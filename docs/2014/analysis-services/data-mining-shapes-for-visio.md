@@ -59,13 +59,13 @@ manager: "mblythe"
   
 ## Requirements  
   
--   To use the templates, you must first create a connection to an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+-   To use the templates, you must first create a connection to an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
-     The wizard will prompt you to select an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server and specify the database that contains the mining model.  
+     The wizard will prompt you to select an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] server and specify the database that contains the mining model.  
   
      For information about how to create a connection, see [Connect to Source Data &#40;Data Mining Client for Excel&#41;](../../2014/analysis-services/connect-to-source-data-data-mining-client-for-excel.md).  
   
--   If you are using the Table Analysis Tools, make sure that you save your models to the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server, and do not use temporary models.  
+-   If you are using the Table Analysis Tools, make sure that you save your models to the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] server, and do not use temporary models.  
   
 -   The model must have been created using one of the supported algorithms: clustering, decision trees, neural networks, Naïve Bayes, or logistic regression.  
   

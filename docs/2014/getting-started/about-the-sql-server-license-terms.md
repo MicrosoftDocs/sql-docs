@@ -19,17 +19,17 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # About the SQL Server License Terms
-  The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Software License Terms are copied to the local computer when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed. When multiple instances of the same edition and language of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are installed on the same computer, a single copy of the license terms will apply to all instances of that edition and language. The files are written to: %ProgramFiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\License Terms\ or %ProgramFiles(x86)%\ [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\License Terms\\.  
+  The [!INCLUDE[msCoName](../includes/msconame-md.md)] Software License Terms are copied to the local computer when [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is installed. When multiple instances of the same edition and language of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] are installed on the same computer, a single copy of the license terms will apply to all instances of that edition and language. The files are written to: %ProgramFiles%\\[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\120\License Terms\ or %ProgramFiles(x86)%\ [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\120\License Terms\\.  
   
- When multiple instances of the same [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edition and language are installed on the same computer, a single copy of the license terms will apply to all instances of that edition and language.  
+ When multiple instances of the same [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edition and language are installed on the same computer, a single copy of the license terms will apply to all instances of that edition and language.  
   
- The license terms file name indicates the edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as well as the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] language edition that is installed. The License terms file name is in the format: SQLServer2014_License_Edition_\<TYPE>_\<LCID>.rtf. For example:  
+ The license terms file name indicates the edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] as well as the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] language edition that is installed. The License terms file name is in the format: SQLServer2014_License_Edition_\<TYPE>_\<LCID>.rtf. For example:  
   
--   SQLServer2014_License_DEV_1033.rtf for [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Developer, English language edition.  
+-   SQLServer2014_License_DEV_1033.rtf for [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Developer, English language edition.  
   
--   SQLServer2014_License_EXPR_1033.rtf for [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Express, English language edition.  
+-   SQLServer2014_License_EXPR_1033.rtf for [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Express, English language edition.  
   
- TYPE indicates the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edition. The following file name segments are used to identify [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editions:  
+ TYPE indicates the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edition. The following file name segments are used to identify [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] editions:  
   
 -   ENT – Enterprise Edition: Server/Client Access License (CAL) Licensing  
   
@@ -45,9 +45,9 @@ manager: "jhubbard"
   
 -   EXPR – Express  
   
- LCID is a number, which refers to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] language locale ID.  The following file name segments are used to identify the corresponding [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] languages:  
+ LCID is a number, which refers to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] language locale ID.  The following file name segments are used to identify the corresponding [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] languages:  
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Language|Abbreviation for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Language|LCID|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Language|Abbreviation for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Language|LCID|  
 |----------------------------------------|---------------------------------------------------------|----------|  
 |English|ENU|1033|  
 |Japanese|JPN|1041|  
@@ -61,8 +61,8 @@ manager: "jhubbard"
 |Portuguese (Brazil)|PTB|1046|  
 |Russian|RUS|1049|  
   
-## [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Licensing Options  
- For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pricing and licensing options, see the [Microsoft SQL Server](http://www.microsoft.com/sqlserver/sql-server-2014.aspx) (http://www.microsoft.com/sqlserver/sql-server-2014.aspx) Web site.  
+## [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Licensing Options  
+ For more information about [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pricing and licensing options, see the [Microsoft SQL Server](http://www.microsoft.com/sqlserver/sql-server-2014.aspx) (http://www.microsoft.com/sqlserver/sql-server-2014.aspx) Web site.  
   
 ## See Also  
  [Licensing Considerations for SQL Server](../../2014/sql-server/install/licensing-considerations-for-sql-server.md)   

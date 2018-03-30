@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Storage Options Dialog Box (Analysis Services - Multidimensional Data)
-  Use the **Storage Options** dialog box in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to specify custom storage mode, proactive caching, and notification options for dimensions, cubes, measure groups, and partitions. You can display the **Storage Options** dialog box in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] by clicking **Options** on the **Storage Settings** dialog box. For more information about the **Storage Settings** dialog box, see [Storage Settings Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/storage-settings-dialog-box-analysis-services-multidimensional-data.md).  
+  Use the **Storage Options** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to specify custom storage mode, proactive caching, and notification options for dimensions, cubes, measure groups, and partitions. You can display the **Storage Options** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] by clicking **Options** on the **Storage Settings** dialog box. For more information about the **Storage Settings** dialog box, see [Storage Settings Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/storage-settings-dialog-box-analysis-services-multidimensional-data.md).  
   
  The **Storage Options** dialog box contains the tabs listed in the following table.  
   

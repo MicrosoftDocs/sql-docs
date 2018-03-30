@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: 21548f08-2910-4a55-baac-b911ba9afaf1
 caps.latest.revision: 19
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # HOST_NAME Values
@@ -34,7 +34,7 @@ manager: "jhubbard"
  [Create a Push Subscription](../../../2014/relational-databases/replication/create-a-push-subscription.md)   
  [View and Modify Pull Subscription Properties](../../../2014/relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
  [View and Modify Push Subscription Properties](../../../2014/relational-databases/replication/view-and-modify-push-subscription-properties.md)   
- [HOST_NAME &#40;Transact-SQL&#41;](../Topic/HOST_NAME%20\(Transact-SQL\).md)   
+ [HOST_NAME &#40;Transact-SQL&#41;](~/t-sql/functions/host-name-transact-sql.md)   
  [Subscribe to Publications](../../../2014/relational-databases/replication/subscribe-to-publications.md)  
   
   

@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 caps.latest.revision: 10
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Tutorial: Add a Bar Chart to Your Report (Report Builder)
@@ -154,7 +154,7 @@ manager: "mblythe"
   
 3.  Under **Axis range and interval**, in the **Interval** box, type **1**.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 5.  Right-click the vertical **Axis Title** and clear the **Show Axis Title** check box.  
   
@@ -180,9 +180,9 @@ manager: "mblythe"
   
      This expression concatenates the last name, a comma, and the first name.  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 8.  Click **Run** to preview the report.  
   
@@ -212,7 +212,7 @@ manager: "mblythe"
   
 8.  Back on the **Category Group Properties** page, in the **Order** drop-down list, select **Z to A**. This selects reverse alphabetical order so that the names appear in order from top to bottom.  
   
-9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 10. Click **Run** to preview the report.  
   
@@ -233,7 +233,7 @@ manager: "mblythe"
   
      When the legend is placed at the top or bottom of a chart, the layout of the legend changes from vertical to horizontal. You can select a different layout from the **Layout** drop-down list.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 6.  Click **Run** to preview the report.  
   
@@ -266,7 +266,7 @@ manager: "mblythe"
   
 5.  On the **Number** tab, select **Show values in Thousands.**  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 7.  Right-click **Axis Title** and click **Axis Title Properties**.  
   
@@ -299,7 +299,7 @@ manager: "mblythe"
   
 9. In **Value**, type the following expression: **=5**  
   
-10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 11. Click **Run** to preview the report.  
   

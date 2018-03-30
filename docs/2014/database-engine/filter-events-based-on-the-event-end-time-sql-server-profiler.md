@@ -21,11 +21,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Filter Events Based on the Event End Time (SQL Server Profiler)
-  This topic describes how to filter trace events based on the event ending time by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+  This topic describes how to filter trace events based on the event ending time by using [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)].  
   
 ### To filter events based on the event end time  
   
-1.  On the **File** menu, click **New Trace**, and then connect to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+1.  On the **File** menu, click **New Trace**, and then connect to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
      The **Trace Properties**dialog box appears.  
   

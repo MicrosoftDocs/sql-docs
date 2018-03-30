@@ -29,7 +29,7 @@ manager: "jhubbard"
 # srv_rpcowner (Extended Stored Procedure API)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
   
  Returns the owner component for the current remote stored procedure.  
   

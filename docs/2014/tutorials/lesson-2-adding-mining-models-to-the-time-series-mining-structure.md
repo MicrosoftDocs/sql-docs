@@ -19,7 +19,7 @@ manager: "jhubbard"
   In this lesson, you will add a new mining model to the mining structure that you just created in [Lesson 1: Creating a Time Series Mining Model and Mining Structure](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md).  
   
 ## ALTER MINING STRUCTURE Statement  
- In order to add a new mining model to an existing mining structure, you use the [ALTER MINING STRUCTURE &#40;DMX&#41;](../Topic/ALTER%20MINING%20STRUCTURE%20\(DMX\).md) statement. The code in the statement can be broken into the following parts:  
+ In order to add a new mining model to an existing mining structure, you use the [ALTER MINING STRUCTURE &#40;DMX&#41;]((~/dmx/alter-mining-structure-dmx.md) statement. The code in the statement can be broken into the following parts:  
   
 -   Identifying the mining structure  
   
@@ -55,7 +55,7 @@ ALTER MINING STRUCTURE [<mining structure name>]
 ADD MINING MODEL [<mining model name>]  
 ```  
   
- For information about naming an object in DMX, see [Identifiers &#40;DMX&#41;](../Topic/Identifiers%20\(DMX\).md).  
+ For information about naming an object in DMX, see [Identifiers &#40;DMX&#41;](~/dmx/identifiers-dmx.md).  
   
  The next lines of the code define columns from the mining structure that will be used by the mining model:  
   
@@ -89,11 +89,11 @@ WITH DRILLTHROUGH
 -   Change the algorithm parameters to use a different method of analysis and prediction  
   
 ## Adding an ARIMA Time Series Model to the Structure  
- The first step is to add a new forecasting mining model to the existing structure. By default, the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series algorithm creates time series mining models by using two algorithms, ARIMA and ARTXP, and blending the results. However, you can specify a single algorithm to use, or you can specify the exact blend of algorithms. In this step, you will add a new model that uses only the ARIMA algorithm. This algorithm is optimized for long-term prediction.  
+ The first step is to add a new forecasting mining model to the existing structure. By default, the [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series algorithm creates time series mining models by using two algorithms, ARIMA and ARTXP, and blending the results. However, you can specify a single algorithm to use, or you can specify the exact blend of algorithms. In this step, you will add a new model that uses only the ARIMA algorithm. This algorithm is optimized for long-term prediction.  
   
 #### To add an ARIMA time series mining model  
   
-1.  In **Object Explorer**, right-click the instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], point to **New Query**, and then click **DMX** to open Query Editor and a new, blank query.  
+1.  In **Object Explorer**, right-click the instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], point to **New Query**, and then click **DMX** to open Query Editor and a new, blank query.  
   
 2.  Copy the generic example of the ALTER MINING STRUCTURE statement into the blank query.  
   

@@ -37,7 +37,7 @@ manager: "jhubbard"
  All delimiters are normalized to a single space as part of the tokenizing process, while symbols are retained.  
   
 ## Understanding the Use of the Tag Table  
- You can optionally group related tokens with a single tag by storing tags and the related terms in a special table that you create in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. The tag table must have two string columns, one named "Tag" and the other named "Term". These columns can be of type `char`, `nchar`, `varchar`, or `nvarchar`, but not `text` or `ntext`. You can combine multiple tags and the corresponding terms in a single table. A Column Pattern Profile Request can use only one tag table. You can use a separate [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection manager to connect to the tag table. Therefore, the tag table can be located in a different database or on a different server than the source data.  
+ You can optionally group related tokens with a single tag by storing tags and the related terms in a special table that you create in a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database. The tag table must have two string columns, one named "Tag" and the other named "Term". These columns can be of type `char`, `nchar`, `varchar`, or `nvarchar`, but not `text` or `ntext`. You can combine multiple tags and the corresponding terms in a single table. A Column Pattern Profile Request can use only one tag table. You can use a separate [!INCLUDE[vstecado](../includes/vstecado-md.md)] connection manager to connect to the tag table. Therefore, the tag table can be located in a different database or on a different server than the source data.  
   
  For example, you could group the values "East", "West", "North", and "South" that might appear in street addresses by using the single tag, "Direction". The following table is an example of such a tag table.  
   
@@ -77,7 +77,7 @@ manager: "jhubbard"
   
 ### Data Options  
  **ConnectionManager**  
- Select the existing [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection manager that uses the .NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) to connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database that contains the table or view to be profiled.  
+ Select the existing [!INCLUDE[vstecado](../includes/vstecado-md.md)] connection manager that uses the .NET Data Provider for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (SqlClient) to connect to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database that contains the table or view to be profiled.  
   
  **TableOrView**  
  Select the existing table or view that contains the column to be profiled.  
@@ -131,7 +131,7 @@ manager: "jhubbard"
  For more information, see "Understanding the Use of Delimiters and Symbols" earlier in this topic.  
   
  **TagTableConnectionManager**  
- Select the existing [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection manager that uses the .NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) to connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database that contains the tag table.  
+ Select the existing [!INCLUDE[vstecado](../includes/vstecado-md.md)] connection manager that uses the .NET Data Provider for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (SqlClient) to connect to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database that contains the tag table.  
   
  For more information, see "Understanding the Use of the Tag Table" earlier in this topic.  
   

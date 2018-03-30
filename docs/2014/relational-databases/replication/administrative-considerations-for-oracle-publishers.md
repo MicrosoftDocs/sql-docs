@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: cfd81fb5-419b-4a1b-97c4-be7c9d4ee289
 caps.latest.revision: 28
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Administrative Considerations for Oracle Publishers

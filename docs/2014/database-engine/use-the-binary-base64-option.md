@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 86a7bb85-7f83-412a-b775-d2c379702fe9
 caps.latest.revision: 9
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Use the BINARY BASE64 Option

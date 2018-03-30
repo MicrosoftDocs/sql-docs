@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Remove a Registered Server (SQL Server Management Studio)
-  This topic describes how to remove a server from Registered Servers in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]..  
+  This topic describes how to remove a server from Registered Servers in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]..  
   
 ##  <a name="SSMSProcedure"></a>  
   

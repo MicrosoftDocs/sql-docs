@@ -16,7 +16,7 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Exploring the Decision Tree Model (Basic Data Mining Tutorial)
-  The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm predicts which columns influence the decision to purchase a bike based upon the remaining columns in the training set.  
+  The [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees algorithm predicts which columns influence the decision to purchase a bike based upon the remaining columns in the training set.  
   
 
   
@@ -37,7 +37,7 @@ manager: "jhubbard"
   
 2.  Use the magnifying glass buttons to adjust the size of the tree display.  
   
-     By default, the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Tree Viewer shows only the first three levels of the tree. If the tree contains fewer than three levels, the viewer shows only the existing levels. You can view more levels by using the **Show Level** slider or the **Default Expansion** list.  
+     By default, the [!INCLUDE[msCoName](../includes/msconame-md.md)] Tree Viewer shows only the first three levels of the tree. If the tree contains fewer than three levels, the viewer shows only the existing levels. You can view more levels by using the **Show Level** slider or the **Default Expansion** list.  
   
 3.  Slide **Show Level** to the fourth bar.  
   

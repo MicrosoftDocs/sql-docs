@@ -38,13 +38,13 @@ manager: "jhubbard"
  Specify the databases affected by this task. When selected, the drop down list provides the following options: **All databases**, **All system databases**, **All user databases**, **These specific databases**.  
   
  **All databases**  
- Generate a maintenance plan that runs maintenance tasks against all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases.  
+ Generate a maintenance plan that runs maintenance tasks against all [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] databases.  
   
  **All system databases (master, msdb, model)**  
- Generate a maintenance plan that runs maintenance tasks against each of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system databases. No maintenance tasks are run against user-created databases.  
+ Generate a maintenance plan that runs maintenance tasks against each of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] system databases. No maintenance tasks are run against user-created databases.  
   
  **All user databases (excluding master, model, msdb, tempdb)**  
- Generate a maintenance plan that runs maintenance tasks against all user-created databases. No maintenance tasks are run against the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system databases.  
+ Generate a maintenance plan that runs maintenance tasks against all user-created databases. No maintenance tasks are run against the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] system databases.  
   
  **These databases**  
  Generate a maintenance plan that runs maintenance tasks against only those databases that are selected. At least one database in the list must be selected if this option is chosen.  
@@ -92,7 +92,7 @@ manager: "jhubbard"
  Perform a log backup as the last step before restoring a database. For more information, see [Tail-Log Backups &#40;SQL Server&#41;](../../2014/database-engine/tail-log-backups-sql-server.md).  
   
  **Set backup compression**  
- In [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (or a later version), select one the following [backup compression](../../2014/database-engine/backup-compression-sql-server.md) values:  
+ In [!INCLUDE[ssEnterpriseEd10](../includes/ssenterpriseed10-md.md)] (or a later version), select one the following [backup compression](../../2014/database-engine/backup-compression-sql-server.md) values:  
   
 |||  
 |-|-|  
@@ -101,7 +101,7 @@ manager: "jhubbard"
 |**Do not compress backup**|Click to create an uncompressed backup, regardless of the server-level default.|  
   
  **View T-SQL**  
- View the [!INCLUDE[tsql](../../includes/tsql-md.md)] statements performed against the server for this task, based on the selected options.  
+ View the [!INCLUDE[tsql](../includes/tsql-md.md)] statements performed against the server for this task, based on the selected options.  
   
 > [!NOTE]  
 >  When the number of objects affected is large, this display can take a considerable amount of time.  
@@ -120,18 +120,18 @@ manager: "jhubbard"
  Specify how to authenticate against the server.  
   
  **Use Windows integrated security**  
- Connect to an instance of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] with Windows Authentication.  
+ Connect to an instance of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] with Windows Authentication.  
   
  **Use a specific user name and password**  
- Connect to an instance of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. This option is not available.  
+ Connect to an instance of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication. This option is not available.  
   
  **User name**  
- Provide a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login to use when authenticating. This option is not available.  
+ Provide a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] login to use when authenticating. This option is not available.  
   
  **Password**  
  Provide a password to use when authenticating. This option is not available.  
   
 ## See Also  
- [BACKUP &#40;Transact-SQL&#41;](../Topic/BACKUP%20\(Transact-SQL\).md)  
+ [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)  
   
   

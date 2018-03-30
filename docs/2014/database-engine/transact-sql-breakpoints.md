@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: c234430f-bd94-4d0d-9e74-2bf11681fa50
 caps.latest.revision: 9
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Transact-SQL Breakpoints
-  Breakpoints specify that the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger pause execution on a specific [!INCLUDE[tsql](../../includes/tsql-md.md)] statement, you can then view the state of the code elements at that point.  
+  Breakpoints specify that the [!INCLUDE[tsql](../includes/tsql-md.md)] debugger pause execution on a specific [!INCLUDE[tsql](../includes/tsql-md.md)] statement, you can then view the state of the code elements at that point.  
   
 ## Breakpoints  
- When running the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger, you can toggle a breakpoint on specific statements. When execution reaches a statement with a breakpoint, the debugger pauses execution so you can view debugging information, such as the values present in variables and parameters.  
+ When running the [!INCLUDE[tsql](../includes/tsql-md.md)] debugger, you can toggle a breakpoint on specific statements. When execution reaches a statement with a breakpoint, the debugger pauses execution so you can view debugging information, such as the values present in variables and parameters.  
   
  You can manage breakpoints individually in the editor window, or collectively by using the **Breakpoints** window. You can edit breakpoints to specify items such as specific conditions under which execution should pause, or the actions to be taken if the breakpoint is executed.  
   
@@ -29,7 +29,7 @@ manager: "jhubbard"
   
 |Task Description|Topic|  
 |----------------------|-----------|  
-|Describes how to specify the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement on which you want the debugger to pause.|[Toggle a Breakpoint](../../2014/database-engine/toggle-a-breakpoint.md)|  
+|Describes how to specify the [!INCLUDE[tsql](../includes/tsql-md.md)] statement on which you want the debugger to pause.|[Toggle a Breakpoint](../../2014/database-engine/toggle-a-breakpoint.md)|  
 |Describes how to temporarily deactivate a breakpoint, and later reactivate it. Also describes how to delete a breakpoint.|[Enable, Disable, and Delete Breakpoints](../../2014/database-engine/enable-disable-and-delete-breakpoints.md)|  
 |Describes how to specify a condition, which defines whether breakpoint breaks based on the evaluation of a specified Transact-SQL expression.|[Specify a Breakpoint Condition](../../2014/database-engine/specify-a-breakpoint-condition.md)|  
 |Describes how to specify a hit count, which causes a breakpoint to break only when the statement containing the breakpoint has been executed a specified number of times.|[Specify a Hit Count](../../2014/database-engine/specify-a-hit-count.md)|  

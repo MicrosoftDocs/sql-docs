@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 9fe0bfb4-3aa6-4eb2-a83e-c0d0e7d4e9f6
 caps.latest.revision: 16
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Server Element (DTA)

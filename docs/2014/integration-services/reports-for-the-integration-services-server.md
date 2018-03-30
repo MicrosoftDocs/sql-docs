@@ -18,14 +18,14 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Reports for the Integration Services Server
-  In the current release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], standard reports are available in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to help you monitor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] projects that have been deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. These reports help you to view package status and history, and, if necessary, identify the cause of package execution failures.  
+  In the current release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], standard reports are available in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to help you monitor [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] projects that have been deployed to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server. These reports help you to view package status and history, and, if necessary, identify the cause of package execution failures.  
   
  At the top of each report page, the back icon takes you to the previous page you viewed, the refresh icon refreshes the information displayed on the page, and the print icon allows you to print the current page.  
   
- For information on how to deploy packages to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, see [Deploy Projects to Integration Services Server](../../2014/integration-services/deploy-projects-to-integration-services-server.md).  
+ For information on how to deploy packages to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server, see [Deploy Projects to Integration Services Server](../../2014/integration-services/deploy-projects-to-integration-services-server.md).  
   
 ## Integration Services Dashboard  
- The **Integration Services Dashboard** report provides an overview of all the package executions on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. For each package that has run on the server, the dashboard allows you to "zoom in" to find specific details on package execution errors that may have occurred.  
+ The **Integration Services Dashboard** report provides an overview of all the package executions on the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance. For each package that has run on the server, the dashboard allows you to "zoom in" to find specific details on package execution errors that may have occurred.  
   
  The report displays the following sections of information.  
   
@@ -39,7 +39,7 @@ manager: "jhubbard"
  You can filter the table displayed on any page by clicking **Filter** and then selecting criteria in the **Filter Settings** dialog. The filter criteria that are available depend on the data being displayed. You can change the sort order of the report by clicking the sort icon in the **Filter Settings** dialog.  
   
 ## All Executions Report  
- The **All Executions Report** displays a summary of all [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] executions that have been performed on the server. There can be multiple executions of the sample package. Unlike the **Integration Services Dashboard** report, you can configure the **All Executions** report to show executions that have started during a range of dates. The dates can span multiple days, months, or years.  
+ The **All Executions Report** displays a summary of all [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] executions that have been performed on the server. There can be multiple executions of the sample package. Unlike the **Integration Services Dashboard** report, you can configure the **All Executions** report to show executions that have started during a range of dates. The dates can span multiple days, months, or years.  
   
  The report displays the following sections of information.  
   
@@ -53,7 +53,7 @@ manager: "jhubbard"
  For more information about parameters, see [Integration Services &#40;SSIS&#41; Parameters](../../2014/integration-services/integration-services-ssis-parameters.md).  
   
 ## All Connections  
- The **All Connections** report provides the following information for connections that have failed, for executions that have occurred on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
+ The **All Connections** report provides the following information for connections that have failed, for executions that have occurred on the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance.  
   
  The report displays the following sections of information.  
   
@@ -63,13 +63,13 @@ manager: "jhubbard"
 |Details|Shows the connection string, number of executions during which a connection failed, and the date when the connection last failed.|  
   
 ## All Operations Report  
- The **All Operations Report** displays a summary of all [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] operations that have been performed on the server, including package deployment, validation, and execution, as well as other administrative operations. As with the Integration Services Dashboard, you can apply a filter to the table to narrow down the information displayed.  
+ The **All Operations Report** displays a summary of all [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] operations that have been performed on the server, including package deployment, validation, and execution, as well as other administrative operations. As with the Integration Services Dashboard, you can apply a filter to the table to narrow down the information displayed.  
   
 ## All Validations Report  
- The **All Validations Report** displays a summary of all [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] validations that have been performed on the server. The summary displays information for each validation such as status, start time, and end time. Each summary entry includes a link to messages generated during validation. As with the Integration Services Dashboard, you can apply a filter to the table to narrow down the information displayed.  
+ The **All Validations Report** displays a summary of all [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] validations that have been performed on the server. The summary displays information for each validation such as status, start time, and end time. Each summary entry includes a link to messages generated during validation. As with the Integration Services Dashboard, you can apply a filter to the table to narrow down the information displayed.  
   
 ## Custom Reports  
- You can add a custom report (.rdl file) to the **SSISDB** catalog node under the **Integration Services Catalogs** node in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Before adding the report, confirm that you are using a three-part naming convention to fully qualify the objects you reference such as a source table. Otherwise, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] will display an error. The naming convention is \<database>.\<owner>.\<object>. An example would be SSISDB.internal.executions.  
+ You can add a custom report (.rdl file) to the **SSISDB** catalog node under the **Integration Services Catalogs** node in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Before adding the report, confirm that you are using a three-part naming convention to fully qualify the objects you reference such as a source table. Otherwise, [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] will display an error. The naming convention is \<database>.\<owner>.\<object>. An example would be SSISDB.internal.executions.  
   
 > [!NOTE]  
 >  When you add custom reports to the **SSISDB** node under the **Databases** node, the SSISDB prefix is not necessary.  

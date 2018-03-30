@@ -51,7 +51,7 @@ manager: "jhubbard"
 -   **Skip Policy Validation** – If `True`, the DAC server selection policy is not evaluated. If `False`, the policy is evaluated and the upgrade terminates if there is a validation error. The default setting is `False`.  
   
 ###  <a name="LimitationsRestrictions"></a> Limitations and Restrictions  
- DAC uprades can only be performed in [!INCLUDE[ssSDS](../../includes/sssds-md.md)], or [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) or later.  
+ DAC uprades can only be performed in [!INCLUDE[ssSDS](../includes/sssds-md.md)], or [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] Service Pack 4 (SP4) or later.  
   
 ###  <a name="Prerequisites"></a> Prerequisites  
  It is prudent to take a full database backup before starting the upgrade. If an upgrade encounters an error and cannot roll back all of its changes, you may need to restore the backup.  
@@ -72,7 +72,7 @@ manager: "jhubbard"
  To improve security, SQL Server Authentication logins are stored in a DAC package without a password. When the package is deployed or upgraded, the login is created as a disabled login with a generated password. To enable the logins, log in using a login that has ALTER ANY LOGIN permission and use ALTER LOGIN to enable the login and assign a new password that can be communicated to the user. This is not needed for Windows Authentication logins because their passwords are not managed by SQL Server.  
   
 ####  <a name="Permissions"></a> Permissions  
- A DAC can only be upgraded by members of the **sysadmin** or **serveradmin** fixed server roles, or by logins that are in the **dbcreator** fixed server role and have ALTER ANY LOGIN permissions. The login must be the owner of the existing database. The built-in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system administrator account named **sa** can also upgrade a DAC.  
+ A DAC can only be upgraded by members of the **sysadmin** or **serveradmin** fixed server roles, or by logins that are in the **dbcreator** fixed server role and have ALTER ANY LOGIN permissions. The login must be the owner of the existing database. The built-in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] system administrator account named **sa** can also upgrade a DAC.  
   
 ##  <a name="UsingDACUpgradeWizard"></a> Using the Upgrade Data-tier Application Wizard  
  **To Upgrade a DAC Using a Wizard**  
@@ -140,7 +140,7 @@ manager: "jhubbard"
  **Cancel** - Terminates the wizard without deploying the DAC.  
   
 ##  <a name="Review_policy"></a> Review Policy Page  
- Use this page to review the results of evaluating the DAC server selection policy, if the DAC has a policy. The DAC server selection policy is optional, and is assigned to a DAC authored in Microsoft Visual Studio. The policy uses the server selection policy facets to specify conditions an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] should meet to host the DAC.  
+ Use this page to review the results of evaluating the DAC server selection policy, if the DAC has a policy. The DAC server selection policy is optional, and is assigned to a DAC authored in Microsoft Visual Studio. The policy uses the server selection policy facets to specify conditions an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)] should meet to host the DAC.  
   
  **Evaluation results of policy conditions** - A read-only report showing whether the evaluations of the conditions in the DAC server selection policy succeeded. The results of evaluating each condition are reported on a separate line.  
   
@@ -245,7 +245,7 @@ manager: "jhubbard"
 7.  Close the file stream used to read the DAC package file.  
   
 ### Example (PowerShell)  
- The following example upgrades a DAC named MyApplication on a default instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], using a new DAC version in a MyApplicationVNext.dacpac package.  
+ The following example upgrades a DAC named MyApplication on a default instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)], using a new DAC version in a MyApplicationVNext.dacpac package.  
   
 ```  
 ## Set a SMO Server object to the default instance on the local computer.  

@@ -32,13 +32,13 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # CLR Triggers
-  Because of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] integration with the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] common language runtime (CLR), you can use any [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] language to create CLR triggers. This section covers information specific to triggers implemented with CLR integration. For a complete discussion of triggers, see [DDL Triggers](../../../2014/database-engine/ddl-triggers.md).  
+  Because of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integration with the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime (CLR), you can use any [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] language to create CLR triggers. This section covers information specific to triggers implemented with CLR integration. For a complete discussion of triggers, see [DDL Triggers](../../../2014/database-engine/ddl-triggers.md).  
   
 ## What Are Triggers?  
- A trigger is a special type of stored procedure that automatically runs when a language event executes. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] includes two general types of triggers: data manipulation language (DML) and data definition language (DDL) triggers. DML triggers can be used when `INSERT`, `UPDATE`, or `DELETE` statements modify data in a specified table or view. DDL triggers fire stored procedures in response to a variety of DDL statements, which are primarily statements that begin with `CREATE`, `ALTER`, and `DROP`. DDL triggers can be used for administrative tasks, such as auditing and regulating database operations.  
+ A trigger is a special type of stored procedure that automatically runs when a language event executes. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes two general types of triggers: data manipulation language (DML) and data definition language (DDL) triggers. DML triggers can be used when `INSERT`, `UPDATE`, or `DELETE` statements modify data in a specified table or view. DDL triggers fire stored procedures in response to a variety of DDL statements, which are primarily statements that begin with `CREATE`, `ALTER`, and `DROP`. DDL triggers can be used for administrative tasks, such as auditing and regulating database operations.  
   
 ## Unique Capabilities of CLR Triggers  
- Triggers written in [!INCLUDE[tsql](../../../includes/tsql-md.md)] have the capability of determining which columns from the firing view or table have been updated by using the `UPDATE(column)` and `COLUMNS_UPDATED()` functions.  
+ Triggers written in [!INCLUDE[tsql](../../includes/tsql-md.md)] have the capability of determining which columns from the firing view or table have been updated by using the `UPDATE(column)` and `COLUMNS_UPDATED()` functions.  
   
  Triggers written in a CLR language differ from other CLR integration objects in several significant ways. CLR triggers can:  
   
@@ -48,14 +48,14 @@ manager: "jhubbard"
   
 -   Access information about database objects affected by the execution of DDL statements.  
   
- These capabilities are provided inherently in the query language, or by the `SqlTriggerContext` class. For information about the advantages of CLR integration and choosing between managed code and [!INCLUDE[tsql](../../../includes/tsql-md.md)], see [Overview of CLR Integration](../../../2014/database-engine/dev-guide/overview-of-clr-integration.md).  
+ These capabilities are provided inherently in the query language, or by the `SqlTriggerContext` class. For information about the advantages of CLR integration and choosing between managed code and [!INCLUDE[tsql](../../includes/tsql-md.md)], see [Overview of CLR Integration](../../../2014/database-engine/dev-guide/overview-of-clr-integration.md).  
   
 ## Using the SqlTriggerContext Class  
  The `SqlTriggerContext` class cannot be publicly constructed and can only be obtained by accessing the `SqlContext.TriggerContext` property within the body of a CLR trigger. The `SqlTriggerContext` class can be obtained from the active `SqlContext` by calling the `SqlContext.TriggerContext` property:  
   
  `SqlTriggerContext myTriggerContext = SqlContext.TriggerContext;`  
   
- The `SqlTriggerContext` class provides context information about the trigger. This contextual information includes the type of action that caused the trigger to fire, which columns were modified in an UPDATE operation, and, in the case of a DDL trigger, an XML `EventData` structure which describes the triggering operation. For more information, see [EVENTDATA &#40;Transact-SQL&#41;](../Topic/EVENTDATA%20\(Transact-SQL\).md).  
+ The `SqlTriggerContext` class provides context information about the trigger. This contextual information includes the type of action that caused the trigger to fire, which columns were modified in an UPDATE operation, and, in the case of a DDL trigger, an XML `EventData` structure which describes the triggering operation. For more information, see [EVENTDATA &#40;Transact-SQL&#41;](~/t-sql/functions/eventdata-transact-sql.md).  
   
 ### Determining the Trigger Action  
  Once you have obtained a `SqlTriggerContext`, you can use it to determine the type of action that caused the trigger to fire. This information is available through the `TriggerAction` property of the `SqlTriggerContext` class.  
@@ -71,7 +71,7 @@ manager: "jhubbard"
 -   For DDL triggers, the list of possible TriggerAction values is considerably longer. Please see "TriggerAction Enumeration" in the .NET Framework SDK for more information.  
   
 ### Using the Inserted and Deleted Tables  
- Two special tables are used in DML trigger statements: the **inserted** table and the **deleted** table. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] automatically creates and manages these tables. You can use these temporary tables to test the effects of certain data modifications and to set conditions for DML trigger actions; however, you cannot alter the data in the tables directly.  
+ Two special tables are used in DML trigger statements: the **inserted** table and the **deleted** table. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatically creates and manages these tables. You can use these temporary tables to test the effects of certain data modifications and to set conditions for DML trigger actions; however, you cannot alter the data in the tables directly.  
   
  CLR triggers can access the **inserted** and **deleted** tables through the CLR in-process provider. This is done by obtaining a `SqlCommand` object from the SqlContext object. For example:  
   
@@ -142,7 +142,7 @@ reader.Close()
   
 -   The type of event that fired the trigger.  
   
- Then, depending on the event type, the schema includes additional information, such as the database in which the event occurred, the object against which the event occurred, and the [!INCLUDE[tsql](../../../includes/tsql-md.md)] command of the event.  
+ Then, depending on the event type, the schema includes additional information, such as the database in which the event occurred, the object against which the event occurred, and the [!INCLUDE[tsql](../../includes/tsql-md.md)] command of the event.  
   
  In the following example, the following DDL trigger returns the raw `EventData` property.  
   
@@ -479,7 +479,7 @@ GO CREATE TABLE UserNameAudit
 )  
 ```  
   
- The [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement that creates the trigger in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is as follows, and assumes assembly **SQLCLRTest** is already registered in the current [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database.  
+ The [!INCLUDE[tsql](../../includes/tsql-md.md)] statement that creates the trigger in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is as follows, and assumes assembly **SQLCLRTest** is already registered in the current [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
   
 ```  
 CREATE TRIGGER EmailAudit  
@@ -508,10 +508,10 @@ The context transaction which was active before entering user defined routine, t
 The statement has been terminated.  
 ```  
   
- This exception is also expected, and a try/catch block around the [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement that performs the action that fires the trigger is necessary so that execution can continue. Despite the two exceptions thrown, the transaction is rolled back and the changes are not committed to the table. A major difference between CLR triggers and [!INCLUDE[tsql](../../../includes/tsql-md.md)] triggers is that [!INCLUDE[tsql](../../../includes/tsql-md.md)] triggers can continue to perform more work after the transaction is rolled back.  
+ This exception is also expected, and a try/catch block around the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement that performs the action that fires the trigger is necessary so that execution can continue. Despite the two exceptions thrown, the transaction is rolled back and the changes are not committed to the table. A major difference between CLR triggers and [!INCLUDE[tsql](../../includes/tsql-md.md)] triggers is that [!INCLUDE[tsql](../../includes/tsql-md.md)] triggers can continue to perform more work after the transaction is rolled back.  
   
 ### Example  
- The following trigger performs simple validation of INSERT statements on a table. If the inserted integer value is equal to one, the transaction is rolled back and the value is not inserted into the table. All other integer values are inserted into the table. Note the try/catch block around the `Transaction.Rollback` method. The [!INCLUDE[tsql](../../../includes/tsql-md.md)] script creates a test table, assembly, and managed stored procedure. Note that the two INSERT statements are wrapped in a try/catch block so that the exception thrown when the trigger finishes execution is caught.  
+ The following trigger performs simple validation of INSERT statements on a table. If the inserted integer value is equal to one, the transaction is rolled back and the value is not inserted into the table. All other integer values are inserted into the table. Note the try/catch block around the `Transaction.Rollback` method. The [!INCLUDE[tsql](../../includes/tsql-md.md)] script creates a test table, assembly, and managed stored procedure. Note that the two INSERT statements are wrapped in a try/catch block so that the exception thrown when the trigger finishes execution is caught.  
   
  C#  
   
@@ -655,11 +655,11 @@ DROP TABLE Table1;
 ```  
   
 ## See Also  
- [CREATE TRIGGER &#40;Transact-SQL&#41;](../Topic/CREATE%20TRIGGER%20\(Transact-SQL\).md)   
+ [CREATE TRIGGER &#40;Transact-SQL&#41;](~/t-sql/statements/create-trigger-transact-sql.md)   
  [DML Triggers](../../../2014/database-engine/dml-triggers.md)   
  [DDL Triggers](../../../2014/database-engine/ddl-triggers.md)   
- [TRY...CATCH &#40;Transact-SQL&#41;](../Topic/TRY...CATCH%20\(Transact-SQL\).md)   
+ [TRY...CATCH &#40;Transact-SQL&#41;](~/t-sql/language-elements/try-catch-transact-sql.md)   
  [Building Database Objects with Common Language Runtime &#40;CLR&#41; Integration](../../../2014/database-engine/dev-guide/building-database-objects-with-common-language-runtime-clr-integration.md)   
- [EVENTDATA &#40;Transact-SQL&#41;](../Topic/EVENTDATA%20\(Transact-SQL\).md)  
+ [EVENTDATA &#40;Transact-SQL&#41;](~/t-sql/functions/eventdata-transact-sql.md)  
   
   

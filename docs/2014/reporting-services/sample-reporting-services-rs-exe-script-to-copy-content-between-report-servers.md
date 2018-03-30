@@ -14,15 +14,15 @@ applies_to:
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 caps.latest.revision: 14
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Sample Reporting Services rs.exe Script to Migrate Content between Report Servers
-  This topic includes and describes a sample [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS script that copies content items and settings from one [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server to another report server, using the **RS.exe** utility. RS.exe is installed with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], both native and SharePoint mode. The script copies [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] items, for example reports and subscriptions, from server to another server. The script supports both SharePoint mode and Native mode report servers.  
+  This topic includes and describes a sample [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] RSS script that copies content items and settings from one [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report server to another report server, using the **RS.exe** utility. RS.exe is installed with [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], both native and SharePoint mode. The script copies [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] items, for example reports and subscriptions, from server to another server. The script supports both SharePoint mode and Native mode report servers.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode|  
+|**[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint mode &#124; [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Native mode|  
   
 ##  <a name="bkmk_top"></a> In this Topic:  
   
@@ -62,13 +62,13 @@ manager: "mblythe"
 ##  <a name="bkmk_supported_scenarios"></a> Supported Scenarios  
  The script supports both SharePoint mode and Native mode report servers. The script supports the following report server versions:  
   
--   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
+-   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
   
--   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
+-   [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
--   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
+-   [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]  
   
- The script can be used to copy content between report servers of the same mode or different modes. For example, you can run the script to copy content from a [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] native mode report server to a [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] SharePoint mode report server. You can run the script from any server where RS.exe is installed. For example, in the following deployment, you can:  
+ The script can be used to copy content between report servers of the same mode or different modes. For example, you can run the script to copy content from a [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] native mode report server to a [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] SharePoint mode report server. You can run the script from any server where RS.exe is installed. For example, in the following deployment, you can:  
   
 -   Run RS.exe and the script **ON** Server A.  
   
@@ -90,7 +90,7 @@ manager: "mblythe"
 |Item|Migrated|SharePoint|Description|  
 |----------|--------------|----------------|-----------------|  
 |Passwords|**No**|**No**|Passwords are **NOT** migrated. After content items are migrated, update the credential information on the destination server. For example, data sources with stored credentials.|  
-|My Reports|**No**|**No**|The Native mode “My Reports” feature is based on individual user logins therefore the scripting service does not have access to content in “My Reports” folders for users other than the **–u** parameter used to run the rss script. Also, “My Reports” is not a feature of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode and items in the folders cannot be copied to a SharePoint environment. Therefore, the script does not copy report items that are in the “My Reports” folders on a source native mode report server. To migrate the content in “My Reports” folders with this script, complete the following:<br /><br /> 1) Create new folder(s) in Report Manager. Optionally, you can create folders or subfolder for each user.<br /><br /> 2) Login as one of the users with “My Reports” content.<br /><br /> 3) In Report Manager, click the **My Reports** folder.<br /><br /> 4) Click the **Details** view for the folder.<br /><br /> 5) Select each report that you want to copy.<br /><br /> 6) Click **Move** in the Report Manager toolbar.<br /><br /> 7) Select the desired destination folder.<br /><br /> 8) Repeat steps 2-7 for each user.<br /><br /> 9) Run the script.|  
+|My Reports|**No**|**No**|The Native mode “My Reports” feature is based on individual user logins therefore the scripting service does not have access to content in “My Reports” folders for users other than the **–u** parameter used to run the rss script. Also, “My Reports” is not a feature of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint mode and items in the folders cannot be copied to a SharePoint environment. Therefore, the script does not copy report items that are in the “My Reports” folders on a source native mode report server. To migrate the content in “My Reports” folders with this script, complete the following:<br /><br /> 1) Create new folder(s) in Report Manager. Optionally, you can create folders or subfolder for each user.<br /><br /> 2) Login as one of the users with “My Reports” content.<br /><br /> 3) In Report Manager, click the **My Reports** folder.<br /><br /> 4) Click the **Details** view for the folder.<br /><br /> 5) Select each report that you want to copy.<br /><br /> 6) Click **Move** in the Report Manager toolbar.<br /><br /> 7) Select the desired destination folder.<br /><br /> 8) Repeat steps 2-7 for each user.<br /><br /> 9) Run the script.|  
 |History|**No**|**No**||  
 |History settings|Yes|Yes|The history settings are migrated however the history details are NOT migrated.|  
 |Schedules|yes|yes|To migrate schedules, it is required that SQL Server Agent is running on the target server. If SQL Server Agent is not running on the target, you will see an error message similar to the following:<br /><br /> `Migrating schedules: 1 items found. Migrating schedule: theMondaySchedule ... FAILURE:  The SQL Agent service is not running. This operation requires the SQL Agent service. ---> Microsoft.ReportingServices.Diagnostics.Utilities.SchedulerNotResponding Exception: The SQL Agent service is not running. This operation requires the SQL Agent service.`|  
@@ -226,7 +226,7 @@ manager: "mblythe"
   
          `Report: /Reports/TitleOnly`  
   
--   The SOURCE_URL and TARGET_URL must be valid report server URLs that point to the source and target [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server. In native mode, a report server URL looks like the following:  
+-   The SOURCE_URL and TARGET_URL must be valid report server URLs that point to the source and target [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report server. In native mode, a report server URL looks like the following:  
   
     -   `http://servername/reportserver`  
   
@@ -306,7 +306,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u 
 ```  
   
 > [!TIP]  
->  For information on how to use Windows PowerShell to create [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report servers on Windows Azure virtual machines, see [Use PowerShell to Create a Windows Azure VM With a Native Mode Report Server](http://msdn.microsoft.com/library/dn449661.aspx).  
+>  For information on how to use Windows PowerShell to create [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report servers on Windows Azure virtual machines, see [Use PowerShell to Create a Windows Azure VM With a Native Mode Report Server](http://msdn.microsoft.com/library/dn449661.aspx).  
   
 ##  <a name="bkmk_sharepoint_site_to_native_Azure_vm"></a> SharePoint Mode –‘bi’ site collection to a Native Mode Server on Windows Azure Virtual Machine  
  The following example migrates content:  
@@ -342,7 +342,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://uetesta02/_vti_bin/reportserv
 ### Roles and Groups  
  **Native Mode**  
   
-1.  Open [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and connect to your native mode report server.  
+1.  Open [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] and connect to your native mode report server.  
   
 2.  In **Object Explorer** click **Security**.  
   

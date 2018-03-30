@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: 5ed6f7cd-d9af-4439-9f33-fc935b883d91
 caps.latest.revision: 27
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # New Full-Text Catalog (General Page)
@@ -39,6 +39,6 @@ manager: "jhubbard"
  Indicates whether the catalog is sensitive or insensitive to diacritical marks, such as a tilde (**~**), acute accent mark (**´**), or umlaut (**¨**). If you select **Insensitive**, diacritical marks are ignored in the full-text indexes that are associated with this full-text catalog. For information about diacritical marks, see[Diacritical Mark](http://go.microsoft.com/fwlink/?LinkId=154091) in the MSN Encarta Encyclopedia.  
   
 ## See Also  
- [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../Topic/CREATE%20FULLTEXT%20CATALOG%20\(Transact-SQL\).md)  
+ [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](~/t-sql/statements/create-fulltext-catalog-transact-sql.md)  
   
   

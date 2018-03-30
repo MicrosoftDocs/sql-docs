@@ -29,10 +29,10 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Retrieving UDT Data
-  In order to create a user-defined type (UDT) on the client, the assembly that was registered as a UDT in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database must be available to the client application. The UDT assembly can be placed in the same directory with the application, or in the Global Assembly Cache (GAC). You can also set a reference to the assembly in your project.  
+  In order to create a user-defined type (UDT) on the client, the assembly that was registered as a UDT in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database must be available to the client application. The UDT assembly can be placed in the same directory with the application, or in the Global Assembly Cache (GAC). You can also set a reference to the assembly in your project.  
   
 ## Requirements for Using UDTs in ADO.NET  
- The assembly loaded in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and the assembly on the client must be compatible in order for the UDT to be created on the client. For UDTs defined with the `Native` serialization format, the assemblies must be structurally compatible. For assemblies defined with the `UserDefined` format, the assembly must be available on the client.  
+ The assembly loaded in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the assembly on the client must be compatible in order for the UDT to be created on the client. For UDTs defined with the `Native` serialization format, the assemblies must be structurally compatible. For assemblies defined with the `UserDefined` format, the assembly must be available on the client.  
   
  You do not need a copy of the UDT assembly on the client in order to retrieve the raw data from a UDT column in a table.  
   

@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 32335af1-5eae-4420-a0ef-b1e8a3267166
 caps.latest.revision: 11
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # ListReservedURLs Method (WMI MSReportServer_ConfigurationSetting)
@@ -59,7 +59,7 @@ public void ListReservedUrls(out string[] Application, out string[] UrlString,
 ## Remarks  
   
 ## Requirements  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../includes/ssrswminmspca-md.md)]  
   
 ## See Also  
  [MSReportServer_ConfigurationSetting Members](../../2014/reporting-services/msreportserver-configurationsetting-members.md)  

@@ -19,16 +19,16 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Modify UPDATETEXT statements that read and write to binary large objects (BLOBs)
-  Upgrade Advisor detected UPDATETEXT statements that read and write to the same binary large objects (BLOB) by using the same text pointer. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] does not support the use of text pointers in this manner.  
+  Upgrade Advisor detected UPDATETEXT statements that read and write to the same binary large objects (BLOB) by using the same text pointer. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] does not support the use of text pointers in this manner.  
   
 ## Component  
- [!INCLUDE[ssDE](../../../includes/ssde-md.md)]  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## Corrective Action  
  Copy the BLOB to a temporary table or to a table variable, and then assign the value back to the original column.  
   
 ## See Also  
  [Database Engine Upgrade Issues](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;new&#93;](../Topic/SQL%20Server%202014%20Upgrade%20Advisor%20[new].md)  
+ [SQL Server 2014 Upgrade Advisor &#91;new&#93;](~/2014/sql-server/install/sql-server-2014-upgrade-advisor.md)  
   
   

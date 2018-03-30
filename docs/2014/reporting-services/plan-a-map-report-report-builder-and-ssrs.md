@@ -12,14 +12,14 @@ ms.topic: "article"
 ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
 caps.latest.revision: 8
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Plan a Map Report (Report Builder and SSRS)
   Good reports present information that leads to actions or insights. To present analytical data such as sales totals or demographics against a geographic background, you can add a map to your report. A map can contain multiple layers, where each layer displays map elements that are defined by a specific type of spatial data: points that represent locations, lines that represent routes, or polygons that represent areas. You can associate your analytical data with map elements on each layer.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ##  <a name="MapPurpose"></a> Specify the Purpose of the Map  
  Good report design provides information that help users take actions to address issues. To create a useful, easily understood map display, decide what questions you want the map to help answer. For example, on a map you can visualize the following types of data to identify market opportunities:  
@@ -56,11 +56,11 @@ manager: "mblythe"
   
 -   ESRI Shapefiles, including publicly available Shapefiles that you can search for on the Internet.  
   
--   Spatial data from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spatial data sources.  
+-   Spatial data from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] spatial data sources.  
   
 -   Maps from reports in the Map Gallery.  
   
--   Third-party sites that offer spatial data as ESRI Shapefiles or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spatial data.  
+-   Third-party sites that offer spatial data as ESRI Shapefiles or [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] spatial data.  
   
 -   Bing map tiles, which provide a background for the map view. To display tiles in a map, the report server must be configured to support Bing Maps Web Services.  
   
@@ -154,7 +154,7 @@ manager: "mblythe"
   
 -   When the source of spatial data is located on the your computer, map elements are always embedded in the report definition. This includes spatial data from the Map Gallery or ESRI Shapefiles that have been installed locally.  
   
- To use dynamic spatial data, the spatial data source must be on the report server. When reports are designed in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], spatial data sources can be added to a project and published to the report server together with the report definition. If you are using Report Builder to design reports, you must upload the spatial data to the report server first, and then, in the wizard or in the layer properties, specify that source of spatial data for the map layer.  
+ To use dynamic spatial data, the spatial data source must be on the report server. When reports are designed in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], spatial data sources can be added to a project and published to the report server together with the report definition. If you are using Report Builder to design reports, you must upload the spatial data to the report server first, and then, in the wizard or in the layer properties, specify that source of spatial data for the map layer.  
   
 
   

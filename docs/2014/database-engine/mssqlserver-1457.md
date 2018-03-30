@@ -47,7 +47,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Database Mirroring &#40;SQL Server&#41;](../../2014/database-engine/database-mirroring-sql-server.md)   
- [ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20\(Transact-SQL\).md)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)   
  [Setting Up Database Mirroring &#40;SQL Server&#41;](../../2014/database-engine/setting-up-database-mirroring-sql-server.md)   
  [Removing Database Mirroring &#40;SQL Server&#41;](../../2014/database-engine/removing-database-mirroring-sql-server.md)   
  [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](../../2014/database-engine/prepare-a-mirror-database-for-mirroring-sql-server.md)  

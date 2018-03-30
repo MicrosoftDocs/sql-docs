@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 2e36f0fe-8100-4513-b169-14d611646f81
 caps.latest.revision: 6
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Add, Edit, Refresh Fields in the Report Data Pane (Report Builder and SSRS)
@@ -25,7 +25,7 @@ manager: "mblythe"
  Use **Refresh Fields** to update the list of fields in the report to match the current list of fields from the shared dataset query. Refreshing the field list does not affect the calculated fields that you define in your report.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ### To add a query field  
   
@@ -43,7 +43,7 @@ manager: "mblythe"
   
 4.  In the **Field Source** text box, type the name of an existing field on the data source.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ### To add a calculated field  
   
@@ -61,7 +61,7 @@ manager: "mblythe"
     > [!NOTE]  
     >  The expression for a calculated field cannot contain aggregates or references to report items.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ### To edit a query field or a dataset field  
   
@@ -71,7 +71,7 @@ manager: "mblythe"
   
 3.  Change the name of the field or the value of the field.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ### To delete a query field or a calculated field  
   

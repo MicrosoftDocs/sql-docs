@@ -23,7 +23,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Impersonation and CLR Integration Security
-  When managed code accesses external resources, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] does not automatically impersonate the current execution context under which the routine is executing. Code in `EXTERNAL_ACCESS` and `UNSAFE` assemblies can explicitly impersonate the current execution context.  
+  When managed code accesses external resources, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not automatically impersonate the current execution context under which the routine is executing. Code in `EXTERNAL_ACCESS` and `UNSAFE` assemblies can explicitly impersonate the current execution context.  
   
 > [!NOTE]  
 >  For information on behavior changes in impersonation, see [Breaking Changes to Database Engine Features in SQL Server 2014](../../../2014/database-engine/breaking-changes-to-database-engine-features-in-sql-server-2014.md).  
@@ -36,9 +36,9 @@ manager: "jhubbard"
   
 -   For managed code executing asynchronously (for example, through `UNSAFE` assemblies creating threads and running code asynchronously), in-process data access is never allowed. This is true whether or not there is impersonation.  
   
- When code is running in an impersonated context that is different from [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], it cannot perform in-process data access calls; it should undo the impersonation context before making in-process data access calls. When in-process data access is made from managed code, the original execution context of the [!INCLUDE[tsql](../../../includes/tsql-md.md)] entry point into the managed code is always used for authorization.  
+ When code is running in an impersonated context that is different from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], it cannot perform in-process data access calls; it should undo the impersonation context before making in-process data access calls. When in-process data access is made from managed code, the original execution context of the [!INCLUDE[tsql](../../includes/tsql-md.md)] entry point into the managed code is always used for authorization.  
   
- Both `EXTERNAL_ACCESS` assemblies and `UNSAFE` assemblies access operating system resources with the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service account, unless they voluntarily impersonate the current security context as previously described. Because of this, the authors of `EXTERNAL_ACCESS` assemblies require a higher level of trust than those of `SAFE` assemblies, which is specified by the `EXTERNAL ACCESS` login-level permission. Only logins who are trusted to run code under the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service account should be granted the `EXTERNAL ACCESS` permission.  
+ Both `EXTERNAL_ACCESS` assemblies and `UNSAFE` assemblies access operating system resources with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account, unless they voluntarily impersonate the current security context as previously described. Because of this, the authors of `EXTERNAL_ACCESS` assemblies require a higher level of trust than those of `SAFE` assemblies, which is specified by the `EXTERNAL ACCESS` login-level permission. Only logins who are trusted to run code under the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account should be granted the `EXTERNAL ACCESS` permission.  
   
 ## See Also  
  [CLR Integration Security](../../../2014/database-engine/dev-guide/clr-integration-security.md)   

@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 caps.latest.revision: 15
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Create a Server Audit and Database Audit Specification
-  This topic describes how to create a server audit and database audit specification in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  This topic describes how to create a server audit and database audit specification in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
- *Auditing* an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database involves tracking and logging events that occur on the system. The *SQL Server Audit* object collects a single instance of server- or database-level actions and groups of actions to monitor. The audit is at the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance level. You can have multiple audits per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. The *Database-Level Audit Specification* object belongs to an audit. You can create one database audit specification per SQL Server database per audit. For more information, see [SQL Server Audit &#40;Database Engine&#41;](../../2014/database-engine/sql-server-audit-database-engine.md).  
+ *Auditing* an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] or a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database involves tracking and logging events that occur on the system. The *SQL Server Audit* object collects a single instance of server- or database-level actions and groups of actions to monitor. The audit is at the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance level. You can have multiple audits per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance. The *Database-Level Audit Specification* object belongs to an audit. You can create one database audit specification per SQL Server database per audit. For more information, see [SQL Server Audit &#40;Database Engine&#41;](../../2014/database-engine/sql-server-audit-database-engine.md).  
   
  **In This Topic**  
   
@@ -106,7 +106,7 @@ manager: "jhubbard"
   
 #### To create a server audit  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -127,7 +127,7 @@ manager: "jhubbard"
   
 #### To create a database-level audit specification  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -146,6 +146,6 @@ manager: "jhubbard"
   
     ```  
   
- For more information, see [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../Topic/CREATE%20SERVER%20AUDIT%20\(Transact-SQL\).md) and [CREATE DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../Topic/CREATE%20DATABASE%20AUDIT%20SPECIFICATION%20\(Transact-SQL\).md).  
+ For more information, see [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](~/t-sql/statements/create-server-audit-transact-sql.md) and [CREATE DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](~/t-sql/statements/create-database-audit-specification-transact-sql.md).  
   
   

@@ -22,7 +22,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # OLE DB for OLAP Schema Rowsets
-  The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) provider supports the following OLE DB for OLAP schema rowsets.  
+  The [!INCLUDE[msCoName](../../includes/msconame-md.md)] XML for Analysis (XMLA) provider supports the following OLE DB for OLAP schema rowsets.  
   
 > [!NOTE]  
 >  To check whether a particular data source provider supports a rowset, use the `DISCOVER_ENUMERATIONS` rowset with the [Discover](../../../2014/analysis-services/dev-guide/discover-method-xmla.md) method.  
@@ -50,7 +50,7 @@ manager: "mblythe"
 |[MDSCHEMA_PROPERTIES Rowset](../../../2014/analysis-services/dev-guide/mdschema-properties-rowset.md)|Describes the properties of members within in a database.|  
 |[MDSCHEMA_SETS Rowset](../../../2014/analysis-services/dev-guide/mdschema-sets-rowset.md)|Describes any sets that are currently defined in a database, including session-scoped sets.|  
   
- <sup>1</sup> All the schema rowsets listed here are supported by the MSOLAP data source provider for the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XMLA provider.  
+ <sup>1</sup> All the schema rowsets listed here are supported by the MSOLAP data source provider for the [!INCLUDE[msCoName](../../includes/msconame-md.md)] XMLA provider.  
   
 ## See Also  
  [DISCOVER_ENUMERATORS Rowset](../../../2014/analysis-services/dev-guide/discover-enumerators-rowset.md)   

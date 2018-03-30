@@ -21,11 +21,11 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Using Variables and Parameters (MDX)
-  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], you can parameterize a Multidimensional Expressions (MDX) statement. A parameterized statement lets you create generic statements that can be customized at runtime.  
+  In [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], you can parameterize a Multidimensional Expressions (MDX) statement. A parameterized statement lets you create generic statements that can be customized at runtime.  
   
  In creating a parameterized statement, you identify the parameter name by prefixing the name with the at sign (@). For example, @Year would be a valid parameter name  
   
- MDX supports only parameters for literal or scalar values. To create a parameter that references a member, set, or tuple, you would have to use a function such as [StrToMember](../Topic/StrToMember%20\(MDX\).md) or [StrToSet](../Topic/StrToSet%20\(MDX\).md).  
+ MDX supports only parameters for literal or scalar values. To create a parameter that references a member, set, or tuple, you would have to use a function such as [StrToMember](~/mdx/strtomember-mdx.md) or [StrToSet](~/mdx/strtoset-mdx.md).  
   
  In the following XML for Analysis (XMLA) example, the @CountryName parameter will contain the country for which customer data is retrieved:  
   

@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: f7d97977-0e2b-40c6-a4ce-2d5bc32a91a7
 caps.latest.revision: 21
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Configure Distribution Wizard

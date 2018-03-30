@@ -18,11 +18,11 @@ helpviewer_keywords:
 ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
 caps.latest.revision: 32
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Create Clustered Indexes
-  You can create clustered indexes on tables in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. With few exceptions, every table should have a clustered index. Besides improving query performance, a clustered index can be rebuilt or reorganized on demand to control table fragmentation. A clustered index can also be created on a view. (Clustered indexes are defined in the topic [Clustered and Nonclustered Indexes Described](../../2014/database-engine/clustered-and-nonclustered-indexes-described.md).)  
+  You can create clustered indexes on tables in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)]. With few exceptions, every table should have a clustered index. Besides improving query performance, a clustered index can be rebuilt or reorganized on demand to control table fragmentation. A clustered index can also be created on a view. (Clustered indexes are defined in the topic [Clustered and Nonclustered Indexes Described](../../2014/database-engine/clustered-and-nonclustered-indexes-described.md).)  
   
  **In This Topic**  
   
@@ -65,7 +65,7 @@ manager: "jhubbard"
   
      The preferred way to build indexes on large tables is to start with the clustered index and then build any nonclustered indexes. Consider setting the ONLINE option to ON when you create indexes on existing tables. When set to ON, long-term table locks are not held. This enables queries or updates to the underlying table to continue. For more information, see [Perform Index Operations Online](../../2014/database-engine/perform-index-operations-online.md).  
   
--   The index key of a clustered index cannot contain `varchar` columns that have existing data in the ROW_OVERFLOW_DATA allocation unit. If a clustered index is created on a `varchar` column and the existing data is in the IN_ROW_DATA allocation unit, subsequent insert or update actions on the column that would push the data off-row will fail. To obtain information about tables that might contain row-overflow data, use the [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../Topic/sys.dm_db_index_physical_stats%20\(Transact-SQL\).md) dynamic management function.  
+-   The index key of a clustered index cannot contain `varchar` columns that have existing data in the ROW_OVERFLOW_DATA allocation unit. If a clustered index is created on a `varchar` column and the existing data is in the IN_ROW_DATA allocation unit, subsequent insert or update actions on the column that would push the data off-row will fail. To obtain information about tables that might contain row-overflow data, use the [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) dynamic management function.  
   
 ###  <a name="Security"></a> Security  
   
@@ -116,7 +116,7 @@ manager: "jhubbard"
   
 #### To create a clustered index  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -138,7 +138,7 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [CREATE INDEX &#40;Transact-SQL&#41;](../Topic/CREATE%20INDEX%20\(Transact-SQL\).md).  
+ For more information, see [CREATE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md).  
   
 ## See Also  
  [Create Primary Keys](../../2014/database-engine/create-primary-keys.md)   

@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 caps.latest.revision: 19
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # SQL Server Audit Records
-  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit feature enables you to audit server-level and database-level groups of events and events. For more information, see [SQL Server Audit &#40;Database Engine&#41;](../../2014/database-engine/sql-server-audit-database-engine.md). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Audit feature enables you to audit server-level and database-level groups of events and events. For more information, see [SQL Server Audit &#40;Database Engine&#41;](../../2014/database-engine/sql-server-audit-database-engine.md). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  Audits consist of zero or more audit action items, which are recorded to an audit *target*. The audit target can be a binary file, the Windows Application event log or the Windows Security event log. The records sent to the target can contain the elements described in the following table.  
   
@@ -54,11 +54,11 @@ manager: "jhubbard"
 ## Remarks  
  Some actions do not populate a column's value because it might be non-applicable to the action.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit stores 4000 characters of data for character fields in an audit record. When the **additional_information** and **statement** values returned from an auditable action return more than 4000 characters, the **sequence_no** column is used to write multiple records into the audit report for a single audit action to record this data. The process is as follows:  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Audit stores 4000 characters of data for character fields in an audit record. When the **additional_information** and **statement** values returned from an auditable action return more than 4000 characters, the **sequence_no** column is used to write multiple records into the audit report for a single audit action to record this data. The process is as follows:  
   
 -   The **statement** column is divided into 4000 characters.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit writes as the first row for the audit record with the partial data. All the other fields are duplicated in each row.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Audit writes as the first row for the audit record with the partial data. All the other fields are duplicated in each row.  
   
 -   The **sequence_no** value is incremented.  
   
@@ -67,44 +67,44 @@ manager: "jhubbard"
  You can connect the data by reading the rows sequentially using the **sequence_no** value, and the **event_Time**, **action_id** and **session_id** columns to identify the action.  
   
 ## Related Content  
- [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../Topic/CREATE%20SERVER%20AUDIT%20\(Transact-SQL\).md)  
+ [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](~/t-sql/statements/create-server-audit-transact-sql.md)  
   
- [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](../Topic/ALTER%20SERVER%20AUDIT%20%20\(Transact-SQL\).md)  
+ [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](~/t-sql/statements/alter-server-audit-specification-transact-sql.md)  
   
- [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](../Topic/DROP%20SERVER%20AUDIT%20%20\(Transact-SQL\).md)  
+ [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](~/t-sql/statements/drop-server-audit-transact-sql.md)  
   
- [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../Topic/CREATE%20SERVER%20AUDIT%20SPECIFICATION%20\(Transact-SQL\).md)  
+ [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](~/t-sql/statements/create-server-audit-specification-transact-sql.md)  
   
- [ALTER SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../Topic/ALTER%20SERVER%20AUDIT%20SPECIFICATION%20\(Transact-SQL\).md)  
+ [ALTER SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](~/t-sql/statements/alter-server-audit-transact-sql.md)  
   
- [DROP SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../Topic/DROP%20SERVER%20AUDIT%20SPECIFICATION%20\(Transact-SQL\).md)  
+ [DROP SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](~/t-sql/statements/drop-server-audit-specification-transact-sql.md)  
   
- [CREATE DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../Topic/CREATE%20DATABASE%20AUDIT%20SPECIFICATION%20\(Transact-SQL\).md)  
+ [CREATE DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](~/t-sql/statements/create-database-audit-specification-transact-sql.md)  
   
- [ALTER DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20AUDIT%20SPECIFICATION%20\(Transact-SQL\).md)  
+ [ALTER DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-audit-specification-transact-sql.md)  
   
- [DROP DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../Topic/DROP%20DATABASE%20AUDIT%20SPECIFICATION%20\(Transact-SQL\).md)  
+ [DROP DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](~/t-sql/statements/drop-database-encryption-key-transact-sql.md)  
   
- [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../Topic/ALTER%20AUTHORIZATION%20\(Transact-SQL\).md)  
+ [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](~/t-sql/statements/alter-authorization-transact-sql.md)  
   
- [sys.fn_get_audit_file &#40;Transact-SQL&#41;](../Topic/sys.fn_get_audit_file%20\(Transact-SQL\).md)  
+ [sys.fn_get_audit_file &#40;Transact-SQL&#41;](~/relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)  
   
- [sys.server_audits &#40;Transact-SQL&#41;](../Topic/sys.server_audits%20\(Transact-SQL\).md)  
+ [sys.server_audits &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)  
   
- [sys.server_file_audits &#40;Transact-SQL&#41;](../Topic/sys.server_file_audits%20\(Transact-SQL\).md)  
+ [sys.server_file_audits &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)  
   
- [sys.server_audit_specifications &#40;Transact-SQL&#41;](../Topic/sys.server_audit_specifications%20\(Transact-SQL\).md)  
+ [sys.server_audit_specifications &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)  
   
- [sys.server_audit_specification_details &#40;Transact-SQL&#41;](../Topic/sys.server_audit_specification_details%20\(Transact-SQL\).md)  
+ [sys.server_audit_specification_details &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql.md)  
   
- [sys.database_audit_specifications &#40;Transact-SQL&#41;](../Topic/sys.database_audit_specifications%20\(Transact-SQL\).md)  
+ [sys.database_audit_specifications &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)  
   
- [sys.database_audit_specification_details &#40;Transact-SQL&#41;](../Topic/sys.database_audit_specification_details%20\(Transact-SQL\).md)  
+ [sys.database_audit_specification_details &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)  
   
- [sys.dm_server_audit_status &#40;Transact-SQL&#41;](../Topic/sys.dm_server_audit_status%20\(Transact-SQL\).md)  
+ [sys.dm_server_audit_status &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)  
   
- [sys.dm_audit_actions &#40;Transact-SQL&#41;](../Topic/sys.dm_audit_actions%20\(Transact-SQL\).md)  
+ [sys.dm_audit_actions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)  
   
- [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](../Topic/sys.dm_audit_class_type_map%20\(Transact-SQL\).md)  
+ [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)  
   
   

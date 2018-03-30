@@ -15,28 +15,28 @@ helpviewer_keywords:
 ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 caps.latest.revision: 10
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Configure IIS 7 for Web Synchronization
-  The procedures in this topic will guide you through the process of manually configuring [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Internet Information Services (IIS) version 7 and higher for use with Web synchronization for merge replication. 
+  The procedures in this topic will guide you through the process of manually configuring [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) version 7 and higher for use with Web synchronization for merge replication. 
   
  Configuring IIS 7 is the first of three steps needed to enable Web synchronization.  
   
  For an overview of the entire configuration process, see [Configure Web Synchronization](../../../2014/relational-databases/replication/configure-web-synchronization.md).  
   
 > [!IMPORTANT]  
->  Make sure that your application uses only [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] or later versions, and that earlier versions of the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] are not installed on the IIS server. Earlier versions of the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] can cause errors, such as: "The format of a message during Web synchronization was invalid. Ensure that replication components are properly configured at the Web server."  
+>  Make sure that your application uses only [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] or later versions, and that earlier versions of the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] are not installed on the IIS server. Earlier versions of the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] can cause errors, such as: "The format of a message during Web synchronization was invalid. Ensure that replication components are properly configured at the Web server."  
   
  To use Web synchronization, you must configure IIS 7 by completing the following steps. Each step is described in detail in this topic.  
   
-1.  Install and configure the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Listener on the computer that is running IIS.  
+1.  Install and configure the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener on the computer that is running IIS.  
   
 2.  Configure Secure Sockets Layer (SSL). SSL is required for communication between IIS and all subscribers.  
   
 3.  Configure IIS authentication.  
   
-4.  Configure an account and set permissions for the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Listener.  
+4.  Configure an account and set permissions for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener.  
   
 ## Installing the SQL Server Replication Listener  
 
@@ -48,7 +48,7 @@ Web synchronization is supported on IIS, beginning with version 5.0. The Configu
 
 2.  Create a new file directory for replisapi.dll on the computer that is running IIS. You can create the directory wherever you want, but we recommend that you create the directory under the \<*drive*>:\Inetpub directory. For example, create the directory \<*drive*>:\Inetpub\SQLReplication\\.  
   
-3.  Copy replisapi.dll from the directory [!INCLUDE[ssInstallPathVar](../../../includes/ssinstallpathvar-md.md)]com\ to the file directory that you created in step 1.  
+3.  Copy replisapi.dll from the directory [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]com\ to the file directory that you created in step 1.  
   
 4.  Register replisapi.dll:  
   
@@ -162,9 +162,9 @@ Web synchronization is supported on IIS, beginning with version 5.0. The Configu
 4.  If you are prompted to **Connect to localhost**, enter a user name and password to proceed. You should see the default page for the Web site.  
   
 ## Setting Permissions for the SQL Server Replication Listener  
- When a subscriber computer connects to the computer running IIS, the subscriber is authenticated by using the type of authentication specified when you configured IIS. After IIS authenticates the subscriber, IIS checks whether the subscriber is authorized to invoke [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] replication. You control the users that can invoke [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] replication by setting permissions for replisapi.dll. Properly configuring permissions is necessary to prevent unauthorized access to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] replication.  
+ When a subscriber computer connects to the computer running IIS, the subscriber is authenticated by using the type of authentication specified when you configured IIS. After IIS authenticates the subscriber, IIS checks whether the subscriber is authorized to invoke [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] replication. You control the users that can invoke [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] replication by setting permissions for replisapi.dll. Properly configuring permissions is necessary to prevent unauthorized access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] replication.  
   
- To configure the minimum permissions for the account under which the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Listener runs, complete the following procedure. The steps in the following procedure apply to [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows Server 2008 running IIS 7.0.  
+ To configure the minimum permissions for the account under which the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener runs, complete the following procedure. The steps in the following procedure apply to [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Server 2008 running IIS 7.0.  
   
  In addition to performing the following steps, make sure that the required logins are in the publication access list (PAL). For more information about the PAL, see [Secure the Publisher](../../../2014/relational-databases/replication/secure-the-publisher.md).  
   
@@ -270,7 +270,7 @@ Web synchronization is supported on IIS, beginning with version 5.0. The Configu
   
 1.  Make sure that local area network (LAN) settings at the Subscriber are correct:  
   
-    1.  In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Internet Explorer, on the **Tools** menu, click **Internet Options**.  
+    1.  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer, on the **Tools** menu, click **Internet Options**.  
   
     2.  On the **Connections** tab, click **LAN Settings**.  
   

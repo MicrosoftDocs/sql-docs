@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: ee84dd74-0eb3-4d29-807a-8b317c2fde96
 caps.latest.revision: 9
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # EditionID Property (WMI MSReportServer_Instance)
@@ -37,7 +37,7 @@ public uint EditionID;
  [MSReportServer_ConfigurationSetting Class](../../2014/reporting-services/msreportserver-configurationsetting-class.md)  
   
 ## Requirements  
- **Namespace:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspc](../includes/ssrswminmspc-md.md)]  
   
 ## See Also  
  [MSReportServer_Instance Members](../../2014/reporting-services/msreportserver-instance-members.md)  

@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Dormant SQL Server 6.5 logins cannot be upgraded
-  Upgrade Advisor detected a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login whose password cannot be directly upgraded to [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+  Upgrade Advisor detected a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login whose password cannot be directly upgraded to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  To enable this login, you must reset its password. You can reset the password by using ALTER LOGIN.  
   
@@ -41,6 +41,6 @@ GO
   
 ## See Also  
  [Database Engine Upgrade Issues](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;new&#93;](../Topic/SQL%20Server%202014%20Upgrade%20Advisor%20[new].md)  
+ [SQL Server 2014 Upgrade Advisor &#91;new&#93;](~/2014/sql-server/install/sql-server-2014-upgrade-advisor.md)  
   
   

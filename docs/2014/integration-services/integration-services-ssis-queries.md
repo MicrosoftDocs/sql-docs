@@ -23,7 +23,7 @@ manager: "jhubbard"
 # Integration Services (SSIS) Queries
   The Execute SQL task, the OLE DB source, the OLE DB destination, and the Lookup transformation can use SQL queries. In the Execute SQL task, the SQL statements can create, update, and delete database objects and data; run stored procedures; and perform SELECT statements. In the OLE DB source and the Lookup transformation, the SQL statements are typically SELECT statements or EXEC statements. The latter most frequently run stored procedures that return result sets.  
   
- A query can be parsed to establish whether it is valid. When parsing a query that uses a connection to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the query is parsed, executed, and the execution outcome (success or failure) is assigned to the parsing outcome. If the query uses a connection to a data other than [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the statement is parsed only.  
+ A query can be parsed to establish whether it is valid. When parsing a query that uses a connection to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the query is parsed, executed, and the execution outcome (success or failure) is assigned to the parsing outcome. If the query uses a connection to a data other than [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the statement is parsed only.  
   
  The SQL statement can be defined either by entering it directly in the designer, or by specifying a file connection or a variable that contains the statement.  
   
@@ -53,7 +53,7 @@ manager: "jhubbard"
  For more information, see [Query Builder](../../2014/integration-services/query-builder.md).  
   
 ## SQL in Files  
- The SQL statement for the Execute SQL task can also reside in a separate file. For example, you can write queries using tools such as the Query Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], save the query to a file, and then read the query from the file when running a package. The file can contain only the SQL statements to run and comments. To use a SQL statement stored in a file, you must provide a file connection that specifies the file name and location. For more information, see [File Connection Manager](../../2014/integration-services/file-connection-manager.md).  
+ The SQL statement for the Execute SQL task can also reside in a separate file. For example, you can write queries using tools such as the Query Editor in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], save the query to a file, and then read the query from the file when running a package. The file can contain only the SQL statements to run and comments. To use a SQL statement stored in a file, you must provide a file connection that specifies the file name and location. For more information, see [File Connection Manager](../../2014/integration-services/file-connection-manager.md).  
   
 ## SQL in Variables  
  If the source of the SQL statement in the Execute SQL task is a variable, you provide the name of the variable that contains the query. The Value property of the variable contains the query text. You set the ValueType property of the variable to a string data type and then type or copy the SQL statement into the Value property. For more information, see [Integration Services &#40;SSIS&#41; Variables](../../2014/integration-services/integration-services-ssis-variables.md) and [Use Variables in Packages](../../2014/integration-services/use-variables-in-packages.md).  

@@ -20,11 +20,11 @@ helpviewer_keywords:
 ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
 caps.latest.revision: 42
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "jhubbard"
 ---
 # Verify a Reporting Services Installation
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] report servers can be installed in one of two modes, Native or SharePoint. The steps you should follow for verifying the installation depend on the report server mode.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report servers can be installed in one of two modes, Native or SharePoint. The steps you should follow for verifying the installation depend on the report server mode.  
   
  This topic contains the following information:  
   
@@ -40,11 +40,11 @@ manager: "jhubbard"
   
 2.  Verify the **SQL Server Reporting Services Service** is installed and in the **Running** state.  
   
-     If you do not see the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] service in the list, verify the service is installed. For more information, see the “Install and start the Reporting Services SharePoint Service” section of [Install Reporting Services SharePoint Mode for SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md).  
+     If you do not see the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service in the list, verify the service is installed. For more information, see the “Install and start the Reporting Services SharePoint Service” section of [Install Reporting Services SharePoint Mode for SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md).  
   
 #### To verify the Service Application  
   
-1.  To verify from Central Administration you have at least one [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] service application, click **Manage Service Applications** in the **Application Management** group.  
+1.  To verify from Central Administration you have at least one [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application, click **Manage Service Applications** in the **Application Management** group.  
   
 2.  Verify there is a service application of type **SQL Server Reporting Services Service Application** and a corresponding application proxy.  
   
@@ -60,7 +60,7 @@ manager: "jhubbard"
   
 #### To Verify Reporting Server content types  
   
-1.  To verify or add [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] report server content types, see [Add Report Server Content Types to a Library &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md).  
+1.  To verify or add [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server content types, see [Add Report Server Content Types to a Library &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md).  
   
 #### To verify you can launch Report Builder  
   
@@ -70,7 +70,7 @@ manager: "jhubbard"
   
 #### Create a basic report  
   
-1.  In a SharePoint document library, create a basic [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] report that only contains a text box, for example a title. The report does not contain any data sources or datasets. The goal is to verify you can open Report Builder and a basic report will preview.  
+1.  In a SharePoint document library, create a basic [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report that only contains a text box, for example a title. The report does not contain any data sources or datasets. The goal is to verify you can open Report Builder and a basic report will preview.  
   
 2.  Save the report to the document library and the run the report from the library. For more information on creating reports with Report Builder, see [Start Report Builder (Report Builder)](http://technet.microsoft.com/library/ms159221.aspx).  
   
@@ -78,14 +78,14 @@ manager: "jhubbard"
   
 1.  Complete one of the Reporting Services tutorials. For more information, see [Reporting Services Tutorials &#40;SSRS&#41;](../../../2014/tutorials/reporting-services-tutorials-ssrs.md).  
   
-2.  Download the Adventure works sample database and the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sample reports from CodePlex. For more information, see [AdventureWorks Report Samples](https://msftrsprodsamples.codeplex.com/wikipage?title=SS2012!AdventureWorks2012%20Report%20Samples&referringTitle=Home).  
+2.  Download the Adventure works sample database and the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sample reports from CodePlex. For more information, see [AdventureWorks Report Samples](https://msftrsprodsamples.codeplex.com/wikipage?title=SS2012!AdventureWorks2012%20Report%20Samples&referringTitle=Home).  
   
 ##  <a name="bkmk_nativemode"></a> Verify a Native Mode Installation  
  When you install a Native mode report server using the default configuration, Setup installs and deploys the server. You can verify whether Setup deployed the report server by performing a few simple tests. You must be a local administrator to perform these steps. To enable other users to perform testing, you must configure report server access for those users.  
   
 #### To verify that the report server is installed and running  
   
-1.  Run the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Configuration tool and connect to the report server instance you just installed. The Web Service URL page includes a link to the Report Server Web service. Click the link to verify you can access the server. If the report server database is not configured, do that first before clicking the link.  
+1.  Run the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool and connect to the report server instance you just installed. The Web Service URL page includes a link to the Report Server Web service. Click the link to verify you can access the server. If the report server database is not configured, do that first before clicking the link.  
   
 2.  Open the Services console applications and verify that the Report Server service is running. To view the status of the Report Server service, click **Start**, point to **Control Panel**, double-click **Administrative Tools**, and then double-click **Services**. When the list of services appears, scroll to **Report Server (MSSQLSERVER)**. The status should be **Started**.  
   
@@ -105,7 +105,7 @@ manager: "jhubbard"
   
 #### To verify that Report Designer is installed and running  
   
-1.  Open [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], and create a new project based on a Report Server project type. For more information on using the Report Server Project Wizard, see [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](../../../2014/reporting-services/reporting-services-in-sql-server-data-tools-ssdt.md) in SQL Server Books Online.  
+1.  Open [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], and create a new project based on a Report Server project type. For more information on using the Report Server Project Wizard, see [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](../../../2014/reporting-services/reporting-services-in-sql-server-data-tools-ssdt.md) in SQL Server Books Online.  
   
 2.  If you installed report samples, open the sample report project files and publish the reports to a report server.  
   

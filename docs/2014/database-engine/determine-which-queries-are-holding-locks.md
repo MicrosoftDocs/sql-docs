@@ -28,9 +28,9 @@ manager: "jhubbard"
   
  You query sys.dm_tran_locks and the results show that there are many locks outstanding, but the sessions that were granted the locks do not have any active requests showing in sys.dm_exec_requests.  
   
- This example demonstrates a method of determining what query took the lock, the plan of the query, and the [!INCLUDE[tsql](../../includes/tsql-md.md)] stack at the time the lock was taken. This example also illustrates how the pairing target is used in an Extended Events session.  
+ This example demonstrates a method of determining what query took the lock, the plan of the query, and the [!INCLUDE[tsql](../includes/tsql-md.md)] stack at the time the lock was taken. This example also illustrates how the pairing target is used in an Extended Events session.  
   
- Accomplishing this task involves using Query Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to carry out the following procedure.  
+ Accomplishing this task involves using Query Editor in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to carry out the following procedure.  
   
 > [!NOTE]  
 >  This example uses the AdventureWorks database.  
@@ -150,10 +150,10 @@ manager: "jhubbard"
     ```  
   
 ## See Also  
- [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../Topic/CREATE%20EVENT%20SESSION%20\(Transact-SQL\).md)   
- [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../Topic/ALTER%20EVENT%20SESSION%20\(Transact-SQL\).md)   
- [DROP EVENT SESSION &#40;Transact-SQL&#41;](../Topic/DROP%20EVENT%20SESSION%20\(Transact-SQL\).md)   
- [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](../Topic/sys.dm_xe_session_targets%20\(Transact-SQL\).md)   
- [sys.dm_xe_sessions &#40;Transact-SQL&#41;](../Topic/sys.dm_xe_sessions%20\(Transact-SQL\).md)  
+ [CREATE EVENT SESSION &#40;Transact-SQL&#41;](~/t-sql/statements/create-event-session-transact-sql.md)   
+ [ALTER EVENT SESSION &#40;Transact-SQL&#41;](~/t-sql/statements/alter-event-session-transact-sql.md)   
+ [DROP EVENT SESSION &#40;Transact-SQL&#41;](~/t-sql/statements/drop-event-session-transact-sql.md)   
+ [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md)   
+ [sys.dm_xe_sessions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-xe-sessions-transact-sql.md)  
   
   

@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: d9551df1-5bb4-4c0b-880a-5bb049834884
 caps.latest.revision: 10
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Columns with a Name Specified as a Wildcard Character

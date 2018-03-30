@@ -41,7 +41,7 @@ manager: "mblythe"
   
  You apply time intelligence to cubes that have a time dimension. (A time dimension is a dimension whose `Type` property is set to `Time`). Additionally, the time attributes of that dimension must also have the appropriate setting (such as, Years or Months) for their `Type` property. The `Type` property of both the dimension and its attributes will be set correctly if you use the Dimension Wizard to create the time dimension.  
   
- To add time intelligence to a cube, you use the Business Intelligence Wizard, and select the **Define time intelligence** option on the **Choose Enhancement** page. This wizard then guides you through the steps of selecting a hierarchy to which you are adding time intelligence and specifying which members in the hierarchy will have time intelligence applied to them. On the last page of the wizard, you can see the changes that will be made to the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database to add the selected time intelligence.  
+ To add time intelligence to a cube, you use the Business Intelligence Wizard, and select the **Define time intelligence** option on the **Choose Enhancement** page. This wizard then guides you through the steps of selecting a hierarchy to which you are adding time intelligence and specifying which members in the hierarchy will have time intelligence applied to them. On the last page of the wizard, you can see the changes that will be made to the [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database to add the selected time intelligence.  
   
 ## Selecting a Time Hierarchy  
  On the **Choose Target Hierarchy and Calculations** page, you select the time hierarchy to which the time enhancement applies. You can apply the time enhancement to only one time hierarchy every time that you run the Business Intelligence Wizard. If you want to apply the enhancement to more than one time hierarchy, you run the wizard again.  
@@ -62,7 +62,7 @@ manager: "mblythe"
 -   **Measures** Instead of specifying an account dimension, you can specify the measures to which the time views apply. In this case, select the views to which selected time calculations apply. For example, assets and liabilities are year-to-date data; therefore, you do not apply a Year-to-Date calculation to assets or liabilities measures.  
   
 ## Viewing the Time Intelligence Enhancement  
- On the final page of the Business Intelligence Wizard, you can view the changes that will be made to the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database. For a time intelligence enhancement, the wizard will change the selected time dimension, associated data source view, and associated cube as described in the following table.  
+ On the final page of the Business Intelligence Wizard, you can view the changes that will be made to the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database. For a time intelligence enhancement, the wizard will change the selected time dimension, associated data source view, and associated cube as described in the following table.  
   
 |Object|Change|  
 |------------|------------|  

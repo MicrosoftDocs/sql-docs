@@ -12,11 +12,11 @@ ms.topic: "article"
 ms.assetid: aebc5f3d-97d5-4d54-b525-753fed073a9a
 caps.latest.revision: 5
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Alternative Ways to Get a Data Connection (Report Builder)
-  A data connection contains the information to connect to an external data source such as a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. Usually, you get the connection information and the type of credentials to use from the data source owner.  
+  A data connection contains the information to connect to an external data source such as a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database. Usually, you get the connection information and the type of credentials to use from the data source owner.  
   
  To specify a data connection, you can use a shared data source from the report server or create an embedded data source that is used only in a specific report.  
   
@@ -33,13 +33,13 @@ manager: "mblythe"
   
 2.  From the list of data sources, select a data source that you have permission to access.  
   
-3.  To verify that you can connect to the data source, click **Test Connection**. The message "Connection created successfully" appears. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  To verify that you can connect to the data source, click **Test Connection**. The message "Connection created successfully" appears. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 4.  Click **Next**.  
   
      If necessary, enter your credentials. To save the credentials locally, select **Save password with connection**. If you not select this option, you will be prompted for credentials every time that you run the report  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 #### To specify a data connection by browsing to a shared data source on a report server  
   
@@ -61,13 +61,13 @@ manager: "mblythe"
   
 6.  To verify that you can connect to the data source, click **Test Connection**.  
   
-     The message "Connection created successfully" appears. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+     The message "Connection created successfully" appears. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 7.  Click **Next**.  
   
 8.  If you are prompted for a user name and password, enter your credentials. To save the credentials locally, select **Save password with connection**.  
   
-9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## See Also  
  [Add Data to a Report &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-data-to-a-report-report-builder-and-ssrs.md)   

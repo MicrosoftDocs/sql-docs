@@ -26,7 +26,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Performing Batch Operations (XMLA)
-  You can use the [Batch](../../../2014/analysis-services/dev-guide/batch-element-xmla.md) command in XML for Analysis (XMLA) to run multiple XMLA commands using a single XMLA [Execute](../../../2014/analysis-services/dev-guide/execute-method-xmla.md) method. You can run multiple commands contained in the `Batch` command either as a single transaction or in individual transactions for each command, in serial or in parallel. You can also specify out-of-line bindings and other properties in the `Batch` command for processing multiple [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objects.  
+  You can use the [Batch](../../../2014/analysis-services/dev-guide/batch-element-xmla.md) command in XML for Analysis (XMLA) to run multiple XMLA commands using a single XMLA [Execute](../../../2014/analysis-services/dev-guide/execute-method-xmla.md) method. You can run multiple commands contained in the `Batch` command either as a single transaction or in individual transactions for each command, in serial or in parallel. You can also specify out-of-line bindings and other properties in the `Batch` command for processing multiple [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects.  
   
 ## Running Transactional and Nontransactional Batch Commands  
  The `Batch` command executes commands in one of two ways:  
@@ -34,7 +34,7 @@ manager: "mblythe"
  **Transactional**  
  If the `Transaction` attribute of the `Batch` command is set to true, the `Batch` command run commands all of the commands contained by the `Batch` command in a single transaction—a *transactional* batch.  
   
- If any command fails in a transactional batch, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] rolls back any command in the `Batch` command that ran before the command that failed and the `Batch` command immediately ends. Any commands in the `Batch` command that have not yet run are not executed. After the `Batch` command ends, the `Batch` command reports any errors that occurred for the failed command.  
+ If any command fails in a transactional batch, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] rolls back any command in the `Batch` command that ran before the command that failed and the `Batch` command immediately ends. Any commands in the `Batch` command that have not yet run are not executed. After the `Batch` command ends, the `Batch` command reports any errors that occurred for the failed command.  
   
  **Nontransactional**  
  If the `Transaction` attribute is set to false, the `Batch` command runs each command contained by the `Batch` command in a separate transaction—a *nontransactional* batch. If any command fails in a nontransactional batch, the `Batch` command continues to run commands after the command which failed. After the `Batch` command tries to run all the commands that the `Batch` command contains, the `Batch` command reports any errors that occurred.  
@@ -56,15 +56,15 @@ manager: "mblythe"
 ## Using Serial and Parallel Execution  
  You can use the `Batch` command to run included commands in serial or in parallel. When the commands are run in serial, the next command included in the `Batch` command cannot start until the currently running command in the `Batch` command is completed. When the commands are run in parallel, multiple commands can be executed simultaneously by the `Batch` command.  
   
- To run commands in parallel, you add the commands to be run in parallel to the [Parallel](../../../2014/analysis-services/dev-guide/parallel-element-xmla.md) property of the `Batch` command. Currently, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] can run only contiguous, sequential [Process](../../../2014/analysis-services/dev-guide/process-element-xmla.md) commands in parallel. Any other XMLA command, such as [Create](../../../2014/analysis-services/dev-guide/create-element-xmla.md) or [Alter](../../../2014/analysis-services/dev-guide/alter-element-xmla.md), included in the `Parallel` property is run serially.  
+ To run commands in parallel, you add the commands to be run in parallel to the [Parallel](../../../2014/analysis-services/dev-guide/parallel-element-xmla.md) property of the `Batch` command. Currently, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] can run only contiguous, sequential [Process](../../../2014/analysis-services/dev-guide/process-element-xmla.md) commands in parallel. Any other XMLA command, such as [Create](../../../2014/analysis-services/dev-guide/create-element-xmla.md) or [Alter](../../../2014/analysis-services/dev-guide/alter-element-xmla.md), included in the `Parallel` property is run serially.  
   
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] tries to run all `Process` commands included in the `Parallel` property in parallel, but cannot guarantee that all included `Process` commands can be run in parallel. The instance analyzes each `Process` command and, if the instance determines that the command cannot be run in parallel, the `Process` command is run in serial.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tries to run all `Process` commands included in the `Parallel` property in parallel, but cannot guarantee that all included `Process` commands can be run in parallel. The instance analyzes each `Process` command and, if the instance determines that the command cannot be run in parallel, the `Process` command is run in serial.  
   
 > [!NOTE]  
->  To run commands in parallel, the `Transaction` attribute of the `Batch` command must be set to true because [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] supports only one active transaction per connection and nontransactional batches run each command in a separate transaction. If you include the `Parallel` property in a nontransactional batch, an error occurs.  
+>  To run commands in parallel, the `Transaction` attribute of the `Batch` command must be set to true because [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supports only one active transaction per connection and nontransactional batches run each command in a separate transaction. If you include the `Parallel` property in a nontransactional batch, an error occurs.  
   
 ### Limiting Parallel Execution  
- An [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance tries to run as many `Process` commands in parallel as possible, up to the limits of the computer on which the instance runs. You can limit the number of concurrently executing `Process` commands by setting the `maxParallel` attribute of the `Parallel` property to a value indicating the maximum number of `Process` commands that can be run in parallel.  
+ An [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance tries to run as many `Process` commands in parallel as possible, up to the limits of the computer on which the instance runs. You can limit the number of concurrently executing `Process` commands by setting the `maxParallel` attribute of the `Parallel` property to a value indicating the maximum number of `Process` commands that can be run in parallel.  
   
  For example, a `Parallel` property contains the following commands in the sequence listed:  
   
@@ -103,7 +103,7 @@ manager: "mblythe"
 -   Commands 8 and 9 run in parallel after command 7 is completed.  
   
 ## Using the Batch Command to Process Objects  
- The `Batch` command contains several optional properties and attributes specifically included to support processing multiple [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] projects:  
+ The `Batch` command contains several optional properties and attributes specifically included to support processing multiple [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] projects:  
   
 -   The `ProcessAffectedObjects` attribute of the `Batch` command indicates whether the instance should also process any object that requires reprocessing as a result of a `Process` command included in the `Batch` command processing a specified object.  
   

@@ -15,7 +15,7 @@ f1_keywords:
 ms.assetid: 2e907f5b-0cf9-484a-afcf-a4e7f1e2f87f
 caps.latest.revision: 19
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Full-Text Stoplist Properties
@@ -48,11 +48,11 @@ manager: "jhubbard"
  If you selected **Add stopword**, **Delete stopword**, or **Delete all stopwords**, select the language of the stopword or stopwords from the list box. This lists all the full-text languages that are supported by the server instance.  
   
 ## See Also  
- [sys.fulltext_stopwords &#40;Transact-SQL&#41;](../Topic/sys.fulltext_stopwords%20\(Transact-SQL\).md)   
- [sys.fulltext_stoplists &#40;Transact-SQL&#41;](../Topic/sys.fulltext_stoplists%20\(Transact-SQL\).md)   
+ [sys.fulltext_stopwords &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql.md)   
+ [sys.fulltext_stoplists &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)   
  [Configure and Manage Stopwords and Stoplists for Full-Text Search](../../2014/database-engine/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
- [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../Topic/ALTER%20FULLTEXT%20STOPLIST%20\(Transact-SQL\).md)   
- [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../Topic/CREATE%20FULLTEXT%20STOPLIST%20\(Transact-SQL\).md)   
- [DROP FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../Topic/DROP%20FULLTEXT%20STOPLIST%20\(Transact-SQL\).md)  
+ [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](~/t-sql/statements/alter-fulltext-stoplist-transact-sql.md)   
+ [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](~/t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
+ [DROP FULLTEXT STOPLIST &#40;Transact-SQL&#41;](~/t-sql/statements/drop-fulltext-stoplist-transact-sql.md)  
   
   

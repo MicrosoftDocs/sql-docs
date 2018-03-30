@@ -21,9 +21,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQLGetDescField
-  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver exposes driver-specific descriptor fields for the implementation row descriptor (IRD) only. Within the IRD, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] descriptor fields are referenced through driver-specific column attributes. For information about a complete list of available driver-specific descriptor fields, see [SQLColAttribute](../../../2014/database-engine/dev-guide/sqlcolattribute.md).  
+  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver exposes driver-specific descriptor fields for the implementation row descriptor (IRD) only. Within the IRD, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] descriptor fields are referenced through driver-specific column attributes. For information about a complete list of available driver-specific descriptor fields, see [SQLColAttribute](../../../2014/database-engine/dev-guide/sqlcolattribute.md).  
   
- Descriptor fields that contain column identifier strings are often zero-length strings. All [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-specific descriptor field values are read-only.  
+ Descriptor fields that contain column identifier strings are often zero-length strings. All [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-specific descriptor field values are read-only.  
   
  Like attributes retrieved with SQLColAttribute, descriptor fields that report row-level attributes (such as SQL_CA_SS_COMPUTE_ID) are reported for all columns in the result set.  
   
@@ -35,7 +35,7 @@ manager: "jhubbard"
   
  For more information, see [Date and Time Improvements &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/date-and-time-improvements-odbc.md).  
   
- Beginning in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], SQLGetDescField can return `SQL_C_SS_TIME2` (for `time` types) or `SQL_C_SS_TIMESTAMPOFFSET` (for `datetimeoffset`) instead of `SQL_C_BINARY`, if your application uses ODBC 3.8.  
+ Beginning in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], SQLGetDescField can return `SQL_C_SS_TIME2` (for `time` types) or `SQL_C_SS_TIMESTAMPOFFSET` (for `datetimeoffset`) instead of `SQL_C_BINARY`, if your application uses ODBC 3.8.  
   
 ## SQLGetDescField Support for Large CLR UDTs  
  `SQLGetDescField` supports large CLR user-defined types (UDTs). For more information, see [Large CLR User-Defined Types &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/large-clr-user-defined-types-odbc.md).  

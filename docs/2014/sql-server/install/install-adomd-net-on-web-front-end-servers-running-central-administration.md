@@ -12,13 +12,13 @@ ms.topic: "article"
 ms.assetid: c2372180-e847-4cdb-b267-4befac3faf7e
 caps.latest.revision: 8
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "jhubbard"
 ---
 # Install ADOMD.NET on Web Front-End Servers Running Central Administration
   If you install PowerPivot for SharePoint into a farm that has the topology of Central Administration, without Excel Services or PowerPivot for SharePoint, download and install the Microsoft ADOMD.NET client library if you want full access to the built-in reports in the PowerPivot management dashboard. Some reports in the dashboard use ADOMD.NET to access internal data that provides reporting data on PowerPivot query processing and server health in the farm.  
   
- **[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2010  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2010  
   
  For SharePoint 2013, the provider is included in the SQL Server feature pack. For information on how to download spPowerPivot.msi, see [Microsoft SQL Server 2014 Feature Pack](http://www.microsoft.com/download/details.aspx?id=35577)  
   

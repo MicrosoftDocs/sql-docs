@@ -22,9 +22,9 @@ manager: "mblythe"
   
  **To display the Warnings tab**  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project.  
   
-2.  In **Solution Explorer**, right-click the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project, click **Edit Database**, and then click the **Warnings** tab.  
+2.  In **Solution Explorer**, right-click the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project, click **Edit Database**, and then click the **Warnings** tab.  
   
 ## Design Warning Rules Grid  
  The **Design Warning Rules** grid displays all the design warning rules. This grid also controls which rules are enabled for the database. To enable or disable a warning rule, select or clear its check box.  

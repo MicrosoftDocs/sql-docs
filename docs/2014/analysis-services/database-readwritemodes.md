@@ -19,7 +19,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Database ReadWriteModes
-  There are often situations when an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database administrator (dba) wants to change a read/write database to a read-only database, or vice versa. These situations are often driven by business needs, such as sharing the same database folder among several servers for scaling out a solution and improving performance. For these situations, the `ReadWriteMode` database property enables the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba to easily change the database operating mode.  
+  There are often situations when an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database administrator (dba) wants to change a read/write database to a read-only database, or vice versa. These situations are often driven by business needs, such as sharing the same database folder among several servers for scaling out a solution and improving performance. For these situations, the `ReadWriteMode` database property enables the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dba to easily change the database operating mode.  
   
 ## ReadWriteMode database property  
  The `ReadWriteMode` database property specifies whether the database is in read/write mode or in read-only mode. These are the only two possible values of the property. When the database is in read-only mode, no changes or updates can be applied to the database. However, when the database is in read/write mode, changes and updates can occur. The `ReadWriteMode` database property is defined as a read-only property; it can only be set through an `Attach` command.  

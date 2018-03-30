@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: 02c1bc0b-760c-4589-9ab1-6927c6d9c734
 caps.latest.revision: 43
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Use RAW Mode with FOR XML
@@ -52,7 +52,7 @@ manager: "jhubbard"
  [Use AUTO Mode with FOR XML](../../2014/database-engine/use-auto-mode-with-for-xml.md)   
  [Use EXPLICIT Mode with FOR XML](../../2014/database-engine/use-explicit-mode-with-for-xml.md)   
  [Use PATH Mode with FOR XML](../../2014/database-engine/use-path-mode-with-for-xml.md)   
- [SELECT &#40;Transact-SQL&#41;](../Topic/SELECT%20\(Transact-SQL\).md)   
+ [SELECT &#40;Transact-SQL&#41;](~/t-sql/queries/select-transact-sql.md)   
  [FOR XML &#40;SQL Server&#41;](../../2014/database-engine/for-xml-sql-server.md)  
   
   

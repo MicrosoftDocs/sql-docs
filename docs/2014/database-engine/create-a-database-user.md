@@ -25,11 +25,11 @@ helpviewer_keywords:
 ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 caps.latest.revision: 25
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Create a Database User
-  This topic describes how to create a database user mapped to a login in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The database user is the identity of the login when it is connected to a database. The database user can use the same name as the login, but that is not required. This topic assumes that a login already exists in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For information about how to create a login, see [Create a Login](../../2014/database-engine/create-a-login.md).  
+  This topic describes how to create a database user mapped to a login in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)]. The database user is the identity of the login when it is connected to a database. The database user can use the same name as the login, but that is not required. This topic assumes that a login already exists in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For information about how to create a login, see [Create a Login](../../2014/database-engine/create-a-login.md).  
   
  **In This Topic**  
   
@@ -48,12 +48,12 @@ manager: "jhubbard"
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
 ###  <a name="Restrictions"></a> Background  
- A user is a database level security principal. Logins must be mapped to a database user to connect to a database. A login can be mapped to different databases as different users but can only be mapped as one user in each database. In a partially contained database, a user can be created that does not have a login. For more information about contained database users, see [CREATE USER &#40;Transact-SQL&#41;](../Topic/CREATE%20USER%20\(Transact-SQL\).md). If the guest user in a database is enabled, a login that is not mapped to a database user can enter the database as the guest user.  
+ A user is a database level security principal. Logins must be mapped to a database user to connect to a database. A login can be mapped to different databases as different users but can only be mapped as one user in each database. In a partially contained database, a user can be created that does not have a login. For more information about contained database users, see [CREATE USER &#40;Transact-SQL&#41;](~/t-sql/statements/create-user-transact-sql.md). If the guest user in a database is enabled, a login that is not mapped to a database user can enter the database as the guest user.  
   
 > [!IMPORTANT]  
 >  The guest user is ordinarily disabled. Do not enable the guest user unless it is necessary.  
   
- As a security principal, permissions can be granted to users. The scope of a user is the database. To connect to a specific database on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a login must be mapped to a database user. Permissions inside the database are granted and denied to the database user, not the login.  
+ As a security principal, permissions can be granted to users. The scope of a user is the database. To connect to a specific database on the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], a login must be mapped to a database user. Permissions inside the database are granted and denied to the database user, not the login.  
   
 ###  <a name="Security"></a> Security  
   
@@ -82,7 +82,7 @@ manager: "jhubbard"
   
 9. In the **Asymmetric key name**  box, enter the key to be used for the database user. Alternately, click the ellipsis **(…)** to open the **Select Asymmetric Key** dialog box. **Asymmetric key name** is available if you select **User mapped to an asymmetric key** from the **User type** list.  
   
-10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ### Additional Options  
  The **Database User – New** dialog box also offers options on four additional pages: **Owned Schemas**, **Membership**, **Securables**, and **Extended Properties**.  
@@ -114,7 +114,7 @@ manager: "jhubbard"
   
 #### To create a database user  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -131,7 +131,7 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [CREATE USER &#40;Transact-SQL&#41;](../Topic/CREATE%20USER%20\(Transact-SQL\).md).  
+ For more information, see [CREATE USER &#40;Transact-SQL&#41;](~/t-sql/statements/create-user-transact-sql.md).  
   
 ## See Also  
  [Principals &#40;Database Engine&#41;](../../2014/database-engine/principals-database-engine.md)  

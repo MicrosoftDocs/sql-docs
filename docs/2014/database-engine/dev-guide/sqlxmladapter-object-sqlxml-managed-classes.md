@@ -23,15 +23,15 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SqlXmlAdapter Object (SQLXML Managed Classes)
-  This object provides methods that facilitate interaction with the dataset in the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. For a working sample, see [Accessing SQLXML Functionality in the .NET Environment](../../../2014/database-engine/dev-guide/accessing-sqlxml-functionality-in-the-net-environment.md).  
+  This object provides methods that facilitate interaction with the dataset in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. For a working sample, see [Accessing SQLXML Functionality in the .NET Environment](../../../2014/database-engine/dev-guide/accessing-sqlxml-functionality-in-the-net-environment.md).  
   
  The SqlXmlAdapter object supports these methods:  
   
  void Fill(DataSet ds)  
- Fills the dataset in the .NET Framework with the XML data retrieved from [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Fills the dataset in the .NET Framework with the XML data retrieved from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  void Update(DataSet ds)  
- Applies updates to records in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] from the data in the dataset.  
+ Applies updates to records in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from the data in the dataset.  
   
  The SqlXmlAdapter object supports these constructors:  
   

@@ -12,14 +12,14 @@ ms.topic: "article"
 ms.assetid: 30bd631a-f774-48e7-a13a-b6c2eb54d9bb
 caps.latest.revision: 7
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Add HTML into a Report (Report Builder and SSRS)
   Using a placeholder, you can import HTML from a field in your dataset for use in the report. By default, a placeholder represents plain text, so you will need to change the placeholder mark-up type to HTML. For more information, see [Importing HTML into a Report &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/importing-html-into-a-report-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ### To add HTML from a field in your dataset into a text box  
   
@@ -37,7 +37,7 @@ manager: "mblythe"
   
 6.  Click **HTML - Interpret HTML tags as styles**. This causes the field to be evaluated as HTML.  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## See Also  
  [Formatting Numbers and Dates &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/formatting-numbers-and-dates-report-builder-and-ssrs.md)   

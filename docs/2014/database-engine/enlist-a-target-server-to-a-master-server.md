@@ -22,9 +22,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Enlist a Target Server to a Master Server
-  This topic describes how to add target servers to a multiserver administration configuration. Run this procedure from the master server. in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or SQL Server Management Objects (SMO).  
+  This topic describes how to add target servers to a multiserver administration configuration. Run this procedure from the master server. in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../includes/tsql-md.md)], or SQL Server Management Objects (SMO).  
   
- For information about how the Windows account used for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service affects a multiserver environment, see [Create a Multiserver Environment](../../2014/database-engine/create-a-multiserver-environment.md).  
+ For information about how the Windows account used for the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent service affects a multiserver environment, see [Create a Multiserver Environment](../../2014/database-engine/create-a-multiserver-environment.md).  
   
  Full Secure Sockets Layer (SSL) encryption and certificate validation is enabled for connections between master servers and target servers by default. For more information, see [Set Encryption Options on Target Servers](../../2014/database-engine/set-encryption-options-on-target-servers.md).  
   
@@ -52,7 +52,7 @@ manager: "jhubbard"
   
 #### To enlist a target server  
   
-1.  Use the `sp_msx_enlist` stored procedure.  For more information, see [sp_msx_enlist &#40;Transact-SQL&#41;](../Topic/sp_msx_enlist%20\(Transact-SQL\).md)  
+1.  Use the `sp_msx_enlist` stored procedure.  For more information, see [sp_msx_enlist &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql.md)  
   
 ##  <a name="PowerShellProcedure"></a> Using SQL Server Management Objects (SMO)  
   

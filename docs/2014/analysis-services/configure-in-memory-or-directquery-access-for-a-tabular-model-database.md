@@ -31,7 +31,7 @@ manager: "mblythe"
   
 4.  Edit the connection string on the deployed database to support Direct Query mode.  
   
- This topic assumes that you have created and validated your model, and only need to enable Direct Query access from a client such as [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].  
+ This topic assumes that you have created and validated your model, and only need to enable Direct Query access from a client such as [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)].  
   
 ## Procedure  
   

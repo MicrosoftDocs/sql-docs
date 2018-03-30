@@ -17,11 +17,11 @@ helpviewer_keywords:
 ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
 caps.latest.revision: 27
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Create a User-Defined Data Type Alias
-  This topic describes how to create a new user-defined data type alias in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  This topic describes how to create a new user-defined data type alias in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -104,13 +104,13 @@ manager: "jhubbard"
   
 6.  Check **Allow NULLs** if the new data type alias can permit NULL values.  
   
-7.  In the **Binding** area, complete the **Default** or **Rule** boxes if you want to bind a default or rule to the new data type alias. Defaults and rules cannot be created in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Use [!INCLUDE[tsql](../../includes/tsql-md.md)]. Example code for creating defaults and rules are available in Template Explorer.  
+7.  In the **Binding** area, complete the **Default** or **Rule** boxes if you want to bind a default or rule to the new data type alias. Defaults and rules cannot be created in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Use [!INCLUDE[tsql](../includes/tsql-md.md)]. Example code for creating defaults and rules are available in Template Explorer.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To create a user-defined data type alias  
   
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
@@ -123,6 +123,6 @@ FROM varchar(11) NOT NULL ;
   
 ## See Also  
  [Database Identifiers](../../2014/database-engine/database-identifiers.md)   
- [CREATE TYPE &#40;Transact-SQL&#41;](../Topic/CREATE%20TYPE%20\(Transact-SQL\).md)  
+ [CREATE TYPE &#40;Transact-SQL&#41;](~/t-sql/statements/create-type-transact-sql.md)  
   
   

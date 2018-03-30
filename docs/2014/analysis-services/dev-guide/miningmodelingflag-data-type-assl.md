@@ -60,7 +60,7 @@ manager: "mblythe"
 |*NOT NULL*|The column cannot accept NULL values.|  
 |*REGRESSOR*|The column supplies regressor values for test cases.|  
   
- Additional provider-specific flags may be used if third-party OLE DB or data mining providers have been aggregated on the instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+ Additional provider-specific flags may be used if third-party OLE DB or data mining providers have been aggregated on the instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
  A closely related element in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.MiningModelingFlags>.  
   

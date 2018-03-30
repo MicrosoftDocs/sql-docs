@@ -17,11 +17,11 @@ helpviewer_keywords:
 ms.assetid: 2d3c14dc-43e5-4324-b8fb-f2692d330b16
 caps.latest.revision: 22
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Modify Views
-  After you define a view, you can modify its definition in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] without dropping and re-creating the view by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  After you define a view, you can modify its definition in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] without dropping and re-creating the view by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -43,7 +43,7 @@ manager: "jhubbard"
   
 -   Modifying a view does not affect any dependent objects, such as stored procedures or triggers, unless the definition of the view changes in such a way that the dependent object is no longer valid.  
   
--   If a view currently used is modified by using ALTER VIEW, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] takes an exclusive schema lock on the view. When the lock is granted, and there are no active users of the view, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] deletes all copies of the view from the procedure cache. Existing plans referencing the view remain in the cache but are recompiled when invoked.  
+-   If a view currently used is modified by using ALTER VIEW, the [!INCLUDE[ssDE](../includes/ssde-md.md)] takes an exclusive schema lock on the view. When the lock is granted, and there are no active users of the view, the [!INCLUDE[ssDE](../includes/ssde-md.md)] deletes all copies of the view from the procedure cache. Existing plans referencing the view remain in the cache but are recompiled when invoked.  
   
 -   ALTER VIEW can be applied to indexed views; however, ALTER VIEW unconditionally drops all indexes on the view.  
   
@@ -74,7 +74,7 @@ manager: "jhubbard"
   
 #### To modify a view  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -100,6 +100,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [ALTER VIEW &#40;Transact-SQL&#41;](../Topic/ALTER%20VIEW%20\(Transact-SQL\).md).  
+ For more information, see [ALTER VIEW &#40;Transact-SQL&#41;](~/t-sql/statements/alter-view-transact-sql.md).  
   
   

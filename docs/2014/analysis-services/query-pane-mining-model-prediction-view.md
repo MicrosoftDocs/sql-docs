@@ -20,7 +20,7 @@ manager: "mblythe"
 # Query Pane (Mining Model Prediction View)
   The **Query** pane displays the Data Mining Expressions (DMX) statements created by Prediction Query Builder. You can modify the statements and then click the **Switch to query result view** button to return the results. If you switch back to the **Design** view, any changes you made to the statement will be lost.  
   
- **For More Information:** [Data Mining Extensions &#40;DMX&#41; Data Manipulation Statements](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Data%20Manipulation%20Statements.md), [Create a DMX Query in SQL Server Management Studio](../../2014/analysis-services/create-a-dmx-query-in-sql-server-management-studio.md)  
+ **For More Information:** [Data Mining Extensions &#40;DMX&#41; Data Manipulation Statements](~/dmx/dmx-statements-data-manipulation.md), [Create a DMX Query in SQL Server Management Studio](../../2014/analysis-services/create-a-dmx-query-in-sql-server-management-studio.md)  
   
 ## Options  
  **Switch to query result view**  
@@ -37,7 +37,7 @@ manager: "mblythe"
   
 ## See Also  
  [Data Mining Query Interfaces](../../2014/analysis-services/data-mining-query-interfaces.md)   
- [Data Mining Extensions &#40;DMX&#41; Statement Reference](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Statement%20Reference.md)   
+ [Data Mining Extensions &#40;DMX&#41; Statement Reference](~/dmx/data-mining-extensions-dmx-statements.md)   
  [Prediction Query Builder &#40;Data Mining&#41;](../../2014/analysis-services/prediction-query-builder-data-mining.md)  
   
   

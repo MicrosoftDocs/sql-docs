@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: 57d09ad0-66a8-44f2-a81f-736217e3815c
 caps.latest.revision: 34
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # DatabaseServerName Property (WMI MSReportServer_ConfigurationSetting)
@@ -43,7 +43,7 @@ public string DatabaseServerName;
  [MSReportServer_ConfigurationSetting Class](../../2014/reporting-services/msreportserver-configurationsetting-class.md)  
   
 ## Requirements  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../includes/ssrswminmspca-md.md)]  
   
 ## See Also  
  [MSReportServer_ConfigurationSetting Members](../../2014/reporting-services/msreportserver-configurationsetting-members.md)  

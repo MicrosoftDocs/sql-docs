@@ -22,7 +22,7 @@ manager: "jhubbard"
   sysperfinfo returns a `bigint` value for the cntr_value column.  
   
 ## Component  
- [!INCLUDE[ssDE](../../../includes/ssde-md.md)]  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## Corrective Action  
  Modify applications that use sysperfinfo to ensure that they can handle the `bigint` values of the cntr_value column.  
@@ -32,6 +32,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Database Engine Upgrade Issues](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;new&#93;](../Topic/SQL%20Server%202014%20Upgrade%20Advisor%20[new].md)  
+ [SQL Server 2014 Upgrade Advisor &#91;new&#93;](~/2014/sql-server/install/sql-server-2014-upgrade-advisor.md)  
   
   

@@ -15,11 +15,11 @@ helpviewer_keywords:
 ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
 caps.latest.revision: 12
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Enable Remote Errors (Reporting Services)
-  You can set server properties on a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server to return additional information about error conditions that occur on remote servers. If an error message contains the text "For more information about this error, navigate to the report server on the local server machine, or enable remote errors", you can set the `EnableRemoteErrors` property to access additional information that can help you troubleshoot the problem. For more information, see [Report Server System Properties](../../2014/reporting-services/dev-guide/report-server-system-properties.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+  You can set server properties on a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report server to return additional information about error conditions that occur on remote servers. If an error message contains the text "For more information about this error, navigate to the report server on the local server machine, or enable remote errors", you can set the `EnableRemoteErrors` property to access additional information that can help you troubleshoot the problem. For more information, see [Report Server System Properties](../../2014/reporting-services/dev-guide/report-server-system-properties.md) in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online.  
   
  **In this topic:**  
   
@@ -32,15 +32,15 @@ manager: "mblythe"
 -   [Modifying the ConfigurationInfo table (Native Mode)](#bkmk_ConfigurationInfo)  
   
 ##  <a name="bkmk_sharepoint"></a> Enable Remote Errors for SharePoint Mode  
- There are two different procedures for enabling remote errors for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode. The procedure is different for the two different report server architectures. The newer SharePoint service based architecture that was introduced in the [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] release, utilizes a setting that can be configured for each [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application. The older architecture utilizes a single site level setting.  
+ There are two different procedures for enabling remote errors for [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint mode. The procedure is different for the two different report server architectures. The newer SharePoint service based architecture that was introduced in the [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] release, utilizes a setting that can be configured for each [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service application. The older architecture utilizes a single site level setting.  
   
 #### Enable Remote errors for a Reporting Services Service Application  
   
-1.  For a SharePoint mode report server installed with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] or a newer version of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], enable the service application setting **Enable remote errors**. The setting can be configured for each [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application.  
+1.  For a SharePoint mode report server installed with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] or a newer version of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], enable the service application setting **Enable remote errors**. The setting can be configured for each [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service application.  
   
 2.  In SharePoint Central Administration, click **Manage service applications** in the **Application Management** group.  
   
-3.  Find your [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application and click the name of your service application.  
+3.  Find your [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service application and click the name of your service application.  
   
 4.  Click **System Settings**.  
   
@@ -50,7 +50,7 @@ manager: "mblythe"
   
 #### Enable Remote Errors for a SharePoint Site  
   
-1.  For a SharePoint mode report server installed with a version of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] prior to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], enable the site setting **Enable remote errors in local mode**.  
+1.  For a SharePoint mode report server installed with a version of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] prior to [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], enable the site setting **Enable remote errors in local mode**.  
   
 2.  In **Site Actions** click **Site Settings** for the site you want to modify.  
   
@@ -62,15 +62,15 @@ manager: "mblythe"
   
 ##  <a name="bkmk_mgtStudio"></a> Enable remote errors through SQL Server Management Studio (Native Mode)  
   
-1.  Start Management Studio and connect to a report server instance. For more information, see [Connect to a Report Server in Management Studio](../../2014/reporting-services/connect-to-a-report-server-in-management-studio.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+1.  Start Management Studio and connect to a report server instance. For more information, see [Connect to a Report Server in Management Studio](../../2014/reporting-services/connect-to-a-report-server-in-management-studio.md) in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online.  
   
 2.  Right-click the report server node, and select **Properties**.  
   
-3.  Click **Advanced** to open the properties page. For more information, see [Server Properties &#40;Advanced Page&#41; - Reporting Services](../../2014/reporting-services/server-properties-advanced-page-reporting-services.md)in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+3.  Click **Advanced** to open the properties page. For more information, see [Server Properties &#40;Advanced Page&#41; - Reporting Services](../../2014/reporting-services/server-properties-advanced-page-reporting-services.md)in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online.  
   
 4.  In `EnableRemoteErrors`, select `True`.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ##  <a name="bkmk_script"></a> Enable remote errors through script (Native Mode)  
   
@@ -109,6 +109,6 @@ manager: "mblythe"
 ##  <a name="bkmk_ConfigurationInfo"></a> Modifying the ConfigurationInfo table (Native Mode)  
   
 1.  > [!NOTE]  
-    >  You can edit the **ConfigurationInfo** table in the report server database to set `EnableRemoteErrors` to `True`, but if the report server is actively used, you should use SQL Server Management Studio or script to modify the settings. If you modify the setting in the database, you need to restart the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service before the changes take effect.  
+    >  You can edit the **ConfigurationInfo** table in the report server database to set `EnableRemoteErrors` to `True`, but if the report server is actively used, you should use SQL Server Management Studio or script to modify the settings. If you modify the setting in the database, you need to restart the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service before the changes take effect.  
   
   

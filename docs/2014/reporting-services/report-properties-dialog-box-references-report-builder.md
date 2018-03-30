@@ -14,11 +14,11 @@ f1_keywords:
 ms.assetid: 3414c857-8ea6-4fc4-a6d5-b4883c039efa
 caps.latest.revision: 11
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Report Properties Dialog Box, References (Report Builder)
-  Select **References** on the **Report Properties** dialog box to add or remove references to custom or other external assemblies and custom class instances that are used by expressions in the report definition. Custom assemblies are not supported in local mode in Report Builder. To author reports that use custom assemblies, use Report Designer in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+  Select **References** on the **Report Properties** dialog box to add or remove references to custom or other external assemblies and custom class instances that are used by expressions in the report definition. Custom assemblies are not supported in local mode in Report Builder. To author reports that use custom assemblies, use Report Designer in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 ## Options  
  **Add or remove assemblies**  

@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: 8c5b29ae-1f17-41f2-ab59-97899b8fb4fc
 caps.latest.revision: 20
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Model Item Security Page (Report Manager)

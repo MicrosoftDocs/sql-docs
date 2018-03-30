@@ -15,11 +15,11 @@ f1_keywords:
 ms.assetid: e4020f79-7abf-4839-b9b2-984ef7049817
 caps.latest.revision: 14
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Collation Dialog Box (Visual Database Tools)
-  This dialog box lets you specify a collation sequence for the column. A column's collation sequence is used in any operation that compares values of the column to another column or to constant values. It also affects the behavior of some string functions, such as SUBSTRING and CHARINDEX. For a complete list of the effects of a column's collation setting, see the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] documentation.  
+  This dialog box lets you specify a collation sequence for the column. A column's collation sequence is used in any operation that compares values of the column to another column or to constant values. It also affects the behavior of some string functions, such as SUBSTRING and CHARINDEX. For a complete list of the effects of a column's collation setting, see the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] documentation.  
   
  This dialog box appears:  
   
@@ -29,7 +29,7 @@ manager: "jhubbard"
   
 ## Options  
  **SQL Collation**  
- Choose among the collation sequences defined by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from the drop-down list.  
+ Choose among the collation sequences defined by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] from the drop-down list.  
   
  **Windows Collation**  
  Choose among the collation sequences defined by Windows from the drop-down list.  

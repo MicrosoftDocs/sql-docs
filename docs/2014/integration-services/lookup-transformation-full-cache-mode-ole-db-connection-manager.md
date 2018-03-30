@@ -26,7 +26,7 @@ manager: "jhubbard"
   
 ### To implement a Lookup transformation in full cache mode by using OLE DB connection manager  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project that contains the package you want, and then double-click the package in Solution Explorer.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project that contains the package you want, and then double-click the package in Solution Explorer.  
   
 2.  On the **Data Flow** tab, from the **Toolbox**, drag the Lookup transformation to the design surface.  
   

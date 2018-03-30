@@ -43,7 +43,7 @@ manager: "jhubbard"
      The mirror server immediately transitions to principal server, and mirroring is suspended.  
   
 ## See Also  
- [ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20\(Transact-SQL\).md)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)   
  [Database Mirroring Operating Modes](../../2014/database-engine/database-mirroring-operating-modes.md)  
   
   

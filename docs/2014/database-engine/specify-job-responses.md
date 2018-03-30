@@ -21,7 +21,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Specify Job Responses
-  Job responses specify actions that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service will take after a job completes. Job responses ensure that database administrators know when jobs complete and how frequently they run. Typical job responses include:  
+  Job responses specify actions that the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent service will take after a job completes. Job responses ensure that database administrators know when jobs complete and how frequently they run. Typical job responses include:  
   
 -   Notifying the operator by using e-mail, electronic paging, or a **net send** message.  
   

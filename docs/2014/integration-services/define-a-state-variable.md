@@ -68,7 +68,7 @@ manager: "jhubbard"
   
 ### To define a CDC state variable  
   
-1.  In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], open the [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] package that has the CDC flow where you need to define the variable.  
+1.  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], open the [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] package that has the CDC flow where you need to define the variable.  
   
 2.  Click the **Package Explorer** tab, and add a new variable.  
   

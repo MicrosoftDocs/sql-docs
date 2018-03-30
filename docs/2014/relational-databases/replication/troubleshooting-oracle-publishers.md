@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 caps.latest.revision: 60
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Troubleshooting Oracle Publishers
   This topic lists a number of issues that might arise when configuring and using an Oracle Publisher.  
   
 ## An Error Is Raised Regarding Oracle Client and Networking Software  
- The account under which [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] runs on the Distributor must be granted read and execute permissions for the directory (and all subdirectories) in which the Oracle client networking software is installed. If the permissions are not granted or the Oracle client components are not installed properly, you will receive the following error message:  
+ The account under which [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] runs on the Distributor must be granted read and execute permissions for the directory (and all subdirectories) in which the Oracle client networking software is installed. If the permissions are not granted or the Oracle client components are not installed properly, you will receive the following error message:  
   
  "Connection to server failed with [Microsoft OLE DB Provider for Oracle]. Oracle client and networking components were not found. These components are supplied by Oracle Corporation and are part of the Oracle Version 7.3.3 or later client software installation. Provider is unable to function until these components are installed."  
   
- If an appropriate Oracle client has been installed at the Distributor, ensure that [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] was stopped and then restarted after the client installation completed. This is required in order for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to recognize the client components.  
+ If an appropriate Oracle client has been installed at the Distributor, ensure that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] was stopped and then restarted after the client installation completed. This is required in order for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to recognize the client components.  
   
  If you have verified that permissions are granted and that components are installed correctly, but this error persists, verify that the registry settings at HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDTC\MTxOCI are correct:  
   
@@ -47,7 +47,7 @@ manager: "jhubbard"
     -   OracleXaLib = oraclient9.dll  
   
 ## The SQL Server Distributor Cannot Connect to the Oracle Database Instance  
- If the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributor cannot connect to the Oracle Publisher, ensure that:  
+ If the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor cannot connect to the Oracle Publisher, ensure that:  
   
 -   The necessary Oracle software is installed on the Distributor.  
   
@@ -57,12 +57,12 @@ manager: "jhubbard"
   
 -   The TNS names defined during configuration of the Oracle Publisher are listed in the tnsnames.ora file.  
   
--   The correct Oracle Home and path are used. Even if you have only one set of Oracle binaries installed on the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributor, ensure that the environment variables related to the Oracle Home are set properly. If you change environment variable values, you must stop and restart [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] for the change to take effect.  
+-   The correct Oracle Home and path are used. Even if you have only one set of Oracle binaries installed on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor, ensure that the environment variables related to the Oracle Home are set properly. If you change environment variable values, you must stop and restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for the change to take effect.  
   
- For more information about configuring and testing connectivity, see "Installing and Configuring Oracle Client Networking Software on the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributor" in [Configure an Oracle Publisher](../../../2014/relational-databases/replication/configure-an-oracle-publisher.md).  
+ For more information about configuring and testing connectivity, see "Installing and Configuring Oracle Client Networking Software on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor" in [Configure an Oracle Publisher](../../../2014/relational-databases/replication/configure-an-oracle-publisher.md).  
   
 ## The Oracle Publisher Is Associated with Another Distributor  
- An Oracle Publisher can only be associated with one [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributor. If a different Distributor is associated with the Oracle Publisher, it must be dropped before another Distributor can be used. If the Distributor is not dropped first, you will receive one of the following error messages:  
+ An Oracle Publisher can only be associated with one [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor. If a different Distributor is associated with the Oracle Publisher, it must be dropped before another Distributor can be used. If the Distributor is not dropped first, you will receive one of the following error messages:  
   
 -   "Oracle server instance '\<*OraclePublisherName*>' has been previously configured to use '\<*SQLServerDistributorName*>' as its Distributor. To begin using '\<*NewSQLServerDistributorName*>' as its Distributor, you must remove the current replication configuration on the Oracle server instance, which will delete all publications on that server instance."  
   
@@ -88,12 +88,12 @@ manager: "jhubbard"
   
  "Heterogeneous publishers require a linked server. A linked server named '*\<LinkedServerName>*' already exists. Please remove linked server or choose a different publisher name."  
   
- This error can occur if you attempt to create the linked server directly or if you have previously dropped the relationship between the Oracle Publisher and the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributor, and you are now attempting to reconfigure it. If you receive this error while attempting to reconfigure the Publisher, drop the linked server with [sp_dropserver &#40;Transact-SQL&#41;](../Topic/sp_dropserver%20\(Transact-SQL\).md).  
+ This error can occur if you attempt to create the linked server directly or if you have previously dropped the relationship between the Oracle Publisher and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor, and you are now attempting to reconfigure it. If you receive this error while attempting to reconfigure the Publisher, drop the linked server with [sp_dropserver &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md).  
   
- If you need to connect to the Oracle Publisher over a linked server connection, create another TNS service name, and then use this name when calling [sp_addlinkedserver &#40;Transact-SQL&#41;](../Topic/sp_addlinkedserver%20\(Transact-SQL\).md). For information about creating TNS service names, see the Oracle documentation.  
+ If you need to connect to the Oracle Publisher over a linked server connection, create another TNS service name, and then use this name when calling [sp_addlinkedserver &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). For information about creating TNS service names, see the Oracle documentation.  
   
 ## SQL Server Error 21617 Is Raised  
- Oracle publishing uses the Oracle application SQL*PLUS to download the package of Publisher support code to the Oracle database. Before attempting to configure the Oracle Publisher, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verifies that SQL\*PLUS is accessible through the system path on the Distributor. If SQL\*PLUS cannot be loaded, the following error message is shown:  
+ Oracle publishing uses the Oracle application SQL*PLUS to download the package of Publisher support code to the Oracle database. Before attempting to configure the Oracle Publisher, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verifies that SQL\*PLUS is accessible through the system path on the Distributor. If SQL\*PLUS cannot be loaded, the following error message is shown:  
   
  "Unable to run SQL*PLUS. Make certain that a current version of the Oracle client code is installed at the distributor."  
   
@@ -129,23 +129,23 @@ manager: "jhubbard"
   
  If you are using Oracle client software version 10g, the provider is OraOLEDB10.dll; for version 9i, it is OraOLEDB.dll. The provider is installed in %ORACLE_HOME%\BIN (for example, C:\oracle\product\10.1.0\Client_1\bin). If you determine that the Oracle OLEDB provider is not installed on the Distributor, install it from the Oracle client software install disc provided by Oracle. For more information, see [Configure an Oracle Publisher](../../../2014/relational-databases/replication/configure-an-oracle-publisher.md).  
   
- If the Oracle OLEDB provider is installed, make sure that it is registered. To register the provider DLL, execute the following command from the directory in which the DLL is installed, and then stop and restart the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance:  
+ If the Oracle OLEDB provider is installed, make sure that it is registered. To register the provider DLL, execute the following command from the directory in which the DLL is installed, and then stop and restart the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance:  
   
 1.  `regsvr32 OraOLEDB10.dll` or `regsvr32 OraOLEDB.dll`.  
   
 ## SQL Server Error 21626 or Error 21627 Is Raised  
- To verify that the Oracle publishing environment is configured properly, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tries to connect to the Oracle Publisher with the login credentials you specified during configuration. If the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributor cannot connect to the Oracle Publisher, the following error message is shown:  
+ To verify that the Oracle publishing environment is configured properly, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tries to connect to the Oracle Publisher with the login credentials you specified during configuration. If the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor cannot connect to the Oracle Publisher, the following error message is shown:  
   
 -   "Unable to connect to Oracle database server '%s' using the Oracle OLEDB provider OraOLEDB.Oracle."  
   
  If this error message is shown, verify connectivity to the Oracle database by running SQL*PLUS directly using the same login and password specified during configuration of the Oracle Publisher. For more information, see the section "The SQL Server Distributor Cannot Connect to the Oracle Database Instance" earlier in this topic.  
   
 ## SQL Server Error 21628 Is Raised  
- For 64-bit Distributors, Oracle publishing uses the Oracle OLEDB Provider for Oracle (OraOLEDB.Oracle). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] creates a registry entry to allow the Oracle provider to run in process with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. If there is a problem reading or writing this registry entry, the following error message is shown:  
+ For 64-bit Distributors, Oracle publishing uses the Oracle OLEDB Provider for Oracle (OraOLEDB.Oracle). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creates a registry entry to allow the Oracle provider to run in process with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If there is a problem reading or writing this registry entry, the following error message is shown:  
   
- "Unable to update the registry of distributor '%s' to allow Oracle OLEDB provider OraOLEDB.Oracle to run in process with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Make certain that current login is authorized to modify [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] owned registry keys."  
+ "Unable to update the registry of distributor '%s' to allow Oracle OLEDB provider OraOLEDB.Oracle to run in process with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Make certain that current login is authorized to modify [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] owned registry keys."  
   
- Oracle publishing requires the registry entry to exist and to be set to **1** for 64 bit Distributors. If the entry does not exist, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] will attempt to create it. If the entry exists, but is set to **0**, the setting will not be changed; the configuration of the Oracle Publisher will fail.  
+ Oracle publishing requires the registry entry to exist and to be set to **1** for 64 bit Distributors. If the entry does not exist, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will attempt to create it. If the entry exists, but is set to **0**, the setting will not be changed; the configuration of the Oracle Publisher will fail.  
   
  To view and modify the registry setting:  
   
@@ -227,11 +227,11 @@ manager: "jhubbard"
  "ORA-22285: non-existent directory or file for FILEOPEN operation"  
   
 ## Changes Are Made That Require Reconfiguration of the Publisher  
- Changes to replication metadata tables or procedures require that you drop and reconfigure the Publisher. To reconfigure the Publisher, you must drop the Publisher and configure it again using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], Transact-SQL, or RMO. For information about configuring the Publisher, see [Configure an Oracle Publisher](../../../2014/relational-databases/replication/configure-an-oracle-publisher.md).  
+ Changes to replication metadata tables or procedures require that you drop and reconfigure the Publisher. To reconfigure the Publisher, you must drop the Publisher and configure it again using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], Transact-SQL, or RMO. For information about configuring the Publisher, see [Configure an Oracle Publisher](../../../2014/relational-databases/replication/configure-an-oracle-publisher.md).  
   
  **To drop an Oracle Publisher (**SQL Server Management Studio**)**  
   
-1.  Connect to the Distributor for the Oracle Publisher in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] and expand the server node.  
+1.  Connect to the Distributor for the Oracle Publisher in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and expand the server node.  
   
 2.  Right-click **Replication**, and then click **Distributor Properties**.  
   
@@ -241,7 +241,7 @@ manager: "jhubbard"
   
  **To drop an Oracle Publisher (Transact-SQL)**  
   
--   Execute **sp_dropdistpublisher**. For more information, see [sp_dropdistpublisher &#40;Transact-SQL&#41;](../Topic/sp_dropdistpublisher%20\(Transact-SQL\).md).  
+-   Execute **sp_dropdistpublisher**. For more information, see [sp_dropdistpublisher &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md).  
   
 ## See Also  
  [Configure an Oracle Publisher](../../../2014/relational-databases/replication/configure-an-oracle-publisher.md)   

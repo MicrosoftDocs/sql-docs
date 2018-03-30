@@ -26,29 +26,29 @@ helpviewer_keywords:
 ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
 caps.latest.revision: 74
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Populate Full-Text Indexes
   Creating and maintaining a full-text index involves populating the index by using a process called a *population* (also known as a *crawl*).  
   
 ##  <a name="types"></a> Types of Population  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports the following types of population: full population, change tracking-based automatic or manual population, and incremental timestamp-based population.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supports the following types of population: full population, change tracking-based automatic or manual population, and incremental timestamp-based population.  
   
 ### Full Population  
  During a full population, index entries are built for all the rows of a table or indexed view. A full population of a full-text index, builds index entries for all the rows of the base table or indexed view.  
   
- By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] populates a new full-text index fully as soon as it is created. However, a full population can consume a significant amount of resources. Therefore, when creating a full-text index during peak periods, it is often a best practice to delay the full population until an off-peak time, particularly if the base table of an full-text index is large. However, the full-text catalog to which the index belongs is not usable until all of its full-text indexes are populated. To create a full-text index without populating it immediately, specify the CHANGE_TRACKING OFF, NO POPULATION clause in the CREATE FULLTEXT INDEX statement. If you specify CHANGE_TRACKING MANUAL, the Full-Text Engine uses statement. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will not populate the new full-text index until you execute an ALTER FULLTEXT INDEX statement using the START FULL POPULATION or START INCREMENTAL POPULATION clause. For more information, see examples "A. Creating a full-text index without running a full population" and "B. Running a full population on table," later in this topic.  
+ By default, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] populates a new full-text index fully as soon as it is created. However, a full population can consume a significant amount of resources. Therefore, when creating a full-text index during peak periods, it is often a best practice to delay the full population until an off-peak time, particularly if the base table of an full-text index is large. However, the full-text catalog to which the index belongs is not usable until all of its full-text indexes are populated. To create a full-text index without populating it immediately, specify the CHANGE_TRACKING OFF, NO POPULATION clause in the CREATE FULLTEXT INDEX statement. If you specify CHANGE_TRACKING MANUAL, the Full-Text Engine uses statement. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] will not populate the new full-text index until you execute an ALTER FULLTEXT INDEX statement using the START FULL POPULATION or START INCREMENTAL POPULATION clause. For more information, see examples "A. Creating a full-text index without running a full population" and "B. Running a full population on table," later in this topic.  
   
 
   
 ### Change Tracking-Based Population  
- Optionally, you can use change tracking to maintain a full-text index after its initial full population. There is a small overhead associated with change tracking because [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] maintains a table in which it tracks changes to the base table since the last population. When change tracking is used, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] maintains a record of the rows in the base table or indexed view that have been modified by updates, deletes, or inserts. Data changes through WRITETEXT and UPDATETEXT are not reflected in the full-text index, and are not picked up with change tracking.  
+ Optionally, you can use change tracking to maintain a full-text index after its initial full population. There is a small overhead associated with change tracking because [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] maintains a table in which it tracks changes to the base table since the last population. When change tracking is used, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] maintains a record of the rows in the base table or indexed view that have been modified by updates, deletes, or inserts. Data changes through WRITETEXT and UPDATETEXT are not reflected in the full-text index, and are not picked up with change tracking.  
   
 > [!NOTE]  
 >  For tables containing a `timestamp` column, you can use incremental populations.  
   
- When change tracking is enabled during index creation, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fully populates the new full-text index immediately after it is created. Thereafter, changes are tracked and propagated to the full-text index. There are two types of change tracking, automatic (CHANGE_TRACKING AUTO option) and manual (CHANGE_TRACKING MANUAL option). Automatic change tracking is the default behavior.  
+ When change tracking is enabled during index creation, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fully populates the new full-text index immediately after it is created. Thereafter, changes are tracked and propagated to the full-text index. There are two types of change tracking, automatic (CHANGE_TRACKING AUTO option) and manual (CHANGE_TRACKING MANUAL option). Automatic change tracking is the default behavior.  
   
  The type of change tracking determines how the full-text index is populated, as follows:  
   
@@ -58,29 +58,29 @@ manager: "jhubbard"
   
      **To set up tracking changes with automatic population**  
   
-    -   [CREATE FULLTEXT INDEX](../Topic/CREATE%20FULLTEXT%20INDEX%20\(Transact-SQL\).md) … WITH CHANGE_TRACKING AUTO  
+    -   [CREATE FULLTEXT INDEX](~/t-sql/statements/create-fulltext-index-transact-sql.md) … WITH CHANGE_TRACKING AUTO  
   
-    -   [ALTER FULLTEXT INDEX](../Topic/ALTER%20FULLTEXT%20INDEX%20\(Transact-SQL\).md) … SET CHANGE_TRACKING AUTO  
+    -   [ALTER FULLTEXT INDEX](~/t-sql/statements/alter-fulltext-index-transact-sql.md) … SET CHANGE_TRACKING AUTO  
   
      For more information, see example "E. Altering a full-text index to use automatic change tracking," later in this topic.  
   
 -   Manual population  
   
-     If you specify CHANGE_TRACKING MANUAL, the Full-Text Engine uses manual population on the full-text index. After the initial full population completes, changes are tracked as data is modified in the base table. However, they are not propagated to the full-text index until you execute an ALTER FULLTEXT INDEX … START UPDATE POPULATION statement. You can use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to call this [!INCLUDE[tsql](../../includes/tsql-md.md)] statement periodically.  
+     If you specify CHANGE_TRACKING MANUAL, the Full-Text Engine uses manual population on the full-text index. After the initial full population completes, changes are tracked as data is modified in the base table. However, they are not propagated to the full-text index until you execute an ALTER FULLTEXT INDEX … START UPDATE POPULATION statement. You can use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent to call this [!INCLUDE[tsql](../includes/tsql-md.md)] statement periodically.  
   
      **To start tracking changes with manual population**  
   
-    -   [CREATE FULLTEXT INDEX](../Topic/CREATE%20FULLTEXT%20INDEX%20\(Transact-SQL\).md) … WITH CHANGE_TRACKING MANUAL  
+    -   [CREATE FULLTEXT INDEX](~/t-sql/statements/create-fulltext-index-transact-sql.md) … WITH CHANGE_TRACKING MANUAL  
   
-    -   [ALTER FULLTEXT INDEX](../Topic/ALTER%20FULLTEXT%20INDEX%20\(Transact-SQL\).md) … SET CHANGE_TRACKING MANUAL  
+    -   [ALTER FULLTEXT INDEX](~/t-sql/statements/alter-fulltext-index-transact-sql.md) … SET CHANGE_TRACKING MANUAL  
   
      For more information, see examples "C. Creating a full-text index with manual change tracking" and "D. Running a manual population," later in this topic.  
   
  **To turn off change tracking**  
   
--   [CREATE FULLTEXT INDEX](../Topic/CREATE%20FULLTEXT%20INDEX%20\(Transact-SQL\).md) … WITH CHANGE_TRACKING OFF  
+-   [CREATE FULLTEXT INDEX](~/t-sql/statements/create-fulltext-index-transact-sql.md) … WITH CHANGE_TRACKING OFF  
   
--   [ALTER FULLTEXT INDEX](../Topic/ALTER%20FULLTEXT%20INDEX%20\(Transact-SQL\).md) … SET CHANGE_TRACKING OFF  
+-   [ALTER FULLTEXT INDEX](~/t-sql/statements/alter-fulltext-index-transact-sql.md) … SET CHANGE_TRACKING OFF  
   
 
   
@@ -89,7 +89,7 @@ manager: "jhubbard"
   
  The requirement for incremental population is that the indexed table must have a column of the `timestamp` data type. If a `timestamp` column does not exist, incremental population cannot be performed. A request for incremental population on a table without a `timestamp` column results in a full population operation. Also, if any metadata that affects the full-text index for the table has changed since the last population, incremental population requests are implemented as full populations. This includes metadata changes caused by altering any column, index, or full-text index definitions.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses the `timestamp` column to identify rows that have changed since the last population. The incremental population then updates the full-text index for rows added, deleted, or modified after the last population, or while the last population was in progress. If a table experiences a high volume of inserts, using incremental population can be more efficient that using manual population.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses the `timestamp` column to identify rows that have changed since the last population. The incremental population then updates the full-text index for rows added, deleted, or modified after the last population, or while the last population was in progress. If a table experiences a high volume of inserts, using incremental population can be more efficient that using manual population.  
   
  At the end of a population, the Full-Text Engine records a new `timestamp` value. This value is the largest `timestamp` value that SQL Gatherer has encountered. This value will be used when a subsequent incremental population starts.  
   
@@ -202,7 +202,7 @@ GO
   
     -   To remove a schedule, select it and click **Delete**.  
   
-2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+2.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 
   
@@ -225,10 +225,10 @@ GO
 
   
 ## See Also  
- [sys.dm_fts_index_population &#40;Transact-SQL&#41;](../Topic/sys.dm_fts_index_population%20\(Transact-SQL\).md)   
+ [sys.dm_fts_index_population &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)   
  [Get Started with Full-Text Search](../../2014/database-engine/get-started-with-full-text-search.md)   
  [Create and Manage Full-Text Indexes](../../2014/database-engine/create-and-manage-full-text-indexes.md)   
- [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../Topic/CREATE%20FULLTEXT%20INDEX%20\(Transact-SQL\).md)   
- [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../Topic/ALTER%20FULLTEXT%20INDEX%20\(Transact-SQL\).md)  
+ [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-fulltext-index-transact-sql.md)   
+ [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-fulltext-index-transact-sql.md)  
   
   

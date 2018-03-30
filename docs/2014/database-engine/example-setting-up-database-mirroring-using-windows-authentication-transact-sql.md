@@ -21,10 +21,10 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Example: Setting Up Database Mirroring Using Windows Authentication (Transact-SQL)
-  This example shows all the stages required to create a database mirroring session with a witness using Windows Authentication. The examples in this topic use [!INCLUDE[tsql](../../includes/tsql-md.md)]. Note that as an alternative to using [!INCLUDE[tsql](../../includes/tsql-md.md)] steps, you can use the Configure Database Mirroring Security Wizard for database mirroring setup. For more information, see [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](../../2014/database-engine/establish-database-mirroring-session-windows-authentication.md).  
+  This example shows all the stages required to create a database mirroring session with a witness using Windows Authentication. The examples in this topic use [!INCLUDE[tsql](../includes/tsql-md.md)]. Note that as an alternative to using [!INCLUDE[tsql](../includes/tsql-md.md)] steps, you can use the Configure Database Mirroring Security Wizard for database mirroring setup. For more information, see [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](../../2014/database-engine/establish-database-mirroring-session-windows-authentication.md).  
   
 ## Prerequisite  
- The example uses the **AdventureWorks** sample database, which uses the simple recovery model by default. To use database mirroring with this database, you must alter it to use the full recovery model. To do this in [!INCLUDE[tsql](../../includes/tsql-md.md)], use the ALTER DATABASE statement, as follows:  
+ The example uses the **AdventureWorks** sample database, which uses the simple recovery model by default. To use database mirroring with this database, you must alter it to use the full recovery model. To do this in [!INCLUDE[tsql](../includes/tsql-md.md)], use the ALTER DATABASE statement, as follows:  
   
 ```  
 USE master;  
@@ -34,7 +34,7 @@ SET RECOVERY FULL;
 GO  
 ```  
   
- For information on changing the recovery model in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], see [View or Change the Recovery Model of a Database &#40;SQL Server&#41;](../../2014/database-engine/view-or-change-the-recovery-model-of-a-database-sql-server.md).  
+ For information on changing the recovery model in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], see [View or Change the Recovery Model of a Database &#40;SQL Server&#41;](../../2014/database-engine/view-or-change-the-recovery-model-of-a-database-sql-server.md).  
   
 ### Permissions  
  Requires ALTER permission on the database and CREATE ENDPOINT permission, or membership in the **sysadmin** fixed server role.  
@@ -156,7 +156,7 @@ GO
 -   [Example: Setting Up Database Mirroring Using Certificates &#40;Transact-SQL&#41;](../../2014/database-engine/example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
   
 ## See Also  
- [ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20\(Transact-SQL\).md)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)   
  [The Database Mirroring Endpoint &#40;SQL Server&#41;](../../2014/database-engine/the-database-mirroring-endpoint-sql-server.md)   
  [Transport Security for Database Mirroring and AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/transport-security-database-mirroring-always-on-availability.md)   
  [Manage Metadata When Making a Database Available on Another Server Instance &#40;SQL Server&#41;](../../2014/database-engine/manage-metadata-when-making-a-database-available-on-another-server.md)   

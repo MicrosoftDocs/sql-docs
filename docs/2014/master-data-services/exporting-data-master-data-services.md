@@ -20,10 +20,10 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Exporting Data (Master Data Services)
-  You can export [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] data to subscribing systems by creating subscriptions views. Any subscribing system can then view the published data in the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database. For more information about views, see [Views](../../2014/database-engine/views.md).  
+  You can export [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] data to subscribing systems by creating subscriptions views. Any subscribing system can then view the published data in the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database. For more information about views, see [Views](../../2014/database-engine/views.md).  
   
 ## Subscription View Formats  
- When you create a view in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], you choose from a set of standard view formats that [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] provides. You can use these formats to create views that show:  
+ When you create a view in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], you choose from a set of standard view formats that [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] provides. You can use these formats to create views that show:  
   
 -   All leaf members and their attributes.  
   
@@ -38,7 +38,7 @@ manager: "jhubbard"
 -   The members in all explicit hierarchies for an entity, in either a parent child or level format.  
   
 ## Subscription Views Can Become Out-of-Date  
- After you create a subscription view for an entity or hierarchy, changes to the associated model objects are not automatically reflected in the view. You might need to regenerate a subscription view in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] to reflect changes to model objects. The **Changed** column on the **Export** page is updated to **True** when model objects change. **True** indicates that you should edit the subscription view and save it, which regenerates the view.  
+ After you create a subscription view for an entity or hierarchy, changes to the associated model objects are not automatically reflected in the view. You might need to regenerate a subscription view in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] to reflect changes to model objects. The **Changed** column on the **Export** page is updated to **True** when model objects change. **True** indicates that you should edit the subscription view and save it, which regenerates the view.  
   
 ## Related Tasks  
   

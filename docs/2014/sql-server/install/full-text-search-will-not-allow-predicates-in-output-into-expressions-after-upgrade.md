@@ -19,7 +19,7 @@ manager: "jhubbard"
   Full-text predicates are not allowed in the OUTPUT clause when the database compatibility level is set to 100 or higher.  
   
 ## Description  
- For more information about the OUTPUT clause, see [OUTPUT Clause &#40;Transact-SQL&#41;](../Topic/OUTPUT%20Clause%20\(Transact-SQL\).md).  
+ For more information about the OUTPUT clause, see [OUTPUT Clause &#40;Transact-SQL&#41;](~/t-sql/queries/output-clause-transact-sql.md).  
   
 ## See Also  
  [Working with Upgrade Advisor](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   

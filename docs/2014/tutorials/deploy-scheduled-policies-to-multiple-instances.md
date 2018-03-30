@@ -31,7 +31,7 @@ manager: "jhubbard"
   
 -   You must have completed the previous tasks in this lesson.  
   
--   The instances where you want to deploy the scheduled policies must be running [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or a later version. Automation requires the policies to be stored locally, which is not supported on versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] earlier than [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
+-   The instances where you want to deploy the scheduled policies must be running [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] or a later version. Automation requires the policies to be stored locally, which is not supported on versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] earlier than [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)].  
   
 -   The servers where you want to deploy the scheduled policies must be registered in Registered Servers in either the **Local Server Groups** or the **Central Management Servers** node. For more information, see the following topics:  
   
@@ -88,12 +88,12 @@ manager: "jhubbard"
     >  To view the evaluation results after a scheduled policy runs, open the Policy History log on the target instance. To open the log, right-click **Policy Management**, and then click **View History**.  
   
 ## Summary  
- This tutorial has shown you how to perform both on-demand and scheduled evaluations of the best practices policies against one or more instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ This tutorial has shown you how to perform both on-demand and scheduled evaluations of the best practices policies against one or more instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## Next  
  This tutorial is finished. To return to the start, see [Tutorial: Evaluating Best Practices by Using Policy-Based Management](../../2014/tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md).  
   
- To see a list of [!INCLUDE[ssDE](../../includes/ssde-md.md)] tutorials, click [Database Engine Tutorials](../../2014/tutorials/database-engine-tutorials.md).  
+ To see a list of [!INCLUDE[ssDE](../includes/ssde-md.md)] tutorials, click [Database Engine Tutorials](../../2014/tutorials/database-engine-tutorials.md).  
   
 ## See Also  
  [Administer Servers by Using Policy-Based Management](../../2014/database-engine/administer-servers-by-using-policy-based-management.md)  

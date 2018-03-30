@@ -26,12 +26,12 @@ ms.author: "jroth"
 manager: "jhubbard"
 ---
 # Use the Fail Over Availability Group Wizard (SQL Server Management Studio)
-  This topic describes how to perform a planned manual failover or forced manual failover (forced failover) on an AlwaysOn availability group by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. An availability group fails over at the level of an availability replica. If you fail over to a secondary replica in the SYNCHRONIZED state, the wizard performs a planned manual failover (without data loss). If you fail over to a secondary replica in the UNSYNCHRONIZED or NOT SYNCHRONIZING state, the wizard performs a forced manual failover—also known as a *forced failover* (with possible data loss). Both forms of manual failover transition the secondary replica to which you are connected to the primary role. A planned manual failover currently transitions the former primary replica to the secondary role. After a forced failover, when the former primary replica comes online, it transitions to the secondary role.  
+  This topic describes how to perform a planned manual failover or forced manual failover (forced failover) on an AlwaysOn availability group by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. An availability group fails over at the level of an availability replica. If you fail over to a secondary replica in the SYNCHRONIZED state, the wizard performs a planned manual failover (without data loss). If you fail over to a secondary replica in the UNSYNCHRONIZED or NOT SYNCHRONIZING state, the wizard performs a forced manual failover—also known as a *forced failover* (with possible data loss). Both forms of manual failover transition the secondary replica to which you are connected to the primary role. A planned manual failover currently transitions the former primary replica to the secondary role. After a forced failover, when the former primary replica comes online, it transitions to the secondary role.  
   
 
 
   
--   **[!INCLUDE[ssAoFoAgWiz](../../includes/ssaofoagwiz-md.md)] pages:**  
+-   **[!INCLUDE[ssAoFoAgWiz](../includes/ssaofoagwiz-md.md)] pages:**  
   
      [Select New Primary Replica page](#SelectNewPrimaryReplica) (later in this topic)  
   
@@ -57,7 +57,7 @@ manager: "jhubbard"
 -   Cross-database consistency across databases within the availability group is not maintained on failover.  
   
     > [!NOTE]  
-    >  Cross-database transactions and distributed transactions are not supported by [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. For more information, see [Cross-Database Transactions Not Supported For Database Mirroring or AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/transactions-always-on-availability-and-database-mirroring.md).  
+    >  Cross-database transactions and distributed transactions are not supported by [!INCLUDE[ssHADR](../includes/sshadr-md.md)]. For more information, see [Cross-Database Transactions Not Supported For Database Mirroring or AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/transactions-always-on-availability-and-database-mirroring.md).  
   
 ###  <a name="Prerequisites"></a> Prerequisites for Using the Failover Availability Group Wizard  
   
@@ -100,7 +100,7 @@ manager: "jhubbard"
 11. After a forced failover, see the "Follow Up: After a Forced Failover" section in the [Perform a Forced Manual Failover of an Availability Group &#40;SQL Server&#41;](../../2014/database-engine/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
 ## Help for Pages that are Exclusive to This Wizard  
- This section describes the pages that are unique to the [!INCLUDE[ssAoFoAgWiz](../../includes/ssaofoagwiz-md.md)].  
+ This section describes the pages that are unique to the [!INCLUDE[ssAoFoAgWiz](../includes/ssaofoagwiz-md.md)].  
   
  
   
@@ -169,7 +169,7 @@ manager: "jhubbard"
  Click to cancel the wizard. On the **Select New Primary Replica** page, cancelling the wizard cause it to exit without performing any actions.  
   
 ###  <a name="ConfirmPotentialDataLoss"></a> Confirm Potential Data Loss Page  
- This section describes the options of the **Confirm Potential Data Loss** page, which is displayed only if you are performing a forced failover. This topic is used only by the [!INCLUDE[ssAoFoAgWiz](../../includes/ssaofoagwiz-md.md)]. Use this page to indicate whether you are willing to risk possible data loss in order to force the availability group to fail over.  
+ This section describes the options of the **Confirm Potential Data Loss** page, which is displayed only if you are performing a forced failover. This topic is used only by the [!INCLUDE[ssAoFoAgWiz](../includes/ssaofoagwiz-md.md)]. Use this page to indicate whether you are willing to risk possible data loss in order to force the availability group to fail over.  
   
 #### Confirm Potential Data Loss Options  
  If the selected secondary replica is not synchronized with the primary replica, the wizard displays a warning that failing over to this secondary replica could cause data loss on one or more databases.  
@@ -181,7 +181,7 @@ manager: "jhubbard"
  Click to cancel the wizard. On the **Confirm Potential Data Loss** page, cancelling the wizard cause it to exit without performing any actions.  
   
 ###  <a name="ConnectToReplica"></a> Connect to Replica Page  
- This section describes the options of the **Connect to Replica** page of the [!INCLUDE[ssAoFoAgWiz](../../includes/ssaofoagwiz-md.md)]. This page is displayed only if you are not connected to the target secondary replica. Use this page to connect to the secondary replica that you have selected as the new primary replica.  
+ This section describes the options of the **Connect to Replica** page of the [!INCLUDE[ssAoFoAgWiz](../includes/ssaofoagwiz-md.md)]. This page is displayed only if you are not connected to the target secondary replica. Use this page to connect to the secondary replica that you have selected as the new primary replica.  
   
 #### Page Options  
  **Grid columns:**  

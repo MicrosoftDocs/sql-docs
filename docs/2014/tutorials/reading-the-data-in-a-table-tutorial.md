@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: 532232c9-3d41-45cd-9150-de67a1cbfcf5
 caps.latest.revision: 13
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Reading the Data in a Table (Tutorial)
-  Use the SELECT statement to read the data in a table. The SELECT statement is one of the most important [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, and there are many variations in the syntax. For this tutorial, you will work with five simple versions.  
+  Use the SELECT statement to read the data in a table. The SELECT statement is one of the most important [!INCLUDE[tsql](../includes/tsql-md.md)] statements, and there are many variations in the syntax. For this tutorial, you will work with five simple versions.  
   
 ### To read the data in a table  
   
@@ -78,13 +78,13 @@ manager: "jhubbard"
   
 |||  
 |-|-|  
-|[String Functions &#40;Transact-SQL&#41;](../Topic/String%20Functions%20\(Transact-SQL\).md)|[Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../Topic/Date%20and%20Time%20Data%20Types%20and%20Functions%20\(Transact-SQL\).md)|  
-|[Mathematical Functions &#40;Transact-SQL&#41;](../Topic/Mathematical%20Functions%20\(Transact-SQL\).md)|[Text and Image Functions &#40;Transact-SQL&#41;](../Topic/Text%20and%20Image%20Functions%20\(Transact-SQL\).md)|  
+|[String Functions &#40;Transact-SQL&#41;](~/t-sql/functions/string-functions-transact-sql.md)|[Date and Time Data Types and Functions &#40;Transact-SQL&#41;](~/t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)|  
+|[Mathematical Functions &#40;Transact-SQL&#41;](~/t-sql/functions/mathematical-functions-transact-sql.md)|[Text and Image Functions &#40;Transact-SQL&#41;](~/t-sql/functions/text-and-image-functions-textptr-transact-sql.md)|  
   
 ## Next Task in Lesson  
  [Summary: Creating Database Objects](../../2014/tutorials/summary-creating-database-objects.md)  
   
 ## See Also  
- [SELECT &#40;Transact-SQL&#41;](../Topic/SELECT%20\(Transact-SQL\).md)  
+ [SELECT &#40;Transact-SQL&#41;](~/t-sql/queries/select-transact-sql.md)  
   
   

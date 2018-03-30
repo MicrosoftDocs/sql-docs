@@ -17,11 +17,11 @@ helpviewer_keywords:
 ms.assetid: 6823c7f8-06ca-4bda-8482-7092f03d52a0
 caps.latest.revision: 16
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Delete Views
-  You can delete (drop) views in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+  You can delete (drop) views in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)]  
   
 
   
@@ -55,7 +55,7 @@ manager: "jhubbard"
   
 #### To delete a view from a database  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -69,6 +69,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [DROP VIEW &#40;Transact-SQL&#41;](../Topic/DROP%20VIEW%20\(Transact-SQL\).md).  
+ For more information, see [DROP VIEW &#40;Transact-SQL&#41;](~/t-sql/statements/drop-view-transact-sql.md).  
   
   

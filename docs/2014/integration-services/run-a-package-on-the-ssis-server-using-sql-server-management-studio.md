@@ -16,13 +16,13 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Run a Package on the SSIS Server Using SQL Server Management Studio
-  After you deploy your project to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, you can run the package on the server.  
+  After you deploy your project to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server, you can run the package on the server.  
   
  You can use operations reports to view information about packages that have run, or are currently running, on the server. For more information, see [Reports for the Integration Services Server](../../2014/integration-services/reports-for-the-integration-services-server.md).  
   
 ### To run a package on the server using SQL Server Management Studio  
   
-1.  Open [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and connect to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that contains the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog.  
+1.  Open [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] and connect to the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that contains the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] catalog.  
   
 2.  In Object Explorer, expand the **Integration Services Catalogs** node, expand the **SSISDB** node, and navigate to the package contained in the project you deployed.  
   
@@ -34,6 +34,6 @@ manager: "jhubbard"
   
      -or-  
   
-     Use stored procedures to run the package. Click **Script** to generate the Transact-SQL statement that creates an instance of the execution and starts an instance of the execution. The statement includes a call to the catalog.create_execution, catalog.set_execution_parameter_value, and catalog.start_execution stored procedures. For more information about these stored procedures, see [catalog.create_execution &#40;SSISDB Database&#41;](../Topic/catalog.create_execution%20\(SSISDB%20Database\).md), [catalog.set_execution_parameter_value &#40;SSISDB Database&#41;](../Topic/catalog.set_execution_parameter_value%20\(SSISDB%20Database\).md), and [catalog.start_execution &#40;SSISDB Database&#41;](../Topic/catalog.start_execution%20\(SSISDB%20Database\).md).  
+     Use stored procedures to run the package. Click **Script** to generate the Transact-SQL statement that creates an instance of the execution and starts an instance of the execution. The statement includes a call to the catalog.create_execution, catalog.set_execution_parameter_value, and catalog.start_execution stored procedures. For more information about these stored procedures, see [catalog.create_execution &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md), [catalog.set_execution_parameter_value &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md), and [catalog.start_execution &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md).  
   
   

@@ -30,7 +30,7 @@ manager: "mblythe"
   
  **To view the toolbar on the Attribute Relationship tab**  
   
--   In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], in Solution Explorer, double-click a dimension to open the Dimension Designer, and then click the **Attribute Relationship** tab.  
+-   In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], in Solution Explorer, double-click a dimension to open the Dimension Designer, and then click the **Attribute Relationship** tab.  
   
 ## Options  
  **Add Business Intelligence**  

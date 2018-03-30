@@ -12,14 +12,14 @@ ms.topic: "article"
 ms.assetid: 81fd4a1f-79a9-4967-86d6-6229413c0995
 caps.latest.revision: 7
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Add an External Image (Report Builder and SSRS)
   External images can be on a report server in native mode or SharePoint integrated mode, or on any other Web site. When you include external images in your report, you must verify that the image exists and that the report reader has permissions to access the image. For more information, see [Images &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/images-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ### To add an external image  
   
@@ -41,7 +41,7 @@ manager: "mblythe"
   
 6.  (Optional) Click **Size**, **Visibility**, **Action**, or **Border** to set additional properties for the image report item.  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## See Also  
  [Embed an Image in a Report &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/embed-an-image-in-a-report-report-builder-and-ssrs.md)   

@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: fbb59d31-2424-4552-9195-0da8d83e755f
 caps.latest.revision: 36
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # View Information and Perform Tasks for the Agents Associated With a Subscription (Replication Monitor)
@@ -28,7 +28,7 @@ manager: "jhubbard"
   
 -   **Subscription Watch List**  
   
-     This tab is intended to display information about subscriptions from all publications available at the selected Publisher that have errors, warnings, or the poorest performance. This tab is not displayed for Distributors running versions prior to [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
+     This tab is intended to display information about subscriptions from all publications available at the selected Publisher that have errors, warnings, or the poorest performance. This tab is not displayed for Distributors running versions prior to [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
  For more information about the options on each tab, click the tab in the right pane, and then click **Help** on the menu bar. For information about starting Replication Monitor, see [Start the Replication Monitor](../../../2014/relational-databases/replication/start-the-replication-monitor.md).  
   

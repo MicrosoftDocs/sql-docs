@@ -19,7 +19,7 @@ f1_keywords:
 ms.assetid: 26a4baf2-7bc5-4634-b136-552687ffa477
 caps.latest.revision: 7
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Formatting Text and Placeholders (Report Builder and SSRS)
@@ -34,7 +34,7 @@ manager: "mblythe"
  To quickly get started, see [Tutorial: Format Text &#40;Report Builder&#41;](../../2014/tutorials/tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## Creating Placeholder Text in a Text Box  
  When a simple or complex expression is defined inside a text box, the resulting UI representation of this expression is known as a *placeholder*. You can define colors, fonts, actions, and other behavior on any number of placeholders or sections of text within a single text box.  

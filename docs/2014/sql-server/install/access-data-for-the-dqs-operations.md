@@ -16,7 +16,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Access Data for the DQS Operations
-  To use your source data for [!INCLUDE[ssDQSnoversion](../../../includes/ssdqsnoversion-md.md)] (DQS) operations, and export your processed data, you can do either of the following:  
+  To use your source data for [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) operations, and export your processed data, you can do either of the following:  
   
 -   Copy your source data to a table/view in the DQS_STAGING_DATA database, and then use it for DQS operations. You can also export the processed data to a new table in the DQS_STAGING_DATA database. To do so, your Windows user account must be granted read/write access to the DQS_STAGING_DATA database.  
   
@@ -24,7 +24,7 @@ manager: "jhubbard"
   
 ## Prerequisites  
   
--   You must have completed the [!INCLUDE[ssDQSServer](../../../includes/ssdqsserver-md.md)] installation by running the DQSInstaller.exe file. For more information, see [Run DQSInstaller.exe to Complete Data Quality Server Installation](../../../2014/sql-server/install/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md).  
+-   You must have completed the [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] installation by running the DQSInstaller.exe file. For more information, see [Run DQSInstaller.exe to Complete Data Quality Server Installation](../../../2014/sql-server/install/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md).  
   
 -   Your Windows user account must be a member of the appropriate fixed server role (such as securityadmin, serveradmin, or sysadmin) in the database engine instance to grant/modify access to SQL login on databases.  
   

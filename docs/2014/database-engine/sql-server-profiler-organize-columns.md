@@ -26,7 +26,7 @@ manager: "jhubbard"
   
  When you group or aggregate events in a trace window display, the columns selected for grouping or aggregating remain fixed in the display window, but you can scroll to the right or left to view all other data columns.  
   
- To access this dialog box, open an existing trace file or table, and click **Properties** on the [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **File** menu. In the **Trace Properties** dialog box, click the **Events Selection** tab, and then click **Organize Columns**. You can also click **Organize Columns** on the **Events Selection** tab when you are creating a new trace.  
+ To access this dialog box, open an existing trace file or table, and click **Properties** on the [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **File** menu. In the **Trace Properties** dialog box, click the **Events Selection** tab, and then click **Organize Columns**. You can also click **Organize Columns** on the **Events Selection** tab when you are creating a new trace.  
   
 ## Options  
  **Groups**  

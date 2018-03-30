@@ -12,14 +12,14 @@ ms.topic: "article"
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 caps.latest.revision: 42
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Lesson 3: Defining a Data-Driven Subscription
   In this lesson, you use the data-driven subscription pages to connect to a subscription data source, build a query that retrieves subscription data, and map the result set to report and delivery options.  
   
 > [!NOTE]  
->  Before you start, verify that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service is running. If it is not running, you cannot save the subscription.  
+>  Before you start, verify that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent service is running. If it is not running, you cannot save the subscription.  
   
  This lesson assumes you completed Lesson 1 and Lesson 2 and that the report data source uses stored credentials.  For more information, see [Lesson 2: Modifying the Report Data Source Properties](../../2014/tutorials/lesson-2-modifying-the-report-data-source-properties.md)  
   
@@ -73,7 +73,7 @@ manager: "mblythe"
 4.  In **User Name** and **Password**, type your domain user name and password. Include both the domain and user account when specifying **User Name**.  
   
     > [!NOTE]  
-    >  Credentials used to connect to a subscriber data source are not passed back to [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. If you modify the subscription later, you must retype the password used to connect to the data source.  
+    >  Credentials used to connect to a subscriber data source are not passed back to [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. If you modify the subscription later, you must retype the password used to connect to the data source.  
   
 5.  Select **Use as windows credentials when connecting to the data source**, and then click **Next**.  
   
@@ -133,7 +133,7 @@ manager: "mblythe"
   
  ![Subscription results in Report Manager](../../2014/tutorials/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.gif "Subscription results in Report Manager")  
   
- This step concludes the tutorial "Defining a Data-Driven Subscription". To learn more about other [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] tutorials, see [Reporting Services Tutorials &#40;SSRS&#41;](../../2014/tutorials/reporting-services-tutorials-ssrs.md).  
+ This step concludes the tutorial "Defining a Data-Driven Subscription". To learn more about other [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] tutorials, see [Reporting Services Tutorials &#40;SSRS&#41;](../../2014/tutorials/reporting-services-tutorials-ssrs.md).  
   
 ## See Also  
  [Create a Data-Driven Subscription &#40;SSRS Tutorial&#41;](../../2014/tutorials/create-a-data-driven-subscription-ssrs-tutorial.md)   

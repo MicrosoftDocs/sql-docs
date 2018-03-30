@@ -185,8 +185,8 @@ SELECT CAST(@timems AS VARCHAR(10)) + ' ms (memory-optimized table with natively
  [Memory-Optimized Tables](../../2014/database-engine/memory-optimized-tables.md)   
  [Natively Compiled Stored Procedures](../../2014/database-engine/natively-compiled-stored-procedures.md)   
  [Requirements for Using Memory-Optimized Tables](../../2014/database-engine/requirements-for-using-memory-optimized-tables.md)   
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../Topic/CREATE%20DATABASE%20\(SQL%20Server%20Transact-SQL\).md)   
- [ALTER DATABASE File and Filegroup Options &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20File%20and%20Filegroup%20Options%20\(Transact-SQL\).md)   
- [CREATE PROCEDURE and Memory-Optimized Tables](../Topic/CREATE%20PROCEDURE%20\(Transact-SQL\).md#mot)  
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](~/t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [ALTER DATABASE File and Filegroup Options &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)   
+ [CREATE PROCEDURE and Memory-Optimized Tables](~/t-sql/statements/create-procedure-transact-sql.md)  
   
   

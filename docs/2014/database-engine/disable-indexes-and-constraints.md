@@ -25,11 +25,11 @@ helpviewer_keywords:
 ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
 caps.latest.revision: 27
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Disable Indexes and Constraints
-  This topic describes how to disable an index or constraints in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Disabling an index prevents user access to the index, and for clustered indexes to the underlying table data. The index definition remains in metadata, and index statistics are kept on nonclustered indexes. Disabling a nonclustered or clustered index on a view physically deletes the index data. Disabling a clustered index on a table prevents access to the data; the data still remains in the table, but is unavailable for data manipulation language (DML) operations until the index is dropped or rebuilt.  
+  This topic describes how to disable an index or constraints in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)]. Disabling an index prevents user access to the index, and for clustered indexes to the underlying table data. The index definition remains in metadata, and index statistics are kept on nonclustered indexes. Disabling a nonclustered or clustered index on a view physically deletes the index data. Disabling a clustered index on a table prevents access to the data; the data still remains in the table, but is unavailable for data manipulation language (DML) operations until the index is dropped or rebuilt.  
   
  **In This Topic**  
   
@@ -79,7 +79,7 @@ manager: "jhubbard"
   
     -   Statistics are required during query optimization.  
   
--   If a clustered index is disabled, [DBCC CHECKDB](../Topic/DBCC%20CHECKDB%20\(Transact-SQL\).md) cannot return information about the underlying table; instead, the statement reports that the clustered index is disabled. [DBCC INDEXDEFRAG](../Topic/DBCC%20INDEXDEFRAG%20\(Transact-SQL\).md) cannot be used to defragment a disabled index; the statement fails with an error message. You can use [DBCC DBREINDEX](../Topic/DBCC%20DBREINDEX%20\(Transact-SQL\).md) to rebuild a disabled index.  
+-   If a clustered index is disabled, [DBCC CHECKDB](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) cannot return information about the underlying table; instead, the statement reports that the clustered index is disabled. [DBCC INDEXDEFRAG](~/t-sql/database-console-commands/dbcc-indexdefrag-transact-sql.md) cannot be used to defragment a disabled index; the statement fails with an error message. You can use [DBCC DBREINDEX](~/t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md) to rebuild a disabled index.  
   
 -   Creating a new clustered index enables previously disabled nonclustered indexes. For more information, see [Enable Indexes and Constraints](../../2014/database-engine/enable-indexes-and-constraints.md).  
   
@@ -161,7 +161,7 @@ manager: "jhubbard"
   
 #### To disable an index  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -178,7 +178,7 @@ manager: "jhubbard"
   
 #### To disable all indexes on a table  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -192,6 +192,6 @@ manager: "jhubbard"
     DISABLE;  
     ```  
   
- For more information, see [ALTER INDEX &#40;Transact-SQL&#41;](../Topic/ALTER%20INDEX%20\(Transact-SQL\).md).  
+ For more information, see [ALTER INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-index-transact-sql.md).  
   
   

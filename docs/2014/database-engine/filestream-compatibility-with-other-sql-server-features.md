@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # FILESTREAM Compatibility with Other SQL Server Features
-  Because FILESTREAM data is in the file system, this topic provides some considerations, guidelines, and limitations for using FILESTREAM with the following features in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+  Because FILESTREAM data is in the file system, this topic provides some considerations, guidelines, and limitations for using FILESTREAM with the following features in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
 -   [SQL Server Integration Services (SSIS)](#ssis)  
   
@@ -55,7 +55,7 @@ manager: "jhubbard"
  FILESTREAM data is not encrypted even when transparent data encryption is enabled.  
   
 ##  <a name="DatabaseSnapshot"></a> Database Snapshots  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not support [database snapshots](../../2014/database-engine/database-snapshots-sql-server.md) for FILESTREAM filegroups. If a FILESTREAM filegroup is included in a CREATE DATABASE ON clause, the statement will fail and an error will be raised.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not support [database snapshots](../../2014/database-engine/database-snapshots-sql-server.md) for FILESTREAM filegroups. If a FILESTREAM filegroup is included in a CREATE DATABASE ON clause, the statement will fail and an error will be raised.  
   
  When you are using FILESTREAM, you can create database snapshots of standard (non-FILESTREAM) filegroups. The FILESTREAM filegroups are marked as offline for those database snapshots.  
   
@@ -64,15 +64,15 @@ manager: "jhubbard"
  `Could not continue scan with NOLOCK due to data movement.`  
   
 ##  <a name="Replication"></a> Replication  
- A `varbinary(max)` column that has the FILESTREAM attribute enabled at the Publisher can be replicated to a Subscriber with or without the FILESTREAM attribute. To specify the way in which the column is replicated, use the **Article Properties - \<Article>** dialog box or the @schema_option parameter of [sp_addarticle](../Topic/sp_addarticle%20\(Transact-SQL\).md) or [sp_addmergearticle](../Topic/sp_addmergearticle%20\(Transact-SQL\).md). Data that is replicated to a `varbinary(max)` column that does not have the FILESTREAM attribute must not exceed the 2-GB limit for that data type; otherwise, a run-time error is generated. We recommend that you replicate the FILESTREAM attribute, unless you are replicating data to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Replicating tables that have FILESTREAM columns to [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Subscribers is not supported, regardless of the schema option that is specified.  
+ A `varbinary(max)` column that has the FILESTREAM attribute enabled at the Publisher can be replicated to a Subscriber with or without the FILESTREAM attribute. To specify the way in which the column is replicated, use the **Article Properties - \<Article>** dialog box or the @schema_option parameter of [sp_addarticle](~/relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) or [sp_addmergearticle](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Data that is replicated to a `varbinary(max)` column that does not have the FILESTREAM attribute must not exceed the 2-GB limit for that data type; otherwise, a run-time error is generated. We recommend that you replicate the FILESTREAM attribute, unless you are replicating data to [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]. Replicating tables that have FILESTREAM columns to [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)] Subscribers is not supported, regardless of the schema option that is specified.  
   
 > [!NOTE]  
->  Replicating large data values from [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Subscribers is limited to a maximum of 256 MB data values. For more information, see [Maximum Capacity Specifications](http://go.microsoft.com/fwlink/?LinkId=103810).  
+>  Replicating large data values from [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] to [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] Subscribers is limited to a maximum of 256 MB data values. For more information, see [Maximum Capacity Specifications](http://go.microsoft.com/fwlink/?LinkId=103810).  
   
 ### Considerations for Transactional Replication  
  If you use FILESTREAM columns in tables that are published for transactional replication, note the following considerations:  
   
--   If any tables include columns that have the FILESTREAM attribute, you cannot use values of *database snapshot* or *database snapshot character* for the @sync_method property of [sp_addpublication](../Topic/sp_addpublication%20\(Transact-SQL\).md).  
+-   If any tables include columns that have the FILESTREAM attribute, you cannot use values of *database snapshot* or *database snapshot character* for the @sync_method property of [sp_addpublication](~/relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md).  
   
 -   The max text repl size option specifies the maximum amount of data that can be inserted into a column that is published for replication. This option can be used to control the size of FILESTREAM data that is replicated.  
   
@@ -89,20 +89,20 @@ manager: "jhubbard"
   
     -   By default, merge replication uses NEWSEQUENTIALID() because it can provide better performance than NEWID(). If you add a `uniqueidentifier` column to a table that will be published for merge replication, specify NEWSEQUENTIALID() as the default.  
   
--   Merge replication includes an optimization for replicating large object types. This optimization is controlled by the @stream_blob_columns parameter of [sp_addmergearticle](../Topic/sp_addmergearticle%20\(Transact-SQL\).md). If you set the schema option to replicate the FILESTREAM attribute, the @stream_blob_columns parameter value is set to `true`. This optimization can be overridden by using [sp_changemergearticle](../Topic/sp_changemergearticle%20\(Transact-SQL\).md). This stored procedure enables you to set @stream_blob_columns to `false`. If you add a FILESTREAM column to a table that is already published for merge replication, we recommend that you set the option to `true` by using sp_changemergearticle.  
+-   Merge replication includes an optimization for replicating large object types. This optimization is controlled by the @stream_blob_columns parameter of [sp_addmergearticle](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). If you set the schema option to replicate the FILESTREAM attribute, the @stream_blob_columns parameter value is set to `true`. This optimization can be overridden by using [sp_changemergearticle](~/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). This stored procedure enables you to set @stream_blob_columns to `false`. If you add a FILESTREAM column to a table that is already published for merge replication, we recommend that you set the option to `true` by using sp_changemergearticle.  
   
 -   Enabling the schema option for FILESTREAM after an article is created can cause replication to fail if the data in a FILESTREAM column exceeds 2 GB and there is a conflict during replication. If you expect this situation to arise, it is recommended that you drop and re-create the table article with the appropriate FILESTREAM schema option enabled at creation time.  
   
 -   Merge replication can synchronize FILESTREAM data over an HTTPS connection by using [Web Synchronization](../../2014/relational-databases/replication/web-synchronization-for-merge-replication.md). This data cannot exceed the 50 MB limit for Web Synchronization; otherwise, a run-time error is generated.  
   
 ##  <a name="LogShipping"></a> Log Shipping  
- [Log shipping](../../2014/database-engine/about-log-shipping-sql-server.md) supports FILESTREAM. Both the primary and secondary servers must be running [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], or a later version, and have FILESTREAM enabled.  
+ [Log shipping](../../2014/database-engine/about-log-shipping-sql-server.md) supports FILESTREAM. Both the primary and secondary servers must be running [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], or a later version, and have FILESTREAM enabled.  
   
 ##  <a name="DatabaseMirroring"></a> Database Mirroring  
  Database mirroring does not support FILESTREAM. A FILESTREAM filegroup cannot be created on the principal server. Database mirroring cannot be configured for a database that contains FILESTREAM filegroups.  
   
 ##  <a name="FullText"></a> Full-Text Indexing  
- [Full-text indexing](../../2014/database-engine/populate-full-text-indexes.md) works with a FILESTREAM column in the same way that it does with a `varbinary(max)` column. The FILESTREAM table must have a column that contains the file name extension for each FILESTREAM BLOB. For more information, see [Query with Full-Text Search](../../2014/database-engine/query-with-full-text-search.md), [Configure and Manage Filters for Search](../../2014/database-engine/configure-and-manage-filters-for-search.md), and [sys.fulltext_document_types &#40;Transact-SQL&#41;](../Topic/sys.fulltext_document_types%20\(Transact-SQL\).md).  
+ [Full-text indexing](../../2014/database-engine/populate-full-text-indexes.md) works with a FILESTREAM column in the same way that it does with a `varbinary(max)` column. The FILESTREAM table must have a column that contains the file name extension for each FILESTREAM BLOB. For more information, see [Query with Full-Text Search](../../2014/database-engine/query-with-full-text-search.md), [Configure and Manage Filters for Search](../../2014/database-engine/configure-and-manage-filters-for-search.md), and [sys.fulltext_document_types &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md).  
   
  The full-text engine indexes the contents of the FILESTREAM BLOBs. Indexing files such as images might not be useful. When a FILESTREAM BLOB is updated it is reindexed.  
   
@@ -110,7 +110,7 @@ manager: "jhubbard"
  For failover clustering, FILESTREAM filegroups must be put on a shared disk. FILESTREAM must be enabled on each node in the cluster that will host the FILESTREAM instance. For more information, see [Set Up FILESTREAM on a Failover Cluster](../../2014/database-engine/set-up-filestream-on-a-failover-cluster.md).  
   
 ##  <a name="SQLServerExpress"></a> SQL Server Express  
- [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] supports FILESTREAM. The 10-GB database size limit does not include the FILESTREAM data container.  
+ [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] supports FILESTREAM. The 10-GB database size limit does not include the FILESTREAM data container.  
   
 ##  <a name="contained"></a> Contained Databases  
  The FILESTREAM feature requires some configuration outside of the database. Therefore a database that uses FILESTREAM or FileTable is not fully contained.  

@@ -19,14 +19,14 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Set the Properties of a User-Defined Variable
-  To set the properties of a user-defined variable in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], you can use one of the following features:  
+  To set the properties of a user-defined variable in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], you can use one of the following features:  
   
 -   Variables window.  
   
 -   Properties window. The **Properties** window lists properties for configuring variables that are not available in the **Variables** window: Description, EvaluateAsExpression, Expression, ReadOnly, ValueType, and IncludeInDebugDump.  
   
 > [!NOTE]  
->  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] also provides a set of system variables whose properties cannot be updated, with the exception of the RaiseChangedEvent property.  
+>  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] also provides a set of system variables whose properties cannot be updated, with the exception of the RaiseChangedEvent property.  
   
  **Setting Expressions on Variables**  
   
@@ -56,7 +56,7 @@ manager: "jhubbard"
   
 #### To set the properties of a variable by using the Variables window  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project that contains the package you want.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project that contains the package you want.  
   
 2.  In Solution Explorer, right-click the package to open it.  
   
@@ -76,13 +76,13 @@ manager: "jhubbard"
   
 #### To set the properties of a variable by using the Properties window  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project that contains the package you want.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project that contains the package you want.  
   
 2.  In Solution Explorer, right-click the package to open it.  
   
 3.  On the **View** menu, click **Properties Window**.  
   
-4.  In [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the **Package Explorer** tab and expand the Package node.  
+4.  In [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click the **Package Explorer** tab and expand the Package node.  
   
 5.  To modify variables with package scope, expand the Variables node; otherwise, expand the Event Handlers or Executables nodes until you locate the Variables node that contains the variable that you want to modify.  
   

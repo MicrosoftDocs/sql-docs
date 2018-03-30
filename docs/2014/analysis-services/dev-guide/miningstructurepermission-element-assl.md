@@ -60,7 +60,7 @@ manager: "mblythe"
 ## Remarks  
  The corresponding element in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.MiningStructurePermission>.  
   
- In [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], the permission `AllowDrillthrough` has been extended to apply to a mining structure. When you assign this permission to a role, any user who is a member of that role can directly query the mining structure by using the following syntax:  
+ In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], the permission `AllowDrillthrough` has been extended to apply to a mining structure. When you assign this permission to a role, any user who is a member of that role can directly query the mining structure by using the following syntax:  
   
 ```  
 SELECT <structure column list> FROM <structure>.CASES  

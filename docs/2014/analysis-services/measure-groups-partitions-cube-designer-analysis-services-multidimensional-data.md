@@ -71,6 +71,6 @@ manager: "mblythe"
 |**Process**|Click to display the **Process** dialog box and process the selected partition.|  
 |**Copy**|This option is disabled.|  
 |**Paste**|This option is disabled.|  
-|**Properties**|Select to display the **Properties** window in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] for the selected partition.|  
+|**Properties**|Select to display the **Properties** window in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] for the selected partition.|  
   
   

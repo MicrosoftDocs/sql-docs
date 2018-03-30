@@ -97,7 +97,7 @@ manager: "jhubbard"
   
 2.  In the Data Source View wizard, make the following selections:  
   
-     **Data Source**: [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)]  
+     **Data Source**: [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
   
      **Select Tables and Views**: Select the table that you just created, NewSalesData.  
   
@@ -119,7 +119,7 @@ manager: "jhubbard"
   
 2.  On the welcome page of the wizard, click **Next**.  
   
-3.  On the **Select Data Source** page, select [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)], and then click **Next**.  
+3.  On the **Select Data Source** page, select [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)], and then click **Next**.  
   
 4.  In the page, **Select Tables and Views**, do not add any tables—just click **Next**.  
   
@@ -148,7 +148,7 @@ manager: "jhubbard"
   
 2.  In the Data Source View wizard, make the following selections:  
   
-     **Data Source**: [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)]  
+     **Data Source**: [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
   
      **Select Tables and Views**: Do not select any tables  
   

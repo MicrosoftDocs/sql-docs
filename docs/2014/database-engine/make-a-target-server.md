@@ -25,7 +25,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Make a Target Server
-  This topic describes how to make a target server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or SQL Server Management Objects (SMO).  
+  This topic describes how to make a target server in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../includes/tsql-md.md)], or SQL Server Management Objects (SMO).  
   
  **In This Topic**  
   
@@ -67,7 +67,7 @@ manager: "jhubbard"
   
 #### To make a target server  
   
-1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], and then expand that instance.  
+1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], and then expand that instance.  
   
 2.  Right-click **SQL Server Agent**, point to **Multi Server Administration**, and then click **Make this a Target**. The **Target Server Wizard** guides you through the process of making a target server.  
   
@@ -88,7 +88,7 @@ manager: "jhubbard"
   
 #### To make a target server  
   
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
@@ -103,7 +103,7 @@ manager: "jhubbard"
     GO;  
     ```  
   
-     For more information, see [sp_msx_enlist &#40;Transact-SQL&#41;](../Topic/sp_msx_enlist%20\(Transact-SQL\).md).  
+     For more information, see [sp_msx_enlist &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql.md).  
   
 ##  <a name="PowerShellProcedure"></a> Using SQL Server Management Objects (SMO)  
   

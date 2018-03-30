@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # ReportServer Element (ASSL)
-  Contains the name of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] instance that is used by the [ReportAction](../../../2014/analysis-services/dev-guide/reportaction-data-type-assl.md).  
+  Contains the name of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instance that is used by the [ReportAction](../../../2014/analysis-services/dev-guide/reportaction-data-type-assl.md).  
   
 ## Syntax  
   

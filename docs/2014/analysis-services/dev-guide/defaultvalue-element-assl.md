@@ -56,7 +56,7 @@ manager: "mblythe"
 |Child elements|None|  
   
 ## Remarks  
- This element contains the read-only installation default value of the `ServerProperty` for the current instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. The default value is supplied by the instance, and typically cannot be changed.  
+ This element contains the read-only installation default value of the `ServerProperty` for the current instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. The default value is supplied by the instance, and typically cannot be changed.  
   
  The element that corresponds to the parent of `DefaultValue` in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.ServerProperty>.  
   

@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # F1 Help for Server Connections (SQL Server Management Studio)
-  This section contains the F1 Help for the **Connect to Server** dialog box pages in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  This section contains the F1 Help for the **Connect to Server** dialog box pages in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
  [Browse for Servers &#40;Local Servers&#41;](../../2014/database-engine/browse-for-servers-local-servers.md)  
   

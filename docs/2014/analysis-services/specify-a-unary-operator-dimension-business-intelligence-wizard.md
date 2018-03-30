@@ -21,7 +21,7 @@ manager: "mblythe"
   Use the **Specify a Unary Operator** page to select a dimension that has a parent attribute defined and to which the Business Intelligence Wizard will apply unary operators. For more information about parent attributes, see [Attributes and Attribute Hierarchies](../../2014/analysis-services/dev-guide/attributes-and-attribute-hierarchies.md).  
   
 > [!NOTE]  
->  This page does not appear if the Business Intelligence Wizard was started from Dimension Designer or by right-clicking a dimension in Solution Explorer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+>  This page does not appear if the Business Intelligence Wizard was started from Dimension Designer or by right-clicking a dimension in Solution Explorer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 ## Options  
  **Dimension**  

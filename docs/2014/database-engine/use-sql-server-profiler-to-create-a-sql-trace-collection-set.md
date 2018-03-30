@@ -18,21 +18,21 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Use SQL Server Profiler to Create a SQL Trace Collection Set (SQL Server Management Studio)
-  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] you can exploit the server-side trace capabilities of [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to export a trace definition that you can use to create a collection set that uses the Generic SQL Trace collector type. There are two parts to this process:  
+  In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] you can exploit the server-side trace capabilities of [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] to export a trace definition that you can use to create a collection set that uses the Generic SQL Trace collector type. There are two parts to this process:  
   
-1.  Create and export a [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] trace.  
+1.  Create and export a [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] trace.  
   
 2.  Script a new collection set based on an exported trace.  
   
  The scenario for the following procedures involves collecting data about any stored procedure that requires 80 milliseconds or longer to complete. In order to complete these procedures you should be able to:  
   
--   Use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to create and configure a trace.  
+-   Use [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] to create and configure a trace.  
   
--   Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to open, edit, and execute a query.  
+-   Use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to open, edit, and execute a query.  
   
 ### Create and export a SQL Server Profiler trace  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], open [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. (On the **Tools** menu, click **SQL Server Profiler**.)  
+1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], open [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]. (On the **Tools** menu, click **SQL Server Profiler**.)  
   
 2.  In the **Connect to Server** dialog box, click **Cancel**.  
   
@@ -80,11 +80,11 @@ manager: "jhubbard"
   
 12. In the **Save As** dialog box, type the name that you want to use for the trace definition in the **File name** box, and then save it in the location that you want. For this example, the file name is the same as the trace name (SPgt80).  
   
-13. Click **OK** when you receive a message that the file was successfully saved, and then close [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+13. Click **OK** when you receive a message that the file was successfully saved, and then close [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)].  
   
 ### Script a new collection set from a SQL Server Profiler trace  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], on the **File** menu, point to **Open,** and then click **File**.  
+1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], on the **File** menu, point to **Open,** and then click **File**.  
   
 2.  In the **Open File** dialog box, locate and then open the file that you created in the previous procedure (SPgt80).  
   

@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Create UNION Queries (Visual Database Tools)
-  The UNION keyword enables you to include the results of two SELECT statements in one resulting table. All rows returned from either SELECT statement are combined into the result of the UNION expression. For examples, see [SELECT Examples &#40;Transact-SQL&#41;](../Topic/SELECT%20Examples%20\(Transact-SQL\).md).  
+  The UNION keyword enables you to include the results of two SELECT statements in one resulting table. All rows returned from either SELECT statement are combined into the result of the UNION expression. For examples, see [SELECT Examples &#40;Transact-SQL&#41;](~/t-sql/queries/select-examples-transact-sql.md).  
   
 > [!NOTE]  
 >  The Diagram pane can only display one SELECT clause. Therefore, when you are working with a UNION query, Query Designer hides the Table Operations pane.  
@@ -51,6 +51,6 @@ manager: "jhubbard"
  [Supported Query Types &#40;Visual Database Tools&#41;](../../2014/database-engine/supported-query-types-visual-database-tools.md)   
  [Design Queries and Views How-to Topics &#40;Visual Database Tools&#41;](../../2014/database-engine/design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [Perform Basic Operations with Queries &#40;Visual Database Tools&#41;](../../2014/database-engine/perform-basic-operations-with-queries-visual-database-tools.md)   
- [UNION &#40;Transact-SQL&#41;](../Topic/UNION%20\(Transact-SQL\).md)  
+ [UNION &#40;Transact-SQL&#41;](~/t-sql/language-elements/set-operators-union-transact-sql.md)  
   
   

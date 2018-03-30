@@ -45,12 +45,12 @@ manager: "jhubbard"
   
  If the name of the identifier includes spaces, or if the name is not a valid regular identifier name, the identifier must be qualified. The expression evaluator uses the opening and closing ([]) brackets to qualify identifiers. The brackets are put in the first and the last position of the string. For example, the identifier 5$> becomes [5$>]. Brackets can be used with column names, variable names, and function names.  
   
- If you build expressions using the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer dialog boxes, regular identifiers are automatically enclosed in brackets. However, brackets are required only if the name include invalid characters. For example, the column named **MiddleName** is valid without brackets.  
+ If you build expressions using the [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer dialog boxes, regular identifiers are automatically enclosed in brackets. However, brackets are required only if the name include invalid characters. For example, the column named **MiddleName** is valid without brackets.  
   
  You cannot reference column names that include brackets in expressions. For example, the column name **Column[1]** cannot be used in an expression. To use the column in an expression it must be renamed to a name without brackets.  
   
 ## Lineage Identifiers  
- Expressions can use lineage identifiers to refer to columns. The lineage identifiers are assigned automatically when you first create the package. You can view the lineage identifier for a column on the **Column Properties** tab of the **Advanced Editor** dialog box in the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer.  
+ Expressions can use lineage identifiers to refer to columns. The lineage identifiers are assigned automatically when you first create the package. You can view the lineage identifier for a column on the **Column Properties** tab of the **Advanced Editor** dialog box in the [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer.  
   
  If you refer to a column using its lineage identifier, the identifier must include the pound (#) character prefix. For example, a column with the lineage identifier 147 must be referenced as #147.  
   
@@ -83,7 +83,7 @@ manager: "jhubbard"
 >  If both elements in dotted notation are enclosed in one pair of brackets, the expression evaluator interprets the pair as a single identifier, not a source-column combination.  
   
 ## Variables in Expressions  
- Variables, when referenced in expressions, must include the @ prefix. For example, the **Counter** variable is referenced by using @Counter. The @ character is not part of the variable name; it only identifies the variable to the expression evaluator. If you build expressions by using the dialog boxes that [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer provides, the @ character is automatically added to the variable name. It is not valid to include spaces between the @ character and the variable name.  
+ Variables, when referenced in expressions, must include the @ prefix. For example, the **Counter** variable is referenced by using @Counter. The @ character is not part of the variable name; it only identifies the variable to the expression evaluator. If you build expressions by using the dialog boxes that [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer provides, the @ character is automatically added to the variable name. It is not valid to include spaces between the @ character and the variable name.  
   
  Variable names follow the same rules as those for other regular identifiers:  
   
@@ -97,11 +97,11 @@ manager: "jhubbard"
 >  The names of user-defined and system variables are case-sensitive.  
   
 ## Unique Variable Names  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supports custom variables and provides a set of system variables. By default, custom variables belong to the **User** namespace, and system variables belong to the **System** namespace. You can create additional namespaces for custom variables and update the namespace names to suit the needs of your application. The expression builder lists in-scope variables in all namespaces.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] supports custom variables and provides a set of system variables. By default, custom variables belong to the **User** namespace, and system variables belong to the **System** namespace. You can create additional namespaces for custom variables and update the namespace names to suit the needs of your application. The expression builder lists in-scope variables in all namespaces.  
   
- All variables have scope and belong to a namespace. A variable has package scope or the scope of a container or task in the package. The expression builder in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer lists only the in-scope variables. For more information, see [Integration Services &#40;SSIS&#41; Variables](../../2014/integration-services/integration-services-ssis-variables.md) and [Use Variables in Packages](../../2014/integration-services/use-variables-in-packages.md).  
+ All variables have scope and belong to a namespace. A variable has package scope or the scope of a container or task in the package. The expression builder in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer lists only the in-scope variables. For more information, see [Integration Services &#40;SSIS&#41; Variables](../../2014/integration-services/integration-services-ssis-variables.md) and [Use Variables in Packages](../../2014/integration-services/use-variables-in-packages.md).  
   
- Variables used in expressions must have unique names for the expression evaluator to evaluate the expression correctly. If a package uses multiple variables with the same name, their namespaces must be different. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides a namespace resolution operator, consisting of two colons (::), for qualifying a variable with its namespace. For example, the following expression uses two variables named **Count**; one belongs to the **User** namespace and one to the **MyNamespace** namespace.  
+ Variables used in expressions must have unique names for the expression evaluator to evaluate the expression correctly. If a package uses multiple variables with the same name, their namespaces must be different. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides a namespace resolution operator, consisting of two colons (::), for qualifying a variable with its namespace. For example, the following expression uses two variables named **Count**; one belongs to the **User** namespace and one to the **MyNamespace** namespace.  
   
 ```  
 @[User::Count] > @[MyNamespace::Count]  

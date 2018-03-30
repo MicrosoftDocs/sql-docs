@@ -20,9 +20,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Create a Transact-SQL Job Step
-  This topic describes how to create a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job step that executes [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or SQL Server Management Objects.  
+  This topic describes how to create a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent job step that executes [!INCLUDE[tsql](../includes/tsql-md.md)] scripts in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../includes/tsql-md.md)], or SQL Server Management Objects.  
   
- These job step scripts may call stored procedures and extended stored procedures. A single [!INCLUDE[tsql](../../includes/tsql-md.md)] job step can contain multiple batches and embedded GO commands. For more information on creating a job, see [Creating Jobs](../../2014/database-engine/create-jobs.md).  
+ These job step scripts may call stored procedures and extended stored procedures. A single [!INCLUDE[tsql](../includes/tsql-md.md)] job step can contain multiple batches and embedded GO commands. For more information on creating a job, see [Creating Jobs](../../2014/database-engine/create-jobs.md).  
   
  **In This Topic**  
   
@@ -47,7 +47,7 @@ manager: "jhubbard"
   
 #### To create a Transact-SQL job step  
   
-1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], and then expand that instance.  
+1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], and then expand that instance.  
   
 2.  Expand **SQL Server Agent**, create a new job or right-click an existing job, and then click **Properties**.  
   
@@ -57,13 +57,13 @@ manager: "jhubbard"
   
 5.  In the **Type** list, click **Transact-SQL Script (TSQL)**.  
   
-6.  In the **Command** box, type the [!INCLUDE[tsql](../../includes/tsql-md.md)] command batches, or click **Open** to select a [!INCLUDE[tsql](../../includes/tsql-md.md)] file to use as the command.  
+6.  In the **Command** box, type the [!INCLUDE[tsql](../includes/tsql-md.md)] command batches, or click **Open** to select a [!INCLUDE[tsql](../includes/tsql-md.md)] file to use as the command.  
   
 7.  Click **Parse** to check your syntax.  
   
 8.  The message "Parse succeeded" is displayed when your syntax is correct. If an error is found, correct the syntax before continuing.  
   
-9. Click the **Advanced** page to set job step options, such as: what action to take if the job step succeeds or fails, how many times [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent should try to execute the job step, and the file or table where [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent can write the job step output. Only members of the **sysadmin** fixed server role can write job step output to an operating system file. All SQL Server Agent users can log output to a table.  
+9. Click the **Advanced** page to set job step options, such as: what action to take if the job step succeeds or fails, how many times [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent should try to execute the job step, and the file or table where [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent can write the job step output. Only members of the **sysadmin** fixed server role can write job step output to an operating system file. All SQL Server Agent users can log output to a table.  
   
 10. If you are a member of the **sysadmin** fixed server role and you want to run this job step as a different SQL login, select the SQL login from the **Run as user** list.  
   
@@ -71,7 +71,7 @@ manager: "jhubbard"
   
 #### To create a Transact-SQL job step  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -91,7 +91,7 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [sp_add_jobstep &#40;Transact-SQL&#41;](../Topic/sp_add_jobstep%20\(Transact-SQL\).md).  
+ For more information, see [sp_add_jobstep &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md).  
   
 ##  <a name="SMO"></a> Using SQL Server Management Objects  
  **To create a Transact-SQL job step**  

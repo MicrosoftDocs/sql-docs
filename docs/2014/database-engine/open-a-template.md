@@ -38,7 +38,7 @@ manager: "jhubbard"
   
  After the template is open, use the **Replace Template Parameters** dialog box to replace the template parameters with your values.  
   
- If opening a template launches a new editor window, the window will open with the credentials of the current active connection. For example, if you are focused on an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] in Object Explorer when you open the CREATE DATABASE template, a new editor window will be opened using a connection to that instance. If there is no active connection, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] will present a login dialog.  
+ If opening a template launches a new editor window, the window will open with the credentials of the current active connection. For example, if you are focused on an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)] in Object Explorer when you open the CREATE DATABASE template, a new editor window will be opened using a connection to that instance. If there is no active connection, [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] will present a login dialog.  
   
 ## See Also  
  [Template Explorer](../../2014/database-engine/template-explorer.md)   

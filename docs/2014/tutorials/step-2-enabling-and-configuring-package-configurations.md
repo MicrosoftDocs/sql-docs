@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 caps.latest.revision: 39
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Step 2: Enabling and Configuring Package Configurations
@@ -20,9 +20,9 @@ manager: "jhubbard"
   
 ### To create a new package-level variable mapped to the Directory property  
   
-1.  Click the background of the **Control Flow** tab in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer. This sets the scope for the variable you will create to the package.  
+1.  Click the background of the **Control Flow** tab in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer. This sets the scope for the variable you will create to the package.  
   
-2.  On the [!INCLUDE[ssIS](../../includes/ssis-md.md)] menu, select **Variables**.  
+2.  On the [!INCLUDE[ssIS](../includes/ssis-md.md)] menu, select **Variables**.  
   
 3.  In the **Variables** window, click the Add Variable icon.  
   
@@ -57,7 +57,7 @@ manager: "jhubbard"
   
 2.  Click **OK** on the warning prompt and, once the conversion is complete, click **OK** on the **Convert to Package Deployment Model** dialog.  
   
-3.  Click the background of the **Control Flow** tab in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer.  
+3.  Click the background of the **Control Flow** tab in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer.  
   
 4.  On the **SSIS** menu, click **Package Configurations**.  
   

@@ -29,7 +29,7 @@ manager: "jhubbard"
   
 #### Create a Month Calendar calculated column in the Date table  
   
-1.  In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], click the **Model** menu, then point to **Model View**, and then click **Data View**.  
+1.  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], click the **Model** menu, then point to **Model View**, and then click **Data View**.  
   
      Calculated columns can only be created by using the model designer in Data View.  
   

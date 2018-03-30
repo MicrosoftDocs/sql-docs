@@ -41,7 +41,7 @@ manager: "jhubbard"
   
      Notice that the level name for this member is **Level 03**.  
   
-5.  In Solution Explorer, double-click **Analysis Services Tutorial.cube** in the **Cubes** folder to open Cube Designer for the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Tutorial cube.  
+5.  In Solution Explorer, double-click **Analysis Services Tutorial.cube** in the **Cubes** folder to open Cube Designer for the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial cube.  
   
 6.  Click the **Browser** tab.  
   
@@ -87,9 +87,9 @@ manager: "jhubbard"
   
 ## Browsing the Employee Dimension with the Modified Attributes  
   
-1.  On the **Build** menu of [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], click **Deploy Analysis Services Tutorial**.  
+1.  On the **Build** menu of [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], click **Deploy Analysis Services Tutorial**.  
   
-2.  When deployment has successfully completed, switch to Cube Designer for the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Tutorial cube, and then click **Reconnect** on the toolbar of the **Browser** tab.  
+2.  When deployment has successfully completed, switch to Cube Designer for the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial cube, and then click **Reconnect** on the toolbar of the **Browser** tab.  
   
 3.  Click the Excel icon, and then click **Enable**.  
   

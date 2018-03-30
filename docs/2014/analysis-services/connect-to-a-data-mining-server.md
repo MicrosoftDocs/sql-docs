@@ -21,13 +21,13 @@ manager: "mblythe"
 # Connect to a Data Mining Server
   ![Connections button](../../2014/analysis-services/media/misc-connection.gif "Connections button")  
   
- Click the **Connection** button to select an existing connection, or to create a new connection to an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+ Click the **Connection** button to select an existing connection, or to create a new connection to an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
  **Why do I need to connect to a server?**  
   
- When you create a connection, it enables you to use the data mining algorithms that are provided by the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server, and to take advantage of the optimized processing of the server.  
+ When you create a connection, it enables you to use the data mining algorithms that are provided by the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] server, and to take advantage of the optimized processing of the server.  
   
- You do not have to keep your data or your results in an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database, or in a SQL Server database. The Excel data mining add-ins can work with data stored only in Excel, or data that you connect to as an Excel data source.  
+ You do not have to keep your data or your results in an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database, or in a SQL Server database. The Excel data mining add-ins can work with data stored only in Excel, or data that you connect to as an Excel data source.  
   
 ## How to Create a New Connection  
   
@@ -39,7 +39,7 @@ manager: "mblythe"
   
 4.  Specify the authentication method.  
   
-5.  Specify the catalog, or [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database, where you will store your data mining models.  
+5.  Specify the catalog, or [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database, where you will store your data mining models.  
   
     > [!NOTE]  
     >  If you have not created any databases yet, you can use (default) to create and then test the connection; however, you cannot add mining models to the default connection. Before you create any mining models, you should create a connection to an existing database.  
@@ -51,11 +51,11 @@ manager: "mblythe"
 8.  Click **Test Connection** to verify that the server is available.  
   
 ## Troubleshooting Connections  
- This section provides answers to some common questions about connections to [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+ This section provides answers to some common questions about connections to [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
  **I get a message saying “No connection found.”**  
   
- If the text in the lower part of the button says **No Connection**, it means that you have not created a connection to an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database, or that the connection failed. You can continue to work with data in Excel from Access or other sources, but to create a data mining model or run a prediction query you must have an active connection.  
+ If the text in the lower part of the button says **No Connection**, it means that you have not created a connection to an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database, or that the connection failed. You can continue to work with data in Excel from Access or other sources, but to create a data mining model or run a prediction query you must have an active connection.  
   
  **Suppose I don’t have permission to use the server?**  
   
@@ -70,7 +70,7 @@ manager: "mblythe"
  Any data or results that were generated will not be lost, because all reports and tables are stored in Excel.  
   
 > [!NOTE]  
->  Do not disconnect from the server or from the network while the add-in is communicating with the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server. For example, never disconnect when a model is being created, or when the data is being processed. In some situations your data could be corrupted.  
+>  Do not disconnect from the server or from the network while the add-in is communicating with the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] server. For example, never disconnect when a model is being created, or when the data is being processed. In some situations your data could be corrupted.  
   
  **I cannot connect to the model using the Visio tools**  
   
@@ -86,9 +86,9 @@ manager: "mblythe"
   
  **What is a temporary model? How can I save a temporary model?**  
   
- The Table Analysis Tools for Excel by default creates temporary data structures and mining models. You can continue to browse and query temporary models as long as you keep the workbook open and do not disconnect from [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+ The Table Analysis Tools for Excel by default creates temporary data structures and mining models. You can continue to browse and query temporary models as long as you keep the workbook open and do not disconnect from [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
- The structures and models that you have created will be deleted as soon as you close the Excel workbook, or if you change or end your connection to [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+ The structures and models that you have created will be deleted as soon as you close the Excel workbook, or if you change or end your connection to [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
  When you complete a wizard in the Data Mining Client for Excel, models are saved to the server by default, but on the final page of each wizard there is the option to use a temporary model. If you select this option, the data mining structure and model that you created are stored in a temporary file. You can browse, manage, and modify the structure and model as long as Excel remains open. However, once you close Excel, the structure and any related models are deleted.  
   

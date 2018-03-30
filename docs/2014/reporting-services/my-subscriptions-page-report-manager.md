@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 491a85a3-f323-4155-a0a8-de2779899995
 caps.latest.revision: 28
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # My Subscriptions Page (Report Manager)
@@ -21,7 +21,7 @@ manager: "mblythe"
  By default, subscriptions are sorted in alphabetical order by report name. Click a different column heading to change how subscriptions are sorted. If you have no subscriptions or if permission to create or manage subscriptions is disabled, no subscriptions appear on the page.  
   
 > [!NOTE]  
->  This feature is not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+>  This feature is not available in every edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ## Navigation  
  Use the following procedure to navigate to this location in the user interface (UI).  

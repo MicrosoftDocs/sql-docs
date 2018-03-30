@@ -24,7 +24,7 @@ manager: "jhubbard"
   Use the Add Replica to Availability Group Wizard to help you a add new secondary replica to an existing AlwaysOn availability group.  
   
 > [!NOTE]  
->  For information about using [!INCLUDE[tsql](../../includes/tsql-md.md)] or PowerShell to add a secondary replica to an availability group, see [Add a Secondary Replica to an Availability Group &#40;SQL Server&#41;](../../2014/database-engine/add-a-secondary-replica-to-an-availability-group-sql-server.md).  
+>  For information about using [!INCLUDE[tsql](../includes/tsql-md.md)] or PowerShell to add a secondary replica to an availability group, see [Add a Secondary Replica to an Availability Group &#40;SQL Server&#41;](../../2014/database-engine/add-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
 
   
@@ -35,13 +35,13 @@ manager: "jhubbard"
   
 -   You must be connected to the server instance that hosts the current primary replica.  
   
--   Before adding a secondary replica, verify that the host instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is in the same Windows Server Failover Clustering (WSFC) cluster as the existing replicas but resides on a different cluster node. Also, verify that this server instance meets all other [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] prerequisites. For more information, see [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/prereqs-restrictions-recommendations-always-on-availability.md).  
+-   Before adding a secondary replica, verify that the host instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is in the same Windows Server Failover Clustering (WSFC) cluster as the existing replicas but resides on a different cluster node. Also, verify that this server instance meets all other [!INCLUDE[ssHADR](../includes/sshadr-md.md)] prerequisites. For more information, see [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/prereqs-restrictions-recommendations-always-on-availability.md).  
   
--   If a server instance that you select to host an availability replica is running under a domain user account and does not yet have a database mirroring endpoint, the wizard can create the endpoint and grant CONNECT permission to the server instance service account. However, if the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service is running as a built-in account, such as Local System, Local Service, or Network Service, or a nondomain account, you must use certificates for endpoint authentication, and the wizard will be unable to create a database mirroring endpoint on the server instance. In this case, we recommend that you create the database mirroring endpoints manually before you launch the Add Replica to Availability Group Wizard.  
+-   If a server instance that you select to host an availability replica is running under a domain user account and does not yet have a database mirroring endpoint, the wizard can create the endpoint and grant CONNECT permission to the server instance service account. However, if the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] service is running as a built-in account, such as Local System, Local Service, or Network Service, or a nondomain account, you must use certificates for endpoint authentication, and the wizard will be unable to create a database mirroring endpoint on the server instance. In this case, we recommend that you create the database mirroring endpoints manually before you launch the Add Replica to Availability Group Wizard.  
   
      `To use certificates for a database mirroring endpoint:`  
   
-     [CREATE ENDPOINT &#40;Transact-SQL&#41;](../Topic/CREATE%20ENDPOINT%20\(Transact-SQL\).md)  
+     [CREATE ENDPOINT &#40;Transact-SQL&#41;](~/t-sql/statements/create-endpoint-transact-sql.md)  
   
      [Use Certificates for a Database Mirroring Endpoint &#40;Transact-SQL&#41;](../../2014/database-engine/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
@@ -51,7 +51,7 @@ manager: "jhubbard"
   
     -   No primary database name can exist on any server instance that hosts a secondary replica. This means that none of the new secondary databases can exist yet.  
   
-    -   You will need to specify a network share in order for the wizard to create and access backups. For the primary replica, the account used to start the [!INCLUDE[ssDE](../../includes/ssde-md.md)] must have read and write file-system permissions on a network share. For secondary replicas, the account must have read permission on the network share.  
+    -   You will need to specify a network share in order for the wizard to create and access backups. For the primary replica, the account used to start the [!INCLUDE[ssDE](../includes/ssde-md.md)] must have read and write file-system permissions on a network share. For secondary replicas, the account must have read permission on the network share.  
   
      If you are unable to use the wizard to perform full initial data synchronization, you need to prepare your secondary databases manually. You can do this before or after running the wizard. For more information, see [Manually Prepare a Secondary Database for an Availability Group &#40;SQL Server&#41;](../../2014/database-engine/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
@@ -79,7 +79,7 @@ manager: "jhubbard"
   
     |Tab|Brief Description|  
     |---------|-----------------------|  
-    |**Replicas**|Use this tab to specify each instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that will host a new secondary replica.|  
+    |**Replicas**|Use this tab to specify each instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that will host a new secondary replica.|  
     |**Endpoints**|Use this tab to verify the existing database mirroring endpoint, if any, for each new secondary replica. If this endpoint is lacking on a server instance whose service accounts use Windows Authentication, the wizard will attempt to create the endpoint automatically. **Note:**  If any server instance is running under a non-domain user account, you need to do make a manual change to your server instance before you can proceed in the wizard. For more information, see [Prerequisites](#Prerequisites), earlier in this topic.|  
     |**Backup Preferences**|Use this tab to specify your backup preference for the availability group as a whole, if you wish to modify the current setting, and to specify your backup priorities for the individual availability replicas.|  
   

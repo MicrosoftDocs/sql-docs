@@ -49,7 +49,7 @@ manager: "mblythe"
   
 #### To paste data into the designer  
   
--   In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], click the **Edit** menu, and then clicke of the following:  
+-   In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], click the **Edit** menu, and then clicke of the following:  
   
     -   Click **Paste** to paste the contents of the Clipboard into a new table.  
   

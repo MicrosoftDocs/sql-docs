@@ -20,11 +20,11 @@ helpviewer_keywords:
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 caps.latest.revision: 8
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "jhubbard"
 ---
 # Configure the Unattended Execution Account (SSRS Configuration Manager)
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] provides a special account that is used for unattended report processing and for sending connection requests across the network. The account is used in the following ways:  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides a special account that is used for unattended report processing and for sending connection requests across the network. The account is used in the following ways:  
   
 -   Send connection requests over the network for reports that use database authentication, or connect to external report data sources that do not require or use authentication. For more information, see [Specify Credential and Connection Information for Report Data Sources](../../../2014/reporting-services/specify-credential-and-connection-information-for-report-data-sources.md) in SQL Server Books Online.  
   
@@ -38,9 +38,9 @@ manager: "jhubbard"
 ## How to Configure the Account  
  You must use a domain user account. To serve its intended purpose, this account should be different than the one used to run the Report Server service. Be sure to use an account that has minimum permissions (read-only access with network connection permissions is sufficient) and limited access to just those computers that provide data sources and resources to the report server. For more information, see [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
- To specify the account, you can use the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Configuration tool or the **rsconfig** utility. The easiest way to configure the unattended execution account is to run the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Configuration tool and specify credentials in the Execution Account page.  
+ To specify the account, you can use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool or the **rsconfig** utility. The easiest way to configure the unattended execution account is to run the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool and specify credentials in the Execution Account page.  
   
-1.  Start the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Configuration tool and connect to the report server instance you want to configure. For instructions, see [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+1.  Start the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool and connect to the report server instance you want to configure. For instructions, see [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 2.  On the Execution Account page, select **Specify an execution account**.  
   
@@ -82,9 +82,9 @@ manager: "jhubbard"
  Although you are not prevented from using the unattended report processing account to retrieve data after the connection is made, doing so is not recommended. The account is supposed to be used for very specific functions. If you use it to retrieve data, you undermine the purpose for which it is intended.  
   
 ## How to Maintain the Unattended Report Processing Account  
- Once you define the account, you must ensure that the account and password are kept up to date. You can use the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Configuration tool to update the configuration settings that store information about this account.  
+ Once you define the account, you must ensure that the account and password are kept up to date. You can use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool to update the configuration settings that store information about this account.  
   
-1.  Start the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Configuration tool and connect to the report server instance you want to configure.  
+1.  Start the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool and connect to the report server instance you want to configure.  
   
 2.  On the Execution Account page, verify that **Specify an execution account** is selected.  
   
@@ -93,7 +93,7 @@ manager: "jhubbard"
 ## How to Delete the Unattended Report Processing Account  
  If you are not using the account, you can delete it to avoid routine account maintenance tasks.  
   
-1.  Start the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Configuration tool and connect to the report server instance you want to configure.  
+1.  Start the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool and connect to the report server instance you want to configure.  
   
 2.  On the Execution Account page, clear **Specify an execution account**.  
   
@@ -102,6 +102,6 @@ manager: "jhubbard"
  The account information is removed from the RSReportServer.config file.  
   
 ## See Also  
- [Reporting Services Configuration Manager &#40;del&#41;](../Topic/Reporting%20Services%20Configuration%20Manager%20\(del\).md)  
+ [Reporting Services Configuration Manager &#40;del&#41;](~/2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   
   

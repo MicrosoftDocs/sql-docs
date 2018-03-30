@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 04e7f4ed-e244-4bbe-ba12-09c33abea09e
 caps.latest.revision: 30
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Replication over the Internet
@@ -27,6 +27,6 @@ manager: "jhubbard"
   
 -   The Web synchronization option for merge replication. For more information, see [Web Synchronization for Merge Replication](../../../2014/relational-databases/replication/web-synchronization-for-merge-replication.md).  
   
- All types of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] replication can replicate data over a VPN, but you should consider Web synchronization if you are using merge replication.  
+ All types of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] replication can replicate data over a VPN, but you should consider Web synchronization if you are using merge replication.  
   
   

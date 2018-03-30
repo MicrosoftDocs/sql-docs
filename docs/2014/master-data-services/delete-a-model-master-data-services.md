@@ -19,7 +19,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Delete a Model (Master Data Services)
-  Delete a model to remove the model and all of its data from [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
+  Delete a model to remove the model and all of its data from [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
 > [!NOTE]  
 >  When you complete this procedure, all objects and all data from all versions of the model will be permanently deleted.  
@@ -33,7 +33,7 @@ manager: "jhubbard"
   
 ### To delete a model  
   
-1.  In [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], click **System Administration**.  
+1.  In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], click **System Administration**.  
   
 2.  On the **Model View** page, from the menu bar, point to **Manage** and click **Models**.  
   

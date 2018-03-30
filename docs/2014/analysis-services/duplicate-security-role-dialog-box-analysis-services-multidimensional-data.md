@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Analysis Services Duplicate Security Role Dialog Box (Analysis Services - Multidimensional Data)
-  Use the **Analysis Services Duplicate Security Role - \<database name> - \<copy from role name>** dialog box in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to duplicate an existing role in an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database. You can display the **Duplicate Role** dialog box by right-clicking a role in Object Explorer and selecting **Duplicate**.  
+  Use the **Analysis Services Duplicate Security Role - \<database name> - \<copy from role name>** dialog box in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to duplicate an existing role in an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database. You can display the **Duplicate Role** dialog box by right-clicking a role in Object Explorer and selecting **Duplicate**.  
   
 ## Options  
   

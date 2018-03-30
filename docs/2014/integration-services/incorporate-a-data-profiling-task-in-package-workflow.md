@@ -18,7 +18,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Incorporate a Data Profiling Task in Package Workflow
-  Data profiling and cleanup are not candidates for an automated process in their early stages. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], the output of the Data Profiling task usually requires visual analysis and human judgment to determine whether reported violations are meaningful or excessive. Even after recognizing data quality problems, there still has to be a carefully thought-out plan that addresses the best approach for cleanup.  
+  Data profiling and cleanup are not candidates for an automated process in their early stages. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], the output of the Data Profiling task usually requires visual analysis and human judgment to determine whether reported violations are meaningful or excessive. Even after recognizing data quality problems, there still has to be a carefully thought-out plan that addresses the best approach for cleanup.  
   
  However, after criteria for data quality have been established, you might want to automate a periodic analysis and cleanup of the data source. Consider these scenarios:  
   
@@ -43,17 +43,17 @@ manager: "jhubbard"
   
  When incorporating the Data Profiling task into the workflow of a package, keep these two features of the task in mind:  
   
--   **Task output**. The Data Profiling task writes its output to a file or a package variable in XML format according to the DataProfile.xsd schema. Therefore, you have to query the XML output if you want to use the profile results in the conditional workflow of a package. You can easily use the Xpath query language to query this XML output. To study the structure of this XML output, you can open a sample output file or the schema itself. To open the output file or schema, you can use [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], another XML editor, or a text editor, such as Notepad.  
+-   **Task output**. The Data Profiling task writes its output to a file or a package variable in XML format according to the DataProfile.xsd schema. Therefore, you have to query the XML output if you want to use the profile results in the conditional workflow of a package. You can easily use the Xpath query language to query this XML output. To study the structure of this XML output, you can open a sample output file or the schema itself. To open the output file or schema, you can use [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], another XML editor, or a text editor, such as Notepad.  
   
     > [!NOTE]  
     >  Some of the profile results that are displayed in the Data Profile Viewer are calculated values that are not directly found in the output. For example, the output of the Column Null Ratio Profile contains the total number of rows and the number of rows that contain null values. You have to query these two values, and then calculate the percentage of rows that contain null values, to obtain the column null ratio.  
   
--   **Task input**. The Data Profiling task reads its input from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables. Therefore, you have to save data that is in memory to staging tables if you want to profile data that has already been loaded and transformed in the data flow.  
+-   **Task input**. The Data Profiling task reads its input from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tables. Therefore, you have to save data that is in memory to staging tables if you want to profile data that has already been loaded and transformed in the data flow.  
   
  The following sections apply this general workflow to profiling data that comes directly from an external data source or that comes transformed from the Data Flow task. These sections also show how to handle the input and output requirements of the Data Flow task.  
   
 ## Connecting the Data Profiling Task Directly to an External Data Source  
- The Data Profiling task can profile data that comes directly from a data source.  To illustrate this capability, the following example uses the Data Profiling task to compute a Column Null Ratio Profile on the columns of the Person.Address table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. Then, this example uses a Script task to retrieve the results from the output file and populate package variables that can be used to direct workflow.  
+ The Data Profiling task can profile data that comes directly from a data source.  To illustrate this capability, the following example uses the Data Profiling task to compute a Column Null Ratio Profile on the columns of the Person.Address table in the [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] database. Then, this example uses a Script task to retrieve the results from the output file and populate package variables that can be used to direct workflow.  
   
 > [!NOTE]  
 >  The AddressLine2 column was selected for this simple example because this column contains a high percentage of null values.  
@@ -73,15 +73,15 @@ manager: "jhubbard"
 ### Configure the Connection Managers  
  For this example, there are two connection managers:  
   
--   An [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection manager that connects to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
+-   An [!INCLUDE[vstecado](../includes/vstecado-md.md)] connection manager that connects to the [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] database.  
   
 -   A File connection manager that creates the output file that will hold the results of the Data Profiling task.  
   
 ##### To configure the connection managers  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], create a new [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], create a new [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package.  
   
-2.  Add an [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection manager to the package. Configure this connection manager to use the NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) and to connect to an available instance of the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
+2.  Add an [!INCLUDE[vstecado](../includes/vstecado-md.md)] connection manager to the package. Configure this connection manager to use the NET Data Provider for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (SqlClient) and to connect to an available instance of the [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] database.  
   
      By default, the connection manager has the following name: \<server name>.AdventureWorks1.  
   
@@ -107,7 +107,7 @@ manager: "jhubbard"
 ### Configure the Data Profiling Task  
  The Data Profiling task has to be configured in the following way:  
   
--   To use the data that the [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection manager supplies as input.  
+-   To use the data that the [!INCLUDE[vstecado](../includes/vstecado-md.md)] connection manager supplies as input.  
   
 -   To perform a Column Null Ratio profile on the input data.  
   
@@ -123,7 +123,7 @@ manager: "jhubbard"
   
 4.  On the **Profile Requests** page of the editor, create a new Column Null Ratio Profile.  
   
-5.  In the **Request properties** pane, for **ConnectionManager**, select the [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection manager that you have previously configured. Then, for **TableOrView**, select Person.Address.  
+5.  In the **Request properties** pane, for **ConnectionManager**, select the [!INCLUDE[vstecado](../includes/vstecado-md.md)] connection manager that you have previously configured. Then, for **TableOrView**, select Person.Address.  
   
 6.  Close the Data Profiling Task Editor.  
   
@@ -311,7 +311,7 @@ manager: "jhubbard"
   
 #### To use the Data Profiling task in the data flow  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], create a package.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], create a package.  
   
 2.  In the Data Flow, add, configure, and connect the appropriate sources and transformations.  
   

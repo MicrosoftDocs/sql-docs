@@ -23,7 +23,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # IBCPSession::BCPDone (OLE DB)
-  Commits the remaining rows to be sent to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Commits the remaining rows to be sent to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Syntax  
   
@@ -45,7 +45,7 @@ HRESULT BCPDone(void);
 ## Example  
  This sample shows how to use the **IBCPSession** interface.  
   
- The following [!INCLUDE[tsql](../../../includes/tsql-md.md)] must be executed before running this sample:  
+ The following [!INCLUDE[tsql](../../includes/tsql-md.md)] must be executed before running this sample:  
   
 ```  
 create table fltest(col1 int, col2 int, col3 image)  

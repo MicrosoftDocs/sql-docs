@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 9a98c53a-fea5-4235-b23d-6c69587c5676
 caps.latest.revision: 35
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Set the Distribution Retention Period for Transactional Publications (SQL Server Management Studio)
@@ -27,7 +27,7 @@ manager: "jhubbard"
   
 2.  To specify the minimum distribution retention period, enter a value in the **At least** box; to specify the maximum distribution retention period, enter a value in the **But not more than** box.  
   
-3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## See Also  
  [Configure Distribution](../../../2014/relational-databases/replication/configure-distribution.md)   

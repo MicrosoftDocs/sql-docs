@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Browser (Cube Designer) (Analysis Services - Multidimensional Data)
-  Use the **Browser** tab in Cube Designer to explore dimensions, measures, and KPIS in a cube. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Cube browser has been integrated with the MDX Query Designer, and provides a graphical user interfaces to help you create MDX queries, filter and slice cubes, and drill down into hierarchies.  
+  Use the **Browser** tab in Cube Designer to explore dimensions, measures, and KPIS in a cube. In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Cube browser has been integrated with the MDX Query Designer, and provides a graphical user interfaces to help you create MDX queries, filter and slice cubes, and drill down into hierarchies.  
   
  The **Browser** tab has two modes: **Design Mode** and **Query Mode**. In either mode, you can use the objects in the **Metadata** pane to explore the cube, or you can drag members from the **Metadata** pane into the query area, to build an MDX query that retrieves the data you want to use.  
   

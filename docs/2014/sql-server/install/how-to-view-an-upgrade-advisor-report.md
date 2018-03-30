@@ -29,7 +29,7 @@ manager: "jhubbard"
   
 ### To view a report  
   
-1.  Click **Start**, click **All Programs**, click **[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]**, and then click **[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Upgrade Advisor**.  
+1.  Click **Start**, click **All Programs**, click **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**, and then click **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor**.  
   
 2.  On the Upgrade Advisor start page, click **Launch Upgrade Advisor Report Viewer**.  
   
@@ -51,7 +51,7 @@ manager: "jhubbard"
   
     -   **Importance**, which indicates how important it is to fix the issue.  
   
-    -   **When to fix**, which indicates if you should (or must) fix the issue before or after upgrading to [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], before or after migrating the application or data, or anytime.  
+    -   **When to fix**, which indicates if you should (or must) fix the issue before or after upgrading to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], before or after migrating the application or data, or anytime.  
   
     -   A brief description of the issue.  
   

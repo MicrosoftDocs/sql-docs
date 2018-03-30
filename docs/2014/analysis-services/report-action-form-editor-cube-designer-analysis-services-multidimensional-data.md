@@ -42,7 +42,7 @@ manager: "mblythe"
 |Level members|A member within the level in **Target object** is selected.|  
   
  **Target object**  
- Select the object to which the action is to be associated. The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance returns to the client only those actions that apply to the selected object. The list of available objects is constrained by the choice of **Target type**.  
+ Select the object to which the action is to be associated. The [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance returns to the client only those actions that apply to the selected object. The list of available objects is constrained by the choice of **Target type**.  
   
  **Condition (Optional)**  
  Enter the Multidimensional Expressions (MDX) expression that describes an optional condition, used in conjunction with **Target object**, which further restricts when the action is available. The expression must return a Boolean value that, if true, indicates the action is available.  
@@ -53,10 +53,10 @@ manager: "mblythe"
  Expand to view the **Server name**, **Server path**, and **Report format** options.  
   
  **Server name**  
- Type the name of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instance on which the action runs the report.  
+ Type the name of the [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] instance on which the action runs the report.  
   
  **Server path**  
- Type the path to the report on the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instance. For example, type **Sales/YearlySalesByCategory**.  
+ Type the path to the report on the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] instance. For example, type **Sales/YearlySalesByCategory**.  
   
  **Report format**  
  Select the format in which the report is returned. The following table describes the available formats.  
@@ -65,7 +65,7 @@ manager: "mblythe"
 |-----------|-----------------|  
 |HTML5|Report is returned in an HTML 5.0-compliant format.|  
 |HTML3|Report is returned in an HTML 3.2-compliant format.|  
-|Excel|Report is returned as a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel workbook (.xls) file.|  
+|Excel|Report is returned as a [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel workbook (.xls) file.|  
 |PDF|Report is returned as an Adobe Portable Document Format (.pdf) file.|  
   
  **Parameters (Optional)**  
@@ -89,7 +89,7 @@ manager: "mblythe"
   
 |Value|Description|  
 |-----------|-----------------|  
-|Batch|The action should run as part of a batch operation or a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] task.|  
+|Batch|The action should run as part of a batch operation or a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] task.|  
 |Interactive|The action runs when the user invokes the action.|  
 |On Open|The action runs when the cube is first opened.|  
   

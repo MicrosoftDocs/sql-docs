@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c6b5c852-37d2-48d0-a8ad-e43bb80d6514
 caps.latest.revision: 27
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Create, Construct, and Query geometry Instances
-  The planar spatial data type, `geometry`, represents data in a Euclidean (flat) coordinate system. This type is implemented as a common language runtime (CLR) data type in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  The planar spatial data type, `geometry`, represents data in a Euclidean (flat) coordinate system. This type is implemented as a common language runtime (CLR) data type in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  The `geometry` type is predefined and available in each database. You can create table columns of type `geometry` and operate on `geometry` data in the same manner as you would use other CLR types.  
   
- The `geometry` data type (planar) supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conforms to the Open Geospatial Consortium (OGC) Simple Features for SQL Specification version 1.1.0.  
+ The `geometry` data type (planar) supported by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] conforms to the Open Geospatial Consortium (OGC) Simple Features for SQL Specification version 1.1.0.  
   
  For more information on OGC specifications, see the following:  
   
@@ -31,7 +31,7 @@ manager: "jhubbard"
   
 -   [OGC Specifications, Simple Feature Access Part 2 – SQL Options](http://go.microsoft.com/fwlink/?LinkId=93629)  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports a subset of the existing GML 3.1 standard which is defined in the following schema: [http://schemas.microsoft.com/sqlserver/profiles/gml/SpatialGML.xsd](http://go.microsoft.com/fwlink/?LinkId=230959).  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supports a subset of the existing GML 3.1 standard which is defined in the following schema: [http://schemas.microsoft.com/sqlserver/profiles/gml/SpatialGML.xsd](http://go.microsoft.com/fwlink/?LinkId=230959).  
   
 ##  <a name="creating"></a> Creating or constructing a new geometry instance  
   
@@ -39,30 +39,30 @@ manager: "jhubbard"
  The `geometry` data type provides numerous built-in methods you can use to create new `geometry` instances based on existing instances.  
   
  **To create a buffer around a geometry**  
- [STBuffer &#40;geometry Data Type&#41;](../Topic/STBuffer%20\(geometry%20Data%20Type\).md)  
+ [STBuffer &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stbuffer-geometry-data-type.md)  
   
- [BufferWithTolerance &#40;geometry Data Type&#41;](../Topic/BufferWithTolerance%20\(geometry%20Data%20Type\).md)  
+ [BufferWithTolerance &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md)  
   
  **To create a simplified version of a geometry**  
- [Reduce &#40;geometry Data Type&#41;](../Topic/Reduce%20\(geometry%20Data%20Type\).md)  
+ [Reduce &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/reduce-geometry-data-type.md)  
   
  **To create the convex hull of a geometry**  
- [STConvexHull &#40;geometry Data Type&#41;](../Topic/STConvexHull%20\(geometry%20Data%20Type\).md)  
+ [STConvexHull &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stconvexhull-geometry-data-type.md)  
   
  **To create a geometry from the intersection of two geometries**  
- [STIntersection &#40;geometry Data Type&#41;](../Topic/STIntersection%20\(geometry%20Data%20Type\).md)  
+ [STIntersection &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stintersection-geometry-data-type.md)  
   
  **To create a geometry from the union of two geometries**  
- [STUnion &#40;geometry Data Type&#41;](../Topic/STUnion%20\(geometry%20Data%20Type\).md)  
+ [STUnion &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stunion-geometry-data-type.md)  
   
  **To create a geometry from the points where one geometry does not overlap another**  
- [STDifference &#40;geometry Data Type&#41;](../Topic/STDifference%20\(geometry%20Data%20Type\).md)  
+ [STDifference &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stdifference-geometry-data-type.md)  
   
  **To create a geometry from the points where two geometries do not overlap**  
- [STSymDifference &#40;geometry Data Type&#41;](../Topic/STSymDifference%20\(geometry%20Data%20Type\).md)  
+ [STSymDifference &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stsymdifference-geometry-data-type.md)  
   
  **To create an arbitrary Point instance that lies on an existing geometry**  
- [STPointOnSurface &#40;geometry Data Type&#41;](../Topic/STPointOnSurface%20\(geometry%20Data%20Type\).md)  
+ [STPointOnSurface &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stpointonsurface-geometry-data-type.md)  
   
   
   
@@ -70,30 +70,30 @@ manager: "jhubbard"
  The `geometry` data type provides several built-in methods that generate a geometry from the Open Geospatial Consortium (OGC) WKT representation. The WKT standard is a text string that allows geometry data to be exchanged in textual form.  
   
  **To construct any type of geometry instance from WKT input**  
- [STGeomFromText &#40;geometry Data Type&#41;](../Topic/STGeomFromText%20\(geometry%20Data%20Type\).md)  
+ [STGeomFromText &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stgeomfromtext-geometry-data-type.md)  
   
- [Parse &#40;geometry Data Type&#41;](../Topic/Parse%20\(geometry%20Data%20Type\).md)  
+ [Parse &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/parse-geometry-data-type.md)  
   
  **To construct a geometry Point instance from WKT input**  
- [STPointFromText &#40;geometry Data Type&#41;](../Topic/STPointFromText%20\(geometry%20Data%20Type\).md)  
+ [STPointFromText &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stpointfromtext-geometry-data-type.md)  
   
  **To construct a geometry MultiPoint instance from WKT input**  
- [STMPointFromText &#40;geometry Data Type&#41;](../Topic/STMPointFromText%20\(geometry%20Data%20Type\).md)  
+ [STMPointFromText &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stmpointfromtext-geometry-data-type.md)  
   
  **To construct a geometry LineString instance from WKT input**  
- [STLineFromText &#40;geometry Data Type&#41;](../Topic/STLineFromText%20\(geometry%20Data%20Type\).md)  
+ [STLineFromText &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stlinefromtext-geometry-data-type.md)  
   
  **To construct a geometry MultiLineString instance from WKT input**  
- [STMLineFromText &#40;geometry Data Type&#41;](../Topic/STMLineFromText%20\(geometry%20Data%20Type\).md)  
+ [STMLineFromText &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stmlinefromtext-geometry-data-type.md)  
   
  **To construct a geometry Polygon instance from WKT input**  
- [STPolyFromText &#40;geometry Data Type&#41;](../Topic/STPolyFromText%20\(geometry%20Data%20Type\).md)  
+ [STPolyFromText &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stpolyfromtext-geometry-data-type.md)  
   
  **To construct a geometry MultiPolygon instance from WKT input**  
- [STMPolyFromText &#40;geometry Data Type&#41;](../Topic/STMPolyFromText%20\(geometry%20Data%20Type\).md)  
+ [STMPolyFromText &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stmpolyfromtext-geometry-data-type.md)  
   
  **To construct a geometry GeometryCollection instance from WKT input**  
- [STGeomCollFromText &#40;geometry Data Type&#41;](../Topic/STGeomCollFromText%20\(geometry%20Data%20Type\).md)  
+ [STGeomCollFromText &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stgeomcollfromtext-geometry-data-type.md)  
   
   
   
@@ -101,36 +101,36 @@ manager: "jhubbard"
  WKB is a binary format specified by the Open Geospatial Consortium (OGC) that permits `geometry` data to be exchanged between a client application and an SQL database. The following functions accept WKB input to construct geometries:  
   
  **To construct any type of geometry instance from WKB input**  
- [STGeomFromWKB &#40;geometry Data Type&#41;](../Topic/STGeomFromWKB%20\(geometry%20Data%20Type\).md)  
+ [STGeomFromWKB &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stgeomfromwkb-geometry-data-type.md)  
   
  **To construct a geometry Point instance from WKB input**  
- [STPointFromWKB &#40;geometry Data Type&#41;](../Topic/STPointFromWKB%20\(geometry%20Data%20Type\).md)  
+ [STPointFromWKB &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stpointfromwkb-geometry-data-type.md)  
   
  **To construct a geometry MultiPoint instance from WKB input**  
- [STMPointFromWKB &#40;geometry Data Type&#41;](../Topic/STMPointFromWKB%20\(geometry%20Data%20Type\).md)  
+ [STMPointFromWKB &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stmpointfromwkb-geometry-data-type.md)  
   
  **To construct a geometry LineString instance from WKB input**  
- [STLineFromWKB &#40;geometry Data Type&#41;](../Topic/STLineFromWKB%20\(geometry%20Data%20Type\).md)  
+ [STLineFromWKB &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stlinefromwkb-geometry-data-type.md)  
   
  **To construct a geometry MultiLineString instance from WKB input**  
- [STMLineFromWKB &#40;geometry Data Type&#41;](../Topic/STMLineFromWKB%20\(geometry%20Data%20Type\).md)  
+ [STMLineFromWKB &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stmlinefromwkb-geometry-data-type.md)  
   
  **To construct a geometry Polygon instance from WKB input**  
- [STPolyFromWKB &#40;geometry Data Type&#41;](../Topic/STPolyFromWKB%20\(geometry%20Data%20Type\).md)  
+ [STPolyFromWKB &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stpolyfromwkb-geometry-data-type.md)  
   
  **To construct a geometry MultiPolygon instance from WKB input**  
- [STMPolyFromWKB &#40;geometry Data Type&#41;](../Topic/STMPolyFromWKB%20\(geometry%20Data%20Type\).md)  
+ [STMPolyFromWKB &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stmpolyfromwkb-geometry-data-type.md)  
   
  **To construct a geometry GeometryCollection instance from WKB input**  
- [STGeomCollFromWKB &#40;geometry Data Type&#41;](../Topic/STGeomCollFromWKB%20\(geometry%20Data%20Type\).md)  
+ [STGeomCollFromWKB &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stgeomcollfromwkb-geometry-data-type.md)  
   
   
   
 ###  <a name="gml"></a> Constructing a geometry Instance from GML Text Input  
- The `geometry` data type provides a method that generates a `geometry` instance from GML, an XML representation of geometric objects. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports a subset of GML.  
+ The `geometry` data type provides a method that generates a `geometry` instance from GML, an XML representation of geometric objects. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supports a subset of GML.  
   
  **To construct any type of geometry instance from GML input**  
- [GeomFromGml &#40;geometry Data Type&#41;](../Topic/GeomFromGml%20\(geometry%20Data%20Type\).md)  
+ [GeomFromGml &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/geomfromgml-geometry-data-type.md)  
   
   
   
@@ -138,44 +138,44 @@ manager: "jhubbard"
  You can use the following methods to return either the WKT or WKB format of a `geometry` instance:  
   
  **To return the WKT representation of a geometry instance**  
- [STAsText &#40;geometry Data Type&#41;](../Topic/STAsText%20\(geometry%20Data%20Type\).md)  
+ [STAsText &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stastext-geometry-data-type.md)  
   
- [ToString &#40;geometry Data Type&#41;](../Topic/ToString%20\(geometry%20Data%20Type\).md)  
+ [ToString &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/tostring-geometry-data-type.md)  
   
  **To return the WKT representation of a geometry instance including any Z and M values**  
- [AsTextZM &#40;geometry Data Type&#41;](../Topic/AsTextZM%20\(geometry%20Data%20Type\).md)  
+ [AsTextZM &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/astextzm-geometry-data-type.md)  
   
  **To return the WKB representation of a geometry instance**  
- [STAsBinary &#40;geometry Data Type&#41;](../Topic/STAsBinary%20\(geometry%20Data%20Type\).md)  
+ [STAsBinary &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stasbinary-geometry-data-type.md)  
   
  **To return a GML representation of a geometry instance**  
- [AsGml &#40;geometry Data Type&#41;](../Topic/AsGml%20\(geometry%20Data%20Type\).md)  
+ [AsGml &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/asgml-geometry-data-type.md)  
   
   
   
 ##  <a name="querying"></a> Querying the Properties and Behaviors of geometry Instances  
- All `geometry` instances have a number of properties that can be retrieved through methods that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides. The following topics define the properties and behaviors of geometry types, and the methods for querying each one.  
+ All `geometry` instances have a number of properties that can be retrieved through methods that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provides. The following topics define the properties and behaviors of geometry types, and the methods for querying each one.  
   
 ###  <a name="valid"></a> Validity, Instance Type, and GeometryCollection Information  
  Once a `geometry` instance is constructed, you can use the following methods to determine if it is well-formed, return the instance type, or, if it is a collection instance, return a specific `geometry` instance.  
   
  **To return the instance type of a geometry**  
- [STGeometryType &#40;geometry Data Type&#41;](../Topic/STGeometryType%20\(geometry%20Data%20Type\).md)  
+ [STGeometryType &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md)  
   
  **To determine if a geometry is a given instance type**  
- [InstanceOf &#40;geometry Data Type&#41;](../Topic/InstanceOf%20\(geometry%20Data%20Type\).md)  
+ [InstanceOf &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/instanceof-geometry-data-type.md)  
   
  **To determine if a geometry instance is well-formed for its instance type**  
- [STIsValid &#40;geometry Data Type&#41;](../Topic/STIsValid%20\(geometry%20Data%20Type\).md)  
+ [STIsValid &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stisvalid-geometry-data-type.md)  
   
  **To convert a geometry instance to a well-formed geometry instance with an instance type**  
- [MakeValid &#40;geometry Data Type&#41;](../Topic/MakeValid%20\(geometry%20Data%20Type\).md)  
+ [MakeValid &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/makevalid-geometry-data-type.md)  
   
  **To return the number of geometries in a geometry collection instance**  
- [STNumGeometries &#40;geometry Data Type&#41;](../Topic/STNumGeometries%20\(geometry%20Data%20Type\).md)  
+ [STNumGeometries &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stnumgeometries-geometry-data-type.md)  
   
  To return a specific geometry in a geometry collection instance  
- [STGeometryN &#40;geometry Data Type&#41;](../Topic/STGeometryN%20\(geometry%20Data%20Type\).md)STGeometryN (geometry Data type)  
+ [STGeometryN &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stgeometryn-geometry-data-type.md)STGeometryN (geometry Data type)  
   
   
   
@@ -183,28 +183,28 @@ manager: "jhubbard"
  All nonempty `geometry` instances are comprised of *points*. These points represent the X- and Y-coordinates of the plane on which the geometries are drawn. `geometry` provides numerous built-in methods for querying the points of an instance.  
   
  **To return the number of points that comprise an instance**  
- [STNumPoints &#40;geometry Data Type&#41;](../Topic/STNumPoints%20\(geometry%20Data%20Type\).md)  
+ [STNumPoints &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stnumpoints-geometry-data-type.md)  
   
  **To return a specific point in an instance**  
- [STPointN](../Topic/STPointN%20\(geometry%20Data%20Type\).md)  
+ [STPointN](~/t-sql/spatial-geometry/stpointn-geometry-data-type.md)  
   
  **To return an arbitrary point that lies on an instance**  
- [STPointOnSurface](../Topic/STPointOnSurface%20\(geometry%20Data%20Type\).md)  
+ [STPointOnSurface](~/t-sql/spatial-geometry/stpointonsurface-geometry-data-type.md)  
   
  **To return the start point of an instance**  
- [STStartPoint](../Topic/STStartPoint%20\(geometry%20Data%20Type\).md)  
+ [STStartPoint](~/t-sql/spatial-geometry/ststartpoint-geometry-data-type.md)  
   
  **To return the end point of an instance**  
- [STEndpoint](../Topic/STEndpoint%20\(geometry%20Data%20Type\).md)  
+ [STEndpoint](~/t-sql/spatial-geometry/stendpoint-geometry-data-type.md)  
   
  **To return the X-coordinate of a Point instance**  
- [STX &#40;geometry Data Type&#41;](../Topic/STX%20\(geometry%20Data%20Type\).md)  
+ [STX &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stx-geometry-data-type.md)  
   
  **To return the Y-coordinate of a Point instance**  
- [STY](../Topic/STY%20\(geometry%20Data%20Type\).md)  
+ [STY](~/t-sql/spatial-geometry/sty-geometry-data-type.md)  
   
  **To return the geometric center point of a Polygon, CurvePolygon, or MultiPolygon instance**  
- [STCentroid](../Topic/STCentroid%20\(geometry%20Data%20Type\).md)  
+ [STCentroid](~/t-sql/spatial-geometry/stcentroid-geometry-data-type.md)  
   
   
   
@@ -212,13 +212,13 @@ manager: "jhubbard"
  A nonempty `geometry` instance can be 0-, 1-, or 2-dimensional. Zero-dimensional `geometries`, such as `Point` and `MultiPoint`, have no length or area. One-dimensional objects, such as `LineString, CircularString, CompoundCurve`, and `MultiLineString`, have length. Two-dimensional instances, such as `Polygon`, `CurvePolygon`, and `MultiPolygon`, have area and length. Empty instances will report a dimension of -1, and a `GeometryCollection` will report an area dependent on the types of its contents.  
   
  **To return the dimension of an instance**  
- [STDimension](../Topic/STDimension%20\(geometry%20Data%20Type\).md)  
+ [STDimension](~/t-sql/spatial-geometry/stdimension-geometry-data-type.md)  
   
  **To return the length of an instance**  
- [STLength](../Topic/STLength%20\(geometry%20Data%20Type\).md)  
+ [STLength](~/t-sql/spatial-geometry/stlength-geometry-data-type.md)  
   
  **To return the area of an instance**  
- [STArea](../Topic/STArea%20\(geometry%20Data%20Type\).md)  
+ [STArea](~/t-sql/spatial-geometry/starea-geometry-data-type.md)  
   
   
   
@@ -226,7 +226,7 @@ manager: "jhubbard"
  An *empty*`geometry` instance does not have any points. The length of empty `LineString, CircularString`, `CompoundCurve`, and `MultiLineString` instances is zero. The area of empty `Polygon`, `CurvePolygon`, and `MultiPolygon` instances is 0.  
   
  **To determine if an instance is empty**  
- [STIsEmpty](../Topic/STIsEmpty%20\(geometry%20Data%20Type\).md).  
+ [STIsEmpty](~/t-sql/spatial-geometry/stisempty-geometry-data-type.md).  
   
   
   
@@ -241,7 +241,7 @@ manager: "jhubbard"
 >  Empty geometries are always simple.  
   
  **To determine if an instance is simple**  
- [STIsSimple](../Topic/STIsSimple%20\(geometry%20Data%20Type\).md).  
+ [STIsSimple](~/t-sql/spatial-geometry/stissimple-geometry-data-type.md).  
   
   
   
@@ -269,7 +269,7 @@ SELECT @g.STBoundary().ToString();
 ```  
   
  **To return the boundary of an instance**  
- [STBoundary](../Topic/STBoundary%20\(geometry%20Data%20Type\).md)  
+ [STBoundary](~/t-sql/spatial-geometry/stboundary-geometry-data-type.md)  
   
   
   
@@ -277,7 +277,7 @@ SELECT @g.STBoundary().ToString();
  The *envelope* of a `geometry` instance, also known as the *bounding box*, is the axis-aligned rectangle formed by the minimum and maximum (X,Y) coordinates of the instance.  
   
  **To return the envelope of an instance**  
- [STEnvelope](../Topic/STEnvelope%20\(geometry%20Data%20Type\).md)  
+ [STEnvelope](~/t-sql/spatial-geometry/stenvelope-geometry-data-type.md)  
   
   
   
@@ -287,19 +287,19 @@ SELECT @g.STBoundary().ToString();
  A ring is a simple, closed `LineString` instance.  
   
  **To determine if an instance is closed**  
- [STIsClosed](../Topic/STIsClosed%20\(geometry%20Data%20Type\).md)  
+ [STIsClosed](~/t-sql/spatial-geometry/stisclosed-geometry-data-type.md)  
   
  **To determine if an instance is a ring**  
- [STIsRing](../Topic/STIsRing%20\(geometry%20Data%20Type\).md)  
+ [STIsRing](~/t-sql/spatial-geometry/stisring-geometry-data-type.md)  
   
  **To return the exterior ring of a Polygon instance**  
- [STExteriorRing](../Topic/STExteriorRing%20\(geometry%20Data%20Type\).md)  
+ [STExteriorRing](~/t-sql/spatial-geometry/stexteriorring-geometry-data-type.md)  
   
  **To return the number of interior rings in a Polygon**  
- [STNumInteriorRing](../Topic/STNumInteriorRing%20\(geometry%20Data%20Type\).md)  
+ [STNumInteriorRing](~/t-sql/spatial-geometry/stnuminteriorring-geometry-data-type.md)  
   
  **To return a specified interior ring of a Polygon**  
- [STInteriorRingN](../Topic/STInteriorRingN%20\(geometry%20Data%20Type\).md)  
+ [STInteriorRingN](~/t-sql/spatial-geometry/stinteriorringn-geometry-data-type.md)  
   
   
   
@@ -307,7 +307,7 @@ SELECT @g.STBoundary().ToString();
  The spatial reference ID (SRID) is an identifier specifying which coordinate system the `geometry` instance is represented in. Two instances with different SRIDs are incomparable.  
   
  **To set or return the SRID of an instance**  
- [STSrid](../Topic/STSrid%20\(geometry%20Data%20Type\).md)  
+ [STSrid](~/t-sql/spatial-geometry/stsrid-geometry-data-type.md)  
   
  This property can be modified.  
   
@@ -317,42 +317,42 @@ SELECT @g.STBoundary().ToString();
  The `geometry` data type provides many built-in methods you can use to determine relationships between two `geometry` instances.  
   
  **To determine if two instances comprise the same point set**  
- [STEquals](../Topic/STEquals%20\(geometry%20Data%20Type\).md)  
+ [STEquals](~/t-sql/spatial-geometry/stequals-geometry-data-type.md)  
   
  **To determine if two instances are disjoint**  
- [STDisjoint](../Topic/STDisjoint%20\(geometry%20Data%20Type\).md)  
+ [STDisjoint](~/t-sql/spatial-geometry/stdisjoint-geometry-data-type.md)  
   
  **To determine if two instances intersect**  
- [STIntersects](../Topic/STIntersects%20\(geometry%20Data%20Type\).md)  
+ [STIntersects](~/t-sql/spatial-geometry/stintersects-geometry-data-type.md)  
   
  **To determine if two instances touch**  
- [STTouches](../Topic/STTouches%20\(geometry%20Data%20Type\).md)  
+ [STTouches](~/t-sql/spatial-geometry/sttouches-geometry-data-type.md)  
   
  **To determine if two instances overlap**  
- [STOverlaps](../Topic/STOverlaps%20\(geometry%20Data%20Type\).md)  
+ [STOverlaps](~/t-sql/spatial-geometry/stoverlaps-geometry-data-type.md)  
   
  **To determine if two instances cross**  
- [STCrosses](../Topic/STCrosses%20\(geometry%20Data%20Type\).md)  
+ [STCrosses](~/t-sql/spatial-geometry/stcrosses-geometry-data-type.md)  
   
  **To determine if one instance is within another**  
- [STWithin](../Topic/STWithin%20\(geometry%20Data%20Type\).md)  
+ [STWithin](~/t-sql/spatial-geometry/stwithin-geometry-data-type.md)  
   
  **To determine if one instance contains another**  
- [STContains](../Topic/STContains%20\(geometry%20Data%20Type\).md)  
+ [STContains](~/t-sql/spatial-geometry/stcontains-geometry-data-type.md)  
   
  **To determine if one instance overlaps another**  
- [STOverlaps](../Topic/STOverlaps%20\(geometry%20Data%20Type\).md)  
+ [STOverlaps](~/t-sql/spatial-geometry/stoverlaps-geometry-data-type.md)  
   
  **To determine if two instances are spatially related**  
- [STRelate](../Topic/STRelate%20\(geometry%20Data%20Type\).md)  
+ [STRelate](~/t-sql/spatial-geometry/strelate-geometry-data-type.md)  
   
  **To determine the shortest distance between points in two geometries**  
- [STDistance](../Topic/STDistance%20\(geometry%20Data%20Type\).md)  
+ [STDistance](~/t-sql/spatial-geometry/stdistance-geometry-data-type.md)  
   
   
   
 ##  <a name="defaultsrid"></a> geometry Instances Default to Zero SRID  
- The default SRID for `geometry` instances in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is 0. With `geometry` spatial data, the specific SRID of the spatial instance is not required to perform calculations; thus, instances can reside in undefined planar space. To indicate undefined planar space in the calculations of `geometry` data type methods, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] uses SRID 0.  
+ The default SRID for `geometry` instances in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is 0. With `geometry` spatial data, the specific SRID of the spatial instance is not required to perform calculations; thus, instances can reside in undefined planar space. To indicate undefined planar space in the calculations of `geometry` data type methods, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] uses SRID 0.  
   
 ##  <a name="examples"></a> Examples  
  The following two examples show how to add and query geometry data.  

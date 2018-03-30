@@ -18,7 +18,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Retrieve and Understand the Change Data
-  In the data flow of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package that performs an incremental load of change data, the first task is to run the query that retrieves the change data. You execute this query inside a source component in a Data Flow task. You can then use downstream transformations and destinations to apply the change data to your destination.  
+  In the data flow of an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package that performs an incremental load of change data, the first task is to run the query that retrieves the change data. You execute this query inside a source component in a Data Flow task. You can then use downstream transformations and destinations to apply the change data to your destination.  
   
 > [!NOTE]  
 >  The creation of a query that contains a table-valued function is the third step in the process of creating a package that performs an incremental load of change data. For more information about this query, see, [Create the Function to Retrieve the Change Data](../../2014/integration-services/create-the-function-to-retrieve-the-change-data.md). For a description of the overall process for creating a package that performs an incremental load of change data, see [Change Data Capture &#40;SSIS&#41;](../../2014/integration-services/change-data-capture-ssis.md).  
@@ -28,7 +28,7 @@ manager: "jhubbard"
   
 #### To add a Data Flow task to the package  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], on the **Control Flow** tab, add a Data Flow task.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], on the **Control Flow** tab, add a Data Flow task.  
   
 2.  Connect the preceding task that prepared the query string to the Data Flow task.  
   
@@ -40,7 +40,7 @@ manager: "jhubbard"
   
 #### To configure an OLE DB source to retrieve the change data  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], on the **Data Flow** tab, add an OLE DB source.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], on the **Data Flow** tab, add an OLE DB source.  
   
 2.  In the **OLE DB Source Editor**, on the **Connection Manager** page, select the following options:  
   

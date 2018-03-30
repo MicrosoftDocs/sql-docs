@@ -16,22 +16,22 @@ helpviewer_keywords:
 ms.assetid: ac6cba68-2665-4a39-8fa3-cb7d7e6723c0
 caps.latest.revision: 30
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "jhubbard"
 ---
 # Reporting Services SharePoint Mode Installation (SharePoint 2010 and SharePoint 2013)
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] in SharePoint mode is a collection of server components that provide report generation and delivery, based on [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SharePoint products.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in SharePoint mode is a collection of server components that provide report generation and delivery, based on [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint products.  
   
- Running [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] in SharePoint mode provides the [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] and data alerting features. For more information regarding features in SharePoint mode, see the section “Feature Support and Behavior Differences by Server Mode” in [Reporting Services Report Server](../../../2014/reporting-services/reporting-services-report-server.md)  
+ Running [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in SharePoint mode provides the [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] and data alerting features. For more information regarding features in SharePoint mode, see the section “Feature Support and Behavior Differences by Server Mode” in [Reporting Services Report Server](../../../2014/reporting-services/reporting-services-report-server.md)  
   
- There are two fundamental installations needed for [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] in SharePoint mode:  
+ There are two fundamental installations needed for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in SharePoint mode:  
   
 |Installation|Description|  
 |------------------|-----------------|  
-|The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] add-in for SharePoint products.|The add-in installs the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] user interface (UI) pages and features on a SharePoint web front-end server. The UI features include [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)], administration pages in SharePoint Central Administration, feature pages used within SharePoint document libraries, and [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Data Alerting pages.|  
-|The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] report server installed in SharePoint Mode|The report server handles the data and report processing and rendering as well subscription and Data Alert processing. The SharePoint mode report server is architected and installed as a SharePoint Shared Service.|  
+|The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] add-in for SharePoint products.|The add-in installs the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] user interface (UI) pages and features on a SharePoint web front-end server. The UI features include [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], administration pages in SharePoint Central Administration, feature pages used within SharePoint document libraries, and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Data Alerting pages.|  
+|The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server installed in SharePoint Mode|The report server handles the data and report processing and rendering as well subscription and Data Alert processing. The SharePoint mode report server is architected and installed as a SharePoint Shared Service.|  
   
- To install [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], use the [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] installation media.  
+ To install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], use the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installation media.  
   
  For instructions on advanced deployment scenarios, see [Deployment Checklist: Reporting Services, Power View, and PowerPivot for SharePoint](../../../2014/sql-server/install/deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md) and [Deployment Checklist: Install Reporting Services into an Existing SharePoint Farm](../../../2014/sql-server/install/deployment-checklist-install-reporting-services-existing-sharepoint-farm.md).  
   

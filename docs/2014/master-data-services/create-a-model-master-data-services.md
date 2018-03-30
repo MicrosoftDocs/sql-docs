@@ -19,7 +19,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Create a Model (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], create a model to contain model objects.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], create a model to contain model objects.  
   
 ## Prerequisites  
  To perform this procedure:  
@@ -28,7 +28,7 @@ manager: "jhubbard"
   
 ### To create a model  
   
-1.  In [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], click **System Administration**.  
+1.  In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], click **System Administration**.  
   
 2.  On the **Model View** page, from the menu bar, point to **Manage** and click **Models**.  
   

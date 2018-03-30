@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 23e286e7-6074-4fbe-be29-203420d6c3d0
 caps.latest.revision: 34
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Implementing a DataReader Class for a Data Processing Extension

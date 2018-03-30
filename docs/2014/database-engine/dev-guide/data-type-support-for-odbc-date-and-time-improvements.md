@@ -20,10 +20,10 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Data Type Support for ODBC Date and Time Improvements
-  This topic provides information about ODBC types that support [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] date and time data types.  
+  This topic provides information about ODBC types that support [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] date and time data types.  
   
 ## Data Type Mapping in Parameters and Resultsets  
- In addition to the ODBC data types (SQL_TYPE_TIMESTAMP and SQL_TIMESTAMP), two new data types were added in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC to expose the new server types:  
+ In addition to the ODBC data types (SQL_TYPE_TIMESTAMP and SQL_TIMESTAMP), two new data types were added in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC to expose the new server types:  
   
 -   SQL_SS_TIME2  
   
@@ -52,11 +52,11 @@ manager: "jhubbard"
  When SQL_C_BINARY binding is specified, alignment checking will be performed and an error reported for incorrect alignment. The SQLSTATE for this error will be IM016, with the message "Incorrect structure alignment".  
   
 ## Data Formats: Strings and Literals  
- The following table shows the mappings between [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data types, ODBC data types, and the ODBC string literals.  
+ The following table shows the mappings between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types, ODBC data types, and the ODBC string literals.  
   
 |SQL Server data type|ODBC data type|String format for client conversions|  
 |--------------------------|--------------------|------------------------------------------|  
-|Datetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports up to three fractional second digits for Datetime.|  
+|Datetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports up to three fractional second digits for Datetime.|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:hh:ss'<br /><br /> This data type has an accuracy of one minute. The seconds component will be zero on output and will be rounded by the server on input.|  
 |Date|SQL_TYPE_DATE<br /><br /> SQL_DATE|'yyyy-mm-dd'|  
 |Time|SQL_SS_TIME2|'hh:mm:ss[.9999999]'<br /><br /> Fractional seconds can optionally be specified using up to seven digits.|  
@@ -88,9 +88,9 @@ manager: "jhubbard"
   
 -   Seconds range is 0 through 61.9(n). This allows up to two leap seconds to maintain synchronization with sideral time.  
   
-     Note that [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] does not allow leap seconds, so second values greater than 59 will cause a server error.  
+     Note that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not allow leap seconds, so second values greater than 59 will cause a server error.  
   
- Implementations for the following existing ODBC structs have been modified to support the new [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] date and time data types. The definitions, however, have not changed.  
+ Implementations for the following existing ODBC structs have been modified to support the new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] date and time data types. The definitions, however, have not changed.  
   
 -   DATE_STRUCT  
   

@@ -65,7 +65,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Create a Database Master Key](../../2014/database-engine/create-a-database-master-key.md)   
- [CREATE MASTER KEY &#40;Transact-SQL&#41;](../Topic/CREATE%20MASTER%20KEY%20\(Transact-SQL\).md)   
+ [CREATE MASTER KEY &#40;Transact-SQL&#41;](~/t-sql/statements/create-master-key-transact-sql.md)   
  [Transport Security for Database Mirroring and AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/transport-security-database-mirroring-always-on-availability.md)   
  [Security Center for SQL Server Database Engine and Azure SQL Database](../../2014/database-engine/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
  [The Database Mirroring Endpoint &#40;SQL Server&#41;](../../2014/database-engine/the-database-mirroring-endpoint-sql-server.md)  

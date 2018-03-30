@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Specify a SQL or MDX Query (SSAS)
-  This page of the **Table Import Wizard** enables you to import data by using a SQL or MDX query. To access the wizard from the [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], on the **Model** menu, click **Import from Data Source**.  
+  This page of the **Table Import Wizard** enables you to import data by using a SQL or MDX query. To access the wizard from the [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], on the **Model** menu, click **Import from Data Source**.  
   
  The query can manipulate the data that is imported. For example, you could join data from different tables or select only rows that meet certain criteria.  
   

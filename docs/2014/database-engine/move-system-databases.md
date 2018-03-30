@@ -29,11 +29,11 @@ helpviewer_keywords:
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 caps.latest.revision: 58
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Move System Databases
-  This topic describes how to move system databases in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Moving system databases may be useful in the following situations:  
+  This topic describes how to move system databases in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Moving system databases may be useful in the following situations:  
   
 -   Failure recovery. For example, the database is in suspect mode or has shut down because of a hardware failure.  
   
@@ -41,9 +41,9 @@ manager: "jhubbard"
   
 -   Relocation for scheduled disk maintenance.  
   
- The following procedures apply to moving database files within the same instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. To move a database to another instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or to another server, use the [backup and restore](../../2014/database-engine/back-up-and-restore-of-sql-server-databases.md) or [detach and attach](../../2014/database-engine/move-a-database-using-detach-and-attach-transact-sql.md) operations.  
+ The following procedures apply to moving database files within the same instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. To move a database to another instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] or to another server, use the [backup and restore](../../2014/database-engine/back-up-and-restore-of-sql-server-databases.md) or [detach and attach](../../2014/database-engine/move-a-database-using-detach-and-attach-transact-sql.md) operations.  
   
- The procedures in this topic require the logical name of the database files. To obtain the name, query the name column in the [sys.master_files](../Topic/sys.master_files%20\(Transact-SQL\).md) catalog view.  
+ The procedures in this topic require the logical name of the database files. To obtain the name, query the name column in the [sys.master_files](~/relational-databases/system-catalog-views/sys-master-files-transact-sql.md) catalog view.  
   
 > [!IMPORTANT]  
 >  If you move a system database and later rebuild the master database, you must move the system database again because the rebuild operation installs all system databases to their default location.  
@@ -71,11 +71,11 @@ manager: "jhubbard"
     ALTER DATABASE database_name MODIFY FILE ( NAME = logical_name , FILENAME = 'new_path\os_file_name' )  
     ```  
   
-2.  Stop the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or shut down the system to perform maintenance. For more information, see [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../2014/database-engine/start-stop-pause-resume-restart-sql-server-services.md).  
+2.  Stop the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] or shut down the system to perform maintenance. For more information, see [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../2014/database-engine/start-stop-pause-resume-restart-sql-server-services.md).  
   
 3.  Move the file or files to the new location.  
   
-4.  Restart the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or the server. For more information, see [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../2014/database-engine/start-stop-pause-resume-restart-sql-server-services.md).  
+4.  Restart the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] or the server. For more information, see [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../2014/database-engine/start-stop-pause-resume-restart-sql-server-services.md).  
   
 5.  Verify the file change by running the following query.  
   
@@ -85,9 +85,9 @@ manager: "jhubbard"
     WHERE database_id = DB_ID(N'<database_name>');  
     ```  
   
- If the msdb database is moved and the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is configured for [Database Mail](../../2014/database-engine/database-mail.md), complete these additional steps.  
+ If the msdb database is moved and the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is configured for [Database Mail](../../2014/database-engine/database-mail.md), complete these additional steps.  
   
-1.  Verify that [!INCLUDE[ssSB](../../includes/sssb-md.md)] is enabled for the msdb database by running the following query.  
+1.  Verify that [!INCLUDE[ssSB](../includes/sssb-md.md)] is enabled for the msdb database by running the following query.  
   
     ```  
     SELECT is_broker_enabled   
@@ -95,7 +95,7 @@ manager: "jhubbard"
     WHERE name = N'msdb';  
     ```  
   
-     For more information about enabling [!INCLUDE[ssSB](../../includes/sssb-md.md)], see [ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20\(Transact-SQL\).md).  
+     For more information about enabling [!INCLUDE[ssSB](../includes/sssb-md.md)], see [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md).  
   
 2.  Verify that Database Mail is working by sending a test mail.  
   
@@ -105,9 +105,9 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  If the database cannot be started, that is it is in suspect mode or in an unrecovered state, only members of the sysadmin fixed role can move the file.  
   
-1.  Stop the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] if it is started.  
+1.  Stop the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] if it is started.  
   
-2.  Start the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in master-only recovery mode by entering one of the following commands at the command prompt. The parameters specified in these commands are case sensitive. The commands fail when the parameters are not specified as shown.  
+2.  Start the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in master-only recovery mode by entering one of the following commands at the command prompt. The parameters specified in these commands are case sensitive. The commands fail when the parameters are not specified as shown.  
   
     -   For the default (MSSQLSERVER) instance, run the following command:  
   
@@ -123,7 +123,7 @@ manager: "jhubbard"
   
      For more information, see [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../2014/database-engine/start-stop-pause-resume-restart-sql-server-services.md).  
   
-3.  For each file to be moved, use **sqlcmd** commands or [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to run the following statement.  
+3.  For each file to be moved, use **sqlcmd** commands or [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to run the following statement.  
   
     ```  
     ALTER DATABASE database_name MODIFY FILE( NAME = logical_name , FILENAME = 'new_path\os_file_name' )  
@@ -131,13 +131,13 @@ manager: "jhubbard"
   
      For more information about using the **sqlcmd** utility, see [Use the sqlcmd Utility](../../2014/database-engine/use-the-sqlcmd-utility.md).  
   
-4.  Exit the **sqlcmd** utility or [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+4.  Exit the **sqlcmd** utility or [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
-5.  Stop the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For example, run `NET STOP MSSQLSERVER`.  
+5.  Stop the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For example, run `NET STOP MSSQLSERVER`.  
   
 6.  Move the file or files to the new location.  
   
-7.  Restart the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For example, run `NET START MSSQLSERVER`.  
+7.  Restart the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For example, run `NET START MSSQLSERVER`.  
   
 8.  Verify the file change by running the following query.  
   
@@ -152,7 +152,7 @@ manager: "jhubbard"
   
 1.  From the **Start** menu, point to **All Programs**, point to **Microsoft SQL Server**, point to **Configuration Tools**, and then click **SQL Server Configuration Manager**.  
   
-2.  In the **SQL Server Services** node, right-click the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (for example, **SQL Server (MSSQLSERVER)**) and choose **Properties**.  
+2.  In the **SQL Server Services** node, right-click the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (for example, **SQL Server (MSSQLSERVER)**) and choose **Properties**.  
   
 3.  In the **SQL Server (***instance_name***) Properties** dialog box, click the **Startup Parameters** tab.  
   
@@ -176,11 +176,11 @@ manager: "jhubbard"
   
      `-lE:\SQLData\mastlog.ldf`  
   
-6.  Stop the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by right-clicking the instance name and choosing **Stop**.  
+6.  Stop the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] by right-clicking the instance name and choosing **Stop**.  
   
 7.  Move the master.mdf and mastlog.ldf files to the new location.  
   
-8.  Restart the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+8.  Restart the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 9. Verify the file change for the master database by running the following query.  
   
@@ -225,7 +225,7 @@ manager: "jhubbard"
  The following example moves the `tempdb` data and log files to a new location as part of a planned relocation.  
   
 > [!NOTE]  
->  Because tempdb is re-created each time the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is started, you do not have to physically move the data and log files. The files are created in the new location when the service is restarted in step 3. Until the service is restarted, tempdb continues to use the data and log files in existing location.  
+>  Because tempdb is re-created each time the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is started, you do not have to physically move the data and log files. The files are created in the new location when the service is restarted in step 3. Until the service is restarted, tempdb continues to use the data and log files in existing location.  
   
 1.  Determine the logical file names of the `tempdb` database and their current location on the disk.  
   
@@ -249,7 +249,7 @@ manager: "jhubbard"
     GO  
     ```  
   
-3.  Stop and restart the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+3.  Stop and restart the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 4.  Verify the file change.  
   
@@ -270,7 +270,7 @@ manager: "jhubbard"
  [Move User Databases](../../2014/database-engine/move-user-databases.md)   
  [Move Database Files](../../2014/database-engine/move-database-files.md)   
  [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../2014/database-engine/start-stop-pause-resume-restart-sql-server-services.md)   
- [ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20\(Transact-SQL\).md)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)   
  [Rebuild System Databases](../../2014/database-engine/rebuild-system-databases.md)  
   
   

@@ -29,9 +29,9 @@ An error occurred in the Microsoft .NET Framework while trying to load assembly 
   
 ## Prerequisites  
   
--   You must be logged on as a member of the Administrators group on the [!INCLUDE[ssDQSServer](../../../includes/ssdqsserver-md.md)] computer.  
+-   You must be logged on as a member of the Administrators group on the [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] computer.  
   
--   Your Windows user account must be a member of the sysadmin fixed server role in the SQL Server instance where [!INCLUDE[ssDQSServer](../../../includes/ssdqsserver-md.md)] is installed.  
+-   Your Windows user account must be a member of the sysadmin fixed server role in the SQL Server instance where [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] is installed.  
   
 ### To upgrade DQS databases schema  
   

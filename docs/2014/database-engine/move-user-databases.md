@@ -26,20 +26,20 @@ helpviewer_keywords:
 ms.assetid: ad9a4e92-13fb-457d-996a-66ffc2d55b79
 caps.latest.revision: 36
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Move User Databases
-  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can move the data, log, and full-text catalog files of a user database to a new location by specifying the new file location in the FILENAME clause of the [ALTER DATABASE](../Topic/ALTER%20DATABASE%20\(Transact-SQL\).md) statement. This method applies to moving database files within the same instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. To move a database to another instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or to another server, use [backup and restore](../../2014/database-engine/back-up-and-restore-of-sql-server-databases.md) or [detach and attach operations](../../2014/database-engine/move-a-database-using-detach-and-attach-transact-sql.md).  
+  In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], you can move the data, log, and full-text catalog files of a user database to a new location by specifying the new file location in the FILENAME clause of the [ALTER DATABASE](~/t-sql/statements/alter-database-transact-sql.md) statement. This method applies to moving database files within the same instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. To move a database to another instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] or to another server, use [backup and restore](../../2014/database-engine/back-up-and-restore-of-sql-server-databases.md) or [detach and attach operations](../../2014/database-engine/move-a-database-using-detach-and-attach-transact-sql.md).  
   
 ## Considerations  
  When you move a database onto another server instance, to provide a consistent experience to users and applications, you might have to re-create some or all the metadata for the database. For more information, see [Manage Metadata When Making a Database Available on Another Server Instance &#40;SQL Server&#41;](../../2014/database-engine/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
- Some features of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] change the way that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] stores information in the database files. These features are restricted to specific editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A database that contains these features cannot be moved to an edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that does not support them. Use the sys.dm_db_persisted_sku_features dynamic management view to list all edition-specific features that are enabled in the current database.  
+ Some features of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] change the way that the [!INCLUDE[ssDE](../includes/ssde-md.md)] stores information in the database files. These features are restricted to specific editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. A database that contains these features cannot be moved to an edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that does not support them. Use the sys.dm_db_persisted_sku_features dynamic management view to list all edition-specific features that are enabled in the current database.  
   
- The procedures in this topic require the logical name of the database files. To obtain the name, query the name column in the [sys.master_files](../Topic/sys.master_files%20\(Transact-SQL\).md) catalog view.  
+ The procedures in this topic require the logical name of the database files. To obtain the name, query the name column in the [sys.master_files](~/relational-databases/system-catalog-views/sys-master-files-transact-sql.md) catalog view.  
   
- Starting with [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], full-text catalogs are integrated into the database rather than being stored in the file system. The full-text catalogs now move automatically when you move a database.  
+ Starting with [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)], full-text catalogs are integrated into the database rather than being stored in the file system. The full-text catalogs now move automatically when you move a database.  
   
 ## Planned Relocation Procedure  
  To move a data or log file as part of a planned relocation, follow these steps:  
@@ -81,11 +81,11 @@ manager: "jhubbard"
     ALTER DATABASE database_name MODIFY FILE ( NAME = logical_name , FILENAME = 'new_path\os_file_name' );  
     ```  
   
-2.  Stop the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or shut down the system to perform maintenance. For more information, see [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../2014/database-engine/start-stop-pause-resume-restart-sql-server-services.md).  
+2.  Stop the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] or shut down the system to perform maintenance. For more information, see [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../2014/database-engine/start-stop-pause-resume-restart-sql-server-services.md).  
   
 3.  Move the file or files to the new location.  
   
-4.  Restart the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or the server. For more information, see [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../2014/database-engine/start-stop-pause-resume-restart-sql-server-services.md)  
+4.  Restart the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] or the server. For more information, see [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../2014/database-engine/start-stop-pause-resume-restart-sql-server-services.md)  
   
 5.  Verify the file change by running the following query.  
   
@@ -101,9 +101,9 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  If the database cannot be started, that is it is in suspect mode or in an unrecovered state, only members of the sysadmin fixed role can move the file.  
   
-1.  Stop the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] if it is started.  
+1.  Stop the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] if it is started.  
   
-2.  Start the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in master-only recovery mode by entering one of the following commands at the command prompt.  
+2.  Start the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in master-only recovery mode by entering one of the following commands at the command prompt.  
   
     -   For the default (MSSQLSERVER) instance, run the following command.  
   
@@ -119,7 +119,7 @@ manager: "jhubbard"
   
      For more information, see [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../2014/database-engine/start-stop-pause-resume-restart-sql-server-services.md).  
   
-3.  For each file to be moved, use **sqlcmd** commands or [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to run the following statement.  
+3.  For each file to be moved, use **sqlcmd** commands or [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to run the following statement.  
   
     ```  
     ALTER DATABASE database_name MODIFY FILE( NAME = logical_name , FILENAME = 'new_path\os_file_name' );  
@@ -127,13 +127,13 @@ manager: "jhubbard"
   
      For more information about how to use the **sqlcmd** utility, see [Use the sqlcmd Utility](../../2014/database-engine/use-the-sqlcmd-utility.md).  
   
-4.  Exit the **sqlcmd** utility or [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+4.  Exit the **sqlcmd** utility or [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
-5.  Stop the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+5.  Stop the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 6.  Move the file or files to the new location.  
   
-7.  Start the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For example, run: `NET START MSSQLSERVER`.  
+7.  Start the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For example, run: `NET START MSSQLSERVER`.  
   
 8.  Verify the file change by running the following query.  
   
@@ -144,7 +144,7 @@ manager: "jhubbard"
     ```  
   
 ## Examples  
- The following example moves the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] log file to a new location as part of a planned relocation.  
+ The following example moves the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] log file to a new location as part of a planned relocation.  
   
 ```  
 USE master;  
@@ -174,13 +174,13 @@ WHERE database_id = DB_ID(N'AdventureWorks2012')
 ```  
   
 ## See Also  
- [ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20\(Transact-SQL\).md)   
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../Topic/CREATE%20DATABASE%20\(SQL%20Server%20Transact-SQL\).md)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](~/t-sql/statements/create-database-sql-server-transact-sql.md)   
  [Database Detach and Attach &#40;SQL Server&#41;](../../2014/database-engine/database-detach-and-attach-sql-server.md)   
  [Move System Databases](../../2014/database-engine/move-system-databases.md)   
  [Move Database Files](../../2014/database-engine/move-database-files.md)   
- [BACKUP &#40;Transact-SQL&#41;](../Topic/BACKUP%20\(Transact-SQL\).md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)   
+ [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)   
  [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../2014/database-engine/start-stop-pause-resume-restart-sql-server-services.md)  
   
   

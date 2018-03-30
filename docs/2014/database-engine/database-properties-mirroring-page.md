@@ -104,7 +104,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
 > [!NOTE]  
 >  If the mirroring session is running in high-performance mode, manual failover is not supported. To fail over manually, you must first change the operating mode to **High safety without automatic failover (synchronous)**. After failover completes, you can change the mode back to **High performance (asynchronous)** on the new principal server instance.  
   
- A prompt asks for confirmation. If you click **Yes**, failover is attempted. The principal server begins by trying to connect to the mirror server by using Windows Authentication. If Windows Authentication does not work, the principal server displays the **Connect to Server** dialog box. If the mirror server uses [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, select **SQL Server Authentication** in the **Authentication** box. In the **Login** text box, specify the login account to connect with on the mirror server, and in the **Password** text box, specify the password for that account.  
+ A prompt asks for confirmation. If you click **Yes**, failover is attempted. The principal server begins by trying to connect to the mirror server by using Windows Authentication. If Windows Authentication does not work, the principal server displays the **Connect to Server** dialog box. If the mirror server uses [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication, select **SQL Server Authentication** in the **Authentication** box. In the **Login** text box, specify the login account to connect with on the mirror server, and in the **Password** text box, specify the password for that account.  
   
  If failover succeeds, the **Database Properties** dialog box closes. The principal and mirror server roles are switched: the former mirror database becomes the principal database, and vice versa. Note that the **Database Properties** dialog box becomes unavailable on the old principal database immediately because it has become the mirror database; this dialog box will become available on the new principal database after failover.  
   
@@ -167,7 +167,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
   
 -   [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](../../2014/database-engine/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
--   [sp_dbmmonitorresults &#40;Transact-SQL&#41;](../Topic/sp_dbmmonitorresults%20\(Transact-SQL\).md)  
+-   [sp_dbmmonitorresults &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)  
   
  For more information, see [Monitoring Database Mirroring &#40;SQL Server&#41;](../../2014/database-engine/monitoring-database-mirroring-sql-server.md).  
   

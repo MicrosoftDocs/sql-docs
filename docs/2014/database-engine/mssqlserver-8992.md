@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 68467e6a-09d8-478f-8bd9-3bb09453ada3
 caps.latest.revision: 22
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_8992
@@ -67,7 +67,7 @@ manager: "jhubbard"
  If the backup also contains the metadata inconsistency, you need to create a new database and export the contents of the existing database to the new database.  
   
 ### DBCC CHECKDB Cannot Repair This Error  
- This error cannot be repaired.  If you cannot restore the database from a backup, contact [!INCLUDE[msCoName](../../includes/msconame-md.md)] Customer Service and Support (CSS).  
+ This error cannot be repaired.  If you cannot restore the database from a backup, contact [!INCLUDE[msCoName](../includes/msconame-md.md)] Customer Service and Support (CSS).  
   
 ### Do Not Manually Update System Tables  
  Do not make manual updates to system tables. SQL Server does not support any manual changes to system databases. If you update a system table in a SQL Server database, two events (event ID 17659 and event ID 3859) are logged. For more information, see KB article 2688307, "Event ID 17659 and event ID 3859 are logged when you update system tables in a SQL Server database".  

@@ -16,7 +16,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Using the DQS Default Knowledge Base
-  This topic describes the default knowledge base, **DQS Data**, which is installed with [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS). This is a pre-built default knowledge base that contains the following domains:  
+  This topic describes the default knowledge base, **DQS Data**, which is installed with [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). This is a pre-built default knowledge base that contains the following domains:  
   
 -   **Country/Region**: Contains the conventional long (official name as designated by the country/region ) and short names (common name used in lists, on maps, etc. ), two-letter abbreviation, three-letter abbreviation and three-digit code for each location.  Leading value is set to the long country name.  
   

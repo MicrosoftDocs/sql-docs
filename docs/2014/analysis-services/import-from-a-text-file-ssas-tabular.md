@@ -22,7 +22,7 @@ manager: "mblythe"
   
 ### To import data from a text file  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], click the **Model** menu, and then click **Import from Data Source**.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], click the **Model** menu, and then click **Import from Data Source**.  
   
 2.  On the **Connect to a Data Source** page, under **Text Files**, select **Excel File** or **Text File**, and then click **Next**.  
   

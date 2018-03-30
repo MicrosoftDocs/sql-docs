@@ -29,7 +29,7 @@ manager: "jhubbard"
  Enter the value for each parameter listed under **Name**. The value used most recently appears as the default parameter value.  
   
 ## Example  
- The following query in the SQL Pane, opens the Query Parameters dialog box when executed in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
+ The following query in the SQL Pane, opens the Query Parameters dialog box when executed in the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database.  
   
 ```  
 SELECT   FirstName, LastName  

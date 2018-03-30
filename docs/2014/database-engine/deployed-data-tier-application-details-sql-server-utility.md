@@ -38,7 +38,7 @@ manager: "jhubbard"
   
  The sequence of columns in the list view can be changed by dragging them to the left or the right. Columns in the list view can be added or deleted by right-clicking on the column headings and selecting or unselecting columns. The right-click menu also provides sort options. Sorting can also be activated by clicking at the top of a column name.  
   
- To access filter options for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility list view, right-click on the **Deployed Data-tier applications** node in the Utility Explorer navigation pane, and select **Filter**. After filter settings have been implemented, the **Deployed Data-tier Applications** node in Utility Explorer will be labeled **Deployed Data-tier Applications (filtered)**. For more information, see [Filter Settings &#40;Object Explorer and Utility Explorer&#41;](../../2014/database-engine/filter-settings-object-explorer-and-utility-explorer.md).  
+ To access filter options for the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility list view, right-click on the **Deployed Data-tier applications** node in the Utility Explorer navigation pane, and select **Filter**. After filter settings have been implemented, the **Deployed Data-tier Applications** node in Utility Explorer will be labeled **Deployed Data-tier Applications (filtered)**. For more information, see [Filter Settings &#40;Object Explorer and Utility Explorer&#41;](../../2014/database-engine/filter-settings-object-explorer-and-utility-explorer.md).  
   
  By default, the following columns display health state information about each data-tier application.  
   
@@ -66,7 +66,7 @@ manager: "jhubbard"
   
 -   Policy Type - Indicates whether "Global" default policies or "Override" custom policies are in effect for the data-tier application.  
   
--   Instance Name - Displays the name of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that hosts the data-tier application.  
+-   Instance Name - Displays the name of the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that hosts the data-tier application.  
   
  Other columns that can be displayed using the right-click menu in the column heading area of the list view:  
   

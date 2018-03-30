@@ -15,11 +15,11 @@ helpviewer_keywords:
 ms.assetid: 392de21a-57fa-4a69-8237-ced8ca86ed1d
 caps.latest.revision: 19
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Hide an Instance of SQL Server Database Engine
-  This topic describes how to hide an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using SQL Server Configuration Manager. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser service to enumerate instances of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] installed on the computer. This enables client applications to browse for a server, and helps clients distinguish between multiple instances of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] on the same computer. You can use the following procedure to prevent the SQL Server Browser service from exposing an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to client computers that try to locate the instance by using the **Browse** button.  
+  This topic describes how to hide an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)] in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using SQL Server Configuration Manager. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser service to enumerate instances of the [!INCLUDE[ssDE](../includes/ssde-md.md)] installed on the computer. This enables client applications to browse for a server, and helps clients distinguish between multiple instances of the [!INCLUDE[ssDE](../includes/ssde-md.md)] on the same computer. You can use the following procedure to prevent the SQL Server Browser service from exposing an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)] to client computers that try to locate the instance by using the **Browse** button.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Configuration Manager  
   
@@ -34,10 +34,10 @@ manager: "jhubbard"
   For more information, see [Configure a Server to Listen on a Specific TCP Port &#40;SQL Server Configuration Manager&#41;](../../2014/database-engine/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
   
 ### Clustering  
- If you hide a clustered named instance, cluster service may not be able to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This will cause the cluster instance’s **IsAlive** check to fail and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will go offline. We recommend that you create an alias in all the nodes of the clustered instance to reflect the static port that you configured for the instance.  
+ If you hide a clustered named instance, cluster service may not be able to connect to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. This will cause the cluster instance’s **IsAlive** check to fail and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] will go offline. We recommend that you create an alias in all the nodes of the clustered instance to reflect the static port that you configured for the instance.  
  For more information, see [Create or Delete a Server Alias for Use by a Client &#40;SQL Server Configuration Manager&#41;](../../2014/database-engine/create-or-delete-a-server-alias-for-use-by-a-client.md).  
   
- If you hide a clustered named instance, cluster service may not be able to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] if the **LastConnect** registry key (**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SNI11.0\LastConnect**) has a different port than the port that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is listening on. If the cluster service is unable to make a connection to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you might see an error similar to the following:  
+ If you hide a clustered named instance, cluster service may not be able to connect to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] if the **LastConnect** registry key (**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SNI11.0\LastConnect**) has a different port than the port that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is listening on. If the cluster service is unable to make a connection to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], you might see an error similar to the following:  
 **Event ID: 1001: Event Name: Failover clustering resource deadlock.**  
   
 ## See Also  

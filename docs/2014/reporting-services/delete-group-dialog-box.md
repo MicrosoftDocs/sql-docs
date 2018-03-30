@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: bc1c0f27-41cb-49ad-8bef-634a4c23586f
 caps.latest.revision: 8
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Delete Group Dialog Box

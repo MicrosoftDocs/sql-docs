@@ -25,11 +25,11 @@ manager: "jhubbard"
  
   
 ##  <a name="ClientConnSupport"></a> Client Connectivity Support  
- The section below provides information about [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] support for client connectivity.  
+ The section below provides information about [!INCLUDE[ssHADR](../includes/sshadr-md.md)] support for client connectivity.  
   
  **Driver Support**  
   
- The following table summarizes driver support for [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]:  
+ The following table summarizes driver support for [!INCLUDE[ssHADR](../includes/sshadr-md.md)]:  
   
 |Driver|Multi-Subnet Failover|Application Intent|Read-Only Routing|Multi-Subnet Failover: Faster Single Subnet Endpoint Failover|Multi-Subnet Failover: Named Instance Resolution For SQL Clustered Instances|  
 |------------|----------------------------|------------------------|------------------------|--------------------------------------------------------------------|-----------------------------------------------------------------------------------|  

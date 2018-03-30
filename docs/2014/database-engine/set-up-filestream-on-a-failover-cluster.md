@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Set Up FILESTREAM on a Failover Cluster
-  This topic describes how to enable FILESTREAM on a failover cluster. Before you try this procedure, you should understand [failover clustering](../Topic/AlwaysOn%20Failover%20Cluster%20Instances%20\(SQL%20Server\).md) and have FILESTREAM enabled. For information about how to enable FILESTREAM, see [Enable and Configure FILESTREAM](../../2014/database-engine/enable-and-configure-filestream.md).  
+  This topic describes how to enable FILESTREAM on a failover cluster. Before you try this procedure, you should understand [failover clustering](always-on-failover-cluster-instances-sql-server.md) and have FILESTREAM enabled. For information about how to enable FILESTREAM, see [Enable and Configure FILESTREAM](../../2014/database-engine/enable-and-configure-filestream.md).  
   
 ### To set up FILESTREAM on a failover cluster  
   
@@ -32,7 +32,7 @@ manager: "jhubbard"
   
 3.  To add more passive nodes, repeat step 2.  
   
-4.  After all the nodes are added, complete the process by executing the sp_configure stored procedure on each instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+4.  After all the nodes are added, complete the process by executing the sp_configure stored procedure on each instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 5.  To add and enable additional nodes to the cluster at any time, you can repeat steps 2, 3, and 4.  
   

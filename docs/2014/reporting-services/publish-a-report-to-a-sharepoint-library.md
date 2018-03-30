@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 3f6dfc28-50d8-4231-bd25-871b5f77cce6
 caps.latest.revision: 14
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Publish a Report to a SharePoint Library
@@ -26,7 +26,7 @@ manager: "mblythe"
   
 ### To publish a report to a SharePoint site  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open an existing or new Report Server project.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open an existing or new Report Server project.  
   
 2.  From the **Project** menu, click **Properties**. The *\<project>***Property Pages** dialog box opens.  
   
@@ -42,7 +42,7 @@ manager: "mblythe"
   
 7.  For **TargetServerURL**, type a URL to a SharePoint top-level site or subsite. If you do not specify a site, the default top-level site is used (for example, *http://servername*, *http://servername/site*, or *http://servername/site/subsite*).  
   
-8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 9. In Solution Explorer, right-click the report you want to publish, and click **Deploy**. The report is published to the location specified in **TargetReportFolder**. Deployment errors appear in the Output window.  
   

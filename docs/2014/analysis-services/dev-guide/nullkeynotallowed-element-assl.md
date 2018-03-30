@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # NullKeyNotAllowed Element (ASSL)
-  Determines how the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] processing engine handles a null key error encountered during processing.  
+  Determines how the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] processing engine handles a null key error encountered during processing.  
   
 ## Syntax  
   

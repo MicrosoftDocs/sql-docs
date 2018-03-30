@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: 8cb24263-e97d-4e4d-9429-6cf494a4d5eb
 caps.latest.revision: 15
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Create a Database Master Key
-  This topic describes how to create a database master key in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  This topic describes how to create a database master key in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -41,7 +41,7 @@ manager: "jhubbard"
   
 1.  Choose a password for encrypting the copy of the master key that will be stored in the database.  
   
-2.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+2.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 3.  On the Standard bar, click **New Query**.  
   
@@ -56,6 +56,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [CREATE MASTER KEY &#40;Transact-SQL&#41;](../Topic/CREATE%20MASTER%20KEY%20\(Transact-SQL\).md).  
+ For more information, see [CREATE MASTER KEY &#40;Transact-SQL&#41;](~/t-sql/statements/create-master-key-transact-sql.md).  
   
   

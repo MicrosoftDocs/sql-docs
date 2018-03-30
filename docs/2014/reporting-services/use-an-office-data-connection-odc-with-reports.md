@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
 caps.latest.revision: 13
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Use an Office Data Connection (.odc) with Reports (Reporting Services in SharePoint Integrated Mode)
-  For limited scenarios, you can use an existing Office Data Connection (.odc) file to provide connection information to a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report. An .odc file can be used in place of an .rsds file when you create a shared data source. The report server uses an .odc file in the same way it uses an .rsds file; it reads the file for the data source type, a connection string, and credential information.  
+  For limited scenarios, you can use an existing Office Data Connection (.odc) file to provide connection information to a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report. An .odc file can be used in place of an .rsds file when you create a shared data source. The report server uses an .odc file in the same way it uses an .rsds file; it reads the file for the data source type, a connection string, and credential information.  
   
- Not all .odc files can be used with a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report. The data processing extension and characteristics of the report and .odc file determine whether an .odc can be used:  
+ Not all .odc files can be used with a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report. The data processing extension and characteristics of the report and .odc file determine whether an .odc can be used:  
   
 -   The report must be designed to work with an OLE DB or ODBC data provider. If you used a different data processing extension to create the report, the report or its queries might include functionality that is not supported by the OLE DB or ODBC data provider.  
   
@@ -36,7 +36,7 @@ manager: "mblythe"
   
 -   The data source must have schema that is identical to the one used to create the report. If the data structures are different, the report will not run.  
   
--   The .odc file must be created in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office 2007 (older versions of .odc are not compatible with report definition files).  
+-   The .odc file must be created in [!INCLUDE[msCoName](../includes/msconame-md.md)] Office 2007 (older versions of .odc are not compatible with report definition files).  
   
  You cannot use .odc files that specify connections to data sources that cannot be processed on a report server, even if the .odc data source types look similar to supported data source types. Specifically, if you created an .odc file in Microsoft Excel 2007 that retrieves data from Microsoft Access, the Web, or a text file, you cannot use that .odc file to provide data to a report.  
   
@@ -96,7 +96,7 @@ manager: "mblythe"
   
 13. Click **OK** to select the file, and then click **OK** to save your changes.  
   
-     If you are trying these steps with the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database and sample reports, be aware that only the Company Sales report will work out-of-the-box with an .odc file. The other sample reports contain query parameters and features that do not work with the OLE DB provider. However, you can make the reports work with the OLE DB provider if you modify them first in Report Designer.  
+     If you are trying these steps with the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] sample database and sample reports, be aware that only the Company Sales report will work out-of-the-box with an .odc file. The other sample reports contain query parameters and features that do not work with the OLE DB provider. However, you can make the reports work with the OLE DB provider if you modify them first in Report Designer.  
   
 ## See Also  
  [Create, Modify, and Delete Shared Data Sources &#40;SSRS&#41;](../../2014/reporting-services/create-modify-and-delete-shared-data-sources-ssrs.md)  

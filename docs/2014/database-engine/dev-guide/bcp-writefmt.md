@@ -59,7 +59,7 @@ szFormatFile
  To load a saved format file, use [bcp_readfmt](../../../2014/database-engine/dev-guide/bcp-readfmt.md).  
   
 > [!NOTE]  
->  The format file produced by **bcp_writefmt** is supported only by versions of the **bcp** utility distributed with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] version 7.0 and later.  
+>  The format file produced by **bcp_writefmt** is supported only by versions of the **bcp** utility distributed with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version 7.0 and later.  
   
 ## Example  
   

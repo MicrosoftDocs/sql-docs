@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 5db8aebc-cc54-48d1-8cba-b2e2d21fa333
 caps.latest.revision: 11
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Summary: Creating Database Objects
@@ -24,6 +24,6 @@ manager: "jhubbard"
  [Lesson 2: Configuring Permissions on Database Objects](../../2014/tutorials/lesson-2-configuring-permissions-on-database-objects.md)  
   
 ## See Also  
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../Topic/CREATE%20DATABASE%20\(SQL%20Server%20Transact-SQL\).md)  
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](~/t-sql/statements/create-database-sql-server-transact-sql.md)  
   
   

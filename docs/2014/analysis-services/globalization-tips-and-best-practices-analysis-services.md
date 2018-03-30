@@ -22,7 +22,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Globalization Tips and Best Practices (Analysis Services)
-  **[!INCLUDE[applies](../../includes/applies-md.md)]**  Multidimensional only  
+  **[!INCLUDE[applies](../includes/applies-md.md)]**  Multidimensional only  
   
  These tips and guidelines can help increase the portability of your business intelligence solutions and avoid errors that are directly related to language and collation settings.  
   
@@ -39,7 +39,7 @@ manager: "mblythe"
 -   [Writing MDX queries containing Date and Time Values](#bkmk_datetime)  
   
 ##  <a name="bkmk_sameColl"></a> Use similar collations throughout the stack  
- If possible, try to use the same collation settings in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] that you use for the database engine, striving for correspondence in width-sensitivity and case-sensitivity, and access-sensitivity.  
+ If possible, try to use the same collation settings in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] that you use for the database engine, striving for correspondence in width-sensitivity and case-sensitivity, and access-sensitivity.  
   
  Each service has its own collation settings, with the database engine default set to SQL_Latin1_General_CP1_CI_AS and Analysis Services set to Latin1_General_AS. The defaults are compatible in term of case, width, and accent sensitivity. Be forewarned that if you vary the settings of either collation, you can run into problems when the collation properties diverge in fundamental ways.  
   
@@ -119,7 +119,7 @@ manager: "mblythe"
      ![MDX query with French translations in SSMS](../../2014/analysis-services/media/ssas-localetest-ssms.png "MDX query with French translations in SSMS")  
   
 ##  <a name="bkmk_mdx"></a> Writing MDX queries in a solution containing Translations  
- Translations provide display information for the names of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects, but the identifiers for the same objects are not translated. Whenever possible, use the identifiers and keys for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects instead of the translated captions and names. For example, use member keys instead of member names for Multidimensional Expressions (MDX) statements and scripts to ensure portability across multiple languages.  
+ Translations provide display information for the names of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objects, but the identifiers for the same objects are not translated. Whenever possible, use the identifiers and keys for [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objects instead of the translated captions and names. For example, use member keys instead of member names for Multidimensional Expressions (MDX) statements and scripts to ensure portability across multiple languages.  
   
 > [!NOTE]  
 >  Recall that tabular object names are always case-insensitive, regardless of collation. Multidimensional object names, on the other hand, follow the case sensitivity of the collation. Since only multidimensional object names are case-sensitive make sure that all MDX queries referencing multidimensional objects are cased correctly.  

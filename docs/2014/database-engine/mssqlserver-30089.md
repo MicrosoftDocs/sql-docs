@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 188e5bde-6865-4740-a2b2-582be8f55c77
 caps.latest.revision: 16
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_30089
@@ -41,7 +41,7 @@ manager: "jhubbard"
 2.  Look at the crawl log to identify any new document that failed to be full-text indexed, and remove it.  
   
 ## See Also  
- [sp_help_fulltext_system_components &#40;Transact-SQL&#41;](../Topic/sp_help_fulltext_system_components%20\(Transact-SQL\).md)   
+ [sp_help_fulltext_system_components &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md)   
  [Configure and Manage Word Breakers and Stemmers for Search](../../2014/database-engine/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Configure and Manage Filters for Search](../../2014/database-engine/configure-and-manage-filters-for-search.md)  
   

@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: 37e949f5-15af-4858-848a-f482ee94fcd9
 caps.latest.revision: 18
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # RestoreEncryptionKey Method (WMI MSReportServer_ConfigurationSetting)
@@ -64,7 +64,7 @@ public void RestoreEncryptionKey(out Byte[] KeyFile, out Int32 Length,
  The method is most effective when called after the [DeleteEncryptionKey](../../2014/reporting-services/deleteencryptionkey-method-wmi-msreportserver-configurationsetting.md) method, which clears the list of encryption keys.  
   
 ## Requirements  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../includes/ssrswminmspca-md.md)]  
   
 ## See Also  
  [MSReportServer_ConfigurationSetting Members](../../2014/reporting-services/msreportserver-configurationsetting-members.md)  

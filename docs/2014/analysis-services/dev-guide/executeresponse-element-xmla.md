@@ -29,7 +29,7 @@ ms.author: "mblythe"
 manager: "mblythe"
 ---
 # ExecuteResponse Element (XMLA)
-  Contains the information returned by an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in response to an [Execute](../../../2014/analysis-services/dev-guide/execute-method-xmla.md) method call.  
+  Contains the information returned by an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in response to an [Execute](../../../2014/analysis-services/dev-guide/execute-method-xmla.md) method call.  
   
  **Namespace** urn:schemas-microsoft-com:xml-analysis  
   

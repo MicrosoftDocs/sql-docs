@@ -22,11 +22,11 @@ helpviewer_keywords:
 ms.assetid: 87520646-4865-49ae-8790-f766b80a41f3
 caps.latest.revision: 64
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Search for Words Close to Another Word with NEAR
-  You can use a proximity term (NEAR) in a [CONTAINS](../Topic/CONTAINS%20\(Transact-SQL\).md) predicate or [CONTAINSTABLE](../Topic/CONTAINSTABLE%20\(Transact-SQL\).md) function to search for words or phrases near one another. You can also specify the maximum number of non-search terms that separate the first and last search terms. In addition, you can search for words or phrases in any order, or you can search for words and phrases in the order in which you specify them. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supports both the earlier [generic proximity term](#Generic_NEAR), which is now deprecated, and the [custom proximity term](#Custom_NEAR), which is new in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+  You can use a proximity term (NEAR) in a [CONTAINS](~/t-sql/queries/contains-transact-sql.md) predicate or [CONTAINSTABLE](~/relational-databases/system-functions/containstable-transact-sql.md) function to search for words or phrases near one another. You can also specify the maximum number of non-search terms that separate the first and last search terms. In addition, you can search for words or phrases in any order, or you can search for words and phrases in the order in which you specify them. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] supports both the earlier [generic proximity term](#Generic_NEAR), which is now deprecated, and the [custom proximity term](#Custom_NEAR), which is new in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
   
 ##  <a name="Custom_NEAR"></a> The Custom Proximity Term  
  The custom proximity term introduces the following new capabilities:  
@@ -60,7 +60,7 @@ manager: "jhubbard"
  )  
   
 > [!NOTE]  
->  For more information about the <custom_proximity_term> syntax, see [CONTAINS &#40;Transact-SQL&#41;](../Topic/CONTAINS%20\(Transact-SQL\).md).  
+>  For more information about the <custom_proximity_term> syntax, see [CONTAINS &#40;Transact-SQL&#41;](~/t-sql/queries/contains-transact-sql.md).  
   
  For example, you could search for 'John' within two terms of 'Smith', as follows:  
   
@@ -72,7 +72,7 @@ CONTAINS(column_name, 'NEAR((John, Smith), 2)')
   
  To require that the terms be found in the specified order, you would change the example proximity term to `NEAR((John, Smith),2, TRUE).` This searches for "`John`" within two terms of "`Smith`" but only when "`John`" precedes "`Smith`". In a language that reads from left to right, such as English, an example of a string that matches is "`John Jacob Smith`".  
   
- Note that for a language that reads from right to left, such as Arabic or Hebrew, the Full-Text Engine applies the specified terms in reverse order. Also, Object Explorer in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] automatically reverses the display order of words specified in right-to-left languages.  
+ Note that for a language that reads from right to left, such as Arabic or Hebrew, the Full-Text Engine applies the specified terms in reverse order. Also, Object Explorer in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] automatically reverses the display order of words specified in right-to-left languages.  
   
 > [!NOTE]  
 >  For more information, see "[Additional Considerations about Proximity Searches](#Additional_Considerations)," later in this topic.  
@@ -147,14 +147,14 @@ GO
   
 -   The **transform noise words** server option  
   
-     The value of **transform noise words** impacts how [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] treats stopwords if they are specified in proximity searches. For more information, see [transform noise words Server Configuration Option](../../2014/database-engine/transform-noise-words-server-configuration-option.md).  
+     The value of **transform noise words** impacts how [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] treats stopwords if they are specified in proximity searches. For more information, see [transform noise words Server Configuration Option](../../2014/database-engine/transform-noise-words-server-configuration-option.md).  
   
 
   
 ##  <a name="Generic_NEAR"></a> The Deprecated Generic Proximity Term  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] We recommend that you use the [custom proximity term](#Custom_NEAR).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] We recommend that you use the [custom proximity term](#Custom_NEAR).  
   
  A generic proximity term indicates that the specified search terms must all occur in a document for a match to be returned, regardless of the number of non-search terms (the *distance*) between the search terms. The basic syntax is:  
   
@@ -167,7 +167,7 @@ GO
 -   `CONTAINSTABLE(table_name, column_name, 'fox ~ chicken')`  
   
 > [!NOTE]  
->  For information about the <generic_proximity_term> syntax, see [CONTAINS &#40;Transact-SQL&#41;](../Topic/CONTAINS%20\(Transact-SQL\).md).  
+>  For information about the <generic_proximity_term> syntax, see [CONTAINS &#40;Transact-SQL&#41;](~/t-sql/queries/contains-transact-sql.md).  
   
  For more information, see "[Additional Considerations about Proximity Searches](#Additional_Considerations)," later in this topic.  
   
@@ -223,8 +223,8 @@ CONTAINSTABLE(Production.Document, Document, '(reflector ~ bracket ~ installatio
 
   
 ## See Also  
- [CONTAINSTABLE &#40;Transact-SQL&#41;](../Topic/CONTAINSTABLE%20\(Transact-SQL\).md)   
+ [CONTAINSTABLE &#40;Transact-SQL&#41;](~/relational-databases/system-functions/containstable-transact-sql.md)   
  [Query with Full-Text Search](../../2014/database-engine/query-with-full-text-search.md)   
- [CONTAINS &#40;Transact-SQL&#41;](../Topic/CONTAINS%20\(Transact-SQL\).md)  
+ [CONTAINS &#40;Transact-SQL&#41;](~/t-sql/queries/contains-transact-sql.md)  
   
   

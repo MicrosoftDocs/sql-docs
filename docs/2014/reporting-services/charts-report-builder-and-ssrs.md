@@ -22,7 +22,7 @@ f1_keywords:
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
 caps.latest.revision: 10
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Charts (Report Builder and SSRS)
@@ -32,13 +32,13 @@ manager: "mblythe"
   
  ![Chart elements diagram](../../2014/reporting-services/media/rs-chartelementsc.gif "Chart elements diagram")  
   
- You can publish charts separately from a report as report parts. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
+ You can publish charts separately from a report as report parts. [!INCLUDE[ssRBrptparts](../includes/ssrbrptparts-md.md)]  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ##  <a name="DesigningChart"></a> Designing a Chart  
- After you add a chart data region to the design surface, you can drag report dataset fields for numeric and non-numeric data to the Chart Data pane of the chart. When you click the chart on the design surface, the Chart Data pane appears, with three areas—Category Groups, Series Groups, and Values. If the report has a shared or embedded dataset, the fields in the dataset appear in the Report Data pane. Drag fields from the dataset into the appropriate area. By default, when a field is added to one of the areas of the chart, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] calculates an aggregate for the field. You can also use series grouping to dynamically generate series. The chart is also closely related to the matrix.  
+ After you add a chart data region to the design surface, you can drag report dataset fields for numeric and non-numeric data to the Chart Data pane of the chart. When you click the chart on the design surface, the Chart Data pane appears, with three areas—Category Groups, Series Groups, and Values. If the report has a shared or embedded dataset, the fields in the dataset appear in the Report Data pane. Drag fields from the dataset into the appropriate area. By default, when a field is added to one of the areas of the chart, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] calculates an aggregate for the field. You can also use series grouping to dynamically generate series. The chart is also closely related to the matrix.  
   
  ![rs_chartwSeriesCategories](../../2014/reporting-services/media/rs-chartwseriescategories.gif "rs_chartwSeriesCategories")  
   
@@ -106,7 +106,7 @@ manager: "mblythe"
   
   
 ##  <a name="AggregateValues"></a> Aggregating Values from a Data Field on the Chart  
- By default, when a field is added to the Values area of the chart, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] calculates an aggregate for the field. If you drag a field onto the chart without dropping the field into a specific area, the chart will determine whether this field belongs on the category (x) axis or value (y) axis based on the data type of the field. Numeric fields that are dropped in the Values area are aggregated using the SUM function. If the data type of your value field is String in the Values area, the chart cannot display a numeric value, even if there are numbers in the fields, so the chart displays the COUNT function. To avoid this behavior, make sure that the fields that you use have numeric data types, instead of Strings that contain formatted numbers. You can use a Visual Basic expression to convert String values to a numeric data type using the `CDbl` or `CInt` constant. For example, the following complex expression converts a field that is named `MyField` that contains numeric values that are formatted as Strings.  
+ By default, when a field is added to the Values area of the chart, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] calculates an aggregate for the field. If you drag a field onto the chart without dropping the field into a specific area, the chart will determine whether this field belongs on the category (x) axis or value (y) axis based on the data type of the field. Numeric fields that are dropped in the Values area are aggregated using the SUM function. If the data type of your value field is String in the Values area, the chart cannot display a numeric value, even if there are numbers in the fields, so the chart displays the COUNT function. To avoid this behavior, make sure that the fields that you use have numeric data types, instead of Strings that contain formatted numbers. You can use a Visual Basic expression to convert String values to a numeric data type using the `CDbl` or `CInt` constant. For example, the following complex expression converts a field that is named `MyField` that contains numeric values that are formatted as Strings.  
   
  `=Sum(CDbl(Fields!MyField.Value))`  
   
@@ -119,7 +119,7 @@ manager: "mblythe"
  Describes the first steps in adding a chart to your report.  
   
  [Chart Types &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/chart-types-report-builder-and-ssrs.md)  
- Describes all of the chart types and sub-types available in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], including considerations and best practices for using various chart types.  
+ Describes all of the chart types and sub-types available in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], including considerations and best practices for using various chart types.  
   
  [Formatting a Chart &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/formatting-a-chart-report-builder-and-ssrs.md)  
  Use formatting to improve the overall appearance and highlight key data points of your chart.  

@@ -25,7 +25,7 @@ f1_keywords:
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
 caps.latest.revision: 5
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Page Headers and Footers (Report Builder and SSRS)
@@ -41,7 +41,7 @@ manager: "mblythe"
  After you create a page header or footer, it is displayed on each report page. For more information about how to suppress page headers and footers on the first and last pages, see [Hide a Page Header or Footer on the First or Last Page &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## Report Headers and Footers  
  Page headers and footers are not the same as report headers and footers. Reports do not have a special report header or report footer area. A report header consists of the report items that are placed at the top of the report body on the report design surface. They appear only once as the first content in the report. A report footer consists of report items that are placed at the bottom of the report body. They appear only once as the last content in the report.  

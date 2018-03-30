@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Select Source Dialog Box
-  Use this dialog box to select the source of the policies to be run. To select one or more XML files that contain policies, select **Files**. To run the policies that are found on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], select **Server**.  
+  Use this dialog box to select the source of the policies to be run. To select one or more XML files that contain policies, select **Files**. To run the policies that are found on the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], select **Server**.  
   
  You can open this dialog box in several ways.  
   
@@ -38,19 +38,19 @@ manager: "jhubbard"
  Enables you to select a server that contains the policies that you want to run.  
   
  **Server type**  
- Only [!INCLUDE[ssDE](../../includes/ssde-md.md)] servers contain policies. This box is read-only.  
+ Only [!INCLUDE[ssDE](../includes/ssde-md.md)] servers contain policies. This box is read-only.  
   
  **Server name**  
  Select the server instance to connect to. By default, the server instance last connected to is displayed.  
   
  **Authentication**  
- Two authentication modes are available when you connect to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ Two authentication modes are available when you connect to an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
  **Windows Authentication Mode (Windows Authentication)**  
  Windows Authentication mode allows for a user to connect through a Windows user account.  
   
  **SQL Server Authentication**  
- When a user connects with a specified login name and password from a nontrusted connection, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] performs the authentication itself by checking whether a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login account has been set up and whether the specified password matches the one previously recorded. If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not have a login account set, authentication fails, and the user receives an error message.  
+ When a user connects with a specified login name and password from a nontrusted connection, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] performs the authentication itself by checking whether a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] login account has been set up and whether the specified password matches the one previously recorded. If [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not have a login account set, authentication fails, and the user receives an error message.  
   
 > [!IMPORTANT]  
 >  When possible, use Windows Authentication.  
@@ -59,10 +59,10 @@ manager: "jhubbard"
  Enter the user name to connect with. This option is available only if you have selected to connect by using Windows Authentication.  
   
  **Login**  
- Enter the login to connect with. This option is available only if you have selected to connect by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.  
+ Enter the login to connect with. This option is available only if you have selected to connect by using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication.  
   
  **Password**  
- Enter the password for the login. This option is editable only if you have selected to connect by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.  
+ Enter the password for the login. This option is editable only if you have selected to connect by using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication.  
   
 ## See Also  
  [Policy Management Node &#40;Object Explorer&#41;](../../2014/database-engine/policy-management-node-object-explorer.md)   

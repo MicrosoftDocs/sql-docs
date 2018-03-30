@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: 0d1f361f-336c-4571-99d1-f4813b2d9fc4
 caps.latest.revision: 18
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Creating a Table Using the hierarchyid Data Type
-  The following example creates a table named EmployeeOrg, which includes employee data together with their reporting hierarchy. The example creates the table in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database, but that is optional. To keep the example simple, this table includes only five columns:  
+  The following example creates a table named EmployeeOrg, which includes employee data together with their reporting hierarchy. The example creates the table in the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database, but that is optional. To keep the example simple, this table includes only five columns:  
   
 -   OrgNode is a `hierarchyid` column that stores the hierarchical relationship.  
   

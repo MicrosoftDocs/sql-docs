@@ -25,7 +25,7 @@ f1_keywords:
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
 caps.latest.revision: 12
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Customize the Data and Display of a Map or Map Layer (Report Builder and SSRS)
@@ -52,7 +52,7 @@ manager: "mblythe"
  A map report item includes the following parts: the map itself, a map viewport, a set of titles, a set of legends (legend, color scale, and distance scale), a set of layers, a set of map elements on each layer (polygons or lines or points). Use the information in the following sections to understand which property dialog box controls the display options for different parts of a map.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ##  <a name="Map"></a> Change Options for the Map  
  On a map report item, you can control the following:  

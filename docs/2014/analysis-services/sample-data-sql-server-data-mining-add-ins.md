@@ -70,7 +70,7 @@ manager: "mblythe"
   
 |Options|Comments|  
 |-------------|--------------|  
-|Select Source Data Dialog Box (Data Mining Client for Excel)|Select an Excel range or table that contains the data. If you want to use external data, the data can be relational, but it must be included in an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data source. T|  
+|Select Source Data Dialog Box (Data Mining Client for Excel)|Select an Excel range or table that contains the data. If you want to use external data, the data can be relational, but it must be included in an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data source. T|  
 |Select Sampling Type Page (Data Mining Client for Excel)|If you use an external data source, you are limited to using the random sampling option. Also, you must specify the number of rows to create in the final data set, by using the **Row count** option. You cannot specify a percentage of the source data.|  
 |Random Sampling Page (Data Mining Client for Excel)|You can copy a percentage of rows from the source, or a specific number of rows.|  
 |Oversampling Page (Data Mining Client for Excel)|**Target state**<br /><br /> Select a value from the list that is underrepresented in the original data set. Oversampling will increase the proportion of data rows that include this state.<br /><br /> **Sample size**<br /><br /> Select the total number of rows to extract. This value represents the size of the final data set.|  

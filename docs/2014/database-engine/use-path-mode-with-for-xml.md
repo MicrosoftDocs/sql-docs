@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: a685a9ad-3d28-4596-aa72-119202df3976
 caps.latest.revision: 44
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Use PATH Mode with FOR XML
@@ -50,7 +50,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Add Namespaces to Queries with WITH XMLNAMESPACES](../../2014/database-engine/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
- [SELECT &#40;Transact-SQL&#41;](../Topic/SELECT%20\(Transact-SQL\).md)   
+ [SELECT &#40;Transact-SQL&#41;](~/t-sql/queries/select-transact-sql.md)   
  [FOR XML &#40;SQL Server&#41;](../../2014/database-engine/for-xml-sql-server.md)  
   
   

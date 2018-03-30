@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
 caps.latest.revision: 7
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Formatting Scales on a Gauge (Report Builder and SSRS)
@@ -33,7 +33,7 @@ manager: "mblythe"
  To quickly get started with formatting scales, see [Set a Minimum or Maximum on a Gauge &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ##  <a name="DefiningMinMax"></a> Defining Minimum, Maximum, and Intervals on a Scale  
  A gauge is frequently used to display KPIs that are measured in percentages from 0 to 100, so these are the default values given to the minimum and maximum properties on the gauge. However, these values may not represent the scale of values that you are trying to show. Because there is no built-in logic to determine what the KPI data field represents, the gauge does not automatically calculate minimum and maximum values. If your KPI data field is not a value between 0 and 100, you must explicitly set values for the minimum and maximum properties in order to give context to the one value that is being displayed on the gauge.  

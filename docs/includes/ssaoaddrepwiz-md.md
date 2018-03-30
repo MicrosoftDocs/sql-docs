@@ -1,1 +1,1 @@
-Add Replica to Availability Group Wizard
+ Add Replica to Availability Group Wizard 

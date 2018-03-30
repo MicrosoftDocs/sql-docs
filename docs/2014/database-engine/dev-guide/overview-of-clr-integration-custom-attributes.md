@@ -23,9 +23,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Overview of CLR Integration Custom Attributes
-  The common language runtime (CLR) of the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] allows the use of descriptive keywords, called attributes. These attributes provide additional information for many elements, such as methods and classes. The attributes are saved in the assembly with the metadata of the object, and can be used to describe your code to other development tools or to affect runtime behavior inside [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  The common language runtime (CLR) of the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] allows the use of descriptive keywords, called attributes. These attributes provide additional information for many elements, such as methods and classes. The attributes are saved in the assembly with the metadata of the object, and can be used to describe your code to other development tools or to affect runtime behavior inside [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- When you register a CLR routine with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] derives a set of properties about the routine. These routine properties determine the capabilities of the routine, including whether the routine can be indexed. For example, setting the `DataAccess` property to `DataAccessKind.Read` lets you access data from [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] user tables inside a CLR function. The following example shows a simple case in which the `DataAccess` property is set to facilitate data access from a user table **table1**.  
+ When you register a CLR routine with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] derives a set of properties about the routine. These routine properties determine the capabilities of the routine, including whether the routine can be indexed. For example, setting the `DataAccess` property to `DataAccessKind.Read` lets you access data from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user tables inside a CLR function. The following example shows a simple case in which the `DataAccess` property is set to facilitate data access from a user table **table1**.  
   
 ```csharp  
 using System;  
@@ -83,7 +83,7 @@ Public partial Class UserDefinedFunctions
 End Class  
 ```  
   
- For [!INCLUDE[tsql](../../../includes/tsql-md.md)] routines, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] derives routine properties directly from the routine definition. For CLR routines, the server does not analyze the body of the routine to derive these properties. Instead, you can use custom attributes for classes and class members implemented in a [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] language.  
+ For [!INCLUDE[tsql](../../includes/tsql-md.md)] routines, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] derives routine properties directly from the routine definition. For CLR routines, the server does not analyze the body of the routine to derive these properties. Instead, you can use custom attributes for classes and class members implemented in a [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] language.  
   
  The custom attributes needed for CLR routines, user-defined types, and aggregates are defined in the `Microsoft.SqlServer.Server` namespace.  
   

@@ -26,13 +26,13 @@ manager: "jhubbard"
   
 |Attribute name|Type|Description|  
 |--------------------|----------|-----------------|  
-|SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|SQL_TRUE indicates that this column is an identity column.<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] can use this information to optimize performance, but applications are not required to set it for identity columns.|  
+|SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|SQL_TRUE indicates that this column is an identity column.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can use this information to optimize performance, but applications are not required to set it for identity columns.|  
   
  The following attributes are added to all parameter types in the application parameter descriptor (APD) and implementation parameter descriptor (IPD):  
   
 |Attribute name|Type|Description|  
 |--------------------|----------|-----------------|  
-|SQL_CA_SS_COLUMN_COMPUTED|SQLSMALLINT|SQL_TRUE indicates that this column is computed.<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] can use this information to optimize performance, but applications are not required to set it for computed columns.<br /><br /> This attribute is ignored for bindings that are not table-valued parameter columns.|  
+|SQL_CA_SS_COLUMN_COMPUTED|SQLSMALLINT|SQL_TRUE indicates that this column is computed.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can use this information to optimize performance, but applications are not required to set it for computed columns.<br /><br /> This attribute is ignored for bindings that are not table-valued parameter columns.|  
 |SQL_CA_SS_COLUMN_IN_UNIQUE_KEY|SQLSMALLINT|SQL_TRUE indicates that a table-valued parameter column participates in a unique key. This can result in better query performance. This attribute is ignored for bindings that are not table-valued parameter columns.|  
 |SQL_CA_SS_COLUMN_SORT_ORDER|SQLSMALLINT|Indicates the sort order of a table-valued parameter column. This can result in better query performance. This attribute is ignored for bindings that are not table-valued parameter columns. The possible values are the following:<br /><br /> -   SQL_SS_ASCENDING_ORDER<br />-   SQL_SS_DESCENDING_ORDER<br />-   SQL_SS_ORDER_UNSPECIFIED<br /><br /> Values other than SQL_SS_ASCENDING_ORDER and SQL_SS_DESCENDING_ORDER generate an error with SQLSTATE HY024 and message 'Invalid attribute value' and are treated as SQL_SS_ORDER_UNSPECIFIED, which is the default value for this attribute.|  
 |SQL_CA_SS_COLUMN_SORT_ORDINAL|SQLSMALLINT|Indicates the ordinal of a table-valued parameter column in the set of columns that define the overall ordering for a table-valued parameter. This can result in better query performance. This attribute is ignored for bindings that are not table-valued parameter columns. Sort ordinals start at 1. A value of 0, the default, indicates that a table-valued parameter column does not have column ordering.|  

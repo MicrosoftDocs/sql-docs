@@ -20,7 +20,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Create a Consolidated Member (Master Data Services)
-  In [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], create a consolidated member when you want a parent node for an explicit hierarchy. Consolidated members can have their own attributes. They are used for grouping. As shown in the following example, consolidated members can be used for account groups that have accounts under them.  
+  In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], create a consolidated member when you want a parent node for an explicit hierarchy. Consolidated members can have their own attributes. They are used for grouping. As shown in the following example, consolidated members can be used for account groups that have accounts under them.  
   
  ![MDS Consolidated Members](../../2014/master-data-services/media/mds-consolidated-members.png "MDS Consolidated Members")  
   
@@ -33,7 +33,7 @@ manager: "jhubbard"
   
 ### To create a consolidated member  
   
-1.  On the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] home page, from the **Model** list, select a model.  
+1.  On the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] home page, from the **Model** list, select a model.  
   
 2.  From the **Version** list, select a version.  
   
@@ -58,7 +58,7 @@ manager: "jhubbard"
 ## See Also  
  [Create an Explicit Hierarchy &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
  [Create a Leaf Member &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-leaf-member-master-data-services.md)   
- [Load or Update Members in Master Data Services by Using the Staging Process](../Topic/Load%20or%20Update%20Members%20in%20Master%20Data%20Services%20by%20Using%20the%20Staging%20Process.md)   
+ [Load or Update Members in Master Data Services by Using the Staging Process](~/2014/master-data-services/add-update-and-delete-data-master-data-services.md)   
  [Members &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)   
  [Explicit Hierarchies &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
   

@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 707d33dd-644e-4cc9-ac51-dddd49031530
 caps.latest.revision: 14
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQL_ENG003165
@@ -26,7 +26,7 @@ manager: "jhubbard"
 |Product Name|SQL Server|  
 |Event ID|3165|  
 |Event Source|MSSQLSERVER|  
-|Component|[!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]|  
+|Component|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Symbolic Name||  
 |Message Text|Database '%ls' was restored; however, an error was encountered while replication was being restored/removed. The database has been left offline. See the topic MSSQL_ENG003165 in SQL Server Books Online.|  
   
@@ -42,11 +42,11 @@ manager: "jhubbard"
 ## User Action  
  To resolve this issue:  
   
-1.  Execute ALTER DATABASE to bring the database online; for example: `ALTER DATABASE AdventureWorks SET ONLINE`. For more information, see [ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20\(Transact-SQL\).md). If you want to preserve replication settings, go to step 2. If not, go to step 3.  
+1.  Execute ALTER DATABASE to bring the database online; for example: `ALTER DATABASE AdventureWorks SET ONLINE`. For more information, see [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md). If you want to preserve replication settings, go to step 2. If not, go to step 3.  
   
-2.  Execute [sp_restoredbreplication &#40;Transact-SQL&#41;](../Topic/sp_restoredbreplication%20\(Transact-SQL\).md). If this stored procedure executes successfully, the restore is complete. If it does not execute successfully, go to step 3.  
+2.  Execute [sp_restoredbreplication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-restoredbreplication-transact-sql.md). If this stored procedure executes successfully, the restore is complete. If it does not execute successfully, go to step 3.  
   
-3.  Execute [sp_removedbreplication &#40;Transact-SQL&#41;](../Topic/sp_removedbreplication%20\(Transact-SQL\).md) to remove all replication settings.  
+3.  Execute [sp_removedbreplication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) to remove all replication settings.  
   
      Reconfigure replication if necessary. If you have scripted the replication topology as recommended, use scripts to reconfigure the topology.  
   

@@ -17,7 +17,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Categorized Web Service Operations (Master Data Services)
-  The [!INCLUDE[ssMDSshort](../../../includes/ssmdsshort-md.md)] web service contains a complete set of operations that let you write code to control all of the features that [!INCLUDE[ssMDSmdm](../../../includes/ssmdsmdm-md.md)] does through its user interface. The web service operations are defined by the <xref:Microsoft.MasterDataServices.IService> interface and are implemented as methods in the <xref:Microsoft.MasterDataServices.ServiceClient> class. This topic groups the web service operations into conceptual categories to help you understand how to use the web service API.  
+  The [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] web service contains a complete set of operations that let you write code to control all of the features that [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] does through its user interface. The web service operations are defined by the <xref:Microsoft.MasterDataServices.IService> interface and are implemented as methods in the <xref:Microsoft.MasterDataServices.ServiceClient> class. This topic groups the web service operations into conceptual categories to help you understand how to use the web service API.  
   
 ## Model Operations  
  These operations are used to create, update, and delete models, as well as to operate on all the contents of a model, such as entities, hierarchies, and versions. For more information, see [Models &#40;Master Data Services&#41;](../../../2014/master-data-services/models-master-data-services.md).  
@@ -117,7 +117,7 @@ manager: "jhubbard"
 |<xref:Microsoft.MasterDataServices.ServiceClient.DataQualityOperationStatus%2A>|  
   
 ## Data Import Operations  
- These operations are used to import data into a [!INCLUDE[ssMDSshort](../../../includes/ssmdsshort-md.md)] database. For more information, see [Data Import &#40;Master Data Services&#41;](../../../2014/master-data-services/data-import-master-data-services.md).  
+ These operations are used to import data into a [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database. For more information, see [Data Import &#40;Master Data Services&#41;](../../../2014/master-data-services/data-import-master-data-services.md).  
   
 ||  
 |-|  
@@ -126,7 +126,7 @@ manager: "jhubbard"
 |<xref:Microsoft.MasterDataServices.ServiceClient.EntityStagingLoad%2A>|  
 |<xref:Microsoft.MasterDataServices.ServiceClient.EntityStagingProcess%2A>|  
   
- The following operations are used to import data by using the staging process included in [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]. These operations should be used only to support existing databases. For new development, use the previously listed operations.  
+ The following operations are used to import data by using the staging process included in [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. These operations should be used only to support existing databases. For new development, use the previously listed operations.  
   
 ||  
 |-|  
@@ -146,7 +146,7 @@ manager: "jhubbard"
 |<xref:Microsoft.MasterDataServices.ServiceClient.ExportViewUpdate%2A>|  
   
 ## Security Operations  
- These operations are used to modify the security settings that control access to the [!INCLUDE[ssMDSshort](../../../includes/ssmdsshort-md.md)] database. For more information, see [Security &#40;Master Data Services&#41;](../../../2014/master-data-services/security-master-data-services.md).  
+ These operations are used to modify the security settings that control access to the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database. For more information, see [Security &#40;Master Data Services&#41;](../../../2014/master-data-services/security-master-data-services.md).  
   
 ||  
 |-|  

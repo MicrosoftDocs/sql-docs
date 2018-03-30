@@ -19,11 +19,11 @@ ms.author: "jroth"
 manager: "jhubbard"
 ---
 # Specify Availability Group Name Page (New Availability Group Wizard/Add Database Wizard)
-  This topic describes the options of the **Specify Availability Group Name** page. This topic is used by both the [!INCLUDE[ssAoNewAgWiz](../../includes/ssaonewagwiz-md.md)] and [!INCLUDE[ssAoAddDbWiz](../../includes/ssaoadddbwiz-md.md)] of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  This topic describes the options of the **Specify Availability Group Name** page. This topic is used by both the [!INCLUDE[ssAoNewAgWiz](../includes/ssaonewagwiz-md.md)] and [!INCLUDE[ssAoAddDbWiz](../includes/ssaoadddbwiz-md.md)] of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
 ##  <a name="PageOptions"></a> Specify Availability Group Name Options  
  **Specify an availability group name**  
- Specify the name of the availability group. For a new availability group, specify a valid [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifier that is unique across all availability groups in the WSFC cluster. The maximum length for an availability group name is 128 characters.  
+ Specify the name of the availability group. For a new availability group, specify a valid [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] identifier that is unique across all availability groups in the WSFC cluster. The maximum length for an availability group name is 128 characters.  
   
 ##  <a name="LaunchWiz"></a> Related Tasks  
   

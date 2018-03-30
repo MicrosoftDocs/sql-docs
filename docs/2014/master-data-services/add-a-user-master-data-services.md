@@ -19,7 +19,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Add a User (Master Data Services)
-  Add a user to the **Users** list in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] to begin the process of assigning permission to the Web application. Before a user in the list can access [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], you must give the user permission to one or more functional areas and model objects.  
+  Add a user to the **Users** list in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] to begin the process of assigning permission to the Web application. Before a user in the list can access [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], you must give the user permission to one or more functional areas and model objects.  
   
 ## Prerequisites  
  To perform this procedure:  
@@ -28,7 +28,7 @@ manager: "jhubbard"
   
 ### To add a user  
   
-1.  In [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], click **User and Group Permissions**.  
+1.  In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], click **User and Group Permissions**.  
   
 2.  On the **Users** page, click **Add users**.  
   

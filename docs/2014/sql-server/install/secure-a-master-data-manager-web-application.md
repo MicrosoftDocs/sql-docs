@@ -16,23 +16,23 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Secure a Master Data Manager Web Application
-  You can secure the [!INCLUDE[ssMDSmdm](../../../includes/ssmdsmdm-md.md)] web application with HTTPS.  
+  You can secure the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application with HTTPS.  
   
 > [!NOTE]  
->  The [!INCLUDE[ssMDSmdm](../../../includes/ssmdsmdm-md.md)] web application can use either HTTP or HTTPS, but not both.  
+>  The [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application can use either HTTP or HTTPS, but not both.  
   
 ## Prerequisites  
  To perform the procedure:  
   
--   You must be an administrator on the web server where [!INCLUDE[ssMDSmdm](../../../includes/ssmdsmdm-md.md)] is installed.  
+-   You must be an administrator on the web server where [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] is installed.  
   
 -   MDS must be installed on the web server, and a web application must exist. For more information, see [Install Master Data Services](../../../2014/sql-server/install/install-master-data-services.md) and [Create a Master Data Manager Web Application &#40;Master Data Services&#41;](../../../2014/sql-server/install/create-a-master-data-manager-web-application-master-data-services.md).  
   
 ### To secure the Master Data Manager web application with HTTPS  
   
-1.  After you have confirmed that the [!INCLUDE[ssMDSmdm](../../../includes/ssmdsmdm-md.md)] web application is configured correctly with HTTP, create a certificate in IIS. For more information, see [Configuring Server Certificates in IIS 7](http://technet.microsoft.com/library/cc732230\(WS.10\).aspx).  
+1.  After you have confirmed that the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application is configured correctly with HTTP, create a certificate in IIS. For more information, see [Configuring Server Certificates in IIS 7](http://technet.microsoft.com/library/cc732230\(WS.10\).aspx).  
   
-2.  In the **Connections** pane, under **Sites**, click the site that hosts the [!INCLUDE[ssMDSmdm](../../../includes/ssmdsmdm-md.md)] web application.  
+2.  In the **Connections** pane, under **Sites**, click the site that hosts the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application.  
   
 3.  In the **Actions** pane, click **Bindings**.  
   

@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: 116cd6a5-32ac-4273-81a2-d184408e0f07
 caps.latest.revision: 20
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Publishers
@@ -27,7 +27,7 @@ manager: "jhubbard"
  Select the servers that are allowed to use this Distributor. Click the properties button (**...**) next to a Publisher to view and set additional properties.  
   
  **Add**  
- If the server you want to allow is not listed, click **Add** to add a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Publisher or Oracle Publisher to the list of available Publishers.  
+ If the server you want to allow is not listed, click **Add** to add a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher or Oracle Publisher to the list of available Publishers.  
   
 ## See Also  
  [Configure Distribution](../../../2014/relational-databases/replication/configure-distribution.md)   

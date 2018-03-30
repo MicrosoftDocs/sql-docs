@@ -31,11 +31,11 @@ manager: "jhubbard"
   
  Your response to this prompt depends on the task you perform, as follows:  
   
--   To bulk export data from an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to a data file in the most compact storage possible (native data format), accept the default file storage types that are provided by **bcp**. For a list of the native file storage types, see "Native File Storage Types," later in this topic.  
+-   To bulk export data from an instance of [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to a data file in the most compact storage possible (native data format), accept the default file storage types that are provided by **bcp**. For a list of the native file storage types, see "Native File Storage Types," later in this topic.  
   
--   To bulk export data from an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to a data file in character format, specify `char` as the file storage type for all columns in the table.  
+-   To bulk export data from an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to a data file in character format, specify `char` as the file storage type for all columns in the table.  
   
--   To bulk import data to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from a data file, specify the file storage type as `char` for types stored in character format and, for data stored in native data type format, specify one of the file storage types, as appropriate:  
+-   To bulk import data to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] from a data file, specify the file storage type as `char` for types stored in character format and, for data stored in native data type format, specify one of the file storage types, as appropriate:  
   
     |File storage type|Enter at command prompt|  
     |-----------------------|-----------------------------|  
@@ -73,7 +73,7 @@ manager: "jhubbard"
   
      <sup>1</sup> The interaction of field length, prefix length, and terminators determines the amount of storage space that is allocated in a data file for noncharacter data that is exported as the `char` file storage type.  
   
-     <sup>2</sup> The `ntext`, `text`, and `image` data types will be removed in a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In new development work, avoid using these data types, and plan to modify applications that currently use them. Use `nvarchar(max)`, `varchar(max)`, and `varbinary(max)` instead.  
+     <sup>2</sup> The `ntext`, `text`, and `image` data types will be removed in a future version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. In new development work, avoid using these data types, and plan to modify applications that currently use them. Use `nvarchar(max)`, `varchar(max)`, and `varbinary(max)` instead.  
   
 ## Native File Storage Types  
  Each native file storage type is recorded in the format file as a corresponding host file data type.  
@@ -112,20 +112,20 @@ manager: "jhubbard"
  <sup>2</sup> You cannot bulk import data into `text`, `ntext`, and `image` columns that have DEFAULT values.  
   
 ## Additional Considerations for File Storage Types  
- When you bulk export data from an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to a data file:  
+ When you bulk export data from an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to a data file:  
   
 -   You can always specify `char` as the file storage type.  
   
 -   If you enter a file storage type that represents an invalid implicit conversion, **bcp** fails; for example, though you can specify `int` for `smallint` data, if you specify `smallint` for `int` data, overflow errors result.  
   
--   When noncharacter data types such as `float`, `money`, `datetime`, or `int` are stored as their database types, the data is written to the data file in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native format.  
+-   When noncharacter data types such as `float`, `money`, `datetime`, or `int` are stored as their database types, the data is written to the data file in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] native format.  
   
     > [!NOTE]  
     >  After you interactively specify all of the fields in a **bcp** command, the command prompts you save your responses for each field in a non-XML format file. For more information on non-XML format files, see [Non-XML Format Files &#40;SQL Server&#41;](../../2014/database-engine/non-xml-format-files-sql-server.md).  
   
 ## See Also  
  [bcp Utility](../../2014/database-engine/bcp-utility.md)   
- [Data Types &#40;Transact-SQL&#41;](../Topic/Data%20Types%20\(Transact-SQL\).md)   
+ [Data Types &#40;Transact-SQL&#41;](~/t-sql/data-types/data-types-transact-sql.md)   
  [Specify Field Length by Using bcp &#40;SQL Server&#41;](../../2014/database-engine/specify-field-length-by-using-bcp-sql-server.md)   
  [Specify Field and Row Terminators &#40;SQL Server&#41;](../../2014/database-engine/specify-field-and-row-terminators-sql-server.md)   
  [Specify Prefix Length in Data Files by Using bcp &#40;SQL Server&#41;](../../2014/database-engine/specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  

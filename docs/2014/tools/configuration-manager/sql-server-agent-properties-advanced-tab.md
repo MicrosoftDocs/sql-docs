@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 588f886f-d6c8-48c8-893d-c2be43a97943
 caps.latest.revision: 17
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # SQL Server Agent Properties (Advanced Tab)
@@ -29,7 +29,7 @@ manager: "jhubbard"
  Displays the location where memory dumps are placed in case of an error.  
   
  **Error Reporting**  
- When set to **Yes**, the Dr. Watson program forwards information to either [!INCLUDE[msCoName](../../../includes/msconame-md.md)] or your error server if a serious failure occurs. For more information on Error Reporting, search Books Online for the topic, "Error and Usage Report Settings."  
+ When set to **Yes**, the Dr. Watson program forwards information to either [!INCLUDE[msCoName](../../includes/msconame-md.md)] or your error server if a serious failure occurs. For more information on Error Reporting, search Books Online for the topic, "Error and Usage Report Settings."  
   
  **Instance ID**  
  Indicates the instance that uses this service.  

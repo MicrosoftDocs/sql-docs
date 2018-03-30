@@ -18,10 +18,10 @@ manager: "jhubbard"
 # Data Quality Matching in the MDS Add-in for Excel
   Over time, you will want to add more data to the MDS repository. Before adding data, it can be useful to compare the new data to the data that’s already managed in MDS, to ensure you are not adding duplicate or inaccurate data.  
   
- The MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] uses the Data Quality Services (DQS) feature of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to match data that’s similar. When you use the matching functionality in the Add-in, similar records are grouped together and a score that represents the accuracy of the result is displayed. For more information about the matching functionality provided by DQS, see [Data Matching](../../2014/data-quality-services/data-matching.md).  
+ The MDS [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] uses the Data Quality Services (DQS) feature of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to match data that’s similar. When you use the matching functionality in the Add-in, similar records are grouped together and a score that represents the accuracy of the result is displayed. For more information about the matching functionality provided by DQS, see [Data Matching](../../2014/data-quality-services/data-matching.md).  
   
 ## Workflow for Data Quality Matching  
- When using DQS with the MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], use the following workflow:  
+ When using DQS with the MDS [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)], use the following workflow:  
   
 1.  Retrieve a list of MDS-managed data and combine it with a list that is not managed in MDS. For more information, see [Combine Data &#40;MDS Add-in for Excel&#41;](../../2014/master-data-services/combine-data-mds-add-in-for-excel.md).  
   

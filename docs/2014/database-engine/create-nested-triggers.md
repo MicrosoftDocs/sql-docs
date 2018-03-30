@@ -22,14 +22,14 @@ helpviewer_keywords:
 ms.assetid: cd522dda-b4ab-41b8-82b0-02445bdba7af
 caps.latest.revision: 31
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Create Nested Triggers
   Both DML and DDL triggers are nested when a trigger performs an action that initiates another trigger. These actions can initiate other triggers, and so on. DML and DDL triggers can be nested up to 32 levels. You can control whether AFTER triggers can be nested through the **nested triggers** server configuration option. INSTEAD OF triggers (only DML triggers can be INSTEAD OF triggers) can be nested regardless of this setting.  
   
 > [!NOTE]  
->  Any reference to managed code from a [!INCLUDE[tsql](../../includes/tsql-md.md)] trigger counts as one level against the 32-level nesting limit. Methods invoked from within managed code do not count against this limit.  
+>  Any reference to managed code from a [!INCLUDE[tsql](../includes/tsql-md.md)] trigger counts as one level against the 32-level nesting limit. Methods invoked from within managed code do not count against this limit.  
   
  If nested triggers are allowed and a trigger in the chain starts an infinite loop, the nesting level is exceeded and the trigger terminates.  
   
@@ -176,14 +176,14 @@ Paul                           Alice                          0
   
  **To set the nested triggers option**  
   
--   [sp_configure &#40;Transact-SQL&#41;](../Topic/sp_configure%20\(Transact-SQL\).md)  
+-   [sp_configure &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
  **To set the RECURSIVE_TRIGGERS database option**  
   
--   [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)  
+-   [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-set-options.md)  
   
 ## See Also  
- [CREATE TRIGGER &#40;Transact-SQL&#41;](../Topic/CREATE%20TRIGGER%20\(Transact-SQL\).md)   
+ [CREATE TRIGGER &#40;Transact-SQL&#41;](~/t-sql/statements/create-trigger-transact-sql.md)   
  [Configure the nested triggers Server Configuration Option](../../2014/database-engine/configure-the-nested-triggers-server-configuration-option.md)  
   
   

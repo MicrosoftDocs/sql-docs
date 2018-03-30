@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 9a48e552-7d47-4243-9be1-894990c506d9
 caps.latest.revision: 35
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Referencing Assemblies in an RDL File

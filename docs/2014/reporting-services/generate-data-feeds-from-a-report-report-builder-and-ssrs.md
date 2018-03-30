@@ -12,20 +12,20 @@ ms.topic: "article"
 ms.assetid: e68baae2-9f2a-4f13-9179-9ac7f29111c5
 caps.latest.revision: 8
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Generate Data Feeds from a Report (Report Builder and SSRS)
-  You can generate Atom-compliant data feeds from reports, and then use the data feeds in applications, such as the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] client, that can consume data feeds.  
+  You can generate Atom-compliant data feeds from reports, and then use the data feeds in applications, such as the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] client, that can consume data feeds.  
   
- The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Atom rendering extension generates an Atom service document that lists the data feeds available from a report. The document lists at least one data feed for each data region in the report. Depending on the type of data region and the data that the data region displays, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] might generate multiple data feeds from a data region.  
+ The [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Atom rendering extension generates an Atom service document that lists the data feeds available from a report. The document lists at least one data feed for each data region in the report. Depending on the type of data region and the data that the data region displays, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] might generate multiple data feeds from a data region.  
   
  Atom service document contains a unique identifier for each the data feed and you use the identifier in a URL to view the content of the data feed.  
   
  For more information, see [Generating Data Feeds from Reports &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ### To generate an Atom service document  
   

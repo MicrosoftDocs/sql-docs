@@ -19,11 +19,11 @@ helpviewer_keywords:
 ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 caps.latest.revision: 20
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Create a Server Audit and Server Audit Specification
-  This topic describes how to create a server audit and server audit specification in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. *Auditing* an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database involves tracking and logging events that occur on the system. The *SQL Server Audit* object collects a single instance of server- or database-level actions and groups of actions to monitor. The audit is at the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance level. You can have multiple audits per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. The *Server Audit Specification* object belongs to an audit. You can create one server audit specification per audit, because both are created at the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance scope. For more information, see [SQL Server Audit &#40;Database Engine&#41;](../../2014/database-engine/sql-server-audit-database-engine.md).  
+  This topic describes how to create a server audit and server audit specification in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)]. *Auditing* an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] or a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database involves tracking and logging events that occur on the system. The *SQL Server Audit* object collects a single instance of server- or database-level actions and groups of actions to monitor. The audit is at the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance level. You can have multiple audits per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance. The *Server Audit Specification* object belongs to an audit. You can create one server audit specification per audit, because both are created at the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance scope. For more information, see [SQL Server Audit &#40;Database Engine&#41;](../../2014/database-engine/sql-server-audit-database-engine.md).  
   
  **In This Topic**  
   
@@ -75,19 +75,19 @@ manager: "jhubbard"
   
      **On Audit Log Failure:**  
      **Continue**  
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] operations continue. Audit records are not retained. The audit continues to attempt to log events and will resume if the failure condition is resolved. Selecting the **Continue** option can allow unaudited activity which could violate your security policies. Select this option when continuing operation of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] is more important than maintaining a complete audit. This is the default selection.  
+     [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] operations continue. Audit records are not retained. The audit continues to attempt to log events and will resume if the failure condition is resolved. Selecting the **Continue** option can allow unaudited activity which could violate your security policies. Select this option when continuing operation of the [!INCLUDE[ssDE](../includes/ssde-md.md)] is more important than maintaining a complete audit. This is the default selection.  
   
      **Shut down server**  
      Forces a server shut down when the server instance writing to the target cannot write data to the audit target. The login issuing this must have the `SHUTDOWN` permission. If the logon does not have this permission, this function will fail and an error message will be raised. No audited events occur. Select this option when an audit failure could compromise the security or integrity of the system.  
   
      **Fail operation**  
-     In cases where the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit cannot write to the audit log this option causes database actions to fail if they would otherwise cause audited events. No audited events occur. Actions which do not cause audited events can continue. The audit continues to attempt to log events and will resume if the failure condition is resolved. Select this option when maintaining a complete audit is more important than full access to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+     In cases where the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Audit cannot write to the audit log this option causes database actions to fail if they would otherwise cause audited events. No audited events occur. Actions which do not cause audited events can continue. The audit continues to attempt to log events and will resume if the failure condition is resolved. Select this option when maintaining a complete audit is more important than full access to the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
     > [!IMPORTANT]  
     >  When the audit is in a failed state, the Dedicated Administrator Connection can continue to perform audited events.  
   
      **Audit destination** list  
-     Specifies the target for auditing data. The available options are a binary file, the Windows Application log, or the Windows Security log. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot write to the Windows Security log without configuring additional settings in Windows. For more information, see [Write SQL Server Audit Events to the Security Log](../../2014/database-engine/write-sql-server-audit-events-to-the-security-log.md).  
+     Specifies the target for auditing data. The available options are a binary file, the Windows Application log, or the Windows Security log. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cannot write to the Windows Security log without configuring additional settings in Windows. For more information, see [Write SQL Server Audit Events to the Security Log](../../2014/database-engine/write-sql-server-audit-events-to-the-security-log.md).  
   
      **File path**  
      Specifies the location of the folder where audit data is written when the **Audit destination** is a file.  
@@ -156,7 +156,7 @@ manager: "jhubbard"
   
 #### To create a server audit  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -170,7 +170,7 @@ manager: "jhubbard"
   
 #### To create a server audit specification  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -191,6 +191,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../Topic/CREATE%20SERVER%20AUDIT%20\(Transact-SQL\).md) and [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../Topic/CREATE%20SERVER%20AUDIT%20SPECIFICATION%20\(Transact-SQL\).md).  
+ For more information, see [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](~/t-sql/statements/create-server-audit-transact-sql.md) and [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](~/t-sql/statements/create-server-audit-specification-transact-sql.md).  
   
   

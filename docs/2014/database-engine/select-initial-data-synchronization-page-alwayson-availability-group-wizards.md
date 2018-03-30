@@ -20,7 +20,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Select Initial Data Synchronization Page (AlwaysOn Availability Group Wizards)
-  Use the AlwaysOn **Select Initial Data Synchronization** page to indicate your preference for initial data synchronization of new secondary databases. This page is shared by three wizards—the [!INCLUDE[ssAoNewAgWiz](../../includes/ssaonewagwiz-md.md)], the [!INCLUDE[ssAoAddRepWiz](../../includes/ssaoaddrepwiz-md.md)], and the [!INCLUDE[ssAoAddDbWiz](../../includes/ssaoadddbwiz-md.md)].  
+  Use the AlwaysOn **Select Initial Data Synchronization** page to indicate your preference for initial data synchronization of new secondary databases. This page is shared by three wizards—the [!INCLUDE[ssAoNewAgWiz](../includes/ssaonewagwiz-md.md)], the [!INCLUDE[ssAoAddRepWiz](../includes/ssaoaddrepwiz-md.md)], and the [!INCLUDE[ssAoAddDbWiz](../includes/ssaoadddbwiz-md.md)].  
   
  The possible choices include **Full**, **Join only**, or **Skip initial data synchronization**. Before you select **Full** or **Join only** ensure that your environment meets the prerequisites.  
   
@@ -50,7 +50,7 @@ manager: "jhubbard"
   
 -   No primary database name can exist on any server instance that hosts a secondary replica. This means that none of the new secondary databases can exist yet.  
   
--   You will need to specify a network share in order for the wizard to create and access backups. For the primary replica, the account used to start the [!INCLUDE[ssDE](../../includes/ssde-md.md)] must have read and write file-system permissions on a network share. For secondary replicas, the account must have read permission on the network share.  
+-   You will need to specify a network share in order for the wizard to create and access backups. For the primary replica, the account used to start the [!INCLUDE[ssDE](../includes/ssde-md.md)] must have read and write file-system permissions on a network share. For secondary replicas, the account must have read permission on the network share.  
   
     > [!IMPORTANT]  
     >  The log backups will be part of your log backup chain. Store the log backup files appropriately.  
@@ -64,7 +64,7 @@ manager: "jhubbard"
  If these prerequisites are all met and you want the wizard to perform full initial data synchronization, select the **Full** option and specify a network share. This will cause  the wizard to create full database and log backups of every selected database and to place these backups on the network share that you specify. Then, on every server instance that hosts one of the new secondary replicas, the wizard will create the secondary databases by restoring backups using RESTORE WITH NORECOVERY. After creating each of the secondary databases, the wizard will join the new secondary database to the availability group. As soon as a secondary database is joined, data synchronizations starts on that database.  
   
  **Specify a shared network location accessible by all replicas**  
- To create and restore backups, the wizard requires that you specify a network share. The account used to start the [!INCLUDE[ssDE](../../includes/ssde-md.md)] on each server instance that will host an availability replica must have read and write file-system permissions on the network share.  
+ To create and restore backups, the wizard requires that you specify a network share. The account used to start the [!INCLUDE[ssDE](../includes/ssde-md.md)] on each server instance that will host an availability replica must have read and write file-system permissions on the network share.  
   
 > [!IMPORTANT]  
 >  The log backups will be part of your log backup chain. Store their backup files appropriately.  
@@ -81,15 +81,15 @@ manager: "jhubbard"
 >  For more information, see [Start Data Movement on an AlwaysOn Secondary Database &#40;SQL Server&#41;](../../2014/database-engine/start-data-movement-on-an-alwayson-secondary-database-sql-server.md).  
   
 ##  <a name="PrepareSecondaryDbs"></a> To Prepare Secondary Databases Manually  
- To prepare secondary databases independently of any [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] wizard, you can use either of the following approaches:  
+ To prepare secondary databases independently of any [!INCLUDE[ssHADR](../includes/sshadr-md.md)] wizard, you can use either of the following approaches:  
   
--   Manually restore a recent database backup of the primary database using RESTORE WITH NORECOVERY, and then restore each subsequent log backup using RESTORE WITH NORECOVERY. If the primary and secondary databases have different file paths, you must use the WITH MOVE option. Perform this restore sequence on every server instance that hosts a secondary replica for the availability group.  You can use [!INCLUDE[tsql](../../includes/tsql-md.md)] or PowerShell to perform these backup and restore operations.  
+-   Manually restore a recent database backup of the primary database using RESTORE WITH NORECOVERY, and then restore each subsequent log backup using RESTORE WITH NORECOVERY. If the primary and secondary databases have different file paths, you must use the WITH MOVE option. Perform this restore sequence on every server instance that hosts a secondary replica for the availability group.  You can use [!INCLUDE[tsql](../includes/tsql-md.md)] or PowerShell to perform these backup and restore operations.  
   
      **For more information:**  
   
      [Manually Prepare a Secondary Database for an Availability Group &#40;SQL Server&#41;](../../2014/database-engine/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
--   If you are adding one or more log shipping primary databases to an availability group, you might be able to migrate one or more of the corresponding secondary databases from log shipping to [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. For more information, see [Prerequisites for Migrating from Log Shipping to AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/prereqs-migrating-log-shipping-to-always-on-availability-groups.md).  
+-   If you are adding one or more log shipping primary databases to an availability group, you might be able to migrate one or more of the corresponding secondary databases from log shipping to [!INCLUDE[ssHADR](../includes/sshadr-md.md)]. For more information, see [Prerequisites for Migrating from Log Shipping to AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/prereqs-migrating-log-shipping-to-always-on-availability-groups.md).  
   
     > [!NOTE]  
     >  After you have created all the secondary databases for the availability group, if you want to perform backups on secondary replicas, you will need to re-configure the automated backup preference of the availability group.  

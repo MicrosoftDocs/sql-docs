@@ -19,6 +19,6 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Remove the cdc schema if you plan to enable change data capture
-  A database already contains a cdc schema. If you plan to enable change data capture after upgrade, you must first drop this cdc schema. When you enable a database for change data capture, the [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] will create a new schema named cdc.  
+  A database already contains a cdc schema. If you plan to enable change data capture after upgrade, you must first drop this cdc schema. When you enable a database for change data capture, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] will create a new schema named cdc.  
   
   

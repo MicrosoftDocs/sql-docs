@@ -28,7 +28,7 @@ manager: "mblythe"
  ![Object Explorer icons for each server mode](../../2014/analysis-services/media/ssas-ssms-servermodes.gif "Object Explorer icons for each server mode")  
   
 ## Viewing DeploymentMode Property in MSMDSRV.INI File  
- Alternatively, you can check the `DeploymentMode` property in the msmdsrv.ini file that is included in every Analysis Services instance. The value of this property identifies the server mode. Valid values are 0 (Multidimensional), 1 (SharePoint), or 2 (Tabular). You must be an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] administrator (that is, a member of the Server role) to open the msmdsrv.ini file. This file contains structured XML. You can use Notepad or another text editor to view the file.  
+ Alternatively, you can check the `DeploymentMode` property in the msmdsrv.ini file that is included in every Analysis Services instance. The value of this property identifies the server mode. Valid values are 0 (Multidimensional), 1 (SharePoint), or 2 (Tabular). You must be an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] administrator (that is, a member of the Server role) to open the msmdsrv.ini file. This file contains structured XML. You can use Notepad or another text editor to view the file.  
   
 > [!CAUTION]  
 >  Do not change the value of the `DeploymentMode` property. Changing the property manually after the server is installed is not supported.  

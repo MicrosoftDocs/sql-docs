@@ -18,11 +18,11 @@ helpviewer_keywords:
 ms.assetid: 44b7c664-03aa-494e-a484-052b318e810c
 caps.latest.revision: 25
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Text-based Query Designer User Interface
-  Use the text-based query designer to specify a query using the query language supported by the data source, run the query, and view the results at design time. You can specify multiple [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, query or command syntax for custom data processing extensions, and queries that are specified as expressions. Because the text-based query designer does not preprocess the query and can accommodate any kind of query syntax, this is the default query designer tool for many data source types.  
+  Use the text-based query designer to specify a query using the query language supported by the data source, run the query, and view the results at design time. You can specify multiple [!INCLUDE[tsql](../includes/tsql-md.md)] statements, query or command syntax for custom data processing extensions, and queries that are specified as expressions. Because the text-based query designer does not preprocess the query and can accommodate any kind of query syntax, this is the default query designer tool for many data source types.  
   
  The text-based query designer displays a toolbar and the following two panes:  
   
@@ -41,7 +41,7 @@ manager: "mblythe"
 |**Command Type**|Select **Text**, **StoredProcedure**, or **TableDirect**. If a stored procedure has parameters, the **Define Query Parameters** dialog box appears when you click **Run** on the toolbar, and you can fill in values as needed. Note that if a stored procedure returns more than one result set, only the first result set is used to populate the dataset.<br /><br /> Support for command type varies by data source type. For example, only OLE DB and ODBC support **TableDirect**.|  
   
 ### Command Type Text  
- When you create a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dataset, Report Designer displays the graphical query designer by default. To switch to the text-based query designer, click the **Edit As Text** toggle button on the toolbar. The text-based query designer presents two panes: the Query pane and the Result pane. The following figure labels each pane.  
+ When you create a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dataset, Report Designer displays the graphical query designer by default. To switch to the text-based query designer, click the **Edit As Text** toggle button on the toolbar. The text-based query designer presents two panes: the Query pane and the Result pane. The following figure labels each pane.  
   
  ![Generic query designer, for relational data query](../../2014/analysis-services/media/rsqd-dsaw-sql-generic.gif "Generic query designer, for relational data query")  
   
@@ -49,17 +49,17 @@ manager: "mblythe"
   
 |Pane|Function|  
 |----------|--------------|  
-|Query|Displays the [!INCLUDE[tsql](../../includes/tsql-md.md)] query text. Use this pane to write or edit a [!INCLUDE[tsql](../../includes/tsql-md.md)] query.|  
+|Query|Displays the [!INCLUDE[tsql](../includes/tsql-md.md)] query text. Use this pane to write or edit a [!INCLUDE[tsql](../includes/tsql-md.md)] query.|  
 |Result|Displays the results of the query. To run the query, right-click in any pane and click **Run**, or click the **Run** button on the toolbar.|  
   
 #### Example  
- The following query returns the list of last names from the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database `Contact` table.  
+ The following query returns the list of last names from the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database `Contact` table.  
   
 ```  
 SELECT LastName FROM Person.Person;  
 ```  
   
- You can use any [!INCLUDE[tsql](../../includes/tsql-md.md)] statement for Command type Text, including `EXEC` statements. The following query calls the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] stored procedure `uspGetEmployeeManagers` and returns the chain-of-command for the employee with identification number 1.  
+ You can use any [!INCLUDE[tsql](../includes/tsql-md.md)] statement for Command type Text, including `EXEC` statements. The following query calls the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] stored procedure `uspGetEmployeeManagers` and returns the chain-of-command for the employee with identification number 1.  
   
 ```  
 EXEC uspGetEmployeeManagers 1;  
@@ -71,7 +71,7 @@ EXEC uspGetEmployeeManagers 1;
  When you select **Command typeStoredProcedure**, the text-based query designer presents two panes: the Query pane and the Result pane. Enter the stored procedure name in the Query pane and click **Run** on the toolbar. The Define Query Parameters dialog box opens. Enter the parameter values for the stored procedure. A report parameter is created for every stored procedure parameter.  
   
 #### Example  
- The following query calls the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] stored procedure `uspGetEmployeeManagers`. You must enter a value for the employee identification number parameter when you run the query.  
+ The following query calls the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] stored procedure `uspGetEmployeeManagers`. You must enter a value for the employee identification number parameter when you run the query.  
   
 ```  
 uspGetEmployeeManagers;  
@@ -81,11 +81,11 @@ uspGetEmployeeManagers;
  When you select **Command typeTableDirect**, the text-based query designer presents two panes: the Query pane and the Result pane. When you enter a table and click the **Run** button, all the columns for that table are returned.  
   
 #### Example  
- The following query returns a result set for all customers in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
+ The following query returns a result set for all customers in the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database.  
   
  `Sales.Customer`  
   
- When you enter the table name Sales.Customer, it is the equivalent of creating the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement `SELECT * FROM Sales.Customer;`.  
+ When you enter the table name Sales.Customer, it is the equivalent of creating the [!INCLUDE[tsql](../includes/tsql-md.md)] statement `SELECT * FROM Sales.Customer;`.  
   
 ## See Also  
  [Query Design Tools in Report Designer SQL Server Data Tools &#40;SSRS&#41;](../../2014/reporting-services/query-design-tools-in-report-designer-sql-server-data-tools-ssrs.md)   

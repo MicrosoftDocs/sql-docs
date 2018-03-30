@@ -12,11 +12,11 @@ ms.topic: "article"
 ms.assetid: 2d8e7232-42f4-41b6-98eb-c856f6c85d8c
 caps.latest.revision: 7
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # SetExtendedProtectionSettings Method (WMI MSReportServer_ConfigurationSetting)
-  The SetExtendedProtectionSettings method is used to set the RSWindowsExtendedProtectionLevel and the RSWindowsExtendedProtectionScenario properties in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configuration file RSReportServer.config.  
+  The SetExtendedProtectionSettings method is used to set the RSWindowsExtendedProtectionLevel and the RSWindowsExtendedProtectionScenario properties in the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] configuration file RSReportServer.config.  
   
 ## Syntax  
   
@@ -59,7 +59,7 @@ public void SetExtendedProtectionSettings(
  To set the ExtendedProtectionLevel, the user must be a member of the BUILTIN\Administrators group on the report server.  
   
 ## Requirements  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../includes/ssrswminmspca-md.md)]  
   
 ## See Also  
  [RSWindowsExtendedProtectionScenario Property &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../2014/reporting-services/rswindowsextendedprotectionscenario-property.md)   

@@ -38,7 +38,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 ### To create a case filter on a mining model  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], in Solution Explorer, click the mining structure that contains the mining model you want to filter.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], in Solution Explorer, click the mining structure that contains the mining model you want to filter.  
   
 2.  Click the **Mining Models** tab.  
   
@@ -111,9 +111,9 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
 ```  
   
 > [!NOTE]  
->  Because the number of nested table attributes is potentially unlimited, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] does not supply a list of possible values from which to select. You must type the exact value. Also, you cannot use a LIKE operator in a nested table.  
+>  Because the number of nested table attributes is potentially unlimited, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] does not supply a list of possible values from which to select. You must type the exact value. Also, you cannot use a LIKE operator in a nested table.  
   
-1.  Add more conditions as necessary, combining the conditions by selecting `AND` or `OR` in the **AND/OR** box at the left side of the **Conditions** grid. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+1.  Add more conditions as necessary, combining the conditions by selecting `AND` or `OR` in the **AND/OR** box at the left side of the **Conditions** grid. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 2.  In the **Model Filter** dialog box, review the conditions that you created by using the **Filter** dialog box. The conditions for the nested table are appended to the conditions for the case table, and the complete set of filter conditions is displayed in the **Expression** text box.  
   

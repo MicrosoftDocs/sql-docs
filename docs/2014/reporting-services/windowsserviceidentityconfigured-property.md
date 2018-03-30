@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: ebf8e559-7fe4-4a01-9810-85f18fc04596
 caps.latest.revision: 17
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # WindowsServiceIdentityConfigured Property (WMI MSReportServer_ConfigurationSetting)
@@ -43,7 +43,7 @@ public string WindowsServiceIdentityConfigured;
  [MSReportServer_ConfigurationSetting Class](../../2014/reporting-services/msreportserver-configurationsetting-class.md)  
   
 ## Requirements  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../includes/ssrswminmspca-md.md)]  
   
 ## See Also  
  [MSReportServer_ConfigurationSetting Members](../../2014/reporting-services/msreportserver-configurationsetting-members.md)  

@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: e416be75-5234-4aa6-a3de-77f60f25169a
 caps.latest.revision: 35
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Pause and Resume Shared Schedules
@@ -37,7 +37,7 @@ manager: "mblythe"
 -   [Pause and Resume Shared Schedules (SharePoint mode)](#bkmk_sharepoint)  
   
 ##  <a name="bkmk_native"></a> Pause and Resume Shared Schedules (Native Mode)  
- To pause and resume a shared schedule, use the Schedules page in Report Manager. You cannot use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]; it does not provide options for pausing and resuming schedules. For more information, see [Create, Modify, and Delete Schedules](../../2014/reporting-services/create-modify-and-delete-schedules.md).  
+ To pause and resume a shared schedule, use the Schedules page in Report Manager. You cannot use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]; it does not provide options for pausing and resuming schedules. For more information, see [Create, Modify, and Delete Schedules](../../2014/reporting-services/create-modify-and-delete-schedules.md).  
   
 #### To pause or resume a shared schedule  
   

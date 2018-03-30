@@ -20,7 +20,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Transfer Logins Task Editor (Logins Page)
-  Use the **Logins** page of the **Transfer Logins Task Editor** dialog box to specify properties for copying one or more [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins from one instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to another. For more information about this task, see [Transfer Logins Task](../../2014/integration-services/transfer-logins-task.md).  
+  Use the **Logins** page of the **Transfer Logins Task Editor** dialog box to specify properties for copying one or more [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] logins from one instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to another. For more information about this task, see [Transfer Logins Task](../../2014/integration-services/transfer-logins-task.md).  
   
 > [!IMPORTANT]  
 >  When the Transfer Logins task is executed, logins are created on the destination server with random passwords and the passwords are disabled. To use these logins, a member of the **sysadmin** fixed server role must change the passwords and then enable them. The **sa** login cannot be transferred.  
@@ -33,11 +33,11 @@ manager: "jhubbard"
  Select a SMO connection manager in the list, or click **\<New connection...>** to create a new connection to the destination server.  
   
  **LoginsToTransfer**  
- Select the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins to copy from the source to the destination server. This property has the options listed in the following table:  
+ Select the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] logins to copy from the source to the destination server. This property has the options listed in the following table:  
   
 |Value|Description|  
 |-----------|-----------------|  
-|**AllLogins**|All [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins on the source server will be copied to the destination server.|  
+|**AllLogins**|All [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] logins on the source server will be copied to the destination server.|  
 |**SelectedLogins**|Only logins specified with **LoginsList** will be copied to the destination server.|  
 |**AllLoginsFromSelectedDatabases**|All logins from the databases specified with **DatabasesList** will be copied to the destination server.|  
   

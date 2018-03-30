@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: c14ed187-bdd9-4304-88e3-72072f03c21b
 caps.latest.revision: 19
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # DeleteEncryptedInformation Method (WMI MSReportServer_ConfigurationSetting)
@@ -60,7 +60,7 @@ public void DeleteEncryptedInformation(out Int32 HRESULT, out string[] ExtendedE
  Calling the DeleteEncryptedInformation method does not affect the report server configuration file.  
   
 ## Requirements  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../includes/ssrswminmspca-md.md)]  
   
 ## See Also  
  [MSReportServer_ConfigurationSetting Members](../../2014/reporting-services/msreportserver-configurationsetting-members.md)  

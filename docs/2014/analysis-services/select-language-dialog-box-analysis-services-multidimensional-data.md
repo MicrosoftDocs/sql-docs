@@ -22,7 +22,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Select Language Dialog Box (Analysis Services - Multidimensional Data)
-  Use the **Select Language** dialog box in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to select a language for a new translation. You can display the **Select Language** dialog box by:  
+  Use the **Select Language** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to select a language for a new translation. You can display the **Select Language** dialog box by:  
   
 -   Clicking **New Translation** from the **Toolbar** pane of the **Translations** tab of **Dimension Designer**.  
   

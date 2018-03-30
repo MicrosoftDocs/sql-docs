@@ -136,7 +136,7 @@ manager: "jhubbard"
  Select an ADO.NET connection manager in the list, or click \<**New connection...**> to create a new ADO.NET connection manager.  
   
 > [!IMPORTANT]  
->  The ADO.NET connection manager must use a .NET provider for OLE DB. If connecting to SQL Server, the recommended provider to use is the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, listed in the **.Net Providers for OleDb** section of the **Connection Manager** dialog box.  
+>  The ADO.NET connection manager must use a .NET provider for OLE DB. If connecting to SQL Server, the recommended provider to use is the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client, listed in the **.Net Providers for OleDb** section of the **Connection Manager** dialog box.  
   
  **Related Topics:** [ADO Connection Manager](../../2014/integration-services/ado-connection-manager.md), [Configure ADO.NET Connection Manager](../../2014/integration-services/configure-ado-net-connection-manager.md)  
   

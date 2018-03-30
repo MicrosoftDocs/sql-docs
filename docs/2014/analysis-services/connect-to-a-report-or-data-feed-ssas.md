@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Connect to a Report or Data Feed (SSAS)
-  This page of the **Table Import Wizard** enables you to connect to a data feed. To access the wizard from the [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], on the **Model** menu, click **Import from Data Source**.  
+  This page of the **Table Import Wizard** enables you to connect to a data feed. To access the wizard from the [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], on the **Model** menu, click **Import from Data Source**.  
   
 ## From a Report  
  **Friendly Connection Name**  

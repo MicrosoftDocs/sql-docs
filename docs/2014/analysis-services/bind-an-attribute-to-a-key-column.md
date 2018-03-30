@@ -33,6 +33,6 @@ manager: "mblythe"
 4.  Type the new name.  
   
     > [!NOTE]  
-    >  You can also set the `Name` property of a selected attribute in the **Properties** window of [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+    >  You can also set the `Name` property of a selected attribute in the **Properties** window of [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
   

@@ -20,7 +20,7 @@ manager: "jhubbard"
 # Create Database (SQL Server Import and Export Wizard)
   Use the **Create Database** page to define a new database for a destination file.  
   
- This page offers a subset of the available options for creating a new database. To view all the options, use [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ This page offers a subset of the available options for creating a new database. To view all the options, use [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
  To learn more about this wizard, see [SQL Server Import and Export Wizard](../../2014/integration-services/sql-server-import-and-export-wizard.md). To learn about the options for starting the wizard, and about the permissions required to run the wizard successfully, see [Run the SQL Server Import and Export Wizard](../../2014/integration-services/run-the-sql-server-import-and-export-wizard.md).  
   

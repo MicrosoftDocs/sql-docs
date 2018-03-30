@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: f286cde9-c0d0-43ef-b7ba-53c3cbb8906c
 caps.latest.revision: 19
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Lesson 2: Preparing the Snapshot Folder
@@ -22,7 +22,7 @@ manager: "jhubbard"
   
 ### To create a share for the snapshot folder and assign permissions  
   
-1.  In Windows Explorer, navigate to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data folder. The default location is C:\Program Files\Microsoft SQL Server\MSSQL.X\MSSQL\Data.  
+1.  In Windows Explorer, navigate to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] data folder. The default location is C:\Program Files\Microsoft SQL Server\MSSQL.X\MSSQL\Data.  
   
 2.  Create a new folder named **repldata**.  
   

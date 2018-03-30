@@ -24,11 +24,11 @@ manager: "jhubbard"
 # Updategram Sample Applications (SQLXML 4.0)
   This section provides examples of using updategrams.  
   
- All the examples in this section use the AdventureWorks sample database in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. All the updates are applied to the tables in the AdventureWorks database.  
+ All the examples in this section use the AdventureWorks sample database in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. All the updates are applied to the tables in the AdventureWorks database.  
   
 ## In This Section  
  [Executing an Updategram by Using ADO &#40;SQLXML 4.0&#41;](../../../2014/database-engine/dev-guide/executing-an-updategram-by-using-ado-sqlxml-4-0.md)  
- Provides a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic application that uses ADO to establish a connection to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and execute an updategram.  
+ Provides a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic application that uses ADO to establish a connection to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and execute an updategram.  
   
  [Executing an Updategram by Using OLE DB &#40;SQLXML 4.0&#41;](../../../2014/database-engine/dev-guide/executing-an-updategram-by-using-ole-db-sqlxml-4-0.md)  
  Provides a working sample of using OLE DB to execute an updategram.  

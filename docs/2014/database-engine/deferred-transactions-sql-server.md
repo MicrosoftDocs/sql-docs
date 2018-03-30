@@ -21,10 +21,10 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Deferred Transactions (SQL Server)
-  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise, a corrupted transaction can become deferred if data required by rollback (undo) is offline during database startup. A *deferred transaction* is a transaction that is uncommitted when the roll forward phase finishes and that has encountered an error that prevents it from being rolled back. Because the transaction cannot be rolled back, it is deferred.  
+  In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise, a corrupted transaction can become deferred if data required by rollback (undo) is offline during database startup. A *deferred transaction* is a transaction that is uncommitted when the roll forward phase finishes and that has encountered an error that prevents it from being rolled back. Because the transaction cannot be rolled back, it is deferred.  
   
 > [!NOTE]  
->  Corrupted transactions are deferred only in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise. In other editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a corrupted transaction causes startup to fail.  
+>  Corrupted transactions are deferred only in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise. In other editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], a corrupted transaction causes startup to fail.  
   
  Generally, a deferred transaction occurs because, while the database was being rolled forward, an I/O error prevented reading a page that was required by the transaction. However, an error at the file level can also cause deferred transactions. A deferred transaction can also occur when a partial restore sequence stops at a point at which transaction rollback is necessary and a transaction requires data that is offline.  
   
@@ -55,7 +55,7 @@ manager: "jhubbard"
   
 -   If the transactions were deferred because a filegroup was offline, bring the filegroup back online.  
   
-     To bring an offline filegroup back online, use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement:  
+     To bring an offline filegroup back online, use the following [!INCLUDE[tsql](../includes/tsql-md.md)] statement:  
   
     ```  
     RESTORE DATABASE database_name FILEGROUP=<filegroup_name>  
@@ -74,7 +74,7 @@ manager: "jhubbard"
   
 -   If transactions were deferred because of a bad page and if a good backup of the database does not exist, use the following process to repair the database:  
   
-    -   First put the database into emergency mode by executing the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement:  
+    -   First put the database into emergency mode by executing the following [!INCLUDE[tsql](../includes/tsql-md.md)] statement:  
   
         ```  
         ALTER DATABASE <database_name> SET EMERGENCY  
@@ -82,7 +82,7 @@ manager: "jhubbard"
   
          For information about emergency mode, see [Database States](../../2014/database-engine/database-states.md).  
   
-    -   Then, repair the database by using the DBCC REPAIR_ALLOW_DATA_LOSS option in one of the following DBCC statements: [DBCC CHECKDB](../Topic/DBCC%20CHECKDB%20\(Transact-SQL\).md), [DBCC CHECKALLOC](../Topic/DBCC%20CHECKALLOC%20\(Transact-SQL\).md), or [DBCC CHECKTABLE](../Topic/DBCC%20CHECKTABLE%20\(Transact-SQL\).md).  
+    -   Then, repair the database by using the DBCC REPAIR_ALLOW_DATA_LOSS option in one of the following DBCC statements: [DBCC CHECKDB](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md), [DBCC CHECKALLOC](~/t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md), or [DBCC CHECKTABLE](~/t-sql/database-console-commands/dbcc-checktable-transact-sql.md).  
   
          When DBCC encounters the bad page, DBCC deallocates it and repairs any related errors. This approach enables the database to be brought back online in a physically consistent state. However, additional data might also be lost; therefore, this approach should be used as a last resort.  
   
@@ -93,7 +93,7 @@ manager: "jhubbard"
  [File Restores &#40;Simple Recovery Model&#41;](../../2014/database-engine/file-restores-simple-recovery-model.md)   
  [Restore Pages &#40;SQL Server&#41;](../../2014/database-engine/restore-pages-sql-server.md)   
  [Piecemeal Restores &#40;SQL Server&#41;](../../2014/database-engine/piecemeal-restores-sql-server.md)   
- [ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20\(Transact-SQL\).md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)   
+ [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)  
   
   

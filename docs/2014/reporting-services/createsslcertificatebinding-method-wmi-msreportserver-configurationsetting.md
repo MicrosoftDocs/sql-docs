@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 407d50e4-0a55-43cb-8ddf-2d82714071b1
 caps.latest.revision: 14
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # CreateSSLCertificateBinding Method (WMI MSReportServer_ConfigurationSetting)
@@ -78,7 +78,7 @@ public void CreateSSLCertificateBinding(string application,
 5.  A URL reservation that specifies a host name exists, but the host name does not match the certificate host name.  
   
 ## Requirements  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../includes/ssrswminmspca-md.md)]  
   
 ## See Also  
  [MSReportServer_ConfigurationSetting Members](../../2014/reporting-services/msreportserver-configurationsetting-members.md)  

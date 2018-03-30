@@ -20,9 +20,9 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Bulk Insert Task Editor (Options Page)
-  Use the **Options** page of the **Bulk Insert Task Editor** dialog box to set properties for the bulk insert operation. The Bulk Insert task copies large amounts of data into a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table or view.  
+  Use the **Options** page of the **Bulk Insert Task Editor** dialog box to set properties for the bulk insert operation. The Bulk Insert task copies large amounts of data into a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] table or view.  
   
- To learn about working with bulk inserts, see [Bulk Insert Task](../../2014/integration-services/bulk-insert-task.md) and [BULK INSERT &#40;Transact-SQL&#41;](../Topic/BULK%20INSERT%20\(Transact-SQL\).md).  
+ To learn about working with bulk inserts, see [Bulk Insert Task](../../2014/integration-services/bulk-insert-task.md) and [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md).  
   
 ## Options  
  **CodePage**  

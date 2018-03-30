@@ -23,7 +23,7 @@ helpviewer_keywords:
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 caps.latest.revision: 55
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # rskeymgmt Utility (SSRS)
@@ -87,13 +87,13 @@ manager: "mblythe"
  (Required for `-f`) Specifies the password used to back up or apply a symmetric key. This value cannot be empty.  
   
  `-i`  
- Specifies a local report server instance. This argument is optional if you installed the report server on the default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance (the default value for `-i` is MSSQLSERVER). If you installed the report server as a named instance, `-i` is required.  
+ Specifies a local report server instance. This argument is optional if you installed the report server on the default [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance (the default value for `-i` is MSSQLSERVER). If you installed the report server as a named instance, `-i` is required.  
   
  `-m`  
  Specifies the name of the remote computer that hosts the report server instance you are joining to the report server scale-out deployment. Use the name of the computer that identifies it on your network.  
   
  `-n`  
- Specifies the name of the report server instance on a remote computer. This argument is optional if you installed the report server on the default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance (the default value for `-n` is MSSQLSERVER). If you installed the report server as a named instance, `-n` is required.  
+ Specifies the name of the report server instance on a remote computer. This argument is optional if you installed the report server on the default [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance (the default value for `-n` is MSSQLSERVER). If you installed the report server as a named instance, `-n` is required.  
   
  `-u`  *useraccount*  
  Specifies the administrator account on the remote computer that you are joining to the scale-out deployment. If an account is not specified, the credentials of the current user are used.  

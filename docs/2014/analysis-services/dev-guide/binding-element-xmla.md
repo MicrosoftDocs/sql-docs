@@ -29,7 +29,7 @@ ms.author: "mblythe"
 manager: "mblythe"
 ---
 # Binding Element (XMLA)
-  Defines an out-of-line binding for an [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] object, such as an attribute in a dimension, for the [Bindings](../../../2014/analysis-services/dev-guide/bindings-element-xmla.md) collection of a [Batch](../../../2014/analysis-services/dev-guide/batch-element-xmla.md) or [Process](../../../2014/analysis-services/dev-guide/process-element-xmla.md) command.  
+  Defines an out-of-line binding for an [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] object, such as an attribute in a dimension, for the [Bindings](../../../2014/analysis-services/dev-guide/bindings-element-xmla.md) collection of a [Batch](../../../2014/analysis-services/dev-guide/batch-element-xmla.md) or [Process](../../../2014/analysis-services/dev-guide/process-element-xmla.md) command.  
   
 ## Syntax  
   
@@ -60,7 +60,7 @@ manager: "mblythe"
 |Child elements|None|  
   
 ## Remarks  
- `Binding` elements define out-of-line bindings, other than data sources and data source views, for [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objects to be processed by a `Batch` or `Process` command. For more information about processing objects, see [Processing Objects &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/processing-objects-xmla.md).  
+ `Binding` elements define out-of-line bindings, other than data sources and data source views, for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects to be processed by a `Batch` or `Process` command. For more information about processing objects, see [Processing Objects &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/processing-objects-xmla.md).  
   
  For more information about out-of-line bindings, see [Data Sources and Bindings &#40;SSAS Multidimensional&#41;](../../../2014/analysis-services/data-sources-and-bindings-ssas-multidimensional.md).  
   

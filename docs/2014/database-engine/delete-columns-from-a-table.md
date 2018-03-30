@@ -17,11 +17,11 @@ helpviewer_keywords:
 ms.assetid: 0d8f6e4f-bc71-4fa3-8615-74249c8e072d
 caps.latest.revision: 15
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Delete Columns from a Table
-  This topic describes how to delete table columns in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  This topic describes how to delete table columns in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
 > [!CAUTION]  
 >  When you delete a column from a table, it and all the data it contains are deleted from the database. This action cannot be undone.  
@@ -45,7 +45,7 @@ manager: "jhubbard"
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
  You cannot delete a column that has a CHECK constraint. You must first delete the constraint.  
   
- You cannot delete a column that has PRIMARY KEY or FOREIGN KEY constraints or other dependencies except when using the Table Designer. When using Object Explorer or [!INCLUDE[tsql](../../includes/tsql-md.md)], you must first remove all dependencies on the column.  
+ You cannot delete a column that has PRIMARY KEY or FOREIGN KEY constraints or other dependencies except when using the Table Designer. When using Object Explorer or [!INCLUDE[tsql](../includes/tsql-md.md)], you must first remove all dependencies on the column.  
   
 ###  <a name="Security"></a> Security  
   
@@ -56,7 +56,7 @@ manager: "jhubbard"
   
 #### To delete columns by using Object Explorer  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  In **Object Explorer**, right-click the table from which you want to delete columns and choose **Delete**.  
   
@@ -76,7 +76,7 @@ manager: "jhubbard"
   
 #### To delete columns  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -90,6 +90,6 @@ manager: "jhubbard"
   
  If the column contains constraints or other dependencies, an error message will be returned. Resolve the error by deleting the referenced constraints.  
   
- For additional examples, see [ALTER TABLE &#40;Transact-SQL&#41;](../Topic/ALTER%20TABLE%20\(Transact-SQL\).md).  
+ For additional examples, see [ALTER TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-table-transact-sql.md).  
   
 ##  <a name="FollowUp"></a>  

@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 91a54778-8929-41f9-bb4c-826cec636be4
 caps.latest.revision: 6
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Change an Item Within a Cell (Report Builder and SSRS)
@@ -23,7 +23,7 @@ manager: "mblythe"
  By default, all cells in a table, matrix, or list data region contain a text box.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ### To change an item within a cell  
   

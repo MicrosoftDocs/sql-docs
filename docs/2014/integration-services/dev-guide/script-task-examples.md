@@ -23,7 +23,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Script Task Examples
-  The Script task is a multi-purpose tool that you can use in a package to fill almost any requirement that is not met by the tasks included with [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]. This topic lists Script task code samples that demonstrate some of the available functionality.  
+  The Script task is a multi-purpose tool that you can use in a package to fill almost any requirement that is not met by the tasks included with [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. This topic lists Script task code samples that demonstrate some of the available functionality.  
   
 > [!NOTE]  
 >  If you want to create tasks that you can more easily reuse across multiple packages, consider using the code in these Script task samples as the starting point for custom tasks. For more information, see [Developing a Custom Task](../../../2014/integration-services/dev-guide/developing-a-custom-task.md).  
@@ -31,7 +31,7 @@ manager: "jhubbard"
 ## In This Section  
   
 ### Example Topics  
- This section contains code examples that demonstrate various uses of the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] classes that you can incorporate into an [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Script task:  
+ This section contains code examples that demonstrate various uses of the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] classes that you can incorporate into an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Script task:  
   
  [Detecting an Empty Flat File with the Script Task](../../../2014/integration-services/dev-guide/detecting-an-empty-flat-file-with-the-script-task.md)  
  Checks a flat file to determine whether it contains rows of data, and saves the result to a variable for use in control flow branching.  
@@ -40,10 +40,10 @@ manager: "jhubbard"
  Gathers a list of files that meet user-specified criteria, and populates a variable for later use by the Foreach from Variable Enumerator.  
   
  [Querying the Active Directory with the Script Task](../../../2014/integration-services/dev-guide/querying-the-active-directory-with-the-script-task.md)  
- Retrieves user information from Active Directory based on the value of an [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] variable, by using classes in the System.DirectoryServices namespace.  
+ Retrieves user information from Active Directory based on the value of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] variable, by using classes in the System.DirectoryServices namespace.  
   
  [Monitoring Performance Counters with the Script Task](../../../2014/integration-services/dev-guide/monitoring-performance-counters-with-the-script-task.md)  
- Creates a custom performance counter that can be used to track the execution progress of an [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] package, by using classes in the System.Diagnostics namespace.  
+ Creates a custom performance counter that can be used to track the execution progress of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package, by using classes in the System.Diagnostics namespace.  
   
  [Working with Images with the Script Task](../../../2014/integration-services/dev-guide/working-with-images-with-the-script-task.md)  
  Compresses images into the JPEG format and creates thumbnail images from them, by using classes in the System.Drawing namespace.  
@@ -77,6 +77,6 @@ manager: "jhubbard"
   
 ||  
 |-|  
-|![Integration Services icon (small)](../../../2014/integration-services/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
+|![Integration Services icon (small)](../../../2014/integration-services/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
   
   

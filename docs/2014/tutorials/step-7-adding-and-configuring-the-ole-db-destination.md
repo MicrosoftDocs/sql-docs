@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
 caps.latest.revision: 24
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Step 7: Adding and Configuring the OLE DB Destination

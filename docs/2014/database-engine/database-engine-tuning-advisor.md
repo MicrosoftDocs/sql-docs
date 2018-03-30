@@ -14,11 +14,11 @@ f1_keywords:
 ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 caps.latest.revision: 13
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Database Engine Tuning Advisor
-  The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Database Engine Tuning Advisor (DTA) analyzes databases and makes recommendations that you can use to optimize query performance. You can use the Database Engine Tuning Advisor to select and create an optimal set of indexes, indexed views, or table partitions without having an expert understanding of the database structure or the internals of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Using the DTA, you can perform the following tasks.  
+  The [!INCLUDE[msCoName](../includes/msconame-md.md)] Database Engine Tuning Advisor (DTA) analyzes databases and makes recommendations that you can use to optimize query performance. You can use the Database Engine Tuning Advisor to select and create an optimal set of indexes, indexed views, or table partitions without having an expert understanding of the database structure or the internals of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Using the DTA, you can perform the following tasks.  
   
 -   Troubleshoot the performance of a specific problem query  
   
@@ -29,7 +29,7 @@ manager: "jhubbard"
 -   Manage storage space  
   
 ## Database Engine Tuning Advisor Benefits  
- Optimizing query performance can be difficult without a full understanding the database structure and the queries that are run against the database. The Database Engine Tuning Advisor can make this task easier by analyzing the current query plan cache or by analyzing a workload of [!INCLUDE[tsql](../../includes/tsql-md.md)] queries that you create and recommending an appropriate physical design. For more advanced database administrators, DTA exposes a powerful mechanism to perform exploratory what-if analysis of different physical design alternatives. The DTA can provide the following information.  
+ Optimizing query performance can be difficult without a full understanding the database structure and the queries that are run against the database. The Database Engine Tuning Advisor can make this task easier by analyzing the current query plan cache or by analyzing a workload of [!INCLUDE[tsql](../includes/tsql-md.md)] queries that you create and recommending an appropriate physical design. For more advanced database administrators, DTA exposes a powerful mechanism to perform exploratory what-if analysis of different physical design alternatives. The DTA can provide the following information.  
   
 -   Recommend the best mix of indexes for databases by using the query optimizer to analyze queries in a workload.  
   
@@ -65,7 +65,7 @@ manager: "jhubbard"
  The command prompt version of Database Engine Tuning Advisor. The **dta** utility is designed to allow you to use Database Engine Tuning Advisor functionality in applications and scripts.  
   
  workload  
- A Transact-SQL script file, trace file, or trace table that contains a representative workload for the databases you want to tune. Beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], you can specify the plan cache as the workload.  
+ A Transact-SQL script file, trace file, or trace table that contains a representative workload for the databases you want to tune. Beginning with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], you can specify the plan cache as the workload.  
   
  XML input file  
  An XML-formatted file that Database Engine Tuning Advisor can use to tune workloads. The XML input file supports advanced tuning options that are not available in either the GUI or **dta** utility.  
@@ -107,7 +107,7 @@ manager: "jhubbard"
 ## Dependency on xp_msver Extended Stored Procedure  
  Database Engine Tuning Advisor depends on the **xp_msver** extended stored procedure to provide full functionality. This extended stored procedure is turned on by default. Database Engine Tuning Advisor uses this extended stored procedure to fetch the number of processors and available memory on the computer where the database that you are tuning resides. If **xp_msver** is unavailable, Database Engine Tuning Advisor assumes the hardware characteristics of the computer where Database Engine Tuning Advisor is running. If the hardware characteristics of the computer where Database Engine Tuning Advisor is running are not available, one processor and 1024 megabytes (MBs) of memory are assumed.  
   
- This dependency affects partitioning recommendations because the number of partitions recommended depends on these two values (number of processors and available memory). The dependency also affects your tuning results when you use a test server to tune your production server. In this scenario, Database Engine Tuning Advisor uses **xp_msver** to fetch hardware properties from the production server. After tuning the workload on the test server, Database Engine Tuning Advisor uses these hardware properties to generate a recommendation. For more information, see [xp_msver &#40;Transact-SQL&#41;](../Topic/xp_msver%20\(Transact-SQL\).md).  
+ This dependency affects partitioning recommendations because the number of partitions recommended depends on these two values (number of processors and available memory). The dependency also affects your tuning results when you use a test server to tune your production server. In this scenario, Database Engine Tuning Advisor uses **xp_msver** to fetch hardware properties from the production server. After tuning the workload on the test server, Database Engine Tuning Advisor uses these hardware properties to generate a recommendation. For more information, see [xp_msver &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/xp-msver-transact-sql.md.  
   
 ## Database Engine Tuning Advisor Tasks  
  The following table lists common Database Engine Tuning Advisor tasks and the topics that describe how to perform them.  

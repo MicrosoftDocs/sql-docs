@@ -26,30 +26,30 @@ manager: "jhubbard"
 # Prerequisites, Restrictions, and Recommendations for Database Mirroring
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] instead.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] Use [!INCLUDE[ssHADR](../includes/sshadr-md.md)] instead.  
   
  This topic describes the prerequisites and recommendations for setting up database mirroring. For an introduction to database mirroring, see [Database Mirroring &#40;SQL Server&#41;](../../2014/database-engine/database-mirroring-sql-server.md).  
   
 > [!NOTE]  
->  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on-disk storage format is the same in the 64-bit and 32-bit environments. Therefore, a database mirroring session can combine server instances that run in a 32-bit environment and server instances that run in a 64-bit environment.  
+>  The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on-disk storage format is the same in the 64-bit and 32-bit environments. Therefore, a database mirroring session can combine server instances that run in a 32-bit environment and server instances that run in a 64-bit environment.  
   
 
   
 ##  <a name="DbmSupport"></a> Support For Database Mirroring  
- For information about support for database mirroring in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ For information about support for database mirroring in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
- Note that database mirroring works with any supported database compatibility level. For information about the supported compatibility levels, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md).  
+ Note that database mirroring works with any supported database compatibility level. For information about the supported compatibility levels, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 
   
 ##  <a name="Prerequisites"></a> Prerequisites  
   
--   For a mirroring session to be established, the partners and the witness, if any, must be running on the same version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   For a mirroring session to be established, the partners and the witness, if any, must be running on the same version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
--   The two partners, that is the principal server and mirror server, must be running the same edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The witness, if any, can run on any edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that supports database mirroring.  
+-   The two partners, that is the principal server and mirror server, must be running the same edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. The witness, if any, can run on any edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that supports database mirroring.  
   
     > [!NOTE]  
-    >  You can upgrade server instances that are partners in a mirroring session to a more recent version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Minimize Downtime for Mirrored Databases When Upgrading Server Instances](../../2014/database-engine/minimize-downtime-for-mirrored-databases-when-upgrading-server-instances.md).  
+    >  You can upgrade server instances that are partners in a mirroring session to a more recent version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For more information, see [Minimize Downtime for Mirrored Databases When Upgrading Server Instances](../../2014/database-engine/minimize-downtime-for-mirrored-databases-when-upgrading-server-instances.md).  
   
 -   The database must use the full recovery model. The simple and bulk-logged recovery models do not support database mirroring. Therefore, bulk operations are always fully logged for a mirrored database. For information about recovery models, see [Recovery Models &#40;SQL Server&#41;](../../2014/database-engine/recovery-models-sql-server.md).  
   

@@ -16,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 caps.latest.revision: 47
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # model Database
-  The **model** database is used as the template for all databases created on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Because **tempdb** is created every time [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is started, the **model** database must always exist on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system. The entire contents of the **model** database, including database options, are copied to the new database. Some of the settings of **model** are also used for creating a new **tempdb** during start up, so the **model** database must always exist on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system.  
+  The **model** database is used as the template for all databases created on an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Because **tempdb** is created every time [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is started, the **model** database must always exist on a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] system. The entire contents of the **model** database, including database options, are copied to the new database. Some of the settings of **model** are also used for creating a new **tempdb** during start up, so the **model** database must always exist on a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] system.  
   
  Newly created user databases use the same [recovery model](../../2014/database-engine/recovery-models-sql-server.md) as the model database. The default is user configurable. To learn the current recovery model of the model, see [View or Change the Recovery Model of a Database &#40;SQL Server&#41;](../../2014/database-engine/view-or-change-the-recovery-model-of-a-database-sql-server.md).  
   
@@ -33,7 +33,7 @@ manager: "jhubbard"
  If you modify the **model** database, all databases created afterward will inherit those changes. For example, you could set permissions or database options, or add objects such as tables, functions, or stored procedures. File properties of the **model** database are an exception, and are ignored except the initial size of the data file.  
   
 ## Physical Properties of model  
- The following table lists initial configuration values of the **model** data and log files. The sizes of these files can vary slightly for different editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ The following table lists initial configuration values of the **model** data and log files. The sizes of these files can vary slightly for different editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 |File|Logical name|Physical name|File growth|  
 |----------|------------------|-------------------|-----------------|  
@@ -43,7 +43,7 @@ manager: "jhubbard"
  To move the **model** database or log files, see [Move System Databases](../../2014/database-engine/move-system-databases.md).  
   
 ### Database Options  
- The following table lists the default value for each database option in the **model** database and whether the option can be modified. To view the current settings for these options, use the [sys.databases](../Topic/sys.databases%20\(Transact-SQL\).md) catalog view.  
+ The following table lists the default value for each database option in the **model** database and whether the option can be modified. To view the current settings for these options, use the [sys.databases](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view.  
   
 |Database option|Default value|Can be modified|  
 |---------------------|-------------------|---------------------|  
@@ -71,14 +71,14 @@ manager: "jhubbard"
 |PARAMETERIZATION|SIMPLE|Yes|  
 |QUOTED_IDENTIFIER|OFF|Yes|  
 |READ_COMMITTED_SNAPSHOT|OFF|Yes|  
-|RECOVERY|Depends on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edition<sup>1</sup>|Yes|  
+|RECOVERY|Depends on [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edition<sup>1</sup>|Yes|  
 |RECURSIVE_TRIGGERS|OFF|Yes|  
 |Service Broker Options|DISABLE_BROKER|No|  
 |TRUSTWORTHY|OFF|No|  
   
- <sup>1</sup> To verify the current recovery model of the database, see [View or Change the Recovery Model of a Database &#40;SQL Server&#41;](../../2014/database-engine/view-or-change-the-recovery-model-of-a-database-sql-server.md) or [sys.databases &#40;Transact-SQL&#41;](../Topic/sys.databases%20\(Transact-SQL\).md).  
+ <sup>1</sup> To verify the current recovery model of the database, see [View or Change the Recovery Model of a Database &#40;SQL Server&#41;](../../2014/database-engine/view-or-change-the-recovery-model-of-a-database-sql-server.md) or [sys.databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
- For a description of these database options, see [ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20\(Transact-SQL\).md).  
+ For a description of these database options, see [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md).  
   
 ## Restrictions  
  The following operations cannot be performed on the **model** database:  
@@ -110,9 +110,9 @@ manager: "jhubbard"
 ## Related Content  
  [System Databases](../../2014/database-engine/system-databases.md)  
   
- [sys.databases &#40;Transact-SQL&#41;](../Topic/sys.databases%20\(Transact-SQL\).md)  
+ [sys.databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
   
- [sys.master_files &#40;Transact-SQL&#41;](../Topic/sys.master_files%20\(Transact-SQL\).md)  
+ [sys.master_files &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   
  [Move Database Files](../../2014/database-engine/move-database-files.md)  
   

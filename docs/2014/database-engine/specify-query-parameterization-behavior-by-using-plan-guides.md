@@ -25,15 +25,15 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Specify Query Parameterization Behavior by Using Plan Guides
-  When the PARAMETERIZATION database option is set to SIMPLE, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query optimizer may choose to parameterize the queries. This means that any literal values that are contained in a query are substituted with parameters. This process is referred to as simple parameterization. When SIMPLE parameterization is in effect, you cannot control which queries are parameterized and which queries are not. However, you can specify that all queries in a database be parameterized by setting the PARAMETERIZATION database option to FORCED. This process is referred to as forced parameterization.  
+  When the PARAMETERIZATION database option is set to SIMPLE, the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] query optimizer may choose to parameterize the queries. This means that any literal values that are contained in a query are substituted with parameters. This process is referred to as simple parameterization. When SIMPLE parameterization is in effect, you cannot control which queries are parameterized and which queries are not. However, you can specify that all queries in a database be parameterized by setting the PARAMETERIZATION database option to FORCED. This process is referred to as forced parameterization.  
   
  You can override the parameterization behavior of a database by using plan guides in the following ways:  
   
--   When the PARAMETERIZATION database option is set to SIMPLE, you can specify that forced parameterization is attempted on a certain class of queries. You do this by creating a TEMPLATE plan guide on the parameterized form of the query, and specifying the PARAMETERIZATION FORCED query hint in the [sp_create_plan_guide](../Topic/sp_create_plan_guide%20\(Transact-SQL\).md) stored procedure. You can consider this kind of plan guide as a way to enable forced parameterization only on a certain class of queries, instead of all queries.  
+-   When the PARAMETERIZATION database option is set to SIMPLE, you can specify that forced parameterization is attempted on a certain class of queries. You do this by creating a TEMPLATE plan guide on the parameterized form of the query, and specifying the PARAMETERIZATION FORCED query hint in the [sp_create_plan_guide](~/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md) stored procedure. You can consider this kind of plan guide as a way to enable forced parameterization only on a certain class of queries, instead of all queries.  
   
 -   When the PARAMETERIZATION database option is set to FORCED, you can specify that for a certain class of queries, only simple parameterization is attempted, not forced parameterization. You do this by creating a TEMPLATE plan guide on the force-parameterized form of the query, and specifying the PARAMETERIZATION SIMPLE query hint in **sp_create_plan_guide**.  
   
- Consider the following query on the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database:  
+ Consider the following query on the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database:  
   
 ```  
 SELECT pi.ProductID, SUM(pi.Quantity) AS Total  
@@ -46,12 +46,12 @@ GROUP BY pi.ProductID, pi.Quantity HAVING SUM(pi.Quantity) > 50;
   
  As a database administrator, you have determined that you do not want to enable forced parameterization on all queries in the database. However, you do want to avoid compilation costs on all queries that are syntactically equivalent to the previous query, but differ only in their constant literal values. In other words, you want the query to be parameterized so that a query plan for this kind of query is reused. In this case, complete the following steps:  
   
-1.  Retrieve the parameterized form of the query. The only safe way to obtain this value for use in **sp_create_plan_guide** is by using the [sp_get_query_template](../Topic/sp_get_query_template%20\(Transact-SQL\).md) system stored procedure.  
+1.  Retrieve the parameterized form of the query. The only safe way to obtain this value for use in **sp_create_plan_guide** is by using the [sp_get_query_template](~/relational-databases/system-stored-procedures/sp-get-query-template-transact-sql.md) system stored procedure.  
   
 2.  Create the plan guide on the parameterized form of the query, specifying the PARAMETERIZATION FORCED query hint.  
   
     > [!IMPORTANT]  
-    >  As part of parameterizing a query, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assigns a data type to the parameters that replace the literal values, depending on the value and size of the literal. The same process occurs to the value of the constant literals passed to the **@stmt** output parameter of **sp_get_query_template**. Because the data type specified in the **@params** argument of **sp_create_plan_guide** must match that of the query as it is parameterized by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you may have to create more than one plan guide to cover the complete range of possible parameter values for the query.  
+    >  As part of parameterizing a query, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] assigns a data type to the parameters that replace the literal values, depending on the value and size of the literal. The same process occurs to the value of the constant literals passed to the **@stmt** output parameter of **sp_get_query_template**. Because the data type specified in the **@params** argument of **sp_create_plan_guide** must match that of the query as it is parameterized by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], you may have to create more than one plan guide to cover the complete range of possible parameter values for the query.  
   
  The following script can be used both to obtain the parameterized query and then create a plan guide on it:  
   

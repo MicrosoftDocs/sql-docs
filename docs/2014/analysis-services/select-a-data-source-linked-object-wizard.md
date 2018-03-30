@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Select a Data Source (Linked Object Wizard)
-  Use the **Select a Data Source** page to select the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data source that contains the objects from which to link or import.  
+  Use the **Select a Data Source** page to select the [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data source that contains the objects from which to link or import.  
   
 ## Options  
  **Analysis Services data sources**  

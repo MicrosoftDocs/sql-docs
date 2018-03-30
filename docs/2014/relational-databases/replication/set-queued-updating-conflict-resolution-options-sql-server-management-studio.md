@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: bb6b6c71-42c7-421a-a0fa-d5594d27e35d
 caps.latest.revision: 32
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Set Queued Updating Conflict Resolution Options (SQL Server Management Studio)
@@ -31,7 +31,7 @@ manager: "jhubbard"
   
     -   **Reinitialize the subscription**  
   
-2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## See Also  
  [Enable Updating Subscriptions for Transactional Publications](../../../2014/relational-databases/replication/enable-updating-subscriptions-for-transactional-publications.md)   

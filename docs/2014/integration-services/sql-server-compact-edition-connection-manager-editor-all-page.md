@@ -20,16 +20,16 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # SQL Server Compact Edition Connection Manager Editor (All Page)
-  Use the **SQL Server Compact Edition Connection Manager** dialog box to specify properties for connecting to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact database.  
+  Use the **SQL Server Compact Edition Connection Manager** dialog box to specify properties for connecting to a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact database.  
   
- To learn more about the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact Edition connection manager, see [SQL Server Compact Edition Connection Manager](../../2014/integration-services/sql-server-compact-edition-connection-manager.md).  
+ To learn more about the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact Edition connection manager, see [SQL Server Compact Edition Connection Manager](../../2014/integration-services/sql-server-compact-edition-connection-manager.md).  
   
 ## Options  
  **AutoShrink Threshold**  
- Specify the amount of free space, as a percentage, that is allowed in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact database before the autoshrink process runs.  
+ Specify the amount of free space, as a percentage, that is allowed in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact database before the autoshrink process runs.  
   
  **Default Lock Escalation**  
- Specify the number of database locks that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact database acquires before it tries to escalate locks.  
+ Specify the number of database locks that the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact database acquires before it tries to escalate locks.  
   
  **Default Lock Timeout**  
  Specify the default interval, in milliseconds, that a transaction will wait for a lock.  
@@ -38,16 +38,16 @@ manager: "jhubbard"
  Specify the interval, in seconds, between committed transactions to flush data to disk.  
   
  **Locale Identifier**  
- Specify the Locale ID (LCID) of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact database.  
+ Specify the Locale ID (LCID) of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact database.  
   
  **Max Buffer Size**  
- Specify the maximum amount of memory, in kilobytes, that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact uses before flushing data to disk.  
+ Specify the maximum amount of memory, in kilobytes, that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact uses before flushing data to disk.  
   
  **Max Database Size**  
- Specify the maximum size, in megabytes, of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact database.  
+ Specify the maximum size, in megabytes, of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact database.  
   
  **Mode**  
- Specify the file mode in which to open the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact database. The default value for this property is **Read Write**.  
+ Specify the file mode in which to open the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact database. The default value for this property is **Read Write**.  
   
  The Mode option has four values, as described in the following table.  
   
@@ -62,13 +62,13 @@ manager: "jhubbard"
  Specify whether security information is returned as part of the connection string. The default value for this option is **False**.  
   
  **Temp File Directory**  
- Specify the location of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact temporary database file.  
+ Specify the location of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact temporary database file.  
   
  **Data Source**  
- Specify the name of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact database.  
+ Specify the name of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact database.  
   
  **Password**  
- Enter the password for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact database.  
+ Enter the password for the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact database.  
   
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   

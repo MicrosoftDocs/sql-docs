@@ -22,7 +22,7 @@ manager: "mblythe"
   
  **To open the Dimension Wizard**  
   
--   In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], in **Solution Explorer**, right-click the **Dimensions** folder for an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project, and then click **New Dimension**.  
+-   In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], in **Solution Explorer**, right-click the **Dimensions** folder for an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project, and then click **New Dimension**.  
   
 ## Options  
  **Related tables**  

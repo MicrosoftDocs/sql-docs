@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 caps.latest.revision: 10
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Tutorial: Adding a KPI to Your Report (Report Builder)
@@ -175,7 +175,7 @@ manager: "mblythe"
   
  This changes the background color to green, using the shade of green named "Lime", for each cell that contains an aggregated sum for `[Sum(Sales)]` that is greater than or equal to 5000. Values of `[Sum(Sales)]` between 2500 and 5000 are colored yellow. Values less than 2500 are colored red.  
   
-1.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+1.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 2.  Click **Run** to preview the report.  
   
@@ -196,7 +196,7 @@ manager: "mblythe"
   
 5.  Click **Linear**. The first linear gauge type, **Horizontal**, is selected.  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
      A gauge is added to the design surface.  
   
@@ -263,7 +263,7 @@ manager: "mblythe"
   
      You will use this indicator in the tutorial.  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
      The indicator is added to the design surface.  
   
@@ -295,7 +295,7 @@ manager: "mblythe"
 4.  Click **Run** to preview the report.  
   
 ##  <a name="Save"></a> 7. Save the Report  
- Save the report to a report server or your computer. If you do not save the report to the report server, a number of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] features such as report parts and subreports are not available.  
+ Save the report to a report server or your computer. If you do not save the report to the report server, a number of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features such as report parts and subreports are not available.  
   
 #### To save the report on a report server  
   

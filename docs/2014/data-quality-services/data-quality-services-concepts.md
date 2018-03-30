@@ -16,7 +16,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Data Quality Services Concepts
-  This topic provides a brief summary of [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) concepts in knowledge management, data quality projects, and data quality administration.  
+  This topic provides a brief summary of [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) concepts in knowledge management, data quality projects, and data quality administration.  
   
 ##  <a name="Knowledge"></a> Knowledge Management Concepts  
  The DQS knowledge base is a repository of metadata that is created by the data steward or IT pro for use in improving data quality through data cleansing and data matching. DQS knowledge management includes the processes used to create and manage the knowledge base, both in a computer-assisted manner and interactively.  
@@ -40,7 +40,7 @@ manager: "jhubbard"
  For more information about knowledge management in DQS, see [DQS Knowledge Bases and Domains](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
 ##  <a name="Projects"></a> Data Quality Project Concepts  
- The data steward performs data-quality operations (cleansing and matching) using a data quality project in the [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] application.  
+ The data steward performs data-quality operations (cleansing and matching) using a data quality project in the [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] application.  
   
  **Data Cleansing**  
   
@@ -63,7 +63,7 @@ manager: "jhubbard"
  For more information about data quality projects in DQS, see [Data Quality Projects &#40;DQS&#41;](../../2014/data-quality-services/data-quality-projects-dqs.md).  
   
 ##  <a name="Admin"></a> Data Quality Administration Concepts  
- A DQS administrator can perform variety of administrative tasks using the [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] application.  
+ A DQS administrator can perform variety of administrative tasks using the [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] application.  
   
  **Activity Monitoring**  
   
@@ -83,7 +83,7 @@ manager: "jhubbard"
   
  **DQS Security**  
   
- You use roles within the SQL Server security mechanism to make DQS secure. There are three DQS roles that determine the access level for a user in the [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] application: dqs_administrator, dqs_kb_editor, and dqs_kb_operator. You cannot grant roles to the users using the [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] application; it is done using SQL Server Management Studio. For more information, see [DQS Security](../../2014/data-quality-services/dqs-security.md).  
+ You use roles within the SQL Server security mechanism to make DQS secure. There are three DQS roles that determine the access level for a user in the [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] application: dqs_administrator, dqs_kb_editor, and dqs_kb_operator. You cannot grant roles to the users using the [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] application; it is done using SQL Server Management Studio. For more information, see [DQS Security](../../2014/data-quality-services/dqs-security.md).  
   
  For more information about DQS administration, see [DQS Administration](../../2014/data-quality-services/dqs-administration.md).  
   

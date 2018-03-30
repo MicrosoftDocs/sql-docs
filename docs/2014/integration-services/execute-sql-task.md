@@ -54,7 +54,7 @@ manager: "jhubbard"
   
  If the SQL statements are stored in a file, the task uses a File connection manager to connect to the file. For more information, see [File Connection Manager](../../2014/integration-services/file-connection-manager.md).  
   
- In [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, you can use the **Execute SQL Task Editor** dialog box to type SQL statements, or use **Query Builder**, a graphical user interface for creating SQL queries. For more information, see [Execute SQL Task Editor &#40;General Page&#41;](../../2014/integration-services/execute-sql-task-editor-general-page.md) and [Query Builder](../../2014/integration-services/query-builder.md).  
+ In [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, you can use the **Execute SQL Task Editor** dialog box to type SQL statements, or use **Query Builder**, a graphical user interface for creating SQL queries. For more information, see [Execute SQL Task Editor &#40;General Page&#41;](../../2014/integration-services/execute-sql-task-editor-general-page.md) and [Query Builder](../../2014/integration-services/query-builder.md).  
   
 > [!NOTE]  
 >  Valid SQL statements written outside the Execute SQL task may not be parsed successfully by the Execute SQL task.  
@@ -121,9 +121,9 @@ manager: "jhubbard"
   
 -   If you use the ADO connection type, you must indicate whether the SQL statement is a stored procedure. For other connection types, this property is read-only and its value is always `false`.  
   
- You can set properties programmatically or through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer.  
+ You can set properties programmatically or through [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer.  
   
- For more information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click one of the following topics:  
+ For more information about the properties that you can set in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click one of the following topics:  
   
 -   [Execute SQL Task Editor &#40;General Page&#41;](../../2014/integration-services/execute-sql-task-editor-general-page.md)  
   
@@ -133,7 +133,7 @@ manager: "jhubbard"
   
 -   [Expressions Page](../../2014/integration-services/expressions-page.md)  
   
- For more information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
+ For more information about how to set these properties in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click the following topic:  
   
 -   [Set the Properties of a Task or Container](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)  
   
@@ -154,7 +154,7 @@ manager: "jhubbard"
   
 -   [Result Sets in the Execute SQL Task](../../2014/integration-services/result-sets-in-the-execute-sql-task.md)  
   
--   [Transact-SQL Reference &#40;Database Engine&#41;](../Topic/Transact-SQL%20Reference%20\(Database%20Engine\).md)  
+-   [Transact-SQL Reference &#40;Database Engine&#41;](~/t-sql/language-reference.md)  
   
 -   Blog entry, [New Date and Time Functions in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=239783), on mssqltips.com  
   

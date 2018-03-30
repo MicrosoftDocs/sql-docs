@@ -25,7 +25,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # bcp_bind
-  Binds data from a program variable to a table column for bulk copy into [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Binds data from a program variable to a table column for bulk copy into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Syntax  
   
@@ -64,12 +64,12 @@ idxServerCol
  Is the bulk copy-enabled ODBC connection handle.  
   
  *pData*  
- Is a pointer to the data copied. If *eDataType* is SQLTEXT, SQLNTEXT, SQLXML, SQLUDT, SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SQLBINARY, SQLNCHAR or SQLIMAGE, *pData* can be NULL. A NULL *pData* indicates that long data values will be sent to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in chunks using [bcp_moretext](../../../2014/database-engine/dev-guide/bcp-moretext.md). The user should only set *pData* to NULL if the column corresponding to the user bound field is a BLOB column otherwise **bcp_bind** will fail.  
+ Is a pointer to the data copied. If *eDataType* is SQLTEXT, SQLNTEXT, SQLXML, SQLUDT, SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SQLBINARY, SQLNCHAR or SQLIMAGE, *pData* can be NULL. A NULL *pData* indicates that long data values will be sent to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in chunks using [bcp_moretext](../../../2014/database-engine/dev-guide/bcp-moretext.md). The user should only set *pData* to NULL if the column corresponding to the user bound field is a BLOB column otherwise **bcp_bind** will fail.  
   
  If indicators are present in the data, they appear in memory directly before the data. The *pData* parameter points to the indicator variable in this case, and the width of the indicator, the *cbIndicator* parameter, is used by bulk copy to address user data correctly.  
   
  *cbIndicator*  
- Is the length, in bytes, of a length or null indicator for the column's data. Valid indicator length values are 0 (when using no indicator), 1, 2, 4, or 8. Indicators appear in memory directly before any data. For example, the following structure type definition could be used to insert integer values into an [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] table using bulk copy:  
+ Is the length, in bytes, of a length or null indicator for the column's data. Valid indicator length values are 0 (when using no indicator), 1, 2, 4, or 8. Indicators appear in memory directly before any data. For example, the following structure type definition could be used to insert integer values into an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table using bulk copy:  
   
 ```  
 typedef struct tagBCPBOUNDINT  
@@ -90,7 +90,7 @@ typedef struct tagBCPBOUNDINT
   
  For fixed-length data types, such as integers, the data type indicates the length of the data to the system. Therefore, for fixed-length data types, *cbData* can safely be SQL_VARLEN_DATA or the length of the data.  
   
- For [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] character and binary data types, *cbData* can be SQL_VARLEN_DATA, SQL_NULL_DATA, some positive value, or 0. If *cbData* is SQL_VARLEN_DATA, the system uses either a length/null indicator (if present) or a terminator sequence to determine the length of the data. If both are supplied, the system uses the one that results in the least amount of data being copied. If *cbData* is SQL_VARLEN_DATA, the data type of the column is a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] character or binary type, and neither a length indicator nor a terminator sequence is specified, the system returns an error message.  
+ For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] character and binary data types, *cbData* can be SQL_VARLEN_DATA, SQL_NULL_DATA, some positive value, or 0. If *cbData* is SQL_VARLEN_DATA, the system uses either a length/null indicator (if present) or a terminator sequence to determine the length of the data. If both are supplied, the system uses the one that results in the least amount of data being copied. If *cbData* is SQL_VARLEN_DATA, the data type of the column is a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] character or binary type, and neither a length indicator nor a terminator sequence is specified, the system returns an error message.  
   
  If *cbData* is 0 or a positive value, the system uses *cbData* as the data length. However, if, in addition to a positive *cbData* value, a length indicator or terminator sequence is provided, the system determines the data length by using the method that results in the least amount of data being copied.  
   
@@ -124,7 +124,7 @@ bcp_bind(hdbc, szName, 0,
    sizeof(WCHAR), SQLNCHAR, 2)  
 ```  
   
- If the bound [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] column is wide character, no conversion is performed on [bcp_sendrow](../../../2014/database-engine/dev-guide/bcp-sendrow.md). If the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] column is an MBCS character type, wide character to multibyte character conversion is performed as the data is sent to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ If the bound [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] column is wide character, no conversion is performed on [bcp_sendrow](../../../2014/database-engine/dev-guide/bcp-sendrow.md). If the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] column is an MBCS character type, wide character to multibyte character conversion is performed as the data is sent to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  *cbTerm*  
  Is the count of bytes present in the terminator for the program variable, if any. If there is no terminator for the variable, set *cbTerm* to 0.  
@@ -132,9 +132,9 @@ bcp_bind(hdbc, szName, 0,
  *eDataType*  
  Is the C data type of the program variable. The data in the program variable is converted to the type of the database column. If this parameter is 0, no conversion is performed.  
   
- The *eDataType* parameter is enumerated by the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data type tokens in sqlncli.h, not the ODBC C data type enumerators. For example, you can specify a two-byte integer, ODBC type SQL_C_SHORT, using the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-specific type SQLINT2.  
+ The *eDataType* parameter is enumerated by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type tokens in sqlncli.h, not the ODBC C data type enumerators. For example, you can specify a two-byte integer, ODBC type SQL_C_SHORT, using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-specific type SQLINT2.  
   
- [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduced support for SQLXML and SQLUDT data type tokens in the *`eDataType`* paramenter.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introduced support for SQLXML and SQLUDT data type tokens in the *`eDataType`* paramenter.  
   
  *idxServerCol*  
  Is the ordinal position of the column in the database table to which the data is copied. The first column in a table is column 1. The ordinal position of a column is reported by [SQLColumns](../../../2014/database-engine/dev-guide/sqlcolumns.md).  
@@ -143,13 +143,13 @@ bcp_bind(hdbc, szName, 0,
  SUCCEED or FAIL.  
   
 ## Remarks  
- Use **bcp_bind** for a fast, efficient way to copy data from a program variable into a table in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Use **bcp_bind** for a fast, efficient way to copy data from a program variable into a table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Call [bcp_init](../../../2014/database-engine/dev-guide/bcp-init.md) before calling this or any other bulk-copy function. Calling **bcp_init** sets the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] target table for bulk copy. When calling **bcp_init** for use with **bcp_bind** and [bcp_sendrow](../../../2014/database-engine/dev-guide/bcp-sendrow.md), the **bcp_init** *szDataFile* parameter, indicating the data file, is set to NULL; the **bcp_init***eDirection* parameter is set to DB_IN.  
+ Call [bcp_init](../../../2014/database-engine/dev-guide/bcp-init.md) before calling this or any other bulk-copy function. Calling **bcp_init** sets the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] target table for bulk copy. When calling **bcp_init** for use with **bcp_bind** and [bcp_sendrow](../../../2014/database-engine/dev-guide/bcp-sendrow.md), the **bcp_init** *szDataFile* parameter, indicating the data file, is set to NULL; the **bcp_init***eDirection* parameter is set to DB_IN.  
   
- Make a separate **bcp_bind** call for every column in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] table into which you want to copy. After the necessary **bcp_bind** calls have been made, then call **bcp_sendrow** to send a row of data from your program variables to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Rebinding a column is not supported.  
+ Make a separate **bcp_bind** call for every column in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table into which you want to copy. After the necessary **bcp_bind** calls have been made, then call **bcp_sendrow** to send a row of data from your program variables to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Rebinding a column is not supported.  
   
- Whenever you want [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to commit the rows already received, call [bcp_batch](../../../2014/database-engine/dev-guide/bcp-batch.md). For example, call **bcp_batch** once for every 1000 rows inserted or at any other interval.  
+ Whenever you want [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to commit the rows already received, call [bcp_batch](../../../2014/database-engine/dev-guide/bcp-batch.md). For example, call **bcp_batch** once for every 1000 rows inserted or at any other interval.  
   
  When there are no more rows to be inserted, call [bcp_done](../../../2014/database-engine/dev-guide/bcp-done.md). Failure to do so results in an error.  
   
@@ -159,7 +159,7 @@ bcp_bind(hdbc, szName, 0,
   
  For new large value types, such as `varchar(max)`, `varbinary(max)`, or `nvarchar(max)`, you can use SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SQLBINARY, and SQLNCHAR as type indicators in the *eDataType* parameter.  
   
- If *cbTerm* is not 0, any value (1, 2, 4, or 8) is valid for the prefix (*cbIndicator*). In this situation, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client will search for the terminator, calculate data length with respect to the terminator (*i*), and set the *cbData* to the smaller value of i and the value of prefix.  
+ If *cbTerm* is not 0, any value (1, 2, 4, or 8) is valid for the prefix (*cbIndicator*). In this situation, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client will search for the terminator, calculate data length with respect to the terminator (*i*), and set the *cbData* to the smaller value of i and the value of prefix.  
   
  If *cbTerm* is 0 and *cbIndicator* (the prefix) is not 0, *cbIndicator* must be 8. The 8 byte prefix can take the following values:  
   

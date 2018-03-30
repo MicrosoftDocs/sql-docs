@@ -23,17 +23,17 @@ helpviewer_keywords:
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 caps.latest.revision: 30
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # XML Schema Collections (SQL Server)
-  As described in the topic, [xml &#40;Transact-SQL&#41;](../Topic/xml%20\(Transact-SQL\).md), SQL Server provides native storage of XML data through the `xml` data type. You can optionally associate XSD schemas with a variable or a column of `xml` type through an XML schema collection. The XML schema collection stores the imported XML schemas and is then used to do the following:  
+  As described in the topic, [xml &#40;Transact-SQL&#41;](~/t-sql/xml/xml-transact-sql.md), SQL Server provides native storage of XML data through the `xml` data type. You can optionally associate XSD schemas with a variable or a column of `xml` type through an XML schema collection. The XML schema collection stores the imported XML schemas and is then used to do the following:  
   
 -   Validate XML instances  
   
 -   Type the XML data as it is stored in the database  
   
- Note that the XML schema collection is a metadata entity like a table in the database. You can create, modify, and drop them. Schemas specified in a [CREATE XML SCHEMA COLLECTION (Transact-SQL)](../Topic/CREATE%20XML%20SCHEMA%20COLLECTION%20\(Transact-SQL\).md) statement are automatically imported into the newly created XML schema collection object. You can import additional schemas or schema components into an existing collection object in the database by using the [ALTER XML SCHEMA COLLECTION (Transact-SQL)](../Topic/ALTER%20XML%20SCHEMA%20COLLECTION%20\(Transact-SQL\).md) statement.  
+ Note that the XML schema collection is a metadata entity like a table in the database. You can create, modify, and drop them. Schemas specified in a [CREATE XML SCHEMA COLLECTION (Transact-SQL)](~/t-sql/statements/create-xml-schema-collection-transact-sql.md) statement are automatically imported into the newly created XML schema collection object. You can import additional schemas or schema components into an existing collection object in the database by using the [ALTER XML SCHEMA COLLECTION (Transact-SQL)](~/t-sql/statements/alter-xml-schema-collection-transact-sql.md) statement.  
   
  As described in the topic, [Typed vs. Untyped XML](../../2014/database-engine/compare-typed-xml-to-untyped-xml.md), the XML stored in a column or variable that a schema is associated with is referred to as **typed** XML, because the schema provides the necessary data type information for the instance data. SQL Server uses this type information to optimize data storage.  
   
@@ -46,17 +46,17 @@ manager: "jhubbard"
  You can also use the XML schema collection to type XML variables, parameters, and columns.  
   
 ##  <a name="ddl"></a> DDL for Managing Schema Collections  
- You can create XML schema collections in the database and associate them with variables and columns of `xml` type. To manage schema collections in the database, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the following DDL statements:  
+ You can create XML schema collections in the database and associate them with variables and columns of `xml` type. To manage schema collections in the database, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provides the following DDL statements:  
   
--   [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../Topic/CREATE%20XML%20SCHEMA%20COLLECTION%20\(Transact-SQL\).md) Imports schema components into a database.  
+-   [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](~/t-sql/statements/create-xml-schema-collection-transact-sql.md) Imports schema components into a database.  
   
--   [ALTER XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../Topic/ALTER%20XML%20SCHEMA%20COLLECTION%20\(Transact-SQL\).md) Modifies the schema components in an existing XML schema collection.  
+-   [ALTER XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](~/t-sql/statements/alter-xml-schema-collection-transact-sql.md) Modifies the schema components in an existing XML schema collection.  
   
--   [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../Topic/DROP%20XML%20SCHEMA%20COLLECTION%20\(Transact-SQL\).md) Deletes a complete XML schema collection and all its components.  
+-   [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](~/t-sql/statements/drop-xml-schema-collection-transact-sql.md) Deletes a complete XML schema collection and all its components.  
   
  To use an XML schema collection and the schemas it contains, you must first create the collection and the schemas by using the CREATE XML SCHEMA COLLECTION statement. After the schema collection is created, you can then create variables and columns of `xml` type and associate the schema collection with them. Note that after a schema collection is created, various schema components are stored in the metadata. You can also use the ALTER XML SCHEMA COLLECTION to add more components to the existing schemas or add new schemas to an existing collection.  
   
- To drop the schema collection, use the DROP XML SCHEMA COLLECTION statement. This drops all schemas that are contained in the collection and removes the collection object. Note that before you can drop a schema collection, the conditions described in [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../Topic/DROP%20XML%20SCHEMA%20COLLECTION%20\(Transact-SQL\).md)must be met.  
+ To drop the schema collection, use the DROP XML SCHEMA COLLECTION statement. This drops all schemas that are contained in the collection and removes the collection object. Note that before you can drop a schema collection, the conditions described in [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](~/t-sql/statements/drop-xml-schema-collection-transact-sql.md)must be met.  
   
 ##  <a name="components"></a> Understanding Schema Components  
  When you use the CREATE XML SCHEMA COLLECTION statement, various schema components are imported into the database. Schema components include schema elements, attributes, and type definitions. When you use the DROP XML SCHEMA COLLECTION statement, you remove the complete collection.  
@@ -117,7 +117,7 @@ manager: "jhubbard"
   
 -   **Customer** is an ELEMENT component.  
   
- When you import a schema into the database, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not store the schema itself. Instead, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stores the various individual components. That is, the \<Schema> tag is not stored, only the components that are defined within it are preserved. All schema elements are not preserved. If the \<Schema> tag contains attributes that specify default behavior of its components, these attributes are moved to the schema components within it during the import process, as shown in the following table.  
+ When you import a schema into the database, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not store the schema itself. Instead, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] stores the various individual components. That is, the \<Schema> tag is not stored, only the components that are defined within it are preserved. All schema elements are not preserved. If the \<Schema> tag contains attributes that specify default behavior of its components, these attributes are moved to the schema components within it during the import process, as shown in the following table.  
   
 |Attribute name|Behavior|  
 |--------------------|--------------|  

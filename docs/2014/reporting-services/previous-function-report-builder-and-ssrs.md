@@ -12,14 +12,14 @@ ms.topic: "article"
 ms.assetid: 403a9384-6ca4-42e8-97ca-ac3f6fe4316b
 caps.latest.revision: 8
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Previous Function (Report Builder and SSRS)
   Returns the value or the specified aggregate value for the previous instance of an item within the specified scope.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## Syntax  
   
@@ -33,7 +33,7 @@ Previous(expression, scope)
  (`Variant` or `Binary`) The expression to use to identify the data and for which to retrieve the previous value, for example, `Fields!Fieldname.Value` or `Sum(Fields!Fieldname.Value)`.  
   
  *scope*  
- (`String`) Optional. The name of a group or data region, or null (`Nothing` in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]), that specifies the scope from which to retrieve the previous value specified by *expression*.  
+ (`String`) Optional. The name of a group or data region, or null (`Nothing` in [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]), that specifies the scope from which to retrieve the previous value specified by *expression*.  
   
 ## Return Type  
  Returns a `Variant` or `Binary`.  
@@ -46,7 +46,7 @@ Previous(expression, scope)
  In a details group, use `Previous` to specify the value of a field reference in the previous instance of the detail row.  
   
 > [!NOTE]  
->  The `Previous` function only supports field references in the details group. For example, in a text box in the details group, `=Previous(Fields!Quantity.Value)` returns the data for the field `Quantity` from the previous row. In the first row, this expression returns a null (`Nothing` in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]).  
+>  The `Previous` function only supports field references in the details group. For example, in a text box in the details group, `=Previous(Fields!Quantity.Value)` returns the data for the field `Quantity` from the previous row. In the first row, this expression returns a null (`Nothing` in [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]).  
   
  If *expression* contains an aggregate function that uses a default scope, `Previous` aggregates the data within the previous instance of the scope specified in the aggregate function call.  
   

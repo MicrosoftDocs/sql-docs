@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Filter Server Process IDs (SPIDs) in a Trace (SQL Server Profiler)
-  This topic describes how to filter server process identifiers (SPIDs) in a trace by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+  This topic describes how to filter server process identifiers (SPIDs) in a trace by using [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)].  
   
 ### To filter system IDs in a trace  
   

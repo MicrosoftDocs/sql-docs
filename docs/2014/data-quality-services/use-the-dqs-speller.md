@@ -16,7 +16,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Use the DQS Speller
-  The [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) Speller checks the syntax, spelling, and sentence structure of string values in a domain. The Speller is a standalone, client-side feature that has no integration with server-side engines and no implications on current flows or statuses. The Speller identifies those string values that it considers to be potential errors, and then marks them with a red underscore in the same location in which you make other manual changes to domain values. These locations include:  
+  The [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) Speller checks the syntax, spelling, and sentence structure of string values in a domain. The Speller is a standalone, client-side feature that has no integration with server-side engines and no implications on current flows or statuses. The Speller identifies those string values that it considers to be potential errors, and then marks them with a red underscore in the same location in which you make other manual changes to domain values. These locations include:  
   
 -   The **Manage Domain Values** page of the **Knowledge Discovery** activity  
   
@@ -38,7 +38,7 @@ manager: "jhubbard"
   
 ##  <a name="Enable"></a> Enable the Speller  
   
-1.  To enable the Speller in [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)], open the knowledge base in the **Domain Management** activity, select the desired domain, and click **Enable Speller** on the **Domain Properties** page. In **Language**, select the language to be used with the Speller.  
+1.  To enable the Speller in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)], open the knowledge base in the **Domain Management** activity, select the desired domain, and click **Enable Speller** on the **Domain Properties** page. In **Language**, select the language to be used with the Speller.  
   
 2.  When the Speller is enabled in the domain properties, it is enabled in the **Manage Domain Values** page, the **Domain Values** page or the **Term-Based Relations** page, and the **Manage and View results** page. To disable the Speller on these pages, click the **Enable/Disable Speller** icon. Clicking the icon changes the status of the Speller on the page. Likewise, if the **Enable Speller** property for the domain is disabled, clicking the **Enable/Disable Speller** icon enables the Speller on the page. If you exit the page and then return to it, the button status is again determined by the **Enable Speller** domain property.  
   

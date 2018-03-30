@@ -28,7 +28,7 @@ manager: "jhubbard"
 >  For this release of the data collector, the management data warehouse is created using the Simple recovery model, to minimize logging. You should implement the appropriate recovery model for your organization.  
   
 ## Deploying and Using the Data Warehouse  
- You can install the management data warehouse on the same instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that runs the data collector. However, if server resources or performance is an issue on the server being monitored, you can install the management data warehouse on a different computer.  
+ You can install the management data warehouse on the same instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that runs the data collector. However, if server resources or performance is an issue on the server being monitored, you can install the management data warehouse on a different computer.  
   
  The required schemas and their objects for the predefined system collection sets are created when you create the management data warehouse. The schemas that are created are core and snapshots.A third schema, custom_snapshots, is created when user-defined collection sets are created that include collection items that use the Generic T-SQL Query collector type.  
   
@@ -124,8 +124,8 @@ manager: "jhubbard"
 |Updated the list of tables in the "Snapshots schema" section. Added snapshots.os_memory_clerks,snapshots.sql_process_and_system_memory, and snapshots.io_virtual_file_stats. Removedsnapshots.os_process_memory and snapshots.distinct_query_stats.|  
   
 ## See Also  
- [Management Data Warehouse Stored Procedures &#40;Transact-SQL&#41;](../Topic/Management%20Data%20Warehouse%20Stored%20Procedures%20\(Transact-SQL\).md)   
- [Data Collector Stored Procedures &#40;Transact-SQL&#41;](../Topic/Data%20Collector%20Stored%20Procedures%20\(Transact-SQL\).md)   
+ [Management Data Warehouse Stored Procedures &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)   
+ [Data Collector Stored Procedures &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [Data Collection](../../2014/database-engine/data-collection.md)   
  [View a Collection Set Report &#40;SQL Server Management Studio&#41;](../../2014/database-engine/view-a-collection-set-report-sql-server-management-studio.md)  
   

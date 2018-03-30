@@ -19,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: 6a4080d9-e43f-4b7b-a1da-bebf654c1194
 caps.latest.revision: 61
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Back Up and Restore Full-Text Catalogs and Indexes
-  This topic explains how to back up and restore full-text indexes created in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the full-text catalog is a logical concept and does not reside in a filegroup. Therefore, to back up a full-text catalog in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you must identify every filegroup that contains a full-text index that belongs to the catalog. Then you must back up those filegroups, one by one.  
+  This topic explains how to back up and restore full-text indexes created in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the full-text catalog is a logical concept and does not reside in a filegroup. Therefore, to back up a full-text catalog in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], you must identify every filegroup that contains a full-text index that belongs to the catalog. Then you must back up those filegroups, one by one.  
   
 > [!IMPORTANT]  
->  It is possible to import full-text catalogs when upgrading a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database. Each imported full-text catalog is a database file in its own filegroup. To back up an imported catalog, simply back up its filegroup. For more information, see [Backing Up and Restoring Full-Text Catalogs](http://go.microsoft.com/fwlink/?LinkID=121052), in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Books Online.  
+>  It is possible to import full-text catalogs when upgrading a [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] database. Each imported full-text catalog is a database file in its own filegroup. To back up an imported catalog, simply back up its filegroup. For more information, see [Backing Up and Restoring Full-Text Catalogs](http://go.microsoft.com/fwlink/?LinkID=121052), in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] Books Online.  
   
 ##  <a name="backingup"></a> Backing Up the Full-Text Indexes of a Full-Text Catalog  
   
 ###  <a name="Find_FTIs_of_a_Catalog"></a> Finding the Full-Text Indexes of a Full-Text Catalog  
- You can retrieve the properties of the full-text indexes by using the following [SELECT](../Topic/SELECT%20\(Transact-SQL\).md) statement, which selects columns from the [sys.fulltext_indexes](../Topic/sys.fulltext_indexes%20\(Transact-SQL\).md) and [sys.fulltext_catalogs](../Topic/sys.fulltext_catalogs%20\(Transact-SQL\).md) catalog views.  
+ You can retrieve the properties of the full-text indexes by using the following [SELECT](~/t-sql/queries/select-transact-sql.md) statement, which selects columns from the [sys.fulltext_indexes](~/relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md) and [sys.fulltext_catalogs](~/relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md) catalog views.  
   
 ```  
 USE AdventureWorks2012;  
@@ -57,7 +57,7 @@ GO
 -   The primary filegroup, for a partitioned table.  
   
 > [!NOTE]  
->  For information about creating a full-text index, see [Create and Manage Full-Text Indexes](../../2014/database-engine/create-and-manage-full-text-indexes.md) and [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../Topic/CREATE%20FULLTEXT%20INDEX%20\(Transact-SQL\).md).  
+>  For information about creating a full-text index, see [Create and Manage Full-Text Indexes](../../2014/database-engine/create-and-manage-full-text-indexes.md) and [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-fulltext-index-transact-sql.md).  
   
  To find the filegroup of full-text index on a table or view, use the following query, where *object_name* is the name of the table or view:  
   
@@ -80,7 +80,7 @@ GO
   
 -   [Back Up Files and Filegroups &#40;SQL Server&#41;](../../2014/database-engine/back-up-files-and-filegroups-sql-server.md)  
   
--   [BACKUP &#40;Transact-SQL&#41;](../Topic/BACKUP%20\(Transact-SQL\).md)  
+-   [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)  
   
 
   
@@ -97,7 +97,7 @@ GO
   
 -   [Restore Files to a New Location &#40;SQL Server&#41;](../../2014/database-engine/restore-files-to-a-new-location-sql-server.md)  
   
--   [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+-   [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)  
   
 
   

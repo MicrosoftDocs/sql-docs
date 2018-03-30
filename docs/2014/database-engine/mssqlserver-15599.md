@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 97e427a9-8587-46ea-954b-974b5df9c223
 caps.latest.revision: 8
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_15599
@@ -33,7 +33,7 @@ manager: "jhubbard"
 ## Explanation  
  Auditing and permissions do not have any effect when set for local or global temp objects. The statements do not result in an error (the operations will return success), but have no effect.  
   
- This behavior has not changed, however beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], this informational message alerts the user.  
+ This behavior has not changed, however beginning with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], this informational message alerts the user.  
   
 ## User Action  
  No action is necessary, but consider removing statements that attempt to set auditing or permissions on local or global temp objects.  

@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 553f0d4e-8b1d-4148-9321-8b41a1e8e1b9
 caps.latest.revision: 14
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Query Designers (Report Builder)

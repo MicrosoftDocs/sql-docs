@@ -22,11 +22,11 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Measures in the Cross-Validation Report
-  During cross-validation, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] divides the data in a mining structure into multiple cross-sections and then iteratively tests the structure and any associated mining models. Based on this analysis, it outputs a set of standard accuracy measures for the structure and each model.  
+  During cross-validation, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] divides the data in a mining structure into multiple cross-sections and then iteratively tests the structure and any associated mining models. Based on this analysis, it outputs a set of standard accuracy measures for the structure and each model.  
   
  The report contains some basic information about the number of folds in the data and the amount of data in each fold, and a set of general metrics that describe data distribution. By comparing the general metrics for each cross-section, you can assess the reliability of the structure or model.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] also displays a set of detailed measures for mining models. These measures depend on the model type and on the type of attribute that is being analyzed: for example, whether it is discrete or continuous.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] also displays a set of detailed measures for mining models. These measures depend on the model type and on the type of attribute that is being analyzed: for example, whether it is discrete or continuous.  
   
  This section provides a list of the measures that are contained in the **Cross-Validation** report, and what they mean. For details on how each measure is calculated, see [Cross-Validation Formulas](../../2014/analysis-services/cross-validation-formulas.md).  
   

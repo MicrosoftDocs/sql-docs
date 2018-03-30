@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: c3dd3109-abf3-4b38-a4e9-ef48d0235656
 caps.latest.revision: 10
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQL_ENG014150
@@ -26,7 +26,7 @@ manager: "jhubbard"
 |Product Name|SQL Server|  
 |Event ID|14150|  
 |Event Source|MSSQLSERVER|  
-|Component|[!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]|  
+|Component|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Symbolic Name||  
 |Message Text|Replication-%s: agent %s succeeded. %s|  
   

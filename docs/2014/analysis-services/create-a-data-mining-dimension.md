@@ -24,7 +24,7 @@ manager: "mblythe"
   
 ### To create a data mining dimension  
   
-1.  In Data Mining Designer in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], select either the **Mining Structure** tab or the **Mining Models** tab.  
+1.  In Data Mining Designer in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], select either the **Mining Structure** tab or the **Mining Models** tab.  
   
 2.  From the **Mining Model** menu, select **Create a Data Mining Dimension**.  
   

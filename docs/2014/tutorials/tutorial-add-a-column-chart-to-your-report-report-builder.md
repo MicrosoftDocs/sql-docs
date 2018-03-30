@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 caps.latest.revision: 10
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Tutorial: Add a Column Chart to Your Report (Report Builder)
@@ -150,7 +150,7 @@ manager: "mblythe"
   
 5.  In the **Type** box, select **31 Jan 2000**.  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 7.  On the Home tab, click **Run** to preview the report.  
   
@@ -174,7 +174,7 @@ manager: "mblythe"
   
 7.  In **Label rotation angle**, select **-90**.  
   
-8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
      The sample text for the horizontal axis rotates by 90 degrees.  
   
@@ -195,7 +195,7 @@ manager: "mblythe"
   
      When the legend is placed at the top or bottom of a chart, the layout of the legend changes from vertical to horizontal. You can select a different layout from the **Layout** drop-down list.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 5.  (Optional) Because there is only one category in this tutorial, the legend is not needed. To remove the legend, right-click the legend and then click **Delete Legend**.  
   
@@ -230,13 +230,13 @@ manager: "mblythe"
   
 7.  In the **Show Values in** box, click **Thousands**.  
   
-8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 9. Right-click the vertical axis title along the side of the chart and click **Axis Title Properties**.  
   
 10. Replace the text in the **Title text** field with the following text: **Sales Total (in Thousands)**. You can also specify a variety of options related to how the title is formatted.  
   
-11. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 12. Click **Run** to preview the report.  
   
@@ -258,7 +258,7 @@ manager: "mblythe"
   
 7.  In **Line width**, select **3pt**.  
   
-8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 9. Click **Run** to preview the report.  
   

@@ -20,7 +20,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Create a Version Flag (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], create a version flag to assign to a version. The flag can indicate the version that users or subscribing systems should use.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], create a version flag to assign to a version. The flag can indicate the version that users or subscribing systems should use.  
   
 ## Prerequisites  
  To perform this procedure:  
@@ -31,7 +31,7 @@ manager: "jhubbard"
   
 ### To create a version flag  
   
-1.  In [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], click **Version Management**.  
+1.  In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], click **Version Management**.  
   
 2.  On the **Manage Versions** page, from the menu bar, point to **Manage** and then click **Flags**.  
   

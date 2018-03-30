@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: 29d7372b-d406-4a5b-80c6-a2d231d25211
 caps.latest.revision: 26
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Configure the nested triggers Server Configuration Option
-  This topic describes how to configure the **nested triggers** server configuration option in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **nested triggers** option controls whether an AFTER trigger can cascade. That is, perform an action that initiates another trigger, which initiates another trigger, and so on. When **nested triggers** is set to 0, AFTER triggers cannot cascade. When **nested triggers** is set to 1 (the default), AFTER triggers can cascade to as many as 32 levels. INSTEAD OF triggers can be nested regardless of the setting of this option.  
+  This topic describes how to configure the **nested triggers** server configuration option in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)]. The **nested triggers** option controls whether an AFTER trigger can cascade. That is, perform an action that initiates another trigger, which initiates another trigger, and so on. When **nested triggers** is set to 0, AFTER triggers cannot cascade. When **nested triggers** is set to 1 (the default), AFTER triggers can cascade to as many as 32 levels. INSTEAD OF triggers can be nested regardless of the setting of this option.  
   
  **In This Topic**  
   
@@ -53,11 +53,11 @@ manager: "jhubbard"
   
 #### To configure the nested triggers option  
   
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_configure](../Topic/sp_configure%20\(Transact-SQL\).md) to set the value of the `nested triggers` option to `0`.  
+3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_configure](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md) to set the value of the `nested triggers` option to `0`.  
   
 ```wmimof  
 USE AdventureWorks2012 ;  
@@ -80,8 +80,8 @@ GO
   
 ## See Also  
  [Create Nested Triggers](../../2014/database-engine/create-nested-triggers.md)   
- [RECONFIGURE &#40;Transact-SQL&#41;](../Topic/RECONFIGURE%20\(Transact-SQL\).md)   
+ [RECONFIGURE &#40;Transact-SQL&#41;](~/t-sql/language-elements/reconfigure-transact-sql.md)   
  [Server Configuration Options &#40;SQL Server&#41;](../../2014/database-engine/server-configuration-options-sql-server.md)   
- [sp_configure &#40;Transact-SQL&#41;](../Topic/sp_configure%20\(Transact-SQL\).md)  
+ [sp_configure &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   

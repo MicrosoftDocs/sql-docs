@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 297867c1-691e-4d6b-a3be-a7575015ecfa
 caps.latest.revision: 9
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_8525
@@ -33,7 +33,7 @@ manager: "jhubbard"
 |Message Text|Distributed transaction completed. Either enlist this session in a new transaction or the NULL transaction.|  
   
 ## Explanation  
- The programming model for using the Distributed Transaction Coordinator with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requires applications to explicitly enlist to and defect from a distributed transaction.  
+ The programming model for using the Distributed Transaction Coordinator with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] requires applications to explicitly enlist to and defect from a distributed transaction.  
   
  This error occurs when the following four conditions are met:  
   

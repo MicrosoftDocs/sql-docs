@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 67cc3fd6-3238-4c58-a3ec-2d3b0438143a
 caps.latest.revision: 25
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Manage Bookmarks

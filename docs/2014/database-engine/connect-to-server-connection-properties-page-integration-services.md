@@ -19,11 +19,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Connect to Server (Connection Properties Page) Integration Services
-  Use this tab to view or specify options when connecting to [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] or registering [!INCLUDE[ssIS](../../includes/ssis-md.md)] in **Registered Servers**. **Connect** and **Options** only appear in this dialog box when connecting. **Test** and **Save** only appear in this dialog box when registering [!INCLUDE[ssIS](../../includes/ssis-md.md)].  
+  Use this tab to view or specify options when connecting to [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] or registering [!INCLUDE[ssIS](../includes/ssis-md.md)] in **Registered Servers**. **Connect** and **Options** only appear in this dialog box when connecting. **Test** and **Save** only appear in this dialog box when registering [!INCLUDE[ssIS](../includes/ssis-md.md)].  
   
 ## Options  
  **Port number**  
- Enter the port number used by [!INCLUDE[ssIS](../../includes/ssis-md.md)].  
+ Enter the port number used by [!INCLUDE[ssIS](../includes/ssis-md.md)].  
   
  **Connection time-out**  
  Enter the number of seconds to wait for a connection to be established before timing out. The default value is 15 seconds.  
@@ -41,7 +41,7 @@ manager: "jhubbard"
  Click to change the dialog and hide the additional server connection options, such as remembering the password.  
   
  **Test**  
- When registering [!INCLUDE[ssIS](../../includes/ssis-md.md)] in **Registered Servers**, click to test the connection.  
+ When registering [!INCLUDE[ssIS](../includes/ssis-md.md)] in **Registered Servers**, click to test the connection.  
   
  **Save**  
  Saves the settings in **Registered Servers**.  

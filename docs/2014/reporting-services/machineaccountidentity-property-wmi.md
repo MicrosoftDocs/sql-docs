@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 9c3a74c2-c7f4-44a7-a552-2e5f6e7cb941
 caps.latest.revision: 11
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # MachineAccountIdentity Property (WMI)
@@ -34,7 +34,7 @@ public string MachineAccountIdentity;
  A `String` value that contains the machine account identity of the computer that the report server is installed on.  
   
 ## Requirements  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../includes/ssrswminmspca-md.md)]  
   
 ## See Also  
  [MSReportServer_ConfigurationSetting Properties](../../2014/reporting-services/msreportserver-configurationsetting-properties.md)  

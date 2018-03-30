@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: e871c4fa-3b57-46cf-b4f8-e3be86f92dc4
 caps.latest.revision: 15
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Name Element for Database (DTA)

@@ -30,17 +30,17 @@ manager: "jhubbard"
   
  Typically, you want to remove old files that are no longer needed, and the Maintenance Cleanup task can be configured to delete files that have reached a specified age. For example, the task can be configured to delete files that are older than four weeks. You can specify the age of files to delete by using days, weeks, months, or years. If you do not specify the minimum age of files to delete, all files of the specified type are deleted.  
   
- In contrast to earlier versions of the Maintenance Cleanup task, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version of the task does not automatically delete files in the subdirectories of the specified directory. This constraint reduces the surface area of any attack that could exploit the functionality of the Maintenance Cleanup task to delete files maliciously. To delete the first-level subfolders, you must explicitly elect to do this by checking the **Include first-level subfolders** option in the **Maintenance Cleanup Task** dialog box.  
+ In contrast to earlier versions of the Maintenance Cleanup task, the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] version of the task does not automatically delete files in the subdirectories of the specified directory. This constraint reduces the surface area of any attack that could exploit the functionality of the Maintenance Cleanup task to delete files maliciously. To delete the first-level subfolders, you must explicitly elect to do this by checking the **Include first-level subfolders** option in the **Maintenance Cleanup Task** dialog box.  
   
 ## Configuration of the Maintenance Cleanup Task  
- You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer. This task is in the **Maintenance Plan Tasks** section of the **Toolbox** in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer.  
+ You can set properties through [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer. This task is in the **Maintenance Plan Tasks** section of the **Toolbox** in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer.  
   
- For more information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
+ For more information about the properties that you can set in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click the following topic:  
   
 -   [Maintenance Cleanup Task &#40;Maintenance Plan&#41;](../../2014/database-engine/maintenance-cleanup-task-maintenance-plan.md)  
   
 ## Related Tasks  
- For details about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, see [Set the Properties of a Task or Container](../../2014/integration-services/set-the-properties-of-a-task-or-container.md).  
+ For details about how to set these properties in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, see [Set the Properties of a Task or Container](../../2014/integration-services/set-the-properties-of-a-task-or-container.md).  
   
 ## See Also  
  [Integration Services Tasks](../../2014/integration-services/integration-services-tasks.md)   

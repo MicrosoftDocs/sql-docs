@@ -29,7 +29,7 @@ manager: "jhubbard"
 # srv_paramname (Extended Stored Procedure API)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
   
  Returns the name of a remote stored procedure call parameter.  
   

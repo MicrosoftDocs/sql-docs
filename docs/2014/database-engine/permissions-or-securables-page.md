@@ -18,13 +18,13 @@ f1_keywords:
 ms.assetid: b3bf077a-bec2-4161-ac0c-460586199906
 caps.latest.revision: 38
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Permissions or Securables Page
   Use the **Permissions** page or the **Securables** page to view or set the permissions for securables. This page can be opened from many locations. The contents of the page can change slightly, depending on how the page is opened and what it contains. The top grid of the page might be populated when the page opens, or it might be empty. To add items to the upper grid, click **Search**. In the upper grid, select an item, and then set the appropriate permissions on the **Explicit** tab. To view aggregated permissions, use the **Effective** tab.  
   
- To understand the possible combinations of securables and principals, see the securable-specific syntax links in the topic [GRANT &#40;Transact-SQL&#41;](../Topic/GRANT%20\(Transact-SQL\).md). For more information, see [Securables](../../2014/database-engine/securables.md).  
+ To understand the possible combinations of securables and principals, see the securable-specific syntax links in the topic [GRANT &#40;Transact-SQL&#41;](~/t-sql/statements/grant-transact-sql.md). For more information, see [Securables](../../2014/database-engine/securables.md).  
   
 ## Page Header  
  The header of the **Permissions** or **Securables** page varies depending on the securable or principal. It displays information relevant to the item, such as its name.  
@@ -51,7 +51,7 @@ manager: "jhubbard"
  Select to grant this permission to the login. Clear to revoke this permission.  
   
  **With Grant**  
- Reflects the state of the WITH GRANT option for the listed permission. This box is read-only. To apply this permission, use the [GRANT](../Topic/GRANT%20\(Transact-SQL\).md) statement.  
+ Reflects the state of the WITH GRANT option for the listed permission. This box is read-only. To apply this permission, use the [GRANT](~/t-sql/statements/grant-transact-sql.md) statement.  
   
  **Deny**  
  Select to deny this permission to the login. Clear to revoke this permission.  

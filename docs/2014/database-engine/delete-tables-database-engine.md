@@ -17,11 +17,11 @@ helpviewer_keywords:
 ms.assetid: ca6aa3e9-9885-44c3-bafc-aec441fd97ec
 caps.latest.revision: 19
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Delete Tables (Database Engine)
-  You can delete (drop) a table from your database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  You can delete (drop) a table from your database in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
 > [!CAUTION]  
 >  Think carefully before you delete a table. If existing queries, views, user-defined functions, stored procedures, or programs refer to that table, the deletion will make these objects invalid.  
@@ -76,7 +76,7 @@ manager: "jhubbard"
   
 #### To delete a table in Query Editor  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -87,6 +87,6 @@ manager: "jhubbard"
   
     ```  
   
- For more information, see [DROP TABLE &#40;Transact-SQL&#41;](../Topic/DROP%20TABLE%20\(Transact-SQL\).md)  
+ For more information, see [DROP TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/drop-table-transact-sql.md)  
   
   

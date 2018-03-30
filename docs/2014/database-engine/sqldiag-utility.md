@@ -31,11 +31,11 @@ helpviewer_keywords:
 ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
 caps.latest.revision: 56
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # SQLdiag Utility
-  The **SQLdiag** utility is a general purpose diagnostics collection utility that can be run as a console application or as a service. You can use **SQLdiag** to collect logs and data files from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and other types of servers, and use it to monitor your servers over time or troubleshoot specific problems with your servers. **SQLdiag** is intended to expedite and simplify diagnostic information gathering for [!INCLUDE[msCoName](../../includes/msconame-md.md)] Customer Support Services.  
+  The **SQLdiag** utility is a general purpose diagnostics collection utility that can be run as a console application or as a service. You can use **SQLdiag** to collect logs and data files from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and other types of servers, and use it to monitor your servers over time or troubleshoot specific problems with your servers. **SQLdiag** is intended to expedite and simplify diagnostic information gathering for [!INCLUDE[msCoName](../includes/msconame-md.md)] Customer Support Services.  
   
 > [!NOTE]  
 >  This utility may be changed, and applications or scripts that rely on its command line arguments or behavior may not work correctly in future releases.  
@@ -46,11 +46,11 @@ manager: "jhubbard"
   
 -   Windows event logs  
   
--   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] traces  
+-   [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] traces  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] blocking information  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] blocking information  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configuration information  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] configuration information  
   
  You can specify what types of information you want **SQLdiag** to collect by editing the configuration file SQLDiag.xml, which is described in a following section.  
   
@@ -150,9 +150,9 @@ manager: "jhubbard"
  Note that **SQLdiag** uses the local time on the computer where the utility is running.  
   
  **/A**  *SQLdiag_application_name*  
- Enables running multiple instances of the **SQLdiag** utility against the same [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
+ Enables running multiple instances of the **SQLdiag** utility against the same [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance.  
   
- Each *SQLdiag_application_name* identifies a different instance of **SQLdiag**. No relationship exists between a *SQLdiag_application_name* instance and a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name.  
+ Each *SQLdiag_application_name* identifies a different instance of **SQLdiag**. No relationship exists between a *SQLdiag_application_name* instance and a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance name.  
   
  *SQLdiag_application_name* can be used to start or stop a specific instance of the **SQLdiag** service.  
   
@@ -168,24 +168,24 @@ manager: "jhubbard"
 >  **SQLdiag** automatically prefixes DIAG$ to the instance name specified for *SQLdiag_application_name*. This provides a sensible service name if you register **SQLdiag** as a service.  
   
  /T { tcp [ ,*port* ] | np | lpc }  
- Connects to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using the specified protocol.  
+ Connects to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using the specified protocol.  
   
  tcp [,*port*]  
  Transmission Control Protocol/Internet Protocol (TCP/IP). You can optionally specify a port number for the connection.  
   
  np  
- Named pipes. By default, the default instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] listens on named pipe `\\.\pipe\sql\query` and `\\.\pipe\MSSQL$<instancename>\sql\query` for a named instance. You cannot connect to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using an alternate pipe name.  
+ Named pipes. By default, the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] listens on named pipe `\\.\pipe\sql\query` and `\\.\pipe\MSSQL$<instancename>\sql\query` for a named instance. You cannot connect to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] by using an alternate pipe name.  
   
  lpc  
- Local procedure call. This shared memory protocol is available if the client is connecting to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the same computer.  
+ Local procedure call. This shared memory protocol is available if the client is connecting to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on the same computer.  
   
  **/Q**  
  Runs **SQLdiag** in quiet mode. **/Q** suppresses all prompts, such as password prompts.  
   
  **/G**  
- Runs **SQLdiag** in generic mode. When **/G** is specified, on startup **SQLdiag** does not enforce [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connectivity checks or verify that the user is a member of the **sysadmin** fixed server role. Instead, **SQLdiag** defers to Windows to determine whether a user has the appropriate rights to gather each requested diagnostic.  
+ Runs **SQLdiag** in generic mode. When **/G** is specified, on startup **SQLdiag** does not enforce [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] connectivity checks or verify that the user is a member of the **sysadmin** fixed server role. Instead, **SQLdiag** defers to Windows to determine whether a user has the appropriate rights to gather each requested diagnostic.  
   
- If **/G** is not specified, **SQLdiag** checks to determine whether the user is a member of the Windows **Administrators** group, and will not collect [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diagnostics if the user is not an **Administrators** group member.  
+ If **/G** is not specified, **SQLdiag** checks to determine whether the user is a member of the Windows **Administrators** group, and will not collect [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] diagnostics if the user is not an **Administrators** group member.  
   
  **/R**  
  Registers **SQLdiag** as a service. Any command line arguments that are specified when you register **SQLdiag** as a service are preserved for future runs of the service.  
@@ -228,12 +228,12 @@ manager: "jhubbard"
  **SQLDIAG START /A** *SQLdiag_application_name*  
   
 ## Security Requirements  
- Unless **SQLdiag** is run in generic mode (by specifying the **/G** command line argument), the user who runs **SQLdiag** must be a member of the Windows **Administrators** group and a member of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin** fixed server role. By default, **SQLdiag** connects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using Windows Authentication, but it also supports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.  
+ Unless **SQLdiag** is run in generic mode (by specifying the **/G** command line argument), the user who runs **SQLdiag** must be a member of the Windows **Administrators** group and a member of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **sysadmin** fixed server role. By default, **SQLdiag** connects to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] by using Windows Authentication, but it also supports [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication.  
   
 ## Performance Considerations  
- The performance effects of running **SQLdiag** depend on the type of diagnostic data you have configured it to collect. For example, if you have configured **SQLdiag** to collect [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] tracing information, the more event classes you choose to trace, the more your server performance is affected.  
+ The performance effects of running **SQLdiag** depend on the type of diagnostic data you have configured it to collect. For example, if you have configured **SQLdiag** to collect [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] tracing information, the more event classes you choose to trace, the more your server performance is affected.  
   
- The performance impact of running **SQLdiag** is approximately equivalent to the sum of the costs of collecting the configured diagnostics separately. For example, collecting a trace with **SQLdiag** incurs the same performance cost as collecting it with [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. The performance impact of using **SQLdiag** is negligible.  
+ The performance impact of running **SQLdiag** is approximately equivalent to the sum of the costs of collecting the configured diagnostics separately. For example, collecting a trace with **SQLdiag** incurs the same performance cost as collecting it with [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]. The performance impact of using **SQLdiag** is negligible.  
   
 ## Required Disk Space  
  Because **SQLdiag** can collect different types of diagnostic information, the free disk space that is required to run **SQLdiag** varies. The amount of diagnostic information collected depends on the nature and volume of the workload that the server is processing and may range from a few megabytes to several gigabytes.  
@@ -242,13 +242,13 @@ manager: "jhubbard"
  On startup, **SQLdiag** reads the configuration file and the command line arguments that have been specified. You specify the types of diagnostic information that **SQLdiag** collects in the configuration file. By default, **SQLdiag** uses the SQLDiag.Xml configuration file, which is extracted each time the tool runs and is located in the **SQLdiag** utility startup folder. The configuration file uses the XML schema, SQLDiag_schema.xsd, which is also extracted into the utility startup directory from the executable file each time **SQLdiag** runs.  
   
 ### Editing the Configuration Files  
- You can copy and edit SQLDiag.Xml to change the types of diagnostic data that **SQLdiag** collects. When editing the configuration file always use an XML editor that can validate the configuration file against its XML schema, such as [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. You should not edit SQLDiag.Xml directly. Instead, make a copy of SQLDiag.Xml and rename it to a new file name in the same folder. Then edit the new file, and use the **/I** argument to pass it to **SQLdiag**.  
+ You can copy and edit SQLDiag.Xml to change the types of diagnostic data that **SQLdiag** collects. When editing the configuration file always use an XML editor that can validate the configuration file against its XML schema, such as [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. You should not edit SQLDiag.Xml directly. Instead, make a copy of SQLDiag.Xml and rename it to a new file name in the same folder. Then edit the new file, and use the **/I** argument to pass it to **SQLdiag**.  
   
 #### Editing the Configuration File When SQLdiag Runs as a Service  
  If you have already run **SQLdiag** as a service and need to edit the configuration file, unregister the SQLDIAG service by specifying the **/U** command line argument and then re-register the service by using the **/R** command line argument. Unregistering and re-registering the service removes old configuration information that was cached in the Windows registry.  
   
 ## Output Folder  
- If you do not specify an output folder with the **/O** argument, **SQLdiag** creates a subfolder named SQLDIAG under the **SQLdiag** startup folder. For diagnostic information collection that involves high volume tracing, such as [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , make sure that the output folder is on a local drive with enough space to store the requested diagnostic output.  
+ If you do not specify an output folder with the **/O** argument, **SQLdiag** creates a subfolder named SQLDIAG under the **SQLdiag** startup folder. For diagnostic information collection that involves high volume tracing, such as [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] , make sure that the output folder is on a local drive with enough space to store the requested diagnostic output.  
   
  When **SQLdiag** is restarted, it overwrites the contents of the output folder. To avoid this, specify **/N 2** on the command line.  
   
@@ -257,12 +257,12 @@ manager: "jhubbard"
   
  If you are using **SQLdiag** to diagnose a problem that you can reproduce, wait until you receive this message before you reproduce the problem on your server.  
   
- **SQLdiag** collects most diagnostic data in parallel. All diagnostic information is collected by connecting to tools, such as the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sqlcmd** utility or the Windows command processor, except when information is collected from Windows performance logs and event logs. **SQLdiag** uses one worker thread per computer to monitor the diagnostic data collection of these other tools, often simultaneously waiting for several tools to complete. During the collection process, **SQLdiag** routes the output from each diagnostic to the output folder.  
+ **SQLdiag** collects most diagnostic data in parallel. All diagnostic information is collected by connecting to tools, such as the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **sqlcmd** utility or the Windows command processor, except when information is collected from Windows performance logs and event logs. **SQLdiag** uses one worker thread per computer to monitor the diagnostic data collection of these other tools, often simultaneously waiting for several tools to complete. During the collection process, **SQLdiag** routes the output from each diagnostic to the output folder.  
   
 ## Stopping Data Collection  
  After **SQLdiag** starts collecting diagnostic data, it continues to do so unless you stop it or it is configured to stop at a specified time. You can configure **SQLdiag** to stop at a specified time by using the **/E** argument, which allows you to specify a stop time, or by using the **/X** argument, which causes **SQLdiag** to run in snapshot mode.  
   
- When **SQLdiag** stops, it stops all diagnostics it has started. For example, it stops [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] traces it was collecting, it stops executing [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts it was running, and it stops any sub processes it has spawned during data collection. After diagnostic data collection has completed, **SQLdiag** exits.  
+ When **SQLdiag** stops, it stops all diagnostics it has started. For example, it stops [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] traces it was collecting, it stops executing [!INCLUDE[tsql](../includes/tsql-md.md)] scripts it was running, and it stops any sub processes it has spawned during data collection. After diagnostic data collection has completed, **SQLdiag** exits.  
   
 > [!NOTE]  
 >  Pausing the **SQLdiag** service is not supported. If you attempt to pause the **SQLdiag** service, it stops after it finishes collecting the diagnostics that it was collecting when you paused it. If you restart **SQLdiag** after stopping it, the application restarts and overwrites the output folder. To avoid overwriting the output folder, specify **/N 2** on the command line.  
@@ -289,7 +289,7 @@ SQLDIAG STOP /A Instance1
  To stop the service as quickly as possible, run **SQLDIAG STOP_ABORT** in the utility startup folder. This command aborts any diagnostics collecting currently being performed without waiting for them to finish.  
   
 > [!NOTE]  
->  Use **SQLDiag STOP** or **SQLDIAG STOP_ABORT** to stop the **SQLdiag** service. Do not use the Windows Services Console to stop **SQLdiag** or other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services.  
+>  Use **SQLDiag STOP** or **SQLDIAG STOP_ABORT** to stop the **SQLdiag** service. Do not use the Windows Services Console to stop **SQLdiag** or other [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] services.  
   
 ## Automatically Starting and Stopping SQLdiag  
  To automatically start and stop diagnostic data collection at a specified time, use the **/B***start_time* and **/E***stop_time* arguments, using 24-hour notation. For example, if you are troubleshooting a problem that consistently appears at approximately 02:00:00, you can configure **SQLdiag** to automatically start collecting diagnostic data at 01:00 and automatically stop at 03:00:00. Use the **/B** and **/E** arguments to specify the start and stop time. Use 24-hour notation to specify an exact start and stop date and time with the format YYYYMMDD_HH:MM:SS. To specify a relative start or stop time, prefix the start and stop time with **+** and omit the date portion (YYYYMMDD_) as shown in the following example, which causes **SQLdiag** to wait 1 hour before it starts collecting information, then it collects information for 3 hours before it stops and exits:  
@@ -353,15 +353,15 @@ SQLDIAG START /A Instance1
  Pausing the **SQLdiag** service is not supported.  
   
 ## Running Multiple Instances of SQLdiag  
- Run multiple instances of **SQLdiag** on the same computer by specifying **/A***SQLdiag_application_name* on the command line. This is useful for collecting different sets of diagnostics simultaneously from the same [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. For example, you can configure a named instance of **SQLdiag** to continuously perform lightweight data collection. Then, if a specific problem occurs on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can run the default **SQLdiag** instance to collect diagnostics for that problem, or to gather a set of diagnostics that [!INCLUDE[msCoName](../../includes/msconame-md.md)] Customer Support Services has asked you to gather to diagnose a problem.  
+ Run multiple instances of **SQLdiag** on the same computer by specifying **/A***SQLdiag_application_name* on the command line. This is useful for collecting different sets of diagnostics simultaneously from the same [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance. For example, you can configure a named instance of **SQLdiag** to continuously perform lightweight data collection. Then, if a specific problem occurs on [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], you can run the default **SQLdiag** instance to collect diagnostics for that problem, or to gather a set of diagnostics that [!INCLUDE[msCoName](../includes/msconame-md.md)] Customer Support Services has asked you to gather to diagnose a problem.  
   
 ## Collecting Diagnostic Data from Clustered SQL Server Instances  
- **SQLdiag** supports collecting diagnostic data from clustered [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances. To gather diagnostics from clustered [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances, make sure that **"."** is specified for the **name** attribute of the **\<Machine>** element in the configuration file SQLDiag.Xml and do not specify the **/G** argument on the command line. By default, **"."** is specified for the **name** attribute in the configuration file and the **/G** argument is turned off. Typically, you do not need to edit the configuration file or change the command line arguments when collecting from a clustered [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
+ **SQLdiag** supports collecting diagnostic data from clustered [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instances. To gather diagnostics from clustered [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instances, make sure that **"."** is specified for the **name** attribute of the **\<Machine>** element in the configuration file SQLDiag.Xml and do not specify the **/G** argument on the command line. By default, **"."** is specified for the **name** attribute in the configuration file and the **/G** argument is turned off. Typically, you do not need to edit the configuration file or change the command line arguments when collecting from a clustered [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance.  
   
- When **"."** is specified as the machine name, **SQLdiag** detects that it is running on a cluster, and simultaneously retrieves diagnostic information from all virtual instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that are installed on the cluster. If you want to collect diagnostic information from only one virtual instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is running on a computer, specify that virtual [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for the **name** attribute of the **\<Machine>** element in SQLDiag.Xml.  
+ When **"."** is specified as the machine name, **SQLdiag** detects that it is running on a cluster, and simultaneously retrieves diagnostic information from all virtual instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that are installed on the cluster. If you want to collect diagnostic information from only one virtual instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that is running on a computer, specify that virtual [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] for the **name** attribute of the **\<Machine>** element in SQLDiag.Xml.  
   
 > [!NOTE]  
->  To collect [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] trace information from clustered [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances, administrative shares (ADMIN$) must be enabled on the cluster.  
+>  To collect [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] trace information from clustered [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instances, administrative shares (ADMIN$) must be enabled on the cluster.  
   
 ## See Also  
  [Command Prompt Utility Reference &#40;Database Engine&#41;](../../2014/database-engine/command-prompt-utility-reference-database-engine.md)  

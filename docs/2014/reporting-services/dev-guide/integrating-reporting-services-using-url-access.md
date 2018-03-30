@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: f1014f7d-fafa-4aa8-8bd2-5bdba835d9b6
 caps.latest.revision: 31
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Integrating Reporting Services Using URL Access
@@ -25,14 +25,14 @@ manager: "jhubbard"
  You can use URL access to embed hyperlinks to reports and other report server items in the applications that you develop, whether in a Windows or Web environment.  
   
 > [!NOTE]  
->  The topics in the section provide you with some basic ideas for integration. You can use the information to begin to design and develop your own [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] integration scenarios.  
+>  The topics in the section provide you with some basic ideas for integration. You can use the information to begin to design and develop your own [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] integration scenarios.  
   
 ## In This Section  
  [Using URL Access in a Web Application](../../../2014/reporting-services/dev-guide/using-url-access-in-a-web-application.md)  
- Describes how to use URL access to integrate [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] into a Web environment.  
+ Describes how to use URL access to integrate [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] into a Web environment.  
   
  [Using URL Access in a Windows Application](../../../2014/reporting-services/dev-guide/using-url-access-in-a-windows-application.md)  
- Describes how to use URL access to integrate [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] into a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Win32 environment.  
+ Describes how to use URL access to integrate [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] into a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Win32 environment.  
   
 ## See Also  
  [Integrating Reporting Services into Applications](../../../2014/reporting-services/dev-guide/integrating-reporting-services-into-applications.md)   

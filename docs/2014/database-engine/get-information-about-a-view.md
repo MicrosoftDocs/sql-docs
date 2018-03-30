@@ -23,11 +23,11 @@ helpviewer_keywords:
 ms.assetid: 05a73e33-8f85-4fb6-80c1-1b659e753403
 caps.latest.revision: 30
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Get Information About a View
-  You can gain information about a view’s definition or properties in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. You may need to see the definition of the view to understand how its data is derived from the source tables or to see the data defined by the view.  
+  You can gain information about a view’s definition or properties in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)]. You may need to see the definition of the view to understand how its data is derived from the source tables or to see the data defined by the view.  
   
 > [!IMPORTANT]  
 >  If you change the name of an object referenced by a view, you must modify the view so that its text reflects the new name. Therefore, before renaming an object, display the dependencies of the object first to determine if any views are affected by the proposed change.  
@@ -92,7 +92,7 @@ manager: "jhubbard"
      Indicates if the object was created with the quoted identifier option.  
   
      **Schema bound**  
-     Indicates whether the view is schema-bound. Values are True and False. For information about schema-bound views, see the SCHEMABINDING portion of [CREATE VIEW &#40;Transact-SQL&#41;](../Topic/CREATE%20VIEW%20\(Transact-SQL\).md).  
+     Indicates whether the view is schema-bound. Values are True and False. For information about schema-bound views, see the SCHEMABINDING portion of [CREATE VIEW &#40;Transact-SQL&#41;](~/t-sql/statements/create-view-transact-sql.md).  
   
 #### Getting view properties by using the View Designer tool  
   
@@ -177,7 +177,7 @@ manager: "jhubbard"
   
 #### To get the definition and properties of a view  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -203,11 +203,11 @@ manager: "jhubbard"
     EXEC sp_helptext 'HumanResources.vEmployee';  
     ```  
   
- For more information, see [sys.sql_modules &#40;Transact-SQL&#41;](../Topic/sys.sql_modules%20\(Transact-SQL\).md), [OBJECT_DEFINITION &#40;Transact-SQL&#41;](../Topic/OBJECT_DEFINITION%20\(Transact-SQL\).md) and [sp_helptext &#40;Transact-SQL&#41;](../Topic/sp_helptext%20\(Transact-SQL\).md).  
+ For more information, see [sys.sql_modules &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md), [OBJECT_DEFINITION &#40;Transact-SQL&#41;](~/t-sql/functions/object-definition-transact-sql.md) and [sp_helptext &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-helptext-transact-sql.md).  
   
 #### To get the dependencies of a view  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -230,6 +230,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../Topic/sys.sql_expression_dependencies%20\(Transact-SQL\).md) and [sys.objects &#40;Transact-SQL&#41;](../Topic/sys.objects%20\(Transact-SQL\).md).  
+ For more information, see [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) and [sys.objects &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-objects-transact-sql.md).  
   
   

@@ -16,7 +16,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Validating Data (MDS Add-in for Excel)
-  In the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], when you publish data, two types of validation take place:  
+  In the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)], when you publish data, two types of validation take place:  
   
 -   Any defined business rules are applied to the data.  
   
@@ -25,12 +25,12 @@ manager: "jhubbard"
  In each case, valid data is published to the MDS repository. Data that is not valid is highlighted, and details of the error can be shown in status columns.  
   
 ## When Validation Occurs  
- In the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], validation occurs when you publish new or changed data, or when you manually apply business rules.  
+ In the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)], validation occurs when you publish new or changed data, or when you manually apply business rules.  
   
  When business rules fail, the data is still published to the MDS repository. When input validation fails, the data is not published to the repository.  
   
 ## Validation Statuses  
- In the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], the following validation statuses are possible.  
+ In the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)], the following validation statuses are possible.  
   
 |Status|Description|  
 |------------|-----------------|  
@@ -39,7 +39,7 @@ manager: "jhubbard"
 |Success|All values in the row have passed validation against business rules.|  
   
 ## Input Statuses  
- In the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], the following input statuses are possible  
+ In the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)], the following input statuses are possible  
   
 |Status|Description|  
 |------------|-----------------|  

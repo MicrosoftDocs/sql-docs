@@ -14,16 +14,16 @@ f1_keywords:
 ms.assetid: 019b7c49-dcca-445d-8969-5982a8ccbc1a
 caps.latest.revision: 21
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Oracle Publisher
-  Beginning with [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] allows you to publish data from an Oracle database using snapshot and transactional replication. For more information, see [Oracle Publishing Overview](../../../2014/relational-databases/replication/oracle-publishing-overview.md).  
+  Beginning with [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] allows you to publish data from an Oracle database using snapshot and transactional replication. For more information, see [Oracle Publishing Overview](../../../2014/relational-databases/replication/oracle-publishing-overview.md).  
   
- The Oracle Publisher must use a remote [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributor; this wizard must be run on that server after the necessary Oracle networking software has been installed and tested. For more information, see [Configure an Oracle Publisher](../../../2014/relational-databases/replication/configure-an-oracle-publisher.md).  
+ The Oracle Publisher must use a remote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor; this wizard must be run on that server after the necessary Oracle networking software has been installed and tested. For more information, see [Configure an Oracle Publisher](../../../2014/relational-databases/replication/configure-an-oracle-publisher.md).  
   
 > [!IMPORTANT]  
->  If another administrator configured the Oracle database as a Publisher, after clicking **Next** you will be prompted to enter the password for the replication login used to connect to the Oracle database. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] will then create a mapping between your login and the linked server connection to the Oracle database. You will not be required to enter a password for subsequent connections to the Oracle database.  
+>  If another administrator configured the Oracle database as a Publisher, after clicking **Next** you will be prompted to enter the password for the replication login used to connect to the Oracle database. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will then create a mapping between your login and the linked server connection to the Oracle database. You will not be required to enter a password for subsequent connections to the Oracle database.  
   
 ## Options  
  **Oracle Publishers**  

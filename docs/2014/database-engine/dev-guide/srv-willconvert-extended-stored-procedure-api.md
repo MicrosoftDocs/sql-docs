@@ -29,7 +29,7 @@ manager: "jhubbard"
 # srv_willconvert (Extended Stored Procedure API)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
   
  Determines whether a specific data type conversion is available within the ODS Library.  
   

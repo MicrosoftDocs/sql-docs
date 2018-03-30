@@ -31,7 +31,7 @@ manager: "mblythe"
 |Column name|Type indicator|Length|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |`SERVICE_NAME`|`DBTYPE_WSTR`||The name of the algorithm. This column is provider-specific.|  
-|`SERVICE_TYPE_ID`|`DBTYPE_UI4`||This column contains a bitmap that describes the mining service. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] populates this column with one of the following values:<br /><br /> -   `DM_SERVICETYPE_CLASSIFICATION` (`1`)<br />-   `DM_SERVICETYPE_CLUSTERING` (`2`)|  
+|`SERVICE_TYPE_ID`|`DBTYPE_UI4`||This column contains a bitmap that describes the mining service. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] populates this column with one of the following values:<br /><br /> -   `DM_SERVICETYPE_CLASSIFICATION` (`1`)<br />-   `DM_SERVICETYPE_CLUSTERING` (`2`)|  
 |`SERVICE_DISPLAY_NAME`|`DBTYPE_WSTR`||A localizable display name for the algorithm.|  
 |`SERVICE_GUID`|`DBTYPE_GUID`||The GUID for the algorithm.|  
 |`DESCRIPTION`|`DBTYPE_WSTR`||A user-friendly description of the algorithm.|  

@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: 4107389d-05b6-4aa3-9fa8-95b40cdf05dc
 caps.latest.revision: 12
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Grant a Permission to a Principal
-  This topic describes how to grant permission to a principal in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  This topic describes how to grant permission to a principal in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -55,7 +55,7 @@ manager: "jhubbard"
 1.  In Object Explorer, expand the database that contains the object to which you want to grant permissions.  
   
     > [!NOTE]  
-    >  These steps deal specifically with granting permissions to a stored procedure, but you can use similar steps to add permissions to tables, views, functions, and assemblies, as well as other securables. For more information, see [GRANT &#40;Transact-SQL&#41;](../Topic/GRANT%20\(Transact-SQL\).md)  
+    >  These steps deal specifically with granting permissions to a stored procedure, but you can use similar steps to add permissions to tables, views, functions, and assemblies, as well as other securables. For more information, see [GRANT &#40;Transact-SQL&#41;](~/t-sql/statements/grant-transact-sql.md)  
   
 2.  Expand the **Programmability** folder.  
   
@@ -71,7 +71,7 @@ manager: "jhubbard"
   
 #### To grant permission to a principal  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -86,7 +86,7 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [GRANT &#40;Transact-SQL&#41;](../Topic/GRANT%20\(Transact-SQL\).md) and [GRANT Object Permissions &#40;Transact-SQL&#41;](../Topic/GRANT%20Object%20Permissions%20\(Transact-SQL\).md).  
+ For more information, see [GRANT &#40;Transact-SQL&#41;](~/t-sql/statements/grant-transact-sql.md) and [GRANT Object Permissions &#40;Transact-SQL&#41;](~/t-sql/statements/grant-object-permissions-transact-sql.md).  
   
 ## See Also  
  [Principals &#40;Database Engine&#41;](../../2014/database-engine/principals-database-engine.md)  

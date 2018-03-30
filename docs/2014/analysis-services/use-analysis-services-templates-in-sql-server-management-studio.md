@@ -16,7 +16,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Use Analysis Services Templates in SQL Server Management Studio
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] provides a set of templates to help you quickly create XMLA scripts, DMX or MDX queries, create KPIs in a cube or tabular model, script backup and restore operations, and perform many other tasks. Templates are located in the **Template Explorer** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] provides a set of templates to help you quickly create XMLA scripts, DMX or MDX queries, create KPIs in a cube or tabular model, script backup and restore operations, and perform many other tasks. Templates are located in the **Template Explorer** in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
  This topic includes a list of the templates for multidimensional models and tabular models, and provides examples of how to build an MDX query and XMLA statement by using the Metadata Explorer and the Template Explorer.  
   
@@ -37,7 +37,7 @@ manager: "mblythe"
 ##  <a name="bkmk_usingTE"></a> Open an Analysis Services Template  
  All templates for database engine queries and Analysis Services queries and commands are available in Template Explorer.  
   
- To open **Template Explorer**, select it from the **View** menu. Next, click the cube icon to see a list of the templates that are available for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+ To open **Template Explorer**, select it from the **View** menu. Next, click the cube icon to see a list of the templates that are available for [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
  ![Template Explorer, filtered for Analysis Services](../../2014/analysis-services/media/ssas-templateexplorer.gif "Template Explorer, filtered for Analysis Services")  
   
@@ -57,11 +57,11 @@ manager: "mblythe"
  This example shows you how to create an MDX query in SQL Server Management Studio, using a tabular model database as the data source. To repeat this example on your computer, you can [download the Adventureworks tabular model sample project](http://go.microsoft.com/fwlink/?LinkId=231183).  
   
 > [!WARNING]  
->  You cannot use MDX queries against tabular models that have been deployed in Direct Query mode. You can, however, send equivalent queries by using the DAX table queries with the EVALUATE command. For more information, see [Parameters for DAX Queries](../Topic/Parameters%20for%20DAX%20Queries.md).  
+>  You cannot use MDX queries against tabular models that have been deployed in Direct Query mode. You can, however, send equivalent queries by using the DAX table queries with the EVALUATE command. For more information, see [Parameters for DAX Queries](https://msdn.microsoft.com/library/gg492200(v=sql.120).aspx).  
   
 #### Create an MDX query from a template  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], open the instance that contains the tabular model you want to query. Right-click the database icon, select **New Query**, and then select **MDX**.  
+1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], open the instance that contains the tabular model you want to query. Right-click the database icon, select **New Query**, and then select **MDX**.  
   
 2.  In Template Browser, in Analysis Services Templates, open **MDX**, and then open **Queries**. Drag **Basic Query** to the query window.  
   
@@ -75,10 +75,10 @@ manager: "mblythe"
   
     4.  Replace \<where_clause, mdx_set> with **[Measures].[Internet Total Sales]**.  
   
-4.  You can execute the query as is, but you will probably want to make some changes, such as adding a function to return specific members. For example, type `.members` after **[Product Category].[Product Category Name]**. For more information, see [Using Member Expressions](../Topic/Using%20Member%20Expressions.md).  
+4.  You can execute the query as is, but you will probably want to make some changes, such as adding a function to return specific members. For example, type `.members` after **[Product Category].[Product Category Name]**. For more information, see [Using Member Expressions](~/mdx/using-member-expressions.md).  
   
 ##  <a name="bkmk_backup"></a> Create XMLA Script from a Template  
- The XMLA command templates that are provided in Template Explorer can be used to create scripts for monitoring and updating [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects, regardless of whether the instance is in multidimensional and data mining mode, or tabular mode. The **XMLA** templates include samples for the following types of scripts:  
+ The XMLA command templates that are provided in Template Explorer can be used to create scripts for monitoring and updating [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objects, regardless of whether the instance is in multidimensional and data mining mode, or tabular mode. The **XMLA** templates include samples for the following types of scripts:  
   
 -   Backup, restore, and synchronize operations  
   
@@ -92,7 +92,7 @@ manager: "mblythe"
   
 #### Create a backup command script from a template  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], open the instance that contains the database you want to query. Right-click the database icon, select **New Query**, and then select **XMLA**.  
+1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], open the instance that contains the database you want to query. Right-click the database icon, select **New Query**, and then select **XMLA**.  
   
     > [!WARNING]  
     >  You cannot set the context of an XMLA query by changing the restriction list, or by specifying a database in the connection dialog. You must open the XMLA query window from the database that you want to query.  
@@ -134,7 +134,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
   
 #### Get a list of data sources for a tabular model using a schema rowset query  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], open the instance that contains the database you want to query. Right-click the database icon, select **New Query**, and then select **XMLA**.  
+1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], open the instance that contains the database you want to query. Right-click the database icon, select **New Query**, and then select **XMLA**.  
   
     > [!WARNING]  
     >  You cannot set the context of an XMLA query by changing the restriction list, or by specifying a database in the connection dialog. You must open the XMLA query window from the database that you want to query.  
@@ -203,14 +203,14 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||Sub-select Query|Demonstrates how to create a MDX SELECT statement that retrieves information from a subcube defined by another SELECT statement.|  
 ||With Calculated Member|Demonstrates how to use the MDX WITH clause in a SELECT statement to define a calculated member for an MDX query.|  
 ||With Named Set|Demonstrates how to use the MDX WITH clause in a SELECT statement to define a named for an MDX query.|  
-|XMLA\Management|Backup|Demonstrates how to use the XMLA `Backup` command to back up an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database to a file.|  
+|XMLA\Management|Backup|Demonstrates how to use the XMLA `Backup` command to back up an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database to a file.|  
 ||Cancel|Demonstrates how to use the XMLA `Cancel` command to cancel all running operations on the current session (for users other than administrators or server administrators), database (for administrators), or instance (for server administrators.)|  
-||Create Remote Partition Database|Demonstrates how to use the XMLA `Create` command with the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripting Language (ASSL) Database element to create an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database and a data source for storing remote partitions.|  
-||Delete|Demonstrates how to use the XMLA `Delete` command to delete an existing [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database.|  
+||Create Remote Partition Database|Demonstrates how to use the XMLA `Create` command with the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Scripting Language (ASSL) Database element to create an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database and a data source for storing remote partitions.|  
+||Delete|Demonstrates how to use the XMLA `Delete` command to delete an existing [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database.|  
 ||Process Dimension|Demonstrates how to use the XMLA `Batch` command, combined with the `Parallel` element and the `Process` command, to update the attributes of a dimension by using a parallel batch operation.|  
 ||Process Partition|Demonstrates how to use the XMLA `Batch` command, combined with the `Parallel` element and the `Process` command, to fully process a partition by using a parallel batch operation.|  
-||Restore|Demonstrates how to use the XMLA `Restore` command to restore an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database from an existing backup file.|  
-||Synchronize|Demonstrates how to use the XMLA `Synchronize` command to synchronize another [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database with the current [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database using the SkipMembership option for the SynchronizeSecurity tag.|  
+||Restore|Demonstrates how to use the XMLA `Restore` command to restore an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database from an existing backup file.|  
+||Synchronize|Demonstrates how to use the XMLA `Synchronize` command to synchronize another [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database with the current [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database using the SkipMembership option for the SynchronizeSecurity tag.|  
 |XMLA\Schema Rowsets|Discover Schema Rowsets|Demonstrates how to use the XMLA `Discover` method to retrieve the contents of the DISCOVER_SCHEMA_ROWSETS schema rowset.|  
 |XMLA\Server Status|Connections|Demonstrates how to use the XMLA `Discover` method to retrieve the contents of the DISCOVER_CONNECTIONS schema rowset.|  
 ||Jobs|Demonstrates how to use the XMLA `Discover` method to retrieve the contents of the DISCOVER_JOBS schema rowset.|  
@@ -223,8 +223,8 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||Transactions|Demonstrates how to use the XMLA `Discover` method to retrieve the contents of the DISCOVER_TRANSACTIONS schema rowset.|  
   
 ## See Also  
- [Multidimensional Expressions &#40;MDX&#41; Reference](../Topic/Multidimensional%20Expressions%20\(MDX\)%20Reference.md)   
- [Data Mining Extensions &#40;DMX&#41; Reference](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Reference.md)   
+ [Multidimensional Expressions &#40;MDX&#41; Reference](~/mdx/multidimensional-expressions-mdx-reference.md)   
+ [Data Mining Extensions &#40;DMX&#41; Reference](~/dmx/data-mining-extensions-dmx-reference.md)   
  [Analysis Services Scripting Language &#40;ASSL&#41; Reference](../../2014/analysis-services/dev-guide/analysis-services-scripting-language-assl-reference.md)   
  [Analysis Services Scripting Language &#40;ASSL&#41; Reference](../../2014/analysis-services/dev-guide/analysis-services-scripting-language-assl-reference.md)  
   

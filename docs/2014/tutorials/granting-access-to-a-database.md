@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: 686edfe2-3650-48a6-a2da-9d46fa211ad8
 caps.latest.revision: 11
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Granting Access to a Database
-  Mary now has access to this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], but does not have permission to access the databases. She does not even have access to her default database **TestData** until you authorize her as a database user.  
+  Mary now has access to this instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], but does not have permission to access the databases. She does not even have access to her default database **TestData** until you authorize her as a database user.  
   
  To grant Mary access, switch to the **TestData** database, and then use the CREATE USER statement to map her login to a user named Mary.  
   
@@ -35,7 +35,7 @@ manager: "jhubbard"
   
     ```  
   
-     Now, Mary has access to both [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the `TestData` database.  
+     Now, Mary has access to both [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and the `TestData` database.  
   
 ## Next Task in Lesson  
  [Creating Views and Stored Procedures](../../2014/tutorials/creating-views-and-stored-procedures.md)  

@@ -20,10 +20,10 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Finding More SQL Server Native Client Information
-  For more information about [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client and other types of data access programming, see the following online resources:  
+  For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client and other types of data access programming, see the following online resources:  
   
  [Data Access and Storage Developer Center](http://go.microsoft.com/fwlink?linkid=4173)  
- This site provides technical articles, sample code, and other resources for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client and other data access technologies.  
+ This site provides technical articles, sample code, and other resources for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client and other data access technologies.  
   
  [Data Access Blog](http://go.microsoft.com/fwlink/?LinkId=48617)  
  This blog site provides information about data access technologies and allows you to interact directly with members of the product team.  
@@ -33,7 +33,7 @@ manager: "jhubbard"
   
  The Window DAC SDK includes documentation for ActiveX Data Objects (ADO), OLE DB, and Open Database Connectivity (ODBC).  
   
- Additional information about [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client can be found by searching the [Microsoft Knowledge Base](http://go.microsoft.com/fwlink?linkid=5757).  
+ Additional information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client can be found by searching the [Microsoft Knowledge Base](http://go.microsoft.com/fwlink?linkid=5757).  
   
 ## See Also  
  [SQL Server Native Client Programming](../../../2014/database-engine/dev-guide/sql-server-native-client-programming.md)  

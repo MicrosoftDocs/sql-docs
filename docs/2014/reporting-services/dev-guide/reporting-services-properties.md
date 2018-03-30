@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 8c855194-4c20-4ecc-a328-5137d54b560c
 caps.latest.revision: 33
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Reporting Services Properties
   The report server defines a set of system properties that are global to the report server and a set of item properties that are associated with an individual item stored in the report server database. Properties defined by the report server cannot be deleted, and in some cases they are read-only. An application can extend system properties and item properties by adding additional user-defined properties to the system and item properties.  
   
- The following Web service methods retrieve and set [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] properties.  
+ The following Web service methods retrieve and set [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] properties.  
   
 |Method|Action|  
 |------------|------------|  
@@ -41,8 +41,8 @@ manager: "jhubbard"
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Report Server Item Properties](../../../2014/reporting-services/dev-guide/report-server-item-properties.md)|Describes the item-specific properties in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
-|[Report Server System Properties](../../../2014/reporting-services/dev-guide/report-server-system-properties.md)|Describes the system-specific properties in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
+|[Report Server Item Properties](../../../2014/reporting-services/dev-guide/report-server-item-properties.md)|Describes the item-specific properties in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
+|[Report Server System Properties](../../../2014/reporting-services/dev-guide/report-server-system-properties.md)|Describes the system-specific properties in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
   
 ## See Also  
  [Building Applications Using the Web Service and the .NET Framework](../../../2014/reporting-services/dev-guide/building-applications-using-the-web-service-and-the-net-framework.md)   

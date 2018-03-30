@@ -27,7 +27,7 @@ manager: "jhubbard"
 # Use Property Expressions in Packages
   A property expression is an expression that is assigned to a property to enable dynamic update of the property at run time. For example, a property expression can update the To line that a Send Mail task uses by inserting an e-mail address that is stored in a variable.  
   
- An expression can be added to a package, task, Foreach Loop, For Loop, Sequence, Foreach enumerator, event handler, a package or project level connection manager, or log provider. Any property of these objects that is read/write can implement a property expression. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] also supports the use of property expressions in some custom properties of data flow components. Variables and precedence constraints do not support property expressions, but they include special properties in which you can use expressions.  
+ An expression can be added to a package, task, Foreach Loop, For Loop, Sequence, Foreach enumerator, event handler, a package or project level connection manager, or log provider. Any property of these objects that is read/write can implement a property expression. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] also supports the use of property expressions in some custom properties of data flow components. Variables and precedence constraints do not support property expressions, but they include special properties in which you can use expressions.  
   
  Property expressions can be updated in different ways:  
   
@@ -39,7 +39,7 @@ manager: "jhubbard"
   
 -   Variables in expressions can be updated by the scripts that the Script task and the Script component run.  
   
- The expressions are built using the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] expression language. The expressions can use system or user-defined variables, together with the operators, functions, and type casts that the expression language provides.  
+ The expressions are built using the [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] expression language. The expressions can use system or user-defined variables, together with the operators, functions, and type casts that the expression language provides.  
   
 > [!NOTE]  
 >  The names of user-defined and system variables are case-sensitive.  
@@ -53,7 +53,7 @@ manager: "jhubbard"
  Some properties are set by using values from enumerators. When you reference the enumerator member in a property expression, you must use the numeric value that is equivalent to the friendly name of the enumerator member. For example, if a property expression sets the `LoggingMode` property, which uses a value from the `DTSLoggingMode` enumeration, the property expression must use 0, 1, or 2 instead of the friendly names `Enabled`, `Disabled`, or `UseParentSetting`. For more information, see [Enumerated Constants in Property Expressions](../../2014/integration-services/enumerated-constants-in-property-expressions.md).  
   
 ## Property Expression User Interface  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides a set of tools for building and managing property expressions.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides a set of tools for building and managing property expressions.  
   
 -   The **Expressions** page, found in the custom editors for tasks, the For Loop container, and the Foreach containers. The **Expressions** page lets you edit expressions and view a list of the property expressions that a task, Foreach Loop, or For Loop uses.  
   
@@ -76,23 +76,23 @@ manager: "jhubbard"
 -   [Add or Change a Property Expression](../../2014/integration-services/add-or-change-a-property-expression.md)  
   
 ### Setting Property Expressions of Data Flow Components  
- If you construct a package in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], the properties of data flow components that support property expressions are exposed on the Data Flow task to which they belong. To add, change, and remove the property expressions of data flow components, you right-click the Data Flow task for the data flow to which the data flow components belong and click **Properties**. The Properties window lists the properties of data flow components with which you can use property expressions. For example, to create or modify a property expression for the SamplingValue property of a Row Sampling transformation in a data flow named SampleCustomer, right-click the Data Flow task for the data flow to which the Row Sampling transformation belongs and click **Properties**. The SamplingValue property is listed in the Properties window, and has the format [SampleCustomer].[SamplingValue].  
+ If you construct a package in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], the properties of data flow components that support property expressions are exposed on the Data Flow task to which they belong. To add, change, and remove the property expressions of data flow components, you right-click the Data Flow task for the data flow to which the data flow components belong and click **Properties**. The Properties window lists the properties of data flow components with which you can use property expressions. For example, to create or modify a property expression for the SamplingValue property of a Row Sampling transformation in a data flow named SampleCustomer, right-click the Data Flow task for the data flow to which the Row Sampling transformation belongs and click **Properties**. The SamplingValue property is listed in the Properties window, and has the format [SampleCustomer].[SamplingValue].  
   
- In the Properties window, you add, change, and remove property expressions for data flow components in the same way as property expressions for other [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] object types. The Properties window also provides access to the various dialog boxes and builders that you use to add, change, or remove property expressions for data flow components. For more information about the properties of data flow components that can be updated by property expressions, see [Transformation Custom Properties](../../2014/integration-services/transformation-custom-properties.md).  
+ In the Properties window, you add, change, and remove property expressions for data flow components in the same way as property expressions for other [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] object types. The Properties window also provides access to the various dialog boxes and builders that you use to add, change, or remove property expressions for data flow components. For more information about the properties of data flow components that can be updated by property expressions, see [Transformation Custom Properties](../../2014/integration-services/transformation-custom-properties.md).  
   
 ## Loading Property Expressions  
- You cannot specify or control when property expressions are loaded. The property expressions are evaluated and loaded when the package and the package objects are validated. Validation occurs when you save the package, open the package in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, and run the package.  
+ You cannot specify or control when property expressions are loaded. The property expressions are evaluated and loaded when the package and the package objects are validated. Validation occurs when you save the package, open the package in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, and run the package.  
   
- You will therefore not see the updated values of the properties of the package objects that use property expressions in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer until you save the package, run the package, or reopen the package after adding the property expressions.  
+ You will therefore not see the updated values of the properties of the package objects that use property expressions in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer until you save the package, run the package, or reopen the package after adding the property expressions.  
   
- The property expressions associated with different types of objects—connection managers, log providers, and enumerators—are also loaded when methods specific to that object type are called. For example, the properties of connection managers are loaded before [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] creates an instance of the connection.  
+ The property expressions associated with different types of objects—connection managers, log providers, and enumerators—are also loaded when methods specific to that object type are called. For example, the properties of connection managers are loaded before [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] creates an instance of the connection.  
   
  Property expressions are loaded after package configurations have loaded. For example, variables are updated first by their configurations, and then the property expressions that use the variables are evaluated and loaded. This means that the property expressions always use the values of variables that are set by configurations.  
   
 > [!NOTE]  
 >  You cannot use the `Set` option of the **dtexec** utility to populate a property expression.  
   
- The following table summarizes when property expressions of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] are evaluated and loaded.  
+ The following table summarizes when property expressions of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] are evaluated and loaded.  
   
 |Object type|Load and evaluate|  
 |-----------------|-----------------------|  
@@ -153,7 +153,7 @@ manager: "jhubbard"
  `@[User::myfilenamefull]`  
   
 > [!NOTE]  
->  Property expressions for connection managers can be accessed only by using the Properties window. To view the properties for a connection manager, you must select the connection manager in the **Connection Managers** area of [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer when the Properties window is open, or right-click the connection manager and select **Properties**.  
+>  Property expressions for connection managers can be accessed only by using the Properties window. To view the properties for a connection manager, you must select the connection manager in the **Connection Managers** area of [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer when the Properties window is open, or right-click the connection manager and select **Properties**.  
   
 ### Property Expression for the ConfigString Property of a Text File Log Provider  
  The following property expression can be used to set the ConfigString property of a Text File log provider. The expression uses a single user-defined variable, `varConfigString`, which contains the name of the File connection manager to use. The File connection manager specifies the path of the text file to which log entries are written.  
@@ -161,7 +161,7 @@ manager: "jhubbard"
  `@[User::varConfigString]`  
   
 > [!NOTE]  
->  Property expressions for log providers can be accessed only by using the Properties window. To view the properties of a log provider, you must select the log provider on the **Package Explorer** tab of [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer when the Properties window is open, or right-click the log provider in Package Explorer and click **Properties**.  
+>  Property expressions for log providers can be accessed only by using the Properties window. To view the properties of a log provider, you must select the log provider on the **Package Explorer** tab of [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer when the Properties window is open, or right-click the log provider in Package Explorer and click **Properties**.  
   
 ## External Resources  
   

@@ -28,7 +28,7 @@ manager: "jhubbard"
  The examples of modified format files in this topic are based on the following table and data file.  
   
 ### Sample Table  
- The examples in this topic require that a table named `myTestOrder` be created in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database under the `dbo` schema. To create this table, in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor, execute the following code:  
+ The examples in this topic require that a table named `myTestOrder` be created in the [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] sample database under the `dbo` schema. To create this table, in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Query Editor, execute the following code:  
   
 ```  
 USE AdventureWorks2012;  
@@ -79,7 +79,7 @@ DataField3,DataField2,1,DataField4
 ### Example  
  The following example uses a `BULK INSERT` statement to bulk import data from the `myTestOrder-c.txt` data file into the `myTestOrder` sample table by using the `myTestOrder.fmt` non-XML format file.  
   
- In the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor, execute:  
+ In the [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Query Editor, execute:  
   
 ```  
 USE AdventureWorks2012;  
@@ -122,7 +122,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ### Example  
  The following example uses the `OPENROWSET` bulk rowset provider to import data from the `myTestOrder-c.txt` data file into the `myTestOrder` sample table by using the `myTestOrder.xml` XML format file. The `INSERT… SELECT` statement specifies the column list in the select list.  
   
- In the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor, execute the following code:  
+ In the [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Query Editor, execute the following code:  
   
 ```  
 USE AdventureWorks2012;  

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 5a7f7cfd-7faf-439f-8085-8fd6bf7db355
 caps.latest.revision: 15
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Tutorial: Using the hierarchyid Data Type
-  This tutorial is intended for users who are experienced with [!INCLUDE[tsql](../../includes/tsql-md.md)], but are new to the `hierarchyid` data type.  
+  This tutorial is intended for users who are experienced with [!INCLUDE[tsql](../includes/tsql-md.md)], but are new to the `hierarchyid` data type.  
   
 ## What You Will Learn  
  This tutorial is divided into two lessons:  
   
  [Lesson 1: Converting a Table to a Hierarchical Structure](../../2014/tutorials/lesson-1-converting-a-table-to-a-hierarchical-structure.md)  
- In this lesson, you take an existing employee table that is structured as a parent/child hierarchy and move the data into a new table that represents the hierarchy by using the `hierarchyid` data type. This lesson requires the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database.  
+ In this lesson, you take an existing employee table that is structured as a parent/child hierarchy and move the data into a new table that represents the hierarchy by using the `hierarchyid` data type. This lesson requires the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] sample database.  
   
  [Lesson 2: Creating and Managing Data in a Hierarchical Table](../../2014/tutorials/lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)  
  In this lesson, you create a table by using the `hierarchyid` data type to represent the hierarchy structure. Then, you manipulate the data in the table by using the hierarchical methods.  
@@ -33,17 +33,17 @@ manager: "jhubbard"
 ## Requirements  
  Your system must have the following installed:  
   
--   Any edition of [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later.  
+-   Any edition of [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] or later.  
   
--   Either [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Express.  
+-   Either [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express.  
   
 -   Internet Explorer 6 or a later version.  
   
 ## See Also  
  [Tutorial: Getting Started with the Database Engine](../../2014/tutorials/tutorial-getting-started-with-the-database-engine.md)   
  [Tutorial: Writing Transact-SQL Statements](../../2014/tutorials/tutorial-writing-transact-sql-statements.md)   
- [hierarchyid Data Type Method Reference](../Topic/hierarchyid%20Data%20Type%20Method%20Reference.md)   
+ [hierarchyid Data Type Method Reference](~/t-sql/data-types/hierarchyid-data-type-method-reference.md)   
  [Hierarchical Data &#40;SQL Server&#41;](../../2014/database-engine/hierarchical-data-sql-server.md)   
- [hierarchyid &#40;Transact-SQL&#41;](../Topic/hierarchyid%20\(Transact-SQL\).md)  
+ [hierarchyid &#40;Transact-SQL&#41;](~/t-sql/data-types/hierarchyid-data-type-method-reference.md)  
   
   

@@ -16,7 +16,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Publishing Data (MDS Add-in for Excel)
-  In the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], publish data to the MDS repository when you want to share it with other users. As soon as data is published, it is available for other users of the Add-in to download.  
+  In the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)], publish data to the MDS repository when you want to share it with other users. As soon as data is published, it is available for other users of the Add-in to download.  
   
  When you publish data, any data you’ve added or updated is published to the MDS repository. Data you’ve deleted is not published—you must delete data separately. For more information, see [Delete a Row &#40;MDS Add-in for Excel&#41;](../../2014/master-data-services/delete-a-row-mds-add-in-for-excel.md).  
   

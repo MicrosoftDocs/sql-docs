@@ -20,12 +20,12 @@ manager: "jhubbard"
   
  To predict the types of products that customers tend to purchase at the same time, you will create two mining models using the [Microsoft Association Algorithm](../../2014/analysis-services/microsoft-association-algorithm.md) and two different values for the *MINIMUM_PROBABILTY* parameter.  
   
- *MINIMUM_PROBABILTY* is a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association algorithm parameter that helps to determine the number of rules that a mining model will contain by specifying the minimum probability that a rule must have. For example, setting this value to 0.4 specifies that a rule can be generated only if the combination of products that the rule describes has at least a forty percent probability of occurring.  
+ *MINIMUM_PROBABILTY* is a [!INCLUDE[msCoName](../includes/msconame-md.md)] Association algorithm parameter that helps to determine the number of rules that a mining model will contain by specifying the minimum probability that a rule must have. For example, setting this value to 0.4 specifies that a rule can be generated only if the combination of products that the rule describes has at least a forty percent probability of occurring.  
   
  You will view the effect of changing the *MINIMUM_PROBABILTY* parameter in a later lesson.  
   
 ## ALTER MINING STRUCTURE Statement  
- To add a mining model that contains a nested table to a mining structure, you use the [ALTER MINING STRUCTURE &#40;DMX&#41;](../Topic/ALTER%20MINING%20STRUCTURE%20\(DMX\).md) statement. The code in the statement can be broken into the following parts:  
+ To add a mining model that contains a nested table to a mining structure, you use the [ALTER MINING STRUCTURE &#40;DMX&#41;]((~/dmx/alter-mining-structure-dmx.md) statement. The code in the statement can be broken into the following parts:  
   
 -   Identifying the mining structure  
   
@@ -65,7 +65,7 @@ ALTER MINING STRUCTURE [<mining structure name>]
 ADD MINING MODEL [<mining model name>]  
 ```  
   
- For information about naming an object in Data Mining Extensions (DMX), see [Identifiers &#40;DMX&#41;](../Topic/Identifiers%20\(DMX\).md).  
+ For information about naming an object in Data Mining Extensions (DMX), see [Identifiers &#40;DMX&#41;](~/dmx/identifiers-dmx.md).  
   
  The next lines of the code define the columns in the mining structure that will be used by the mining model:  
   
@@ -100,16 +100,16 @@ ADD MINING MODEL [<mining model name>]
 -   Add an association mining model to the structure using a modified probability  
   
 ## Adding an Association Mining Model to the Structure Using the Default MINIMUM_PROBABILITY  
- The first task is to add a new mining model to the Market Basket mining structure based on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association algorithm using the default value for *MINIMUM_PROBABILITY*.  
+ The first task is to add a new mining model to the Market Basket mining structure based on the [!INCLUDE[msCoName](../includes/msconame-md.md)] Association algorithm using the default value for *MINIMUM_PROBABILITY*.  
   
 #### To add an Association mining model  
   
-1.  In **Object Explorer**, right-click the instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], point to **New Query**, and then click **DMX**.  
+1.  In **Object Explorer**, right-click the instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], point to **New Query**, and then click **DMX**.  
   
      Query Editor opens and contains a new, blank query.  
   
     > [!NOTE]  
-    >  To create a DMX query against a specific [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database, right-click the database instead of the instance.  
+    >  To create a DMX query against a specific [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database, right-click the database instead of the instance.  
   
 2.  Copy the generic example of the `ALTER MINING STRUCTURE` statement into the blank query.  
   
@@ -194,11 +194,11 @@ ADD MINING MODEL [<mining model name>]
 9. On the toolbar, click the **Execute** button.  
   
 ## Adding an Association Mining Model to the Structure Changing the Default MINIMUM_PROBABILITY  
- The next task is to add a new mining model to the Market Basket mining structure based on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association algorithm, and change the default value for MINIMUM_PROBABILITY to 0.01. Changing the parameter will cause the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association algorithm to create more rules.  
+ The next task is to add a new mining model to the Market Basket mining structure based on the [!INCLUDE[msCoName](../includes/msconame-md.md)] Association algorithm, and change the default value for MINIMUM_PROBABILITY to 0.01. Changing the parameter will cause the [!INCLUDE[msCoName](../includes/msconame-md.md)] Association algorithm to create more rules.  
   
 #### To add an Association mining model  
   
-1.  In **Object Explorer**, right-click the instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], point to **New Query**, and then click **DMX**.  
+1.  In **Object Explorer**, right-click the instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], point to **New Query**, and then click **DMX**.  
   
      Query Editor opens and contains a new, blank query.  
   

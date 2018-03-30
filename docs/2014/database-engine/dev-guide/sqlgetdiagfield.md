@@ -21,19 +21,19 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQLGetDiagField
-  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver specifies the following additional diagnostics fields for `SQLGetDiagField`. These fields support rich error reporting for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] applications and are available in all diagnostics records generated on connected ODBC connection handles and ODBC statement handles. The fields are defined in sqlncli.h.  
+  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver specifies the following additional diagnostics fields for `SQLGetDiagField`. These fields support rich error reporting for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applications and are available in all diagnostics records generated on connected ODBC connection handles and ODBC statement handles. The fields are defined in sqlncli.h.  
   
 |Diagnostics record field|Description|  
 |------------------------------|-----------------|  
 |SQL_DIAG_SS_LINE|Reports the line number of a stored procedure generating an error. The value of SQL_DIAG_SS_LINE is meaningful only if SQL_DIAG_SS_PROCNAME returns a value. The value is returned as an unsigned, 16-bit integer.|  
-|SQL_DIAG_SS_MSGSTATE|The state of an error message. For information about the error message state, see [RAISERROR](../Topic/RAISERROR%20\(Transact-SQL\).md). The value is returned as a signed, 32-bit integer.|  
-|SQL_DIAG_SS_PROCNAME|Name of the stored procedure generating an error, if appropriate. The value is returned as a character string. The length of the string (in characters) depends on the version of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. It can be determined by calling [SQLGetInfo](../../../2014/database-engine/dev-guide/sqlgetinfo.md) requesting the value for SQL_MAX_PROCEDURE_NAME_LEN.|  
+|SQL_DIAG_SS_MSGSTATE|The state of an error message. For information about the error message state, see [RAISERROR](~/t-sql/language-elements/raiserror-transact-sql.md). The value is returned as a signed, 32-bit integer.|  
+|SQL_DIAG_SS_PROCNAME|Name of the stored procedure generating an error, if appropriate. The value is returned as a character string. The length of the string (in characters) depends on the version of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. It can be determined by calling [SQLGetInfo](../../../2014/database-engine/dev-guide/sqlgetinfo.md) requesting the value for SQL_MAX_PROCEDURE_NAME_LEN.|  
 |SQL_DIAG_SS_SEVERITY|The severity level of the associated error message. The value is returned as a signed, 32-bit integer.|  
 |SQL_DIAG_SS_SRVNAME|The name of the server on which the error occurred. The value is returned as a character string. The length of the string (in characters) is defined by the SQL_MAX_SQLSERVERNAME macro in sqlncli.h.|  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-specific diagnostic fields that contain character data, SQL_DIAG_SS_PROCNAME and SQL_DIAG_SS_SRVNAME, return that data to the client as null terminated, ANSI, or Unicode strings. If necessary, the count of characters should be adjusted by the character width. Alternately, a portable C data type such as TCHAR or SQLTCHAR can be used to ensure correct program variable length.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-specific diagnostic fields that contain character data, SQL_DIAG_SS_PROCNAME and SQL_DIAG_SS_SRVNAME, return that data to the client as null terminated, ANSI, or Unicode strings. If necessary, the count of characters should be adjusted by the character width. Alternately, a portable C data type such as TCHAR or SQLTCHAR can be used to ensure correct program variable length.  
   
- The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver reports the following additional dynamic function codes that identify the last attempted [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] statement. The dynamic function code is returned in the header (record 0) of the diagnostics record set and is therefore available on every execution (successful or not).  
+ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver reports the following additional dynamic function codes that identify the last attempted [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] statement. The dynamic function code is returned in the header (record 0) of the diagnostics record set and is therefore available on every execution (successful or not).  
   
 |Dynamic function code|Source|  
 |---------------------------|------------|  

@@ -18,7 +18,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Import Cleansing Project Values into a Domain
-  In [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS), you can import data quality knowledge gathered during the cleansing process in a data quality cleansing project or an Integration Services package containing the DQS Cleansing component into a domain. This ensures that trusted knowledge is not lost, and that the knowledge base is continually improved.  
+  In [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS), you can import data quality knowledge gathered during the cleansing process in a data quality cleansing project or an Integration Services package containing the DQS Cleansing component into a domain. This ensures that trusted knowledge is not lost, and that the knowledge base is continually improved.  
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
@@ -35,9 +35,9 @@ manager: "jhubbard"
   
 ##  <a name="Import"></a> Import Cleansing Project Values  
   
-1.  [!INCLUDE[ssDQSInitialStep](../../includes/ssdqsinitialstep-md.md)] [Run the Data Quality Client Application](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Run the Data Quality Client Application](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  In the [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] home screen, open a knowledge base in the Domain Management activity.  
+2.  In the [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] home screen, open a knowledge base in the Domain Management activity.  
   
 3.  If adding values to an existing domain, select the domain in the domain list.  
   

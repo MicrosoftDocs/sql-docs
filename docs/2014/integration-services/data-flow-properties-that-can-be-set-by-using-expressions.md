@@ -68,8 +68,8 @@ manager: "jhubbard"
 |----------------------|--------------|  
 |ADO NET Destination|TableOrViewName property<br /><br /> BatchSize property<br /><br /> CommandTimeout property|  
 |Flat File destination|Header property|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact destination|TableName property|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destination|BulkInsertTableName property<br /><br /> BulkInsertFirstRow property<br /><br /> BulkInsertLastRow property<br /><br /> BulkInsertOrder property<br /><br /> Timeout property|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact destination|TableName property|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] destination|BulkInsertTableName property<br /><br /> BulkInsertFirstRow property<br /><br /> BulkInsertLastRow property<br /><br /> BulkInsertOrder property<br /><br /> Timeout property|  
   
 ## Related Tasks  
   

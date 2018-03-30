@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: ad76799c-4486-4b98-9705-005433041321
 caps.latest.revision: 55
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Group Changes to Related Rows with Logical Records
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
  By default, merge replication processes data changes on a row-by-row basis. In many circumstances this is appropriate, but for some applications, it is essential that related rows be processed as a unit. The logical records feature of merge replication allows you to define a relationship between related rows in different tables so that the rows are processed as a unit.  
   
@@ -89,7 +89,7 @@ manager: "jhubbard"
   
     -   `UDT`  
   
--   Foreign key relationships in published tables cannot be defined with the CASCADE option. For more information, see [CREATE TABLE &#40;Transact-SQL&#41;](../Topic/CREATE%20TABLE%20\(Transact-SQL\).md) and [ALTER TABLE &#40;Transact-SQL&#41;](../Topic/ALTER%20TABLE%20\(Transact-SQL\).md).  
+-   Foreign key relationships in published tables cannot be defined with the CASCADE option. For more information, see [CREATE TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/create-table-transact-sql.md) and [ALTER TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-table-transact-sql.md).  
   
 -   You cannot update any columns that are used in the logical relation clause.  
   
@@ -103,7 +103,7 @@ manager: "jhubbard"
   
 -   The publication must have a compatibility level of 90RTM or greater. For more information, see the "Publication Compatibility Level" section of [Replication Backward Compatibility](../../../2014/relational-databases/replication/replication-backward-compatibility.md).  
   
--   The publication must use native snapshot mode. This is the default unless you are replicating to [!INCLUDE[ssEW](../../../includes/ssew-md.md)], which does not support logical records.  
+-   The publication must use native snapshot mode. This is the default unless you are replicating to [!INCLUDE[ssEW](../../includes/ssew-md.md)], which does not support logical records.  
   
 -   The publication cannot allow Web synchronization. For more information about Web synchronization, see [Web Synchronization for Merge Replication](../../../2014/relational-databases/replication/web-synchronization-for-merge-replication.md).  
   

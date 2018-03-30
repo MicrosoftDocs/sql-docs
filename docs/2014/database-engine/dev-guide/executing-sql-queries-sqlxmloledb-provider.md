@@ -33,7 +33,7 @@ manager: "jhubbard"
  The xml root property provides the single top-level root element for the XML document that is generated.  
   
 > [!NOTE]  
->  In the code, you must provide the name of the instance of Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in the connection string. Also, this example specifies the use of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) for the data provider, which requires additional network client software to be installed. For more information, see [System Requirements for SQL Server Native Client](../../../2014/database-engine/dev-guide/system-requirements-for-sql-server-native-client.md).  
+>  In the code, you must provide the name of the instance of Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in the connection string. Also, this example specifies the use of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) for the data provider, which requires additional network client software to be installed. For more information, see [System Requirements for SQL Server Native Client](../../../2014/database-engine/dev-guide/system-requirements-for-sql-server-native-client.md).  
   
 ```  
 Option Explicit  

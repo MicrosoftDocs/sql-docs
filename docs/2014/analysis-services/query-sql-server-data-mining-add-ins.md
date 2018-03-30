@@ -46,7 +46,7 @@ manager: "mblythe"
  At any time, you can click **Advanced** to switch to the **Data Mining Advanced Query Editor**, which gives you more control over each part of the DMX statement. For more information about how to use the advanced query editing tools, see [Advanced Data Mining Query Editor](../../2014/analysis-services/advanced-data-mining-query-editor.md).  
   
 ### Requirements  
- To use the **Query** wizard, you must be connected to an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Moreover, the server must contain at least one data mining model of an appropriate type. If no mining models are available, you can create one by using the wizards provided in the Data Mining Client for Excel. For information about how to create a new mining mode by using a wizard, see [Creating a Data Mining Model](../../2014/analysis-services/creating-a-data-mining-model.md).  
+ To use the **Query** wizard, you must be connected to an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Moreover, the server must contain at least one data mining model of an appropriate type. If no mining models are available, you can create one by using the wizards provided in the Data Mining Client for Excel. For information about how to create a new mining mode by using a wizard, see [Creating a Data Mining Model](../../2014/analysis-services/creating-a-data-mining-model.md).  
   
 ## See Also  
  [Deploying and Scaling Mining Models &#40;Data Mining Add-ins for Excel&#41;](../../2014/analysis-services/deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)   

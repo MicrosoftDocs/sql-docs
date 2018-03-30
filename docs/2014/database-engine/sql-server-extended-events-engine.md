@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQL Server Extended Events Engine
-  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events engine is a collection of services and objects that:  
+  The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Extended Events engine is a collection of services and objects that:  
   
 -   Enable the definition of events.  
   

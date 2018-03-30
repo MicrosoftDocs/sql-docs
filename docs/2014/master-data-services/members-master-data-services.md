@@ -23,7 +23,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Members (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], members are the physical master data. For example, a member can be a Road-150 bike in a Product entity or a specific customer in a Customer entity.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], members are the physical master data. For example, a member can be a Road-150 bike in a Product entity or a specific customer in a Customer entity.  
   
 ## How Members Relate to Other Model Objects  
  You can think of members as rows in a table. Related members are contained in an entity, and each member is defined by attribute values.  

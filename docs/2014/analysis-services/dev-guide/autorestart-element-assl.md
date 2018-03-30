@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # AutoRestart Element (ASSL)
-  Determines whether a [Trace](../../../2014/analysis-services/dev-guide/trace-element-assl.md) element should automatically restart if the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] service stops and restarts.  
+  Determines whether a [Trace](../../../2014/analysis-services/dev-guide/trace-element-assl.md) element should automatically restart if the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] service stops and restarts.  
   
 ## Syntax  
   

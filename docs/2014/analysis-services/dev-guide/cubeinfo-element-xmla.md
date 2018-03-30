@@ -63,7 +63,7 @@ manager: "mblythe"
  The `CubeInfo` element contains one `Cube` element for each cube referenced in the multidimensional dataset.  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] returns only a single `Cube` element in this collection because [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] does not support statements that reference multiple cubes in the FROM clause of the Multidimensional Expressions (MDX) language.  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] returns only a single `Cube` element in this collection because [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] does not support statements that reference multiple cubes in the FROM clause of the Multidimensional Expressions (MDX) language.  
   
 ## See Also  
  [Properties &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/properties-xmla.md)  

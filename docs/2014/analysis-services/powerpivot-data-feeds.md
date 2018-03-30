@@ -20,7 +20,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # PowerPivot Data Feeds
-  A data feed provides a stream of data on demand from an online data source to a client application. In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], you can use data feeds to add data from an Atom-aware Web service or application to a PowerPivot data source in an Excel workbook.  
+  A data feed provides a stream of data on demand from an online data source to a client application. In [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], you can use data feeds to add data from an Atom-aware Web service or application to a PowerPivot data source in an Excel workbook.  
   
  This section provides information to help you make best use of data feeds to get existing corporate or workgroup data into PowerPivot workbooks. It also provides information on how share data feeds with others in your organization, and how data feeds are constructed and used in case you need to troubleshoot any problems that arise.  
   

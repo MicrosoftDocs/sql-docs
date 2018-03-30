@@ -12,16 +12,16 @@ ms.topic: "article"
 ms.assetid: e7c7a8ef-f561-4258-a7b6-c445dba69f87
 caps.latest.revision: 5
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Configure Editors (SQL Server Management Studio)
-  You can customize the operation of the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] editors by configuring the options for each editor.  
+  You can customize the operation of the [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] editors by configuring the options for each editor.  
   
 ## Settng Editor Options  
  Most of the editor options are set by using the **Tools** menu and selecting **Options…** to display an **Options** dialog. In the **Options** dialog, open the **Text Editor** node in the left pane to set code and text editing options. The nodes under Text Editor apply to specific editors:  
   
-1.  **All Languages** – options set using this node apply to all of the [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] editors. You can override these settings by using the other nodes to set different options for a specific editor.  
+1.  **All Languages** – options set using this node apply to all of the [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] editors. You can override these settings by using the other nodes to set different options for a specific editor.  
   
 2.  **Plain Text** – options set using this node apply to the MDX, DMX, and text editors.  
   

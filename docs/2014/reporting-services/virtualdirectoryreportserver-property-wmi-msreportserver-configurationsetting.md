@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 3e0e860a-afe9-47ce-ae6a-f8c7ca26494f
 caps.latest.revision: 9
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # VirtualDirectoryReportServer Property (WMI MSReportServer_ConfigurationSetting)
@@ -37,7 +37,7 @@ public string VirtualDirectoryReportServer;
  [MSReportServer_ConfigurationSetting Class](../../2014/reporting-services/msreportserver-configurationsetting-class.md)  
   
 ## Requirements  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../includes/ssrswminmspca-md.md)]  
   
 ## See Also  
  [MSReportServer_ConfigurationSetting Members](../../2014/reporting-services/msreportserver-configurationsetting-members.md)  

@@ -45,7 +45,7 @@ manager: "jhubbard"
  You can log the calls that the OLE DB Command transformation makes to external data providers. You can use this logging capability to troubleshoot the connections and commands to external data sources that the OLE DB Command transformation performs. To log the calls that the OLE DB Command transformation makes to external data providers, enable package logging and select the **Diagnostic** event at the package level. For more information, see [Troubleshooting Tools for Package Execution](../../2014/integration-services/troubleshooting-tools-for-package-execution.md).  
   
 ## Related Tasks  
- You can configure the transformation by either using the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or the object model. For details about configuring the transformation using the [!INCLUDE[ssIS](../../includes/ssis-md.md)] designer, see  [Configure the OLE DB Command Transformation](../../2014/integration-services/configure-the-ole-db-command-transformation.md). See the Developer Guide for details about programmatically configuring this transformation.  
+ You can configure the transformation by either using the [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer or the object model. For details about configuring the transformation using the [!INCLUDE[ssIS](../includes/ssis-md.md)] designer, see  [Configure the OLE DB Command Transformation](../../2014/integration-services/configure-the-ole-db-command-transformation.md). See the Developer Guide for details about programmatically configuring this transformation.  
   
 ## See Also  
  [Data Flow](../../2014/integration-services/data-flow.md)   

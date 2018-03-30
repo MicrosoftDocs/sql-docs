@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: dd78fd8f-56e3-4582-9abd-6bc25c91e075
 caps.latest.revision: 37
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Join Filters
@@ -25,7 +25,7 @@ manager: "jhubbard"
   
  Join filters typically follow the primary key/foreign key relationships defined for the tables to which they are applied, but they are not limited strictly to primary key/foreign key relationships. The join filter can be based on any logic that compares related data in two tables.  
   
- Consider the following tables in the [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)] sample database, which are related through primary key to foreign key relationships:  
+ Consider the following tables in the [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] sample database, which are related through primary key to foreign key relationships:  
   
 -   **HumanResources.Employee**  
   

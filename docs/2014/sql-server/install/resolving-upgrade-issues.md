@@ -36,7 +36,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Resolving Upgrade Issues
-  The topics in this section describe upgrade issues that can be detected as well as those that cannot be detected, but that might affect the upgrade or post-upgrade experience. The issues are organized by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] component.  
+  The topics in this section describe upgrade issues that can be detected as well as those that cannot be detected, but that might affect the upgrade or post-upgrade experience. The issues are organized by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] component.  
   
 ## In This Section  
   
@@ -53,10 +53,10 @@ manager: "jhubbard"
 -   [SQL Server Agent Upgrade Issues](../../../2014/sql-server/install/sql-server-agent-upgrade-issues.md)  
   
 ## Issues That Prevent Upgrading  
- A few configurations or settings in a previous version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] can prevent you from upgrading to [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. If Setup detects these issues when you install [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], Setup stops the upgrade process and requests that you run Upgrade Advisor and fix any blocking issues.  
+ A few configurations or settings in a previous version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can prevent you from upgrading to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. If Setup detects these issues when you install [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], Setup stops the upgrade process and requests that you run Upgrade Advisor and fix any blocking issues.  
   
-### [!INCLUDE[ssDE](../../../includes/ssde-md.md)]  
- If the following tasks are listed on the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] upgrade report, you must perform the required actions before you upgrade to [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]:  
+### [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
+ If the following tasks are listed on the [!INCLUDE[ssDE](../../includes/ssde-md.md)] upgrade report, you must perform the required actions before you upgrade to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]:  
   
 -   [Detach database ID 32767](../../../2014/sql-server/install/detach-database-id-32767.md)  
   
@@ -67,6 +67,6 @@ manager: "jhubbard"
 -   [Use sp_rename to rename duplicate index name](../../../2014/sql-server/install/use-sp-rename-to-rename-duplicate-index-name.md)  
   
 ## See Also  
- [SQL Server 2014 Upgrade Advisor &#91;new&#93;](../Topic/SQL%20Server%202014%20Upgrade%20Advisor%20[new].md)  
+ [SQL Server 2014 Upgrade Advisor &#91;new&#93;](~/2014/sql-server/install/sql-server-2014-upgrade-advisor.md)  
   
   

@@ -33,11 +33,11 @@ manager: "jhubbard"
   
 -   Positioned updates.  
   
- ODBC applications rarely declare and open cursors or use any cursor-related [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements. ODBC automatically opens a cursor for every result set returned from an SQL statement. The characteristics of the cursors are controlled by statement attributes set with [SQLSetStmtAttr](../../../2014/database-engine/dev-guide/sqlsetstmtattr.md) before the SQL statement is executed. The ODBC API functions for processing result sets support the full range of cursor functionality, including fetching, scrolling, and positioned updates.  
+ ODBC applications rarely declare and open cursors or use any cursor-related [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. ODBC automatically opens a cursor for every result set returned from an SQL statement. The characteristics of the cursors are controlled by statement attributes set with [SQLSetStmtAttr](../../../2014/database-engine/dev-guide/sqlsetstmtattr.md) before the SQL statement is executed. The ODBC API functions for processing result sets support the full range of cursor functionality, including fetching, scrolling, and positioned updates.  
   
- This is a comparison of how [!INCLUDE[tsql](../../../includes/tsql-md.md)] scripts and ODBC applications work with cursors.  
+ This is a comparison of how [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts and ODBC applications work with cursors.  
   
-|Action|[!INCLUDE[tsql](../../../includes/tsql-md.md)]|ODBC|  
+|Action|[!INCLUDE[tsql](../../includes/tsql-md.md)]|ODBC|  
 |------------|------------------------|----------|  
 |Define cursor behavior|Specify through DECLARE CURSOR parameters|Set cursor attributes by using [SQLSetStmtAttr](../../../2014/database-engine/dev-guide/sqlsetstmtattr.md)|  
 |Open a cursor|DECLARE CURSOR OPEN *cursor_name*|**SQLExecDirect** or **SQLExecute**|  
@@ -45,7 +45,7 @@ manager: "jhubbard"
 |Positioned update|WHERE CURRENT OF clause on UPDATE or DELETE|**SQLSetPos**|  
 |Close a cursor|CLOSE *cursor_name* DEALLOCATE|[SQLCloseCursor](../../../2014/database-engine/dev-guide/sqlclosecursor.md)|  
   
- The server cursors implemented in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] support the functionality of the ODBC cursor model. The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client driver uses server cursors to support the cursor functionality of the ODBC API.  
+ The server cursors implemented in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] support the functionality of the ODBC cursor model. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client driver uses server cursors to support the cursor functionality of the ODBC API.  
   
 ## In This Section  
   
@@ -65,11 +65,11 @@ manager: "jhubbard"
   
 ## See Also  
  [SQL Server Native Client &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/sql-server-native-client-odbc.md)   
- [CLOSE &#40;Transact-SQL&#41;](../Topic/CLOSE%20\(Transact-SQL\).md)   
+ [CLOSE &#40;Transact-SQL&#41;](~/t-sql/language-elements/close-transact-sql.md)   
  [Cursors](../../../2014/database-engine/cursors.md)   
- [DEALLOCATE &#40;Transact-SQL&#41;](../Topic/DEALLOCATE%20\(Transact-SQL\).md)   
- [DECLARE CURSOR &#40;Transact-SQL&#41;](../Topic/DECLARE%20CURSOR%20\(Transact-SQL\).md)   
- [FETCH &#40;Transact-SQL&#41;](../Topic/FETCH%20\(Transact-SQL\).md)   
- [OPEN &#40;Transact-SQL&#41;](../Topic/OPEN%20\(Transact-SQL\).md)  
+ [DEALLOCATE &#40;Transact-SQL&#41;](~/t-sql/language-elements/deallocate-transact-sql.md)   
+ [DECLARE CURSOR &#40;Transact-SQL&#41;](~/t-sql/language-elements/declare-cursor-transact-sql.md)   
+ [FETCH &#40;Transact-SQL&#41;](~/t-sql/language-elements/fetch-transact-sql.md)   
+ [OPEN &#40;Transact-SQL&#41;](~/t-sql/language-elements/open-transact-sql.md)  
   
   

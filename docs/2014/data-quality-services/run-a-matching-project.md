@@ -20,7 +20,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Run a Matching Project
-  This topic describes how to perform data matching in [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS). The matching process identifies clusters of matching records based upon matching rules in the matching policy, designates one record from each cluster as the survivor based upon a survivorship rule, and exports the results. DQS performs the matching process, also called de-duplication, in a computer-assisted process, but you create matching rules interactively, and you select the survivorship rule from several choices, so you control the matching process.  
+  This topic describes how to perform data matching in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). The matching process identifies clusters of matching records based upon matching rules in the matching policy, designates one record from each cluster as the survivor based upon a survivorship rule, and exports the results. DQS performs the matching process, also called de-duplication, in a computer-assisted process, but you create matching rules interactively, and you select the survivorship rule from several choices, so you control the matching process.  
   
  Matching is performed in three stages: a mapping process in which you identify the data source and map domains to the data source, a matching process in which you run the matching analysis, and a survivorship and export process in which you designate the survivorship rule and export the matching results. Each of these processes is performed on a separate page of the Matching activity wizard, enabling you to move back and forth to different pages, to re-run the process, and to close out of a specific matching process and then return to the same stage of the process. DQS provides you with statistics about the source data, the matching rules, and the matching results that enable you to make informed decisions about matching, and refine the matching process.  
   
@@ -32,7 +32,7 @@ manager: "jhubbard"
   
 -   You must have created a knowledge base with a matching policy consisting of one or more matching rules.  
   
--   Microsoft Excel must be installed on the [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] computer if the source data to be matched is in an Excel file. Otherwise, you will not be able to select the Excel file in the mapping stage. The files created by Microsoft Excel can have an extension of .xlsx, .xls, or .csv. If the 64-bit version of Excel is used, only Excel 2003 files (.xls) are supported; Excel 2007 or 2010 files (.xlsx) are not supported. If you are using 64-bit version of Excel 2007 or 2010, save the file as an .xls file or a .csv file, or install a 32-bit version of Excel instead.  
+-   Microsoft Excel must be installed on the [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] computer if the source data to be matched is in an Excel file. Otherwise, you will not be able to select the Excel file in the mapping stage. The files created by Microsoft Excel can have an extension of .xlsx, .xls, or .csv. If the 64-bit version of Excel is used, only Excel 2003 files (.xls) are supported; Excel 2007 or 2010 files (.xlsx) are not supported. If you are using 64-bit version of Excel 2007 or 2010, save the file as an .xls file or a .csv file, or install a 32-bit version of Excel instead.  
   
 ###  <a name="Security"></a> Security  
   
@@ -42,9 +42,9 @@ manager: "jhubbard"
 ##  <a name="StartingaMatchingProject"></a> First Step: Starting a Matching Project  
  You perform the matching activity in a data quality project that you create in the DQS client application.  
   
-1.  [!INCLUDE[ssDQSInitialStep](../../includes/ssdqsinitialstep-md.md)] [Run the Data Quality Client Application](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Run the Data Quality Client Application](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  In the [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] home screen, click **New Data Quality Project** to perform matching in a new data quality project. Enter a name for the data quality project, enter a description, and select the knowledge base that you want to use for matching in **Use knowledge base**. Click **Matching** for the activity. Click **Next** to proceed to the mapping stage.  
+2.  In the [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] home screen, click **New Data Quality Project** to perform matching in a new data quality project. Enter a name for the data quality project, enter a description, and select the knowledge base that you want to use for matching in **Use knowledge base**. Click **Matching** for the activity. Click **Next** to proceed to the mapping stage.  
   
 3.  Click **Open data quality project** to perform matching in an existing data quality project. Select the project and then click **Next**. (Or you can click a project under **Recent Data Quality Project**.) If you open a matching project that was closed, you will proceed to the stage that the matching project activity was closed in (as indicated by the **State** column in the project table or in the project name under **Recent Data Quality Project**). If you open a matching project that was finished, you will go to the **Export** page (and you cannot go back to previous screens).  
   
@@ -53,7 +53,7 @@ manager: "jhubbard"
   
 1.  On the **Map** page, to run matching on a database, leave **Data Source** as **SQL Server**, select the database that you want to run matching on, and then select the table. The source database must be present in the same SQL Server instance as the DQS server. Otherwise, it will not appear in the drop-down list.  
   
-2.  To run matching on the data in an Excel spreadsheet, select **Excel File** for **Data Source**, click **Browse** and select the Excel file, and leave **Use first row as header** selected if appropriate. In **Worksheet**, select the worksheet in the Excel file that will be the source of the data. Excel must be installed on the [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] computer to select an Excel file. If Excel is not installed on the [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] computer, the **Browse** button will not be available, and you will be notified beneath this text box that Excel is not installed.  
+2.  To run matching on the data in an Excel spreadsheet, select **Excel File** for **Data Source**, click **Browse** and select the Excel file, and leave **Use first row as header** selected if appropriate. In **Worksheet**, select the worksheet in the Excel file that will be the source of the data. Excel must be installed on the [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] computer to select an Excel file. If Excel is not installed on the [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] computer, the **Browse** button will not be available, and you will be notified beneath this text box that Excel is not installed.  
   
 3.  Under **Mappings**, select a field in the data source for **Source Column**, and then select the corresponding domain. Repeat for all domains that you use in the matching process. Each domain that is defined in the matching policy must be mapped to the appropriate source column. The Map page displays the domains that have been defined in the matching policy and the rules in the matching policy in the right-hand pane.  
   
@@ -151,9 +151,9 @@ manager: "jhubbard"
   
     -   If you selected **SQL Server** as the data destination, a new table with the specified name will be created in the selected database.  
   
-    -   If you selected **CSV File** as the data destination, a .csv file will be created at the location on the [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] computer with the file name that you specified earlier in the **Csv file name** box.  
+    -   If you selected **CSV File** as the data destination, a .csv file will be created at the location on the [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] computer with the file name that you specified earlier in the **Csv file name** box.  
   
-    -   If you selected **Excel File** as the data destination, an .xlsx file will be created at the location on the [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] computer with the file name that you specified earlier in the **Excel file name** box.  
+    -   If you selected **Excel File** as the data destination, an .xlsx file will be created at the location on the [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] computer with the file name that you specified earlier in the **Excel file name** box.  
   
 10. Verify that the export completed successfully, and then click **Close**.  
   

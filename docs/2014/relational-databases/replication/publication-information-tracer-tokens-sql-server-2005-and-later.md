@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: a115ba95-17ae-45df-91bd-5a1a35f3745f
 caps.latest.revision: 23
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Publication Information, Tracer Tokens (Transactional Publication, SQL Server 2005 and Later)

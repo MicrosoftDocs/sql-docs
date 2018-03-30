@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: 050c00e1-78bd-4d9c-affe-40e22feb4d94
 caps.latest.revision: 19
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # New Peer Initialization (Peer-to-Peer Replication)
@@ -30,17 +30,17 @@ manager: "jhubbard"
   
      When a publication is enabled for peer-to-peer replication, the **allow_initialize_from_backup** publication property is set. Replication immediately starts to track changes in the first publication database. Therefore, these changes can be delivered to a restored database at one or more peers if the **initialize with backup** option is selected. Click the **Browse** button to locate the backup used, and replication will read the log sequence number (LSN) from the backup. All changes in the first publication database that have a higher LSN will be delivered to each peer.  
   
-     This option might not be available if you are creating or adding to a topology that includes [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. The following table shows whether the option is available when you are adding a node to an existing topology.  
+     This option might not be available if you are creating or adding to a topology that includes [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. The following table shows whether the option is available when you are adding a node to an existing topology.  
   
     |New node|First node|Additional nodes|Option|  
     |--------------|----------------|----------------------|------------|  
-    |[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]|[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]|[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]|Disabled|  
-    |[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]|[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]|None|Disabled|  
-    |[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]|[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]|Disabled|  
-    |[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]|[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]|None|Enabled|  
-    |[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]|None|Enabled|  
-    |[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]|Enabled|  
-    |[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]|[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]|None|Enabled|  
+    |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Disabled|  
+    |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|None|Disabled|  
+    |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Disabled|  
+    |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|None|Enabled|  
+    |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|None|Enabled|  
+    |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|Enabled|  
+    |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|None|Enabled|  
   
 ## See Also  
  [Administer a Peer-to-Peer Topology &#40;Replication Transact-SQL Programming&#41;](../../../2014/relational-databases/replication/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   

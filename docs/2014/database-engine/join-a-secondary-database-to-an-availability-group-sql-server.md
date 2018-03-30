@@ -24,7 +24,7 @@ ms.author: "jroth"
 manager: "jhubbard"
 ---
 # Join a Secondary Database to an Availability Group (SQL Server)
-  This topic explains how to join a secondary database to an AlwaysOn availability group by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. After you prepare a secondary database for a secondary replica, you need to join the database to the availability group as soon as possible. This will start data movement from the corresponding primary database to the secondary database.  
+  This topic explains how to join a secondary database to an AlwaysOn availability group by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. After you prepare a secondary database for a secondary replica, you need to join the database to the availability group as soon as possible. This will start data movement from the corresponding primary database to the secondary database.  
   
 -   **Before you begin:**  
   
@@ -76,7 +76,7 @@ manager: "jhubbard"
   
 1.  Connect to the server instance that hosts the secondary replica.  
   
-2.  Use the [SET HADR clause of the ALTER DATABASE](../Topic/ALTER%20DATABASE%20SET%20HADR%20\(Transact-SQL\).md) statement, as follows:  
+2.  Use the [SET HADR clause of the ALTER DATABASE](~/t-sql/statements/alter-database-transact-sql-set-hadr.md) statement, as follows:  
   
      ALTER DATABASE *database_name* SET HADR AVAILABILITY GROUP = *group_name*  
   
@@ -89,7 +89,7 @@ manager: "jhubbard"
     ```  
   
     > [!NOTE]  
-    >  To see this [!INCLUDE[tsql](../../includes/tsql-md.md)] statement used in context, see [Create an Availability Group &#40;Transact-SQL&#41;](../../2014/database-engine/create-an-availability-group-transact-sql.md).  
+    >  To see this [!INCLUDE[tsql](../includes/tsql-md.md)] statement used in context, see [Create an Availability Group &#40;Transact-SQL&#41;](../../2014/database-engine/create-an-availability-group-transact-sql.md).  
   
 ##  <a name="PowerShellProcedure"></a> Using PowerShell  
  **To join a secondary database to an availability group**  
@@ -107,7 +107,7 @@ manager: "jhubbard"
     ```  
   
     > [!NOTE]  
-    >  To view the syntax of a cmdlet, use the `Get-Help` cmdlet in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../2014/database-engine/get-help-sql-server-powershell.md).  
+    >  To view the syntax of a cmdlet, use the `Get-Help` cmdlet in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../2014/database-engine/get-help-sql-server-powershell.md).  
   
  **To set up and use the SQL Server PowerShell provider**  
   
@@ -120,8 +120,8 @@ manager: "jhubbard"
 -   [Manually Prepare a Secondary Database for an Availability Group &#40;SQL Server&#41;](../../2014/database-engine/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
 ## See Also  
- [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../Topic/ALTER%20AVAILABILITY%20GROUP%20\(Transact-SQL\).md)   
+ [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](~/t-sql/statements/alter-availability-group-transact-sql.md)   
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/overview-of-alwayson-availability-groups-sql-server.md)   
- [Troubleshoot AlwaysOn Availability Groups Configuration &#40;SQL Server&#41;deleted](../Topic/Troubleshoot%20AlwaysOn%20Availability%20Groups%20Configuration%20\(SQL%20Server\)deleted.md)  
+ [Troubleshoot AlwaysOn Availability Groups Configuration &#40;SQL Server&#41;deleted](troubleshoot-alwayson-availability-groups-configuration-sql-server.md)  
   
   

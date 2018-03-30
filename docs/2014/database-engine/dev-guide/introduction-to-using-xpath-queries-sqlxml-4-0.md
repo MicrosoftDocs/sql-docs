@@ -81,7 +81,7 @@ manager: "jhubbard"
   
 -   **Error handling and security**  
   
-     Depending on the schema and XPath query expression that are used, [!INCLUDE[tsql](../../../includes/tsql-md.md)] errors could be exposed to users under certain conditions.  
+     Depending on the schema and XPath query expression that are used, [!INCLUDE[tsql](../../includes/tsql-md.md)] errors could be exposed to users under certain conditions.  
   
  The tables in the following sections provide details about how the implementation of XPath queries in SQLXML 4.0 differs from the W3C specification in these areas.  
   

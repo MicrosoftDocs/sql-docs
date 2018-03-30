@@ -52,9 +52,9 @@ manager: "jhubbard"
   
 |Possible bottleneck area|Effects on the server|  
 |------------------------------|---------------------------|  
-|Memory usage|Insufficient memory allocated or available to Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] degrades performance. Data must be read from the disk rather than directly from the data cache. Microsoft Windows operating systems perform excessive paging by swapping data to and from the disk as the pages are needed.|  
-|CPU utilization|A chronically high CPU utilization rate may indicate that [!INCLUDE[tsql](../../includes/tsql-md.md)] queries need to be tuned or that a CPU upgrade is needed.|  
-|Disk input/output (I/O)|[!INCLUDE[tsql](../../includes/tsql-md.md)] queries can be tuned to reduce unnecessary I/O; for example, by employing indexes.|  
+|Memory usage|Insufficient memory allocated or available to Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] degrades performance. Data must be read from the disk rather than directly from the data cache. Microsoft Windows operating systems perform excessive paging by swapping data to and from the disk as the pages are needed.|  
+|CPU utilization|A chronically high CPU utilization rate may indicate that [!INCLUDE[tsql](../includes/tsql-md.md)] queries need to be tuned or that a CPU upgrade is needed.|  
+|Disk input/output (I/O)|[!INCLUDE[tsql](../includes/tsql-md.md)] queries can be tuned to reduce unnecessary I/O; for example, by employing indexes.|  
 |User connections|Too many users may be accessing the server simultaneously causing performance degradation.|  
 |Blocking locks|Incorrectly designed applications can cause locks and hamper concurrency, thus causing longer response times and lower transaction throughput rates.|  
   

@@ -12,11 +12,11 @@ ms.topic: "article"
 ms.assetid: 80aedab6-2be4-409d-88ba-2107e96345fe
 caps.latest.revision: 15
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Report Server Properties (Advanced Tab)
-  This service is the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. If custom properties are defined, they appear on this tab, with their values.  
+  This service is the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. If custom properties are defined, they appear on this tab, with their values.  
   
 ## Options  
  **Customer Feedback Reporting**  
@@ -26,7 +26,7 @@ manager: "jhubbard"
  Displays the location where memory dumps are placed in case of an error.  
   
  **Error Reporting**  
- When set to **Yes**, the Dr. Watson program forwards information to either [!INCLUDE[msCoName](../../../includes/msconame-md.md)] or your error server if a serious failure occurs. For more information on Error Reporting, search Books Online for the topic, "Error and Usage Report Settings."  
+ When set to **Yes**, the Dr. Watson program forwards information to either [!INCLUDE[msCoName](../../includes/msconame-md.md)] or your error server if a serious failure occurs. For more information on Error Reporting, search Books Online for the topic, "Error and Usage Report Settings."  
   
  **Instance ID**  
  Indicates the instance that uses this service.  

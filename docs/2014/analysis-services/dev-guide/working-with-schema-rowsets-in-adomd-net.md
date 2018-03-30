@@ -71,7 +71,7 @@ manager: "mblythe"
 ## Example  
  In the following example, the GetActions function takes a connection, the cube name, a coordinate, and a coordinate type, retrieves an [MDSCHEMA_ACTIONS Rowset](../../../2014/analysis-services/dev-guide/mdschema-actions-rowset.md), and returns the actions available on the selected coordinate.  
   
- [!code-csharp[Adomd.NetClient#GetActions](../../../snippets/csharp/SQL14/adomd.net/adomd.netclient/cs/adomdexample.cs#getactions)]  
+ [!code-csharp[Adomd.NetClient#GetActions](../../snippets/csharp/SQL14/adomd.net/adomd.netclient/cs/adomdexample.cs#getactions)]  
   
 ## See Also  
  [Retrieving Metadata from an Analytical Data Source](../../../2014/analysis-services/dev-guide/retrieving-metadata-from-an-analytical-data-source.md)  

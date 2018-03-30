@@ -28,10 +28,10 @@ manager: "jhubbard"
   
 |Data column name|Data type|Description|Column ID|Filterable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|ApplicationName|`nvarchar`|Name of the client application that created the connection to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This column is populated with the values passed by the application rather than the displayed name of the program.|10|Yes|  
+|ApplicationName|`nvarchar`|Name of the client application that created the connection to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. This column is populated with the values passed by the application rather than the displayed name of the program.|10|Yes|  
 |BinaryData|`image`|Lock resource identifier.|2|Yes|  
 |ClientProcessID|`int`|ID assigned by the host computer to the process where the client application is running. This data column is populated if the client provides the client process ID.|9|Yes|  
-|DatabaseID|`int`|ID of the database in which the timeout occurred. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] displays the name of the database if the `ServerName` data column is captured in the trace and the server is available. Determine the value for a database by using the DB_ID function.|3|Yes|  
+|DatabaseID|`int`|ID of the database in which the timeout occurred. [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] displays the name of the database if the `ServerName` data column is captured in the trace and the server is available. Determine the value for a database by using the DB_ID function.|3|Yes|  
 |DatabaseName|`nvarchar`|Name of the database in which the time-out occurred.|35|Yes|  
 |Duration|`bigint`|Amount of time (in microseconds) taken by the event.|13|Yes|  
 |EndTime|`datetime`|Time at which the event ended. This column is not populated for starting event classes, such as **SQL:BatchStarting** or **SP:Starting**.|15|Yes|  
@@ -39,9 +39,9 @@ manager: "jhubbard"
 |EventSequence|`int`|Sequence of a given event within the request.|51|No|  
 |GroupID|`int`|ID of the workload group where the SQL Trace event fires.|66|Yes|  
 |HostName|`nvarchar`|Name of the computer on which the client is running. This data column is populated if the client provides the host name. To determine the host name, use the HOST_NAME function.|8|Yes|  
-|IntegerData2|`int`|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|55|Yes|  
+|IntegerData2|`int`|[!INCLUDE[ssInternalOnly](../includes/ssinternalonly-md.md)]|55|Yes|  
 |IsSystem|`int`|Indicates whether the event occurred on a system process or a user process. 1 = system, 0 = user.|60|Yes|  
-|LoginName|`nvarchar`|Name of the login of the user (either [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security login or the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows login credentials in the form of DOMAIN\username).|11|Yes|  
+|LoginName|`nvarchar`|Name of the login of the user (either [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] security login or the [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows login credentials in the form of DOMAIN\username).|11|Yes|  
 |LoginSid|`image`|Security identification number (SID) of the logged-in user. You can find this information in the sys.server_principals catalog view. Each SID is unique for each login in the server.|41|Yes|  
 |Mode|`int`|State that the event has received or is requesting.<br /><br /> 0=NULL<br /><br /> 1=Sch-S<br /><br /> 2=Sch-M<br /><br /> 3=S<br /><br /> 4=U<br /><br /> 5=X<br /><br /> 6=IS<br /><br /> 7=IU<br /><br /> 8=IX<br /><br /> 9=SIU<br /><br /> 10=SIX<br /><br /> 11=UIX<br /><br /> 12=BU<br /><br /> 13=RangeS-S<br /><br /> 14=RangeS-U<br /><br /> 15=RangeI-N<br /><br /> 16=RangeI-S<br /><br /> 17=RangeI-U<br /><br /> 18=RangeI-X<br /><br /> 19=RangeX-S<br /><br /> 20=RangeX-U<br /><br /> 21=RangeX-X|32|Yes|  
 |NTDomainName|`nvarchar`|Windows domain to which the user belongs.|7|Yes|  
@@ -50,8 +50,8 @@ manager: "jhubbard"
 |ObjectID2|`bigint`|ID of the related object or entity, if available and applicable.|56|Yes|  
 |OwnerID|`int`|1=TRANSACTION<br /><br /> 2=CURSOR<br /><br /> 3=SESSION<br /><br /> 4=SHARED_TRANSACTION_WORKSPACE<br /><br /> 5=EXCLUSIVE_TRANSACTION_WORKSPACE|58|Yes|  
 |RequestID|`int`|ID of the request containing the statement.|49|Yes|  
-|ServerName|`nvarchar`|Name of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] being traced.|26|No|  
-|SessionLoginName|`nvarchar`|Login name of the user who originated the session. For example, if you connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using Login1 and execute a statement as Login2, `SessionLoginName` shows Login1 and `LoginName` shows Login2. This column displays both [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Windows logins.|64|Yes|  
+|ServerName|`nvarchar`|Name of the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] being traced.|26|No|  
+|SessionLoginName|`nvarchar`|Login name of the user who originated the session. For example, if you connect to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using Login1 and execute a statement as Login2, `SessionLoginName` shows Login1 and `LoginName` shows Login2. This column displays both [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and Windows logins.|64|Yes|  
 |SPID|`int`|ID of the session on which the event occurred.|12|Yes|  
 |StartTime|`datetime`|Time at which the event started, if available.|14|Yes|  
 |TextData|`ntext`|Text value dependent on the event class captured in the trace.|1|Yes|  
@@ -60,7 +60,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Lock:Timeout Event Class](../../2014/database-engine/lock-timeout-event-class.md)   
- [sp_trace_setevent &#40;Transact-SQL&#41;](../Topic/sp_trace_setevent%20\(Transact-SQL\).md)   
- [sys.dm_tran_locks &#40;Transact-SQL&#41;](../Topic/sys.dm_tran_locks%20\(Transact-SQL\).md)  
+ [sp_trace_setevent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
+ [sys.dm_tran_locks &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)  
   
   

@@ -25,7 +25,7 @@ manager: "jhubbard"
   
 #### To create a singleton query by using the neural network model  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the solution that contains the model that you want to use.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the solution that contains the model that you want to use.  
   
 2.  In Data Mining Designer, click the **Mining Model Prediction** tab.  
   
@@ -71,7 +71,7 @@ manager: "jhubbard"
   
 1.  In Solution Explorer, right-click **Data Source Views**, and then select **New Data Source View**.  
   
-2.  In the Data Source View wizard, select [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] as the data source, and then click **Next**.  
+2.  In the Data Source View wizard, select [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] as the data source, and then click **Next**.  
   
 3.  On the **Select Tables and Views** page, click **Next** without selecting any tables.  
   

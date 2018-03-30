@@ -17,7 +17,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Custom Workflow XML Description (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../../../includes/ssmdsshort-md.md)], the <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A>method is called by SQL Server MDS Workflow Integration Service when a workflow starts. This method receives metadata and data about the item that triggered the workflow business rule as a block of XML. For example code that implements a workflow handler, see [Custom Workflow Example &#40;Master Data Services&#41;](../../../2014/master-data-services/dev-guide/custom-workflow-example-master-data-services.md).  
+  In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], the <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A>method is called by SQL Server MDS Workflow Integration Service when a workflow starts. This method receives metadata and data about the item that triggered the workflow business rule as a block of XML. For example code that implements a workflow handler, see [Custom Workflow Example &#40;Master Data Services&#41;](../../../2014/master-data-services/dev-guide/custom-workflow-example-master-data-services.md).  
   
  The following example shows what the XML that is sent to the workflow handler might look like:  
   
@@ -63,10 +63,10 @@ manager: "jhubbard"
   
 |Tag|Description|  
 |---------|-----------------|  
-|\<Type>|The text you entered in the **Workflow type** text box in [!INCLUDE[ssMDSmdm](../../../includes/ssmdsmdm-md.md)] to identify which custom workflow assembly to load.|  
-|\<SendData>|A Boolean value controlled by the **Include member data in the message** checkbox in [!INCLUDE[ssMDSmdm](../../../includes/ssmdsmdm-md.md)]. A value of 1 means that the \<MemberData> section is sent; otherwise the \<MemberData> section is not sent.|  
-|<Server_URL>|The text you entered in the **Workflow site** text box in [!INCLUDE[ssMDSmdm](../../../includes/ssmdsmdm-md.md)].|  
-|<Action_ID>|The text you entered in the **Workflow name** text box in [!INCLUDE[ssMDSmdm](../../../includes/ssmdsmdm-md.md)].|  
+|\<Type>|The text you entered in the **Workflow type** text box in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] to identify which custom workflow assembly to load.|  
+|\<SendData>|A Boolean value controlled by the **Include member data in the message** checkbox in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]. A value of 1 means that the \<MemberData> section is sent; otherwise the \<MemberData> section is not sent.|  
+|<Server_URL>|The text you entered in the **Workflow site** text box in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].|  
+|<Action_ID>|The text you entered in the **Workflow name** text box in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].|  
 |\<MemberData>|Contains the data of the member that triggered the workflow action. This is included only if the value of \<SendData> is 1.|  
 |\<Enter*xxx*>|This set of tags contains metadata about the creation of the member, such as when it was created and who created it.|  
 |\<LastChg*xxx*>|This set of tags contains metadata about the last change made to the member, such as when the change was made and who made it.|  

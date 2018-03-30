@@ -21,20 +21,20 @@ manager: "jhubbard"
   
  This sample does not require an ODBC data source, but the sample runs, by default, on the local instance of SQL Server.  
   
- This sample will not work with any version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] earlier than [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  
+ This sample will not work with any version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] earlier than [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
  For more information about spatial storage, see [Spatial Data &#40;SQL Server&#41;](../../../2014/database-engine/spatial-data-sql-server.md).  
   
 ## Example  
- The first ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) code listing creates a table used by this sample.  
+ The first ([!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing creates a table used by this sample.  
   
  Compile the second (C++) code listing with odbc32.lib and user32.lib. Make sure your INCLUDE environment variable includes the directory that contains sqlncli.h.  
   
  If you will build and run this sample as a 32-bit application on a 64-bit operating system, you must create the ODBC data source with the ODBC Administrator in %windir%\SysWOW64\odbcad32.exe.  
   
- This sample connects to your computer's default [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. To connect to a named instance, change the definition of the ODBC data source to specify the instance using the following format: server\namedinstance. By default, [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] installs to a named instance.  
+ This sample connects to your computer's default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. To connect to a named instance, change the definition of the ODBC data source to specify the instance using the following format: server\namedinstance. By default, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] installs to a named instance.  
   
- The third ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) code listing deletes the table used by this sample.  
+ The third ([!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing deletes the table used by this sample.  
   
 ```  
 use tempdb  

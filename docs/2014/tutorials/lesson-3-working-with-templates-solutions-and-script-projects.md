@@ -12,11 +12,11 @@ ms.topic: "article"
 ms.assetid: edac948a-18bb-4301-9504-945056727f63
 caps.latest.revision: 22
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Lesson 3: Working with Templates, Solutions, and Script Projects
-  Using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], you can create custom templates, and create solutions and script projects.  
+  Using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], you can create custom templates, and create solutions and script projects.  
   
  This lesson contains the following topics:  
   

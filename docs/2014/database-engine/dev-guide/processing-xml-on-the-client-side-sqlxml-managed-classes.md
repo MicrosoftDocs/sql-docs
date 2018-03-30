@@ -40,7 +40,7 @@ Go
  This C# application executes the stored procedure and specifies the FOR XML AUTO option in specifying the CommandText value. In the application, the ClientSideXml property of the SqlXmlCommand object is set to true. This allows you to execute preexisting stored procedures that return a rowset and apply an XML transformation to it on the client.  
   
 > [!NOTE]  
->  In the code, you must provide the name of the instance of Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in the connection string.  
+>  In the code, you must provide the name of the instance of Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in the connection string.  
   
 ```  
 using System;  
@@ -76,7 +76,7 @@ public static int Main(String[] args)
 }  
 ```  
   
- To test this example, you must have the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework installed on your computer.  
+ To test this example, you must have the [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework installed on your computer.  
   
 ### To test the application  
   

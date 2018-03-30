@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Intrinsic Member Properties (MDX)
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] exposes intrinsic properties on dimension members that you can include in a query to return additional data or metadata for use in a custom application, or to assist in model investigation or construction. If you are using the SQL Server client tools, you can view intrinsic properties in SQL Server Management Studio (SSMS).  
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] exposes intrinsic properties on dimension members that you can include in a query to return additional data or metadata for use in a custom application, or to assist in model investigation or construction. If you are using the SQL Server client tools, you can view intrinsic properties in SQL Server Management Studio (SSMS).  
   
  Intrinsic properties include `ID`, `KEY`, `KEYx`, and `NAME`, which are properties exposed by every member, at any level. You can also return positional information, such as `LEVEL_NUMBER` or `PARENT_UNIQUE_NAME`, among others.  
   
@@ -27,12 +27,12 @@ manager: "mblythe"
  For an introduction to using and viewing dimension member properties, see [Viewing SSAS Member Properties within an MDX Query Window in SSMS](http://go.microsoft.com/fwlink/?LinkId=317362).  
   
 > [!NOTE]  
->  As a provider that is compliant with the OLAP section of the OLE DB specification dated March 1999 (2.6), [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supports the intrinsic member properties listed in this topic.  
+>  As a provider that is compliant with the OLAP section of the OLE DB specification dated March 1999 (2.6), [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supports the intrinsic member properties listed in this topic.  
 >   
->  Providers other than [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] may support additional intrinsic member properties. For more information about the intrinsic member properties supported by other providers, refer to the documentation that comes with those providers.  
+>  Providers other than [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] may support additional intrinsic member properties. For more information about the intrinsic member properties supported by other providers, refer to the documentation that comes with those providers.  
   
 ## Types of Member Properties  
- The intrinsic member properties supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] are of two types:  
+ The intrinsic member properties supported by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] are of two types:  
   
  Context sensitive member properties  
  These member properties must be used in the context of a specific hierarchy or level, and supply values for each member of the specified dimension or level.  
@@ -52,7 +52,7 @@ manager: "mblythe"
   
 -   You use the `PROPERTIES` keyword to query for the properties.  
   
- The following sections describe both the various context sensitive and non-context sensitive intrinsic member properties available in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], and how to use the `PROPERTIES` keyword with each type of property.  
+ The following sections describe both the various context sensitive and non-context sensitive intrinsic member properties available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], and how to use the `PROPERTIES` keyword with each type of property.  
   
 ## Context Sensitive Member Properties  
  All dimension members and level members support a list of intrinsic member properties that are context sensitive. The following table lists these context-sensitive properties.  
@@ -82,7 +82,7 @@ manager: "mblythe"
 ## Non-Context Sensitive Member Properties  
  All members support a list of intrinsic member properties that are the same regardless of context. These properties provide additional information that can be used by applications to enhance the user's experience.  
   
- The following table lists the non-context sensitive intrinsic properties supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+ The following table lists the non-context sensitive intrinsic properties supported by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
 > [!NOTE]  
 >  Columns in the MEMBERS schema rowset support the intrinsic member properties listed in the following table. For more information about the `MEMBERS` schema rowset, see [MDSCHEMA_MEMBERS Rowset](../../2014/analysis-services/dev-guide/mdschema-members-rowset.md).  
@@ -204,16 +204,16 @@ FROM [Adventure Works]
 ```  
   
 ## See Also  
- [PeriodsToDate &#40;MDX&#41;](../Topic/PeriodsToDate%20\(MDX\).md)   
- [Children &#40;MDX&#41;](../Topic/Children%20\(MDX\).md)   
- [Hierarchize &#40;MDX&#41;](../Topic/Hierarchize%20\(MDX\).md)   
- [Count &#40;Set&#41; &#40;MDX&#41;](../Topic/Count%20\(Set\)%20\(MDX\).md)   
- [Filter &#40;MDX&#41;](../Topic/Filter%20\(MDX\).md)   
- [AddCalculatedMembers &#40;MDX&#41;](../Topic/AddCalculatedMembers%20\(MDX\).md)   
- [DrilldownLevel &#40;MDX&#41;](../Topic/DrilldownLevel%20\(MDX\).md)   
- [Properties &#40;MDX&#41;](../Topic/Properties%20\(MDX\).md)   
- [PrevMember &#40;MDX&#41;](../Topic/PrevMember%20\(MDX\).md)   
+ [PeriodsToDate &#40;MDX&#41;](~/mdx/periodstodate-mdx.md)   
+ [Children &#40;MDX&#41;](~/mdx/children-mdx.md)   
+ [Hierarchize &#40;MDX&#41;](~/mdx/hierarchize-mdx.md)   
+ [Count &#40;Set&#41; &#40;MDX&#41;](~/mdx/count-set-mdx.md)   
+ [Filter &#40;MDX&#41;](~/mdx/filter-mdx.md)   
+ [AddCalculatedMembers &#40;MDX&#41;](~/mdx/addcalculatedmembers-mdx.md)   
+ [DrilldownLevel &#40;MDX&#41;](~/mdx/drilldownlevel-mdx.md)   
+ [Properties &#40;MDX&#41;](~/mdx/properties-mdx.md)   
+ [PrevMember &#40;MDX&#41;](~/mdx/prevmember-mdx.md)   
  [Using Member Properties &#40;MDX&#41;](../../2014/analysis-services/using-member-properties-mdx.md)   
- [MDX Function Reference &#40;MDX&#41;](../Topic/MDX%20Function%20Reference%20\(MDX\).md)  
+ [MDX Function Reference &#40;MDX&#41;](~/mdx/mdx-function-reference-mdx.md)  
   
   

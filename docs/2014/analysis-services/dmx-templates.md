@@ -40,7 +40,7 @@ manager: "mblythe"
   
      Be aware, however, that if you switch views when working in the query editor, any information that you had in the previous view will be cleared. Before changing views, save your work by copying and pasting the DMX statements to a separate file.  
   
-8.  Click **Finish**. In the **Choose Destination** dialog  box, specify where you want the result saved. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  Click **Finish**. In the **Choose Destination** dialog  box, specify where you want the result saved. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 > [!NOTE]  
 >  If you executed a statement successfully, the DMX statement that you sent to the server is also recorded in the **Trace** window. For more information about how to use the Trace feature, see [Trace &#40;Data Mining Client for Excel&#41;](../../2014/analysis-services/trace-data-mining-client-for-excel.md).  
@@ -72,7 +72,7 @@ manager: "mblythe"
   
  **Create**  
   
- Use these templates to build custom models or data structures. You are not limited to the models supported by the wizards – you can use any data mining algorithm supported by the instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] that you are connected to, including plug-in algorithms.  
+ Use these templates to build custom models or data structures. You are not limited to the models supported by the wizards – you can use any data mining algorithm supported by the instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] that you are connected to, including plug-in algorithms.  
   
 -   Mining model  
   
@@ -121,7 +121,7 @@ manager: "mblythe"
 -   Train mining structure  
   
 ### Requirements  
- Depending on which template you are using, you might need administrative permissions to access the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server and execute the query.  
+ Depending on which template you are using, you might need administrative permissions to access the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] server and execute the query.  
   
 ## See Also  
  [Creating a Data Mining Model](../../2014/analysis-services/creating-a-data-mining-model.md)  

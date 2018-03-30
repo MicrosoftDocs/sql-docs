@@ -21,12 +21,12 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Loading and Running a Remote Package Programmatically
-  To run remote packages from a local computer that does not have [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] installed, start the packages so that they run on the remote computer on which [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] is installed. You do this by having the local computer use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, a Web service, or a remote component to start the packages on the remote computer. If you try to start the remote packages directly from the local computer, the packages will load onto and try to run from the local computer. If the local computer does not have [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] installed, the packages will not run.  
+  To run remote packages from a local computer that does not have [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installed, start the packages so that they run on the remote computer on which [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] is installed. You do this by having the local computer use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, a Web service, or a remote component to start the packages on the remote computer. If you try to start the remote packages directly from the local computer, the packages will load onto and try to run from the local computer. If the local computer does not have [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installed, the packages will not run.  
   
 > [!NOTE]  
->  You cannot run packages outside [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] on a client computer that does not have [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] installed, and the terms of your [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] licensing might not let you install [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] on additional computers. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] is a server component and is not redistributable to client computers.  
+>  You cannot run packages outside [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] on a client computer that does not have [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installed, and the terms of your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] licensing might not let you install [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] on additional computers. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] is a server component and is not redistributable to client computers.  
   
- Alternately, you can run a remote package from a local computer that has [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] installed. For more information, see [Loading and Running a Local Package Programmatically](../../../2014/integration-services/dev-guide/loading-and-running-a-local-package-programmatically.md).  
+ Alternately, you can run a remote package from a local computer that has [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installed. For more information, see [Loading and Running a Local Package Programmatically](../../../2014/integration-services/dev-guide/loading-and-running-a-local-package-programmatically.md).  
   
 ##  <a name="top"></a> Running a Remote Package on the Remote Computer  
  As mentioned above, there are multiple ways in which you can run a remote package on a remote server:  
@@ -38,12 +38,12 @@ manager: "jhubbard"
  Almost all the methods that are used in this topic to load and save packages require a reference to the `Microsoft.SqlServer.ManagedDTS` assembly. The exception is the ADO.NET approach demonstrated in this topic for executing the **sp_start_job** stored procedure, which requires only a reference to `System.Data`. After you add the reference to the `Microsoft.SqlServer.ManagedDTS` assembly in a new project, import the <xref:Microsoft.SqlServer.Dts.Runtime> namespace with a `using` or `Imports` statement.  
   
 ###  <a name="agent"></a> Using SQL Server Agent to Run a Remote Package Programmatically on the Server  
- The following code sample demonstrates how to programmatically use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent to run a remote package on the server. The code sample calls the system stored procedure, **sp_start_job**, which launches a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent job. The job that the procedure launches is named `RunSSISPackage`, and this job is on the remote computer. The `RunSSISPackage` job then runs the package on the remote computer.  
+ The following code sample demonstrates how to programmatically use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to run a remote package on the server. The code sample calls the system stored procedure, **sp_start_job**, which launches a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job. The job that the procedure launches is named `RunSSISPackage`, and this job is on the remote computer. The `RunSSISPackage` job then runs the package on the remote computer.  
   
 > [!NOTE]  
->  The return value of the **sp_start_job** stored procedure indicates whether the stored procedure was able to start the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent job successfully. The return value does not indicate whether the package succeeded or failed.  
+>  The return value of the **sp_start_job** stored procedure indicates whether the stored procedure was able to start the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job successfully. The return value does not indicate whether the package succeeded or failed.  
   
- For information on troubleshooting packages that are run from [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent jobs, see the Microsoft article, [An SSIS package does not run when you call the SSIS package from a SQL Server Agent job step](http://support.microsoft.com/kb/918760).  
+ For information on troubleshooting packages that are run from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs, see the Microsoft article, [An SSIS package does not run when you call the SSIS package from a SQL Server Agent job step](http://support.microsoft.com/kb/918760).  
   
 ### Sample Code  
   
@@ -145,7 +145,7 @@ namespace LaunchSSISPackageAgent_CS
  
   
 ###  <a name="service"></a> Using a Web Service or Remote Component to Run a Remote Package Programmatically  
- The previous solution for running packages programmatically on the server does not require any custom code on the server. However, you may prefer a solution that does not rely on SQL Server Agent to execute packages. The following example demonstrates a Web service that can be created on the server to start [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] packages locally, and a test application that can be used to call the Web service from a client computer. If you prefer to create a remote component instead of a Web service, you can use the same code logic with very few changes in a remote component. However a remote component may require more extensive configuration than a Web service.  
+ The previous solution for running packages programmatically on the server does not require any custom code on the server. However, you may prefer a solution that does not rely on SQL Server Agent to execute packages. The following example demonstrates a Web service that can be created on the server to start [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages locally, and a test application that can be used to call the Web service from a client computer. If you prefer to create a remote component instead of a Web service, you can use the same code logic with very few changes in a remote component. However a remote component may require more extensive configuration than a Web service.  
   
 > [!IMPORTANT]  
 >  With its default settings for authentication and authorization, a Web service generally does not have sufficient permissions to access SQL Server or the file system to load and execute packages. You may have to assign appropriate permissions to the Web service by configuring its authentication and authorization settings in the **web.config** file and assigning database and file system permissions as appropriate. A complete discussion of Web, database, and file system permissions is beyond the scope of this topic.  
@@ -157,7 +157,7 @@ namespace LaunchSSISPackageAgent_CS
  The following code samples show how to create and test the Web service.  
   
 #### Creating the Web Service  
- An [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] package can be loaded directly from a file, directly from SQL Server, or from the SSIS Package Store, which manages package storage in both SQL Server and special file system folders. This sample supports all the available options by using a `Select Case` or `switch` construct to select the appropriate syntax for starting the package and to concatenate the input arguments appropriately. The LaunchPackage Web service method returns the result of package execution as an integer instead of a <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> value so that client computers do not require a reference to any [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] assemblies.  
+ An [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package can be loaded directly from a file, directly from SQL Server, or from the SSIS Package Store, which manages package storage in both SQL Server and special file system folders. This sample supports all the available options by using a `Select Case` or `switch` construct to select the appropriate syntax for starting the package and to concatenate the input arguments appropriately. The LaunchPackage Web service method returns the result of package execution as an integer instead of a <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> value so that client computers do not require a reference to any [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] assemblies.  
   
 ###### To create a Web service to run packages on the server programmatically  
   
@@ -330,7 +330,7 @@ public class LaunchSSISPackageServiceCS : System.Web.Services.WebService
 ```  
   
 #### Testing the Web Service  
- The following sample console application uses the Web service to run a package. The LaunchPackage method of the Web service returns the result of package execution as an integer instead of a <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> value so that client computers do not require a reference to any [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] assemblies. The sample creates a private enumeration whose values mirror the <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> values to report the results of execution.  
+ The following sample console application uses the Web service to run a package. The LaunchPackage method of the Web service returns the result of package execution as an integer instead of a <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> value so that client computers do not require a reference to any [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] assemblies. The sample creates a private enumeration whose values mirror the <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> values to report the results of execution.  
   
 ###### To create a console application to test the Web service  
   
@@ -423,7 +423,7 @@ namespace LaunchSSISPackageSvcTestCS
   
 ||  
 |-|  
-|![Integration Services icon (small)](../../../2014/integration-services/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
+|![Integration Services icon (small)](../../../2014/integration-services/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
   
 ## See Also  
  [Understanding the Differences between Local and Remote Execution](../../../2014/integration-services/dev-guide/understanding-the-differences-between-local-and-remote-execution.md)   

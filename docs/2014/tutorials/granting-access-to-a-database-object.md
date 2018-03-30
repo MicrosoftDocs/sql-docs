@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: a44d9bbf-f58e-4734-b7f4-eb3b492b777b
 caps.latest.revision: 14
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Granting Access to a Database Object
@@ -41,7 +41,7 @@ manager: "jhubbard"
  [Summary: Configuring Permissions on Database Objects](../../2014/tutorials/summary-configuring-permissions-on-database-objects.md)  
   
 ## See Also  
- [GRANT &#40;Transact-SQL&#41;](../Topic/GRANT%20\(Transact-SQL\).md)   
- [REVOKE &#40;Transact-SQL&#41;](../Topic/REVOKE%20\(Transact-SQL\).md)  
+ [GRANT &#40;Transact-SQL&#41;](~/t-sql/statements/grant-transact-sql.md)   
+ [REVOKE &#40;Transact-SQL&#41;](~/t-sql/statements/revoke-transact-sql.md)  
   
   

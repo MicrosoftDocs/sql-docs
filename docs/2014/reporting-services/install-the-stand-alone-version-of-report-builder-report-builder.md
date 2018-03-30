@@ -12,11 +12,11 @@ ms.topic: "article"
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 caps.latest.revision: 10
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Install the Stand-Alone Version of Report Builder (Report Builder)
-  You can install Report Builder from the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] feature pack on the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=168472) or a location such as public folder to which the ReportBuilder3_x86.msi, the Windows Installer Package for Report Builder, has been downloaded.  
+  You can install Report Builder from the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] feature pack on the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=168472) or a location such as public folder to which the ReportBuilder3_x86.msi, the Windows Installer Package for Report Builder, has been downloaded.  
   
  You can also perform a command line installation of Report Builder and provide arguments to customize the installation. In addition to the standard MSI intrinsic parameters, you can use the custom parameters that Report Builder provides: RBINSTALLDIR and REPORTSERVERURL. RBINSTALLDIR specifies the root installation folder for Report Builder. REPORTSERVERURL specifies the default report server that Report Builder uses to save reports on the server.  
   

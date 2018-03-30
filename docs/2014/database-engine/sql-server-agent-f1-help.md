@@ -16,6 +16,6 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQL Server Agent F1 Help
-  This section contains the F1 Help for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. These topics are available from the user interface by pressing the F1 key or by clicking Help in dialog boxes.  
+  This section contains the F1 Help for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent. These topics are available from the user interface by pressing the F1 key or by clicking Help in dialog boxes.  
   
   

@@ -16,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: c7317eec-c0e9-479e-a4a7-83b6b6c58d59
 caps.latest.revision: 28
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Modify or Rename DML Triggers
-  This topic describes how to modify or rename a DML trigger in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  This topic describes how to modify or rename a DML trigger in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -46,19 +46,19 @@ manager: "jhubbard"
   
 ###  <a name="Recommendations"></a> Recommendations  
   
--   We recommend you do not use the [sp_rename](../Topic/sp_rename%20\(Transact-SQL\).md) stored procedure to rename a trigger. Changing any part of an object name can break scripts and stored procedures. Renaming a trigger does not change the name of the corresponding object name in the definition column of the [sys.sql_modules](../Topic/sys.sql_modules%20\(Transact-SQL\).md) catalog view. We recommend that you drop and and re-create the trigger instead.  
+-   We recommend you do not use the [sp_rename](~/relational-databases/system-stored-procedures/sp-rename-transact-sql.md) stored procedure to rename a trigger. Changing any part of an object name can break scripts and stored procedures. Renaming a trigger does not change the name of the corresponding object name in the definition column of the [sys.sql_modules](~/relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) catalog view. We recommend that you drop and and re-create the trigger instead.  
   
 -   If you change the name of an object referenced by a DML trigger, you must modify the trigger so that its text reflects the new name. Therefore, before you rename an object, display the dependencies of the object first to determine whether any triggers are affected by the proposed change.  
   
 -   A DML trigger can also be modified to encrypt its definition.  
   
--   To view the dependencies of a trigger, you can use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or the following function and catalog views:  
+-   To view the dependencies of a trigger, you can use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or the following function and catalog views:  
   
-    -   [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../Topic/sys.sql_expression_dependencies%20\(Transact-SQL\).md)  
+    -   [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
   
-    -   [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../Topic/sys.dm_sql_referenced_entities%20\(Transact-SQL\).md)  
+    -   [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)  
   
-    -   [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../Topic/sys.dm_sql_referencing_entities%20\(Transact-SQL\).md)  
+    -   [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)  
   
 ###  <a name="Security"></a> Security  
   
@@ -69,7 +69,7 @@ manager: "jhubbard"
   
 #### To modify a DML trigger  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)] and then expand that instance.  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)] and then expand that instance.  
   
 2.  Expand the database that you want, expand **Tables**, and then expand the table that contains the trigger that you want to modify.  
   
@@ -87,11 +87,11 @@ manager: "jhubbard"
   
 #### To modify a trigger using ALTER TRIGGER  
   
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following examples into the query. Execute the first example to create a DML trigger that prints a user-defined message to the client when a user tries to add or change data in the `SalesPersonQuotaHistory` table. Execute the [ALTER TRIGGER](../Topic/ALTER%20TRIGGER%20\(Transact-SQL\).md) statement to modify the trigger to fire only on `INSERT` activities. This trigger is helpful because it reminds the user that updates or inserts rows into this table to also notify the `Compensation` department.  
+3.  Copy and paste the following examples into the query. Execute the first example to create a DML trigger that prints a user-defined message to the client when a user tries to add or change data in the `SalesPersonQuotaHistory` table. Execute the [ALTER TRIGGER](~/t-sql/statements/alter-trigger-transact-sql.md) statement to modify the trigger to fire only on `INSERT` activities. This trigger is helpful because it reminds the user that updates or inserts rows into this table to also notify the `Compensation` department.  
   
 ```tsql  
 USE AdventureWorks2012;  
@@ -121,11 +121,11 @@ GO
   
 #### To rename a trigger using DROP TRIGGER and ALTER TRIGGER  
   
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example use the [DROP TRIGGER](../Topic/DROP%20TRIGGER%20\(Transact-SQL\).md) and [ALTER TRIGGER](../Topic/ALTER%20TRIGGER%20\(Transact-SQL\).md) statements to rename the `Sales.bonus_reminder` trigger to `Sales.bonus_reminder_2`.  
+3.  Copy and paste the following example into the query window and click **Execute**. This example use the [DROP TRIGGER](~/t-sql/statements/drop-trigger-transact-sql.md) and [ALTER TRIGGER](~/t-sql/statements/alter-trigger-transact-sql.md) statements to rename the `Sales.bonus_reminder` trigger to `Sales.bonus_reminder_2`.  
   
 ```tsql  
 USE AdventureWorks2012;  
@@ -143,23 +143,23 @@ GO
 ```  
   
 ## See Also  
- [CREATE TRIGGER &#40;Transact-SQL&#41;](../Topic/CREATE%20TRIGGER%20\(Transact-SQL\).md)   
- [DROP TRIGGER &#40;Transact-SQL&#41;](../Topic/DROP%20TRIGGER%20\(Transact-SQL\).md)   
- [ENABLE TRIGGER &#40;Transact-SQL&#41;](../Topic/ENABLE%20TRIGGER%20\(Transact-SQL\).md)   
- [DISABLE TRIGGER &#40;Transact-SQL&#41;](../Topic/DISABLE%20TRIGGER%20\(Transact-SQL\).md)   
- [EVENTDATA &#40;Transact-SQL&#41;](../Topic/EVENTDATA%20\(Transact-SQL\).md)   
- [sp_rename &#40;Transact-SQL&#41;](../Topic/sp_rename%20\(Transact-SQL\).md)   
- [ALTER TRIGGER &#40;Transact-SQL&#41;](../Topic/ALTER%20TRIGGER%20\(Transact-SQL\).md)   
+ [CREATE TRIGGER &#40;Transact-SQL&#41;](~/t-sql/statements/create-trigger-transact-sql.md)   
+ [DROP TRIGGER &#40;Transact-SQL&#41;](~/t-sql/statements/drop-trigger-transact-sql.md)   
+ [ENABLE TRIGGER &#40;Transact-SQL&#41;](~/t-sql/statements/enable-trigger-transact-sql.md)   
+ [DISABLE TRIGGER &#40;Transact-SQL&#41;](~/t-sql/statements/disable-trigger-transact-sql.md)   
+ [EVENTDATA &#40;Transact-SQL&#41;](~/t-sql/functions/eventdata-transact-sql.md)   
+ [sp_rename &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
+ [ALTER TRIGGER &#40;Transact-SQL&#41;](~/t-sql/statements/alter-trigger-transact-sql.md)   
  [Get Information About DML Triggers](../../2014/database-engine/get-information-about-dml-triggers.md)   
- [sp_help &#40;Transact-SQL&#41;](../Topic/sp_help%20\(Transact-SQL\).md)   
- [sp_helptrigger &#40;Transact-SQL&#41;](../Topic/sp_helptrigger%20\(Transact-SQL\).md)   
- [sys.triggers &#40;Transact-SQL&#41;](../Topic/sys.triggers%20\(Transact-SQL\).md)   
- [sys.trigger_events &#40;Transact-SQL&#41;](../Topic/sys.trigger_events%20\(Transact-SQL\).md)   
- [sys.sql_modules &#40;Transact-SQL&#41;](../Topic/sys.sql_modules%20\(Transact-SQL\).md)   
- [sys.assembly_modules &#40;Transact-SQL&#41;](../Topic/sys.assembly_modules%20\(Transact-SQL\).md)   
- [sys.server_triggers &#40;Transact-SQL&#41;](../Topic/sys.server_triggers%20\(Transact-SQL\).md)   
- [sys.server_trigger_events &#40;Transact-SQL&#41;](../Topic/sys.server_trigger_events%20\(Transact-SQL\).md)   
- [sys.server_sql_modules &#40;Transact-SQL&#41;](../Topic/sys.server_sql_modules%20\(Transact-SQL\).md)   
- [sys.server_assembly_modules &#40;Transact-SQL&#41;](../Topic/sys.server_assembly_modules%20\(Transact-SQL\).md)  
+ [sp_help &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
+ [sp_helptrigger &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
+ [sys.triggers &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-triggers-transact-sql.md)   
+ [sys.trigger_events &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-trigger-events-transact-sql.md)   
+ [sys.sql_modules &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
+ [sys.assembly_modules &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)   
+ [sys.server_triggers &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md)   
+ [sys.server_trigger_events &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-server-trigger-events-transact-sql.md)   
+ [sys.server_sql_modules &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-server-sql-modules-transact-sql.md)   
+ [sys.server_assembly_modules &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-server-assembly-modules-transact-sql.md)  
   
   

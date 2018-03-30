@@ -30,11 +30,11 @@ helpviewer_keywords:
 ms.assetid: 7641df10-1921-42a7-ba6e-4cb03b3ba9c8
 caps.latest.revision: 33
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Create Partitioned Tables and Indexes
-  You can create a partitioned table or index in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The data in partitioned tables and indexes is horizontally divided into units that can be spread across more than one filegroup in a database. Partitioning can make large tables and indexes more manageable and scalable.  
+  You can create a partitioned table or index in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)]. The data in partitioned tables and indexes is horizontally divided into units that can be spread across more than one filegroup in a database. Partitioning can make large tables and indexes more manageable and scalable.  
   
  Creating a partitioned table or index typically happens in four parts:  
   
@@ -260,7 +260,7 @@ manager: "jhubbard"
   
 #### To create a partitioned table  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -407,12 +407,12 @@ manager: "jhubbard"
   
  For more information, see:  
   
--   [ALTER DATABASE File and Filegroup Options &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20File%20and%20Filegroup%20Options%20\(Transact-SQL\).md)  
+-   [ALTER DATABASE File and Filegroup Options &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
   
--   [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../Topic/CREATE%20PARTITION%20FUNCTION%20\(Transact-SQL\).md)  
+-   [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](~/t-sql/statements/create-partition-function-transact-sql.md)  
   
--   [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](../Topic/CREATE%20PARTITION%20SCHEME%20\(Transact-SQL\).md)  
+-   [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](~/t-sql/statements/create-partition-scheme-transact-sql.md)  
   
--   [CREATE TABLE &#40;Transact-SQL&#41;](../Topic/CREATE%20TABLE%20\(Transact-SQL\).md)  
+-   [CREATE TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/create-table-transact-sql.md)  
   
   

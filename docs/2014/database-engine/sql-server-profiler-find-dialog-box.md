@@ -22,7 +22,7 @@ manager: "jhubbard"
 # SQL Server Profiler - Find Dialog Box
   Use the **Find** dialog box to search a trace for specific characters or words. To cancel a search in progress, press ESC.  
   
- To open this dialog box in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], on the **Edit** menu, click **Find**.  
+ To open this dialog box in [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)], on the **Edit** menu, click **Find**.  
   
 ## Options  
  **Find what**  

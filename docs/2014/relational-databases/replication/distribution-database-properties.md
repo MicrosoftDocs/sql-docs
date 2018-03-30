@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 0f404ab9-1237-4936-8df5-888baab6a245
 caps.latest.revision: 21
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Distribution Database Properties
@@ -46,7 +46,7 @@ manager: "jhubbard"
   
 -   The agent connects to the Subscriber using the credentials specified for the Distribution Agent in the New Subscription Wizard.  
   
- For more information, see  \\[Replication Agent Security Model](../Topic/Replication%20Agent%20Security%20Model.md).  
+ For more information, see  \\[Replication Agent Security Model](replication-agent-security-model.md).  
   
 ## See Also  
  [Configure Distribution](../../../2014/relational-databases/replication/configure-distribution.md)   

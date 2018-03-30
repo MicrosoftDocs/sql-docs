@@ -37,7 +37,7 @@ object
   
 ## Parts  
  *object*  
- A [ProtocolName Property (ServerNetworkProtocol Class)](../../../2014/database-engine/dev-guide/protocolname-property-servernetworkprotocol-class.md) object that represents the network protocol used by the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ A [ProtocolName Property (ServerNetworkProtocol Class)](../../../2014/database-engine/dev-guide/protocolname-property-servernetworkprotocol-class.md) object that represents the network protocol used by the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Property Value/Return Value  
  A Boolean value that specifies whether multiple IP addresses are supported by the server network protocol: `true` if multiple IP addresses are supported by the server network protocol, or `false` if multiple IP addresses are not supported by the server network protocol.  

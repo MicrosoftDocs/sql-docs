@@ -24,7 +24,7 @@ manager: "jhubbard"
   
 ## Options  
  **SQL Server**  
- Specifies the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] currently connected. This field is populated automatically and cannot be updated. To change the server, click **Cancel** and connect to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] where you want to store the trace table.  
+ Specifies the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] currently connected. This field is populated automatically and cannot be updated. To change the server, click **Cancel** and connect to the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] where you want to store the trace table.  
   
  **Database**  
  Specify the database where you want the trace table to be stored.  

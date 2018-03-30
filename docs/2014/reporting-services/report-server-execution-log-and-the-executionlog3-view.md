@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 caps.latest.revision: 40
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Report Server Execution Log and the ExecutionLog3 View
@@ -43,7 +43,7 @@ manager: "mblythe"
 -   [Log Fields (ExecutionLog)](#bkmk_executionlog)  
   
 ##  <a name="bkmk_sharepoint"></a> Configuration Settings for a SharePoint mode Report Server  
- You can turn report execution logging on or off from the system settings of a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application.  
+ You can turn report execution logging on or off from the system settings of a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service application.  
   
  By default, log entries are kept 60 days. Entries that exceed this date are removed at 2:00 A.M. every day. On a mature installation, only 60 days of information will be available at any given time.  
   
@@ -53,7 +53,7 @@ manager: "mblythe"
   
 1.  From SharePoint Central Administration, click **Manage service applications** in the **Application Management** group.  
   
-2.  Click the name of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application you want to configure.  
+2.  Click the name of the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service application you want to configure.  
   
 3.  Click **System Settings**.  
   
@@ -65,7 +65,7 @@ manager: "mblythe"
   
  You need to enable logging as described in the previous steps and then complete the following:  
   
-1.  From the **System Settings** page of your [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] services application, find the **User-defined** section.  
+1.  From the **System Settings** page of your [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] services application, find the **User-defined** section.  
   
 2.  Change the **ExecutionLogLevel** to **verbose**. This field is a text entry field and the two possible values are **verbose** and **normal**.  
   
@@ -250,7 +250,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </DataExtension>  
     ```  
   
--   **ExternalImages**The value is in miliseconds. This data can be used to diagnose performance issues. The time needed to retrieve images from an external webserver may slow the overall report execution. Added in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+-   **ExternalImages**The value is in miliseconds. This data can be used to diagnose performance issues. The time needed to retrieve images from an external webserver may slow the overall report execution. Added in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
   
     ```  
     <ExternalImages>  
@@ -260,7 +260,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </ExternalImages>  
     ```  
   
--   **Connections**: A multi-leveled structure. Added in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+-   **Connections**: A multi-leveled structure. Added in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
   
     ```  
     <Connections>  

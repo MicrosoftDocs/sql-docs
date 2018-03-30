@@ -16,7 +16,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Delete User-defined Functions
-  You can delete (drop) user-defined functions in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+  You can delete (drop) user-defined functions in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)]  
   
  **In This Topic**  
   
@@ -72,7 +72,7 @@ manager: "jhubbard"
   
 #### To delete a user-defined function  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -108,6 +108,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [DROP FUNCTION &#40;Transact-SQL&#41;](../Topic/DROP%20FUNCTION%20\(Transact-SQL\).md).  
+ For more information, see [DROP FUNCTION &#40;Transact-SQL&#41;](~/t-sql/statements/drop-function-transact-sql.md).  
   
   

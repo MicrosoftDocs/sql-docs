@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: c5cec0e4-0bcd-4907-826f-e7d835cfcb37
 caps.latest.revision: 10
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_33028
@@ -31,7 +31,7 @@ manager: "jhubbard"
 |Message Text|Cannot open session for %S_MSG '%.*ls'. Provider error code: %d.|  
   
 ## Explanation  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] was unable to open the cryptographic provider listed in the error message. The cryptographic provider supplied the error code listed. You may need to contact your cryptographic provider for more information about the error.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] was unable to open the cryptographic provider listed in the error message. The cryptographic provider supplied the error code listed. You may need to contact your cryptographic provider for more information about the error.  
   
 |Error code|Description|  
 |----------------|-----------------|  

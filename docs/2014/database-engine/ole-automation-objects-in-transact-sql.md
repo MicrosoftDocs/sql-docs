@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a887d956-4cd0-400a-aa96-00d7abd7c44b
 caps.latest.revision: 23
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # OLE Automation Objects in Transact-SQL
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] includes several system stored procedures that allow OLE Automation objects to be referenced in [!INCLUDE[tsql](../../includes/tsql-md.md)] batches, stored procedures, and triggers. These system stored procedures run as extended stored procedures, and the OLE Automation objects that are executed through the stored procedures run in the address space of an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in the same way that an extended stored procedure runs.  
+  [!INCLUDE[tsql](../includes/tsql-md.md)] includes several system stored procedures that allow OLE Automation objects to be referenced in [!INCLUDE[tsql](../includes/tsql-md.md)] batches, stored procedures, and triggers. These system stored procedures run as extended stored procedures, and the OLE Automation objects that are executed through the stored procedures run in the address space of an instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] in the same way that an extended stored procedure runs.  
   
- The OLE Automation stored procedures enable [!INCLUDE[tsql](../../includes/tsql-md.md)] batches to reference SQL-DMO objects and custom OLE Automation objects, such as objects that expose the **IDispatch** interface. A custom in-process OLE server that is created by using [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] must have an error handler (specified with the **On Error GoTo** statement) for the **Class_Initialize** and **Class_Terminate** subroutines. Unhandled errors in the **Class_Initialize** and **Class_Terminate** subroutines can cause unpredictable errors, such as an access violation in an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Error handlers for other subroutines are also recommended.  
+ The OLE Automation stored procedures enable [!INCLUDE[tsql](../includes/tsql-md.md)] batches to reference SQL-DMO objects and custom OLE Automation objects, such as objects that expose the **IDispatch** interface. A custom in-process OLE server that is created by using [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] must have an error handler (specified with the **On Error GoTo** statement) for the **Class_Initialize** and **Class_Terminate** subroutines. Unhandled errors in the **Class_Initialize** and **Class_Terminate** subroutines can cause unpredictable errors, such as an access violation in an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)]. Error handlers for other subroutines are also recommended.  
   
- The first step when using an OLE Automation object in [!INCLUDE[tsql](../../includes/tsql-md.md)] is to call the **sp_OACreate** system stored procedure to create an instance of the object in the address space of the instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ The first step when using an OLE Automation object in [!INCLUDE[tsql](../includes/tsql-md.md)] is to call the **sp_OACreate** system stored procedure to create an instance of the object in the address space of the instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
  After an instance of the object has been created, call the following stored procedures to work with the properties, methods, and error information related to the object:  
   
@@ -43,25 +43,25 @@ manager: "jhubbard"
   
  The scope of an OLE Automation object is a batch. All references to the object must be contained in a single batch, stored procedure, or trigger.  
   
- When it references objects, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE Automation objects support traversing the referenced object to other objects that it contains. For example, when using the SQL-DMO **SQLServer** object, references can be made to databases and tables contained on that server.  
+ When it references objects, the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] OLE Automation objects support traversing the referenced object to other objects that it contains. For example, when using the SQL-DMO **SQLServer** object, references can be made to databases and tables contained on that server.  
   
 ## Related Content  
- [Object Hierarchy Syntax &#40;Transact-SQL&#41;](../Topic/Object%20Hierarchy%20Syntax%20\(Transact-SQL\).md)  
+ [Object Hierarchy Syntax &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/object-hierarchy-syntax-transact-sql.md)  
   
  [Surface Area Configuration](../../2014/database-engine/surface-area-configuration.md)  
   
  [Ole Automation Procedures Server Configuration Option](../../2014/database-engine/ole-automation-procedures-server-configuration-option.md)  
   
- [sp_OACreate &#40;Transact-SQL&#41;](../Topic/sp_OACreate%20\(Transact-SQL\).md)  
+ [sp_OACreate &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-oacreate-transact-sql.md)  
   
- [sp_OAGetProperty &#40;Transact-SQL&#41;](../Topic/sp_OAGetProperty%20\(Transact-SQL\).md)  
+ [sp_OAGetProperty &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-oagetproperty-transact-sql.md)  
   
- [sp_OASetProperty &#40;Transact-SQL&#41;](../Topic/sp_OASetProperty%20\(Transact-SQL\).md)  
+ [sp_OASetProperty &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-oasetproperty-transact-sql.md)  
   
- [sp_OAMethod &#40;Transact-SQL&#41;](../Topic/sp_OAMethod%20\(Transact-SQL\).md)  
+ [sp_OAMethod &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-oamethod-transact-sql.md)  
   
- [sp_OAGetErrorInfo &#40;Transact-SQL&#41;](../Topic/sp_OAGetErrorInfo%20\(Transact-SQL\).md)  
+ [sp_OAGetErrorInfo &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-oageterrorinfo-transact-sql.md)  
   
- [sp_OADestroy &#40;Transact-SQL&#41;](../Topic/sp_OADestroy%20\(Transact-SQL\).md)  
+ [sp_OADestroy &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-oadestroy-transact-sql.md)  
   
   

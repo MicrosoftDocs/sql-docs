@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: d0e16108-7123-4788-87b3-05db962dbc94
 caps.latest.revision: 11
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Choosing Microsoft Reporting and Analysis Tools

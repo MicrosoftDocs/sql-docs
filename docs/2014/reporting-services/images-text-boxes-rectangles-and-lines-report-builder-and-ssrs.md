@@ -12,14 +12,14 @@ ms.topic: "article"
 ms.assetid: aa7ad08f-dd49-401e-9619-522e27055bb9
 caps.latest.revision: 6
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Images, Text Boxes, Rectangles, and Lines (Report Builder and SSRS)
   In addition to data regions like tables, matrices, and charts, reports use other report items like images, text boxes, and rectangles to add visual interest, highlight key information, or provide related information. You can change the formatting of a report item. For example, you can add a border or padding, change the initial visibility or direction, or specify an exact size and location for the item.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## In This Section  
  [Text Boxes &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/text-boxes-report-builder-and-ssrs.md)  

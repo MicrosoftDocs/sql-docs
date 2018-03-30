@@ -29,17 +29,17 @@ manager: "jhubbard"
  The syntax for making these prediction types is summarized below:  
   
  Default time series prediction  
- Use [PredictTimeSeries &#40;DMX&#41;](../Topic/PredictTimeSeries%20\(DMX\).md) to return the specified number of predictions from the trained mining model.  
+ Use [PredictTimeSeries &#40;DMX&#41;](~/dmx/predicttimeseries-dmx.md) to return the specified number of predictions from the trained mining model.  
   
- For example, see [PredictTimeSeries &#40;DMX&#41;](../Topic/PredictTimeSeries%20\(DMX\).md) or [Time Series Model Query Examples](../../2014/analysis-services/time-series-model-query-examples.md).  
+ For example, see [PredictTimeSeries &#40;DMX&#41;](~/dmx/predicttimeseries-dmx.md) or [Time Series Model Query Examples](../../2014/analysis-services/time-series-model-query-examples.md).  
   
  EXTEND_MODEL_CASES  
- Use [PredictTimeSeries &#40;DMX&#41;](../Topic/PredictTimeSeries%20\(DMX\).md) with the EXTEND_MODEL_CASES argument to add new data, extend the series, and create predictions based on the updated mining model.  
+ Use [PredictTimeSeries &#40;DMX&#41;](~/dmx/predicttimeseries-dmx.md) with the EXTEND_MODEL_CASES argument to add new data, extend the series, and create predictions based on the updated mining model.  
   
  This tutorial contains an example of how to use EXTEND_MODEL_CASES.  
   
  REPLACE_MODEL_CASES  
- Use [PredictTimeSeries &#40;DMX&#41;](../Topic/PredictTimeSeries%20\(DMX\).md) with the REPLACE_MODEL_CASES argument to replace the original data with a new data series, and then create predictions based on applying the patterns in the mining model to the new data series.  
+ Use [PredictTimeSeries &#40;DMX&#41;](~/dmx/predicttimeseries-dmx.md) with the REPLACE_MODEL_CASES argument to replace the original data with a new data series, and then create predictions based on applying the patterns in the mining model to the new data series.  
   
  For an example of how to use REPLACE_MODEL_CASES, see [Lesson 2: Building a Forecasting Scenario &#40;Intermediate Data Mining Tutorial&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
   
@@ -52,7 +52,7 @@ manager: "jhubbard"
   
 -   Create a query to supply new data and get updated predictions.  
   
- In addition to creating queries manually by using DMX, you can also create predictions by using the prediction query builder in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+ In addition to creating queries manually by using DMX, you can also create predictions by using the prediction query builder in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 ## Simple Time Series Prediction Query  
  The first step is to use the `SELECT FROM` statement together with the `PredictTimeSeries` function to create time series predictions. Time series models support a simplified syntax for creating predictions: you do not need to supply any inputs, but only have to specify the number of predictions to create. The following is a generic example of the statement you will use:  
@@ -63,11 +63,11 @@ FROM [<mining model name>]
 WHERE [<criteria>]  
 ```  
   
- The select list can contain columns from the model, such as the name of the product line that you are creating the predictions for, or prediction functions, such as [Lag &#40;DMX&#41;](../Topic/Lag%20\(DMX\).md) or [PredictTimeSeries &#40;DMX&#41;](../Topic/PredictTimeSeries%20\(DMX\).md), which are specifically for time series mining models.  
+ The select list can contain columns from the model, such as the name of the product line that you are creating the predictions for, or prediction functions, such as [Lag &#40;DMX&#41;](~/dmx/lag-dmx.md) or [PredictTimeSeries &#40;DMX&#41;](~/dmx/predicttimeseries-dmx.md), which are specifically for time series mining models.  
   
 #### To create a simple time series prediction query  
   
-1.  In **Object Explorer**, right-click the instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], point to **New Query**, and then click **DMX**.  
+1.  In **Object Explorer**, right-click the instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], point to **New Query**, and then click **DMX**.  
   
      Query Editor opens and contains a new, blank query.  
   
@@ -145,8 +145,8 @@ WHERE [<criteria>]
  [Lesson 5: Extending the Time Series Model](../../2014/tutorials/lesson-5-extending-the-time-series-model.md)  
   
 ## See Also  
- [PredictTimeSeries &#40;DMX&#41;](../Topic/PredictTimeSeries%20\(DMX\).md)   
- [Lag &#40;DMX&#41;](../Topic/Lag%20\(DMX\).md)   
+ [PredictTimeSeries &#40;DMX&#41;](~/dmx/predicttimeseries-dmx.md)   
+ [Lag &#40;DMX&#41;](~/dmx/lag-dmx.md)   
  [Time Series Model Query Examples](../../2014/analysis-services/time-series-model-query-examples.md)   
  [Lesson 2: Building a Forecasting Scenario &#40;Intermediate Data Mining Tutorial&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
   

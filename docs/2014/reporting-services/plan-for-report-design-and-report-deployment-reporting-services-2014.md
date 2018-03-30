@@ -12,13 +12,13 @@ ms.topic: "article"
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 caps.latest.revision: 17
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Plan for Report Design and Report Deployment (Reporting Services 2014)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides several approaches for authoring and deploying reports. Use this topic to help plan a report authoring environment and report server that work together. This topic is an overview of report definition support by [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] components. A report definition is an XML file that is written in the Report Definition Language (RDL) or the Report Definition Language for Clients (RDLC). Each report definition conforms to a specific schema version that is listed at the beginning of the file.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] provides several approaches for authoring and deploying reports. Use this topic to help plan a report authoring environment and report server that work together. This topic is an overview of report definition support by [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] components. A report definition is an XML file that is written in the Report Definition Language (RDL) or the Report Definition Language for Clients (RDLC). Each report definition conforms to a specific schema version that is listed at the beginning of the file.  
   
- RDL files are authored in Report Designer in [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] projects, and in Report Builder 3.0. RDLC files are authored by using the ReportViewer controls that are included in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
+ RDL files are authored in Report Designer in [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] projects, and in Report Builder 3.0. RDLC files are authored by using the ReportViewer controls that are included in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
   
  In this topic:  
   
@@ -51,9 +51,9 @@ manager: "mblythe"
  For more information about ReportViewer controls, see [ReportViewer Controls (Visual Studio)](http://msdn.microsoft.com/library/ms251671.aspx).  
   
 ##  <a name="bkmk_report_server_rdl_schema_support"></a> Report Server and RDL Schema Support  
- A report definition file can be deployed to a [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] report server in the following ways:  
+ A report definition file can be deployed to a [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] report server in the following ways:  
   
--   **Report Designer:** Deploy a report from Report Designer in [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)].  
+-   **Report Designer:** Deploy a report from Report Designer in [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)].  
   
 -   **Report Builder:** Save a report to the report server from Report Builder.  
   
@@ -67,9 +67,9 @@ manager: "mblythe"
   
 |Report server version|RDL schema version|  
 |---------------------------|------------------------|  
-|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> Or<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> Or<br /><br /> [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|2010 RDL<br /><br /> 2008 RDL<br /><br /> 2005 RDL<br /><br /> 2000 RDL|  
-|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|2008 RDL<br /><br /> 2005 RDL<br /><br /> 2000 RDL|  
-|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|2005 RDL<br /><br /> 2000 RDL|  
+|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]<br /><br /> Or<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]<br /><br /> Or<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|2010 RDL<br /><br /> 2008 RDL<br /><br /> 2005 RDL<br /><br /> 2000 RDL|  
+|[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|2008 RDL<br /><br /> 2005 RDL<br /><br /> 2000 RDL|  
+|[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]|2005 RDL<br /><br /> 2000 RDL|  
   
  When you upload a report definition to the report server or upgrade a report server that contains existing reports, the report server preserves the report definition in the original format. **On first use**, the report server upgrades the report in the report server database to a binary format that is preserved for subsequent views. The report definition (.rdl) itself is not upgraded.  
   
@@ -80,31 +80,31 @@ manager: "mblythe"
  For more information about report upgrades and the schema versions that are supported, see [Upgrade Reports](../../2014/sql-server/install/upgrade-reports.md).  
   
 ##  <a name="bkmk_report_authoring_and_deployment"></a> Report Authoring and Deployment Support  
- Report authoring environments are Report Designer in [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] projects, and Report Builder. Report authoring environments provide a variety of support for report upgrade, report design, report preview in local mode, report preview on the report server, and report deployment.  
+ Report authoring environments are Report Designer in [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] projects, and Report Builder. Report authoring environments provide a variety of support for report upgrade, report design, report preview in local mode, report preview on the report server, and report deployment.  
   
  The following table summarizes support for authoring and deploying report definitions for different schema versions:  
   
 |Authoring environment|RDL version Authored|Deploy RDL version|Deploy to report server versions|  
 |---------------------------|--------------------------|------------------------|--------------------------------------|  
-|Report Designer in SQL Server 2014 Data Tools - Business Intelligence for Microsoft Visual Studio 2012, on Microsoft download center.<br /><br /> Or<br /><br /> Report Designer in SQL Server 2012 Data Tools - Business Intelligence for Microsoft Visual Studio 2012, on Microsoft download center.<br /><br /> Or<br /><br /> Report Designer in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Data Tools, included in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].|Authors 2010 RDL. On open of existing RDL:<br /><br /> 2000 RDL, upgrades to 2010 RDL<br /><br /> 2005 RDL, upgrades to 2010 RDL<br /><br /> 2008 RDL, upgrades to 2010 RDL|2008 RDL<br /><br /> 2010 RDL|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|  
-|Report Designer in [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Business Intelligence Development Studio|Authors 2010 RDL. On open of existing RDL:<br /><br /> 2000 RDL, upgrades to 2010 RDL<br /><br /> 2005 RDL, upgrades to 2010 RDL<br /><br /> 2008 RDL, upgrades to 2010 RDL|2008 RDL<br /><br /> 2010 RDL|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|  
-|Report Designer in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Business Intelligence Development Studio|Authors 2008 RDL. On open of existing RDL:<br /><br /> 2000 RDL, upgrades to 2008 RDL<br /><br /> 2005 RDL, upgrades to 2008 RDL|2008 RDL|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
-|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Report Builder|Authors 2010 RDL. On open of existing RDL:<br /><br /> 2000 RDL, upgrades to 2010 RDL<br /><br /> 2005 RDL, upgrades to 2010 RDL<br /><br /> 2008 RDL, upgrades to 2010 RDL|2010 RDL|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
+|Report Designer in SQL Server 2014 Data Tools - Business Intelligence for Microsoft Visual Studio 2012, on Microsoft download center.<br /><br /> Or<br /><br /> Report Designer in SQL Server 2012 Data Tools - Business Intelligence for Microsoft Visual Studio 2012, on Microsoft download center.<br /><br /> Or<br /><br /> Report Designer in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Data Tools, included in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].|Authors 2010 RDL. On open of existing RDL:<br /><br /> 2000 RDL, upgrades to 2010 RDL<br /><br /> 2005 RDL, upgrades to 2010 RDL<br /><br /> 2008 RDL, upgrades to 2010 RDL|2008 RDL<br /><br /> 2010 RDL|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Report Designer in [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] Business Intelligence Development Studio|Authors 2010 RDL. On open of existing RDL:<br /><br /> 2000 RDL, upgrades to 2010 RDL<br /><br /> 2005 RDL, upgrades to 2010 RDL<br /><br /> 2008 RDL, upgrades to 2010 RDL|2008 RDL<br /><br /> 2010 RDL|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Report Designer in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] Business Intelligence Development Studio|Authors 2008 RDL. On open of existing RDL:<br /><br /> 2000 RDL, upgrades to 2008 RDL<br /><br /> 2005 RDL, upgrades to 2008 RDL|2008 RDL|[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|  
+|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Report Builder|Authors 2010 RDL. On open of existing RDL:<br /><br /> 2000 RDL, upgrades to 2010 RDL<br /><br /> 2005 RDL, upgrades to 2010 RDL<br /><br /> 2008 RDL, upgrades to 2010 RDL|2010 RDL|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|  
 |Visual Studio RDLC Report Designer Report Designer|2005 RDLC|N/A|N/A|  
   
- For more information on [!INCLUDE[ss_dtbi_vs2013](../../includes/ss-dtbi-vs2013-md.md)], see the following:  
+ For more information on [!INCLUDE[ss_dtbi_vs2013](../includes/ss-dtbi-vs2013-md.md)], see the following:  
   
 -   [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41;](../../2014/reporting-services/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
   
 -   [Microsoft SQL Server Data Tools - Business Intelligence for Visual Studio 2012](http://www.microsoft.com/download/details.aspx?id=36843).  
   
 ##  <a name="bkmk_reportviewer"></a> ReportViewer Controls  
- A [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ReportViewer control can display an .rdlc report in local preview mode or in remote mode, the control can display an .rdl file hosted on a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server. The following table provides the list of RDL versions supported by the ReportViewer controls for local processing (.rdlc). Server side RDL support is summarized in the section [Report Server and RDL Schema Support](#bkmk_report_server_rdl_schema_support).  
+ A [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ReportViewer control can display an .rdlc report in local preview mode or in remote mode, the control can display an .rdl file hosted on a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report server. The following table provides the list of RDL versions supported by the ReportViewer controls for local processing (.rdlc). Server side RDL support is summarized in the section [Report Server and RDL Schema Support](#bkmk_report_server_rdl_schema_support).  
   
 |ReportViewer control in product|Version of RDL for local preview|  
 |-------------------------------------|--------------------------------------|  
-|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2013<br /><br /> Or<br /><br /> [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2012<br /><br /> Or<br /><br /> [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)]|2008 RDL|  
-|[!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)]<br /><br /> Or<br /><br /> [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)]|2005 RDL|  
+|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2013<br /><br /> Or<br /><br /> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2012<br /><br /> Or<br /><br /> [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]|2008 RDL|  
+|[!INCLUDE[vsprvslong](../includes/vsprvslong-md.md)]<br /><br /> Or<br /><br /> [!INCLUDE[vsOrcas](../includes/vsorcas-md.md)]|2005 RDL|  
   
  For more information, see the following:  
   

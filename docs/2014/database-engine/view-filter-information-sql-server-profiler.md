@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # View Filter Information (SQL Server Profiler)
-  This topic describes how to view filters on data columns for event classes by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+  This topic describes how to view filters on data columns for event classes by using [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)].  
   
 ### To view filter information  
   

@@ -20,7 +20,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Message Queue Task Editor (Receive Page)
-  Use the **Receive** page of the **Message Queue Task Editor** dialog box to configure a Message Queue task to receive [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing (MSMQ) messages.  
+  Use the **Receive** page of the **Message Queue Task Editor** dialog box to configure a Message Queue task to receive [!INCLUDE[msCoName](../includes/msconame-md.md)] Message Queuing (MSMQ) messages.  
   
  To learn about this task, see [Message Queue Task](../../2014/integration-services/message-queue-task.md).  
   

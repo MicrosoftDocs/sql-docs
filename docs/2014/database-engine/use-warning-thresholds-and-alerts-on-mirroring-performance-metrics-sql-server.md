@@ -23,7 +23,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Use Warning Thresholds and Alerts on Mirroring Performance Metrics (SQL Server)
-  This topic contains information about the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] events for which warning thresholds can be configured and managed for database mirroring. You can use the  Database Mirroring Monitor or the **sp_dbmmonitorchangealert**, **sp_dbmmonitorhelpalert**, and **sp_dbmmonitordropalert** stored procedures. This topic also contains information about configuring alerts on database mirroring events.  
+  This topic contains information about the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] events for which warning thresholds can be configured and managed for database mirroring. You can use the  Database Mirroring Monitor or the **sp_dbmmonitorchangealert**, **sp_dbmmonitorhelpalert**, and **sp_dbmmonitordropalert** stored procedures. This topic also contains information about configuring alerts on database mirroring events.  
   
  After monitoring is established for a mirrored database, a system administrator can configure warning thresholds on several key performance metrics. Also, an administrator can configure alerts on these and other database mirroring events.  
   
@@ -66,12 +66,12 @@ manager: "jhubbard"
   
     |Procedure|Description|  
     |---------------|-----------------|  
-    |[sp_dbmmonitorchangealert &#40;Transact-SQL&#41;](../Topic/sp_dbmmonitorchangealert%20\(Transact-SQL\).md)|Adds or changes warning threshold for a specified mirroring performance metric.|  
-    |[sp_dbmmonitorhelpalert &#40;Transact-SQL&#41;](../Topic/sp_dbmmonitorhelpalert%20\(Transact-SQL\).md)|Returns information about warning thresholds on one or all of several key database mirroring monitor performance metrics.|  
-    |[sp_dbmmonitordropalert &#40;Transact-SQL&#41;](../Topic/sp_dbmmonitordropalert%20\(Transact-SQL\).md)|Drops the warning for a specified performance metric.|  
+    |[sp_dbmmonitorchangealert &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)|Adds or changes warning threshold for a specified mirroring performance metric.|  
+    |[sp_dbmmonitorhelpalert &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql.md)|Returns information about warning thresholds on one or all of several key database mirroring monitor performance metrics.|  
+    |[sp_dbmmonitordropalert &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql.md)|Drops the warning for a specified performance metric.|  
   
 ## Performance-Threshold Events Sent to the Windows Event Log  
- If warning thresholdis defined for a performance metric, when the status table is updated, the latest value is evaluated against the threshold. If the threshold has been reached, the update procedure, **sp_dbmmonitorupdate**, generates an informational event—a *performance-threshold event*— for the metric and writes the event to the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows event log. The following table lists the event IDs of the performance-threshold events.  
+ If warning thresholdis defined for a performance metric, when the status table is updated, the latest value is evaluated against the threshold. If the threshold has been reached, the update procedure, **sp_dbmmonitorupdate**, generates an informational event—a *performance-threshold event*— for the metric and writes the event to the [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows event log. The following table lists the event IDs of the performance-threshold events.  
   
 |Performance metric|Event ID|  
 |------------------------|--------------|  
@@ -86,7 +86,7 @@ manager: "jhubbard"
 >  topic.  
   
 ##  <a name="UseAlerts"></a> Using Alerts for a Mirrored Database  
- An important part of monitoring a mirrored database is configuring alerts on significant database mirro events. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generates the following types of database mirroring events:  
+ An important part of monitoring a mirrored database is configuring alerts on significant database mirro events. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] generates the following types of database mirroring events:  
   
 -   Performance threshold events  
   
@@ -99,11 +99,11 @@ manager: "jhubbard"
     > [!NOTE]  
     >  For more information, see [WMI Provider for Server Events Concepts](../../2014/database-engine/dev-guide/wmi-provider-for-server-events-concepts.md).  
   
- A system administrator can configure alerts on these by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent or other applications, such as [!INCLUDE[msCoName](../../includes/msconame-md.md)] Operations Manager.  
+ A system administrator can configure alerts on these by using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent or other applications, such as [!INCLUDE[msCoName](../includes/msconame-md.md)] Operations Manager.  
   
  When you define alerts on database mirroring events, we recommend that you define warning thresholds and alerts at both partner server instances. Individual events are generated at either the principal server or the mirror server, but each partner can perform either role at any time. To make sure that an alert continues to operate after a failover, the alert must be defined at both partners.  
   
- For more information, see the white paper about alerting on database mirroring events at this [SQL Server Web site](http://go.microsoft.com/fwlink/?linkid=62373). This white paper contains information about how to configure alerts using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, the database mirroring WMI events, and sample scripts.  
+ For more information, see the white paper about alerting on database mirroring events at this [SQL Server Web site](http://go.microsoft.com/fwlink/?linkid=62373). This white paper contains information about how to configure alerts using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent, the database mirroring WMI events, and sample scripts.  
   
 > [!IMPORTANT]  
 >  For all mirroring sessions, we strongly recommend that you configure the database to send an alert on any state-change events. Unless a state change is expected as the result of a manual configuration change, something has occurred that could compromise your data. To help protect your data, identify and fix the cause of an unexpected state change.  
@@ -119,23 +119,23 @@ manager: "jhubbard"
   
 -   [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](../../2014/database-engine/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
--   [sp_dbmmonitoraddmonitoring &#40;Transact-SQL&#41;](../Topic/sp_dbmmonitoraddmonitoring%20\(Transact-SQL\).md)  
+-   [sp_dbmmonitoraddmonitoring &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)  
   
--   [sp_dbmmonitorchangealert &#40;Transact-SQL&#41;](../Topic/sp_dbmmonitorchangealert%20\(Transact-SQL\).md)  
+-   [sp_dbmmonitorchangealert &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)  
   
--   [sp_dbmmonitorchangemonitoring &#40;Transact-SQL&#41;](../Topic/sp_dbmmonitorchangemonitoring%20\(Transact-SQL\).md)  
+-   [sp_dbmmonitorchangemonitoring &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)  
   
--   [sp_dbmmonitordropalert &#40;Transact-SQL&#41;](../Topic/sp_dbmmonitordropalert%20\(Transact-SQL\).md)  
+-   [sp_dbmmonitordropalert &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql.md)  
   
--   [sp_dbmmonitordropmonitoring &#40;Transact-SQL&#41;](../Topic/sp_dbmmonitordropmonitoring%20\(Transact-SQL\).md)  
+-   [sp_dbmmonitordropmonitoring &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)  
   
--   [sp_dbmmonitorhelpalert &#40;Transact-SQL&#41;](../Topic/sp_dbmmonitorhelpalert%20\(Transact-SQL\).md)  
+-   [sp_dbmmonitorhelpalert &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql.md)  
   
--   [sp_dbmmonitorhelpmonitoring &#40;Transact-SQL&#41;](../Topic/sp_dbmmonitorhelpmonitoring%20\(Transact-SQL\).md)  
+-   [sp_dbmmonitorhelpmonitoring &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)  
   
--   [sp_dbmmonitorresults &#40;Transact-SQL&#41;](../Topic/sp_dbmmonitorresults%20\(Transact-SQL\).md)  
+-   [sp_dbmmonitorresults &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)  
   
--   [sp_dbmmonitorupdate &#40;Transact-SQL&#41;](../Topic/sp_dbmmonitorupdate%20\(Transact-SQL\).md)  
+-   [sp_dbmmonitorupdate &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql.md)  
   
 ## See Also  
  [Database Mirroring &#40;SQL Server&#41;](../../2014/database-engine/database-mirroring-sql-server.md)   

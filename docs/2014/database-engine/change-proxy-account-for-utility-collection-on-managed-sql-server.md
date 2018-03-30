@@ -16,19 +16,19 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Change the Proxy Account for the Utility Collection Set on a Managed Instance of SQL Server (SQL Server Utility)
-  This topic describes how to change the proxy account for the Utility Collection Set on a managed instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  This topic describes how to change the proxy account for the Utility Collection Set on a managed instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   
 #### To change the proxy account for the utility collection set on a managed instance of SQL Server  
   
-1.  Remove the managed instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility.  
+1.  Remove the managed instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] from the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility.  
   
     -   In **Utility Explorer** in SSMS, click on the **Managed Instances** node.  
   
-    -   In the **Utility Explorer** list view, right-click the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name, and select **Remove Managed Instance…**. For more information, see [Remove an Instance of SQL Server from the SQL Server Utility](../../2014/database-engine/remove-an-instance-of-sql-server-from-the-sql-server-utility.md).  
+    -   In the **Utility Explorer** list view, right-click the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance name, and select **Remove Managed Instance…**. For more information, see [Remove an Instance of SQL Server from the SQL Server Utility](../../2014/database-engine/remove-an-instance-of-sql-server-from-the-sql-server-utility.md).  
   
-2.  Enroll the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility again.  
+2.  Enroll the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility again.  
   
     -   In **Utility Explorer** in SSMS, right-click on the **Managed Instances** node, and select **Add Managed Instance…**.  
   

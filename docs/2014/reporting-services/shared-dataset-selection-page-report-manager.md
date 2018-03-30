@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: a67dc03e-f838-4ec2-9ef6-f04895bab3c7
 caps.latest.revision: 4
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Shared Dataset Selection Page (Report Manager)

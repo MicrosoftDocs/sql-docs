@@ -55,7 +55,7 @@ manager: "jhubbard"
   
      The relationships between the members of the **Month Name** attribute and the **Month Number Of Year** attribute will not change over time. As a result, Analysis Services will not drop aggregations for this relationship during incremental processing. If a change does occur, a processing error will occur during incremental processing and you will need to perform a full process of the dimension. You are now ready to set the sort order for the members of **Month Name**.  
   
-9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 10. Click the **Dimension Structure** tab.  
   
@@ -73,7 +73,7 @@ manager: "jhubbard"
   
 1.  Switch to the **Browser** tab in Dimension Designer for the Customer dimension, and then browse the members of the **Commute Distance** attribute hierarchy.  
   
-     Notice that the members of this attribute hierarchy are sorted based on the ASCII values of the member key. In this case, sorting by the attribute name or key does not sort the commute distances from least to most. In this task, you sort the members of the attribute hierarchy based on the **CommuteDistanceSort** named calculation that ascribes the appropriate sort number to each distinct value in the column. To save time, this named calculation has already been added to the **Customer** table in the [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] DW data source view. You can switch to this data source view to view the SQL script that is used in this named calculation. For more information, see [Define Named Calculations in a Data Source View &#40;Analysis Services&#41;](../../2014/analysis-services/define-named-calculations-in-a-data-source-view-analysis-services.md).  
+     Notice that the members of this attribute hierarchy are sorted based on the ASCII values of the member key. In this case, sorting by the attribute name or key does not sort the commute distances from least to most. In this task, you sort the members of the attribute hierarchy based on the **CommuteDistanceSort** named calculation that ascribes the appropriate sort number to each distinct value in the column. To save time, this named calculation has already been added to the **Customer** table in the [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW data source view. You can switch to this data source view to view the SQL script that is used in this named calculation. For more information, see [Define Named Calculations in a Data Source View &#40;Analysis Services&#41;](../../2014/analysis-services/define-named-calculations-in-a-data-source-view-analysis-services.md).  
   
      The following image shows the members of the **Commute Distance** attribute hierarchy, sorted by the ASCII values of the member key.  
   
@@ -99,7 +99,7 @@ manager: "jhubbard"
   
      The relationship between the members of the **Commute Distance** attribute and the **Commute Distance Sort** attribute will not change over time.  
   
-9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
      You are now ready to set the sort order for the **Commute Distance** attribute.  
   

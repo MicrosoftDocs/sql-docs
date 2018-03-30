@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: 8681506b-5dc6-4165-beb6-1e76ca470425
 caps.latest.revision: 19
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Full-Text Catalog Properties (Population Schedule Page)
@@ -45,6 +45,6 @@ manager: "jhubbard"
  Click this button to remove the selected population schedule.  
   
 ## See Also  
- [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../Topic/CREATE%20FULLTEXT%20CATALOG%20\(Transact-SQL\).md)  
+ [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](~/t-sql/statements/create-fulltext-catalog-transact-sql.md)  
   
   

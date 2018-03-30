@@ -18,7 +18,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Annotate a Transaction (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], annotate a transaction when you want to provide supporting details about the transaction for historical purposes.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], annotate a transaction when you want to provide supporting details about the transaction for historical purposes.  
   
 > [!NOTE]  
 >  You cannot delete annotations.  
@@ -31,7 +31,7 @@ manager: "jhubbard"
   
 ### To annotate a transaction in Explorer  
   
-1.  On the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] home page, from the **Model** list, select a model.  
+1.  On the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] home page, from the **Model** list, select a model.  
   
 2.  From the **Version** list, select a version.  
   
@@ -51,7 +51,7 @@ manager: "jhubbard"
   
 ### To annotate a transaction in Version Management (administrators only)  
   
-1.  On the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] home page, click **Version Management**.  
+1.  On the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] home page, click **Version Management**.  
   
 2.  On the menu bar, click **Transactions**.  
   

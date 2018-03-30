@@ -28,7 +28,7 @@ manager: "mblythe"
  Select to create an empty cube. This option is useful when you want to create everything manually, or when all measure groups in the cube are linked measure groups.  
   
 > [!NOTE]  
->  This option is only available when you are working with an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project and not when you are connected directly to an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database.  
+>  This option is only available when you are working with an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project and not when you are connected directly to an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database.  
   
  **Generate tables in the data source**  
  Select to create a cube first and then generate new tables in the data source based on the cube definition.  

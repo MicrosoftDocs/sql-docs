@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
 caps.latest.revision: 19
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Create XML Indexes
   This topic describes how to create primary and secondary XML indexes.  
   
 ## Creating a Primary XML Index  
- To create a primary XML index, use the [CREATE INDEX &#40;Transact-SQL&#41;](../Topic/CREATE%20INDEX%20\(Transact-SQL\).md)[!INCLUDE[tsql](../../includes/tsql-md.md)] DDL statement. Not all options available for non-XML indexes are supported on XML indexes.  
+ To create a primary XML index, use the [CREATE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md)[!INCLUDE[tsql](../includes/tsql-md.md)] DDL statement. Not all options available for non-XML indexes are supported on XML indexes.  
   
  Note the following when you are creating an XML index:  
   
@@ -51,7 +51,7 @@ manager: "jhubbard"
     > [!NOTE]  
     >  Information about an XML index can be found in catalog views. However, **sp_helpindex** is not supported. Examples provided later in this topic show how to query the catalog views to find XML index information.  
   
- When creating or recreating a primary XML index on an XML data type column that contains values of the XML Schema types **xs:date** or **xs:dateTime** (or any subtypes of these types) that have a year of less than 1, the index creation will fail in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] allowed these values, so this problem can occur when creating indexes in a database generated in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. For more information, see [Compare Typed XML to Untyped XML](../../2014/database-engine/compare-typed-xml-to-untyped-xml.md).  
+ When creating or recreating a primary XML index on an XML data type column that contains values of the XML Schema types **xs:date** or **xs:dateTime** (or any subtypes of these types) that have a year of less than 1, the index creation will fail in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] and later versions. [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] allowed these values, so this problem can occur when creating indexes in a database generated in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]. For more information, see [Compare Typed XML to Untyped XML](../../2014/database-engine/compare-typed-xml-to-untyped-xml.md).  
   
 ### Example: Creating a Primary XML Index  
  Table T (pk INT PRIMARY KEY, xCol XML) with an untyped XML column is used in most of the examples. These can be extended to typed XML in a straightforward way. For simplicity, queries are described for XML data instances as shown in the following:  
@@ -78,7 +78,7 @@ CREATE PRIMARY XML INDEX idx_xCol on T (xCol)
 ```  
   
 ## Creating a Secondary XML Index  
- Use the [CREATE INDEX &#40;Transact-SQL&#41;](../Topic/CREATE%20INDEX%20\(Transact-SQL\).md)[!INCLUDE[tsql](../../includes/tsql-md.md)] DDL statement to create secondary XML indexes and specify the type of the secondary XML index that you want.  
+ Use the [CREATE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md)[!INCLUDE[tsql](../includes/tsql-md.md)] DDL statement to create secondary XML indexes and specify the type of the secondary XML index that you want.  
   
  Note the following when you are creating secondary XML indexes:  
   

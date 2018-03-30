@@ -25,7 +25,7 @@ manager: "mblythe"
   
 ### To slice a cube  
   
-1.  In Data Mining Designer in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], select the **Mining Structure** tab or the **Mining Models** tab.  
+1.  In Data Mining Designer in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], select the **Mining Structure** tab or the **Mining Models** tab.  
   
 2.  On the **Mining Model** menu, select **Define Mining Structure Cube Slice**.  
   

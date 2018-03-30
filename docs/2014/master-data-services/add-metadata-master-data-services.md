@@ -19,7 +19,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Add Metadata (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], add user-defined metadata to the **Metadata** model to describe your model objects.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], add user-defined metadata to the **Metadata** model to describe your model objects.  
   
 ## Prerequisites  
  To perform this procedure:  
@@ -32,7 +32,7 @@ manager: "jhubbard"
   
 ### To add metadata  
   
-1.  On the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] home page, from the **Model** list, select the **Metadata** model.  
+1.  On the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] home page, from the **Model** list, select the **Metadata** model.  
   
 2.  From the **Version** list, select a version.  
   

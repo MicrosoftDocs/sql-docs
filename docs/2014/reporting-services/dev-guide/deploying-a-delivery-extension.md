@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 4436ce48-397d-42c7-9b5d-2a267e2a1b2c
 caps.latest.revision: 43
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Deploying a Delivery Extension
@@ -25,7 +25,7 @@ manager: "jhubbard"
   
  If a delivery extension is replaced or upgraded, all subscriptions that reference the delivery extension remain valid.  
   
- After you have written and compiled your [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] delivery extension into a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] library, you must copy the extension to the appropriate directory and add an entry to the appropriate [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] configuration file so the report server can locate it.  
+ After you have written and compiled your [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] delivery extension into a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] library, you must copy the extension to the appropriate directory and add an entry to the appropriate [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configuration file so the report server can locate it.  
   
 ## Configuration-File Extension Element  
  Delivery extensions that you deploy to the report server need to be entered as `Extension` elements in the configuration file. The configuration file for the report server is RSReportServer.config.  
@@ -50,7 +50,7 @@ manager: "jhubbard"
     > [!IMPORTANT]  
     >  If you are attempting to overwrite an existing delivery extension assembly, you must first stop the Report Server service before copying the updated assembly. Restart your service after the assembly is through copying.  
   
-2.  After the assembly file is copied, open the RSReportServer.config file. The RSReportServer.config file is located in the %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<InstanceName>\Reporting Services\ReportServer directory. You need to make an entry in the configuration file for your delivery extension assembly file. You can open the configuration file with [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] or a simple text editor, such as Notepad.  
+2.  After the assembly file is copied, open the RSReportServer.config file. The RSReportServer.config file is located in the %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<InstanceName>\Reporting Services\ReportServer directory. You need to make an entry in the configuration file for your delivery extension assembly file. You can open the configuration file with [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] or a simple text editor, such as Notepad.  
   
 3.  Locate the `Delivery` element in the RSReportServer.config file. An entry for your newly created delivery extension should be made in the following location:  
   
@@ -85,7 +85,7 @@ manager: "jhubbard"
     </CodeGroup>  
     ```  
   
-     URL membership is only one of many membership conditions you might choose for your delivery extension. For more information about code access security in [!INCLUDE[ssRS](../../../includes/ssrs-md.md)], see.[Secure Development &#40;Reporting Services&#41;](../../../2014/reporting-services/dev-guide/secure-development-reporting-services.md)  
+     URL membership is only one of many membership conditions you might choose for your delivery extension. For more information about code access security in [!INCLUDE[ssRS](../../includes/ssrs-md.md)], see.[Secure Development &#40;Reporting Services&#41;](../../../2014/reporting-services/dev-guide/secure-development-reporting-services.md)  
   
 ## Deploying the Extension to Report Manager  
  If your delivery extension implements the <xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl> interface, your delivery extension can be used with the Report Manager Subscription page. To make the subscription user interface available, you need to deploy your extension to Report Manager.  
@@ -132,7 +132,7 @@ manager: "jhubbard"
     </CodeGroup>  
     ```  
   
-     URL membership is only one of many membership conditions you might choose for your delivery extension. For more information about code access security in [!INCLUDE[ssRS](../../../includes/ssrs-md.md)], see [Secure Development &#40;Reporting Services&#41;](../../../2014/reporting-services/dev-guide/secure-development-reporting-services.md)  
+     URL membership is only one of many membership conditions you might choose for your delivery extension. For more information about code access security in [!INCLUDE[ssRS](../../includes/ssrs-md.md)], see [Secure Development &#40;Reporting Services&#41;](../../../2014/reporting-services/dev-guide/secure-development-reporting-services.md)  
   
 ## Verifying the Deployment  
  You can verify whether your delivery extension was deployed successfully to the report server by using the Web service <xref:ReportService2010.ReportingService2010.ListExtensions%2A> method. You can also open Report Manager and verify that your extension is included in the list of available delivery extensions for a subscription. For more information about Report Manager and subscriptions, see [Subscriptions and Delivery &#40;Reporting Services&#41;](../../../2014/reporting-services/subscriptions-and-delivery-reporting-services.md).  

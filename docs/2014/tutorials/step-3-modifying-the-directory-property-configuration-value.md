@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: ba2a091f-361c-4331-afe2-53b465164c36
 caps.latest.revision: 29
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Step 3: Modifying the Directory Property Configuration Value

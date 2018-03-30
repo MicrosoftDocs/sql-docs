@@ -31,10 +31,10 @@ manager: "jhubbard"
   In addition to the annotations discussed in the previous topics in this section, XML Bulk Load interprets these other annotations, as follows:  
   
  `sql:id-prefix`  
- If the schema specifies prefixes to the XML data, XML Bulk Load removes the prefixes before sending the data to Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ If the schema specifies prefixes to the XML data, XML Bulk Load removes the prefixes before sending the data to Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  `sql:use-cdata`  
- XML Bulk Load reads the text that is stored in the CDATA sections and sends it to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ XML Bulk Load reads the text that is stored in the CDATA sections and sends it to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  `sql:url-encode`  
  XML Bulk Load does not support this annotation. For example, you cannot specify a URL in the XML data input and expect XML Bulk Load to read data from that location to store it in the database.  

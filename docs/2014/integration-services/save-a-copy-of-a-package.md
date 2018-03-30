@@ -22,14 +22,14 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Save a Copy of a Package
-  This procedure describes how to save a copy of a package to the file system, to the package store, or to the **msdb** database in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. When you specify a location to save the package copy, you can also update the name of the package.  
+  This procedure describes how to save a copy of a package to the file system, to the package store, or to the **msdb** database in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. When you specify a location to save the package copy, you can also update the name of the package.  
   
  The package store can include both the **msdb** database and the folders in the file system, only **msdb**, or only folders in the file system. In **msdb**, packages are saved to the **sysssispackages** table. This table includes a **folderid** column that identifies the logical folder to which the package belongs. The logical folders provide a useful way to group packages saved to **msdb** in the same way that folders in the file system provide a way to group packages saved to the file system. Rows in the **sysssispackagefolders** table in **msdb** define the folders.  
   
  If **msdb** is not defined as part of the package store, you can continue to associate packages with existing logical folders when you select SQL Server in the **Package Path** option.  
   
 > [!NOTE]  
->  The package must be opened in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer before you can save a copy of the package.  
+>  The package must be opened in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer before you can save a copy of the package.  
   
 ### To save a copy of a package  
   
@@ -41,7 +41,7 @@ manager: "jhubbard"
   
 4.  If the location is **SQL Server** or **SSIS Package Store**, provide a server name.  
   
-5.  If saving to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], specify the authentication type and, if using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, provide a user name and password.  
+5.  If saving to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], specify the authentication type and, if using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication, provide a user name and password.  
   
 6.  To specify the package path, either type the path or click the browse button **(…)** to specify the location of the package. The default name of the package is Package. Optionally, update the package name to one that suits your needs.  
   

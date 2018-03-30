@@ -16,9 +16,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Transact-SQL Constructs Not Supported by In-Memory OLTP
-  Memory-optimized tables and natively compiled stored procedures do not support the full [!INCLUDE[tsql](../../includes/tsql-md.md)] surface area that is supported by disk-based tables and interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures. When attempting to use one of the unsupported features, the server returns an error.  
+  Memory-optimized tables and natively compiled stored procedures do not support the full [!INCLUDE[tsql](../includes/tsql-md.md)] surface area that is supported by disk-based tables and interpreted [!INCLUDE[tsql](../includes/tsql-md.md)] stored procedures. When attempting to use one of the unsupported features, the server returns an error.  
   
- The error message text mentions the type of [!INCLUDE[tsql](../../includes/tsql-md.md)] statement (feature, operation, option, for example) and well as the name of the feature or [!INCLUDE[tsql](../../includes/tsql-md.md)] keyword. Most unsupported features will return error 10794, with the error message text indicating the unsupported feature. The following tables list the [!INCLUDE[tsql](../../includes/tsql-md.md)] features and keywords that can appear in the error message text, as well as the corrective action to resolve the error.  
+ The error message text mentions the type of [!INCLUDE[tsql](../includes/tsql-md.md)] statement (feature, operation, option, for example) and well as the name of the feature or [!INCLUDE[tsql](../includes/tsql-md.md)] keyword. Most unsupported features will return error 10794, with the error message text indicating the unsupported feature. The following tables list the [!INCLUDE[tsql](../includes/tsql-md.md)] features and keywords that can appear in the error message text, as well as the corrective action to resolve the error.  
   
  For more information on supported features with memory-optimized tables and natively compiled stored procedures, see:  
   
@@ -31,7 +31,7 @@ manager: "jhubbard"
 -   [Natively Compiled Stored Procedures](../../2014/database-engine/natively-compiled-stored-procedures.md)  
   
 ## Databases That Use In-Memory OLTP  
- The following table lists the [!INCLUDE[tsql](../../includes/tsql-md.md)] features and keywords that can appear in the message text of an error involving an In-Memory OLTP database.  
+ The following table lists the [!INCLUDE[tsql](../includes/tsql-md.md)] features and keywords that can appear in the message text of an error involving an In-Memory OLTP database.  
   
 |Type|Name|Resolution|  
 |----------|----------|----------------|  
@@ -42,7 +42,7 @@ manager: "jhubbard"
 |Feature|DBCC CHECKDB<br /><br /> DBCC CHECKTABLE|DBCC CHECKDB skips the memory-optimized tables in the database.<br /><br /> DBCC CHECKTABLE will fail for memory-optimized tables.|  
   
 ## Memory-Optimized Tables  
- The following table lists the [!INCLUDE[tsql](../../includes/tsql-md.md)] features and keywords that can appear in the message text of an error involving a memory-optimized table, as well as the corrective action to resolve the error.  
+ The following table lists the [!INCLUDE[tsql](../includes/tsql-md.md)] features and keywords that can appear in the message text of an error involving a memory-optimized table, as well as the corrective action to resolve the error.  
   
 |Type|Name|Resolution|  
 |----------|----------|----------------|  
@@ -80,7 +80,7 @@ manager: "jhubbard"
 |Operation|Memory-optimized tables as target of MERGE|Memory-optimized tables cannot be the target of a `MERGE` operation. Use `INSERT`, `UPDATE`, or `DELETE` statements instead.|  
   
 ## Indexes on Memory-Optimized Tables  
- The following table lists the [!INCLUDE[tsql](../../includes/tsql-md.md)] features and keywords that can appear in the message text of an error involving an index on a memory-optimized table, as well as the corrective action to resolve the error.  
+ The following table lists the [!INCLUDE[tsql](../includes/tsql-md.md)] features and keywords that can appear in the message text of an error involving an index on a memory-optimized table, as well as the corrective action to resolve the error.  
   
 |Type|Name|Resolution|  
 |----------|----------|----------------|  
@@ -94,19 +94,19 @@ manager: "jhubbard"
 |Index option|*Index option*|The indicated index option is not supported with indexes on memory-optimized tables. Remove the option from the index specification.|  
   
 ## Nonclustered Hash Indexes  
- The following table lists the [!INCLUDE[tsql](../../includes/tsql-md.md)] features and keywords that can appear in the message text of an error involving a nonclustered hash index, as well as the corrective action to resolve the error.  
+ The following table lists the [!INCLUDE[tsql](../includes/tsql-md.md)] features and keywords that can appear in the message text of an error involving a nonclustered hash index, as well as the corrective action to resolve the error.  
   
 |Type|Name|Resolution|  
 |----------|----------|----------------|  
 |Option|ASC/DESC|Nonclustered hash indexes are not ordered. Remove the keywords `ASC` and `DESC` from the index key specification.|  
   
 ## Natively Compiled Stored Procedures  
- The following table lists the [!INCLUDE[tsql](../../includes/tsql-md.md)] features and keywords that can appear in the message text of an error involving natively compiled stored procedures, as well as the corrective action to resolve the error.  
+ The following table lists the [!INCLUDE[tsql](../includes/tsql-md.md)] features and keywords that can appear in the message text of an error involving natively compiled stored procedures, as well as the corrective action to resolve the error.  
   
 |Type|Feature|Resolution|  
 |----------|-------------|----------------|  
 |Feature|Inline table variables|Table types cannot be declared inline with variable declarations. Table types must be declared explicitly using a `CREATE TYPE` statement.|  
-|Feature|Cursors|Cursors are not supported on or in natively compiled stored procedures.<br /><br /> -When executing the procedure from the client, use RPC rather than the cursor API. With ODBC, avoid the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement `EXECUTE`, instead specify the name of the procedure directly.<br /><br /> -When executing the procedure from a [!INCLUDE[tsql](../../includes/tsql-md.md)] batch or another stored procedure, avoid using a cursor with the natively compiled stored procedure.<br /><br /> -When creating a natively compiled stored procedure, rather than using a cursor, use set-based logic or a `WHILE` loop.|  
+|Feature|Cursors|Cursors are not supported on or in natively compiled stored procedures.<br /><br /> -When executing the procedure from the client, use RPC rather than the cursor API. With ODBC, avoid the [!INCLUDE[tsql](../includes/tsql-md.md)] statement `EXECUTE`, instead specify the name of the procedure directly.<br /><br /> -When executing the procedure from a [!INCLUDE[tsql](../includes/tsql-md.md)] batch or another stored procedure, avoid using a cursor with the natively compiled stored procedure.<br /><br /> -When creating a natively compiled stored procedure, rather than using a cursor, use set-based logic or a `WHILE` loop.|  
 |Feature|Non-constant parameter defaults|When using default values with parameters on natively compiled stored procedures, the values must be constants. Remove any wildcards from the parameter declarations.|  
 |Feature|EXTERNAL|CLR stored procedures cannot be natively compiled. Either remove the AS EXTERNAL clause or the NATIVE_COMPILATION option from the CREATE PROCEDURE statement.|  
 |Feature|Numbered stored procedures|Natively compiled stored procedures cannot be numbered. Remove the `;`*number* from the `CREATE PROCEDURE` statement.|  
@@ -124,7 +124,7 @@ manager: "jhubbard"
 |Feature|browse mode metadata|Natively compiled stored procedures do not support browse mode metadata. Make sure the session option `NO_BROWSETABLE` is set to OFF.|  
 |Feature|DELETE with FROM clause|The `FROM` clause is not supported for `DELETE` statements with a table source in natively compiled stored procedures.<br /><br /> `DELETE` with the `FROM` clause is supported when it is used to indicate the table to delete from.|  
 |Feature|UPDATE with FROM clause|The `FROM` clause is not supported for `UPDATE` statements in natively compiled stored procedures.|  
-|Feature|temporary procedures|Temporary stored procedures cannot be natively compiled. Either create a permanent natively compiled stored procedure or a temporary interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure.|  
+|Feature|temporary procedures|Temporary stored procedures cannot be natively compiled. Either create a permanent natively compiled stored procedure or a temporary interpreted [!INCLUDE[tsql](../includes/tsql-md.md)] stored procedure.|  
 |Isolation level|READ UNCOMMITTED|The isolation level READ UNCOMMITTED is not supported for natively compiled stored procedures. Use a supported isolation level, such as SNAPSHOT.|  
 |Isolation level|READ COMMITTED|The isolation level READ UNCOMMITTED is not supported for natively compiled stored procedures. Use a supported isolation level, such as SNAPSHOT.|  
 |Feature|temporary tables|Tables in tempdb cannot be used in natively compiled stored procedures. Instead, use a table variable or a memory-optimized table with DURABILITY=SCHEMA_ONLY.|  
@@ -162,7 +162,7 @@ manager: "jhubbard"
 |Operator|NOT|This operator is not supported. Remove `NOT` from the natively compiled stored procedure. In some cases, `NOT` can be replaced with inequality. For example, `NOT a=b` can be replaced with `a!=b`.|  
 |Operator|TSEQUAL|This operator is not supported. Remove `TSEQUAL` from the natively compiled stored procedure.|  
 |Operator|LIKE|This operator is not supported. Remove `LIKE` from the natively compiled stored procedure.|  
-|Operator|NEXT VALUE FOR|Sequences cannot be referenced inside natively compiled stored procedures. Obtain the value using interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)], and then pass it into the natively compiled stored procedure. For more information, see [Implementing IDENTITY in a Memory-Optimized Table](../../2014/database-engine/implementing-identity-in-a-memory-optimized-table.md).|  
+|Operator|NEXT VALUE FOR|Sequences cannot be referenced inside natively compiled stored procedures. Obtain the value using interpreted [!INCLUDE[tsql](../includes/tsql-md.md)], and then pass it into the natively compiled stored procedure. For more information, see [Implementing IDENTITY in a Memory-Optimized Table](../../2014/database-engine/implementing-identity-in-a-memory-optimized-table.md).|  
 |Set option|*option*|SET options cannot be changed inside natively compiled stored procedures. Certain options can be set with the BEGIN ATOMIC statement. For more information, see the section on atonic blocks in [Natively Compiled Stored Procedures](../../2014/database-engine/natively-compiled-stored-procedures.md).|  
 |Operand|TABLESAMPLE|This operator is not supported. Remove `TABLESAMPLE` from the natively compiled stored procedure.|  
 |Option|RECOMPILE|Natively compiled stored procedures are compiled at create time. To recompile a natively compiled stored procedure, drop and recreate it. Remove `RECOMPILE` from the procedure definition.|  
@@ -171,7 +171,7 @@ manager: "jhubbard"
 |Option|FOR XML|This option is not supported. Remove `FOR XML` from the natively compiled stored procedure.|  
 |Option|FOR BROWSE|This option is not supported. Remove `FOR BROWSE` from the natively compiled stored procedure.|  
 |Join hint|HASH, MERGE|Natively compiled stored procedures only support nested-loops joins. Hash and merge joins are not supported. Remove the join hint.|  
-|Query hint|*Query hint*|This query hint is not inside natively compiled stored procedures. For supported query hints see [Query Hints &#40;Transact-SQL&#41;](../Topic/Query%20Hints%20\(Transact-SQL\).md).|  
+|Query hint|*Query hint*|This query hint is not inside natively compiled stored procedures. For supported query hints see [Query Hints &#40;Transact-SQL&#41;](~/t-sql/queries/hints-transact-sql-query.md).|  
 |Option|DISTINCT|This option is not supported. Remove `DISTINCT` from the query in the natively compiled stored procedure.|  
 |Option|PERCENT|This option is not supported with `TOP` clauses. Remove `PERCENT` from the query in the natively compiled stored procedure.|  
 |Option|WITH TIES|This option is not supported with `TOP` clauses. Remove `WITH TIES` from the query in the natively compiled stored procedure.|  
@@ -195,7 +195,7 @@ manager: "jhubbard"
 |Feature|Table valued functions|Table-valued functions cannot be accessed from natively compiled stored procedures. Remove references to table-valued functions from the natively compiled stored procedure.|  
   
 ## Transactions that Access Memory-Optimized Tables  
- The following table lists the [!INCLUDE[tsql](../../includes/tsql-md.md)] features and keywords that can appear in the message text of an error involving transactions that access memory-optimized tables, as well as the corrective action to resolve the error.  
+ The following table lists the [!INCLUDE[tsql](../includes/tsql-md.md)] features and keywords that can appear in the message text of an error involving transactions that access memory-optimized tables, as well as the corrective action to resolve the error.  
   
 |Type|Name|Resolution|  
 |----------|----------|----------------|  

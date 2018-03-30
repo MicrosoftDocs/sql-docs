@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Open Projects from Source Control
-  You can use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to open projects directly from source control. When you do this, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] retrieves the latest version of the project and copies it to your local disk. The [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] environment also creates a solution for the project automatically.  
+  You can use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to open projects directly from source control. When you do this, [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] retrieves the latest version of the project and copies it to your local disk. The [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] environment also creates a solution for the project automatically.  
   
  After you have opened a project from source control, you can check out and modify the project files.  
   
@@ -30,7 +30,7 @@ manager: "jhubbard"
   
 1.  On the **File** menu, point to **Source Control**, and click **Open From Source Control**.  
   
-2.  If prompted, log on to [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual SourceSafe.  
+2.  If prompted, log on to [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe.  
   
 3.  In the **Create local project from SourceSafe** dialog box, open the folder that contains the project to open.  
   

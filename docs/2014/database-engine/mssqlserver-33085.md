@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: c27b8d1d-668a-4ba8-8b61-25a5ebbc5485
 caps.latest.revision: 9
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_33085
@@ -31,7 +31,7 @@ manager: "jhubbard"
 |Message Text|One or more methods cannot be found in cryptographic provider library '%.*ls'.|  
   
 ## Explanation  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] was unable to use the cryptographic provider listed in the error message. The cryptographic provider did not support a required method. The state of the error indicates which method was not found.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] was unable to use the cryptographic provider listed in the error message. The cryptographic provider did not support a required method. The state of the error indicates which method was not found.  
   
 |State|Description|  
 |-----------|-----------------|  

@@ -31,17 +31,17 @@ manager: "jhubbard"
 |Message Text|Could not obtain information about Windows NT group/user '*user*', error code *code*.|  
   
 ## Explanation  
- 15404 is used in authentication when an invalid principal is specified. Or, impersonation of a Windows account fails because there is no full trust relationship between the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account and the domain of the Windows account.  
+ 15404 is used in authentication when an invalid principal is specified. Or, impersonation of a Windows account fails because there is no full trust relationship between the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] service account and the domain of the Windows account.  
   
 ## User Action  
  Check that the Windows principal exists and is not misspelled.  
   
- If this error is the result of a lack of a full trust relationship between the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account and the domain of the Windows account, one of the following actions can resolve the error:  
+ If this error is the result of a lack of a full trust relationship between the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] service account and the domain of the Windows account, one of the following actions can resolve the error:  
   
--   Use an account from the same domain as the Windows user for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service.  
+-   Use an account from the same domain as the Windows user for the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] service.  
   
--   If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is using a machine account such as Network Service or Local System, the machine must be trusted by the domain containing the Windows User.  
+-   If [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is using a machine account such as Network Service or Local System, the machine must be trusted by the domain containing the Windows User.  
   
--   Use a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account.  
+-   Use a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] account.  
   
   

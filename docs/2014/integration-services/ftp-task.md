@@ -20,7 +20,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # FTP Task
-  The FTP task downloads and uploads data files and manages directories on servers. For example, a package can download data files from a remote server or an Internet location as part of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package workflow. You can use the FTP task for the following purposes:  
+  The FTP task downloads and uploads data files and manages directories on servers. For example, a package can download data files from a remote server or an Internet location as part of an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package workflow. You can use the FTP task for the following purposes:  
   
 -   Copying directories and data files from one directory to another, before or after moving data, and applying transformations to the data.  
   
@@ -66,9 +66,9 @@ manager: "jhubbard"
 |`FTPOperation`|Reports the beginning of and the type of FTP operation that the task performs.|  
   
 ## Related Tasks  
- You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer or programmatically.  
   
- For information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, see [Set the Properties of a Task or Container](../../2014/integration-services/set-the-properties-of-a-task-or-container.md).  
+ For information about how to set these properties in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, see [Set the Properties of a Task or Container](../../2014/integration-services/set-the-properties-of-a-task-or-container.md).  
   
  For more information about programmatically setting these properties, see <xref:Microsoft.SqlServer.Dts.Tasks.FtpTask.FtpTask>.  
   

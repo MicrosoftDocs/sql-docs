@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
 caps.latest.revision: 6
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Formatting Report Items (Report Builder and SSRS)
@@ -33,7 +33,7 @@ manager: "mblythe"
  To quickly get started, see [Tutorial: Format Text &#40;Report Builder&#41;](../../2014/tutorials/tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## In This Section  
  [Formatting Text and Placeholders &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
@@ -43,7 +43,7 @@ manager: "mblythe"
  Describes how to insert and use HTML in a report.  
   
  [Formatting Numbers and Dates &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/formatting-numbers-and-dates-report-builder-and-ssrs.md)  
- Describes how to use standard and custom formatting strings that are supported by [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+ Describes how to use standard and custom formatting strings that are supported by [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
  [Formatting Lines, Colors, and Images &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/formatting-lines-colors-and-images-report-builder-and-ssrs.md)  
  Describes how to format lines, gridlines, colors, and images within report items and data regions.  

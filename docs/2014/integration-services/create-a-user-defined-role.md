@@ -19,7 +19,7 @@ manager: "jhubbard"
     
 ### To create a user-defined role  
   
-1.  Open [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+1.  Open [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 2.  Click **Object Explorer** on the **View** menu.  
   

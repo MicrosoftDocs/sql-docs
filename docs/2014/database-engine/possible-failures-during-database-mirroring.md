@@ -24,7 +24,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Possible Failures During Database Mirroring
-  Physical, operating system, or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] problems can cause a failure in a database mirroring session. Database mirroring does not regularly check the components on which Sqlservr.exe relies to verify whether they are functioning correctly or have failed. However, for some types of failures, the affected component reports an error to Sqlservr.exe. An error reported by another component is called a *hard error*. To detect other failures that would otherwise go unnoticed, database mirroring implements its own time-out mechanism. When a mirroring time-out occurs, database mirroring assumes that a failure has occurred and declares a *soft error*. However, some failures that happen at the SQL Server instance level do not cause mirroring to time-out and can go undetected.  
+  Physical, operating system, or [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] problems can cause a failure in a database mirroring session. Database mirroring does not regularly check the components on which Sqlservr.exe relies to verify whether they are functioning correctly or have failed. However, for some types of failures, the affected component reports an error to Sqlservr.exe. An error reported by another component is called a *hard error*. To detect other failures that would otherwise go unnoticed, database mirroring implements its own time-out mechanism. When a mirroring time-out occurs, database mirroring assumes that a failure has occurred and declares a *soft error*. However, some failures that happen at the SQL Server instance level do not cause mirroring to time-out and can go undetected.  
   
 > [!IMPORTANT]  
 >  Failures in databases other than the mirrored database are not detectable in a database mirroring session. Moreover, a data disk failure is unlikely to be detected, unless the database is restarted because of a data disk failure.  
@@ -61,7 +61,7 @@ manager: "jhubbard"
   
 -   Cables are unplugged.  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows has a firewall that blocks a specific port.  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows has a firewall that blocks a specific port.  
   
 -   The application that is monitoring a port fails.  
   
@@ -96,11 +96,11 @@ manager: "jhubbard"
   
  **To change the time-out value (high-safety mode only)**  
   
--   Use the [ALTER DATABASE \<database> SET PARTNER TIMEOUT \<integer>](../Topic/ALTER%20DATABASE%20\(Transact-SQL\).md) statement.  
+-   Use the [ALTER DATABASE \<database> SET PARTNER TIMEOUT \<integer>](~/t-sql/statements/alter-database-transact-sql.md) statement.  
   
  **To view the current time-out value**  
   
--   Query **mirroring_connection_timeout** in [sys.database_mirroring](../Topic/sys.database_mirroring%20\(Transact-SQL\).md).  
+-   Query **mirroring_connection_timeout** in [sys.database_mirroring](~/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md).  
   
 ## Responding to an Error  
  Regardless of the type of error, a server instance that detects an error responds appropriately based on the role of the instance, the operating mode of the session, and the state of any other connection in the session. For information about what occurs on the loss of a partner, see [Database Mirroring Operating Modes](../../2014/database-engine/database-mirroring-operating-modes.md).  

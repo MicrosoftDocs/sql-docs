@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 4a53a1a8-d1e1-47ef-b1fc-63352ece7d3c
 caps.latest.revision: 22
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Choose Item Location Page (Report Manager)

@@ -54,7 +54,7 @@ manager: "jhubbard"
   
 ### Data Options  
  **ConnectionManager**  
- Select the existing [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection manager that uses the .NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) to connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database that contains the table or view to be profiled.  
+ Select the existing [!INCLUDE[vstecado](../includes/vstecado-md.md)] connection manager that uses the .NET Data Provider for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (SqlClient) to connect to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database that contains the table or view to be profiled.  
   
  **TableOrView**  
  Select the existing table or view to be profiled.  

@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 4a5c64f5-2391-4597-ba3f-81d265b23703
 caps.latest.revision: 33
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Implementing a Rendering Extension
@@ -30,7 +30,7 @@ manager: "jhubbard"
   
 ## In This Section  
  [Rendering Extensions Overview](../../../2014/reporting-services/dev-guide/rendering-extensions-overview.md)  
- Introduces how to write a custom rendering extension for [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
+ Introduces how to write a custom rendering extension for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
  [Implementing the IRenderingExtension Interface](../../../2014/reporting-services/dev-guide/implementing-the-irenderingextension-interface.md)  
  Describes the attributes of a rendering extension.  

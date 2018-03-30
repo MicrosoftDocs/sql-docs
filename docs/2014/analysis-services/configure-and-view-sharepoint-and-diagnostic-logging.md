@@ -16,7 +16,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Configure and View SharePoint Log Files  and Diagnostic Logging (PowerPivot for SharePoint)
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] server operations, events, and messages are recorded in SharePoint log files. Use the information in this topic to configure logging levels and view log file information. You can control which [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] server events are logged to the file. You can also control the severity of messages that are logged. For more information, see [Configure Usage Data Collection for &#40;PowerPivot for SharePoint](../../2014/analysis-services/configure-usage-data-collection-for-powerpivot-for-sharepoint.md).  
+  [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] server operations, events, and messages are recorded in SharePoint log files. Use the information in this topic to configure logging levels and view log file information. You can control which [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] server events are logged to the file. You can also control the severity of messages that are logged. For more information, see [Configure Usage Data Collection for &#40;PowerPivot for SharePoint](../../2014/analysis-services/configure-usage-data-collection-for-powerpivot-for-sharepoint.md).  
   
  In this topic:  
   
@@ -48,7 +48,7 @@ manager: "mblythe"
   
 4.  Expand the category and select individual categories.  
   
-     **Application Page Request** specifies events triggered by the service application when locating a [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] for loading a PowerPivot data source and communicating with other servers in the farm.  
+     **Application Page Request** specifies events triggered by the service application when locating a [!INCLUDE[ssGeminiSrv](../includes/ssgeminisrv-md.md)] for loading a PowerPivot data source and communicating with other servers in the farm.  
   
      **Request Processing** specifies events triggered by query requests against a PowerPivot database that is loaded on a server in the farm.  
   
@@ -68,9 +68,9 @@ manager: "mblythe"
  Log files are text files. You can open them in any text editor. You can also use third-party log viewer applications.  
   
 #### Use a Text Editor  
- If you are using a text editor to troubleshoot a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] server error, the following tips can help you locate relevant information in the file:  
+ If you are using a text editor to troubleshoot a [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] server error, the following tips can help you locate relevant information in the file:  
   
--   For errors related to publishing, viewing, or refreshing a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook, search the log file for the name of the workbook.  
+-   For errors related to publishing, viewing, or refreshing a [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] workbook, search the log file for the name of the workbook.  
   
 -   For errors that provide a correlation ID, copy the ID and use it as a search term in the log file.  
   
@@ -112,15 +112,15 @@ manager: "mblythe"
 13. Use the built-in filters to select records based on severity, process, category, or a user-defined text file. You can also click column headings to change the sort order.  
   
 #### Entries for PowerPivot Services  
- The following table describes entries for [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] server operations most likely to be found in a SharePoint log file.  
+ The following table describes entries for [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] server operations most likely to be found in a SharePoint log file.  
   
 |Process|Area|Category|Level|Message|Details|  
 |-------------|----------|--------------|-----------|-------------|-------------|  
 |w3wp.exe|PowerPivot Service|Usage|Verbose|There are no current request statistics, nothing to log.|At predefined intervals, the service reports query response statistics as a usage event to the usage data collection system. This message indicates there were no query statistics to report.|  
-|w3wp.exe|PowerPivot Service|Web front end|Verbose|Starting to locate an application server for data source=\<*path*>|When it receives a connection request, the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] service identifies an available [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] to handle the request. If there is only one server in the farm, the local server accepts the request in all cases.|  
-|w3wp.exe|PowerPivot Service|Web front end|Verbose|Locating the application server succeeded.|The request was allocated to a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] service application.|  
-|w3wp.exe|PowerPivot Service|Web front end|Verbose|Redirecting request for the \<*PowerPivotdata source*> to the [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)].|The request was forwarded to the [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)].|  
-|w3wp.exe|PowerPivot Service|Request Processing|Verbose|Redirecting request for UserName\<*SharePoint user*> to the database|An impersonated connection to the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data source was created on behalf of the SharePoint user.|  
+|w3wp.exe|PowerPivot Service|Web front end|Verbose|Starting to locate an application server for data source=\<*path*>|When it receives a connection request, the [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] service identifies an available [!INCLUDE[ssGeminiSrv](../includes/ssgeminisrv-md.md)] to handle the request. If there is only one server in the farm, the local server accepts the request in all cases.|  
+|w3wp.exe|PowerPivot Service|Web front end|Verbose|Locating the application server succeeded.|The request was allocated to a [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] service application.|  
+|w3wp.exe|PowerPivot Service|Web front end|Verbose|Redirecting request for the \<*PowerPivotdata source*> to the [!INCLUDE[ssGeminiSrv](../includes/ssgeminisrv-md.md)].|The request was forwarded to the [!INCLUDE[ssGeminiSrv](../includes/ssgeminisrv-md.md)].|  
+|w3wp.exe|PowerPivot Service|Request Processing|Verbose|Redirecting request for UserName\<*SharePoint user*> to the database|An impersonated connection to the [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] data source was created on behalf of the SharePoint user.|  
   
 ## See Also  
  [PowerPivot Usage Data Collection](../../2014/analysis-services/powerpivot-usage-data-collection.md)   

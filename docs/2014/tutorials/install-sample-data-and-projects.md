@@ -35,7 +35,7 @@ manager: "jhubbard"
   
  Optionally, consider installing Excel to browse your multidimensional data as you proceed through the tutorial. Installing Excel enables the **Analyze in Excel** feature that starts Excel using a PivotTable field list that is connected to the cube you are building. Using Excel to browse data is recommended because you can quickly build a pivot report that lets you interact with the data.  
   
- Alternatively, you can browse data using the built-in MDX query designer that is built into [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. The query designer returns the same data, except the data is presented as a flat rowset.  
+ Alternatively, you can browse data using the built-in MDX query designer that is built into [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. The query designer returns the same data, except the data is presented as a flat rowset.  
   
 ## Step 2: Download SQL Server Data Tools – Business Intelligence for Visual Studio 2012  
  In this release, SQL Server Data Tools is downloaded and installed separately from other SQL Server features. The designers and project templates used to create BI models and reports are now available as a free web download.  
@@ -49,7 +49,7 @@ manager: "jhubbard"
   
 -   **AdventureWorksDW2012** – This is a relational data warehouse that runs on a Database Engine instance. It provides the original data that will be used by the Analysis Services databases and projects that you build and deploy throughout the tutorial.  
   
-     You can use this sample database with [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] as well as [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+     You can use this sample database with [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] as well as [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
   
  To install this database, do the following:  
   
@@ -94,7 +94,7 @@ manager: "jhubbard"
   
 1.  Download the [Analysis Services Tutorial SQL Server 2012](http://go.microsoft.com/fwlink/p/?LinkID=221866) on the product samples page on codeplex.  
   
-     The 2012 tutorials are valid for the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] release.  
+     The 2012 tutorials are valid for the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] release.  
   
      The “Analysis Services Tutorial SQL Server 2012.zip” file will be saved to the Downloads folder on your computer.  
   
@@ -126,7 +126,7 @@ manager: "jhubbard"
   
 4.  Remove the read-only permissions on these files. Right-click the parent folder, "Analysis Services Tutorial SQL Server 2012", select **Properties**, and clear the checkbox for **Read-only**. Click **OK**. Apply the changes to this folder, subfolders, and files.  
   
-5.  Start [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+5.  Start [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 6.  Open the solution (.sln) file that corresponds to the lesson you are using. For example, in the folder named "Lesson 1 Complete", you would open the Analysis Services Tutorial.sln file.  
   

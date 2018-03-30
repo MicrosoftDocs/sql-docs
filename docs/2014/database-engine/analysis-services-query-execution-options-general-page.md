@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Analysis Services Query Execution Options (General Page)
-  Use this page to specify the options for displaying the results of a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] query.  
+  Use this page to specify the options for displaying the results of a [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] query.  
   
  **Execution time-out**  
  Indicates the number of seconds to wait before canceling the query. A value of 0 indicates an infinite wait, or no time-out.  

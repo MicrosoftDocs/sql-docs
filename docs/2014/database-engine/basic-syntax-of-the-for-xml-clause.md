@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: df19ecbf-d28e-4e9c-aaa3-700f8bbd3be4
 caps.latest.revision: 36
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Basic Syntax of the FOR XML Clause
   The FOR XML mode can be RAW, AUTO, EXPLICIT, or PATH. It determines the shape of the resulting XML.  
   
 > [!IMPORTANT]  
->  The XMLDATA directive to the FOR XML option is deprecated. Use XSD generation in the case of RAW and AUTO modes. There is no replacement for the XMLDATA directive in EXPLICT mode. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+>  The XMLDATA directive to the FOR XML option is deprecated. Use XSD generation in the case of RAW and AUTO modes. There is no replacement for the XMLDATA directive in EXPLICT mode. [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)]  
   
- Following is the basic syntax that is described in [FOR Clause (Transact-SQL)](../Topic/FOR%20Clause%20\(Transact-SQL\).md):  
+ Following is the basic syntax that is described in [FOR Clause (Transact-SQL)](~/t-sql/queries/select-for-clause-transact-sql.md):  
   
 ```  
 [ FOR { BROWSE | <XML> } ]  
@@ -94,7 +94,7 @@ XML
  [Use AUTO Mode with FOR XML](../../2014/database-engine/use-auto-mode-with-for-xml.md)   
  [Use EXPLICIT Mode with FOR XML](../../2014/database-engine/use-explicit-mode-with-for-xml.md)   
  [Use PATH Mode with FOR XML](../../2014/database-engine/use-path-mode-with-for-xml.md)   
- [SELECT &#40;Transact-SQL&#41;](../Topic/SELECT%20\(Transact-SQL\).md)   
+ [SELECT &#40;Transact-SQL&#41;](~/t-sql/queries/select-transact-sql.md)   
  [FOR XML &#40;SQL Server&#41;](../../2014/database-engine/for-xml-sql-server.md)  
   
   

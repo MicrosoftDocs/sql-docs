@@ -16,7 +16,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Make an Attribute Group Visible to Users (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], make an attribute group visible to users or groups when you want users to have tabs above the grid in the **Explorer** functional area.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], make an attribute group visible to users or groups when you want users to have tabs above the grid in the **Explorer** functional area.  
   
  When you create an attribute group, it is automatically hidden from all users except the one who created it.  
   
@@ -31,7 +31,7 @@ manager: "jhubbard"
   
 ### To make an attribute group visible to users  
   
-1.  In [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], click **System Administration**.  
+1.  In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], click **System Administration**.  
   
 2.  On the **Model View** page, from the menu bar, point to **Manage** and click **Attribute Groups**.  
   

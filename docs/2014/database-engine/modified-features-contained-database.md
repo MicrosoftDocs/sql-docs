@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: a2942509-39a2-4903-b504-ae80a300a9de
 caps.latest.revision: 26
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Modified Features (Contained Database)
@@ -25,13 +25,13 @@ manager: "jhubbard"
 ## ALTER DATABASE  
   
 ### Application Level  
- When using the ALTER DATABASE statement from inside of a contained database, the syntax differs from that used for a non-contained database. This difference includes restrictions of elements of the statement that extend beyond the database to the instance. For more information, see [ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20\(Transact-SQL\).md).  
+ When using the ALTER DATABASE statement from inside of a contained database, the syntax differs from that used for a non-contained database. This difference includes restrictions of elements of the statement that extend beyond the database to the instance. For more information, see [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md).  
   
 ### Instance Level  
- The syntax for the ALTER DATABASE when used outside of a contained database differs from that used for non-contained databases. These changes prevent crossing the database boundary. For more information, see [ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20\(Transact-SQL\).md).  
+ The syntax for the ALTER DATABASE when used outside of a contained database differs from that used for non-contained databases. These changes prevent crossing the database boundary. For more information, see [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md).  
   
 ## CREATE DATABASE  
- The CREATE DATABASE syntax for a contained database differs from that for a non-contained database. See [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../Topic/CREATE%20DATABASE%20\(SQL%20Server%20Transact-SQL\).md)for information about new syntax requirements and allowances.  
+ The CREATE DATABASE syntax for a contained database differs from that for a non-contained database. See [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](~/t-sql/statements/create-database-sql-server-transact-sql.md)for information about new syntax requirements and allowances.  
   
 ## Temporary Tables  
  Local temporary tables are permitted within a contained database, but their behavior differs from those in non-contained databases. In non-contained databases, temporary table data is collated in the collation of **tempdb**. In a contained database temporary table data is collated in the collation of the contained database.  
@@ -46,7 +46,7 @@ manager: "jhubbard"
  In the non-contained database model, there are three separate types of collation: Database collation, Instance collation, and tempdb collation. Contained databases use only two collations, database collation and the new catalog collation. See [Contained Database Collations](../../2014/database-engine/contained-database-collations.md) for more details on contained database collation.  
   
 ## User Options  
- When enabling contained databases, the [user options Option](../../2014/database-engine/configure-the-user-options-server-configuration-option.md) must be set to 0 for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ When enabling contained databases, the [user options Option](../../2014/database-engine/configure-the-user-options-server-configuration-option.md) must be set to 0 for the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## See Also  
  [Contained Database Collations](../../2014/database-engine/contained-database-collations.md)   

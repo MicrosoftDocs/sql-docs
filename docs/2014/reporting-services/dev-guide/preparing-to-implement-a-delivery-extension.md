@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: aee1608d-374f-4ad3-bc23-fe07fdaa52b7
 caps.latest.revision: 33
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Preparing to Implement a Delivery Extension
-  Before you implement your [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] delivery extension, you should define the interfaces to implement. You first need to decide how your delivery extension will be used, what settings your delivery extension will require, and the specific functionality you will need to implement in order to deliver report notifications.  
+  Before you implement your [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] delivery extension, you should define the interfaces to implement. You first need to decide how your delivery extension will be used, what settings your delivery extension will require, and the specific functionality you will need to implement in order to deliver report notifications.  
   
- Each [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] delivery extension must provide the following functionality:  
+ Each [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] delivery extension must provide the following functionality:  
   
 -   An <xref:Microsoft.ReportingServices.Interfaces.IExtension> interface implementation that represents the extension and a localized extension name.  
   
@@ -32,14 +32,14 @@ manager: "jhubbard"
   
  Each delivery extension can be enhanced to include the following functionality:  
   
--   An [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] user control implementation that enables end users to use Report Manager to create report subscriptions that use the delivery extension.  
+-   An [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] user control implementation that enables end users to use Report Manager to create report subscriptions that use the delivery extension.  
   
  The following table describes the available interfaces and classes for delivery extensions.  
   
 |Interface or class|Description|  
 |------------------------|-----------------|  
-|<xref:Microsoft.ReportingServices.Interfaces.IExtension> Interface|Represents an extension in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
-|<xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> Interface|Represents a delivery extension in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
+|<xref:Microsoft.ReportingServices.Interfaces.IExtension> Interface|Represents an extension in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
+|<xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> Interface|Represents a delivery extension in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
 |<xref:Microsoft.ReportingServices.Interfaces.IDeliveryReportServerInformation> Interface|Contains information about the report server that is required by delivery extensions (for example, a list of the available rendering extensions).|  
 |<xref:Microsoft.ReportingServices.Interfaces.Setting> Class|Represents a setting for an extension.|  
 |<xref:Microsoft.ReportingServices.Interfaces.Notification> Class|Contains subscription information that delivery extensions use to deliver reports.|  

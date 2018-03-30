@@ -20,10 +20,10 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Add Attributes to a Change Tracking Group (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], add attributes to a change tracking group when you want to track changes to the attribute's values.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], add attributes to a change tracking group when you want to track changes to the attribute's values.  
   
 > [!NOTE]  
->  After you add an attribute to a change tracking group, when values for the attribute change, the attribute is flagged as changed in the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database. Create a business rule to take action based on the change.  
+>  After you add an attribute to a change tracking group, when values for the attribute change, the attribute is flagged as changed in the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database. Create a business rule to take action based on the change.  
   
 ## Prerequisites  
  To perform this procedure:  
@@ -36,7 +36,7 @@ manager: "jhubbard"
   
 ### To add attributes to a change tracking group  
   
-1.  In [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], click **System Administration**.  
+1.  In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], click **System Administration**.  
   
 2.  On the **Model Explorer** page, from the menu bar, point to **Manage** and click **Entities**.  
   

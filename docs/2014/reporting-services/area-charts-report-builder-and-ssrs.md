@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 245b236d-1d55-4744-b752-80bd133502aa
 caps.latest.revision: 5
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Area Charts (Report Builder and SSRS)
@@ -23,7 +23,7 @@ manager: "mblythe"
  ![Area chart](../../2014/reporting-services/media/areachart.gif "Area chart")  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## Variations  
   

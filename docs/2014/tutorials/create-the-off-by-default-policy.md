@@ -54,7 +54,7 @@ manager: "jhubbard"
   
 11. To confirm the address by opening the Web page, click **Test Link**.  
   
-12. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+12. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## Next Task in Lesson  
  [Configure a Server to Run the Off By Default Policy](../../2014/tutorials/configure-a-server-to-run-the-off-by-default-policy.md)  

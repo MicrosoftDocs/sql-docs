@@ -21,20 +21,20 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQLSetConnectAttr
-  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver ignores the setting of SQL_ATTR_CONNECTION_TIMEOUT.  
+  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver ignores the setting of SQL_ATTR_CONNECTION_TIMEOUT.  
   
- SQL_ATTR_TRANSLATE_LIB is also ignored; specifying another translation library is not supported. To allow applications to easily be ported to use a Microsoft ODBC driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], any value set with SQL_ATTR_TRANSLATE_LIB will be copied into and out of a buffer in the Driver Manager.  
+ SQL_ATTR_TRANSLATE_LIB is also ignored; specifying another translation library is not supported. To allow applications to easily be ported to use a Microsoft ODBC driver for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], any value set with SQL_ATTR_TRANSLATE_LIB will be copied into and out of a buffer in the Driver Manager.  
   
- The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver implements repeatable read transaction isolation as serializable.  
+ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver implements repeatable read transaction isolation as serializable.  
   
- [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduced support for a new transaction isolation attribute, SQL_COPT_SS_TXN_ISOLATION. Setting SQL_COPT_SS_TXN_ISOLATION to SQL_TXN_SS_SNAPSHOT indicates that the transaction will take place under the snapshot isolation level.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introduced support for a new transaction isolation attribute, SQL_COPT_SS_TXN_ISOLATION. Setting SQL_COPT_SS_TXN_ISOLATION to SQL_TXN_SS_SNAPSHOT indicates that the transaction will take place under the snapshot isolation level.  
   
 > [!NOTE]  
 >  SQL_ATTR_TXN_ISOLATION can be used to set all other isolation levels except for SQL_TXN_SS_SNAPSHOT. If you want to use snapshot isolation, you must set SQL_TXN_SS_SNAPSHOT through SQL_COPT_SS_TXN_ISOLATION. However, you can retrieve the isolation level by using either SQL_ATTR_TXN_ISOLATION or SQL_COPT_SS_TXN_ISOLATION.  
   
  Promoting ODBC statement attributes to connection attributes can have unintended consequences. Statement attributes that request server cursors for result set processing can be promoted to the connection. For example, setting the ODBC statement attribute SQL_ATTR_CONCURRENCY to a value more restrictive than the default SQL_CONCUR_READ_ONLY directs the driver to use dynamic cursors for all statements submitted on the connection. Executing an ODBC catalog function on a statement on the connection returns SQL_SUCCESS_WITH_INFO and a diagnostic record indicating that the cursor behavior has been changed to read-only. Attempting to execute a Transact-SQL SELECT statement containing a COMPUTE clause on the same connection fails.  
   
- The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver supports a number of driver-specific extensions to ODBC connection attributes defined in sqlncli.h. The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver may require that the attribute be set prior to connection, or it may ignore the attribute if it is already set. The following table lists restrictions.  
+ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver supports a number of driver-specific extensions to ODBC connection attributes defined in sqlncli.h. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver may require that the attribute be set prior to connection, or it may ignore the attribute if it is already set. The following table lists restrictions.  
   
 |SQL Server attribute|Set before or after connection to server|  
 |--------------------------|----------------------------------------------|  
@@ -70,7 +70,7 @@ manager: "jhubbard"
 |SQL_COPT_SS_USER_DATA|Either|  
 |SQL_COPT_SS_WARN_ON_CP_ERROR|Before|  
   
- Using a pre-connection attribute and the equivalent [!INCLUDE[tsql](../../../includes/tsql-md.md)] command for the same session, database, or [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] state can produce unexpected behavior. For example,  
+ Using a pre-connection attribute and the equivalent [!INCLUDE[tsql](../../includes/tsql-md.md)] command for the same session, database, or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] state can produce unexpected behavior. For example,  
   
 ```  
 SQLSetConnectAttr(SQL_COPT_SS_QUOTED_IDENT, SQL_QI_ON) // turn ON via attribute  
@@ -85,7 +85,7 @@ SQLSetConnectAttr(SQL_ATTR_CURRENT_CATALOG, …) // restores to pre-connect attr
 |Value|Description|  
 |-----------|-----------------|  
 |SQL_AD_ON|Default. The connection uses ANSI default behavior for handling NULL comparisons, padding, warnings, and NULL concatenations.|  
-|SQL_AD_OFF|The connection uses [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-defined handling of NULL, character data type padding, and warnings.|  
+|SQL_AD_OFF|The connection uses [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-defined handling of NULL, character data type padding, and warnings.|  
   
  If you use connection pooling, SQL_COPT_SS_ANSI_NPW should be set in the connection string, rather than with SQLSetConnectAttr. After a connection has been made, any attempt to change this attribute will fail silently when connection pooling is used.  
   
@@ -96,10 +96,10 @@ SQLSetConnectAttr(SQL_ATTR_CURRENT_CATALOG, …) // restores to pre-connect attr
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NTS)  
 ```  
   
- The default is `ReadWrite`. For more information about [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client's support for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] AGs, see [SQL Server Native Client Support for High Availability, Disaster Recovery](../../../2014/database-engine/dev-guide/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
+ The default is `ReadWrite`. For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client's support for [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] AGs, see [SQL Server Native Client Support for High Availability, Disaster Recovery](../../../2014/database-engine/dev-guide/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
 ## SQL_COPT_SS_ATTACHDBFILENAME  
- SQL_COPT_SS_ATTACHDBFILENAME specifies the name of the primary file of an attachable database. This database is attached and becomes the default database for the connection. To use SQL_COPT_SS_ATTACHDBFILENAME you must specify the name of the database as the value of the connection attribute SQL_ATTR_CURRENT_CATALOG or in the DATABASE = parameter of a [SQLDriverConnect](../../../2014/database-engine/dev-guide/sqldriverconnect.md). If the database was previously attached, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] will not reattach it.  
+ SQL_COPT_SS_ATTACHDBFILENAME specifies the name of the primary file of an attachable database. This database is attached and becomes the default database for the connection. To use SQL_COPT_SS_ATTACHDBFILENAME you must specify the name of the database as the value of the connection attribute SQL_ATTR_CURRENT_CATALOG or in the DATABASE = parameter of a [SQLDriverConnect](../../../2014/database-engine/dev-guide/sqldriverconnect.md). If the database was previously attached, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will not reattach it.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -114,7 +114,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 |SQL_BCP_ON|Bulk copy functions are available on the connection.|  
   
 ## SQL_COPT_SS_BROWSE_CONNECT  
- This attribute is used to customize the result set returned by [SQLBrowseConnect](../../../2014/database-engine/dev-guide/sqlbrowseconnect.md). SQL_COPT_SS_BROWSE_CONNECT enables or disables the return of additional information from an enumerated instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. This can include information such as whether the server is a cluster, names of different instances, and the version number.  
+ This attribute is used to customize the result set returned by [SQLBrowseConnect](../../../2014/database-engine/dev-guide/sqlbrowseconnect.md). SQL_COPT_SS_BROWSE_CONNECT enables or disables the return of additional information from an enumerated instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This can include information such as whether the server is a cluster, names of different instances, and the version number.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -126,7 +126,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
   
 |Value|Description|  
 |-----------|-----------------|  
-|computername|**SQLBrowseConnect** returns a list of instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on the specified computer. Double backslashes (\\\\) should not be used for the server name (for example, instead of \\\MyServer, MyServer should be used).|  
+|computername|**SQLBrowseConnect** returns a list of instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the specified computer. Double backslashes (\\\\) should not be used for the server name (for example, instead of \\\MyServer, MyServer should be used).|  
 |NULL|Default. **SQLBrowseConnect** returns information for all servers in the domain.|  
   
 ## SQL_COPT_SS_CONCAT_NULL  
@@ -135,7 +135,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 |Value|Description|  
 |-----------|-----------------|  
 |SQL_CN_ON|Default. The connection uses ISO default behavior for handling NULL values when concatenating strings.|  
-|SQL_CN_OFF|The connection uses [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-defined behavior for handling NULL values when concatenating strings.|  
+|SQL_CN_OFF|The connection uses [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-defined behavior for handling NULL values when concatenating strings.|  
   
 ## SQL_COPT_SS_ENCRYPT  
  Controls encryption for a connection.  
@@ -152,7 +152,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
   
 |Value|Description|  
 |-----------|-----------------|  
-|DTC object*|The MS DTC OLE transaction object that specifies the transaction to export to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|DTC object*|The MS DTC OLE transaction object that specifies the transaction to export to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |SQL_DTC_DONE|Delimits the end of a DTC transaction.|  
   
 ## SQL_COPT_SS_ENLIST_IN_XA  
@@ -162,7 +162,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
  This attribute is no longer supported.  
   
 ## SQL_COPT_SS_FAILOVER_PARTNER  
- Used to specify or retrieve the name of the failover partner used for database mirroring in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], and it is a null terminated character string which must be set before the connection to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is initially made.  
+ Used to specify or retrieve the name of the failover partner used for database mirroring in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and it is a null terminated character string which must be set before the connection to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is initially made.  
   
  After making the connection, the application can query this attribute using [SQLGetConnectAttr](../../../2014/database-engine/dev-guide/sqlgetconnectattr.md) to determine the identity of the failover partner. If the primary server has no failover partner this property will return an empty string. This allows a smart application to cache the most recently determined backup server, but such applications should be aware that the information is only updated when the connection is first established, or reset, if pooled, and can become out of date for long term connections.  
   
@@ -173,11 +173,11 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
   
 |Value|Description|  
 |-----------|-----------------|  
-|SQL_IS_OFF|Default. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication is used to validate user identifier and password on login.|  
-|SQL_IS_ON|Windows Authentication Mode is used to validate a user's access rights to the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|SQL_IS_OFF|Default. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication is used to validate user identifier and password on login.|  
+|SQL_IS_ON|Windows Authentication Mode is used to validate a user's access rights to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
 ## SQL_COPT_SS_MARS_ENABLED  
- This attribute enables or disables Multiple Active Result Sets (MARS). By default, MARS is disabled. This attribute should be set before making a connection to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Once the connection [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is opened, MARS will remain enabled or disabled for the life of the connection.  
+ This attribute enables or disables Multiple Active Result Sets (MARS). By default, MARS is disabled. This attribute should be set before making a connection to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Once the connection [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is opened, MARS will remain enabled or disabled for the life of the connection.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -187,21 +187,21 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
  For more information about MARS, see [Using Multiple Active Result Sets &#40;MARS&#41;](../../../2014/database-engine/dev-guide/using-multiple-active-result-sets-mars.md).  
   
 ## SQL_COPT_SS_MULTISUBNET_FAILOVER  
- If your application is connecting to a [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] availability group (AG) on different subnets, this connection property configures [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client to provide faster detection of and connection to the (currently) active server. For example:  
+ If your application is connecting to a [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] availability group (AG) on different subnets, this connection property configures [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client to provide faster detection of and connection to the (currently) active server. For example:  
   
 ```  
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBMIT_FAILOVER, SQL_IS_ON, SQL_IS_INTEGER)  
 ```  
   
- For more information about [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client's support for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] AGs, see [SQL Server Native Client Support for High Availability, Disaster Recovery](../../../2014/database-engine/dev-guide/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
+ For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client's support for [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] AGs, see [SQL Server Native Client Support for High Availability, Disaster Recovery](../../../2014/database-engine/dev-guide/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
 |Value|Description|  
 |-----------|-----------------|  
-|SQL_IS_ON|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client provides faster reconnection if there is a failover.|  
-|SQL_IS_OFF|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client will not provide faster reconnection if there is a failover.|  
+|SQL_IS_ON|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client provides faster reconnection if there is a failover.|  
+|SQL_IS_OFF|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client will not provide faster reconnection if there is a failover.|  
   
 ## SQL_COPT_SS_OLDPWD  
- Password expiration for SQL Server Authentication was introduced in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. The SQL_COPT_SS_OLDPWD attribute has been added to allow the client to provide both the old and the new password for the connection. When this property is set, the provider will not use the connection pool for the first connection or for subsequent connections, since the connection string will contain the "old password" which has now changed.  
+ Password expiration for SQL Server Authentication was introduced in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. The SQL_COPT_SS_OLDPWD attribute has been added to allow the client to provide both the old and the new password for the connection. When this property is set, the provider will not use the connection pool for the first connection or for subsequent connections, since the connection string will contain the "old password" which has now changed.  
   
  For more information, see [Changing Passwords Programmatically](../../../2014/database-engine/dev-guide/changing-passwords-programmatically.md).  
   
@@ -250,15 +250,15 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBMIT_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 |SQL_PC_ON|Cursors are not closed when transaction is committed or rolled back using **SQLEndTran**, except when using a static or keyset cursor in asynchronous mode. If a rollback is issued while the population of the cursor is not complete, the cursor is closed.|  
   
 ## SQL_COPT_SS_QUOTED_IDENT  
- SQL_COPT_SS_QUOTED_IDENT allows quoted identifiers in ODBC and Transact-SQL statements submitted on the connection. By supplying quoted identifiers, the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver allows otherwise invalid object names such as "My Table", which contains a space character in the identifier. For more information, see SET QUOTED_IDENTIFIER.  
+ SQL_COPT_SS_QUOTED_IDENT allows quoted identifiers in ODBC and Transact-SQL statements submitted on the connection. By supplying quoted identifiers, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver allows otherwise invalid object names such as "My Table", which contains a space character in the identifier. For more information, see SET QUOTED_IDENTIFIER.  
   
 |Value|Description|  
 |-----------|-----------------|  
-|SQL_QI_OFF|The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] connection does not allow quoted identifiers in submitted [!INCLUDE[tsql](../../../includes/tsql-md.md)].|  
-|SQL_QI_ON|Default. The connection allows quoted identifiers in submitted [!INCLUDE[tsql](../../../includes/tsql-md.md)].|  
+|SQL_QI_OFF|The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connection does not allow quoted identifiers in submitted [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
+|SQL_QI_ON|Default. The connection allows quoted identifiers in submitted [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
   
 ## SQL_COPT_SS_TRANSLATE  
- SQL_COPT_SS_TRANSLATE causes the driver to translate characters between the client and server code pages as MBCS data is exchanged. The attribute affects only data stored in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**char**, **varchar**, and **text** columns.  
+ SQL_COPT_SS_TRANSLATE causes the driver to translate characters between the client and server code pages as MBCS data is exchanged. The attribute affects only data stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**char**, **varchar**, and **text** columns.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -276,7 +276,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBMIT_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 |SQL_TRUST_SERVER_CERTIFICATE_YES|Encryption without certificate validation is enabled.|  
   
 ## SQL_COPT_SS_TXN_ISOLATION  
- SQL_COPT_SS_TXN_ISOLATION sets the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] specific snapshot isolation attribute. Snapshot isolation cannot be set using SQL_ATTR_TXN_ISOLATION because the value is [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] specific. However, it can be retrieved using either SQL_ATTR_TXN_ISOLATION or SQL_COPT_SS_TXN_ISOLATION.  
+ SQL_COPT_SS_TXN_ISOLATION sets the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specific snapshot isolation attribute. Snapshot isolation cannot be set using SQL_ATTR_TXN_ISOLATION because the value is [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specific. However, it can be retrieved using either SQL_ATTR_TXN_ISOLATION or SQL_COPT_SS_TXN_ISOLATION.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -358,11 +358,11 @@ SQLSetConnectAttr(hDbc, SQL_COPT_SS_PERF_DATA,
  [SQLSetConnectAttr Function](http://go.microsoft.com/fwlink/?LinkId=59368)   
  [ODBC API Implementation Details](../../../2014/database-engine/dev-guide/odbc-api-implementation-details.md)   
  [Bulk Copy Functions](../../../2014/database-engine/dev-guide/bulk-copy-functions.md)   
- [SET ANSI_NULLS &#40;Transact-SQL&#41;](../Topic/SET%20ANSI_NULLS%20\(Transact-SQL\).md)   
- [SET ANSI_PADDING &#40;Transact-SQL&#41;](../Topic/SET%20ANSI_PADDING%20\(Transact-SQL\).md)   
- [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../Topic/SET%20ANSI_WARNINGS%20\(Transact-SQL\).md)   
- [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../Topic/SET%20CONCAT_NULL_YIELDS_NULL%20\(Transact-SQL\).md)   
- [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../Topic/SET%20QUOTED_IDENTIFIER%20\(Transact-SQL\).md)   
+ [SET ANSI_NULLS &#40;Transact-SQL&#41;](~/t-sql/statements/set-ansi-nulls-transact-sql.md)   
+ [SET ANSI_PADDING &#40;Transact-SQL&#41;](~/t-sql/statements/set-ansi-padding-transact-sql.md)   
+ [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](~/t-sql/statements/set-ansi-warnings-transact-sql.md)   
+ [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](~/t-sql/statements/set-concat-null-yields-null-transact-sql.md)   
+ [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](~/t-sql/statements/set-quoted-identifier-transact-sql.md)   
  [SQLPrepare Function](http://go.microsoft.com/fwlink/?LinkId=59360)   
  [SQLGetInfo](../../../2014/database-engine/dev-guide/sqlgetinfo.md)  
   

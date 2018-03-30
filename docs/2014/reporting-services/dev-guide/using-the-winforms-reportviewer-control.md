@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
 caps.latest.revision: 25
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Using the WinForms ReportViewer Control
@@ -23,7 +23,7 @@ manager: "jhubbard"
   
 ###### To add the ReportViewer Control to a Windows application  
   
-1.  Create a new Windows application using either [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] or [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)].  
+1.  Create a new Windows application using either [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] or [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
      \- Or -  
   
@@ -48,7 +48,7 @@ manager: "jhubbard"
  ![Select local report](../../../2014/reporting-services/dev-guide/media/windowsapp-localreportsettings.png "Select local report")  
   
 ## Viewing Reports in Remote Processing Mode  
- The following example demonstrates how to render a report that has been deployed to a report server using the WinForms ReportViewer control. This example uses the Sales Order Detail report that is included with the [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] sample reports project.  
+ The following example demonstrates how to render a report that has been deployed to a report server using the WinForms ReportViewer control. This example uses the Sales Order Detail report that is included with the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample reports project.  
   
 ```csharp  
 public partial class Form1 : Form  
@@ -149,7 +149,7 @@ End Class
   
 2.  From the **Project** menu, select **Add Existing Item**.  
   
-3.  Browse to the location where you installed the [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] Report Samples project.  
+3.  Browse to the location where you installed the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Report Samples project.  
   
      The download the report samples, go to [AdventureWorks 2012 Report Samples](http://go.microsoft.com/fwlink/?LinkId=404153)  
   
@@ -164,7 +164,7 @@ End Class
      If Solution Explorer is not visible, you can open it from the **View** menu by selecting **Solution Explorer**.  
   
     > [!NOTE]  
-    >  Renaming the file extension from rdl to rdlc will allow you to edit the report using report designer for [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)].  
+    >  Renaming the file extension from rdl to rdlc will allow you to edit the report using report designer for [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)].  
   
 6.  After the report has been renamed, select the file and locate the Properties window. Change the **Copy to Output Directory** property to **Copy if Newer**.  
   

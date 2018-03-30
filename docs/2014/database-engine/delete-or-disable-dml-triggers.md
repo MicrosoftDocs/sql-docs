@@ -19,11 +19,11 @@ helpviewer_keywords:
 ms.assetid: 0f97f953-33c5-4b26-afeb-db2a26ce38b4
 caps.latest.revision: 26
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Delete or Disable DML Triggers
-  This topic describes how to delete or disable a DML trigger in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  This topic describes how to delete or disable a DML trigger in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -60,7 +60,7 @@ manager: "jhubbard"
   
 #### To delete a DML trigger  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)] and then expand that instance.  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)] and then expand that instance.  
   
 2.  Expand the database that you want, expand **Tables**, and then expand the table that contains the trigger that you want to delete.  
   
@@ -70,7 +70,7 @@ manager: "jhubbard"
   
 #### To disable and enable a DML trigger  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)] and then expand that instance.  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)] and then expand that instance.  
   
 2.  Expand the database that you want, expand **Tables**, and then expand the table that contains the trigger that you want to disable.  
   
@@ -82,11 +82,11 @@ manager: "jhubbard"
   
 #### To delete a DML trigger  
   
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following examples into the query window. Execute the [CREATE TRIGGER](../Topic/CREATE%20TRIGGER%20\(Transact-SQL\).md) statement to create the `Sales.bonus_reminder` trigger. To delete the trigger, execute the [DROP TRIGGER](../Topic/DROP%20TRIGGER%20\(Transact-SQL\).md) statement.  
+3.  Copy and paste the following examples into the query window. Execute the [CREATE TRIGGER](~/t-sql/statements/create-trigger-transact-sql.md) statement to create the `Sales.bonus_reminder` trigger. To delete the trigger, execute the [DROP TRIGGER](~/t-sql/statements/drop-trigger-transact-sql.md) statement.  
   
 ```tsql  
 --Create the trigger.  
@@ -116,11 +116,11 @@ GO
   
 #### To disable and enable a DML trigger  
   
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following examples into the query window. Execute the [CREATE TRIGGER](../Topic/CREATE%20TRIGGER%20\(Transact-SQL\).md) statement to create the `Sales.bonus_reminder` trigger. To disable and enable the trigger, execute the [DISABLE TRIGGER](../Topic/DISABLE%20TRIGGER%20\(Transact-SQL\).md) and [ENABLE TRIGGER](../Topic/ENABLE%20TRIGGER%20\(Transact-SQL\).md) statements, respectively.  
+3.  Copy and paste the following examples into the query window. Execute the [CREATE TRIGGER](~/t-sql/statements/create-trigger-transact-sql.md) statement to create the `Sales.bonus_reminder` trigger. To disable and enable the trigger, execute the [DISABLE TRIGGER](~/t-sql/statements/disable-trigger-transact-sql.md) and [ENABLE TRIGGER](~/t-sql/statements/enable-trigger-transact-sql.md) statements, respectively.  
   
 ```tsql  
 --Create the trigger.  
@@ -156,22 +156,22 @@ GO
 ```  
   
 ## See Also  
- [ALTER TRIGGER &#40;Transact-SQL&#41;](../Topic/ALTER%20TRIGGER%20\(Transact-SQL\).md)   
- [CREATE TRIGGER &#40;Transact-SQL&#41;](../Topic/CREATE%20TRIGGER%20\(Transact-SQL\).md)   
- [DROP TRIGGER &#40;Transact-SQL&#41;](../Topic/DROP%20TRIGGER%20\(Transact-SQL\).md)   
- [ENABLE TRIGGER &#40;Transact-SQL&#41;](../Topic/ENABLE%20TRIGGER%20\(Transact-SQL\).md)   
- [DISABLE TRIGGER &#40;Transact-SQL&#41;](../Topic/DISABLE%20TRIGGER%20\(Transact-SQL\).md)   
- [EVENTDATA &#40;Transact-SQL&#41;](../Topic/EVENTDATA%20\(Transact-SQL\).md)   
+ [ALTER TRIGGER &#40;Transact-SQL&#41;](~/t-sql/statements/alter-trigger-transact-sql.md)   
+ [CREATE TRIGGER &#40;Transact-SQL&#41;](~/t-sql/statements/create-trigger-transact-sql.md)   
+ [DROP TRIGGER &#40;Transact-SQL&#41;](~/t-sql/statements/drop-trigger-transact-sql.md)   
+ [ENABLE TRIGGER &#40;Transact-SQL&#41;](~/t-sql/statements/enable-trigger-transact-sql.md)   
+ [DISABLE TRIGGER &#40;Transact-SQL&#41;](~/t-sql/statements/disable-trigger-transact-sql.md)   
+ [EVENTDATA &#40;Transact-SQL&#41;](~/t-sql/functions/eventdata-transact-sql.md)   
  [Get Information About DML Triggers](../../2014/database-engine/get-information-about-dml-triggers.md)   
- [sp_help &#40;Transact-SQL&#41;](../Topic/sp_help%20\(Transact-SQL\).md)   
- [sp_helptrigger &#40;Transact-SQL&#41;](../Topic/sp_helptrigger%20\(Transact-SQL\).md)   
- [sys.triggers &#40;Transact-SQL&#41;](../Topic/sys.triggers%20\(Transact-SQL\).md)   
- [sys.trigger_events &#40;Transact-SQL&#41;](../Topic/sys.trigger_events%20\(Transact-SQL\).md)   
- [sys.sql_modules &#40;Transact-SQL&#41;](../Topic/sys.sql_modules%20\(Transact-SQL\).md)   
- [sys.assembly_modules &#40;Transact-SQL&#41;](../Topic/sys.assembly_modules%20\(Transact-SQL\).md)   
- [sys.server_triggers &#40;Transact-SQL&#41;](../Topic/sys.server_triggers%20\(Transact-SQL\).md)   
- [sys.server_trigger_events &#40;Transact-SQL&#41;](../Topic/sys.server_trigger_events%20\(Transact-SQL\).md)   
- [sys.server_sql_modules &#40;Transact-SQL&#41;](../Topic/sys.server_sql_modules%20\(Transact-SQL\).md)   
- [sys.server_assembly_modules &#40;Transact-SQL&#41;](../Topic/sys.server_assembly_modules%20\(Transact-SQL\).md)  
+ [sp_help &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
+ [sp_helptrigger &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
+ [sys.triggers &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-triggers-transact-sql.md)   
+ [sys.trigger_events &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-trigger-events-transact-sql.md)   
+ [sys.sql_modules &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
+ [sys.assembly_modules &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)   
+ [sys.server_triggers &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md)   
+ [sys.server_trigger_events &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-server-trigger-events-transact-sql.md)   
+ [sys.server_sql_modules &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-server-sql-modules-transact-sql.md)   
+ [sys.server_assembly_modules &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-server-assembly-modules-transact-sql.md)  
   
   

@@ -27,7 +27,7 @@ manager: "jhubbard"
  Displays the names, types, owners, and status of the objects that are about to be deleted, as well as any messages about errors during execution.  
   
 > [!NOTE]  
->  Running **Delete** on a database is equivalent to issuing DROP DATABASE in [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+>  Running **Delete** on a database is equivalent to issuing DROP DATABASE in [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
  **Show Dependencies**  
  Click to display both the objects that are dependent on the currently selected object and objects that the current object is dependent on (upward and downward dependency). The information displayed in the **Show Dependencies** dialog box is read-only.  

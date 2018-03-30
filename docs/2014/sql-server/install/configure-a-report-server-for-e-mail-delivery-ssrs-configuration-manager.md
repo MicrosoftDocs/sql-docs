@@ -24,17 +24,17 @@ helpviewer_keywords:
 ms.assetid: b838f970-d11a-4239-b164-8d11f4581d83
 caps.latest.revision: 13
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "jhubbard"
 ---
 # Configure a Report Server for E-Mail Delivery (SSRS Configuration Manager)
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] includes an e-mail delivery extension so that you can distribute reports through e-mail. Depending on how you define the e-mail subscription, a delivery might consist of a notification, link, attachment, or embedded report. The e-mail delivery extension works with your existing mail server technology. The mail server must be an SMTP server or forwarder. The report server connects to an SMTP server through Collaboration Data Objects (CDO) libraries (cdosys.dll) that are provided by the operating system.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] includes an e-mail delivery extension so that you can distribute reports through e-mail. Depending on how you define the e-mail subscription, a delivery might consist of a notification, link, attachment, or embedded report. The e-mail delivery extension works with your existing mail server technology. The mail server must be an SMTP server or forwarder. The report server connects to an SMTP server through Collaboration Data Objects (CDO) libraries (cdosys.dll) that are provided by the operating system.  
   
  The report server e-mail delivery extension is not configured by default. You must use the Reporting Services Configuration Manager to minimally configure the extension. To set advanced properties, you must edit the `RSReportServer.config` file. If you cannot configure the report server to use this extension, you can deliver reports to a shared folder instead. For more information, see [File Share Delivery in Reporting Services](../../../2014/reporting-services/file-share-delivery-in-reporting-services.md).  
   
 ||  
 |-|  
-|[!INCLUDE[applies](../../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Native mode|  
+|[!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode|  
   
  
   
@@ -71,7 +71,7 @@ manager: "jhubbard"
 
   
 ##  <a name="bkmk_example_config_file"></a> Example Report Server E-Mail Configuration  
- The following example illustrates the settings in the RSreportserver.config file for a remote SMTP server. To read about the setting descriptions and valid values, see [RSReportServer Configuration File](../../../2014/reporting-services/rsreportserver-configuration-file.md) in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online or the CDO product documentation.  
+ The following example illustrates the settings in the RSreportserver.config file for a remote SMTP server. To read about the setting descriptions and valid values, see [RSReportServer Configuration File](../../../2014/reporting-services/rsreportserver-configuration-file.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online or the CDO product documentation.  
   
 ```  
 <RSEmailDPConfiguration>  
@@ -187,7 +187,7 @@ manager: "jhubbard"
   
 8.  Save the file.  
   
-     The report server will use the new settings automatically; you do not need to restart the service. You can specify additional SMTP settings to further configure how the SMTP server is used for report server e-mail delivery. For more information, see [Configuring a Report Server for E-Mail Delivery](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) and [RSReportServer Configuration File](../../../2014/reporting-services/rsreportserver-configuration-file.md) in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online.  
+     The report server will use the new settings automatically; you do not need to restart the service. You can specify additional SMTP settings to further configure how the SMTP server is used for report server e-mail delivery. For more information, see [Configuring a Report Server for E-Mail Delivery](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) and [RSReportServer Configuration File](../../../2014/reporting-services/rsreportserver-configuration-file.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
 
   

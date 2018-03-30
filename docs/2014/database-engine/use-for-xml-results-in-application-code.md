@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
 caps.latest.revision: 23
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Use FOR XML Results in Application Code
@@ -122,13 +122,13 @@ manager: "jhubbard"
   
 #### To test this example  
   
-1.  Verify that IIS is installed and that the AdventureWorks sample database for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has been installed.  
+1.  Verify that IIS is installed and that the AdventureWorks sample database for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has been installed.  
   
      This example requires that Internet Information Services (IIS) version 5.0, or later versions, are installed with ASP support enabled. Also, the AdventureWorks sample database has to be installed.  
   
 2.  Copy the code example that was previously provided and paste it into the XML or text editor that you use. Save the file as RetrieveResults.asp in the root directory that is used for IIS. Typically, this is C:Inetpub\wwwroot.  
   
-3.  Open the ASP page in a browser window by using the following URL. First, replace 'MyServer' with either "localhost" or the actual name of the server where [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and IIS are installed.  
+3.  Open the ASP page in a browser window by using the following URL. First, replace 'MyServer' with either "localhost" or the actual name of the server where [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and IIS are installed.  
   
     ```  
     http://MyServer/RetrieveResults.asp  
@@ -261,13 +261,13 @@ manager: "jhubbard"
   
 #### To test this example  
   
-1.  Verify that IIS is installed and that the AdventureWorks sample database for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has been installed.  
+1.  Verify that IIS is installed and that the AdventureWorks sample database for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has been installed.  
   
      This example requires that Internet Information Services (IIS) version 5.0, or later versions, are installed with ASP.NET support enabled. Also, the AdventureWorks sample database has to be installed.  
   
 2.  Copy the code that was previously provided and paste it into the XML or text editor that you use. Save the file as RetrieveResults.aspx in the root directory used for IIS. Typically, this is C:Inetpub\wwwroot.  
   
-3.  Open the ASP.NET page in a browser window using the following URL. First, replace 'MyServer' with either "localhost" or the actual name of the server where [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and IIS are installed.  
+3.  Open the ASP.NET page in a browser window using the following URL. First, replace 'MyServer' with either "localhost" or the actual name of the server where [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and IIS are installed.  
   
     ```  
     http://MyServer/RetrieveResults.aspx  
@@ -288,7 +288,7 @@ SqlConnection closed.
 ```  
   
 > [!NOTE]  
->  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`xml` data type support lets you request that the result of a FOR XML query be returned as `xml` data type, instead of as string or image typed data, by specifying the [TYPE directive](../../2014/database-engine/type-directive-in-for-xml-queries.md). When the TYPE directive is used in FOR XML queries, it provides programmatic access to the FOR XML results similar to that shown in [Use XML Data in Applications](../../2014/database-engine/use-xml-data-in-applications.md).  
+>  The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]`xml` data type support lets you request that the result of a FOR XML query be returned as `xml` data type, instead of as string or image typed data, by specifying the [TYPE directive](../../2014/database-engine/type-directive-in-for-xml-queries.md). When the TYPE directive is used in FOR XML queries, it provides programmatic access to the FOR XML results similar to that shown in [Use XML Data in Applications](../../2014/database-engine/use-xml-data-in-applications.md).  
   
 ## See Also  
  [FOR XML &#40;SQL Server&#41;](../../2014/database-engine/for-xml-sql-server.md)  

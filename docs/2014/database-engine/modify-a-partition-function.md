@@ -12,11 +12,11 @@ ms.topic: "article"
 ms.assetid: ae5bfc09-f27a-4ea9-9518-485278b11674
 caps.latest.revision: 10
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Modify a Partition Function
-  You can change the way a table or index is partitioned in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by adding or subtracting the number of partitions specified, in increments of 1, in the partition function of the partitioned table or index by using [!INCLUDE[tsql](../../includes/tsql-md.md)]. When you add a partition, you do so by "splitting" an existing partition into two partitions and redefining the boundaries of the new partitions. When you drop a partition, you do so by "merging" the boundaries of two partitions into one. This last action repopulates one partition and leaves the other partition unassigned.  
+  You can change the way a table or index is partitioned in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by adding or subtracting the number of partitions specified, in increments of 1, in the partition function of the partitioned table or index by using [!INCLUDE[tsql](../includes/tsql-md.md)]. When you add a partition, you do so by "splitting" an existing partition into two partitions and redefining the boundaries of the new partitions. When you drop a partition, you do so by "merging" the boundaries of two partitions into one. This last action repopulates one partition and leaves the other partition unassigned.  
   
 > [!CAUTION]  
 >  More than one table or index can use the same partition function. When you modify a partition function, you affect all of them in a single transaction. Check the partition function’s dependencies before modifying it.  
@@ -41,18 +41,18 @@ manager: "jhubbard"
   
 -   ALTER PARTITION FUNCTION can only be used for splitting one partition into two, or for merging two partitions into one. To change the way a table or index is partitioned (from 10 partitions to 5, for example), you can use any one of the following options:  
   
-    -   Create a new partitioned table with the desired partition function, and then insert the data from the old table into the new table by using either an INSERT INTO ... SELECT FROM [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or the **Manage Partition Wizard** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+    -   Create a new partitioned table with the desired partition function, and then insert the data from the old table into the new table by using either an INSERT INTO ... SELECT FROM [!INCLUDE[tsql](../includes/tsql-md.md)] statement or the **Manage Partition Wizard** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
     -   Create a partitioned clustered index on a heap.  
   
         > [!NOTE]  
         >  Dropping a partitioned clustered index results in a partitioned heap.  
   
-    -   Drop and rebuild an existing partitioned index by using the [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE INDEX statement with the DROP EXISTING = ON clause.  
+    -   Drop and rebuild an existing partitioned index by using the [!INCLUDE[tsql](../includes/tsql-md.md)] CREATE INDEX statement with the DROP EXISTING = ON clause.  
   
     -   Perform a sequence of ALTER PARTITION FUNCTION statements.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not provide replication support for modifying a partition function. If you want to make changes to a partition function in the publication database, you must do this manually in the subscription database.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not provide replication support for modifying a partition function. If you want to make changes to a partition function in the publication database, you must do this manually in the subscription database.  
   
 -   All filegroups that are affected by ALTER PARITITION FUNCTION must be online.  
   
@@ -70,7 +70,7 @@ manager: "jhubbard"
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  **To modify a partition function:**  
   
- This specific action cannot be performed using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. In order to modify a partition function, you must first delete the function and then create a new one with the desired properties using the Create Partition Wizard. For more information, see  
+ This specific action cannot be performed using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. In order to modify a partition function, you must first delete the function and then create a new one with the desired properties using the Create Partition Wizard. For more information, see  
   
 #### To delete a partition function  
   
@@ -86,7 +86,7 @@ manager: "jhubbard"
   
 #### To split a single partition into two partitions  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -111,7 +111,7 @@ manager: "jhubbard"
   
 #### To merge two partitions into one partition  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -134,6 +134,6 @@ manager: "jhubbard"
     MERGE RANGE (100);  
     ```  
   
- For more information, see [ALTER PARTITION FUNCTION &#40;Transact-SQL&#41;](../Topic/ALTER%20PARTITION%20FUNCTION%20\(Transact-SQL\).md).  
+ For more information, see [ALTER PARTITION FUNCTION &#40;Transact-SQL&#41;](~/t-sql/statements/alter-partition-function-transact-sql.md).  
   
   

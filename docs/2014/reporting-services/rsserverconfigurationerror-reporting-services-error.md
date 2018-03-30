@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 0913afc2-34b4-4713-b570-cfd5718975ac
 caps.latest.revision: 11
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # rsServerConfigurationError - Reporting Services Error
@@ -23,10 +23,10 @@ manager: "mblythe"
   
 |||  
 |-|-|  
-|Product Name|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|Product Name|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|  
 |Event ID|rsServerConfiguration|  
 |Event Source|Microsoft.ReportingServices.Diagnostics.Utilities.ErrorStrings|  
-|Component|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
+|Component|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|  
 |Message Text|The report server has encountered a configuration error.|  
   
 ## Explanation  

@@ -27,12 +27,12 @@ manager: "jhubbard"
   Before you write custom code in the Script component, you must select the type of data flow component that you want to create—source, transformation, or destination—and then configure the component's metadata and properties in the **Script Transformation Editor**.  
   
 ## Selecting the Type of Component to Create  
- When you add a Script component to the Data Flow pane of [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, the **Select Script Component Type** dialog box appears. You preconfigure the component as a source, transformation, or destination. After you make this initial selection, you can continue to configure the component in the **Script Transformation Editor**.  
+ When you add a Script component to the Data Flow pane of [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, the **Select Script Component Type** dialog box appears. You preconfigure the component as a source, transformation, or destination. After you make this initial selection, you can continue to configure the component in the **Script Transformation Editor**.  
   
  To set the default script language for the Script component, use the **Scripting language** option on the **General** page of the **Options** dialog box. For more information, see [General Page](../../../2014/integration-services/general-page.md).  
   
 ## Understanding the Two Design-Time Modes  
- In [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, the Script component has two modes: metadata design mode and code design mode.  
+ In [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, the Script component has two modes: metadata design mode and code design mode.  
   
  When you open the **Script Transformation Editor**, the component enters metadata design mode. In this mode, you can select input columns, and add or configure outputs and output columns, but you cannot write code. After you have configured the component's metadata, you can switch to code design mode to write the script.  
   
@@ -96,7 +96,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
  On the **Script** page of the **Script Task Editor**, you assign a unique name and a description for the Script task. You can also assign values for the following properties.  
   
 > [!NOTE]  
->  In [!INCLUDE[ssISversion10](../../../includes/ssisversion10-md.md)] and later versions, all scripts are precompiled. In previous versions, you specified whether scripts were precompiled by setting a `Precompile` property for the task.  
+>  In [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] and later versions, all scripts are precompiled. In previous versions, you specified whether scripts were precompiled by setting a `Precompile` property for the task.  
   
 #### ValidateExternalMetadata Property  
  The Boolean value of the `ValidateExternalMetadata` property specifies whether the component should perform validation against external data sources at design time, or whether it should postpone validation until run time. By default, the value of this property is `True`; that is, the external metadata is validated both at design time and at run time. You may want to set the value of this property to `False` when an external data source is not available at design time: for example, when the package downloads the source or creates the destination only at run time.  
@@ -108,10 +108,10 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
 >  Variable names are case-sensitive.  
   
 #### ScriptLanguage  
- You can select either [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic or [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# as the programming language for the Script component.  
+ You can select either [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic or [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# as the programming language for the Script component.  
   
 #### Edit Script Button  
- The **Edit Script** button opens the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE in which you write your custom script. For more information, see [Coding and Debugging the Script Component](../../../2014/integration-services/dev-guide/coding-and-debugging-the-script-component.md).  
+ The **Edit Script** button opens the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE in which you write your custom script. For more information, see [Coding and Debugging the Script Component](../../../2014/integration-services/dev-guide/coding-and-debugging-the-script-component.md).  
   
 ### Connection Managers Page of the Script Transformation Editor  
  On the **Connection Managers** page of the **Script Transformation Editor**, you add and remove connection managers that you want to use in your custom script. Normally you need to reference connection managers when you create a source or destination component.  
@@ -127,7 +127,7 @@ Dim myADONETConnectionManager As IDTSConnectionManager100 = _
   
 ||  
 |-|  
-|![Integration Services icon (small)](../../../2014/integration-services/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
+|![Integration Services icon (small)](../../../2014/integration-services/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
   
 ## See Also  
  [Coding and Debugging the Script Component](../../../2014/integration-services/dev-guide/coding-and-debugging-the-script-component.md)  

@@ -18,11 +18,11 @@ manager: "jhubbard"
 # Specifying Attribute Relationships Between Attributes in a User-Defined Hierarchy
   As you have already learned in this tutorial, you can organize attribute hierarchies into levels within user hierarchies to provide navigation paths for users in a cube. A user hierarchy can represent a natural hierarchy, such as city, state, and country, or can just represent a navigation path, such as employee name, title, and department name. To the user navigating a hierarchy, these two types of user hierarchies are the same.  
   
- With a natural hierarchy, if you define attribute relationships between the attributes that make up the levels, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] can use an aggregation from one attribute to obtain the results from a related attribute. If there are no defined relationships between attributes, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] will aggregate all non-key attributes from the key attribute. Therefore, if the underlying data supports it, you should define attribute relationships between attributes. Defining attribute relationships improves dimension, partition, and query processing performance. For more information, see [Define Attribute Relationships](../../2014/analysis-services/define-attribute-relationships.md) and [Attribute Relationships](../../2014/analysis-services/dev-guide/attribute-relationships.md).  
+ With a natural hierarchy, if you define attribute relationships between the attributes that make up the levels, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] can use an aggregation from one attribute to obtain the results from a related attribute. If there are no defined relationships between attributes, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] will aggregate all non-key attributes from the key attribute. Therefore, if the underlying data supports it, you should define attribute relationships between attributes. Defining attribute relationships improves dimension, partition, and query processing performance. For more information, see [Define Attribute Relationships](../../2014/analysis-services/define-attribute-relationships.md) and [Attribute Relationships](../../2014/analysis-services/dev-guide/attribute-relationships.md).  
   
- When you define attribute relationships, you can specify that the relationship is either flexible or rigid. If you define a relationship as rigid, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] retains aggregations when the dimension is updated. If a relationship that is defined as rigid actually changes, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] generates an error during processing unless the dimension is fully processed. Specifying the appropriate relationships and relationship properties increases query and processing performance. For more information, see [Define Attribute Relationships](../../2014/analysis-services/define-attribute-relationships.md), and [User Hierarchy Properties](../../2014/analysis-services/dev-guide/user-hierarchy-properties.md).  
+ When you define attribute relationships, you can specify that the relationship is either flexible or rigid. If you define a relationship as rigid, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] retains aggregations when the dimension is updated. If a relationship that is defined as rigid actually changes, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] generates an error during processing unless the dimension is fully processed. Specifying the appropriate relationships and relationship properties increases query and processing performance. For more information, see [Define Attribute Relationships](../../2014/analysis-services/define-attribute-relationships.md), and [User Hierarchy Properties](../../2014/analysis-services/dev-guide/user-hierarchy-properties.md).  
   
- In the tasks in this topic, you define attribute relationships for the attributes in the natural user hierarchies in the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Tutorial project. These include the **Customer Geography** hierarchy in the **Custome**r dimension, the **Sales Territory** hierarchy in the **Sales Territory** dimension, the **Product Model** Lines hierarchy in the **Product** dimension, and the **Fiscal Date** and **Calendar Date** hierarchies in the **Date** dimension. These user hierarchies are all natural hierarchies.  
+ In the tasks in this topic, you define attribute relationships for the attributes in the natural user hierarchies in the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial project. These include the **Customer Geography** hierarchy in the **Custome**r dimension, the **Sales Territory** hierarchy in the **Sales Territory** dimension, the **Product Model** Lines hierarchy in the **Product** dimension, and the **Fiscal Date** and **Calendar Date** hierarchies in the **Date** dimension. These user hierarchies are all natural hierarchies.  
   
 ## Defining Attribute Relationships for Attributes in the Customer Geography Hierarchy  
   
@@ -38,7 +38,7 @@ manager: "jhubbard"
   
 4.  In the **Create Attribute Relationship** dialog box, the **Source Attribute** is **Full Name**. Set the **Related Attribute** to **Postal Code**. In the **Relationship type** list, leave the relationship type set to **Flexible** because relationships between the members might change over time.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
      A warning icon appears in the diagram because the relationship is redundant. The relationship **Full Name** -> **Geography**-> **Postal Code** already existed, and you just created the relationship **Full Name** -> **Postal Code**. The relationship **Geography**-> **Postal Code** is now redundant, so we will remove it.  
   
@@ -50,7 +50,7 @@ manager: "jhubbard"
   
 9. In the **Create Attribute Relationship** dialog box, the **Source Attribute** is **Postal Code**. Set the **Related Attribute** to **City**. In the **Relationship type** list, leave the relationship type set to **Flexible**.  
   
-10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
      The relationship **Geography**-> **City** is now redundant so we will delete it.  
   
@@ -62,7 +62,7 @@ manager: "jhubbard"
   
 14. In the **Create Attribute Relationship** dialog box, the **Source Attribute** is **City**. Set the **Related Attribute** to **State-Province**. In the **Relationship type** list, set the relationship type to **Rigid** because the relationship between a city and a state will not change over time.  
   
-15. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+15. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 16. Right-click the arrow between **Geography** and **State-Province** and then click **Delete**.  
   
@@ -72,7 +72,7 @@ manager: "jhubbard"
   
 19. In the **Create Attribute Relationship** dialog box, the **Source Attribute** is **State-Province**. Set the **Related Attribute** to **Country-Region**. In the **Relationship type** list, set the relationship type to **Rigid** because the relationship between a state-province and a country-region will not change over time.  
   
-20. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+20. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 21. In the Attribute Relationships pane, right-click **Geography**-> **Country-Region** and then click **Delete**.  
   
@@ -92,7 +92,7 @@ manager: "jhubbard"
   
 3.  In the **Create Attribute Relationship** dialog box, the **Source Attribute** is **Sales Territory Country**. Set the **Related Attribute** to **Sales Territory Group**. In the **Relationship type** list, leave the relationship type set to **Flexible**.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
      **Sales Territory Group** is now linked to **Sales Territory Country**, and **Sales Territory Country** is now linked to **Sales Territory Region**. The **RelationshipType** property for each of these relationships is set to **Flexible** because the groupings of regions within a country might change over time and because the groupings of countries into groups might change over time.  
   
@@ -104,7 +104,7 @@ manager: "jhubbard"
   
 3.  In the **Create Attribute Relationship** dialog box, the **Source Attribute** is **Model Name**. Set the **Related Attribute** to **Product Line**. In the **Relationship type** list, leave the relationship type set to **Flexible**.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## Defining Attribute Relationships for Attributes in the Fiscal Date Hierarchy  
   
@@ -114,19 +114,19 @@ manager: "jhubbard"
   
 3.  In the **Create Attribute Relationship** dialog box, the **Source Attribute** is **Month Name**. Set the **Related Attribute** to **Fiscal Quarter**. In the **Relationship type** list, set the relationship type to **Rigid**.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 5.  In the diagram, right-click the **Fiscal Quarter** attribute and then select **New Attribute Relationship**.  
   
 6.  In the **Create Attribute Relationship** dialog box, the **Source Attribute** is **Fiscal Quarter**. Set the **Related Attribute** to **Fiscal Semester**. In the **Relationship type** list, set the relationship type to **Rigid**.  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 8.  In the diagram, right-click the **Fiscal Semester** attribute and then select **New Attribute Relationship**.  
   
 9. In the **Create Attribute Relationship** dialog box, the **Source Attribute** is **Fiscal Semester**. Set the **Related Attribute** to **Fiscal Year**. In the **Relationship type** list, set the relationship type to **Rigid**.  
   
-10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## Defining Attribute Relationships for Attributes in the Calendar Date Hierarchy  
   
@@ -134,19 +134,19 @@ manager: "jhubbard"
   
 2.  In the **Create Attribute Relationship** dialog box, the **Source Attribute** is **Month Name**. Set the **Related Attribute** to **Calendar Quarter**. In the **Relationship type** list, set the relationship type to **Rigid**.  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 4.  In the diagram, right-click the **Calendar Quarter** attribute and then select **New Attribute Relationship**.  
   
 5.  In the **Create Attribute Relationship** dialog box, the **Source Attribute** is **Calendar Quarter**. Set the **Related Attribute** to **Calendar Semester**. In the **Relationship type** list, set the relationship type to **Rigid**.  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 7.  In the diagram, right-click the **Calendar Semester** attribute and then select **New Attribute Relationship**.  
   
 8.  In the **Create Attribute Relationship** dialog box, the **Source Attribute** is **Calendar Semester**. Set the **Related Attribute** to **Calendar Year**. In the **Relationship type** list, set the relationship type to **Rigid**.  
   
-9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## Defining Attribute Relationships for Attributes in the Geography Hierarchy  
   
@@ -156,19 +156,19 @@ manager: "jhubbard"
   
 3.  In the **Create Attribute Relationship** dialog box, the **Source Attribute** is **Postal Code**. Set the **Related Attribute** to **City**. In the **Relationship type** list, set the relationship type to **Flexible**.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 5.  In the diagram, right-click the **City** attribute and then select **New Attribute Relationship**.  
   
 6.  In the **Create Attribute Relationship** dialog box, the **Source Attribute** is **City**. Set the **Related Attribute** to **State-Province**. In the **Relationship type** list, set the relationship type to **Rigid**.  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 8.  In the diagram, right-click the **State-Province** attribute and then select **New Attribute Relationship**.  
   
 9. In the **Create Attribute Relationship** dialog box, the **Source Attribute** is **State-Province**. Set the **Related Attribute** to **Country-Region**. In the **Relationship type** list, set the relationship type to **Rigid**.  
   
-10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 11. In the diagram, right-click the **Geography Key** attribute and then select **Properties**.  
   
@@ -176,7 +176,7 @@ manager: "jhubbard"
   
 13. On the **File** menu, click **Save All**.  
   
-14. On the **Build** menu of [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], click **Deploy Analysis Services Tutorial**.  
+14. On the **Build** menu of [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], click **Deploy Analysis Services Tutorial**.  
   
 ## Next Task in Lesson  
  [Defining the Unknown Member and Null Processing Properties](../../2014/tutorials/defining-the-unknown-member-and-null-processing-properties.md)  

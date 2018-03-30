@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: e298dea0-b5ef-4907-a745-cfad9793653f
 caps.latest.revision: 38
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Specify Interactive Conflict Resolution for Merge Articles
-  This topic describes how to specify interactive conflict resolution for merge articles in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+  This topic describes how to specify interactive conflict resolution for merge articles in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] replication provides an Interactive Resolver, which allows you to resolve conflicts manually during on-demand synchronization in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows Synchronization Manager. After interactive resolution is enabled, resolve conflicts interactively during synchronization, using the Interactive Resolver. The Interactive Resolver is available through the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows Synchronization Manager. For more information, see [Synchronize a Subscription Using Windows Synchronization Manager &#40;Windows Synchronization Manager&#41;](../../../2014/relational-databases/replication/synchronize-a-subscription-using-windows-synchronization-manager.md).  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] replication provides an Interactive Resolver, which allows you to resolve conflicts manually during on-demand synchronization in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Synchronization Manager. After interactive resolution is enabled, resolve conflicts interactively during synchronization, using the Interactive Resolver. The Interactive Resolver is available through the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Synchronization Manager. For more information, see [Synchronize a Subscription Using Windows Synchronization Manager &#40;Windows Synchronization Manager&#41;](../../../2014/relational-databases/replication/synchronize-a-subscription-using-windows-synchronization-manager.md).  
   
  **In This Topic**  
   
@@ -55,7 +55,7 @@ manager: "jhubbard"
   
 4.  Select **Allow Subscriber to resolve conflicts interactively during on-demand synchronization**.  
   
-5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 6.  If you are in the **Publication Properties - \<Publication>** dialog box, click **OK** to save and close the dialog box.  
   
@@ -63,22 +63,22 @@ manager: "jhubbard"
   
 1.  In the **Subscription Properties - \<Subscriber>: \<SubscriptionDatabase>** dialog box, specify a value of **True** for the **Resolve conflicts interactively** option. For more information about accessing this dialog box, see [View and Modify Push Subscription Properties](../../../2014/relational-databases/replication/view-and-modify-push-subscription-properties.md) and [View and Modify Pull Subscription Properties](../../../2014/relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
   
-2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  You can programmatically specify that a Subscriber will use this graphical interface to resolve article conflicts when a pull subscription to a merge publication is created. Only conflicts in articles that support this option will be displayed in the Interactive Resolver.  
   
 #### To create a merge pull subscription that uses the Interactive Resolver  
   
-1.  At the Publisher on the publication database, execute [sp_helpmergearticle](../Topic/sp_helpmergepublication%20\(Transact-SQL\).md), specifying **@publication**. Note the value of **allow_interactive_resolver** for each article in the result set for which the Interactive Resolver will be used.  
+1.  At the Publisher on the publication database, execute [sp_helpmergearticle](~/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md), specifying **@publication**. Note the value of **allow_interactive_resolver** for each article in the result set for which the Interactive Resolver will be used.  
   
     -   If this value is **1**, the Interactive Resolver will be used.  
   
-    -   If this value is **0**, you must first enable the Interactive Resolver for each article. To do this, execute [sp_changemergearticle](../Topic/sp_changemergearticle%20\(Transact-SQL\).md), specifying **@publication**, **@article**, a value of **allow_interactive_resolver** for **@property**, and a value of **true** for **@value**.  
+    -   If this value is **0**, you must first enable the Interactive Resolver for each article. To do this, execute [sp_changemergearticle](~/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), specifying **@publication**, **@article**, a value of **allow_interactive_resolver** for **@property**, and a value of **true** for **@value**.  
   
-2.  At the Subscriber on the subscription database, execute [sp_addmergepullsubscription](../Topic/sp_addmergepullsubscription%20\(Transact-SQL\).md). For more information, see [Create a Pull Subscription](../../../2014/relational-databases/replication/create-a-pull-subscription.md).  
+2.  At the Subscriber on the subscription database, execute [sp_addmergepullsubscription](~/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). For more information, see [Create a Pull Subscription](../../../2014/relational-databases/replication/create-a-pull-subscription.md).  
   
-3.  At the Subscriber on the subscription database, execute [sp_addmergepullsubscription_agent](../Topic/sp_addmergepullsubscription_agent%20\(Transact-SQL\).md), specifying the following parameters:  
+3.  At the Subscriber on the subscription database, execute [sp_addmergepullsubscription_agent](~/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md), specifying the following parameters:  
   
     -   **@publisher**, **@publisher_db** (the published database), and **@publication**.  
   
@@ -88,11 +88,11 @@ manager: "jhubbard"
   
     -   The security account information required by the Merge Agent. For more information, see [Create a Pull Subscription](../../../2014/relational-databases/replication/create-a-pull-subscription.md).  
   
-4.  At the Publisher on the publication database, execute [sp_addmergesubscription](../Topic/sp_addmergesubscription%20\(Transact-SQL\).md).  
+4.  At the Publisher on the publication database, execute [sp_addmergesubscription](~/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md).  
   
 #### To define an article that supports the Interactive Resolver  
   
-1.  At the Publisher on the publication database, execute [sp_addmergearticle](../Topic/sp_addmergearticle%20\(Transact-SQL\).md). Specify the name of the publication to which the article belongs for **@publication**, a name for the article for **@article**, the database object being published for **@source_object**, and a value of **true** for **@allow_interactive_resolver**. For more information, see [Define an Article](../../../2014/relational-databases/replication/define-an-article.md).  
+1.  At the Publisher on the publication database, execute [sp_addmergearticle](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Specify the name of the publication to which the article belongs for **@publication**, a name for the article for **@article**, the database object being published for **@source_object**, and a value of **true** for **@allow_interactive_resolver**. For more information, see [Define an Article](../../../2014/relational-databases/replication/define-an-article.md).  
   
 ## See Also  
  [View and Resolve Data Conflicts for Merge Publications &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)   

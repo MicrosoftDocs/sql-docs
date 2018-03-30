@@ -25,15 +25,15 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SecurityCertificate Class
-  The [SecurityCertificate Class](../../../2014/database-engine/dev-guide/securitycertificate-class.md) represents a security certificate. A certificate is a digitally signed statement that binds the value of a public key to the instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], which holds the corresponding private key. The certificate is issued from a certification authority.  
+  The [SecurityCertificate Class](../../../2014/database-engine/dev-guide/securitycertificate-class.md) represents a security certificate. A certificate is a digitally signed statement that binds the value of a public key to the instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], which holds the corresponding private key. The certificate is issued from a certification authority.  
   
  With the [SecurityCertificate Class](../../../2014/database-engine/dev-guide/securitycertificate-class.md), you can perform the following tasks:  
   
 -   View the properties of the security certificate.  
   
--   Set the security certificate with the specified SHA thumbprint for the specified instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   Set the security certificate with the specified SHA thumbprint for the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Verify the SHA thumbprint for the specified instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   Verify the SHA thumbprint for the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## See Also  
  [Encryption Hierarchy](../../../2014/database-engine/encryption-hierarchy.md)  

@@ -28,11 +28,11 @@ manager: "jhubbard"
   
 1.  Click **Connect** on the Object Explorer toolbar, and click the type of server to connect to. The **Connect to Server** dialog box appears.  
   
-2.  In the **Server Name** box, type the name of your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
+2.  In the **Server Name** box, type the name of your [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance.  
   
 3.  Click **Options**. The **Connect to Server** dialog box displays additional options.  
   
-4.  Click the **Connection Properties** tab to configure the additional settings. The settings that are available vary depending upon the server type. The following settings are available for the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+4.  Click the **Connection Properties** tab to configure the additional settings. The settings that are available vary depending upon the server type. The following settings are available for the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
     |Setting|Description|  
     |-------------|-----------------|  

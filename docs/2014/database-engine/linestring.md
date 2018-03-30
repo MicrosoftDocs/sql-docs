@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
 caps.latest.revision: 24
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # LineString
@@ -125,14 +125,14 @@ POINT(1 3) is a valid Point.
 ```  
   
 ## See Also  
- [STLength &#40;geometry Data Type&#41;](../Topic/STLength%20\(geometry%20Data%20Type\).md)   
- [STStartPoint &#40;geometry Data Type&#41;](../Topic/STStartPoint%20\(geometry%20Data%20Type\).md)   
- [STEndpoint &#40;geometry Data Type&#41;](../Topic/STEndpoint%20\(geometry%20Data%20Type\).md)   
- [STPointN &#40;geometry Data Type&#41;](../Topic/STPointN%20\(geometry%20Data%20Type\).md)   
- [STNumPoints &#40;geometry Data Type&#41;](../Topic/STNumPoints%20\(geometry%20Data%20Type\).md)   
- [STIsRing &#40;geometry Data Type&#41;](../Topic/STIsRing%20\(geometry%20Data%20Type\).md)   
- [STIsClosed &#40;geometry Data Type&#41;](../Topic/STIsClosed%20\(geometry%20Data%20Type\).md)   
- [STPointOnSurface &#40;geometry Data Type&#41;](../Topic/STPointOnSurface%20\(geometry%20Data%20Type\).md)   
+ [STLength &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stlength-geometry-data-type.md)   
+ [STStartPoint &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/ststartpoint-geometry-data-type.md)   
+ [STEndpoint &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stendpoint-geometry-data-type.md)   
+ [STPointN &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stpointn-geometry-data-type.md)   
+ [STNumPoints &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stnumpoints-geometry-data-type.md)   
+ [STIsRing &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stisring-geometry-data-type.md)   
+ [STIsClosed &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stisclosed-geometry-data-type.md)   
+ [STPointOnSurface &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stpointonsurface-geometry-data-type.md)   
  [Spatial Data &#40;SQL Server&#41;](../../2014/database-engine/spatial-data-sql-server.md)  
   
   

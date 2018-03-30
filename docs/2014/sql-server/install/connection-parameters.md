@@ -24,20 +24,20 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Connection Parameters
-  To analyze certain server types, such as the [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)], you must select a specific instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. The default instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is automatically selected. You can change this selection, but you can select only one instance at a time for analysis by Upgrade Advisor. If you have included a server type that requires authentication, you must enter the authentication mode and credentials.  
+  To analyze certain server types, such as the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], you must select a specific instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The default instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is automatically selected. You can change this selection, but you can select only one instance at a time for analysis by Upgrade Advisor. If you have included a server type that requires authentication, you must enter the authentication mode and credentials.  
   
 ## Options  
  **Server name**  
- Pre-populated with the computer name that you entered in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Components pane.  
+ Pre-populated with the computer name that you entered in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Components pane.  
   
  **Instance name**  
- Select from the instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that are available on the computer. If you do not see a list of instances, use MSSQLSERVER to scan the default instance. This is especially relevant for remote computers. You can also use the word "default" to scan the default instance.  
+ Select from the instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that are available on the computer. If you do not see a list of instances, use MSSQLSERVER to scan the default instance. This is especially relevant for remote computers. You can also use the word "default" to scan the default instance.  
   
  **Authentication**  
  Select from the list of available authentication modes on this computer. By default, the authentication mode is Windows Authentication.  
   
  **User name**  
- If using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication, enter a user name in the box. We recommend that the user name have administrative credentials on the computer.  
+ If using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, enter a user name in the box. We recommend that the user name have administrative credentials on the computer.  
   
 > [!NOTE]  
 >  If you select Windows Authentication, the user name of the currently logged-on user is populated in the **User name** text box.  

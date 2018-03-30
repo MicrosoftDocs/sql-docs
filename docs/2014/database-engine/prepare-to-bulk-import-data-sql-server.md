@@ -27,16 +27,16 @@ manager: "jhubbard"
   You can use the **bcp** command, BULK INSERT statement, or OPENROWSET(BULK) function to bulk import data from a data file only.  
   
 > [!NOTE]  
->  It is possible to write a custom application that bulk imports data from objects other than a text file. To bulk import data from memory buffers, use either the bcp extensions to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client (ODBC) application programming interface (API) or the OLE DB **IRowsetFastLoad** interface.  To bulk import data from a C# data table, use the ADO.NET bulk-copy API, **SqlBulkCopy**.  
+>  It is possible to write a custom application that bulk imports data from objects other than a text file. To bulk import data from memory buffers, use either the bcp extensions to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client (ODBC) application programming interface (API) or the OLE DB **IRowsetFastLoad** interface.  To bulk import data from a C# data table, use the ADO.NET bulk-copy API, **SqlBulkCopy**.  
   
 > [!NOTE]  
 >  Bulk importing data into a remote table is not supported.  
   
- Use the following guidelines when you bulk import data from a data file to an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+ Use the following guidelines when you bulk import data from a data file to an instance of [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
 -   Obtain required permissions for your user account.  
   
-     The user account in which you use the **bcp** utility, the BULK INSERT statement, or the INSERT ... SELECT * FROM OPENROWSET(BULK...) statement must have the required permissions on the table, which are assigned by the table owner. For more information about permissions that are required by each method, see [bcp Utility](../../2014/database-engine/bcp-utility.md), [OPENROWSET &#40;Transact-SQL&#41;](../Topic/OPENROWSET%20\(Transact-SQL\).md), and [BULK INSERT &#40;Transact-SQL&#41;](../Topic/BULK%20INSERT%20\(Transact-SQL\).md).  
+     The user account in which you use the **bcp** utility, the BULK INSERT statement, or the INSERT ... SELECT * FROM OPENROWSET(BULK...) statement must have the required permissions on the table, which are assigned by the table owner. For more information about permissions that are required by each method, see [bcp Utility](../../2014/database-engine/bcp-utility.md), [OPENROWSET &#40;Transact-SQL&#41;](~/t-sql/functions/openrowset-transact-sql.md), and [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md).  
   
 -   Use the bulk-logged recovery model.  
   
@@ -68,8 +68,8 @@ manager: "jhubbard"
  [Import and Export Bulk Data by Using the bcp Utility &#40;SQL Server&#41;](../../2014/database-engine/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)   
  [Import Bulk Data by Using BULK INSERT or OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../2014/database-engine/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)   
  [bcp Utility](../../2014/database-engine/bcp-utility.md)   
- [BULK INSERT &#40;Transact-SQL&#41;](../Topic/BULK%20INSERT%20\(Transact-SQL\).md)   
+ [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md)   
  [Data Formats for Bulk Import or Bulk Export &#40;SQL Server&#41;](../../2014/database-engine/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
- [OPENROWSET &#40;Transact-SQL&#41;](../Topic/OPENROWSET%20\(Transact-SQL\).md)  
+ [OPENROWSET &#40;Transact-SQL&#41;](~/t-sql/functions/openrowset-transact-sql.md)  
   
   

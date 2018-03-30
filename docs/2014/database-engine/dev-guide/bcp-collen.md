@@ -25,7 +25,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # bcp_collen
-  Sets the data length in the program variable for the current bulk copy into [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Sets the data length in the program variable for the current bulk copy into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Syntax  
   
@@ -58,7 +58,7 @@ idxServerCol
  SUCCEED or FAIL.  
   
 ## Remarks  
- The **bcp_collen** function allows you to change the data length in the program variable for a particular column when copying data to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] with [bcp_sendrow](../../../2014/database-engine/dev-guide/bcp-sendrow.md).  
+ The **bcp_collen** function allows you to change the data length in the program variable for a particular column when copying data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with [bcp_sendrow](../../../2014/database-engine/dev-guide/bcp-sendrow.md).  
   
  Initially, the data length is determined when [bcp_bind](../../../2014/database-engine/dev-guide/bcp-bind.md) is called. If the data length changes between calls to **bcp_sendrow** and no length prefix or terminator is being used, you can call **bcp_collen** to reset the length. The next call to **bcp_sendrow** uses the length set by the call to **bcp_collen**.  
   

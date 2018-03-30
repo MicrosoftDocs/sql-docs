@@ -23,11 +23,11 @@ manager: "jhubbard"
   
  To create or change property expressions, you can use either the **Property Expressions Editor** or **Expression Builder**. The **Property Expressions Editor** can be accessed from either the custom editors that are available for tasks and containers, or from the **Properties** window. **Expression Builder** can be accessed from inside the **Property Expressions Editor**. While you can write expressions in either the **Property Expressions Editor** or **Expression Builder**, **Expression Builder** provides a graphical set of tools that makes it simple to build complex expressions.  
   
- To learn more about the syntax, operators, and functions that [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides, see [Operators &#40;SSIS Expression&#41;](../../2014/integration-services/operators-ssis-expression.md) and [Functions &#40;SSIS Expression&#41;](../../2014/integration-services/functions-ssis-expression.md). The topic for each operator or function includes examples of using that operator or function in an expression. For examples of more complex expressions, see [Use Property Expressions in Packages](../../2014/integration-services/use-property-expressions-in-packages.md).  
+ To learn more about the syntax, operators, and functions that [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides, see [Operators &#40;SSIS Expression&#41;](../../2014/integration-services/operators-ssis-expression.md) and [Functions &#40;SSIS Expression&#41;](../../2014/integration-services/functions-ssis-expression.md). The topic for each operator or function includes examples of using that operator or function in an expression. For examples of more complex expressions, see [Use Property Expressions in Packages](../../2014/integration-services/use-property-expressions-in-packages.md).  
   
 ### To create or change a property expression  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the project that contains the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package you want.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the project that contains the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package you want.  
   
 2.  In Solution Explorer, double-click the package to open it, and then do one of the following:  
   
@@ -49,7 +49,7 @@ manager: "jhubbard"
   
     -   To access system and user-defined variables, expand **Variables**.  
   
-    -   To access the functions, the casts, and the operators that the [!INCLUDE[ssIS](../../includes/ssis-md.md)] expression language provides, expand **Mathematical Functions**, **String Functions**, **Date/Time Functions**, **NULL Functions**, **Type Casts**, and **Operators**.  
+    -   To access the functions, the casts, and the operators that the [!INCLUDE[ssIS](../includes/ssis-md.md)] expression language provides, expand **Mathematical Functions**, **String Functions**, **Date/Time Functions**, **NULL Functions**, **Type Casts**, and **Operators**.  
   
     -   To build or change an expression in the **Expression Builder**, drag variables, columns, functions, operators, and casts to the **Expression** box, or type the expression in the box.  
   
@@ -60,7 +60,7 @@ manager: "jhubbard"
         > [!NOTE]  
         >  Evaluating an expression does not assign the evaluation result to the property.  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## See Also  
  [Integration Services &#40;SSIS&#41; Expressions](../../2014/integration-services/integration-services-ssis-expressions.md)   

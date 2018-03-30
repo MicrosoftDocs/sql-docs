@@ -16,6 +16,6 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Remove SQL Server Failover Cluster Node
-  Use the Remove Failover Cluster Node page to identify the computer to remove as a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] failover cluster node.  
+  Use the Remove Failover Cluster Node page to identify the computer to remove as a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] failover cluster node.  
   
   

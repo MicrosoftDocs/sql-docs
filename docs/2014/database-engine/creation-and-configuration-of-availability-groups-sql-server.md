@@ -20,12 +20,12 @@ ms.author: "jroth"
 manager: "jhubbard"
 ---
 # Creation and Configuration of Availability Groups (SQL Server)
-  The topics in this section explain how to deploy a [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] implementation on instances of [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] that reside on different Windows Server Failover Clustering (WSFC) nodes within a single WSFC failover cluster.  
+  The topics in this section explain how to deploy a [!INCLUDE[ssHADR](../includes/sshadr-md.md)] implementation on instances of [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] that reside on different Windows Server Failover Clustering (WSFC) nodes within a single WSFC failover cluster.  
   
  Before you create your first availability group, we strongly recommend that you familiarize yourself with the information in the following topics:  
   
  [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/prereqs-restrictions-recommendations-always-on-availability.md)  
- This topic describes the prerequisites, restrictions, and recommendations for computers; WSFC nodes; instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; availability groups, replicas, and databases. This topic also contains information about security considerations.  
+ This topic describes the prerequisites, restrictions, and recommendations for computers; WSFC nodes; instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]; availability groups, replicas, and databases. This topic also contains information about security considerations.  
   
  [Getting Started with AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/getting-started-with-alwayson-availability-groups-sql-server.md)  
  Contains information about the steps for configuring a server instance, creating an availability group, configuring the availability group for client connections, managing availability groups, and monitoring availability groups.  
@@ -33,7 +33,7 @@ manager: "jhubbard"
  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
- **To configure a server instance for [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]**  
+ **To configure a server instance for [!INCLUDE[ssHADR](../includes/sshadr-md.md)]**  
   
 -   [Enable and Disable AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/enable-and-disable-alwayson-availability-groups-sql-server.md)  
   

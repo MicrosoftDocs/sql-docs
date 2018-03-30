@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Bulk Copy Changes for Enhanced Date and Time Types (OLE DB and ODBC)
-  This topic describes the date/time enhancements to support bulk copy functionality. The information in this topic is valid for both OLE DB and ODBC in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
+  This topic describes the date/time enhancements to support bulk copy functionality. The information in this topic is valid for both OLE DB and ODBC in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
 ## Format Files  
  When building format files interactively, the following table describes the input used to specify date/time types and the corresponding host-file data type names.  
@@ -62,7 +62,7 @@ manager: "jhubbard"
 ## Character Data Files  
  In character data files, date and time values are represented as described in the "Data Formats: Strings and Literals" section of [Data Type Support for ODBC Date and Time Improvements](../../../2014/database-engine/dev-guide/data-type-support-for-odbc-date-and-time-improvements.md) for ODBC, or of [Data Type Support for OLE DB Date and Time Improvements](../../../2014/database-engine/dev-guide/data-type-support-for-ole-db-date-and-time-improvements.md) for OLE DB.  
   
- In native data fles, date and time values for the four new types are represented as their TDS representations with a scale of 7 (because this is the maximum supported by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and bcp data files do not store the scale of these columns). There is no change to the storage of the existing `datetime` and `smalldatetime` type or their tabular data stream (TDS) representations.  
+ In native data fles, date and time values for the four new types are represented as their TDS representations with a scale of 7 (because this is the maximum supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and bcp data files do not store the scale of these columns). There is no change to the storage of the existing `datetime` and `smalldatetime` type or their tabular data stream (TDS) representations.  
   
  The storage sizes for the different storage types are as follows for OLE DB:  
   
@@ -133,7 +133,7 @@ manager: "jhubbard"
 |10|If truncation with data loss occurs on a client to server conversion, an error is posted (OLE DB) or an ODBC diagnostic record is generated with SQLSTATE 22008 and the message "Datetime field overflow". This error also occurs if the value falls outside the range that can be represented by the UTC range used by the server. If seconds or fractional seconds truncation occurs in a server to client conversion, there is only a warning.|  
 |11|If truncation with data loss occurs, a diagnostic record is generated.<br /><br /> On a server-to-client conversion, this is a warning (ODBC SQLSTATE S1000).<br /><br /> On a client-to-server conversion, this is an error (ODBC SQLSTATE 22001).|  
 |12|Seconds are set to zero and fractional seconds are discarded. No truncation error is possible.|  
-|N/A|Existing [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and earlier behavior is maintained.|  
+|N/A|Existing [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and earlier behavior is maintained.|  
   
 ## See Also  
  [Date and Time Improvements &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/date-and-time-improvements-odbc.md)   

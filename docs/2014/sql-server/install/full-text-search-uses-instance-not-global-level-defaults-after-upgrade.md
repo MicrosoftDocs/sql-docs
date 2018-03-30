@@ -19,13 +19,13 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Upgrading will cause Full-Text Search to use instance-level, not global, word breakers and filters by default
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provides a way to allow instance-level registration of new word breakers and filters.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a way to allow instance-level registration of new word breakers and filters.  
   
 ## Component  
  Full-Text Search  
   
 ## Description  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] allows the instance-level registration of new word breakers and filters. This instance-level registration provides functional and security isolation between instances.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] allows the instance-level registration of new word breakers and filters. This instance-level registration provides functional and security isolation between instances.  
   
 ## Corrective Action  
  After upgrading, use the `sp_fulltext_service` to set the service property and `load_os_resources`, which allows the components to be loaded. You must run the following:  

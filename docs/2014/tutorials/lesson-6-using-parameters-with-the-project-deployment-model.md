@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 9216f18c-1762-4f2d-8c22-bd0ab7107555
 caps.latest.revision: 6
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Lesson 6: Using Parameters with the Project Deployment Model

@@ -24,14 +24,14 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # View the Size of the Sparse File of a Database Snapshot (Transact-SQL)
-  This topic describes how to use [!INCLUDE[tsql](../../includes/tsql-md.md)] to verify that a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database file is a sparse file and to find out its actual and maximum sizes. Sparse files, which are a feature of the NTFS file system, are used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database snapshots.  
+  This topic describes how to use [!INCLUDE[tsql](../includes/tsql-md.md)] to verify that a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database file is a sparse file and to find out its actual and maximum sizes. Sparse files, which are a feature of the NTFS file system, are used by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database snapshots.  
   
 > [!NOTE]  
 >  During database snapshot creation, sparse files are created by using the file names in the CREATE DATABASE statement. These file names are stored in **sys.master_files** in the **physical_name** column. In **sys.database_files** (whether in the source database or in a snapshot), the **physical_name** column always contains the names of the source database files.  
   
 ## Verify that a Database File is a Sparse File  
   
-1.  On the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+1.  On the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
      Select the **is_sparse** column from either **sys.database_files** in the database snapshot or from **sys.master_files**. The value indicates whether the file is a sparse file, as follows:  
   
@@ -44,7 +44,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  Sparse files grow in 64-kilobyte (KB) increments; thus, the size of a sparse file on disk is always a multiple of 64 KB.  
   
- To view the number of bytes that each sparse file of a snapshot is currently using on disk, query the **size_on_disk_bytes** column of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][sys.dm_io_virtual_file_stats](../Topic/sys.dm_io_virtual_file_stats%20\(Transact-SQL\).md) dynamic management view.  
+ To view the number of bytes that each sparse file of a snapshot is currently using on disk, query the **size_on_disk_bytes** column of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][sys.dm_io_virtual_file_stats](~/relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) dynamic management view.  
   
  To view the disk space used by a sparse file, right-click the file in Microsoft Windows, click **Properties**, and look at the **Size on disk** value.  
   
@@ -57,7 +57,7 @@ manager: "jhubbard"
   
     2.  Select the sparse file, open the file **Properties** dialog box in Windows, and look at the **Size** value.  
   
--   On the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+-   On the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
      Select the **size** column from either **sys.database_files** in the database snapshot or from **sys.master_files**. The value of **size** column reflects the maximum space, in SQL pages, that the snapshot can ever use; this value is equivalent to the Windows **Size** field, except that it is represented in terms of the number of SQL pages in the file; the size in bytes is:  
   
@@ -65,8 +65,8 @@ manager: "jhubbard"
   
 ## See Also  
  [Database Snapshots &#40;SQL Server&#41;](../../2014/database-engine/database-snapshots-sql-server.md)   
- [sys.fn_virtualfilestats &#40;Transact-SQL&#41;](../Topic/sys.fn_virtualfilestats%20\(Transact-SQL\).md)   
- [sys.database_files &#40;Transact-SQL&#41;](../Topic/sys.database_files%20\(Transact-SQL\).md)   
- [sys.master_files &#40;Transact-SQL&#41;](../Topic/sys.master_files%20\(Transact-SQL\).md)  
+ [sys.fn_virtualfilestats &#40;Transact-SQL&#41;](~/relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql.md)   
+ [sys.database_files &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
+ [sys.master_files &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   
   

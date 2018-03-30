@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 4a8bf90f-a083-4c53-84f0-d23c711c8081
 caps.latest.revision: 16
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_2020
@@ -117,6 +117,6 @@ manager: "jhubbard"
  `GO`  
   
 ## See Also  
- [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../Topic/sys.dm_sql_referenced_entities%20\(Transact-SQL\).md)  
+ [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)  
   
   

@@ -22,18 +22,18 @@ helpviewer_keywords:
 ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 caps.latest.revision: 70
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Replication Agent Security Model
   The replication agent security model allows for fine-grained control over the accounts under which replication agents run and make connections: A different account can be specified for each agent. For more information about how to specify accounts, see [Manage Logins and Passwords in Replication](../../../2014/relational-databases/replication/manage-logins-and-passwords-in-replication.md).  
   
 > [!IMPORTANT]  
->  When a member of the **sysadmin** fixed server role configures replication, replication agents can be configured to impersonate the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent account. This is done by not specifying a login and password for a replication agent; however, we do not recommend this approach. Instead, as a security best practice, we recommend that you specify an account for each agent that has the minimum permissions that are described in the section "Permissions That Are Required by Agents" later in this topic.  
+>  When a member of the **sysadmin** fixed server role configures replication, replication agents can be configured to impersonate the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent account. This is done by not specifying a login and password for a replication agent; however, we do not recommend this approach. Instead, as a security best practice, we recommend that you specify an account for each agent that has the minimum permissions that are described in the section "Permissions That Are Required by Agents" later in this topic.  
   
  Replication agents, like all executables, run under the context of a Windows account. The agents make Windows Integrated Security connections by using this account. The account under which the agent runs depends on how the agent is started:  
   
--   Starting the agent from a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent job, the default: When a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent job is used to start a replication agent, the agent runs under the context of an account that you specify when you configure replication. For more information about [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent and replication, see the section "Agent Security under SQL Server Agent" later in this topic. For information about the permissions that are required for the account under which [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent runs, see [Configure SQL Server Agent](../../../2014/database-engine/configure-sql-server-agent.md).  
+-   Starting the agent from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job, the default: When a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job is used to start a replication agent, the agent runs under the context of an account that you specify when you configure replication. For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent and replication, see the section "Agent Security under SQL Server Agent" later in this topic. For information about the permissions that are required for the account under which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent runs, see [Configure SQL Server Agent](../../../2014/database-engine/configure-sql-server-agent.md).  
   
 -   Starting the agent from an MS-DOS command line, either directly or through a script: The agent runs under the context of the account of the user that is running the agent at the command line.  
   
@@ -42,7 +42,7 @@ manager: "jhubbard"
     > [!NOTE]  
     >  ActiveX controls are deprecated.  
   
- We recommend that connections be made under the context of Windows Integrated Security. For backward compatibility, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Security can also be used. For more information about best practices, see [Replication Security Best Practices](../../../2014/relational-databases/replication/replication-security-best-practices.md).  
+ We recommend that connections be made under the context of Windows Integrated Security. For backward compatibility, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Security can also be used. For more information about best practices, see [Replication Security Best Practices](../../../2014/relational-databases/replication/replication-security-best-practices.md).  
   
 ## Permissions That Are Required by Agents  
  The accounts under which agents run and make connections require a variety of permissions. These permissions are described in the following table. We recommend that each agent run under a different Windows account and the account should be granted only the required permissions. For information about the publication access list (PAL), which is relevant for a number of agents, see [Secure the Publisher](../../../2014/relational-databases/replication/secure-the-publisher.md).  
@@ -61,7 +61,7 @@ manager: "jhubbard"
 |Queue Reader Agent|The Windows account under which the agent runs is used when it makes connections to the Distributor. This account must at minimum be a member of the **db_owner** fixed database role in the distribution database.<br /><br /> The account that is used to connect to the Publisher must at minimum be a member of the **db_owner** fixed database role in the publication database.<br /><br /> The account that is used to connect to the Subscriber must at minimum be a member of the **db_owner** fixed database role in the subscription database.|  
   
 ## Agent Security Under SQL Server Agent  
- When you configure replication by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] procedures, or RMO, a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent job is created by default for each agent. Agents then run under the context of a job step, regardless of whether they run continuously, on a schedule, or on demand. You can view these jobs under the **Jobs** folder in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. The following table lists the job names.  
+ When you configure replication by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] procedures, or RMO, a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job is created by default for each agent. Agents then run under the context of a job step, regardless of whether they run continuously, on a schedule, or on demand. You can view these jobs under the **Jobs** folder in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. The following table lists the job names.  
   
 |Agent|Job name|  
 |-----------|--------------|  
@@ -81,9 +81,9 @@ manager: "jhubbard"
   
  When you configure replication, you specify accounts under which agents should run. However, all job steps run under the security context of a *proxy*; therefore, replication performs the following mappings internally for the agent accounts that you specify:  
   
--   The account is first mapped to a credential by using the [!INCLUDE[tsql](../../../includes/tsql-md.md)] [CREATE CREDENTIAL](../Topic/CREATE%20CREDENTIAL%20\(Transact-SQL\).md) statement. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent proxies use credentials to store information about Windows user accounts.  
+-   The account is first mapped to a credential by using the [!INCLUDE[tsql](../../includes/tsql-md.md)] [CREATE CREDENTIAL](~/t-sql/statements/create-credential-transact-sql.md) statement. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxies use credentials to store information about Windows user accounts.  
   
--   The [sp_add_proxy](../Topic/sp_add_proxy%20\(Transact-SQL\).md) stored procedure is called, and the credential is used to create a proxy..  
+-   The [sp_add_proxy](~/relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md) stored procedure is called, and the credential is used to create a proxy..  
   
 > [!NOTE]  
 >  This information is provided to help you understand what is involved in running agents with the appropriate security context. You should not have to interact directly with the credentials or proxies that have been created.  

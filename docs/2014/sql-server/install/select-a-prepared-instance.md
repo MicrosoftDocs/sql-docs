@@ -23,7 +23,7 @@ manager: "jhubbard"
   
 ## UIElement List  
  **Select an instance Id**  
- The list includes all the prepared instances that you can complete on the machine that [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup is running. Select a prepared instance you want to complete.  
+ The list includes all the prepared instances that you can complete on the machine that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup is running. Select a prepared instance you want to complete.  
   
  **Installed Instances**  
  This includes the installed, prepared, and completed instances.  

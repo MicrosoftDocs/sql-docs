@@ -21,7 +21,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Create and Test a Classifier User-Defined Function
-  This topic shows how to create and test a classifier user-defined function (UDF). The steps involve executing [!INCLUDE[tsql](../../includes/tsql-md.md)] statements in the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor.  
+  This topic shows how to create and test a classifier user-defined function (UDF). The steps involve executing [!INCLUDE[tsql](../includes/tsql-md.md)] statements in the [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Query Editor.  
   
  The example shown in the following procedure illustrates the possibilities for creating a fairly complex classifier user-defined function.  
   
@@ -116,7 +116,7 @@ manager: "jhubbard"
 4.  Create the classifier function that uses time functions and values that can be evaluated against the times in the lookup table. For information about using Lookup Tables in a classifier function, see “Best practices for using Lookup Tables in a classifier function” in this topic.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] introduced an expanded set of date and time data types and functions. For more information, see [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../Topic/Date%20and%20Time%20Data%20Types%20and%20Functions%20\(Transact-SQL\).md).  
+    >  [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] introduced an expanded set of date and time data types and functions. For more information, see [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](~/t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
     ```  
     CREATE FUNCTION fnTimeClassifier()  
@@ -267,10 +267,10 @@ manager: "jhubbard"
  [Resource Governor Workload Group](../../2014/database-engine/resource-governor-workload-group.md)   
  [Configure Resource Governor Using a Template](../../2014/database-engine/configure-resource-governor-using-a-template.md)   
  [View Resource Governor Properties](../../2014/database-engine/view-resource-governor-properties.md)   
- [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../Topic/ALTER%20RESOURCE%20GOVERNOR%20\(Transact-SQL\).md)   
- [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../Topic/CREATE%20RESOURCE%20POOL%20\(Transact-SQL\).md)   
- [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../Topic/CREATE%20WORKLOAD%20GROUP%20\(Transact-SQL\).md)   
- [CREATE FUNCTION &#40;Transact-SQL&#41;](../Topic/CREATE%20FUNCTION%20\(Transact-SQL\).md)   
- [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../Topic/ALTER%20RESOURCE%20GOVERNOR%20\(Transact-SQL\).md)  
+ [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](~/t-sql/statements/alter-resource-governor-transact-sql.md)   
+ [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](~/t-sql/statements/create-resource-pool-transact-sql.md)   
+ [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](~/t-sql/statements/create-workload-group-transact-sql.md)   
+ [CREATE FUNCTION &#40;Transact-SQL&#41;](~/t-sql/statements/create-function-transact-sql.md)   
+ [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](~/t-sql/statements/alter-resource-governor-transact-sql.md)  
   
   

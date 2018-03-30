@@ -26,7 +26,7 @@ manager: "jhubbard"
 ## Examples  
  To use any code example that is provided, you will have to choose the programming environment, the programming template, and the programming language in which to create your application. For more information, see [Create a Visual Basic SMO Project in Visual Studio .NET](../../../2014/database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) or [Create a Visual C&#35; SMO Project in Visual Studio .NET](../../../2014/database-engine/dev-guide/create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
- For programs that use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Database Mail, you must include the `Imports` statement to qualify the Mail namespace. Insert the statement after the other `Imports` statements, before any declarations in the application, such as:  
+ For programs that use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Mail, you must include the `Imports` statement to qualify the Mail namespace. Insert the statement after the other `Imports` statements, before any declarations in the application, such as:  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   

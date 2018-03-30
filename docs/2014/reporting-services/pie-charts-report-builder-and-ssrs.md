@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 536efa9c-c6fb-4cdd-b41f-ff5382910bd7
 caps.latest.revision: 6
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Pie Charts (Report Builder and SSRS)
@@ -23,7 +23,7 @@ manager: "mblythe"
  ![Pie chart](../../2014/reporting-services/media/piechart.gif "Pie chart")  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## Variations  
   

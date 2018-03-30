@@ -44,7 +44,7 @@ manager: "jhubbard"
   
  When `sql:relation` is specified on an element, the scope of this annotation applies to all attributes and child elements that are described in the complex type definition of that element, therefore providing a shortcut in writing annotations.  
   
- The `sql:relation` annotation is also useful when identifiers that are valid in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] are not valid in XML. For example, "Order Details" is a valid table name in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] but not in XML. In such cases, the `sql:relation` annotation can be used to specify the mapping, for example:  
+ The `sql:relation` annotation is also useful when identifiers that are valid in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are not valid in XML. For example, "Order Details" is a valid table name in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] but not in XML. In such cases, the `sql:relation` annotation can be used to specify the mapping, for example:  
   
 ```  
 <xsd:element name="OD" sql:relation="[Order Details]">  

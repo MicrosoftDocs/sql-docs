@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
 caps.latest.revision: 38
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Connect to Another Computer (SQL Server Configuration Manager)
-  This topic describes how to connect to another computer in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Follow the first procedure to open the Windows Computer Management [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (mmc), connect to the computer, and expand the Services and Applications tree. Follow the second procedure to create a file with a link to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager on a remote computer.  
+  This topic describes how to connect to another computer in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Follow the first procedure to open the Windows Computer Management [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console (mmc), connect to the computer, and expand the Services and Applications tree. Follow the second procedure to create a file with a link to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager on a remote computer.  
   
 > [!NOTE]  
 >  Some actions cannot be performed by Configuration Manager when connecting remotely.  
   
- To start, stop, pause, or resume services on another computer, you can also connect to the server with [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], right-click the server or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent and then click the desired action.  
+ To start, stop, pause, or resume services on another computer, you can also connect to the server with [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], right-click the server or [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent and then click the desired action.  
   
 ##  <a name="SSMSProcedure"></a>  
   
@@ -43,7 +43,7 @@ manager: "jhubbard"
   
 1.  On the **Start** menu, click **Run**.  
   
-2.  In the **Open** box, type `mmc -a` to open the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console in author mode.  
+2.  In the **Open** box, type `mmc -a` to open the [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console in author mode.  
   
 3.  On the **File** menu, click **Add/Remove Snap-in**.  
   
@@ -63,12 +63,12 @@ manager: "jhubbard"
   
 11. On the **Window** menu, click **Console Root**, to switch back to the first widow, and delete the window.  
   
-12. On the **File** menu, click **Save As**, and save the file in the desired folder, with an appropriate name with the `.msc` file extension. Close the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console.  
+12. On the **File** menu, click **Save As**, and save the file in the desired folder, with an appropriate name with the `.msc` file extension. Close the [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console.  
   
-13. To open [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager on the target computer, double-click the file. If desired, save a link to the file on the desktop or in the **Start** menu.  
+13. To open [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager on the target computer, double-click the file. If desired, save a link to the file on the desktop or in the **Start** menu.  
   
 > [!CAUTION]  
->  When using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager on a remote computer, the computer name is not obvious and it is possible to mistakenly stop or configure the wrong computer. On the **Service** tab, check the **Host Name** box to confirm the computer name before modifying a service.  
+>  When using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager on a remote computer, the computer name is not obvious and it is possible to mistakenly stop or configure the wrong computer. On the **Service** tab, check the **Host Name** box to confirm the computer name before modifying a service.  
   
 ## See Also  
  [Configure WMI to Show Server Status in SQL Server Tools](../../2014/database-engine/configure-wmi-to-show-server-status-in-sql-server-tools.md)  

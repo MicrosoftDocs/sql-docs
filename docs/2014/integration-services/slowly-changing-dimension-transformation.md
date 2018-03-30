@@ -23,10 +23,10 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Slowly Changing Dimension Transformation
-  The Slowly Changing Dimension transformation coordinates the updating and inserting of records in data warehouse dimension tables. For example, you can use this transformation to configure the transformation outputs that insert and update records in the DimProduct table of the [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)] database with data from the Production.Products table in the AdventureWorks OLTP database.  
+  The Slowly Changing Dimension transformation coordinates the updating and inserting of records in data warehouse dimension tables. For example, you can use this transformation to configure the transformation outputs that insert and update records in the DimProduct table of the [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] database with data from the Production.Products table in the AdventureWorks OLTP database.  
   
 > [!IMPORTANT]  
->  The Slowly Changing Dimension Wizard only supports connections to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  The Slowly Changing Dimension Wizard only supports connections to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  The Slowly Changing Dimension transformation provides the following functionality for managing slowly changing dimensions:  
   
@@ -83,7 +83,7 @@ manager: "jhubbard"
  You can log the calls that the Slowly Changing Dimension transformation makes to external data providers. You can use this logging capability to troubleshoot the connections, commands, and queries to external data sources that the Slowly Changing Dimension transformation performs. To log the calls that the Slowly Changing Dimension transformation makes to external data providers, enable package logging and select the **Diagnostic** event at the package level. For more information, see [Troubleshooting Tools for Package Execution](../../2014/integration-services/troubleshooting-tools-for-package-execution.md).  
   
 ## Configuring the Slowly Changing Dimension Transformation  
- You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer or programmatically.  
   
  For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
@@ -94,7 +94,7 @@ manager: "jhubbard"
  For more information about how to set properties, see [Set the Properties of a Data Flow Component](../../2014/integration-services/set-the-properties-of-a-data-flow-component.md).  
   
 ## Configuring the Slowly Changing Dimension Transformation Outputs  
- Coordinating the update and insertion of records in dimension tables can be a complex task, especially if both Type 1 and Type 2 changes are used. [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer provides two ways to configure support for slowly changing dimensions:  
+ Coordinating the update and insertion of records in dimension tables can be a complex task, especially if both Type 1 and Type 2 changes are used. [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer provides two ways to configure support for slowly changing dimensions:  
   
 -   The **Advanced Editor** dialog box, in which you to select a connection, set common and custom component properties, choose input columns, and set column properties on the six outputs. To complete the task of configuring support for a slowly changing dimension, you must manually create the data flow for the outputs that the Slowly Changing Dimension transformation uses. For more information, see [Data Flow](../../2014/integration-services/data-flow.md).  
   

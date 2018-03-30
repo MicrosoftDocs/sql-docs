@@ -22,15 +22,15 @@ manager: "jhubbard"
   
 1.  On the computer on which the Distributed Replay services are installed, from the command prompt, type `dcomcnfg`.  
   
-2.  Double-click **Services**, scroll down and right-click **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay \<service name>**, and then click **Start** or **Stop**.  
+2.  Double-click **Services**, scroll down and right-click **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay \<service name>**, and then click **Start** or **Stop**.  
   
 ### To modify the Distributed Replay controller service  
   
-1.  On the controller computer, stop the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay controller service.  
+1.  On the controller computer, stop the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay controller service.  
   
-2.  Under **Services**, right-click **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay Controller**, and then select **Properties**.  
+2.  Under **Services**, right-click **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller**, and then select **Properties**.  
   
-3.  In the **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay Controller Properties** window, on the **Log On** tab, select **This account**, type or click **Browse** to enter the new logon account, and then click **OK**.  
+3.  In the **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller Properties** window, on the **Log On** tab, select **This account**, type or click **Browse** to enter the new logon account, and then click **OK**.  
   
      **Important**: When you configure Distributed Replay Controller, you can specify one or more user accounts that will be used to run the Distributed Replay Client services. The following is the list of supported accounts:  
   
@@ -52,7 +52,7 @@ manager: "jhubbard"
   
 1.  Before you modify the Distributed Replay client service, make sure the client service account you are changing was specified during setup (in the CTLRUSERS parameter on the controller computer). If the client service account you are changing was not specified during setup, you must perform the following steps first:  
   
-    1.  Stop the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay controller service.  
+    1.  Stop the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay controller service.  
   
     2.  On the controller computer on which the controller service is installed, from the command prompt, type `dcomcnfg`.  
   
@@ -72,9 +72,9 @@ manager: "jhubbard"
   
     10. Start the SQL Server Distributed Replay controller service.  
   
-2.  Stop the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay client service.  
+2.  Stop the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay client service.  
   
-3.  In the **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay Client Properties** window, on the **Log On** tab, select **This account**, type or click **Browse** to enter the new logon account, and then click **OK**.  
+3.  In the **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client Properties** window, on the **Log On** tab, select **This account**, type or click **Browse** to enter the new logon account, and then click **OK**.  
   
 4.  Start the Distributed Replay client service.  
   

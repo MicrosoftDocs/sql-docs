@@ -29,7 +29,7 @@ manager: "jhubbard"
 # srv_describe (Extended Stored Procedure API)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
   
  Defines the column name and source and destination data types for a specific column in a row.  
   

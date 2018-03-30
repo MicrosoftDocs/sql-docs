@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 12da7931-e124-4466-889c-046f1b7b7bfd
 caps.latest.revision: 9
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_9524
@@ -35,7 +35,7 @@ manager: "jhubbard"
   
  `<column_name_1>value1</column_name_1><column_name_2>value2</column_name_2>...`  
   
- For more information about column sets, see the topic "Using Column Sets" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+ For more information about column sets, see the topic "Using Column Sets" in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online.  
   
 ## User Action  
  Correct the format of the XML for the column set in the statement.  

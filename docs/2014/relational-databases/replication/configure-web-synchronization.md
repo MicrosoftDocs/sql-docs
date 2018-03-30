@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 caps.latest.revision: 73
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Configure Web Synchronization
-  The Web synchronization option for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Merge Replication enables data replication using the HTTPS protocol over the Internet. To use Web synchronization, you first need to perform the following configuration actions:  
+  The Web synchronization option for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Merge Replication enables data replication using the HTTPS protocol over the Internet. To use Web synchronization, you first need to perform the following configuration actions:  
   
-1.  Create new domain accounts and map [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] logins.  
+1.  Create new domain accounts and map [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins.  
   
-2.  Configure the computer that is running [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Internet Information Services (IIS) to synchronize subscriptions.  
+2.  Configure the computer that is running [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) to synchronize subscriptions.  
   
 3.  Configure a merge publication to allow Web synchronization.  
   
@@ -44,12 +44,12 @@ manager: "jhubbard"
   
  To successfully set up Web synchronization, you must decide how you will configure security to meet your particular requirements and policies. It is best to make these decisions and create the necessary accounts before you attempt to configure IIS, the publication, and subscriptions.  
   
- In the procedures that follow, a simplified security configuration using local accounts is described, for brevity. This simplified configuration is suitable for installations where both IIS and the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Publisher and Distributor are running on the same computer, even though it is much more likely (and recommended) that you will use a multiple-server topology for a production installation. You can substitute domain accounts for the local accounts in the procedures.  
+ In the procedures that follow, a simplified security configuration using local accounts is described, for brevity. This simplified configuration is suitable for installations where both IIS and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher and Distributor are running on the same computer, even though it is much more likely (and recommended) that you will use a multiple-server topology for a production installation. You can substitute domain accounts for the local accounts in the procedures.  
   
 ## Creating New Accounts and Mapping SQL Server Logins  
- The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Listener (replisapi.dll) connects to the Publisher by impersonating the account specified for the application pool that is associated with the replication web site.  
+ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener (replisapi.dll) connects to the Publisher by impersonating the account specified for the application pool that is associated with the replication web site.  
   
- The account used for the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Listener must have permissions as described in [Merge Agent Security](../../../2014/relational-databases/replication/merge-agent-security.md), under the section "Connect to the Publisher or Distributor." In summary, the account must:  
+ The account used for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener must have permissions as described in [Merge Agent Security](../../../2014/relational-databases/replication/merge-agent-security.md), under the section "Connect to the Publisher or Distributor." In summary, the account must:  
   
 -   Be a member of the Publication Access List (PAL).  
   
@@ -59,7 +59,7 @@ manager: "jhubbard"
   
 -   Have Read permissions on the snapshot share.  
   
- If this is the first time you are using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication, you will also need to create accounts and logins for the replication agents. For more information, see the "Configuring the Publication" and "Configuring the Subscription" sections in this topic.  
+ If this is the first time you are using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication, you will also need to create accounts and logins for the replication agents. For more information, see the "Configuring the Publication" and "Configuring the Subscription" sections in this topic.  
   
  Before you configure Web synchronization, we recommend that you read the "Security Best Practices for Web Synchronization" section in this topic. For more information about Web synchronization security, see [Security Architecture for Web Synchronization](../../../2014/relational-databases/replication/security-architecture-for-web-synchronization.md).  
   
@@ -73,12 +73,12 @@ Web synchronization is supported on IIS beginning with version 5.0. The Configur
   
  **To configure IIS for Web synchronization**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Configure IIS for Web Synchronization](../../../2014/relational-databases/replication/configure-iis-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Configure IIS for Web Synchronization](../../../2014/relational-databases/replication/configure-iis-for-web-synchronization.md)  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Configure IIS 7 for Web Synchronization](../../../2014/relational-databases/replication/configure-iis-7-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Configure IIS 7 for Web Synchronization](../../../2014/relational-databases/replication/configure-iis-7-for-web-synchronization.md)  
   
 ## Creating a Web Garden  
- The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Listener supports two concurrent synchronization operations per thread. Exceeding this limit may cause the Replication Listener to stop responding. The number of threads allocated to replisapi.dll is determined by the application pool Maximum Worker Processes property. By default, this property is set at 1.  
+ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener supports two concurrent synchronization operations per thread. Exceeding this limit may cause the Replication Listener to stop responding. The number of threads allocated to replisapi.dll is determined by the application pool Maximum Worker Processes property. By default, this property is set at 1.  
   
  You can support a greater number of concurrent synchronization operations per CPU by increasing the Maximum Worker Process property value. Scaling out by increasing the number of worker processes per CPU is known as creating a "Web garden."  
   
@@ -95,7 +95,7 @@ Web synchronization is supported on IIS beginning with version 5.0. The Configur
 ## Configuring the Publication  
  To use Web synchronization, create a publication in the same way that you would for a standard merge topology. For more information, see [Publish Data and Database Objects](../../../2014/relational-databases/replication/publish-data-and-database-objects.md).  
   
- After the publication is created, enable the option to allow for Web synchronization by using one of the following methods: [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or Replication Management Objects (RMO). To enable Web synchronization, you will need to supply the Web server address for Subscriber connections.  
+ After the publication is created, enable the option to allow for Web synchronization by using one of the following methods: [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or Replication Management Objects (RMO). To enable Web synchronization, you will need to supply the Web server address for Subscriber connections.  
   
  If you are using a Publisher for the first time, you must also configure a Distributor and a snapshot share. The Merge Agent at each Subscriber must have read permissions on the snapshot share. For more information, see [Configure Distribution](../../../2014/relational-databases/replication/configure-distribution.md) and [Secure the Snapshot Folder](../../../2014/relational-databases/replication/secure-the-snapshot-folder.md).  
   
@@ -105,7 +105,7 @@ Web synchronization is supported on IIS beginning with version 5.0. The Configur
  After you enable a publication and configure IIS, create a pull subscription and specify that the pull subscription should synchronize by using IIS. (Web synchronization is supported only for pull subscriptions.)  
   
 ## Upgrading from an Earlier Version of SQL Server  
- If you have an existing Web synchronization topology configured and you upgrade [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], you must ensure that the latest version of Replisapi.dll is copied to the virtual directory used by Web synchronization. By default, the latest version of Replisapi.dll is located in C:\Program Files\Microsoft SQL Server\\<nnn\>\COM.  
+ If you have an existing Web synchronization topology configured and you upgrade [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you must ensure that the latest version of Replisapi.dll is copied to the virtual directory used by Web synchronization. By default, the latest version of Replisapi.dll is located in C:\Program Files\Microsoft SQL Server\\<nnn\>\COM.  
   
 ## Replicating Large Volumes of Data  
  To help avoid potential memory problems on Subscriber computers Web synchronization uses a default maximum size of 100 MB for the XML file used to transfer changes. The limit can be raised by setting the following registry key:  
@@ -129,7 +129,7 @@ Web synchronization is supported on IIS beginning with version 5.0. The Configur
 ## Security Best Practices for Web Synchronization  
  There are many choices for security-related settings in Web synchronization. We recommend the following approach:  
   
--   The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributor and Publisher can be on the same computer (a typical setup for merge replication). However, IIS should be installedon a separate computer.  
+-   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor and Publisher can be on the same computer (a typical setup for merge replication). However, IIS should be installedon a separate computer.  
   
 -   Use Secure Sockets Layer (SSL) to encrypt the connection between the Subscriber and the computer running IIS. This is required for Web synchronization.  
   
@@ -142,17 +142,17 @@ Web synchronization is supported on IIS beginning with version 5.0. The Configur
   
      For more information about the permissions that are required by agents, see [Replication Agent Security Model](../../../2014/relational-databases/replication/replication-agent-security-model.md).  
   
--   Specify the same domain account as the one the Merge Agent uses when you specify an account and password on the **Web Server Information** page of the New Subscription Wizard or when you specify values for the **@internet_url** and **@internet_login** parameters of [sp_addpullsubscription_agent](../Topic/sp_addpullsubscription_agent%20\(Transact-SQL\).md). This account must have read permissions for the snapshot share.  
+-   Specify the same domain account as the one the Merge Agent uses when you specify an account and password on the **Web Server Information** page of the New Subscription Wizard or when you specify values for the **@internet_url** and **@internet_login** parameters of [sp_addpullsubscription_agent](~/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). This account must have read permissions for the snapshot share.  
   
 -   Each publication should use a separate virtual directory for IIS.  
   
--   The account under which the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Listener (Replisapi.dll) runs is also the account that will connect to the Publisher and Distributor during synchronization. This account must be mapped to a SQL Login account on the Publisher and Distributor. For more information, see the "Setting Permissions for the SQL Server Replication Listener" section in the [Configure IIS for Web Synchronization](../../../2014/relational-databases/replication/configure-iis-for-web-synchronization.md).  
+-   The account under which the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener (Replisapi.dll) runs is also the account that will connect to the Publisher and Distributor during synchronization. This account must be mapped to a SQL Login account on the Publisher and Distributor. For more information, see the "Setting Permissions for the SQL Server Replication Listener" section in the [Configure IIS for Web Synchronization](../../../2014/relational-databases/replication/configure-iis-for-web-synchronization.md).  
   
 -   You can use FTP to deliver the snapshot from the Publisher to the computer that is running IIS. The snapshot is always delivered from the computer that is running IIS to the Subscriber by using HTTPS. For more information, see [Transfer Snapshots Through FTP](../../../2014/relational-databases/replication/transfer-snapshots-through-ftp.md).  
   
 -   If servers in the replication topology are behind a firewall, you might need to open ports in the firewall to enable Web synchronization.  
   
-    -   The Subscriber computer connects to the computer that is running IIS over HTTPS using SSL, which is typically configured to use port 443. [!INCLUDE[ssEW](../../../includes/ssew-md.md)] Subscribers can also connect over HTTP, which is typically configured to use port 80.  
+    -   The Subscriber computer connects to the computer that is running IIS over HTTPS using SSL, which is typically configured to use port 443. [!INCLUDE[ssEW](../../includes/ssew-md.md)] Subscribers can also connect over HTTP, which is typically configured to use port 80.  
   
     -   The computer that is running IIS typically connects to the Publisher or Distributor using port 1433 (default instance). When the Publisher or Distributor is a named instance on a server with another default instance, port 1500 is typically used to connect to the named instance.  
   

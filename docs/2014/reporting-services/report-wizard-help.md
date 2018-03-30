@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 68287bcf-f91a-429f-bb7c-48c029b041fa
 caps.latest.revision: 33
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Report Wizard Help

@@ -21,13 +21,13 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Display an Actual Execution Plan
-  This topic describes how to generate actual graphical execution plans by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. When actual execution plans are generated, the [!INCLUDE[tsql](../../includes/tsql-md.md)] queries or batches execute. The execution plan that is generated displays the actual query execution plan that the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] uses to execute the queries.  
+  This topic describes how to generate actual graphical execution plans by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. When actual execution plans are generated, the [!INCLUDE[tsql](../includes/tsql-md.md)] queries or batches execute. The execution plan that is generated displays the actual query execution plan that the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] uses to execute the queries.  
   
- To use this feature, users must have the appropriate permissions to execute the [!INCLUDE[tsql](../../includes/tsql-md.md)] queries for which a graphical execution plan is being generated, and they must be granted the SHOWPLAN permission for all databases referenced by the query.  
+ To use this feature, users must have the appropriate permissions to execute the [!INCLUDE[tsql](../includes/tsql-md.md)] queries for which a graphical execution plan is being generated, and they must be granted the SHOWPLAN permission for all databases referenced by the query.  
   
 ### To include an execution plan for a query during execution  
   
-1.  On the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] toolbar, click **Database Engine Query**. You can also open an existing query and display the estimated execution plan by clicking the **Open File** toolbar button and locating the existing query.  
+1.  On the [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] toolbar, click **Database Engine Query**. You can also open an existing query and display the estimated execution plan by clicking the **Open File** toolbar button and locating the existing query.  
   
 2.  Enter the query for which you would like to display the actual execution plan.  
   

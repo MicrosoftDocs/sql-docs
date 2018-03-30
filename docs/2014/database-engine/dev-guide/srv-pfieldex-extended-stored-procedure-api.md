@@ -29,7 +29,7 @@ manager: "jhubbard"
 # srv_pfieldex (Extended Stored Procedure API)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
   
  Returns a pointer to data containing the requested SRV_PROC field.  
   

@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 caps.latest.revision: 46
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Create, Modify, and Delete Standard Subscriptions (Reporting Services in Native Mode)
@@ -24,7 +24,7 @@ manager: "mblythe"
  A user who creates a subscription owns that subscription. Each user can modify or delete the subscriptions that he or she owns.  
   
 > [!NOTE]  
->  Starting with [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] you can transfer the ownership of a subscription programmatically. There is no user interface you can use to transfer ownership of subscriptions. For more information, see <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
+>  Starting with [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] you can transfer the ownership of a subscription programmatically. There is no user interface you can use to transfer ownership of subscriptions. For more information, see <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
   
  Depending on **RSReportServer.config** configuration file settings, users may be able to add more users to a subscription (for example, a manager adds the e-mail addresses of his or her direct reports so that they each receive a copy of the report). Whether this is supported depends on whether the To: field is visible when defining individual subscriptions. For more information, see [Configure a Report Server for E-Mail Delivery &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
   
@@ -45,7 +45,7 @@ manager: "mblythe"
 ##  <a name="bkmk_create_subscription"></a> To Create a Subscription  
  To create a subscription, choose the tool and approach that is valid for your report server deployment:  
   
--   The content in this topic explains how to create subscriptions on a native mode report server using [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Report Manager. After you define a subscription, you can access it in Report Manager through the My Subscriptions page or the **Subscriptions** tab of a specific report.  
+-   The content in this topic explains how to create subscriptions on a native mode report server using [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Report Manager. After you define a subscription, you can access it in Report Manager through the My Subscriptions page or the **Subscriptions** tab of a specific report.  
   
 -   [Create and Manage Subscriptions for SharePoint Mode Report Servers](../../2014/reporting-services/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md) explains how to use the application pages in a SharePoint site to subscribe to reports on a report server that runs in SharePoint integrated mode.  
   
@@ -124,7 +124,7 @@ manager: "mblythe"
   
     -   To send the report as an attachment, choose any of the other rendering formats.  
   
-7.  Select a priority from the **Priority** list box. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] Exchange, this setting sets a flag for the importance level of the e-mail message.  
+7.  Select a priority from the **Priority** list box. In [!INCLUDE[msCoName](../includes/msconame-md.md)] Exchange, this setting sets a flag for the importance level of the e-mail message.  
   
 8.  Specify when you want the report delivered:  
   

@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 10266c94-d4da-4f4a-8cdd-5a64f57ada5e
 caps.latest.revision: 9
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Version Property  (WMI MSReportServer_ConfigurationSetting)
@@ -37,7 +37,7 @@ public string Version;
  [MSReportServer_ConfigurationSetting Class](../../2014/reporting-services/msreportserver-configurationsetting-class.md)  
   
 ## Requirements  
- **Namespace:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspc](../includes/ssrswminmspc-md.md)]  
   
 ## See Also  
  [MSReportServer_Instance Members](../../2014/reporting-services/msreportserver-instance-members.md)  

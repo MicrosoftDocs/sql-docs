@@ -31,7 +31,7 @@ manager: "jhubbard"
 >  You can define a database maintenance plan to create database backups. For more information, see [Maintenance Plans](../../2014/database-engine/maintenance-plans.md) and [Use the Maintenance Plan Wizard](../../2014/database-engine/use-the-maintenance-plan-wizard.md).  
   
 > [!NOTE]  
->  When you specify a backup task by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], you can generate the corresponding [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](../Topic/BACKUP%20\(Transact-SQL\).md) script by clicking the **Script** button and then selecting a destination for the script.  
+>  When you specify a backup task by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], you can generate the corresponding [!INCLUDE[tsql](../includes/tsql-md.md)][BACKUP](~/t-sql/statements/backup-transact-sql.md) script by clicking the **Script** button and then selecting a destination for the script.  
   
 ## Options  
   
@@ -78,7 +78,7 @@ manager: "jhubbard"
  Verify that the backup set is complete and that all volumes are readable.  
   
  **Perform checksum before writing to media**  
- Verify the checksums before writing to the backup media. Selecting this option is equivalent to specifying the CHECKSUM option in the BACKUP statement of [!INCLUDE[tsql](../../includes/tsql-md.md)]. Selecting this option may increase the workload, and decrease the backup throughput of the backup operation. For information about backup checksums, see [Possible Media Errors During Backup and Restore &#40;SQL Server&#41;](../../2014/database-engine/possible-media-errors-during-backup-and-restore-sql-server.md).  
+ Verify the checksums before writing to the backup media. Selecting this option is equivalent to specifying the CHECKSUM option in the BACKUP statement of [!INCLUDE[tsql](../includes/tsql-md.md)]. Selecting this option may increase the workload, and decrease the backup throughput of the backup operation. For information about backup checksums, see [Possible Media Errors During Backup and Restore &#40;SQL Server&#41;](../../2014/database-engine/possible-media-errors-during-backup-and-restore-sql-server.md).  
   
  **Continue on error**  
  The backup operation is to continue even after encountering one or more errors.  
@@ -95,7 +95,7 @@ manager: "jhubbard"
  **Back up the tail of the log, and leave the database in the restoring state**  
  Back up the tail of the log and leave the database in a restoring state. This option creates a *tail-log backup*, which backs up logs that have not yet been backed up (the active log), typically, in preparation for restoring a database. The database will be unavailable to users until it is completely restored.  
   
- Selecting this option is equivalent to specifying WITH NO_TRUNCATE, NORECOVERY in a [BACKUP](../Topic/BACKUP%20\(Transact-SQL\).md) statement ([!INCLUDE[tsql](../../includes/tsql-md.md)]). For more information, see [Tail-Log Backups &#40;SQL Server&#41;](../../2014/database-engine/tail-log-backups-sql-server.md).  
+ Selecting this option is equivalent to specifying WITH NO_TRUNCATE, NORECOVERY in a [BACKUP](~/t-sql/statements/backup-transact-sql.md) statement ([!INCLUDE[tsql](../includes/tsql-md.md)]). For more information, see [Tail-Log Backups &#40;SQL Server&#41;](../../2014/database-engine/tail-log-backups-sql-server.md).  
   
 ### Tape drive  
  The options of the **Tape drive** panel control tape management during the backup operation. These options are activated only if **Tape** has been selected in the **Destination** panel on the [General](../../2014/database-engine/back-up-database-general-page.md) page of the **Back Up Database** dialog box.  
@@ -110,7 +110,7 @@ manager: "jhubbard"
  Before unloading the tape, release and rewind it. This is enabled only if **Unload the tape after backup** is selected.  
   
 ## See Also  
- [BACKUP &#40;Transact-SQL&#41;](../Topic/BACKUP%20\(Transact-SQL\).md)   
+ [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)   
  [Back Up a Transaction Log &#40;SQL Server&#41;](../../2014/database-engine/back-up-a-transaction-log-sql-server.md)   
  [Back Up Files and Filegroups &#40;SQL Server&#41;](../../2014/database-engine/back-up-files-and-filegroups-sql-server.md)   
  [Back Up the Transaction Log When the Database Is Damaged &#40;SQL Server&#41;](../../2014/database-engine/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)  

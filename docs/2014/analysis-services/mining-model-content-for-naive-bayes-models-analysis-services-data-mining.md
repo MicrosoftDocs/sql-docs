@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Mining Model Content for Naive Bayes Models (Analysis Services - Data Mining)
-  This topic describes mining model content that is specific to models that use the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes algorithm. For an explanation of how to interpret statistics and structure shared by all model types, and general definitions of terms related to mining model content, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/mining-model-content-analysis-services-data-mining.md).  
+  This topic describes mining model content that is specific to models that use the [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes algorithm. For an explanation of how to interpret statistics and structure shared by all model types, and general definitions of terms related to mining model content, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/mining-model-content-analysis-services-data-mining.md).  
   
 ## Understanding the Structure of a Naive Bayes Model  
  A Naive Bayes model has a single parent node that represents the model and its metadata, and underneath that parent node, any number of independent trees that represent the predictable attributes that you selected. In addition to trees for the attributes, each model contains one marginal statistics node (NODE_TYPE = 26) that provides descriptive statistics about the set of training cases. For more information, see [Information in the Marginal Statistics Node](#bkmk_margstats).  

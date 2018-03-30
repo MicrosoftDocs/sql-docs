@@ -35,12 +35,12 @@ manager: "jhubbard"
  For the following code example, you will have to select the programming environment, programming template and the programming language to create your application. For more information, see [Create a Visual Basic SMO Project in Visual Studio .NET](../../../2014/database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) and [Create a Visual C&#35; SMO Project in Visual Studio .NET](../../../2014/database-engine/dev-guide/create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## Setting Up a Partition Scheme for a Table in Visual Basic  
- The code example shows how to create a partition function and a partition scheme for the `TransactionHistory` table in the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] sample database. The partitions are divided by date with the intention of separating out old records into the `TransactionHistoryArchive` table.  
+ The code example shows how to create a partition function and a partition scheme for the `TransactionHistory` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database. The partitions are divided by date with the intention of separating out old records into the `TransactionHistoryArchive` table.  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBPartition1](SMO How to#SMO_VBPartition1)]  -->  
   
 ## Setting Up a Partition Scheme for a Table in Visual C#  
- The code example shows how to create a partition function and a partition scheme for the `TransactionHistory` table in the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] sample database. The partitions are divided by date with the intention of separating out old records into the `TransactionHistoryArchive` table.  
+ The code example shows how to create a partition function and a partition scheme for the `TransactionHistory` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database. The partitions are divided by date with the intention of separating out old records into the `TransactionHistoryArchive` table.  
   
 ```  
 {   
@@ -88,7 +88,7 @@ ps.Create();
 ```  
   
 ## Setting Up a Partition Scheme for a Table in PowerShell  
- The code example shows how to create a partition function and a partition scheme for the `TransactionHistory` table in the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] sample database. The partitions are divided by date with the intention of separating out old records into the `TransactionHistoryArchive` table.  
+ The code example shows how to create a partition function and a partition scheme for the `TransactionHistory` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database. The partitions are divided by date with the intention of separating out old records into the `TransactionHistoryArchive` table.  
   
 ```powershell  
 # Set the path context to the local, default instance of SQL Server.  

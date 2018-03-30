@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: ef84ce9d-9156-48e9-8073-7e0535476932
 caps.latest.revision: 16
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Configure a Report Server (Reporting Services Native Mode)

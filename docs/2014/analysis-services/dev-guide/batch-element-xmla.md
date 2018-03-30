@@ -29,7 +29,7 @@ ms.author: "mblythe"
 manager: "mblythe"
 ---
 # Batch Element (XMLA)
-  Performs one or more XML for Analysis (XMLA) commands as a batch operation, either sequentially or in parallel, on an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+  Performs one or more XML for Analysis (XMLA) commands as a batch operation, either sequentially or in parallel, on an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ## Syntax  
   
@@ -66,7 +66,7 @@ manager: "mblythe"
   
 |Attribute|Description|  
 |---------------|-----------------|  
-|ProcessAffectedObjects|(Optional `Boolean` attribute) Indicates whether all objects that require reprocessing will be processed.<br /><br /> If set to true, the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance processes any objects that require reprocessing as a result of processing an object included in the `Batch` command.<br /><br /> If set to `false`, the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance processes only those objects included in the `Batch` command.|  
+|ProcessAffectedObjects|(Optional `Boolean` attribute) Indicates whether all objects that require reprocessing will be processed.<br /><br /> If set to true, the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance processes any objects that require reprocessing as a result of processing an object included in the `Batch` command.<br /><br /> If set to `false`, the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance processes only those objects included in the `Batch` command.|  
 |Transaction|(Optional `Boolean` attribute) Indicates whether the command included in the `Batch` command are treated as a single transaction or individual transactions.<br /><br /> If set to true, all of the commands included in the `Batch` command are considered a single transaction. If any command fails, the commands executed prior to the failed command are rolled back, and the `Batch` command stops without executing subsequent commands.<br /><br /> If set to `false`, the `Batch` command attempts to execute every command, and commits the results of each command that completes successfully.|  
   
 ## Remarks  

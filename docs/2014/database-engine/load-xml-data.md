@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
 caps.latest.revision: 19
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Load XML Data
-  You can transfer XML data into [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] in several ways. For example:  
+  You can transfer XML data into [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] in several ways. For example:  
   
--   If you have your data in an [n]text or image column in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, you can import the table by using [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Change the column type to XML by using the ALTER TABLE statement.  
+-   If you have your data in an [n]text or image column in a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database, you can import the table by using [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Change the column type to XML by using the ALTER TABLE statement.  
   
--   You can bulk copy your data from another [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database by using bcp out, and then bulk insert the data into the later version database by using bcp in.  
+-   You can bulk copy your data from another [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database by using bcp out, and then bulk insert the data into the later version database by using bcp in.  
   
--   If you have data in relational columns in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, create a new table with an [n]text column and, optionally, a primary key column for a row identifier. Use client-side programming to retrieve the XML that is generated at the server with FOR XML and write it into the `[n]text` column. Then, use the previously mentioned techniques to transfer data to a later version database. You can choose to write the XML into an XML column in the later version database directly.  
+-   If you have data in relational columns in a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database, create a new table with an [n]text column and, optionally, a primary key column for a row identifier. Use client-side programming to retrieve the XML that is generated at the server with FOR XML and write it into the `[n]text` column. Then, use the previously mentioned techniques to transfer data to a later version database. You can choose to write the XML into an XML column in the later version database directly.  
   
 ## Bulk loading XML data  
- You can bulk load XML data into the server by using the bulk loading capabilities of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], such as bcp. OPENROWSET allows you to load data into an XML column from files. The following example illustrates this point.  
+ You can bulk load XML data into the server by using the bulk loading capabilities of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], such as bcp. OPENROWSET allows you to load data into an XML column from files. The following example illustrates this point.  
   
 ##### Example: Loading XML from Files  
  This example shows how to insert a row in table T. The value of the XML column is loaded from file C:\MyFile\xmlfile.xml as CLOB, and the integer column is supplied the value 10.  
@@ -42,7 +42,7 @@ FROM    (SELECT *
 ```  
   
 ## Text Encoding  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stores XML data in Unicode (UTF-16). XML data retrieved from the server comes out in UTF-16 encoding. If you want a different encoding, you have to perform the required conversion on the retrieved data. Sometimes, the XML data may be in a different encoding. If it is, you have to use care during data loading. For example:  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] stores XML data in Unicode (UTF-16). XML data retrieved from the server comes out in UTF-16 encoding. If you want a different encoding, you have to perform the required conversion on the retrieved data. Sometimes, the XML data may be in a different encoding. If it is, you have to use care during data loading. For example:  
   
 -   If your text XML is in Unicode (UCS-2, UTF-16), you can assign it to an XML column, variable, or parameter  without any problems.  
   
@@ -60,7 +60,7 @@ CAST (('<?xml version="1.0" encoding="iso8859-1"?>'+ vcdoc) AS VARBINARY (MAX))
 ```  
   
 ### String Encoding Incompatibilities  
- If you copy and paste XML as a string literal into the Query Editor window in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], you might experience [N]VARCHAR string encoding incompatibilities. This will depend on the encoding of your XML instance. In many cases, you may want to remove the XML declaration. For example:  
+ If you copy and paste XML as a string literal into the Query Editor window in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], you might experience [N]VARCHAR string encoding incompatibilities. This will depend on the encoding of your XML instance. In many cases, you may want to remove the XML declaration. For example:  
   
 ```  
 <?xml version="1.0" encoding="UTF-8"?>  

@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: 7ad9a0a0-6e4f-4f7b-8801-8c1b9d49c4d8
 caps.latest.revision: 18
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Back Up a Database Master Key
-  This topic describes how to back up a database master key in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../../includes/tsql-md.md)]. The database master key is used to encrypt other keys and certificates inside a database. If it is deleted or corrupted, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] may be unable to decrypt those keys, and the data encrypted using them will be effectively lost. For this reason, you should back up the database master key and store the backup in a secure off-site location.  
+  This topic describes how to back up a database master key in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../includes/tsql-md.md)]. The database master key is used to encrypt other keys and certificates inside a database. If it is deleted or corrupted, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] may be unable to decrypt those keys, and the data encrypted using them will be effectively lost. For this reason, you should back up the database master key and store the backup in a secure off-site location.  
   
  **In This Topic**  
   
@@ -47,7 +47,7 @@ manager: "jhubbard"
   
 #### To back-up the database master key  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance containing the database master key you wish to back up.  
+1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], connect to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance containing the database master key you wish to back up.  
   
 2.  Choose a password that will be used to encrypt the database master key on the backup medium. This password is subject to complexity checks.  
   
@@ -55,7 +55,7 @@ manager: "jhubbard"
   
 4.  Identify an NTFS directory in which to create the backup of the key. This is where you will create the file specified in the next step. The directory should be protected with highly restrictive access control lists (ACLs).  
   
-5.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+5.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 6.  On the Standard bar, click **New Query**.  
   
@@ -79,6 +79,6 @@ manager: "jhubbard"
   
 9. Store the backup in a secure, off-site location.  
   
- For more information, see [OPEN MASTER KEY &#40;Transact-SQL&#41;](../Topic/OPEN%20MASTER%20KEY%20\(Transact-SQL\).md) and [BACKUP MASTER KEY &#40;Transact-SQL&#41;](../Topic/BACKUP%20MASTER%20KEY%20\(Transact-SQL\).md).  
+ For more information, see [OPEN MASTER KEY &#40;Transact-SQL&#41;](~/t-sql/statements/open-master-key-transact-sql.md) and [BACKUP MASTER KEY &#40;Transact-SQL&#41;](~/t-sql/statements/backup-master-key-transact-sql.md).  
   
   

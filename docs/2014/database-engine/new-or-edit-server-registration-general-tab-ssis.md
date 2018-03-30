@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # New or Edit Server Registration (General Tab) (SSIS)
-  Use this tab to specify options when registering [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+  Use this tab to specify options when registering [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
  To access this page, in Registered Servers, click **Integration Services** on the **Registered Servers** toolbar, right-click any registered servers group, point to **New**, and then click **Server Registration**.  
   
@@ -30,7 +30,7 @@ manager: "jhubbard"
  Select the server to which to connect. The server last connected to is displayed by default.  
   
  **Authentication**  
- Windows Authentication mode allows a user to connect through a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows user account.  
+ Windows Authentication mode allows a user to connect through a [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows user account.  
   
  **User name**  
  This option is not available in this release.  

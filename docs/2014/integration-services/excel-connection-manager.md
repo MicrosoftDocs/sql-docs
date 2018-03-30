@@ -21,9 +21,9 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Excel Connection Manager
-  An Excel connection manager enables a package to connect to an existing [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel workbook file. The Excel source and the Excel destination that [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include use the Excel connection manager.  
+  An Excel connection manager enables a package to connect to an existing [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel workbook file. The Excel source and the Excel destination that [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include use the Excel connection manager.  
   
- When you add an Excel connection manager to a package, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] creates a connection manager that is resolved as an Excel connection at run time, sets the connection manager properties, and adds the connection manager to the `Connections` collection on the package.  
+ When you add an Excel connection manager to a package, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] creates a connection manager that is resolved as an Excel connection at run time, sets the connection manager properties, and adds the connection manager to the `Connections` collection on the package.  
   
  The `ConnectionManagerType` property of the connection manager is set to `EXCEL`.  
   
@@ -41,11 +41,11 @@ manager: "jhubbard"
   
  If the Excel connection manager is used by an Excel source, the column names are included with the extracted data. If it is used by an Excel destination, the column names are included in the written data.  
   
- The Excel connection manager uses the [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet 4.0 and its supporting Excel ISAM (Indexed Sequential Access Method) driver to connect and read and write data to Excel data sources. For more information about the behavior of this provider and driver when used with Excel sources and Excel destinations, see [Excel Source](../../2014/integration-services/excel-source.md) and [Excel Destination](../../2014/integration-services/excel-destination.md).  
+ The Excel connection manager uses the [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB Provider for Jet 4.0 and its supporting Excel ISAM (Indexed Sequential Access Method) driver to connect and read and write data to Excel data sources. For more information about the behavior of this provider and driver when used with Excel sources and Excel destinations, see [Excel Source](../../2014/integration-services/excel-source.md) and [Excel Destination](../../2014/integration-services/excel-destination.md).  
   
- You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer or programmatically.  
   
- For more information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, see [Excel Connection Manager Editor](../../2014/integration-services/excel-connection-manager-editor.md).  
+ For more information about the properties that you can set in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, see [Excel Connection Manager Editor](../../2014/integration-services/excel-connection-manager-editor.md).  
   
  For information about configuring a connection manager programmatically, see <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> and [Adding Connections Programmatically](../../2014/integration-services/dev-guide/adding-connections-programmatically.md).  
   

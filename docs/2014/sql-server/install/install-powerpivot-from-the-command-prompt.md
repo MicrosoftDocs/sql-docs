@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 7f1f2b28-c9f5-49ad-934b-02f2fa6b9328
 caps.latest.revision: 13
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "jhubbard"
 ---
 # Install PowerPivot from the Command Prompt
@@ -82,7 +82,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
   
 3.  Replace the placeholders for \<domain\username> and \<StrongPassword>with valid user accounts and passwords.  
   
-     The `/assvaccount` and **/assvcpassword** parameters are used to configure the [!INCLUDE[ssGeminiSrv](../../../includes/ssgeminisrv-md.md)] instance on the application server. Replace these placeholders with valid account information.  
+     The `/assvaccount` and **/assvcpassword** parameters are used to configure the [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] instance on the application server. Replace these placeholders with valid account information.  
   
      The **/assysadminaccounts** parameter must be set to the identity of the user who is running SQL Server Setup. You must specify at least one system administrator. Note that SQL Server Setup no long grants automatic sysadmin permissions to members of the built-in Administrators group.  
   

@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 caps.latest.revision: 55
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Oracle Subscribers
-  Beginning with [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports push subscriptions to Oracle through the Oracle OLE DB provider supplied by Oracle.  
+  Beginning with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports push subscriptions to Oracle through the Oracle OLE DB provider supplied by Oracle.  
   
 ## Configuring an Oracle Subscriber  
  To configure an Oracle Subscriber, follow these steps:  
   
-1.  Install and configure Oracle client networking software and the Oracle OLE DB provider on the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributor, so that the Distributor can make connections to the Oracle Subscriber. The Oracle client networking software should be the most recent version available. Oracle recommends that users install the most recent versions of client software. The client software is therefore often a more recent version than the database software. The most straightforward way to install the software is to use the Oracle Universal Installer on the Oracle Client disk. In the Oracle Universal Installer, you will supply the following information:  
+1.  Install and configure Oracle client networking software and the Oracle OLE DB provider on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor, so that the Distributor can make connections to the Oracle Subscriber. The Oracle client networking software should be the most recent version available. Oracle recommends that users install the most recent versions of client software. The client software is therefore often a more recent version than the database software. The most straightforward way to install the software is to use the Oracle Universal Installer on the Oracle Client disk. In the Oracle Universal Installer, you will supply the following information:  
   
     |Information|Description|  
     |-----------------|-----------------|  
@@ -46,10 +46,10 @@ manager: "jhubbard"
     |Select the network protocol|Select the appropriate protocols you would like to support. Most applications use TCP.|  
     |Specify the host information to identify the database listener|The host is the name or DNS alias of the computer on which the Oracle listener is running, which is typically the same computer on which the database resides. For some protocols, you must provide additional information. For example, if you select TCP, you must supply the port on which the listener is listening for connection requests to the target database. The default TCP configuration uses port 1521.|  
   
-3.  Create a snapshot or transactional publication, enable it for non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers, and then create a push subscription for the Subscriber. For more information, see [Create a Subscription for a Non-SQL Server Subscriber](../../../2014/relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
+3.  Create a snapshot or transactional publication, enable it for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers, and then create a push subscription for the Subscriber. For more information, see [Create a Subscription for a Non-SQL Server Subscriber](../../../2014/relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
   
 ### Setting directory permissions  
- The account under which the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service on the Distributor runs must be granted read and execute permissions for the directory (and all subdirectories) where the Oracle client networking software is installed.  
+ The account under which the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service on the Distributor runs must be granted read and execute permissions for the directory (and all subdirectories) where the Oracle client networking software is installed.  
   
 ### Testing connectivity between the SQL Server Distributor and the Oracle Publisher  
  Near the end of the Net Configuration Assistant there might be an option to test the connection to the Oracle Subscriber. Before you test the connection, ensure that the Oracle database instance is online and that the Oracle Listener is running. If the test is unsuccessful, contact the Oracle DBA responsible for the database to which you are trying to connect.  
@@ -71,23 +71,23 @@ manager: "jhubbard"
 ### Considerations for Oracle Home  
  Oracle supports side-by-side installation of application binaries, but only one set of binaries can be used by replication at a given time. Each set of binaries is associated with an Oracle Home; the binaries are in the directory %ORACLE_HOME%\bin. You must ensure that the correct set of binaries (specifically the latest version of the client networking software) is used when replication makes connections to the Oracle Subscriber.  
   
- Log into the Distributor with the accounts used by the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service and the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent service and set the appropriate environment variables. The %ORACLE_HOME% variable should be set to refer to the installation point you specified when you installed the client networking software. The %PATH% must include the %ORACLE_HOME% \bin directory as the first Oracle entry that is encountered. For information about setting environment variables, see the Windows documentation.  
+ Log into the Distributor with the accounts used by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service and set the appropriate environment variables. The %ORACLE_HOME% variable should be set to refer to the installation point you specified when you installed the client networking software. The %PATH% must include the %ORACLE_HOME% \bin directory as the first Oracle entry that is encountered. For information about setting environment variables, see the Windows documentation.  
   
 > [!NOTE]  
->  If you have more than one Oracle home on the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributor, ensure that the Distribution Agent is using the most recent Oracle OLE DB provider. In some cases, Oracle does not update the OLE DB provider by default when you update the client components on the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributor. Uninstall the old OLE DB provider and install the latest OLE DB provider. For more information about installing and uninstalling the provider, see the Oracle documentation.  
+>  If you have more than one Oracle home on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor, ensure that the Distribution Agent is using the most recent Oracle OLE DB provider. In some cases, Oracle does not update the OLE DB provider by default when you update the client components on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor. Uninstall the old OLE DB provider and install the latest OLE DB provider. For more information about installing and uninstalling the provider, see the Oracle documentation.  
   
 ## Considerations for Oracle Subscribers  
  In addition to the considerations covered in the topic [Non-SQL Server Subscribers](../../../2014/relational-databases/replication/non-sql-server-subscribers.md), consider the following issues when replicating to Oracle Subscribers:  
   
--   Oracle treats both empty strings and NULL values as NULL. This is important if you define a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] column as NOT NULL, and are replicating the column to an Oracle Subscriber. To avoid failures when applying changes to the Oracle Subscriber, you must do one of the following:  
+-   Oracle treats both empty strings and NULL values as NULL. This is important if you define a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] column as NOT NULL, and are replicating the column to an Oracle Subscriber. To avoid failures when applying changes to the Oracle Subscriber, you must do one of the following:  
   
     -   Ensure that empty strings are not inserted into the published table as column values.  
   
     -   Use the **–SkipErrors** parameter for the Distribution Agent if it is acceptable to be notified of failures in the Distribution Agent history log and to continue processing. Specify the Oracle error code 1400 (**-SkipErrors1400**).  
   
-    -   Modify the generated create table script, removing the NOT NULL attribute from any character columns that may have associated empty strings, and supply the modified script as a custom create script for the article using the @creation_script parameter of [sp_addarticle](../Topic/sp_addarticle%20\(Transact-SQL\).md).  
+    -   Modify the generated create table script, removing the NOT NULL attribute from any character columns that may have associated empty strings, and supply the modified script as a custom create script for the article using the @creation_script parameter of [sp_addarticle](~/relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
   
--   Oracle Subscribers support a schema option of 0x4071. For more information about schema options, see [sp_addarticle &#40;Transact-SQL&#41;](../Topic/sp_addarticle%20\(Transact-SQL\).md).  
+-   Oracle Subscribers support a schema option of 0x4071. For more information about schema options, see [sp_addarticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
   
 ## Mapping Data Types from SQL Server to Oracle  
  The following table shows the data type mappings that are used when data is replicated to a Subscriber running Oracle.  

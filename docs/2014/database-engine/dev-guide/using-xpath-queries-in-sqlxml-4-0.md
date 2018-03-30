@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Using XPath Queries in SQLXML 4.0
-  Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] support for annotated XSD schemas allows you to create XML views of the relational data stored in the database. You can use a subset of the XPath language to query the XML views created by an annotated XSD schema.  
+  Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] support for annotated XSD schemas allows you to create XML views of the relational data stored in the database. You can use a subset of the XPath language to query the XML views created by an annotated XSD schema.  
   
 > [!NOTE]  
 >  To understand XPath queries in SQLXML 4.0, you must be familiar with XML views and related concepts such as templates and mapping schema. For more information, see [Introduction to Annotated XSD Schemas &#40;SQLXML 4.0&#41;](../../../2014/database-engine/dev-guide/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). For more information about XPath, see the XPath standard defined by the World Wide Web Consortium (W3C) at http://www.w3.org/TR/xpath.  
@@ -38,7 +38,7 @@ manager: "jhubbard"
  Provides sample XPath queries for SQLXML 4.0.  
   
  [XPath Data Types &#40;SQLXML 4.0&#41;](../../../2014/database-engine/dev-guide/xpath-data-types-sqlxml-4-0.md)  
- Describes XPath data types, which are significantly different from those of both [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and XSD.  
+ Describes XPath data types, which are significantly different from those of both [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and XSD.  
   
 ## See Also  
  [Client-side XML Formatting &#40;SQLXML 4.0&#41;](../../../2014/database-engine/dev-guide/client-side-xml-formatting-sqlxml-4-0.md)  

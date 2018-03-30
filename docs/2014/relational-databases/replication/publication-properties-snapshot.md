@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: 8e9133b1-fc37-4a85-8a7c-d5eaf172fbef
 caps.latest.revision: 23
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Publication Properties, Snapshot
@@ -27,9 +27,9 @@ manager: "jhubbard"
  **Snapshot format**  
  Select native mode or character mode for the snapshot format.  
   
--   Select **Native SQL Server - all Subscribers must be servers running SQL Server** if all Subscribers are instances of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] other than [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../../includes/ssew-md.md)]. The native snapshot format provides the best performance.  
+-   Select **Native SQL Server - all Subscribers must be servers running SQL Server** if all Subscribers are instances of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] other than [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)]. The native snapshot format provides the best performance.  
   
--   Select **Character - required if a Publisher or Subscriber is not running SQL Server** if any Subscribers are running [!INCLUDE[ssEW](../../../includes/ssew-md.md)] or are non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers.  
+-   Select **Character - required if a Publisher or Subscriber is not running SQL Server** if any Subscribers are running [!INCLUDE[ssEW](../../includes/ssew-md.md)] or are non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers.  
   
  **Location of snapshot files**  
  Select the location to store snapshot files. They can be stored in the default location; they can also be stored in an alternate location instead of, or in addition to, the default location. Files stored in an alternate location can be compressed.  

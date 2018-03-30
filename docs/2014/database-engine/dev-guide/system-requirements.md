@@ -22,11 +22,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # System Requirements
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO) uses the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] `System.Data.SqlClient` object driver to connect to and communicate with instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) uses the [!INCLUDE[msCoName](../../includes/msconame-md.md)] `System.Data.SqlClient` object driver to connect to and communicate with instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- SMO clients require [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, which is included with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 2.0.  
+ SMO clients require [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, which is included with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0.  
   
- To develop applications by using SMO, you must have [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 2008 installed.  
+ To develop applications by using SMO, you must have [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2008 installed.  
   
 ## See Also  
  [Overview of SQL Server Installation](http://technet.microsoft.com/library/bb500438\(v=SQL.105\).aspx)  

@@ -19,11 +19,11 @@ helpviewer_keywords:
 ms.assetid: ed2a5522-f4d2-4111-95a4-d3e1e5081739
 caps.latest.revision: 10
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Create a Database Schema
-  This topic describes how to create a schema in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  This topic describes how to create a schema in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -69,7 +69,7 @@ manager: "jhubbard"
   
 5.  In the **Schema owner** box, enter the name of a database user or role to own the schema. Alternately, click **Search** to open the **Search Roles and Users** dialog box.  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ### Additional Options  
  The **Schema– New** dialog box also offers options on two additional pages: **Permissions** and **Extended Properties**.  
@@ -82,7 +82,7 @@ manager: "jhubbard"
   
 #### To create a schema  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -101,6 +101,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [CREATE SCHEMA &#40;Transact-SQL&#41;](../Topic/CREATE%20SCHEMA%20\(Transact-SQL\).md).  
+ For more information, see [CREATE SCHEMA &#40;Transact-SQL&#41;](~/t-sql/statements/create-schema-transact-sql.md).  
   
   

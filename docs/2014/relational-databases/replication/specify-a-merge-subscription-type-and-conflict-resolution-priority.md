@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 2b828d83-2341-4924-b92a-4f81a22246c0
 caps.latest.revision: 33
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Specify a Merge Subscription Type and Conflict Resolution Priority (SQL Server Management Studio)
@@ -33,7 +33,7 @@ manager: "jhubbard"
   
 1.  In the **Subscription Properties - \<Publisher>: \<PublicationDatabase>** at the Publisher, enter a value (0.00 to 99.99) for the **Priority** option.  
   
-2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## See Also  
  [Advanced Merge Replication Conflict Detection and Resolution](../../../2014/relational-databases/replication/advanced-merge-replication-conflict-detection-and-resolution.md)   

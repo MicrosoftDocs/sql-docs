@@ -44,7 +44,7 @@ manager: "jhubbard"
  This section describes how asynchronous database mirroring works, when it is appropriate to use high-performance mode, and how to respond if the principal server fails.  
   
 > [!NOTE]  
->  Most editions of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] support only synchronous database mirroring ("Safety Full Only"). For information about editions that fully support database mirroring, see "High Availability (AlwaysOn)" in [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+>  Most editions of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] support only synchronous database mirroring ("Safety Full Only"). For information about editions that fully support database mirroring, see "High Availability (AlwaysOn)" in [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  When transaction safety is set to OFF, the database mirroring session operates asynchronously. Asynchronous operation supports only one operating mode—high-performance mode. This mode enhances performance at the expense of high availability. High-performance mode uses just the principal server and the mirror server. Problems on the mirror server never impact the principal server. On the loss of the principal server, the mirror database is marked DISCONNECTED but is available as a warm standby.  
   
@@ -166,10 +166,10 @@ manager: "jhubbard"
 >  If you expect the witness to remain disconnected for a significant amount of time, we recommend that you remove the witness from the session until it becomes available.  
   
 ##  <a name="TsqlSettingsAndOpModes"></a> Transact-SQL Settings and Database Mirroring Operating Modes  
- This section describes a database mirroring session in terms of the ALTER DATABASE settings and states of the mirrored database and witness, if any. The section is aimed at users who manage database mirroring primarily or exclusively using [!INCLUDE[tsql](../../includes/tsql-md.md)], rather than using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ This section describes a database mirroring session in terms of the ALTER DATABASE settings and states of the mirrored database and witness, if any. The section is aimed at users who manage database mirroring primarily or exclusively using [!INCLUDE[tsql](../includes/tsql-md.md)], rather than using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 > [!TIP]  
->  As an alternative to using [!INCLUDE[tsql](../../includes/tsql-md.md)], you can control the operating mode of a session in Object Explorer using the **Mirroring** page of the **Database Properties** dialog box. For more information, see [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](../../2014/database-engine/establish-database-mirroring-session-windows-authentication.md).  
+>  As an alternative to using [!INCLUDE[tsql](../includes/tsql-md.md)], you can control the operating mode of a session in Object Explorer using the **Mirroring** page of the **Database Properties** dialog box. For more information, see [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](../../2014/database-engine/establish-database-mirroring-session-windows-authentication.md).  
   
 
   
@@ -193,7 +193,7 @@ manager: "jhubbard"
   
      Turning off transaction safety causes the session to operate asynchronously, in high-performance mode. If the SAFETY property is set to OFF, the WITNESS property should also be set to OFF (the default). For information about the impact of the witness in high-performance mode, see [The State of the Witness](#WitnessState), later in this topic. For more information about running with transaction safety turned off, see [Asynchronous Database Mirroring (High-Performance Mode)](#Async), earlier in this topic.  
   
- The transaction safety setting of the database is recorded on each partner in the **sys.database_mirroring** catalog view in the **mirroring_safety_level** and **mirroring_safety_level_desc** columns. For more information, see [sys.database_mirroring &#40;Transact-SQL&#41;](../Topic/sys.database_mirroring%20\(Transact-SQL\).md).  
+ The transaction safety setting of the database is recorded on each partner in the **sys.database_mirroring** catalog view in the **mirroring_safety_level** and **mirroring_safety_level_desc** columns. For more information, see [sys.database_mirroring &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md).  
   
  The database owner can change the transaction safety level at any time.  
   
@@ -208,7 +208,7 @@ manager: "jhubbard"
   
  For information about quorum, see [Quorum: How a Witness Affects Database Availability &#40;Database Mirroring&#41;](../../2014/database-engine/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
- The state of each witness on a server instance is recorded in the **sys.database_mirroring** catalog view in the **mirroring_witness_state** and **mirroring_witness_state_desc** columns. For more information, see [sys.database_mirroring &#40;Transact-SQL&#41;](../Topic/sys.database_mirroring%20\(Transact-SQL\).md).  
+ The state of each witness on a server instance is recorded in the **sys.database_mirroring** catalog view in the **mirroring_witness_state** and **mirroring_witness_state_desc** columns. For more information, see [sys.database_mirroring &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md).  
   
  The following table summarizes how the operating mode of a session depends upon its transaction safety setting and on state of the witness.  
   
@@ -237,7 +237,7 @@ manager: "jhubbard"
 SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_state_desc FROM sys.database_mirroring  
 ```  
   
- For more information about this catalog view, see [sys.database_mirroring &#40;Transact-SQL&#41;](../Topic/sys.database_mirroring%20\(Transact-SQL\).md).  
+ For more information about this catalog view, see [sys.database_mirroring &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md).  
   
 ###  <a name="FactorsOnLossOfPrincipal"></a> Factors Affecting Behavior on Loss of the Principal Server  
  The following table summarizes the combined effect of the transaction safety setting, the state of the database, and the state of the witness on the behavior of a mirroring session on the loss of the principal server.  

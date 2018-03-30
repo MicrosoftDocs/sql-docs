@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 493e63b9-ecd0-4054-97ec-92d84e9b8182
 caps.latest.revision: 10
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Matrices (Report Builder and SSRS)
@@ -22,16 +22,16 @@ manager: "mblythe"
   
  To quickly get started with matrices, see [Tutorial: Creating a Matrix Report &#40;Report Builder&#41;](../../2014/tutorials/tutorial-creating-a-matrix-report-report-builder.md).  
   
- The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sample reports include a number of reports that use matrices. You can learn about matrices by exploring the report definition of a sample report in Report Builder or Report Designer or by previewing the rendered report in Report Builder or Report Designer. For more information about downloading the sample reports, see [(SSRS) Reporting Services Samples](http://go.microsoft.com/fwlink/?LinkID=198283).  
+ The [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sample reports include a number of reports that use matrices. You can learn about matrices by exploring the report definition of a sample report in Report Builder or Report Designer or by previewing the rendered report in Report Builder or Report Designer. For more information about downloading the sample reports, see [(SSRS) Reporting Services Samples](http://go.microsoft.com/fwlink/?LinkID=198283).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ##  <a name="AddingMatrix"></a> Adding a Matrix to Your Report  
  Add a matrix to the design surface from the Insert tab on the ribbon. You have the option to add a matrix by using the Table or Matrix Wizard, which includes creating a data source connection and dataset, and configuring the matrix or adding a matrix based on the matrix template.  
   
 > [!NOTE]  
->  The wizard is available only in [!INCLUDE[ssRBDenali](../../includes/ssrbdenali-md.md)].  
+>  The wizard is available only in [!INCLUDE[ssRBDenali](../includes/ssrbdenali-md.md)].  
   
  To describe how to configure a table from beginning to end, this topic uses the matrix template.  The matrix initially has a row group, a column group, a corner cell, and a data cell, as shown in the following figure.  
   

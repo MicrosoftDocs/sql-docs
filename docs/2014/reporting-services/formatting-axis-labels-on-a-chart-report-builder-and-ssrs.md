@@ -29,7 +29,7 @@ helpviewer_keywords:
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
 caps.latest.revision: 8
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Formatting Axis Labels on a Chart (Report Builder and SSRS)
@@ -40,7 +40,7 @@ manager: "mblythe"
  Axis labels identify major intervals on the chart. By default, the chart uses an algorithm to determine how the labels should be optimally placed on the axis to avoid overlapping text.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## Types of Axes  
  The chart has two primary axes: the value axis and the category axis.  

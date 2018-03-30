@@ -23,7 +23,7 @@ manager: "jhubbard"
   
 ### To configure the OLE DB Command transformation  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project that contains the package you want.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project that contains the package you want.  
   
 2.  In Solution Explorer, double-click the package to open it.  
   
@@ -47,7 +47,7 @@ manager: "jhubbard"
   
 12. Verify that **External Columns** lists a column for each parameter in the SQL statement. The column names are **Param_0**, **Param_1**, and so on.  
   
-     You should not change the column names. If you change the column names, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] generates a validation error for the OLE DB Command transformation.  
+     You should not change the column names. If you change the column names, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] generates a validation error for the OLE DB Command transformation.  
   
      Also, you should not change the data type. The DataType property of each column is set to the correct data type.  
   

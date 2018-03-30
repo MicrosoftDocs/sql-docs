@@ -36,7 +36,7 @@ manager: "mblythe"
  Choose a mining model to view, from those in the current mining structure. The mining model will open in a custom viewer. The type of custom viewer that is used for each model is determined by the algorithm that you used to create the model.  
   
  **Viewer**  
- Choose a viewer to use to explore the selected mining model. For each model, you can use either the custom viewer is provided for each mining model, or the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Mining Content Viewer. You can also use plug-in viewers if available. The Microsoft Content Tree Viewer can be used with all models, and represents the model content in an HTML table.  
+ Choose a viewer to use to explore the selected mining model. For each model, you can use either the custom viewer is provided for each mining model, or the [!INCLUDE[msCoName](../includes/msconame-md.md)] Mining Content Viewer. You can also use plug-in viewers if available. The Microsoft Content Tree Viewer can be used with all models, and represents the model content in an HTML table.  
   
  **Zoom In**  
  Zoom in to the diagram, so that you can see the attributes in more detail.  

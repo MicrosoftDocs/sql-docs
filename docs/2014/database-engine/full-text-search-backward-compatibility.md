@@ -16,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: 1b5a9bbc-beb8-44fd-ab03-4c14908c604c
 caps.latest.revision: 16
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Full-Text Search Backward Compatibility
-  Topics in the backward compatibility section describe changes in the behavior of full-text search between earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  Topics in the backward compatibility section describe changes in the behavior of full-text search between earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
 |See…|For topics about…|  
 |----------|-----------------------|  

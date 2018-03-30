@@ -15,11 +15,11 @@ helpviewer_keywords:
 ms.assetid: 5f73fb9d-86bb-4d9e-8a8e-37b59d735df3
 caps.latest.revision: 10
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "jhubbard"
 ---
 # Reporting Services SharePoint Mode Upgrade (SSRS)
-  Use the **Reporting Services SharePoint Mode** page to confirm the upgrade of all shared features. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint mode is an [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] shared feature and will be upgraded with all of the other [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] shared features. The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installation wizard does not support upgrading only one shared feature. All [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] shared features are upgraded at the same time.  
+  Use the **Reporting Services SharePoint Mode** page to confirm the upgrade of all shared features. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode is an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] shared feature and will be upgraded with all of the other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] shared features. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation wizard does not support upgrading only one shared feature. All [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] shared features are upgraded at the same time.  
   
 ## Options  
  The **Next** button is available only if you have selected the **Continue with upgrade** check box. If you do not select the check box, you cannot continue with the upgrade.  

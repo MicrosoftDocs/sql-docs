@@ -24,7 +24,7 @@ manager: "jhubbard"
   
 ## Options  
  **Select a program to open**  
- Lists the editors available in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio for the selected type of file. Choose the editor with which to open the document from the list displayed, or click **Add** to include a new editor in the list.  
+ Lists the editors available in [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Studio for the selected type of file. Choose the editor with which to open the document from the list displayed, or click **Add** to include a new editor in the list.  
   
  **Open**  
  Click **Open** to open the document in the selected editor.  
@@ -36,7 +36,7 @@ manager: "jhubbard"
  To remove a program, select the program and then click **Remove**.  
   
  **Set as Default**  
- To specify a default editor (and language encoding options, if applicable) for the type of file selected, choose a program from the list under **Select a program to open** and then click **Set as Default**. The next time you open this type of file in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], the document will open in the new default editor.  
+ To specify a default editor (and language encoding options, if applicable) for the type of file selected, choose a program from the list under **Select a program to open** and then click **Set as Default**. The next time you open this type of file in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], the document will open in the new default editor.  
   
 > [!NOTE]  
 >  In the list of programs under **Select a program to open**, the name of the default editor for the type of file selected is followed by **(Default)**.  

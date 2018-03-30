@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: c8c29543-d1f6-49d5-b6c8-e8c3aa373090
 caps.latest.revision: 13
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQL_ENG021075
@@ -26,7 +26,7 @@ manager: "jhubbard"
 |Product Name|SQL Server|  
 |Event ID|21075|  
 |Event Source|MSSQLSERVER|  
-|Component|[!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]|  
+|Component|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Symbolic Name||  
 |Message Text|The initial snapshot for publication '%s' is not yet available.|  
   

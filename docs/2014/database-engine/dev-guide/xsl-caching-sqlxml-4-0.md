@@ -30,7 +30,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SQLXML4\XSLCacheSize
 ```  
   
 > [!CAUTION]  
->  [!INCLUDE[ssNoteRegistry](../../../includes/ssnoteregistry-md.md)]  
+>  [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
   
  The XSL cache size should be set on the basis of the available memory and the number of XSL style sheets you are using. The default of **XSLCacheSize** size is 31. You can increase the cache size if XSL access seems slow, or decrease the cache size if memory is low.  
   

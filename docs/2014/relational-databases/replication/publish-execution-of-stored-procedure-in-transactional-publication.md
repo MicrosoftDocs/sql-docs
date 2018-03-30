@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 1d3a3525-0bc5-466f-b097-5359dc74432d
 caps.latest.revision: 14
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Publish the Execution of a Stored Procedure in a Transactional Publication (SQL Server Management Studio)
@@ -37,7 +37,7 @@ manager: "jhubbard"
   
          This is the recommended option, because it replicates the procedure execution only if the procedure is executed within the context of a serializable transaction. If the stored procedure is executed outside of a serializable transaction, changes to data in published tables are replicated as a series of data manipulation language (DML) statements.  
   
-4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 5.  If you are in the **Publication Properties - \<Publication>** dialog box, click **OK** to save and close the dialog box.  
   

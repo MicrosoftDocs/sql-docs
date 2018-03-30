@@ -20,11 +20,11 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Configure Checkpoints for Restarting a Failed Package
-  You configure [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages to restart from a point of failure, instead of rerunning the entire package, by setting the properties that apply to checkpoints.  
+  You configure [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages to restart from a point of failure, instead of rerunning the entire package, by setting the properties that apply to checkpoints.  
   
 ### To configure a package to restart  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project that contains the package you want to configure.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project that contains the package you want to configure.  
   
 2.  In **Solution Explorer**, double-click the package to open it.  
   

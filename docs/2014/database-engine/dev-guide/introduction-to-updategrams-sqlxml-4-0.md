@@ -29,14 +29,14 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Introduction to Updategrams (SQLXML 4.0)
-  You can modify (insert, update, or delete) a database in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] from an existing XML document by using an updategram or the OPENXML [!INCLUDE[tsql](../../../includes/tsql-md.md)] function.  
+  You can modify (insert, update, or delete) a database in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from an existing XML document by using an updategram or the OPENXML [!INCLUDE[tsql](../../includes/tsql-md.md)] function.  
   
  The OPENXML function modifies a database by shredding the existing XML document and providing a rowset that can be passed to an INSERT, UPDATE, or DELETE statement. With OPENXML, operations are performed directly against the database tables. Therefore, OPENXML is most appropriate wherever rowset providers, such as a table, can appear as a source.  
   
  Like OPENXML, an updategram allows you to insert, update, or delete data in the database; however, an updategram works against the XML views provided by the annotated XSD (or an XDR) schema; for example, the updates are applied to the XML view provided by the mapping schema. The mapping schema, in turn, has the necessary information to map XML elements and attributes to the corresponding database tables and columns. The updategram uses this mapping information to update the database tables and columns.  
   
 > [!NOTE]  
->  This documentation assumes that you are familiar with templates and mapping schema support in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. For more information, see [Introduction to Annotated XSD Schemas &#40;SQLXML 4.0&#41;](../../../2014/database-engine/dev-guide/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). For legacy applications that use XDR, see [Annotated XDR Schemas &#40;Deprecated in SQLXML 4.0&#41;](../../../2014/database-engine/dev-guide/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
+>  This documentation assumes that you are familiar with templates and mapping schema support in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Introduction to Annotated XSD Schemas &#40;SQLXML 4.0&#41;](../../../2014/database-engine/dev-guide/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). For legacy applications that use XDR, see [Annotated XDR Schemas &#40;Deprecated in SQLXML 4.0&#41;](../../../2014/database-engine/dev-guide/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
 ## Required Namespaces in the Updategram  
  The keywords in an updategram, such as **\<sync>**, **\<before>**, and **\<after>**, exist in the `urn:schemas-microsoft-com:xml-updategram` namespace. The namespace prefix that you use is arbitrary. In this documentation, the `updg` prefix denotes the `updategram` namespace.  
@@ -157,9 +157,9 @@ manager: "jhubbard"
 ```  
   
 ## Working with Characters Valid in SQL Server but Not Valid in XML  
- In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], table names can include a space. However, this type of table name is not valid in XML.  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], table names can include a space. However, this type of table name is not valid in XML.  
   
- To encode characters that are valid [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] identifiers but are not valid XML identifiers, use '__xHHHH\_\_' as the encoding value, where HHHH stands for the four-digit hexadecimal UCS-2 code for the character in the most significant bit-first order. Using this encoding scheme, a space character gets replaced with x0020 (the four-digit hexadecimal code for a space character); thus, the table name [Order Details] in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] becomes _x005B_Order_x0020_Details_x005D\_ in XML.  
+ To encode characters that are valid [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifiers but are not valid XML identifiers, use '__xHHHH\_\_' as the encoding value, where HHHH stands for the four-digit hexadecimal UCS-2 code for the character in the most significant bit-first order. Using this encoding scheme, a space character gets replaced with x0020 (the four-digit hexadecimal code for a space character); thus, the table name [Order Details] in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] becomes _x005B_Order_x0020_Details_x005D\_ in XML.  
   
  Similarly, you might need to specify three-part element names, such as \<[database].[owner].[table]>. Because the bracket characters ([ and ]) are not valid in XML, you must specify this as \<_x005B_database_x005D\_._x005B_owner_x005D\_._x005B_table_x005D\_>, where _x005B\_ is the encoding for the left bracket ([) and _x005D\_ is the encoding for the right bracket (]).  
   

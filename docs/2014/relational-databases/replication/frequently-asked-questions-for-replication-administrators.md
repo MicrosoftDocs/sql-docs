@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 caps.latest.revision: 58
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Frequently Asked Questions for Replication Administrators
@@ -86,10 +86,10 @@ manager: "jhubbard"
 ### Can multiple publications use the same distribution database?  
  Yes. There are no restrictions on the number or types of publications that can use the same distribution database. All publications from a given Publisher must use the same Distributor and distribution database.  
   
- If you have multiple publications, you can configure multiple distribution databases at the Distributor to ensure that the data flowing through each distribution database is from a single publication. Use the **Distributor Properties** dialog box or [sp_adddistributiondb &#40;Transact-SQL&#41;](../Topic/sp_adddistributiondb%20\(Transact-SQL\).md) to add a distribution database. For more information about accessing the dialog box, see [View and Modify Distributor and Publisher Properties](../../../2014/relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
+ If you have multiple publications, you can configure multiple distribution databases at the Distributor to ensure that the data flowing through each distribution database is from a single publication. Use the **Distributor Properties** dialog box or [sp_adddistributiondb &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md) to add a distribution database. For more information about accessing the dialog box, see [View and Modify Distributor and Publisher Properties](../../../2014/relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
   
 ### How do I find information on the Distributor and Publisher, such as which objects in a database are published?  
- This information is available through [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], and a number of replication stored procedures. For more information, see [Distributor and Publisher Information Script](../../../2014/relational-databases/replication/distributor-and-publisher-information-script.md).  
+ This information is available through [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], and a number of replication stored procedures. For more information, see [Distributor and Publisher Information Script](../../../2014/relational-databases/replication/distributor-and-publisher-information-script.md).  
   
 ### Does replication encrypt data?  
  No. Replication does not encrypt data that is stored in the database or transferred over the network. For more information, see the "Encryption" section of the topic [Security Overview &#40;Replication&#41;](../../../2014/relational-databases/replication/security-overview-replication.md).  
@@ -101,7 +101,7 @@ manager: "jhubbard"
   
 -   The Web synchronization option for merge replication. For more information, see [Web Synchronization for Merge Replication](../../../2014/relational-databases/replication/web-synchronization-for-merge-replication.md).  
   
- All types of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] replication can replicate data over a VPN, but you should consider Web synchronization if you are using merge replication.  
+ All types of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] replication can replicate data over a VPN, but you should consider Web synchronization if you are using merge replication.  
   
 ### Does replication resume if a connection is dropped  
  Yes. Replication processing resumes at the point at which it left off if a connection is dropped. If you are using merge replication over an unreliable network, consider using logical records, which ensures related changes are processed as a unit. For more information, see [Group Changes to Related Rows with Logical Records](../../../2014/relational-databases/replication/group-changes-to-related-rows-with-logical-records.md).  
@@ -115,7 +115,7 @@ manager: "jhubbard"
  No. You could create a DTS package to transfer logins and passwords from a Publisher to one or more Subscribers.  
   
 ### What are schemas and how are they replicated?  
- Beginning with [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], *schema* has two meanings:  
+ Beginning with [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], *schema* has two meanings:  
   
 -   The definition of an object, such as a CREATE TABLE statement. By default, replication copies the definitions of all replicated objects to the Subscriber.  
   
@@ -129,7 +129,7 @@ manager: "jhubbard"
   
 -   For articles in Oracle publications: by default, the owner is specified as **dbo**.  
   
--   For articles in publications that use character mode snapshots (which are used for non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers and [!INCLUDE[ssEW](../../../includes/ssew-md.md)] Subscribers): by default, the owner is left blank. The owner defaults to the owner associated with the account used by the Distribution Agent or Merge Agent to connect to the Subscriber.  
+-   For articles in publications that use character mode snapshots (which are used for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers and [!INCLUDE[ssEW](../../includes/ssew-md.md)] Subscribers): by default, the owner is left blank. The owner defaults to the owner associated with the account used by the Distribution Agent or Merge Agent to connect to the Subscriber.  
   
  The object owner can be changed through the **Article Properties - \<***Article***>** dialog box and through the following stored procedures: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle**, and **sp_changemergearticle**. For more information, see [View and Modify Publication Properties](../../../2014/relational-databases/replication/view-and-modify-publication-properties.md), [Define an Article](../../../2014/relational-databases/replication/define-an-article.md), and [View and Modify Article Properties](../../../2014/relational-databases/replication/view-and-modify-article-properties.md).  
   
@@ -140,7 +140,7 @@ manager: "jhubbard"
   
 -   Use a post-snapshot script to execute the statements. For more information, see [Execute Scripts Before and After the Snapshot Is Applied](../../../2014/relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md).  
   
--   Use the stored procedure [sp_addscriptexec](../Topic/sp_addscriptexec%20\(Transact-SQL\).md) to execute the statements.  
+-   Use the stored procedure [sp_addscriptexec](~/relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql.md) to execute the statements.  
   
 ### What happens to permissions granted in a subscription database if a subscription is reinitialized?  
  By default, objects at the Subscriber are dropped and recreated when a subscription is reinitialized, which causes all granted permissions for those objects to be dropped. There are two ways to handle this:  
@@ -149,7 +149,7 @@ manager: "jhubbard"
   
 -   Specify that objects should not be dropped when the subscription is reinitialized. Prior to reinitialization, either:  
   
-    -   Execute [sp_changearticle](../Topic/sp_changearticle%20\(Transact-SQL\).md) or [sp_changemergearticle](../Topic/sp_changemergearticle%20\(Transact-SQL\).md). Specify a value of 'pre_creation_cmd' (**sp_changearticle**) or 'pre_creation_command' (**sp_changemergearticle**) for the parameter **@property** and a value of 'none', 'delete' or 'truncate' for the parameter **@value**.  
+    -   Execute [sp_changearticle](~/relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) or [sp_changemergearticle](~/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Specify a value of 'pre_creation_cmd' (**sp_changearticle**) or 'pre_creation_command' (**sp_changemergearticle**) for the parameter **@property** and a value of 'none', 'delete' or 'truncate' for the parameter **@value**.  
   
     -   In the **Article Properties - \<Article>** dialog box in the **Destination Object** section, select a value of **Keep existing object unchanged**, **Delete data. If article has a row filter, delete only data that matches the filter.** or **Truncate all data in the existing object** for the option **Action if name is in use**. For more information on accessing this dialog box, see [View and Modify Publication Properties](../../../2014/relational-databases/replication/view-and-modify-publication-properties.md).  
   
@@ -176,13 +176,13 @@ manager: "jhubbard"
  Indexes can be added at the Publisher or Subscribers with no special considerations for replication (be aware that indexes can affect performance). CREATE INDEX and ALTER INDEX are not replicated, so if you add or change an index at, for example, the Publisher, you must make the same addition or change at the Subscriber if you want it reflected there.  
   
 ### How do I move or rename files for databases involved in replication?  
- In versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prior to [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], moving or renaming database files required detaching and reattaching the database. Because a replicated database cannot be detached, replication had to be removed from these databases first. Beginning with [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], you can move or rename files without detaching and re-attaching the database, with no effect on replication. For more information about moving and renaming files, see [ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20\(Transact-SQL\).md).  
+ In versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prior to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], moving or renaming database files required detaching and reattaching the database. Because a replicated database cannot be detached, replication had to be removed from these databases first. Beginning with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], you can move or rename files without detaching and re-attaching the database, with no effect on replication. For more information about moving and renaming files, see [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md).  
   
 ### How do I drop a table that is being replicated?  
- First drop the article from the publication using [sp_droparticle](../Topic/sp_droparticle%20\(Transact-SQL\).md), [sp_dropmergearticle](../Topic/sp_dropmergearticle%20\(Transact-SQL\).md), or the **Publication Properties - \<Publication>** dialog box, and then drop it from the database using `DROP <Object>`. You cannot drop articles from snapshot or transactional publications after subscriptions have been added; you must drop the subscriptions first. For more information, see [Add Articles to and Drop Articles from Existing Publications](../../../2014/relational-databases/replication/add-articles-to-and-drop-articles-from-existing-publications.md).  
+ First drop the article from the publication using [sp_droparticle](~/relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md), [sp_dropmergearticle](~/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md), or the **Publication Properties - \<Publication>** dialog box, and then drop it from the database using `DROP <Object>`. You cannot drop articles from snapshot or transactional publications after subscriptions have been added; you must drop the subscriptions first. For more information, see [Add Articles to and Drop Articles from Existing Publications](../../../2014/relational-databases/replication/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ### How do I add or drop columns on a published table?  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports a wide variety of schema changes on published objects, including adding and dropping columns. For example, execute ALTER TABLE … DROP COLUMN at the Publisher, and the statement is replicated to Subscribers and then executed to drop the column. Subscribers running versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prior to [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] support adding and dropping columns through the stored procedures [sp_repladdcolumn](../Topic/sp_repladdcolumn%20\(Transact-SQL\).md) and [sp_repldropcolumn](../Topic/sp_repldropcolumn%20\(Transact-SQL\).md). For more information, see [Make Schema Changes on Publication Databases](../../../2014/relational-databases/replication/make-schema-changes-on-publication-databases.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports a wide variety of schema changes on published objects, including adding and dropping columns. For example, execute ALTER TABLE … DROP COLUMN at the Publisher, and the statement is replicated to Subscribers and then executed to drop the column. Subscribers running versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prior to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] support adding and dropping columns through the stored procedures [sp_repladdcolumn](~/relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) and [sp_repldropcolumn](~/relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md). For more information, see [Make Schema Changes on Publication Databases](../../../2014/relational-databases/replication/make-schema-changes-on-publication-databases.md).  
   
 ## Replication Maintenance  
   
@@ -190,10 +190,10 @@ manager: "jhubbard"
  Use validation. Validation reports on whether a given Subscriber is synchronized with the Publisher. For more information, see [Validate Replicated Data](../../../2014/relational-databases/replication/validate-replicated-data.md). Validation does not provide information on which rows if any are not synchronized correctly, but the [tablediff utility](../../../2014/database-engine/tablediff-utility.md) does.  
   
 ### How do I add a table to an existing publication?  
- It is not necessary to stop activity on the publication or subscription databases in order to add a table (or another object). Add a table to a publication through the **Publication Properties - \<Publication>** dialog box or the stored procedures [sp_addarticle](../Topic/sp_addarticle%20\(Transact-SQL\).md) and [sp_addmergearticle](../Topic/sp_addmergearticle%20\(Transact-SQL\).md). For more information, see [Add Articles to and Drop Articles from Existing Publications](../../../2014/relational-databases/replication/add-articles-to-and-drop-articles-from-existing-publications.md).  
+ It is not necessary to stop activity on the publication or subscription databases in order to add a table (or another object). Add a table to a publication through the **Publication Properties - \<Publication>** dialog box or the stored procedures [sp_addarticle](~/relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) and [sp_addmergearticle](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). For more information, see [Add Articles to and Drop Articles from Existing Publications](../../../2014/relational-databases/replication/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ### How do I remove a table from a publication?  
- Remove a table from the publication using [sp_droparticle](../Topic/sp_droparticle%20\(Transact-SQL\).md), [sp_dropmergearticle](../Topic/sp_dropmergearticle%20\(Transact-SQL\).md), or the **Publication Properties - \<Publication>** dialog box. You cannot drop articles from snapshot or transactional publications after subscriptions have been added; you must drop the subscriptions first. For more information, see [Add Articles to and Drop Articles from Existing Publications](../../../2014/relational-databases/replication/add-articles-to-and-drop-articles-from-existing-publications.md).  
+ Remove a table from the publication using [sp_droparticle](~/relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md), [sp_dropmergearticle](~/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md), or the **Publication Properties - \<Publication>** dialog box. You cannot drop articles from snapshot or transactional publications after subscriptions have been added; you must drop the subscriptions first. For more information, see [Add Articles to and Drop Articles from Existing Publications](../../../2014/relational-databases/replication/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ### What actions require subscriptions to be reinitialized?  
  There are a number of article and publication changes that require subscriptions to be reinitialized. For more information, see [Change Publication and Article Properties](../../../2014/relational-databases/replication/change-publication-and-article-properties.md).  
@@ -207,7 +207,7 @@ manager: "jhubbard"
 ### How do I determine whether there are transactions or rows to be replicated?  
  For transactional replication, use stored procedures or the **Undistributed Commands** tab in Replication Monitor. For more information, see [View Replicated Commands and Other Information in the Distribution Database &#40;Replication Transact-SQL Programming&#41;](../../../2014/relational-databases/replication/view-replicated-commands-and-information-in-distribution-database.md) and [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](../../../2014/relational-databases/replication/view-information-and-perform-tasks-for-subscription-agents.md).  
   
- For merge replication, use the stored procedure **sp_showpendingchanges**. For more information, see [sp_showpendingchanges &#40;Transact-SQL&#41;](../Topic/sp_showpendingchanges%20\(Transact-SQL\).md).  
+ For merge replication, use the stored procedure **sp_showpendingchanges**. For more information, see [sp_showpendingchanges &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql.md).  
   
 ### How far behind is the Distribution Agent? Should I reinitialize?  
  Use the **sp_replmonitorsubscriptionpendingcmds** stored procedure or the **Undistributed Commands** tab in Replication Monitor. The stored procedure and tab display:  
@@ -216,7 +216,7 @@ manager: "jhubbard"
   
 -   The estimated amount of time to deliver commands to the Subscriber. If this value is greater than the amount of time required to generate and apply a snapshot to the Subscriber, consider reinitializing the Subscriber. For more information, see [Reinitialize Subscriptions](../../../2014/relational-databases/replication/reinitialize-subscriptions.md).  
   
- For more information, see [sp_replmonitorsubscriptionpendingcmds &#40;Transact-SQL&#41;](../Topic/sp_replmonitorsubscriptionpendingcmds%20\(Transact-SQL\).md) and [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](../../../2014/relational-databases/replication/view-information-and-perform-tasks-for-subscription-agents.md).  
+ For more information, see [sp_replmonitorsubscriptionpendingcmds &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql.md) and [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](../../../2014/relational-databases/replication/view-information-and-perform-tasks-for-subscription-agents.md).  
   
 ## Replication and Other Database Features  
   

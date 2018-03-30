@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Pause or Resume a Database Mirroring Session (SQL Server)
-  This topic describes how to pause or resume database mirroring in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  This topic describes how to pause or resume database mirroring in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -72,17 +72,17 @@ manager: "jhubbard"
   
 #### To pause database mirroring  
   
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)] for either partner.  
+1.  Connect to the [!INCLUDE[ssDE](../includes/ssde-md.md)] for either partner.  
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Issue the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement:  
+3.  Issue the following [!INCLUDE[tsql](../includes/tsql-md.md)] statement:  
   
      ALTER DATABASE *database_name* SET PARTNER SUSPEND  
   
      where *database_name* is the mirrored database whose session you want to you want to suspend.  
   
-     The following example pauses the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database.  
+     The following example pauses the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] sample database.  
   
     ```  
     ALTER DATABASE AdventureWorks2012 SET PARTNER SUSPEND;  
@@ -90,7 +90,7 @@ manager: "jhubbard"
   
 ##### To resume database mirroring  
   
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)] for either partner.  
+1.  Connect to the [!INCLUDE[ssDE](../includes/ssde-md.md)] for either partner.  
   
 2.  From the Standard bar, click **New Query**.  
   
@@ -100,7 +100,7 @@ manager: "jhubbard"
   
      where *database_name* is the mirrored database whose session you want to resume.  
   
-     The following example pauses the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database.  
+     The following example pauses the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] sample database.  
   
     ```  
     ALTER DATABASE AdventureWorks2012 SET PARTNER RESUME;  

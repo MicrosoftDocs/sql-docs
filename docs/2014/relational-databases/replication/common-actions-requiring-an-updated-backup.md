@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: a5975bf4-183e-42e3-b7d1-ad02f89d2e1d
 caps.latest.revision: 31
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Common Actions Requiring an Updated Backup
@@ -35,7 +35,7 @@ manager: "jhubbard"
   
 -   Making a schema change on a published table.  
   
--   Performing on-demand script execution with [sp_addscriptexec &#40;Transact-SQL&#41;](../Topic/sp_addscriptexec%20\(Transact-SQL\).md).  
+-   Performing on-demand script execution with [sp_addscriptexec &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql.md).  
   
 -   Changing any article property.  
   

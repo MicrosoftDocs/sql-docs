@@ -56,7 +56,7 @@ manager: "mblythe"
 |Child elements|None|  
   
 ## Remarks  
- The `Slice` element contains an MDX tuple expression or set expression that identifies the portion of the cube for which the partition stores information. The MDX expression is similar to the [StrToSet](../Topic/StrToSet%20\(MDX\).md) MDX function with the CONSTRAINED keyword, in that the expression cannot include MDX or user-defined functions.  
+ The `Slice` element contains an MDX tuple expression or set expression that identifies the portion of the cube for which the partition stores information. The MDX expression is similar to the [StrToSet](~/mdx/strtoset-mdx.md) MDX function with the CONSTRAINED keyword, in that the expression cannot include MDX or user-defined functions.  
   
  The element that corresponds to the parent of `Slice` in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.Partition>.  
   

@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
 caps.latest.revision: 48
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Specify How Changes Are Propagated for Transactional Articles
@@ -22,7 +22,7 @@ manager: "jhubbard"
   
 -   Specify that transactional replication should script out and subsequently call a stored procedure to propagate changes to Subscribers (the default).  
   
--   Specify that the change should be propagated using an INSERT, UPDATE, or DELETE statement (the default for non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers).  
+-   Specify that the change should be propagated using an INSERT, UPDATE, or DELETE statement (the default for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers).  
   
 -   Specify that a custom stored procedure should be used.  
   
@@ -50,11 +50,11 @@ manager: "jhubbard"
 ### Considerations for Using Custom Stored Procedures  
  Keep the following considerations in mind when using custom stored procedures:  
   
--   You must support the logic in the stored procedure; [!INCLUDE[msCoName](../../../includes/msconame-md.md)] does not provide support for custom logic.  
+-   You must support the logic in the stored procedure; [!INCLUDE[msCoName](../../includes/msconame-md.md)] does not provide support for custom logic.  
   
 -   In order to avoid conflicts with the transactions used by replication, explicit transactions should not be used in custom procedures.  
   
--   The schema at the Subscriber is typically identical to the schema at the Publisher, but can also be a subset of the Publisher schema if column filtering is used. However, if you need to transform the schema as the data is moved such that the schema on the Subscriber is not a subset of the schema on the Publisher, [!INCLUDE[ssISCurrent](../../../includes/ssiscurrent-md.md)] is the recommended solution. For more information, see [SQL Server Integration Services](../../../2014/integration-services/sql-server-integration-services.md).  
+-   The schema at the Subscriber is typically identical to the schema at the Publisher, but can also be a subset of the Publisher schema if column filtering is used. However, if you need to transform the schema as the data is moved such that the schema on the Subscriber is not a subset of the schema on the Publisher, [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] is the recommended solution. For more information, see [SQL Server Integration Services](../../../2014/integration-services/sql-server-integration-services.md).  
   
 -   If you make schema changes to a published table, the custom procedures must be regenerated. For more information, see [Regenerate Custom Transactional Procedures to Reflect Schema Changes](../../../2014/relational-databases/replication/regenerate-custom-transactional-procedures-to-reflect-schema-changes.md).  
   
@@ -147,7 +147,7 @@ old-c1, old-c2, old-c3,... old-cn
 >  When using XCALL, the before image values for **text** and **image** columns are expected to be NULL.  
   
 ## Examples  
- The following procedures are the default procedures created for the `Vendor Table` in the [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)] sample database.  
+ The following procedures are the default procedures created for the `Vendor Table` in the [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] sample database.  
   
 ```  
 --INSERT procedure using CALL syntax  

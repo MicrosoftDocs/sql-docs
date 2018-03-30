@@ -24,15 +24,15 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Object Explorer Details Pane
-  Object Explorer Details, a component of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], provides a tabular view of all the objects in the server and presents a user interface to manage them. The capabilities of Object Explorer vary slightly depending on the type of server, but generally include the development features for databases and management features for all server types.  
+  Object Explorer Details, a component of [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], provides a tabular view of all the objects in the server and presents a user interface to manage them. The capabilities of Object Explorer vary slightly depending on the type of server, but generally include the development features for databases and management features for all server types.  
   
- The Object Explorer Details pane is visible in the [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] by default. If you cannot see Object Explorer, on the **View** menu, click **Object Explorer Details** or press **F7**.  
+ The Object Explorer Details pane is visible in the [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] by default. If you cannot see Object Explorer, on the **View** menu, click **Object Explorer Details** or press **F7**.  
   
 > [!NOTE]  
->  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] presents dates formatted with the Microsoft Windows Regional and Language Options in effect when [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] was started. Restart [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to reflect newer settings.  
+>  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] presents dates formatted with the Microsoft Windows Regional and Language Options in effect when [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] was started. Restart [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] to reflect newer settings.  
   
 ## Object Explorer Details  
- Object Explorer Details can be used to navigate through folders and objects on your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. On 32-bit operating systems, Object Explorer can only display 64,000 objects. An icon must be selected to access additional objects.  
+ Object Explorer Details can be used to navigate through folders and objects on your [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance. On 32-bit operating systems, Object Explorer can only display 64,000 objects. An icon must be selected to access additional objects.  
   
  Object Explorer Details includes a toolbar which contains the icons described in the following table. Icons are only available when appropriate.  
   
@@ -47,13 +47,13 @@ manager: "jhubbard"
 |**Search**|Provides an area to enter a search term for certain database objects.|  
   
 ### Column Header Selections  
- Object Explorer Details has selectable columns. You can right-click in any column header and check the items that you want to display. Your selections will be persisted across the different objects you navigate through. Selections for each user are retained when you leave and restart [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ Object Explorer Details has selectable columns. You can right-click in any column header and check the items that you want to display. Your selections will be persisted across the different objects you navigate through. Selections for each user are retained when you leave and restart [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 > [!CAUTION]  
 >  Showing all columns for some object types (such as Databases) might slow the display rendering slightly for large sets of objects.  
   
 ### Sorting  
- Clicking one time on a column header will sort by that column. Clicking again on the same header reverse-sorts by that column. Sort selections are maintained for each user across objects and folders, and on [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] restart.  
+ Clicking one time on a column header will sort by that column. Clicking again on the same header reverse-sorts by that column. Sort selections are maintained for each user across objects and folders, and on [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] restart.  
   
 ### Filtering  
  Certain lists of objects displayed in Object Explorer Detail can be filtered using the **Filter** icon on the Object Explorer Details toolbar. The icon will be enabled when filtering is possible.  

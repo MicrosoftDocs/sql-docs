@@ -26,7 +26,7 @@ manager: "jhubbard"
   
  Before you can run the Slowly Changing Dimension Wizard, you must add a source and a Slowly Changing Dimension transformation to the data flow, and then connect the output from the source to the input of the Slowly Changing Dimension transformation. Optionally, the data flow can include other transformations between the data source and the Slowly Changing Dimension transformation.  
   
- To open the Slowly Changing Dimension Wizard in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, double-click the Slowly Changing Dimension transformation.  
+ To open the Slowly Changing Dimension Wizard in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, double-click the Slowly Changing Dimension transformation.  
   
 ## Creating Slowly Changing Dimension Outputs  
   

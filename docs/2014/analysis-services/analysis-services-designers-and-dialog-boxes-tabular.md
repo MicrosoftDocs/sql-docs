@@ -16,7 +16,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Analysis Services Designers and Dialog Boxes (Tabular)
-  The tabular project authoring environment in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] and the tabular model management tools in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] include numerous dialog boxes, property pages, and Wizard pages. You can click on the Help button or press F1 to learn more.  
+  The tabular project authoring environment in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] and the tabular model management tools in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] include numerous dialog boxes, property pages, and Wizard pages. You can click on the Help button or press F1 to learn more.  
   
  Topics in this section:  
   

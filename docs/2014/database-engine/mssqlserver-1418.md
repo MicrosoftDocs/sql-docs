@@ -23,7 +23,7 @@ manager: "jhubbard"
   
 |||  
 |-|-|  
-|Product Name|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|Product Name|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|  
 |Event ID|1418|  
 |Event Source|MSSQLSERVER|  
 |Component|SQLEngine|  
@@ -34,7 +34,7 @@ manager: "jhubbard"
  The server network endpoint did not respond because the specified server network address cannot be reached or does not exist.  
   
 > [!NOTE]  
->  By default, [!INCLUDE[msCoName](../../includes/msconame-md.md)] operating system blocks all ports.  
+>  By default, [!INCLUDE[msCoName](../includes/msconame-md.md)] operating system blocks all ports.  
   
 ## User Action  
  Verify the network address name and reissue the command.  
@@ -78,25 +78,25 @@ manager: "jhubbard"
   
 1.  Obtain the process ID.  
   
-     To learn the process ID of an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], connect to that instance and use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement:  
+     To learn the process ID of an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], connect to that instance and use the following [!INCLUDE[tsql](../includes/tsql-md.md)] statement:  
   
     ```  
     SELECT SERVERPROPERTY('ProcessID')   
     ```  
   
-     For more information, see "SERVERPROPERTY (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+     For more information, see "SERVERPROPERTY (Transact-SQL)" in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online.  
   
 2.  Match the process ID with the output of the following **netstat** command:  
   
      **netstat -ano**  
   
 ## See Also  
- [ALTER ENDPOINT &#40;Transact-SQL&#41;](../Topic/ALTER%20ENDPOINT%20\(Transact-SQL\).md)   
+ [ALTER ENDPOINT &#40;Transact-SQL&#41;](~/t-sql/statements/alter-endpoint-transact-sql.md)   
  [The Database Mirroring Endpoint &#40;SQL Server&#41;](../../2014/database-engine/the-database-mirroring-endpoint-sql-server.md)   
  [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](../../2014/database-engine/prepare-a-mirror-database-for-mirroring-sql-server.md)   
- [SERVERPROPERTY &#40;Transact-SQL&#41;](../Topic/SERVERPROPERTY%20\(Transact-SQL\).md)   
+ [SERVERPROPERTY &#40;Transact-SQL&#41;](~/t-sql/functions/serverproperty-transact-sql.md)   
  [Specify a Server Network Address &#40;Database Mirroring&#41;](../../2014/database-engine/specify-a-server-network-address-database-mirroring.md)   
- [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](../Topic/sys.database_mirroring_endpoints%20\(Transact-SQL\).md)   
+ [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)   
  [Troubleshoot Database Mirroring Configuration &#40;SQL Server&#41;](../../2014/database-engine/troubleshoot-database-mirroring-configuration-sql-server.md)  
   
   

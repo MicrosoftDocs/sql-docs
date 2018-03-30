@@ -18,7 +18,7 @@ manager: "mblythe"
 # Create a BI Semantic Model Connection to a PowerPivot Workbook
   Use the information in this topic to set up a BI semantic model connection that redirects to a PowerPivot workbook in the same farm.  
   
- After you create a BI semantic model connection and configure SharePoint permissions, you can use it as a data source for Excel or [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] reports.  
+ After you create a BI semantic model connection and configure SharePoint permissions, you can use it as a data source for Excel or [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] reports.  
   
  This topic includes the following sections. Perform each task in the order given.  
   

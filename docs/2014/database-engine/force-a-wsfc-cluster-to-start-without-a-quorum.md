@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Force a WSFC Cluster to Start Without a Quorum
-  This topic describes how to force a Windows Server Failover Clustering (WSFC) cluster node to start without a quorum.  This may be required in disaster recovery and multi-subnet scenarios to recover data and fully re-establish high-availability for [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Failover Cluster Instances.  
+  This topic describes how to force a Windows Server Failover Clustering (WSFC) cluster node to start without a quorum.  This may be required in disaster recovery and multi-subnet scenarios to recover data and fully re-establish high-availability for [!INCLUDE[ssHADR](../includes/sshadr-md.md)] and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Failover Cluster Instances.  
   
 -   **Before you start:**  [Recommendations](#Recommendations), [Security](#Security)  
   
@@ -108,7 +108,7 @@ net.exe start clussvc /forcequorum
   
 -   The procedures in this topic are only one step in bringing the WSFC cluster back online if an un-planned quorum failure were to occur.  You may also want to take additional steps to prevent other WSFC cluster nodes from interfering with the new quorum configuration.  
   
--   Other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features such as [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], database mirroring, and log shipping may also require subsequent actions to recover data and to fully re-establish high-availability.  
+-   Other [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] features such as [!INCLUDE[ssHADR](../includes/sshadr-md.md)], database mirroring, and log shipping may also require subsequent actions to recover data and to fully re-establish high-availability.  
   
      **For more information:**  
   

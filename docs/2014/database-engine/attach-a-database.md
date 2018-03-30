@@ -21,7 +21,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Attach a Database
-  This topic describes how to attach a database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. You can use this feature to copy, move, or upgrade a SQL Server database.  
+  This topic describes how to attach a database in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)]. You can use this feature to copy, move, or upgrade a SQL Server database.  
   
  **In This Topic**  
   
@@ -55,9 +55,9 @@ manager: "jhubbard"
  We recommend that you move databases by using the ALTER DATABASE planned relocation procedure, instead of using detach and attach. For more information, see [Move User Databases](../../2014/database-engine/move-user-databases.md).  
   
 ###  <a name="Security"></a> Security  
- File access permissions are set during a number of database operations, including detaching or attaching a database. For information about file permissions that are set whenever a database is detached and attached, see [Securing Data and Log Files](http://technet.microsoft.com/library/ms189128.aspx) in [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Books Online.  
+ File access permissions are set during a number of database operations, including detaching or attaching a database. For information about file permissions that are set whenever a database is detached and attached, see [Securing Data and Log Files](http://technet.microsoft.com/library/ms189128.aspx) in [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] Books Online.  
   
- We recommend that you do not attach or restore databases from unknown or untrusted sources. Such databases could contain malicious code that might execute unintended [!INCLUDE[tsql](../../includes/tsql-md.md)] code or cause errors by modifying the schema or the physical database structure. Before you use a database from an unknown or untrusted source, run [DBCC CHECKDB](../Topic/DBCC%20CHECKDB%20\(Transact-SQL\).md) on the database on a nonproduction server and also examine the code, such as stored procedures or other user-defined code, in the database. For more information about attaching databases and information about changes that are made to metadata when you attach a database, see [Database Detach and Attach &#40;SQL Server&#41;](../../2014/database-engine/database-detach-and-attach-sql-server.md).  
+ We recommend that you do not attach or restore databases from unknown or untrusted sources. Such databases could contain malicious code that might execute unintended [!INCLUDE[tsql](../includes/tsql-md.md)] code or cause errors by modifying the schema or the physical database structure. Before you use a database from an unknown or untrusted source, run [DBCC CHECKDB](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) on the database on a nonproduction server and also examine the code, such as stored procedures or other user-defined code, in the database. For more information about attaching databases and information about changes that are made to metadata when you attach a database, see [Database Detach and Attach &#40;SQL Server&#41;](../../2014/database-engine/database-detach-and-attach-sql-server.md).  
   
 ####  <a name="Permissions"></a> Permissions  
  Requires CREATE DATABASE, CREATE ANY DATABASE, or ALTER ANY DATABASE permission.  
@@ -66,7 +66,7 @@ manager: "jhubbard"
   
 #### To Attach a Database  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Object Explorer, connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], and then expand that instance.  
+1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Object Explorer, connect to an instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], and then expand that instance.  
   
 2.  Right-click **Databases** and click **Attach**.  
   
@@ -138,13 +138,13 @@ manager: "jhubbard"
   
 #### To attach a database  
   
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Use the [CREATE DATABASE](../Topic/CREATE%20DATABASE%20\(SQL%20Server%20Transact-SQL\).md) statement with the FOR ATTACH close.  
+3.  Use the [CREATE DATABASE](~/t-sql/statements/create-database-sql-server-transact-sql.md) statement with the FOR ATTACH close.  
   
-     Copy and paste the following example into the query window and click **Execute**. This example attaches the files of the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database and renames the database to `MyAdventureWorks`.  
+     Copy and paste the following example into the query window and click **Execute**. This example attaches the files of the [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] database and renames the database to `MyAdventureWorks`.  
   
     ```  
     CREATE DATABASE MyAdventureWorks   
@@ -155,15 +155,15 @@ manager: "jhubbard"
     ```  
   
     > [!NOTE]  
-    >  Alternatively, you can use the [sp_attach_db](../Topic/sp_attach_db%20\(Transact-SQL\).md) or [sp_attach_single_file_db](../Topic/sp_attach_single_file_db%20\(Transact-SQL\).md) stored procedure. However, these procedures will be removed in a future version of Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. We recommend that you use CREATE DATABASE … FOR ATTACH instead.  
+    >  Alternatively, you can use the [sp_attach_db](~/relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md) or [sp_attach_single_file_db](~/relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql.md) stored procedure. However, these procedures will be removed in a future version of Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. We recommend that you use CREATE DATABASE … FOR ATTACH instead.  
   
 ##  <a name="FollowUp"></a> Follow Up: After Upgrading a SQL Server Database  
  After you upgrade a database by using the attach method, the database becomes available immediately and is automatically upgraded. If the database has full-text indexes, the upgrade process either imports, resets, or rebuilds them, depending on the setting of the **Full-Text Upgrade Option** server property. If the upgrade option is set to **Import** or **Rebuild**, the full-text indexes will be unavailable during the upgrade. Depending the amount of data being indexed, importing can take several hours, and rebuilding can take up to ten times longer. Note also that when the upgrade option is set to **Import**, if a full-text catalog is not available, the associated full-text indexes are rebuilt.  
   
- If the compatibility level of a user database is 100 or higher before upgrade, it remains the same after upgrade. If the compatibility level is 90 before upgrade, in the upgraded database, the compatibility level is set to 100, which is the lowest supported compatibility level in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md).  
+ If the compatibility level of a user database is 100 or higher before upgrade, it remains the same after upgrade. If the compatibility level is 90 before upgrade, in the upgraded database, the compatibility level is set to 100, which is the lowest supported compatibility level in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 ## See Also  
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../Topic/CREATE%20DATABASE%20\(SQL%20Server%20Transact-SQL\).md)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](~/t-sql/statements/create-database-sql-server-transact-sql.md)   
  [Detach a Database](../../2014/database-engine/detach-a-database.md)  
   
   

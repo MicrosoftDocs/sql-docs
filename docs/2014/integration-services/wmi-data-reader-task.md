@@ -78,9 +78,9 @@ Select * FROM Win32_QuickFixEngineering
 |`WMIDataReaderOperation`|Reports the WQL query that the task ran.|  
   
 ## Configuration of the WMI Data Reader Task  
- You can set properties programmatically or through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer.  
+ You can set properties programmatically or through [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer.  
   
- For information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click one of the following topics:  
+ For information about the properties that you can set in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click one of the following topics:  
   
 -   [WMI Data Reader Task Editor &#40;WMI Options Page&#41;](../../2014/integration-services/wmi-data-reader-task-editor-wmi-options-page.md)  
   
@@ -91,7 +91,7 @@ Select * FROM Win32_QuickFixEngineering
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WmiDataReaderTask.WmiDataReaderTask>  
   
 ## Related Tasks  
- For more information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
+ For more information about how to set these properties in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click the following topic:  
   
 -   [Set the Properties of a Task or Container](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)  
   

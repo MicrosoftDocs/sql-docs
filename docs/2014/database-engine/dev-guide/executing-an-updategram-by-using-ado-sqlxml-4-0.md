@@ -21,11 +21,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Executing an Updategram by Using ADO (SQLXML 4.0)
-  This [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic application uses ADO to establish a connection to an instance of Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and execute an updategram. The updategram updates the last name of a specific employee. This example uses the AdventureWorks sample database.  
+  This [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic application uses ADO to establish a connection to an instance of Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and execute an updategram. The updategram updates the last name of a specific employee. This example uses the AdventureWorks sample database.  
   
  In this sample application:  
   
--   The **conn** object (**ADODB.Connection**) establishes a connection to a running instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on a specific server computer.  
+-   The **conn** object (**ADODB.Connection**) establishes a connection to a running instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a specific server computer.  
   
 -   The **cmd** object (**ADODB.Command**) executes on the established connection.  
   

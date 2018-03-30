@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 3d46d143-bc6a-4220-8b55-6baa37547c25
 caps.latest.revision: 19
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # blocked process threshold Server Configuration Option
@@ -44,7 +44,7 @@ GO
 ```  
   
 ## See Also  
- [sp_trace_setevent &#40;Transact-SQL&#41;](../Topic/sp_trace_setevent%20\(Transact-SQL\).md)   
+ [sp_trace_setevent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Blocked Process Report Event Class](../../2014/database-engine/blocked-process-report-event-class.md)  
   
   

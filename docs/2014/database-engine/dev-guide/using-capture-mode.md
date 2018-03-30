@@ -21,18 +21,18 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Using Capture Mode
-  SMO programs can capture and record the equivalent [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements issued by the program in place of, or in addition to, the statements that are executed by the program. You enable capture mode by using the <xref:Microsoft.SqlServer.Management.Common.ServerConnection> object, or by using the <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> property of the <xref:Microsoft.SqlServer.Management.Smo.Server> object.  
+  SMO programs can capture and record the equivalent [!INCLUDE[tsql](../../includes/tsql-md.md)] statements issued by the program in place of, or in addition to, the statements that are executed by the program. You enable capture mode by using the <xref:Microsoft.SqlServer.Management.Common.ServerConnection> object, or by using the <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> property of the <xref:Microsoft.SqlServer.Management.Smo.Server> object.  
   
 ## Example  
- [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  
+ [!INCLUDE[ssChooseProgEnv](../../includes/sschooseprogenv-md.md)]  
   
 ## Enabling Capture Mode in Visual Basic  
- This code example enables capture mode, and then displays the [!INCLUDE[tsql](../../../includes/tsql-md.md)] commands held in the capture buffer.  
+ This code example enables capture mode, and then displays the [!INCLUDE[tsql](../../includes/tsql-md.md)] commands held in the capture buffer.  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBCapture1](SMO How to#SMO_VBCapture1)]  -->  
   
 ## Enabling Capture Mode in Visual C#  
- This code example enables capture mode, and then displays the [!INCLUDE[tsql](../../../includes/tsql-md.md)] commands held in the capture buffer.  
+ This code example enables capture mode, and then displays the [!INCLUDE[tsql](../../includes/tsql-md.md)] commands held in the capture buffer.  
   
 ```  
 {   

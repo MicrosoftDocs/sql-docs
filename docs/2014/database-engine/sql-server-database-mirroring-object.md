@@ -21,7 +21,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQL Server, Database Mirroring Object
-  The **SQLServer:Database Mirroring** performance object contains performance counters that report information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database mirroring. The table below lists the counters that this object contains.  
+  The **SQLServer:Database Mirroring** performance object contains performance counters that report information about [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database mirroring. The table below lists the counters that this object contains.  
   
 |Name|Description|  
 |----------|-----------------|  

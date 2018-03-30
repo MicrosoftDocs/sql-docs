@@ -47,6 +47,6 @@ manager: "mblythe"
 |[Using Variables and Parameters &#40;MDX&#41;](../../2014/analysis-services/using-variables-and-parameters-mdx.md)|Describes how to use variables and parameters within MDX queries.|  
   
 ## See Also  
- [Multidimensional Expressions &#40;MDX&#41; Reference](../Topic/Multidimensional%20Expressions%20\(MDX\)%20Reference.md)  
+ [Multidimensional Expressions &#40;MDX&#41; Reference](~/mdx/multidimensional-expressions-mdx-reference.md)  
   
   

@@ -25,15 +25,15 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # ServerSettings Class
-  The [ServerSettings Class](../../../2014/database-engine/dev-guide/serversettings-class.md) represents server settings on an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  The [ServerSettings Class](../../../2014/database-engine/dev-guide/serversettings-class.md) represents server settings on an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  The [ServerSettings Class](../../../2014/database-engine/dev-guide/serversettings-class.md) allows you to perform the following tasks:  
   
--   Access general flag settings for the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   Access general flag settings for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Set default values for the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   Set default values for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Set the security certificate for the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   Set the security certificate for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## See Also  
  [Configuring Server Network Protocols and Net-Libraries](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

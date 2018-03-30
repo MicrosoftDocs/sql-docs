@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Browsing a Clustering Model
-  When you open a clustering model using **Browse**, the model is displayed in an interactive viewer, similar to the clustering viewer in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. The viewer helps you explore the clusters that were created, and understand cluster characteristics. You can also compare and contrast individual segments with other segments or with the population.  
+  When you open a clustering model using **Browse**, the model is displayed in an interactive viewer, similar to the clustering viewer in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. The viewer helps you explore the clusters that were created, and understand cluster characteristics. You can also compare and contrast individual segments with other segments or with the population.  
   
 ##  <a name="BKMK_Tabs"></a> Explore the Model  
  The **Browse** window includes the following tools to help you understand your clustering model and explore the attributes of the underlying data groups:  

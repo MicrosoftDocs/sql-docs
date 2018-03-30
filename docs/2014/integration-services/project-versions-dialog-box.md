@@ -20,7 +20,7 @@ manager: "jhubbard"
 # Project Versions Dialog Box
   Use the **Project Versions** dialog box to view versions of a project and to restore a previous version.  
   
- You can also view previous versions in the [catalog.object_versions &#40;SSISDB Database&#41;](../Topic/catalog.object_versions%20\(SSISDB%20Database\).md) view, and use the [catalog.restore_project &#40;SSISDB Database&#41;](../Topic/catalog.restore_project%20\(SSISDB%20Database\).md) stored procedure to restore previous versions.  
+ You can also view previous versions in the [catalog.object_versions &#40;SSISDB Database&#41;](~/integration-services/system-views/catalog-object-versions-ssisdb-database.md) view, and use the [catalog.restore_project &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-restore-project-ssisdb-database.md) stored procedure to restore previous versions.  
   
  **What do you want to do?**  
   
@@ -30,9 +30,9 @@ manager: "jhubbard"
   
 ##  <a name="open_dialog"></a> Open the Project Versions dialog box  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connect to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.  
+1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], connect to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server.  
   
-     That is, connect to the instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] that hosts the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] database.  
+     That is, connect to the instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] that hosts the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] database.  
   
 2.  In Object Explorer, expand the tree to display the **Integration Services Catalogs** node.  
   

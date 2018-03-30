@@ -23,7 +23,7 @@ manager: "jhubbard"
 # Unicode Data and Server Code Pages
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Use CLR Integration instead.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR Integration instead.  
   
  The Extended Stored Procedure API is enabled for Unicode data; however, it is not enabled for Unicode metadata. The #define Unicode directive does not have any effect on the Extended Stored Procedure API.  
   
@@ -38,7 +38,7 @@ manager: "jhubbard"
   
 -   Column name metadata is passed to **srv_describe** as multibyte data.  
   
-     The extended stored procedure calls **srv_pfield** with the field parameter set to SRV_SPROC_CODEPAGE to obtain the multibyte code page of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+     The extended stored procedure calls **srv_pfield** with the field parameter set to SRV_SPROC_CODEPAGE to obtain the multibyte code page of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   Error messages are passed to **srv_sendmsg** as multibyte data.  
   

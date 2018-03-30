@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: a86b89cb-0432-4648-895a-05ecc5450e45
 caps.latest.revision: 29
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Open Log File Viewer
-  You can use Log File Viewer in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to access information about errors and events that are captured in the following logs:  
+  You can use Log File Viewer in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to access information about errors and events that are captured in the following logs:  
   
 -   Audit Collection  
   
@@ -34,14 +34,14 @@ manager: "jhubbard"
   
 -   Windows events (These Windows events can also be accessed from Event Viewer.)  
   
- Beginning in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], you can use Registered Servers to view [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log files from local or remote instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. By using Registered Servers, you can view the log files when the instances are either online or offline. For more information about online access, see the procedure "To view online log files from Registered Servers" later in this topic. For more information about how to access offline [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log files, see [View Offline Log Files](../../2014/database-engine/view-offline-log-files.md).  
+ Beginning in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], you can use Registered Servers to view [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] log files from local or remote instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. By using Registered Servers, you can view the log files when the instances are either online or offline. For more information about online access, see the procedure "To view online log files from Registered Servers" later in this topic. For more information about how to access offline [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] log files, see [View Offline Log Files](../../2014/database-engine/view-offline-log-files.md).  
   
  You can open Log File Viewer in several ways, depending on the information that you want to view.  
   
 ##  <a name="BeforeYouBegin"></a> Permissions  
- To access log files for instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that are online, this requires membership in the securityadmin fixed server role.  
+ To access log files for instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that are online, this requires membership in the securityadmin fixed server role.  
   
- To access log files for instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that are offline, you must have read access to both the **Root\Microsoft\SqlServer\ComputerManagement10** WMI namespace, and to the folder where the log files are stored. For more information, see the Security section of the topic [View Offline Log Files](../../2014/database-engine/view-offline-log-files.md).  
+ To access log files for instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that are offline, you must have read access to both the **Root\Microsoft\SqlServer\ComputerManagement10** WMI namespace, and to the folder where the log files are stored. For more information, see the Security section of the topic [View Offline Log Files](../../2014/database-engine/view-offline-log-files.md).  
   
 ### Security  
  Requires membership in the securityadmin fixed server role.  

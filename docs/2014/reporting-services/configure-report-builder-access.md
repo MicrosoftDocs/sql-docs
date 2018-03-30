@@ -16,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: a79003d0-c905-4d4c-9560-93a7cc1e1dd4
 caps.latest.revision: 46
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Configure Report Builder Access
-  Report Builder is an ad hoc reporting tool that installs with a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server configured for either native mode or SharePoint integration mode.  
+  Report Builder is an ad hoc reporting tool that installs with a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report server configured for either native mode or SharePoint integration mode.  
   
  Access to Report Builder depends on the following factors:  
   
@@ -33,13 +33,13 @@ manager: "mblythe"
  To use Report Builder, you must have a published report model to work with.  
   
 ## Prerequisites  
- Report Builder is not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ Report Builder is not available in every edition of [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
- The client computer must have the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 installed. The [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] provides the infrastructure for running [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] applications.  
+ The client computer must have the [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 2.0 installed. The [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] provides the infrastructure for running [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] applications.  
   
- You must use [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 6.0 or later.  
+ You must use [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 6.0 or later.  
   
- Report Builder always runs in full trust; you cannot configure it to run in partial trust. In previous releases, it was possible to run Report Builder in partial trust, but that option is not supported in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions.  
+ Report Builder always runs in full trust; you cannot configure it to run in partial trust. In previous releases, it was possible to run Report Builder in partial trust, but that option is not supported in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] and later versions.  
   
 ## Enabling and Disabling Report Builder  
  Report Builder is enabled by default. Report server administrators have the option of disabling the Report Builder feature by setting the report server system property `EnableReportDesignClientDownload` to `false`. Setting this property will disable Report Builder downloads for that report server.  

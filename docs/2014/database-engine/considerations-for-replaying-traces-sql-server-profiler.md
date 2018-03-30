@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Considerations for Replaying Traces (SQL Server Profiler)
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] cannot replay the following kinds of traces:  
+  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] cannot replay the following kinds of traces:  
   
 -   Traces that contain transactional replication and other transaction log activity. These events are skipped. Other types of replication do not mark the transaction log so they are not affected.  
   
@@ -30,18 +30,18 @@ manager: "jhubbard"
 -   Traces that contain session binding: **sp_getbindtoken** and **sp_bindsession** system stored procedures. These events are skipped.  
   
 > [!NOTE]  
->  If you do not use the preconfigured replay template (**TSQL_Replay**), and do not capture all required data, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] does not replay the trace. For more information, see [Replay Requirements](../../2014/database-engine/replay-requirements.md).  
+>  If you do not use the preconfigured replay template (**TSQL_Replay**), and do not capture all required data, [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] does not replay the trace. For more information, see [Replay Requirements](../../2014/database-engine/replay-requirements.md).  
   
  For information about what permissions are required to replay a trace, see [Permissions Required to Run SQL Server Profiler](../../2014/database-engine/permissions-required-to-run-sql-server-profiler.md).  
   
 ## See Also  
  [bcp Utility](../../2014/database-engine/bcp-utility.md)   
  [SQL Server Event Class Reference](../../2014/database-engine/sql-server-event-class-reference.md)   
- [sp_getbindtoken &#40;Transact-SQL&#41;](../Topic/sp_getbindtoken%20\(Transact-SQL\).md)   
- [sp_bindsession &#40;Transact-SQL&#41;](../Topic/sp_bindsession%20\(Transact-SQL\).md)   
- [BULK INSERT &#40;Transact-SQL&#41;](../Topic/BULK%20INSERT%20\(Transact-SQL\).md)   
- [READTEXT &#40;Transact-SQL&#41;](../Topic/READTEXT%20\(Transact-SQL\).md)   
- [WRITETEXT &#40;Transact-SQL&#41;](../Topic/WRITETEXT%20\(Transact-SQL\).md)   
- [UPDATETEXT &#40;Transact-SQL&#41;](../Topic/UPDATETEXT%20\(Transact-SQL\).md)  
+ [sp_getbindtoken &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-getbindtoken-transact-sql.md)   
+ [sp_bindsession &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-bindsession-transact-sql.md)   
+ [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md)   
+ [READTEXT &#40;Transact-SQL&#41;](~/t-sql/queries/readtext-transact-sql.md)   
+ [WRITETEXT &#40;Transact-SQL&#41;](~/t-sql/queries/writetext-transact-sql.md)   
+ [UPDATETEXT &#40;Transact-SQL&#41;](~/t-sql/queries/updatetext-transact-sql.md)  
   
   

@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: 53a0426d-07d8-4b7c-aa21-22632753bad8
 caps.latest.revision: 13
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Creating Views and Stored Procedures
-  Now that Mary can access the **TestData** database, you may want to create some database objects, such as a view and a stored procedure, and then grant Mary access to them. A view is a stored SELECT statement, and a stored procedure is one or more [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that execute as a batch.  
+  Now that Mary can access the **TestData** database, you may want to create some database objects, such as a view and a stored procedure, and then grant Mary access to them. A view is a stored SELECT statement, and a stored procedure is one or more [!INCLUDE[tsql](../includes/tsql-md.md)] statements that execute as a batch.  
   
  Views are queried like tables and do not accept parameters. Stored procedures are more complex than views. Stored procedures can have both input and output parameters and can contain statements to control the flow of the code, such as IF and WHILE statements. It is good programming practice to use stored procedures for all repetitive actions in the database.  
   
@@ -78,7 +78,7 @@ manager: "jhubbard"
  [Granting Access to a Database Object](../../2014/tutorials/granting-access-to-a-database-object.md)  
   
 ## See Also  
- [CREATE VIEW &#40;Transact-SQL&#41;](../Topic/CREATE%20VIEW%20\(Transact-SQL\).md)   
- [CREATE PROCEDURE &#40;Transact-SQL&#41;](../Topic/CREATE%20PROCEDURE%20\(Transact-SQL\).md)  
+ [CREATE VIEW &#40;Transact-SQL&#41;](~/t-sql/statements/create-view-transact-sql.md)   
+ [CREATE PROCEDURE &#40;Transact-SQL&#41;](~/t-sql/statements/create-procedure-transact-sql.md)  
   
   

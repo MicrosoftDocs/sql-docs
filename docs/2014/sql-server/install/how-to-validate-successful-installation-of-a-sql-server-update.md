@@ -16,9 +16,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # How to: Validate Successful Installation of a SQL Server Update
-  To validate successful installation of a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] update:  
+  To validate successful installation of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] update:  
   
--   Verify that [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] services are online.  
+-   Verify that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services are online.  
   
 -   Verify version information returned by the @@version query.  
   

@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Backup and Restore: Interoperability and Coexistence (SQL Server)
-  This topic describes backup-and-restore considerations for several features in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. These features include: file restore and database startup, online restore and disabled indexes, database mirroring, and piecemeal restore and full-text indexes.  
+  This topic describes backup-and-restore considerations for several features in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. These features include: file restore and database startup, online restore and disabled indexes, database mirroring, and piecemeal restore and full-text indexes.  
   
  **In this Topic:**  
   
@@ -39,12 +39,12 @@ manager: "jhubbard"
 -   [Related Tasks](#RelatedTasks)  
   
 ##  <a name="FileRestoreAndDbStartup"></a> File Restore and Database Startup  
- This section is relevant only for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases that have multiple filegroups.  
+ This section is relevant only for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] databases that have multiple filegroups.  
   
 > [!NOTE]  
 >  When a database is started, only filegroups whose files were online when the database was closed are recovered and brought online.  
   
- If a problem is encountered during database startup, recovery fails, and the database is marked as SUSPECT. If the problem can be isolated to a file or files, the database administrator can take the files offline and try to restart the database. To take a file offline, you can use the following [ALTER DATABASE](../Topic/ALTER%20DATABASE%20\(Transact-SQL\).md) statement:  
+ If a problem is encountered during database startup, recovery fails, and the database is marked as SUSPECT. If the problem can be isolated to a file or files, the database administrator can take the files offline and try to restart the database. To take a file offline, you can use the following [ALTER DATABASE](~/t-sql/statements/alter-database-transact-sql.md) statement:  
   
  ALTER DATABASE *database_name* MODIFY FILE (NAME **='*`filename`*'**, OFFLINE)  
   
@@ -61,7 +61,7 @@ manager: "jhubbard"
  This section is relevant only for full-model databases that have multiple filegroups.  
   
 > [!NOTE]  
->  The database mirroring feature will be removed in a future version of Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Use [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] instead.  
+>  The database mirroring feature will be removed in a future version of Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Use [!INCLUDE[ssHADR](../includes/sshadr-md.md)] instead.  
   
  Database mirroring is a solution for increasing database availability. Mirroring is implemented on a per-database basis and works only with databases that use the full recovery model. For more information, see [Database Mirroring &#40;SQL Server&#41;](../../2014/database-engine/database-mirroring-sql-server.md).  
   
@@ -88,14 +88,14 @@ manager: "jhubbard"
  Full-text indexes are stored in database filegroups and can be affected by a piecemeal restore. If the full-text index resides in the same filegroup as any of the associated table data, piecemeal restore works as expected.  
   
 > [!NOTE]  
->  To view the filegroup ID of the filegroup that contains a full-text index, select the data_space_id column of [sys.fulltext_indexes](../Topic/sys.fulltext_indexes%20\(Transact-SQL\).md).  
+>  To view the filegroup ID of the filegroup that contains a full-text index, select the data_space_id column of [sys.fulltext_indexes](~/relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
   
 ### Full-Text Indexes and Tables in Separate Filegroups  
  If a full-text index resides in a separate filegroup from all of the associated table data, the behavior of piecemeal restore depends on which of the filegroups is restored and brought online first:  
   
 -   If the filegroup that contains the full-text index is restored and brought online before the filegroups that contain the associated table data, full-text search works as expected as soon as the full-text index is online.  
   
--   If the filegroup that contains the table data is restored and brought online before the filegroup that contains the full-text index, full-text behavior might be affected. This is because [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that trigger a population, rebuild the catalog, or reorganize the catalog fail until the index is brought online. These statements include CREATE FULLTEXT INDEX, ALTER FULLTEXT INDEX, DROP FULLTEXT INDEX, and ALTER FULLTEXT CATALOG.  
+-   If the filegroup that contains the table data is restored and brought online before the filegroup that contains the full-text index, full-text behavior might be affected. This is because [!INCLUDE[tsql](../includes/tsql-md.md)] statements that trigger a population, rebuild the catalog, or reorganize the catalog fail until the index is brought online. These statements include CREATE FULLTEXT INDEX, ALTER FULLTEXT INDEX, DROP FULLTEXT INDEX, and ALTER FULLTEXT CATALOG.  
   
      In this case, the following factors are significant:  
   
@@ -110,7 +110,7 @@ manager: "jhubbard"
  As soon as both the base table filegroup and the full-text index filegroup are online, any paused full-text population is resumed.  
   
 ##  <a name="FileBnRandCompression"></a> File Backup and Restore and Compression  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports NTFS file system data compression of read-only filegroups and read-only databases.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supports NTFS file system data compression of read-only filegroups and read-only databases.  
   
  Restoring files in a read-only filegroup is supported on compressed NTFS files. Backup and restore of these filegroups works essentially as it would for any read-only filegroup, with the following exceptions:  
   

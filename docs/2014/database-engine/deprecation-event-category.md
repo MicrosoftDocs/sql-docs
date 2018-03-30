@@ -26,7 +26,7 @@ manager: "jhubbard"
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Deprecation Announcement Event Class](../../2014/database-engine/deprecation-announcement-event-class.md)|Indicates that a feature will be removed in a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|[Deprecation Final Support Event Class](../../2014/database-engine/deprecation-final-support-event-class.md)|Indicates that a feature will be removed in the next major release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|[Deprecation Announcement Event Class](../../2014/database-engine/deprecation-announcement-event-class.md)|Indicates that a feature will be removed in a future version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
+|[Deprecation Final Support Event Class](../../2014/database-engine/deprecation-final-support-event-class.md)|Indicates that a feature will be removed in the next major release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
   
   

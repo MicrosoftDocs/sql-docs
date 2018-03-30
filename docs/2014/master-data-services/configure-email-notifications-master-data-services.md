@@ -19,11 +19,11 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Configure Email Notifications (Master Data Services)
-  Configure notification emails when you want [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] to send email messages automatically.  
+  Configure notification emails when you want [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] to send email messages automatically.  
   
 ### To configure notifications  
   
-1.  In [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)], on the **Database** page, select your [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database.  
+1.  In [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], on the **Database** page, select your [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.  
   
 2.  In the **System Settings** section, click **Create Profile**.  
   
@@ -32,11 +32,11 @@ manager: "jhubbard"
 4.  Click **OK**.  
   
     > [!NOTE]  
-    >  After you configure notifications, you cannot use [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] to make changes. You must make changes directly in the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database. For more information, see [Database Mail Configuration Objects](../../2014/database-engine/database-mail-configuration-objects.md).  
+    >  After you configure notifications, you cannot use [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] to make changes. You must make changes directly in the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database. For more information, see [Database Mail Configuration Objects](../../2014/database-engine/database-mail-configuration-objects.md).  
   
 ## Next Steps  
   
--   There are settings in [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] that affect notifications. You can adjust these settings in [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] or directly in the System Settings table in the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database. For more information, see [System Settings &#40;Master Data Services&#41;](../../2014/master-data-services/system-settings-master-data-services.md).  
+-   There are settings in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] that affect notifications. You can adjust these settings in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] or directly in the System Settings table in the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database. For more information, see [System Settings &#40;Master Data Services&#41;](../../2014/master-data-services/system-settings-master-data-services.md).  
   
 ## See Also  
  [Notifications &#40;Master Data Services&#41;](../../2014/master-data-services/notifications-master-data-services.md)   

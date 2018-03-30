@@ -23,10 +23,10 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Understanding the Database Schemas
-  The Schema Generation Wizard generates a denormalized relational schema for the subject area database based on the dimensions and measure groups in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. The wizard generates a relational table for each dimension to store dimension data, which is called a dimension table, and a relational table for each measure group to store fact data, which is called a fact table. The wizard ignores linked dimensions, linked measure groups, and server time dimensions when it generates these relational tables.  
+  The Schema Generation Wizard generates a denormalized relational schema for the subject area database based on the dimensions and measure groups in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. The wizard generates a relational table for each dimension to store dimension data, which is called a dimension table, and a relational table for each measure group to store fact data, which is called a fact table. The wizard ignores linked dimensions, linked measure groups, and server time dimensions when it generates these relational tables.  
   
 ## Validation  
- Before it begins to generate the underlying relational schema, the Schema Generation Wizard validates the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cubes and dimensions. If the wizard detects errors, it stops and reports the errors to the Task List window in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Examples of errors that prevent generation include the following:  
+ Before it begins to generate the underlying relational schema, the Schema Generation Wizard validates the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cubes and dimensions. If the wizard detects errors, it stops and reports the errors to the Task List window in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Examples of errors that prevent generation include the following:  
   
 -   Dimensions that have more than one key attribute.  
   
@@ -80,7 +80,7 @@ manager: "mblythe"
  The wizard generates a separate table to hold the translated values for any property in the measure group that requires a translation column. The wizard also creates a separate column for each of the required languages.  
   
 ## Data Type Conversion and Default Lengths  
- Schema Generation Wizard ignores data types in all cases except for columns that use the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar` data type. The `wchar` data size translates directly to the `nvarchar` data type. However, if the specified length of a column using the `wchar` size is larger than 4000 bytes, the Schema Generation Wizard generates an error.  
+ Schema Generation Wizard ignores data types in all cases except for columns that use the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] `wchar` data type. The `wchar` data size translates directly to the `nvarchar` data type. However, if the specified length of a column using the `wchar` size is larger than 4000 bytes, the Schema Generation Wizard generates an error.  
   
  If a data item, such as the binding for an attribute, has no specified length, the default length listed in the following table is used for the column.  
   

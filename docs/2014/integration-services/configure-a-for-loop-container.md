@@ -25,7 +25,7 @@ manager: "jhubbard"
   
 ### To configure the For Loop container  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], double-click the For Loop container to open the **For Loop Editor**.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], double-click the For Loop container to open the **For Loop Editor**.  
   
 2.  Optionally, modify the name and description of the For Loop container.  
   

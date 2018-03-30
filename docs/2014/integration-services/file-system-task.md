@@ -56,15 +56,15 @@ manager: "jhubbard"
 |`FileSystemOperation`|Reports the operation that the task performs. The log entry is written when the file system operation starts and includes information about the source and destination.|  
   
 ## Configuring the File System Task  
- You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer or programmatically.  
   
- For more information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, see the following topics:  
+ For more information about the properties that you can set in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, see the following topics:  
   
 -   [File System Task Editor &#40;General Page&#41;](../../2014/integration-services/file-system-task-editor-general-page.md)  
   
 -   [Expressions Page](../../2014/integration-services/expressions-page.md)  
   
- For more information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, see the following topic:  
+ For more information about how to set these properties in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, see the following topic:  
   
 -   [Set the Properties of a Task or Container](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)  
   
@@ -73,7 +73,7 @@ manager: "jhubbard"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask>  
   
 ## Related Tasks  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes a task that downloads and uploads data files and manages directories on servers. For more information, see [FTP Task](../../2014/integration-services/ftp-task.md).  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes a task that downloads and uploads data files and manages directories on servers. For more information, see [FTP Task](../../2014/integration-services/ftp-task.md).  
   
 ## See Also  
  [Integration Services Tasks](../../2014/integration-services/integration-services-tasks.md)   

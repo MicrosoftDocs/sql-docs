@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: a828e284-097e-4854-8c49-931934eb73bf
 caps.latest.revision: 15
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Full-Text Index Properties (Schedules Page)

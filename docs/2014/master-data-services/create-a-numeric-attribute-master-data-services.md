@@ -19,7 +19,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Create a Numeric Attribute (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], create a numeric attribute when you want users to enter a number as an attribute value.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], create a numeric attribute when you want users to enter a number as an attribute value.  
   
 > [!NOTE]  
 >  Numeric attributes have limitations. For more information, see [Attributes &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md).  
@@ -35,7 +35,7 @@ manager: "jhubbard"
   
 ### To create a numeric attribute  
   
-1.  In [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], click **System Administration**.  
+1.  In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], click **System Administration**.  
   
 2.  On the **Model View** page, from the menu bar, point to **Manage** and click **Entities**.  
   

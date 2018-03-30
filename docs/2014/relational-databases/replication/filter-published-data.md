@@ -22,7 +22,7 @@ helpviewer_keywords:
 ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 caps.latest.revision: 49
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Filter Published Data
@@ -127,7 +127,7 @@ manager: "jhubbard"
   
 -   Transactional replication allows you to replicate an indexed view as a view or as a table. If you replicate the view as a table, you cannot filter columns from the table.  
   
- Row filters are not designed to work across databases. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] intentionally restricts the execution of `sp_replcmds` (which filters execute under) to the database owner (`dbo`). The `dbo` does not have cross database privileges. With the addition of CDC (Change Data Capture) in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] the `sp_replcmds` logic populates the change tracking tables with information that the user can return to and query. For security reasons, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] restricts the execution of this logic so that a malicious `dbo` can’t highjack this execution path. For example, a malicious `dbo` could add triggers on CDC tables which would then get executed under the context of the user calling `sp_replcmds`, in this case the logreader agent.  If the account the agent is running under has higher privilege the malicious `dbo` could escalate his privileges.  
+ Row filters are not designed to work across databases. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intentionally restricts the execution of `sp_replcmds` (which filters execute under) to the database owner (`dbo`). The `dbo` does not have cross database privileges. With the addition of CDC (Change Data Capture) in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] the `sp_replcmds` logic populates the change tracking tables with information that the user can return to and query. For security reasons, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restricts the execution of this logic so that a malicious `dbo` can’t highjack this execution path. For example, a malicious `dbo` could add triggers on CDC tables which would then get executed under the context of the user calling `sp_replcmds`, in this case the logreader agent.  If the account the agent is running under has higher privilege the malicious `dbo` could escalate his privileges.  
   
 ## See Also  
  [Publish Data and Database Objects](../../../2014/relational-databases/replication/publish-data-and-database-objects.md)  

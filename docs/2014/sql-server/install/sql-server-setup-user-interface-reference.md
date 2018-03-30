@@ -18,6 +18,6 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQL Server Setup User Interface Reference
-  This section describes the installation options presented by the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Installation Wizard.  
+  This section describes the installation options presented by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard.  
   
   

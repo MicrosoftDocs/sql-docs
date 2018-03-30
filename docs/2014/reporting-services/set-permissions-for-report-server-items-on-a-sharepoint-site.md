@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 2467c657-a3bf-4ec3-a88c-8877df19823d
 caps.latest.revision: 13
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Set Permissions for Report Server Items on a SharePoint Site (Reporting Services in SharePoint Integrated Mode)

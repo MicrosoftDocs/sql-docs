@@ -33,9 +33,9 @@ manager: "jhubbard"
 3.  Select **Yes** when prompted if you want to set up database diagramming.  
   
     > [!NOTE]  
-    >  This will create the database diagram table, system stored procedures, and a system function on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
+    >  This will create the database diagram table, system stored procedures, and a system function on the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database.  
   
-4.  Visual Studio will create the following objects on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+4.  Visual Studio will create the following objects on the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
     1.  sysdiagrams table  
   
@@ -58,6 +58,6 @@ manager: "jhubbard"
 ## See Also  
  [Understand Database Diagram Ownership &#40;Visual Database Tools&#41;](../../2014/database-engine/understand-database-diagram-ownership-visual-database-tools.md)   
  [Upgrade Database Diagrams from Previous Editions &#40;Visual Database Tools&#41;](../../2014/database-engine/upgrade-database-diagrams-from-previous-editions-visual-database-tools.md)   
- [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../Topic/ALTER%20AUTHORIZATION%20\(Transact-SQL\).md)  
+ [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](~/t-sql/statements/alter-authorization-transact-sql.md)  
   
   

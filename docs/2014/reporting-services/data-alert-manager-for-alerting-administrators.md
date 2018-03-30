@@ -15,11 +15,11 @@ helpviewer_keywords:
 ms.assetid: 32fd968f-1c0c-4ba8-851c-8a3b5e1fbbf2
 caps.latest.revision: 21
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Data Alert Manager for Alerting Administrators
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides Data Alert Manager for SharePoint alerting administrators to manage data alerts. Alerting administrators can view information about all alerts saved to the site and delete alerts. The following picture shows the features available to SharePoint alerting managers in Data Alert Manager.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] provides Data Alert Manager for SharePoint alerting administrators to manage data alerts. Alerting administrators can view information about all alerts saved to the site and delete alerts. The following picture shows the features available to SharePoint alerting managers in Data Alert Manager.  
   
  ![Alert Manager for SharePoin tsite administrators](../../2014/reporting-services/media/rs-alertmanagersite.gif "Alert Manager for SharePoin tsite administrators")  
   
@@ -30,7 +30,7 @@ manager: "mblythe"
  `http: //<site name>/_layouts/ReportServer/ SiteDataAlerts.aspx`  
   
 > [!NOTE]  
->  As an alerting administrator, you can grant permission to information workers to access the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data alerts features. For more information about the required permissions, see [Reporting Services Data Alerts](../../2014/reporting-services/reporting-services-data-alerts.md).  
+>  As an alerting administrator, you can grant permission to information workers to access the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] data alerts features. For more information about the required permissions, see [Reporting Services Data Alerts](../../2014/reporting-services/reporting-services-data-alerts.md).  
   
 ##  <a name="ViewingAlerts"></a> Viewing Data Alert Information  
  When Reporting Services is installed and configured in SharePoint, the Site Settings SharePoint page includes the **Reporting Services** options. Alerting administrators click the **Manage Data Alerts** option within Reporting Service to open Data Alert Manager. The following picture shows from where on the Site Settings page you open Data Alert Manager.  

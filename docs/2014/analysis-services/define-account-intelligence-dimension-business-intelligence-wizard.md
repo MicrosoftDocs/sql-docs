@@ -21,7 +21,7 @@ manager: "mblythe"
   Use this page to select the dimension to which account intelligence, including dimension and attribute type settings, definition of semi-additive measures, and other features, will be applied.  
   
 > [!NOTE]  
->  This page does not appear if the Business Intelligence Wizard was started from Dimension Designer or by right-clicking a dimension in Solution Explorer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+>  This page does not appear if the Business Intelligence Wizard was started from Dimension Designer or by right-clicking a dimension in Solution Explorer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 ## Options  
  **Dimension**  

@@ -26,7 +26,7 @@ helpviewer_keywords:
 ms.assetid: 088ee30a-05ab-47c4-92ed-316b93e12445
 caps.latest.revision: 43
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Subscribe to Publications
@@ -70,14 +70,14 @@ manager: "jhubbard"
   
  **To delete a push subscription**  
   
- [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Delete a Push Subscription](../../../2014/relational-databases/replication/delete-a-push-subscription.md)  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Delete a Push Subscription](../../../2014/relational-databases/replication/delete-a-push-subscription.md)  
   
 > [!NOTE]  
 >  Deleting a subscription does not remove published objects from the Subscriber.  
   
  **To create a pull subscription**  
   
- [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Create a Pull Subscription](../../../2014/relational-databases/replication/create-a-pull-subscription.md)  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Create a Pull Subscription](../../../2014/relational-databases/replication/create-a-pull-subscription.md)  
   
  **To view or modify pull subscription properties**  
   

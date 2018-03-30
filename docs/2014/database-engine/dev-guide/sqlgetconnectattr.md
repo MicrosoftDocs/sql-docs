@@ -21,9 +21,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQLGetConnectAttr
-  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver defines driver-specific connection attributes. Some of the attributes are available to `SQLGetConnectAttr`, and the function is used to report their current settings. The values reported for these attributes are not guaranteed until after a connection has been made or the attribute has been set using [SQLSetConnectAttr](../../../2014/database-engine/dev-guide/sqlsetconnectattr.md).  
+  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver defines driver-specific connection attributes. Some of the attributes are available to `SQLGetConnectAttr`, and the function is used to report their current settings. The values reported for these attributes are not guaranteed until after a connection has been made or the attribute has been set using [SQLSetConnectAttr](../../../2014/database-engine/dev-guide/sqlsetconnectattr.md).  
   
- This topic lists the read only attributes. For information about the other [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver-specific connection attributes, see [SQLSetConnectAttr](../../../2014/database-engine/dev-guide/sqlsetconnectattr.md).  
+ This topic lists the read only attributes. For information about the other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver-specific connection attributes, see [SQLSetConnectAttr](../../../2014/database-engine/dev-guide/sqlsetconnectattr.md).  
   
 ## SQL_COPT_SS_CONNECTION_DEAD  
  The SQL_COPT_SS_CONNECTION_DEAD attribute reports the state of a connection to a server. The driver queries the network for the current state of the connection.  
@@ -83,9 +83,9 @@ manager: "jhubbard"
 ## See Also  
  [SQLGetConnectAttr Function](http://go.microsoft.com/fwlink/?LinkId=59347)   
  [ODBC API Implementation Details](../../../2014/database-engine/dev-guide/odbc-api-implementation-details.md)   
- [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../Topic/SET%20QUOTED_IDENTIFIER%20\(Transact-SQL\).md)   
- [SET ANSI_NULLS &#40;Transact-SQL&#41;](../Topic/SET%20ANSI_NULLS%20\(Transact-SQL\).md)   
- [SET ANSI_PADDING &#40;Transact-SQL&#41;](../Topic/SET%20ANSI_PADDING%20\(Transact-SQL\).md)   
- [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../Topic/SET%20ANSI_WARNINGS%20\(Transact-SQL\).md)  
+ [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](~/t-sql/statements/set-quoted-identifier-transact-sql.md)   
+ [SET ANSI_NULLS &#40;Transact-SQL&#41;](~/t-sql/statements/set-ansi-nulls-transact-sql.md)   
+ [SET ANSI_PADDING &#40;Transact-SQL&#41;](~/t-sql/statements/set-ansi-padding-transact-sql.md)   
+ [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](~/t-sql/statements/set-ansi-warnings-transact-sql.md)  
   
   

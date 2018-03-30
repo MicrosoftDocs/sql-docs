@@ -20,7 +20,7 @@ manager: "mblythe"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2010 &#124; SharePoint 2013.|  
+|**[!INCLUDE[applies](../includes/applies-md.md)]**  SharePoint 2010 &#124; SharePoint 2013.|  
   
  **Overview:** Create two Secure Store Target Applications. Configure the first target application (PowerPivotDataRefresh) to use Windows credentials. Configure the second target application with the credentials for a data source that does not support windows authentication, for example, an Oracle database. The second target application also uses the first target application for the unattended data refresh account.  
   

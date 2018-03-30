@@ -61,7 +61,7 @@ manager: "mblythe"
   
 -   Creates a data mining structure based on the current data in the table.  
   
--   Creates a new data mining model by using the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering algorithm.  
+-   Creates a new data mining model by using the [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering algorithm.  
   
 -   Creates a prediction query based on the patterns to determine whether any values in the worksheet are improbable.  
   
@@ -74,9 +74,9 @@ manager: "mblythe"
 ## Related Tools  
  When you are cleaning or reviewing data in preparation for data mining, you might also try the data exploration features in the Data Mining Client for Excel. This add-in provides more advanced tools to help you find outliers, relabel data, or view the distribution of data. For more information about data exploration tools in the Data Mining Client for Excel, see [Exploring and Cleaning Data](../../2014/analysis-services/exploring-and-cleaning-data.md).  
   
- The **Highlight Exceptions** tool uses the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering algorithm. A clustering model detects groups of rows that share similar characteristics. The Data Mining Client for Excel provides a **Browse** window that uses graphs and characteristic profiles to let you explore data mining models created by clustering. For information about how to browse the clustering model created by the **Highlight Exceptions** tool, see [Browse Models (Data Mining Client for Excel)](../../2014/analysis-services/highlight-exceptions-table-analysis-tools-for-excel.md).  
+ The **Highlight Exceptions** tool uses the [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering algorithm. A clustering model detects groups of rows that share similar characteristics. The Data Mining Client for Excel provides a **Browse** window that uses graphs and characteristic profiles to let you explore data mining models created by clustering. For information about how to browse the clustering model created by the **Highlight Exceptions** tool, see [Browse Models (Data Mining Client for Excel)](../../2014/analysis-services/highlight-exceptions-table-analysis-tools-for-excel.md).  
   
- For more information about the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering algorithm, see the topic "Microsoft Clustering Algorithm" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+ For more information about the [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering algorithm, see the topic "Microsoft Clustering Algorithm" in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online.  
   
 ## See Also  
  [Table Analysis Tools for Excel](../../2014/analysis-services/table-analysis-tools-for-excel.md)  

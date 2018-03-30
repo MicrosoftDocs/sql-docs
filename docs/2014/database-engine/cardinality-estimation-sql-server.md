@@ -20,23 +20,23 @@ ms.author: "barbkess"
 manager: "jhubbard"
 ---
 # Cardinality Estimation (SQL Server)
-  The cardinality estimation logic, called the cardinality estimator, is re-designed in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] to improve the quality of query plans, and therefore to improve query performance. The new cardinality estimator incorporates assumptions and algorithms that work well on modern OLTP and data warehousing workloads. It is based on in-depth cardinality estimation research on modern workloads, and our learnings over the past 15 years of improving the SQL Server cardinality estimator. Feedback from customers shows that while most queries will benefit from the change or remain unchanged, a small number might show regressions compared to the previous cardinality estimator.  
+  The cardinality estimation logic, called the cardinality estimator, is re-designed in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] to improve the quality of query plans, and therefore to improve query performance. The new cardinality estimator incorporates assumptions and algorithms that work well on modern OLTP and data warehousing workloads. It is based on in-depth cardinality estimation research on modern workloads, and our learnings over the past 15 years of improving the SQL Server cardinality estimator. Feedback from customers shows that while most queries will benefit from the change or remain unchanged, a small number might show regressions compared to the previous cardinality estimator.  
   
 > [!NOTE]  
 >  Cardinality estimates are a prediction of the number of rows in the query result. The query optimizer uses these estimates to choose a plan for executing the query. The quality of the query plan has a direct impact on improving query performance.  
   
 ## Performance Testing and Tuning Recommendations  
- The new cardinality estimator is enabled for all new databases created in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. However, upgrading to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] does not enable the new cardinality estimator on existing databases.  
+ The new cardinality estimator is enabled for all new databases created in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. However, upgrading to [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] does not enable the new cardinality estimator on existing databases.  
   
  To ensure the best query performance, use these recommendations to test your workload with the new cardinality estimator before enabling it on your production system.  
   
-1.  Upgrade all existing databases to use the new cardinality estimator. To do this, use [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md) to set the database compatibility level to 120.  
+1.  Upgrade all existing databases to use the new cardinality estimator. To do this, use [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-compatibility-level.md) to set the database compatibility level to 120.  
   
 2.  Run your test workload with the new cardinality estimator, and then troubleshoot any new performance issues in the same manner you currently troubleshoot performance issues.  
   
-3.  Once your workload is running with the new cardinality estimator (database compatibility level 120 (SQL Server 2014)), and a specific query has regressed, you can run the query with trace flag 9481 to use the version of the cardinality estimator used in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and earlier. To run a query with a trace flag, see the KB article [Enable plan-affecting SQL Server query optimizer behavior that can be controlled by different trace flags on a specific-query level](http://support.microsoft.com/kb/2801413).  
+3.  Once your workload is running with the new cardinality estimator (database compatibility level 120 (SQL Server 2014)), and a specific query has regressed, you can run the query with trace flag 9481 to use the version of the cardinality estimator used in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] and earlier. To run a query with a trace flag, see the KB article [Enable plan-affecting SQL Server query optimizer behavior that can be controlled by different trace flags on a specific-query level](http://support.microsoft.com/kb/2801413).  
   
-4.  If you cannot change all of the databases at once to use the new cardinality estimator, you can use the former cardinality estimator for all databases by using [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md) to set the database compatibility level to 110.  
+4.  If you cannot change all of the databases at once to use the new cardinality estimator, you can use the former cardinality estimator for all databases by using [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-compatibility-level.md) to set the database compatibility level to 110.  
   
 5.  If your workload is running with database compatibility level 110 and you want to test or run a specific query with the new cardinality estimator, you can run the query with trace flag 2312 to use the SQL Server 2014 version of the cardinality estimator.  To run a query with a trace flag, see the KB article [Enable plan-affecting SQL Server query optimizer behavior that can be controlled by different trace flags on a specific-query level](http://support.microsoft.com/kb/2801413).  
   

@@ -18,7 +18,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Apply the Changes to the Destination
-  In the data flow of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package that performs an incremental load of change data, the third and final task is to apply the changes to your destination. You will need one component to apply inserts, one to apply updates, and one to apply deletes.  
+  In the data flow of an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package that performs an incremental load of change data, the third and final task is to apply the changes to your destination. You will need one component to apply inserts, one to apply updates, and one to apply deletes.  
   
 > [!NOTE]  
 >  The second task in designing the data flow of a package that performs an incremental load of change data is to separate inserts, updates, and deletes. For more information about this component, see [Process Inserts, Updates, and Deletes](../../2014/integration-services/process-inserts-updates-and-deletes.md). For a description of the overall process for creating a package that performs an incremental load of change data, see [Change Data Capture &#40;SSIS&#41;](../../2014/integration-services/change-data-capture-ssis.md).  
@@ -98,7 +98,7 @@ manager: "jhubbard"
 6.  On the **Column Mappings** tab of the editor, map the appropriate column from the change data to the parameter in the DELETE statement.  
   
 ## Optimizing Inserts and Updates by Using MERGE Functionality  
- You can optimize the processing of inserts and updates by combining certain change data capture options with the use of the Transact-SQL MERGE keyword. For more information about the MERGE keyword, see [MERGE &#40;Transact-SQL&#41;](../Topic/MERGE%20\(Transact-SQL\).md).  
+ You can optimize the processing of inserts and updates by combining certain change data capture options with the use of the Transact-SQL MERGE keyword. For more information about the MERGE keyword, see [MERGE &#40;Transact-SQL&#41;](~/t-sql/statements/merge-transact-sql.md).  
   
  In the Transact-SQL statement that retrieves the change data, you can specify *all with merge* as the value of the *row_filter_option* parameter when you call the **cdc.fn_cdc_get_net_changes_<capture_instance>** function. This change data capture function operates more efficiently when it does not have to perform the extra processing that is required to distinguish inserts from updates. When you specify the *all with merge* parameter value, the **__$operation** value of the change data is 1 for deletes or 5 for changes that were caused by inserts or updates. For more information about the Transact-SQL function that is used to retrieve the change data, see [Retrieve and Understand the Change Data](../../2014/integration-services/retrieve-and-understand-the-change-data.md).After retrieving changes with the *all with merge* parameter value, you can apply deletes, and output the remaining rows to a temporary table or a staging table. Then, in a downstream Execute SQL Task, you can use a single MERGE statement to apply all the inserts or updates from the staging table to the destination.  
   

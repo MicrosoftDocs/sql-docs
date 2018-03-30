@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Create a Workload Group
-  You can create a workload group by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  You can create a workload group by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
 -   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
@@ -38,7 +38,7 @@ manager: "jhubbard"
  Creating a workload group requires CONTROL SERVER permission.  
   
 ##  <a name="CreWGProp"></a> Create a Workload Group Using SQL Server Management Studio  
- **To create a workload group by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
+ **To create a workload group by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]**  
   
 1.  In Object Explorer, recursively expand the **Management** node down to and including the resource pool that contains the workload group to be modified.  
   
@@ -55,7 +55,7 @@ manager: "jhubbard"
 7.  To save the changes, click **OK**  
   
 ##  <a name="CreWGTSQL"></a> Create a Workload Group Using Transact-SQL  
- **To create a workload group by using [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
+ **To create a workload group by using [!INCLUDE[tsql](../includes/tsql-md.md)]**  
   
 1.  Run the CREATE WORKLOAD GROUP statement specifying the property values to be set.  
   
@@ -78,7 +78,7 @@ GO
  [Create a Resource Pool](../../2014/database-engine/create-a-resource-pool.md)   
  [Change Workload Group Settings](../../2014/database-engine/change-workload-group-settings.md)   
  [Create and Test a Classifier User-Defined Function](../../2014/database-engine/create-and-test-a-classifier-user-defined-function.md)   
- [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../Topic/CREATE%20WORKLOAD%20GROUP%20\(Transact-SQL\).md)   
- [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../Topic/ALTER%20RESOURCE%20GOVERNOR%20\(Transact-SQL\).md)  
+ [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](~/t-sql/statements/create-workload-group-transact-sql.md)   
+ [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](~/t-sql/statements/alter-resource-governor-transact-sql.md)  
   
   

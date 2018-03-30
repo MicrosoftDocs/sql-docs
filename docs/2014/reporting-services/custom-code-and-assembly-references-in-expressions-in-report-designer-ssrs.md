@@ -21,7 +21,7 @@ helpviewer_keywords:
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 caps.latest.revision: 76
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Custom Code and Assembly References in Expressions in Report Designer (SSRS)
@@ -36,10 +36,10 @@ manager: "mblythe"
 >  Be aware that during an upgrade of a report server, reports that depend on custom assemblies might require additional steps to complete the upgrade. For more information, see [Use Upgrade Advisor to Prepare for Upgrades](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ##  <a name="RB3"></a> Working with Custom Code in Report Builder  
- In Report Builder, you can open a report from a report server that includes references to custom assemblies. For example, you can edit reports that are created and deployed by using Report Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. The custom assemblies must be deployed to the report server.  
+ In Report Builder, you can open a report from a report server that includes references to custom assemblies. For example, you can edit reports that are created and deployed by using Report Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. The custom assemblies must be deployed to the report server.  
   
  You cannot do the following:  
   
@@ -48,7 +48,7 @@ manager: "mblythe"
 2.  Preview a report with references to custom assemblies in local mode.  
   
 ##  <a name="Common"></a> Including References to Commonly Used Functions  
- Use the **Expression** dialog box to view a categorized list of common functions built-in to [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. When you expand **Common Functions** and click a category, the **Item** pane displays the list of functions that you include in an expression. The common functions include classes from the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> and <xref:System.Convert> namespaces and [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] run-time library functions. For convenience, you can view the most commonly used functions in the **Expression** dialog box, where they are listed by category: Text, Date and Time, Math, Inspection, Program Flow, Aggregate, Financial, Conversion, and Miscellaneous. Less commonly used functions do not appear in the list but can still be used in an expression.  
+ Use the **Expression** dialog box to view a categorized list of common functions built-in to [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. When you expand **Common Functions** and click a category, the **Item** pane displays the list of functions that you include in an expression. The common functions include classes from the [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] <xref:System.Math> and <xref:System.Convert> namespaces and [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] run-time library functions. For convenience, you can view the most commonly used functions in the **Expression** dialog box, where they are listed by category: Text, Date and Time, Math, Inspection, Program Flow, Aggregate, Financial, Conversion, and Miscellaneous. Less commonly used functions do not appear in the list but can still be used in an expression.  
   
  To use a built-in function, double-click the function name in the Item pane. A description of the function appears in the Description pane and an example of the function call appears in the Example pane. In the code pane, when you type the function name followed by a left parenthesis **(**, the IntelliSense help displays each valid syntax for the function call. For example, to calculate the maximum value for a field named `Quantity` in a table, add the simple expression `=Max(` to the Code pane, and then use the smart tags to view all possible valid syntaxes for the function call. To complete this example, type `=Max(Fields!Quantity.Value)`.  
   
@@ -63,7 +63,7 @@ manager: "mblythe"
  To include a reference to a class in an external assembly, you must identify the assembly for the report processor. Use the **References** page of the **Report Properties** dialog box to specify the fully qualified name of the assembly to add to the report. In your expression, you must use the fully qualified name for the class in the assembly. Classes in an external assembly do not appear in the **Expression** dialog box; you must provide the correct name for the class. A fully qualified name includes the namespace, the class name, and the member name.  
   
 ##  <a name="Embedded"></a> Including Embedded Code  
- To add embedded code to a report, use the Code tab of the **Report Properties** dialog box. The code block you create can contain multiple methods. Methods in embedded code must be written in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] and must be instance-based. The report processor automatically adds references for the System.Convert and System.Math namespaces. Use the **References** page of the **Report Properties** dialog box to add additional assembly references. For more information, see [Add an Assembly Reference to a Report &#40;SSRS&#41;](../../2014/reporting-services/add-an-assembly-reference-to-a-report-ssrs.md).  
+ To add embedded code to a report, use the Code tab of the **Report Properties** dialog box. The code block you create can contain multiple methods. Methods in embedded code must be written in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] and must be instance-based. The report processor automatically adds references for the System.Convert and System.Math namespaces. Use the **References** page of the **Report Properties** dialog box to add additional assembly references. For more information, see [Add an Assembly Reference to a Report &#40;SSRS&#41;](../../2014/reporting-services/add-an-assembly-reference-to-a-report-ssrs.md).  
   
  Methods in embedded code are available through a globally defined `Code` member. You access these by referring to the `Code` member and the method name. The following example calls the method `ToUSD`, which converts the value in the `StandardCost` field to a dollar value:  
   
@@ -99,7 +99,7 @@ Public Dim MyDoubleVersion As Double = 123.456
   
  `=Code.FixSpelling(Fields!SubCategory.Value)`  
   
- The following code, when embedded in a report definition code block, shows an implementation of the `FixSpelling` method. This example shows you how to use a fully qualified reference to the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] `StringBuilder` class.  
+ The following code, when embedded in a report definition code block, shows an implementation of the `FixSpelling` method. This example shows you how to use a fully qualified reference to the [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] `StringBuilder` class.  
   
 ```vb  
 Public Function FixSpelling(ByVal s As String) As String  
@@ -115,7 +115,7 @@ End Function
  For more information about built-in object collections and initialization, see [Built-in Globals and Users References &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/built-in-globals-and-users-references-report-builder-and-ssrs.md) and [Initializing Custom Assembly Objects](../../2014/reporting-services/dev-guide/initializing-custom-assembly-objects.md).  
   
 ##  <a name="Parameters"></a> Including References to Parameters from Code  
- You can reference the global parameters collection via custom code in a Code block of the report definition or in a custom assembly that you provide. The parameters collection is read-only and has no public iterators. You cannot use a [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] `For Each` construct to step through the collection. You need to know the name of the parameter defined in the report definition before you can reference it in your code. You can, however, iterate through all the values of a multivalue parameter.  
+ You can reference the global parameters collection via custom code in a Code block of the report definition or in a custom assembly that you provide. The parameters collection is read-only and has no public iterators. You cannot use a [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] `For Each` construct to step through the collection. You need to know the name of the parameter defined in the report definition before you can reference it in your code. You can, however, iterate through all the values of a multivalue parameter.  
   
  The following table includes examples of referencing the built-in collection `Parameters` from custom code:  
   
@@ -127,7 +127,7 @@ End Function
 ##  <a name="Custom"></a> Including References to Code from Custom Assemblies  
  To use custom assemblies in a report, you must first create the assembly, make it available to Report Designer, add a reference to the assembly in the report, and then use an expression in the report to refer to the methods contained in that assembly. When the report is deployed to the report server, you must also deploy the custom assembly to the report server.  
   
- For information about creating a custom assembly and making it available to [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], see [Using Custom Assemblies with Reports](../../2014/reporting-services/dev-guide/using-custom-assemblies-with-reports.md).  
+ For information about creating a custom assembly and making it available to [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], see [Using Custom Assemblies with Reports](../../2014/reporting-services/dev-guide/using-custom-assemblies-with-reports.md).  
   
  To refer to custom code in an expression, you must call the member of a class within the assembly. How you do this depends on whether the method is static or instance-based. Static methods within a custom assembly are available globally within the report. You can access static methods in expressions by specifying the namespace, class, and method name. The following example calls the method `ToGBP`, which converts the value of the **StandardCost** value from dollar to pounds sterling:  
   
@@ -142,7 +142,7 @@ End Function
 ```  
   
 > [!NOTE]  
->  In Report Designer, a custom assembly is loaded once and is not unloaded until you close [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. If you preview a report, make changes to a custom assembly used in the report, and then preview the report again, the changes will not appear in the second preview. To reload the assembly, close and reopen [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] and then preview the report.  
+>  In Report Designer, a custom assembly is loaded once and is not unloaded until you close [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. If you preview a report, make changes to a custom assembly used in the report, and then preview the report again, the changes will not appear in the second preview. To reload the assembly, close and reopen [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] and then preview the report.  
   
  For more information about accessing your code, see [Accessing Custom Assemblies Through Expressions](../../2014/reporting-services/dev-guide/accessing-custom-assemblies-through-expressions.md).  
   

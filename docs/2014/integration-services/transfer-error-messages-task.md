@@ -20,11 +20,11 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Transfer Error Messages Task
-  The Transfer Error Messages task transfers one or more [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user-defined error messages between instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. User-defined messages are messages with an identifier that is equal to or greater than 50000. Messages with an identifier less than 50000 are system error messages, and cannot be transferred by using the Transfer Error Messages task.  
+  The Transfer Error Messages task transfers one or more [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] user-defined error messages between instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. User-defined messages are messages with an identifier that is equal to or greater than 50000. Messages with an identifier less than 50000 are system error messages, and cannot be transferred by using the Transfer Error Messages task.  
   
  The Transfer Error Messages task can be configured to transfer all error messages, or only the specified error messages. User-defined error messages may be available in a number of different languages and the task can be configured to transfer only messages in selected languages. A us_english version of the message that uses code page 1033 must exist on the destination server before you can transfer other language versions of the message to that server.  
   
- The sysmessages table in the master database contains all the error messages—both system and user-defined—that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses.  
+ The sysmessages table in the master database contains all the error messages—both system and user-defined—that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses.  
   
  The user-defined messages to be transferred may already exist on the destination. An error message is defined as a duplicate error message if the identifier and the language are the same. The Transfer Error Messages task can be configured to handle existing error messages in the following ways:  
   
@@ -36,7 +36,7 @@ manager: "jhubbard"
   
  At run time, the Transfer Error Messages task connects to the source and destination servers by using one or two SMO connection managers. The SMO connection manager is configured separately from the Transfer Error Messages task, and then is referenced in the Transfer Error Messages task. The SMO connection manager specifies the server and the authentication mode to use when accessing the server. For more information, see [SMO Connection Manager](../../2014/integration-services/smo-connection-manager.md).  
   
- The Transfer Error Messages task supports a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] source and destination. There are no restrictions on which version to use as a source or destination.  
+ The Transfer Error Messages task supports a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] source and destination. There are no restrictions on which version to use as a source or destination.  
   
 ## Events  
  The task raises an information event that reports the number of error messages that have been transferred.  
@@ -59,9 +59,9 @@ manager: "jhubbard"
  To create new error messages, the user that runs the package must be a member of the sysadmin or serveradmin server role on the destination server.  
   
 ## Configuration of the Transfer Error Messages Task  
- You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer or programmatically.  
   
- For more information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click one of the following topics:  
+ For more information about the properties that you can set in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click one of the following topics:  
   
 -   [Transfer Error Messages Task Editor &#40;General Page&#41;](../../2014/integration-services/transfer-error-messages-task-editor-general-page.md)  
   
@@ -74,7 +74,7 @@ manager: "jhubbard"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.TransferErrorMessagesTask.TransferErrorMessagesTask>  
   
 ## Related Tasks  
- For more information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
+ For more information about how to set these properties in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click the following topic:  
   
 -   [Set the Properties of a Task or Container](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)  
   

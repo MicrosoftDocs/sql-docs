@@ -18,7 +18,7 @@ manager: "jhubbard"
 # SAP BW Source Editor (Connection Manager Page)
   Use the **Connection Manager** page of the **SAP BW Source Editor** to select the SAP BW connection manager for the SAP BW source. On this page, you also select the execution mode and the parameters for extracting the data from the SAP Netweaver BW system.  
   
- To learn more about the SAP BW source component of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW, see [SAP BW Source](../../2014/integration-services/sap-bw-source.md).  
+ To learn more about the SAP BW source component of the [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW, see [SAP BW Source](../../2014/integration-services/sap-bw-source.md).  
   
 > [!IMPORTANT]  
 >  The documentation for the Microsoft Connector 1.1 for SAP BW assumes familiarity with the SAP Netweaver BW environment. For more information about SAP Netweaver BW, or for information about how to configure SAP Netweaver BW objects and processes, see your SAP documentation.  
@@ -28,7 +28,7 @@ manager: "jhubbard"
   
  **To open the Connection Manager page**  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package that contains the SAP BW source.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package that contains the SAP BW source.  
   
 2.  On the **Data Flow** tab, double-click the SAP BW source.  
   
@@ -55,9 +55,9 @@ manager: "jhubbard"
   
 |Option|Description|  
 |------------|-----------------|  
-|**P - Trigger Process Chain**|Trigger a process chain. In this case, the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package starts the extraction process.|  
+|**P - Trigger Process Chain**|Trigger a process chain. In this case, the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package starts the extraction process.|  
 |**W - Wait for Notify**|Wait for notification from the SAP Netweaver BW system to begin extracting the data. In this case, the SAP Netweaver BW system starts the extraction process.|  
-|**E - Extract Only**|Retrieve the data that is associated with a particular Request ID. In this case, the SAP Netweaver BW system has already extracted the data into an internal table, and the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package just reads the data.|  
+|**E - Extract Only**|Retrieve the data that is associated with a particular Request ID. In this case, the SAP Netweaver BW system has already extracted the data into an internal table, and the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package just reads the data.|  
   
  **Preview**  
  Open the **Preview** dialog box in which you can preview results. For more information, see [Preview](../../2014/integration-services/preview.md).  

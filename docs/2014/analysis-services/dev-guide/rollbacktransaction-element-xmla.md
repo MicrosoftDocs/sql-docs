@@ -29,7 +29,7 @@ ms.author: "mblythe"
 manager: "mblythe"
 ---
 # RollbackTransaction Element (XMLA)
-  Rolls back a transaction on the current session with an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+  Rolls back a transaction on the current session with an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ## Syntax  
   
@@ -56,7 +56,7 @@ manager: "mblythe"
 |Child elements|None|  
   
 ## Remarks  
- The `RollbackTransaction` command rolls back all active transactions, explicitly defined using the `BeginTransaction` element, on the current session. If an active transaction does not already exist, an error occurs. If an active transaction already exists, the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance decrements the reference count of transactions for the current session to zero, rolling back all active transactions.  
+ The `RollbackTransaction` command rolls back all active transactions, explicitly defined using the `BeginTransaction` element, on the current session. If an active transaction does not already exist, an error occurs. If an active transaction already exists, the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance decrements the reference count of transactions for the current session to zero, rolling back all active transactions.  
   
 ## See Also  
  [BeginTransaction Element &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/begintransaction-element-xmla.md)   

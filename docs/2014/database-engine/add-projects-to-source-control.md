@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Add Projects to Source Control
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] solutions can host multiple script projects. How you add a project to source control depends upon whether the solution to which the project belongs is under source control. If the solution is under source control, checking in the solution automatically adds the project to source control. For more information about checking in solutions, see [Check In Files](../../2014/database-engine/check-in-files.md).  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] solutions can host multiple script projects. How you add a project to source control depends upon whether the solution to which the project belongs is under source control. If the solution is under source control, checking in the solution automatically adds the project to source control. For more information about checking in solutions, see [Check In Files](../../2014/database-engine/check-in-files.md).  
   
  If the solution that this project belongs to is not under source control, you can add that solution to source control, which then automatically adds the solution's projects. For more information about adding solutions to source control, see [Add Solutions to Source Control](../../2014/database-engine/add-solutions-to-source-control.md).  
   

@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 99311b36-5dc5-4039-ac93-4d2826701327
 caps.latest.revision: 13
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Report Authoring Concepts (Report Builder and SSRS)
   This section briefly defines key concepts used in the Report Builder and Report Designer documentation. For definitions of specific words or terms, see the [Glossary &#40;Report Builder&#41;](../../2014/reporting-services/glossary-report-builder.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## In This Section  
  [Reports, Report Parts, and Report Definitions &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)  

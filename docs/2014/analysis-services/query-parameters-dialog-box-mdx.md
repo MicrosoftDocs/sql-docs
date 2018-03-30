@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Query Parameters Dialog Box (MDX)
-  Use the **Query Parameters** dialog box in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] and [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to add parameters to MDX queries that are used to define sets, dimensions, and subcubes. You can display the **Query Parameters** dialog box by clicking the **Parameters** icon in the **MDX query builder** dialog box.  
+  Use the **Query Parameters** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] and [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to add parameters to MDX queries that are used to define sets, dimensions, and subcubes. You can display the **Query Parameters** dialog box by clicking the **Parameters** icon in the **MDX query builder** dialog box.  
   
 ## Options  
  **Parameter**  

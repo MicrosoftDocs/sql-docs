@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: f32527ae-f623-4e08-adfb-6d3262f5c2ac
 caps.latest.revision: 6
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "jhubbard"
 ---
 # Install ADO.NET Data Services to support data feed exports of SharePoint lists

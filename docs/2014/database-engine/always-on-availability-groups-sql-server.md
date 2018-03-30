@@ -22,13 +22,13 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Always On Availability Groups (SQL Server)
-  The [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] feature is a high-availability and disaster-recovery solution that provides an enterprise-level alternative to database mirroring. Introduced in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] maximizes the availability of a set of user databases for an enterprise. An *availability group* supports a failover environment for a discrete set of user databases, known as *availability databases*, that fail over together. An availability group supports a set of read-write primary databases and one to eight sets of corresponding secondary databases. Optionally, secondary databases can be made available for read-only access and/or some backup operations.  
+  The [!INCLUDE[ssHADR](../includes/sshadr-md.md)] feature is a high-availability and disaster-recovery solution that provides an enterprise-level alternative to database mirroring. Introduced in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], [!INCLUDE[ssHADR](../includes/sshadr-md.md)] maximizes the availability of a set of user databases for an enterprise. An *availability group* supports a failover environment for a discrete set of user databases, known as *availability databases*, that fail over together. An availability group supports a set of read-write primary databases and one to eight sets of corresponding secondary databases. Optionally, secondary databases can be made available for read-only access and/or some backup operations.  
   
  An availability group fails over at the level of an availability replica. Failovers are not caused by database issues such as a database becoming suspect due to a loss of a data file, deletion of a database, or corruption of a transaction log.  
   
   
 ##  <a name="Benefits"></a> Benefits  
- [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] provides a rich set of options that improve database availability and that enable improved resource use. The key components are as follows:  
+ [!INCLUDE[ssHADR](../includes/sshadr-md.md)] provides a rich set of options that improve database availability and that enable improved resource use. The key components are as follows:  
   
 -   Supports up to nine availability replicas. An *availability replica* is an instantiation of an availability group that is hosted by a specific instance of SQL Server and maintains a local copy of each availability database that belongs to the availability group. Each availability group supports one primary replica and up to eight secondary replicas. For more information, see [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/overview-of-alwayson-availability-groups-sql-server.md).  
   
@@ -63,19 +63,19 @@ manager: "jhubbard"
   
 -   Provides an integrated set of tools to simplify deployment and management of availability groups, including:  
   
-    -   [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL statements for creating and managing availability groups. For more information, see [Overview of Transact-SQL Statements for Always On Availability Group;SQL Server;](../../2014/database-engine/overview-of-transact-sql-statements-for-alwayson-availability-groups-sql-server.md).  
+    -   [!INCLUDE[tsql](../includes/tsql-md.md)] DDL statements for creating and managing availability groups. For more information, see [Overview of Transact-SQL Statements for Always On Availability Group;SQL Server;](../../2014/database-engine/overview-of-transact-sql-statements-for-alwayson-availability-groups-sql-server.md).  
   
-    -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] tools, as follows:  
+    -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] tools, as follows:  
   
-        -   The [!INCLUDE[ssAoNewAgWiz](../../includes/ssaonewagwiz-md.md)] creates and configures an availability group. In some environments, this wizard can also automatically prepare the secondary databases and start data synchronization for each of them. For more information, see [Use the New Availability Group Dialog Box;SQL Server Management Studio;](../../2014/database-engine/use-the-new-availability-group-dialog-box-sql-server-management-studio.md).  
+        -   The [!INCLUDE[ssAoNewAgWiz](../includes/ssaonewagwiz-md.md)] creates and configures an availability group. In some environments, this wizard can also automatically prepare the secondary databases and start data synchronization for each of them. For more information, see [Use the New Availability Group Dialog Box;SQL Server Management Studio;](../../2014/database-engine/use-the-new-availability-group-dialog-box-sql-server-management-studio.md).  
   
-        -   The [!INCLUDE[ssAoAddDbWiz](../../includes/ssaoadddbwiz-md.md)] adds one or more primary databases to an existing availability group. In some environments, this wizard can also automatically prepare the secondary databases and start data synchronization for each of them. For more information, see [Use the Add Database to Availability Group Wizard (SQL Server)](../../2014/database-engine/use-the-add-database-to-availability-group-wizard-sql-server-management-studio.md).  
+        -   The [!INCLUDE[ssAoAddDbWiz](../includes/ssaoadddbwiz-md.md)] adds one or more primary databases to an existing availability group. In some environments, this wizard can also automatically prepare the secondary databases and start data synchronization for each of them. For more information, see [Use the Add Database to Availability Group Wizard (SQL Server)](../../2014/database-engine/use-the-add-database-to-availability-group-wizard-sql-server-management-studio.md).  
   
-        -   The [!INCLUDE[ssAoAddRepWiz](../../includes/ssaoaddrepwiz-md.md)] adds one or more secondary replicas to an existing availability group. In some environments, this wizard can also automatically prepare the secondary databases and start data synchronization for each of them. For more information, see [Use the Add Replica to Availability Group Wizard;SQL Server Management Studio;](../../2014/database-engine/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md).  
+        -   The [!INCLUDE[ssAoAddRepWiz](../includes/ssaoaddrepwiz-md.md)] adds one or more secondary replicas to an existing availability group. In some environments, this wizard can also automatically prepare the secondary databases and start data synchronization for each of them. For more information, see [Use the Add Replica to Availability Group Wizard;SQL Server Management Studio;](../../2014/database-engine/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md).  
   
-        -   The [!INCLUDE[ssAoFoAgWiz](../../includes/ssaofoagwiz-md.md)] initiates a manual failover on an availability group. Depending on the configuration and state of the secondary replica that you specify as the failover target, the wizard can perform either a planned or forced manual failover. For more information, see [Use the Fail Over Availability Group Wizard;SQL Server Management Studio;](../../2014/database-engine/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md).  
+        -   The [!INCLUDE[ssAoFoAgWiz](../includes/ssaofoagwiz-md.md)] initiates a manual failover on an availability group. Depending on the configuration and state of the secondary replica that you specify as the failover target, the wizard can perform either a planned or forced manual failover. For more information, see [Use the Fail Over Availability Group Wizard;SQL Server Management Studio;](../../2014/database-engine/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md).  
   
-    -   The [!INCLUDE[ssAoDash](../../includes/ssaodash-md.md)] monitors AlwaysOn availability groups, availability replicas, and availability databases and evaluates results for AlwaysOn policies. For more information, see [Use the AlwaysOn Dashboard;SQL Server Management Studio;](../../2014/database-engine/use-the-alwayson-dashboard-sql-server-management-studio.md).  
+    -   The [!INCLUDE[ssAoDash](../includes/ssaodash-md.md)] monitors AlwaysOn availability groups, availability replicas, and availability databases and evaluates results for AlwaysOn policies. For more information, see [Use the AlwaysOn Dashboard;SQL Server Management Studio;](../../2014/database-engine/use-the-alwayson-dashboard-sql-server-management-studio.md).  
   
     -   The Object Explorer Details pane displays basic information about existing availability groups. For more information, see [Use the Object Explorer Details to Monitor Availability Group;SQL Server Management Studio;](../../2014/database-engine/use-object-explorer-details-to-monitor-availability-groups.md).  
   
@@ -95,7 +95,7 @@ manager: "jhubbard"
  A read-only copy of an availability database.  
   
  availability replica  
- An instantiation of an availability group that is hosted by a specific instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and maintains a local copy of each availability database that belongs to the availability group. Two types of availability replicas exist: a single *primary replica* and one to eight *secondary replicas*.  
+ An instantiation of an availability group that is hosted by a specific instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and maintains a local copy of each availability database that belongs to the availability group. Two types of availability replicas exist: a single *primary replica* and one to eight *secondary replicas*.  
   
  primary replica  
  The availability replica that makes the primary databases available for read-write connections from clients and, also, sends transaction log records for each primary database to every secondary replica.  
@@ -110,7 +110,7 @@ manager: "jhubbard"
 >  For more information, see [Overview of AlwaysOn Availability Groups;SQL Serve;](../../2014/database-engine/overview-of-alwayson-availability-groups-sql-server.md).  
   
 ##  <a name="Interoperability"></a> Interoperability and Coexistence with Other Database Engine Features  
- [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] can be used with the following features or components of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+ [!INCLUDE[ssHADR](../includes/sshadr-md.md)] can be used with the following features or components of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
 -   [About Change Data Capture;SQL Server;](../../2014/database-engine/about-change-data-capture-sql-server.md)  
   
@@ -139,7 +139,7 @@ manager: "jhubbard"
 -   [Reporting Services](../../2014/database-engine/reporting-services-with-alwayson-availability-groups-sql-server.md)  
   
 > [!WARNING]  
->  For information about restrictions and limitations for using other features with [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], see [Always On Availability Groups: Interoperability;SQL Server;](../../2014/database-engine/always-on-availability-groups-interoperability-sql-server.md).  
+>  For information about restrictions and limitations for using other features with [!INCLUDE[ssHADR](../includes/sshadr-md.md)], see [Always On Availability Groups: Interoperability;SQL Server;](../../2014/database-engine/always-on-availability-groups-interoperability-sql-server.md).  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   

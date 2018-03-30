@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 1262f283-9fc2-4bc1-9c79-457f7642abc7
 caps.latest.revision: 6
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Display the Same Data on a Matrix and a Chart (Report Builder)
@@ -25,7 +25,7 @@ manager: "mblythe"
  At run-time, your report may appear cluttered if there are too many group values for your group definitions. You might need to filter values, combine groups, or adjust the threshold for the chart to combine groups for you. For more information, see [Linking Multiple Data Regions to the Same Dataset &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ### To add a matrix and chart to display the same data  
   
@@ -47,13 +47,13 @@ manager: "mblythe"
   
 6.  In the matrix, right-click the cell with data, click **Text Box Properties**, and then click **Number**. Choose an appropriate format for the dataset field value.  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 8.  Drag the same dataset field you chose in step 3 to the **Values** area on the chart.  
   
 9. In the chart, right-click the Y axis, click **Axis Properties**, and then click **Number**. Choose the same format for the data that you chose in step 4.  
   
-10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
      In the next few steps, you will set the matrix row group and the chart series group to the same expression, and also set the sort order for the chart series group.  
   
@@ -71,7 +71,7 @@ manager: "mblythe"
   
 16. In **Sort by**, from the drop-down list, choose the dataset field that you chose to group by in step 9.  
   
-17. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+17. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
      In the next few steps, you will set the matrix column group and the chart category group to the same expression, and also set the sort order for the chart category group.  
   
@@ -89,7 +89,7 @@ manager: "mblythe"
   
 23. In **Sort by**, from the drop-down list, choose the dataset field that you chose to group by in step 16.  
   
-24. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+24. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 25. Preview the result. The matrix row and column groups display the same data as the chart series and category groups.  
   

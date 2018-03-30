@@ -28,7 +28,7 @@ manager: "jhubbard"
   
  `SQLColumns` can be executed on a static server cursor. An attempt to execute `SQLColumns` on an updatable (dynamic or keyset) cursor will return SQL_SUCCESS_WITH_INFO indicating that the cursor type has been changed.  
   
- The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver supports reporting information for tables on linked servers by accepting a two-part name for the *CatalogName* parameter: *Linked_Server_Name.Catalog_Name*.  
+ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver supports reporting information for tables on linked servers by accepting a two-part name for the *CatalogName* parameter: *Linked_Server_Name.Catalog_Name*.  
   
  For ODBC 2.*x* applications not using wildcards in *TableName*, `SQLColumns` returns information about any tables whose names match *TableName* and are owned by the current user. If the current user owns no table whose name matches the *TableName* parameter, `SQLColumns` returns information about any tables owned by other users where the table name matches the *TableName* parameter. For ODBC 2.*x* applications using wildcards, `SQLColumns` returns all tables whose names match *TableName*. For ODBC 3.*x* applications `SQLColumns` returns all tables whose names match *TableName* regardless of owner or whether wildcards are used.  
   
@@ -53,7 +53,7 @@ manager: "jhubbard"
   
  For the UDT of parameters, you can use the new driver-specific descriptors defined above to get or set the extra metadata properties of a UDT, should the server return or require this information.  
   
- When a client connects to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and calls SQLColumns, using NULL or wild card values for the catalog input parameter will not return information from other catalogs. Instead, only information about the current catalog will be returned. The client can first call SQLTables to determine in which catalog the desired table is located. The client can then use that catalog value for the catalog input parameter in its call to SQLColumns to retrieve information about the columns in that table.  
+ When a client connects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and calls SQLColumns, using NULL or wild card values for the catalog input parameter will not return information from other catalogs. Instead, only information about the current catalog will be returned. The client can first call SQLTables to determine in which catalog the desired table is located. The client can then use that catalog value for the catalog input parameter in its call to SQLColumns to retrieve information about the columns in that table.  
   
 ## SQLColumns and Table-Valued Parameters  
  The result set returned by SQLColumns depends on the setting of SQL_SOPT_SS_NAME_SCOPE. For more information, see [SQLSetStmtAttr](../../../2014/database-engine/dev-guide/sqlsetstmtattr.md). The following columns have been added for table-valued parameters:  
@@ -74,14 +74,14 @@ manager: "jhubbard"
  `SQLColumns` supports large CLR user-defined types (UDTs). For more information, see [Large CLR User-Defined Types &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/large-clr-user-defined-types-odbc.md).  
   
 ## SQLColumns Support for Sparse Columns  
- Two [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] specific columns have been added to the result set for SQLColumns:  
+ Two [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specific columns have been added to the result set for SQLColumns:  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |SS_IS_SPARSE|`Smallint`|If the column is a sparse column, this is SQL_TRUE; otherwise, SQL_FALSE.|  
 |SS_IS_COLUMN_SET|`Smallint`|If the column is the `column_set` column, this is SQL_TRUE; otherwise, SQL_FALSE.|  
   
- In conformance with the ODBC specification, SS_IS_SPARSE and SS_IS_COLUMN_SET appear before all driver-specific columns that were added to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] versions earlier than [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], and after all columns mandated by ODBC itself.  
+ In conformance with the ODBC specification, SS_IS_SPARSE and SS_IS_COLUMN_SET appear before all driver-specific columns that were added to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions earlier than [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], and after all columns mandated by ODBC itself.  
   
  The result set returned by SQLColumns depends on the setting of SQL_SOPT_SS_NAME_SCOPE. For more information, see [SQLSetStmtAttr](../../../2014/database-engine/dev-guide/sqlsetstmtattr.md).  
   

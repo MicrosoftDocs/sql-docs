@@ -45,11 +45,11 @@ manager: "jhubbard"
 -   Map the input columns in the Cache Transform to destination columns in the Cache connection manager.  
   
     > [!NOTE]  
-    >  Each input column must be mapped to a destination column, and the column data types must match. Otherwise, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Designer displays an error message.  
+    >  Each input column must be mapped to a destination column, and the column data types must match. Otherwise, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Designer displays an error message.  
   
      You can use the **Cache Connection Manager Editor** to modify column data types, names, and other column properties.  
   
- You can set properties through [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Designer. For more information about the properties that you can set in the **Advanced Editor** dialog box, see [Transformation Custom Properties](../../2014/integration-services/transformation-custom-properties.md).  
+ You can set properties through [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Designer. For more information about the properties that you can set in the **Advanced Editor** dialog box, see [Transformation Custom Properties](../../2014/integration-services/transformation-custom-properties.md).  
   
  For more information about how to set properties, see [Set the Properties of a Data Flow Component](../../2014/integration-services/set-the-properties-of-a-data-flow-component.md).  
   

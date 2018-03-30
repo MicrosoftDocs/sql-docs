@@ -16,7 +16,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Ready to Prepare Image
-  The **Ready to Prepare Image** page provides a summary of the features to be prepared by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup.  
+  The **Ready to Prepare Image** page provides a summary of the features to be prepared by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup.  
   
 ## Options  
  You have the following options on this page:  

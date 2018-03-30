@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
 caps.latest.revision: 23
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Manage FileTables
@@ -24,9 +24,9 @@ manager: "jhubbard"
 ##  <a name="HowToEnumerate"></a> How To: Get a List of FileTables and Related Objects  
  To get a list of FileTables, query one of the following catalog views:  
   
--   [sys.filetables &#40;Transact-SQL&#41;](../Topic/sys.filetables%20\(Transact-SQL\).md)  
+-   [sys.filetables &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-filetables-transact-sql.md)  
   
--   [sys.tables &#40;Transact-SQL&#41;](../Topic/sys.tables%20\(Transact-SQL\).md) (Check the value of the **is_filetable** column.)  
+-   [sys.tables &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-tables-transact-sql.md) (Check the value of the **is_filetable** column.)  
   
 ```tsql  
 SELECT * FROM sys.filetables;  
@@ -36,7 +36,7 @@ SELECT * FROM sys.tables WHERE is_filetable = 1;
 GO  
 ```  
   
- To get a list of the system-defined objects that were created when the associated FileTables were created, query the catalog view [sys.filetable_system_defined_objects &#40;Transact-SQL&#41;](../Topic/sys.filetable_system_defined_objects%20\(Transact-SQL\).md).  
+ To get a list of the system-defined objects that were created when the associated FileTables were created, query the catalog view [sys.filetable_system_defined_objects &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql.md).  
   
 ```tsql  
 SELECT object_id, OBJECT_NAME(object_id) AS 'Object Name'  
@@ -78,7 +78,7 @@ GO
 -   None of the database-level directories on the instance are visible if FILESTREAM is disabled at the instance level.  
   
 ###  <a name="HowToDisable"></a> How To: Disable and Re-enable Non-Transactional Access at the Database Level  
- For more information, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md).  
+ For more information, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  **To disable full non-transactional access**  
  Call the **ALTER DATABASE** statement and SET the value of **NON_TRANSACTED_ACCESS** to **READ_ONLY** or **OFF**.  
@@ -114,7 +114,7 @@ GO
 3.  A valid directory has been specified at the database level.  
   
 ##  <a name="BasicsEnabling"></a> Disabling and Re-enabling the FileTable Namespace at the Table Level  
- Disabling the FileTable namespace disables all the system-defined constraints and triggers that were created with the FileTable. This is useful in cases where a FileTable has to be reorganized on a large scale by using [!INCLUDE[tsql](../../includes/tsql-md.md)] operations without incurring the expense of enforcing FileTable semantics. However these operations can leave the FileTable in an inconsistent state, and can prevent the re-enabling of the FileTable namespace.  
+ Disabling the FileTable namespace disables all the system-defined constraints and triggers that were created with the FileTable. This is useful in cases where a FileTable has to be reorganized on a large scale by using [!INCLUDE[tsql](../includes/tsql-md.md)] operations without incurring the expense of enforcing FileTable semantics. However these operations can leave the FileTable in an inconsistent state, and can prevent the re-enabling of the FileTable namespace.  
   
  Disabling a FileTable namespace has the following results:  
   
@@ -160,7 +160,7 @@ GO
 >  Killing open file handles may cause users to lose unsaved data. This behavior is consistent with the behavior of the file system itself.  
   
 ###  <a name="HowToListOpen"></a> How To: Get a List of Open File Handles Associated with a FileTable  
- Query the catalog view [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../Topic/sys.dm_filestream_non_transacted_handles%20\(Transact-SQL\).md).  
+ Query the catalog view [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md).  
   
 ```tsql  
 SELECT * FROM sys.dm_filestream_non_transacted_handles;  
@@ -168,7 +168,7 @@ GO
 ```  
   
 ###  <a name="HowToKill"></a> How To: Kill Open File Handles Associated with a FileTable  
- Call the stored procedure [sp_kill_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../Topic/sp_kill_filestream_non_transacted_handles%20\(Transact-SQL\).md) with the appropriate arguments to kill all open file handles in the database or in the FileTable, or to kill a specific handle.  
+ Call the stored procedure [sp_kill_filestream_non_transacted_handles &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md) with the appropriate arguments to kill all open file handles in the database or in the FileTable, or to kill a specific handle.  
   
 ```  
 USE database_name;  
@@ -190,7 +190,7 @@ GO
  Most locks taken by FileTables correspond to files opened by applications.  
   
  **To identify open files and the associated locks**  
- Join the **request_owner_id** field in the dynamic management view [sys.dm_tran_locks &#40;Transact-SQL&#41;](../Topic/sys.dm_tran_locks%20\(Transact-SQL\).md) with the **fcb_id** field in [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../Topic/sys.dm_filestream_non_transacted_handles%20\(Transact-SQL\).md). In some cases, the lock does not correspond to a single open file handle.  
+ Join the **request_owner_id** field in the dynamic management view [sys.dm_tran_locks &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md) with the **fcb_id** field in [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md). In some cases, the lock does not correspond to a single open file handle.  
   
 ```tsql  
 SELECT opened_file_name  
@@ -201,18 +201,18 @@ GO
 ```  
   
 ##  <a name="BasicsSecurity"></a> FileTable Security  
- The files and directories stored in FileTables are secured by SQL Server security only. Table and column-based security is enforced for file system access as well as [!INCLUDE[tsql](../../includes/tsql-md.md)] access. Windows file system security APIs and ACL settings are not supported.  
+ The files and directories stored in FileTables are secured by SQL Server security only. Table and column-based security is enforced for file system access as well as [!INCLUDE[tsql](../includes/tsql-md.md)] access. Windows file system security APIs and ACL settings are not supported.  
   
  The security and access permissions that are applicable to FILESTREAM filegroups and containers also apply to FileTables, since the file data is stored as a FILESTREAM column in the FileTable.  
   
  **FileTable Security and Transact-SQL Access**  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] access to data in FileTables is secured in the same way as any other table. Appropriate table and column-level security checks are done for every operation that accesses or changes the data.  
+ [!INCLUDE[tsql](../includes/tsql-md.md)] access to data in FileTables is secured in the same way as any other table. Appropriate table and column-level security checks are done for every operation that accesses or changes the data.  
   
  **FileTable Security and File System Access**  
- File system APIs require appropriate [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permissions on the entire row in the FileTable (that is, table-level permission) to open a handle to a file or directory stored in the FileTable. If the user does not have the appropriate [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permission on any column in the FileTable, then file system access is denied.  
+ File system APIs require appropriate [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] permissions on the entire row in the FileTable (that is, table-level permission) to open a handle to a file or directory stored in the FileTable. If the user does not have the appropriate [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] permission on any column in the FileTable, then file system access is denied.  
   
 ##  <a name="OtherBackup"></a> Backup and FileTables  
- When you use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to back up a FileTable, the FILESTREAM data is backed up with the structured data in the database. If you do not want to back up FILESTREAM data with relational data, you can use a partial backup to exclude FILESTREAM filegroups.  
+ When you use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to back up a FileTable, the FILESTREAM data is backed up with the structured data in the database. If you do not want to back up FILESTREAM data with relational data, you can use a partial backup to exclude FILESTREAM filegroups.  
   
  **Transactional Consistency of FileTable Backups**  
   
@@ -221,7 +221,7 @@ GO
  However, when full non-transactional access is enabled, then a FileTable could contain data that was updated more recently (through a non-transactional update) than the transaction that the tool or process is reading from the transaction log. This means that a “point in time” restore operation to a specific transaction may contain FILESTREAM data that is more recent than that transaction. This is the expected behavior when non-transactional updates are allowed on FileTables.  
   
 ##  <a name="Monitor"></a> SQL Server Profiler and FileTables  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler can capture the Windows File Open and File Close operations in trace output for files that are stored in a FileTable.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler can capture the Windows File Open and File Close operations in trace output for files that are stored in a FileTable.  
   
 ##  <a name="OtherAuditing"></a> Auditing and FileTables  
  FileTable can be audited just like any other table. Howerver, Win32 access patterns are not set based operations. A single action in the file system translates into multiple Transact-SQL DML operations. For example, opening a file in Microsoft Word translates into multiple open/close/create/rename/delete operations and corresponding Transact-SQL DML activities. This results in verbose audit records where it is hard to correlate records between file system actions and corresponding Transact-SQL DML audit records.  

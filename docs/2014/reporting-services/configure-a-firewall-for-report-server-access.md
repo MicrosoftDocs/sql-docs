@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 04dae07a-a3a4-424c-9bcb-a8000e20dc93
 caps.latest.revision: 9
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Configure a Firewall for Report Server Access
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Report server applications and published reports are accessed through URLs that specify an IP address, port, and virtual directory. If Windows Firewall is turned on, the port that the report server is configured to use is most likely closed. Indications that a port might be closed are the appearance of a blank Web page after requesting a report, or a blank page when you attempt to open Report Manager from a remote client computer.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Report server applications and published reports are accessed through URLs that specify an IP address, port, and virtual directory. If Windows Firewall is turned on, the port that the report server is configured to use is most likely closed. Indications that a port might be closed are the appearance of a blank Web page after requesting a report, or a blank page when you attempt to open Report Manager from a remote client computer.  
   
  To open a port, you must use the Windows Firewall utility on the report server computer. Reporting Services will not open ports for you; you must perform this step manually.  
   
  By default, the report server listens for HTTP requests on port 80. As such, the following instructions include steps that specify that port. If you configured the report server URLs to use a different port, you must specify that port number when following the instructions below.  
   
- If you are accessing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relational databases on external computers, or if the report server database is on an external [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, you must open port 1433 and 1434 on the external computer. For more information, see [Configure a Windows Firewall for Database Engine Access](../../2014/database-engine/configure-a-windows-firewall-for-database-engine-access.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online. For more information about the default Windows firewall settings, and a description of the TCP ports that affect the [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], and [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], see [Configure the Windows Firewall to Allow SQL Server Access](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+ If you are accessing [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] relational databases on external computers, or if the report server database is on an external [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance, you must open port 1433 and 1434 on the external computer. For more information, see [Configure a Windows Firewall for Database Engine Access](../../2014/database-engine/configure-a-windows-firewall-for-database-engine-access.md) in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online. For more information about the default Windows firewall settings, and a description of the TCP ports that affect the [!INCLUDE[ssDE](../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], and [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], see [Configure the Windows Firewall to Allow SQL Server Access](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md) in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online.  
   
 ## Prerequisites  
  These instructions assume that you already configured the service account, created the report server database, and configured URLs for the Report Server Web service and Report Manager. For more information, see [Manage a Reporting Services Native Mode Report Server](../../2014/reporting-services/manage-a-reporting-services-native-mode-report-server.md).  
@@ -94,9 +94,9 @@ manager: "mblythe"
 11. Restart the computer.  
   
 ## Next Steps  
- After you open the port and before you confirm whether remote users can access the report server on the port that you open, you must grant user access to the report server through role assignments on Home and at the site level. You can open a port correctly and still have report server connections fail if users do not have sufficient permissions. For more information, see [Grant User Access to a Report Server &#40;Report Manager&#41;](../../2014/reporting-services/grant-user-access-to-a-report-server-report-manager.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+ After you open the port and before you confirm whether remote users can access the report server on the port that you open, you must grant user access to the report server through role assignments on Home and at the site level. You can open a port correctly and still have report server connections fail if users do not have sufficient permissions. For more information, see [Grant User Access to a Report Server &#40;Report Manager&#41;](../../2014/reporting-services/grant-user-access-to-a-report-server-report-manager.md) in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online.  
   
- You can also verify that the port is opened correctly by starting Report Manager on a different computer. For more information, see [Report Manager  &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+ You can also verify that the port is opened correctly by starting Report Manager on a different computer. For more information, see [Report Manager  &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md) in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online.  
   
 ## See Also  
  [Configure the Report Server Service Account &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-the-report-server-service-account-ssrs-configuration-manager.md)   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1b0904ea-28c1-448e-b56c-c0fdfbc8b222
 caps.latest.revision: 21
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Query Builder (Report Wizard)
   Use the Query Builder to specify a query that retrieves a result set to use in a report. You can choose between two query builders:  
   
--   The text-based query builder (default) provides a simple workspace for specifying a query and viewing the results. You can specify multiple [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, query or command syntax for custom data processing extensions, and queries that are specified as expressions. Because the generic query builder does not preprocess the query and can accommodate any kind of query syntax, it is the default query builder tool for Report Designer.  
+-   The text-based query builder (default) provides a simple workspace for specifying a query and viewing the results. You can specify multiple [!INCLUDE[tsql](../includes/tsql-md.md)] statements, query or command syntax for custom data processing extensions, and queries that are specified as expressions. Because the generic query builder does not preprocess the query and can accommodate any kind of query syntax, it is the default query builder tool for Report Designer.  
   
--   The graphical query builder provides a richer visual experience. It is used in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] and in other parts of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You can use the graphical query builder if you are not creating expressions or multi-part SQL statements.  
+-   The graphical query builder provides a richer visual experience. It is used in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] and in other parts of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. You can use the graphical query builder if you are not creating expressions or multi-part SQL statements.  
   
      To switch to the graphical query builder, toggle the **Edit As Text** button in the top left corner of the window.  
   

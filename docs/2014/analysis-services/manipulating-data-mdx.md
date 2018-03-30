@@ -26,8 +26,9 @@ manager: "mblythe"
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Using DRILLTHROUGH to Retrieve Source Data &#40;MDX&#41;](../../2014/analysis-services/using-drillthrough-to-retrieve-source-data-mdx.md)|Discusses the use of the MDX [DRILLTHROUGH](../Topic/DRILLTHROUGH%20Statement%20\(MDX\).md) statement to retrieve the rowsets of source data applicable to a cell in a multidimensional data source|  
-|[Working with the RollupChildren Function &#40;MDX&#41;](../../2014/analysis-services/working-with-the-rollupchildren-function-mdx.md)|Discusses the impact of the MDX [RollupChildren](../Topic/RollupChildren%20\(MDX\).md)function on the analysis of multidimensional data.|  
+|[Using DRILLTHROUGH to Retrieve Source Data &#40;MDX&#41;](../../2014/analysis-services/using-drillthrough-to-retrieve-source-data-mdx.md)|Discusses the use of the MDX [DRILLTHROUGH](~/mdx/mdx-data-manipulation-drillthrough.md) statement to retrieve the rowsets of source data applicable to a cell in a multidimensional data source|  
+|[Working with the RollupChildren Function &#40;MDX&#41;](../../2014/analysis-services/working-with-the-rollupchildren-function-mdx.md)|Discusses the impact of the MDX [RollupChildren](~/mdx/rollupchildren-mdx.md)
+[Script for Search and Replace]function on the analysis of multidimensional data.|  
 |[Understanding Pass Order and Solve Order &#40;MDX&#41;](../../2014/analysis-services/understanding-pass-order-and-solve-order-mdx.md)|Details the concepts of solve order, and how this feature affects MDX expressions, statements, and scripts.|  
   
 ## See Also  

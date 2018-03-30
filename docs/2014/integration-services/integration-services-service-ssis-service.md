@@ -22,14 +22,14 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Integration Services Service (SSIS Service)
-  The topics in this section discuss the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service, a Windows service for managing [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages. This service is not required to create, save, and run Integration Services packages. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] supports the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service for backward compatibility with earlier releases of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+  The topics in this section discuss the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service, a Windows service for managing [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages. This service is not required to create, save, and run Integration Services packages. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] supports the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service for backward compatibility with earlier releases of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
- Starting in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stores objects, settings, and operational data in the `SSISDB` database for projects that you’ve deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server using the project deployment model. The [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, which is an instance of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine, hosts the database. For more information about the database, see [SSIS Catalog](../../2014/integration-services/ssis-catalog.md). For more information about deploying projects to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, see [Deploy Projects to Integration Services Server](../../2014/integration-services/deploy-projects-to-integration-services-server.md).  
+ Starting in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] stores objects, settings, and operational data in the `SSISDB` database for projects that you’ve deployed to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server using the project deployment model. The [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server, which is an instance of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Database Engine, hosts the database. For more information about the database, see [SSIS Catalog](../../2014/integration-services/ssis-catalog.md). For more information about deploying projects to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server, see [Deploy Projects to Integration Services Server](../../2014/integration-services/deploy-projects-to-integration-services-server.md).  
   
 ## Management Capabilities  
- The [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service is a Windows service for managing [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages. The [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service is available only in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ The [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service is a Windows service for managing [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages. The [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service is available only in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
- Running the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service provides the following management capabilities:  
+ Running the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service provides the following management capabilities:  
   
 -   Starting remote and locally stored packages  
   
@@ -47,12 +47,12 @@ manager: "jhubbard"
   
 -   Viewing the Windows Event log  
   
--   Connecting to multiple [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] servers  
+-   Connecting to multiple [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] servers  
   
 ## Startup Type for Integration Services Service  
- The [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service is installed when you install the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] component of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. By default, the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service is started and the startup type of the service is set to automatic. The service must be running to monitor the packages that are stored in the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Package Store. The [!INCLUDE[ssIS](../../includes/ssis-md.md)] Package Store can be either the msdb database in an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or the designated folders in the file system.  
+ The [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service is installed when you install the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] component of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. By default, the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service is started and the startup type of the service is set to automatic. The service must be running to monitor the packages that are stored in the [!INCLUDE[ssIS](../includes/ssis-md.md)] Package Store. The [!INCLUDE[ssIS](../includes/ssis-md.md)] Package Store can be either the msdb database in an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] or the designated folders in the file system.  
   
- The [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service is not required if you only want to design and execute [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages. However, the service is required to list and monitor packages using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ The [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service is not required if you only want to design and execute [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages. However, the service is required to list and monitor packages using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 ## Related Tasks  
   

@@ -35,6 +35,6 @@ manager: "jhubbard"
  [Perform Basic Operations with Queries &#40;Visual Database Tools&#41;](../../2014/database-engine/perform-basic-operations-with-queries-visual-database-tools.md)   
  [Create Queries &#40;Visual Database Tools&#41;](../../2014/database-engine/create-queries-visual-database-tools.md)   
  [Open Queries &#40;Visual Database Tools&#41;](../../2014/database-engine/open-queries-visual-database-tools.md)   
- [SELECT &#40;Transact-SQL&#41;](../Topic/SELECT%20\(Transact-SQL\).md)  
+ [SELECT &#40;Transact-SQL&#41;](~/t-sql/queries/select-transact-sql.md)  
   
   

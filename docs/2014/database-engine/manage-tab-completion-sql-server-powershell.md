@@ -16,14 +16,14 @@ ms.author: "mblythe"
 manager: "jhubbard"
 ---
 # Manage Tab Completion (SQL Server PowerShell)
-  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell snap-ins introduce three variables (`$SqlServerMaximumTabCompletion`, `$SqlServerMaximumChildItems`, and `$SqlServerIncludeSystemObjects`) to control Windows PowerShell tab completion. Tab completion reduces the amount of typing you must do by returning tables of items whose names start with the string you are typing.  
+  The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell snap-ins introduce three variables (`$SqlServerMaximumTabCompletion`, `$SqlServerMaximumChildItems`, and `$SqlServerIncludeSystemObjects`) to control Windows PowerShell tab completion. Tab completion reduces the amount of typing you must do by returning tables of items whose names start with the string you are typing.  
   
 ## Before You Begin  
  With Windows PowerShell tab-completion, when you have typed part of a path or cmdlet name, you can hit the Tab key to get a list of the items whose names match what you have already typed. You can then select the item you want from the list without having to type the rest of the name.  
   
- If you are working in a database that has a lot of objects, the tab-completion lists can become very large. Some [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] object types, such as views, also have large numbers of system objects.  
+ If you are working in a database that has a lot of objects, the tab-completion lists can become very large. Some [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] object types, such as views, also have large numbers of system objects.  
   
- The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] snap-ins introduces three system variables that you can use to control the amount of information presented by tab-completion and **Get-ChildItem**.  
+ The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] snap-ins introduces three system variables that you can use to control the amount of information presented by tab-completion and **Get-ChildItem**.  
   
  **$SqlServerMaximumTabCompletion =** *n*  
  Specifies the maximum number of objects to include in a tab-completion list. If you select Tab at a path node having more than *n* objects, the tab-completion list is truncated at *n*. *n* is an integer. 0 is the default setting, and means there is no limit to the number of objects listed.  

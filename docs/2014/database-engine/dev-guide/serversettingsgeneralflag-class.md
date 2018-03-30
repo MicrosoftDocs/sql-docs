@@ -25,7 +25,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # ServerSettingsGeneralFlag Class
-  The [ServerSettingsGeneralFlag Class](../../../2014/database-engine/dev-guide/serversettingsgeneralflag-class.md) represents the general flag settings on an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  The [ServerSettingsGeneralFlag Class](../../../2014/database-engine/dev-guide/serversettingsgeneralflag-class.md) represents the general flag settings on an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  This class can be used to do the following:  
   

@@ -29,7 +29,7 @@ manager: "mblythe"
   
 ### To create a related mining model  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], in Solution Explorer, click the mining structure that contains the mining model.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], in Solution Explorer, click the mining structure that contains the mining model.  
   
 2.  Click the **Mining Models** tab.  
   
@@ -39,7 +39,7 @@ manager: "mblythe"
   
      Select the model. On the **Mining Model** menu, select **New Mining Model**.  
   
-4.  Type a name for the new mining model, and select an algorithm. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  Type a name for the new mining model, and select an algorithm. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ### To edit the filter on the copied mining model  
   
@@ -53,7 +53,7 @@ manager: "mblythe"
   
 4.  In the **Properties** window, in the `AlgorithmParameters` text box, click **Setalgorithm parameters**, and change algorithm parameters, if desired.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## See Also  
  [Filters for Mining Models &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/filters-for-mining-models-analysis-services-data-mining.md)   

@@ -17,9 +17,9 @@ ms.author: "mblythe"
 manager: "mblythe"
 ---
 # CSDLBI Concepts
-  Conceptual Schema Definition Language with BI annotations (CSDLBI) is based on the Entity Data Framework, which is an abstraction for representing data in a way that enables disparate data sets to be programmatically accessed, queried, or exported. CSDLBI is used to represent data models created using [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] because it supports rich, data-driven reporting and applications.  
+  Conceptual Schema Definition Language with BI annotations (CSDLBI) is based on the Entity Data Framework, which is an abstraction for representing data in a way that enables disparate data sets to be programmatically accessed, queried, or exported. CSDLBI is used to represent data models created using [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] because it supports rich, data-driven reporting and applications.  
   
- This section explains how the CSDLBI representation maps to [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] data models (both tabular and multidimensional), along with examples of each model type.  
+ This section explains how the CSDLBI representation maps to [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data models (both tabular and multidimensional), along with examples of each model type.  
   
  Examples used to illustrate these concepts are taken from the AdventureWorks sample database, available on Codeplex. For more information about the samples, see [Adventure Works Samples for SQL Server](http://go.microsoft.com/fwlink/?linkID=220093).  
   
@@ -100,7 +100,7 @@ manager: "mblythe"
 ```  
   
 ### Visualization and Navigation Properties  
- An important part of the CSDLBI annotations are the properties for defining presentation in the reporting layer, and for navigating the relationships among entities. Typically, when you are creating a data model, you do not consider it important to control how the data is ordered or grouped, or what the default value might be, on the assumption that the client application will specify ordering and other details of presentation. However, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] tabular models are designed for integration with the [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] reporting client, and includes properties and attributes that support presentation of entities from the data model in the report design surface.  
+ An important part of the CSDLBI annotations are the properties for defining presentation in the reporting layer, and for navigating the relationships among entities. Typically, when you are creating a data model, you do not consider it important to control how the data is ordered or grouped, or what the default value might be, on the assumption that the client application will specify ordering and other details of presentation. However, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tabular models are designed for integration with the [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] reporting client, and includes properties and attributes that support presentation of entities from the data model in the report design surface.  
   
  Extensions for visualization include attributes for specifying the default aggregation to use with numerical data, for indicating that a text field points to a URL of an image, or specifying the field used to sort the current field.  
   
@@ -109,7 +109,7 @@ manager: "mblythe"
   
  The `Documentation` element provides the opportunity for report designers to furnish a description of the entity, to help business users understand the meaning of the data. Some entities also allow one or more `Annotation` attributes, which provide extra metadata for consumption by the application or by clients.  
   
- When you generate a model the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] tools, the names that are created for objects follow the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] conventions for object naming and name uniqueness. However, because CSDLBI is based on the Entity Data Framework (EDF), which requires that names adhere to conventions for C# identifiers, when the server creates the CSDLBI output for a model, the server takes the names used within the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] schema and automatically creates new object names that comply with EDF requirements. The following table describes the operations by which the new names are generated.  
+ When you generate a model the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tools, the names that are created for objects follow the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] conventions for object naming and name uniqueness. However, because CSDLBI is based on the Entity Data Framework (EDF), which requires that names adhere to conventions for C# identifiers, when the server creates the CSDLBI output for a model, the server takes the names used within the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] schema and automatically creates new object names that comply with EDF requirements. The following table describes the operations by which the new names are generated.  
   
 |Rule|Action|  
 |----------|------------|  
@@ -122,7 +122,7 @@ manager: "mblythe"
 ## Additions to Support Multidimensional Models  
  Version 1.0 of the CSDLBI annotations supported only tabular models. In version 1.1, support was added for multidimensional models (OLAP cubes) created using traditional BI development tools. Therefore, you can now issue an XML request to a multidimensional model and receive a CSDLBI definition of the model, for use in reporting.  
   
- **Cubes:** A SQL Server [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] tabular database can contain only one mode. In contrast, each multidimensional database can contain multiple cubes, each database being associated with a default cube. Therefore, when issuing an XML request against a multidimensional server, it is necessary to specify the cube; otherwise, the XML for the default cube will be returned.  
+ **Cubes:** A SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tabular database can contain only one mode. In contrast, each multidimensional database can contain multiple cubes, each database being associated with a default cube. Therefore, when issuing an XML request against a multidimensional server, it is necessary to specify the cube; otherwise, the XML for the default cube will be returned.  
   
  The representation of a cube is otherwise very much like that of a tabular model database. The cube name and cube correspond to the tabular database name and database identifier.  
   

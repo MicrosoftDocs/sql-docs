@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 201665dc-7ac8-4c19-90d3-33354c5caa72
 caps.latest.revision: 12
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_233
@@ -33,10 +33,10 @@ manager: "jhubbard"
 |Message Text|A connection was successfully established with the server, but then an error occurred during the login process. (provider: Shared Memory Provider, error: 0 - No process is on the other end of the pipe.) (Microsoft SQL Server, Error: 233)|  
   
 ## Explanation  
- The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client cannot connect to the server. This error could occur because the server is not configured to accept remote connections.  
+ The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] client cannot connect to the server. This error could occur because the server is not configured to accept remote connections.  
   
 ## User Action  
- Use the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager tool to allow [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to accept remote connections.  
+ Use the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager tool to allow [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to accept remote connections.  
   
 ## See Also  
  [Network Protocols and Network Libraries](../../2014/sql-server/install/network-protocols-and-network-libraries.md)   

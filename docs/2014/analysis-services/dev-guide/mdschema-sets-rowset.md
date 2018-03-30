@@ -39,7 +39,7 @@ manager: "mblythe"
 |`EXPRESSION`|`DBTYPE_WSTR`||The expression for the set.|  
 |`DIMENSIONS`|`DBTYPE_WSTR`||A comma delimited list of hierarchies included in the set.|  
 |`SET_CAPTION`|`DBTYPE_WSTR`||A label or caption associated with the set. The label or caption is used primarily for display purposes.|  
-|`SET_DISPLAY_FOLDER`|`DBTYPE_WSTR`||A string that identifies the path of the display folder that the client application uses to show the set. The folder level separator is defined by the client application. For the tools and clients supplied by [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], the backslash (\\) is the level separator. To provide multiple display folders, use a semicolon (;) to separate the folders.|  
+|`SET_DISPLAY_FOLDER`|`DBTYPE_WSTR`||A string that identifies the path of the display folder that the client application uses to show the set. The folder level separator is defined by the client application. For the tools and clients supplied by [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], the backslash (\\) is the level separator. To provide multiple display folders, use a semicolon (;) to separate the folders.|  
 |`SET_EVALUATION_CONTEXT`|`DBTYPE_I4`||The context for the set. The set can be static or dynamic.<br /><br /> This column can have one of the following values:<br /><br /> -   MDSET_RESOLUTION_STATIC=1<br />-   MDSET_RESOLUTION_DYNAMIC=2|  
   
  The rowset is sorted on `CATALOG_NAME`, `SCHEMA_NAME`, `CUBE_NAME`.  

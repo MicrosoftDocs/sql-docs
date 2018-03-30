@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
 caps.latest.revision: 12
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Replication Tutorials
-  Replication includes tutorials that you can use to learn how to set up and run replication topologies using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  Replication includes tutorials that you can use to learn how to set up and run replication topologies using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
- In the replication tutorials, "Publisher" refers to the server that contains that source data being replicated and "Subscriber" refers to the destination server. The Publisher and Subscriber may share the same instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], but it is not a requirement. For more information, see [Replication Publishing Model Overview](../../2014/relational-databases/replication/replication-publishing-model-overview.md).  
+ In the replication tutorials, "Publisher" refers to the server that contains that source data being replicated and "Subscriber" refers to the destination server. The Publisher and Subscriber may share the same instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], but it is not a requirement. For more information, see [Replication Publishing Model Overview](../../2014/relational-databases/replication/replication-publishing-model-overview.md).  
   
 > [!NOTE]  
 >  Most of the tasks shown in these tutorials can be performed programmatically. For more information, see [Developer's Guide &#40;Replication&#41;](../../2014/relational-databases/replication/dev-guide/developer-s-guide-replication.md).  

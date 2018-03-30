@@ -30,7 +30,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Bulk Import and Export of Data (SQL Server)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports exporting data in bulk (*bulk data*) from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table and importing bulk data into a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table or nonpartitioned view. Bulk importing and bulk exporting are essential to efficient transfer data between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and heterogeneous data sources. *Bulk exporting* refers to copying data from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table to a data file. *Bulk importing* refers to loading data from a data file into a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table. For example, you can export data from a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel application to a data file and then bulk import that data into a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supports exporting data in bulk (*bulk data*) from a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] table and importing bulk data into a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] table or nonpartitioned view. Bulk importing and bulk exporting are essential to efficient transfer data between [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and heterogeneous data sources. *Bulk exporting* refers to copying data from a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] table to a data file. *Bulk importing* refers to loading data from a data file into a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] table. For example, you can export data from a [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel application to a data file and then bulk import that data into a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] table.  
   
  **In this Topic:**  
   
@@ -48,23 +48,23 @@ manager: "jhubbard"
 -   [Format Files](#FFs)  
   
 ###  <a name="MethodsForBuliIE"></a> Methods for Bulk Importing and Exporting Data  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports bulk exporting data from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table and for bulk importing data into a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table or nonpartitioned view. The following basic methods are available.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supports bulk exporting data from a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] table and for bulk importing data into a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] table or nonpartitioned view. The following basic methods are available.  
   
 |Method|Description|Imports data|Exports data|  
 |------------|-----------------|------------------|------------------|  
 |[bcp utility](../../2014/database-engine/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)|A command-line utility (Bcp.exe) that bulk exports and bulk imports data and generates format files.|Yes|Yes|  
-|[BULK INSERT statement](../../2014/database-engine/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|A [!INCLUDE[tsql](../../includes/tsql-md.md)] statement that imports data directly from a data file into a database table or nonpartitioned view.|Yes|No|  
-|[INSERT ... SELECT * FROM OPENROWSET(BULK...) statement](../../2014/database-engine/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|A [!INCLUDE[tsql](../../includes/tsql-md.md)] statement that uses the OPENROWSET bulk rowset provider to bulk import data into a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table by specifying the OPENROWSET(BULK…) function to select data in an INSERT statement.|Yes|No|  
+|[BULK INSERT statement](../../2014/database-engine/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|A [!INCLUDE[tsql](../includes/tsql-md.md)] statement that imports data directly from a data file into a database table or nonpartitioned view.|Yes|No|  
+|[INSERT ... SELECT * FROM OPENROWSET(BULK...) statement](../../2014/database-engine/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|A [!INCLUDE[tsql](../includes/tsql-md.md)] statement that uses the OPENROWSET bulk rowset provider to bulk import data into a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] table by specifying the OPENROWSET(BULK…) function to select data in an INSERT statement.|Yes|No|  
   
 > [!IMPORTANT]  
 >  Comma-separated value (CSV) files are not supported by SQL Server bulk-import operations. However, in some cases, a CSV file can be used as the data file for a bulk import of data into SQL Server. Note that the field terminator of a CSV file does not have to be a comma. For more information, see [Prepare Data for Bulk Export or Import &#40;SQL Server&#41;](../../2014/database-engine/prepare-data-for-bulk-export-or-import-sql-server.md).  
   
 ###  <a name="FFs"></a> Format Files  
- The **bcp** utility, BULK INSERT, and INSERT ... SELECT \* FROM OPENROWSET(BULK...) all support the use of a specialized *format file* that stores format information for each field in a data file. A format file might also contain information about the corresponding [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table. The format file can be used to provide all the format information that is required to bulk export data from and bulk import data to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ The **bcp** utility, BULK INSERT, and INSERT ... SELECT \* FROM OPENROWSET(BULK...) all support the use of a specialized *format file* that stores format information for each field in a data file. A format file might also contain information about the corresponding [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] table. The format file can be used to provide all the format information that is required to bulk export data from and bulk import data to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- Format files provide a flexible way to interpret data as it is in the data file during import, and also to format data in the data file during export. This flexibility eliminates the need to write special-purpose code to interpret the data or reformat the data to the specific requirements of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or the external application. For example, if you are bulk exporting data to be loaded into an application that requires comma-separated values, you can use a format file to insert commas as field terminators in the exported data.  
+ Format files provide a flexible way to interpret data as it is in the data file during import, and also to format data in the data file during export. This flexibility eliminates the need to write special-purpose code to interpret the data or reformat the data to the specific requirements of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] or the external application. For example, if you are bulk exporting data to be loaded into an application that requires comma-separated values, you can use a format file to insert commas as field terminators in the exported data.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports two kinds of format files: XML format files and non-XML format files.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supports two kinds of format files: XML format files and non-XML format files.  
   
  The **bcp** utility is the only tool that can generate a format file. For more information, see [Create a Format File &#40;SQL Server&#41;](../../2014/database-engine/create-a-format-file-sql-server.md). For more information about format files, see [Format Files for Importing or Exporting Data &#40;SQL Server&#41;](../../2014/database-engine/format-files-for-importing-or-exporting-data-sql-server.md).  
   
@@ -124,8 +124,8 @@ manager: "jhubbard"
  [Performing Bulk Load of XML Data &#40;SQLXML 4.0&#41;](../../2014/database-engine/dev-guide/performing-bulk-load-of-xml-data-sqlxml-4-0.md)   
  [Performing Bulk Copy Operations](../../2014/database-engine/dev-guide/performing-bulk-copy-operations.md)   
  [bcp Utility](../../2014/database-engine/bcp-utility.md)   
- [BULK INSERT &#40;Transact-SQL&#41;](../Topic/BULK%20INSERT%20\(Transact-SQL\).md)   
+ [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md)   
  [Format Files for Importing or Exporting Data &#40;SQL Server&#41;](../../2014/database-engine/format-files-for-importing-or-exporting-data-sql-server.md)   
- [OPENROWSET &#40;Transact-SQL&#41;](../Topic/OPENROWSET%20\(Transact-SQL\).md)  
+ [OPENROWSET &#40;Transact-SQL&#41;](~/t-sql/functions/openrowset-transact-sql.md)  
   
   

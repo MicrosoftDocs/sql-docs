@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 5f18df92-0248-4858-836b-c8b02f0e0439
 caps.latest.revision: 22
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Step 5: Testing the Lesson 4 Tutorial Package

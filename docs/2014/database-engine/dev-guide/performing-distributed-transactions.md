@@ -23,13 +23,13 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Performing Distributed Transactions
-  The Microsoft Distributed Transaction Coordinator (MS DTC) allows applications to extend transactions across two or more instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. It also allows applications to participate in transactions managed by transaction managers that comply with the Open Group DTP XA standard.  
+  The Microsoft Distributed Transaction Coordinator (MS DTC) allows applications to extend transactions across two or more instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. It also allows applications to participate in transactions managed by transaction managers that comply with the Open Group DTP XA standard.  
   
- Normally, all transaction management commands are sent through the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver to the server. The application starts a transaction by calling [SQLSetConnectAttr](../../../2014/database-engine/dev-guide/sqlsetconnectattr.md) with the autocommit mode turned off. The application then performs the updates comprising the transaction and calls [SQLEndTran](../../../2014/database-engine/dev-guide/sqlendtran.md) with either the SQL_COMMIT or SQL_ROLLBACK option.  
+ Normally, all transaction management commands are sent through the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver to the server. The application starts a transaction by calling [SQLSetConnectAttr](../../../2014/database-engine/dev-guide/sqlsetconnectattr.md) with the autocommit mode turned off. The application then performs the updates comprising the transaction and calls [SQLEndTran](../../../2014/database-engine/dev-guide/sqlendtran.md) with either the SQL_COMMIT or SQL_ROLLBACK option.  
   
  When using MS DTC, however, MS DTC becomes the transaction manager and the application no longer uses **SQLEndTran**.  
   
- When enlisted in a distributed transaction, and then enlist in a second distributed transaction, the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC Driver defects from the original distributed transaction and enlists in the new transaction. For more information, see [DTC Programmer's Reference](http://msdn.microsoft.com/library/ms686108\(VS.85\).aspx).  
+ When enlisted in a distributed transaction, and then enlist in a second distributed transaction, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC Driver defects from the original distributed transaction and enlists in the new transaction. For more information, see [DTC Programmer's Reference](http://msdn.microsoft.com/library/ms686108\(VS.85\).aspx).  
   
 ## See Also  
  [Performing Transactions &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/performing-transactions-odbc.md)  

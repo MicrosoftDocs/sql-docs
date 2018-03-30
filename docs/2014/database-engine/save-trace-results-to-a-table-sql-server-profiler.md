@@ -19,11 +19,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Save Trace Results to a Table (SQL Server Profiler)
-  This topic describes how to save trace results to a database table by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+  This topic describes how to save trace results to a database table by using [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)].  
   
 ### To save trace results to a table  
   
-1.  On the **File** menu, click **New Trace**, and then connect to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+1.  On the **File** menu, click **New Trace**, and then connect to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
      The **Trace Properties**dialog box appears.  
   
@@ -32,7 +32,7 @@ manager: "jhubbard"
   
 2.  In the **Trace name** box, type a name for the trace, and then click **Save to table**.  
   
-3.  In the **Connect to server** dialog box, connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database that will contain the trace table.  
+3.  In the **Connect to server** dialog box, connect to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database that will contain the trace table.  
   
 4.  In the **Destination Table** dialog box, select a database from the **Database**list.  
   

@@ -19,7 +19,7 @@ ms.author: "jroth"
 manager: "jhubbard"
 ---
 # Always On Policies for Operational Issues with Always On Availability Groups (SQL Server)
-  The [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] health model evaluates a set of predefined policy based management (PBM) policies. You can use theses for viewing the health of an availability group and its availability replicas and databases in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  The [!INCLUDE[ssHADR](../includes/sshadr-md.md)] health model evaluates a set of predefined policy based management (PBM) policies. You can use theses for viewing the health of an availability group and its availability replicas and databases in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
  
   
@@ -34,13 +34,13 @@ manager: "jhubbard"
  A container for a discrete set of user databases, known as *availability databases*, that fail over together.  
   
  availability replica  
- An instantiation of an availability group that is hosted by a specific instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and that maintains a local copy of each availability database that belongs to the availability group. Two types of availability replicas exist: a single *primary replica* and one to four *secondary replicas*. The server instances that host the availability replicas for a given availability group must reside on different nodes of a single Windows Server Failover Clustering (WSFC) cluster.  
+ An instantiation of an availability group that is hosted by a specific instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and that maintains a local copy of each availability database that belongs to the availability group. Two types of availability replicas exist: a single *primary replica* and one to four *secondary replicas*. The server instances that host the availability replicas for a given availability group must reside on different nodes of a single Windows Server Failover Clustering (WSFC) cluster.  
   
  availability database  
  A database that belongs to an availability group. For each availability database, the availability group maintains a single read-write copy (the *primary database*) and one to four read-only copies (*secondary databases*).  
   
  AlwaysOn Dashboard  
- A [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dashboard that provides an at-a-glance view of the health of an availability group. For more information, see [AlwaysOn Dashboard](#Dashboard), later in this topic.  
+ A [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] dashboard that provides an at-a-glance view of the health of an availability group. For more information, see [AlwaysOn Dashboard](#Dashboard), later in this topic.  
   
 ##  <a name="AlwaysOnPBM"></a> Predefined Policies and Issues  
  The following table summarizes the predefined policies.  
@@ -81,9 +81,9 @@ manager: "jhubbard"
 -   If failing over the availability group is a possible remediation for an issue, provides a launch point for the links[Fail Over Availability Group Wizard](../../2014/database-engine/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md). This wizard takes a database administrator through the manual failover process.  
   
 ##  <a name="ExtendHealthModel"></a> Extending the AlwaysOn Health Model  
- Extending the [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] health model is simply a matter of creating your own user-defined policies and putting them into certain categories based on the type of object that you are monitoring.  After you a alter few settings, the AlwaysOn dashboard will automatically evaluate your own user-defined policies, as well as the AlwaysOn predefined policies.  
+ Extending the [!INCLUDE[ssHADR](../includes/sshadr-md.md)] health model is simply a matter of creating your own user-defined policies and putting them into certain categories based on the type of object that you are monitoring.  After you a alter few settings, the AlwaysOn dashboard will automatically evaluate your own user-defined policies, as well as the AlwaysOn predefined policies.  
   
- A user-defined policy can use any of the available PBM facets, including those used by the AlwaysOn predefined policies (see [Predefined Policies and Issues](#AlwaysOnPBM), earlier in this topic). The Server facet provides the following properties for monitoring [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] health: (`IsHadrEnabled` and `HadrManagerStatus`). The Server facet also provides properties the following policies for monitoring the WSFC cluster configuration: `ClusterQuorumType`, and `ClusterQuorumState`.  
+ A user-defined policy can use any of the available PBM facets, including those used by the AlwaysOn predefined policies (see [Predefined Policies and Issues](#AlwaysOnPBM), earlier in this topic). The Server facet provides the following properties for monitoring [!INCLUDE[ssHADR](../includes/sshadr-md.md)] health: (`IsHadrEnabled` and `HadrManagerStatus`). The Server facet also provides properties the following policies for monitoring the WSFC cluster configuration: `ClusterQuorumType`, and `ClusterQuorumState`.  
   
  For more information, see [The AlwaysOn Health Model Part 2 -- Extending the Health Model](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (a SQL Server AlwaysOn Team blog).  
   

@@ -21,7 +21,7 @@ manager: "mblythe"
  For instructions on how to change the partition that is used, or view information about the partition, see [Change the DirectQuery Partition &#40;SSAS Tabular&#41;](../../2014/analysis-services/change-the-directquery-partition-ssas-tabular.md).  
   
 ## Using Partitions in DirectQuery Mode  
- For each table, you must specify a single partition to use as the DirectQuery data source.  If there are multiple partitions, when you switch the model to enable DirectQuery mode, by default the first partition that was created in the table is flagged as the DirectQuery partition. You can change this later by using the Partition Manager in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+ For each table, you must specify a single partition to use as the DirectQuery data source.  If there are multiple partitions, when you switch the model to enable DirectQuery mode, by default the first partition that was created in the table is flagged as the DirectQuery partition. You can change this later by using the Partition Manager in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
  Why allow only a single partition in DirectQuery mode?  
   
@@ -38,7 +38,7 @@ manager: "mblythe"
 ## Partitions in Cached Models and in DirectQuery Models  
  When you configure a DirectQuery partition, you must specify processing options for the partition.  
   
- There are two processing options for the DirectQuery partition. To set this property, use the **Partition Manager** in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], or [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], and select the **Processing Option** property. The following table lists the values of this property, and describes the effects of each value when combined with the DirectQueryUsage property on the connection string:  
+ There are two processing options for the DirectQuery partition. To set this property, use the **Partition Manager** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], or [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], and select the **Processing Option** property. The following table lists the values of this property, and describes the effects of each value when combined with the DirectQueryUsage property on the connection string:  
   
 |**DirectQueryUsage** property|**Processing Option** property|Notes|  
 |-----------------------------------|------------------------------------|-----------|  

@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Unsuppress Run Custom Report Warnings
-  There are two warning dialog boxes for custom reports. This topic describes how to unsuppress the display of these boxes in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  There are two warning dialog boxes for custom reports. This topic describes how to unsuppress the display of these boxes in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
  By default, the **Run Custom Reports** dialog box appears before a custom report runs. If you select the **Please don't show this warning again** check box, the dialog box will no longer appear. Also by default, the **Run Custom Reports** dialog box appears when you open a custom report and then click a link to open another custom report. This dialog box displays the fill path to the drill-through custom report file. If you select the **Please don't show this warning again** check box, the dialog box will no longer appear.  
   
@@ -32,7 +32,7 @@ manager: "jhubbard"
   
 3.  Change**\<SuppressWarning>true\</SuppressWarning> to \<SuppressWarning>false\</SuppressWarning>**.  
   
-4.  Restart [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+4.  Restart [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 #### To unsuppress the drill-through custom report warning dialog box  
   
@@ -42,7 +42,7 @@ manager: "jhubbard"
   
 3.  Change **\<SuppressDrillthroughWarning>true\</SuppressDrillthroughWarning>to \<SuppressDrillthroughWarning>false\</SuppressDrillthroughWarning>**.  
   
-4.  Restart [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+4.  Restart [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 ## See Also  
  [Custom Reports in Management Studio](../../2014/database-engine/custom-reports-in-management-studio.md)   

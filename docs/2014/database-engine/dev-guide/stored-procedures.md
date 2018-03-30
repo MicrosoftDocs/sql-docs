@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Stored Procedures
-  A stored procedure ([Stored Procedures &#40;Database Engine&#41;](../../../2014/database-engine/stored-procedures-database-engine.md)) is an executable object stored in a database. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports:  
+  A stored procedure ([Stored Procedures &#40;Database Engine&#41;](../../../2014/database-engine/stored-procedures-database-engine.md)) is an executable object stored in a database. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports:  
   
 -   Stored procedures  
   
@@ -30,7 +30,7 @@ manager: "jhubbard"
   
 -   Extended stored procedures  
   
-     C or C++ dynamic-link libraries (DLLs) written to the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Open Data Services API for extended stored procedures. The Open Data Services API extends the capabilities of stored procedures to include C or C++ code.  
+     C or C++ dynamic-link libraries (DLLs) written to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Open Data Services API for extended stored procedures. The Open Data Services API extends the capabilities of stored procedures to include C or C++ code.  
   
 ## In This Section  
   

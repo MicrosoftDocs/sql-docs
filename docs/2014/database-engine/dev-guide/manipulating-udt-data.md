@@ -36,10 +36,10 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Manipulating UDT Data
-  [!INCLUDE[tsql](../../../includes/tsql-md.md)] provides no specialized syntax for INSERT, UPDATE, or DELETE statements when modifying data in user-defined type (UDT) columns. The [!INCLUDE[tsql](../../../includes/tsql-md.md)] CAST or CONVERT functions are used to cast native data types to the UDT type.  
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] provides no specialized syntax for INSERT, UPDATE, or DELETE statements when modifying data in user-defined type (UDT) columns. The [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST or CONVERT functions are used to cast native data types to the UDT type.  
   
 ## Inserting Data in a UDT Column  
- The following [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements insert three rows of sample data into the **Points** table. The **Point** data type consists of X and Y integer values that are exposed as properties of the UDT. You must use either the CAST or CONVERT function to cast the comma-delimited X and Y values to the **Point** type. The first two statements use the CONVERT function to convert a string value to the **Point** type, and the third statement uses the CAST function:  
+ The following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements insert three rows of sample data into the **Points** table. The **Point** data type consists of X and Y integer values that are exposed as properties of the UDT. You must use either the CAST or CONVERT function to cast the comma-delimited X and Y values to the **Point** type. The first two statements use the CONVERT function to convert a string value to the **Point** type, and the third statement uses the CAST function:  
   
 ```  
 INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '3,4'));  
@@ -71,7 +71,7 @@ IDPointValue
 31,99  
 ```  
   
- You can also use the [!INCLUDE[tsql](../../../includes/tsql-md.md)] CAST and CONVERT functions to achieve the same results.  
+ You can also use the [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST and CONVERT functions to achieve the same results.  
   
 ```  
 SELECT ID, CAST(PointValue AS varchar)   
@@ -81,7 +81,7 @@ SELECT ID, CONVERT(varchar, PointValue)
 FROM dbo.Points;  
 ```  
   
- The **Point** UDT exposes its X and Y coordinates as properties, which you can then select individually. The following [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement selects the X and Y coordinates separately:  
+ The **Point** UDT exposes its X and Y coordinates as properties, which you can then select individually. The following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement selects the X and Y coordinates separately:  
   
 ```  
 SELECT ID, PointValue.X AS xVal, PointValue.Y AS yVal   
@@ -99,7 +99,7 @@ IDxValyVal
 ```  
   
 ## Working with Variables  
- You can work with variables using the DECLARE statement to assign a variable to a UDT type. The following statements assign a value using the [!INCLUDE[tsql](../../../includes/tsql-md.md)] SET statement and display the results by calling the UDT's `ToString` method on the variable:  
+ You can work with variables using the DECLARE statement to assign a variable to a UDT type. The following statements assign a value using the [!INCLUDE[tsql](../../includes/tsql-md.md)] SET statement and display the results by calling the UDT's `ToString` method on the variable:  
   
 ```  
 DECLARE @PointValue Point;  
@@ -116,7 +116,7 @@ PointValue
 -1,5  
 ```  
   
- The following [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements achieve the same result using SELECT rather than SET for the variable assignment:  
+ The following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements achieve the same result using SELECT rather than SET for the variable assignment:  
   
 ```  
 DECLARE @PointValue Point;  
@@ -136,7 +136,7 @@ FROM dbo.Points
 WHERE PointValue > CONVERT(Point, '2,2');  
 ```  
   
- You can compare internal values of the UDT regardless of the `IsByteOrdered` setting if the values themselves are comparable. The following [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement selects rows where X is greater than Y:  
+ You can compare internal values of the UDT regardless of the `IsByteOrdered` setting if the values themselves are comparable. The following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement selects rows where X is greater than Y:  
   
 ```  
 SELECT ID, PointValue.ToString() AS PointValue   
@@ -155,9 +155,9 @@ WHERE PointValue = @ComparePoint;
 ```  
   
 ## Invoking UDT Methods  
- You can also invoke methods that are defined in your UDT in [!INCLUDE[tsql](../../../includes/tsql-md.md)]. The **Point** class contains three methods, `Distance`, `DistanceFrom`, and `DistanceFromXY`. For the code listings defining these three methods, see [Coding User-Defined Types](../../../2014/database-engine/dev-guide/coding-user-defined-types.md).  
+ You can also invoke methods that are defined in your UDT in [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **Point** class contains three methods, `Distance`, `DistanceFrom`, and `DistanceFromXY`. For the code listings defining these three methods, see [Coding User-Defined Types](../../../2014/database-engine/dev-guide/coding-user-defined-types.md).  
   
- The following [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement calls the `PointValue.Distance` method:  
+ The following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement calls the `PointValue.Distance` method:  
   
 ```  
 SELECT ID, PointValue.X AS [Point.X],   
@@ -205,7 +205,7 @@ FROM dbo.Points
  The result set is the same as the `DistanceFrom` method.  
   
 ## Updating Data in a UDT Column  
- To update data in a UDT column, use the [!INCLUDE[tsql](../../../includes/tsql-md.md)] UPDATE statement. You can also use a method of the UDT to update the state of the object. The following [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement updates a single row in the table:  
+ To update data in a UDT column, use the [!INCLUDE[tsql](../../includes/tsql-md.md)] UPDATE statement. You can also use a method of the UDT to update the state of the object. The following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement updates a single row in the table:  
   
 ```  
 UPDATE dbo.Points  
@@ -213,7 +213,7 @@ SET PointValue = CAST('1,88' AS Point)
 WHERE ID = 3  
 ```  
   
- You can also update UDT elements separately. The following [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement updates only the Y coordinate:  
+ You can also update UDT elements separately. The following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement updates only the Y coordinate:  
   
 ```  
 UPDATE dbo.Points  
@@ -221,7 +221,7 @@ SET PointValue.Y = 99
 WHERE ID = 3  
 ```  
   
- If the UDT has been defined with byte ordering set to `true`, [!INCLUDE[tsql](../../../includes/tsql-md.md)] can evaluate the UDT column in a WHERE clause.  
+ If the UDT has been defined with byte ordering set to `true`, [!INCLUDE[tsql](../../includes/tsql-md.md)] can evaluate the UDT column in a WHERE clause.  
   
 ```  
 UPDATE dbo.Points  
@@ -230,7 +230,7 @@ WHERE PointValue = '3,4';
 ```  
   
 ### Updating Limitations  
- You cannot update multiple properties at once using [!INCLUDE[tsql](../../../includes/tsql-md.md)]. For example, the following UPDATE statement fails with an error because you cannot use the same column name twice in one UDATE statement.  
+ You cannot update multiple properties at once using [!INCLUDE[tsql](../../includes/tsql-md.md)]. For example, the following UPDATE statement fails with an error because you cannot use the same column name twice in one UDATE statement.  
   
 ```  
 UPDATE dbo.Points  
@@ -238,7 +238,7 @@ SET PointValue.X = 5, PointValue.Y = 99
 WHERE ID = 3  
 ```  
   
- To update each point individually, you would need to create a mutator method in the Point UDT assembly. You can then invoke the mutator method to update the object in a [!INCLUDE[tsql](../../../includes/tsql-md.md)] UPDATE statement, as in the following:  
+ To update each point individually, you would need to create a mutator method in the Point UDT assembly. You can then invoke the mutator method to update the object in a [!INCLUDE[tsql](../../includes/tsql-md.md)] UPDATE statement, as in the following:  
   
 ```  
 UPDATE dbo.Points  
@@ -247,7 +247,7 @@ WHERE ID = 3
 ```  
   
 ## Deleting Data in a UDT Column  
- To delete data in a UDT, use the [!INCLUDE[tsql](../../../includes/tsql-md.md)] DELETE statement. The following statement deletes all rows in the table that match the criteria specified in the WHERE clause. If you omit the WHERE clause in a DELETE statement, all rows in the table will be deleted.  
+ To delete data in a UDT, use the [!INCLUDE[tsql](../../includes/tsql-md.md)] DELETE statement. The following statement deletes all rows in the table that match the criteria specified in the WHERE clause. If you omit the WHERE clause in a DELETE statement, all rows in the table will be deleted.  
   
 ```  
 DELETE FROM dbo.Points  

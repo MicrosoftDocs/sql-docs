@@ -15,7 +15,7 @@ f1_keywords:
 ms.assetid: e4ef6cc0-ec84-4a89-86ed-a3f8523402d9
 caps.latest.revision: 8
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Axis Title Properties Dialog Box, General (Report Builder and SSRS)

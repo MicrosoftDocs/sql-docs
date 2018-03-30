@@ -68,7 +68,7 @@ manager: "jhubbard"
 ## The Impact of Database Mirroring on a Remote Monitoring Instance  
  When log shipping uses with a remote monitoring instance, combining the log shipping session and database mirroring affects the information in the monitor tables. The information about the primary is a combination of the one configured at the principal/primary and the monitor configured on each secondary.  
   
- To keep monitoring as seamless as possible, when you use a remote monitor, we recommend that you specify the original primary name when configuring the primary at the secondary. This approach also facilitates changing the log shipping configuration from Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. For more information about monitoring, see [Monitor Log Shipping &#40;Transact-SQL&#41;](../../2014/database-engine/monitor-log-shipping-transact-sql.md).  
+ To keep monitoring as seamless as possible, when you use a remote monitor, we recommend that you specify the original primary name when configuring the primary at the secondary. This approach also facilitates changing the log shipping configuration from Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent. For more information about monitoring, see [Monitor Log Shipping &#40;Transact-SQL&#41;](../../2014/database-engine/monitor-log-shipping-transact-sql.md).  
   
 ## Setting Up Mirroring and Log Shipping Together  
  To set up database mirroring and log shipping together, the following steps are required:  
@@ -100,7 +100,7 @@ manager: "jhubbard"
   
      You must use the same backup share that you used in step 4.  
   
-     The **Transaction Log Shipping** interface in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] supports only one primary database per log shipping configuration. Therefore, you must use stored procedures to set up the new principal as primary.  
+     The **Transaction Log Shipping** interface in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] supports only one primary database per log shipping configuration. Therefore, you must use stored procedures to set up the new principal as primary.  
   
 7.  Perform another manual failover to fail back to the original principal.  
   

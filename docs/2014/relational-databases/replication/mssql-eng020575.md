@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 8886378c-e70e-481a-bd24-2d613a39f491
 caps.latest.revision: 8
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQL_ENG020575
@@ -26,7 +26,7 @@ manager: "jhubbard"
 |Product Name|SQL Server|  
 |Event ID|20575|  
 |Event Source|MSSQLSERVER|  
-|Component|[!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]|  
+|Component|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Symbolic Name||  
 |Message Text|Subscriber '%s' subscription to article '%s' in publication '%s' passed data validation.|  
   

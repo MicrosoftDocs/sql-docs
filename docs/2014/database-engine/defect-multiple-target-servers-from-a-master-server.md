@@ -23,7 +23,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Defect Multiple Target Servers from a Master Server
-  This topic describes how to defect multiple target servers from a multiserver administration configuration in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Run this procedure from the master server.  
+  This topic describes how to defect multiple target servers from a multiserver administration configuration in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Run this procedure from the master server.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   

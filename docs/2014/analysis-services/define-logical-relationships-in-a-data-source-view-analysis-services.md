@@ -22,7 +22,7 @@ manager: "mblythe"
 # Define Logical Relationships in a Data Source View (Analysis Services)
   The Data Source View Wizard and Data Source View Designer automatically define relationships between tables added to a data source view (DSV) based on underlying database relationships or name matching criteria you specify.  
   
- In cases where you are working with data from multiple data sources, you may need to manually define logical relationships in the DSV to supplement those relationships that are defined automatically. Relationships are required in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] to identify fact and dimension tables, to construct queries for retrieving data and metadata from underlying data sources, and to take advantage of advanced business intelligence features.  
+ In cases where you are working with data from multiple data sources, you may need to manually define logical relationships in the DSV to supplement those relationships that are defined automatically. Relationships are required in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] to identify fact and dimension tables, to construct queries for retrieving data and metadata from underlying data sources, and to take advantage of advanced business intelligence features.  
   
  You can define the following types of relationships in Data Source View Designer:  
   
@@ -47,7 +47,7 @@ manager: "mblythe"
   
 ##  <a name="bkmk_addRel"></a> To add a relationship between tables, named queries, or views  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the project or connect to the database that contains the data source view in which you wish to add a logical relationship.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the project or connect to the database that contains the data source view in which you wish to add a logical relationship.  
   
 2.  In Solution Explorer, expand the **Data Source Views** folder, then double-click the data source view to open it in **Data Source View Designer**.  
   
@@ -64,9 +64,9 @@ manager: "mblythe"
   
     3.  Select columns from the **Source Columns** and **Destination Columns** lists to create a relationship between the two tables.  
   
-         If [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] detects, by sampling the data in the underlying table, view, or named query, that you have defined the relationship in the wrong direction (from the primary key to the foreign key rather than from the foreign key to the primary key), you will be prompted to reverse the order. To quickly reverse the order, click **Reverse**.  
+         If [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] detects, by sampling the data in the underlying table, view, or named query, that you have defined the relationship in the wrong direction (from the primary key to the foreign key rather than from the foreign key to the primary key), you will be prompted to reverse the order. To quickly reverse the order, click **Reverse**.  
   
-         If [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] detects that a relationship already exists for the columns you have selected, you will be prompted. You cannot define duplicate relationships.  
+         If [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] detects that a relationship already exists for the columns you have selected, you will be prompted. You cannot define duplicate relationships.  
   
     4.  Optionally, in the **Description** box, type a description for the relationship.  
   

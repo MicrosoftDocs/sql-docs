@@ -93,7 +93,7 @@ manager: "jhubbard"
 ## Remarks  
  Members of the **dbm_monitor** fixed database role can view the existing mirroring status by using either Database Mirroring Monitor or the **sp_dbmmonitorresults** stored procedure. But these users cannot update the status table. They depend on the **Database Mirroring Monitor Job**to update the status table at regular intervals. To learn the age of the displayed status a user can look at the times in the **Principal log (***\<time>***)** and **Mirror log (***\<time>***)** labels.  
   
- If this job does not exist or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is stopped, the status becomes increasingly stale and may no longer reflect the configuration of the mirroring session. For example, after a failover, the partners might appear to share the same role—principal or mirror, or the current principal server might be shown as the mirror, while the current mirror server is shown as the principal.  
+ If this job does not exist or [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent is stopped, the status becomes increasingly stale and may no longer reflect the configuration of the mirroring session. For example, after a failover, the partners might appear to share the same role—principal or mirror, or the current principal server might be shown as the mirror, while the current mirror server is shown as the principal.  
   
 ## See Also  
  [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](../../2014/database-engine/start-database-mirroring-monitor-sql-server-management-studio.md)   

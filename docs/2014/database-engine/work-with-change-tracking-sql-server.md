@@ -23,7 +23,7 @@ helpviewer_keywords:
 ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
 caps.latest.revision: 26
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Work with Change Tracking (SQL Server)
@@ -259,7 +259,7 @@ BEGIN TRAN
 COMMIT TRAN  
 ```  
   
- For more information about snapshot transactions, see [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../Topic/SET%20TRANSACTION%20ISOLATION%20LEVEL%20\(Transact-SQL\).md).  
+ For more information about snapshot transactions, see [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](~/t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
 #### Alternatives to Using Snapshot Isolation  
  There are alternatives to using snapshot isolation, but they require more work to make sure all application requirements are met. To make sure the *last_synchronization_version* is valid and data is not removed by the cleanup process before changes are obtained, do the following:  
@@ -284,7 +284,7 @@ COMMIT TRAN
 >  Choosing the approach that will work for the application when you are using change tracking (or any custom tracking mechanism), requires significant analysis. Therefore, it is much simpler to use snapshot isolation.  
   
 ##  <a name="Handles"></a> How Change Tracking Handles Changes to a Database  
- Some applications that use change tracking perform two-way synchronization with another data store. That is, changes that are made in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database are updated in the other data store, and changes that are made in the other store are updated in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
+ Some applications that use change tracking perform two-way synchronization with another data store. That is, changes that are made in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database are updated in the other data store, and changes that are made in the other store are updated in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database.  
   
  When an application updates the local database with changes from another data store, the application must perform the following operations:  
   
@@ -434,9 +434,9 @@ COMMIT TRAN
  [About Change Tracking &#40;SQL Server&#41;](../../2014/database-engine/about-change-tracking-sql-server.md)   
  [Manage Change Tracking &#40;SQL Server&#41;](../../2014/database-engine/manage-change-tracking-sql-server.md)   
  [Enable and Disable Change Tracking &#40;SQL Server&#41;](../../2014/database-engine/enable-and-disable-change-tracking-sql-server.md)   
- [CHANGETABLE &#40;Transact-SQL&#41;](../Topic/CHANGETABLE%20\(Transact-SQL\).md)   
- [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41;](../Topic/CHANGE_TRACKING_MIN_VALID_VERSION%20\(Transact-SQL\).md)   
- [CHANGE_TRACKING_CURRENT_VERSION &#40;Transact-SQL&#41;](../Topic/CHANGE_TRACKING_CURRENT_VERSION%20\(Transact-SQL\).md)   
- [WITH CHANGE_TRACKING_CONTEXT &#40;Transact-SQL&#41;](../Topic/WITH%20CHANGE_TRACKING_CONTEXT%20\(Transact-SQL\).md)  
+ [CHANGETABLE &#40;Transact-SQL&#41;](~/relational-databases/system-functions/changetable-transact-sql.md)   
+ [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41;](~/relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)   
+ [CHANGE_TRACKING_CURRENT_VERSION &#40;Transact-SQL&#41;](~/relational-databases/system-functions/change-tracking-current-version-transact-sql.md)   
+ [WITH CHANGE_TRACKING_CONTEXT &#40;Transact-SQL&#41;](~/relational-databases/system-functions/with-change-tracking-context-transact-sql.md)  
   
   

@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 9e2cb199-f077-4d88-8117-1b7550afc696
 caps.latest.revision: 16
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_10003
@@ -34,7 +34,7 @@ manager: "jhubbard"
  Low system memory has caused the OLE DB provider to run out of memory.  
   
 ## User Action  
- Restart the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If that does not help, restart the computer. If the problem persists, collect OLE DB trace events using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] and provide this data to product support for the OLE DB provider.  
+ Restart the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. If that does not help, restart the computer. If the problem persists, collect OLE DB trace events using [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] and provide this data to product support for the OLE DB provider.  
   
 ## See Also  
  [SQL Server Profiler Templates and Permissions](../../2014/database-engine/sql-server-profiler-templates-and-permissions.md)   

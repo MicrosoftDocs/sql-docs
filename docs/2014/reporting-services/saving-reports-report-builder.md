@@ -12,13 +12,13 @@ ms.topic: "article"
 ms.assetid: 59ddc4b8-9517-4d3f-9c88-a07e9907cecb
 caps.latest.revision: 7
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Saving Reports (Report Builder)
   In Report Builder you can save a report to a report server, SharePoint library, file share on which you have write permission, or your computer. You can save a report to the same location from which you opened it, save it to a different location, or save it with a new name to the same or different location. By default, a report is resaved to the location from which you opened it. When you save the report, what you are really saving is the report definition, which describes the report layout. You are not saving the data. Every time you run the report, the report data is refreshed and is likely to be different than the previous time you ran the report.  
   
- If you want to save the report to a different format or save the report definition with the data, use one of the following [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] features:  
+ If you want to save the report to a different format or save the report definition with the data, use one of the following [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features:  
   
 -   Export a rendered report to a different file format such as comma separated files (CSV) or Excel workbooks and save the report in that format. You can also generate data feeds from reports and save the report data.  
   
@@ -26,7 +26,7 @@ manager: "mblythe"
   
 -   Use report history to save versions of rendered reports as historical copies.  
   
- To learn more about viewing and managing reports directly on the report server, see [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](../../2014/reporting-services/finding-viewing-and-managing-reports-report-builder-and-ssrs.md) and [Reporting Services Report Server &#40;Native Mode&#41;](../../2014/reporting-services/reporting-services-report-server-native-mode.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?LinkId=154888) on msdn.microsoft.com.  
+ To learn more about viewing and managing reports directly on the report server, see [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](../../2014/reporting-services/finding-viewing-and-managing-reports-report-builder-and-ssrs.md) and [Reporting Services Report Server &#40;Native Mode&#41;](../../2014/reporting-services/reporting-services-report-server-native-mode.md) in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?LinkId=154888) on msdn.microsoft.com.  
   
 ##  <a name="SavingReportDefinitions"></a> Saving Report Definitions  
  Although you can save reports to your computer, saving reports to a report server offers many advantages.  

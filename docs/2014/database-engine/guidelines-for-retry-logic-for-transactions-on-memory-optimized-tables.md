@@ -61,9 +61,9 @@ manager: "jhubbard"
   
 -   Client-side retries. Client-side retries is the preferred way to implement retry logic in the general case. The client application catches the error thrown by the transaction, and retries the transaction. If an existing client application has retry logic to handle deadlocks, you can extend the application to handle the new error codes.  
   
--   Using a wrapper stored procedure. The client calls an interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure that calls the natively compiled stored procedure or executes the transaction. The wrapper procedure then uses try/catch logic to catch the error and retry the procedure call if needed. It is possible that results are returned to the client before the failure, and the client would not know to discard them. Therefore, to be safe, it is best to use this method only with natively compiled stored procedures that do not return any result sets to the client.  
+-   Using a wrapper stored procedure. The client calls an interpreted [!INCLUDE[tsql](../includes/tsql-md.md)] stored procedure that calls the natively compiled stored procedure or executes the transaction. The wrapper procedure then uses try/catch logic to catch the error and retry the procedure call if needed. It is possible that results are returned to the client before the failure, and the client would not know to discard them. Therefore, to be safe, it is best to use this method only with natively compiled stored procedures that do not return any result sets to the client.  
   
- The retry logic can be implemented either in [!INCLUDE[tsql](../../includes/tsql-md.md)] or in the application code in the mid-tier.  
+ The retry logic can be implemented either in [!INCLUDE[tsql](../includes/tsql-md.md)] or in the application code in the mid-tier.  
   
  Two possible reasons to consider the retry logic are:  
   
@@ -71,7 +71,7 @@ manager: "jhubbard"
   
 -   Conflicts are rare, and it is important to reduce end-to-end latency by using prepared execution. For more information about executing natively compiled stored procedures directly, see [Natively Compiled Stored Procedures](../../2014/database-engine/natively-compiled-stored-procedures.md).  
   
- The following sample shows retry logic in an interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure that contains a call either to a natively compiled stored procedure or to a cross-container transaction.  
+ The following sample shows retry logic in an interpreted [!INCLUDE[tsql](../includes/tsql-md.md)] stored procedure that contains a call either to a natively compiled stored procedure or to a cross-container transaction.  
   
 ```tsql  
 CREATE PROCEDURE usp_my_procedure @param1 type1, @param2 type2, ...  

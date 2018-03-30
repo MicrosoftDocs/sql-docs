@@ -18,11 +18,11 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Control Flow Tab
-  Use the **Control Flow** tab of [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer to build the control flow in a [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package.  
+  Use the **Control Flow** tab of [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer to build the control flow in a [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package.  
   
- Create the control flow by dragging graphical objects that represent [!INCLUDE[ssIS](../../includes/ssis-md.md)] tasks and containers from the **Toolbox** to the design surface of the **Control Flow** tab, and then connecting the objects by dragging the connector on an object to another object. Each connecting line represents a precedence constraint that specifies the order in which the tasks and containers run  
+ Create the control flow by dragging graphical objects that represent [!INCLUDE[ssIS](../includes/ssis-md.md)] tasks and containers from the **Toolbox** to the design surface of the **Control Flow** tab, and then connecting the objects by dragging the connector on an object to another object. Each connecting line represents a precedence constraint that specifies the order in which the tasks and containers run  
   
- Additionally, you can use [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer to add the following functionality from the **Control Flow** tab:  
+ Additionally, you can use [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer to add the following functionality from the **Control Flow** tab:  
   
 -   Implement logging  
   
@@ -36,7 +36,7 @@ manager: "jhubbard"
   
 -   Configure breakpoints  
   
- To add these functions to individual tasks or containers in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, right-click the object on the design surface, and then select the option.  
+ To add these functions to individual tasks or containers in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, right-click the object on the design surface, and then select the option.  
   
 ## See Also  
  [Precedence Constraints](../../2014/integration-services/precedence-constraints.md)   

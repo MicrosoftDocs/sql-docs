@@ -19,12 +19,12 @@ manager: "jhubbard"
   The assembly **Microsoft.SqlServer.Types.dll**, which contains the spatial data types, has been upgraded from version 10.0 to version 11.0. Custom applications that reference this assembly may fail when certain conditions are true.  
   
 ## Component  
- [!INCLUDE[ssDE](../../../includes/ssde-md.md)]  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## Description  
  The assembly **Microsoft.SqlServer.Types.dll**, which contains the spatial data types, has been upgraded from version 10.0 to version 11.0. Custom applications that reference this assembly may fail when the following conditions are true.  
   
--   When you move a custom application from a computer on which [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] was installed to a computer on which only [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] is installed, the application will fail because the referenced version 10.0 of the **SqlTypes** assembly is not present. You may see this error message: `“Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified.”`  
+-   When you move a custom application from a computer on which [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] was installed to a computer on which only [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] is installed, the application will fail because the referenced version 10.0 of the **SqlTypes** assembly is not present. You may see this error message: `“Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified.”`  
   
 -   When you reference the **SqlTypes** assembly version 11.0, and version 10.0 is also installed, you may see this error message: `“System.InvalidCastException: Unable to cast object of type 'Microsoft.SqlServer.Types.SqlGeometry' to type 'Microsoft.SqlServer.Types.SqlGeometry'.”`  
   
@@ -41,7 +41,7 @@ manager: "jhubbard"
 ## Corrective Action  
  You can work around this issue by using one of the following methods:  
   
--   You can work around this issue in your code by calling the `GetSqlBytes` method, instead of the Get methods listed above, to retrieve CLR [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] system types, as shown in the following example:  
+-   You can work around this issue in your code by calling the `GetSqlBytes` method, instead of the Get methods listed above, to retrieve CLR [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system types, as shown in the following example:  
   
     ```csharp  
     string query = "SELECT [SpatialColumn] FROM [SpatialTable]";  
@@ -82,6 +82,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Database Engine Upgrade Issues](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;new&#93;](../Topic/SQL%20Server%202014%20Upgrade%20Advisor%20[new].md)  
+ [SQL Server 2014 Upgrade Advisor &#91;new&#93;](~/2014/sql-server/install/sql-server-2014-upgrade-advisor.md)  
   
   

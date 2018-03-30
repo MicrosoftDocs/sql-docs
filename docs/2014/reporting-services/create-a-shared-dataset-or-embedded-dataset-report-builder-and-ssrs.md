@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: d1d7bc71-f0e9-4ce5-b3ad-6fee54388a31
 caps.latest.revision: 7
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Create a Shared Dataset or Embedded Dataset (Report Builder and SSRS)
@@ -26,7 +26,7 @@ manager: "mblythe"
   
 -   Save the dataset directly to the report server or SharePoint site.  
   
- Use Report Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to do the following tasks:  
+ Use Report Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to do the following tasks:  
   
 1.  Create a shared dataset in Solution Explorer. Shared datasets must use data sources from the Shared Data Sources folder in Solution Explorer.  
   
@@ -37,7 +37,7 @@ manager: "mblythe"
  For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ### To open Report Builder and create a shared dataset  
   
@@ -76,7 +76,7 @@ manager: "mblythe"
   
 7.  Click **Parameters**. On this page, set a default value to a constant or an expression, mark the parameter as read-only, nullable, or **Omit From Query**. For more information, see [Dataset Properties Dialog Box, Parameters &#40;Report Builder&#41;](../../2014/reporting-services/dataset-properties-dialog-box-parameters-report-builder.md).  
   
-8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 9.  
   
@@ -105,7 +105,7 @@ manager: "mblythe"
   
 6.  In **Timeout**, type the number of seconds that the report server waits for a response from the database. The default value is 0 seconds. When the time out value is 0 seconds, the query does not time out.  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
      The dataset and its field collection appear in the Report Data pane under the data source node.  
   

@@ -16,7 +16,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Test an Action
-  You test an action by using the Browser view in Cube Designer. Cube Designer can be accessed from [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. After you create the action, you must process the cube before the action can be tested. For more information, see [Multidimensional Model Object Processing](../../2014/analysis-services/multidimensional-model-object-processing.md).  
+  You test an action by using the Browser view in Cube Designer. Cube Designer can be accessed from [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. After you create the action, you must process the cube before the action can be tested. For more information, see [Multidimensional Model Object Processing](../../2014/analysis-services/multidimensional-model-object-processing.md).  
   
 ### To test an action  
   

@@ -19,23 +19,23 @@ helpviewer_keywords:
 ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 caps.latest.revision: 50
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Report and Snapshot Size Limits
-  Administrators who manage a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] deployment can use the information in this topic to understand report size limits when the report is published to a report server, rendered at run time, and saved to the file system. This topic also provides practical guidance on how to measure the size of a report server database, and describes the effect of snapshot size on server performance.  
+  Administrators who manage a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] deployment can use the information in this topic to understand report size limits when the report is published to a report server, rendered at run time, and saved to the file system. This topic also provides practical guidance on how to measure the size of a report server database, and describes the effect of snapshot size on server performance.  
   
 ## Maximum Size for Published Reports and Models  
- On the report server, report and model size is based on the size of the report definition (.rdl) and report model (.smdl) files that you publish to a report server. The report server does not limit the size of a report or model that you publish. However, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] imposes a maximum size for items that are posted to the server. By default, this limit is 4 megabytes (MB). If you upload or publish a file that exceeds this limit to a report server, you receive an HTTP exception. In this case, you can modify the default by increasing the value of the `maxRequestLength` element in the Machine.config file.  
+ On the report server, report and model size is based on the size of the report definition (.rdl) and report model (.smdl) files that you publish to a report server. The report server does not limit the size of a report or model that you publish. However, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] imposes a maximum size for items that are posted to the server. By default, this limit is 4 megabytes (MB). If you upload or publish a file that exceeds this limit to a report server, you receive an HTTP exception. In this case, you can modify the default by increasing the value of the `maxRequestLength` element in the Machine.config file.  
   
  Although a report model might be very large, report definitions rarely exceed 4 MB. A more typical report size is in the order of kilobytes (KB). However, if you include embedded images, the encoding of those images can result in large report definitions that exceed the 4 MB default.  
   
- [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] imposes a maximum limit on posted files to reduce the threat of denial-of-service attacks against the server. Increasing the value of the upper limit undermines some of the protection that this limit provides. Increase the value only if you are confident that the benefit of doing so outweighs any additional security risk.  
+ [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] imposes a maximum limit on posted files to reduce the threat of denial-of-service attacks against the server. Increasing the value of the upper limit undermines some of the protection that this limit provides. Increase the value only if you are confident that the benefit of doing so outweighs any additional security risk.  
   
  Keep in mind that the value you set for the `maxRequestLength` element must be larger than the actual size limits you want to enforce. You need to make the value larger to account for the inevitable increase to the HTTP request size that occurs after all the parameters are encapsulated in a SOAP envelop, and the Base64 encoding is applied to certain parameters such as the Definition parameter in the <xref:ReportService2010.ReportingService2010.CreateReportEditSession%2A> and <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A> methods. Base64 encoding increases the size of the original data by approximately 33%. Consequently, the value you specify for the `maxRequestLength` element needs to be approximately 33% larger than the actual usable item size. For example, if you specify a value of 64 MB for `maxRequestLength`, realistically you can expect the maximum size for report files that are posted to the report server to be approximately 48 MB.  
   
 ## Report Size in Memory  
- When you run a report, report size is equal to the amount of data that is returned in the report plus the size of the output stream. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] does not impose a maximum limit on the size of a rendered report. System memory determines the upper limit on size (by default, a report server uses all available configured memory when rendering a report), but you can specify configuration settings to set memory thresholds and memory management policies. For more information, see [Configure Available Memory for Report Server Applications](../../2014/reporting-services/configure-available-memory-for-report-server-applications.md).  
+ When you run a report, report size is equal to the amount of data that is returned in the report plus the size of the output stream. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] does not impose a maximum limit on the size of a rendered report. System memory determines the upper limit on size (by default, a report server uses all available configured memory when rendering a report), but you can specify configuration settings to set memory thresholds and memory management policies. For more information, see [Configure Available Memory for Report Server Applications](../../2014/reporting-services/configure-available-memory-for-report-server-applications.md).  
   
  For any report, size can vary considerably depending on how much data is returned and which rendering format you use for the report. A parameterized report might be larger or smaller depending on how parameter values affect the query results. The report output format you choose effects report size in the following ways:  
   
@@ -57,7 +57,7 @@ manager: "mblythe"
   
  By default, both the **reportserver** and **reportservertempdb** databases are set to autogrow. Although the database size can increase automatically, it is never decreased automatically. If the **reportserver** database has excess capacity because you deleted snapshots, you must manually reduce it to recover disk space. Similarly, if the **reportservertempdb** grew to accommodate an unusually high volume of interactive reporting, the disk space allocation will remain at that setting until you reduce it.  
   
- To measure the size of the report server databases, you can run the following [!INCLUDE[tsql](../../includes/tsql-md.md)] commands. Calculating total database size at regular intervals can help you develop reasonable estimates of how to allocate space for the report server database over time. The following statements measure the amount of space that that is currently used (the statements assume you are using default database names):  
+ To measure the size of the report server databases, you can run the following [!INCLUDE[tsql](../includes/tsql-md.md)] commands. Calculating total database size at regular intervals can help you develop reasonable estimates of how to allocate space for the report server database over time. The following statements measure the amount of space that that is currently used (the statements assume you are using default database names):  
   
 ```  
 USE ReportServer  
@@ -69,7 +69,7 @@ EXEC sp_spaceused
   
  To minimize performance delays due to large snapshots, you can do the following:  
   
--   Deploy the report server and the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] on separate computers.  
+-   Deploy the report server and the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] on separate computers.  
   
 -   Add more system memory.  
   

@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: c1d6bfb6-28af-4df6-8087-25807602d282
 caps.latest.revision: 18
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_17300
@@ -45,10 +45,10 @@ manager: "jhubbard"
 -   Increase the maximum number of user connections allowed on the server.  
   
 ## See Also  
- [sp_configure &#40;Transact-SQL&#41;](../Topic/sp_configure%20\(Transact-SQL\).md)   
+ [sp_configure &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [Server Configuration Options &#40;SQL Server&#41;](../../2014/database-engine/server-configuration-options-sql-server.md)   
- [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../Topic/sys.dm_exec_sessions%20\(Transact-SQL\).md)   
+ [sys.dm_exec_sessions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
  [Configure the user connections Server Configuration Option](../../2014/database-engine/configure-the-user-connections-server-configuration-option.md)   
- [KILL &#40;Transact-SQL&#41;](../Topic/KILL%20\(Transact-SQL\).md)  
+ [KILL &#40;Transact-SQL&#41;](~/t-sql/language-elements/kill-transact-sql.md)  
   
   

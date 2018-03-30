@@ -22,7 +22,7 @@ helpviewer_keywords:
 ms.assetid: 80949f9d-58f5-48e3-9342-9e9bf4e57896
 caps.latest.revision: 69
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Report Manager  (SSRS Native Mode)
@@ -45,7 +45,7 @@ manager: "mblythe"
   
 -   Configure report execution properties, report history, and report parameters.  
   
--   Create report models that connect to and retrieve data from a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data source or from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relational data source.  
+-   Create report models that connect to and retrieve data from a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data source or from a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] relational data source.  
   
 -   Set model item security to allow access to specific entities in the model, or map entities to predefined click through reports that you create in advance.  
   
@@ -64,11 +64,11 @@ manager: "mblythe"
   
  Report Manager is used only for a report server that runs in native mode. It is not supported for a report server that you configure for SharePoint integrated mode.  
   
- Some Report Manager features are only available in specified editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ Some Report Manager features are only available in specified editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For more information, see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  On a new installation, only local administrators have sufficient permissions to work with content and settings. To grant permissions to other users, a local administrator must create role assignments that provide access to the report server. The application pages and tasks that a user can subsequently access will depend on the role assignments for that user. For more information, see [Grant User Access to a Report Server &#40;Report Manager&#41;](../../2014/reporting-services/grant-user-access-to-a-report-server-report-manager.md).  
   
- If you are using [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] or Windows Server 2008, you must configure Report Manager for local administration. For more information, see [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../../2014/reporting-services/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+ If you are using [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)] or Windows Server 2008, you must configure Report Manager for local administration. For more information, see [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../../2014/reporting-services/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 ##  <a name="bkmk_start_report_manager"></a> Start and Use Report Manager  
  Report Manager is a Web application that you open by typing the Report Manager URL in the address bar of a browser window. When you start Report Manager, the pages, links, and options that you see will vary based on the permissions you have on the report server. To perform a task, you must be assigned to a role that includes the task. A user who is assigned to a role that has full permissions has access to the complete set of application menus and pages available for managing a report server. A user assigned to a role that has permissions to view and run reports sees only the menus and pages that support those activities. Each user can have different role assignments for different report servers, or even for the various reports and folders that are stored on a single report server.  
@@ -82,7 +82,7 @@ manager: "mblythe"
   
 #### To start Report Manager from a browser  
   
-1.  Open [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 7.0 or later.  
+1.  Open [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 7.0 or later.  
   
 2.  In the address bar of the Web browser, type the Report Manager URL.  
   

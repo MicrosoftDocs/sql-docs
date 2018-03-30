@@ -22,7 +22,7 @@ manager: "mblythe"
   
  **To display the Dimension Structure page**  
   
--   In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project, and then open the dimension that you want to view.  
+-   In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project, and then open the dimension that you want to view.  
   
      By default, the **Dimension Structure** page appears when you first open a dimension in Dimension Designer.  
   

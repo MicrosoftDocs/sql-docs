@@ -16,31 +16,31 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Generating Dump Files for Package Execution
-  In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], you can create debug dump files that provide information about the execution of a package. The information in these files can help you in troubleshooting package execution issues.  
+  In [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], you can create debug dump files that provide information about the execution of a package. The information in these files can help you in troubleshooting package execution issues.  
   
 > [!NOTE]  
->  Debug dump files might contain sensitive information. To help protect sensitive information, you can use an access control list (ACL) to restrict access to the files, or copy the files to a folder that has restricted access. For example, before you send your debug files to [!INCLUDE[msCoName](../../includes/msconame-md.md)] support services, we recommend that you remove any sensitive or confidential information.  
+>  Debug dump files might contain sensitive information. To help protect sensitive information, you can use an access control list (ACL) to restrict access to the files, or copy the files to a folder that has restricted access. For example, before you send your debug files to [!INCLUDE[msCoName](../includes/msconame-md.md)] support services, we recommend that you remove any sensitive or confidential information.  
   
- When you deploy a project to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, you can create dump files that provide information about the execution of the packages contained in the project. When the ISServerExec.exe process ends, the dump files are created. You can specify that a dump file is created when errors occur during the package execution, by selecting the **Dump on errors** option in the **Execute Package** Dialog box. You can also use the following stored procedures:  
+ When you deploy a project to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server, you can create dump files that provide information about the execution of the packages contained in the project. When the ISServerExec.exe process ends, the dump files are created. You can specify that a dump file is created when errors occur during the package execution, by selecting the **Dump on errors** option in the **Execute Package** Dialog box. You can also use the following stored procedures:  
   
--   [catalog.set_execution_parameter_value &#40;SSISDB Database&#41;](../Topic/catalog.set_execution_parameter_value%20\(SSISDB%20Database\).md)  
+-   [catalog.set_execution_parameter_value &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)  
   
      Call this stored procedure to configure a dump file to be created when any error or event occurs, and when specific events occur, during a package execution.  
   
--   [catalog.create_execution_dump](../Topic/catalog.create_execution_dump.md)  
+-   [catalog.create_execution_dump](~/integration-services/system-stored-procedures/catalog-create-execution-dump.md)  
   
      Call this stored procedure to cause a running package to pause and create a dump file.  
   
  If you are deploying packages using the package deployment model, you create the debug dump files by using either the **dtexec** utility or the **dtutil** utility to specify a debug dump option in the command line. For more information, see [dtexec Utility](../../2014/integration-services/dtexec-utility.md) and [dtutil Utility](../../2014/integration-services/dtutil-utility.md). For more information about the package deployment model, see [Deployment of Projects and Packages](../../2014/integration-services/deployment-of-projects-and-packages.md) and [Package Deployment &#40;SSIS&#41;](../../2014/integration-services/package-deployment-ssis.md).  
   
 ## Debug Dump File Format  
- When you specify a debug dump option, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] creates the following debug dump files:  
+ When you specify a debug dump option, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] creates the following debug dump files:  
   
 -   A .mdmp debug dump file. This is a binary file.  
   
 -   The .tmp debug dump file. This is a text formatted file.  
   
- By default, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stores these files in the folder, *\<drive>:*\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.  
+ By default, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] stores these files in the folder, *\<drive>:*\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.  
   
  The following table describes only certain sections in the .tmp file. The .tmp file includes additional data that is not listed in the table.  
   

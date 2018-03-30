@@ -22,7 +22,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Integration Services (SSIS) Expressions
-  An expression is a combination of symbols—identifiers, literals, functions, and operators—that yields a single data value. Simple expressions can be a single constant, variable, or function. More frequently, expressions are complex, using multiple operators and functions and referencing multiple columns and variables. In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], expressions can be used to define conditions for CASE statements, create and update values in data columns, assign values to variables, update or populate properties at run time, define constraints in precedence constraints, and provide the expressions used by the For Loop container.  
+  An expression is a combination of symbols—identifiers, literals, functions, and operators—that yields a single data value. Simple expressions can be a single constant, variable, or function. More frequently, expressions are complex, using multiple operators and functions and referencing multiple columns and variables. In [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], expressions can be used to define conditions for CASE statements, create and update values in data columns, assign values to variables, update or populate properties at run time, define constraints in precedence constraints, and provide the expressions used by the For Loop container.  
   
  Expressions are based on an expression language, and the expression evaluator. The expression evaluator parses the expression and determines whether the expression follows the rules of the expression language. For more information about the expression syntax and supported literals and identifiers, see the following topics.  
   
@@ -33,7 +33,7 @@ manager: "jhubbard"
 -   [Identifiers &#40;SSIS&#41;](../../2014/integration-services/identifiers-ssis.md)  
   
 ## Components that Use Expressions  
- The following elements in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] can use expressions:  
+ The following elements in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] can use expressions:  
   
 -   The Conditional Split transformation implements a decision structure based on expressions to direct data rows to different destinations. Expressions used in a Conditional Split transformation must evaluate to `true` or `false`. For example, rows that meet the condition in the expression "Column1 > Column2" can be routed to a separate output.  
   
@@ -48,7 +48,7 @@ manager: "jhubbard"
  Expressions can also be used to update the values of properties of packages, containers such as the For Loop and Foreach Loop, tasks, package and project level connection managers, log providers, and Foreach enumerators. For example, using a property expression, the string "Localhost.AdventureWorks" can be assigned to the ConnectionName property of the Execute SQL task. For more information, see [Use Property Expressions in Packages](../../2014/integration-services/use-property-expressions-in-packages.md).  
   
 ## Icon Markers for Expressions  
- In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], a special icon marker displays next to connection managers, variables, and tasks that have expressions set on them. The **HasExpressions** property is available on all SSIS objects that support expresions, with the exception of variables. The property enables you to easily identy which objects have expressions.  
+ In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], a special icon marker displays next to connection managers, variables, and tasks that have expressions set on them. The **HasExpressions** property is available on all SSIS objects that support expresions, with the exception of variables. The property enables you to easily identy which objects have expressions.  
   
 ## Expression Builder  
  The expression builder is a graphical tool for building expressions. It is available in the **Conditional Split Transformation Editor**, **Derived Column Transformation Editor** dialog boxes, and in the **Expression Builder** dialog box, is a graphical tool for building expressions.  

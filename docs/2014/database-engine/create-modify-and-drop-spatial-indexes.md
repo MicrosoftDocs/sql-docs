@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
 caps.latest.revision: 22
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Create, Modify, and Drop Spatial Indexes
@@ -28,18 +28,18 @@ manager: "jhubbard"
  There are a number of restrictions on creating spatial indexes. For more information, see [Restrictions on Spatial Indexes](#restrictions) in this topic.  
   
 > [!NOTE]  
->  For information about the relationship of spatial indexes to partition and to filegroups, see the "Remarks" section in [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../Topic/CREATE%20SPATIAL%20INDEX%20\(Transact-SQL\).md).  
+>  For information about the relationship of spatial indexes to partition and to filegroups, see the "Remarks" section in [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-spatial-index-transact-sql.md).  
   
 ##  <a name="creating"></a> Creating, Modifying, and Dropping Spatial Indexes  
   
 ###  <a name="create"></a> To create a spatial index  
  **To create a spatial index by using Transact-SQL**  
- [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../Topic/CREATE%20SPATIAL%20INDEX%20\(Transact-SQL\).md)  
+ [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-spatial-index-transact-sql.md)  
   
  **To create a spatial index by using the New Index dialog box in Management Studio**  
  ##### To create a spatial index in Management Studio  
   
-1.  In Object Explorer, connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and then expand that instance.  
+1.  In Object Explorer, connect to an instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] and then expand that instance.  
   
 2.  Expand **Databases**, expand the database that contains the table with the specified index, and then expand **Tables**.  
   
@@ -63,9 +63,9 @@ manager: "jhubbard"
   
      When creating an index on a `geometry` type column, you must specify the **(*`X-min`*,*`Y-min`*)** and **(*`X-max`*,*`Y-max`*)** coordinates of the bounding box. For an index on a `geography` type column, the bounding-box fields become read-only after you specify the **Geography grid** tessellation scheme, because geography grid tessellation does not use a bounding box.  
   
-     Optionally, you can specify nondefault values for the **Cells Per Object** field and for the grid density at any level of the tessellation scheme. The default number of cells per object is 16 for [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or 8 for [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] or higher, and the default grid density is **Medium** for [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
+     Optionally, you can specify nondefault values for the **Cells Per Object** field and for the grid density at any level of the tessellation scheme. The default number of cells per object is 16 for [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] or 8 for [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] or higher, and the default grid density is **Medium** for [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)].  
   
-     You can select GEOMETRY_AUTO_GRID or GEOGRAPHY_AUTO_GRID for tessellation scheme in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. When GEOMETRY_AUTO_GRID or GEOGRAPHY_AUTO_GRID is selected, then Level 1, Level 2, Level 3, and Level 4 grid density options are disabled.  
+     You can select GEOMETRY_AUTO_GRID or GEOGRAPHY_AUTO_GRID for tessellation scheme in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. When GEOMETRY_AUTO_GRID or GEOGRAPHY_AUTO_GRID is selected, then Level 1, Level 2, Level 3, and Level 4 grid density options are disabled.  
   
      For more information about these properties, see [Index Properties F1 Help](../../2014/database-engine/index-properties-f1-help.md).  
   
@@ -93,10 +93,10 @@ manager: "jhubbard"
   
 ###  <a name="alter"></a> To alter a spatial index  
   
--   [ALTER INDEX &#40;Transact-SQL&#41;](../Topic/ALTER%20INDEX%20\(Transact-SQL\).md)  
+-   [ALTER INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-index-transact-sql.md)  
   
     > [!IMPORTANT]  
-    >  To change options that are specific to a spatial index, such as BOUNDING_BOX or GRID, you can either use a CREATE SPATIAL INDEX statement that specifies DROP_EXISTING = ON, or drop the spatial index and create a new one. For an example, see [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../Topic/CREATE%20SPATIAL%20INDEX%20\(Transact-SQL\).md).  
+    >  To change options that are specific to a spatial index, such as BOUNDING_BOX or GRID, you can either use a CREATE SPATIAL INDEX statement that specifies DROP_EXISTING = ON, or drop the spatial index and create a new one. For an example, see [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-spatial-index-transact-sql.md).  
   
 -   [Modify an Index](../../2014/database-engine/modify-an-index.md)  
   
@@ -105,7 +105,7 @@ manager: "jhubbard"
   
 ###  <a name="drop"></a> To drop a spatial index  
  **To drop a spatial index by using Transact-SQL**  
- [DROP INDEX &#40;Transact-SQL&#41;](../Topic/DROP%20INDEX%20\(Transact-SQL\).md)  
+ [DROP INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/drop-index-transact-sql.md)  
   
  **To drop an index by using Management Studio**  
  [Delete an Index](../../2014/database-engine/delete-an-index.md)  
@@ -148,7 +148,7 @@ manager: "jhubbard"
  An index build can use available process parallelism.  
   
 ### Version Restrictions  
- Spatial tessellations introduced in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] cannot be replicated to [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] or [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. You must use [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] or [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] spatial tessellations for spatial indexes when backward compatibility with [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] or [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] databases is a requirement.  
+ Spatial tessellations introduced in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] cannot be replicated to [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] or [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. You must use [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] or [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] spatial tessellations for spatial indexes when backward compatibility with [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] or [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] databases is a requirement.  
   
   
 ## See Also  

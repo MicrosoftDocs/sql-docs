@@ -18,20 +18,20 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Job Step Properties: New Job Step (Advanced Page)
-  Use this page to view and change the properties of a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job step.  
+  Use this page to view and change the properties of a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent job step.  
   
 ## Options  
  **On success action**  
- Sets the action for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to perform if the job step succeeds.  
+ Sets the action for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent to perform if the job step succeeds.  
   
  **Retry attempts**  
- Sets the number of times that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent attempts to retry a failed job step.  
+ Sets the number of times that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent attempts to retry a failed job step.  
   
  **Retry interval (minutes)**  
- Sets the amount of time for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to wait between retry attempts.  
+ Sets the amount of time for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent to wait between retry attempts.  
   
  **On failure action**  
- Sets the action for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to perform if the job step fails.  
+ Sets the action for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent to perform if the job step fails.  
   
 ## Options for Transact-SQL Job Steps  
  **Output file**  
@@ -41,7 +41,7 @@ manager: "jhubbard"
  Browse to the file to use for output from the job step.  
   
  **View**  
- In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], this button is disabled for viewing output files. Instead, use Notepad to view job step output files.  
+ In [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], this button is disabled for viewing output files. Instead, use Notepad to view job step output files.  
   
  **Append output to existing file**  
  Append output to the existing contents of the file. Otherwise, the previous file contents are overwritten each time the job step runs.  
@@ -69,7 +69,7 @@ manager: "jhubbard"
  Browse to the file to use for output from the job step.  
   
  **View**  
- In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], this button is disabled for viewing output files. Instead, use Notepad to view job step output files.  
+ In [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], this button is disabled for viewing output files. Instead, use Notepad to view job step output files.  
   
  **Append output to existing file**  
  Appends the job step output to the previous file contents each time it runs.  
@@ -94,7 +94,7 @@ manager: "jhubbard"
  Browse to the file to use for output from the job step.  
   
  **View**  
- In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], this button is disabled for viewing output files. Instead, use Notepad to view job step output files.  
+ In [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], this button is disabled for viewing output files. Instead, use Notepad to view job step output files.  
   
  **Append output to existing file**  
  Appends the job step output to the previous file contents each time it runs.  
@@ -126,7 +126,7 @@ manager: "jhubbard"
  Browse to the file to use for output from the job step.  
   
  **View**  
- In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], this button is disabled for viewing output files. Instead, use Notepad to view job step output files.  
+ In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], this button is disabled for viewing output files. Instead, use Notepad to view job step output files.  
   
  **Append output to existing file**  
  Append output to the existing contents of the file. Otherwise, the previous file contents are overwritten each time the job step runs.  

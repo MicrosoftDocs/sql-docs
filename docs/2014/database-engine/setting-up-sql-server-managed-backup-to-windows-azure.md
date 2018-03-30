@@ -18,16 +18,16 @@ manager: "jhubbard"
 # Setting up SQL Server Managed Backup to Windows Azure
   This topic includes two tutorials:  
   
- Set up [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] at the database level, enable email notification, and monitor backup activity.  
+ Set up [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] at the database level, enable email notification, and monitor backup activity.  
   
- Setting up  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] at the instance level, enable email notification, and monitor backup activity.  
+ Setting up  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] at the instance level, enable email notification, and monitor backup activity.  
   
- For a tutorial on setting up [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for Availability Groups, see [Setting up SQL Server Managed Backup to Microsoft Azure for Availability Groups](../../2014/database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md).  
+ For a tutorial on setting up [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] for Availability Groups, see [Setting up SQL Server Managed Backup to Microsoft Azure for Availability Groups](../../2014/database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md).  
   
-## Setting Up [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
+## Setting Up [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]  
   
-### Enable and Configure [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for a Database  
- This tutorial describes the steps necessary to enable and configure [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for a database (TestDB), followed by steps to enable monitoring [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] health status.  
+### Enable and Configure [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] for a Database  
+ This tutorial describes the steps necessary to enable and configure [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] for a database (TestDB), followed by steps to enable monitoring [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] health status.  
   
  **Permissions:**  
   
@@ -46,11 +46,11 @@ manager: "jhubbard"
  
 2.  **Create a SQL Credential:** Create a SQL Credential using the name of the storage account as the Identity and the storage access key as the password.  
   
-3.  **Ensure SQL Server Agent service is Started and Running:**  Start SQL Server Agent if it is not currently running.  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] requires SQL Server Agent to be running on the instance to perform backup operations.  You may want to set SQL Server Agent to run automatically to make sure that backup operations can occur regularly.  
+3.  **Ensure SQL Server Agent service is Started and Running:**  Start SQL Server Agent if it is not currently running.  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] requires SQL Server Agent to be running on the instance to perform backup operations.  You may want to set SQL Server Agent to run automatically to make sure that backup operations can occur regularly.  
   
 4.  **Determine the retention period:** Determine the retention period for the backup files. The retention period is specified in days and can range from 1 to 30.  
   
-5.  **Enable and configure [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] :** Start SQL Server Management Studio and connect to the instance where the database is installed. From the query window run the following statement after you modify the values for the database name, SQL Credential, retention period, and encryption options per your requirements:  
+5.  **Enable and configure [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] :** Start SQL Server Management Studio and connect to the instance where the database is installed. From the query window run the following statement after you modify the values for the database name, SQL Credential, retention period, and encryption options per your requirements:  
   
      For more information on creating a certificate for encryption, see the **Create a Backup Certificate** step in [Create an Encrypted Backup](../../2014/database-engine/create-an-encrypted-backup.md).  
   
@@ -69,7 +69,7 @@ manager: "jhubbard"
   
     ```  
   
-     [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] is now enabled on the database you specified. It may take up to 15 minutes for the backup operations on the database to start to run.  
+     [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] is now enabled on the database you specified. It may take up to 15 minutes for the backup operations on the database to start to run.  
   
 6.  **Review Extended Event Default Configuration:** Review the Extended Event settings by running the following transact-SQL statement.  
   
@@ -77,9 +77,9 @@ manager: "jhubbard"
     SELECT * FROM smart_admin.fn_get_current_xevent_settings()  
     ```  
   
-     You should see that Admin, Operational, and Analytical channel events are enabled by default and cannot be disabled. This should be sufficient to monitor the events that require manual intervention.  You can enable debug events, but the debug channels include informational and debug events that [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] uses to detect issues and solve them. For more information, see [Monitor SQL Server Managed Backup to Microsoft Azure](../../2014/database-engine/monitor-sql-server-managed-backup-to-windows-azure.md).  
+     You should see that Admin, Operational, and Analytical channel events are enabled by default and cannot be disabled. This should be sufficient to monitor the events that require manual intervention.  You can enable debug events, but the debug channels include informational and debug events that [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] uses to detect issues and solve them. For more information, see [Monitor SQL Server Managed Backup to Microsoft Azure](../../2014/database-engine/monitor-sql-server-managed-backup-to-windows-azure.md).  
   
-7.  **Enable and Configure Notification for Health Status:** [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] has a stored procedure that creates an agent job to send out e-mail notifications of errors or warnings that may require attention. The following steps describe the process to enable and configure e-mail notifications:  
+7.  **Enable and Configure Notification for Health Status:** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] has a stored procedure that creates an agent job to send out e-mail notifications of errors or warnings that may require attention. The following steps describe the process to enable and configure e-mail notifications:  
   
     1.  Setup Database Mail if it is not already enabled on the instance. For more information, see [Configure Database Mail](../../2014/database-engine/configure-database-mail.md).  
   
@@ -96,7 +96,7 @@ manager: "jhubbard"
   
          For more information, and a full sample script see [Monitor SQL Server Managed Backup to Microsoft Azure](../../2014/database-engine/monitor-sql-server-managed-backup-to-windows-azure.md).  
   
-8.  **View backup files in the Microsoft Azure Storage Account:** Connect to the storage account from SQL Server Management Studio or the Azure Management Portal. You will see a container for the instance of SQL Server that hosts the database you configured to use [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. You may also see a database and a log backup within 15 minutes of enabling [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for the database.  
+8.  **View backup files in the Microsoft Azure Storage Account:** Connect to the storage account from SQL Server Management Studio or the Azure Management Portal. You will see a container for the instance of SQL Server that hosts the database you configured to use [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. You may also see a database and a log backup within 15 minutes of enabling [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] for the database.  
   
 9. **Monitor the Health Status:**  You can monitor through e-mail notifications you configured previously, or actively monitor the events logged. The following are some example Transact-SQL Statements used to view the events:  
   
@@ -145,10 +145,10 @@ manager: "jhubbard"
   
     ```  
   
- The steps described in this section are specifically for configuring [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for the first time on the database. You can modify the existing configurations using the same system stored procedure **smart_admin.sp_set_db_backup** and provide the new values. For more information, see [SQL Server Managed Backup to Microsoft Azure - Retention and Storage Settings](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md).  
+ The steps described in this section are specifically for configuring [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] for the first time on the database. You can modify the existing configurations using the same system stored procedure **smart_admin.sp_set_db_backup** and provide the new values. For more information, see [SQL Server Managed Backup to Microsoft Azure - Retention and Storage Settings](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md).  
   
-### Enable [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for the Instance with Default Settings  
- This tutorial describes the steps to enable and configure [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for the instance, ‘MyInstance’,\\. It includes steps to enable monitoring the [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] health status.  
+### Enable [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] for the Instance with Default Settings  
+ This tutorial describes the steps to enable and configure [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] for the instance, ‘MyInstance’,\\. It includes steps to enable monitoring the [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] health status.  
   
  **Permissions:**  
   
@@ -165,11 +165,11 @@ manager: "jhubbard"
   
 2.  **Create a SQL Credential:** Create a SQL Credential using the name of the storage account as the Identity and the storage access key as the password.  
   
-3.  **Ensure SQL Server Agent service is Started and Running:** Start SQL Server Agent if it is not currently running. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] requires SQL Server Agent to be running on the instance to perform backup operations.  You may want to set SQL Server Agent to run automatically to make sure that backup operations can occur regularly.  
+3.  **Ensure SQL Server Agent service is Started and Running:** Start SQL Server Agent if it is not currently running. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] requires SQL Server Agent to be running on the instance to perform backup operations.  You may want to set SQL Server Agent to run automatically to make sure that backup operations can occur regularly.  
   
-4.  **Determine the retention period:** Determine the retention period for the backup files. The retention period is specified in days and can range from 1 to 30. Once [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] is enabled at the instance level with the defaults all new databases created thereafter will inherit the settings. Only databases that are set to full or bulk-logged recovery models are supported and will be configured automatically. You may disable [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for a specific database at any time if you  do not want [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] configured. You can also change the configuration for a specific database by configuring [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] at the database level.  
+4.  **Determine the retention period:** Determine the retention period for the backup files. The retention period is specified in days and can range from 1 to 30. Once [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] is enabled at the instance level with the defaults all new databases created thereafter will inherit the settings. Only databases that are set to full or bulk-logged recovery models are supported and will be configured automatically. You may disable [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] for a specific database at any time if you  do not want [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] configured. You can also change the configuration for a specific database by configuring [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] at the database level.  
   
-5.  **Enable and configure [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] :** Start SQL Server Management Studio and connect to the instance of SQL Server. From the query window run the following statement after you modify the values for the database name, SQL Credential, retention period, and the encryption options per your requirements:  
+5.  **Enable and configure [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] :** Start SQL Server Management Studio and connect to the instance of SQL Server. From the query window run the following statement after you modify the values for the database name, SQL Credential, retention period, and the encryption options per your requirements:  
   
      For more information on creating a certificate for encryption, see the **Create a Backup Certificate** step in [Create an Encrypted Backup](../../2014/database-engine/create-an-encrypted-backup.md).  
   
@@ -187,7 +187,7 @@ manager: "jhubbard"
   
     ```  
   
-     [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] is now enabled on the instance.  
+     [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] is now enabled on the instance.  
   
 6.  Verify the configuration settings by running the following Transact-SQL statement:  
   
@@ -198,7 +198,7 @@ manager: "jhubbard"
   
     ```  
   
-7.  Create a new database on the instance. Run the following Transact-SQL statement to view the [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] configuration settings for the database:  
+7.  Create a new database on the instance. Run the following Transact-SQL statement to view the [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] configuration settings for the database:  
   
     ```  
     Use msdb  
@@ -208,7 +208,7 @@ manager: "jhubbard"
   
      It may take up to 15 minutes for the settings to show and backup operations on the database to start to run.  
   
-8.  **Enable and Configure Notification for Health Status:** [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] has a stored procedure that creates an agent job to send out e-mail notifications of errors or warnings that may require attention.  To receive such notifications, you must enable run the stored procedure which creates a SQL Server Agent Job. The following steps describe the process to enable and configure e-mail notifications:  
+8.  **Enable and Configure Notification for Health Status:** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] has a stored procedure that creates an agent job to send out e-mail notifications of errors or warnings that may require attention.  To receive such notifications, you must enable run the stored procedure which creates a SQL Server Agent Job. The following steps describe the process to enable and configure e-mail notifications:  
   
     1.  Setup Database Mail if it is not already enabled on the instance. For more information, see [Configure Database Mail](../../2014/database-engine/configure-database-mail.md).  
   
@@ -225,7 +225,7 @@ manager: "jhubbard"
   
          For more information about how to monitor, and a full sample script see [Monitor SQL Server Managed Backup to Microsoft Azure](../../2014/database-engine/monitor-sql-server-managed-backup-to-windows-azure.md).  
   
-9. **View backup files in the Microsoft Azure Storage Account:** Connect to the storage account from SQL Server Management Studio or the Azure Management Portal. You will see a container for the instance of SQL Server that hosts the database you configured to use [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. You may also see a database and a log backup within 15 minutes of creating a new database.  
+9. **View backup files in the Microsoft Azure Storage Account:** Connect to the storage account from SQL Server Management Studio or the Azure Management Portal. You will see a container for the instance of SQL Server that hosts the database you configured to use [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. You may also see a database and a log backup within 15 minutes of creating a new database.  
   
 10. **Monitor the Health Status:**  You can monitor through e-mail notifications you configured previously, or actively monitor the events logged. The following are some example Transact-SQL Statements used to view the events:  
   
@@ -274,6 +274,6 @@ manager: "jhubbard"
   
     ```  
   
- [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] default settings can be overridden for a specific database by configuring the settings specifically at the database level. You can also pause and resume [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] service temporarily. For more information, see [SQL Server Managed Backup to Microsoft Azure - Retention and Storage Settings](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)  
+ [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] default settings can be overridden for a specific database by configuring the settings specifically at the database level. You can also pause and resume [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] service temporarily. For more information, see [SQL Server Managed Backup to Microsoft Azure - Retention and Storage Settings](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)  
   
   

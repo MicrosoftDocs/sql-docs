@@ -35,7 +35,7 @@ manager: "jhubbard"
   
      In an *offline file restore*, the database is offline while damaged files or filegroups are restored. At the end of the restore sequence, the database comes online.  
   
-     All editions of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] support offline file restore.  
+     All editions of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] support offline file restore.  
   
 -   Online file restore  
   
@@ -44,7 +44,7 @@ manager: "jhubbard"
      For information about support for online page and file restore, see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md). For more information about online restores, see [Online Restore &#40;SQL Server&#41;](../../2014/database-engine/online-restore-sql-server.md).  
   
     > [!TIP]  
-    >  If you want the database to be offline for a file restore, take the database offline before you start the restore sequence by executing the following [ALTER DATABASE](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md) statement: ALTER DATABASE *database_name* SET OFFLINE.  
+    >  If you want the database to be offline for a file restore, take the database offline before you start the restore sequence by executing the following [ALTER DATABASE](~/t-sql/statements/alter-database-transact-sql-set-options.md) statement: ALTER DATABASE *database_name* SET OFFLINE.  
   
 
   
@@ -56,9 +56,9 @@ manager: "jhubbard"
 2.  Restore the most recent differential file backup for each restored file and recover the database.  
   
 ### Transact-SQL Steps for File Restore Sequence (Simple Recovery Model)  
- This section shows the essential [!INCLUDE[tsql](../../includes/tsql-md.md)][RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) options for a simple file-restore sequence. Syntax and details that are not relevant to this purpose are omitted.  
+ This section shows the essential [!INCLUDE[tsql](../includes/tsql-md.md)][RESTORE](~/t-sql/statements/restore-statements-transact-sql.md) options for a simple file-restore sequence. Syntax and details that are not relevant to this purpose are omitted.  
   
- The restore sequence contains only two [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. The first statement restores a secondary file, file `A`, which is restored using WITH NORECOVERY. The second operation restores two other files, `B` and `C` which are restored using WITH RECOVERY from a different backup device:  
+ The restore sequence contains only two [!INCLUDE[tsql](../includes/tsql-md.md)] statements. The first statement restores a secondary file, file `A`, which is restored using WITH NORECOVERY. The second operation restores two other files, `B` and `C` which are restored using WITH RECOVERY from a different backup device:  
   
 1.  RESTORE DATABASE *database* FILE **=***name_of_file_A*  
   
@@ -99,7 +99,7 @@ manager: "jhubbard"
  [Full File Backups &#40;SQL Server&#41;](../../2014/database-engine/full-file-backups-sql-server.md)   
  [Backup Overview &#40;SQL Server&#41;](../../2014/database-engine/backup-overview-sql-server.md)   
  [Restore and Recovery Overview &#40;SQL Server&#41;](../../2014/database-engine/restore-and-recovery-overview-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)   
  [Complete Database Restores &#40;Simple Recovery Model&#41;](../../2014/database-engine/complete-database-restores-simple-recovery-model.md)   
  [Piecemeal Restores &#40;SQL Server&#41;](../../2014/database-engine/piecemeal-restores-sql-server.md)  
   

@@ -18,11 +18,11 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Use a Recordset Destination
-  The Recordset destination does not save data to an external data source. Instead, the Recordset destination saves data in memory in a recordset that is stored in an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package variable of the `Object` data type. After the Recordset destination saves the data, you typically use a Foreach Loop container with the Foreach ADO enumerator to process one row of the recordset at a time. The Foreach ADO enumerator saves the value from each column of the current row into a separate package variable. Then, the tasks that you configure inside the Foreach Loop container read those values from the variables and perform some action with them.  
+  The Recordset destination does not save data to an external data source. Instead, the Recordset destination saves data in memory in a recordset that is stored in an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package variable of the `Object` data type. After the Recordset destination saves the data, you typically use a Foreach Loop container with the Foreach ADO enumerator to process one row of the recordset at a time. The Foreach ADO enumerator saves the value from each column of the current row into a separate package variable. Then, the tasks that you configure inside the Foreach Loop container read those values from the variables and perform some action with them.  
   
  You can use the Recordset destination in many different scenarios. Here are some examples:  
   
--   You can use a Send Mail task and the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] expression language to send a customized e-mail message for each row in the recordset.  
+-   You can use a Send Mail task and the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] expression language to send a customized e-mail message for each row in the recordset.  
   
 -   You can use a Script component configured as a source, inside a Data Flow task, to read the column values into the columns of the data flow. Then, you can use transformations and destinations to transform and save the row. In this example, the Data Flow task runs once for each row.  
   
@@ -33,7 +33,7 @@ manager: "jhubbard"
   
 #### To save data to a Recordset destination and process each row by using the Foreach Loop container  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], create or open an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], create or open an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package.  
   
 2.  Create a variable that will contain the recordset saved into memory by the Recordset destination, and set the variable's type to `Object`.  
   
@@ -41,11 +41,11 @@ manager: "jhubbard"
   
 4.  Add and configure the connection manager required by the data source that you plan to use in your data flow.  
   
-5.  Add a Data Flow task to the package, and on the Data Flow tab of [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, configure sources and transformations to load and transform the data.  
+5.  Add a Data Flow task to the package, and on the Data Flow tab of [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, configure sources and transformations to load and transform the data.  
   
 6.  Add a Recordset destination to the data flow and connect it to the transformations. For the `VariableName` property of the Recordset destination, enter the name of the variable that you created to hold the recordset.  
   
-7.  On the Control Flow tab of [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, add a Foreach Loop container and connect this container after the Data Flow task. Then, open the **Foreach Loop Editor** to configure the container with the following settings:  
+7.  On the Control Flow tab of [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, add a Foreach Loop container and connect this container after the Data Flow task. Then, open the **Foreach Loop Editor** to configure the container with the following settings:  
   
     1.  On the **Collection** page, select the Foreach ADO Enumerator. Then, for **ADO object source variable**, select the variable that contains the recordset.  
   
@@ -56,11 +56,11 @@ manager: "jhubbard"
 8.  Inside the Foreach Loop container, add and configure tasks to process one row of the recordset at a time by reading the values from the variables.  
   
 ## Example of Using the Recordset Destination  
- In the following example, the Data Flow task loads information about [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] employees from the Sales.SalesPerson table into a Recordset destination. Then, a Foreach Loop container reads one row of data at a time, and calls a Send Mail task. The Send Mail task uses expressions to send a customized e-mail message to each salesperson about the amount of his or her bonus.  
+ In the following example, the Data Flow task loads information about [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] employees from the Sales.SalesPerson table into a Recordset destination. Then, a Foreach Loop container reads one row of data at a time, and calls a Send Mail task. The Send Mail task uses expressions to send a customized e-mail message to each salesperson about the amount of his or her bonus.  
   
 #### To create the project and configure the variables  
   
-1.  In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], create a new [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project.  
+1.  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], create a new [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project.  
   
 2.  On the **SSIS** menu, select **Variables**.  
   
@@ -84,7 +84,7 @@ manager: "jhubbard"
   
 #### To configure the connection managers  
   
-1.  In the Connection Managers area of the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, add and configure a new OLE DB connection manager that connects to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database.  
+1.  In the Connection Managers area of the [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, add and configure a new OLE DB connection manager that connects to the [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] sample database.  
   
      The OLE DB source in the Data Flow task will use this connection manager to retrieve data.  
   
@@ -94,7 +94,7 @@ manager: "jhubbard"
   
 #### To configure the data flow and the Recordset Destination  
   
-1.  On the **Control Flow** tab of [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, add a Data Flow task to the design surface.  
+1.  On the **Control Flow** tab of [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, add a Data Flow task to the design surface.  
   
 2.  On the **Data Flow** tab, add an OLE DB source to the Data Flow task, and then open the **OLE DB Source Editor.**  
   
@@ -125,7 +125,7 @@ manager: "jhubbard"
   
 #### To configure the Foreach Loop container and run the package  
   
-1.  On the **Control Flow** tab of [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, add a Foreach Loop container, and connect the container after the Data Flow task.  
+1.  On the **Control Flow** tab of [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, add a Foreach Loop container, and connect the container after the Data Flow task.  
   
 2.  Open the **Foreach Loop Editor**, and configure the container with the following settings:  
   
@@ -141,7 +141,7 @@ manager: "jhubbard"
   
     2.  For **From**, enter an appropriate e-mail address.  
   
-         If you use your own e-mail address, you will be able to confirm that the package runs successfully. You will receive undeliverable receipts for the messages sent by the Send Mail task to the fictitious salespersons of [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
+         If you use your own e-mail address, you will be able to confirm that the package runs successfully. You will receive undeliverable receipts for the messages sent by the Send Mail task to the fictitious salespersons of [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)].  
   
     3.  For **To**, enter a default e-mail address.  
   
@@ -169,6 +169,6 @@ manager: "jhubbard"
   
 7.  Run the package.  
   
-     If you have specified a valid SMTP server and provided your own e-mail address, you will receive undeliverable receipts for the messages that the Send Mail task sends to the fictitious salespersons of [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
+     If you have specified a valid SMTP server and provided your own e-mail address, you will receive undeliverable receipts for the messages that the Send Mail task sends to the fictitious salespersons of [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)].  
   
   

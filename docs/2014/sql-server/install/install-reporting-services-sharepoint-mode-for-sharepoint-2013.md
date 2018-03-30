@@ -12,17 +12,17 @@ ms.topic: "article"
 ms.assetid: b29d0f45-0068-4c84-bd7e-5b8a9cd1b538
 caps.latest.revision: 18
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "jhubbard"
 ---
 # Install Reporting Services SharePoint Mode for SharePoint 2013
-  The procedures in this topic guide you through a single server installation of [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] in SharePoint mode. The steps include running the SQL Server installation wizard as well as configuration tasks that use SharePoint Central Administration. The topic can also be used for individual procedures for updating an existing installation, for example to create a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] service application.  
+  The procedures in this topic guide you through a single server installation of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in SharePoint mode. The steps include running the SQL Server installation wizard as well as configuration tasks that use SharePoint Central Administration. The topic can also be used for individual procedures for updating an existing installation, for example to create a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2013 &#124; **Note:** [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint mode does **not** support SharePoint Server multi-tenancy.|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 &#124; **Note:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode does **not** support SharePoint Server multi-tenancy.|  
   
- For information on adding more [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] servers to an existing farm, see the following:  
+ For information on adding more [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] servers to an existing farm, see the following:  
   
 -   [Add an Additional Report Server to a Farm &#40;SSRS Scale-out&#41;](../../../2014/sql-server/install/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)  
   
@@ -46,19 +46,19 @@ manager: "jhubbard"
   
 -   [Windows PowerShell script for Steps 1–4](#bkmk_full_script)  
   
--   [Additional Configuration](#bkmk_additional_config) including provisioning for subscriptions and alerts, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] content types, and configuring Excel Services to Use an Analysis Services Server.  
+-   [Additional Configuration](#bkmk_additional_config) including provisioning for subscriptions and alerts, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] content types, and configuring Excel Services to Use an Analysis Services Server.  
   
 -   [Verify the installation](#bkmk_verify_installation)  
   
 ##  <a name="bkmk_singleserver"></a> Example Single-Server Deployment  
- A single-server installation is useful for development and testing scenarios but a single-server is not recommended for a production environment. The single-server environment refers to a single computer that has SharePoint and [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] components installed on the same computer. The topic does not cover scale-out with multiple [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] servers.  
+ A single-server installation is useful for development and testing scenarios but a single-server is not recommended for a production environment. The single-server environment refers to a single computer that has SharePoint and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] components installed on the same computer. The topic does not cover scale-out with multiple [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] servers.  
   
- The following diagram illustrates the components that are part of a single server [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] deployment.  
+ The following diagram illustrates the components that are part of a single server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] deployment.  
   
 |||  
 |-|-|  
-|**(1)**|SharePoint service installed from SQL Server installation. You can create one or more [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] service applications.|  
-|**(2)**|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] add-in for SharePoint products provides the user interface components on the SharePoint Servers.|  
+|**(1)**|SharePoint service installed from SQL Server installation. You can create one or more [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service applications.|  
+|**(2)**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] add-in for SharePoint products provides the user interface components on the SharePoint Servers.|  
 |**(3)**|The Excel Service Application used by Power View and PowerPivot.|  
 |**(4)**|PowerPivot service application.|  
   
@@ -68,20 +68,20 @@ manager: "jhubbard"
 >  For more complex deployment examples, see [Deployment Topologies for SQL Server BI Features in SharePoint](../../../2014/sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md).  
   
 ##  <a name="bkmk_setupaccounts"></a> Setup accounts  
- This section describes the accounts and permissions used for the primary deployment steps of [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] in SharePoint mode.  
+ This section describes the accounts and permissions used for the primary deployment steps of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in SharePoint mode.  
   
- **Installation and registering the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Service:**  
+ **Installation and registering the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Service:**  
   
--   The current account during the installation (referred to as the ‘setup’ account) of [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] in SharePoint mode needs to have administrative rights in the local computer. If you are installing [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] after SharePoint is installed and the ‘setup’ account is also a member of the SharePoint farm administrators group, the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] installation will register the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] service for you. If you install [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] before SharePoint is installed or the ‘setup’ account is not a member of the farm administrators group, you register the service manually. See the section [Step 2: Register and Start the Reporting Services SharePoint Service](#bkmk_install_SSRS_sharedservice).  
+-   The current account during the installation (referred to as the ‘setup’ account) of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in SharePoint mode needs to have administrative rights in the local computer. If you are installing [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] after SharePoint is installed and the ‘setup’ account is also a member of the SharePoint farm administrators group, the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation will register the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service for you. If you install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] before SharePoint is installed or the ‘setup’ account is not a member of the farm administrators group, you register the service manually. See the section [Step 2: Register and Start the Reporting Services SharePoint Service](#bkmk_install_SSRS_sharedservice).  
   
- **Creating [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Service Applications**  
+ **Creating [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Service Applications**  
   
--   Following installation and registering the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] service, create one or more [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] service applications. The “SharePoint farm service account “ needs to temporarily be a member of the local administrators group so the Reporting Services service application can be created. For more information on SharePoint 2013 account permissions, see [Account permissions and security settings in SharePoint 2013](http://technet.microsoft.com/library/cc678863.aspx) (http://technet.microsoft.com/library/cc678863.aspx).  
+-   Following installation and registering the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service, create one or more [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service applications. The “SharePoint farm service account “ needs to temporarily be a member of the local administrators group so the Reporting Services service application can be created. For more information on SharePoint 2013 account permissions, see [Account permissions and security settings in SharePoint 2013](http://technet.microsoft.com/library/cc678863.aspx) (http://technet.microsoft.com/library/cc678863.aspx).  
   
      It is security best practice that SharePoint farm administrator accounts are not also local operating system administrator accounts. If you add a farm admin account to the local administrators group as part of your installation process, it is recommended you remove the account from the local administrators group after installation is complete.  
   
 ##  <a name="bkmk_install_SSRS"></a> Step 1: Install Reporting Services Report Server in SharePoint mode  
- This step installs a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] report server in SharePoint mode and the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] add-in for SharePoint products. Depending on what is already installed on your computer, you may not see some of the installation pages described in the following steps.  
+ This step installs a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server in SharePoint mode and the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] add-in for SharePoint products. Depending on what is already installed on your computer, you may not see some of the installation pages described in the following steps.  
   
 1.  Run the SQL Server Installation Wizard (Setup.exe).  
   
@@ -119,9 +119,9 @@ manager: "jhubbard"
   
     -   **Reporting Services add-in for SharePoint Products**.  
   
-         ![note](../../../2014/reporting-services/media/rs-fyinote.png "note") The installation wizard option for installing the add-in is new with the [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] release.  
+         ![note](../../../2014/reporting-services/media/rs-fyinote.png "note") The installation wizard option for installing the add-in is new with the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] release.  
   
-    -   If you do not already have an instance of SQL Server [!INCLUDE[ssDE](../../../includes/ssde-md.md)], you could also select **Database Engine Services** and **Management Tools Complete** for a complete environment.  
+    -   If you do not already have an instance of SQL Server [!INCLUDE[ssDE](../../includes/ssde-md.md)], you could also select **Database Engine Services** and **Management Tools Complete** for a complete environment.  
   
      Click **Next**.  
   
@@ -135,16 +135,16 @@ manager: "jhubbard"
   
 13. Review the **Disk Space Requirements** page and click **Next**.  
   
-14. If you see the **Server Configuration** page type appropriate credentials. If you want to use the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data alerting or subscription features, you need to change the **Startup Type** for SQL Server Agent to **Automatic**. You may not see the **Server Configuration** page, depending on what is already installed on the computer.  
+14. If you see the **Server Configuration** page type appropriate credentials. If you want to use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data alerting or subscription features, you need to change the **Startup Type** for SQL Server Agent to **Automatic**. You may not see the **Server Configuration** page, depending on what is already installed on the computer.  
   
      Click **Next**.  
   
 15. If you selected the Database Engine services, you will see the **Database Engine Configuration** page, add appropriate accounts to the list of SQL Administrators and click **Next**.  
   
-16. On the **Reporting Services Configuration** page you should see the **Install only** option is selected. This option installs the report server files, and does not configure the SharePoint environment for [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
+16. On the **Reporting Services Configuration** page you should see the **Install only** option is selected. This option installs the report server files, and does not configure the SharePoint environment for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
     > [!NOTE]  
-    >  When the SQL Server installation is complete, follow the other sections of this topic to configure the SharePoint environment. This Includes installing the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] shared service and creating [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] service applications.  
+    >  When the SQL Server installation is complete, follow the other sections of this topic to configure the SharePoint environment. This Includes installing the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] shared service and creating [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service applications.  
   
      ![SQL Server Setup Wizard - SSRS Configuration Page](../../../2014/sql-server/install/media/rs-2012sp1-setup-ssrs-configpage-with-circles.gif "SQL Server Setup Wizard - SSRS Configuration Page")  
   
@@ -162,15 +162,15 @@ manager: "jhubbard"
  ![PowerShell related content](../../../2014/reporting-services/media/rs-powershellicon.jpg "PowerShell related content")  
   
 > [!NOTE]  
->  If you are installing into an existing SharePoint farm, you do not need to complete the steps in this section. The [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint service is installed and started when you ran the SQL Server installation wizard as part of the previous section of this document.  
+>  If you are installing into an existing SharePoint farm, you do not need to complete the steps in this section. The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint service is installed and started when you ran the SQL Server installation wizard as part of the previous section of this document.  
   
- The following are the common reasons why you need to manually register the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] service.  
+ The following are the common reasons why you need to manually register the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service.  
   
--   You installed [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint mode before SharePoint was installed.  
+-   You installed [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode before SharePoint was installed.  
   
--   The account used to install [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint mode, was not a member of the SharePoint farm administrators group. For more information, see the section [Setup accounts](#bkmk_setupaccounts).  
+-   The account used to install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode, was not a member of the SharePoint farm administrators group. For more information, see the section [Setup accounts](#bkmk_setupaccounts).  
   
- The necessary files were installed as part of the SQL Server installation wizard, but the services need to be registered into the SharePoint farm. The [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] release introduces PowerShell support for [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] in SharePoint mode.  
+ The necessary files were installed as part of the SQL Server installation wizard, but the services need to be registered into the SharePoint farm. The [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] release introduces PowerShell support for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in SharePoint mode.  
   
  The following steps guide you through opening the SharePoint Management Shell and running cmdlets:  
   
@@ -206,7 +206,7 @@ manager: "jhubbard"
     get-spserviceinstance -all |where {$_.TypeName -like "SQL Server Reporting*"} | Start-SPServiceInstance  
     ```  
   
- Either you are in the Windows Powershell instead of the SharePoint Management Shell  or [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint mode is not installed. For more information on [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] and PowerShell, see [PowerShell cmdlets for Reporting Services SharePoint Mode](../../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
+ Either you are in the Windows Powershell instead of the SharePoint Management Shell  or [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode is not installed. For more information on [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and PowerShell, see [PowerShell cmdlets for Reporting Services SharePoint Mode](../../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
  You can also start the service from SharePoint central Administration rather than running the third PowerShell command. The following steps are also useful to verify that the service is running.  
   
@@ -229,7 +229,7 @@ manager: "jhubbard"
 3.  In the New menu, click **SQL Server Reporting Services Service Application.**.  
   
     > [!IMPORTANT]  
-    >  If the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] option does not appear in the list, it is an **indication that the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] shared service is not installed**. Review the previous section on how to use PowerShell cmdlts to install the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] service.  
+    >  If the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] option does not appear in the list, it is an **indication that the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] shared service is not installed**. Review the previous section on how to use PowerShell cmdlts to install the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service.  
   
 4.  In the **Create SQL Server Reporting Services Service Application** page, enter a name for the application. If you are creating multiple Reporting Services service applications, a descriptive name or naming convention will help you organize your administration and management operations.  
   
@@ -247,18 +247,18 @@ manager: "jhubbard"
   
 10. Click **OK**.  
   
-11. The process to create a service application could take several minutes to complete. When it is complete, you will see a confirmation message and a link to a **Provision Subscriptions and Alerts** page. Complete the provision step if you want to use the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] subscriptions feature or the data alerts feature. For more information, see [Provision Subscriptions and Alerts for SSRS Service Applications](../../../2014/sql-server/install/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
+11. The process to create a service application could take several minutes to complete. When it is complete, you will see a confirmation message and a link to a **Provision Subscriptions and Alerts** page. Complete the provision step if you want to use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] subscriptions feature or the data alerts feature. For more information, see [Provision Subscriptions and Alerts for SSRS Service Applications](../../../2014/sql-server/install/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
- ![PowerShell related content](../../../2014/reporting-services/media/rs-powershellicon.jpg "PowerShell related content") For information on using PowerShell to create a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] service application, see:  
+ ![PowerShell related content](../../../2014/reporting-services/media/rs-powershellicon.jpg "PowerShell related content") For information on using PowerShell to create a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application, see:  
   
 -   See the following section [Windows PowerShell script for Steps 1–4](#bkmk_full_script).  
   
 -   Topic [To create a Reporting Services Service Application using PowerShell](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md#bkmk_powershell_create_ssrs_serviceapp).  
   
 ##  <a name="bkmk_powerview"></a> Step 4: Activate the Power View Site Collection Feature.  
- [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)], a feature of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Add-in for [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SharePoint Products, is a site collection feature. The feature is activated automatically for root site collections and site collections created after the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] add-in is installed. If you plan to use [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)], verify that the feature is activated.  
+ [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], a feature of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Add-in for [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint Products, is a site collection feature. The feature is activated automatically for root site collections and site collections created after the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] add-in is installed. If you plan to use [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], verify that the feature is activated.  
   
- If you install the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] add-in for SharePoint Products after the installation of the SharePoint Server, then the Report Server integration feature and the Power View integration feature will only be activated for root site collections. For other site collections, manually activate the features.  
+ If you install the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] add-in for SharePoint Products after the installation of the SharePoint Server, then the Report Server integration feature and the Power View integration feature will only be activated for root site collections. For other site collections, manually activate the features.  
   
 #### To Activate or Verify the Power View Site Collection Feature  
   
@@ -281,13 +281,13 @@ manager: "jhubbard"
 ##  <a name="bkmk_full_script"></a> Windows PowerShell script for Steps 1–4  
  The PowerShells script in this section are the equivalent of completing steps 1 to 4 in the previous sections. The script completes the following:  
   
--   Installs [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] service and service proxy, and starts the service.  
+-   Installs [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service and service proxy, and starts the service.  
   
 -   Creates a service proxy named “Reporting Services”.  
   
--   Creates a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] service application named “Reporting Services Application”.  
+-   Creates a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application named “Reporting Services Application”.  
   
--   Enables the [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] feature for a site collection.  
+-   Enables the [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] feature for a site collection.  
   
  Parameters  
   
@@ -295,7 +295,7 @@ manager: "jhubbard"
   
 -   Update the **–DatabaseServer** parameter for the service application. This parameter is the database engine instance  
   
--   Update the **–url** parameter of the site that you want the [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] feature enabled.  
+-   Update the **–url** parameter of the site that you want the [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] feature enabled.  
   
  **To use the script:**  
   
@@ -381,30 +381,30 @@ Enable-SPfeature -identity "reportserver" -Url http://server/sites/bi
  This section describes additional configuration steps that are important in most SharePoint deployments.  
   
 ###  <a name="bkmk_configure_ECS"></a> Configure Excel Services and PowerPivot  
- If you want to view [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] Power View reports in an Excel 2013 workbook in SharePoint, an Excel Services Application on the farm needs to be configured to use an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Server in SharePoint mode. Also, the application pool security account used by the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] service application, must be an administrator on the Analysis Services Server. For more information, see the following:  
+ If you want to view [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] Power View reports in an Excel 2013 workbook in SharePoint, an Excel Services Application on the farm needs to be configured to use an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Server in SharePoint mode. Also, the application pool security account used by the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application, must be an administrator on the Analysis Services Server. For more information, see the following:  
   
 -   The section “Configure Excel Services for Analysis Services integration” in [PowerPivot for SharePoint 2013 Installation](../../../2014/sql-server/install/powerpivot-for-sharepoint-2013-installation.md).  
   
 -   [Manage Excel Services data model settings (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780.aspx).  
   
 ###  <a name="bkmk_provision_agent"></a> Provision Subscriptions and Alerts  
- The [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] subscription and data alert features may require the configuration of SQL Server Agent permissions. If you see an error message that indicates SQL Server Agent is required and you have verified SQL Server Agent is running, update the permissions. You can click the link **Provision Subscriptions and Alerts** on the create service application success page to go to another page for provisioning SQL Server Agent. The provision step is needed if your deployment crosses machine boundaries, for example when the SQL Server database instance is on a different machine. For more information, see [Provision Subscriptions and Alerts for SSRS Service Applications](../../../2014/sql-server/install/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)  
+ The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] subscription and data alert features may require the configuration of SQL Server Agent permissions. If you see an error message that indicates SQL Server Agent is required and you have verified SQL Server Agent is running, update the permissions. You can click the link **Provision Subscriptions and Alerts** on the create service application success page to go to another page for provisioning SQL Server Agent. The provision step is needed if your deployment crosses machine boundaries, for example when the SQL Server database instance is on a different machine. For more information, see [Provision Subscriptions and Alerts for SSRS Service Applications](../../../2014/sql-server/install/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)  
   
 ### Configure E-mail for SSRS Service Applications  
- The [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data alerts feature sends alerts in e-mail messages. To send e-mail you may need to configure your [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] service application and you may need to modify the e-mail delivery extension for the service application. If you plan to use the e-mail delivery extension for the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] subscription feature, the e-mail settings are required. For more information, see [Configure E-mail for a Reporting Services Service Application &#40;SharePoint 2010 and SharePoint 2013&#41;](../../../2014/sql-server/install/configure-e-mail-for-a-reporting-services-service-application.md)  
+ The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data alerts feature sends alerts in e-mail messages. To send e-mail you may need to configure your [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application and you may need to modify the e-mail delivery extension for the service application. If you plan to use the e-mail delivery extension for the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] subscription feature, the e-mail settings are required. For more information, see [Configure E-mail for a Reporting Services Service Application &#40;SharePoint 2010 and SharePoint 2013&#41;](../../../2014/sql-server/install/configure-e-mail-for-a-reporting-services-service-application.md)  
   
 ### Add Reporting Services Content Types to Content Libraries  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] provides predefined content types that are used to manage shared data source (.rsds) files, report models (.smdl), and Report Builder report definition (.rdl) files. Adding a **Report Builder Report**, **Report Model**, and **Report Data Source** content type to a library enables the **New** command so that you can create new documents of that type. For more information, see [Add Report Server Content Types to a Library &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md).  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides predefined content types that are used to manage shared data source (.rsds) files, report models (.smdl), and Report Builder report definition (.rdl) files. Adding a **Report Builder Report**, **Report Model**, and **Report Data Source** content type to a library enables the **New** command so that you can create new documents of that type. For more information, see [Add Report Server Content Types to a Library &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md).  
   
 ### Activate the Report Server File sync Feature  
  If users will frequently upload published report items directly to SharePoint document libraries, the **Report Server File Sync** site level feature will be beneficial. The file sync feature will synchronize the report server catalog with items in document libraries on a more frequent basis. For more information, see [Activate the Report Server File Sync Feature in SharePoint Central Administration](../../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md).  
   
 ##  <a name="bkmk_verify_installation"></a> Verify the installation  
- The following are suggested steps and procedures to verify the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint mode deployment.  
+ The following are suggested steps and procedures to verify the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode deployment.  
   
 -   See the SharePoint section in the verification topic [Verify a Reporting Services Installation](../../../2014/sql-server/install/verify-a-reporting-services-installation.md).  
   
--   In a SharePoint document library, create a basic [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] report that only contains a text box, for example a title. The report does not contain any data sources or datasets. The goal is to verify you can open Report Builder, build a basic report, and preview the report.  
+-   In a SharePoint document library, create a basic [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report that only contains a text box, for example a title. The report does not contain any data sources or datasets. The goal is to verify you can open Report Builder, build a basic report, and preview the report.  
   
      Save the report to the document library and the run the report from the library. For more information on creating reports with Report Builder, see [Start Report Builder (Report Builder)](http://technet.microsoft.com/library/ms159221.aspx).  
   

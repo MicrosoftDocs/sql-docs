@@ -35,7 +35,7 @@ manager: "jhubbard"
  Opens a dialog to change the font settings.  
   
  **Use regional settings to display date and time values**  
- Displays date and time values in regional settings configured for your computer. If you do not select this option, the date and time values are displayed in the fixed format used by Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], which includes milliseconds.  
+ Displays date and time values in regional settings configured for your computer. If you do not select this option, the date and time values are displayed in the fixed format used by Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], which includes milliseconds.  
   
 > [!NOTE]  
 >  Toggling this checkbox changes the time columns display format such as **StartTime** and **EndTime**. However, it does not change the **DateTime** value parameters inside the language events or remote procedure calls (RPCs).  
@@ -48,17 +48,17 @@ manager: "jhubbard"
  Begin a trace using the default template as soon as a connection is made.  
   
  **Update trace definition when provider version changes**  
- Apply the most current trace definition to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] when the provider is updated. This item is not checked by default. This forces [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to query the server for the trace definition and re-create, if one exists, the file on disk.  
+ Apply the most current trace definition to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] when the provider is updated. This item is not checked by default. This forces [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] to query the server for the trace definition and re-create, if one exists, the file on disk.  
   
 ### File Rollover Options  
  **Load all rollover files in sequence without prompting**  
  Load rollover files automatically when a trace file is opened. If more than one file was created while tracing, selecting this option automatically loads all rollover files.  
   
  **Prompt before loading rollover files**  
- Have [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] prompt you before adding a rollover file when a trace file is opened.  
+ Have [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] prompt you before adding a rollover file when a trace file is opened.  
   
  **Never load subsequent rollover files**  
- [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] never loads subsequent rollover files when a trace file is opened.  
+ [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] never loads subsequent rollover files when a trace file is opened.  
   
 ### Replay Options  
  **Default number of replay threads**  

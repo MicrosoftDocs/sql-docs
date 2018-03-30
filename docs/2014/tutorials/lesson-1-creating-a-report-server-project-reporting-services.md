@@ -12,17 +12,17 @@ ms.topic: "article"
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
 caps.latest.revision: 51
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Lesson 1: Creating a Report Server Project (Reporting Services)
-  To create a report in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you must first create a report server project where you will save your report definition (.rdl) file and any other resource files that you need for your report. Then you will create the actual report definition file, define a data source for your report, define a dataset, and define the report layout. When you run the report, the actual data is retrieved and combined with the layout, and then rendered on your screen, from where you can export it, print it, or save it.  
+  To create a report in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], you must first create a report server project where you will save your report definition (.rdl) file and any other resource files that you need for your report. Then you will create the actual report definition file, define a data source for your report, define a dataset, and define the report layout. When you run the report, the actual data is retrieved and combined with the layout, and then rendered on your screen, from where you can export it, print it, or save it.  
   
- In this lesson, you will learn how to create a report server project in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. A report server project is used to create reports that run on a report server.  
+ In this lesson, you will learn how to create a report server project in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. A report server project is used to create reports that run on a report server.  
   
 ### To create a report server project  
   
-1.  Click **Start**, point to **All Programs**, point to [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], and then click **SQL Server Data Tools**. If this is the first time you have opened [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], click **Business Intelligence Settings** for the default environment settings.  
+1.  Click **Start**, point to **All Programs**, point to [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], and then click **SQL Server Data Tools**. If this is the first time you have opened [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], click **Business Intelligence Settings** for the default environment settings.  
   
 2.  On the **File** menu, point to **New**, and then click **Project**.  
   
@@ -49,7 +49,7 @@ manager: "mblythe"
   
      Report Designer opens and displays the new .rdl file in Design view.  
   
- Report Designer is a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] component that runs in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. It has two views: **Design** and **Preview**. Click each tab to change views.  
+ Report Designer is a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] component that runs in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. It has two views: **Design** and **Preview**. Click each tab to change views.  
   
  You define your data in the **Report Data** pane. You define your report layout in **Design** view. You can run the report and see what it looks like in **Preview** view.  
   

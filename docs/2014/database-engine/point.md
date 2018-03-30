@@ -15,11 +15,11 @@ helpviewer_keywords:
 ms.assetid: 2a596ec4-8b2f-4962-bcb4-e5c8f77edad5
 caps.latest.revision: 19
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Point
-  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spatial data, a `Point` is a 0-dimensional object representing a single location and may contain Z (elevation) and M (measure) values.  
+  In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] spatial data, a `Point` is a 0-dimensional object representing a single location and may contain Z (elevation) and M (measure) values.  
   
 ## Geography Data Type  
  The Point type for the geography data type represents a single location where *Lat* represents latitude and *Long* represents longitude. The values for latitude and longitude are measured in degrees. Values for latitude always lie in the interval [-90, 90], and values that are inputted outside this range will throw an exception. Values for longitude always lie in the interval (-180, 180], and values inputted outside this range are wrapped around to fit in this range. For example, if 190 is inputted for longitude, then it will be wrapped to the value -170. *SRID* represents the spatial reference ID of the **geography** instance that you wish to return.  
@@ -60,8 +60,8 @@ SET @g = geometry::Parse('POINT(3 4 NULL NULL)');
   
 ## See Also  
  [MultiPoint](../../2014/database-engine/multipoint.md)   
- [STX &#40;geometry Data Type&#41;](../Topic/STX%20\(geometry%20Data%20Type\).md)   
- [STY &#40;geometry Data Type&#41;](../Topic/STY%20\(geometry%20Data%20Type\).md)   
+ [STX &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stx-geometry-data-type.md)   
+ [STY &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/sty-geometry-data-type.md)   
  [Spatial Data &#40;SQL Server&#41;](../../2014/database-engine/spatial-data-sql-server.md)  
   
   

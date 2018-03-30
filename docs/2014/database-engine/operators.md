@@ -29,7 +29,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Operators
-  Operators are aliases for people or groups that can receive electronic notification when jobs have completed or alerts have been raised. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service supports the notification of administrators through operators. Operators enable notification and monitoring capabilities of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+  Operators are aliases for people or groups that can receive electronic notification when jobs have completed or alerts have been raised. The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent service supports the notification of administrators through operators. Operators enable notification and monitoring capabilities of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent.  
   
 ## Operator Attributes and Concepts  
  The primary attributes of an operator are:  
@@ -39,13 +39,13 @@ manager: "jhubbard"
 -   Contact information  
   
 ### Naming an Operator  
- Every operator must have a name. Operator names must be unique within the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance and can be no longer than **128** characters.  
+ Every operator must have a name. Operator names must be unique within the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance and can be no longer than **128** characters.  
   
 ### Contact Information  
  An operator's contact information defines how the operator is notified. Operators can be notified by e-mail, pager, or through the **net send** command:  
   
 > [!IMPORTANT]  
->  The Pager and **net send** options will be removed from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in a future version of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using these features in new development work, and plan to modify applications that currently use these features.  
+>  The Pager and **net send** options will be removed from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent in a future version of [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Avoid using these features in new development work, and plan to modify applications that currently use these features.  
   
 -   **E-mail notification**  
   
@@ -67,7 +67,7 @@ manager: "jhubbard"
   
          This software is proprietary to pager service providers. The software acts as a e-mail client that periodically processes its inbox either by interpreting all or part of the e-mail address information as a pager number, or by matching the e-mail name to a pager number in a translation table.  
   
-         If all of the operators share a pager provider, you can use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to specify any special e-mail formatting that is required by the pager-to-e-mail system. The special formatting can be a prefix or a suffix and can be included in the following lines of the e-mail:  
+         If all of the operators share a pager provider, you can use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to specify any special e-mail formatting that is required by the pager-to-e-mail system. The special formatting can be a prefix or a suffix and can be included in the following lines of the e-mail:  
   
          **Subject:**  
   
@@ -83,7 +83,7 @@ manager: "jhubbard"
      This sends a message to the operator by means of the **net send** command. For **net send**, specify the recipient (computer or user) of a network message.  
   
     > [!NOTE]  
-    >  The **net send** command uses Microsoft Windows Messenger. To successfully send alerts, this service must be running on both the computer on which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running and the computer that the operator uses.  
+    >  The **net send** command uses Microsoft Windows Messenger. To successfully send alerts, this service must be running on both the computer on which [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is running and the computer that the operator uses.  
   
 ## Alerting and Fail-Safe Operators  
  You can choose which operators are to be notified in response to an alert. For example, you can assign rotating responsibilities for operator notification by scheduling alerts. For example, Individual A is notified of alerts that occur on Monday, Wednesday, or Friday, and Individual B is notified of alerts that occur on Tuesday, Thursday, or Saturday.  
@@ -96,7 +96,7 @@ manager: "jhubbard"
   
      Reasons for failure to reach primary operators include incorrect pager addresses and off-duty operators.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent cannot access system tables in the **msdb** database.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent cannot access system tables in the **msdb** database.  
   
      The **sysnotifications** system table specifies operator responsibilities for alerts.  
   
@@ -117,7 +117,7 @@ manager: "jhubbard"
 |-|-|  
 |**Tasks**|**Topic**|  
 |Tasks related to creating an operator|[Create an Operator](../../2014/database-engine/create-an-operator.md)<br /><br /> [Designate a Fail-Safe Operator](../../2014/database-engine/designate-a-fail-safe-operator.md)|  
-|Tasks related to assigning alerts|[Assign Alerts to an Operator](../../2014/database-engine/assign-alerts-to-an-operator.md)<br /><br /> [Define the Response to an Alert &#40;SQL Server Management Studio&#41;](../../2014/database-engine/define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br /> [sp_add_notification &#40;Transact-SQL&#41;](../Topic/sp_add_notification%20\(Transact-SQL\).md)<br /><br /> [Assign Alerts to an Operator](../../2014/database-engine/assign-alerts-to-an-operator.md)|  
+|Tasks related to assigning alerts|[Assign Alerts to an Operator](../../2014/database-engine/assign-alerts-to-an-operator.md)<br /><br /> [Define the Response to an Alert &#40;SQL Server Management Studio&#41;](../../2014/database-engine/define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br /> [sp_add_notification &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)<br /><br /> [Assign Alerts to an Operator](../../2014/database-engine/assign-alerts-to-an-operator.md)|  
   
 ## See Also  
  [Database Mail](../../2014/database-engine/database-mail.md)  

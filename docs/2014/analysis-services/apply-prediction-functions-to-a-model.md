@@ -34,7 +34,7 @@ manager: "mblythe"
   
  There is a wide variety of prediction functions that you can use, but you must choose the function that suits the type of model you created. Usually this choice depends on the algorithm used to create the model.  
   
--   For a list of the prediction functions that are supported for almost all model types, see [General Prediction Functions &#40;DMX&#41;](../Topic/General%20Prediction%20Functions%20\(DMX\).md).  
+-   For a list of the prediction functions that are supported for almost all model types, see [General Prediction Functions &#40;DMX&#41;](~/dmx/general-prediction-functions-dmx.md).  
   
 -   Additionally, individual algorithms support a variety of specialized functions. For example, if you create a mining model based on the Microsoft Clustering algorithm, you can use specialized prediction functions to find information about the clusters, such as the distance from a data value to the cluster centroid.  
   
@@ -42,15 +42,15 @@ manager: "mblythe"
   
 ### Choose a mining model to use for prediction  
   
-1.  From [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], right-click the model, and select **Build Prediction Query**.  
+1.  From [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], right-click the model, and select **Build Prediction Query**.  
   
      --OR --  
   
-     In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], click the tab, **Mining Model Prediction**, and then click **Select Model** in the  **Mining Model** table.  
+     In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], click the tab, **Mining Model Prediction**, and then click **Select Model** in the  **Mining Model** table.  
   
 2.  In the **Select Mining Model** dialog box, select a mining model, and then click **OK**.  
   
-     You can choose any model within the current [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database. To create a query using a model in a different database, you must either open a new query window in the context of that database, or open the solution file that contains that model.  
+     You can choose any model within the current [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database. To create a query using a model in a different database, you must either open a new query window in the context of that database, or open the solution file that contains that model.  
   
 ### Add prediction functions to a query  
   
@@ -67,7 +67,7 @@ manager: "mblythe"
     |-|-|  
     |**\<model name>**|Select this option to include values from the mining model in the output. You can only add predictable columns.<br /><br /> When you add a column from the model, the result returned is the non-distinct list of values in that column.<br /><br /> The columns that you add with this option are included in the SELECT portion of the resulting DMX statement.|  
     |**Prediction Function**|Select this option to browse a list of prediction functions.<br /><br /> The values or functions you select are added to the SELECT portion of the resulting DMX statement.<br /><br /> The list of prediction functions is not filtered or constrained by the type of model you have selected. Therefore, if you have any doubt about whether the function is supported for the current model type, you can just add the function to the list and see if there is an error.<br /><br /> List items that are preceded by $ (such as $AdjustedProbability) represent columns from the nested table that is output when you use the function, `PredictHistogram`. These are shortcuts that you can use to return a single column and not a nested table.|  
-    |**Custom Expression**|Select this option to type a custom expression and then assign an alias to the output.<br /><br /> The custom expression is added to the SELECT portion of the resulting DMX prediction query.<br /><br /> This option is useful if you want to add text for output with each row, to call VB functions, or to call custom stored procedures.<br /><br /> For information about using VBA and Excel functions from DMX, see [VBA functions in MDX and DAX](../Topic/VBA%20functions%20in%20MDX%20and%20DAX.md).|  
+    |**Custom Expression**|Select this option to type a custom expression and then assign an alias to the output.<br /><br /> The custom expression is added to the SELECT portion of the resulting DMX prediction query.<br /><br /> This option is useful if you want to add text for output with each row, to call VB functions, or to call custom stored procedures.<br /><br /> For information about using VBA and Excel functions from DMX, see [VBA functions in MDX and DAX](~/mdx/vba-functions-in-mdx-and-dax.md).|  
   
 3.  After adding each function or expression, switch to DMX view to see how the function is added within the DMX statement.  
   
@@ -78,7 +78,7 @@ manager: "mblythe"
   
 1.  If you do not have a clustering model available for building this sample query, create the model, [TM_Clustering], using the [Basic Data Mining Tutorial](../../2014/tutorials/basic-data-mining-tutorial.md).  
   
-2.  From [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], right-click the model, [TM_Clustering], and select **Build Prediction Query**.  
+2.  From [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], right-click the model, [TM_Clustering], and select **Build Prediction Query**.  
   
 3.  From the **Mining Model** menu, select **Singleton Query**.  
   

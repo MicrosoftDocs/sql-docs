@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 9dce05c1-c52f-455d-8b8d-6f303e242760
 caps.latest.revision: 24
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Adding Indentation

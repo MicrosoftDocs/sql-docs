@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 8311ed32-00f3-451d-8279-946429f5fee1
 caps.latest.revision: 23
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Error Page (Report Manager)
@@ -26,7 +26,7 @@ manager: "mblythe"
   
      The machine could not be found. "The RPC server is unavailable. (Exception from HRESULT: 0x800706BA)".  
   
--   You can set server properties on a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server to return additional information about error conditions that occur on remote servers. If an error message contains the text "For more information about this error, navigate to the report server on the local server machine, or enable remote errors", see [Enable Remote Errors &#40;Reporting Services&#41;](../../2014/reporting-services/enable-remote-errors-reporting-services.md).  
+-   You can set server properties on a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report server to return additional information about error conditions that occur on remote servers. If an error message contains the text "For more information about this error, navigate to the report server on the local server machine, or enable remote errors", see [Enable Remote Errors &#40;Reporting Services&#41;](../../2014/reporting-services/enable-remote-errors-reporting-services.md).  
   
 ## See Also  
  [Configure Report Manager &#40;Native Mode&#41;](../../2014/reporting-services/configure-report-manager-native-mode.md)   

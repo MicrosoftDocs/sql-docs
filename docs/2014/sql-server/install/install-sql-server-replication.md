@@ -22,20 +22,20 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Install SQL Server Replication
-  Replication components can be installed by using the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Installation Wizard or at a command prompt. Install replication when you install [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], or when you modify an existing instance.  
+  Replication components can be installed by using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard or at a command prompt. Install replication when you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or when you modify an existing instance.  
   
- After replication components are installed, you must configure the server before you can use replication. For more information, see [Configure Distribution](../../../2014/relational-databases/replication/configure-distribution.md) in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online.  
+ After replication components are installed, you must configure the server before you can use replication. For more information, see [Configure Distribution](../../../2014/relational-databases/replication/configure-distribution.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
 > [!IMPORTANT]  
->  If you install replication components when you modify an existing instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], you must stop and restart [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent after the installation is completed. This action helps ensure that [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent recognizes the replication agent subsystems and can call replication agents from job steps.  
+>  If you install replication components when you modify an existing instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you must stop and restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent after the installation is completed. This action helps ensure that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent recognizes the replication agent subsystems and can call replication agents from job steps.  
   
 ## Installing Replication by Using Setup  
- **To install replication when installing a new instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**  
+ **To install replication when installing a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**  
   
 -   To install replication components, including Replication Management Objects (RMO), select **SQL Server Replication** on the **Feature Selection** page of the Installation Wizard.  
   
 ## Installing Replication from the Command Prompt  
- **To install replication when installing a new instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**  
+ **To install replication when installing a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**  
   
 -   See [Install SQL Server 2014 from the Command Prompt](../../../2014/sql-server/install/install-sql-server-2014-from-the-command-prompt.md).  
   

@@ -16,11 +16,11 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Creating a Forecasting Structure and Model (Intermediate Data Mining Tutorial)
-  Next, you will use the Data Mining Wizard to create a new mining structure and mining model based on the data source view that you just created. In this task you will specify that the mining model should use the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series algorithm.  
+  Next, you will use the Data Mining Wizard to create a new mining structure and mining model based on the data source view that you just created. In this task you will specify that the mining model should use the [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series algorithm.  
   
 ### To create a forecasting mining structure  
   
-1.  In Solution Explorer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], right-click **Mining Structures** and select **New Mining Structure**.  
+1.  In Solution Explorer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], right-click **Mining Structures** and select **New Mining Structure**.  
   
 2.  On the **Welcome to the Data Mining Wizard** page, click **Next**.  
   

@@ -41,6 +41,6 @@ manager: "jhubbard"
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/overview-of-alwayson-availability-groups-sql-server.md)   
  [Manually Prepare a Secondary Database for an Availability Group &#40;SQL Server&#41;](../../2014/database-engine/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)   
  [Troubleshoot Orphaned Users &#40;SQL Server&#41;](../../2014/database-engine/troubleshoot-orphaned-users-sql-server.md)   
- [Troubleshoot AlwaysOn Availability Groups Configuration &#40;SQL Server&#41;deleted](../Topic/Troubleshoot%20AlwaysOn%20Availability%20Groups%20Configuration%20\(SQL%20Server\)deleted.md)  
+ [Troubleshoot AlwaysOn Availability Groups Configuration &#40;SQL Server&#41;deleted](troubleshoot-alwayson-availability-groups-configuration-sql-server.md)  
   
   

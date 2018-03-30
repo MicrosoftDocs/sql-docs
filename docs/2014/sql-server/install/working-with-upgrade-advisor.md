@@ -20,18 +20,18 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Working with Upgrade Advisor
-  To help ensure that your upgrade to [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] is successful, Upgrade Advisor provides a central console to identify issues to address in your installations before upgrading to [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+  To help ensure that your upgrade to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] is successful, Upgrade Advisor provides a central console to identify issues to address in your installations before upgrading to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  You can use Upgrade Advisor to perform the following tasks:  
   
 -   Analyze previous version's components on local or remote servers.  
   
     > [!IMPORTANT]  
-    >  You cannot analyze remote instances of [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
+    >  You cannot analyze remote instances of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 -   View the results of the analysis.  
   
- Upgrade Advisor includes an analyzer and a viewer. The Upgrade Advisor Analysis Wizard analyzes the components you select. The analyzer then generates custom reports about issues that you must handle before you can upgrade to [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. You use the Upgrade Advisor Report Viewer to view the custom reports. For more information about what Upgrade Advisor analysis detects, see [Resolving Upgrade Issues](../../../2014/sql-server/install/resolving-upgrade-issues.md).  
+ Upgrade Advisor includes an analyzer and a viewer. The Upgrade Advisor Analysis Wizard analyzes the components you select. The analyzer then generates custom reports about issues that you must handle before you can upgrade to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. You use the Upgrade Advisor Report Viewer to view the custom reports. For more information about what Upgrade Advisor analysis detects, see [Resolving Upgrade Issues](../../../2014/sql-server/install/resolving-upgrade-issues.md).  
   
  The topics in this section provide an overview of Upgrade Advisor functionality and information about how to use Upgrade Advisor and Upgrade Advisor reports.  
   

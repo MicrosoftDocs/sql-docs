@@ -32,7 +32,7 @@ manager: "mblythe"
   
      These tools provide wizard interfaces to well-known, empirically tested data mining algorithms, including clustering (K-means and EM), association analysis, time series analysis, and decision trees. Advanced modeling options for each wizard let you choose different algorithms, such as the Naïve Bayes or neural networks, and customize behavior such as the cluster seed or initial sampling size.  
   
-     All data mining algorithms are hosted in an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], giving you more power to build complex models.  
+     All data mining algorithms are hosted in an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], giving you more power to build complex models.  
   
 -   [Test, Query, and Validate Models](#bkmk_Validate)  
   
@@ -52,9 +52,9 @@ manager: "mblythe"
  [Explore Data &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/explore-data-sql-server-data-mining-add-ins.md)  
  For building and storing models, the add-ins support these data connections:  
   
--   Connection to an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server, for storing and processing the models.  
+-   Connection to an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] server, for storing and processing the models.  
   
--   Optional connections to external data sources. You can build your model using any type of data that can be defined as an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data source, or just use the data already in Excel.  
+-   Optional connections to external data sources. You can build your model using any type of data that can be defined as an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data source, or just use the data already in Excel.  
   
  [Explore Data &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/explore-data-sql-server-data-mining-add-ins.md)  
  The **Explore Data** wizard helps you understand the type and amount of data in your data table by graphing the distribution and values for the selected columns, one at a time.  
@@ -69,7 +69,7 @@ manager: "mblythe"
  The **Relabel** wizard helps you create new labels for data to make it easier to understand the results of analysis. For example, you can rename a range of data with a more descriptive name, or you can choose a representative value from the list.  
   
 ##  <a name="bkmk_Model"></a> Build Models and Analyze  
- The options on the **Data Modeling** section of the toolbar let you derive patterns from data; group rows of data based on attributes, or explore associations. The wizards in this tool ribbon are based on the powerful data mining algorithms available in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Unlike the similar tools in the Table Analysis Tools for Excel, these wizards let you customize the behavior of the algorithm and use a variety of data sources.  
+ The options on the **Data Modeling** section of the toolbar let you derive patterns from data; group rows of data based on attributes, or explore associations. The wizards in this tool ribbon are based on the powerful data mining algorithms available in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Unlike the similar tools in the Table Analysis Tools for Excel, these wizards let you customize the behavior of the algorithm and use a variety of data sources.  
   
  [Classify Wizard &#40;Data Mining Add-ins for Excel&#41;](../../2014/analysis-services/classify-wizard-data-mining-add-ins-for-excel.md)  
  The **Classify** wizard helps you build a classification model based on existing data in an Excel table, an Excel range, or an external data source. A classification model extracts patterns in your data that indicate similarities and helps you make predictions based on groupings of values. For example, a classification model might be used to predict risk based on income or spending patterns.  
@@ -138,15 +138,15 @@ manager: "mblythe"
  If you have the necessary permissions, you can delete modify, rename, or process existing mining models and structures without leaving Excel.  
   
  [Trace &#40;Data Mining Client for Excel&#41;](../../2014/analysis-services/trace-data-mining-client-for-excel.md)  
- Click **Trace** to view an ongoing capture of the interaction between the Excel client and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server. All activity is stored as DMX or XMLA statements, so that you can troubleshoot your data mining session or save the information for later use.  
+ Click **Trace** to view an ongoing capture of the interaction between the Excel client and the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] server. All activity is stored as DMX or XMLA statements, so that you can troubleshoot your data mining session or save the information for later use.  
   
  [Connect to a Data Mining Server](../../2014/analysis-services/connect-to-a-data-mining-server.md)  
- To use Excel as a client for data mining, you must establish a connection to an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. The connection provides you with access to the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] engine. If you have permissions, the connection also lets you store any patterns you have discovered, and modify existing data mining objects.  
+ To use Excel as a client for data mining, you must establish a connection to an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. The connection provides you with access to the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] engine. If you have permissions, the connection also lets you store any patterns you have discovered, and modify existing data mining objects.  
   
- The **Connections** toolbar provides wizards for managing connections to an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. You must define a connection to an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] to use the data mining tools and algorithms. You can create the connection when you install the add-in, or you can add a connection later.  
+ The **Connections** toolbar provides wizards for managing connections to an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. You must define a connection to an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] to use the data mining tools and algorithms. You can create the connection when you install the add-in, or you can add a connection later.  
   
  **Getting Started**  
- Click the **Getting Started** button to start a configuration wizard that walks you through the process of creating a connection to an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], and obtaining the permissions needed to do data mining.  
+ Click the **Getting Started** button to start a configuration wizard that walks you through the process of creating a connection to an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], and obtaining the permissions needed to do data mining.  
   
  **Help**  
  The **Help** dropdown menu provides links to online help, Web sites, and a configuration wizard to help you complete setup and start data mining.  

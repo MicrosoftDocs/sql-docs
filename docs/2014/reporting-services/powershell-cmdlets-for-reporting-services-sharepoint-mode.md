@@ -12,21 +12,21 @@ ms.topic: "article"
 ms.assetid: 7835bc97-2827-4215-b0dd-52f692ce5e02
 caps.latest.revision: 30
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # PowerShell cmdlets for Reporting Services SharePoint Mode
-  When you install [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode, PowerShell cmdlets are installed to support report Servers in SharePoint mode. The cmdlets cover three categories of functionality.  
+  When you install [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint mode, PowerShell cmdlets are installed to support report Servers in SharePoint mode. The cmdlets cover three categories of functionality.  
   
--   Installation of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint shared service and proxy.  
+-   Installation of the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint shared service and proxy.  
   
--   Provisioning and management of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service applications and associated proxies.  
+-   Provisioning and management of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service applications and associated proxies.  
   
--   Management of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] features, for example extensions and encryption keys.  
+-   Management of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features, for example extensions and encryption keys.  
   
 ||  
 |-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint Mode|  
+|[!INCLUDE[applies](../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint Mode|  
   
  **This topic contains the following:**  
   
@@ -53,7 +53,7 @@ manager: "mblythe"
     -   [Change and list subscription owners](#bkmk_change_subscription_owner)  
   
 ##  <a name="bkmk_cmdlet_sum"></a> Cmdlet Summary  
- To run the cmdlets you need to open the SharePoint Management Shell. You can also use the graphical user interface editor that is included with Microsoft Windows, **Windows PowerShell Integrated Scripting Environment (ISE)**. For more information, see [Starting Windows PowerShell on Windows Server](http://technet.microsoft.com/library/hh847814.aspx) (http://technet.microsoft.com/library/hh847814.aspx). In the following cmdlet summaries, the references to service application ‘databases’, refer to all of the databases created and used by a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application. This includes the configuration, alerting, and temp databases.  
+ To run the cmdlets you need to open the SharePoint Management Shell. You can also use the graphical user interface editor that is included with Microsoft Windows, **Windows PowerShell Integrated Scripting Environment (ISE)**. For more information, see [Starting Windows PowerShell on Windows Server](http://technet.microsoft.com/library/hh847814.aspx) (http://technet.microsoft.com/library/hh847814.aspx). In the following cmdlet summaries, the references to service application ‘databases’, refer to all of the databases created and used by a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service application. This includes the configuration, alerting, and temp databases.  
   
  If you see an error message similar to the following when you type the PowerShell examples:  
   
@@ -62,7 +62,7 @@ manager: "mblythe"
   
  One of the following issues is occurring:  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode is not installed and therefore the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] cmdlets are not installed.  
+-   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint mode is not installed and therefore the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] cmdlets are not installed.  
   
 -   You ran the PowerShell command in Windows PowerShell or Windows PowerShell ISE instead of the SharePoint Management Shell. Use the SharePoint Management shell or add the SharePoint Snap-in to the Windows PowerShell window with the following command:  
   
@@ -85,35 +85,35 @@ manager: "mblythe"
  `Get-Help Get-SPRSServiceApplicationServers`  
   
 ###  <a name="bkmk_sharedservice_cmdlets"></a> Shared Service and Proxy Cmdlets  
- The following table contains the PowerShell cmdlets for the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint shared service.  
+ The following table contains the PowerShell cmdlets for the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint shared service.  
   
 |Cmdlet|Description|  
 |------------|-----------------|  
-|Install-SPRSService|Installs and registers, or uninstalls, the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] shared service. This can be done only on the machine that has an installation of SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in SharePoint mode. For installation, two operations occur:<br /><br /> 1) The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service is installed in the farm.<br /><br /> 2) The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service instance is installed to the current machine.<br /><br /> For Uninstallation, two operations occur:<br />1) The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service is uninstalled from the current machine.<br />2) The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service is uninstalled from the farm.<br /><br /> <br /><br /> NOTE: If there are any other machines in the farm that have the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service installed, or if there are still [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service applications running in the farm, a warning message is displayed.|  
+|Install-SPRSService|Installs and registers, or uninstalls, the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] shared service. This can be done only on the machine that has an installation of SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in SharePoint mode. For installation, two operations occur:<br /><br /> 1) The [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service is installed in the farm.<br /><br /> 2) The [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service instance is installed to the current machine.<br /><br /> For Uninstallation, two operations occur:<br />1) The [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service is uninstalled from the current machine.<br />2) The [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service is uninstalled from the farm.<br /><br /> <br /><br /> NOTE: If there are any other machines in the farm that have the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service installed, or if there are still [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service applications running in the farm, a warning message is displayed.|  
 |Install-SPRSServiceProxy|Installs and registers, or uninstalls, the Reporting Services service proxy in the SharePoint farm.|  
-|Get-SPRSProxyUrl|Gets the URL(s) for accessing the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service.|  
-|Get-SPRSServiceApplicationServers|Gets all servers in the local SharePoint farm that contain an installation of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] shared service. This cmdlet is useful for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] upgrades, to determine which servers run the shared service and therefore need to be upgraded.|  
+|Get-SPRSProxyUrl|Gets the URL(s) for accessing the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service.|  
+|Get-SPRSServiceApplicationServers|Gets all servers in the local SharePoint farm that contain an installation of the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] shared service. This cmdlet is useful for [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] upgrades, to determine which servers run the shared service and therefore need to be upgraded.|  
   
 ###  <a name="bkmk_serviceapp_cmdlets"></a> Service Application and Proxy Cmdlets  
- The following table contains the PowerShell cmdlets for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service applications and their associated proxies.  
+ The following table contains the PowerShell cmdlets for [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service applications and their associated proxies.  
   
 |cmdlet|Description|  
 |------------|-----------------|  
-|Get-SPRSServiceApplication|Gets one or more [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application objects.|  
+|Get-SPRSServiceApplication|Gets one or more [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service application objects.|  
 |New-SPRSServiceApplication|Create a new Reporting Services service application and associated databases.<br /><br /> LogonType Parameter: Specifies if the report server uses the SSRS Application Pool account or a SQL Server login to access the report server database. It can be one of the following:<br /><br /> 0 Windows Authentication<br /><br /> 1 SQL Server<br /><br /> 2 Application Pool Account (default)|  
 |Remove-SPRSServiceApplication|Removes the specified Reporting Services service application. This will also remove the associated databases.|  
 |Set-SPRSServiceApplication|Edits the properties of an existing Reporting Services service application.|  
 |New-SPRSServiceApplicationProxy|Creates a new Reporting Services service application proxy.|  
-|Get-SPRSServiceApplicationProxy|Gets one or more [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application proxies.|  
-|Dismount-SPRSDatabase|Dismounts the service application databases for a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application.|  
-|Remove-SPRSDatabase|Remove the service application databases for a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application.|  
-|Set-SPRSDatabase|Sets the properties of the databases associated to a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application.|  
-|Mount-SPRSDatabase|Mounts databases for a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application.|  
-|New-SPRSDatabase|Create new service application databases for the specified [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application.|  
-|Get-SPRSDatabaseCreationScript|Outputs the database creation script to the screen for a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application. You can then run the script in SQL Server Management Studio.|  
-|Get-SPRSDatabase|Gets one or more [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application databases. Use the command to get the ID of service application database so you can use the Set-SPRSDatabase comdlet to modify properties, for example the `querytimeout`. See the example in this topic, [Get and set properties of the Reporting Servicea application database, for example database timeout](#bkmk_example_db_properties).|  
-|Get-SPRSDatabaseRightsScript|Outputs the database rights script to the screen for a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application. It will prompt for desired user and database then returns transact SQL you can run to modify permissions. You can then run this script in SQL Server Management Studio.|  
-|Get-SPRSDatabaseUpgradeScript|Outputs a database upgrade script to the screen. The script will upgrade [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application databases to the database version of the current [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation.|  
+|Get-SPRSServiceApplicationProxy|Gets one or more [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service application proxies.|  
+|Dismount-SPRSDatabase|Dismounts the service application databases for a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service application.|  
+|Remove-SPRSDatabase|Remove the service application databases for a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service application.|  
+|Set-SPRSDatabase|Sets the properties of the databases associated to a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service application.|  
+|Mount-SPRSDatabase|Mounts databases for a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service application.|  
+|New-SPRSDatabase|Create new service application databases for the specified [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service application.|  
+|Get-SPRSDatabaseCreationScript|Outputs the database creation script to the screen for a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service application. You can then run the script in SQL Server Management Studio.|  
+|Get-SPRSDatabase|Gets one or more [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service application databases. Use the command to get the ID of service application database so you can use the Set-SPRSDatabase comdlet to modify properties, for example the `querytimeout`. See the example in this topic, [Get and set properties of the Reporting Servicea application database, for example database timeout](#bkmk_example_db_properties).|  
+|Get-SPRSDatabaseRightsScript|Outputs the database rights script to the screen for a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service application. It will prompt for desired user and database then returns transact SQL you can run to modify permissions. You can then run this script in SQL Server Management Studio.|  
+|Get-SPRSDatabaseUpgradeScript|Outputs a database upgrade script to the screen. The script will upgrade [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service application databases to the database version of the current [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] installation.|  
   
 ###  <a name="bkmk_ssrsfeatures_cmdlets"></a> Reporting Services Custom Functionality Cmdlets  
   
@@ -126,11 +126,11 @@ manager: "mblythe"
 |New-SPRSExtension|Registers a new extension with a Reporting Services service application.|  
 |Set-SPRSExtension|Sets the properties of an existing Reporting Services extension.|  
 |Remove-SPRSExtension|Removes an extension from a Reporting Services service application.|  
-|Get-SPRSExtension|Gets one or more [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] extensions for a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application.<br /><br /> Valid values are:<br /><br /> **Delivery**<br /><br /> **DeliveryUI**<br /><br /> **Render**<br /><br /> **Data**<br /><br /> **Security**<br /><br /> **Authentication**<br /><br /> **EventProcessing**<br /><br /> **ReportItems**<br /><br /> **Designer**<br /><br /> **ReportItemDesigner**<br /><br /> **ReportItemConverter**<br /><br /> **ReportDefinitionCustomization**|  
+|Get-SPRSExtension|Gets one or more [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] extensions for a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service application.<br /><br /> Valid values are:<br /><br /> **Delivery**<br /><br /> **DeliveryUI**<br /><br /> **Render**<br /><br /> **Data**<br /><br /> **Security**<br /><br /> **Authentication**<br /><br /> **EventProcessing**<br /><br /> **ReportItems**<br /><br /> **Designer**<br /><br /> **ReportItemDesigner**<br /><br /> **ReportItemConverter**<br /><br /> **ReportDefinitionCustomization**|  
 |Get-SPRSSite|Gets the SharePoint sites based on whether the "ReportingService" feature is enabled. By default, sites that enable the "ReportingService" feature are returned.|  
   
 ##  <a name="bkmk_basic_samples"></a> Basic Samples  
- Return a list of cmdlets that contain ‘SPRS’ in the name. This will be the full list of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] cmdlets.  
+ Return a list of cmdlets that contain ‘SPRS’ in the name. This will be the full list of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] cmdlets.  
   
 ```  
 Get-command –noun *SPRS*  
@@ -142,7 +142,7 @@ Get-command –noun *SPRS*
 Get-command -noun *SPRS* | Select name, definition | Format-List | Out-File c:\commandlist.txt  
 ```  
   
- Install the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint service and service proxy.  
+ Install the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint service and service proxy.  
   
 ```  
 Install-SPRSService  
@@ -152,7 +152,7 @@ Install-SPRSService
 Install-SPRSServiceProxy  
 ```  
   
- Start the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service  
+ Start the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service  
   
 ```  
 get-spserviceinstance -all |where {$_.TypeName -like "SQL Server Reporting*"} | Start-SPServiceInstance  
@@ -259,7 +259,7 @@ Get-SPRSDatabase –identity 56f8d1bc-cb04-44cf-bd41-a873643c5a14 | select id, q
 ```  
   
 ###  <a name="bkmk_example_list_data_extensions"></a> List reporting services data extensions – SharePoint mode  
- The following example loops through each [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application and lists the current data extensions for each.  
+ The following example loops through each [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service application and lists the current data extensions for each.  
   
 ```  
 $apps = Get-SPRSServiceApplication  

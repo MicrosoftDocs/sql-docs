@@ -25,7 +25,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # bcp_control
-  Changes the default settings for various control parameters for a bulk copy between a file and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Changes the default settings for various control parameters for a bulk copy between a file and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Syntax  
   
@@ -55,7 +55,7 @@ iValue
  Stops a bulk-copy operation that is already in progress. Call **bcp_control** with an *eOption* of BCPABORT from another thread to stop a running bulk copy operation. The *iValue* parameter is ignored.  
   
  BCPBATCH  
- Is the number of rows per batch. The default is 0, which indicates either all rows in a table, when data is being extracted, or all rows in the user data file, when data is being copied to an [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. A value less than 1 resets BCPBATCH to the default.  
+ Is the number of rows per batch. The default is 0, which indicates either all rows in a table, when data is being extracted, or all rows in the user data file, when data is being copied to an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A value less than 1 resets BCPBATCH to the default.  
   
  BCPDELAYREADFMT  
  A Boolean, if set to true, will cause [bcp_readfmt](../../../2014/database-engine/dev-guide/bcp-readfmt.md) to read at execution. If false (the default), bcp_readfmt will immediately read the format file. A sequence error will occur if BCPDELAYREADFMT is true and you call bcp_columns or bcp_setcolfmt.  
@@ -71,10 +71,10 @@ iValue
   
  BCPFILE_OEMCP: data in the file is in the OEM code page of the client (default).  
   
- BCPFILE_RAW: data in the file is in the code page of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ BCPFILE_RAW: data in the file is in the code page of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  BCPFILEFMT  
- The version number of the data file format. This can be 80 ([!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)]), 90 ([!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]), 100 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] or [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]), 110 ([!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]), or 120 ([!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]). 120 is the default. This is useful for exporting and importing data in formats that were supported by earlier version of the server. For example, to import data that was obtained from a text column in a [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] server into a **varchar(max)** column in a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] or later server, you should specify 80. Similarly, if you specify 80 when exporting data from a **varchar(max)** column, it will be saved just like text columns are saved in the [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] format, and can be imported into a text column of a [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] server.  
+ The version number of the data file format. This can be 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), 110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]), or 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]). 120 is the default. This is useful for exporting and importing data in formats that were supported by earlier version of the server. For example, to import data that was obtained from a text column in a [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] server into a **varchar(max)** column in a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or later server, you should specify 80. Similarly, if you specify 80 when exporting data from a **varchar(max)** column, it will be saved just like text columns are saved in the [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] format, and can be imported into a text column of a [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] server.  
   
  BCPFIRST  
  Is the first row of data to file or table to copy. The default is 1; a value less than 1 resets this option to its default.  
@@ -92,16 +92,16 @@ iValue
  XML format files provide greater flexibility but with some added constraints. For example, you can not specify the prefix and terminator for a field simultaneously, which was possible in older format files.  
   
 > [!NOTE]  
->  XML format files are only supported when [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is installed along with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
+>  XML format files are only supported when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed along with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
  BCPHINTS  
- *iValue* contains an SQLTCHAR character string pointer. The string addressed specifies either [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bulk-copy processing hints or a Transact-SQL statement that returns a result set. If a Transact-SQL statement is specified that returns more than one result set, all result sets after the first are ignored. For more information about bulk-copy processing hints, see [bcp Utility](../../../2014/database-engine/bcp-utility.md).  
+ *iValue* contains an SQLTCHAR character string pointer. The string addressed specifies either [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bulk-copy processing hints or a Transact-SQL statement that returns a result set. If a Transact-SQL statement is specified that returns more than one result set, all result sets after the first are ignored. For more information about bulk-copy processing hints, see [bcp Utility](../../../2014/database-engine/bcp-utility.md).  
   
  BCPKEEPIDENTITY  
- When *iValue* is TRUE, specifies that bulk copy functions insert data values supplied for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] columns defined with an identity constraint. The input file must supply values for the identity columns. If this is not set, new identity values are generated for the inserted rows. Any data present in the file for the identity columns is ignored.  
+ When *iValue* is TRUE, specifies that bulk copy functions insert data values supplied for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] columns defined with an identity constraint. The input file must supply values for the identity columns. If this is not set, new identity values are generated for the inserted rows. Any data present in the file for the identity columns is ignored.  
   
  BCPKEEPNULLS  
- Specifies whether empty data values in the file will be converted to NULL values in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] table. When *iValue* is TRUE, empty values will be converted to NULL in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] table. The default is for empty values to be converted to a default value for the column in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] table if a default exists.  
+ Specifies whether empty data values in the file will be converted to NULL values in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table. When *iValue* is TRUE, empty values will be converted to NULL in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table. The default is for empty values to be converted to a default value for the column in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table if a default exists.  
   
  BCPLAST  
  Is the last row to copy. The default is to copy all rows; a value less than 1 resets this option to its default.  
@@ -139,9 +139,9 @@ iValue
 ## Remarks  
  This function sets various control parameters for bulk-copy operations, including the number of errors allowed before canceling a bulk copy, the numbers of the first and last rows to copy from a data file, and the batch size.  
   
- This function is also used to specify the SELECT statement when bulk copying out from [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] the result set of a SELECT. Set *eOption* to BCPHINTS and set *iValue* to have a pointer to an SQLTCHAR string containing the SELECT statement.  
+ This function is also used to specify the SELECT statement when bulk copying out from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] the result set of a SELECT. Set *eOption* to BCPHINTS and set *iValue* to have a pointer to an SQLTCHAR string containing the SELECT statement.  
   
- These control parameters are only meaningful when copying between a user file and an [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] table. Control parameter settings have no effect on rows copied to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] with [bcp_sendrow](../../../2014/database-engine/dev-guide/bcp-sendrow.md).  
+ These control parameters are only meaningful when copying between a user file and an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table. Control parameter settings have no effect on rows copied to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with [bcp_sendrow](../../../2014/database-engine/dev-guide/bcp-sendrow.md).  
   
 ## Example  
   

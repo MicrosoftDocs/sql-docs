@@ -28,14 +28,14 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Coding and Debugging the Script Component
-  In [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, the Script component has two modes: metadata design mode and code design mode. When you open the **Script Transformation Editor**, the component enters metadata design mode, in which you configure metadata and set component properties. After you have set the properties of the Script component and configured the input and outputs in metadata design mode, you can switch to code design mode to write your custom script. For more information about metadata design mode and code design mode, see [Configuring the Script Component in the Script Component Editor](../../../2014/integration-services/dev-guide/configuring-the-script-component-in-the-script-component-editor.md).  
+  In [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, the Script component has two modes: metadata design mode and code design mode. When you open the **Script Transformation Editor**, the component enters metadata design mode, in which you configure metadata and set component properties. After you have set the properties of the Script component and configured the input and outputs in metadata design mode, you can switch to code design mode to write your custom script. For more information about metadata design mode and code design mode, see [Configuring the Script Component in the Script Component Editor](../../../2014/integration-services/dev-guide/configuring-the-script-component-in-the-script-component-editor.md).  
   
 ## Writing the Script in Code Design Mode  
   
 ### Script Component Development Environment  
- To write your script, click **Edit Script** on the **Script** page of the **Script Transformation Editor** to open the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE. The VSTA IDE includes all the standard features of the [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] .NET environment, such as the color-coded [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] editor, IntelliSense, and Object Browser.  
+ To write your script, click **Edit Script** on the **Script** page of the **Script Transformation Editor** to open the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE. The VSTA IDE includes all the standard features of the [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET environment, such as the color-coded [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] editor, IntelliSense, and Object Browser.  
   
- Script code is written in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic or [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#. You specify the script language by setting the **ScriptLanguage** property in the **Script Transformation Editor**. If you prefer to use another programming language, you can develop a custom assembly in your language of choice and call its functionality from the code in the Script component.  
+ Script code is written in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic or [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#. You specify the script language by setting the **ScriptLanguage** property in the **Script Transformation Editor**. If you prefer to use another programming language, you can develop a custom assembly in your language of choice and call its functionality from the code in the Script component.  
   
  The script that you create in the Script component is stored in the package definition. There is no separate script file. Therefore, the use of the Script component does not affect package deployment.  
   
@@ -173,7 +173,7 @@ public class ScriptMain : UserComponent
 |Logging|Perform logging by using the <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> method of the `ScriptMain` class.|  
   
 ## Debugging the Script Component  
- To debug the code in your Script component, set at least one breakpoint in the code, and then close the VSTA IDE to run the package in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. When package execution enters the Script component, the VSTA IDE reopens and displays your code in read-only mode. After execution reaches your breakpoint, you can examine variable values and step through the remaining code.  
+ To debug the code in your Script component, set at least one breakpoint in the code, and then close the VSTA IDE to run the package in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. When package execution enters the Script component, the VSTA IDE reopens and displays your code in read-only mode. After execution reaches your breakpoint, you can examine variable values and step through the remaining code.  
   
 > [!NOTE]  
 >  You cannot debug a Script component when you run the Script component as part of a child package that is run from an Execute Package task. Breakpoints that you set in the Script component in the child package are disregarded in these circumstances. You can debug the child package normally by running it separately.  
@@ -185,7 +185,7 @@ public class ScriptMain : UserComponent
   
 -   Interrupt execution and display a modal message by using the `MessageBox.Show` method in the **System.Windows.Forms** namespace. (Remove this code after you complete the debugging process.)  
   
--   Raise events for informational messages, warnings, and errors. The FireInformation, FireWarning, and FireError methods display the event description in the Visual Studio **Output** window. However, the FireProgress method, the Console.Write method, and Console.WriteLine method do not display any information in the **Output** window. Messages from the FireProgress event appear on the **Progress** tab of [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer. For more information, see [Raising Events in the Script Component](../../../2014/integration-services/dev-guide/raising-events-in-the-script-component.md).  
+-   Raise events for informational messages, warnings, and errors. The FireInformation, FireWarning, and FireError methods display the event description in the Visual Studio **Output** window. However, the FireProgress method, the Console.Write method, and Console.WriteLine method do not display any information in the **Output** window. Messages from the FireProgress event appear on the **Progress** tab of [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer. For more information, see [Raising Events in the Script Component](../../../2014/integration-services/dev-guide/raising-events-in-the-script-component.md).  
   
 -   Log events or user-defined messages to enabled logging providers. For more information, see [Logging in the Script Component](../../../2014/integration-services/dev-guide/logging-in-the-script-component.md).  
   
@@ -198,7 +198,7 @@ public class ScriptMain : UserComponent
  Explains how to use the objects, methods, and properties available in the Script component.  
   
  [Referencing Other Assemblies in Scripting Solutions](../../../2014/integration-services/dev-guide/referencing-other-assemblies-in-scripting-solutions.md)  
- Explains how to reference objects from the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] class library in the Script component.  
+ Explains how to reference objects from the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] class library in the Script component.  
   
  [Simulating an Error Output for the Script Component](../../../2014/integration-services/dev-guide/simulating-an-error-output-for-the-script-component.md)  
  Explains how to simulate an error output for rows that raise errors during processing by the Script component.  
@@ -209,7 +209,7 @@ public class ScriptMain : UserComponent
   
 ||  
 |-|  
-|![Integration Services icon (small)](../../../2014/integration-services/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
+|![Integration Services icon (small)](../../../2014/integration-services/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
   
 ## See Also  
  [Configuring the Script Component in the Script Component Editor](../../../2014/integration-services/dev-guide/configuring-the-script-component-in-the-script-component-editor.md)  

@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 caps.latest.revision: 8
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Report Parts (Report Builder and SSRS)
@@ -136,7 +136,7 @@ manager: "mblythe"
  ![Arrow icon used with Back to Top link](../../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="RptPartsRptDesigner"></a> Working with Report Parts in Report Designer  
- Report parts work a little differently in Report Designer in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. In Report Designer, publishing is one-way: you can publish a report part from Report Designer, but you cannot reuse an existing report part in Report Designer. For more information, see [Report Parts in Report Designer &#40;SSRS&#41;](../../2014/reporting-services/report-parts-in-report-designer-ssrs.md).  
+ Report parts work a little differently in Report Designer in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. In Report Designer, publishing is one-way: you can publish a report part from Report Designer, but you cannot reuse an existing report part in Report Designer. For more information, see [Report Parts in Report Designer &#40;SSRS&#41;](../../2014/reporting-services/report-parts-in-report-designer-ssrs.md).  
   
 ##  <a name="HowTo"></a> How-to Topics  
  [Publish and Republish Report Parts &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/publish-and-republish-report-parts-report-builder-and-ssrs.md)  

@@ -23,7 +23,7 @@ manager: "jhubbard"
  To predict whether a potential customer is likely to buy a bicycle, you will create a mining model based on the [Microsoft Decision Trees Algorithm](../../2014/analysis-services/microsoft-decision-trees-algorithm.md). This algorithm looks through the information that is associated with each potential customer, and finds characteristics that are useful in predicting if they will buy a bicycle. It then compares the values of the characteristics of previous bike buyers against new potential customers to determine whether the new potential customers are likely to buy a bicycle.  
   
 ## ALTER MINING STRUCTURE Statement  
- In order to add a mining model to the mining structure, you use the [ALTER MINING STRUCTURE &#40;DMX&#41;](../Topic/ALTER%20MINING%20STRUCTURE%20\(DMX\).md) statement. The code in the statement can be broken into the following parts:  
+ In order to add a mining model to the mining structure, you use the [ALTER MINING STRUCTURE &#40;DMX&#41;]((~/dmx/alter-mining-structure-dmx.md) statement. The code in the statement can be broken into the following parts:  
   
 -   Identifying the mining structure  
   
@@ -59,7 +59,7 @@ ALTER MINING STRUCTURE [<mining structure name>]
 ADD MINING MODEL [<mining model name>]  
 ```  
   
- For information about naming an object in DMX, see [Identifiers &#40;DMX&#41;](../Topic/Identifiers%20\(DMX\).md).  
+ For information about naming an object in DMX, see [Identifiers &#40;DMX&#41;](~/dmx/identifiers-dmx.md).  
   
  The next lines of the code define columns from the mining structure that will be used by the mining model:  
   
@@ -89,18 +89,18 @@ ADD MINING MODEL [<mining model name>]
 ## Lesson Tasks  
  You will perform the following tasks in this lesson:  
   
--   Add a decision tree mining model to the Bike Buyer structure by using the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm  
+-   Add a decision tree mining model to the Bike Buyer structure by using the [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees algorithm  
   
--   Add a clustering mining model to the Bike Buyer structure by using the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering algorithm  
+-   Add a clustering mining model to the Bike Buyer structure by using the [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering algorithm  
   
 -   Because you want to see results for all cases, you will not yet add a filter to either model.  
   
 ## Adding a Decision Tree Mining Model to the Structure  
- The first step is to add a mining model based on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm.  
+ The first step is to add a mining model based on the [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees algorithm.  
   
 #### To add a decision tree mining model  
   
-1.  In **Object Explorer**, right-click the instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], point to **New Query**, and then click **DMX** to open Query Editor and a new, blank query.  
+1.  In **Object Explorer**, right-click the instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], point to **New Query**, and then click **DMX** to open Query Editor and a new, blank query.  
   
 2.  Copy the generic example of the ALTER MINING STRUCTURE statement into the blank query.  
   
@@ -202,11 +202,11 @@ ADD MINING MODEL [<mining model name>]
 9. On the toolbar, click the **Execute** button.  
   
 ## Adding a Clustering Mining Model to the Structure  
- You can now add a mining model to the Bike Buyer mining structure based on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering algorithm. Because the clustering mining model will use all the columns defined in the mining structure, you can use a shortcut to add the model to the structure by omitting the definition of the mining columns.  
+ You can now add a mining model to the Bike Buyer mining structure based on the [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering algorithm. Because the clustering mining model will use all the columns defined in the mining structure, you can use a shortcut to add the model to the structure by omitting the definition of the mining columns.  
   
 #### To add a Clustering mining model  
   
-1.  In **Object Explorer**, right-click the instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], point to **New Query**, and then click **DMX** to open Query Editor opens and a new, blank query.  
+1.  In **Object Explorer**, right-click the instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], point to **New Query**, and then click **DMX** to open Query Editor opens and a new, blank query.  
   
 2.  Copy the generic example of the ALTER MINING STRUCTURE statement into the blank query.  
   

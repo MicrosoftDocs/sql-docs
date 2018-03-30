@@ -16,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: 89fddca5-bd96-4128-9072-5348d1b6e02c
 caps.latest.revision: 14
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Text-based Query Designer User Interface (Report Builder)
-  Use the text-based query designer to specify a query using the query language supported by the data source, run the query, and view the results at design time. You can specify multiple [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, query or command syntax for custom data processing extensions, and queries that are specified as expressions. Because the text-based query designer does not preprocess the query and can accommodate any kind of query syntax, this is the default query designer tool for many data source types.  
+  Use the text-based query designer to specify a query using the query language supported by the data source, run the query, and view the results at design time. You can specify multiple [!INCLUDE[tsql](../includes/tsql-md.md)] statements, query or command syntax for custom data processing extensions, and queries that are specified as expressions. Because the text-based query designer does not preprocess the query and can accommodate any kind of query syntax, this is the default query designer tool for many data source types.  
   
 > [!IMPORTANT]  
 >  Users access data sources when they create and run queries. You should grant minimal permissions on the data sources, such as read-only permissions.  
@@ -42,7 +42,7 @@ manager: "mblythe"
 |**Command Type**|Select **Text**, **StoredProcedure**, or **TableDirect**. If a stored procedure has parameters, the **Define Query Parameters** dialog box appears when you click **Run** on the toolbar, and you can fill in values as needed.<br /><br /> Note: If a stored procedure returns more than one result set, only the first result set is used to populate the dataset.|  
   
 ### Command Type Text  
- When you create a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dataset, the relational query designer opens by default. To switch to the text-based query designer, click the **Edit As Text** toggle button on the toolbar. The text-based query designer presents two panes: the Query pane and the Result pane. The following figure labels each pane.  
+ When you create a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dataset, the relational query designer opens by default. To switch to the text-based query designer, click the **Edit As Text** toggle button on the toolbar. The text-based query designer presents two panes: the Query pane and the Result pane. The following figure labels each pane.  
   
  ![Generic query designer, for relational data query](../../2014/analysis-services/media/rsqd-dsaw-sql-generic.gif "Generic query designer, for relational data query")  
   
@@ -50,11 +50,11 @@ manager: "mblythe"
   
 |Pane|Function|  
 |----------|--------------|  
-|Query|Displays the [!INCLUDE[tsql](../../includes/tsql-md.md)] query text. Use this pane to write or edit a [!INCLUDE[tsql](../../includes/tsql-md.md)] query.|  
+|Query|Displays the [!INCLUDE[tsql](../includes/tsql-md.md)] query text. Use this pane to write or edit a [!INCLUDE[tsql](../includes/tsql-md.md)] query.|  
 |Result|Displays the results of the query. To run the query, right-click in any pane and click **Run**, or click the **Run** button on the toolbar.|  
   
 #### Example  
- The following query returns the list of last names from the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]**2008** database `ContactType` table for the `Person` schema.  
+ The following query returns the list of last names from the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]**2008** database `ContactType` table for the `Person` schema.  
   
 ```  
 SELECT Name FROM Person.ContactType  
@@ -77,7 +77,7 @@ SELECT Name FROM Person.ContactType
 |Result|Displays the results of the query. To run the query, right-click in any pane and click **Run**, or click the **Run** button on the toolbar.|  
   
 #### Example  
- The following query calls the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]**2008** stored procedure `uspGetWhereUsedProductID`. You must enter a value for the product identification number parameter when you run the query.  
+ The following query calls the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]**2008** stored procedure `uspGetWhereUsedProductID`. You must enter a value for the product identification number parameter when you run the query.  
   
 ```  
 uspGetWhereUsedProductID  
@@ -96,11 +96,11 @@ uspGetWhereUsedProductID
  When you select **Command typeTableDirect**, the text-based query designer presents two panes: the Query pane and the Result pane. When you enter a table and click the **Run** button, all the columns for that table are returned.  
   
 #### Example  
- For a data source type OLE DB, the following dataset query returns a result set for all contact types in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]**2008** database.  
+ For a data source type OLE DB, the following dataset query returns a result set for all contact types in the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]**2008** database.  
   
  `Person.ContactType`  
   
- When you enter the table name Person.ContactType, it is the equivalent of creating the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement `SELECT * FROM Person.ContactType`.  
+ When you enter the table name Person.ContactType, it is the equivalent of creating the [!INCLUDE[tsql](../includes/tsql-md.md)] statement `SELECT * FROM Person.ContactType`.  
   
 ## See Also  
  [Relational Query Designer User Interface &#40;Report Builder&#41;](../../2014/reporting-services/relational-query-designer-user-interface-report-builder.md)   

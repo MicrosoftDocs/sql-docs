@@ -21,11 +21,11 @@ manager: "jhubbard"
 # Set the Properties of the Integration Services Service
     
 > [!IMPORTANT]  
->  This topic discusses the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service, a Windows service for managing [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] supports the service for backward compatibility with earlier releases of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Starting in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], you can manage objects such as packages on the Integration Services server.  
+>  This topic discusses the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service, a Windows service for managing [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] supports the service for backward compatibility with earlier releases of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Starting in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], you can manage objects such as packages on the Integration Services server.  
   
- The [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service manages and monitors packages in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. When you first install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service is started and the startup type of the service is set to automatic.  
+ The [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service manages and monitors packages in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. When you first install [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service is started and the startup type of the service is set to automatic.  
   
- After the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service has been installed, you can set the properties of the service by using either SQL Server Configuration Manager or the Services MMC snap-in.  
+ After the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service has been installed, you can set the properties of the service by using either SQL Server Configuration Manager or the Services MMC snap-in.  
   
  To configure other important features of the service, including the locations where it stores and manages packages, you must modify the configuration file of the service. For more information, see [Configuring the Integration Services Service &#40;SSIS Service&#41;](../../2014/integration-services/configuring-the-integration-services-service-ssis-service.md).  
   
@@ -39,10 +39,10 @@ manager: "jhubbard"
   
     -   Click the **Log On** tab to view the logon information such as the account name.  
   
-    -   Click the **Service** tab to view information about the service such as the name of the host computer and to specify the start mode of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service.  
+    -   Click the **Service** tab to view information about the service such as the name of the host computer and to specify the start mode of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service.  
   
         > [!NOTE]  
-        >  The **Advanced** tab contains no information for [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service.  
+        >  The **Advanced** tab contains no information for [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service.  
   
 4.  Click **OK**.  
   
@@ -66,7 +66,7 @@ manager: "jhubbard"
   
     -   Click the **Recovery** tab to view the default computer responses to service failure. You can modify these options to suit your environment.  
   
-    -   Click the **Dependencies** tab to view a list of dependent services. The [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service has no dependencies.  
+    -   Click the **Dependencies** tab to view a list of dependent services. The [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service has no dependencies.  
   
 5.  Click **OK**.  
   

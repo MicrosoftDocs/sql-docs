@@ -20,15 +20,15 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Migrate Query Plans
-  In most cases, upgrading a database to the most recent version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] will result in improved query performance. However, if you have mission-critical queries that have been carefully tuned for performance, you may want to preserve the query plans for these queries before upgrading by creating a plan guide for each query. If, after upgrading, the query optimizer chooses a less efficient plan for one or more of the queries, you can enable the plan guides and force the query optimizer to use the pre-upgrade plans.  
+  In most cases, upgrading a database to the most recent version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will result in improved query performance. However, if you have mission-critical queries that have been carefully tuned for performance, you may want to preserve the query plans for these queries before upgrading by creating a plan guide for each query. If, after upgrading, the query optimizer chooses a less efficient plan for one or more of the queries, you can enable the plan guides and force the query optimizer to use the pre-upgrade plans.  
   
  To create plan guides before upgrading follow these steps:  
   
-1.  Record the current plan for each mission critical query by using the [sp_create_plan_guide](../Topic/sp_create_plan_guide%20\(Transact-SQL\).md) stored procedure and specifying the query plan in the USE PLAN query hint.  
+1.  Record the current plan for each mission critical query by using the [sp_create_plan_guide](~/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md) stored procedure and specifying the query plan in the USE PLAN query hint.  
   
 2.  Verify that the plan guide is applied to the query.  
   
-3.  Upgrade the database to the newer version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+3.  Upgrade the database to the newer version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
      The plans are persisted in the upgraded database in the plan guides and serve as a fallback in case of plan regressions after the upgrade.  
   
@@ -42,13 +42,13 @@ manager: "jhubbard"
 ### Step 1: Collect the Plan  
  The query plan recorded in the plan guide must be in XML format. XML-formatted query plans can be produced through the following ways:  
   
--   [SET SHOWPLAN_XML](../Topic/SET%20SHOWPLAN_XML%20\(Transact-SQL\).md)  
+-   [SET SHOWPLAN_XML](~/t-sql/statements/set-showplan-xml-transact-sql.md)  
   
--   [SET STATISTICS XML](../Topic/SET%20STATISTICS%20XML%20\(Transact-SQL\).md)  
+-   [SET STATISTICS XML](~/t-sql/statements/set-statistics-xml-transact-sql.md)  
   
--   Querying the query_plan column of the [sys.dm_exec_query_plan](../Topic/sys.dm_exec_query_plan%20\(Transact-SQL\).md) dynamic management function.  
+-   Querying the query_plan column of the [sys.dm_exec_query_plan](~/relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md) dynamic management function.  
   
--   The [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] [Showplan XML](../../../2014/database-engine/showplan-xml-event-class.md), [Showplan XML Statistics Profile](../../../2014/database-engine/showplan-xml-statistics-profile-event-class.md), and [Showplan XML For Query Compile](../../../2014/database-engine/showplan-xml-for-query-compile-event-class.md) event classes.  
+-   The [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] [Showplan XML](../../../2014/database-engine/showplan-xml-event-class.md), [Showplan XML Statistics Profile](../../../2014/database-engine/showplan-xml-statistics-profile-event-class.md), and [Showplan XML For Query Compile](../../../2014/database-engine/showplan-xml-for-query-compile-event-class.md) event classes.  
   
  The following example collects the query plan for the statement `SELECT City, StateProvinceID, PostalCode FROM Person.Address ORDER BY PostalCode DESC;` by querying dynamic management views.  
   
@@ -90,8 +90,8 @@ GO
  Run the query again and examine the query plan that is produced. You should see that the plan matches the one that you specified in the plan guide.  
   
 ## See Also  
- [sp_create_plan_guide &#40;Transact-SQL&#41;](../Topic/sp_create_plan_guide%20\(Transact-SQL\).md)   
- [Query Hints &#40;Transact-SQL&#41;](../Topic/Query%20Hints%20\(Transact-SQL\).md)   
+ [sp_create_plan_guide &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
+ [Query Hints &#40;Transact-SQL&#41;](~/t-sql/queries/hints-transact-sql-query.md)   
  [Plan Guides](../../../2014/database-engine/plan-guides.md)  
   
   

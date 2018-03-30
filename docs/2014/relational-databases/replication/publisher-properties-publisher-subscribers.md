@@ -16,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: 552d2bd6-13f9-4876-b8f1-89adb242ef70
 caps.latest.revision: 21
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Publisher Properties - Publisher, Subscribers
-  The **Subscribers** page of the **Publisher Properties** dialog box is used for Publishers running versions of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prior to [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. The page allows you to enable Subscribers to receive data from publications on this Publisher. Enabling a Subscriber to receive data from this Publisher does not create subscriptions to publications on this Publisher. To create a subscription, you must use the New Subscription Wizard.  
+  The **Subscribers** page of the **Publisher Properties** dialog box is used for Publishers running versions of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prior to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. The page allows you to enable Subscribers to receive data from publications on this Publisher. Enabling a Subscriber to receive data from this Publisher does not create subscriptions to publications on this Publisher. To create a subscription, you must use the New Subscription Wizard.  
   
 ## Options  
  **Subscribers**  

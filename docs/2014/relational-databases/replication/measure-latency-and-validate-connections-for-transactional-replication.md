@@ -18,11 +18,11 @@ helpviewer_keywords:
 ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 caps.latest.revision: 35
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Measure Latency and Validate Connections for Transactional Replication
-  This topic describes how to measure latency and validate connections for transactional replication in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using Replication Monitor, [!INCLUDE[tsql](../../../includes/tsql-md.md)], or Replication Management Objects (RMO). Transactional replication provides the tracer token feature, which provides a convenient way to measure latency in transactional replication topologies and to validate the connections between the Publisher, Distributor and Subscribers. A token (a small amount of data) is written to the transaction log of the publication database, marked as though it were a typical replicated transaction, and sent through the system, allowing a calculation of:  
+  This topic describes how to measure latency and validate connections for transactional replication in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using Replication Monitor, [!INCLUDE[tsql](../../includes/tsql-md.md)], or Replication Management Objects (RMO). Transactional replication provides the tracer token feature, which provides a convenient way to measure latency in transactional replication topologies and to validate the connections between the Publisher, Distributor and Subscribers. A token (a small amount of data) is written to the transaction log of the publication database, marked as though it were a typical replicated transaction, and sent through the system, allowing a calculation of:  
   
 -   How much time elapses between a transaction being committed at the Publisher and the corresponding command being inserted in the distribution database at the Distributor.  
   
@@ -53,15 +53,15 @@ manager: "jhubbard"
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
  Tracer tokens can also be useful when quiescing a system, which involves stopping all activity and verifying that all nodes have received all outstanding changes. For more information, see [Quiesce a Replication Topology &#40;Replication Transact-SQL Programming&#41;](../../../2014/relational-databases/replication/quiesce-a-replication-topology-replication-transact-sql-programming.md).  
   
- To use tracer tokens, you must use certain versions of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
+ To use tracer tokens, you must use certain versions of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
--   The Distributor must be [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] or later.  
+-   The Distributor must be [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or later.  
   
--   The Publisher must be [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] or later or be an Oracle Publisher.  
+-   The Publisher must be [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or later or be an Oracle Publisher.  
   
--   For push subscriptions, tracer token statistics are gathered from the Publisher, Distributor, and Subscribers if the Subscriber is [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 or later.  
+-   For push subscriptions, tracer token statistics are gathered from the Publisher, Distributor, and Subscribers if the Subscriber is [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 or later.  
   
--   For pull subscriptions, tracer token statistics are gathered from Subscribers only if the Subscriber is [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] or later. If the Subscriber is [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 or [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)], statistics are gathered only from the Publisher and Distributor.  
+-   For pull subscriptions, tracer token statistics are gathered from Subscribers only if the Subscriber is [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or later. If the Subscriber is [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 or [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], statistics are gathered only from the Publisher and Distributor.  
   
  There are also a number of other issues and restrictions to be aware of:  
   
@@ -73,7 +73,7 @@ manager: "jhubbard"
   
 -   Tracer tokens are not forwarded by republishing Subscribers.  
   
--   After failover to a secondary, Replication Monitor is unable to adjust the name of the publishing instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and will continue to display replication information under the name of the original primary instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. After failover, a tracer token cannot be entered by using the Replication Monitor, however a tracer token entered on the new publisher by using [!INCLUDE[tsql](../../../includes/tsql-md.md)], is visible in Replication Monitor.  
+-   After failover to a secondary, Replication Monitor is unable to adjust the name of the publishing instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and will continue to display replication information under the name of the original primary instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. After failover, a tracer token cannot be entered by using the Replication Monitor, however a tracer token entered on the new publisher by using [!INCLUDE[tsql](../../includes/tsql-md.md)], is visible in Replication Monitor.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Replication Monitor  
  For information about starting Replication Monitor, see [Start the Replication Monitor](../../../2014/relational-databases/replication/start-the-replication-monitor.md).  
@@ -105,30 +105,30 @@ manager: "jhubbard"
   
 #### To post a tracer token to a transactional publication  
   
-1.  (Optional) At the Publisher on the publication database, execute [sp_helppublication &#40;Transact-SQL&#41;](../Topic/sp_helppublication%20\(Transact-SQL\).md). Verify that the publication exists and that the status is active.  
+1.  (Optional) At the Publisher on the publication database, execute [sp_helppublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md). Verify that the publication exists and that the status is active.  
   
-2.  (Optional) At the Publisher on the publication database, execute [sp_helpsubscription &#40;Transact-SQL&#41;](../Topic/sp_helpsubscription%20\(Transact-SQL\).md). Verify that the subscription exists and that the status is active.  
+2.  (Optional) At the Publisher on the publication database, execute [sp_helpsubscription &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md). Verify that the subscription exists and that the status is active.  
   
-3.  At the Publisher on the publication database, execute [sp_posttracertoken &#40;Transact-SQL&#41;](../Topic/sp_posttracertoken%20\(Transact-SQL\).md), specifying **@publication**. Note the value of the **@tracer_token_id** output parameter.  
+3.  At the Publisher on the publication database, execute [sp_posttracertoken &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql.md), specifying **@publication**. Note the value of the **@tracer_token_id** output parameter.  
   
 #### To determine latency and validate connections for a transactional publication  
   
 1.  Post a tracer token to the publication using the previous procedure.  
   
-2.  At the Publisher on the publication database, execute [sp_helptracertokens &#40;Transact-SQL&#41;](../Topic/sp_helptracertokens%20\(Transact-SQL\).md), specifying **@publication**. This returns a list of all tracer tokens posted to the publication. Note the desired **tracer_id** in the result set.  
+2.  At the Publisher on the publication database, execute [sp_helptracertokens &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md), specifying **@publication**. This returns a list of all tracer tokens posted to the publication. Note the desired **tracer_id** in the result set.  
   
-3.  At the Publisher on the publication database, execute [sp_helptracertokenhistory &#40;Transact-SQL&#41;](../Topic/sp_helptracertokenhistory%20\(Transact-SQL\).md), specifying **@publication** and the tracer token ID from step 2 for **@tracer_id**. This returns latency information for the selected tracer token.  
+3.  At the Publisher on the publication database, execute [sp_helptracertokenhistory &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md), specifying **@publication** and the tracer token ID from step 2 for **@tracer_id**. This returns latency information for the selected tracer token.  
   
 #### To remove tracer tokens  
   
-1.  At the Publisher on the publication database, execute [sp_helptracertokens &#40;Transact-SQL&#41;](../Topic/sp_helptracertokens%20\(Transact-SQL\).md), specifying **@publication**. This returns a list of all tracer tokens posted to the publication. Note the **tracer_id** for the tracer token to delete in the result set.  
+1.  At the Publisher on the publication database, execute [sp_helptracertokens &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md), specifying **@publication**. This returns a list of all tracer tokens posted to the publication. Note the **tracer_id** for the tracer token to delete in the result set.  
   
-2.  At the Publisher on the publication database, execute [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](../Topic/sp_deletetracertokenhistory%20\(Transact-SQL\).md), specifying **@publication** and the ID of the tracer to delete from step 2 for **@tracer_id**.  
+2.  At the Publisher on the publication database, execute [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md), specifying **@publication** and the ID of the tracer to delete from step 2 for **@tracer_id**.  
   
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
  This example posts a tracer token record and uses the returned ID of the posted tracer token to view latency information.  
   
- [!code-sql[HowTo#sp_tracertokens](../../../snippets/tsql/SQL15/replication/howto/tsql/createtracertokens.sql#sp_tracertokens)]  
+ [!code-sql[HowTo#sp_tracertokens](../../snippets/tsql/SQL15/replication/howto/tsql/createtracertokens.sql#sp_tracertokens)]  
   
 ##  <a name="RMOProcedure"></a> Using Replication Management Objects (RMO)  
   
@@ -156,7 +156,7 @@ manager: "jhubbard"
   
 5.  Call the <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A> method. Cast the returned <xref:System.Collections.ArrayList> object to an array of <xref:Microsoft.SqlServer.Replication.TracerToken> objects.  
   
-6.  Call the <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokenHistory%2A> method. Pass a value of <xref:Microsoft.SqlServer.Replication.TracerToken.TracerTokenID%2A> for a tracer token from step 5. This returns latency information for the selected tracer token as a <xref:System.Data.DataSet> object. If all tracer token information is returned, the connection between the Publisher and Distributor and the connection between the Distributor and the Subscriber both exist and the replication topology is functioning.  
+6.  Call the <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokenHistory%2A> method. Pass a value of <xref:Microsoft.SqlServer.Replication.TracerToken.TracerTokenId%2A> for a tracer token from step 5. This returns latency information for the selected tracer token as a <xref:System.Data.DataSet> object. If all tracer token information is returned, the connection between the Publisher and Distributor and the connection between the Distributor and the Subscriber both exist and the replication topology is functioning.  
   
 #### To remove tracer tokens  
   
@@ -172,7 +172,7 @@ manager: "jhubbard"
   
 6.  Call the <xref:Microsoft.SqlServer.Replication.PublicationMonitor.CleanUpTracerTokenHistory%2A> method. Pass one of the following values:  
   
-    -   The <xref:Microsoft.SqlServer.Replication.TracerToken.TracerTokenID%2A> for a tracer token from step 5. This deletes information for a selected token.  
+    -   The <xref:Microsoft.SqlServer.Replication.TracerToken.TracerTokenId%2A> for a tracer token from step 5. This deletes information for a selected token.  
   
     -   A <xref:System.DateTime> object. This deletes information for all tokens older than the specified date and time.  
   

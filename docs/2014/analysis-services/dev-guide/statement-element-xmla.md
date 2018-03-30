@@ -29,7 +29,7 @@ ms.author: "mblythe"
 manager: "mblythe"
 ---
 # Statement Element (XMLA)
-  Contains a query or statement to be sent using the `Execute` method to an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+  Contains a query or statement to be sent using the `Execute` method to an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ## Syntax  
   
@@ -56,7 +56,7 @@ manager: "mblythe"
 |Child elements|None|  
   
 ## Remarks  
- The `Statement` command executes a query or statement on the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] supports the following languages:  
+ The `Statement` command executes a query or statement on the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supports the following languages:  
   
 -   Multidimensional Expressions (MDX)  
   

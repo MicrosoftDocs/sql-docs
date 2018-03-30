@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
 caps.latest.revision: 10
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Report Parts in Report Designer (SSRS)
@@ -72,7 +72,7 @@ manager: "mblythe"
   
 2.  Deploy the report.  
   
- When you deploy the report, the report part is published to a SharePoint site or report server, and others can reuse it. To publish a report part, you must have a connection to and sufficient permissions on a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] report server when you deploy the report.  
+ When you deploy the report, the report part is published to a SharePoint site or report server, and others can reuse it. To publish a report part, you must have a connection to and sufficient permissions on a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] report server when you deploy the report.  
   
   
 ##  <a name="SearchReuseComponents"></a> Reusing Report Parts  

@@ -30,7 +30,7 @@ manager: "mblythe"
  Choose a mining model from those in the current mining structure. The mining model automatically opens in the correct custom viewer.  
   
  **Viewer**  
- Choose a viewer to use to explore the selected mining model. For each model, you can choose either the custom viewer, or the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Mining Content Viewer. You can also use plug-in viewers if available.  
+ Choose a viewer to use to explore the selected mining model. For each model, you can choose either the custom viewer, or the [!INCLUDE[msCoName](../includes/msconame-md.md)] Mining Content Viewer. You can also use plug-in viewers if available.  
   
  **Attribute**  
  Choose a predictable attribute.  

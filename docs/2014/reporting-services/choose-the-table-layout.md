@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: 370079eb-4a13-42f6-8f90-8fb8adf4d55e
 caps.latest.revision: 24
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Choose the Table Layout

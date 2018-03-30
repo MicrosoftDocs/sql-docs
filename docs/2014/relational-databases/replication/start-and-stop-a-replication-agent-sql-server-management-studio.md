@@ -15,11 +15,11 @@ helpviewer_keywords:
 ms.assetid: 97977c4a-8c7c-4a22-9480-69aa812bd1e5
 caps.latest.revision: 40
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Start and Stop a Replication Agent (SQL Server Management Studio)
-  Start and stop agents from the **Jobs** folder and the **Replication** folder in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] and from Replication Monitor. Start and stop the following agents and jobs:  
+  Start and stop agents from the **Jobs** folder and the **Replication** folder in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and from Replication Monitor. Start and stop the following agents and jobs:  
   
 -   The Snapshot Agent, which is used by all publications.  
   
@@ -39,7 +39,7 @@ manager: "jhubbard"
   
 ### To start and stop a Snapshot Agent or Log Reader Agent from Management Studio  
   
-1.  Connect to the Publisher in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], and then expand the server node and the **Replication** folder.  
+1.  Connect to the Publisher in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], and then expand the server node and the **Replication** folder.  
   
 2.  Expand the **Local Publications** folder, and then right-click a publication.  
   
@@ -49,7 +49,7 @@ manager: "jhubbard"
   
 ### To start and stop a Queue Reader Agent from Management Studio  
   
-1.  Connect to the Distributor in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], and then expand the server node.  
+1.  Connect to the Distributor in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], and then expand the server node.  
   
 2.  Expand the **SQL Server Agent** folder, and then expand the **Jobs** folder.  
   

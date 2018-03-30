@@ -21,11 +21,11 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Copy a Package in SQL Server Data Tools
-  This topic describes how to create a new [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package by copying an existing package, and how to update the `Name` and `GUID` properties of the new package.  
+  This topic describes how to create a new [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package by copying an existing package, and how to update the `Name` and `GUID` properties of the new package.  
   
 ### To copy a package  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project that contains the package that you want to copy.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project that contains the package that you want to copy.  
   
 2.  In Solution Explorer, double-click the package.  
   
@@ -42,7 +42,7 @@ manager: "jhubbard"
   
 7.  Click **Save**.  
   
-8.  At the prompt, choose whether to update the name of the package object to match the file name. If you click **Yes**, the `Name` property of the package is updated. The new package is added to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project and opened in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer.  
+8.  At the prompt, choose whether to update the name of the package object to match the file name. If you click **Yes**, the `Name` property of the package is updated. The new package is added to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project and opened in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer.  
   
 9. Optionally, click in the background of the **Control Flow** tab, and the click **Properties**.  
   

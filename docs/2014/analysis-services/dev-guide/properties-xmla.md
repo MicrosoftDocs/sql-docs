@@ -27,7 +27,7 @@ manager: "mblythe"
   The XML for Analysis (XMLA) protocol uses XML elements to represent property information and values for XMLA headers, methods, objects, commands, and data types.  
   
 ## Topic List  
- The following topics describe the XMLA elements implemented by [!INCLUDE[ssAS](../../../includes/ssas-md.md)].  
+ The following topics describe the XMLA elements implemented by [!INCLUDE[ssAS](../../includes/ssas-md.md)].  
   
 |Element|Description|  
 |-------------|-----------------|  

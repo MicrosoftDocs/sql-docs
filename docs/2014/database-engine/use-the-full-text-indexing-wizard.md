@@ -42,7 +42,7 @@ manager: "jhubbard"
      To include a column in the index, select the check box next to the column name. Columns that are not eligible for full-text indexing appear in grey with their check boxes disabled.  
   
      **Language for Word Breaker**  
-     Select a language from the drop-down list. This choice will be used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to identify the correct word breakers for the index. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses word breakers to identify word boundaries in the full-text indexed data.  
+     Select a language from the drop-down list. This choice will be used by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to identify the correct word breakers for the index. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses word breakers to identify word boundaries in the full-text indexed data.  
   
      **Type Column**  
      Select the name of the column that holds the document type of column being full-text indexed.  
@@ -100,7 +100,7 @@ manager: "jhubbard"
      **Select full-text stoplist**  
      Specify a stoplist to use for the full-text index, or disable stoplist use.  
   
-     In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions, stopwords are managed in databases using objects called stoplists. A *stoplist* is a list of stopwords that, when associated with a full-text index, is applied to full-text queries on that index. For more information, see [Configure and Manage Stopwords and Stoplists for Full-Text Search](../../2014/database-engine/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
+     In [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] and later versions, stopwords are managed in databases using objects called stoplists. A *stoplist* is a list of stopwords that, when associated with a full-text index, is applied to full-text queries on that index. For more information, see [Configure and Manage Stopwords and Stoplists for Full-Text Search](../../2014/database-engine/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
      Select one of the following values:  
   

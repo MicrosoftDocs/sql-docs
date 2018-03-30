@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Keep the Locks Configuration Option Default Value
-  This rule checks the value of the locks configuration option. This option determines the maximum number of available locks. This limits how much memory the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] uses for locks. The default setting of 0 enables the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to allocate and deallocate lock structures dynamically based on changing system requirements.  
+  This rule checks the value of the locks configuration option. This option determines the maximum number of available locks. This limits how much memory the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] uses for locks. The default setting of 0 enables the [!INCLUDE[ssDE](../includes/ssde-md.md)] to allocate and deallocate lock structures dynamically based on changing system requirements.  
   
  If locks is nonzero, batch jobs will stop, and an "out of locks" error message will be generated, if the value specified is exceeded.  
   
@@ -32,9 +32,9 @@ EXEC sp_configure 'locks', 0;
 ## For More Information  
  [Configure the locks Server Configuration Option](../../2014/database-engine/configure-the-locks-server-configuration-option.md)  
   
- [sys.dm_tran_locks &#40;Transact-SQL&#41;](../Topic/sys.dm_tran_locks%20\(Transact-SQL\).md)  
+ [sys.dm_tran_locks &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)  
   
- [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../Topic/sys.dm_os_wait_stats%20\(Transact-SQL\).md)  
+ [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)  
   
  [Microsoft Knowledge Base article 271509](http://go.microsoft.com/fwlink/?linkid=117788)  
   

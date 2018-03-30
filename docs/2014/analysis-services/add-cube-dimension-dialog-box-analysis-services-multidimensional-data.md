@@ -20,7 +20,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Add Cube Dimension Dialog Box (Analysis Services - Multidimensional Data)
-  Use the **Add Cube Dimension** dialog box in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to add a reference to a database dimension to a cube. You can display the **Add Cube Dimension** dialog box by doing one of the following:  
+  Use the **Add Cube Dimension** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to add a reference to a database dimension to a cube. You can display the **Add Cube Dimension** dialog box by doing one of the following:  
   
 -   Click **Add Cube Dimension** in the **Toolbar** pane on the **Cube Structure** or **Dimension Usage** tab in Cube Designer.  
   

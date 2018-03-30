@@ -12,13 +12,13 @@ ms.topic: "article"
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 caps.latest.revision: 13
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Tutorial: Add a Sparkline to Your Report (Report Builder)
   In this tutorial, you create a basic table report based on sample sales data, and then add a sparkline chart to a cell in the table.  
   
- An enhanced version of the report you create in this tutorial is available as a sample [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Report Builder report. For more information about downloading this sample report and others, see [Report Builder sample reports](http://go.microsoft.com/fwlink/?LinkId=184851). The following illustration shows the sample report similar to the one that you will create.  
+ An enhanced version of the report you create in this tutorial is available as a sample [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Report Builder report. For more information about downloading this sample report and others, see [Report Builder sample reports](http://go.microsoft.com/fwlink/?LinkId=184851). The following illustration shows the sample report similar to the one that you will create.  
   
  ![rs_SparklineMatrixTutorial](../../2014/tutorials/media/rs-sparklinematrixtutorial.gif "rs_SparklineMatrixTutorial")  
   
@@ -69,7 +69,7 @@ manager: "mblythe"
 4.  On the **Choose a dataset** page, select **Create a dataset**, and then click **Next**. The **Choose a connection to a data source** page opens.  
   
     > [!NOTE]  
-    >  This tutorial does not need specific data; it just needs a connection to a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] database. If you already have a data source connection listed under **Data Source Connections**, you can select it and go to step 10. For more information, see [Alternative Ways to Get a Data Connection &#40;Report Builder&#41;](../../2014/tutorials/alternative-ways-to-get-a-data-connection-report-builder.md).  
+    >  This tutorial does not need specific data; it just needs a connection to a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] database. If you already have a data source connection listed under **Data Source Connections**, you can select it and go to step 10. For more information, see [Alternative Ways to Get a Data Connection &#40;Report Builder&#41;](../../2014/tutorials/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 5.  Click **New**. The **Data Source Properties** dialog box opens.  
   
@@ -85,7 +85,7 @@ manager: "mblythe"
   
 9. Click **Credentials**. Enter the credentials that you need to access the external data source.  
   
-10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
      You are back on the **Choose a connection to a data source** page.  
   
@@ -93,7 +93,7 @@ manager: "mblythe"
   
      The message "Connection created successfully" appears.  
   
-12. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+12. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 13. Click **Next**.  
   
@@ -109,7 +109,7 @@ manager: "mblythe"
   
 2.  Click **Edit As Text**. The text-based query designer displays a query pane and a results pane.  
   
-3.  Paste the following [!INCLUDE[tsql](../../includes/tsql-md.md)] query into the **Query** box.  
+3.  Paste the following [!INCLUDE[tsql](../includes/tsql-md.md)] query into the **Query** box.  
   
     ```  
     SELECT CAST('2010-01-04' AS date) as SalesDate, 'Accessories' as Subcategory,   
@@ -313,10 +313,10 @@ manager: "mblythe"
   
 7.  Select **Bold**.  
   
-8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ##  <a name="Save"></a> 9. Save the Report  
- Save the report to a report server or your computer. If you do not save the report to the report server, a number of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] features such as report parts and subreports are not available.  
+ Save the report to a report server or your computer. If you do not save the report to the report server, a number of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features such as report parts and subreports are not available.  
   
 #### To save the report on a report server  
   

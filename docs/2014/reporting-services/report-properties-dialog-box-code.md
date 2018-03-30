@@ -15,7 +15,7 @@ f1_keywords:
 ms.assetid: 955d4b11-17b4-4f1c-9690-6e7af54caea7
 caps.latest.revision: 34
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Report Properties Dialog Box, Code
@@ -23,7 +23,7 @@ manager: "mblythe"
   
 ## Options  
  **Custom Code**  
- Type the methods to be used within the report. Code must be written in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
+ Type the methods to be used within the report. Code must be written in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)].  
   
 ## See Also  
  [Custom Code and Assembly References in Expressions in Report Designer &#40;SSRS&#41;](../../2014/reporting-services/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   

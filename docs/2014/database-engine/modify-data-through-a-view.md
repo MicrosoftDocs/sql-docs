@@ -16,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: 410e2812-4ebe-48b2-b95f-c7784f1c4336
 caps.latest.revision: 33
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Modify Data Through a View
-  You can modify the data of an underlying base table in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  You can modify the data of an underlying base table in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -40,7 +40,7 @@ manager: "jhubbard"
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
--   See the section 'Updatable Views' in [CREATE VIEW &#40;Transact-SQL&#41;](../Topic/CREATE%20VIEW%20\(Transact-SQL\).md).  
+-   See the section 'Updatable Views' in [CREATE VIEW &#40;Transact-SQL&#41;](~/t-sql/statements/create-view-transact-sql.md).  
   
 ###  <a name="Security"></a> Security  
   
@@ -71,7 +71,7 @@ manager: "jhubbard"
   
 #### To update table data through a view  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -86,11 +86,11 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [UPDATE &#40;Transact-SQL&#41;](../Topic/UPDATE%20\(Transact-SQL\).md).  
+ For more information, see [UPDATE &#40;Transact-SQL&#41;](~/t-sql/queries/update-transact-sql.md).  
   
 #### To insert table data through a view  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -104,6 +104,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [INSERT &#40;Transact-SQL&#41;](../Topic/INSERT%20\(Transact-SQL\).md).  
+ For more information, see [INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/insert-transact-sql.md).  
   
   

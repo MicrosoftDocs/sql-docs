@@ -12,14 +12,14 @@ ms.topic: "article"
 ms.assetid: 4d67a01c-eae4-49ba-a6e8-8e983c0248f5
 caps.latest.revision: 5
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Site Settings Page (Report Manager)
   Use the Site Settings page to change the application title, set server-wide defaults for report history limits and report processing timeout values, manage system-level role assignments, and manage shared schedules. You must have Content Manager and System Administrator permissions to view this page.  
   
 > [!NOTE]  
->  The following features are not available in every edition of SQL Server: report history, report execution, and shared schedules. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+>  The following features are not available in every edition of SQL Server: report history, report execution, and shared schedules. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ## Navigation  
  Use the following procedure to navigate to this location in the user interface (UI).  
@@ -34,7 +34,7 @@ manager: "mblythe"
   
 ## Options  
  **Name**  
- Specify the title to use for this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Report Manager. By default, the title is "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]".  
+ Specify the title to use for this instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Report Manager. By default, the title is "[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]".  
   
  **Select the default settings for report history**  
  Select a default value for the number of copies of report history to retain. The default value provides an initial setting that establishes report history limits. You can vary these settings at the report level. For more information, see [Snapshot Options Properties Page &#40;Report Manager&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md).  

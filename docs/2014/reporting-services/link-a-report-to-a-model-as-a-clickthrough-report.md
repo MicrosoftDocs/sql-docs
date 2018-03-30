@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 3af42de3-67ef-41c2-bc8a-7045baec6f63
 caps.latest.revision: 26
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Link a Report to a Model as a Clickthrough Report
-  Instead of using the default clickthrough report templates, you can create a Report Builder report and then link it to a specific entity in the report model. When the person viewing the report clicks the interactive data in the main report, this report is displayed as a clickthrough report. To link a report to an entity, use [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Report Manager.  
+  Instead of using the default clickthrough report templates, you can create a Report Builder report and then link it to a specific entity in the report model. When the person viewing the report clicks the interactive data in the main report, this report is displayed as a clickthrough report. To link a report to an entity, use [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Report Manager.  
   
 > [!IMPORTANT]  
 >  The primary, or base, entity that is used in the report must to be the same entity to which the report is linked.  
   
 ### To start Report Manager from a browser  
   
-1.  Open [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 6.0 or later.  
+1.  Open [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 6.0 or later.  
   
 2.  In the address bar of the Web browser, type the Report Manager URL. By default, the URL is http://\<*ComputerName*>/reports.  
   

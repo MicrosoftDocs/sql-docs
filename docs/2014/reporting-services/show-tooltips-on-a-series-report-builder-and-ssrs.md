@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 4c9606ff-e1c3-4cf7-a4e7-bb16f1a9e8ab
 caps.latest.revision: 5
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Show ToolTips on a Series (Report Builder and SSRS)
@@ -21,7 +21,7 @@ manager: "mblythe"
  You cannot add a ToolTip to a calculated series.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ### To specify a ToolTip on each data point  
   

@@ -20,10 +20,10 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Transfer Logins Task
-  The Transfer Logins task transfers one or more logins between instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  The Transfer Logins task transfers one or more logins between instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## Transfer Logins Between Instances of SQL Server  
- The Transfer Logins task supports a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] source and destination.  
+ The Transfer Logins task supports a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] source and destination.  
   
 ## Events  
  The task raises an information event that reports the number of logins transferred and a warning event when a login is overwritten.  
@@ -62,9 +62,9 @@ manager: "jhubbard"
   
  At run time, the Transfer Logins task connects to the source and destination servers by using two SMO connection managers. The SMO connection managers are configured separately from the Transfer Logins task, and then referenced in the Transfer Logins task. The SMO connection managers specify the server and the authentication mode to use when accessing the server. For more information, see [SMO Connection Manager](../../2014/integration-services/smo-connection-manager.md).  
   
- You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer or programmatically.  
   
- For more information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click one of the following topics:  
+ For more information about the properties that you can set in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click one of the following topics:  
   
 -   [Transfer Logins Task Editor &#40;General Page&#41;](../../2014/integration-services/transfer-logins-task-editor-general-page.md)  
   
@@ -72,7 +72,7 @@ manager: "jhubbard"
   
 -   [Expressions Page](../../2014/integration-services/expressions-page.md)  
   
- For more information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
+ For more information about how to set these properties in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click the following topic:  
   
 -   [Set the Properties of a Task or Container](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)  
   

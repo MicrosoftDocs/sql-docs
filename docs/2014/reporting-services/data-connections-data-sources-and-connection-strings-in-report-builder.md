@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: 7e103637-4371-43d7-821c-d269c2cc1b34
 caps.latest.revision: 13
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Data Connections, Data Sources, and Connection Strings in Report Builder
@@ -37,7 +37,7 @@ manager: "mblythe"
  Data can also be included in a report by using predefined shared data sources, shared datasets, and report parts. These items already have the data connection information that you need. For more information, see [Add Data to a Report &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-data-to-a-report-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
  ![rs_DataSourcesStory](../../2014/reporting-services/media/rs-datasourcesstory.gif "rs_DataSourcesStory")  
   
@@ -46,10 +46,10 @@ manager: "mblythe"
   
 |**Data source**|**Example**|**Description**|  
 |---------------------|-----------------|---------------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database on the local server|`data source="(local)";initial catalog=AdventureWorks2012`|Set data source type to `SQL Server`.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance database|`Data Source=localhost\MSSQL12.InstanceName; Initial Catalog= AdventureWorks2012`|Set data source type to `SQL Server`.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express database|`Data Source=localhost\MSSQL12.SQLEXPRESS; Initial Catalog= AdventureWorks2012`|Set data source type to `SQL Server`.|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database on the local server|`data source=localhost;initial catalog=Adventure Works DW 2012`|Set data source type to `SQL Server Analysis Services`.|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database on the local server|`data source="(local)";initial catalog=AdventureWorks2012`|Set data source type to `SQL Server`.|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance database|`Data Source=localhost\MSSQL12.InstanceName; Initial Catalog= AdventureWorks2012`|Set data source type to `SQL Server`.|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express database|`Data Source=localhost\MSSQL12.SQLEXPRESS; Initial Catalog= AdventureWorks2012`|Set data source type to `SQL Server`.|  
+|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database on the local server|`data source=localhost;initial catalog=Adventure Works DW 2012`|Set data source type to `SQL Server Analysis Services`.|  
 |SharePoint List|`data source=http://MySharePointWeb/MySharePointSite/`|Set data source type to `SharePoint List`.|  
 ||||  
 |Report Models|Not applicable.|You do not need a connection string for a report model. In Report Builder, browse to the report server and select the .smdl file that is the report model.|  
@@ -72,7 +72,7 @@ manager: "mblythe"
 > [!NOTE]  
 >  Some types of credentials might not support all the scenarios that Report Builder uses: to run a query in the query designer, preview a report from your computer when you are not connected to a report server, and run the report from the report server. We recommend that you use shared data sources whenever possible. You can store credentials for a shared data source on the report server. For more information, see [Specify Credentials in Report Builder](../../2014/reporting-services/specify-credentials-in-report-builder.md).  
   
- To create a shared data source, you must use Report Manager to create the data source directly on the report server, or use an authoring environment such as Report Designer in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. For more information, see [Create an Embedded or Shared Data Source &#40;SSRS&#41;](../../2014/reporting-services/create-an-embedded-or-shared-data-source-ssrs.md).  
+ To create a shared data source, you must use Report Manager to create the data source directly on the report server, or use an authoring environment such as Report Designer in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. For more information, see [Create an Embedded or Shared Data Source &#40;SSRS&#41;](../../2014/reporting-services/create-an-embedded-or-shared-data-source-ssrs.md).  
   
 
   

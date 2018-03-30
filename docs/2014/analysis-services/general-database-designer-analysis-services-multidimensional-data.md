@@ -20,13 +20,13 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # General (Database Designer) (Analysis Services - Multidimensional Data)
-  Use the **General** tab to change the properties of an [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database.  
+  Use the **General** tab to change the properties of an [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database.  
   
  **To display the General tab**  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project.  
   
-2.  In **Solution Explorer**, right-click the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project, click **Edit Database**, and then click the **General** tab.  
+2.  In **Solution Explorer**, right-click the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project, click **Edit Database**, and then click the **General** tab.  
   
 ## Basic Options  
  Expand the **Basic** section to modify basic information about the database. This section contains the following options:  

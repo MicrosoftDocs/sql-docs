@@ -16,7 +16,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Error Handling
-  An Oracle CDC Instance mines changes from a single Oracle source database (an Oracle RAC cluster is considered a single database) and writes the committed changes to change tables in a CDC database in the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
+  An Oracle CDC Instance mines changes from a single Oracle source database (an Oracle RAC cluster is considered a single database) and writes the committed changes to change tables in a CDC database in the target [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance.  
   
  A CDC Instance maintains its state in a system table called **cdc.xdbcdc_state**. This table can be queried any time to find the state of the CDC Instance. For more information about the cdc.xdbcdc_state table, see [cdc.xdbcdc_state](../../2014/integration-services/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_state).  
   
@@ -41,7 +41,7 @@ manager: "jhubbard"
 |SUSPENDED|1|1|The CDC instance is running but processing is suspended due to a recoverable error. The SUSPENDED status contains the following substatus codes:<br /><br /> DISCONNECTED: The connection with the source Oracle database cannot be established. Processing will resume once connection is restored.<br /><br /> STORAGE: The storage is full. Processing will resume when storage becomes available. In some cases, this status may not appear because the status table cannot be updated.<br /><br /> LOGGER: The logger is connected to Oracle but it cannot read the Oracle transaction logs because of a temporary problem.|  
 |DATAERROR|x|x|This status code is only used for the **xdbcdc_trace** table. It does not appear in the **xdbcdc_state** table. Trace records with this status indicate a problem with an Oracle log record. The bad log record is stored in the **data** column as a BLOB. The DATAERROR status contains the following substatus codes:<br /><br /> BADRECORD: The attached log record could not be parsed.<br /><br /> CONVERT-ERROR: The data in some columns could not be converted to the target columns in the capture table. This status may appear only if the configuration specifies that conversion errors should produce trace records.|  
   
- Because the Oracle CDC Service state is stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], there may be cases where the state value in the database might not reflect the actual state of the service. The most common scenario is when the service loses its connection to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and cannot resume it (for any reason). In that case, the state stored in **cdc.xdbcdc_state** becomes stale. If the last update timestamp (UTC) is more than a minute old, the state is probably stale. In this case, use the Windows Event Viewer to find additional information about the status of the service.  
+ Because the Oracle CDC Service state is stored in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], there may be cases where the state value in the database might not reflect the actual state of the service. The most common scenario is when the service loses its connection to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and cannot resume it (for any reason). In that case, the state stored in **cdc.xdbcdc_state** becomes stale. If the last update timestamp (UTC) is more than a minute old, the state is probably stale. In this case, use the Windows Event Viewer to find additional information about the status of the service.  
   
 ## Error Handling  
  This section describes how the Oracle CDC Service handles errors.  
@@ -49,7 +49,7 @@ manager: "jhubbard"
 ### Logging  
  The Oracle CDC Service creates error information in one of the following places.  
   
--   The Windows event log, which is used with logging errors and to indicate Oracle CDC Service life cycle events (starting, stopping, (re)connection to the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance).  
+-   The Windows event log, which is used with logging errors and to indicate Oracle CDC Service life cycle events (starting, stopping, (re)connection to the target [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance).  
   
 -   The MSXDBCDC.dbo.xdbcdc_trace table, which is used for general logging and tracing by the Oracle CDC Service main process.  
   
@@ -59,7 +59,7 @@ manager: "jhubbard"
   
 -   Is started or stopped by the service control manager.  
   
--   Cannot connect to the associated [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance and when it successfully establishes a connection following a failure.  
+-   Cannot connect to the associated [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance and when it successfully establishes a connection following a failure.  
   
 -   Encounters an error starting Oracle CDC Service instances.  
   
@@ -85,22 +85,22 @@ manager: "jhubbard"
  When it is not clear whether the error is transient, it is best to assume it is transient.  
   
 ### Handling Target SQL Server Connection Errors  
- The Oracle CDC Service needs a persistent connection to the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. This connection is used to:  
+ The Oracle CDC Service needs a persistent connection to the target [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance. This connection is used to:  
   
--   Ensure that there are no other services by the same name currently working with this [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
+-   Ensure that there are no other services by the same name currently working with this [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance.  
   
 -   Check which Oracle CDC Instance is enabled or disabled and start (or stop) its subprocess.  
   
- When the service establishes a connection with the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance and verifies that it is the only Oracle CDC service by this name that is working, it can check which Oracle CDC instances are enabled and start their handling processes (afterward the service stops these processes when they are disabled). The Oracle CDC instances use their [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connections to work with the CDC database of the Oracle CDC instance.  
+ When the service establishes a connection with the target [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance and verifies that it is the only Oracle CDC service by this name that is working, it can check which Oracle CDC instances are enabled and start their handling processes (afterward the service stops these processes when they are disabled). The Oracle CDC instances use their [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] connections to work with the CDC database of the Oracle CDC instance.  
   
- How errors are handled when the connection to the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fails depends on whether the errors are transient.  
+ How errors are handled when the connection to the target [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fails depends on whether the errors are transient.  
   
- For known non-transient errors (such as bad credentials, insufficient privileges, bad connection information), the service logs an error to the Windows event log and stops (it cannot write to the trace table because it cannot connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). In this case, the user must resolve the error and restart the Oracle CDC Windows service.  
+ For known non-transient errors (such as bad credentials, insufficient privileges, bad connection information), the service logs an error to the Windows event log and stops (it cannot write to the trace table because it cannot connect to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]). In this case, the user must resolve the error and restart the Oracle CDC Windows service.  
   
  For transient errors and unexpected errors, the operation is retried several times and if the failure persists for a significant time period, the CDC Service stops its CDC Instance subprocesses and goes back to its initial connection attempt (by this time, an Oracle CDC Service on another machine may have already taken control of the named CDC service).  
   
 ### Handling Target SQL Server Storage Full Errors  
- When the Oracle CDC Service detects that it cannot insert new change data into the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC database, it writes a warning to the event log and tries to insert a trace record (although that may fail for the same reason). It then retries the operation in a specific interval until it is successful.  
+ When the Oracle CDC Service detects that it cannot insert new change data into the target [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] CDC database, it writes a warning to the event log and tries to insert a trace record (although that may fail for the same reason). It then retries the operation in a specific interval until it is successful.  
   
 ### Handling Oracle CDC Errors  
  The Oracle CDC Instance reads the Oracle transaction log and processes it. If the CDC processing encounters an error, it is reported in the **cdc.xdbcdc_state** table and the user needs to manually intervene based on the reported error.  

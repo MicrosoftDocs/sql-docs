@@ -28,7 +28,7 @@ manager: "jhubbard"
  **Copy data from one or more tables or views**  
  Copy fields from selected source tables and views to the specified destination or destinations by using the **Select Source Tables and Views** dialog box. Use this option if you want to copy all data in the source without filtering or ordering records.  
   
- When you use a [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] data provider to connect to your data source, the **Copy data from one or more tables or views** option might not be available. This option is available only for those providers that have a ProviderDescription section in the ProviderDescriptors.xml file. Each ProviderDescription section contains the information that is required to retrieve metadata from the corresponding provider. By default, the ProviderDescriptors.xml file contains a ProviderDescription section for only the following providers:  
+ When you use a [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] data provider to connect to your data source, the **Copy data from one or more tables or views** option might not be available. This option is available only for those providers that have a ProviderDescription section in the ProviderDescriptors.xml file. Each ProviderDescription section contains the information that is required to retrieve metadata from the corresponding provider. By default, the ProviderDescriptors.xml file contains a ProviderDescription section for only the following providers:  
   
 -   System.Data.SqlClient  
   

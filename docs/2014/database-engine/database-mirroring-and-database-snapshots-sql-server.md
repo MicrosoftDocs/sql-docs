@@ -37,9 +37,9 @@ manager: "jhubbard"
 ## Example  
  This example creates snapshots on a mirrored database.  
   
- Assume that the database of a database mirroring session is [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. This example creates three database snapshots on the mirror copy of the `AdventureWorks` database, which resides on the `F` drive. The snapshots are named `AdventureWorks_0600`, `AdventureWorks_1200`, and `AdventureWorks_1800` to identify their approximate creation times.  
+ Assume that the database of a database mirroring session is [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]. This example creates three database snapshots on the mirror copy of the `AdventureWorks` database, which resides on the `F` drive. The snapshots are named `AdventureWorks_0600`, `AdventureWorks_1200`, and `AdventureWorks_1800` to identify their approximate creation times.  
   
-1.  Create the first database snapshot on the mirror of [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+1.  Create the first database snapshot on the mirror of [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)].  
   
     ```  
     CREATE DATABASE AdventureWorks_0600  
@@ -47,7 +47,7 @@ manager: "jhubbard"
        AS SNAPSHOT OF AdventureWorks2012  
     ```  
   
-2.  Create the second database snapshot on the mirror of [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Users who are still using `AdventureWorks_0600` can continue to use it.  
+2.  Create the second database snapshot on the mirror of [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]. Users who are still using `AdventureWorks_0600` can continue to use it.  
   
     ```  
     CREATE DATABASE AdventureWorks_1200  
@@ -57,7 +57,7 @@ manager: "jhubbard"
   
      At this point, new client connections can be programmatically directed to the latest snapshot.  
   
-3.  Create the third snapshot on the mirror [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Users who are still using `AdventureWorks_0600` or `AdventureWorks_1200` can continue to use them.  
+3.  Create the third snapshot on the mirror [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]. Users who are still using `AdventureWorks_0600` or `AdventureWorks_1200` can continue to use them.  
   
     ```  
     CREATE DATABASE AdventureWorks_1800  

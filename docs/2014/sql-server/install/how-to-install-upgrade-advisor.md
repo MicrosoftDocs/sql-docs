@@ -21,7 +21,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # How to: Install Upgrade Advisor
-  Upgrade Advisor supports remote analysis of all supported components except [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. If you are not scanning instances of [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], you can install Upgrade Advisor on any computer that can connect to your instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. The computer must also meet Upgrade Advisor prerequisites. If you are scanning instances of [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], you must install Upgrade Advisor on the report server.  
+  Upgrade Advisor supports remote analysis of all supported components except [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. If you are not scanning instances of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], you can install Upgrade Advisor on any computer that can connect to your instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The computer must also meet Upgrade Advisor prerequisites. If you are scanning instances of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], you must install Upgrade Advisor on the report server.  
   
  For more information, see [Installing Upgrade Advisor](../../../2014/sql-server/install/installing-upgrade-advisor.md).  
   
@@ -29,16 +29,16 @@ manager: "jhubbard"
   
 1.  Start the installation using one of the following methods:  
   
-    -   If you are installing from the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Web site, click the **Download** link and then click the **Run** button to start the installation.  
+    -   If you are installing from the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Web site, click the **Download** link and then click the **Run** button to start the installation.  
   
     -   If you are installing from the product media, open the **redist** folder, open the **Upgrade Advisor** folder, and then double-click **SQLUA.msi**.  
   
     > [!NOTE]  
-    >  Upgrade Advisor requires the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 4. If it is not installed, or if you have a pre-release version, an error message will appear. Uninstall any earlier version of the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] and then install the latest version of .NET Framework 4.  
+    >  Upgrade Advisor requires the [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 4. If it is not installed, or if you have a pre-release version, an error message will appear. Uninstall any earlier version of the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] and then install the latest version of .NET Framework 4.  
     >   
-    >  The [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[tsql](../../../includes/tsql-md.md)] ScriptDom is a prerequisite for installing [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Upgrade Advisor, and is not installed by Upgrade Advisor Setup. The Setup requires you to download and install the [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[tsql](../../../includes/tsql-md.md)] ScriptDom from the [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Feature Pack.  
+    >  The [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)] ScriptDom is a prerequisite for installing [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor, and is not installed by Upgrade Advisor Setup. The Setup requires you to download and install the [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)] ScriptDom from the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Feature Pack.  
   
-2.  On the **Welcome to the [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Upgrade Advisor Setup** page, click **Next**.  
+2.  On the **Welcome to the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor Setup** page, click **Next**.  
   
 3.  On the **License Agreement** page, read the license agreement. If you agree, select **I accept the license agreement** and then click **Next**.  
   

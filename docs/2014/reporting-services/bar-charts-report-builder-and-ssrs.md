@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: db0cf6a0-2114-41d0-ab27-0319e52dee76
 caps.latest.revision: 6
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Bar Charts (Report Builder and SSRS)
@@ -25,7 +25,7 @@ manager: "mblythe"
  ![Bar chart](../../2014/reporting-services/media/barchart.gif "Bar chart")  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## Variations of the Bar Chart  
   

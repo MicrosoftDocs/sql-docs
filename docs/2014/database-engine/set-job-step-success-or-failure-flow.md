@@ -21,7 +21,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Set Job Step Success or Failure Flow
-  When creating [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs, you can specify what action [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] should take if a failure occurs during job execution. Determine the action that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] should take upon the success or failure of each job step. Then use the following procedure to configure the job step action flow logic by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+  When creating [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent jobs, you can specify what action [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] should take if a failure occurs during job execution. Determine the action that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] should take upon the success or failure of each job step. Then use the following procedure to configure the job step action flow logic by using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent.  
   
 -   **Before you begin:**  
   
@@ -58,7 +58,7 @@ manager: "jhubbard"
   
 7.  In the **On failure action** list, click the action to perform if the job step fails.  
   
-8.  If the job is a [!INCLUDE[tsql](../../includes/tsql-md.md)] script, you can choose from the following options:  
+8.  If the job is a [!INCLUDE[tsql](../includes/tsql-md.md)] script, you can choose from the following options:  
   
     -   In the **Output file** box, enter the name of an output file to which the script output will be written. By default the file is overwritten each time the job step executes. If you do not want the output file overwritten, check **Append output to existing file**.  
   
@@ -72,7 +72,7 @@ manager: "jhubbard"
   
 #### To set job step success or failure flow  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -90,7 +90,7 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [sp_add_jobstep &#40;Transact-SQL&#41;](../Topic/sp_add_jobstep%20\(Transact-SQL\).md).  
+ For more information, see [sp_add_jobstep &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md).  
   
 ##  <a name="SMO"></a> Using SQL Server Management Objects  
  **To set job step success or failure flow**  

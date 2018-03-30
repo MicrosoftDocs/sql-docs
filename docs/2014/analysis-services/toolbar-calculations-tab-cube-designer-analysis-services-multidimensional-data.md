@@ -24,7 +24,7 @@ manager: "mblythe"
 |------------|-----------------|  
 |**Add Business Intelligence**|Click to display the **Business Intelligence Wizard** and add business intelligence features to the cube.|  
 |**Process**|Click to display the **Process** dialog box and process the cube.|  
-|**Reconnect**|Click to reconnect the **Calculations** tab to the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance and database that contains the cube, if the session for the **Calculations** tab is disconnected due to connection loss or timeout.|  
+|**Reconnect**|Click to reconnect the **Calculations** tab to the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance and database that contains the cube, if the session for the **Calculations** tab is disconnected due to connection loss or timeout.|  
 |**New Calculated Member**|Click to display the **Calculated Member Form Editor** and create a new calculated member. This option is enabled only in form view.|  
 |**New Named Set**|Click to display the **Named Set Form Editor** and create a new named set. This option is enabled only in form view.|  
 |**New Script Command**|Click to display the **Script Editor** and create a new script command. This option is enabled only in form view.|  

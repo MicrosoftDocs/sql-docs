@@ -40,7 +40,7 @@ manager: "jhubbard"
   
  This transformation has one input and one output. It has no error output.  
   
- You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer or programmatically.  
   
  For more information about the properties that you can set in the **Unpivot Transformation Editor** dialog box, click one of the following topics:  
   

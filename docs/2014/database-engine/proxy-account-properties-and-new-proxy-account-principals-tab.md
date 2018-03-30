@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Proxy Account Properties and New Proxy Account (Principals Tab)
-  Use this page to view or change the principals that can use a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy account in job steps.  
+  Use this page to view or change the principals that can use a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent proxy account in job steps.  
   
 ## Options  
  **Proxy account principals**  

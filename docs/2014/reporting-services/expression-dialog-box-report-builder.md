@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: e89c4d97-5d41-4b55-8695-79329edac15d
 caps.latest.revision: 16
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Expression Dialog Box (Report Builder)
-  Use the **Expression** dialog box to write [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] expressions for report item properties. You can use expressions to set many properties, including color, font, and borders. At run time, the report processor evaluates expressions and substitutes the result for the value of the property.  
+  Use the **Expression** dialog box to write [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] expressions for report item properties. You can use expressions to set many properties, including color, font, and borders. At run time, the report processor evaluates expressions and substitutes the result for the value of the property.  
   
  The **Expression** dialog box includes a code window, category tree, category items, description pane, and example pane. The **Expression** dialog box is context-sensitive; the category items and descriptions change in response to the expression category you are working with. For more information, see [Expression Examples &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/expression-examples-report-builder-and-ssrs.md), [Expressions &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/expressions-report-builder-and-ssrs.md)  
   
 ## Expression Constructs  
- Expressions begin with an equal sign (=) and can include constants, literals, operators, and references to built-in fields, built-in collections, built-in functions, [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] run-time library functions, [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime classes, and custom functions. The following list describes the categories and values you can add to an expression.  
+ Expressions begin with an equal sign (=) and can include constants, literals, operators, and references to built-in fields, built-in collections, built-in functions, [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] run-time library functions, [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] common language runtime classes, and custom functions. The following list describes the categories and values you can add to an expression.  
   
  **Set expression for:**  *\<PropertyName>*  
  The name of the property that you are defining an expression for. You can also set this property, by name, in the Properties pane.  
@@ -56,7 +56,7 @@ manager: "mblythe"
  **Common Functions**  
  Displays common functions, grouped by type. When you select a function in the Item pane, a description and example appear.  
   
- Common functions include built-in report and aggregate functions, [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] run-time library functions, and [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime classes (CLR) in the <xref:System.Math> and <xref:System.Convert> namespace. You can also add references to CLR classes and external assemblies that do not appear in the category list. For more information, see [Custom Code and Assembly References in Expressions in Report Designer &#40;SSRS&#41;](../../2014/reporting-services/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
+ Common functions include built-in report and aggregate functions, [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] run-time library functions, and [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] common language runtime classes (CLR) in the <xref:System.Math> and <xref:System.Convert> namespace. You can also add references to CLR classes and external assemblies that do not appear in the category list. For more information, see [Custom Code and Assembly References in Expressions in Report Designer &#40;SSRS&#41;](../../2014/reporting-services/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
   
 ## Options  
  Code window  

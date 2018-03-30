@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 7362fca4-b005-4872-bdfa-a3e32f834db8
 caps.latest.revision: 9
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_26013
@@ -31,7 +31,7 @@ manager: "jhubbard"
 |Message Text|The certificate [Cert Hash(sha1) "%hs"] was successfully loaded for encryption.|  
   
 ## Explanation  
- This is an informational message. The named certificate was successfully loaded into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and can be used for encryption.  
+ This is an informational message. The named certificate was successfully loaded into [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and can be used for encryption.  
   
 ## User Action  
  No action is necessary.  

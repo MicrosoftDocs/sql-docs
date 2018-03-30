@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c1e77e91-2a69-40d9-b8b3-97cffc710586
 caps.latest.revision: 16
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Create a Credential
-  This topic describes how to create a credential in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  This topic describes how to create a credential in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
- Credentials provide a way to allow [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication users to have an identity outside of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This is primarily used to execute code in Assemblies with EXTERNAL_ACCESS permission set. Credentials can also be used when a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication user needs access to a domain resource, such as a file location to store a backup.  
+ Credentials provide a way to allow [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication users to have an identity outside of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. This is primarily used to execute code in Assemblies with EXTERNAL_ACCESS permission set. Credentials can also be used when a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication user needs access to a domain resource, such as a file location to store a backup.  
   
- A credential can be mapped to several [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins at the same time. A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login can only be mapped to one credential at a time. After a credential is created, use the **Login Properties (General Page)** to map a login to a credential.  
+ A credential can be mapped to several [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] logins at the same time. A [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] login can only be mapped to one credential at a time. After a credential is created, use the **Login Properties (General Page)** to map a login to a credential.  
   
  **In This Topic**  
   
@@ -44,7 +44,7 @@ manager: "jhubbard"
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
--   If there is no login mapped credential for the provider, the credential mapped to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account is used.  
+-   If there is no login mapped credential for the provider, the credential mapped to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] service account is used.  
   
 -   A login can have multiple credentials mapped to it as long as they are used with distinctive providers. There must be only one mapped credential per provider per login. The same credential can be mapped to other logins.  
   
@@ -63,7 +63,7 @@ manager: "jhubbard"
   
 3.  In the **New Credential** dialog box, in the **Credential Name** box, type a name for the credential.  
   
-4.  In the **Identity** box, type the name of the account used for outgoing connections (when leaving the context of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Typically, this will be a Windows user account, but the identity can be an account of another type.  
+4.  In the **Identity** box, type the name of the account used for outgoing connections (when leaving the context of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]). Typically, this will be a Windows user account, but the identity can be an account of another type.  
   
      Alternately, click the ellipsis **(…)** to open the **Select User or Group** dialog box.  
   
@@ -71,13 +71,13 @@ manager: "jhubbard"
   
 6.  Select **Use Encryption Provider** to set the credential to be verified by an Extensible Key Management (EKM) Provider. For more information, see [Extensible Key Management &#40;EKM&#41;](../../2014/database-engine/extensible-key-management-ekm.md)  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 ###  <a name="Credential"></a> To create a credential  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -91,6 +91,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../Topic/CREATE%20CREDENTIAL%20\(Transact-SQL\).md).  
+ For more information, see [CREATE CREDENTIAL &#40;Transact-SQL&#41;](~/t-sql/statements/create-credential-transact-sql.md).  
   
   

@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 759fab42-66c7-4541-a7a3-bb6fb868493c
 caps.latest.revision: 27
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Snapshot Options
@@ -25,7 +25,7 @@ manager: "jhubbard"
   
 -   Compress snapshots for storage on removable media or for transfer over a slow network. For more information, see [Compressed Snapshots](../../../2014/relational-databases/replication/compressed-snapshots.md).  
   
--   Execute [!INCLUDE[tsql](../../../includes/tsql-md.md)] scripts before or after the snapshot is applied. For more information, see [Execute Scripts Before and After the Snapshot Is Applied](../../../2014/relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md).  
+-   Execute [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts before or after the snapshot is applied. For more information, see [Execute Scripts Before and After the Snapshot Is Applied](../../../2014/relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md).  
   
 -   Transfer snapshot files using File Transfer Protocol (FTP). For more information, see [Transfer Snapshots Through FTP](../../../2014/relational-databases/replication/transfer-snapshots-through-ftp.md).  
   

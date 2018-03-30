@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Create an Analysis Services Job Step
-  This topic describes how to create and define [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job steps in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] that execute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services commands and queries by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] or SQL Server Management Objects.  
+  This topic describes how to create and define [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent job steps in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] that execute [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Analysis Services commands and queries by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../includes/tsql-md.md)] or SQL Server Management Objects.  
   
 -   **Before you begin:**  
   
@@ -38,7 +38,7 @@ manager: "jhubbard"
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
--   If the job step uses an Analysis Services command, the command statement must be an XML for Analysis Services **Execute** method. The statement may not contain a complete Simple Object Access Protocol (SOAP) envelope or an XML for Analysis **Discover** method. While [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] supports complete SOAP envelopes and the **Discover** method, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job steps do not. For more information about XML for Analysis Services, see [XML for Analysis Overview (XMLA)](http://msdn.microsoft.com/library/ms187190.aspx).  
+-   If the job step uses an Analysis Services command, the command statement must be an XML for Analysis Services **Execute** method. The statement may not contain a complete Simple Object Access Protocol (SOAP) envelope or an XML for Analysis **Discover** method. While [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] supports complete SOAP envelopes and the **Discover** method, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent job steps do not. For more information about XML for Analysis Services, see [XML for Analysis Overview (XMLA)](http://msdn.microsoft.com/library/ms187190.aspx).  
   
 -   If the job step uses an Analysis Services query, the query statement must be a multidimensional expressions (MDX) query. For more information about MDX, see [MDX Query Fundamentals &#40;Analysis Services&#41;](../../2014/analysis-services/mdx-query-fundamentals-analysis-services.md).  
   
@@ -46,9 +46,9 @@ manager: "jhubbard"
   
 ####  <a name="Permissions"></a> Permissions  
   
--   To run a job step that uses the Analysis Services subsystem, a user must be a member of the **sysadmin** fixed server role or have access to a valid proxy account defined to use this subsystem. In addition, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account or the proxy must be an Analysis Services administrator and a valid Windows domain account.  
+-   To run a job step that uses the Analysis Services subsystem, a user must be a member of the **sysadmin** fixed server role or have access to a valid proxy account defined to use this subsystem. In addition, the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent service account or the proxy must be an Analysis Services administrator and a valid Windows domain account.  
   
--   Only members of the **sysadmin** fixed server role can write job step output to a file. If the job step is run by users who are members of the **SQLAgentUserRole** database role in the **msdb** database, then the output can be written only to a table. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent writes job step output to the **sysjobstepslog** table in the **msdb** database.  
+-   Only members of the **sysadmin** fixed server role can write job step output to a file. If the job step is run by users who are members of the **SQLAgentUserRole** database role in the **msdb** database, then the output can be written only to a table. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent writes job step output to the **sysjobstepslog** table in the **msdb** database.  
   
 -   For detailed information, see [Implement SQL Server Agent Security](../../2014/database-engine/implement-sql-server-agent-security.md).  
   
@@ -56,7 +56,7 @@ manager: "jhubbard"
   
 #### To create an Analysis Services command job step  
   
-1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], and then expand that instance.  
+1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], and then expand that instance.  
   
 2.  Expand **SQL Server Agent**, create a new job or right-click an existing job, and then click **Properties**. For more information on creating a job, see [Create Jobs](../../2014/database-engine/create-jobs.md).  
   
@@ -72,11 +72,11 @@ manager: "jhubbard"
   
 8.  In the **Command** box, type the statement to execute, or click **Open** to select a statement.  
   
-9. Click the **Advanced** page to define options for this job step, such as what action [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent should take if the job step succeeds or fails, how many times the job step should be attempted, and where the job step output should be written.  
+9. Click the **Advanced** page to define options for this job step, such as what action [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent should take if the job step succeeds or fails, how many times the job step should be attempted, and where the job step output should be written.  
   
 #### To create an Analysis Services query job step  
   
-1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], and then expand that instance.  
+1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], and then expand that instance.  
   
 2.  Expand **SQL Server Agent**, create a new job or right-click an existing job, and then click **Properties**. For more information on creating a job, see [Create Jobs](../../2014/database-engine/create-jobs.md).  
   
@@ -92,13 +92,13 @@ manager: "jhubbard"
   
 8.  In the **Command** box, type the statement to execute, or click **Open** to select a statement.  
   
-9. Click the **Advanced** page to define options for this job step, such as what action [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent should take if the job step succeeds or fails, how many times the job step should be attempted, and where the job step output should be written.  
+9. Click the **Advanced** page to define options for this job step, such as what action [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent should take if the job step succeeds or fails, how many times the job step should be attempted, and where the job step output should be written.  
   
 ##  <a name="TSQL"></a> Using Transact-SQL  
   
 #### To create an Analysis Services command job step  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -133,11 +133,11 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [sp_add_jobstep &#40;Transact-SQL&#41;](../Topic/sp_add_jobstep%20\(Transact-SQL\).md).  
+ For more information, see [sp_add_jobstep &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md).  
   
 #### To create an Analysis Services query job step  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -161,7 +161,7 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [sp_add_jobstep &#40;Transact-SQL&#41;](../Topic/sp_add_jobstep%20\(Transact-SQL\).md).  
+ For more information, see [sp_add_jobstep &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md).  
   
 ##  <a name="SMO"></a> Using SQL Server Management Objects  
  **To create a PowerShell Script job step**  

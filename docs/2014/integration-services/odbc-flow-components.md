@@ -16,19 +16,19 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # ODBC Flow Components
-  This topic describes the concepts necessary for creating an ODBC data flow using [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  
+  This topic describes the concepts necessary for creating an ODBC data flow using [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)]  
   
- The Connector for Open Database Connectivity (ODBC) by Attunity for [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] helps SSIS developers easily create packages that load and unload data from ODBC-supported databases.  
+ The Connector for Open Database Connectivity (ODBC) by Attunity for [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] helps SSIS developers easily create packages that load and unload data from ODBC-supported databases.  
   
- The ODBC Connector is designed to achieve optimal performance when loading data into or unloading data from an ODBC-supported database in the context of [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
+ The ODBC Connector is designed to achieve optimal performance when loading data into or unloading data from an ODBC-supported database in the context of [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)].  
   
 ## Benefits  
- The ODBC source and ODBC destination for [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] provides a competitive edge for SSIS in projects dealing with loading data into or unloading data from ODBC-supported databases.  
+ The ODBC source and ODBC destination for [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] provides a competitive edge for SSIS in projects dealing with loading data into or unloading data from ODBC-supported databases.  
   
  Both the ODBC source and ODBC destination enable high performance data integration with ODBC-enabled databases. Both components can be configured to work with row-wise parameter array bindings for high-functioning ODBC providers that support this mode of binding and single-row parameter bindings for low-functioning ODBC providers.  
   
 ## Getting Started with the ODBC Source and Destination  
- Before you can set up packages that use [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)], you must make sure that the following are available.  
+ Before you can set up packages that use [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)], you must make sure that the following are available.  
   
 -   [ODBC Source](../../2014/integration-services/odbc-source.md)  
   
@@ -36,7 +36,7 @@ manager: "jhubbard"
   
  The ODBC source and ODBC destination provide an easy way to unload and load data and transfer data from an ODBC-supported source database to an ODBC-supported destination database.  
   
- To use the source or destination to load or unload data, open a new [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] Project in the [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Then drag the source or destination onto the design surface of the [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
+ To use the source or destination to load or unload data, open a new [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] Project in the [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Then drag the source or destination onto the design surface of the [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
   
 -   The ODBC source component reads data from the source ODBC-supported database.  
   
@@ -64,34 +64,34 @@ manager: "jhubbard"
  This section describes some of the main uses for the ODBC source and destination components.  
   
 ### Bulk Copy Data from SQL Server tables to any ODBC-Supported database table  
- You can use the components to bulk copy data from one or more [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables to a single ODBC-supported database table.  
+ You can use the components to bulk copy data from one or more [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tables to a single ODBC-supported database table.  
   
- The following example shows how to create an SSIS Data Flow Task that extracts data from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table and loads it into a DB2 table.  
+ The following example shows how to create an SSIS Data Flow Task that extracts data from a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] table and loads it into a DB2 table.  
   
--   Create an [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] Project in the [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
+-   Create an [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] Project in the [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
   
--   Create an OLE DB connection manager that connects to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database that contains the data you want to copy.  
+-   Create an OLE DB connection manager that connects to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database that contains the data you want to copy.  
   
--   Create an ODBC connection manager that uses a locally installed DB2 ODBC driver with a DSN pointing to a local or remote DB2 database. This database is where the data from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database is loaded.  
+-   Create an ODBC connection manager that uses a locally installed DB2 ODBC driver with a DSN pointing to a local or remote DB2 database. This database is where the data from the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database is loaded.  
   
--   Drag an OLE DB source to the design surface, then configure the source to get the data from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database and table with the data you are going to extract. Use the OLE DB connection manager you created previously.  
+-   Drag an OLE DB source to the design surface, then configure the source to get the data from the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database and table with the data you are going to extract. Use the OLE DB connection manager you created previously.  
   
--   Drag an ODBC destination to the design surface, connect the source output to the ODBC destination, then configure the destination to load the data into the DB2 table with the data you extract from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. Use the ODBC connection manager you created previously.  
+-   Drag an ODBC destination to the design surface, connect the source output to the ODBC destination, then configure the destination to load the data into the DB2 table with the data you extract from the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database. Use the ODBC connection manager you created previously.  
   
 ### Bulk Copy Data from ODBC-supported database tables to any SQL Server table  
- You can use the components to bulk copy data from one or more ODBC-supported database tables to a single [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database table.  
+ You can use the components to bulk copy data from one or more ODBC-supported database tables to a single [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database table.  
   
- The following example shows how to create an SSIS Data Flow Task that extracts data from a Sybase database table and loads it into a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database table.  
+ The following example shows how to create an SSIS Data Flow Task that extracts data from a Sybase database table and loads it into a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database table.  
   
--   Create an [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] Project in the [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  
+-   Create an [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] Project in the [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]  
   
 -   Create an ODBC connection manager that uses a locally installed Sybase ODBC driver with a DSN pointing to a local or remote Sybase database. This database is where the data is extracted.  
   
--   Create an OLE DB connection manager that connects to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database where you want to load the data.  
+-   Create an OLE DB connection manager that connects to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database where you want to load the data.  
   
 -   Drag an ODBC source to the design surface, then configure the source to get the data from the Sybase table with the data you are going to copy. Use the ODBC connection manager you created previously.  
   
--   Drag an OLE DB destination to the design surface, connect the source output to the OLE DB destination, then configure the destination to load the data into the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table with the data you extract from the Sybase database. Use the OLE DB connection manager you created previously.  
+-   Drag an OLE DB destination to the design surface, connect the source output to the OLE DB destination, then configure the destination to load the data into the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] table with the data you extract from the Sybase database. Use the OLE DB connection manager you created previously.  
   
 ## Supported Data Types  
  The ODBC Bulk SSIS components support all built-in ODBC data types, including support for large objects (CLOBs and BLOBs).  

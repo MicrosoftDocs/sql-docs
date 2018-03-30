@@ -26,7 +26,7 @@ manager: "mblythe"
  **Metadata**  
  Displays the metadata available in the current view. You can change the view (that is, the currently selected perspective or cube) by clicking the cube icon, and then using the **Cube Selection** dialog box to choose a new cube or perspective. You can also click **Measure Group**, and select a new measure group from the dropdown list to filter the objects that are available in the **Metadata** pane.  
   
- Drag selected items to the filter, data, row, or column areas of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office 11.0 PivotTable control in the **Report** pane to display the data for the selected item.  
+ Drag selected items to the filter, data, row, or column areas of the [!INCLUDE[msCoName](../includes/msconame-md.md)] Office 11.0 PivotTable control in the **Report** pane to display the data for the selected item.  
   
  **Functions**  
  Displays a list of all functions, operators, and constants that can be used to create queries or data views in the **Browser**. To use a function, locate the one you want, and drag it into the query area. The syntax definition is added to the text  

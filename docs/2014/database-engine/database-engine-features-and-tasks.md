@@ -15,11 +15,11 @@ helpviewer_keywords:
 ms.assetid: d9efe145-3306-4d61-bd77-e2af43e19c34
 caps.latest.revision: 23
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Database Engine Features and Tasks
-  Find information that anyone—designer, developer, analyst, or administrator—requires to build [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases.  
+  Find information that anyone—designer, developer, analyst, or administrator—requires to build [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] databases.  
   
 ## In This Section  
  [Database Engine Instances &#40;SQL Server&#41;](../../2014/database-engine/database-engine-instances-sql-server.md)  

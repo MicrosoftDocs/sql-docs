@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
 caps.latest.revision: 7
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Display Page Numbers or Other Report Properties (Report Builder and SSRS)
@@ -40,7 +40,7 @@ manager: "mblythe"
 >  Adding the total number of pages to the footer may slow performance when you run or preview your report.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ### To add a page number or other report properties  
   
@@ -66,7 +66,7 @@ manager: "mblythe"
   
      The expression is now  ="Page "&Globals!PageNumber  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ### To add total number of pages after the page number  
   
@@ -78,7 +78,7 @@ manager: "mblythe"
   
      The expression is now ="Page "&Globals!PageNumber &" of "&Globals!TotalPages  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## See Also  
  [Page Headers and Footers &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/page-headers-and-footers-report-builder-and-ssrs.md)   

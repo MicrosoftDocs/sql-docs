@@ -39,7 +39,7 @@ manager: "jhubbard"
  [Bulk Insert Task Editor &#40;Connection Page&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
  [Bulk Insert Task Editor &#40;Options Page&#41;](../../2014/integration-services/bulk-insert-task-editor-options-page.md)   
  [Expressions Page](../../2014/integration-services/expressions-page.md)   
- [BULK INSERT &#40;Transact-SQL&#41;](../Topic/BULK%20INSERT%20\(Transact-SQL\).md)   
+ [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md)   
  [Control Flow](../../2014/integration-services/control-flow.md)  
   
   

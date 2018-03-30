@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 162ffe86-69c3-49d2-b9ed-49d097c05551
 caps.latest.revision: 5
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # RSWindowsExtendedProtectionLevel Property (WMI MSReportServer_ConfigurationSetting)

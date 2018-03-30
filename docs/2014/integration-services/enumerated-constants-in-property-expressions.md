@@ -25,9 +25,9 @@ manager: "jhubbard"
 # Enumerated Constants in Property Expressions
   If property expressions include values from an enumerator member list, the expression must use the numeric value of the enumerator member instead of the friendly name of the member. For example, if an expression sets the `LoggingMode` property then you must use the numeric value 2 instead of the friendly name Disabled.  
   
- This topic lists only the numeric values equivalent to friendly names of enumerators whose members are commonly used in property expressions. The [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] object model includes many additional enumerators that you use when you program the object model to build packages programmatically or code custom package elements such as tasks and data flow components.  
+ This topic lists only the numeric values equivalent to friendly names of enumerators whose members are commonly used in property expressions. The [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] object model includes many additional enumerators that you use when you program the object model to build packages programmatically or code custom package elements such as tasks and data flow components.  
   
- In addition to the custom properties for packages and package objects, the Properties window in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] includes a set of properties that are available to packages, tasks, and the Foreach Loop, For Loop, and Sequence containers. The common properties that are set by values from enumerators—`ForceExecutionResult`, `LoggingMode`, `IsolationLevel`, and `Transaction Option`—are listed in Common Properties section.  
+ In addition to the custom properties for packages and package objects, the Properties window in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] includes a set of properties that are available to packages, tasks, and the Foreach Loop, For Loop, and Sequence containers. The common properties that are set by values from enumerators—`ForceExecutionResult`, `LoggingMode`, `IsolationLevel`, and `Transaction Option`—are listed in Common Properties section.  
   
  The following sections provide information about enumerated constants:  
   
@@ -142,7 +142,7 @@ manager: "jhubbard"
 |NodeText|2|  
   
 ##  <a name="Tasks"></a> Tasks  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes numerous tasks with properties that can be set by property expressions.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes numerous tasks with properties that can be set by property expressions.  
   
 ### Analysis Services Execute DDL Task  
  `SourceType` property—Set by using values from the `DDLSourceType` enumeration.  
@@ -474,9 +474,9 @@ manager: "jhubbard"
 |Precise|2|  
   
 ##  <a name="MaintenancePlanTasks"></a> Maintenance Plan Tasks  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes a set of tasks that perform SQL Server tasks for use in maintenance plans and [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes a set of tasks that perform SQL Server tasks for use in maintenance plans and [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not support working with these tasks programmatically and programming reference documentation does not include API documentation of these tasks and their enumerators.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not support working with these tasks programmatically and programming reference documentation does not include API documentation of these tasks and their enumerators.  
   
 ### All Maintenance Tasks  
  All maintenance tasks use the following enumerations to set the specified properties.  
@@ -530,7 +530,7 @@ manager: "jhubbard"
 |Files|1|  
 |Log|2|  
   
- `BackupDevice` property—Set by using values from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) `DeviceType` enumeration.  
+ `BackupDevice` property—Set by using values from the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects (SMO) `DeviceType` enumeration.  
   
 |Friendly name in DeviceType|Numeric value|  
 |---------------------------------|-------------------|  
@@ -558,7 +558,7 @@ manager: "jhubbard"
 |Year|3|  
   
 ### Update Statistics Task  
- `UpdateType` property—Set by using values from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) `StatisticsTarget` enumeration.  
+ `UpdateType` property—Set by using values from the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects (SMO) `StatisticsTarget` enumeration.  
   
 |Friendly name in StatisticsTarget|Numeric value|  
 |---------------------------------------|-------------------|  

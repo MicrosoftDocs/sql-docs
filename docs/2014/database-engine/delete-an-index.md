@@ -18,11 +18,11 @@ helpviewer_keywords:
 ms.assetid: fd38a0ed-26c4-4c76-9ef7-e0a16147329d
 caps.latest.revision: 29
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Delete an Index
-  This topic describes how to delete (drop) an index in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  This topic describes how to delete (drop) an index in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -41,7 +41,7 @@ manager: "jhubbard"
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
- Indexes created as the result of a PRIMARY KEY or UNIQUE constraint cannot be deleted by using this method. Instead, the constraint must be deleted. To remove the constraint and corresponding index, use [ALTER TABLE](../Topic/ALTER%20TABLE%20\(Transact-SQL\).md) with the DROP CONSTRAINT clause in [!INCLUDE[tsql](../../includes/tsql-md.md)]. For more information, see [Delete Primary Keys](../../2014/database-engine/delete-primary-keys.md).  
+ Indexes created as the result of a PRIMARY KEY or UNIQUE constraint cannot be deleted by using this method. Instead, the constraint must be deleted. To remove the constraint and corresponding index, use [ALTER TABLE](~/t-sql/statements/alter-table-transact-sql.md) with the DROP CONSTRAINT clause in [!INCLUDE[tsql](../includes/tsql-md.md)]. For more information, see [Delete Primary Keys](../../2014/database-engine/delete-primary-keys.md).  
   
 ###  <a name="Security"></a> Security  
   
@@ -86,7 +86,7 @@ manager: "jhubbard"
   
 #### To delete an index  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -102,6 +102,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [DROP INDEX &#40;Transact-SQL&#41;](../Topic/DROP%20INDEX%20\(Transact-SQL\).md).  
+ For more information, see [DROP INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/drop-index-transact-sql.md).  
   
   

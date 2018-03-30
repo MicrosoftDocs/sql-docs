@@ -20,7 +20,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Restart Packages by Using Checkpoints
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] can restart failed packages from the point of failure, instead of rerunning the whole package. If a package is configured to use checkpoints, information about package execution is written to a checkpoint file. When the failed package is rerun, the checkpoint file is used to restart the package from the point of failure. If the package runs successfully, the checkpoint file is deleted, and then re-created the next time the package is run.  
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] can restart failed packages from the point of failure, instead of rerunning the whole package. If a package is configured to use checkpoints, information about package execution is written to a checkpoint file. When the failed package is rerun, the checkpoint file is used to restart the package from the point of failure. If the package runs successfully, the checkpoint file is deleted, and then re-created the next time the package is run.  
   
  Using checkpoints in a package can provide the following benefits.  
   
@@ -30,7 +30,7 @@ manager: "jhubbard"
   
 -   Avoid repeating the aggregation of values. For example, a package that computes many aggregates, such as averages and sums, using a separate Data Flow task to perform each aggregation, can be restarted after computing an aggregation fails and only that aggregation will be recomputed.  
   
- If a package is configured to use checkpoints, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] captures the restart point in the checkpoint file. The type of container that fails and the implementation of features such as transactions affect the restart point that is recorded in the checkpoint file. The current values of variables are also captured in the checkpoint file. However, the values of variables that have the `Object` data type are not saved in checkpoint files.  
+ If a package is configured to use checkpoints, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] captures the restart point in the checkpoint file. The type of container that fails and the implementation of features such as transactions affect the restart point that is recorded in the checkpoint file. The current values of variables are also captured in the checkpoint file. However, the values of variables that have the `Object` data type are not saved in checkpoint files.  
   
 ## Defining Restart Points  
  The task host container, which encapsulates a single task, is the smallest atomic unit of work that can be restarted. The Foreach Loop container and a transacted container are also treated as atomic units of work.  

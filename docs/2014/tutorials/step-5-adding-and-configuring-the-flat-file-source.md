@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
 caps.latest.revision: 20
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Step 5: Adding and Configuring the Flat File Source

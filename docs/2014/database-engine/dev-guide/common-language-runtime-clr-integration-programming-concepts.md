@@ -23,26 +23,26 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Common Language Runtime (CLR) Integration Programming Concepts
-  Beginning with [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] features the integration of the common language runtime (CLR) component of the .NET Framework for [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. This means that you can now write stored procedures, triggers, user-defined types, user-defined functions, user-defined aggregates, and streaming table-valued functions, using any .NET Framework language, including [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic .NET and [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#.  
+  Beginning with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features the integration of the common language runtime (CLR) component of the .NET Framework for [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. This means that you can now write stored procedures, triggers, user-defined types, user-defined functions, user-defined aggregates, and streaming table-valued functions, using any .NET Framework language, including [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET and [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#.  
   
- The Microsoft.SqlServer.Server namespace includes core functionality for CLR programming in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. However, the Microsoft.SqlServer.Server namespace is documented in the .NET Framework SDK. This documentation is not included in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online.  
+ The Microsoft.SqlServer.Server namespace includes core functionality for CLR programming in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. However, the Microsoft.SqlServer.Server namespace is documented in the .NET Framework SDK. This documentation is not included in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
 > [!IMPORTANT]  
->  By default, the .NET Framework is installed with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], but the .NET Framework SDK is not. Without the SDK installed on your computer and included in the Books Online collection, links to SDK content in this section do not work. Install the .NET Framework SDK. Once installed, add the SDK to the Books Online collection and table of contents by following the instructions in [Installing the .NET Framework SDK](http://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx).  
+>  By default, the .NET Framework is installed with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], but the .NET Framework SDK is not. Without the SDK installed on your computer and included in the Books Online collection, links to SDK content in this section do not work. Install the .NET Framework SDK. Once installed, add the SDK to the Books Online collection and table of contents by following the instructions in [Installing the .NET Framework SDK](http://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx).  
   
  The following table lists the topics in this section.  
   
  [Common Language Runtime &#40;CLR&#41; Integration Overview](../../../2014/database-engine/dev-guide/common-language-runtime-clr-integration-overview.md)  
- Provides a brief overview of the CLR, and describes how and why this technology has been used in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Describes the benefits of using the CLR to create database objects.  
+ Provides a brief overview of the CLR, and describes how and why this technology has been used in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Describes the benefits of using the CLR to create database objects.  
   
  [Assemblies &#40;Database Engine&#41;](../../../2014/database-engine/dev-guide/assemblies-database-engine.md)  
- Describes how assemblies are used in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to deploy functions, stored procedures, triggers, user-defined aggregates, and user-defined types that are written in one of the managed code languages hosted by the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework common language runtime (CLR), and not written in [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+ Describes how assemblies are used in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to deploy functions, stored procedures, triggers, user-defined aggregates, and user-defined types that are written in one of the managed code languages hosted by the [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework common language runtime (CLR), and not written in [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  [Building Database Objects with Common Language Runtime &#40;CLR&#41; Integration](../../../2014/database-engine/dev-guide/building-database-objects-with-common-language-runtime-clr-integration.md)  
  Describes the kinds of objects that can be built using the CLR, and reviews the requirements for building CLR database objects.  
   
  [Data Access from CLR Database Objects](../../../2014/database-engine/dev-guide/data-access-from-clr-database-objects.md)  
- Describes how a CLR routine can access data stored in an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Describes how a CLR routine can access data stored in an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [CLR Integration Security](../../../2014/database-engine/dev-guide/clr-integration-security.md)  
  Describes the CLR integration security model.  
@@ -57,7 +57,7 @@ manager: "jhubbard"
  Describes how to create and drop CLR integration assemblies.  
   
  [Monitoring and Troubleshooting Managed Database Objects](../../../2014/database-engine/dev-guide/monitoring-and-troubleshooting-managed-database-objects.md)  
- Provides information about the tools that can be used to monitor and troubleshoot managed database objects and assemblies running in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Provides information about the tools that can be used to monitor and troubleshoot managed database objects and assemblies running in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [Usage Scenarios and Examples for Common Language Runtime &#40;CLR&#41; Integration](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
  Describes usage scenarios and code samples using CLR objects.  

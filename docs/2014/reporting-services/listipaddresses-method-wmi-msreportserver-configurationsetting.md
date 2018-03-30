@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 7e7cf182-fba0-4604-a474-098461e23e9d
 caps.latest.revision: 12
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # ListIPAddresses Method (WMI MSReportServer_ConfigurationSetting)
@@ -59,7 +59,7 @@ public void ListIPAddresses (out string[] IPAddress,
  If *IsDhcpEnabled* is `True`, the *IPAddress* is dynamic. It should not be used for SSL bindings.  
   
 ## Requirements  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../includes/ssrswminmspca-md.md)]  
   
 ## See Also  
  [MSReportServer_ConfigurationSetting Members](../../2014/reporting-services/msreportserver-configurationsetting-members.md)  

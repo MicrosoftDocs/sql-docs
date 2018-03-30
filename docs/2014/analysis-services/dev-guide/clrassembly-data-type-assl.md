@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # ClrAssembly Data Type (ASSL)
-  Defines a derived data type that represents a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] assembly associated with a [Database](../../../2014/analysis-services/dev-guide/database-element-assl.md) or [Server](../../../2014/analysis-services/dev-guide/server-element-assl.md) element  
+  Defines a derived data type that represents a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] assembly associated with a [Database](../../../2014/analysis-services/dev-guide/database-element-assl.md) or [Server](../../../2014/analysis-services/dev-guide/server-element-assl.md) element  
   
 ## Syntax  
   
@@ -56,7 +56,7 @@ manager: "mblythe"
 |Derived elements|See [Assembly](../../../2014/analysis-services/dev-guide/assembly-element-assl.md) ([Assemblies](../../../2014/analysis-services/dev-guide/assemblies-element-assl.md) collection of [Database](../../../2014/analysis-services/dev-guide/database-element-assl.md) or [Server](../../../2014/analysis-services/dev-guide/server-element-assl.md))|  
   
 ## Remarks  
- The `ClrAssembly` element contains the files needed to recreate a [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] assembly, associated either with an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] or with a specific database on an instance of [!INCLUDE[ssAS](../../../includes/ssas-md.md)], as well as the permissions needed to execute the assembly.  
+ The `ClrAssembly` element contains the files needed to recreate a [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] assembly, associated either with an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] or with a specific database on an instance of [!INCLUDE[ssAS](../../includes/ssas-md.md)], as well as the permissions needed to execute the assembly.  
   
  The corresponding element in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.ClrAssembly>.  
   

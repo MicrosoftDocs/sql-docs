@@ -22,7 +22,7 @@ helpviewer_keywords:
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 caps.latest.revision: 43
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Configure Distribution
@@ -44,7 +44,7 @@ manager: "jhubbard"
   
  For transactional replication, after you configure distribution, we recommend that you:  
   
--   Size the distribution database appropriately. Test replication with a typical load for your system to determine how much space is required to store commands. Ensure the database is large enough to store commands without having to auto-grow frequently. For more information about changing the size of a database, see [ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20\(Transact-SQL\).md).  
+-   Size the distribution database appropriately. Test replication with a typical load for your system to determine how much space is required to store commands. Ensure the database is large enough to store commands without having to auto-grow frequently. For more information about changing the size of a database, see [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md).  
   
 -   Set the **sync with backup** option on the distribution database. For more information, see [Strategies for Backing Up and Restoring Snapshot and Transactional Replication](../../../2014/relational-databases/replication/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md) and [Enable Coordinated Backups for Transactional Replication &#40;Replication Transact-SQL Programming&#41;](../../../2014/relational-databases/replication/enable-coordinated-backups-for-transactional-replication.md).  
   

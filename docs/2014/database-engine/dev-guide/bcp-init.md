@@ -74,29 +74,29 @@ eDirection
  SUCCEED or FAIL.  
   
 ## Remarks  
- Call **bcp_init** before calling any other bulk-copy function. **bcp_init** performs the necessary initializations for a bulk copy of data between the workstation and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Call **bcp_init** before calling any other bulk-copy function. **bcp_init** performs the necessary initializations for a bulk copy of data between the workstation and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  The **bcp_init** function must be provided with an ODBC connection handle enabled for use with bulk copy functions. To enable the handle, use [SQLSetConnectAttr](../../../2014/database-engine/dev-guide/sqlsetconnectattr.md) with SQL_COPT_SS_BCP set to SQL_BCP_ON on an allocated, but not connected, connection handle. Attempting to assign the attribute on a connected handle results in an error.  
   
  When a data file is specified, **bcp_init** examines the structure of the database source or target table, not the data file. **bcp_init** specifies data format values for the data file based on each column in the database table, view, or SELECT result set. This specification includes the data type of each column, the presence or absence of a length or null indicator and terminator byte strings in the data, and the width of fixed-length data types. **bcp_init** sets these values as follows:  
   
--   The data type specified is the data type of the column in the database table, view, or SELECT result set. The data type is enumerated by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native data types specified in sqlncli.h. Data itself is represented in its computer form. That is, data from a column of **integer** data type is represented by a four-byte sequence that is big-or little-endian based on the computer that created the data file.  
+-   The data type specified is the data type of the column in the database table, view, or SELECT result set. The data type is enumerated by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native data types specified in sqlncli.h. Data itself is represented in its computer form. That is, data from a column of **integer** data type is represented by a four-byte sequence that is big-or little-endian based on the computer that created the data file.  
   
 -   If a database data type is fixed in length, the data file data is also fixed in length. Bulk-copy functions that process data (for example, [bcp_exec](../../../2014/database-engine/dev-guide/bcp-exec.md)) parse data rows expecting the length of the data in the data file to be identical to the length of the data specified in the database table, view, or SELECT column list. For example, data for a database column defined as **char(13)** must be represented by 13 characters for each row of data in the file. Fixed-length data can be prefixed with a null indicator if the database column allows null values.  
   
 -   When terminator-byte sequence is defined, the length of the terminator-byte sequence is set to 0.  
   
--   When copying to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], the data file must have data for each column in the database table. When copying from [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], data from all columns in the database table, view, or SELECT result set are copied to the data file.  
+-   When copying to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the data file must have data for each column in the database table. When copying from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], data from all columns in the database table, view, or SELECT result set are copied to the data file.  
   
--   When copying to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], the ordinal position of a column in the data file must be identical to the ordinal position of the column in the database table. When copying from [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], **bcp_exec** places data based on the ordinal position of the column in the database table.  
+-   When copying to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the ordinal position of a column in the data file must be identical to the ordinal position of the column in the database table. When copying from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **bcp_exec** places data based on the ordinal position of the column in the database table.  
   
 -   If a database data type is variable in length (for example, **varbinary(22)**) or if a database column can contain null values, data in the data file is prefixed by a length/null indicator. The width of the indicator varies based on the data type and version of bulk copy.  
   
  To change data format values specified for a data file, call [bcp_columns](../../../2014/database-engine/dev-guide/bcp-columns.md) and [bcp_colfmt](../../../2014/database-engine/dev-guide/bcp-colfmt.md).  
   
- Bulk copies to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] can be optimized for tables that do not contain indexes by setting the database recovery model to SIMPLE or BULK_LOGGED. For more information, see [Prerequisites for Minimal Logging in Bulk Import](../../../2014/database-engine/prerequisites-for-minimal-logging-in-bulk-import.md) and [ALTER DATABASE](../Topic/ALTER%20DATABASE%20\(Transact-SQL\).md).  
+ Bulk copies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can be optimized for tables that do not contain indexes by setting the database recovery model to SIMPLE or BULK_LOGGED. For more information, see [Prerequisites for Minimal Logging in Bulk Import](../../../2014/database-engine/prerequisites-for-minimal-logging-in-bulk-import.md) and [ALTER DATABASE](~/t-sql/statements/alter-database-transact-sql.md).  
   
- If no data file is used, you must call [bcp_bind](../../../2014/database-engine/dev-guide/bcp-bind.md) to specify the format and location in memory of the data fsor each column, then copy data rows to the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] using [bcp_sendrow](../../../2014/database-engine/dev-guide/bcp-sendrow.md).  
+ If no data file is used, you must call [bcp_bind](../../../2014/database-engine/dev-guide/bcp-bind.md) to specify the format and location in memory of the data fsor each column, then copy data rows to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using [bcp_sendrow](../../../2014/database-engine/dev-guide/bcp-sendrow.md).  
   
 ## Example  
  This sample shows how to use the ODBC bcp_init function with a format file.  
@@ -105,7 +105,7 @@ eDirection
   
 -   Create an ODBC data source called Test. You can associate this data source with any database.  
   
--   Run the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] on the database:  
+-   Run the following [!INCLUDE[tsql](../../includes/tsql-md.md)] on the database:  
   
     ```  
     CREATE TABLE BCPDate (cola int, colb datetime);  

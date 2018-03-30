@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Developer Reference for SQL Server 2014
-  The following features and technologies allow you to develop applications that access data in a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database.  
+  The following features and technologies allow you to develop applications that access data in a [!INCLUDE[ssNoVersion](includes/ssnoversion-md.md)] database.  
   
 ## Programming Reference Sections  
  ![Small File Folder Icon](../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [Common Language Runtime &#40;CLR&#41; Integration Programming Concepts](../2014/database-engine/dev-guide/common-language-runtime-clr-integration-programming-concepts.md)  

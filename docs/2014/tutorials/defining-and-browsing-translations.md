@@ -16,15 +16,15 @@ ms.author: "owend"
 manager: "jhubbard"
 ---
 # Defining and Browsing Translations
-  A translation is a representation of the names of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects in a specific language. Objects include measure groups, measures, dimensions, attributes, hierarchies, KPIs, actions, and calculated members. Translations provide server support for client applications that can support multiple languages. By using such a client, the client passes the locale identifier (LCID) to the instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], which uses the LCID to determine which set of translations to use when it provides metadata for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects. If an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] object does not contain a translation for that language, or does not contain a translation for a specified object, the default language is used in returning the object metadata back to the client. For example, if a business user in France accesses a cube from a workstation that has a French locale setting, the business user will see the member captions and member property values in French if a French translation exists. However, if a business user in Germany accesses the same cube from a workstation that has a German locale setting, the business user will see the captions names and member property values in German. For more information, see [Dimension Translations](../../2014/analysis-services/dev-guide/dimension-translations.md), [Cube Translations](../../2014/analysis-services/dev-guide/cube-translations.md), [Translations &#40;Analysis Services&#41;](../../2014/analysis-services/translations-analysis-services.md).  
+  A translation is a representation of the names of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objects in a specific language. Objects include measure groups, measures, dimensions, attributes, hierarchies, KPIs, actions, and calculated members. Translations provide server support for client applications that can support multiple languages. By using such a client, the client passes the locale identifier (LCID) to the instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], which uses the LCID to determine which set of translations to use when it provides metadata for [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objects. If an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] object does not contain a translation for that language, or does not contain a translation for a specified object, the default language is used in returning the object metadata back to the client. For example, if a business user in France accesses a cube from a workstation that has a French locale setting, the business user will see the member captions and member property values in French if a French translation exists. However, if a business user in Germany accesses the same cube from a workstation that has a German locale setting, the business user will see the captions names and member property values in German. For more information, see [Dimension Translations](../../2014/analysis-services/dev-guide/dimension-translations.md), [Cube Translations](../../2014/analysis-services/dev-guide/cube-translations.md), [Translations &#40;Analysis Services&#41;](../../2014/analysis-services/translations-analysis-services.md).  
   
- In the tasks in this topic, you define metadata translations for a limited set of dimension objects in the Date dimension and cube objects in the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Tutorial cube. You will then browse these dimension and cube objects to examine the metadata translations.  
+ In the tasks in this topic, you define metadata translations for a limited set of dimension objects in the Date dimension and cube objects in the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial cube. You will then browse these dimension and cube objects to examine the metadata translations.  
   
 ## Specifying Translations for the Date Dimension Metadata  
   
 1.  Open Dimension Designer for the **Date** dimension, and then click the **Translations** tab.  
   
-     The metadata in the default language for each dimension object appears. The default language in the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Tutorial cube is English.  
+     The metadata in the default language for each dimension object appears. The default language in the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial cube is English.  
   
 2.  On the toolbar of the **Translations** tab, click the **New Translation** button.  
   
@@ -60,9 +60,9 @@ manager: "jhubbard"
   
 ## Specifying Translations for the Analysis Services Tutorial Cube Metadata  
   
-1.  Switch to Cube Designer for the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Tutorial cube, and then switch to the **Translations** tab.  
+1.  Switch to Cube Designer for the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial cube, and then switch to the **Translations** tab.  
   
-     The metadata in the default language for each cube object appears, as shown in the following image. The default language in the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Tutorial cube is English.  
+     The metadata in the default language for each cube object appears, as shown in the following image. The default language in the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial cube is English.  
   
      ![Default language in Translations tab](../../2014/tutorials/media/l9-translations-5.gif "Default language in Translations tab")  
   
@@ -92,7 +92,7 @@ manager: "jhubbard"
   
 2.  When deployment has successfully completed, switch to the **Browser** tab, and then click **Reconnect**.  
   
-3.  Remove all hierarchies and measures from the **Data** pane and select [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Tutorial in the **Perspectives** list.  
+3.  Remove all hierarchies and measures from the **Data** pane and select [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial in the **Perspectives** list.  
   
 4.  In the metadata pane, expand **Measures** and then expand **Internet Sales**.  
   

@@ -23,7 +23,7 @@ ms.author: "jroth"
 manager: "jhubbard"
 ---
 # Suspend an Availability Database (SQL Server)
-  You can suspend an availability database in [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Note that a suspend command needs to be issued on the server instance that hosts the database to be suspended or resumed.  
+  You can suspend an availability database in [!INCLUDE[ssHADR](../includes/sshadr-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Note that a suspend command needs to be issued on the server instance that hosts the database to be suspended or resumed.  
   
  The effect of a suspend command depends on whether you suspend a secondary database or a primary database, as follows:  
   
@@ -98,7 +98,7 @@ manager: "jhubbard"
   
 1.  Connect to the server instance that hosts the replica whose database you want to suspend. For more information, see [Prerequisites](#Prerequisites), earlier in this topic.  
   
-2.  Suspend the database by using the following [ALTER DATABASE](../Topic/ALTER%20DATABASE%20SET%20HADR%20\(Transact-SQL\).md)statement:  
+2.  Suspend the database by using the following [ALTER DATABASE](~/t-sql/statements/alter-database-transact-sql-set-hadr.md)statement:  
   
      ALTER DATABASE *database_name* SET HADR SUSPEND  
   
@@ -117,7 +117,7 @@ manager: "jhubbard"
     ```  
   
     > [!NOTE]  
-    >  To view the syntax of a cmdlet, use the `Get-Help` cmdlet in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../2014/database-engine/get-help-sql-server-powershell.md).  
+    >  To view the syntax of a cmdlet, use the `Get-Help` cmdlet in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../2014/database-engine/get-help-sql-server-powershell.md).  
   
  **To set up and use the SQL Server PowerShell provider**  
   

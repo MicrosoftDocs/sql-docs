@@ -23,7 +23,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # DMSCHEMA_MINING_FUNCTIONS Rowset
-  Describes the data mining functions that are supported by the data mining algorithms available on a server that is running [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+  Describes the data mining functions that are supported by the data mining algorithms available on a server that is running [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ## Rowset Columns  
  The `DMSCHEMA_MINING_FUNCTIONS` rowset contains the following columns.  

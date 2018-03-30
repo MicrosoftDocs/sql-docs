@@ -16,9 +16,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Check Files In Use
-  To avoid restarting Windows after you install [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] updates, use the Check Files in Use page to identify processes that are locking files required by the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] update Setup program.  
+  To avoid restarting Windows after you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] updates, use the Check Files in Use page to identify processes that are locking files required by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] update Setup program.  
   
- Stop all applications and services that make connections to the instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that are being updated. This includes stopping [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] and [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
+ Stop all applications and services that make connections to the instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that are being updated. This includes stopping [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
  If Setup determines that files are locked during installation, you might have to restart your computer after installation is completed. If necessary, Setup prompts you to restart your computer. If the Setup program must stop a service during installation, it will restart the service after installation is completed.  
   
@@ -30,7 +30,7 @@ manager: "jhubbard"
   
 -   Name of the process  
   
--   Name of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] feature  
+-   Name of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] feature  
   
 -   Process type  
   

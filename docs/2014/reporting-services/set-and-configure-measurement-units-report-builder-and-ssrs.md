@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: a15a96c3-7d2c-433e-a440-4ea051e967a9
 caps.latest.revision: 6
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Set and Configure Measurement Units (Report Builder and SSRS)
@@ -23,7 +23,7 @@ manager: "mblythe"
  Options such as measurement units can be set by using expressions. For more information, see [Expressions &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/expressions-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ### To use the numeric state measurement unit  
   
@@ -42,7 +42,7 @@ manager: "mblythe"
     > [!NOTE]  
     >  The values in the **Start** and **End** text boxes must be numeric.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ### To use the percentage measurement unit  
   
@@ -68,7 +68,7 @@ manager: "mblythe"
     > [!NOTE]  
     >  The values in the **Start** and **End** text boxes must be numeric.  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## See Also  
  [Indicators &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/indicators-report-builder-and-ssrs.md)  

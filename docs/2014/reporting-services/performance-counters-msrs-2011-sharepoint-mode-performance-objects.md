@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
 caps.latest.revision: 54
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Performance Counters for the MSRS 2014 Web Service SharePoint Mode and MSRS 2014 Windows Service SharePoint Mode Performance Objects (SharePoint Mode)
-  This topic describes performance counters for the `MSRS 2014 Web Service SharePoint Mode` and `MSRS 2014 Windows Service SharePoint Mode` performance objects that are part of a [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] SharePoint mode deployment.  
+  This topic describes performance counters for the `MSRS 2014 Web Service SharePoint Mode` and `MSRS 2014 Windows Service SharePoint Mode` performance objects that are part of a [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] SharePoint mode deployment.  
   
 > [!NOTE]  
 >  This performance objects monitor events on the local report server. If you are running a report server in a scale-out deployment, the counts apply to the current server and not the scale-out deployment as a whole.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode  
+ **[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint mode  
   
  The performance objects are available in the Windows Performance Monitor (**Perfmon.exe**). For more information, see the Windows documentation. [Runtime Profiling](http://msdn.microsoft.com/library/w4bz2147.aspx).  
   
@@ -41,7 +41,7 @@ manager: "mblythe"
 -   [Use PowerShell Cmdlets to return lists](#bkmk_powershell)  
   
 ##  <a name="bkmk_webservice"></a> MSRS 2014 Web Service SharePoint Mode Performance Counters  
- The `MSRS 2014 Web Service SharePoint Mode` performance object monitors report server performance. This performance object includes a collection of counters used to track report server processing typically initiated through interactive report viewing operations. When you set up this counter, you can apply the counter to all instances of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] or you can select specific instances. These counters are reset whenever [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] stops the Report Server Web service.  
+ The `MSRS 2014 Web Service SharePoint Mode` performance object monitors report server performance. This performance object includes a collection of counters used to track report server processing typically initiated through interactive report viewing operations. When you set up this counter, you can apply the counter to all instances of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] or you can select specific instances. These counters are reset whenever [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] stops the Report Server Web service.  
   
  The following table lists the counters that are included with the `MSRS 2014 Web Service SharePoint Mode` performance object.  
   
@@ -53,25 +53,25 @@ manager: "mblythe"
 |`Cache Misses/Sec`|Number of requests per second that failed to return a report from cache. Use this counter to find out whether the resources used for caching (disk or memory) are sufficient.|  
 |`Cache Misses/Sec (Semantic Models)`|Number of requests per second that failed to return a model from cache. Use this counter to find out whether the resources used for caching (disk or memory) are sufficient.|  
 |`First Session Requests/Sec`|Number of new user sessions that are started from the report server cache each second.|  
-|`Memory Cache Hits/Sec`|Number of times per second that reports are retrieved from the in-memory cache. *In-memory cache* is a part of the cache that stores reports in CPU memory. When in-memory cache is used, the report server does not query [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for cached content.|  
+|`Memory Cache Hits/Sec`|Number of times per second that reports are retrieved from the in-memory cache. *In-memory cache* is a part of the cache that stores reports in CPU memory. When in-memory cache is used, the report server does not query [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] for cached content.|  
 |`Memory Cache Misses/Sec`|Number of times per second that reports could not be retrieved from the in-memory cache.|  
 |`Next Session Requests/Sec`|Number of requests per second for reports that are open in an existing session (such as reports that are rendered from a session snapshot).|  
 |`Report Requests`|Number of reports that are currently active and being handled by the report server.|  
 |`Reports Executed/Sec`|Number of successful report executions per second. This counter provides statistics about report volume. Use this counter with `Request/Sec` to compare report execution to report requests that can be returned from cache.|  
 |`Requests/Sec`|Number of requests per second made to the report server. This counter tracks all types of requests that are handled by the report server.|  
-|`Total Cache Hits`|Total number of requests for reports from the cache after the service started. This counter is reset whenever [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] stops the Report Server Web service.|  
+|`Total Cache Hits`|Total number of requests for reports from the cache after the service started. This counter is reset whenever [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] stops the Report Server Web service.|  
 |`Total Cache Hits (Semantic Models)`|Total number of requests for model from the cache after the service started. This counter is reset whenever ASP.NET stops the Report Server Web service.|  
-|`Total Cache Misses`|Total number of times that a report could not be returned from the cache after the service started. This counter is reset whenever [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] stops the Report Server Web service. Use this counter to determine whether disk space and memory are sufficient.|  
+|`Total Cache Misses`|Total number of times that a report could not be returned from the cache after the service started. This counter is reset whenever [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] stops the Report Server Web service. Use this counter to determine whether disk space and memory are sufficient.|  
 |`Total Cache Misses (Semantic Models)`|Total number of times that a model could not be returned from the cache after the service started. This counter is reset whenever ASP.NET stops the Report Server Web service. Use this counter to determine whether disk space and memory are sufficient.|  
-|`Total Memory Cache Hits`|Total number of cached reports returned from the in-memory cache after the service started. This counter is reset whenever [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] stops the Report Server Web service. *In-memory cache* is a part of the cache that stores reports in CPU memory. When in-memory cache is used, the report server does not query [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for cached content.|  
-|`Total Memory Cache Misses`|Total number of cache misses against the in-memory cache after the service started. This counter is reset whenever [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] stops the Report Server Web service.|  
+|`Total Memory Cache Hits`|Total number of cached reports returned from the in-memory cache after the service started. This counter is reset whenever [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] stops the Report Server Web service. *In-memory cache* is a part of the cache that stores reports in CPU memory. When in-memory cache is used, the report server does not query [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] for cached content.|  
+|`Total Memory Cache Misses`|Total number of cache misses against the in-memory cache after the service started. This counter is reset whenever [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] stops the Report Server Web service.|  
 |`Total Processing Failures`|Number of errors in report server web service request processing.|  
 |`Total Rejected Threads`|Total number of threads rejected for asynchronous processing, and subsequently handled as synchronous processes in the same thread. Each data source is processed on one thread. If the volume of threads exceeds capacity, threads are rejected for asynchronous processing, and are then processed in a serial manner.|  
-|`Total Reports Executed`|Total number of reports that ran successfully after the service started. This counter is reset whenever [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] stops the Report Server Web service.|  
-|`Total Requests`|Total number of all requests made to the report server after the service started. This counter is reset whenever [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] stops the Report Server Web service.|  
+|`Total Reports Executed`|Total number of reports that ran successfully after the service started. This counter is reset whenever [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] stops the Report Server Web service.|  
+|`Total Requests`|Total number of all requests made to the report server after the service started. This counter is reset whenever [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] stops the Report Server Web service.|  
   
 ##  <a name="bkmk_windowsservice"></a> MSRS 2014 Windows Service SharePoint Mode Performance Counters  
- The `MSRS 2014 Windows Service SharePoint Mode` performance object is used to monitor the Report Server Windows service. This performance object includes a collection of counters used to track report processing that is initiated through scheduled operations. Scheduled operations can include subscription and delivery, report execution snapshots, and report history. When you set up this counter, you can apply the counter to all instances of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] or you can select specific instances.  
+ The `MSRS 2014 Windows Service SharePoint Mode` performance object is used to monitor the Report Server Windows service. This performance object includes a collection of counters used to track report processing that is initiated through scheduled operations. Scheduled operations can include subscription and delivery, report execution snapshots, and report history. When you set up this counter, you can apply the counter to all instances of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] or you can select specific instances.  
   
  The following table lists the counters that are included in the `MSRS 2014 Windows Service SharePoint mode` performance object.  
   
@@ -94,7 +94,7 @@ manager: "mblythe"
 |`Delivers/Sec`|Number of report deliveries per second, from any delivery extension.|  
 |`Events/Sec`|Number of events processed per second. Events that are monitored include `SnapshotUpdated` and `TimedSubscription`.|  
 |`First Session Requests/Sec`|Number of new report execution sessions created per second.|  
-|`Memory Cache Hits/Sec`|Number of times per second that reports are retrieved from the in-memory cache. *In-memory cache* is a part of the cache that stores reports in CPU memory. When in-memory cache is used, the report server does not query [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for cached content.|  
+|`Memory Cache Hits/Sec`|Number of times per second that reports are retrieved from the in-memory cache. *In-memory cache* is a part of the cache that stores reports in CPU memory. When in-memory cache is used, the report server does not query [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] for cached content.|  
 |`Memory Cache Misses/Sec`|Number of times per second that reports cannot be retrieved from the in-memory cache.|  
 |`Next Session Requests/Sec`|Number of requests per second for reports that are open in an existing session (such as reports that are rendered from a session snapshot).|  
 |`Report Requests`|Number of reports that are currently active and being handled by the report server. Use this counter to evaluate caching strategy. There might be significantly more requests than reports generated.|  

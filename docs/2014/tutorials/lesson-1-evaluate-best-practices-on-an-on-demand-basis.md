@@ -16,9 +16,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Lesson 1: Evaluate Best Practices on an On-Demand Basis
-  By using the on-demand (or "ad hoc") method of policy evaluation, you can quickly evaluate best practices policies to determine whether an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] meets best practices guidelines and recommendations.  
+  By using the on-demand (or "ad hoc") method of policy evaluation, you can quickly evaluate best practices policies to determine whether an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] meets best practices guidelines and recommendations.  
   
- In this lesson, you will perform an on-demand evaluation of the best practices policies for the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] on one or more instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ In this lesson, you will perform an on-demand evaluation of the best practices policies for the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] on one or more instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  This lesson contains the following topics:  
   

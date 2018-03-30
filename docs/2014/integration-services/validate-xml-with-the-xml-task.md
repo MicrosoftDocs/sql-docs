@@ -27,10 +27,10 @@ manager: "jhubbard"
   
  Before the `ValidationDetails` property was available, XML validation by the XML Task returned only a true or false result, with no information about errors or their locations. Now, when you set `ValidationDetails` to true, the output file contains detailed information about every error including the line number and the position. You can use this information to understand, locate, and fix errors in XML documents.  
   
- The XML validation functionality scales easily for large XML documents and large numbers of errors. Since the output file itself is in XML format, you can query and analyze the output. For example, if the output contains a large number of errors, you can group the errors by using a [!INCLUDE[tsql](../../includes/tsql-md.md)] query, as described in this topic.  
+ The XML validation functionality scales easily for large XML documents and large numbers of errors. Since the output file itself is in XML format, you can query and analyze the output. For example, if the output contains a large number of errors, you can group the errors by using a [!INCLUDE[tsql](../includes/tsql-md.md)] query, as described in this topic.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) introduced the `ValidationDetails` property in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 2. The property is also available in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and in SQL Server 2016.  
+>  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../includes/ssis-md.md)]) introduced the `ValidationDetails` property in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Service Pack 2. The property is also available in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] and in SQL Server 2016.  
   
 ## Sample output for XML that's valid  
  Here is a sample output file with validation results for a valid XML file.  
@@ -76,7 +76,7 @@ manager: "jhubbard"
 ```  
   
 ## Analyze XML validation output with a Transact-SQL query  
- If the output of XML validation contains a large number of errors, you can use a [!INCLUDE[tsql](../../includes/tsql-md.md)] query to load the output in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Then you can analyze the error list with all the capabilities of the T-SQL language including WHERE, GROUP BY, ORDER BY, JOIN, and so forth.  
+ If the output of XML validation contains a large number of errors, you can use a [!INCLUDE[tsql](../includes/tsql-md.md)] query to load the output in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Then you can analyze the error list with all the capabilities of the T-SQL language including WHERE, GROUP BY, ORDER BY, JOIN, and so forth.  
   
 ```tsql  
 DECLARE @xml XML;  
@@ -112,7 +112,7 @@ ORDER BY 2 DESC, COALESCE(error, 'Z');
   
 ```  
   
- Here is the result in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] of the second sample query shown in the preceding text.  
+ Here is the result in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] of the second sample query shown in the preceding text.  
   
  ![Query to group XML errors in Management Studio](../../2014/integration-services/media/queryforxmlerrors.jpg "Query to group XML errors in Management Studio")  
   

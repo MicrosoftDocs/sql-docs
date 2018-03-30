@@ -22,7 +22,7 @@ manager: "jhubbard"
   
 ### To process the mining structure and model  
   
-1.  On the **Mining Model** menu of [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], select **Process Mining Structure and All Models**.  
+1.  On the **Mining Model** menu of [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], select **Process Mining Structure and All Models**.  
   
 2.  At the warning asking whether you want to build and deploy the project, click **Yes**.  
   

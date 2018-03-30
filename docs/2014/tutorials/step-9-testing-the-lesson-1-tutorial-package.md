@@ -12,13 +12,13 @@ ms.topic: "article"
 ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
 caps.latest.revision: 26
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Step 9: Testing the Lesson 1 Tutorial Package
   In this lesson, you have done the following tasks:  
   
--   Created a new [!INCLUDE[ssIS](../../includes/ssis-md.md)] project.  
+-   Created a new [!INCLUDE[ssIS](../includes/ssis-md.md)] project.  
   
 -   Configured the connection managers that the package needs to connect to the source and destination data.  
   

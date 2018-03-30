@@ -23,13 +23,13 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Use the sqlcmd Utility
-  The `sqlcmd` utility is a command-line utility for ad hoc, interactive execution of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements and scripts and for automating [!INCLUDE[tsql](../../includes/tsql-md.md)] scripting tasks. To use `sqlcmd` interactively, or to build script files to be run using `sqlcmd`, users must understand [!INCLUDE[tsql](../../includes/tsql-md.md)]. The `sqlcmd` utility is typically used in the following ways:  
+  The `sqlcmd` utility is a command-line utility for ad hoc, interactive execution of [!INCLUDE[tsql](../includes/tsql-md.md)] statements and scripts and for automating [!INCLUDE[tsql](../includes/tsql-md.md)] scripting tasks. To use `sqlcmd` interactively, or to build script files to be run using `sqlcmd`, users must understand [!INCLUDE[tsql](../includes/tsql-md.md)]. The `sqlcmd` utility is typically used in the following ways:  
   
--   Users interactively enter [!INCLUDE[tsql](../../includes/tsql-md.md)] statements in a manner similar to working at the command prompt. The results are displayed at the command prompt. To open a Command Prompt window, click **Start**, click **All Programs**, point to **Accessories**, and then click **Command Prompt**. At the command prompt, type `sqlcmd` followed by a list of options that you want. For a complete list of the options that are supported by `sqlcmd`, see [sqlcmd Utility](../../2014/database-engine/sqlcmd-utility.md).  
+-   Users interactively enter [!INCLUDE[tsql](../includes/tsql-md.md)] statements in a manner similar to working at the command prompt. The results are displayed at the command prompt. To open a Command Prompt window, click **Start**, click **All Programs**, point to **Accessories**, and then click **Command Prompt**. At the command prompt, type `sqlcmd` followed by a list of options that you want. For a complete list of the options that are supported by `sqlcmd`, see [sqlcmd Utility](../../2014/database-engine/sqlcmd-utility.md).  
   
--   Users submit a `sqlcmd` job either by specifying a single [!INCLUDE[tsql](../../includes/tsql-md.md)] statement to execute, or by pointing the utility to a text file that contains [!INCLUDE[tsql](../../includes/tsql-md.md)] statements to execute. The output is usually directed to a text file, but it can also be displayed at the command prompt.  
+-   Users submit a `sqlcmd` job either by specifying a single [!INCLUDE[tsql](../includes/tsql-md.md)] statement to execute, or by pointing the utility to a text file that contains [!INCLUDE[tsql](../includes/tsql-md.md)] statements to execute. The output is usually directed to a text file, but it can also be displayed at the command prompt.  
   
--   [SQLCMD mode](../../2014/database-engine/edit-sqlcmd-scripts-with-query-editor.md) in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor.  
+-   [SQLCMD mode](../../2014/database-engine/edit-sqlcmd-scripts-with-query-editor.md) in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Query Editor.  
   
 -   SQL Server Management Objects (SMO)  
   
@@ -38,9 +38,9 @@ manager: "jhubbard"
 ## Typically Used sqlcmd Options  
  The following options are used most frequently:  
   
--   The server option (**-S**) that identifies the instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to which `sqlcmd` connects.  
+-   The server option (**-S**) that identifies the instance of [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to which `sqlcmd` connects.  
   
--   Authentication options (**-E**, **-U**, and **-P**) that specify the credentials that `sqlcmd` uses to connect to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Authentication options (**-E**, **-U**, and **-P**) that specify the credentials that `sqlcmd` uses to connect to the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
     > [!NOTE]  
     >  The **-E** option is the default and does not have to be specified.  
@@ -52,7 +52,7 @@ manager: "jhubbard"
 ## Connecting to the sqlcmd Utility  
  The following are common uses of the `sqlcmd` utility:  
   
--   Connecting to a default instance by using Windows Authentication to interactively run [!INCLUDE[tsql](../../includes/tsql-md.md)] statements:  
+-   Connecting to a default instance by using Windows Authentication to interactively run [!INCLUDE[tsql](../includes/tsql-md.md)] statements:  
   
     ```  
     sqlcmd -S <ComputerName>  
@@ -61,7 +61,7 @@ manager: "jhubbard"
     > [!NOTE]  
     >  In the previous example, **-E** is not specified because it is the default and `sqlcmd` connects to the default instance by using Windows Authentication.  
   
--   Connecting to a named instance by using Windows Authentication to interactively run [!INCLUDE[tsql](../../includes/tsql-md.md)] statements:  
+-   Connecting to a named instance by using Windows Authentication to interactively run [!INCLUDE[tsql](../includes/tsql-md.md)] statements:  
   
     ```  
     sqlcmd -S <ComputerName>\<InstanceName>  
@@ -91,7 +91,7 @@ manager: "jhubbard"
     sqlcmd -Q "SELECT * FROM AdventureWorks2012.Person.Person" -o MyOutput.txt  
     ```  
   
--   Connecting to a named instance using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication to interactively run [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, with `sqlcmd` prompting for a password:  
+-   Connecting to a named instance using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication to interactively run [!INCLUDE[tsql](../includes/tsql-md.md)] statements, with `sqlcmd` prompting for a password:  
   
     ```  
     sqlcmd -U MyLogin -S <ComputerName>\<InstanceName>  
@@ -101,20 +101,20 @@ manager: "jhubbard"
     >  To see a list of the options that are supported by the `sqlcmd` utility run: `sqlcmd -?`.  
   
 ## Running Transact-SQL Statements Interactively by Using sqlcmd  
- You can use the `sqlcmd` utility interactively to execute [!INCLUDE[tsql](../../includes/tsql-md.md)] statements in a Command Prompt window. To interactively execute [!INCLUDE[tsql](../../includes/tsql-md.md)] statements by using `sqlcmd`, run the utility without using the **-Q**, **-q**, **-Z**, or **-i** options to specify any input files or queries. For example:  
+ You can use the `sqlcmd` utility interactively to execute [!INCLUDE[tsql](../includes/tsql-md.md)] statements in a Command Prompt window. To interactively execute [!INCLUDE[tsql](../includes/tsql-md.md)] statements by using `sqlcmd`, run the utility without using the **-Q**, **-q**, **-Z**, or **-i** options to specify any input files or queries. For example:  
   
  `sqlcmd -S <ComputerName>\<InstanceName>`  
   
- When the command is executed without input files or queries, `sqlcmd` connects to the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and then displays a new line with a `1>` followed by a blinking underscore that is named the `sqlcmd` prompt. The `1` signifies that this is the first line of a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement, and the `sqlcmd` prompt is the point at which the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement will start when you type it in.  
+ When the command is executed without input files or queries, `sqlcmd` connects to the specified instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and then displays a new line with a `1>` followed by a blinking underscore that is named the `sqlcmd` prompt. The `1` signifies that this is the first line of a [!INCLUDE[tsql](../includes/tsql-md.md)] statement, and the `sqlcmd` prompt is the point at which the [!INCLUDE[tsql](../includes/tsql-md.md)] statement will start when you type it in.  
   
- At the `sqlcmd` prompt, you can type both [!INCLUDE[tsql](../../includes/tsql-md.md)] statements and `sqlcmd` commands, such as `GO` and `EXIT`. Each [!INCLUDE[tsql](../../includes/tsql-md.md)] statement is put in a buffer called the statement cache. These statements are sent to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] after you type the `GO` command and press ENTER. To exit `sqlcmd`, type `EXIT` or `QUIT` at the start of a new line.  
+ At the `sqlcmd` prompt, you can type both [!INCLUDE[tsql](../includes/tsql-md.md)] statements and `sqlcmd` commands, such as `GO` and `EXIT`. Each [!INCLUDE[tsql](../includes/tsql-md.md)] statement is put in a buffer called the statement cache. These statements are sent to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] after you type the `GO` command and press ENTER. To exit `sqlcmd`, type `EXIT` or `QUIT` at the start of a new line.  
   
  To clear the statement cache, type `:RESET`. Typing `^C` causes `sqlcmd` to exit. `^C` can also be used to stop the execution of the statement cache after a `GO` command has been issued.  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that are entered in an interactive session can edited by entering the **:ED** command and the `sqlcmd` prompt. The editor will open and, after editing the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement and closing the editor, the revised [!INCLUDE[tsql](../../includes/tsql-md.md)] statement will appear in the command window. Enter `GO` to run therevised [!INCLUDE[tsql](../../includes/tsql-md.md)] statement.  
+ [!INCLUDE[tsql](../includes/tsql-md.md)] statements that are entered in an interactive session can edited by entering the **:ED** command and the `sqlcmd` prompt. The editor will open and, after editing the [!INCLUDE[tsql](../includes/tsql-md.md)] statement and closing the editor, the revised [!INCLUDE[tsql](../includes/tsql-md.md)] statement will appear in the command window. Enter `GO` to run therevised [!INCLUDE[tsql](../includes/tsql-md.md)] statement.  
   
 ## Quoted Strings  
- Characters that are enclosed in quotation marks are used without any additional preprocessing, except that quotations marks can be inserted into a string by entering two consecutive quotation marks. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] treats this character sequence as one quotation mark. (However, the translation occurs in the server.) Scripting variables will not be expanded when they appear within a string.  
+ Characters that are enclosed in quotation marks are used without any additional preprocessing, except that quotations marks can be inserted into a string by entering two consecutive quotation marks. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] treats this character sequence as one quotation mark. (However, the translation occurs in the server.) Scripting variables will not be expanded when they appear within a string.  
   
  For example:  
   
@@ -124,7 +124,7 @@ manager: "jhubbard"
   
  `GO`  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+ [!INCLUDE[ssResult](../includes/ssresult-md.md)]  
   
  `Length: 5" 7'`  
   
@@ -148,13 +148,13 @@ manager: "jhubbard"
   
  This means the folder `C:\` is the current folder, and if you specify a file name, Windows will look for the file in that folder.  
   
- Type `sqlcmd` to connect to the default instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the local computer, and the contents of the Command Prompt window will be:  
+ Type `sqlcmd` to connect to the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on the local computer, and the contents of the Command Prompt window will be:  
   
  `C:\>sqlcmd`  
   
  `1> _`  
   
- This means you have connected to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and `sqlcmd` is now ready to accept [!INCLUDE[tsql](../../includes/tsql-md.md)] statements and `sqlcmd` commands. The flashing underscore after the `1>` is the `sqlcmd` prompt that marks the location at which the statements and commands you type will be displayed. Now, type `USE AdventureWorks2012` and press ENTER, and then type `GO` and press ENTER. The contents of the Command Prompt window will be:  
+ This means you have connected to the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and `sqlcmd` is now ready to accept [!INCLUDE[tsql](../includes/tsql-md.md)] statements and `sqlcmd` commands. The flashing underscore after the `1>` is the `sqlcmd` prompt that marks the location at which the statements and commands you type will be displayed. Now, type `USE AdventureWorks2012` and press ENTER, and then type `GO` and press ENTER. The contents of the Command Prompt window will be:  
   
  `sqlcmd`  
   
@@ -162,13 +162,13 @@ manager: "jhubbard"
   
  `GO`  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+ [!INCLUDE[ssResult](../includes/ssresult-md.md)]  
   
  `Changed database context to 'AdventureWorks2012'.`  
   
  `1> _`  
   
- Pressing ENTER after entering `USE AdventureWorks2012` signaled `sqlcmd` to start a new line. Pressing ENTER, after you type `GO,` signaled `sqlcmd` to send the `USE AdventureWorks2012` statement to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. `sqlcmd` then returned a message to indicate that the `USE` statement completed successfully and displayed a new `1>` prompt as a signal to enter a new statement or command.  
+ Pressing ENTER after entering `USE AdventureWorks2012` signaled `sqlcmd` to start a new line. Pressing ENTER, after you type `GO,` signaled `sqlcmd` to send the `USE AdventureWorks2012` statement to the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. `sqlcmd` then returned a message to indicate that the `USE` statement completed successfully and displayed a new `1>` prompt as a signal to enter a new statement or command.  
   
  The following example shows what the Command Prompt window contains if you type a `SELECT` statement, a `GO` to execute the `SELECT`, and an `EXIT` to exit `sqlcmd`:  
   
@@ -184,7 +184,7 @@ manager: "jhubbard"
   
  `GO`  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+ [!INCLUDE[ssResult](../includes/ssresult-md.md)]  
   
  `BusinessEntityID   FirstName                 LastName`  
   
@@ -205,18 +205,18 @@ manager: "jhubbard"
  The lines after line `3> GO` are the output of a `SELECT` statement. After you generate output, `sqlcmd` resets the `sqlcmd` prompt and displays `1>`. After entering `EXIT` at line `1>`, the Command Prompt window displays the same line it did when you first opened it. This indicates that `sqlcmd` has exited its session. You can now close the Command Prompt window by typing another `EXIT` command.  
   
 ## Running Transact-SQL Script Files by Using sqlcmd  
- You can use `sqlcmd` to execute database script files. Script files are text files that contain a mix of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, `sqlcmd` commands, and scripting variables. For more information about how to script variables, see [Use sqlcmd with Scripting Variables](../../2014/database-engine/use-sqlcmd-with-scripting-variables.md). `sqlcmd` works with the statements, commands, and scripting variables in a script file in a manner similar to how it works with statements and commands that are entered interactively. The main difference is that `sqlcmd` reads through the input file without pause instead of waiting for a user to enter the statements, commands, and scripting variables.  
+ You can use `sqlcmd` to execute database script files. Script files are text files that contain a mix of [!INCLUDE[tsql](../includes/tsql-md.md)] statements, `sqlcmd` commands, and scripting variables. For more information about how to script variables, see [Use sqlcmd with Scripting Variables](../../2014/database-engine/use-sqlcmd-with-scripting-variables.md). `sqlcmd` works with the statements, commands, and scripting variables in a script file in a manner similar to how it works with statements and commands that are entered interactively. The main difference is that `sqlcmd` reads through the input file without pause instead of waiting for a user to enter the statements, commands, and scripting variables.  
   
  There are different ways to create database script files:  
   
--   You can interactively build and debug a set of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], and then save the contents of the Query window as a script file.  
+-   You can interactively build and debug a set of [!INCLUDE[tsql](../includes/tsql-md.md)] statements in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], and then save the contents of the Query window as a script file.  
   
--   You can create a text file that contains [!INCLUDE[tsql](../../includes/tsql-md.md)] statements by using a text editor, such as Notepad.  
+-   You can create a text file that contains [!INCLUDE[tsql](../includes/tsql-md.md)] statements by using a text editor, such as Notepad.  
   
 ## Examples  
   
 ### A. Running a script by using sqlcmd  
- Start Notepad, and type the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements:  
+ Start Notepad, and type the following [!INCLUDE[tsql](../includes/tsql-md.md)] statements:  
   
  `USE AdventureWorks2012;`  
   
@@ -257,7 +257,7 @@ manager: "jhubbard"
   
  `2> GO`  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+ [!INCLUDE[ssResult](../includes/ssresult-md.md)]  
   
  `spid   blocked`  
   
@@ -478,13 +478,13 @@ manager: "jhubbard"
  `SQLCMD returned 100 to the command shell`  
   
 ### G. Using sqlcmd to set encryption on Windows Azure SQL Database  
- A `sqlcmd`can be executed on a connection to [!INCLUDE[ssSDS](../../includes/sssds-md.md)] data on to specify encryption and certificate trust. Two `sqlcmd```options are available:  
+ A `sqlcmd`can be executed on a connection to [!INCLUDE[ssSDS](../includes/sssds-md.md)] data on to specify encryption and certificate trust. Two `sqlcmd```options are available:  
   
 -   The -N switch is used by the client to request an encrypted connection. This option is equivalent to the ADO.net option `ENCRYPT = true`.  
   
 -   The –C switch is used by the client to configure it to implicitly the trust server certificate and not validate it. This option is equivalent to the ADO.net option `TRUSTSERVERCERTIFICATE = true`.  
   
- The [!INCLUDE[ssSDS](../../includes/sssds-md.md)] service does not support all the `SET` options available on a SQL Server instance. The following options throw an error when the corresponding `SET` option is set to `ON` or `OFF`:  
+ The [!INCLUDE[ssSDS](../includes/sssds-md.md)] service does not support all the `SET` options available on a SQL Server instance. The following options throw an error when the corresponding `SET` option is set to `ON` or `OFF`:  
   
 -   SET ANSI_DEFAULTS  
   
@@ -503,7 +503,7 @@ manager: "jhubbard"
 -   SET QUERY_GOVERNOR_COST_LIMIT  
   
 #### Syntax  
- The following examples refer to cases where [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client Provider settings include: `ForceProtocolEncryption = False`, `Trust Server Certificate = No`  
+ The following examples refer to cases where [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client Provider settings include: `ForceProtocolEncryption = False`, `Trust Server Certificate = No`  
   
  Connect using Windows credentials and encrypt communication:  
   
@@ -526,7 +526,7 @@ SQLCMD –E –N –C
   
 ```  
   
- The following examples refer to cases where [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client Provider settings include: `ForceProtocolEncryption = True`, `TrustServerCertificate = Yes`.  
+ The following examples refer to cases where [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client Provider settings include: `ForceProtocolEncryption = True`, `TrustServerCertificate = Yes`.  
   
  Connect using Windows credentials, encrypt communication and trust server certificate:  
   

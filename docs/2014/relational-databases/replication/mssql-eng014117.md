@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: e5906a76-9511-4c47-8826-8c765b58a39d
 caps.latest.revision: 17
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQL_ENG014117
@@ -26,7 +26,7 @@ manager: "jhubbard"
 |Product Name|SQL Server|  
 |Event ID|14117|  
 |Event Source|MSSQLSERVER|  
-|Component|[!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]|  
+|Component|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Symbolic Name||  
 |Message Text|'%s' is not configured as a distribution database.|  
   
@@ -37,9 +37,9 @@ manager: "jhubbard"
   
 -   There is not an entry for the local server in the **master** database, or the entry that is there is incorrect.  
   
-     Replication expects all servers in a topology to be registered using the computer name with an optional instance name (in the case of a clustered instance, the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] virtual server name with the optional instance name). For replication to function properly, the value returned by `SELECT @@SERVERNAME` for each server in the topology should match the computer name or virtual server name with the optional instance name.  
+     Replication expects all servers in a topology to be registered using the computer name with an optional instance name (in the case of a clustered instance, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] virtual server name with the optional instance name). For replication to function properly, the value returned by `SELECT @@SERVERNAME` for each server in the topology should match the computer name or virtual server name with the optional instance name.  
   
-     Replication is not supported if you have registered any of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instances by IP address or by Fully Qualified Domain Name (FQDN). If you had any of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instances registered by IP address or by FQDN in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] when you configured replication, this error could be raised.  
+     Replication is not supported if you have registered any of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances by IP address or by Fully Qualified Domain Name (FQDN). If you had any of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances registered by IP address or by FQDN in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] when you configured replication, this error could be raised.  
   
 ## User Action  
  Verify that the Distributor instance is registered properly. If the network name of the computer and the name of the SQL Server instance differ, either:  
@@ -59,7 +59,7 @@ manager: "jhubbard"
     go  
     ```  
   
-     After you execute the [sp_addserver &#40;Transact-SQL&#41;](../Topic/sp_addserver%20\(Transact-SQL\).md) stored procedure, you must restart the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service for the change to @@SERVERNAME to take effect.  
+     After you execute the [sp_addserver &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addserver-transact-sql.md) stored procedure, you must restart the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service for the change to @@SERVERNAME to take effect.  
   
      If the value of @@SERVERNAME is not correct for a clustered instance, you must change the name using Cluster Administrator. For more information, see [ AlwaysOn Failover Cluster Instances (SQL Server)](../../../2014/database-engine/always-on-failover-cluster-instances-sql-server.md).  
   

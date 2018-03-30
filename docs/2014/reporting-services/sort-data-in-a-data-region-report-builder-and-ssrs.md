@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 2fcb9be2-1daa-4c92-ad00-5f63cdf39f70
 caps.latest.revision: 6
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Sort Data in a Data Region (Report Builder and SSRS)
@@ -29,7 +29,7 @@ manager: "mblythe"
  For a tablix data region, you can also add an interactive sort button to the top of a column header to provide the user with the ability to change the sort order of groups or detail rows. For more information, see [Interactive Sort &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/interactive-sort-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ### To sort data in a Tablix data region  
   
@@ -45,7 +45,7 @@ manager: "mblythe"
   
     3.  From the **Order** column drop-down list, choose the sort direction for each expression. **A-Z** sorts the expression in ascending order. **Z-A** sorts the expression in descending order.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ### To sort values in a group, including the details group, for a Tablix  
   
@@ -63,7 +63,7 @@ manager: "mblythe"
   
     3.  From the **Order** column drop-down list, choose the sort direction for each expression. **A-Z** sorts the expression in ascending order. **Z-A** sorts the expression in descending order.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ### To sort x-axis labels in alphabetical order on a chart  
   
@@ -79,7 +79,7 @@ manager: "mblythe"
   
     3.  From the **Order** column drop-down list, choose the sort direction for each expression. **A-Z** sorts the expression in ascending alphabetical order. **Z-A** sorts the expression in descending alphabetical order.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ### To sort the data points in ascending or descending order on a chart  
   
@@ -95,7 +95,7 @@ manager: "mblythe"
   
     3.  From the **Order** column drop-down list, choose the sort direction for each expression. **A-Z** sorts the expression in ascending order. **Z-A** sorts the expression in descending order.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ### To sort data in ascending or descending order for display on a gauge  
   
@@ -119,7 +119,7 @@ manager: "mblythe"
   
     3.  From the **Order** column drop-down list, choose the sort direction for each expression. **A-Z** sorts the expression in ascending order. **Z-A** sorts the expression in descending order.  
   
-8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
  For more information about how data is grouped in a gauge, see [Gauges &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/gauges-report-builder-and-ssrs.md).  
   

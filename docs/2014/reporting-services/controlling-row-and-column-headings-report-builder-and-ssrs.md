@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 4be6e836-158e-4bc9-8870-7f394d7c7e11
 caps.latest.revision: 8
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Controlling Row and Column Headings (Report Builder and SSRS)
@@ -31,7 +31,7 @@ manager: "mblythe"
     -   Whether the table or matrix has a row group area that expands vertically. Row headings are supported only for row groups with a row group header.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## Understanding Rows and Columns in a Tablix Data Region  
  A table or matrix is a template for the underlying tablix data region. A tablix data region has four possible areas: the row group area that controls rows that expand down a report, the column group area that controls columns that expand across a report, the body that displays data, and the corner. To understand where to set properties to control repeating or freezing headers, it helps to understand that there are two representations for a tablix data region:  

@@ -12,11 +12,11 @@ ms.topic: "article"
 ms.assetid: 071eb2cb-f073-41ca-9f4d-11d3b8803495
 caps.latest.revision: 5
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Objects Supported by the Generate Scripts Wizard
-  The Generate and Publish Scripts wizard supports a subset of the objects supported by the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
+  The Generate and Publish Scripts wizard supports a subset of the objects supported by the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)].  
   
 ## Supported Objects  
  The following table lists the objects that can be published supported by the Generate and Publish Scripts Wizard.  

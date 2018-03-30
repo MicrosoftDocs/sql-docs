@@ -73,7 +73,7 @@ manager: "mblythe"
  The **Shopping Basket Analysis** tool uses the Microsoft Association algorithm.  
   
 ## Requirements for the Table Analysis Tools for Excel  
- To use the Table Analysis Tools for Excel, you must first create a connection to an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. This connection gives you access to the Microsoft data mining algorithms that are used to analyze your data. If you do not have access to an instance, we recommend that you ask your administrator to set up an instance that you can use for experimenting with data mining. For more information, see [Connect to Source Data &#40;Data Mining Client for Excel&#41;](../../2014/analysis-services/connect-to-source-data-data-mining-client-for-excel.md).  
+ To use the Table Analysis Tools for Excel, you must first create a connection to an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. This connection gives you access to the Microsoft data mining algorithms that are used to analyze your data. If you do not have access to an instance, we recommend that you ask your administrator to set up an instance that you can use for experimenting with data mining. For more information, see [Connect to Source Data &#40;Data Mining Client for Excel&#41;](../../2014/analysis-services/connect-to-source-data-data-mining-client-for-excel.md).  
   
  To work with data using the Table Analysis Tools, you must convert the range of data you want to use to Excel tables.  
   

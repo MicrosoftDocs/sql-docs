@@ -22,7 +22,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Using Cube Writebacks (MDX)
-  You update a cube by using the [UPDATE CUBE](../Topic/UPDATE%20CUBE%20Statement%20\(MDX\).md) statement. This statement lets you update a tuple with a specific value. To effectively use the UPDATE CUBE statement to update a cube, you have to understand the syntax for the statement, the error conditions that can occur, and the affect that updates can have on a cube.  
+  You update a cube by using the [UPDATE CUBE](~/mdx/mdx-data-manipulation-update-cube.md) statement. This statement lets you update a tuple with a specific value. To effectively use the UPDATE CUBE statement to update a cube, you have to understand the syntax for the statement, the error conditions that can occur, and the affect that updates can have on a cube.  
   
 ## UPDATE CUBE Statement Syntax  
  The following syntax describes the UPDATE CUBE statement:  
@@ -34,7 +34,7 @@ UPDATE [CUBE] <Cube_Name> SET <tuple>.VALUE = <value> [,<tuple>.VALUE = <value>.
   USE_WEIGHTED_INCREMENT [BY <weight value_expression>] ]   
 ```  
   
- If a full set of coordinates is not specified for the tuple, the unspecified coordinates will use the default member of the hierarchy. The tuple identified must reference a cell that is aggregated with the [Sum](../Topic/Sum%20\(MDX\).md) function, and must not use a calculated member as one of the cell's coordinates.  
+ If a full set of coordinates is not specified for the tuple, the unspecified coordinates will use the default member of the hierarchy. The tuple identified must reference a cell that is aggregated with the [Sum](~/mdx/sum-mdx.md) function, and must not use a calculated member as one of the cell's coordinates.  
   
  You can think of the UPDATE CUBE statement as a subroutine that generates a series of individual writeback operations to atomic cells. All these individual writeback operations then roll up into the specified sum.  
   

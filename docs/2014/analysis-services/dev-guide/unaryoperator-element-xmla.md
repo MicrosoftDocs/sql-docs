@@ -60,7 +60,7 @@ manager: "mblythe"
 ## Remarks  
  The `UnaryOperator` element contains a Multidimensional Expressions (MDX) expression that defines the unary operator for the attribute member defined by the parent `Attribute` element.  
   
- For more information about MDX expressions, see [Expressions &#40;MDX&#41;](../Topic/Expressions%20\(MDX\).md).  
+ For more information about MDX expressions, see [Expressions &#40;MDX&#41;](~/mdx/expressions-mdx.md).  
   
 ## See Also  
  [Insert Element &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/insert-element-xmla.md)   

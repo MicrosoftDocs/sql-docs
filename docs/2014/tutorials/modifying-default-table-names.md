@@ -41,7 +41,7 @@ manager: "jhubbard"
   
 6.  When you have finished, click the **Auto Hide** button to hide the Properties window again.  
   
-7.  On the **File** menu, or on the toolbar of [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], click **Save All** to save the changes you have made to this point in the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Tutorial project. You can stop the tutorial here if you want and resume it later.  
+7.  On the **File** menu, or on the toolbar of [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], click **Save All** to save the changes you have made to this point in the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial project. You can stop the tutorial here if you want and resume it later.  
   
 ## Next Lesson  
  [Lesson 2: Defining and Deploying a Cube](../../2014/tutorials/lesson-2-defining-and-deploying-a-cube.md)  

@@ -22,13 +22,13 @@ manager: "jhubbard"
   Upgrade Advisor detected the use of the FOR BROWSE clause in a view. The FOR BROWSE clause is allowed (and ignored) in views when the database compatibility mode is set to 80. The FOR BROWSE clause is not allowed in views when the database compatibility mode is set to 90 or later.  
   
 ## Component  
- [!INCLUDE[ssDE](../../../includes/ssde-md.md)]  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## Corrective Action  
- When you upgrade, user databases maintain their compatibility mode. Before you change the database compatibility mode to 90 or later, remove the FOR BROWSE clause from view definitions. For more information, see "sp_dbcmptlevel" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online.  
+ When you upgrade, user databases maintain their compatibility mode. Before you change the database compatibility mode to 90 or later, remove the FOR BROWSE clause from view definitions. For more information, see "sp_dbcmptlevel" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
 ## See Also  
  [Database Engine Upgrade Issues](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;new&#93;](../Topic/SQL%20Server%202014%20Upgrade%20Advisor%20[new].md)  
+ [SQL Server 2014 Upgrade Advisor &#91;new&#93;](~/2014/sql-server/install/sql-server-2014-upgrade-advisor.md)  
   
   

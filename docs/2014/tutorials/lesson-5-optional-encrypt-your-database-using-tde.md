@@ -85,7 +85,7 @@ GO
   
 ```  
   
- For detailed information the Transact-SQL statements that have been used in this lesson, see [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../Topic/CREATE%20DATABASE%20\(SQL%20Server%20Transact-SQL\).md), [ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20\(Transact-SQL\).md), [CREATE MASTER KEY &#40;Transact-SQL&#41;](../Topic/CREATE%20MASTER%20KEY%20\(Transact-SQL\).md), [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../Topic/CREATE%20CERTIFICATE%20\(Transact-SQL\).md), and [sys.dm_database_encryption_keys &#40;Transact-SQL&#41;](../Topic/sys.dm_database_encryption_keys%20\(Transact-SQL\).md).  
+ For detailed information the Transact-SQL statements that have been used in this lesson, see [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](~/t-sql/statements/create-database-sql-server-transact-sql.md), [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md), [CREATE MASTER KEY &#40;Transact-SQL&#41;](~/t-sql/statements/create-master-key-transact-sql.md), [CREATE CERTIFICATE &#40;Transact-SQL&#41;](~/t-sql/statements/create-certificate-transact-sql.md), and [sys.dm_database_encryption_keys &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md).  
   
  **Next Lesson:**  
   

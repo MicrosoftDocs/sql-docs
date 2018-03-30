@@ -12,14 +12,14 @@ ms.topic: "article"
 ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
 caps.latest.revision: 5
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Interactive Functionality for Different Report Rendering Extensions (Report Builder and SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides interactive reporting features that allow you to work with a report at run time. Not all of the report rendering formats support the full range of interactive features. You can use the following table to understand how each interactive feature works in specific formats.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] provides interactive reporting features that allow you to work with a report at run time. Not all of the report rendering formats support the full range of interactive features. You can use the following table to understand how each interactive feature works in specific formats.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## Interactive Features in Different Output Formats  
  Reports that are rendered to XML, CSV, or Image formats do not support interactive features.  

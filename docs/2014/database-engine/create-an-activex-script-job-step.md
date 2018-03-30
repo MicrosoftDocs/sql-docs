@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Create an ActiveX Script Job Step
-  This topic describes how to create and define a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job step in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] that executes an ActiveX script by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or SQL Server Management Objects.  
+  This topic describes how to create and define a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent job step in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] that executes an ActiveX script by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../includes/tsql-md.md)], or SQL Server Management Objects.  
   
 -   **Before you begin:**  
   
@@ -38,7 +38,7 @@ manager: "jhubbard"
 ## Before You Begin  
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
- [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+ [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)]  
   
 ###  <a name="Security"></a> Security  
  For detailed information, see [Implement SQL Server Agent Security](../../2014/database-engine/implement-sql-server-agent-security.md).  
@@ -47,7 +47,7 @@ manager: "jhubbard"
   
 #### To create an ActiveX Script job step  
   
-1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], and then expand that instance.  
+1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], and then expand that instance.  
   
 2.  Expand **SQL Server Agent**, create a new job or right-click an existing job, and then click **Properties**. For more information on creating a job, see [Creating Jobs](../../2014/database-engine/create-jobs.md).  
   
@@ -59,17 +59,17 @@ manager: "jhubbard"
   
 6.  In the **Run as** list, select the proxy account with the credentials that the job will use.  
   
-7.  Select the **Language** in which the script was written. Alternatively, click **Other** and then enter the name of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX scripting language in which the script will be written.  
+7.  Select the **Language** in which the script was written. Alternatively, click **Other** and then enter the name of the [!INCLUDE[msCoName](../includes/msconame-md.md)] ActiveX scripting language in which the script will be written.  
   
 8.  In the **Command** box, enter the script syntax that will be executed for the job step. Alternately, click **Open** and select a file containing the script syntax.  
   
-9. Click the **Advanced** page to set the following job step options: what action to take if the job step succeeds or fails, how many times [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent should try to execute the job step, and how often retry attempts should be made.  
+9. Click the **Advanced** page to set the following job step options: what action to take if the job step succeeds or fails, how many times [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent should try to execute the job step, and how often retry attempts should be made.  
   
 ##  <a name="TSQL"></a> Using Transact-SQL  
   
 #### To create an ActiveX Script job step  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -97,7 +97,7 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [sp_add_jobstep &#40;Transact-SQL&#41;](../Topic/sp_add_jobstep%20\(Transact-SQL\).md).  
+ For more information, see [sp_add_jobstep &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md).  
   
 ##  <a name="SMO"></a> Using SQL Server Management Objects  
  **To create an ActiveX Script job step**  

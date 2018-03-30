@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Calculated Member Builder Dialog Box (Analysis Services - Multidimensional Data)
-  Use the **Calculated Member Builder** dialog box in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to build a calculated member.  
+  Use the **Calculated Member Builder** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to build a calculated member.  
   
 ## Options  
   
@@ -29,10 +29,10 @@ manager: "mblythe"
 |**Parent Member**|This option is enabled if you select a parent hierarchy (other than the `Measures` dimension) that has more than one level. Click the ellipsis (**…**) button to select a parent member. The parent member determines the location of the calculated member in the dimension structure.|  
 |**Expression**|Type the MDX expression that will be used.|  
 |**Check**|Click **Check** to test the MDX expression defined in **Expression**.|  
-|**Metadata**|Displays metadata for the current [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] object that can be included in the MDX expression defined in **Expression**.<br /><br /> You can copy the MDX syntax for the selected item by right-clicking the item and selecting **Copy**, or by dragging the selected item to **Expression**.|  
-|**Functions**|Displays the available MDX functions for the current [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance. The items listed are retrieved from the MDSCHEMA_FUNCTIONS schema rowset.<br /><br /> You can copy the MDX syntax for the selected item by right-clicking the item and selecting **Copy**, or by dragging the selected item to **Expression**.|  
+|**Metadata**|Displays metadata for the current [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] object that can be included in the MDX expression defined in **Expression**.<br /><br /> You can copy the MDX syntax for the selected item by right-clicking the item and selecting **Copy**, or by dragging the selected item to **Expression**.|  
+|**Functions**|Displays the available MDX functions for the current [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance. The items listed are retrieved from the MDSCHEMA_FUNCTIONS schema rowset.<br /><br /> You can copy the MDX syntax for the selected item by right-clicking the item and selecting **Copy**, or by dragging the selected item to **Expression**.|  
   
 ## See Also  
- [Multidimensional Expressions &#40;MDX&#41; Reference](../Topic/Multidimensional%20Expressions%20\(MDX\)%20Reference.md)  
+ [Multidimensional Expressions &#40;MDX&#41; Reference](~/mdx/multidimensional-expressions-mdx-reference.md)  
   
   

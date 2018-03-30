@@ -24,31 +24,31 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Connect to the Database Engine With sqlcmd
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports client communication with the TCP/IP network protocol (the default), and the named pipes protocol. The shared memory protocol is also available if the client is connecting to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] on the same computer. There are three common methods of selecting the protocol. The protocol used by the **sqlcmd** utility is determined in the following order:  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supports client communication with the TCP/IP network protocol (the default), and the named pipes protocol. The shared memory protocol is also available if the client is connecting to an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)] on the same computer. There are three common methods of selecting the protocol. The protocol used by the **sqlcmd** utility is determined in the following order:  
   
 -   **sqlcmd** uses the protocol specified as part of the connection string as described below.  
   
 -   If no protocol is specified as part the connection string, **sqlcmd** will use the protocol defined as part of the alias that it is connecting to. To configure **sqlcmd** to use a specific network protocol by creating an alias, see [Create or Delete a Server Alias for Use by a Client &#40;SQL Server Configuration Manager&#41;](../../2014/database-engine/create-or-delete-a-server-alias-for-use-by-a-client.md).  
   
--   If the protocol is not specified in some other way, **sqlcmd** will use the network protocol determined by the protocol order in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager.  
+-   If the protocol is not specified in some other way, **sqlcmd** will use the network protocol determined by the protocol order in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager.  
   
- The following examples show various ways of connecting to the default instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)] on port 1433, and named instances of [!INCLUDE[ssDE](../../includes/ssde-md.md)] presumed to be listening on port 1691. Some of these examples use the IP address of the loopback adapter (127.0.0.1). Test using the IP address of your computer network interface card.  
+ The following examples show various ways of connecting to the default instance of [!INCLUDE[ssDE](../includes/ssde-md.md)] on port 1433, and named instances of [!INCLUDE[ssDE](../includes/ssde-md.md)] presumed to be listening on port 1691. Some of these examples use the IP address of the loopback adapter (127.0.0.1). Test using the IP address of your computer network interface card.  
   
- Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)] by specifying the instance name:  
+ Connect to the [!INCLUDE[ssDE](../includes/ssde-md.md)] by specifying the instance name:  
   
 ```  
 sqlcmd -S ComputerA  
 sqlcmd -S ComputerA\instanceB  
 ```  
   
- Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)] by specifying the IP address:  
+ Connect to the [!INCLUDE[ssDE](../includes/ssde-md.md)] by specifying the IP address:  
   
 ```  
 sqlcmd -S 127.0.0.1  
 sqlcmd -S 127.0.0.1\instanceB  
 ```  
   
- Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)] by specifying the TCP\IP port number:  
+ Connect to the [!INCLUDE[ssDE](../includes/ssde-md.md)] by specifying the TCP\IP port number:  
   
 ```  
 sqlcmd -S ComputerA,1433  

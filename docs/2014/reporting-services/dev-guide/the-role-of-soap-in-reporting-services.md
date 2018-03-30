@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: f229c3ef-f2ca-448f-98f1-b8df350b9992
 caps.latest.revision: 34
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # The Role of SOAP in Reporting Services
@@ -28,7 +28,7 @@ manager: "jhubbard"
   
  A report server acts as a SOAP server, a SOAP-aware service that can accept requests from SOAP clients and create appropriate responses. The server handles the requests and sends encoded responses back to the client.  
   
- SOAP messages in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] take many different forms, depending on the type of request made by the client. The following example represents a simple SOAP client request to remove an item from the report server database.  
+ SOAP messages in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] take many different forms, depending on the type of request made by the client. The following example represents a simple SOAP client request to remove an item from the report server database.  
   
 ```  
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
@@ -40,7 +40,7 @@ manager: "jhubbard"
 </soap:Envelope>  
 ```  
   
- The SOAP itself requires that messages be put into an `Envelope` element, with the bulk of the message inside a `Body` element. In this example, the body contains a call to the <xref:ReportService2010.ReportingService2010.DeleteItem%2A> method, which takes a string parameter representing the path of the item to delete. You can create a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] client proxy class that encapsulates all SOAP operations into methods. The following [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] method represents the SOAP example given earlier.  
+ The SOAP itself requires that messages be put into an `Envelope` element, with the bulk of the message inside a `Body` element. In this example, the body contains a call to the <xref:ReportService2010.ReportingService2010.DeleteItem%2A> method, which takes a string parameter representing the path of the item to delete. You can create a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] client proxy class that encapsulates all SOAP operations into methods. The following [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] method represents the SOAP example given earlier.  
   
 ```  
 public void DeleteItem(string item);  

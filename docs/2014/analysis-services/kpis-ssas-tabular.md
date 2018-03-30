@@ -45,7 +45,7 @@ manager: "mblythe"
 ##  <a name="bkmk_example"></a> Example  
  The sales manager at Adventure Works wants to create a PivotTable that she can use to quickly display whether or not sales employees are meeting their sales quota for a given period (year). For each sales employee, she wants the PivotTable to display the the actual sales amount in dollars, the sales quota amount in dollars, and a simple graphic display showing the status of whether or not each sales employee is below, at, or above their sales quota. She wants to be able to slice the data by year.  
   
- To do this, the sales manager enlists the help of her organization’s BI solution developer to add a Sales KPI to the AdventureWorks Tabular Model. The sales manager will then use [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] to connect to the Adventure Works Tabular Model as a data source and create a PivotTable with the fields (measures and KPI) and slicers to analyze whether or not the sales force is meeting their quotas.  
+ To do this, the sales manager enlists the help of her organization’s BI solution developer to add a Sales KPI to the AdventureWorks Tabular Model. The sales manager will then use [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] to connect to the Adventure Works Tabular Model as a data source and create a PivotTable with the fields (measures and KPI) and slicers to analyze whether or not the sales force is meeting their quotas.  
   
  In the model, a measure on the SalesAmount column in the FactResellerSales table, which gives the actual sales amount in dollars for each sales employee is created. This measure will define the Base value of the KPI.  
   

@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 56d2d0d7-1eb6-4c6b-aaf4-0521723ef4af
 caps.latest.revision: 5
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Save Reports to Your Computer (Report Builder)

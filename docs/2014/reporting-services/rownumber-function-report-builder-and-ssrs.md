@@ -12,14 +12,14 @@ ms.topic: "article"
 ms.assetid: 9d718ba8-d323-49fb-aac8-e7013a117b75
 caps.latest.revision: 7
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # RowNumber Function (Report Builder and SSRS)
   Returns a running count of the number of rows for the specified scope.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## Syntax  
   
@@ -30,7 +30,7 @@ RowNumber(scope)
   
 #### Parameters  
  *scope*  
- (`String`) The name of a dataset, data region, or group, or null (`Nothing` in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]), that specifies the context in which to evaluate the number of rows. `Nothing` specifies the outermost context, usually the report dataset.  
+ (`String`) The name of a dataset, data region, or group, or null (`Nothing` in [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]), that specifies the context in which to evaluate the number of rows. `Nothing` specifies the outermost context, usually the report dataset.  
   
 ## Remarks  
  `RowNumber` returns a running value of the count of rows within the specified scope, just as [RunningValue](../../2014/reporting-services/runningvalue-function-report-builder-and-ssrs.md) returns the running value of an aggregate function. When you specify a scope, you specify when to reset the row count to 1.  

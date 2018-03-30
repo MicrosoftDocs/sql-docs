@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b
 caps.latest.revision: 17
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Change the Default Reporting Services Delivery Extension
-  You can modify [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configuration settings to change the default delivery extension that appears in the **Delivered by** list of a subscription definition page. For example you can modify the configuration so that when users create a new subscription, file share delivery is selected by default instead of e-mail delivery. You can also change the order the delivery extensions are listed in the user interface.  
+  You can modify [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] configuration settings to change the default delivery extension that appears in the **Delivered by** list of a subscription definition page. For example you can modify the configuration so that when users create a new subscription, file share delivery is selected by default instead of e-mail delivery. You can also change the order the delivery extensions are listed in the user interface.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode  
+ **[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Native mode | [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint mode  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] includes E-mail and Windows File Share delivery are extensions. Your report server might have additional delivery extensions if you have deployed custom or third-party extensions to support custom delivery. The availability of a delivery extension depends on whether it is deployed on a report server.  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] includes E-mail and Windows File Share delivery are extensions. Your report server might have additional delivery extensions if you have deployed custom or third-party extensions to support custom delivery. The availability of a delivery extension depends on whether it is deployed on a report server.  
   
 ## Default Native mode report server configuration  
  The order of a delivery extension appears in Report Manager in the **Delivered by** list is based on the order of the delivery extension entries in the **RSReportServer.config** file. For example the following image shows e-mail first in the list and it is selected by default.  
@@ -90,19 +90,19 @@ manager: "mblythe"
      The RSReportServer.config file has been modified  
   
 ## SharePoint mode report servers  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode stores extensions information in the SharePoint service application databases and not in the RsrReportServer.config file. In SharePoint mode, delivery extension configuration is modified using PowerShell.  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint mode stores extensions information in the SharePoint service application databases and not in the RsrReportServer.config file. In SharePoint mode, delivery extension configuration is modified using PowerShell.  
   
 #### Configure the default delivery extension  
   
 1.  Open the **SharePoint Management Shell**.  
   
-2.  You can skip this step if you already know the name of your [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application. Use the following PowerShell to list the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service applications in your SharePoint farm.  
+2.  You can skip this step if you already know the name of your [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service application. Use the following PowerShell to list the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service applications in your SharePoint farm.  
   
     ```  
     get-sprsserviceapplication | format-list *  
     ```  
   
-3.  Run the following PowerShell to verify the current default delivery extension for the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application “ssrsapp”.  
+3.  Run the following PowerShell to verify the current default delivery extension for the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service application “ssrsapp”.  
   
     ```  
     $app=get-sprsserviceapplication | where {$_.name -like "ssrsapp*"};Get-SPRSExtension -identity $app | where{$_.ServerDirectivesXML -like "<DefaultDelivery*"} | format-list *  

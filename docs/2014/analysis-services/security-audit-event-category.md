@@ -24,7 +24,7 @@ manager: "mblythe"
   
 |Event Class|Event Id|Description|  
 |-----------------|--------------|-----------------|  
-|Audit Login|1|Records all new connection events since the trace started, such as when a client requested a connection to a server running an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
+|Audit Login|1|Records all new connection events since the trace started, such as when a client requested a connection to a server running an instance of [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
 |Audit Logout|2|Records all new disconnect events since the trace started, such as when a client issues a disconnect command.|  
 |Audit Server Starts and Stops|4|Records shutdown, start, and pause activities for services.|  
 |Audit Object Permission Event|18|Records all object permission changes.|  

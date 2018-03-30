@@ -23,9 +23,9 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Create a Date type Dimension
-  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], a time dimension is a dimension type whose attributes represent time periods, such as years, semesters, quarters, months, and days. The periods in a time dimension provide time-based levels of granularity for analysis and reporting. The attributes are organized in hierarchies, and the granularity of the time dimension is determined largely by the business and reporting requirements for historical data. For example, most financial and sales data in business intelligence applications use a monthly or quarterly granularity.  
+  In [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], a time dimension is a dimension type whose attributes represent time periods, such as years, semesters, quarters, months, and days. The periods in a time dimension provide time-based levels of granularity for analysis and reporting. The attributes are organized in hierarchies, and the granularity of the time dimension is determined largely by the business and reporting requirements for historical data. For example, most financial and sales data in business intelligence applications use a monthly or quarterly granularity.  
   
- Typically, cubes in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] incorporate a time dimension in one form or another. A cube may include more than one time dimension, or several hierarchies from the same time dimension, depending on the granularity of the data and the reporting requirements. However, not all cubes require a time dimension. Some OLAP applications, such as activity-based costing, do not require a time dimension, because .costing in an activity-based dimension is based on activity instead of time.  
+ Typically, cubes in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] incorporate a time dimension in one form or another. A cube may include more than one time dimension, or several hierarchies from the same time dimension, depending on the granularity of the data and the reporting requirements. However, not all cubes require a time dimension. Some OLAP applications, such as activity-based costing, do not require a time dimension, because .costing in an activity-based dimension is based on activity instead of time.  
   
 ## Dimension Structure  
  The dimension structure for a time dimension depends on how the underlying data source stores the time period information. This difference in storage produces two basic types of time dimensions:  
@@ -36,9 +36,9 @@ manager: "mblythe"
  Like other dimensions, the fact table has a foreign key relationship to the dimension table for the time dimension. The key attribute for a time dimension is based either on an integer key or on the lowest level of detail, such as the date, that appears in the dimension main table.  
   
  Server time dimension  
- If you do not have a dimension table to which to bind time-related attributes, you can have [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] define a server time dimension based on time periods. To define the hierarchies, levels, and members represented by the server time dimension, you select standard time periods when you create the dimension.  
+ If you do not have a dimension table to which to bind time-related attributes, you can have [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] define a server time dimension based on time periods. To define the hierarchies, levels, and members represented by the server time dimension, you select standard time periods when you create the dimension.  
   
- Attributes in a server time dimension have a special time-attribute binding. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] uses the attribute types that are related to dates, such as Year, Month, or Day, to define members of attributes in a time dimension.  
+ Attributes in a server time dimension have a special time-attribute binding. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] uses the attribute types that are related to dates, such as Year, Month, or Day, to define members of attributes in a time dimension.  
   
  After you include the server time dimension in a cube, you set the relationship between the measure group and the server time dimension by specifying a relationship on the **Define Dimension Usage** page of the Cube Wizard.  
   

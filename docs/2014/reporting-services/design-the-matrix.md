@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: ecd8cae0-3f19-4f3e-90d9-4ddfe1d0eec8
 caps.latest.revision: 22
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Design the Matrix

@@ -16,9 +16,9 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # SQL Server Destination Custom Properties
-  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destination has both custom properties and the properties common to all data flow components.  
+  The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] destination has both custom properties and the properties common to all data flow components.  
   
- The following table describes the custom properties of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destination. All properties are read/write.  
+ The following table describes the custom properties of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] destination. All properties are read/write.  
   
 |Property name|Data Type|Description|  
 |-------------------|---------------|-----------------|  
@@ -31,13 +31,13 @@ manager: "jhubbard"
 |BulkInsertLastRow|Integer|A value that specifies the last row to insert. The default value of this property is **-1**, which indicates that no value has been assigned.|  
 |BulkInsertMaxErrors|Integer|A value that specifies the number of errors that can occur before the bulk insert stops. The default value of this property is **–1**, which indicates that no value has been assigned.|  
 |BulkInsertOrder|String|The names of the sort columns. Each column can be sorted in ascending or descending order. If multiple sort columns are used, the column names are separated by commas.|  
-|BulkInsertTableName|String|The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table or view in the database to which the data is copied.|  
+|BulkInsertTableName|String|The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] table or view in the database to which the data is copied.|  
 |BulkInsertTablock|Boolean|A value that specifies whether the table is locked during the bulk insert. The default value of this property is `True`.|  
 |DefaultCodePage|Integer|The code page to use when code page information is not available from the data source.|  
 |MaxInsertCommitSize|Integer|A value that specifies the maximum number of rows to insert in a batch. When the value is zero, all rows are inserted in a single batch.|  
-|Timeout|Integer|A value that specifies the number of seconds the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destination waits before termination if there is no data available for insertion. A value of 0 means that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destination will not time out. The default value of this property is 30.|  
+|Timeout|Integer|A value that specifies the number of seconds the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] destination waits before termination if there is no data available for insertion. A value of 0 means that the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] destination will not time out. The default value of this property is 30.|  
   
- The input and the input columns of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destination have no custom properties.  
+ The input and the input columns of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] destination have no custom properties.  
   
  For more information, see [SQL Server Destination](../../2014/integration-services/sql-server-destination.md).  
   

@@ -33,7 +33,7 @@ manager: "mblythe"
 -   [To copy a perspective](#bkmk_copy)  
   
 ## Tasks  
- To create perspectives, you will use the **Perspectives** dialog box, where you can add, edit, delete, copy, and view perspectives. To view the **Perspectives** dialog box, in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], click on the **Model** menu, and then click **Perspectives**.  
+ To create perspectives, you will use the **Perspectives** dialog box, where you can add, edit, delete, copy, and view perspectives. To view the **Perspectives** dialog box, in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], click on the **Model** menu, and then click **Perspectives**.  
   
 ###  <a name="bkmk_add"></a> To add a perspective  
   

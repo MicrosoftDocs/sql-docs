@@ -38,12 +38,12 @@ manager: "jhubbard"
   
 -   Recover from accidental deletions. You can restore the latest file version checked into source control.  
   
--   Conserve disk space on both the source control client and server. Some source control providers, such as [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual SourceSafe, support disk space conservation on the server by storing the latest version of a file and the differences between each version and the version that precedes or follows it. On the client, Visual SourceSafe supports disk space conservation. You can cloak folders and files so that they are not downloaded to your local disk.  
+-   Conserve disk space on both the source control client and server. Some source control providers, such as [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe, support disk space conservation on the server by storing the latest version of a file and the differences between each version and the version that precedes or follows it. On the client, Visual SourceSafe supports disk space conservation. You can cloak folders and files so that they are not downloaded to your local disk.  
   
- File check outs, check ins, and other source control operations are actually accomplished through a source control client, such as [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. The client is designed to interact with the provider to make the provider's capabilities available to a distributed group of users. Using a source control client, users can browse the files stored by the provider; add and delete files; check files in and out; and retrieve copies of local files.  
+ File check outs, check ins, and other source control operations are actually accomplished through a source control client, such as [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. The client is designed to interact with the provider to make the provider's capabilities available to a distributed group of users. Using a source control client, users can browse the files stored by the provider; add and delete files; check files in and out; and retrieve copies of local files.  
   
 > [!NOTE]  
->  This documentation assumes that you are using [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual SourceSafe as your source control provider. If you are using a different source control provider, you might see differences between this documentation and the software you are running. If you see differences, consult the documentation for your source control provider.  
+>  This documentation assumes that you are using [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe as your source control provider. If you are using a different source control provider, you might see differences between this documentation and the software you are running. If you see differences, consult the documentation for your source control provider.  
   
 ## Related Tasks  
   

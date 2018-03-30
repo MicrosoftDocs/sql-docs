@@ -22,7 +22,7 @@ ms.author: "jroth"
 manager: "jhubbard"
 ---
 # Join a Secondary Replica to an Availability Group (SQL Server)
-  This topic describes how to join a secondary replica to an AlwaysOn availability group by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. After a secondary replica is added to an AlwaysOn availability group, the secondary replica must be joined to the availability group. The join-replica operation must be performed on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is hosting the secondary replica.  
+  This topic describes how to join a secondary replica to an AlwaysOn availability group by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. After a secondary replica is added to an AlwaysOn availability group, the secondary replica must be joined to the availability group. The join-replica operation must be performed on the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that is hosting the secondary replica.  
   
 -   **Before you begin:**  
   
@@ -78,7 +78,7 @@ manager: "jhubbard"
   
 1.  Connect to the server instance that hosts the secondary replica.  
   
-2.  Use the [ALTER AVAILABILITY GROUP](../Topic/ALTER%20AVAILABILITY%20GROUP%20\(Transact-SQL\).md) statement, as follows:  
+2.  Use the [ALTER AVAILABILITY GROUP](~/t-sql/statements/alter-availability-group-transact-sql.md) statement, as follows:  
   
      ALTER AVAILABILITY GROUP *group_name* JOIN  
   
@@ -91,12 +91,12 @@ manager: "jhubbard"
     ```  
   
     > [!NOTE]  
-    >  To see this [!INCLUDE[tsql](../../includes/tsql-md.md)] statement used in context, see [Create an Availability Group &#40;Transact-SQL&#41;](../../2014/database-engine/create-an-availability-group-transact-sql.md).  
+    >  To see this [!INCLUDE[tsql](../includes/tsql-md.md)] statement used in context, see [Create an Availability Group &#40;Transact-SQL&#41;](../../2014/database-engine/create-an-availability-group-transact-sql.md).  
   
 ##  <a name="PowerShellProcedure"></a> Using PowerShell  
  **To join an availability replica to an availability group**  
   
- In the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell provider:  
+ In the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell provider:  
   
 1.  Change directory (`cd`) to the server instance that hosts the secondary replica.  
   
@@ -109,7 +109,7 @@ manager: "jhubbard"
     ```  
   
     > [!NOTE]  
-    >  To view the syntax of a cmdlet, use the `Get-Help` cmdlet in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../2014/database-engine/get-help-sql-server-powershell.md).  
+    >  To view the syntax of a cmdlet, use the `Get-Help` cmdlet in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../2014/database-engine/get-help-sql-server-powershell.md).  
   
  **To set up and use the SQL Server PowerShell provider**  
   
@@ -125,6 +125,6 @@ manager: "jhubbard"
 ## See Also  
  [Creation and Configuration of Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/creation-and-configuration-of-availability-groups-sql-server.md)   
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/overview-of-alwayson-availability-groups-sql-server.md)   
- [Troubleshoot AlwaysOn Availability Groups Configuration &#40;SQL Server&#41;deleted](../Topic/Troubleshoot%20AlwaysOn%20Availability%20Groups%20Configuration%20\(SQL%20Server\)deleted.md)  
+ [Troubleshoot AlwaysOn Availability Groups Configuration &#40;SQL Server&#41;deleted](troubleshoot-alwayson-availability-groups-configuration-sql-server.md)  
   
   

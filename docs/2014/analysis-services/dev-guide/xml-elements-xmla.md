@@ -21,16 +21,16 @@ ms.author: "mblythe"
 manager: "mblythe"
 ---
 # XML Elements (XMLA)
-  The following topics describe the various XML for Analysis (XMLA) element categories supported by [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+  The following topics describe the various XML for Analysis (XMLA) element categories supported by [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ## In This Section  
   
 |Property|Description|  
 |--------------|-----------------|  
-|[Headers &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/headers-xmla.md)|Describes those elements sent in the SOAP header of a SOAP envelope, either by an application or by an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance, to manage protocol-level features.|  
-|[Methods &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/methods-xmla.md)|Describes the topmost elements sent by an application in a SOAP envelope to an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance to retrieve data or metadata, or to perform actions on the instance.|  
+|[Headers &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/headers-xmla.md)|Describes those elements sent in the SOAP header of a SOAP envelope, either by an application or by an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance, to manage protocol-level features.|  
+|[Methods &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/methods-xmla.md)|Describes the topmost elements sent by an application in a SOAP envelope to an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance to retrieve data or metadata, or to perform actions on the instance.|  
 |[Commands &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/commands-xmla.md)|Describes the elements sent within an XMLA method to perform a specific action.|  
-|[Objects &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/objects-xmla.md)|Describes the topmost elements received by an application in a SOAP envelope from an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance in response to an XMLA method.|  
+|[Objects &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/objects-xmla.md)|Describes the topmost elements received by an application in a SOAP envelope from an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance in response to an XMLA method.|  
 |[Properties &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/properties-xmla.md)|Describes the child elements for XMLA headers, methods, objects, or commands.|  
   
 ## See Also  

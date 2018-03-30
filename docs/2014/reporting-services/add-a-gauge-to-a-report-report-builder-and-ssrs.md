@@ -12,14 +12,14 @@ ms.topic: "article"
 ms.assetid: 45da4fef-2b02-40e1-977c-f8f80d87155e
 caps.latest.revision: 5
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Add a Gauge to a Report (Report Builder and SSRS)
   When you want to summarize data in a visual format, you can use a Gauge data region. After you add a Gauge data region to the design surface, you can drag report dataset fields to a data pane on the gauge.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ### To add a gauge to your report  
   
@@ -27,7 +27,7 @@ manager: "mblythe"
   
 2.  On the Insert tab, double-click Gauge. The **Select Gauge Type** dialog box opens.  
   
-3.  Select the type of gauge you want to add. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  Select the type of gauge you want to add. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
     > [!NOTE]  
     >  Unlike Chart, Gauge has only two types: linear and radial. The available gauges in the **Select a Gauge Type** dialog box are templates for these two types of gauges. For this reason, you cannot change the gauge type after you add the gauge to your report. You must delete and re-add a gauge to change its type.  

@@ -16,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: 8edda06d-1608-498b-bd50-10905e54f6ce
 caps.latest.revision: 13
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # SAP NetWeaver BI Query Designer User Interface (Report Builder)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides a graphical query designer for building Multidimensional Expression (MDX) queries for a SAP NetWeaver® Business Intelligence data source. The MDX graphical query designer has two modes: Design mode and Query mode. Each mode provides a Metadata pane from which you can drag members from an InfoCube, MultiProvider, or Web-enabled query defined on the data source to build an MDX query that retrieves data when the report is processed.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] provides a graphical query designer for building Multidimensional Expression (MDX) queries for a SAP NetWeaver® Business Intelligence data source. The MDX graphical query designer has two modes: Design mode and Query mode. Each mode provides a Metadata pane from which you can drag members from an InfoCube, MultiProvider, or Web-enabled query defined on the data source to build an MDX query that retrieves data when the report is processed.  
   
 > [!IMPORTANT]  
 >  Users access data sources when they create and run queries. You should grant minimal permissions on the data sources, such as read-only permissions.  
@@ -28,7 +28,7 @@ manager: "mblythe"
  This section describes the toolbar buttons and query designer panes for each mode of the graphical query designer.  
   
 ## Graphical Query Designer in Design Mode  
- When you edit a dataset query that uses a [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] data source, the graphical query designer opens in the Design mode.  
+ When you edit a dataset query that uses a [!INCLUDE[SAP_DPE_BW_1](../includes/sap-dpe-bw-1-md.md)] data source, the graphical query designer opens in the Design mode.  
   
  ![Query Designer using MDX in Design Mode](../../2014/reporting-services/media/rsqd-dssapbw-mdx-designmode.gif "Query Designer using MDX in Design Mode")  
   

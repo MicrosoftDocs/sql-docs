@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Change Workload Group Settings
-  You can change workload group settings by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  You can change workload group settings by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 -   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
@@ -40,7 +40,7 @@ manager: "jhubbard"
  Changing workload group settings requires CONTROL SERVER permission.  
   
 ##  <a name="ChgWGProp"></a> Change Workload Group Settings Using SQL Server Management Studio  
- **To change workload group settings by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
+ **To change workload group settings by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]**  
   
 1.  In Object Explorer, recursively expand the **Management** node down to and including the **Workload Groups** folder that contains the workload group to be modified.  
   
@@ -75,8 +75,8 @@ GO
  [Create a Workload Group](../../2014/database-engine/create-a-workload-group.md)   
  [Create a Resource Pool](../../2014/database-engine/create-a-resource-pool.md)   
  [Change Resource Pool Settings](../../2014/database-engine/change-resource-pool-settings.md)   
- [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../Topic/ALTER%20WORKLOAD%20GROUP%20\(Transact-SQL\).md)   
- [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../Topic/ALTER%20RESOURCE%20POOL%20\(Transact-SQL\).md)   
- [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../Topic/ALTER%20RESOURCE%20GOVERNOR%20\(Transact-SQL\).md)  
+ [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](~/t-sql/statements/alter-workload-group-transact-sql.md)   
+ [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](~/t-sql/statements/alter-resource-pool-transact-sql.md)   
+ [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](~/t-sql/statements/alter-resource-governor-transact-sql.md)  
   
   

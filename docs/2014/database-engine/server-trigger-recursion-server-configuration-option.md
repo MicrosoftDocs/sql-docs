@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: da4c25f5-d04c-4951-a3db-409e71a1b468
 caps.latest.revision: 23
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # server trigger recursion Server Configuration Option
@@ -25,8 +25,8 @@ manager: "jhubbard"
  For more information, see [Create Nested Triggers](../../2014/database-engine/create-nested-triggers.md).  
   
 ## See Also  
- [RECONFIGURE &#40;Transact-SQL&#41;](../Topic/RECONFIGURE%20\(Transact-SQL\).md)   
+ [RECONFIGURE &#40;Transact-SQL&#41;](~/t-sql/language-elements/reconfigure-transact-sql.md)   
  [Server Configuration Options &#40;SQL Server&#41;](../../2014/database-engine/server-configuration-options-sql-server.md)   
- [sp_configure &#40;Transact-SQL&#41;](../Topic/sp_configure%20\(Transact-SQL\).md)  
+ [sp_configure &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   

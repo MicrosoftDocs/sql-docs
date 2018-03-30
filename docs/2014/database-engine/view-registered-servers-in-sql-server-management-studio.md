@@ -20,13 +20,13 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # View Registered Servers in SQL Server Management Studio
-  This topic describes how to view registered servers in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  This topic describes how to view registered servers in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
 ##  <a name="SSMSProcedure"></a>  
   
 #### To view Registered Servers in SQL Server Management Studio  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], on the **View** menu, click **Registered Servers**.  
+1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], on the **View** menu, click **Registered Servers**.  
   
      By default, Registered Servers appears above Object Explorer in the main window.  
   

@@ -16,7 +16,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Policy Management Node (Object Explorer)
-  This section contains the following F1 Help topics for the **PolicyManagement** node of Object Explorer in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  This section contains the following F1 Help topics for the **PolicyManagement** node of Object Explorer in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 -   [Create New Condition or Open Condition Dialog Box, General Page](../../2014/database-engine/create-new-condition-or-open-condition-dialog-box-general-page.md)  
   

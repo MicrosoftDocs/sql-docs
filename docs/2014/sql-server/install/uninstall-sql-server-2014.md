@@ -16,23 +16,23 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Uninstall SQL Server 2014
-  Follow the topics below to uninstall an existing instance of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] completely, and prepare the system so that you can reinstall [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Follow the topics below to uninstall an existing instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] completely, and prepare the system so that you can reinstall [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## In This Section  
  [Uninstall an Existing Instance of SQL Server &#40;Setup&#41;](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)  
- This topic describes how to manually uninstall a stand-alone instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ This topic describes how to manually uninstall a stand-alone instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [Uninstall PowerPivot for SharePoint](../../../2014/sql-server/install/uninstall-powerpivot-for-sharepoint.md)  
  This topic describes how to manually uninstall PowerPivot for SharePoint.  
   
  [Uninstall Reporting Services](../../../2014/sql-server/install/uninstall-reporting-services.md)  
- This topic describes how to uninstall [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] servers for both SharePoint mode and Native mode servers.  
+ This topic describes how to uninstall [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] servers for both SharePoint mode and Native mode servers.  
   
  [Uninstall and Remove Master Data Services](../../../2014/sql-server/install/uninstall-and-remove-master-data-services.md)  
- This topic describes the process of uninstalling and removing [!INCLUDE[ssMDSshort](../../../includes/ssmdsshort-md.md)] from the local computer.  
+ This topic describes the process of uninstalling and removing [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] from the local computer.  
   
  [Remove Data Quality Server Objects](../../../2014/sql-server/install/remove-data-quality-server-objects.md)  
- This topic describes how to manually remove the [!INCLUDE[ssDQSServer](../../../includes/ssdqsserver-md.md)] objects after uninstalling either [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] or just the [!INCLUDE[ssDQSServer](../../../includes/ssdqsserver-md.md)] component in [!INCLUDE[ssDQSnoversion](../../../includes/ssdqsnoversion-md.md)] (DQS).  
+ This topic describes how to manually remove the [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] objects after uninstalling either [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or just the [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] component in [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS).  
   
 ## Related Sections  
   

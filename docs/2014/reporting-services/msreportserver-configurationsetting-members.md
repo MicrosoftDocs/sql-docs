@@ -21,7 +21,7 @@ helpviewer_keywords:
 ms.assetid: 5e21a53a-a2f8-4b35-a8d9-5483519e3857
 caps.latest.revision: 46
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # MSReportServer_ConfigurationSetting Members
@@ -31,11 +31,11 @@ manager: "mblythe"
   
 |||  
 |-|-|  
-|[ConnectionPoolSize](../../2014/reporting-services/connectionpoolsize-property-wmi-msreportserver-configurationsetting.md)|Returns the connection pool size used by the report server to communicate with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance that hosts the report server database. Read-only.|  
-|[DatabaseLogonAccount](../../2014/reporting-services/databaselogonaccount-property-wmi-msreportserver-configurationsetting.md)|Specifies the login account used by the report server to connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance that hosts the report server database. Read-only.|  
+|[ConnectionPoolSize](../../2014/reporting-services/connectionpoolsize-property-wmi-msreportserver-configurationsetting.md)|Returns the connection pool size used by the report server to communicate with the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] instance that hosts the report server database. Read-only.|  
+|[DatabaseLogonAccount](../../2014/reporting-services/databaselogonaccount-property-wmi-msreportserver-configurationsetting.md)|Specifies the login account used by the report server to connect to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] instance that hosts the report server database. Read-only.|  
 |[DatabaseLogonTimeout](../../2014/reporting-services/databaselogontimeout-property-wmi-msreportserver-configurationsetting.md)|Specifies the number of seconds to wait before an attempt to log on to the report server database fails. Read-only.|  
-|[DatabaseLogonType](../../2014/reporting-services/databaselogontype-property-wmi-msreportserver-configurationsetting.md)|Specifies whether the report server uses a Windows service account, a Windows user account, or a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login to access the report server database. Read-only.|  
-|[DatabaseName](../../2014/reporting-services/databasename-property-wmi-msreportserver-configurationsetting.md)|Specifies the name of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance that hosts the report server database.|  
+|[DatabaseLogonType](../../2014/reporting-services/databaselogontype-property-wmi-msreportserver-configurationsetting.md)|Specifies whether the report server uses a Windows service account, a Windows user account, or a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] login to access the report server database. Read-only.|  
+|[DatabaseName](../../2014/reporting-services/databasename-property-wmi-msreportserver-configurationsetting.md)|Specifies the name of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance that hosts the report server database.|  
 |[DatabaseQueryTimeout](../../2014/reporting-services/databasequerytimeout-property-wmi-msreportserver-configurationsetting.md)|Specifies the number of seconds that must elapse before the command fails or times out. The report server is timing the process against the report server database, not a data source for the report.|  
 |[DatabaseServerName](../../2014/reporting-services/databaseservername-property-wmi-msreportserver-configurationsetting.md)|Specifies the name of the server on which the report server database is installed.|  
 |[InstallationID Property](../../2014/reporting-services/installationid-property-wmi-msreportserver-configurationsetting.md)|Returns a unique identifier for a specific report server instance.|  
@@ -71,7 +71,7 @@ manager: "mblythe"
 |[GetAdminSiteUrl Method &#40;WMI&#41;](../../2014/reporting-services/getadminsiteurl-method-wmi.md)|Gets the absolute URL to the Central Administration Web site.|  
 |[GetDatabaseVersionDisplayName](../../2014/reporting-services/getdatabaseversiondisplayname-method-wmi.md)|Gets the display name for a given report server database version string.|  
 |[InitializeReportServer](../../2014/reporting-services/initializereportserver-method-wmi-msreportserver-configurationsetting.md)|Initializes the specified report server instance.|  
-|[ListInstalledSharePointVersions Method &#40;WMI&#41;](../../2014/reporting-services/listinstalledsharepointversions-method-wmi.md)|Returns a set of tokens that represent the versions of [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)], [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], or [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] that are installed on the same computer as the report server.|  
+|[ListInstalledSharePointVersions Method &#40;WMI&#41;](../../2014/reporting-services/listinstalledsharepointversions-method-wmi.md)|Returns a set of tokens that represent the versions of [!INCLUDE[winSPServ](../includes/winspserv-md.md)] [!INCLUDE[offSPServ](../includes/offspserv-md.md)], [!INCLUDE[SPF2010](../includes/spf2010-md.md)], or [!INCLUDE[SPS2010](../includes/sps2010-md.md)] that are installed on the same computer as the report server.|  
 |[ListIPAddresses Method &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../2014/reporting-services/listipaddresses-method-wmi-msreportserver-configurationsetting.md)|Lists IP addresses for the computer.|  
 |[ListReportServersInDatabase](../../2014/reporting-services/listreportserversindatabase-method-wmi-msreportserver-configurationsetting.md)|Returns a list of report server installations that are present in the report server database, regardless of whether those installations have access to secure information.|  
 |[ListReservedURLs Method &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../2014/reporting-services/listreservedurls-method-wmi-msreportserver-configurationsetting.md)|Lists URLs reserved for all applications on the report server.|  

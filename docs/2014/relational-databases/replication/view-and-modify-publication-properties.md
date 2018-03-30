@@ -20,11 +20,11 @@ helpviewer_keywords:
 ms.assetid: 27d72ea4-bcb6-48f2-b4aa-eb1410da7efc
 caps.latest.revision: 43
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # View and Modify Publication Properties
-  This topic describes how to view and modify publication properties in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or Replication Management Objects (RMO).  
+  This topic describes how to view and modify publication properties in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or Replication Management Objects (RMO).  
   
  **In This Topic**  
   
@@ -53,7 +53,7 @@ manager: "jhubbard"
 -   After a publication is created, some property changes require a new snapshot. If a publication has subscriptions, some changes also require all subscriptions to be reinitialized. For more information, see [Change Publication and Article Properties](../../../2014/relational-databases/replication/change-publication-and-article-properties.md) and [Add Articles to and Drop Articles from Existing Publications](../../../2014/relational-databases/replication/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
- View and modify publication properties in the **Publication Properties - \<Publication>** dialog box, which is available in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] and Replication Monitor. For information about starting Replication Monitor, see [Start the Replication Monitor](../../../2014/relational-databases/replication/start-the-replication-monitor.md).  
+ View and modify publication properties in the **Publication Properties - \<Publication>** dialog box, which is available in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and Replication Monitor. For information about starting Replication Monitor, see [Start the Replication Monitor](../../../2014/relational-databases/replication/start-the-replication-monitor.md).  
   
  The **Publication Properties - \<Publication>** dialog box includes the following pages:  
   
@@ -79,7 +79,7 @@ manager: "jhubbard"
   
 #### To view and modify publication properties in Management Studio  
   
-1.  Connect to the Publisher in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], and then expand the server node.  
+1.  Connect to the Publisher in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], and then expand the server node.  
   
 2.  Expand the **Replication** folder, and then expand the **Local Publications** folder.  
   
@@ -100,50 +100,50 @@ manager: "jhubbard"
   
 #### To view the properties of a snapshot or transactional publication  
   
-1.  Execute [sp_helppublication](../Topic/sp_helppublication%20\(Transact-SQL\).md), specifying the name of the publication for the **@publication** parameter. If you do not specify this parameter, information on all publications at the Publisher is returned.  
+1.  Execute [sp_helppublication](~/relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md), specifying the name of the publication for the **@publication** parameter. If you do not specify this parameter, information on all publications at the Publisher is returned.  
   
 #### To change the properties of a snapshot or transactional publication  
   
-1.  Execute [sp_changepublication](../Topic/sp_changepublication%20\(Transact-SQL\).md), specifying the publication property to change in the **@property** parameter and the new value of this property in the **@value** parameter.  
+1.  Execute [sp_changepublication](~/relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), specifying the publication property to change in the **@property** parameter and the new value of this property in the **@value** parameter.  
   
     > [!NOTE]  
     >  If the change will require the generation of a new snapshot, you must also specify a value of **1** for **@force_invalidate_snapshot**, and if the change will require that Subscribers be reinitialized, you must specify a value of **1** for **@force_reinit_subscription**. For more information on the properties that, when changed, require a new snapshot or reinitialization, see [Change Publication and Article Properties](../../../2014/relational-databases/replication/change-publication-and-article-properties.md).  
   
 #### To view the properties of a merge publication  
   
-1.  Execute [sp_helpmergepublication](../Topic/sp_helpmergepublication%20\(Transact-SQL\).md), specifying the name of the publication for the **@publication** parameter. If you do not specify this parameter, information on all publications at the Publisher is returned.  
+1.  Execute [sp_helpmergepublication](~/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md), specifying the name of the publication for the **@publication** parameter. If you do not specify this parameter, information on all publications at the Publisher is returned.  
   
 #### To change the properties of a merge publication  
   
-1.  Execute [sp_changemergepublication](../Topic/sp_changemergepublication%20\(Transact-SQL\).md), specifying the publication property being changed in the **@property** parameter and the new value of this property in the **@value** parameter.  
+1.  Execute [sp_changemergepublication](~/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), specifying the publication property being changed in the **@property** parameter and the new value of this property in the **@value** parameter.  
   
     > [!NOTE]  
     >  If the change will require the generation of a new snapshot, you must also specify a value of **1** for **@force_invalidate_snapshot**, and if the change will require that Subscribers be reinitialized, you must specify a value of **1** for **@force_reinit_subscription** For more information on the properties that, when changed, require a new snapshot or reinitialization, see [Change Publication and Article Properties](../../../2014/relational-databases/replication/change-publication-and-article-properties.md).  
   
 #### To view the properties of a snapshot  
   
-1.  Execute [sp_helppublication_snapshot](../Topic/sp_helppublication_snapshot%20\(Transact-SQL\).md), specifying the name of the publication for the **@publication** parameter.  
+1.  Execute [sp_helppublication_snapshot](~/relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql.md), specifying the name of the publication for the **@publication** parameter.  
   
 #### To change the properties of a snapshot  
   
-1.  Execute [sp_changepublication_snapshot](../Topic/sp_changepublication_snapshot%20\(Transact-SQL\).md), specifying one or more of the new snapshot properties for the appropriate snapshot parameters.  
+1.  Execute [sp_changepublication_snapshot](~/relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md), specifying one or more of the new snapshot properties for the appropriate snapshot parameters.  
   
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
  This transactional replication example returns the properties of the publication.  
   
- [!code-sql[HowTo#sp_helppublication](../../../snippets/tsql/SQL15/replication/howto/tsql/changetranpub.sql#sp_helppublication)]  
+ [!code-sql[HowTo#sp_helppublication](../../snippets/tsql/SQL15/replication/howto/tsql/changetranpub.sql#sp_helppublication)]  
   
  This transactional replication example disables schema replication for the publication.  
   
- [!code-sql[HowTo#sp_changepublication](../../../snippets/tsql/SQL15/replication/howto/tsql/changetranpub.sql#sp_changepublication)]  
+ [!code-sql[HowTo#sp_changepublication](../../snippets/tsql/SQL15/replication/howto/tsql/changetranpub.sql#sp_changepublication)]  
   
  This merge replication example returns the properties of the publication.  
   
- [!code-sql[HowTo#sp_helpmergepublication](../../../snippets/tsql/SQL15/replication/howto/tsql/changemergepub.sql#sp_helpmergepublication)]  
+ [!code-sql[HowTo#sp_helpmergepublication](../../snippets/tsql/SQL15/replication/howto/tsql/changemergepub.sql#sp_helpmergepublication)]  
   
  This merge replication example disables schema replication for the publication.  
   
- [!code-sql[HowTo#sp_changemergepublication](../../../snippets/tsql/SQL15/replication/howto/tsql/changemergepub.sql#sp_changemergepublication)]  
+ [!code-sql[HowTo#sp_changemergepublication](../../snippets/tsql/SQL15/replication/howto/tsql/changemergepub.sql#sp_changemergepublication)]  
   
 ##  <a name="RMOProcedure"></a> Using Replication Management Objects (RMO)  
  You can modify publications and access their properties programmatically by using Replication Management Objects (RMO). The RMO classes that you use to view or modify publication properties depend on the type of publication.  
@@ -175,15 +175,15 @@ manager: "jhubbard"
 ###  <a name="PShellExample"></a> Examples (RMO)  
  This example sets publication attributes for a transactional publication. The changes are cached until explicitly sent to the server.  
   
- [!code-csharp[HowTo#rmo_ChangeTranPub_cached](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_changetranpub_cached)]  
+ [!code-csharp[HowTo#rmo_ChangeTranPub_cached](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_changetranpub_cached)]  
   
- [!code-vb[HowTo#rmo_vb_ChangeTranPub_cached](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_changetranpub_cached)]  
+ [!code-vb[HowTo#rmo_vb_ChangeTranPub_cached](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_changetranpub_cached)]  
   
  This example disables DDL replication for a merge publication.  
   
- [!code-csharp[HowTo#rmo_ChangeMergePub_ddl](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_changemergepub_ddl)]  
+ [!code-csharp[HowTo#rmo_ChangeMergePub_ddl](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_changemergepub_ddl)]  
   
- [!code-vb[HowTo#rmo_vb_ChangeMergePub_ddl](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_changemergepub_ddl)]  
+ [!code-vb[HowTo#rmo_vb_ChangeMergePub_ddl](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_changemergepub_ddl)]  
   
 ## See Also  
  [Publish Data and Database Objects](../../../2014/relational-databases/replication/publish-data-and-database-objects.md)   

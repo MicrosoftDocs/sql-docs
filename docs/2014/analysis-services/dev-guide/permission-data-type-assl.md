@@ -64,7 +64,7 @@ manager: "mblythe"
 |Derived elements|None|  
   
 ## Remarks  
- `Permission` serves as the abstract base type for a number of derived permission types used in an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+ `Permission` serves as the abstract base type for a number of derived permission types used in an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
  This data type has the following validations under DeploymentMode value 2 (tabular server mode).  
   

@@ -30,7 +30,7 @@ manager: "jhubbard"
   
 ### To create a cache file  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project that contains the package you want, and then open the package.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project that contains the package you want, and then open the package.  
   
 2.  On the **Control Flow** tab, add a Data Flow task.  
   
@@ -68,7 +68,7 @@ manager: "jhubbard"
   
 ### To deploy a cache file  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project that contains the package you want, and then open the package.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project that contains the package you want, and then open the package.  
   
 2.  Optionally, create a package configuration. For more information, see [Create Package Configurations](../../2014/integration-services/create-package-configurations.md).  
   

@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Table Properties Dialog Box (SSAS - Tabular)
-  Use the **Table Properties** dialog box in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to view the properties of a table in a tabular model database. All properties are read-only.  
+  Use the **Table Properties** dialog box in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to view the properties of a table in a tabular model database. All properties are read-only.  
   
  You can display the **Table Properties** dialog box by right-clicking a table in Object Explorer and selecting **Properties**.  
   

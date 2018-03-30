@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: f248984a-0b59-4c2f-a56d-31f8dafe72b5
 caps.latest.revision: 19
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Lesson 3: Configuring Distribution
@@ -24,18 +24,18 @@ manager: "jhubbard"
   
 ### Configuring distribution at the Publisher  
   
-1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], and then expand the server node.  
+1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], and then expand the server node.  
   
 2.  Right-click the **Replication** folder and click **Configure Distribution**.  
   
     > [!NOTE]  
-    >  If you have connected to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using **localhost** rather than the actual server name you will be prompted with a warning that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is unable to connect to server **'localhost'**. Click **OK** on the warning dialog. In the **Connect to Server** dialog change the **Server name** from **localhost** to the name of your server. Click **Connect**.  
+    >  If you have connected to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using **localhost** rather than the actual server name you will be prompted with a warning that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is unable to connect to server **'localhost'**. Click **OK** on the warning dialog. In the **Connect to Server** dialog change the **Server name** from **localhost** to the name of your server. Click **Connect**.  
   
      The Distribution Configuration Wizard launches.  
   
 3.  On the **Distributor** page, select **'***\<ServerName>***' will act as its own Distributor; SQL Server will create a distribution database and log**, and then click **Next**.  
   
-4.  If the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is not running, on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**Agent Start** page, select **Yes**, configure the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service to start automatically. Click **Next**.  
+4.  If the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is not running, on the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]**Agent Start** page, select **Yes**, configure the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent service to start automatically. Click **Next**.  
   
 5.  Enter **\\\\**\<*Machine_Name>***\repldata** in the **Snapshot folder** text box, where \<*Machine_Name>* is the name of the Publisher, and then click **Next**.  
   
@@ -45,11 +45,11 @@ manager: "jhubbard"
   
 ### Setting database permissions at the Publisher  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expand **Security**, right-click **Logins**, and then select **New Login**.  
+1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], expand **Security**, right-click **Logins**, and then select **New Login**.  
   
 2.  On the **General** page, click **Search**, enter \<*Machine_Name>***\repl_snapshot** in the **Enter the object name to select** box, where \<*Machine_Name>* is the name of the local Publisher server, click **Check Names**, and then click **OK**.  
   
-3.  On the **User Mapping** page, in the **Users mapped to this login** list select both the **distribution** and [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] databases.  
+3.  On the **User Mapping** page, in the **Users mapped to this login** list select both the **distribution** and [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] databases.  
   
      In the **Database role membership** list select the `db_owner` role for the login for both databases.  
   

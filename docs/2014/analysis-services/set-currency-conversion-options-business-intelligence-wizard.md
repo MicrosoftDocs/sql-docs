@@ -21,7 +21,7 @@ manager: "mblythe"
   Use the **Set Currency Conversion** page to define currency conversion calculations for a measure group that contains exchange rates.  
   
 > [!NOTE]  
->  This page does not appear if the Business Intelligence Wizard was started from Dimension Designer or by right-clicking a dimension in Solution Explorer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+>  This page does not appear if the Business Intelligence Wizard was started from Dimension Designer or by right-clicking a dimension in Solution Explorer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 ## Options  
  **Select the measure group that contains exchange rates**  

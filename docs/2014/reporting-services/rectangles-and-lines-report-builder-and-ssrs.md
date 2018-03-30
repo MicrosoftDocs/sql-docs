@@ -12,17 +12,17 @@ ms.topic: "article"
 ms.assetid: d6226b0c-0398-4185-8565-96099876fc21
 caps.latest.revision: 9
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Rectangles and Lines (Report Builder and SSRS)
   Rectangles and lines can create visual effects within a report. You can set display properties on these report items from the Border section of the Home tab, and set other properties by using the Properties pane. You can add features like a background color or image, a tooltip, or a bookmark to a rectangle.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ##  <a name="RectanglesLinesReportParts"></a> Rectangles and Lines as Report Parts  
- You can publish rectangles with the items that they contain separately from the report as report parts. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
+ You can publish rectangles with the items that they contain separately from the report as report parts. [!INCLUDE[ssRBrptparts](../includes/ssrbrptparts-md.md)]  
   
  You cannot publish the report items within the rectangle as report parts. When people add the rectangle to a report, they get the rectangle and the items it contains.  
   

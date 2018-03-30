@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQLSetDescRec
-  This topic discusses SQLSetDescRec functionality that is specific to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
+  This topic discusses SQLSetDescRec functionality that is specific to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
 ## SQLSetDescRec and Table-Valued Parameters  
  SQLSetDescRec can be used to set descriptor fields for table-valued parameters and table-valued parameter columns. Table-valued parameter columns are only available when the descriptor header field SQL_SOPT_SS_PARAM_FOCUS is set to the ordinal of a record that has SQL_DESC_TYPE set to SQL_SS_TABLE. For more information about SQL_SOPT_SS_PARAM_FOCUS, see [SQLSetStmtAttr](../../../2014/database-engine/dev-guide/sqlsetstmtattr.md).  

@@ -68,9 +68,9 @@ manager: "mblythe"
 (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’  AND Quantity>2) )  
 ```  
   
- When you have finished building the filter, the filter text is evaluated by [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], translated to a DMX expression, and then saved with the model.  
+ When you have finished building the filter, the filter text is evaluated by [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], translated to a DMX expression, and then saved with the model.  
   
- For instructions on how to use the filter dialog boxes in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], see [Apply a Filter to a Mining Model](../../2014/analysis-services/apply-a-filter-to-a-mining-model.md).  
+ For instructions on how to use the filter dialog boxes in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], see [Apply a Filter to a Mining Model](../../2014/analysis-services/apply-a-filter-to-a-mining-model.md).  
   
 ## Managing Mining Model Filters  
  Data-based model filtering greatly simplifies the task of managing mining structures and mining models, because you can easily create multiple models that are based on the same structure. You can also quickly make copies of existing mining models and then change only the filter condition. However, filters can lead to some confusion.  

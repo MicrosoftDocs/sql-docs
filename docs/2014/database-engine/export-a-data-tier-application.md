@@ -30,7 +30,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Export a Data-tier Application
-  Exporting a deployed data-tier application (DAC) or database creates an export file that includes both the definitions of the objects in the database and all of the data contained in the tables. The export file can then be imported to another instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], or to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. The export-import operations can be combined to migrate a DAC between instances, to create a logical backup, or to create an on-premise copy of a database deployed in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+  Exporting a deployed data-tier application (DAC) or database creates an export file that includes both the definitions of the objects in the database and all of the data contained in the tables. The export file can then be imported to another instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)], or to [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]. The export-import operations can be combined to migrate a DAC between instances, to create a logical backup, or to create an on-premise copy of a database deployed in [!INCLUDE[ssSDS](../includes/sssds-md.md)].  
   
 ## Before You Begin  
  The export process builds a DAC export file in two stages.  
@@ -41,10 +41,10 @@ manager: "jhubbard"
   
  The export process sets the DAC version to 1.0.0.0 and the DAC description in the export file to an empty string. If the database was deployed from a DAC, the DAC definition in the export file contains the name given to the original DAC, otherwise the DAC name is set to the database name.  
   
- There is a sample application in the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Labs that can be used to test exporting and importing DACs and databases. For instructions on how to download and use the sample, see [Database Import and Export for Windows Azure SQL Database](http://go.microsoft.com/fwlink/?LinkId=219404).  
+ There is a sample application in the [!INCLUDE[ssSDS](../includes/sssds-md.md)] Labs that can be used to test exporting and importing DACs and databases. For instructions on how to download and use the sample, see [Database Import and Export for Windows Azure SQL Database](http://go.microsoft.com/fwlink/?LinkId=219404).  
   
 ###  <a name="LimitationsRestrictions"></a> Limitations and Restrictions  
- A DAC or database can only be exported from a database in [!INCLUDE[ssSDS](../../includes/sssds-md.md)], or [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) or later.  
+ A DAC or database can only be exported from a database in [!INCLUDE[ssSDS](../includes/sssds-md.md)], or [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] Service Pack 4 (SP4) or later.  
   
  You cannot export a database that has objects that are not supported in a DAC, or contained users. For more information about the types of objects supported in a DAC, see [DAC Support For SQL Server Objects and Versions](../../2014/database-engine/dac-support-for-sql-server-objects-and-versions.md).  
   
@@ -54,7 +54,7 @@ manager: "jhubbard"
 ##  <a name="UsingDeployDACWizard"></a> Using the Export Data-tier Application Wizard  
  **To Export a DAC Using a Wizard**  
   
-1.  Connect to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], whether on-premise or in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+1.  Connect to the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], whether on-premise or in [!INCLUDE[ssSDS](../includes/sssds-md.md)].  
   
 2.  In **Object Explorer**, expand the node for the instance from which you want to export the DAC.  
   

@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: d62159a8-ec67-4e28-a9f1-05a9250065bb
 caps.latest.revision: 48
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Create, Delete, or Modify a Folder (Report Manager)
@@ -49,7 +49,7 @@ manager: "mblythe"
   
 3.  In the drop-down menu, click **Delete**.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ### To modify or delete a folder  
   

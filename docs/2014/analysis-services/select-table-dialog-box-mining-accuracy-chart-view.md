@@ -24,7 +24,7 @@ manager: "mblythe"
   
 ## Options  
  **Data Source**  
- The data source that contains the table that you will use to test the mining models. The list includes each data source that is defined in the current [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project.  
+ The data source that contains the table that you will use to test the mining models. The list includes each data source that is defined in the current [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project.  
   
  **Table/View Name**  
  Select a table or view that is available in the currently selected data source.  

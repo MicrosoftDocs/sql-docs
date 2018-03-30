@@ -28,7 +28,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Data Type Mapping in Rowsets and Parameters
-  In rowsets and as parameter values, the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider represents [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data by using the following OLE DB defined data types, reported in the functions **IColumnsInfo::GetColumnInfo** and **ICommandWithParameters::GetParameterInfo**.  
+  In rowsets and as parameter values, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider represents [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data by using the following OLE DB defined data types, reported in the functions **IColumnsInfo::GetColumnInfo** and **ICommandWithParameters::GetParameterInfo**.  
   
 |SQL Server data type|OLE DB data type|  
 |--------------------------|----------------------|  
@@ -62,9 +62,9 @@ manager: "jhubbard"
 |**varchar**|DBTYPE_STR|  
 |**XML**|DBTYPE_XML|  
   
- The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider supports consumer-requested data conversions as shown in the illustration.  
+ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider supports consumer-requested data conversions as shown in the illustration.  
   
- The **sql_variant** objects can hold data of any [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data type except text, ntext, image, varchar(max), nvarchar(max), varbinary(max), xml, timestamp, and Microsoft .NET Framework common language runtime (CLR) user-defined types. An instance of sql_variant data also cannot have sql_variant as its underlying base data type. For example, the column can contain **smallint** values for some rows, **float** values for other rows, and **char**/**nchar** values in the remainder.  
+ The **sql_variant** objects can hold data of any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type except text, ntext, image, varchar(max), nvarchar(max), varbinary(max), xml, timestamp, and Microsoft .NET Framework common language runtime (CLR) user-defined types. An instance of sql_variant data also cannot have sql_variant as its underlying base data type. For example, the column can contain **smallint** values for some rows, **float** values for other rows, and **char**/**nchar** values in the remainder.  
   
 > [!NOTE]  
 >  The **sql_variant** data type is similar to the Variant data type in Microsoft Visual Basic® and the DBTYPE_VARIANT, DBTYPE_SQLVARIANT in OLEDB.  
@@ -72,7 +72,7 @@ manager: "jhubbard"
  When **sql_variant** data is fetched as DBTYPE_VARIANT, it is put in a VARIANT structure in the buffer. But the subtypes in the VARIANT structure may not map to subtypes defined in the **sql_variant** data type. The **sql_variant** data must then be fetched as DBTYPE_SQLVARIANT in order for all the subtypes to match.  
   
 ## DBTYPE_SQLVARIANT Data Type  
- To support the **sql_variant** data type, the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider exposes a provider-specific data type called DBTYPE_SQLVARIANT. When **sql_variant** data is fetched in as DBTYPE_SQLVARIANT, it is stored in a provider-specific SSVARIANT structure. The SSVARIANT structure contains all of the subtypes that match the subtypes of the **sql_variant** data type.  
+ To support the **sql_variant** data type, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider exposes a provider-specific data type called DBTYPE_SQLVARIANT. When **sql_variant** data is fetched in as DBTYPE_SQLVARIANT, it is stored in a provider-specific SSVARIANT structure. The SSVARIANT structure contains all of the subtypes that match the subtypes of the **sql_variant** data type.  
   
  The session property SSPROP_ALLOWNATIVEVARIANT must also be set to TRUE.  
   

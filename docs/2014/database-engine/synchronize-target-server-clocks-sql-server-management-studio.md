@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Synchronize Target Server Clocks (SQL Server Management Studio)
-  This topic describes how to synchronize target server clocks in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] with the master server clock by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Synchronizing these system clocks supports your job schedules.  
+  This topic describes how to synchronize target server clocks in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] with the master server clock by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)]. Synchronizing these system clocks supports your job schedules.  
   
  **In This Topic**  
   
@@ -67,7 +67,7 @@ manager: "jhubbard"
   
 #### To synchronize target server clocks  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -82,6 +82,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [sp_resync_targetserver &#40;Transact-SQL&#41;](../Topic/sp_resync_targetserver%20\(Transact-SQL\).md).  
+ For more information, see [sp_resync_targetserver &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql.md).  
   
   

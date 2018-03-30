@@ -16,7 +16,7 @@ ms.author: "sstein"
 manager: "jhubbard"
 ---
 # Memory-Optimized Table Variables
-  In addition to memory-optimized tables (for efficient data access) and natively compiled stored procedures (for efficient query processing and business logic execution) [!INCLUDE[hek_2](../../includes/hek-2-md.md)] introduces a third kind of object: the memory-optimized table type. A table variable created using a memory-optimized table type is a memory-optimized table variable.  
+  In addition to memory-optimized tables (for efficient data access) and natively compiled stored procedures (for efficient query processing and business logic execution) [!INCLUDE[hek_2](../includes/hek-2-md.md)] introduces a third kind of object: the memory-optimized table type. A table variable created using a memory-optimized table type is a memory-optimized table variable.  
   
  Memory-optimized table variables offer the following advantages when compared to disk-based table variables:  
   
@@ -34,7 +34,7 @@ manager: "jhubbard"
   
 -   Table variables can be used to simulate cursors in natively compiled stored procedures, which can help you work around surface area limitations in natively compiled stored procedures.  
   
- Like memory-optimized tables, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generates a DLL for each memory-optimized table type. (Compilation is invoked when the memory-optimized table type is created and not when used to create memory-optimized table variables.) This DLL includes the functions for accessing indexes and retrieving data from the table variables. When a memory-optimized table variable is declared based on the table type, an instance of the table and index structures corresponding to the table type is created in the user session. The table variable can then be used in the same way as disk-based table variables. You can insert, update, and delete rows in the table variable, and you can use the variables in [!INCLUDE[tsql](../../includes/tsql-md.md)] queries. You can also pass the variables into natively compiled and interpreted stored procedures, as table-valued parameters (TVP).  
+ Like memory-optimized tables, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] generates a DLL for each memory-optimized table type. (Compilation is invoked when the memory-optimized table type is created and not when used to create memory-optimized table variables.) This DLL includes the functions for accessing indexes and retrieving data from the table variables. When a memory-optimized table variable is declared based on the table type, an instance of the table and index structures corresponding to the table type is created in the user session. The table variable can then be used in the same way as disk-based table variables. You can insert, update, and delete rows in the table variable, and you can use the variables in [!INCLUDE[tsql](../includes/tsql-md.md)] queries. You can also pass the variables into natively compiled and interpreted stored procedures, as table-valued parameters (TVP).  
   
  The following sample shows a memory-optimized table type from the AdventureWorks-based In-Memory OLTP sample ([SQL Server 2014 In-Memory OLTP Sample](https://msftdbprodsamples.codeplex.com/releases/view/114491)).  
   
@@ -64,7 +64,7 @@ WITH ( MEMORY_OPTIMIZED = ON );
   
      For a hash index, the bucket count should be about one to two times the number of expected unique index keys. For more information, see [Determining the Correct Bucket Count for Hash Indexes](../../2014/database-engine/determining-the-correct-bucket-count-for-hash-indexes.md).  
   
--   The data type and constraint restrictions on memory-optimized tables also apply to memory-optimized table types. For example, in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] default constraints are supported, but check constraints are not.  
+-   The data type and constraint restrictions on memory-optimized tables also apply to memory-optimized table types. For example, in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] default constraints are supported, but check constraints are not.  
   
  Like memory-optimized tables, memory-optimized table variables,  
   

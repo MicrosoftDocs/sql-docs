@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 0140478a-8046-42da-a7af-caca69ca2f66
 caps.latest.revision: 10
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Delete Rows Dialog Box

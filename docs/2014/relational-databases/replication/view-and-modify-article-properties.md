@@ -23,11 +23,11 @@ helpviewer_keywords:
 ms.assetid: e71831fa-3d39-4e4a-9706-4d3a497082cc
 caps.latest.revision: 36
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # View and Modify Article Properties
-  This topic describes how to view and modify article properties in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or Replication Management Objects (RMO).  
+  This topic describes how to view and modify article properties in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or Replication Management Objects (RMO).  
   
  **In This Topic**  
   
@@ -56,7 +56,7 @@ manager: "jhubbard"
 -   After a publication is created, some property changes require a new snapshot. If a publication has subscriptions, some changes also require all subscriptions to be reinitialized. For more information, see [Change Publication and Article Properties](../../../2014/relational-databases/replication/change-publication-and-article-properties.md) and [Add Articles to and Drop Articles from Existing Publications](../../../2014/relational-databases/replication/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
- View and modify article properties in the **Publication Properties - \<Publication>** dialog box, which is available in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] and Replication Monitor. For information about starting Replication Monitor, see [Start the Replication Monitor](../../../2014/relational-databases/replication/start-the-replication-monitor.md).  
+ View and modify article properties in the **Publication Properties - \<Publication>** dialog box, which is available in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and Replication Monitor. For information about starting Replication Monitor, see [Start the Replication Monitor](../../../2014/relational-databases/replication/start-the-replication-monitor.md).  
   
 -   The **General** page includes the publication name and description, the database name, the type of publication, and the subscription expiration settings.  
   
@@ -100,26 +100,26 @@ manager: "jhubbard"
   
 #### To view the properties of an article belonging to a snapshot or transactional publication  
   
-1.  Execute [sp_helparticle](../Topic/sp_helparticle%20\(Transact-SQL\).md), specifying the name of the publication for the **@publication** parameter and the name of the article for the **@article** parameter. If you do not specify **@article**, information will be returned for all articles in the publication.  
+1.  Execute [sp_helparticle](~/relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md), specifying the name of the publication for the **@publication** parameter and the name of the article for the **@article** parameter. If you do not specify **@article**, information will be returned for all articles in the publication.  
   
-2.  Execute [sp_helparticlecolumns](../Topic/sp_helparticlecolumns%20\(Transact-SQL\).md) for table articles to list all columns available in the base table.  
+2.  Execute [sp_helparticlecolumns](~/relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md) for table articles to list all columns available in the base table.  
   
 #### To modify the properties of an article belonging to a snapshot or transactional publication  
   
-1.  Execute [sp_changearticle](../Topic/sp_changearticle%20\(Transact-SQL\).md), specifying the article property being changed in the **@property** parameter and the new value of this property in the **@value** parameter.  
+1.  Execute [sp_changearticle](~/relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md), specifying the article property being changed in the **@property** parameter and the new value of this property in the **@value** parameter.  
   
     > [!NOTE]  
     >  If the change requires the generation of a new snapshot, you must also specify a value of **1** for **@force_invalidate_snapshot**, and if the change requires that Subscribers be reinitialized, you must also specify a value of **1** for **@force_reinit_subscription**. For more information on the properties that, when changed, require a new snapshot or reinitialization, see [Change Publication and Article Properties](../../../2014/relational-databases/replication/change-publication-and-article-properties.md).  
   
 #### To view the properties of an article belonging to a merge publication  
   
-1.  Execute [sp_helpmergearticle](../Topic/sp_helpmergearticle%20\(Transact-SQL\).md), specifying the name of the publication for the **@publication** parameter and the name of the article for the **@article** parameter. If you do not specify these parameters, information will be returned for all articles in a publication or at the publisher.  
+1.  Execute [sp_helpmergearticle](~/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md), specifying the name of the publication for the **@publication** parameter and the name of the article for the **@article** parameter. If you do not specify these parameters, information will be returned for all articles in a publication or at the publisher.  
   
-2.  Execute [sp_helpmergearticlecolumn](../Topic/sp_helpmergearticlecolumn%20\(Transact-SQL\).md) for table articles to list all columns available in the base table.  
+2.  Execute [sp_helpmergearticlecolumn](~/relational-databases/system-stored-procedures/sp-helpmergearticlecolumn-transact-sql.md) for table articles to list all columns available in the base table.  
   
 #### To modify the properties of an article belonging to a merge publication  
   
-1.  Execute [sp_changemergearticle](../Topic/sp_changemergearticle%20\(Transact-SQL\).md), specifying the article property being changed in the **@property** parameter and the new value of this property in the **@value** parameter.  
+1.  Execute [sp_changemergearticle](~/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), specifying the article property being changed in the **@property** parameter and the new value of this property in the **@value** parameter.  
   
     > [!NOTE]  
     >  If the change requires the generation of a new snapshot, you must also specify a value of **1** for **@force_invalidate_snapshot**, and if the change requires that Subscribers be reinitialized, you must also specify a value of **1** for **@force_reinit_subscription**. For more information on the properties that, when changed, require a new snapshot or reinitialization, see [Change Publication and Article Properties](../../../2014/relational-databases/replication/change-publication-and-article-properties.md).  
@@ -127,19 +127,19 @@ manager: "jhubbard"
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
  This transactional replication example returns the properties of the published article.  
   
- [!code-sql[HowTo#sp_helptranarticle](../../../snippets/tsql/SQL15/replication/howto/tsql/changetranart.sql#sp_helptranarticle)]  
+ [!code-sql[HowTo#sp_helptranarticle](../../snippets/tsql/SQL15/replication/howto/tsql/changetranart.sql#sp_helptranarticle)]  
   
  This transactional replication example changes the schema options for the published article.  
   
- [!code-sql[HowTo#sp_changetranarticle](../../../snippets/tsql/SQL15/replication/howto/tsql/changetranart.sql#sp_changetranarticle)]  
+ [!code-sql[HowTo#sp_changetranarticle](../../snippets/tsql/SQL15/replication/howto/tsql/changetranart.sql#sp_changetranarticle)]  
   
  This merge replication example returns the properties of the published article.  
   
- [!code-sql[HowTo#sp_helpmergearticle](../../../snippets/tsql/SQL15/replication/howto/tsql/changemergeart.sql#sp_helpmergearticle)]  
+ [!code-sql[HowTo#sp_helpmergearticle](../../snippets/tsql/SQL15/replication/howto/tsql/changemergeart.sql#sp_helpmergearticle)]  
   
  This merge replication example changes the conflict detection settings for a published article.  
   
- [!code-sql[HowTo#sp_changemergearticle](../../../snippets/tsql/SQL15/replication/howto/tsql/changemergeart.sql#sp_changemergearticle)]  
+ [!code-sql[HowTo#sp_changemergearticle](../../snippets/tsql/SQL15/replication/howto/tsql/changemergeart.sql#sp_changemergearticle)]  
   
 ##  <a name="RMOProcedure"></a> Using Replication Management Objects (RMO)  
  You can modify articles and access their properties programmatically by using Replication Management Objects (RMO). The RMO classes you use to view or modify article properties depend on the type of publication to which the article belongs.  
@@ -179,9 +179,9 @@ manager: "jhubbard"
 ###  <a name="PShellExample"></a> Example (RMO)  
  This example changes a merge article to specify the business logic handler used by the article.  
   
- [!code-csharp[HowTo#rmo_ChangeMergeArticle_BLH](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_changemergearticle_blh)]  
+ [!code-csharp[HowTo#rmo_ChangeMergeArticle_BLH](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_changemergearticle_blh)]  
   
- [!code-vb[HowTo#rmo_vb_ChangeMergeArticle_BLH](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_changemergearticle_blh)]  
+ [!code-vb[HowTo#rmo_vb_ChangeMergeArticle_BLH](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_changemergearticle_blh)]  
   
 ## See Also  
  [Implement a Business Logic Handler for a Merge Article](../../../2014/relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   

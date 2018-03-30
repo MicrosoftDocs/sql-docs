@@ -21,7 +21,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Delete a Job Step Log
-  This topic describes how to delete a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job step log.  
+  This topic describes how to delete a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent job step log.  
   
 -   **Before you begin:**  
   
@@ -51,7 +51,7 @@ manager: "jhubbard"
   
 #### To delete a SQL Server Agent job step log  
   
-1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], and then expand that instance.  
+1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], and then expand that instance.  
   
 2.  Expand **SQL Server Agent**, expand **Jobs**, right-click the job you want to modify, and then click **Properties**.  
   
@@ -61,7 +61,7 @@ manager: "jhubbard"
   
 #### To delete a SQL Server Agent job step log  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -78,7 +78,7 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [sp_delete_jobsteplog &#40;Transact-SQL&#41;](../Topic/sp_delete_jobsteplog%20\(Transact-SQL\).md).  
+ For more information, see [sp_delete_jobsteplog &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql.md).  
   
 ##  <a name="SMO"></a> Using SQL Server Management Objects  
  Use the `DeleteJobStepLogs` methods of the `Job` class by using a programming language that you choose, such as Visual Basic, Visual C#, or PowerShell. For more information, see[SQL Server Management Objects (SMO)](http://msdn.microsoft.com/library/ms162169.aspx).  

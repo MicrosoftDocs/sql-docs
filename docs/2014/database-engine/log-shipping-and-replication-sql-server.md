@@ -39,7 +39,7 @@ manager: "jhubbard"
   
 -   The installation path for the secondary server instance must be the same as the primary. User database locations on the secondary server must be the same as on the primary.  
   
--   Back up the service master key at the primary. This key will be restored at the secondary. For more information, see [BACKUP SERVICE MASTER KEY &#40;Transact-SQL&#41;](../Topic/BACKUP%20SERVICE%20MASTER%20KEY%20\(Transact-SQL\).md).  
+-   Back up the service master key at the primary. This key will be restored at the secondary. For more information, see [BACKUP SERVICE MASTER KEY &#40;Transact-SQL&#41;](~/t-sql/statements/backup-service-master-key-transact-sql.md).  
   
 -   Log shipping does not guarantee against data loss. A failure on the primary database can result in the loss of data that has not yet been backed up or for backups that are lost during the failure.  
   
@@ -50,37 +50,37 @@ manager: "jhubbard"
   
  **To configure transactional replication and log shipping with the sync with backup option**  
   
-1.  If the sync with backup option is not set on the publication database, execute `sp_replicationdboption '<publicationdatabasename>', 'sync with backup', 'true'`. For more information, see [sp_replicationdboption &#40;Transact-SQL&#41;](../Topic/sp_replicationdboption%20\(Transact-SQL\).md).  
+1.  If the sync with backup option is not set on the publication database, execute `sp_replicationdboption '<publicationdatabasename>', 'sync with backup', 'true'`. For more information, see [sp_replicationdboption &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md).  
   
 2.  Configure log shipping for the publication database. For more information, see [Configure Log Shipping &#40;SQL Server&#41;](../../2014/database-engine/configure-log-shipping-sql-server.md).  
   
-3.  If the Publisher fails, restore the last log of the database to the secondary server, using the KEEP_REPLICATION option of RESTORE LOG. This retains all replication settings for the database. For more information, see [Fail Over to a Log Shipping Secondary &#40;SQL Server&#41;](../../2014/database-engine/fail-over-to-a-log-shipping-secondary-sql-server.md) and [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md).  
+3.  If the Publisher fails, restore the last log of the database to the secondary server, using the KEEP_REPLICATION option of RESTORE LOG. This retains all replication settings for the database. For more information, see [Fail Over to a Log Shipping Secondary &#40;SQL Server&#41;](../../2014/database-engine/fail-over-to-a-log-shipping-secondary-sql-server.md) and [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md).  
   
 4.  Restore the **msdb** database and **master** databases from the primary to the secondary. For more information, see [Back Up and Restore of System Databases &#40;SQL Server&#41;](../../2014/database-engine/back-up-and-restore-of-system-databases-sql-server.md). If the primary was also a Distributor, restore the distribution database from the primary to the secondary.  
   
      These databases must be consistent with the publication database at the primary in terms of replication configuration and settings.  
   
-5.  At the secondary server, rename the computer and then rename the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance to match the primary server name. For information about renaming the computer, see the Windows documentation. For information about renaming the server, see [Rename a Computer that Hosts a Stand-Alone Instance of SQL Server](../../2014/sql-server/install/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md) and [Rename a SQL Server Failover Cluster Instance](../../2014/sql-server/install/rename-a-sql-server-failover-cluster-instance.md).  
+5.  At the secondary server, rename the computer and then rename the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance to match the primary server name. For information about renaming the computer, see the Windows documentation. For information about renaming the server, see [Rename a Computer that Hosts a Stand-Alone Instance of SQL Server](../../2014/sql-server/install/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md) and [Rename a SQL Server Failover Cluster Instance](../../2014/sql-server/install/rename-a-sql-server-failover-cluster-instance.md).  
   
-6.  At the secondary server, restore the service master key that was backed up from the primary. For more information, see [RESTORE SERVICE MASTER KEY &#40;Transact-SQL&#41;](../Topic/RESTORE%20SERVICE%20MASTER%20KEY%20\(Transact-SQL\).md).  
+6.  At the secondary server, restore the service master key that was backed up from the primary. For more information, see [RESTORE SERVICE MASTER KEY &#40;Transact-SQL&#41;](~/t-sql/statements/restore-service-master-key-transact-sql.md).  
   
  **To configure transactional replication and log shipping without the sync with backup option**  
   
 1.  Configure log shipping for the publication database. For more information, see [Configure Log Shipping &#40;SQL Server&#41;](../../2014/database-engine/configure-log-shipping-sql-server.md).  
   
-2.  If the Publisher fails, restore the last log of the database to the secondary server, using the KEEP_REPLICATION option of RESTORE LOG. This retains all replication settings for the database. For more information, see [Fail Over to a Log Shipping Secondary &#40;SQL Server&#41;](../../2014/database-engine/fail-over-to-a-log-shipping-secondary-sql-server.md) and [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md).  
+2.  If the Publisher fails, restore the last log of the database to the secondary server, using the KEEP_REPLICATION option of RESTORE LOG. This retains all replication settings for the database. For more information, see [Fail Over to a Log Shipping Secondary &#40;SQL Server&#41;](../../2014/database-engine/fail-over-to-a-log-shipping-secondary-sql-server.md) and [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md).  
   
 3.  Restore the **msdb** database and **master** databases from the primary to the secondary. For more information, see [Back Up and Restore of System Databases &#40;SQL Server&#41;](../../2014/database-engine/back-up-and-restore-of-system-databases-sql-server.md). If the primary was also a Distributor, restore the distribution database from the primary to the secondary.  
   
      These databases must be consistent with the publication database at the primary in terms of replication configuration and settings.  
   
-4.  At the secondary server, rename the computer and then rename the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance to match the primary server name. For information about renaming the computer, see the Windows documentation. For information about renaming the server, see [Rename a Computer that Hosts a Stand-Alone Instance of SQL Server](../../2014/sql-server/install/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md) and [Rename a SQL Server Failover Cluster Instance](../../2014/sql-server/install/rename-a-sql-server-failover-cluster-instance.md).  
+4.  At the secondary server, rename the computer and then rename the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance to match the primary server name. For information about renaming the computer, see the Windows documentation. For information about renaming the server, see [Rename a Computer that Hosts a Stand-Alone Instance of SQL Server](../../2014/sql-server/install/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md) and [Rename a SQL Server Failover Cluster Instance](../../2014/sql-server/install/rename-a-sql-server-failover-cluster-instance.md).  
   
      You might receive an error message from the Log Reader Agent that the publication database and the distribution database are not synchronized.  
   
-5.  At the secondary server, restore the service master key that was backed up from the primary. For more information, see [RESTORE SERVICE MASTER KEY &#40;Transact-SQL&#41;](../Topic/RESTORE%20SERVICE%20MASTER%20KEY%20\(Transact-SQL\).md).  
+5.  At the secondary server, restore the service master key that was backed up from the primary. For more information, see [RESTORE SERVICE MASTER KEY &#40;Transact-SQL&#41;](~/t-sql/statements/restore-service-master-key-transact-sql.md).  
   
-6.  Execute **sp_replrestart**. This stored procedure can be used to force the Log Reader Agent to ignore all the previous replicated transactions in the publication database log. Transactions applied after the completion of the stored procedure are processed by the Log Reader Agent. For more information, see [sp_replrestart &#40;Transact-SQL&#41;](../Topic/sp_replrestart%20\(Transact-SQL\).md).  
+6.  Execute **sp_replrestart**. This stored procedure can be used to force the Log Reader Agent to ignore all the previous replicated transactions in the publication database log. Transactions applied after the completion of the stored procedure are processed by the Log Reader Agent. For more information, see [sp_replrestart &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-replrestart-transact-sql.md).  
   
 7.  Restart the Log Reader Agent after the stored procedure executes successfully. For more information, see [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../2014/relational-databases/replication/start-and-stop-a-replication-agent-sql-server-management-studio.md).  
   
@@ -93,15 +93,15 @@ manager: "jhubbard"
   
 1.  Configure log shipping for the publication database. For more information, see [Configure Log Shipping &#40;SQL Server&#41;](../../2014/database-engine/configure-log-shipping-sql-server.md).  
   
-2.  If the Publisher fails, at the secondary server, rename the computer and then rename the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance to match the primary server name. For information about renaming the computer, see the Windows documentation. For information about renaming the server, see [Rename a Computer that Hosts a Stand-Alone Instance of SQL Server](../../2014/sql-server/install/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md) and [Rename a SQL Server Failover Cluster Instance](../../2014/sql-server/install/rename-a-sql-server-failover-cluster-instance.md).  
+2.  If the Publisher fails, at the secondary server, rename the computer and then rename the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance to match the primary server name. For information about renaming the computer, see the Windows documentation. For information about renaming the server, see [Rename a Computer that Hosts a Stand-Alone Instance of SQL Server](../../2014/sql-server/install/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md) and [Rename a SQL Server Failover Cluster Instance](../../2014/sql-server/install/rename-a-sql-server-failover-cluster-instance.md).  
   
-3.  Restore the last log of the database to the secondary server, using the KEEP_REPLICATION option of RESTORE LOG. This retains all replication settings for the database. For more information, see [Fail Over to a Log Shipping Secondary &#40;SQL Server&#41;](../../2014/database-engine/fail-over-to-a-log-shipping-secondary-sql-server.md) and [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md).  
+3.  Restore the last log of the database to the secondary server, using the KEEP_REPLICATION option of RESTORE LOG. This retains all replication settings for the database. For more information, see [Fail Over to a Log Shipping Secondary &#40;SQL Server&#41;](../../2014/database-engine/fail-over-to-a-log-shipping-secondary-sql-server.md) and [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md).  
   
 4.  Restore the **msdb** database and **master** databases from the primary to the secondary. For more information, see [Back Up and Restore of System Databases &#40;SQL Server&#41;](../../2014/database-engine/back-up-and-restore-of-system-databases-sql-server.md). If the primary was also a Distributor, restore the distribution database from the primary to the secondary.  
   
      These databases must be consistent with the publication database at the primary in terms of replication configuration and settings.  
   
-5.  At the secondary server, restore the service master key that was backed up from the primary. For more information, see [RESTORE SERVICE MASTER KEY &#40;Transact-SQL&#41;](../Topic/RESTORE%20SERVICE%20MASTER%20KEY%20\(Transact-SQL\).md).  
+5.  At the secondary server, restore the service master key that was backed up from the primary. For more information, see [RESTORE SERVICE MASTER KEY &#40;Transact-SQL&#41;](~/t-sql/statements/restore-service-master-key-transact-sql.md).  
   
 6.  Synchronize the publication database with one or more subscription databases. This allows you to upload those changes made previously in the publication database, but not represented in the restored backup. The data that can be uploaded depends on the way in which a publication is filtered:  
   
@@ -109,7 +109,7 @@ manager: "jhubbard"
   
     -   If the publication is filtered, you might not be able to bring the publication database up-to-date. Consider a table that is partitioned such that each subscription receives customer data only for a single region: North, East, South, and West. If there is at least one Subscriber for each partition of data, synchronizing with a Subscriber for each partition should bring the publication database up-to-date. However, if data in the West partition, for example, was not replicated to any Subscribers, this data at the Publisher cannot be brought up-to-date. In this case, we recommend reinitializing all subscriptions so that the data at the Publisher and Subscribers converges. For more information, see [Reinitialize Subscriptions](../../2014/relational-databases/replication/reinitialize-subscriptions.md).  
   
-     If you synchronize with a Subscriber that is running a version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prior to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], the subscription cannot be anonymous; it must be a client subscription or server subscription (referred to as local subscriptions and global subscriptions in previous releases). For more information, see [Synchronize Data](../../2014/relational-databases/replication/synchronize-data.md).  
+     If you synchronize with a Subscriber that is running a version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prior to [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], the subscription cannot be anonymous; it must be a client subscription or server subscription (referred to as local subscriptions and global subscriptions in previous releases). For more information, see [Synchronize Data](../../2014/relational-databases/replication/synchronize-data.md).  
   
 ## See Also  
  [Replication Features and Tasks](../../2014/relational-databases/replication/replication-features-and-tasks.md)   

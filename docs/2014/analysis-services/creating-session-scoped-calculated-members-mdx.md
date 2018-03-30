@@ -19,7 +19,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Creating Session-Scoped Calculated Members (MDX)
-  To create a calculated member that is available throughout a Multidimensional Expressions (MDX) session, you use the [CREATE MEMBER](../Topic/CREATE%20MEMBER%20Statement%20\(MDX\).md) statement. A calculated member that is created by using the CREATE MEMBER statement will not be removed until after the MDX session closes.  
+  To create a calculated member that is available throughout a Multidimensional Expressions (MDX) session, you use the [CREATE MEMBER](~/mdx/mdx-data-definition-create-member.md) statement. A calculated member that is created by using the CREATE MEMBER statement will not be removed until after the MDX session closes.  
   
  As discussed in this topic, the syntax of the CREATE MEMBER statement is straightforward and easy to use.  
   

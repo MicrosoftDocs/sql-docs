@@ -30,38 +30,38 @@ manager: "jhubbard"
 >  The examples in this topic require the FILESTREAM-enabled database and table that are created in [Create a FILESTREAM-Enabled Database](../../2014/database-engine/create-a-filestream-enabled-database.md) and [Create a Table for Storing FILESTREAM Data](../../2014/database-engine/create-a-table-for-storing-filestream-data.md).  
   
 ##  <a name="func"></a> Functions for Working with FILESTREAM Data  
- When you use FILESTREAM to store binary large object (BLOB) data, you can use Win32 APIs to work with the files. To support working with FILESTREAM BLOB data in Win32 applications, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the following functions and API:  
+ When you use FILESTREAM to store binary large object (BLOB) data, you can use Win32 APIs to work with the files. To support working with FILESTREAM BLOB data in Win32 applications, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provides the following functions and API:  
   
--   [PathName](../Topic/PathName%20\(Transact-SQL\).md) returns a path as a token to a BLOB. An application uses this token to obtain a Win32 handle and operate on BLOB data.  
+-   [PathName](~/relational-databases/system-functions/pathname-transact-sql.md) returns a path as a token to a BLOB. An application uses this token to obtain a Win32 handle and operate on BLOB data.  
   
      When the database that contains FILESTREAM data belongs to an AlwaysOn availability group, then the PathName function returns a virtual network name (VNN) instead of a computer name.  
   
--   [GET_FILESTREAM_TRANSACTION_CONTEXT()](../Topic/GET_FILESTREAM_TRANSACTION_CONTEXT%20\(Transact-SQL\).md) returns a token that represents the current transaction of a session. An application uses this token to bind FILESTREAM file system streaming operations to the transaction.  
+-   [GET_FILESTREAM_TRANSACTION_CONTEXT()](~/t-sql/functions/get-filestream-transaction-context-transact-sql.md) returns a token that represents the current transaction of a session. An application uses this token to bind FILESTREAM file system streaming operations to the transaction.  
   
 -   The [OpenSqlFilestream API](../../2014/database-engine/access-filestream-data-with-opensqlfilestream.md) obtains a Win32 file handle. The application uses the handle to stream the FILESTREAM data, and can then pass the handle to the following Win32 APIs: [ReadFile](http://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](http://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](http://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](http://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](http://go.microsoft.com/fwlink/?LinkId=86426), or [FlushFileBuffers](http://go.microsoft.com/fwlink/?LinkId=86427). If the application calls any other API by using the handle, an ERROR_ACCESS_DENIED error is returned. The application should close the handle by using [CloseHandle](http://go.microsoft.com/fwlink/?LinkId=86428).  
   
- All FILESTREAM data container access is performed in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transaction. [!INCLUDE[tsql](../../includes/tsql-md.md)] statements can be executed in the same transaction to maintain consistency between SQL data and FILESTREAM data.  
+ All FILESTREAM data container access is performed in a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] transaction. [!INCLUDE[tsql](../includes/tsql-md.md)] statements can be executed in the same transaction to maintain consistency between SQL data and FILESTREAM data.  
   
 ##  <a name="steps"></a> Steps for Accessing FILESTREAM Data  
   
 ###  <a name="path"></a> Reading the FILESTREAM File Path  
- Each cell in a FILESTREAM table has a file path that is associated with it. To read the path, use the `PathName` property of a `varbinary(max)` column in a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement. The following example shows how to read the file path of a `varbinary(max)` column.  
+ Each cell in a FILESTREAM table has a file path that is associated with it. To read the path, use the `PathName` property of a `varbinary(max)` column in a [!INCLUDE[tsql](../includes/tsql-md.md)] statement. The following example shows how to read the file path of a `varbinary(max)` column.  
   
- [!code-sql[FILESTREAM#FS_PathName](../../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_pathname)]  
+ [!code-sql[FILESTREAM#FS_PathName](../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_pathname)]  
   
 ###  <a name="trx"></a> Reading the Transaction Context  
- To obtain the current transaction context, use the [!INCLUDE[tsql](../../includes/tsql-md.md)] [GET_FILESTREAM_TRANSACTION_CONTEXT()](../Topic/GET_FILESTREAM_TRANSACTION_CONTEXT%20\(Transact-SQL\).md) function. The following example shows how to begin a transaction and read the current transaction context.  
+ To obtain the current transaction context, use the [!INCLUDE[tsql](../includes/tsql-md.md)] [GET_FILESTREAM_TRANSACTION_CONTEXT()](~/t-sql/functions/get-filestream-transaction-context-transact-sql.md) function. The following example shows how to begin a transaction and read the current transaction context.  
   
- [!code-sql[FILESTREAM#FS_GET_TRANSACTION_CONTEXT](../../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_get_transaction_context)]  
+ [!code-sql[FILESTREAM#FS_GET_TRANSACTION_CONTEXT](../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_get_transaction_context)]  
   
 ###  <a name="handle"></a> Obtaining a Win32 File Handle  
  To obtain a Win32 file handle, call the OpenSqlFilestream API. This API is exported from the sqlncli.dll file. The returned handle can be passed to any of the following Win32 APIs: [ReadFile](http://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](http://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](http://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](http://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](http://go.microsoft.com/fwlink/?LinkId=86426), or [FlushFileBuffers](http://go.microsoft.com/fwlink/?LinkId=86427). The following examples show you how to obtain a Win32 File handle and use it to read and write data to a FILESTREAM BLOB.  
   
- [!code-csharp[FILESTREAM#FS_CS_ReadAndWriteBLOB](../../snippets/csharp/SQL15/tsql/filestream/cs/filestream.cs#fs_cs_readandwriteblob)]  
+ [!code-csharp[FILESTREAM#FS_CS_ReadAndWriteBLOB](../snippets/tsql/SQL15/tsql/filestream/cs/filestream.cs#fs_cs_readandwriteblob)]  
   
- [!code-vb[FILESTREAM#FS_VB_ReadAndWriteBLOB](../../snippets/visualbasic/SQL15/tsql/filestream/vb/filestream.vb#fs_vb_readandwriteblob)]  
+ [!code-vb[FILESTREAM#FS_VB_ReadAndWriteBLOB](../snippets/tsql/SQL15/tsql/filestream/vb/filestream.vb#fs_vb_readandwriteblob)]  
   
- [!code-cpp[FILESTREAM#FS_CPP_WriteBLOB](../../snippets/cpp/SQL15/tsql/filestream/cpp/filestream.cpp#fs_cpp_writeblob)]  
+ [!code-cpp[FILESTREAM#FS_CPP_WriteBLOB](../snippets/tsql/SQL15/tsql/filestream/cpp/filestream.cpp#fs_cpp_writeblob)]  
   
 ##  <a name="best"></a> Best Practices for Application Design and Implementation  
   
@@ -73,13 +73,13 @@ manager: "jhubbard"
   
 -   In applications that use replication, use NEWSEQUENTIALID() instead of NEWID(). NEWSEQUENTIALID() performs better than NEWID() for GUID generation in these applications.  
   
--   The FILESTREAM API is designed for Win32 streaming access to data. Avoid using [!INCLUDE[tsql](../../includes/tsql-md.md)] to read or write FILESTREAM binary large objects (BLOBs) that are larger than 2 MB. If you must read or write BLOB data from [!INCLUDE[tsql](../../includes/tsql-md.md)], make sure that all BLOB data is consumed before you try to open the FILESTREAM BLOB from Win32. Failure to consume all the [!INCLUDE[tsql](../../includes/tsql-md.md)] data might cause any successive FILESTREAM open or close operations to fail.  
+-   The FILESTREAM API is designed for Win32 streaming access to data. Avoid using [!INCLUDE[tsql](../includes/tsql-md.md)] to read or write FILESTREAM binary large objects (BLOBs) that are larger than 2 MB. If you must read or write BLOB data from [!INCLUDE[tsql](../includes/tsql-md.md)], make sure that all BLOB data is consumed before you try to open the FILESTREAM BLOB from Win32. Failure to consume all the [!INCLUDE[tsql](../includes/tsql-md.md)] data might cause any successive FILESTREAM open or close operations to fail.  
   
--   Avoid [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that update, append or prepend data to the FILESTREAM BLOB. This causes the BLOB data to be spooled into the tempdb database and then back into a new physical file.  
+-   Avoid [!INCLUDE[tsql](../includes/tsql-md.md)] statements that update, append or prepend data to the FILESTREAM BLOB. This causes the BLOB data to be spooled into the tempdb database and then back into a new physical file.  
   
 -   Avoid appending small BLOB updates to a FILESTREAM BLOB. Each append causes the underlying FILESTREAM files to be copied. If an application has to append small BLOBs, write the BLOBs into a `varbinary(max)` column, and then perform a single write operation to the FILESTREAM BLOB when the number of BLOBs reaches a predetermined limit.  
   
--   Avoid retrieving the data length of lots of BLOB files in an application. This is a time-consuming operation because the size is not stored in the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. If you must determine the length of a BLOB file, use the [!INCLUDE[tsql](../../includes/tsql-md.md)] DATALENGTH() function to determine the size of the BLOB if it is closed. DATALENGTH() does not open the BLOB file to determine its size.  
+-   Avoid retrieving the data length of lots of BLOB files in an application. This is a time-consuming operation because the size is not stored in the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. If you must determine the length of a BLOB file, use the [!INCLUDE[tsql](../includes/tsql-md.md)] DATALENGTH() function to determine the size of the BLOB if it is closed. DATALENGTH() does not open the BLOB file to determine its size.  
   
 -   If an application uses Message Block1 (SMB1) protocol, FILESTREAM BLOB data should be read in 60-KB multiples to optimize performance.  
   

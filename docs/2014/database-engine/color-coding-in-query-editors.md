@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 802882dc-c997-4e3f-8a01-994bb43169ae
 caps.latest.revision: 33
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Color Coding in Query Editors
@@ -32,11 +32,11 @@ manager: "jhubbard"
 |Green|System table, view, or table-valued function. Also, the system schemas sys and INFORMATION_SCHEMA.|  
 |Blue|Keyword|  
 |Teal|Line numbers or template parameter|  
-|Maroon|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stored procedure|  
+|Maroon|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] stored procedure|  
 |Dark gray|Operators|  
   
 ## Status Bar  
- You can configure registered servers or [!INCLUDE[ssDE](../../includes/ssde-md.md)] servers in Object Explorer to have different colors in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor status bar. This helps you identify which server each editor window is connected to when you have many windows open at the same time. For more information about setting status bar colors, see [Status Bar &#40;Database Engine Query Editor&#41;](../../2014/database-engine/status-bar-database-engine-query-editor.md).  
+ You can configure registered servers or [!INCLUDE[ssDE](../includes/ssde-md.md)] servers in Object Explorer to have different colors in the [!INCLUDE[ssDE](../includes/ssde-md.md)] Query Editor status bar. This helps you identify which server each editor window is connected to when you have many windows open at the same time. For more information about setting status bar colors, see [Status Bar &#40;Database Engine Query Editor&#41;](../../2014/database-engine/status-bar-database-engine-query-editor.md).  
   
  Some types of editors do not display the status bar, or do not support multiple colors.  
   

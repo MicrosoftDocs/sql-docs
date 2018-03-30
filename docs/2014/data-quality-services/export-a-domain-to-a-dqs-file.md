@@ -16,7 +16,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Export a Domain to a .dqs File
-  This topic describes how to export a domain to a .dqs file in [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS). You can export a domain or an entire knowledge base to a data file. For information about exporting a knowledge base, see [Export a Knowledge Base to a .dqs File](../../2014/data-quality-services/export-a-knowledge-base-to-a-dqs-file.md).  
+  This topic describes how to export a domain to a .dqs file in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). You can export a domain or an entire knowledge base to a data file. For information about exporting a knowledge base, see [Export a Knowledge Base to a .dqs File](../../2014/data-quality-services/export-a-knowledge-base-to-a-dqs-file.md).  
   
  Exporting a domain from one knowledge base to a .dqs data file, and then importing it to another knowledge base simplifies the knowledge generation process, saving time and effort. It enables you to share a domain and its knowledge with others.  
   
@@ -37,9 +37,9 @@ manager: "jhubbard"
 ##  <a name="Export"></a> Export a domain to a .dqs file  
  You can export from any Domain Management page. The export command is available from both a control in the user interface and from a command in the context menu of the Domain List pane.  
   
-1.  [!INCLUDE[ssDQSInitialStep](../../includes/ssdqsinitialstep-md.md)] [Run the Data Quality Client Application](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Run the Data Quality Client Application](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  In the [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] home screen, open a knowledge base in the Domain Management activity.  
+2.  In the [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] home screen, open a knowledge base in the Domain Management activity.  
   
 3.  In the **Domain Management page** (with any tab selected), select a single domain or a composite domain in the **Domain** list.  
   

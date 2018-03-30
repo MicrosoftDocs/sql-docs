@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 5ee6f19a-6dd7-4730-a91c-bbed1bd77e0b
 caps.latest.revision: 18
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Lesson 1: Converting a Table to a Hierarchical Structure
@@ -31,7 +31,7 @@ manager: "jhubbard"
 -   [Summary: Converting a Table to a Hierarchical Structure](../../2014/tutorials/summary-converting-a-table-to-a-hierarchical-structure.md)  
   
 ## Prerequisites  
- This lesson requires the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database.  
+ This lesson requires the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] sample database.  
   
 ## Next Task in Lesson  
  [Examining the Current Structure of the Employee Table](../../2014/tutorials/examining-the-current-structure-of-the-employee-table.md)  

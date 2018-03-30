@@ -28,7 +28,7 @@ manager: "jhubbard"
   
 1.  Add a reference in your managed code project to the Microsoft.ExceptionMessageBox.dll assembly.  
   
-2.  (Optional) Add a `using` (C#) or `Imports` ([!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic .NET) directive to use the <xref:Microsoft.SqlServer.MessageBox> namespace.  
+2.  (Optional) Add a `using` (C#) or `Imports` ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET) directive to use the <xref:Microsoft.SqlServer.MessageBox> namespace.  
   
 3.  Create a try-catch block to handle the anticipated exception.  
   
@@ -137,43 +137,43 @@ manager: "jhubbard"
 ## Example  
  This example uses the exception message box with only the **OK** button to display information from an application exception that includes the handled exception along with additional application-specific information.  
   
- [!code-csharp[HowTo#emb_showOKbutton](../../../snippets/csharp/SQL15/replication/howto/cs/embform.cs#emb_showokbutton)]  
+ [!code-csharp[HowTo#emb_showOKbutton](../../snippets/csharp/SQL15/replication/howto/cs/embform.cs#emb_showokbutton)]  
   
- [!code-vb[HowTo#emb_vb_showOKbutton](../../../snippets/visualbasic/SQL15/replication/howto/vb/embform.vb#emb_vb_showokbutton)]  
+ [!code-vb[HowTo#emb_vb_showOKbutton](../../snippets/visualbasic/SQL15/replication/howto/vb/embform.vb#emb_vb_showokbutton)]  
   
 ## Example  
  This example uses the exception message box with **Yes** and **No** buttons from which the user chooses.  
   
- [!code-csharp[HowTo#emb_showYesNobutton](../../../snippets/csharp/SQL15/replication/howto/cs/embform.cs#emb_showyesnobutton)]  
+ [!code-csharp[HowTo#emb_showYesNobutton](../../snippets/csharp/SQL15/replication/howto/cs/embform.cs#emb_showyesnobutton)]  
   
- [!code-vb[HowTo#emb_vb_showYesNobutton](../../../snippets/visualbasic/SQL15/replication/howto/vb/embform.vb#emb_vb_showyesnobutton)]  
+ [!code-vb[HowTo#emb_vb_showYesNobutton](../../snippets/visualbasic/SQL15/replication/howto/vb/embform.vb#emb_vb_showyesnobutton)]  
   
 ## Example  
  This example uses the exception message box with custom buttons.  
   
- [!code-csharp[HowTo#emb_showcustombutton](../../../snippets/csharp/SQL15/replication/howto/cs/embform.cs#emb_showcustombutton)]  
+ [!code-csharp[HowTo#emb_showcustombutton](../../snippets/csharp/SQL15/replication/howto/cs/embform.cs#emb_showcustombutton)]  
   
- [!code-vb[HowTo#emb_vb_showcustombutton](../../../snippets/visualbasic/SQL15/replication/howto/vb/embform.vb#emb_vb_showcustombutton)]  
+ [!code-vb[HowTo#emb_vb_showcustombutton](../../snippets/visualbasic/SQL15/replication/howto/vb/embform.vb#emb_vb_showcustombutton)]  
   
 ## Example  
  This example uses the check box to determine whether to show the exception message box.  
   
- [!code-csharp[HowTo#emb_usecheckbox](../../../snippets/csharp/SQL15/replication/howto/cs/embform.cs#emb_usecheckbox)]  
+ [!code-csharp[HowTo#emb_usecheckbox](../../snippets/csharp/SQL15/replication/howto/cs/embform.cs#emb_usecheckbox)]  
   
- [!code-vb[HowTo#emb_vb_usecheckbox](../../../snippets/visualbasic/SQL15/replication/howto/vb/embform.vb#emb_vb_usecheckbox)]  
+ [!code-vb[HowTo#emb_vb_usecheckbox](../../snippets/visualbasic/SQL15/replication/howto/vb/embform.vb#emb_vb_usecheckbox)]  
   
 ## Example  
  This example uses the check box and a registry key to determine whether to show the exception message box.  
   
- [!code-csharp[HowTo#emb_useregkey](../../../snippets/csharp/SQL15/replication/howto/cs/embform.cs#emb_useregkey)]  
+ [!code-csharp[HowTo#emb_useregkey](../../snippets/csharp/SQL15/replication/howto/cs/embform.cs#emb_useregkey)]  
   
- [!code-vb[HowTo#emb_vb_useregkey](../../../snippets/visualbasic/SQL15/replication/howto/vb/embform.vb#emb_vb_useregkey)]  
+ [!code-vb[HowTo#emb_vb_useregkey](../../snippets/visualbasic/SQL15/replication/howto/vb/embform.vb#emb_vb_useregkey)]  
   
 ## Example  
  This example uses the exception message box to show additional information that is helpful when troubleshooting or debugging.  
   
- [!code-csharp[HowTo#emb_moreinfo](../../../snippets/csharp/SQL15/replication/howto/cs/embform.cs#emb_moreinfo)]  
+ [!code-csharp[HowTo#emb_moreinfo](../../snippets/csharp/SQL15/replication/howto/cs/embform.cs#emb_moreinfo)]  
   
- [!code-vb[HowTo#emb_vb_moreinfo](../../../snippets/visualbasic/SQL15/replication/howto/vb/embform.vb#emb_vb_moreinfo)]  
+ [!code-vb[HowTo#emb_vb_moreinfo](../../snippets/visualbasic/SQL15/replication/howto/vb/embform.vb#emb_vb_moreinfo)]  
   
   

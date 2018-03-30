@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: 764bf435-3aab-4c62-b4e0-64fe020a5a95
 caps.latest.revision: 18
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Query Options Results (Grid Page)
@@ -42,7 +42,7 @@ manager: "jhubbard"
  Enter a number from 1 through 65535 to specify the maximum number of characters that will be displayed in each cell.  
   
 > [!NOTE]  
->  Specifying a large number of characters may cause data in the result set to appear truncated. The maximum number of characters displayed in each cell is dependent on the font size. When large result sets are returned, a high value in this box can cause [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to run low on memory and hinder system performance.  
+>  Specifying a large number of characters may cause data in the result set to appear truncated. The maximum number of characters displayed in each cell is dependent on the font size. When large result sets are returned, a high value in this box can cause [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to run low on memory and hinder system performance.  
   
  **XML data**:  
   

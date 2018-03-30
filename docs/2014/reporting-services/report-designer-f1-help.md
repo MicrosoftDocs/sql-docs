@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: 7c1bc931-d1ec-47fc-8f82-55560ddaf776
 caps.latest.revision: 59
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Report Designer F1 Help
-  This section provides F1 Help for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Report Designer wizards, views, and dialog boxes. Alternatively, you can open the F1 Help while working with the dialog box by pressing F1 or by clicking the Help button displayed in the dialog box.  
+  This section provides F1 Help for the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Report Designer wizards, views, and dialog boxes. Alternatively, you can open the F1 Help while working with the dialog box by pressing F1 or by clicking the Help button displayed in the dialog box.  
   
 ## See Also  
  [Feature Reference &#40;Reporting Services&#41;](../../2014/reporting-services/feature-reference-reporting-services.md)   

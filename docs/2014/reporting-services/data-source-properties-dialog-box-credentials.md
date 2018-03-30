@@ -15,7 +15,7 @@ f1_keywords:
 ms.assetid: 14c3eeb6-d37b-4fda-967b-43afcdb48119
 caps.latest.revision: 38
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Data Source Properties Dialog Box, Credentials

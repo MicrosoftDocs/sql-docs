@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: 5f3e9b65-f10e-4db2-a62c-b270ac11d04e
 caps.latest.revision: 13
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # The &lt;xsd:redefine&gt; Element
-  The W3C XSD **redefine** element provides support for redefining schema components. However, support for this directive is potentially costly to performance and also requires that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] revalidate all instances of the `xml` data type associated with the redefined schema. Therefore, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not support this element. XML schemas that include the **\<xsd:redefine>** element are rejected by the server.  
+  The W3C XSD **redefine** element provides support for redefining schema components. However, support for this directive is potentially costly to performance and also requires that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] revalidate all instances of the `xml` data type associated with the redefined schema. Therefore, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not support this element. XML schemas that include the **\<xsd:redefine>** element are rejected by the server.  
   
  To update a schema or its components, you can do the following instead:  
   

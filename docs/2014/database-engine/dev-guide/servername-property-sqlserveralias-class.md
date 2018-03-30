@@ -25,7 +25,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # ServerName Property (SqlServerAlias Class)
-  Gets the name of the instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] specified by the server connection alias.  
+  Gets the name of the instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specified by the server connection alias.  
   
 ## Syntax  
   
@@ -37,10 +37,10 @@ object
   
 ## Parts  
  *object*  
- A [SqlServerAlias Class](../../../2014/database-engine/dev-guide/sqlserveralias-class.md) object that represents a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] alias.  
+ A [SqlServerAlias Class](../../../2014/database-engine/dev-guide/sqlserveralias-class.md) object that represents a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alias.  
   
 ## Property Value/Return Value  
- A string value that specifies the name of the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] referenced by the server connection alias.  
+ A string value that specifies the name of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] referenced by the server connection alias.  
   
 ## Remarks  
   

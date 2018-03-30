@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 caps.latest.revision: 38
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Database Mirroring and Replication (SQL Server)
@@ -56,7 +56,7 @@ manager: "jhubbard"
   
     1.  We recommend using a remote Distributor. For more information about configuring distribution, see [Configure Distribution](../../2014/relational-databases/replication/configure-distribution.md).  
   
-    2.  You can enable a database for snapshot and transactional publications and/or merge publications. For mirrored databases that will contain more than one type of publication, you must enable the database for both types at the same node using [sp_replicationdboption](../Topic/sp_replicationdboption%20\(Transact-SQL\).md). For example, you could execute the following stored procedure calls at the principal:  
+    2.  You can enable a database for snapshot and transactional publications and/or merge publications. For mirrored databases that will contain more than one type of publication, you must enable the database for both types at the same node using [sp_replicationdboption](~/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md). For example, you could execute the following stored procedure calls at the principal:  
   
         ```  
         exec sp_replicationdboption @dbname='<PublicationDatabase>', @optname='publish', @value=true;  
@@ -67,7 +67,7 @@ manager: "jhubbard"
   
 2.  Configure database mirroring. For more information, see [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](../../2014/database-engine/establish-database-mirroring-session-windows-authentication.md) and [Setting Up Database Mirroring &#40;SQL Server&#41;](../../2014/database-engine/setting-up-database-mirroring-sql-server.md).  
   
-3.  Configure distribution for the mirror. Specify the mirror name as the Publisher, and specify the same Distributor and snapshot folder that the principal uses. For example, if you are configuring replication with stored procedures, execute [sp_adddistpublisher](../Topic/sp_adddistpublisher%20\(Transact-SQL\).md) at the Distributor; and then execute [sp_adddistributor](../Topic/sp_adddistributor%20\(Transact-SQL\).md) at the mirror. For **sp_adddistpublisher**:  
+3.  Configure distribution for the mirror. Specify the mirror name as the Publisher, and specify the same Distributor and snapshot folder that the principal uses. For example, if you are configuring replication with stored procedures, execute [sp_adddistpublisher](~/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) at the Distributor; and then execute [sp_adddistributor](~/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md) at the mirror. For **sp_adddistpublisher**:  
   
     -   Set the value of the **@publisher** parameter to the network name of the mirror.  
   
@@ -83,7 +83,7 @@ manager: "jhubbard"
   
     -   Merge Agent (for merge subscriptions)  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] replication listener (replisapi.dll: for merge subscriptions synchronized using Web synchronization)  
+    -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] replication listener (replisapi.dll: for merge subscriptions synchronized using Web synchronization)  
   
     -   SQL Merge ActiveX Control (for merge subscriptions synchronized with the control)  
   
@@ -119,7 +119,7 @@ manager: "jhubbard"
 ## Maintaining a Mirrored Publication Database  
  Maintaining a mirrored publication database is essentially the same as maintaining a non-mirrored database, with the following considerations:  
   
--   Administration and monitoring must occur at the active server. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], publications appear under the **Local Publications** folder only for the active server. For example, if you failover to the mirror, the publications are displayed at the mirror and are no longer displayed at the principal. If the database fails over to the mirror, you might need to manually refresh [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] and Replication Monitor for the change to be reflected.  
+-   Administration and monitoring must occur at the active server. In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], publications appear under the **Local Publications** folder only for the active server. For example, if you failover to the mirror, the publications are displayed at the mirror and are no longer displayed at the principal. If the database fails over to the mirror, you might need to manually refresh [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] and Replication Monitor for the change to be reflected.  
   
 -   Replication Monitor displays Publisher nodes in the object tree for both the principal and the mirror. If the principal is the active server, publication information is displayed only under the principal node in Replication Monitor.  
   
@@ -129,16 +129,16 @@ manager: "jhubbard"
   
     -   If the principal is unavailable, the principal and mirror nodes display identical lists of publications. Monitoring should be performed on the publications under the mirror node.  
   
--   When using stored procedures or Replication Management Objects (RMO) to administer replication at the mirror, for cases in which you specify the Publisher name, you must specify the name of the instance on which the database was enabled for replication. To determine the appropriate name, use the function [publishingservername](../Topic/PUBLISHINGSERVERNAME%20\(Transact-SQL\).md).  
+-   When using stored procedures or Replication Management Objects (RMO) to administer replication at the mirror, for cases in which you specify the Publisher name, you must specify the name of the instance on which the database was enabled for replication. To determine the appropriate name, use the function [publishingservername](~/t-sql/functions/replication-functions-publishingservername.md).  
   
      When a publication database is mirrored, the replication metadata stored in the mirrored database is identical to the metadata stored in the principal database. Consequently, for publication databases enabled for replication at the principal, the Publisher instance name stored in system tables at the mirror is the name of the principal, not the mirror. This affects replication configuration and maintenance if the publication database fails over to the mirror. For example, if you are configuring replication with stored procedures on the mirror after a failover, and you want to add a pull subscription to a publication database that was enabled at the principal, you must specify the principal name rather than the mirror name for the **@publisher** parameter of **sp_addpullsubscription** or **sp_addmergepullsubscription**.  
   
      If you enable a publication database at the mirror after failover to the mirror, the Publisher instance name stored in system tables is the name of the mirror; in this case, you would use the name of the mirror for the **@publisher** parameter.  
   
     > [!NOTE]  
-    >  In some cases, such as **sp_addpublication**, the **@publisher** parameter is supported only for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers; in these cases, it is not relevant for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database mirroring.  
+    >  In some cases, such as **sp_addpublication**, the **@publisher** parameter is supported only for non-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Publishers; in these cases, it is not relevant for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database mirroring.  
   
--   To synchronize a subscription in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] after a failover: synchronize pull subscriptions from the Subscriber; and synchronize push subscriptions from the active Publisher.  
+-   To synchronize a subscription in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] after a failover: synchronize pull subscriptions from the Subscriber; and synchronize push subscriptions from the active Publisher.  
   
 ### Replication Behavior if Mirroring is Removed  
  Keep the following issues in mind if database mirroring is removed from a published database:  
@@ -147,7 +147,7 @@ manager: "jhubbard"
   
 -   If the publication database fails over from the principal to the mirror and the mirroring relationship is subsequently disabled or removed, replication agents will not function against the mirror. If the principal is permanently lost, disable and then reconfigure replication with the mirror specified as the Publisher.  
   
--   If database mirroring is removed completely, the mirror database is in a recovery state and must be restored in order to become functional. The behavior of the recovered database with respect to replication depends on whether the KEEP_REPLICATION option is specified. This option forces the restore operation to preserve replication settings when restoring a published database to a server other than that on which the backup was created. Use the KEEP_REPLICATION option only when the other publication database is unavailable. The option is not supported if the other publication database is still intact and replicating. For more information about KEEP_REPLICATION, see [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md).  
+-   If database mirroring is removed completely, the mirror database is in a recovery state and must be restored in order to become functional. The behavior of the recovered database with respect to replication depends on whether the KEEP_REPLICATION option is specified. This option forces the restore operation to preserve replication settings when restoring a published database to a server other than that on which the backup was created. Use the KEEP_REPLICATION option only when the other publication database is unavailable. The option is not supported if the other publication database is still intact and replicating. For more information about KEEP_REPLICATION, see [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md).  
   
 ## Log Reader Agent Behavior  
  The following table describes Log Reader Agent behavior for the various operating modes of database mirroring.  

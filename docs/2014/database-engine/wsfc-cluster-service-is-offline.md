@@ -36,13 +36,13 @@ manager: "jhubbard"
  The policy state is healthy when the cluster state is in the normal quorum.  
   
 > [!NOTE]  
->  For this release of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], information about possible causes and solutions is located at [WSFC cluster service is offline](http://go.microsoft.com/fwlink/p/?LinkId=220849) on the TechNet Wiki.  
+>  For this release of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], information about possible causes and solutions is located at [WSFC cluster service is offline](http://go.microsoft.com/fwlink/p/?LinkId=220849) on the TechNet Wiki.  
   
 ## Possible Causes  
  This issue can be caused by a cluster service issue or by the loss of the quorum in the cluster.  
   
 ## Possible Solution  
- Use the Cluster Administrator tool to perform the forced quorum or disaster recovery workflow. If you cannot resolve the issue by performing the forced quorum or disaster recovery, contact your cluster administrator to help resolve this issue. For more information, see [Force a WSFC Cluster to Start Without a Quorum](../../2014/database-engine/force-a-wsfc-cluster-to-start-without-a-quorum.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+ Use the Cluster Administrator tool to perform the forced quorum or disaster recovery workflow. If you cannot resolve the issue by performing the forced quorum or disaster recovery, contact your cluster administrator to help resolve this issue. For more information, see [Force a WSFC Cluster to Start Without a Quorum](../../2014/database-engine/force-a-wsfc-cluster-to-start-without-a-quorum.md) in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online.  
   
 ## See Also  
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/overview-of-alwayson-availability-groups-sql-server.md)   

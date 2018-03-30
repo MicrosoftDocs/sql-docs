@@ -24,13 +24,13 @@ manager: "jhubbard"
 # Data Profiling Task
   The Data Profiling task computes various profiles that help you become familiar with a data source and identify problems in the data that have to be fixed.  
   
- You can use the Data Profiling task inside an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package to profile data that is stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and to identify potential problems with data quality.  
+ You can use the Data Profiling task inside an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package to profile data that is stored in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and to identify potential problems with data quality.  
   
 > [!NOTE]  
 >  This topic only describes the the features and requirements of the Data Profiling task. For a walkthrough of how to use the Data Profiling task, see the section, [Data Profiling Task and Viewer](../../2014/integration-services/data-profiling-task-and-viewer.md).  
   
 ## Requirements and Limitations  
- The Data Profiling task works only with data that is stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This task does not work with third-party or file-based data sources.  
+ The Data Profiling task works only with data that is stored in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. This task does not work with third-party or file-based data sources.  
   
  Furthermore, to run a package that contains the Data Profiling task, you must use an account that has read/write permissions, including CREATE TABLE permissions, on the tempdb database.  
   
@@ -114,7 +114,7 @@ manager: "jhubbard"
 |**DataProfilingTaskTrace**|Provides descriptive information about the status of the task. Messages include the following information:<br /><br /> Start Processing Requests<br /><br /> Query Start<br /><br /> Query End<br /><br /> Finish Computing Request|  
   
 ## Output and Its Schema  
- The Data Profiling task outputs the selected profiles into XML that is structured according to the DataProfile.xsd schema. You can specify whether this XML output is saved in a file or in a package variable. You can view this schema online at [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/). From the webpage, you can save a local copy of the schema. You can then view the local copy of the schema in Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] or another schema editor, in an XML editor, or in a text editor such as Notepad.  
+ The Data Profiling task outputs the selected profiles into XML that is structured according to the DataProfile.xsd schema. You can specify whether this XML output is saved in a file or in a package variable. You can view this schema online at [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/). From the webpage, you can save a local copy of the schema. You can then view the local copy of the schema in Microsoft [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] or another schema editor, in an XML editor, or in a text editor such as Notepad.  
   
  This schema for data quality information could be useful for:  
   
@@ -125,7 +125,7 @@ manager: "jhubbard"
  The target namespace is identified in the schema as [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/).  
   
 ## Output in the Conditional Workflow of a Package  
- The data profiling components do not include built-in functionality to implement conditional logic in the workflow of the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package based on the output of the Data Profiling task. However, you can easily add this logic, with a minimal amount of programming, in a Script task. This code would perform an XPath query against the XML output, and then save the result in a package variable. Precedence constraints that connect the Script task to subsequent tasks can use an expression to determine the workflow. For example, the Script task detects that the percentage of null values in a column exceeds a certain threshold. When this condition is true, you might want to interrupt the package and resolve the problem before continuing.  
+ The data profiling components do not include built-in functionality to implement conditional logic in the workflow of the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package based on the output of the Data Profiling task. However, you can easily add this logic, with a minimal amount of programming, in a Script task. This code would perform an XPath query against the XML output, and then save the result in a package variable. Precedence constraints that connect the Script task to subsequent tasks can use an expression to determine the workflow. For example, the Script task detects that the percentage of null values in a column exceeds a certain threshold. When this condition is true, you might want to interrupt the package and resolve the problem before continuing.  
   
 ## Configuration of the Data Profiling Task  
  You configure the Data Profiling task by using the **Data Profiling Task Editor**. The editor has two pages:  

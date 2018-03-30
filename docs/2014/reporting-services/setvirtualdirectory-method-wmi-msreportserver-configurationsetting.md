@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 1a25cb1d-38d5-401a-970b-87b642a780e4
 caps.latest.revision: 11
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # SetVirtualDirectory Method (WMI MSReportServer_ConfigurationSetting)
@@ -60,7 +60,7 @@ public void SetVirtualDirectory(string Application, string VirtualDirectory,
  Updates the value of the \Configuration\URLReservations\Application\VirtualDirectory element. Succeeds even if no URL reservations have been created yet.  
   
 ## Requirements  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../includes/ssrswminmspca-md.md)]  
   
 ## See Also  
  [MSReportServer_ConfigurationSetting Members](../../2014/reporting-services/msreportserver-configurationsetting-members.md)  

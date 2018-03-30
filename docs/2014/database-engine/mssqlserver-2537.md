@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 0af6ff69-d75a-4c39-8da2-9bd0695277c6
 caps.latest.revision: 14
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_2537
@@ -36,7 +36,7 @@ manager: "jhubbard"
 ## User Action  
   
 ### Look for Hardware Failure  
- Run hardware diagnostics and correct any problems. Also examine the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows system and application logs and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log to see whether the error occurred as the result of hardware failure. Fix any hardware-related problems that are contained in the logs.  
+ Run hardware diagnostics and correct any problems. Also examine the [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows system and application logs and the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] error log to see whether the error occurred as the result of hardware failure. Fix any hardware-related problems that are contained in the logs.  
   
  If you have persistent data corruption problems, try to swap out different hardware components to isolate the problem. Check to make sure that the system does not have write-caching enabled on the disk controller. If you suspect that write-caching is the problem, contact your hardware vendor.  
   

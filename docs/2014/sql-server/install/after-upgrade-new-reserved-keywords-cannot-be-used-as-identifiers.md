@@ -26,7 +26,7 @@ manager: "jhubbard"
  Database Engine  
   
 ## Description  
- At compatibility level 90 or lower, the following words are not reserved keywords and can be used as identifiers or object names in [!INCLUDE[tsql](../../../includes/tsql-md.md)] scripts. At compatibility level 100, these words are fully reserved keywords and should not be used as identifiers or object names.  
+ At compatibility level 90 or lower, the following words are not reserved keywords and can be used as identifiers or object names in [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts. At compatibility level 100, these words are fully reserved keywords and should not be used as identifiers or object names.  
   
 -   EXTERNAL  
   
@@ -50,12 +50,12 @@ manager: "jhubbard"
 -   Refer to the object by using delimited identifiers. For example, the statement `CREATE TABLE [MERGE] ([MERGE] int);` uses brackets to delimit the object name MERGE.  
   
 ## External Resources  
- [Reserved Keywords &#40;Transact-SQL&#41;](../Topic/Reserved%20Keywords%20\(Transact-SQL\).md)  
+ [Reserved Keywords &#40;Transact-SQL&#41;](~/t-sql/language-elements/reserved-keywords-transact-sql.md)  
   
- [MERGE &#40;Transact-SQL&#41;](../Topic/MERGE%20\(Transact-SQL\).md)  
+ [MERGE &#40;Transact-SQL&#41;](~/t-sql/statements/merge-transact-sql.md)  
   
  [Delimited Identifiers (Database Engine)](http://go.microsoft.com/fwlink/?LinkId=112509)  
   
- [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md)  
+ [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
   
   

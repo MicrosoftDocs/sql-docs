@@ -58,7 +58,7 @@ manager: "mblythe"
 |Child elements|None|  
   
 ## Remarks  
- The `SPID` element represents the server process ID (SPID) used for a given session on an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+ The `SPID` element represents the server process ID (SPID) used for a given session on an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ## See Also  
  [CancelAssociated Element &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/cancelassociated-element-xmla.md)   

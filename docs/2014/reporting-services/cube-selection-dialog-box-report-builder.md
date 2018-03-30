@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: 2887ad5f-015f-4197-8388-c59f78d32f52
 caps.latest.revision: 8
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Cube Selection Dialog Box (Report Builder)

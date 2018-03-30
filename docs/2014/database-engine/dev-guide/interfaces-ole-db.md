@@ -21,7 +21,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Interfaces (OLE DB)
-  In addition to the core OLE DB interfaces provided by the Microsoft Data Access Components (MDAC), the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider implements the following additional OLE DB interfaces:  
+  In addition to the core OLE DB interfaces provided by the Microsoft Data Access Components (MDAC), the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider implements the following additional OLE DB interfaces:  
   
 -   [IBCPSession &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/ibcpsession-ole-db.md)  
   

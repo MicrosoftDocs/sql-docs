@@ -25,7 +25,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # InstanceName Property (ClientSettingsGeneralFlag Class)
-  Gets the name of the instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] client.  
+  Gets the name of the instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client.  
   
 ## Syntax  
   
@@ -40,7 +40,7 @@ object
  A [ClientSettingsGeneralFlag Class](../../../2014/database-engine/dev-guide/clientsettingsgeneralflag-class.md) object that represents a general flag for the server settings.  
   
 ## Property Value/Return Value  
- A string value that specifies the name of the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] client.  
+ A string value that specifies the name of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client.  
   
 ## Remarks  
   

@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: e96cdeba-452b-45a8-9bcf-b75d76261e31
 caps.latest.revision: 20
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Clickthrough Reports Page (Report Manager)
@@ -29,7 +29,7 @@ manager: "mblythe"
  Although you can select any report to which you have access, select only those reports that are created specifically for the model you are configuring.  
   
 > [!NOTE]  
->  Clickthrough reports are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md). If you are not sure of which edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that your organization is running, contact your database administrator.  
+>  Clickthrough reports are not available in every edition of [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md). If you are not sure of which edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that your organization is running, contact your database administrator.  
   
 ## Navigation  
  Use the following procedure to navigate to this location in the user interface (UI).  

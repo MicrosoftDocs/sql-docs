@@ -24,7 +24,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # View and Read SQL Server Setup Log Files
-  Each execution of Setup creates log files are created with a new timestamped log folder at %programfiles%\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\. The time-stamped log folder name format is YYYYMMDD_hhmmss. When Setup is run in an unattended mode, the logs are created at % temp%\sqlsetup*.log. All files in the logs folder are archived into the Log\*.cab file in their respective log folder.  
+  Each execution of Setup creates log files are created with a new timestamped log folder at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\. The time-stamped log folder name format is YYYYMMDD_hhmmss. When Setup is run in an unattended mode, the logs are created at % temp%\sqlsetup*.log. All files in the logs folder are archived into the Log\*.cab file in their respective log folder.  
   
  A typical Setup request goes through three execution phases:  
   
@@ -44,20 +44,20 @@ manager: "jhubbard"
   
 -   Datastore  
   
- The following sections describe [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup log files.  
+ The following sections describe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup log files.  
   
 ## Summary Text  
   
 ### Overview  
- This file shows the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] components that were detected during Setup, the operating system environment, command-line parameter values if they are specified, and the overall status of each MSI/MSP that was executed.  
+ This file shows the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components that were detected during Setup, the operating system environment, command-line parameter values if they are specified, and the overall status of each MSI/MSP that was executed.  
   
  The log is organized into the following sections:  
   
 -   An overall summary of the execution  
   
--   Properties and the configuration of the computer where [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup was run  
+-   Properties and the configuration of the computer where [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup was run  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] product features previously installed on the computer  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] product features previously installed on the computer  
   
 -   Description of the installation version and installation package properties  
   
@@ -76,7 +76,7 @@ manager: "jhubbard"
 -   Location of the rules report file  
   
 ### Location  
- It is located at %programfiles%\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\.  
+ It is located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\.  
   
  To find errors in the summary text file, search the file by using the "error" or "failed" keywords.  
   
@@ -86,7 +86,7 @@ manager: "jhubbard"
  The summary_engine base file is similar to the summary file and is generated during the main workflow.  
   
 ### Location  
- It is located at %programfiles%\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
+ It is located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
   
 ## Summary_engine-base_YYYYMMDD_HHMMss_ComponentUpdate.txt  
   
@@ -94,7 +94,7 @@ manager: "jhubbard"
  The component update summary log file is similar to the summary file and is generated during the component update workflow.  
   
 ### Location  
- It is located at %programfiles%\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
+ It is located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
   
 ## Summary_engine-base_\<VersionNumber>MMDD_HHMMss_GlobalRules.txt  
   
@@ -102,7 +102,7 @@ manager: "jhubbard"
  The global rules summary log file is similar to the summary file generated during the global rules workflow.  
   
 ### Location  
- It is located at %programfiles%\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
+ It is located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
   
 ## Detail.txt  
   
@@ -110,7 +110,7 @@ manager: "jhubbard"
  Detail.txt is generated for the main workflow such as install or upgrade, and provides the details of the execution. The logs in the file are generated based on the time when each action for the installation was invoked, and show the order in which the actions were executed, and their dependencies.  
   
 ### Location  
- It is located at %programfiles%\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\120\Setup  
+ It is located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup  
   
  Bootstrap\Log\\<YYYYMMDD_HHMM>\Detail.txt.  
   
@@ -122,7 +122,7 @@ manager: "jhubbard"
  The Detail_ComponentUpdate.txt file is generated for the component update workflow and is similar to Detail.txt.  
   
 ### Location  
- It is located at %programfiles%\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
+ It is located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
   
 ## Detail_GlobalRules.txt  
   
@@ -130,7 +130,7 @@ manager: "jhubbard"
  Detail_GlobalRules.txt is generated for the global rules execution and is similar to Detail.txt.  
   
 ### Location  
- It is located at %programfiles%\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
+ It is located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
   
 ## MSI log files  
   
@@ -146,7 +146,7 @@ manager: "jhubbard"
 -   \<Feature>_\<Architecture>\_\<Interation>\_\<workflow>.log  
   
 ### Location  
- The MSI log files are located at %programfiles%\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\<Name\>.log.  
+ The MSI log files are located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\<Name\>.log.  
   
  At the end of the file is a summary of the execution which includes the success or failure status and properties. To find the error in the MSI file, search for "value 3" and usually the errors can be found close to the string.  
   
@@ -156,7 +156,7 @@ manager: "jhubbard"
  The configuration file contains the input settings that are provided during installation. It can be used to restart the installation without having to enter the settings manually. However, passwords for the accounts, PID, and some parameters are not saved in the configuration file. The settings can be either added to the file or provided by using the command line or the Setup user interface. For more information, see [Install SQL Server 2014 Using a Configuration File](../../../2014/sql-server/install/install-sql-server-2014-using-a-configuration-file.md).  
   
 ### Location  
- It is located at %programfiles%\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
+ It is located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
   
 ## SystemConfigurationCheck_Report.htm  
   
@@ -164,7 +164,7 @@ manager: "jhubbard"
  The system configuration check report contains a short description for each executed rule, and the execution status.  
   
 ### Location  
- It is located at %programfiles%\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
+ It is located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
   
 ## See Also  
  [Installation How-to Topics](../../../2014/sql-server/install/installation-how-to-topics.md)   

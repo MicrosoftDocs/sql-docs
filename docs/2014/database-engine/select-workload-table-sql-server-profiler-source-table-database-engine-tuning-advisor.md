@@ -21,15 +21,15 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQL Server Profiler - Source Table-Database Engine Tuning Advisor - Select Workload Table
-  Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] and [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor use this dialog box to select tables.  
+  Microsoft [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] and [!INCLUDE[ssDE](../includes/ssde-md.md)] Tuning Advisor use this dialog box to select tables.  
   
- In [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], use the **Source Table** dialog box to specify a source table for a trace table. This is a table from which a trace is loaded, and the contents of which are viewed or used for replaying the trace.  
+ In [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)], use the **Source Table** dialog box to specify a source table for a trace table. This is a table from which a trace is loaded, and the contents of which are viewed or used for replaying the trace.  
   
- In [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor, use the **Select Workload Table** dialog box to select a database table that contains [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] trace information to use as a tuning workload, or to preview the table contents before starting tuning analysis.  
+ In [!INCLUDE[ssDE](../includes/ssde-md.md)] Tuning Advisor, use the **Select Workload Table** dialog box to select a database table that contains [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] trace information to use as a tuning workload, or to preview the table contents before starting tuning analysis.  
   
 ## Options  
  **SQL Server**  
- Specifies the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] currently connected. This field is populated automatically and cannot be updated.  
+ Specifies the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] currently connected. This field is populated automatically and cannot be updated.  
   
  **Database**  
  Specify the database where the trace table is located.  

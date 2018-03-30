@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 57fab70f-4a72-4413-a0ad-d0525caca3f7
 caps.latest.revision: 17
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Lesson 5: Publish the Report Definition to the Report Server
@@ -20,7 +20,7 @@ manager: "mblythe"
   
 ### To publish the report to the report catalog  
   
-1.  Replace the code for the `PublishReportDefinition()` method in your Program.cs file (Module1.vb for [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) with the following code:  
+1.  Replace the code for the `PublishReportDefinition()` method in your Program.cs file (Module1.vb for [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) with the following code:  
   
     ```csharp  
     private void PublishReportDefinition()  

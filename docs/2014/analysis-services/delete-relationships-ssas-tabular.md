@@ -33,13 +33,13 @@ manager: "mblythe"
   
 #### To delete a relationship by using Diagram View  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], click the **Model** menu, then point to **Model View**, and then click **Diagram View**.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], click the **Model** menu, then point to **Model View**, and then click **Diagram View**.  
   
 2.  Right-click a relationship line between two tables, and then click **Delete**.  
   
 #### To delete a relationship by using the Manage Relationships dialog box  
   
-1.  In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], click the **Table** menu, and then click **Manage Relationships**.  
+1.  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], click the **Table** menu, and then click **Manage Relationships**.  
   
 2.  In the **Manage Relationships** dialog box, select one or more relationships from the list.  
   

@@ -28,17 +28,17 @@ manager: "jhubbard"
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Exec Prepared SQL Event Class](../../2014/database-engine/exec-prepared-sql-event-class.md)|Indicates that the SqlClient, ODBC, OLE DB, or DB-Library has executed a prepared [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or statements.|  
-|[Prepare SQL Event Class](../../2014/database-engine/prepare-sql-event-class.md)|Indicates that SqlClient, ODBC, OLE DB, or DB-Library has prepared a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or statements for use.|  
-|[SQL:BatchCompleted Event Class](../../2014/database-engine/sql-batchcompleted-event-class.md)|Indicates that the [!INCLUDE[tsql](../../includes/tsql-md.md)] batch has completed.|  
-|[SQL:BatchStarting Event Class](../../2014/database-engine/sql-batchstarting-event-class.md)|Indicates that the [!INCLUDE[tsql](../../includes/tsql-md.md)] batch is starting.|  
-|[SQL:StmtCompleted Event Class](../../2014/database-engine/sql-stmtcompleted-event-class.md)|Indicates that a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement has completed.|  
+|[Exec Prepared SQL Event Class](../../2014/database-engine/exec-prepared-sql-event-class.md)|Indicates that the SqlClient, ODBC, OLE DB, or DB-Library has executed a prepared [!INCLUDE[tsql](../includes/tsql-md.md)] statement or statements.|  
+|[Prepare SQL Event Class](../../2014/database-engine/prepare-sql-event-class.md)|Indicates that SqlClient, ODBC, OLE DB, or DB-Library has prepared a [!INCLUDE[tsql](../includes/tsql-md.md)] statement or statements for use.|  
+|[SQL:BatchCompleted Event Class](../../2014/database-engine/sql-batchcompleted-event-class.md)|Indicates that the [!INCLUDE[tsql](../includes/tsql-md.md)] batch has completed.|  
+|[SQL:BatchStarting Event Class](../../2014/database-engine/sql-batchstarting-event-class.md)|Indicates that the [!INCLUDE[tsql](../includes/tsql-md.md)] batch is starting.|  
+|[SQL:StmtCompleted Event Class](../../2014/database-engine/sql-stmtcompleted-event-class.md)|Indicates that a [!INCLUDE[tsql](../includes/tsql-md.md)] statement has completed.|  
 |[SQL:StmtRecompile Event Class](../../2014/database-engine/sql-stmtrecompile-event-class.md)|Indicates statement-level recompilations caused by all types of batches: stored procedures, triggers, ad hoc batches, and queries.|  
-|[SQL:StmtStarting Event Class](../../2014/database-engine/sql-stmtstarting-event-class.md)|Indicates that a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement is starting.|  
-|[Unprepare SQL Event Class](../../2014/database-engine/unprepare-sql-event-class.md)|Indicates that the SqlClient, ODBC, OLE DB, or DB-Library has deleted a prepared [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or statements.|  
-|[XQuery Static Type Event Class](../../2014/database-engine/xquery-static-type-event-class.md)|Occurs when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executes an XQuery expression.|  
+|[SQL:StmtStarting Event Class](../../2014/database-engine/sql-stmtstarting-event-class.md)|Indicates that a [!INCLUDE[tsql](../includes/tsql-md.md)] statement is starting.|  
+|[Unprepare SQL Event Class](../../2014/database-engine/unprepare-sql-event-class.md)|Indicates that the SqlClient, ODBC, OLE DB, or DB-Library has deleted a prepared [!INCLUDE[tsql](../includes/tsql-md.md)] statement or statements.|  
+|[XQuery Static Type Event Class](../../2014/database-engine/xquery-static-type-event-class.md)|Occurs when [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] executes an XQuery expression.|  
   
 ## See Also  
- [Transact-SQL Reference &#40;Database Engine&#41;](../Topic/Transact-SQL%20Reference%20\(Database%20Engine\).md)  
+ [Transact-SQL Reference &#40;Database Engine&#41;](~/t-sql/language-reference.md)  
   
   

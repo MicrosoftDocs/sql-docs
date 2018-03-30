@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: aeee9546-4480-49f9-8b1e-c71da1f056c7
 caps.latest.revision: 40
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # View and Resolve Data Conflicts for Merge Publications (SQL Server Management Studio)
-  Conflicts in merge replication are resolved based on the resolver specified for each article. By default, conflicts are resolved without the need for user intervention. But conflicts can be viewed, and the outcome of the resolution can be changed, in the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Replication Conflict Viewer.  
+  Conflicts in merge replication are resolved based on the resolver specified for each article. By default, conflicts are resolved without the need for user intervention. But conflicts can be viewed, and the outcome of the resolution can be changed, in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Replication Conflict Viewer.  
   
  Conflict data is available in the Replication Conflict Viewer for the amount of time specified for the conflict retention period (with a default of 14 days). To set the conflict retention period, either:  
   
--   Specify a retention value for the **@conflict_retention** parameter of [sp_addmergepublication &#40;Transact-SQL&#41;](../Topic/sp_addmergepublication%20\(Transact-SQL\).md).  
+-   Specify a retention value for the **@conflict_retention** parameter of [sp_addmergepublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md).  
   
--   Specify a value of **conflict_retention** for the **@property** parameter and a retention value for the **@value** parameter of [sp_changemergepublication &#40;Transact-SQL&#41;](../Topic/sp_changemergepublication%20\(Transact-SQL\).md).  
+-   Specify a value of **conflict_retention** for the **@property** parameter and a retention value for the **@value** parameter of [sp_changemergepublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md).  
   
  By default, conflict information is stored:  
   
@@ -34,15 +34,15 @@ manager: "jhubbard"
   
 -   At the Publisher if the publication compatibility level is lower than 80RTM.  
   
--   At the Publisher if Subscribers are running [!INCLUDE[ssEW](../../../includes/ssew-md.md)]. Conflict data cannot be stored on [!INCLUDE[ssEW](../../../includes/ssew-md.md)] Subscribers.  
+-   At the Publisher if Subscribers are running [!INCLUDE[ssEW](../../includes/ssew-md.md)]. Conflict data cannot be stored on [!INCLUDE[ssEW](../../includes/ssew-md.md)] Subscribers.  
   
- Storage of conflict information is controlled by the **conflict_logging** publication property. For more information, see [sp_addmergepublication &#40;Transact-SQL&#41;](../Topic/sp_addmergepublication%20\(Transact-SQL\).md) and [sp_changemergepublication &#40;Transact-SQL&#41;](../Topic/sp_changemergepublication%20\(Transact-SQL\).md).  
+ Storage of conflict information is controlled by the **conflict_logging** publication property. For more information, see [sp_addmergepublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) and [sp_changemergepublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md).  
   
- Conflicts can also be resolved interactively during synchronization using the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Interactive Resolver. The Interactive Resolver is available through the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows Synchronization Manager. For more information, see [Synchronize a Subscription Using Windows Synchronization Manager &#40;Windows Synchronization Manager&#41;](../../../2014/relational-databases/replication/synchronize-a-subscription-using-windows-synchronization-manager.md).  
+ Conflicts can also be resolved interactively during synchronization using the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Interactive Resolver. The Interactive Resolver is available through the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Synchronization Manager. For more information, see [Synchronize a Subscription Using Windows Synchronization Manager &#40;Windows Synchronization Manager&#41;](../../../2014/relational-databases/replication/synchronize-a-subscription-using-windows-synchronization-manager.md).  
   
 ### To view and resolve conflicts for merge publications  
   
-1.  Connect to the Publisher (or Subscriber if appropriate) in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], and then expand the server node.  
+1.  Connect to the Publisher (or Subscriber if appropriate) in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], and then expand the server node.  
   
 2.  Expand the **Replication** folder, and then expand the **Local Publications** folder.  
   

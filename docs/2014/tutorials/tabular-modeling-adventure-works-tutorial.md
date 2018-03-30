@@ -16,12 +16,12 @@ ms.author: "owend"
 manager: "jhubbard"
 ---
 # Tabular Modeling (Adventure Works Tutorial)
-  This tutorial provides lessons on how to create a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Analysis Services tabular model by using [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+  This tutorial provides lessons on how to create a [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services tabular model by using [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 ## What You Will Learn  
  During the course of this tutorial, you will learn the following:  
   
--   How to create a new tabular model project in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
+-   How to create a new tabular model project in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
   
 -   How to import data from a SQL Server relational database into a tabular model project.  
   
@@ -38,13 +38,13 @@ manager: "jhubbard"
 -   How to deploy a tabular model to a sandbox or production instance of Analysis Services running in Tabular mode.  
   
 ## Tutorial Scenario  
- This tutorial is based on [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)], a fictitious company. [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] is a large, multinational manufacturing company that produces and distributes metal and composite bicycles to commercial markets in North America, Europe, and Asia. The headquarters for [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] is in Bothell, Washington, where the company employs 500 workers. Additionally, [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] employs several regional sales teams throughout its market base.  
+ This tutorial is based on [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], a fictitious company. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] is a large, multinational manufacturing company that produces and distributes metal and composite bicycles to commercial markets in North America, Europe, and Asia. The headquarters for [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] is in Bothell, Washington, where the company employs 500 workers. Additionally, [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] employs several regional sales teams throughout its market base.  
   
  To better support the data analysis needs of sales and marketing teams and of senior management, you are tasked with creating a tabular model for users to analyze internet sales data in the AdventureWorksDW sample database.  
   
  In order to complete the tutorial, and the Adventure Works Internet Sales tabular model, you must complete a number of lessons. Within each lesson are a number of tasks; completing each task in order is necessary for completing the lesson. While in a particular lesson there may be several tasks that accomplish a similar outcome; however, how you complete each task is slightly different. This is to show that there is often more than one way to complete a particular task, and to challenge you by using skills you learned in previous tasks.  
   
- The purpose of the lessons is to guide you through authoring a basic tabular model running in In-Memory mode by using many of the features included in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Because each lesson builds upon the previous lesson, you should complete the lessons in order. Once you have completed all of the lessons, you will have authored and deployed the Adventure Works Internet Sales sample tabular model on an Analysis Services server.  
+ The purpose of the lessons is to guide you through authoring a basic tabular model running in In-Memory mode by using many of the features included in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Because each lesson builds upon the previous lesson, you should complete the lessons in order. Once you have completed all of the lessons, you will have authored and deployed the Adventure Works Internet Sales sample tabular model on an Analysis Services server.  
   
 > [!NOTE]  
 >  This tutorial does not provide lessons or information about managing a deployed tabular model database by using SQL Server Management Studio, or using a reporting client application to connect to a deployed model to browse model data.  
@@ -52,13 +52,13 @@ manager: "jhubbard"
 ## Prerequisites  
  In order to complete this tutorial, you must have the following prerequisites installed:  
   
--   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Analysis Services instance running in Tabular mode.  
+-   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services instance running in Tabular mode.  
   
--   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+-   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 -   AdventureWorksDW sample database. This sample database includes the data necessary to complete this tutorial. To download the sample database, see [http://go.microsoft.com/fwlink/?LinkID=335807](http://go.microsoft.com/fwlink/?LinkID=335807).  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 2003 or later (for use with the Analyze in Excel feature in lesson 11)  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 2003 or later (for use with the Analyze in Excel feature in lesson 11)  
   
 ## Lessons  
  This tutorial includes the following lessons:  

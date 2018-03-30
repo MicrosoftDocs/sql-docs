@@ -16,12 +16,12 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Create a Cube from a template without using a Data Source View
-  Select **Build the cube without using a data source** on the first page of the Cube Wizard to create a cube without using a data source view. You can later use the Schema Generation Wizard to generate the relational schema for the data source view based on the structure of the cube and possibly other [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects. For more information about generating a schema, see [Schema Generation Wizard &#40;Analysis Services&#41;](../../2014/analysis-services/schema-generation-wizard-analysis-services.md).  
+  Select **Build the cube without using a data source** on the first page of the Cube Wizard to create a cube without using a data source view. You can later use the Schema Generation Wizard to generate the relational schema for the data source view based on the structure of the cube and possibly other [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objects. For more information about generating a schema, see [Schema Generation Wizard &#40;Analysis Services&#41;](../../2014/analysis-services/schema-generation-wizard-analysis-services.md).  
   
 ## Selecting the Build Method  
  In the Cube Wizard, on the **Select Build Method** page, click **Build the cube without using a data source**. To build the cube by using an existing cube template, select the **Use a cube template** check box. . If you do not select to use a template, you must set the options manually.  
   
- Cube templates contain predefined measures, measure groups, dimensions, hierarchies, and attributes. If you select a template, the wizard uses the object definitions in the templates as the basis for setting options in the following pages. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] is installed with several templates for standard cubes. The server administrator can also add cube or dimension templates that are designed specifically for your organization's data.  
+ Cube templates contain predefined measures, measure groups, dimensions, hierarchies, and attributes. If you select a template, the wizard uses the object definitions in the templates as the basis for setting options in the following pages. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] is installed with several templates for standard cubes. The server administrator can also add cube or dimension templates that are designed specifically for your organization's data.  
   
 ## Selecting Dimensions  
  Use the **Select Dimensions** page of the wizard to add existing dimensions to the cube. This page appears only if there are already shared dimensions without a data source in the project or database. It does not list dimensions that have a data source.  

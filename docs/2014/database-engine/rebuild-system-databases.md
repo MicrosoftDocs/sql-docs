@@ -17,11 +17,11 @@ helpviewer_keywords:
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 caps.latest.revision: 29
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Rebuild System Databases
-  System databases must be rebuilt to fix corruption problems in the [master](../../2014/database-engine/master-database.md), [model](../../2014/database-engine/model-database.md), [msdb](../../2014/database-engine/msdb-database.md), or [resource](../../2014/database-engine/resource-database.md) system databases or to modify the default server-level collation. This topic provides step-by-step instructions to rebuild system databases in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  System databases must be rebuilt to fix corruption problems in the [master](../../2014/database-engine/master-database.md), [model](../../2014/database-engine/model-database.md), [msdb](../../2014/database-engine/msdb-database.md), or [resource](../../2014/database-engine/resource-database.md) system databases or to modify the default server-level collation. This topic provides step-by-step instructions to rebuild system databases in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
  **In This Topic**  
   
@@ -57,7 +57,7 @@ manager: "jhubbard"
     SELECT * FROM sys.configurations;  
     ```  
   
-2.  Record all service packs and hotfixes applied to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the current collation. You must reapply these updates after rebuilding the system databases.  
+2.  Record all service packs and hotfixes applied to the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and the current collation. You must reapply these updates after rebuilding the system databases.  
   
     ```  
     SELECT  
@@ -78,20 +78,20 @@ manager: "jhubbard"
   
 4.  Locate the current backup of the master, model, and msdb databases.  
   
-5.  If the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is configured as a replication Distributor, locate the current backup of the distribution database.  
+5.  If the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is configured as a replication Distributor, locate the current backup of the distribution database.  
   
 6.  Ensure you have appropriate permissions to rebuild the system databases. To perform this operation, you must be a member of the `sysadmin` fixed server role. For more information, see [Server-Level Roles](../../2014/database-engine/server-level-roles.md).  
   
 7.  Verify that copies of the master, model, msdb data and log template files exist on the local server. The default location for the template files is C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn\Templates. These files are used during the rebuild process and must be present for Setup to succeed. If they are missing, run the Repair feature of Setup, or manually copy the files from your installation media. To locate the files on the installation media, navigate to the appropriate platform directory (x86 or x64) and then navigate to setup\sql_engine_core_inst_msi\Pfiles\SqlServr\MSSQL.X\MSSQL\Binn\Templates.  
   
 ##  <a name="RebuildProcedure"></a> Rebuild System Databases  
- The following procedure rebuilds the master, model, msdb, and tempdb system databases. You cannot specify the system databases to be rebuilt. For clustered instances, this procedure must be performed on the active node and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resource in the corresponding cluster application group must be taken offline before performing the procedure.  
+ The following procedure rebuilds the master, model, msdb, and tempdb system databases. You cannot specify the system databases to be rebuilt. For clustered instances, this procedure must be performed on the active node and the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] resource in the corresponding cluster application group must be taken offline before performing the procedure.  
   
  This procedure does not rebuild the resource database. See the section, "Rebuild the resource Database Procedure" later in this topic.  
   
 #### To rebuild system databases for an instance of SQL Server:  
   
-1.  Insert the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installation media into the disk drive, or, from a command prompt, change directories to the location of the setup.exe file on the local server. The default location on the server is C:\Program Files\Microsoft SQL Server\120\Setup Bootstrap\Release.  
+1.  Insert the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] installation media into the disk drive, or, from a command prompt, change directories to the location of the setup.exe file on the local server. The default location on the server is C:\Program Files\Microsoft SQL Server\120\Setup Bootstrap\Release.  
   
 2.  From a command prompt window, enter the following command. Square brackets are used to indicate optional parameters. Do not enter the brackets. When using a Windows operating system that has User Account Control (UAC) enabled, running Setup requires elevated privileges. The command prompt must be run as Administrator.  
   
@@ -101,9 +101,9 @@ manager: "jhubbard"
     |--------------------|-----------------|  
     |/QUIET or /Q|Specifies that Setup run without any user interface.|  
     |/ACTION=REBUILDDATABASE|Specifies that Setup re-create the system databases.|  
-    |/INSTANCENAME=*InstanceName*|Is the name of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For the default instance, enter MSSQLSERVER.|  
+    |/INSTANCENAME=*InstanceName*|Is the name of the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For the default instance, enter MSSQLSERVER.|  
     |/SQLSYSADMINACCOUNTS=*accounts*|Specifies the Windows groups or individual accounts to add to the `sysadmin` fixed server role. When specifying more than one account, separate the accounts with a blank space. For example, enter **BUILTIN\Administrators MyDomain\MyUser**. When you are specifying an account that contains a blank space within the account name, enclose the account in double quotation marks. For example, enter `NT AUTHORITY\SYSTEM`.|  
-    |[ /SAPWD=*StrongPassword* ]|Specifies the password for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa` account. This parameter is required if the instance uses Mixed Authentication ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Windows Authentication) mode.<br /><br /> **\*\* Security Note \*\*** The `sa` account is a well-known [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account and it is often targeted by malicious users. It is very important that you use a strong password for the `sa` login.<br /><br /> Do not specify this parameter for Windows Authentication mode.|  
+    |[ /SAPWD=*StrongPassword* ]|Specifies the password for the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] `sa` account. This parameter is required if the instance uses Mixed Authentication ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and Windows Authentication) mode.<br /><br /> **\*\* Security Note \*\*** The `sa` account is a well-known [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] account and it is often targeted by malicious users. It is very important that you use a strong password for the `sa` login.<br /><br /> Do not specify this parameter for Windows Authentication mode.|  
     |[ /SQLCOLLATION=*CollationName* ]|Specifies a new server-level collation. This parameter is optional. When not specified, the current collation of the server is used.<br /><br /> **\*\* Important \*\*** Changing the server-level collation does not change the collation of existing user databases. All newly created user databases will use the new collation by default.<br /><br /> For more information, see [Set or Change the Server Collation](../../2014/database-engine/set-or-change-the-server-collation.md).|  
   
 3.  When Setup has completed rebuilding the system databases, it returns to the command prompt with no messages. Examine the Summary.txt log file to verify that the process completed successfully. This file is located at C:\Program Files\Microsoft SQL Server\120\Setup Bootstrap\Logs.  
@@ -116,12 +116,12 @@ manager: "jhubbard"
     > [!IMPORTANT]  
     >  If you have changed the server collation, do not restore the system databases. Doing so will replace the new collation with the previous collation setting.  
   
-     If a backup is not available or if the restored backup is not current, re-create any missing entries. For example, re-create all missing entries for your user databases, backup devices, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins, end points, and so on. The best way to re-create entries is to run the original scripts that created them.  
+     If a backup is not available or if the restored backup is not current, re-create any missing entries. For example, re-create all missing entries for your user databases, backup devices, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] logins, end points, and so on. The best way to re-create entries is to run the original scripts that created them.  
   
 > [!IMPORTANT]  
 >  We recommend that you secure your scripts to prevent their being altered by unauthorized by individuals.  
   
--   If the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is configured as a replication Distributor, you must restore the distribution database. For more information, see [Back Up and Restore Replicated Databases](../../2014/relational-databases/replication/back-up-and-restore-replicated-databases.md).  
+-   If the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is configured as a replication Distributor, you must restore the distribution database. For more information, see [Back Up and Restore Replicated Databases](../../2014/relational-databases/replication/back-up-and-restore-replicated-databases.md).  
   
 -   Move the system databases to the locations you recorded previously. For more information, see [Move System Databases](../../2014/database-engine/move-system-databases.md).  
   
@@ -132,7 +132,7 @@ manager: "jhubbard"
   
 #### To rebuild the resource system database:  
   
-1.  Launch the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Setup program (setup.exe) from the distribution media.  
+1.  Launch the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Setup program (setup.exe) from the distribution media.  
   
 2.  In the left navigation area, click **Maintenance**, and then click **Repair**.  
   
@@ -150,21 +150,21 @@ manager: "jhubbard"
 > [!WARNING]  
 >  Rebuilding the `msdb` database using the **instmsdb** script will eliminate all the information stored in `msdb` such as jobs, alert, operators, maintenance plans, backup history, Policy-Based Management settings, Database Mail, Performance Data Warehouse, etc.  
   
-1.  Stop all services connecting to the [!INCLUDE[ssDE](../../includes/ssde-md.md)], including [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, [!INCLUDE[ssRS](../../includes/ssrs-md.md)], [!INCLUDE[ssIS](../../includes/ssis-md.md)], and all applications using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as data store.  
+1.  Stop all services connecting to the [!INCLUDE[ssDE](../includes/ssde-md.md)], including [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent, [!INCLUDE[ssRS](../includes/ssrs-md.md)], [!INCLUDE[ssIS](../includes/ssis-md.md)], and all applications using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] as data store.  
   
-2.  Start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from the command line using the command: `NET START MSSQLSERVER /T3608`  
+2.  Start [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] from the command line using the command: `NET START MSSQLSERVER /T3608`  
   
      For more information, see [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../2014/database-engine/start-stop-pause-resume-restart-sql-server-services.md).  
   
-3.  In another command line window, detach the `msdb` database by executing the following command, replacing *\<servername>* with the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: `SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
+3.  In another command line window, detach the `msdb` database by executing the following command, replacing *\<servername>* with the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]: `SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
   
-4.  Using the Windows Explorer, rename the `msdb` database files. By default these are in the DATA sub-folder for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
+4.  Using the Windows Explorer, rename the `msdb` database files. By default these are in the DATA sub-folder for the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance.  
   
-5.  Using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, stop and restart the [!INCLUDE[ssDE](../../includes/ssde-md.md)] service normally.  
+5.  Using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager, stop and restart the [!INCLUDE[ssDE](../includes/ssde-md.md)] service normally.  
   
-6.  In a command line window, connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and execute the command: `SQLCMD -E -S<servername> -i"C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Install\instmsdb.sql" -o" C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Install\instmsdb.out"`  
+6.  In a command line window, connect to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and execute the command: `SQLCMD -E -S<servername> -i"C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Install\instmsdb.sql" -o" C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Install\instmsdb.out"`  
   
-     Replace *\<servername>* with the instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Use the file system path of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Replace *\<servername>* with the instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)]. Use the file system path of the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 7.  Using the Windows Notepad, open the **instmsdb.out** file and check the output for any errors.  
   
@@ -185,7 +185,7 @@ manager: "jhubbard"
   
 -   Presence of commas (,) or other characters that are not specified in the syntax.  
   
- After the rebuild operation is complete, examine the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logs for any errors. The default log location is C:\Program Files\Microsoft SQL Server\120\Setup Bootstrap\Logs. To locate the log file that contains the results of the rebuild process, change directories to the Logs folder from a command prompt, and then run `findstr /s RebuildDatabase summary*.*`. This search will point you to any log files that contain the results of rebuilding system databases. Open the log files and examine them for relevant error messages.  
+ After the rebuild operation is complete, examine the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] logs for any errors. The default log location is C:\Program Files\Microsoft SQL Server\120\Setup Bootstrap\Logs. To locate the log file that contains the results of the rebuild process, change directories to the Logs folder from a command prompt, and then run `findstr /s RebuildDatabase summary*.*`. This search will point you to any log files that contain the results of rebuilding system databases. Open the log files and examine them for relevant error messages.  
   
 ## See Also  
  [System Databases](../../2014/database-engine/system-databases.md)  

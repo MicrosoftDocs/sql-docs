@@ -44,8 +44,8 @@ manager: "jhubbard"
   
 |Provider|Description|ConfigString property|  
 |--------------|-----------------|---------------------------|  
-|SQL Server Profiler|Generates SQL traces that may be captured and viewed in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Profiler. The default file name extension for this provider is .trc.|No configuration is required.|  
-|SQL Server|Writes event log entries to the **sysssislog** table in any [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database.|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider requires that the connection to the database be specified, and also the target database name.|  
+|SQL Server Profiler|Generates SQL traces that may be captured and viewed in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler. The default file name extension for this provider is .trc.|No configuration is required.|  
+|SQL Server|Writes event log entries to the **sysssislog** table in any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider requires that the connection to the database be specified, and also the target database name.|  
 |Text File|Writes event log entries to ASCII text files in a comma-separated value (CSV) format. The default file name extension for this provider is .log.|The name of a file connection manager.|  
 |Windows Event Log|Logs to standard Windows Event Log on the local computer in the Application log.|No configuration is required.|  
 |XML File|Writes event log entries to XML formatted file. The default file name extension for this provider is .xml|The name of a file connection manager.|  
@@ -115,7 +115,7 @@ End Module
   
 ||  
 |-|  
-|![Integration Services icon (small)](../../../2014/integration-services/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
+|![Integration Services icon (small)](../../../2014/integration-services/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
   
 ## See Also  
  [Integration Services &#40;SSIS&#41; Logging](../../../2014/integration-services/integration-services-ssis-logging.md)  

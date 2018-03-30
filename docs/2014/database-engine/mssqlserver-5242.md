@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 712b1a10-2f87-41df-a111-1ed9f14102d4
 caps.latest.revision: 14
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_5242
@@ -34,7 +34,7 @@ manager: "jhubbard"
  A structural inconsistency occurred on the database page that is referenced in the error message.  
   
 ## See Also  
- [DBCC CHECKDB &#40;Transact-SQL&#41;](../Topic/DBCC%20CHECKDB%20\(Transact-SQL\).md)   
+ [DBCC CHECKDB &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)   
  [Database Files and Filegroups](../../2014/database-engine/database-files-and-filegroups.md)  
   
   

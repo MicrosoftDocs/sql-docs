@@ -84,7 +84,7 @@ manager: "mblythe"
  Select an available zoom option.  
   
  **Properties**  
- Displays the **Properties** window in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] for the data source view associated with the cube.  
+ Displays the **Properties** window in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] for the data source view associated with the cube.  
   
 ## Table Context Menu  
  The following options are available in the context menu displayed by right-clicking the name of a table or view in the **Data Source View** pane:  
@@ -108,7 +108,7 @@ manager: "mblythe"
 >  This option is enabled only if the table is not yet referenced by a measure group in the **Measures** pane.  
   
  **Properties**  
- Displays the **Properties** window in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] for the selected table.  
+ Displays the **Properties** window in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] for the selected table.  
   
 ## Column Context Menu  
  The following options are available in the context menu displayed by right-clicking the name of a column in a table or view in the **Data Source View** pane:  
@@ -123,7 +123,7 @@ manager: "mblythe"
  Displays Data Source View Designer for the data source view that contains the selected column. For more information about Data Source View Designer, see [Data Source View Designer &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/data-source-view-designer-analysis-services-multidimensional-data.md).  
   
  **Properties**  
- Displays the **Properties** window in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] for the selected column.  
+ Displays the **Properties** window in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] for the selected column.  
   
 ## Relationship Context Menu  
  The following options are available in the context menu displayed by right-clicking a relationship in the **Data Source View** pane:  
@@ -132,7 +132,7 @@ manager: "mblythe"
  Displays Data Source View Designer for the data source view that contains the selected relationship. For more information about Data Source View Designer, see [Data Source View Designer &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/data-source-view-designer-analysis-services-multidimensional-data.md).  
   
  **Properties**  
- Displays the **Properties** window in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] for the selected relationship.  
+ Displays the **Properties** window in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] for the selected relationship.  
   
 ## See Also  
  [Toolbar &#40;Cube Structure Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   

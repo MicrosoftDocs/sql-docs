@@ -15,11 +15,11 @@ helpviewer_keywords:
 ms.assetid: 41921d45-8a3c-4b69-b397-4b02b3b62160
 caps.latest.revision: 11
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Tools Reference (Replication)
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provides several tools for implementing, administering, and troubleshooting replication. These include [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], programming interfaces, and other [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows components.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides several tools for implementing, administering, and troubleshooting replication. These include [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], programming interfaces, and other [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows components.  
   
 ## See Also  
  [Technical Reference &#40;Replication&#41;](../../../2014/relational-databases/replication/technical-reference-replication.md)  

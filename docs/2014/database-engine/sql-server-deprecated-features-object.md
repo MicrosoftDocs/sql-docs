@@ -17,11 +17,11 @@ helpviewer_keywords:
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 caps.latest.revision: 58
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # SQL Server, Deprecated Features Object
-  The SQLServer:Deprecated Features object in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a counter to monitor the features designated as deprecated. In each case the counter provides a usage count that lists the number of times the deprecated feature was encountered since [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] last started.  
+  The SQLServer:Deprecated Features object in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provides a counter to monitor the features designated as deprecated. In each case the counter provides a usage count that lists the number of times the deprecated feature was encountered since [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] last started.  
   
  The following table describes the SQL Server Deprecated Features counter instances.  
   
@@ -29,7 +29,7 @@ manager: "jhubbard"
 |------------------------------------------------------|-----------------|  
 |'#' and '##' as the name of temporary tables and stored procedures|An identifier was encountered that did not contain any characters other than #. Use at least one additional character. Occurs once per compilation.|  
 |'::' function calling syntax|The :: function calling syntax was encountered for a table-valued function. Replace with `SELECT column_list FROM` *\< function_name>*`()`. For example, replace `SELECT * FROM ::fn_virtualfilestats(2,1)`with `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Occurs once per compilation.|  
-|'@' and names that start with '@@' as [!INCLUDE[tsql](../../includes/tsql-md.md)] identifiers|An identifier was encountered that began with @ or @@. Do not use @ or @@ or names that begin with @@ as identifiers. Occurs once per compilation.|  
+|'@' and names that start with '@@' as [!INCLUDE[tsql](../includes/tsql-md.md)] identifiers|An identifier was encountered that began with @ or @@. Do not use @ or @@ or names that begin with @@ as identifiers. Occurs once per compilation.|  
 |ADDING TAPE DEVICE|The deprecated feature sp_addumpdevice'`tape`' was encountered. Use sp_addumpdevice'`disk`' instead. Occurs once per use.|  
 |ALL Permission|Total number of times the GRANT ALL, DENY ALL, or REVOKE ALL syntax was encountered. Modify the syntax to deny specific permissions. Occurs once per query.|  
 |ALTER DATABASE WITH TORN_PAGE_DETECTION|Total number of times the deprecated feature TORN_PAGE_DETECTION option of ALTER DATABASE has been used since the server instance was started. Use the PAGE_VERIFY syntax instead. Occurs once per use in a DDL statement.|  
@@ -56,10 +56,10 @@ manager: "jhubbard"
 |DBCC INDEXDEFRAG|The DBCC INDEXDEFRAG statement was encountered. Rewrite the statement to use the REORGANIZE option of ALTER INDEX. Occurs once per query.|  
 |DBCC SHOWCONTIG|The DBCC SHOWCONTIG statement was encountered. Query sys.dm_db_index_physical_stats for this information. Occurs once per query.|  
 |DEFAULT keyword as a default value|Syntax that uses the DEFAULT keyword as a default value was encountered. Do not use. Occurs once per compilation.|  
-|Deprecated encryption algorithm|Deprecated encryption algorithm rc4 will be removed in the next version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it. The RC4 algorithm is weak and is only supported for backward compatibility. New material can only be encrypted using RC4 or RC4_128 when the database is in compatibility level 90 or 100. (Not recommended.) Use a newer algorithm such as one of the AES algorithms instead. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and higher material encrypted using RC4 or RC4_128 can be unencrypted in any compatibility level.|  
+|Deprecated encryption algorithm|Deprecated encryption algorithm rc4 will be removed in the next version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it. The RC4 algorithm is weak and is only supported for backward compatibility. New material can only be encrypted using RC4 or RC4_128 when the database is in compatibility level 90 or 100. (Not recommended.) Use a newer algorithm such as one of the AES algorithms instead. In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] and higher material encrypted using RC4 or RC4_128 can be unencrypted in any compatibility level.|  
 |DESX algorithm|Syntax that uses the DESX encryption algorithm was encountered. Use another algorithm for encryption. Occurs once per compilation.|  
 |dm_fts_active_catalogs|The dm_fts_active_catalogs counter always remains at 0 because some columns of the sys.dm_fts_active_catalogs view are not deprecated. To monitor a deprecated column, use the column-specific counter; for example, dm_fts_active_catalogs.is_paused.|  
-|dm_fts_active_catalogs.is_paused|The is_paused column of the [sys.dm_fts_active_catalogs](../Topic/sys.dm_fts_active_catalogs%20\(Transact-SQL\).md) dynamic management view was encountered. Avoid using this column. Occurs every time the server instance detects a reference to the column.|  
+|dm_fts_active_catalogs.is_paused|The is_paused column of the [sys.dm_fts_active_catalogs](~/relational-databases/system-dynamic-management-views/sys-dm-fts-active-catalogs-transact-sql.md) dynamic management view was encountered. Avoid using this column. Occurs every time the server instance detects a reference to the column.|  
 |dm_fts_active_catalogs.previous_status|The previous_status column of the sys.dm_fts_active_catalogs dynamic management view was encountered. Avoid using this column. Occurs every time the server instance detects a reference to the column.|  
 |dm_fts_active_catalogs.previous_status_description|The previous_status_description column of the sys.dm_fts_active_catalogs dynamic management view was encountered. Avoid using this column. Occurs every time the server instance detects a reference to the column.|  
 |dm_fts_active_catalogs.row_count_in_thousands|The row_count_in_thousands column of the sys.dm_fts_active_catalogs dynamic management view was encountered. Avoid using this column. Occurs every time the server instance detects a reference to the column.|  
@@ -67,7 +67,7 @@ manager: "jhubbard"
 |dm_fts_active_catalogs.status_description|The status_description column of the sys.dm_fts_active_catalogs dynamic management view was encountered. Avoid using this column. Occurs every time the server instance detects a reference to the column.|  
 |dm_fts_active_catalogs.worker_count|The worker_count column of the sys.dm_fts_active_catalogs dynamic management view was encountered. Avoid using this column. Occurs every time the server instance detects a reference to the column.|  
 |dm_fts_memory_buffers|The dm_fts_memory_buffers counter always remains at 0 because most columns of the sys.dm_fts_memory_buffers view are not deprecated. To monitor the deprecated column, use the column-specific counter: dm_fts_memory_buffers.row_count.|  
-|dm_fts_memory_buffers.row_count|The row_count column of the [sys.dm_fts_memory_buffers](../Topic/sys.dm_fts_memory_buffers%20\(Transact-SQL\).md) dynamic management view was encountered. Avoid using this column. Occurs every time the server instance detects a reference to the column.|  
+|dm_fts_memory_buffers.row_count|The row_count column of the [sys.dm_fts_memory_buffers](~/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md) dynamic management view was encountered. Avoid using this column. Occurs every time the server instance detects a reference to the column.|  
 |DROP INDEX with two-part name|The DROP INDEX syntax contained the format *table_name.index_name* syntax in DROP INDEX. Replace with *index_name* ON *table_name* syntax in the DROP INDEX statement. Occurs once per compilation.|  
 |EXT_CREATE_ALTER_SOAP_ENDPOINT|The CREATE or ALTER ENDPOINT statement with the FOR SOAP option was encountered. Native XML Web Services is deprecated. Use Windows Communications Foundation (WCF) or ASP.NET instead.|  
 |EXT_endpoint_webmethods|sys.endpoint_webmethods was encountered. Native XML Web Services is deprecated. Use Windows Communications Foundation (WCF) or ASP.NET instead.|  
@@ -80,7 +80,7 @@ manager: "jhubbard"
 |fn_servershareddrives|The fn_servershareddrives function was compiled. Use sys.dm_io_cluster_shared_drives instead. Occurs once per compilation.|  
 |fn_virtualservernodes|The fn_virtualservernodes function was compiled. Use sys.dm_os_cluster_nodes instead. Occurs once per compilation.|  
 |fulltext_catalogs|The fulltext_catalogs counter always remains at 0 because some columns of the sys.fulltext_catalogs view are not deprecated. To monitor a deprecated column, use its column-specific counter; for example, fulltext_catalogs.data_space_id. Occurs every time the server instance detects a reference to the column.|  
-|fulltext_catalogs.data_space_id|The data_space_id column of the [sys.fulltext_catalogs](../Topic/sys.fulltext_catalogs%20\(Transact-SQL\).md) catalog view was encountered. Do not use this column. Occurs every time the server instance detects a reference to the column.|  
+|fulltext_catalogs.data_space_id|The data_space_id column of the [sys.fulltext_catalogs](~/relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md) catalog view was encountered. Do not use this column. Occurs every time the server instance detects a reference to the column.|  
 |fulltext_catalogs.file_id|The file_id column of the sys.fulltext_catalogs catalog view was encountered. Do not use this column. Occurs every time the server instance detects a reference to the column.|  
 |fulltext_catalogs.path|The path column of the sys.fulltext_catalogs catalog view was encountered. Do not use this column. Occurs every time the server instance detects a reference to the column.|  
 |FULLTEXTCATALOGPROPERTY('LogSize')|The LogSize property of the FULLTEXTCATALOGPROPERTY function was encountered. Avoid using this property.|  
@@ -95,7 +95,7 @@ manager: "jhubbard"
 |Index view select list without COUNT_BIG(*)|The select list of an aggregate indexed view must contain COUNT_BIG (*) .|  
 |INDEX_OPTION|Encountered CREATE TABLE, ALTER TABLE, or CREATE INDEX syntax without parentheses around the options. Rewrite the statement to use the current syntax. Occurs once per query.|  
 |INDEXKEY_PROPERTY|The INDEXKEY_PROPERTY syntax was encountered. Rewrite statements to query sys.index_columns. Occurs once per compilation.|  
-|Indirect TVF hints|The indirect application, through a view, of table hints to an invocation of a multistatement table-valued function (TVF) will be removed in a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|Indirect TVF hints|The indirect application, through a view, of table hints to an invocation of a multistatement table-valued function (TVF) will be removed in a future version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
 |INSERT NULL into TIMESTAMP columns|A NULL value was inserted to a TIMESTAMP column. Use a default value instead. Occurs once per compilation.|  
 |INSERT_HINTS||  
 |Korean_Wansung_Unicode|Event occurs once per database start and once per collation use. Plan to modify applications that use this collation.|  
@@ -111,7 +111,7 @@ manager: "jhubbard"
 |numbered_procedure_parameters|References to the deprecated sys.numbered_procedure_parameters were encountered. Do not use. Occurs once per compilation.|  
 |numbered_procedures|References to the deprecated sys.numbered_procedures were encountered. Do not use. Occurs once per compilation.|  
 |Oldstyle RAISEERROR|The deprecated RAISERROR (Format: RAISERROR integer string) syntax was encountered. Rewrite the statement using the current RAISERROR syntax. Occurs once per compilation.|  
-|OLEDB for ad hoc connections|SQLOLEDB is not a supported provider. Use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client for ad hoc connections.|  
+|OLEDB for ad hoc connections|SQLOLEDB is not a supported provider. Use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client for ad hoc connections.|  
 |PERMISSIONS|References to the PERMISSIONS intrinsic function were encountered. Query sys.fn_my_permissions instead. Occurs once per query.|  
 |ProcNums|The deprecated ProcNums syntax was encountered. Rewrite statements to remove the references. Occurs once per compilation.|  
 |READTEXT|The READTEXT syntax was encountered. Rewrite applications to use the `varchar(max)` data type and removed `text` data type syntax. Occurs once per query.|  

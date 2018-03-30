@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 314aebf1-6cdf-488d-a274-ce967fadb57b
 caps.latest.revision: 16
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_7987
@@ -38,7 +38,7 @@ manager: "jhubbard"
 ## User Action  
   
 ### Look for Hardware Failure  
- Run hardware diagnostics and correct any problems. Also examine the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows system and application logs and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log to see whether the error occurred as the result of hardware failure. Fix any hardware-related problems that are contained in the logs.  
+ Run hardware diagnostics and correct any problems. Also examine the [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows system and application logs and the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] error log to see whether the error occurred as the result of hardware failure. Fix any hardware-related problems that are contained in the logs.  
   
  If you have persistent data corruption problems, try to swap out different hardware components to isolate the problem. Check to make sure that the system does not have write-caching enabled on the disk controller. If you suspect write-caching to be the problem, contact your hardware vendor.  
   
@@ -48,6 +48,6 @@ manager: "jhubbard"
  If the problem is not hardware related and a known clean backup is available, restore the database from the backup.  
   
 ### Run DBCC CHECKDB  
- Not applicable. This error cannot be repaired automatically. If you cannot restore the database from a backup, contact [!INCLUDE[msCoName](../../includes/msconame-md.md)] Service and Support (CSS).  
+ Not applicable. This error cannot be repaired automatically. If you cannot restore the database from a backup, contact [!INCLUDE[msCoName](../includes/msconame-md.md)] Service and Support (CSS).  
   
   

@@ -16,7 +16,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Integration Services Tutorials
-  This section contains tutorials [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+  This section contains tutorials [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
 -   [SSIS Tutorial: Creating a Simple ETL Package](../../2014/tutorials/ssis-tutorial-creating-a-simple-etl-package.md)  
   

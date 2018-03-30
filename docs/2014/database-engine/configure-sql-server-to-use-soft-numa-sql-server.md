@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 caps.latest.revision: 38
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Configure SQL Server to Use Soft-NUMA (SQL Server)
@@ -35,14 +35,14 @@ The figure below shows the type of information regarding soft-NUMA that you will
 
 ## Manual Soft-NUMA
   
-To configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to use soft-NUMA manually, you must edit the registry to add a node configuration affinity mask. The soft-NUMA mask can be stated as a binary, DWORD (hexadecimal or decimal), or QWORD (hexadecimal or decimal) registry entry. To configure more than the first 32 CPUs use QWORD or BINARY registry values. (QWORD values cannot be used prior to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].) You must restart the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to configure soft-NUMA.  
+To configure [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to use soft-NUMA manually, you must edit the registry to add a node configuration affinity mask. The soft-NUMA mask can be stated as a binary, DWORD (hexadecimal or decimal), or QWORD (hexadecimal or decimal) registry entry. To configure more than the first 32 CPUs use QWORD or BINARY registry values. (QWORD values cannot be used prior to [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].) You must restart the [!INCLUDE[ssDE](../includes/ssde-md.md)] to configure soft-NUMA.  
   
 > [!TIP]  
 >  CPUs are numbered starting with 0.  
   
- [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
+ [!INCLUDE[ssNoteRegistry](../includes/ssnoteregistry-md.md)]  
   
- Consider the following example. A computer with eight CPUs does not have hardware NUMA. Three soft-NUMA nodes are configured. [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance A is configured to use CPUs 0 through 3. A second instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] is installed and configured to use CPUs 4 through 7. The example can be visually represented as:  
+ Consider the following example. A computer with eight CPUs does not have hardware NUMA. Three soft-NUMA nodes are configured. [!INCLUDE[ssDE](../includes/ssde-md.md)] instance A is configured to use CPUs 0 through 3. A second instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)] is installed and configured to use CPUs 4 through 7. The example can be visually represented as:  
   
  `CPUs          0  1  2  3  4  5  6  7`  
   
@@ -55,7 +55,7 @@ To configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to use so
  The lazy writer thread is tied to the SQL OS view of the physical NUMA memory nodes. Therefore, whatever the hardware presents as physical NUMA nodes will equate to the number of lazy writer threads that are created. For more information, see [How It Works: Soft NUMA, I/O Completion Thread, Lazy Writer Workers and Memory Nodes](http://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx).  
   
 > [!NOTE]  
->  The **Soft-NUMA** registry keys are not copied when you upgrade an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  The **Soft-NUMA** registry keys are not copied when you upgrade an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ### Set the CPU affinity mask  
   
@@ -79,7 +79,7 @@ To configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to use so
   
      In the following example, assume you have a DL580 G9 server, with 18 cores per socket (in 4 sockets), and each socket is in its own K-group. A soft-numa configuration that you might create would look something like following. (6 cores per Node, 3 nodes per group, 4 groups).  
   
-    |Example for a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] server with multiple K-Groups|Type|Value name|Value data|  
+    |Example for a [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] server with multiple K-Groups|Type|Value name|Value data|  
     |------------------------------------------------------------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node0|DWORD|CPUMask|0x3F|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node0|DWORD|Group|0|  
@@ -108,7 +108,7 @@ To configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to use so
   
      Additional examples:  
   
-    |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Type|Value name|Value data|  
+    |[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]|Type|Value name|Value data|  
     |---------------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node0|DWORD|Group|0|  
@@ -120,7 +120,7 @@ To configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to use so
     > [!TIP]  
     >  To specify CPUs 60 through 63, use a QWORD value of F000000000000000 or a BINARY value of 1111000000000000000000000000000000000000000000000000000000000000.  
   
-    |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|Type|Value name|Value data|  
+    |[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|Type|Value name|Value data|  
     |---------------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\NodeConfiguration\Node0|DWORD|Group|0|  
@@ -153,6 +153,6 @@ To configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to use so
 ## See Also  
  [Map TCP IP Ports to NUMA Nodes &#40;SQL Server&#41;](../../2014/database-engine/map-tcp-ip-ports-to-numa-nodes-sql-server.md)   
  [affinity mask Server Configuration Option](../../2014/database-engine/affinity-mask-server-configuration-option.md)   
- [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../Topic/ALTER%20SERVER%20CONFIGURATION%20\(Transact-SQL\).md)  
+ [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](~/t-sql/statements/alter-server-configuration-transact-sql.md)  
   
   

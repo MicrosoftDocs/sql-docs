@@ -39,7 +39,7 @@ manager: "jhubbard"
   
 8.  Identify a specific version of a file as the current version.  
   
-9. Export the history report to a printer, a file, or the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows clipboard.  
+9. Export the history report to a printer, a file, or the [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows clipboard.  
   
  For information on how to perform these tasks, click the **Help** button in the **History of File** dialog box.  
   

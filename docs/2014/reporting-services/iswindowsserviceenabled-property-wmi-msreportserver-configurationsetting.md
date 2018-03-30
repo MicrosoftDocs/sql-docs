@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: b1b75d72-6220-43fe-abfb-f967f3972d00
 caps.latest.revision: 18
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # IsWindowsServiceEnabled Property (WMI MSReportServer_ConfigurationSetting)
@@ -43,7 +43,7 @@ public boolean IsWindowsServiceEnabled;
  [MSReportServer_ConfigurationSetting Class](../../2014/reporting-services/msreportserver-configurationsetting-class.md)  
   
 ## Requirements  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../includes/ssrswminmspca-md.md)]  
   
 ## See Also  
  [MSReportServer_ConfigurationSetting Members](../../2014/reporting-services/msreportserver-configurationsetting-members.md)  

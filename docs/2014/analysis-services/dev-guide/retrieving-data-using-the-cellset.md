@@ -45,7 +45,7 @@ manager: "mblythe"
 ### Example of Retrieving Data in a Connected State  
  The following example makes a connection to the local server, and then runs a command on the connection. The example parses the results by using the `CellSet` object model: the captions (metadata) for the columns are retrieved from the first axis, and the captions (metadata) for each row are retrieved from the second axis, and the intersecting data is retrieved by using the <xref:Microsoft.AnalysisServices.AdomdClient.CellSet.Cells%2A> collection.  
   
- [!code-csharp[Adomd.NetClient#ReturnCommandUsingCellSet](../../../snippets/csharp/SQL14/adomd.net/adomd.netclient/cs/adomdexample.cs#returncommandusingcellset)]  
+ [!code-csharp[Adomd.NetClient#ReturnCommandUsingCellSet](../../snippets/csharp/SQL14/adomd.net/adomd.netclient/cs/adomdexample.cs#returncommandusingcellset)]  
   
 ## Retrieving Data in a Disconnected State  
  By loading XML returned from a previous query, you can use the <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> object to provide a comprehensive method of browsing analytical data without requiring an active connection.  
@@ -56,7 +56,7 @@ manager: "mblythe"
 ### Example of Retrieving Data in a Disconnected State  
  The following example is similar to the metadata and data example shown earlier in this topic. However, the command in the following example runs with a call to <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteXmlReader%2A>, and the result is returned as a `System.Xml.XmlReader`. The example then populates the <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> object by using this `System.Xml.XmlReader` with the <xref:Microsoft.AnalysisServices.AdomdClient.CellSet.LoadXml%2A> method. Although this example loads the `System.Xml.XmlReader` immediately, you could cache the XML that is contained by the reader to a hard disk or transport that data to a different application through any means before loading the data into a cellset.  
   
- [!code-csharp[Adomd.NetClient#DemonstrateDisconnectedCellset](../../../snippets/csharp/SQL14/adomd.net/adomd.netclient/cs/adomdexample.cs#demonstratedisconnectedcellset)]  
+ [!code-csharp[Adomd.NetClient#DemonstrateDisconnectedCellset](../../snippets/csharp/SQL14/adomd.net/adomd.netclient/cs/adomdexample.cs#demonstratedisconnectedcellset)]  
   
 ## See Also  
  [Retrieving Data from an Analytical Data Source](../../../2014/analysis-services/dev-guide/retrieving-data-from-an-analytical-data-source.md)   

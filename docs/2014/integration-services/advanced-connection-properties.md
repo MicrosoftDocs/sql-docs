@@ -18,7 +18,7 @@ manager: "jhubbard"
 # Advanced Connection Properties
   Use the **Advanced Connection Properties** dialog box to add more connection parameters to the connection string.  
   
- The additional connection parameters can be any ODBC connection parameter that is supported by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database instance you are using.  
+ The additional connection parameters can be any ODBC connection parameter that is supported by the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database instance you are using.  
   
  The parameters added using the **Advanced Connection Properties** dialog box are added to the parameters selected in the **Connect to SQL Server** dialog box.  
   

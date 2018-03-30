@@ -20,11 +20,11 @@ helpviewer_keywords:
 ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
 caps.latest.revision: 50
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Create, Modify, and Delete Shared Data Sources (SSRS)
-  A shared data source is a set of data source connection properties that can be referenced by multiple reports, models, and data-driven subscriptions that run on a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server. Shared data sources provide an easy way to manage data source properties that often change over time. If a user account or password changes, or if you move the database to a different server, you can update the connection information in one place.  
+  A shared data source is a set of data source connection properties that can be referenced by multiple reports, models, and data-driven subscriptions that run on a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report server. Shared data sources provide an easy way to manage data source properties that often change over time. If a user account or password changes, or if you move the database to a different server, you can update the connection information in one place.  
   
  Shared data sources are optional for reports and data-driven subscriptions, but required for report models. If you plan to use report models for ad hoc reporting, you must create and maintain a shared data source item to provide connection information to the model.  
   
@@ -34,7 +34,7 @@ manager: "mblythe"
 |----------|-----------------|  
 |Name|A name that identifies the item within the report server folder hierarchy.|  
 |Description|A description that appears with the item in Report Manager when you view the contents of the folder.|  
-|Connection type|The data processing extension used with the data source. You can only use data processing extensions that are deployed on the report server. For more information about data processing extensions included with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../2014/reporting-services/data-sources-supported-by-reporting-services-ssrs.md).|  
+|Connection type|The data processing extension used with the data source. You can only use data processing extensions that are deployed on the report server. For more information about data processing extensions included with [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../2014/reporting-services/data-sources-supported-by-reporting-services-ssrs.md).|  
 |Connection string|The connection string for the database. For more information and to view examples of connection strings to frequently used data sources, see [Data Connections, Data Sources, and Connection Strings in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).|  
 |Credential type|Specifies how credentials are obtained for the connection and whether they are to be used after the connection is made. For more information, see [Specify Credential and Connection Information for Report Data Sources](../../2014/reporting-services/specify-credential-and-connection-information-for-report-data-sources.md).|  
   

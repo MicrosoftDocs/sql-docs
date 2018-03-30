@@ -21,19 +21,19 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQLPutData
-  The following restrictions apply when using SQLPutData to send more than 65,535 bytes of data (for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] version 4.21a) or 400 KB of data (for SQL Server version 6.0 and later) for a SQL_LONGVARCHAR (`text`), SQL_WLONGVARCHAR (`ntext`) or SQL_LONGVARBINARY (`image`) column:  
+  The following restrictions apply when using SQLPutData to send more than 65,535 bytes of data (for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version 4.21a) or 400 KB of data (for SQL Server version 6.0 and later) for a SQL_LONGVARCHAR (`text`), SQL_WLONGVARCHAR (`ntext`) or SQL_LONGVARBINARY (`image`) column:  
   
 -   The referenced parameter can be the *insert_value* in an INSERT statement.  
   
 -   The referenced parameter can be an *expression* in the SET clause of an UPDATE statement.  
   
- Canceling a sequence of SQLPutData calls that provide data in blocks to a server running [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] causes a partial update of the column's value when using version 6.5 or earlier. The `text`, `ntext`, or `image` column that was referenced when SQLCancel was called is set to an intermediate placeholder value.  
+ Canceling a sequence of SQLPutData calls that provide data in blocks to a server running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] causes a partial update of the column's value when using version 6.5 or earlier. The `text`, `ntext`, or `image` column that was referenced when SQLCancel was called is set to an intermediate placeholder value.  
   
 > [!NOTE]  
->  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver does not support connecting to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] version 6.5 and earlier.  
+>  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver does not support connecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version 6.5 and earlier.  
   
 ## Diagnostics  
- There is one [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client specific SQLSTATE for SQLPutData:  
+ There is one [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client specific SQLSTATE for SQLPutData:  
   
 |SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  

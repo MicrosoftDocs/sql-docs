@@ -31,7 +31,7 @@ manager: "mblythe"
  This section includes tasks for configuring the software using Central Administration. At a minimum, you must perform all three of the required configuration tasks noted in the list below.  
   
 > [!IMPORTANT]  
->  For SharePoint 2010, SharePoint 2010 Service Pack 1 (SP1) must be installed before you can configure either PowerPivot for SharePoint, or a SharePoint farm that uses a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] database server. If you have not yet installed the service pack, do so now before you begin configuring the server.  
+>  For SharePoint 2010, SharePoint 2010 Service Pack 1 (SP1) must be installed before you can configure either PowerPivot for SharePoint, or a SharePoint farm that uses a [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] database server. If you have not yet installed the service pack, do so now before you begin configuring the server.  
   
 ## Benefits of Configuring PowerPivot for SharePoint Using Central Administration  
  SharePoint Central Administration is the administrative application of a SharePoint farm. If you are farm administrator, you might prefer to use a familiar tool when adding a PowerPivot for SharePoint instance to your farm.  

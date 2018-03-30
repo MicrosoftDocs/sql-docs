@@ -36,11 +36,11 @@ manager: "mblythe"
 ## Viewing the Results of Processing  
  After a mining structure has been processed, it contains a compact representation of the data for use in statistical analysis. If the cache has not been cleared, you can access the data in this cache in the following ways:  
   
--   Creating a Data Mining Extensions (DMX) query on the model and drilling through to the structure. For more information, see [SELECT FROM &#60;model&#62;.CASES &#40;DMX&#41;](../Topic/SELECT%20FROM%20%3Cmodel%3E.CASES%20\(DMX\).md).  
+-   Creating a Data Mining Extensions (DMX) query on the model and drilling through to the structure. For more information, see [SELECT FROM &#60;model&#62;.CASES &#40;DMX&#41;](~/dmx/select-from-model-content-dmx.md).  
   
 -   Browsing a model based on the structure, and using one of the options in the user interface to drill through to structure cases. For more information, see [Data Mining Model Viewers](../../2014/analysis-services/data-mining-model-viewers.md), or [Drill Through to Case Data from a Mining Model](../../2014/analysis-services/drill-through-to-case-data-from-a-mining-model.md).  
   
--   Creating a DMX query on the structure cases. For more information, see [SELECT FROM &#60;structure&#62;.CASES](../Topic/SELECT%20FROM%20%3Cstructure%3E.CASES.md).  
+-   Creating a DMX query on the structure cases. For more information, see [SELECT FROM &#60;structure&#62;.CASES](~/dmx/select-from-structure-cases.md).  
   
  After a mining model has been processed, it contains only the patterns that were derived from analysis, and mappings from the model results to the cached training data. You can browse or query the model results, called *model content*, or you can query the model and structure cases, if they have been cached.  
   

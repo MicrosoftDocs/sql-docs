@@ -20,7 +20,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Create or Edit Relationship Dialog Box (Analysis Services - Multidimensional Data)
-  Use the **Create/Edit Relationship** dialog box in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to define or modify a relationship in a data source view. You can display the **Create/Edit Relationship** dialog box by:  
+  Use the **Create/Edit Relationship** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to define or modify a relationship in a data source view. You can display the **Create/Edit Relationship** dialog box by:  
   
 -   Clicking **New Relationship** in the **Toolbar** pane of **Data Source View Designer**.  
   

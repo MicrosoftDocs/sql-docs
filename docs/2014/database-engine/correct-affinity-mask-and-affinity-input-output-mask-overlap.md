@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Correct Affinity Mask and Affinity Input Output Mask Overlap
-  This rule checks whether the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has one or more processors that are assigned to be used with both the affinity mask and the affinity I/O mask options. On a computer that has more than one processor, the affinity mask and the affinity I/O mask options are used to designate which CPUs are used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Enabling a CPU with both the affinity mask and the affinity I/O mask can slow performance by forcing the processor to be overused.  
+  This rule checks whether the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has one or more processors that are assigned to be used with both the affinity mask and the affinity I/O mask options. On a computer that has more than one processor, the affinity mask and the affinity I/O mask options are used to designate which CPUs are used by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Enabling a CPU with both the affinity mask and the affinity I/O mask can slow performance by forcing the processor to be overused.  
   
 ## Best Practices Recommendations  
  When you specify either the affinity mask or the affinity I/O mask options, you should specify both, but only enable each CPU no more than once.  

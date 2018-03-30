@@ -16,9 +16,9 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Troubleshooting Reports for Package Execution
-  In the current release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], standard reports are available in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to help you monitor and troubleshoot [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages that have been deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog. Two of these package reports in particular help you to view package execution status and identify the cause of execution failures.  
+  In the current release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], standard reports are available in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to help you monitor and troubleshoot [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages that have been deployed to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] catalog. Two of these package reports in particular help you to view package execution status and identify the cause of execution failures.  
   
--   **Integration Services Dashboard** - This report provides an overview of all the package executions on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance in the past 24 hours. The report displays information such as Status, Operation Type, Package Name, etc., for each package.  
+-   **Integration Services Dashboard** - This report provides an overview of all the package executions on the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance in the past 24 hours. The report displays information such as Status, Operation Type, Package Name, etc., for each package.  
   
      The Start Time, End Time, and Duration can be interpreted as follows:  
   
@@ -30,7 +30,7 @@ manager: "jhubbard"
   
      You can filter the table displayed on any page by clicking **Filter** and then selecting criteria in the **Filter Settings** dialog. The filter criteria available depends on the data being displayed. You can change the sort order of the report by clicking the sort icon in the **Filter Settings** dialog.  
   
--   **Activity - All Executions Report** – This report displays a summary of all [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] executions that have been performed on the server. The summary displays information for each execution such as status, start time, and end time. Each summary entry includes links to more information about the execution including messages generated during execution and performance data. As with the Integration Services Dashboard, you can apply a filter to the table to narrow down the information displayed.  
+-   **Activity - All Executions Report** – This report displays a summary of all [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] executions that have been performed on the server. The summary displays information for each execution such as status, start time, and end time. Each summary entry includes links to more information about the execution including messages generated during execution and performance data. As with the Integration Services Dashboard, you can apply a filter to the table to narrow down the information displayed.  
   
 ## Related Tasks  
  [View Reports for the Integration Services Server](../../2014/integration-services/view-reports-for-the-integration-services-server.md)  

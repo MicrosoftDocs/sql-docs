@@ -39,15 +39,15 @@ manager: "mblythe"
   
 -   A set of rules that describe how products are grouped together in a transaction, and the probabilities that products are purchased together.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] provides multiple algorithms for use in your data mining solutions. These algorithms are implementations of some of the most popular methodologies used in data mining. All of the Microsoft data mining algorithms can be customized and are fully programmable using the provided APIs, or by using the data mining components in SQL Server Integration Services.  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] provides multiple algorithms for use in your data mining solutions. These algorithms are implementations of some of the most popular methodologies used in data mining. All of the Microsoft data mining algorithms can be customized and are fully programmable using the provided APIs, or by using the data mining components in SQL Server Integration Services.  
   
  You can also use third-party algorithms that comply with the OLE DB for Data Mining specification, or develop custom algorithms that can be registered as services and then used within the SQL Server Data Mining framework.  
   
 ## Choosing the Right Algorithm  
- Choosing the best algorithm to use for a specific analytical task can be a challenge. While you can use different algorithms to perform the same business task, each algorithm produces a different result, and some algorithms can produce more than one type of result. For example, you can use the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm not only for prediction, but also as a way to reduce the number of columns in a dataset, because the decision tree can identify columns that do not affect the final mining model.  
+ Choosing the best algorithm to use for a specific analytical task can be a challenge. While you can use different algorithms to perform the same business task, each algorithm produces a different result, and some algorithms can produce more than one type of result. For example, you can use the [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees algorithm not only for prediction, but also as a way to reduce the number of columns in a dataset, because the decision tree can identify columns that do not affect the final mining model.  
   
 ### Choosing an Algorithm by Type  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] includes the following algorithm types:  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] includes the following algorithm types:  
   
 -   **Classification algorithms** predict one or more discrete variables, based on the other attributes in the dataset.  
   
@@ -73,7 +73,7 @@ manager: "mblythe"
 |**Finding groups of similar items**<br /><br /> Create patient risk profiles groups based on attributes such as demographics and behaviors.<br /><br /> Analyze users by browsing and buying patterns.<br /><br /> Identify servers that have similar usage characteristics.|[Microsoft Clustering Algorithm](../../2014/analysis-services/microsoft-clustering-algorithm.md)<br /><br /> [Microsoft Sequence Clustering Algorithm](../../2014/analysis-services/microsoft-sequence-clustering-algorithm.md)|  
   
 ## Related Content  
- The following table provides links to learning resources for each of the data mining algorithms that are provided in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:  
+ The following table provides links to learning resources for each of the data mining algorithms that are provided in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]:  
   
 |||  
 |-|-|  

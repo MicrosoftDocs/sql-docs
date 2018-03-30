@@ -36,7 +36,7 @@ manager: "jhubbard"
   
 -   Indicate whether the Raw File destination appends data to an existing file that has the same name or creates a new file.  
   
- The Raw File destination is frequently used to write intermediary results of partly processed data between package executions. Storing raw data means that the data can be read quickly by a Raw File source and then further transformed before it is loaded into its final destination. For example, a package might run several times, and each time write raw data to files. Later, a different package can use the Raw File source to read from each file, use a Union All transformation to merge the data into one data set, and then apply additional transformations that summarize the data before loading the data into its final destination such as a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table.  
+ The Raw File destination is frequently used to write intermediary results of partly processed data between package executions. Storing raw data means that the data can be read quickly by a Raw File source and then further transformed before it is loaded into its final destination. For example, a package might run several times, and each time write raw data to files. Later, a different package can use the Raw File source to read from each file, use a Union All transformation to merge the data into one data set, and then apply additional transformations that summarize the data before loading the data into its final destination such as a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] table.  
   
 > [!NOTE]  
 >  The Raw File destination supports null data but not binary large object (BLOB) data.  
@@ -116,7 +116,7 @@ manager: "jhubbard"
  If you use the **TruncateAppend** option instead of the **Append** option, it will truncate rows that were added in any previous iteration, and then append new rows. Using the **TruncateAppend** option also requires that the data matches the file format.  
   
 ## Configuration of the Raw File Destination  
- You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer or programmatically.  
   
  The **Advanced Editor** dialog box reflects the properties that can be set programmatically. For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   

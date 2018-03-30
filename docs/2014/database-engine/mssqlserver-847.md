@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 67208b7c-bd8d-48a1-9f70-a6488e0f5f9b
 caps.latest.revision: 16
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_847
@@ -31,9 +31,9 @@ manager: "jhubbard"
 |Message Text|Time-out occurred while waiting for latch: class '%ls', id %p, type %d, Task 0x%p : %d, waittime %d, flags 0x%I64x, owning task 0x%p. Continuing to wait.|  
   
 ## Explanation  
- A computer might stop responding (hang), or a time-out or some other disruption of regular operations might occur at the same time that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] writes buffer latch errors to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log.  
+ A computer might stop responding (hang), or a time-out or some other disruption of regular operations might occur at the same time that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] writes buffer latch errors to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] error log.  
   
- If the stat field in the message has the value of 0x04 on, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is waiting for an I/O operation. You may also receive message [MSSQLSERVER_833](../../2014/database-engine/mssqlserver-833.md) in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log.  
+ If the stat field in the message has the value of 0x04 on, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is waiting for an I/O operation. You may also receive message [MSSQLSERVER_833](../../2014/database-engine/mssqlserver-833.md) in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] error log.  
   
  If the stat field in the message has the value 0x04 off, there is heavy contention for a page. If the object is a data page, this can be caused by inefficient code design. If the page is nondata, the error might be caused by server bottlenecks, such as insufficient hardware resources.  
   

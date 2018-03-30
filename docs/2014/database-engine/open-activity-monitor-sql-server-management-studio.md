@@ -21,7 +21,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Open Activity Monitor (SQL Server Management Studio)
-  This topic describes how to open the Activity Monitor to obtain information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processes and how these processes affect the current instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. It also describes how to set the refresh interval of the Activity Monitor.  
+  This topic describes how to open the Activity Monitor to obtain information about [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] processes and how these processes affect the current instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. It also describes how to set the refresh interval of the Activity Monitor.  
   
  **In This Topic**  
   
@@ -49,7 +49,7 @@ manager: "jhubbard"
   
 #### To open Activity Monitor in SQL Server Management Studio  
   
-1.  On the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] standard toolbar, click **Activity Monitor**.  
+1.  On the [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] standard toolbar, click **Activity Monitor**.  
   
 2.  In the **Connect to Server** dialog box, select the server name and authentication mode, and then click **Connect**.  
   
@@ -67,7 +67,7 @@ manager: "jhubbard"
   
 3.  In the **At startup** box, select **Open Object Explorer and Activity Monitor**.  
   
-4.  To activate the changes, close and reopen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+4.  To activate the changes, close and reopen [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 ###  <a name="Refresh"></a> To Set the Activity Monitor Refresh Interval  
   

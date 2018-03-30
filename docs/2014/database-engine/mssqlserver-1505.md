@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: ef4df75d-0f36-4c8b-b36c-e427f65f91ca
 caps.latest.revision: 14
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_1505
@@ -60,7 +60,7 @@ manager: "jhubbard"
 -   If the duplicate values are the result of data entry errors, manually correct the data and then create the index or constraint. For information about removing duplicate rows in a table, see Knowledge Base article 139444: [How to remove duplicate rows from a table in SQL Server](http://support.microsoft.com/kb/139444).  
   
 ## See Also  
- [CREATE INDEX &#40;Transact-SQL&#41;](../Topic/CREATE%20INDEX%20\(Transact-SQL\).md)   
+ [CREATE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md)   
  [Create Unique Indexes](../../2014/database-engine/create-unique-indexes.md)   
  [Create Unique Constraints](../../2014/database-engine/create-unique-constraints.md)  
   

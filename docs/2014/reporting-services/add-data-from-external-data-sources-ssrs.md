@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 924a2ec3-150c-4bb2-83c9-4c7b440e8c03
 caps.latest.revision: 10
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Add Data from External Data Sources (SSRS)
@@ -60,7 +60,7 @@ manager: "mblythe"
 
   
 ##  <a name="DataTypes"></a> Working with Data Types  
- When you create a dataset, the data types of the fields are mapped to a subset of common language runtime (CLR) data types from the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Data types that cannot be clearly mapped are returned as strings. For more information about working with field data types, see [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/dataset-fields-collection-report-builder-and-ssrs.md). When you create a parameter, the data type must be a supported report definition data type. For more information about mapping data types from the data provider to a report parameter, see [Data Types in Expressions &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/data-types-in-expressions-report-builder-and-ssrs.md).  
+ When you create a dataset, the data types of the fields are mapped to a subset of common language runtime (CLR) data types from the [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]. Data types that cannot be clearly mapped are returned as strings. For more information about working with field data types, see [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/dataset-fields-collection-report-builder-and-ssrs.md). When you create a parameter, the data type must be a supported report definition data type. For more information about mapping data types from the data provider to a report parameter, see [Data Types in Expressions &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/data-types-in-expressions-report-builder-and-ssrs.md).  
   
 
   
@@ -80,12 +80,12 @@ manager: "mblythe"
   
 |Topic|Data Source Type|  
 |-----------|----------------------|  
-|[SQL Server Connection Type &#40;SSRS&#41;](../../2014/reporting-services/sql-server-connection-type-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|[Analysis Services Connection Type for MDX &#40;SSRS&#41;](../../2014/reporting-services/analysis-services-connection-type-for-mdx-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|  
-|[PowerPivot Connection Type &#40;SSRS&#41;](../../2014/reporting-services/powerpivot-connection-type-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|  
-|[SharePoint List Connection Type &#40;SSRS&#41;](../../2014/reporting-services/sharepoint-list-connection-type-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint List|  
-|[SQL Azure Connection Type &#40;SSRS&#41;](../../2014/reporting-services/sql-azure-connection-type-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
-|[SQL Server Parallel Data Warehouse Connection Type &#40;SSRS&#41;](../../2014/reporting-services/sql-server-parallel-data-warehouse-connection-type-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../../includes/ssdwfull-md.md)]|  
+|[SQL Server Connection Type &#40;SSRS&#41;](../../2014/reporting-services/sql-server-connection-type-ssrs.md)|[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|  
+|[Analysis Services Connection Type for MDX &#40;SSRS&#41;](../../2014/reporting-services/analysis-services-connection-type-for-mdx-ssrs.md)|[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|  
+|[PowerPivot Connection Type &#40;SSRS&#41;](../../2014/reporting-services/powerpivot-connection-type-ssrs.md)|[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|  
+|[SharePoint List Connection Type &#40;SSRS&#41;](../../2014/reporting-services/sharepoint-list-connection-type-ssrs.md)|[!INCLUDE[msCoName](../includes/msconame-md.md)] SharePoint List|  
+|[SQL Azure Connection Type &#40;SSRS&#41;](../../2014/reporting-services/sql-azure-connection-type-ssrs.md)|[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDS](../includes/sssds-md.md)]|  
+|[SQL Server Parallel Data Warehouse Connection Type &#40;SSRS&#41;](../../2014/reporting-services/sql-server-parallel-data-warehouse-connection-type-ssrs.md)|[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]|  
 |[SAP NetWeaver BI Connection Type &#40;SSRS&#41;](../../2014/reporting-services/sap-netweaver-bi-connection-type-ssrs.md)|SAP NetWeaver BI|  
 |[Hyperion Essbase Connection Type &#40;SSRS&#41;](../../2014/reporting-services/hyperion-essbase-connection-type-ssrs.md)|Hyperion Essbase|  
 |[OLE DB Connection Type &#40;SSRS&#41;](../../2014/reporting-services/ole-db-connection-type-ssrs.md)|OLE DB|  
@@ -104,8 +104,8 @@ manager: "mblythe"
 |[Data Connections, Data Sources, and Connection Strings in Report Builder](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)|Provides information about data connections and data sources.|  
 |[Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|Provides information about embedded and shared datasets.|  
 |[Dataset Fields Collection &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/dataset-fields-collection-report-builder-and-ssrs.md)|Provides information about the dataset field collection generated by the query.|  
-|[Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../2014/reporting-services/data-sources-supported-by-reporting-services-ssrs.md) in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).|Provides in-depth information about platform and version support for each data extension.|  
-|[Data Processing Extensions Overview](../../2014/reporting-services/dev-guide/data-processing-extensions-overview.md) in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).|Provides in-depth information for advanced users about data extensions.|  
+|[Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../2014/reporting-services/data-sources-supported-by-reporting-services-ssrs.md) in the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).|Provides in-depth information about platform and version support for each data extension.|  
+|[Data Processing Extensions Overview](../../2014/reporting-services/dev-guide/data-processing-extensions-overview.md) in the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).|Provides in-depth information for advanced users about data extensions.|  
   
 
   

@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: e9a01a74-2f51-4b35-be3a-a6138568f6cf
 caps.latest.revision: 6
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Format Axis Labels as Dates or Currencies (Report Builder and SSRS)
@@ -26,7 +26,7 @@ manager: "mblythe"
  When a numeric value is added to the y-axis, by default, the chart does not format the number before displaying it. If your numeric field is a sales figure, consider formatting the numbers as currencies to increase the readability of the chart.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ### To format x-axis labels as monthly intervals  
   
@@ -43,7 +43,7 @@ manager: "mblythe"
     > [!NOTE]  
     >  If you do not specify an interval type, the chart will calculate intervals in terms of days.  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ### To format y-axis labels using a currency format  
   
@@ -53,7 +53,7 @@ manager: "mblythe"
   
 3.  From the **Category** list, select **Currency**. From the **Symbol** list, select a currency format to apply to the y-axis labels.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## See Also  
  [Formatting Axis Labels on a Chart &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   

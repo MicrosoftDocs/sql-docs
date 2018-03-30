@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: a5c7cd6e-18d6-47ef-902b-db9dd64bba34
 caps.latest.revision: 8
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_7711

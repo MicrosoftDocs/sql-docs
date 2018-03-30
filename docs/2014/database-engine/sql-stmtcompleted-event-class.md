@@ -20,16 +20,16 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQL:StmtCompleted Event Class
-  The SQL:StmtCompleted event class indicates that a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement has completed.  
+  The SQL:StmtCompleted event class indicates that a [!INCLUDE[tsql](../includes/tsql-md.md)] statement has completed.  
   
 ## SQL:StmtCompleted Event Class Data Columns  
   
 |Data column name|Data type|Description|Column ID|Filterable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|ApplicationName|`nvarchar`|Name of the client application that created the connection to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This column is populated with the values passed by the application rather than the displayed name of the program.|10|Yes|  
+|ApplicationName|`nvarchar`|Name of the client application that created the connection to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. This column is populated with the values passed by the application rather than the displayed name of the program.|10|Yes|  
 |ClientProcessID|`int`|ID assigned by the host computer to the process where the client application is running. This data column is populated if the client provides the client process ID.|9|Yes|  
 |CPU|`int`|Amount of CPU time (in milliseconds) used by the event.|18|Yes|  
-|DatabaseID|`int`|ID of the database specified by the USE *database* statement or the default database if no USE *database* statement has been issued for a given instance. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] displays the name of the database if the ServerName data column is captured in the trace and the server is available. Determine the value for a database by using the DB_ID function.|3|Yes|  
+|DatabaseID|`int`|ID of the database specified by the USE *database* statement or the default database if no USE *database* statement has been issued for a given instance. [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] displays the name of the database if the ServerName data column is captured in the trace and the server is available. Determine the value for a database by using the DB_ID function.|3|Yes|  
 |DatabaseName|`nvarchar`|Name of the database in which the user statement is running.|35|Yes|  
 |Duration|`bigint`|Amount of time (in microseconds) taken by the event.|13|Yes|  
 |EndTime|`datetime`|Time at which the event ended.|15|Yes|  
@@ -41,7 +41,7 @@ manager: "jhubbard"
 |IntegerData2|`int`|End offset (in bytes) of the statement that is being executed.|55|Yes|  
 |IsSystem|`int`|Indicates whether the event occurred on a system process or a user process. 1 = system, 0 = user.|60|Yes|  
 |LineNumber|`int`|Line number of the statement being executed.|5|Yes|  
-|LoginName|`nvarchar`|Name of the login of the user (either [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security login or the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows login credentials in the form of DOMAIN\username).|11|Yes|  
+|LoginName|`nvarchar`|Name of the login of the user (either [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] security login or the [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows login credentials in the form of DOMAIN\username).|11|Yes|  
 |LoginSid|`image`|Security identification number (SID) of the logged-in user. You can find this information in the sys.server_principals catalog view. Each SID is unique for each login in the server.|41|Yes|  
 |NestLevel|`int`|The nest level of the stored procedure if the statement was run within a stored procedure.|29|Yes|  
 |NTDomainName|`nvarchar`|Windows domain to which the user belongs.|7|Yes|  
@@ -50,8 +50,8 @@ manager: "jhubbard"
 |Reads|`bigint`|Number of page reads issued by the SQL statement.|16|Yes|  
 |RequestID|`int`|ID of the request containing the statement.|49|Yes|  
 |RowCounts|`bigint`|Number of rows affected by an event.|48|Yes|  
-|ServerName|`nvarchar`|Name of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] being traced.|26|No|  
-|SessionLoginName|`nvarchar`|Login name of the user who originated the session. For example, if you connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using Login1 and execute a statement as Login2, SessionLoginName shows Login1 and LoginName shows Login2. This column displays both [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Windows logins.|64|Yes|  
+|ServerName|`nvarchar`|Name of the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] being traced.|26|No|  
+|SessionLoginName|`nvarchar`|Login name of the user who originated the session. For example, if you connect to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using Login1 and execute a statement as Login2, SessionLoginName shows Login1 and LoginName shows Login2. This column displays both [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and Windows logins.|64|Yes|  
 |SPID|`int`|ID of the session on which the event occurred.|12|Yes|  
 |StartTime|`datetime`|Time at which the event started, if available.|14|Yes|  
 |TextData|`ntext`|Text of the statement that was executed.|1|Yes|  
@@ -61,6 +61,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Extended Events](../../2014/database-engine/extended-events.md)   
- [sp_trace_setevent &#40;Transact-SQL&#41;](../Topic/sp_trace_setevent%20\(Transact-SQL\).md)  
+ [sp_trace_setevent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

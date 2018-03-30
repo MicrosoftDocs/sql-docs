@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Microsoft Linear Regression Algorithm
-  The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression algorithm is a variation of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm that helps you calculate a linear relationship between a dependent and independent variable, and then use that relationship for prediction.  
+  The [!INCLUDE[msCoName](../includes/msconame-md.md)] Linear Regression algorithm is a variation of the [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees algorithm that helps you calculate a linear relationship between a dependent and independent variable, and then use that relationship for prediction.  
   
  The relationship takes the form of an equation for a line that best represents a series of data. For example, the line in the following diagram is the best possible linear representation of the data.  
   
@@ -34,10 +34,10 @@ manager: "mblythe"
 ## Example  
  You can use linear regression to determine a relationship between two continuous columns. For example, you can use linear regression to compute a trend line from manufacturing or sales data. You could also use the linear regression as a precursor to development of more complex data mining models, to assess the relationships among data columns.  
   
- Although there are many ways to compute linear regression that do not require data mining tools, the advantage of using the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression algorithm for this task is that all the possible relationships among the variables are automatically computed and tested. You do not have to select a computation method, such as solving for least squares. However, linear regression might oversimplify the relationships in scenarios where multiple factors affect the outcome.  
+ Although there are many ways to compute linear regression that do not require data mining tools, the advantage of using the [!INCLUDE[msCoName](../includes/msconame-md.md)] Linear Regression algorithm for this task is that all the possible relationships among the variables are automatically computed and tested. You do not have to select a computation method, such as solving for least squares. However, linear regression might oversimplify the relationships in scenarios where multiple factors affect the outcome.  
   
 ## How the Algorithm Works  
- The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression algorithm is a variation of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm. When you select the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression algorithm, a special case of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm is invoked, with parameters that constrain the behavior of the algorithm and require certain input data types. Moreover, in a linear regression model, the whole data set is used for computing relationships in the initial pass, whereas a standard decision trees model splits the data repeatedly into smaller subsets or trees.  
+ The [!INCLUDE[msCoName](../includes/msconame-md.md)] Linear Regression algorithm is a variation of the [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees algorithm. When you select the [!INCLUDE[msCoName](../includes/msconame-md.md)] Linear Regression algorithm, a special case of the [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees algorithm is invoked, with parameters that constrain the behavior of the algorithm and require certain input data types. Moreover, in a linear regression model, the whole data set is used for computing relationships in the initial pass, whereas a standard decision trees model splits the data repeatedly into smaller subsets or trees.  
   
 ## Data Required for Linear Regression Models  
  When you prepare data for use in a linear regression model, you should understand the requirements for the particular algorithm. This includes how much data is needed, and how the data is used. The requirements for this model type are as follows:  
@@ -62,7 +62,7 @@ manager: "mblythe"
   
  For general information about how to create queries against mining models, see [Data Mining Queries](../../2014/analysis-services/data-mining-queries.md).  
   
- In addition to creating a linear regression model by selecting the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression algorithm, if the predictable attribute is a continuous numeric data type, you can create a decision tree model that contains regressions. In this case, the algorithm will split the data when it finds appropriate separation points, but for some regions of data, will create a regression formula instead. For more information about regression trees within a decision trees model, see [Mining Model Content for Decision Tree Models &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md).  
+ In addition to creating a linear regression model by selecting the [!INCLUDE[msCoName](../includes/msconame-md.md)] Linear Regression algorithm, if the predictable attribute is a continuous numeric data type, you can create a decision tree model that contains regressions. In this case, the algorithm will split the data when it finds appropriate separation points, but for some regions of data, will create a regression formula instead. For more information about regression trees within a decision trees model, see [Mining Model Content for Decision Tree Models &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md).  
   
 ## Remarks  
   

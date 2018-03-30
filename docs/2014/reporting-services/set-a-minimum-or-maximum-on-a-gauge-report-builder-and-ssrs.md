@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: b4c260c0-5a88-4f30-8977-eb5cc78fc146
 caps.latest.revision: 6
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Set a Minimum or Maximum on a Gauge (Report Builder and SSRS)
@@ -23,7 +23,7 @@ manager: "mblythe"
  You can use expressions to set the values of the **Minimum** and **Maximum** options. For more information, see [Expressions &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/expressions-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ### To set the minimum and maximum on the gauge  
   

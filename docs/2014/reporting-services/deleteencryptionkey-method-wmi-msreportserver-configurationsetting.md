@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: ed2f25b6-6a63-468d-9279-a577ca01b096
 caps.latest.revision: 20
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # DeleteEncryptionKey Method (WMI MSReportServer_ConfigurationSetting)
@@ -55,7 +55,7 @@ public void DeleteEncryptionKeys(string InstallationID, out Int32 HRESULT,
  The *DeleteEncryptionKey* method deletes entries from the keys table for any report servers that have access to the secure information in the report server database. If the *InstallationID* parameter specified does not correspond to an installation ID in the database, the method returns an error.  
   
 ## Requirements  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../includes/ssrswminmspca-md.md)]  
   
 ## See Also  
  [MSReportServer_ConfigurationSetting Members](../../2014/reporting-services/msreportserver-configurationsetting-members.md)  

@@ -22,13 +22,13 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Features Supported by the Editions of SQL Server 2014
-  This topic provides details of features supported by the different editions of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  This topic provides details of features supported by the different editions of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
-> **NOTE:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is available in an Evaluation edition for a 180-day trial period. For more information, see the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Trial Software Web Site](http://go.microsoft.com/fwlink/?LinkId=190955).  
+> **NOTE:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is available in an Evaluation edition for a 180-day trial period. For more information, see the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Trial Software Web Site](http://go.microsoft.com/fwlink/?LinkId=190955).  
   
-> **NOTE:** For features supported by Evaluation and Developer editions see the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise feature set.  
+> **NOTE:** For features supported by Evaluation and Developer editions see the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise feature set.  
   
- To navigate to the table for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] technology, click on its link:  
+ To navigate to the table for a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] technology, click on its link:  
   
  [Cross-Box Scale Limits](#CrossBoxScale)  
   
@@ -82,14 +82,14 @@ manager: "jhubbard"
   
 |Feature Name|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|Maximum Compute Capacity Used by a Single Instance ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine)<sup>1</sup>|Operating System maximum|Limited to lesser of 4 Sockets or 16 cores|Limited to lesser of 4 Sockets or 16 cores|Limited to lesser of 4 Sockets or 16 cores|Limited to lesser of 1 Socket or 4 cores|Limited to lesser of 1 Socket or 4 cores|Limited to lesser of 1 Socket or 4 cores|  
+|Maximum Compute Capacity Used by a Single Instance ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Database Engine)<sup>1</sup>|Operating System maximum|Limited to lesser of 4 Sockets or 16 cores|Limited to lesser of 4 Sockets or 16 cores|Limited to lesser of 4 Sockets or 16 cores|Limited to lesser of 1 Socket or 4 cores|Limited to lesser of 1 Socket or 4 cores|Limited to lesser of 1 Socket or 4 cores|  
 |Maximum Compute Capacity Used by a Single Instance (Analysis Services, Reporting Services) <sup>1</sup>|Operating system maximum|Operating system maximum|Limited to lesser of 4 Sockets or 16 cores|Limited to lesser of 4 Sockets or 16 cores|Limited to lesser of 1 Socket or 4 cores|Limited to lesser of 1 Socket or 4 cores|Limited to lesser of 1 Socket or 4 cores|  
-|Maximum memory utilized (per instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine)|Operating system maximum|128 GB|128 GB|64 GB|1 GB|1 GB|1 GB|  
-|Maximum memory utilized (per instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)])|Operating system maximum|Operating system maximum|64 GB|N/A|N/A|N/A|N/A|  
-|Maximum memory utilized (per instance of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)])|Operating system maximum|Operating system maximum|64 GB|64 GB|4 GB|N/A|N/A|  
+|Maximum memory utilized (per instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Database Engine)|Operating system maximum|128 GB|128 GB|64 GB|1 GB|1 GB|1 GB|  
+|Maximum memory utilized (per instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)])|Operating system maximum|Operating system maximum|64 GB|N/A|N/A|N/A|N/A|  
+|Maximum memory utilized (per instance of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)])|Operating system maximum|Operating system maximum|64 GB|64 GB|4 GB|N/A|N/A|  
 |Maximum relational Database size|524 PB|524 PB|524 PB|524 PB|10 GB|10 GB|10 GB|  
   
- <sup>1</sup> Enterprise Edition with Server + Client Access License (CAL) based licensing (not available for new agreements) is limited to a maximum of 20 cores per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. There are no limits under the Core-based Server Licensing model. For more information, see [Compute Capacity Limits by Edition of SQL Server](../../2014/getting-started/compute-capacity-limits-by-edition-of-sql-server.md).  
+ <sup>1</sup> Enterprise Edition with Server + Client Access License (CAL) based licensing (not available for new agreements) is limited to a maximum of 20 cores per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance. There are no limits under the Core-based Server Licensing model. For more information, see [Compute Capacity Limits by Edition of SQL Server](../../2014/getting-started/compute-capacity-limits-by-edition-of-sql-server.md).  
   
 ##  <a name="High_availability"></a> High Availability  
   
@@ -113,9 +113,9 @@ manager: "jhubbard"
 |Encrypted Backup|Yes|Yes|Yes|||||  
 |Smart Backup|Yes|Yes|Yes|No||||  
   
- <sup>1</sup>For more information on installing [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] on Server Core, see [Install SQL Server 2014 on Server Core](../../2014/sql-server/install/install-sql-server-2014-on-server-core.md).  
+ <sup>1</sup>For more information on installing [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] on Server Core, see [Install SQL Server 2014 on Server Core](../../2014/sql-server/install/install-sql-server-2014-on-server-core.md).  
   
- <sup>2</sup>This feature is only available for 64-bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ <sup>2</sup>This feature is only available for 64-bit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ##  <a name="Scalability"></a> Scalability and Performance  
   
@@ -133,7 +133,7 @@ manager: "jhubbard"
 |In-Memory OLTP <sup>1</sup>|Yes|||||||  
 |Delayed durability|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
   
- <sup>1</sup> This feature is only available for 64-bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ <sup>1</sup> This feature is only available for 64-bit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ##  <a name="Enterprise_security"></a> Security  
   
@@ -151,7 +151,7 @@ manager: "jhubbard"
   
 |Feature Name|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] change tracking|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] change tracking|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
 |Merge replication|Yes|Yes|Yes|Yes (Subscriber only)|Yes (Subscriber only)|Yes (Subscriber only)|Yes (Subscriber only)|  
 |Transactional replication|Yes|Yes|Yes|Yes (Subscriber only)|Yes (Subscriber only)|Yes (Subscriber only)|Yes (Subscriber only)|  
 |Snapshot replication|Yes|Yes|Yes|Yes (Subscriber only|Yes (Subscriber only)|Yes (Subscriber only)|Yes (Subscriber only)|  
@@ -166,18 +166,18 @@ manager: "jhubbard"
 |SQL Management Objects (SMO)|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
 |SQL Configuration Manager|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
 |SQL CMD (Command Prompt tool)|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio|Yes|Yes|Yes|Yes|Yes|Yes||  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio|Yes|Yes|Yes|Yes|Yes|Yes||  
 |Distributed Replay – Admin Tool|Yes|Yes|Yes|Yes|Yes|Yes||  
 |Distributed Replay - Client|Yes|No|Yes|Yes||||  
 |Distributed Replay - Controller|Yes (Enterprise supports up to 16 clients,  Developer supports only 1 client)|No|Yes (1 client support only)|Yes (1 client support only)||||  
 |SQL Profiler|Yes|Yes|Yes|No<sup>2</sup>|No<sup>2</sup>|No<sup>2</sup>|No<sup>2</sup>|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|Yes|Yes|Yes|Yes||||  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent|Yes|Yes|Yes|Yes||||  
 |Microsoft System Center Operations Manager Management Pack|Yes|Yes|Yes|Yes||||  
 |Database Tuning Advisor (DTA)|Yes|Yes|Yes<sup>3</sup>|Yes<sup>3</sup>||||  
-|Deploy a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database to a Windows Azure VM Wizard|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Files in Windows Azure|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
+|Deploy a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Database to a Windows Azure VM Wizard|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Files in Windows Azure|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
   
- <sup>2</sup> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Tools, and [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services can be profiled using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise editions.  
+ <sup>2</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Web, [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Tools, and [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services can be profiled using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise editions.  
   
  <sup>3</sup> Tuning enabled only on Standard edition features.  
   
@@ -202,21 +202,21 @@ manager: "jhubbard"
 |Parallel indexed operations|Yes|||||||  
 |Automatic use of indexed view by query optimizer|Yes|||||||  
 |Parallel consistency check|Yes|||||||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility control point|Yes|||||||  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility control point|Yes|||||||  
 |Contained Databases|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
 |Buffer Pool Extension<sup>2</sup>|Yes|Yes|Yes|||||  
   
  <sup>1</sup> For more information, see [Considerations for Installing SQL Server Using SysPrep](../../2014/sql-server/install/considerations-for-installing-sql-server-using-sysprep.md).  
   
- <sup>2</sup> This feature is only available for 64-bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ <sup>2</sup> This feature is only available for 64-bit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ##  <a name="Dev_tools"></a> Development Tools  
   
 |Feature Name|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio Integration|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
-|Intellisense ([!INCLUDE[tsql](../../includes/tsql-md.md)] and MDX)|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
-|[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|Yes|Yes|Yes|Yes|Yes|||  
+|[!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Studio Integration|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
+|Intellisense ([!INCLUDE[tsql](../includes/tsql-md.md)] and MDX)|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
+|[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]|Yes|Yes|Yes|Yes|Yes|||  
 |SQL query edit and design tools<sup>1</sup>|Yes|Yes|Yes|||||  
 |Version control support<sup>1</sup>|Yes|Yes|Yes|||||  
 |MDX edit, debug, and design tools<sup>1</sup>|Yes|Yes|Yes|||||  
@@ -238,13 +238,13 @@ manager: "jhubbard"
 |Full-text and semantic search|Yes|Yes|Yes|Yes|Yes|||  
 |Specification of language in query|Yes|Yes|Yes|Yes|Yes|||  
 |Service Broker (messaging)|Yes|Yes|Yes|No (Client only)|No (Client only)|No (Client only)|No (Client only)|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] endpoints|Yes|Yes|Yes|Yes||||  
+|[!INCLUDE[tsql](../includes/tsql-md.md)] endpoints|Yes|Yes|Yes|Yes||||  
   
 ##  <a name="SSIS"></a> Integration Services  
   
 |Feature|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |-------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Import and Export Wizard|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
 |Built-in data source connectors|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
 |SSIS designer and runtime|Yes|Yes|Yes|||||  
 |Basic Transforms|Yes|Yes|Yes|||||  
@@ -277,12 +277,12 @@ manager: "jhubbard"
 ##  <a name="MDS"></a> Master Data Services  
   
 > [!NOTE]  
->  -   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] is available on the 64-bit editions of Business Intelligence and Enterprise only.  
+>  -   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] is available on the 64-bit editions of Business Intelligence and Enterprise only.  
   
 |Feature|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |-------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database|Yes|Yes||||||  
-|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application|Yes|Yes||||||  
+|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database|Yes|Yes||||||  
+|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] web application|Yes|Yes||||||  
   
 ##  <a name="Data_warehouse"></a> Data Warehouse  
   
@@ -393,8 +393,8 @@ manager: "jhubbard"
   
 |Feature Name|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|Supported catalog DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edition|Standard or higher|Standard or higher|Standard or higher|Web|Express|||  
-|Supported data source [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edition|All   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editions|All [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editions|All [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editions|Web|Express|||  
+|Supported catalog DB [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edition|Standard or higher|Standard or higher|Standard or higher|Web|Express|||  
+|Supported data source [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edition|All   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] editions|All [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] editions|All [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] editions|Web|Express|||  
 |Report server|Yes|Yes|Yes|Yes|Yes|||  
 |Report Designer|Yes|Yes|Yes|Yes|Yes|||  
 |Report Manager|Yes|Yes|Yes|Yes|Yes|||  
@@ -417,16 +417,16 @@ manager: "jhubbard"
 |Data driven report subscription|Yes|Yes||||||  
 |Scale out deployment (Web farms)|Yes|Yes||||||  
 |Alerting<sup>2</sup>|Yes|Yes||||||  
-|[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] <sup>2</sup>|Yes|Yes||||||  
+|[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] <sup>2</sup>|Yes|Yes||||||  
   
- <sup>1</sup>For more information on the supported datasources in [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../2014/reporting-services/data-sources-supported-by-reporting-services-ssrs.md).  
+ <sup>1</sup>For more information on the supported datasources in [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)], see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../2014/reporting-services/data-sources-supported-by-reporting-services-ssrs.md).  
   
- <sup>2</sup>Requires [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in SharePoint mode. For more information, see [Reporting Services SharePoint Mode Installation &#40;SharePoint 2010 and SharePoint 2013&#41;](../../2014/sql-server/install/install-reporting-services-sharepoint-mode.md).  
+ <sup>2</sup>Requires [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in SharePoint mode. For more information, see [Reporting Services SharePoint Mode Installation &#40;SharePoint 2010 and SharePoint 2013&#41;](../../2014/sql-server/install/install-reporting-services-sharepoint-mode.md).  
   
 ### Report Server Database Server Edition Requirements  
- When creating a report server database, not all editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can be used to host the database. The following table shows you which editions of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] you can use for specific editions of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+ When creating a report server database, not all editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] can be used to host the database. The following table shows you which editions of the [!INCLUDE[ssDE](../includes/ssde-md.md)] you can use for specific editions of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
-|For this edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Reporting Services|Use this edition of the Database Engine instance to host the database|  
+|For this edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Reporting Services|Use this edition of the Database Engine instance to host the database|  
 |----------------------------------------------------------------------|---------------------------------------------------------------------------|  
 |Enterprise|Standard, Business Intelligence Enterprise,  editions (local or remote)|  
 |Business Intelligence|Standard, Business Intelligence Enterprise,  editions (local or remote)|  
@@ -436,18 +436,18 @@ manager: "jhubbard"
 |Evaluation|Evaluation|  
   
 ##  <a name="BIClients"></a> Business Intelligence Clients  
- The following software client applications are available on the Microsoft Downloads center and are provided to assist you with creating business intelligence documents that run on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. When you host these documents in a server environment, use an edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is supported for that document type. The following table identifies which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edition contains the server features required to host the documents created in these client applications.  
+ The following software client applications are available on the Microsoft Downloads center and are provided to assist you with creating business intelligence documents that run on a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance. When you host these documents in a server environment, use an edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that is supported for that document type. The following table identifies which [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edition contains the server features required to host the documents created in these client applications.  
   
 |Feature Name|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]|Yes|Yes|Yes|||||  
+|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)]|Yes|Yes|Yes|||||  
 |Data Mining Addins for Excel and Visio 2010|Yes|Yes|Yes|||||  
-|[!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] 2010|Yes|Yes||||||  
-|[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]|Yes|Yes||||||  
+|[!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] 2010|Yes|Yes||||||  
+|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]|Yes|Yes||||||  
   
 > [!NOTE]  
->  1.  [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] is an Excel addin and does not depend on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. However [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] is required for sharing and collaborating with [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks in SharePoint and this capability is available as part of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise and Business Intelligence editions.  
-> 2.  The above table identifies the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editions that are required to enable these client tools; however these features can access data hosted on any edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  1.  [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] is an Excel addin and does not depend on [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. However [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] is required for sharing and collaborating with [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] workbooks in SharePoint and this capability is available as part of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise and Business Intelligence editions.  
+> 2.  The above table identifies the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] editions that are required to enable these client tools; however these features can access data hosted on any edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ##  <a name="Spatial"></a> Spatial and Location Services  
   
@@ -462,7 +462,7 @@ manager: "jhubbard"
   
 |Feature Name|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Migration Assistant|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
 |Database mail|Yes|Yes|Yes|Yes||||  
   
 ##  <a name="Other_Components"></a> Other Components  

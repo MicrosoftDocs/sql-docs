@@ -37,7 +37,7 @@ manager: "jhubbard"
 ##  <a name="open_dialog"></a> Open the Configure SSIS Logs Dialog Box  
  **To open the Configure SSIS Logs dialog box**  
   
--   In the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click **Logging** on the **SSIS** menu.  
+-   In the [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click **Logging** on the **SSIS** menu.  
   
 ##  <a name="container"></a> Configure the Options in the Containers Pane  
  Use the **Containers** pane of the **Configure SSIS Logs** dialog box to enable the package and its containers for logging.  
@@ -71,7 +71,7 @@ manager: "jhubbard"
  The description field is editable. Click and then modify the default description of the log.  
   
  **Configuration**  
- Select an existing connection manager in the list, or click \<**New connection...**> to create a new connection manager. Depending on the type of log provider, you can configure an OLE DB connection manager or a File connection manager. The log provider for the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Event Log requires no connection.  
+ Select an existing connection manager in the list, or click \<**New connection...**> to create a new connection manager. Depending on the type of log provider, you can configure an OLE DB connection manager or a File connection manager. The log provider for the [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows Event Log requires no connection.  
   
  Related Topics: [OLE DB Connection Manager](../../2014/integration-services/ole-db-connection-manager.md) manager, [File Connection Manager](../../2014/integration-services/file-connection-manager.md)  
   
@@ -79,7 +79,7 @@ manager: "jhubbard"
  Select a log provider and then click **Delete**.  
   
 ##  <a name="detail"></a> Configure the Options on the Details Tab  
- Use the **Details** tab of the **Configure SSIS Logs** dialog box to specify the events to enable for logging and the information details to log. The information that you select applies to all the log providers in the package. For example, you cannot write some information to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance and different information to a text file.  
+ Use the **Details** tab of the **Configure SSIS Logs** dialog box to specify the events to enable for logging and the information details to log. The information that you select applies to all the log providers in the package. For example, you cannot write some information to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance and different information to a text file.  
   
 ### Options  
  **Events**  

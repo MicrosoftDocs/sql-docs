@@ -173,7 +173,7 @@ manager: "mblythe"
 8.  Convert the score to a predicted result by using the criteria printed on the sheet immediately after the **Total** row.  
   
 ## Related Tools  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] provides the Microsoft Logistic Regression algorithm for use in this type of analysis. If you are already familiar with logistic regression, you can easily create logistic regression models by using the **Advanced** option of the Data Mining Client for Excel. For more information, see [Advanced Modeling &#40;Data Mining Add-ins for Excel&#41;](../../2014/analysis-services/advanced-modeling-data-mining-add-ins-for-excel.md). For more information about the options and parameters for logistic regression models, see the topic "Microsoft Logistic Regression Algorithm" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] provides the Microsoft Logistic Regression algorithm for use in this type of analysis. If you are already familiar with logistic regression, you can easily create logistic regression models by using the **Advanced** option of the Data Mining Client for Excel. For more information, see [Advanced Modeling &#40;Data Mining Add-ins for Excel&#41;](../../2014/analysis-services/advanced-modeling-data-mining-add-ins-for-excel.md). For more information about the options and parameters for logistic regression models, see the topic "Microsoft Logistic Regression Algorithm" in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online.  
   
 ## See Also  
  [Table Analysis Tools for Excel](../../2014/analysis-services/table-analysis-tools-for-excel.md)  

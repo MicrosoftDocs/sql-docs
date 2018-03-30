@@ -23,7 +23,7 @@ manager: "jhubbard"
 # Add Solutions and Projects to Source Control
   When you add a solution to source control, the solution becomes part of a dynamic versioning archive created and maintained by the source control provider. Each time someone checks in a new version of the solution, that version becomes part of the archive and is available to other source control users.  
   
- Adding a solution to source control also starts a system of centralized file management. Source control providers, such as [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual SourceSafe, control access to source-controlled items; source control clients cannot write to local copies of source-controlled files without checking them out.  
+ Adding a solution to source control also starts a system of centralized file management. Source control providers, such as [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe, control access to source-controlled items; source control clients cannot write to local copies of source-controlled files without checking them out.  
   
  The following table describes the topics in this section.  
   

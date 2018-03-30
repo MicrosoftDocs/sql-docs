@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: c4b47e15-0484-4c13-9182-898db825f01f
 caps.latest.revision: 7
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Parameters Collection References (Report Builder and SSRS)
@@ -23,7 +23,7 @@ manager: "mblythe"
  In order to include a parameter reference in an expression, you must understand how to specify the correct syntax for the parameter reference, which varies depending on whether the parameter is a single-value or multivalue parameter.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ##  <a name="Single"></a> Using a Single-Valued Parameter in an Expression  
  The following table shows examples of the syntax to use when you include a reference to a single-value parameter of any data type in an expression.  

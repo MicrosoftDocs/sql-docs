@@ -16,7 +16,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Create a Master Data Manager Web Application (Master Data Services)
-  The [!INCLUDE[ssMDSmdm](../../../includes/ssmdsmdm-md.md)] web application provides an interface for users to work with master data and for administrators to configure and administer MDS.  
+  The [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application provides an interface for users to work with master data and for administrators to configure and administer MDS.  
   
  A web application must always be contained by a website. To create a web application, you must either:  
   
@@ -26,23 +26,23 @@ manager: "jhubbard"
   
 -   Create a new website, which automatically creates a web application.  
   
- After you create the web application, you associate it with the [!INCLUDE[ssMDSshort](../../../includes/ssmdsshort-md.md)] database.  
+ After you create the web application, you associate it with the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database.  
   
 ## Prerequisites  
   
 -   For information about the requirements for the computer that hosts the web application, see [Web Application Requirements &#40;Master Data Services&#41;](../../../2014/sql-server/install/web-application-requirements-master-data-services.md).  
   
 ## To create a Master Data Manager web application in a new website  
- When you create a new website, the root web application is the [!INCLUDE[ssMDSmdm](../../../includes/ssmdsmdm-md.md)] web application. The web application is also added to a new application pool.  
+ When you create a new website, the root web application is the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application. The web application is also added to a new application pool.  
   
 > [!NOTE]  
->  If you follow this procedure, you cannot specify a virtual path and alias of the [!INCLUDE[ssMDSmdm](../../../includes/ssmdsmdm-md.md)] web application. If you want to specify a virtual path and alias for [!INCLUDE[ssMDSmdm](../../../includes/ssmdsmdm-md.md)], you must create a web application in an existing website that is not already configured as a [!INCLUDE[ssMDSmdm](../../../includes/ssmdsmdm-md.md)] web application.  
+>  If you follow this procedure, you cannot specify a virtual path and alias of the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application. If you want to specify a virtual path and alias for [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], you must create a web application in an existing website that is not already configured as a [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application.  
   
- Additionally, [!INCLUDE[ssMDScfgmgr](../../../includes/ssmdscfgmgr-md.md)] supports creating sites with HTTP bindings only. To add an HTTPS binding, create a new site and application in [!INCLUDE[ssMDScfgmgr](../../../includes/ssmdscfgmgr-md.md)] and then see [Secure a Master Data Manager Web Application](../../../2014/sql-server/install/secure-a-master-data-manager-web-application.md) for more information.  
+ Additionally, [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] supports creating sites with HTTP bindings only. To add an HTTPS binding, create a new site and application in [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] and then see [Secure a Master Data Manager Web Application](../../../2014/sql-server/install/secure-a-master-data-manager-web-application.md) for more information.  
   
 #### To create a Master Data Manager web application in a new website  
   
-1.  Open [!INCLUDE[ssMDScfgmgr](../../../includes/ssmdscfgmgr-md.md)].  
+1.  Open [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
   
 2.  In the left pane, click **Web Configuration**.  
   
@@ -57,11 +57,11 @@ manager: "jhubbard"
   
 #### To create a Master Data Manager web application in an existing website  
   
-1.  Open [!INCLUDE[ssMDScfgmgr](../../../includes/ssmdscfgmgr-md.md)].  
+1.  Open [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
   
 2.  In the left pane, click **Web Configuration**.  
   
-3.  On the **Web Configuration** page, from the **Website** list, select the website in which you want to create the [!INCLUDE[ssMDSmdm](../../../includes/ssmdsmdm-md.md)] web application.  
+3.  On the **Web Configuration** page, from the **Website** list, select the website in which you want to create the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application.  
   
 4.  Click **Create Application**.  
   
@@ -71,9 +71,9 @@ manager: "jhubbard"
   
 ## Next Steps  
   
--   Associate the web application with a [!INCLUDE[ssMDSshort](../../../includes/ssmdsshort-md.md)] database. For more information, see [Associate a Master Data Services Database and Web Application](../../../2014/sql-server/install/associate-a-master-data-services-database-and-web-application.md).  
+-   Associate the web application with a [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database. For more information, see [Associate a Master Data Services Database and Web Application](../../../2014/sql-server/install/associate-a-master-data-services-database-and-web-application.md).  
   
--   Optionally, configure the website that hosts the [!INCLUDE[ssMDSmdm](../../../includes/ssmdsmdm-md.md)] web application to use an HTTPS binding if you want to encrypt content by using Secure Sockets Layer (SSL). You must use an Internet Information Services (IIS) tool, such as IIS Manager, to configure the server certificate for the web server, and to configure an HTTPS binding and the SSL settings for the site. For more information, see [Secure a Master Data Manager Web Application](../../../2014/sql-server/install/secure-a-master-data-manager-web-application.md).  
+-   Optionally, configure the website that hosts the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application to use an HTTPS binding if you want to encrypt content by using Secure Sockets Layer (SSL). You must use an Internet Information Services (IIS) tool, such as IIS Manager, to configure the server certificate for the web server, and to configure an HTTPS binding and the SSL settings for the site. For more information, see [Secure a Master Data Manager Web Application](../../../2014/sql-server/install/secure-a-master-data-manager-web-application.md).  
   
 ## See Also  
  [Install Master Data Services](../../../2014/sql-server/install/install-master-data-services.md)  

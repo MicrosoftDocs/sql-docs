@@ -59,7 +59,7 @@ manager: "jhubbard"
 > [!WARNING]  
 >  If a backup to Windows Azure Blob storage service is running at the same time as this script, the backup can fail since this script will break the lease that the backup is trying to acquire at the same time. We recommend running this script during a maintenance windows or when no backups are expected to run.  
   
-1.  When you run this script, you will be prompted to provide values for the storage account, storage key, container, and the windows azure storage assembly path and name parameters. The path of the storage is assembly is the installation directory of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The file name for the storage assembly is Microsoft.WindowsAzure.Storage.dll. Following is an example of the prompts and values entered:  
+1.  When you run this script, you will be prompted to provide values for the storage account, storage key, container, and the windows azure storage assembly path and name parameters. The path of the storage is assembly is the installation directory of the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. The file name for the storage assembly is Microsoft.WindowsAzure.Storage.dll. Following is an example of the prompts and values entered:  
   
     ```  
     cmdlet  at command pipeline position 1  

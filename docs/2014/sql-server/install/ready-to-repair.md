@@ -16,7 +16,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Ready to Repair
-  The Ready to Repair page provides a summary of the repair process by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup.  
+  The Ready to Repair page provides a summary of the repair process by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup.  
   
 ## Options  
  You have the following options on this page:  

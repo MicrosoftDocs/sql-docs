@@ -27,13 +27,13 @@ manager: "jhubbard"
  Displays the name of the server instance that is currently configured as the monitor server for the log shipping configuration.  
   
  **Connect**  
- Choose and connect to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to be used as the monitor server. The account used to connect must be a member of the sysadmin fixed server role on the secondary server instance.  
+ Choose and connect to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to be used as the monitor server. The account used to connect must be a member of the sysadmin fixed server role on the secondary server instance.  
   
  **By impersonating the proxy account of the job**  
  Have log shipping impersonate the SQL Server Agent proxy account when connecting to the monitor server instance. The backup, copy, and restore processes must be able to connect to the monitor server to update the status of log shipping operations.  
   
  **Using the following SQL Server login**  
- Allow log shipping to use a specific [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login when connecting to the monitor server instance. The backup, copy, and restore processes must be able to connect to the monitor server to update the status of log shipping operations. Choose this option if you want log shipping to use a specific [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login and then specify the login and password.  
+ Allow log shipping to use a specific [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] login when connecting to the monitor server instance. The backup, copy, and restore processes must be able to connect to the monitor server to update the status of log shipping operations. Choose this option if you want log shipping to use a specific [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] login and then specify the login and password.  
   
  **Delete history after**  
  Specify the amount of time to retain log shipping history information on the monitor server before it is deleted.  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
 caps.latest.revision: 18
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Conflict Detection in Peer-to-Peer Replication
   Peer-to-peer transactional replication lets you insert, update, or delete data at any node in a topology and have data changes propagated to the other nodes. Because you can change data at any node, data changes at different nodes could conflict with each other. If a row is modified at more than one node, it can cause a conflict or even a lost update when the row is propagated to other nodes.  
   
- Peer-to-peer replication in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] and later versions provides the option to enable conflict detection across a peer-to-peer topology. This option would help prevent the issues that are caused by undetected conflicts, including inconsistent application behavior and lost updates. With this option enabled, by default a conflicting change is treated as a critical error that causes the failure of the Distribution Agent. In the event of a conflict, the topology remains in an inconsistent state until the conflict is resolved and the data is made consistent across the topology.  
+ Peer-to-peer replication in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions provides the option to enable conflict detection across a peer-to-peer topology. This option would help prevent the issues that are caused by undetected conflicts, including inconsistent application behavior and lost updates. With this option enabled, by default a conflicting change is treated as a critical error that causes the failure of the Distribution Agent. In the event of a conflict, the topology remains in an inconsistent state until the conflict is resolved and the data is made consistent across the topology.  
   
 > [!NOTE]  
 >  To avoid potential data inconsistency, make sure that you avoid conflicts in a peer-to-peer topology, even with conflict detection enabled. To ensure that write operations for a particular row are performed at only one node, applications that access and change data must partition insert, update, and delete operations. This partitioning ensures that modifications to a given row that is originating at one node are synchronized with all other nodes in the topology before the row is modified by a different node. If an application requires sophisticated conflict detection and resolution capabilities, use merge replication. For more information, see [Merge Replication](../../../2014/relational-databases/replication/merge-replication.md) and [Detect and Resolve Merge Replication Conflicts](../../../2014/relational-databases/replication/detect-and-resolve-merge-replication-conflicts.md).  
@@ -65,13 +65,13 @@ manager: "jhubbard"
      Occurs when a row was deleted at more than one node.  
   
 ## Enabling Conflict Detection  
- To use conflict detection, all nodes must be running [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] or a later version; and detection must be enabled for all nodes. In [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] and later versions, by default, conflict detection is enabled in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. We recommend that you have detection enabled, even in scenarios in which you do not expect any conflicts. Conflict detection can be enabled and disabled by using [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)] stored procedures:  
+ To use conflict detection, all nodes must be running [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or a later version; and detection must be enabled for all nodes. In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions, by default, conflict detection is enabled in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. We recommend that you have detection enabled, even in scenarios in which you do not expect any conflicts. Conflict detection can be enabled and disabled by using [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures:  
   
--   You can enable and disable detection in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] either by using the **Subscription Options** page of the **Publication Properties** dialog box or the **Configure Topology** page of the Configure Peer-to-Peer Topology Wizard.  
+-   You can enable and disable detection in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] either by using the **Subscription Options** page of the **Publication Properties** dialog box or the **Configure Topology** page of the Configure Peer-to-Peer Topology Wizard.  
   
-     If you configure conflict detection by using [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], the Distribution Agent is configured to stop applying changes when a conflict is detected.  
+     If you configure conflict detection by using [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], the Distribution Agent is configured to stop applying changes when a conflict is detected.  
   
--   You can also enable and disable detection by using the following stored procedures: [sp_addpublication](../Topic/sp_addpublication%20\(Transact-SQL\).md) or [sp_configure_peerconflictdetection](../Topic/sp_configure_peerconflictdetection%20\(Transact-SQL\).md).  
+-   You can also enable and disable detection by using the following stored procedures: [sp_addpublication](~/relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) or [sp_configure_peerconflictdetection](~/relational-databases/system-stored-procedures/sp-configure-peerconflictdetection-transact-sql.md).  
   
      If you configure conflict detection by using stored procedures, you can specify whether the Distribution Agent should stop applying changes when a conflict is detected. The default is for the agent to stop. We recommend that you use the default setting.  
   
@@ -84,7 +84,7 @@ manager: "jhubbard"
   
 -   Try to synchronize the node again by enabling the Distribution Agent to continue to apply changes:  
   
-    1.  Execute [sp_changepublication](../Topic/sp_changepublication%20\(Transact-SQL\).md): specify 'p2p_continue_onconflict' for the @property parameter and `true` for the @value parameter.  
+    1.  Execute [sp_changepublication](~/relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md): specify 'p2p_continue_onconflict' for the @property parameter and `true` for the @value parameter.  
   
     2.  Restart the Distribution Agent.  
   
@@ -95,7 +95,7 @@ manager: "jhubbard"
         > [!NOTE]  
         >  If data is inconsistent after this step, you must manually update rows on the node that has the highest priority, and then let the changes propagate from this node. If there are no further conflicting changes in the topology, all nodes will be brought to a consistent state.  
   
-    5.  Execute [sp_changepublication](../Topic/sp_changepublication%20\(Transact-SQL\).md): specify 'p2p_continue_onconflict' for the @property parameter and `false` for the @value parameter.  
+    5.  Execute [sp_changepublication](~/relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md): specify 'p2p_continue_onconflict' for the @property parameter and `false` for the @value parameter.  
   
 ## See Also  
  [Peer-to-Peer Transactional Replication](../../../2014/relational-databases/replication/peer-to-peer-transactional-replication.md)  

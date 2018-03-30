@@ -14,11 +14,11 @@ f1_keywords:
 ms.assetid: bf18907c-94e2-4c09-9b2b-0925ac04c627
 caps.latest.revision: 28
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Options (Text Editor - All Languages - General Page)
-  Use this dialog box to set general editing options in all five of the editors in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. To display these options, click **Options** on the **Tools** menu. Select the **Text Editor** folder, expand the **All Languages** folder and then click **General**.  
+  Use this dialog box to set general editing options in all five of the editors in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. To display these options, click **Options** on the **Tools** menu. Select the **Text Editor** folder, expand the **All Languages** folder and then click **General**.  
   
 ## Option Settings by Editor  
  You must use the **All Languages** dialogs to set options for the DMX, MDX, and SQL Server Compact editors. Options set here are also applied to the Plain Text, Transact-SQL, and XML editors, but you can set options separately for those editors by expanding the subfolders for those languages and selecting their option pages.  

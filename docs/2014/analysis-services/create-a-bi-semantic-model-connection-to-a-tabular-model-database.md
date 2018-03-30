@@ -18,7 +18,7 @@ manager: "mblythe"
 # Create a BI Semantic Model Connection to a Tabular Model Database
   Use the information in this topic to set up a BI semantic model connection that redirects to a tabular model database running on an Analysis Services instance outside the SharePoint farm.  
   
- After you create a BI semantic model connection and configure SharePoint and Analysis Services permissions, people can use it as a data source for Excel or [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] reports.  
+ After you create a BI semantic model connection and configure SharePoint and Analysis Services permissions, people can use it as a data source for Excel or [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] reports.  
   
  This topic includes the following sections. Perform each task in the order given.  
   
@@ -77,11 +77,11 @@ manager: "mblythe"
 ##  <a name="bkmk_BISM"></a> Grant Read Permissions on the Tabular Model Database  
  Because the database is running on a server that is external to the farm, part of setting up your connections will include granting database user permissions on the backend Analysis Services server. Analysis Services uses a role-based permission model. Users who connect to model databases must do so with Read permissions or higher, through a role that grants read access to its members.  
   
- Roles, and sometimes role membership, are defined when the model is created in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. You cannot use SQL Server Management Studio to create roles, but you can use it to add members to a role that is already defined. For more information about creating roles, see [Create and Manage Roles &#40;SSAS Tabular&#41;](../../2014/analysis-services/create-and-manage-roles-ssas-tabular.md).  
+ Roles, and sometimes role membership, are defined when the model is created in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. You cannot use SQL Server Management Studio to create roles, but you can use it to add members to a role that is already defined. For more information about creating roles, see [Create and Manage Roles &#40;SSAS Tabular&#41;](../../2014/analysis-services/create-and-manage-roles-ssas-tabular.md).  
   
 #### Assign role membership  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connect to the instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], expand the database in Object Explorer, and then expand **Roles**. You should see a role that is already defined. If a role does not exist, contact the author of the model and request the addition or a role. The model must be redeployed before the role is visible in Management Studio.  
+1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], connect to the instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], expand the database in Object Explorer, and then expand **Roles**. You should see a role that is already defined. If a role does not exist, contact the author of the model and request the addition or a role. The model must be redeployed before the role is visible in Management Studio.  
   
 2.  Right-click the role, and select **Properties**.  
   

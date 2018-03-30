@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: 3056cf64-621d-4996-9162-3913f6bc6d5b
 caps.latest.revision: 35
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Configure the max text repl size Server Configuration Option
-  This topic describes how to configure the **max text repl size** server configuration option in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **max text repl size** option specifies the maximum size (in bytes) of `text`, `ntext`, `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, `xml`, and `image` data that can be added to a replicated column or captured column in a single INSERT, UPDATE, WRITETEXT, or UPDATETEXT statement. The default value is 65536 bytes. A value of -1 indicates that there is no size limit, other than the limit imposed by the data type.  
+  This topic describes how to configure the **max text repl size** server configuration option in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)]. The **max text repl size** option specifies the maximum size (in bytes) of `text`, `ntext`, `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, `xml`, and `image` data that can be added to a replicated column or captured column in a single INSERT, UPDATE, WRITETEXT, or UPDATETEXT statement. The default value is 65536 bytes. A value of -1 indicates that there is no size limit, other than the limit imposed by the data type.  
   
  **In This Topic**  
   
@@ -61,11 +61,11 @@ manager: "jhubbard"
   
 #### To configure the max text repl size option  
   
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_configure](../Topic/sp_configure%20\(Transact-SQL\).md) to configure the `max text repl size` option to `-1`.  
+3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_configure](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md) to configure the `max text repl size` option to `-1`.  
   
 ```tsql  
 USE AdventureWorks2012 ;  
@@ -87,12 +87,12 @@ GO
   
 ## See Also  
  [Replication Features and Tasks](../../2014/relational-databases/replication/replication-features-and-tasks.md)   
- [INSERT &#40;Transact-SQL&#41;](../Topic/INSERT%20\(Transact-SQL\).md)   
- [RECONFIGURE &#40;Transact-SQL&#41;](../Topic/RECONFIGURE%20\(Transact-SQL\).md)   
+ [INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/insert-transact-sql.md)   
+ [RECONFIGURE &#40;Transact-SQL&#41;](~/t-sql/language-elements/reconfigure-transact-sql.md)   
  [Server Configuration Options &#40;SQL Server&#41;](../../2014/database-engine/server-configuration-options-sql-server.md)   
- [sp_configure &#40;Transact-SQL&#41;](../Topic/sp_configure%20\(Transact-SQL\).md)   
- [UPDATE &#40;Transact-SQL&#41;](../Topic/UPDATE%20\(Transact-SQL\).md)   
- [UPDATETEXT &#40;Transact-SQL&#41;](../Topic/UPDATETEXT%20\(Transact-SQL\).md)   
- [WRITETEXT &#40;Transact-SQL&#41;](../Topic/WRITETEXT%20\(Transact-SQL\).md)  
+ [sp_configure &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
+ [UPDATE &#40;Transact-SQL&#41;](~/t-sql/queries/update-transact-sql.md)   
+ [UPDATETEXT &#40;Transact-SQL&#41;](~/t-sql/queries/updatetext-transact-sql.md)   
+ [WRITETEXT &#40;Transact-SQL&#41;](~/t-sql/queries/writetext-transact-sql.md)  
   
   

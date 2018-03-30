@@ -56,7 +56,7 @@ manager: "mblythe"
 |Child elements|None|  
   
 ## Remarks  
- The invocation of an action depends on the client application. The `Invocation` element suggests to a client application how an action should be handled, and does not indicate to the instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] how to invoke an action.  
+ The invocation of an action depends on the client application. The `Invocation` element suggests to a client application how an action should be handled, and does not indicate to the instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] how to invoke an action.  
   
  The value of this element is limited to one of the strings in the following table.  
   

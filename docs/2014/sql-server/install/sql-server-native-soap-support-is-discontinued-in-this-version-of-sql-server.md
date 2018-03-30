@@ -16,20 +16,20 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQL Server native SOAP support is discontinued in this version of SQL Server.
-  Upgrade Advisor detected use of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native XML Web Services.  
+  Upgrade Advisor detected use of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native XML Web Services.  
   
 ## Component  
- [!INCLUDE[ssDE](../../../includes/ssde-md.md)]  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## Description  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native XML Web Services has been removed in this [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] release.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native XML Web Services has been removed in this [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] release.  
   
 ## Discovering Where You Use Native XML Web Services  
  You can see where your applications use Native XML Web Services, as follows:  
   
 -   When you run the Upgrade Advisor.  
   
--   When you upgrade your [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] version.  
+-   When you upgrade your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version.  
   
 ## Corrective Action  
  Modify applications that currently use Native XML Web Services.  

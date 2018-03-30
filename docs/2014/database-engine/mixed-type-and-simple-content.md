@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: 6ea1f11d-e64b-4ebb-ab68-4eb6e4027665
 caps.latest.revision: 8
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Mixed Type and Simple Content
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not support restricting a mixed type to a simple content.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not support restricting a mixed type to a simple content.  
   
 ## Example  
  In the following XML schema collection, `myComplexTypeA` is a complex type that can be emptied. That is, both its elements have `minOccurs` set to 0. The attempt to restrict this to a simple content, as in the `myComplexTypeB` declaration, is not supported. Therefore, the following XML schema collection creation fails:  

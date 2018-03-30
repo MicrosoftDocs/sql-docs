@@ -56,7 +56,7 @@ manager: "mblythe"
 |Child elements|None|  
   
 ## Remarks  
- The `Schema` is represented using the XML Schema Definition (XSD) language format of DataSets in the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework, with some extensions for DataSets and others specific to this usage within the data definition language (DDL). DataSets define a flexible mapping from XSD to a relational schema, but then return XSD in a more canonical form. Only this canonical form is valid within data sources.  
+ The `Schema` is represented using the XML Schema Definition (XSD) language format of DataSets in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, with some extensions for DataSets and others specific to this usage within the data definition language (DDL). DataSets define a flexible mapping from XSD to a relational schema, but then return XSD in a more canonical form. Only this canonical form is valid within data sources.  
   
  The element that corresponds to the parent of `Schema` in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.DataSourceView>.  
   

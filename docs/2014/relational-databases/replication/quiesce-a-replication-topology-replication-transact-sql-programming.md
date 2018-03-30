@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 7626d575-9994-47be-b772-5b6f1b7ef7ca
 caps.latest.revision: 33
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Quiesce a Replication Topology (Replication Transact-SQL Programming)
@@ -28,9 +28,9 @@ manager: "jhubbard"
   
 1.  Stop activity on all published tables at the Publisher.  
   
-2.  At the Publisher on the publication database, execute [sp_posttracertoken &#40;Transact-SQL&#41;](../Topic/sp_posttracertoken%20\(Transact-SQL\).md).  
+2.  At the Publisher on the publication database, execute [sp_posttracertoken &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql.md).  
   
-3.  At the Publisher on the publication database, execute [sp_helptracertokenhistory](../Topic/sp_helptracertokenhistory%20\(Transact-SQL\).md).  
+3.  At the Publisher on the publication database, execute [sp_helptracertokenhistory](~/relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md).  
   
 4.  Ensure that each Subscriber has received the tracer token.  
   
@@ -42,11 +42,11 @@ manager: "jhubbard"
   
     1.  If the Queue Reader Agent is not running in continuous mode, run the agent. For more information about running agents, see [Replication Agent Executables Concepts](../../../2014/relational-databases/replication/dev-guide/replication-agent-executables-concepts.md) or [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/start-and-stop-a-replication-agent-sql-server-management-studio.md).  
   
-    2.  To verify that the queue is empty, execute [sp_replqueuemonitor](../Topic/sp_replqueuemonitor%20\(Transact-SQL\).md) at each Subscriber.  
+    2.  To verify that the queue is empty, execute [sp_replqueuemonitor](~/relational-databases/system-stored-procedures/sp-replqueuemonitor-transact-sql.md) at each Subscriber.  
   
-3.  At the Publisher on the publication database, execute [sp_posttracertoken](../Topic/sp_posttracertoken%20\(Transact-SQL\).md).  
+3.  At the Publisher on the publication database, execute [sp_posttracertoken](~/relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql.md).  
   
-4.  At the Publisher on the publication database, execute [sp_helptracertokenhistory](../Topic/sp_helptracertokenhistory%20\(Transact-SQL\).md).  
+4.  At the Publisher on the publication database, execute [sp_helptracertokenhistory](~/relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md).  
   
 5.  Ensure that each Subscriber has received the tracer token.  
   
@@ -54,19 +54,19 @@ manager: "jhubbard"
   
 1.  Stop activity on all published tables at all nodes.  
   
-2.  Execute [sp_requestpeerresponse](../Topic/sp_requestpeerresponse%20\(Transact-SQL\).md) on each publication database in the topology.  
+2.  Execute [sp_requestpeerresponse](~/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) on each publication database in the topology.  
   
 3.  If the Log Reader Agent or Distribution Agent is not running in continuous mode, run the agent. The Log Reader Agent must be started before the Distribution Agent. For more information about running agents, see [Replication Agent Executables Concepts](../../../2014/relational-databases/replication/dev-guide/replication-agent-executables-concepts.md) or [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/start-and-stop-a-replication-agent-sql-server-management-studio.md).  
   
-4.  Execute [sp_helppeerresponses](../Topic/sp_helppeerresponses%20\(Transact-SQL\).md) on each publication database in the topology. Ensure that the result set contains responses from each of the other nodes.  
+4.  Execute [sp_helppeerresponses](~/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md) on each publication database in the topology. Ensure that the result set contains responses from each of the other nodes.  
   
 ### To ensure a peer-to-peer node has received all prior changes  
   
-1.  Execute [sp_requestpeerresponse](../Topic/sp_requestpeerresponse%20\(Transact-SQL\).md) on the publication database at the node you are checking.  
+1.  Execute [sp_requestpeerresponse](~/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) on the publication database at the node you are checking.  
   
 2.  If the Log Reader Agent or Distribution Agent is not running in continuous mode, run the agent. The Log Reader Agent must be started before the Distribution Agent. For more information about running agents, see [Replication Agent Executables Concepts](../../../2014/relational-databases/replication/dev-guide/replication-agent-executables-concepts.md) or [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/start-and-stop-a-replication-agent-sql-server-management-studio.md).  
   
-3.  Execute [sp_helppeerresponses](../Topic/sp_helppeerresponses%20\(Transact-SQL\).md) on the publication database at the node you are checking. Ensure that the result set contains responses from each of the other nodes.  
+3.  Execute [sp_helppeerresponses](~/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md) on the publication database at the node you are checking. Ensure that the result set contains responses from each of the other nodes.  
   
 ### To quiesce a merge replication topology  
   

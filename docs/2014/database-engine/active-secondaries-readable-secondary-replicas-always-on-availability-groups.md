@@ -23,14 +23,14 @@ ms.author: "jroth"
 manager: "jhubbard"
 ---
 # Active Secondaries: Readable Secondary Replicas (Always On Availability Groups)
-  The [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] active secondary capabilities include support for read-only access to one or more secondary replicas (*readable secondary replicas*). A readable secondary replica allows read-only access to all its secondary databases. However, readable secondary databases are not set to read-only. They are dynamic. A given secondary database changes as changes on the corresponding primary database are applied to the secondary database. For a typical secondary replica, the data, including durable memory optimized tables, in the secondary databases is in near real time. Furthermore, full-text indexes are synchronized with the secondary databases. In many circumstances, data latency between a primary database and the corresponding secondary database is only a few seconds.  
+  The [!INCLUDE[ssHADR](../includes/sshadr-md.md)] active secondary capabilities include support for read-only access to one or more secondary replicas (*readable secondary replicas*). A readable secondary replica allows read-only access to all its secondary databases. However, readable secondary databases are not set to read-only. They are dynamic. A given secondary database changes as changes on the corresponding primary database are applied to the secondary database. For a typical secondary replica, the data, including durable memory optimized tables, in the secondary databases is in near real time. Furthermore, full-text indexes are synchronized with the secondary databases. In many circumstances, data latency between a primary database and the corresponding secondary database is only a few seconds.  
   
  Security settings that occur in the primary databases are persisted to the secondary databases. This includes users, database roles, and applications roles together with their respective permissions and transparent data encryption (TDE), if enabled on the primary database.  
   
 > [!NOTE]  
 >  Though you cannot write data to secondary databases, you can write to read-write databases on the server instance that hosts the secondary replica, including user databases and system databases such as **tempdb**.  
   
- [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] also supports the re-routing of read-intent connection requests to a readable secondary replica (*read-only routing*). For information about read-only routing, see [Using a Listener to Connect to a Read-Only Secondary Replica (Read-Only Routing)](../../2014/database-engine/listeners-client-connectivity-application-failover.md#ConnectToSecondary).  
+ [!INCLUDE[ssHADR](../includes/sshadr-md.md)] also supports the re-routing of read-intent connection requests to a readable secondary replica (*read-only routing*). For information about read-only routing, see [Using a Listener to Connect to a Read-Only Secondary Replica (Read-Only Routing)](../../2014/database-engine/listeners-client-connectivity-application-failover.md#ConnectToSecondary).  
   
  
   
@@ -102,10 +102,10 @@ manager: "jhubbard"
   
 -   The DBCC SHRINKFILE operation on files containing disk-based tables might fail on the primary replica if the file contains ghost records that are still needed on a secondary replica.  
   
--   Beginning in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], readable secondary replicas can remain online even when the primary replica is offline due to user action or a failure. However, read-only routing does not work in this situation because the availability group listener is offline as well. Clients must connect directly to the read-only secondary replicas for read-only workloads.  
+-   Beginning in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], readable secondary replicas can remain online even when the primary replica is offline due to user action or a failure. However, read-only routing does not work in this situation because the availability group listener is offline as well. Clients must connect directly to the read-only secondary replicas for read-only workloads.  
   
 > [!NOTE]  
->  If you query the [sys.dm_db_index_physical_stats](../Topic/sys.dm_db_index_physical_stats%20\(Transact-SQL\).md) dynamic management view on a server instance that is hosting a readable secondary replica, you might encounter a REDO blocking issue. This is because this dynamic management view acquires an IS lock on the specified user table or view that can block requests by a REDO thread for an X lock on that user table or view.  
+>  If you query the [sys.dm_db_index_physical_stats](~/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) dynamic management view on a server instance that is hosting a readable secondary replica, you might encounter a REDO blocking issue. This is because this dynamic management view acquires an IS lock on the specified user table or view that can block requests by a REDO thread for an X lock on that user table or view.  
   
 ##  <a name="bkmk_Performance"></a> Performance Considerations  
  This section discusses several performance considerations for readable secondary databases  
@@ -117,7 +117,7 @@ manager: "jhubbard"
   
  The primary replica sends log records of changes on primary database to the secondary replicas. On each secondary database, a dedicated redo thread applies the log records. On a read-access secondary database, a given data change does not appear in query results until the log record that contains the change has been applied to the secondary database and the transaction has been committed on primary database.  
   
- This means that there is some latency, usually only a matter of seconds, between the primary and secondary replicas. In unusual cases, however, for example if network issues reduce throughput, latency can become significant. Latency increases when I/O bottlenecks occur and when data movement is suspended. To monitor suspended data movement, you can use the [AlwaysOn Dashboard](../../2014/database-engine/use-the-alwayson-dashboard-sql-server-management-studio.md) or the [sys.dm_hadr_database_replica_states](../Topic/sys.dm_hadr_database_replica_states%20\(Transact-SQL\).md) dynamic management view.  
+ This means that there is some latency, usually only a matter of seconds, between the primary and secondary replicas. In unusual cases, however, for example if network issues reduce throughput, latency can become significant. Latency increases when I/O bottlenecks occur and when data movement is suspended. To monitor suspended data movement, you can use the [AlwaysOn Dashboard](../../2014/database-engine/use-the-alwayson-dashboard-sql-server-management-studio.md) or the [sys.dm_hadr_database_replica_states](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) dynamic management view.  
   
 ####  <a name="bkmk_LatencyWithInMemOLTP"></a> Data Latency on databases with memory-optimized tables  
  When accessing memory-optimized tables on secondary replica for read workload, a *safe-timestamp* is used to return rows from transactions that have committed earlier than *safe-timestamp*. The safe-timestamp is the oldest timestamp hint used by the garbage collection thread to garbage collect the rows on the primary replica. This timestamp is updated when the number of DML transactions on memory-optimized tables exceed an internal threshold since the last update. Whenever the oldest transaction timestamp is updated on the primary replica, the next DML transaction on a durable memory-optimized table will send this timestamp to be sent to secondary replica as part of a special log record. REDO thread on the secondary replica, updates the safe-timestamp as part of processing this log record.  
@@ -169,16 +169,16 @@ GO
 ###  <a name="bkmk_Indexing"></a> Indexing  
  To optimize read-only workloads on the readable secondary replicas, you may want to create indexes on the tables in the secondary databases. Because you cannot make schema or data changes on the secondary databases, create indexes in the primary databases and allow the changes to transfer to the secondary database through the redo process.  
   
- To monitor index usage activity on a secondary replica, query the **user_seeks**, **user_scans**, and **user_lookups** columns of the [sys.dm_db_index_usage_stats](../Topic/sys.dm_db_index_usage_stats%20\(Transact-SQL\).md) dynamic management view.  
+ To monitor index usage activity on a secondary replica, query the **user_seeks**, **user_scans**, and **user_lookups** columns of the [sys.dm_db_index_usage_stats](~/relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md) dynamic management view.  
   
 ###  <a name="Read-OnlyStats"></a> Statistics for Read-Only Access Databases  
  Statistics on columns of tables and indexed views are used to optimize query plans. For availability groups, statistics that are created and maintained on the primary databases are automatically persisted on the secondary databases as part of applying the transaction log records. However, the read-only workload on the secondary databases may need different statistics than those that are created on the primary databases. However, because secondary databases are restricted to read-only access, statistics cannot be created on the secondary databases.  
   
  To address this problem, the secondary replica creates and maintains temporary statistics for secondary databases in **tempdb**. The suffix _readonly_database_statistic is appended to the name of temporary statistics to differentiate them from the permanent statistics that are persisted from the primary database.  
   
- Only [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can create and update temporary statistics. However, you can delete temporary statistics and monitor their properties using the same tools that you use for permanent statistics:  
+ Only [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] can create and update temporary statistics. However, you can delete temporary statistics and monitor their properties using the same tools that you use for permanent statistics:  
   
--   Delete temporary statistics using the [DROP STATISTICS](../Topic/DROP%20STATISTICS%20\(Transact-SQL\).md)[!INCLUDE[tsql](../../includes/tsql-md.md)] statement.  
+-   Delete temporary statistics using the [DROP STATISTICS](~/t-sql/statements/drop-statistics-transact-sql.md)[!INCLUDE[tsql](../includes/tsql-md.md)] statement.  
   
 -   Monitor statistics using the **sys.stats** and **sys.stats_columns** catalog views. **sys_stats** includes a column, **is_temporary**, to indicate which statistics are permanent and which are temporary.  
   
@@ -189,17 +189,17 @@ GO
 
   
 ####  <a name="StalePermStats"></a> Stale Permanent Statistics on Secondary Databases  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] detects when permanent statistics on a secondary database are stale. But changes cannot be made to the permanent statistics except through changes on the primary database. For query optimization, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creates temporary statistics for disk-based tables on the secondary database and uses these statistics instead of the stale permanent statistics.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] detects when permanent statistics on a secondary database are stale. But changes cannot be made to the permanent statistics except through changes on the primary database. For query optimization, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] creates temporary statistics for disk-based tables on the secondary database and uses these statistics instead of the stale permanent statistics.  
   
- When the permanent statistics are updated on the primary database, they are automatically persisted to the secondary database. Then [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses the updated permanent statistics, which are more current than the temporary statistics.  
+ When the permanent statistics are updated on the primary database, they are automatically persisted to the secondary database. Then [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses the updated permanent statistics, which are more current than the temporary statistics.  
   
  If the availability group fails over, temporary statistics are deleted on all of the secondary replicas.  
   
 ####  <a name="StatsLimitationsRestrictions"></a> Limitations and Restrictions  
   
--   Because temporary statistics are stored in **tempdb**, a restart of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service causes all temporary statistics to disappear.  
+-   Because temporary statistics are stored in **tempdb**, a restart of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] service causes all temporary statistics to disappear.  
   
--   The suffix _readonly_database_statistic is reserved for statistics generated by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You cannot use this suffix when creating statistics on a primary database. For more information, see [Statistics](../../2014/database-engine/statistics.md).  
+-   The suffix _readonly_database_statistic is reserved for statistics generated by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. You cannot use this suffix when creating statistics on a primary database. For more information, see [Statistics](../../2014/database-engine/statistics.md).  
   
 ##  <a name="bkmk_AccessInMemTables"></a> Accessing memory-optimized tables on a Secondary Replica  
  The read workload isolation levels on secondary replica are only those allowed on the primary replica. There is no mapping of isolations levels done on the secondary replica. This ensure that any reporting workload that can be run on primary replica is able to run on the secondary replica without requiring any changes. This makes it easy for you to migrate a reporting workload from the primary replica to a secondary or vice versa when the secondary replica is not available.  

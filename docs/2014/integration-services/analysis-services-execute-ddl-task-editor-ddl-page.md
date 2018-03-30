@@ -20,13 +20,13 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Analysis Services Execute DDL Task Editor (DDL Page)
-  Use the **DDL** page of the **Analysis Services Execute DDL Task Editor** dialog box to specify a connection to an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project or an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database and to provide information about the source of data definition language (DDL) statements.  
+  Use the **DDL** page of the **Analysis Services Execute DDL Task Editor** dialog box to specify a connection to an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project or an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database and to provide information about the source of data definition language (DDL) statements.  
   
  To learn about this task, see [Analysis Services Execute DDL Task](../../2014/integration-services/analysis-services-execute-ddl-task.md).  
   
 ## Static Options  
  **Connection**  
- Select an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project or an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] connection manager in the list, or click \<**New connection...**> and use the **Add Analysis Services Connection Manager** dialog box to create a new connection.  
+ Select an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project or an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] connection manager in the list, or click \<**New connection...**> and use the **Add Analysis Services Connection Manager** dialog box to create a new connection.  
   
  **Related Topics:** [Add Analysis Services Connection Manager Dialog Box UI Reference](../../2014/integration-services/add-analysis-services-connection-manager-dialog-box-ui-reference.md), [Analysis Services Connection Manager](../../2014/integration-services/analysis-services-connection-manager.md)  
   

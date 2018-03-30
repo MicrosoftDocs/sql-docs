@@ -25,7 +25,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Invoking CLR User-Defined Aggregate Functions
-  In [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT statements, you can invoke common language runtime (CLR) user-defined aggregates, subject to all the rules that apply to system aggregate functions.  
+  In [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT statements, you can invoke common language runtime (CLR) user-defined aggregates, subject to all the rules that apply to system aggregate functions.  
   
  The following additional rules apply:  
   
@@ -195,7 +195,7 @@ Public Class Concatenate
 End Class  
 ```  
   
- Once you compile the code into **MyAgg.dll**, you can register the aggregate in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] as follows:  
+ Once you compile the code into **MyAgg.dll**, you can register the aggregate in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as follows:  
   
 ```  
 CREATE ASSEMBLY MyAgg FROM 'C:\MyAgg.dll';  
@@ -205,7 +205,7 @@ EXTERNAL NAME MyAgg.Concatenate;
 ```  
   
 > [!NOTE]  
->  Visual C++ database objects, such as scalar-valued functions, that have been compiled with the /clr:pure compiler option are not supported for execution in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+>  Visual C++ database objects, such as scalar-valued functions, that have been compiled with the /clr:pure compiler option are not supported for execution in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  As with most aggregates, the bulk of the logic is in the `Accumulate` method. Here, the string that is passed in as a parameter to the `Accumulate` method is appended to the `StringBuilder` object that was initialized in the `Init` method. Assuming that this is not the first time the `Accumulate` method has been called, a comma is also appended to the `StringBuilder` prior to appending the passed-in string. At the conclusion of the computational tasks, the `Terminate` method is called, which returns the `StringBuilder` as a string.  
   
@@ -398,7 +398,7 @@ Public Class WeightedAvg
 End Class  
 ```  
   
- After you compile the C# or Visual Basic source code, run the following [!INCLUDE[tsql](../../../includes/tsql-md.md)].  This script assumes that the DLL is called WghtAvg.dll and is in the root directory of your C drive.  A database called test is also assumed.  
+ After you compile the C# or Visual Basic source code, run the following [!INCLUDE[tsql](../../includes/tsql-md.md)].  This script assumes that the DLL is called WghtAvg.dll and is in the root directory of your C drive.  A database called test is also assumed.  
   
 ```  
 use test;  

@@ -28,14 +28,14 @@ manager: "jhubbard"
   
 ## Options  
  **Principal server instance**  
- Because database mirroring in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] is always configured from the principal server, the current server instance is always the principal server instance.  
+ Because database mirroring in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] is always configured from the principal server, the current server instance is always the principal server instance.  
   
  **Listener Port**  
  The behavior of this option depends on whether the mirroring endpoint exists for this server instance, as follows:  
   
 -   If the listener port does not exist for this server instance, port number 5022 is displayed in the **Port** text box. You can use any available port number, such as, 7022.  
   
--   When the mirroring endpoint already exists, the port number from the endpoint is displayed. If you need to change the port, use an ALTER ENDPOINT command. For more information, see [ALTER ENDPOINT &#40;Transact-SQL&#41;](../Topic/ALTER%20ENDPOINT%20\(Transact-SQL\).md).  
+-   When the mirroring endpoint already exists, the port number from the endpoint is displayed. If you need to change the port, use an ALTER ENDPOINT command. For more information, see [ALTER ENDPOINT &#40;Transact-SQL&#41;](~/t-sql/statements/alter-endpoint-transact-sql.md).  
   
 > [!NOTE]  
 >  A port number is required.  
@@ -44,7 +44,7 @@ manager: "jhubbard"
  If the mirroring endpoint exists for this server instance, the endpoint name is displayed here. If the endpoint does not exist, you can specify the name of the endpoint.  
   
  **Encrypt data sent through this endpoint**  
- By default, encryption is enabled. When enabled, encryption is required (not merely supported) and uses the default values for all of the encryption options. For more information, see [CREATE ENDPOINT &#40;Transact-SQL&#41;](../Topic/CREATE%20ENDPOINT%20\(Transact-SQL\).md).  
+ By default, encryption is enabled. When enabled, encryption is required (not merely supported) and uses the default values for all of the encryption options. For more information, see [CREATE ENDPOINT &#40;Transact-SQL&#41;](~/t-sql/statements/create-endpoint-transact-sql.md).  
   
  To disable encryption, clear the check box. To re-enable encryption, select the check box.  
   

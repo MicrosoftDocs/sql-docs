@@ -23,7 +23,7 @@ manager: "jhubbard"
  For more information about basic backup concepts, see [Backup Overview &#40;SQL Server&#41;](../../2014/database-engine/backup-overview-sql-server.md).  
   
 > [!NOTE]  
->  When you specify a backup task by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], you can generate the corresponding [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](../Topic/BACKUP%20\(Transact-SQL\).md) script by clicking the **Script** button and then selecting a destination for the script.  
+>  When you specify a backup task by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], you can generate the corresponding [!INCLUDE[tsql](../includes/tsql-md.md)][BACKUP](~/t-sql/statements/backup-transact-sql.md) script by clicking the **Script** button and then selecting a destination for the script.  
   
  **To use SQL Server Management Studio to create a backup**  
   
@@ -32,11 +32,11 @@ manager: "jhubbard"
 -   [Create a Differential Database Backup &#40;SQL Server&#41;](../../2014/database-engine/create-a-differential-database-backup-sql-server.md)  
   
     > [!IMPORTANT]  
-    >  You can define a database maintenance plan to create database backups. For more information, see [Database Maintenance Plans](http://msdn.microsoft.com/library/ms187658.aspx) in [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Books Online.  
+    >  You can define a database maintenance plan to create database backups. For more information, see [Database Maintenance Plans](http://msdn.microsoft.com/library/ms187658.aspx) in [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] Books Online.  
   
  **To create a partial backup**  
   
--   For a partial backup, you must use the [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../Topic/BACKUP%20\(Transact-SQL\).md) statement with the PARTIAL option.  
+-   For a partial backup, you must use the [!INCLUDE[tsql](../includes/tsql-md.md)] [BACKUP](~/t-sql/statements/backup-transact-sql.md) statement with the PARTIAL option.  
   
 ## Options  
   
@@ -59,7 +59,7 @@ manager: "jhubbard"
 |Transaction Log|Transaction logs|Transaction log backups are not available for the Simple Recovery Model.|  
   
  **Copy Only Backup**  
- Select to create a copy-only backup. A *copy-only backup* is a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup that is independent of the sequence of conventional [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups. For more information, see [Copy-Only Backups &#40;SQL Server&#41;](../../2014/database-engine/copy-only-backups-sql-server.md).  
+ Select to create a copy-only backup. A *copy-only backup* is a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] backup that is independent of the sequence of conventional [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] backups. For more information, see [Copy-Only Backups &#40;SQL Server&#41;](../../2014/database-engine/copy-only-backups-sql-server.md).  
   
 > [!NOTE]  
 >  When the **Differential** option is selected, you cannot create a copy-only backup.  
@@ -78,7 +78,7 @@ manager: "jhubbard"
  The options of the **Destination** panel allow for you to specify the type of backup device for the back up operation and find an existing logical or physical backup device.  
   
 > [!NOTE]  
->  For information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup devices, see [Backup Devices &#40;SQL Server&#41;](../../2014/database-engine/backup-devices-sql-server.md).  
+>  For information about [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] backup devices, see [Backup Devices &#40;SQL Server&#41;](../../2014/database-engine/backup-devices-sql-server.md).  
   
  **Back up to**  
  Select one of the following types of media to which to back up. The destinations you select appear in the **Back up to** list.  
@@ -86,7 +86,7 @@ manager: "jhubbard"
 |||  
 |-|-|  
 |**Disk**|Backs up to disk. This may be a system file or a disk-based logical backup device created for the database. The currently selected disks appear in the **Back up to** list. You can select up to 64 disk devices for your backup operation.|  
-|**Tape**|Backs up to tape. This may be a local tape drive or a tape-based logical backup device created for the database. The currently selected tapes appear in the **Back up to** list. The maximum number is 64. If there are no tape devices attached to the server, this option is deactivated. The tapes you select are listed in the **Back up to** list.<br /><br /> Note: Support for tape backup devices will be removed in a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using this feature in new development work, and plan to modify applications that currently use this feature.|  
+|**Tape**|Backs up to tape. This may be a local tape drive or a tape-based logical backup device created for the database. The currently selected tapes appear in the **Back up to** list. The maximum number is 64. If there are no tape devices attached to the server, this option is deactivated. The tapes you select are listed in the **Back up to** list.<br /><br /> Note: Support for tape backup devices will be removed in a future version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Avoid using this feature in new development work, and plan to modify applications that currently use this feature.|  
 |**URL**|Backs up to Windows Azure Blob storage.|  
   
  The next set of options displayed depends on the type of destination selected. If you select Disk or Tape, the following options are displayed.  

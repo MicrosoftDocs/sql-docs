@@ -19,7 +19,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Create a Subscription View (Master Data Services)
-  Create a subscription view when you want to create a view of your data in the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database for use by subscribing systems.  
+  Create a subscription view when you want to create a view of your data in the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database for use by subscribing systems.  
   
 ## Prerequisites  
  To perform this procedure:  
@@ -30,7 +30,7 @@ manager: "jhubbard"
   
 ### To create a subscription view  
   
-1.  In [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], click **Integration Management**.  
+1.  In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], click **Integration Management**.  
   
 2.  From the menu bar, click **Create Views**.  
   

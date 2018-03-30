@@ -25,15 +25,15 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Using WQL and Scripting Languages with the WMI Provider for Configuration Management
-  Management applications access [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] services and network settings using the Windows Management Instrumentation (WMI) Provider for Configuration Management objects in two ways:  
+  Management applications access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services and network settings using the Windows Management Instrumentation (WMI) Provider for Configuration Management objects in two ways:  
   
 -   Using a WQL editor or query tool, such as WBEMTest.exe to query the object set with the Windows Management Instrumentation Language (WQL).  
   
 -   Using a scripting language, such as VBScript.  
   
- Alternatively, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] services and network settings can be managed programmatically using the WMI managed objects in SMO. For more information about programming WMI managed objects, see [Managing Services and Network Settings by Using WMI Provider](../../../2014/database-engine/dev-guide/managing-services-and-network-settings-by-using-wmi-provider.md).  
+ Alternatively, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services and network settings can be managed programmatically using the WMI managed objects in SMO. For more information about programming WMI managed objects, see [Managing Services and Network Settings by Using WMI Provider](../../../2014/database-engine/dev-guide/managing-services-and-network-settings-by-using-wmi-provider.md).  
   
- The WMI provider for Configuration Management can be accessed by using the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager and [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Management Console. For more information about accessing the WMI provider from a user interface, see [Managing Services How-to Topics &#40;SQL Server Configuration Manager&#41;](../../../2014/database-engine/managing-services-how-to-topics-sql-server-configuration-manager.md).  
+ The WMI provider for Configuration Management can be accessed by using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager and [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console. For more information about accessing the WMI provider from a user interface, see [Managing Services How-to Topics &#40;SQL Server Configuration Manager&#41;](../../../2014/database-engine/managing-services-how-to-topics-sql-server-configuration-manager.md).  
   
 ## See Also  
  [Access WMI Provider for Configuration Management using WQL](../../../2014/database-engine/dev-guide/access-wmi-provider-for-configuration-management-using-wql.md)   

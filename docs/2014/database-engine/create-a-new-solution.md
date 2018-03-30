@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Create a New Solution
-  When you create a project, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] creates a solution to contain it. You can only open one solution at a time. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] does not allow you to create folders within projects. To organize your work, create multiple projects.  
+  When you create a project, [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] creates a solution to contain it. You can only open one solution at a time. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] does not allow you to create folders within projects. To organize your work, create multiple projects.  
   
  To access Solution Explorer, click **Solution Explorer** on the **View** menu.  
   

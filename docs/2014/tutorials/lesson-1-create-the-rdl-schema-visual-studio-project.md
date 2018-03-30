@@ -12,14 +12,14 @@ ms.topic: "article"
 ms.assetid: f420509c-51aa-4170-8c25-64c2954f4bb9
 caps.latest.revision: 17
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Lesson 1: Create the RDL Schema Visual Studio Project
-  For this tutorial, you will create a simple console application. This tutorial assumes you are developing in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)].  
+  For this tutorial, you will create a simple console application. This tutorial assumes you are developing in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)].  
   
 > [!NOTE]  
->  When accessing the Report Server Web service running on [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services, you must append "_SQLExpress" to the "ReportServer" path. For example:  
+>  When accessing the Report Server Web service running on [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services, you must append "_SQLExpress" to the "ReportServer" path. For example:  
 >   
 >  `http://myserver/reportserver_sqlexpress/reportservice2010.asmx"`  
   
@@ -53,7 +53,7 @@ manager: "mblythe"
   
 5.  In the **Location** box, type the path where you want to save your project, or click **Browse** to navigate to the folder.  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] A collapsed view of your project appears in Solution Explorer.  
+6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] A collapsed view of your project appears in Solution Explorer.  
   
 7.  On the **Project** menu, click **Add Existing Item**.  
   
@@ -67,9 +67,9 @@ manager: "mblythe"
   
      For more information about how to connect to the Report Server Web service, see [Building Applications Using the Web Service and the .NET Framework](../../2014/reporting-services/dev-guide/building-applications-using-the-web-service-and-the-net-framework.md).  
   
-10. In Solution Explorer, expand the project node. You will see a code file with the default name of Program.cs (Module1.vb for [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) has been added to your project.  
+10. In Solution Explorer, expand the project node. You will see a code file with the default name of Program.cs (Module1.vb for [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) has been added to your project.  
   
-11. Open the Program.cs (Module1.vb for [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) file and replace the code with the following:  
+11. Open the Program.cs (Module1.vb for [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) file and replace the code with the following:  
   
      The following code provides the method stubs we will use to implement the Load, Update and Save functionality.  
   

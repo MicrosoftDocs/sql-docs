@@ -17,7 +17,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQLNumParams
-  Improvements in the database engine beginning with [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] allow SQLNumParams to obtain more accurate descriptions of the expected results. These more accurate results may differ from the values returned by SQLNumParams in previous versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Improvements in the database engine beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] allow SQLNumParams to obtain more accurate descriptions of the expected results. These more accurate results may differ from the values returned by SQLNumParams in previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  For more information, see [Metadata Discovery](../../../2014/database-engine/dev-guide/metadata-discovery.md).  
   

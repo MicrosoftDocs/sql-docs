@@ -21,13 +21,13 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Use the full path to register extended stored procedure DLL names
-  Extended stored procedures that were previously registered without the full path for the DLL name may not work in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+  Extended stored procedures that were previously registered without the full path for the DLL name may not work in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ## Component  
- [!INCLUDE[ssDE](../../../includes/ssde-md.md)]  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## Description  
- Extended stored procedures that were previously registered without the full path for the DLL name may not work after you upgrade. This is because the old BINN directory is not added to the new path during the upgrade process. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] may not be able to locate the extended stored procedures.  
+ Extended stored procedures that were previously registered without the full path for the DLL name may not work after you upgrade. This is because the old BINN directory is not added to the new path during the upgrade process. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] may not be able to locate the extended stored procedures.  
   
 ## Corrective Action  
  Before you upgrade, follow these steps for each extended stored procedure that was not registered with a full path name:  
@@ -38,6 +38,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Database Engine Upgrade Issues](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;new&#93;](../Topic/SQL%20Server%202014%20Upgrade%20Advisor%20[new].md)  
+ [SQL Server 2014 Upgrade Advisor &#91;new&#93;](~/2014/sql-server/install/sql-server-2014-upgrade-advisor.md)  
   
   

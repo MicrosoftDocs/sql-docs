@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: edd0d17a-0e9c-4c28-8395-a7d47e8ce3d6
 caps.latest.revision: 33
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Debug a Business Logic Handler (Replication Programming)
   Use a business logic handler to invoke custom business logic when a merge subscription is synchronized. For more information, see [Execute Business Logic During Merge Synchronization](../../../2014/relational-databases/replication/execute-business-logic-during-merge-synchronization.md).  
   
- The Merge Replication Reconciler (replrec.dll) calls the managed code assembly containing the business logic. In most cases, replrec.dll and the custom business logic is executed on the computer where the Merge Agent runs (at the Subscriber for a pull subscription or at the Distributor for a push subscription). In the case of Web synchronization, or in the case of a [!INCLUDE[ssEW](../../../includes/ssew-md.md)] Subscriber, the reconciler and the custom business logic is executed on the Web server.  
+ The Merge Replication Reconciler (replrec.dll) calls the managed code assembly containing the business logic. In most cases, replrec.dll and the custom business logic is executed on the computer where the Merge Agent runs (at the Subscriber for a pull subscription or at the Distributor for a push subscription). In the case of Web synchronization, or in the case of a [!INCLUDE[ssEW](../../includes/ssew-md.md)] Subscriber, the reconciler and the custom business logic is executed on the Web server.  
   
 ### To debug a business logic handler on a local computer  
   
@@ -33,7 +33,7 @@ manager: "jhubbard"
   
 2.  Create and register a business logic handler. For more information, see [Implement a Business Logic Handler for a Merge Article](../../../2014/relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md).  
   
-3.  Create a Replication Management Objects (RMO) project in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio that programmatically starts the Merge Agent synchronously. For more information, see [Synchronize a Pull Subscription](../../../2014/relational-databases/replication/synchronize-a-pull-subscription.md).  
+3.  Create a Replication Management Objects (RMO) project in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio that programmatically starts the Merge Agent synchronously. For more information, see [Synchronize a Pull Subscription](../../../2014/relational-databases/replication/synchronize-a-pull-subscription.md).  
   
 4.  Set a breakpoint in the business logic handler code, either in the method being debugged or in the class constructor. For more information about the methods that can be implemented in a business logic handler, see the <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> methods topic.  
   
@@ -50,7 +50,7 @@ manager: "jhubbard"
   
 ### To debug a business logic handler on a Web server using Web synchronization, or for a SQL Server Compact Subscriber  
   
-1.  Configure publishing and distribution, create a publication, and create a pull subscription to the publication. The publication must support Web synchronization or [!INCLUDE[ssEW](../../../includes/ssew-md.md)] Subscribers.  
+1.  Configure publishing and distribution, create a publication, and create a pull subscription to the publication. The publication must support Web synchronization or [!INCLUDE[ssEW](../../includes/ssew-md.md)] Subscribers.  
   
 2.  Create and register a business logic handler. For more information, see [Implement a Business Logic Handler for a Merge Article](../../../2014/relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md).  
   

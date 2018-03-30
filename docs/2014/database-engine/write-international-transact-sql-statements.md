@@ -20,11 +20,11 @@ helpviewer_keywords:
 ms.assetid: f0b10fee-27f7-45fe-aece-ccc3f63bdcdb
 caps.latest.revision: 35
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Write International Transact-SQL Statements
-  Databases and database applications that use [!INCLUDE[tsql](../../includes/tsql-md.md)] statements will become more portable from one language to another, or will support multiple languages, if the following guidelines are followed:  
+  Databases and database applications that use [!INCLUDE[tsql](../includes/tsql-md.md)] statements will become more portable from one language to another, or will support multiple languages, if the following guidelines are followed:  
   
 -   Replace all uses of the `char`, `varchar`, and `text` data types with `nchar`, `nvarchar`, and `nvarchar(max)`. By doing this, you do not have to consider code page conversion issues. For more information, see [Collation and Unicode Support](../../2014/database-engine/collation-and-unicode-support.md).  
   
@@ -40,9 +40,9 @@ manager: "jhubbard"
   
          **{ t'** *hh* **:** *mm* **:** *ss* **'}** such as: **{ t'**10:02:20**'}**  
   
-    -   Applications that use other APIs, or [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts, stored procedures, and triggers, should use the unseparated numeric strings. For example, *yyyymmdd* as 19980924.  
+    -   Applications that use other APIs, or [!INCLUDE[tsql](../includes/tsql-md.md)] scripts, stored procedures, and triggers, should use the unseparated numeric strings. For example, *yyyymmdd* as 19980924.  
   
-    -   Applications that use other APIs, or [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts, stored procedures, and triggers should use the CONVERT statement with an explicit style parameter for all conversions between the `time`, `date`, `smalldate`, `datetime`, **datetime2**, and `datetimeoffset` data types and character string data types. For example, the following statement is interpreted in the same way for all language or date format connection settings:  
+    -   Applications that use other APIs, or [!INCLUDE[tsql](../includes/tsql-md.md)] scripts, stored procedures, and triggers should use the CONVERT statement with an explicit style parameter for all conversions between the `time`, `date`, `smalldate`, `datetime`, **datetime2**, and `datetimeoffset` data types and character string data types. For example, the following statement is interpreted in the same way for all language or date format connection settings:  
   
         ```  
         SELECT *  
@@ -50,6 +50,6 @@ manager: "jhubbard"
         WHERE OrderDate = CONVERT(DATETIME, '20060719', 101)  
         ```  
   
-         For more information, see [CAST and CONVERT &#40;Transact-SQL&#41;](../Topic/CAST%20and%20CONVERT%20\(Transact-SQL\).md).  
+         For more information, see [CAST and CONVERT &#40;Transact-SQL&#41;](~/t-sql/functions/cast-and-convert-transact-sql.md).  
   
   

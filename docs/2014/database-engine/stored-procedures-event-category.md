@@ -40,11 +40,11 @@ manager: "jhubbard"
 |[SP:Completed Event Class](../../2014/database-engine/sp-completed-event-class.md)|Indicates that execution of the stored procedure has completed.|  
 |[SP:Recompile Event Class](../../2014/database-engine/sp-recompile-event-class.md)|Indicates that the stored procedure has been recompiled.|  
 |[SP:Starting Event Class](../../2014/database-engine/sp-starting-event-class.md)|Indicates that execution of the stored procedure is starting.|  
-|[SP:StmtCompleted Event Class](../../2014/database-engine/sp-stmtcompleted-event-class.md)|Indicates that a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement within a stored procedure has completed.|  
-|[SP:StmtStarting Event Class](../../2014/database-engine/sp-stmtstarting-event-class.md)|Indicates that a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement within a stored procedure has started.|  
+|[SP:StmtCompleted Event Class](../../2014/database-engine/sp-stmtcompleted-event-class.md)|Indicates that a [!INCLUDE[tsql](../includes/tsql-md.md)] statement within a stored procedure has completed.|  
+|[SP:StmtStarting Event Class](../../2014/database-engine/sp-stmtstarting-event-class.md)|Indicates that a [!INCLUDE[tsql](../includes/tsql-md.md)] statement within a stored procedure has started.|  
   
 ## See Also  
  [Extended Events](../../2014/database-engine/extended-events.md)   
- [sp_trace_setevent &#40;Transact-SQL&#41;](../Topic/sp_trace_setevent%20\(Transact-SQL\).md)  
+ [sp_trace_setevent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

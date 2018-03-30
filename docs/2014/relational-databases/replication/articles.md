@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: 7c743dc6-6c6d-4c92-b711-842e1b0b273e
 caps.latest.revision: 31
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Articles
@@ -64,7 +64,7 @@ manager: "jhubbard"
     >  Property changes made in the **Properties for All \<ObjectType> Articles** dialog box override any made previously in the **Article Properties - \<ObjectName>** dialog box. If, for example, you want to set a number of defaults for all articles of an object type, but also want to set some properties for individual objects, set the defaults for all articles first. Then set the properties for the individual objects.  
   
  **Highlighted table is download-only**  
- Merge replication only. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and later versions only. Select to specify that changes are disallowed at the Subscriber if a client subscription is used. Because download-only articles cannot be updated at the Subscriber, tracking metadata is not sent to Subscribers. This can lead to reduced storage on the Subscribers and a performance benefit, especially if the network connection is slow. This option corresponds to a value of **Download-only to Subscriber, prohibit Subscriber changes** for the option **Synchronization direction** in the **Article Properties** dialog box. For more information, see [Optimize Merge Replication Performance with Download-Only Articles](../../../2014/relational-databases/replication/optimize-merge-replication-performance-with-download-only-articles.md).  
+ Merge replication only. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only. Select to specify that changes are disallowed at the Subscriber if a client subscription is used. Because download-only articles cannot be updated at the Subscriber, tracking metadata is not sent to Subscribers. This can lead to reduced storage on the Subscribers and a performance benefit, especially if the network connection is slow. This option corresponds to a value of **Download-only to Subscriber, prohibit Subscriber changes** for the option **Synchronization direction** in the **Article Properties** dialog box. For more information, see [Optimize Merge Replication Performance with Download-Only Articles](../../../2014/relational-databases/replication/optimize-merge-replication-performance-with-download-only-articles.md).  
   
  **Show only checked objects in the list**  
  Select this check box to show only those articles that are selected in the object pane.  

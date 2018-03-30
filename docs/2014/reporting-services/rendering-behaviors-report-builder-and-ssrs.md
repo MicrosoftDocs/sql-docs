@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 8f873ef9-27a3-40e5-b58b-6774f8027a58
 caps.latest.revision: 7
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Rendering Behaviors (Report Builder  and SSRS)
@@ -31,7 +31,7 @@ manager: "mblythe"
  This topic discusses the general rules that are applied by Reporting Services. For more information, see [Rendering Report Items &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/rendering-report-items-report-builder-and-ssrs.md), [Rendering Data Regions &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/rendering-data-regions-report-builder-and-ssrs.md), and [Rendering Data &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/rendering-data-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## General Behaviors for HTML, MHTML, Word, and Excel (Soft Page-Break Renderers)  
  Reports exported using HTML and MHTML formats are optimized for a computer screen-based experience where pages can be various lengths. Page breaks are inserted vertically only at approximate locations within the report body. These approximate locations are determined by the interactive height setting in the Properties pane. For example, suppose the interactive height is set to 5 inches. When the report is rendered, the page height is approximately 5 inches in length. Word and Excel paginate based on logical page breaks and ignore the interactive height setting.  

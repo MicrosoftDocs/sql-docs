@@ -62,7 +62,7 @@ manager: "jhubbard"
     > [!IMPORTANT]  
     >  Complete the remaining setup steps as soon as you can after taking the backup of the principal database. Before you can start mirroring on the partners, you should create a current log backup on the original database and restore it to the future mirror database.  
   
-2.  You can set up mirroring by using either [!INCLUDE[tsql](../../includes/tsql-md.md)] or the Database Mirroring Wizard. For more information, see one of the following:  
+2.  You can set up mirroring by using either [!INCLUDE[tsql](../includes/tsql-md.md)] or the Database Mirroring Wizard. For more information, see one of the following:  
   
     -   [Establish a Database Mirroring Session Using Windows Authentication &#40;Transact-SQL&#41;](../../2014/database-engine/database-mirroring-establish-session-windows-authentication.md)  
   
@@ -91,9 +91,9 @@ manager: "jhubbard"
         >  In high-performance mode, WITNESS needs to be set to OFF. For more information, see [Quorum: How a Witness Affects Database Availability &#40;Database Mirroring&#41;](../../2014/database-engine/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 > [!NOTE]  
->  For an example of using [!INCLUDE[tsql](../../includes/tsql-md.md)] to set up database mirroring using Microsoft Windows Authentication, see [Example: Setting Up Database Mirroring Using Windows Authentication &#40;Transact-SQL&#41;](../../2014/database-engine/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md).  
+>  For an example of using [!INCLUDE[tsql](../includes/tsql-md.md)] to set up database mirroring using Microsoft Windows Authentication, see [Example: Setting Up Database Mirroring Using Windows Authentication &#40;Transact-SQL&#41;](../../2014/database-engine/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md).  
 >   
->  For an example of using [!INCLUDE[tsql](../../includes/tsql-md.md)] to set up database mirroring using certificate-based security, see [Example: Setting Up Database Mirroring Using Certificates &#40;Transact-SQL&#41;](../../2014/database-engine/example-setting-up-database-mirroring-using-certificates-transact-sql.md).  
+>  For an example of using [!INCLUDE[tsql](../includes/tsql-md.md)] to set up database mirroring using certificate-based security, see [Example: Setting Up Database Mirroring Using Certificates &#40;Transact-SQL&#41;](../../2014/database-engine/example-setting-up-database-mirroring-using-certificates-transact-sql.md).  
   
  
   
@@ -108,7 +108,7 @@ manager: "jhubbard"
  Describes how to use the Configure Database Mirroring Security Wizard to start database mirroring on a database.  
   
  [Establish a Database Mirroring Session Using Windows Authentication &#40;Transact-SQL&#41;](../../2014/database-engine/database-mirroring-establish-session-windows-authentication.md)  
- Describes the [!INCLUDE[tsql](../../includes/tsql-md.md)] steps for setting up database mirroring.  
+ Describes the [!INCLUDE[tsql](../includes/tsql-md.md)] steps for setting up database mirroring.  
   
  [Example: Setting Up Database Mirroring Using Windows Authentication &#40;Transact-SQL&#41;](../../2014/database-engine/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)  
  Contains an example of all the stages required to create a database mirroring session with a witness, using Windows Authentication.  

@@ -20,12 +20,12 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Data Type Support for OLE DB Date and Time Improvements
-  This topic provides information about OLE DB ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client) types that support [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] date/time data types.  
+  This topic provides information about OLE DB ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client) types that support [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] date/time data types.  
   
 ## Data Type Mapping in Rowsets and Parameters  
  OLE DB provides two new data types to support the new server types: DBTYPE_DBTIME2 and DBTYPE_DBTIMESTAMPOFFSET. The following table shows the complete server type mapping:  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data type|OLE DB data type|Value|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type|OLE DB data type|Value|  
 |-----------------------------------------|----------------------|-----------|  
 |datetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
@@ -36,9 +36,9 @@ manager: "jhubbard"
   
 ## Data Formats: Strings and Literals  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data type|OLE DB data type|String format for client conversions|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type|OLE DB data type|String format for client conversions|  
 |-----------------------------------------|----------------------|------------------------------------------|  
-|datetime|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports up to three fractional second digits for Datetime.|  
+|datetime|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports up to three fractional second digits for Datetime.|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss'<br /><br /> This data type has an accuracy of one minute. The seconds component will be zero on output and will be rounded by the server on input.|  
 |date|DBTYPE_DBDATE|'yyyy-mm-dd'|  
 |time|DBTYPE_DBTIME2|'hh:mm:ss[.9999999]'<br /><br /> Fractional seconds can optionally be specified using up to seven digits.|  
@@ -68,7 +68,7 @@ manager: "jhubbard"
   
 -   Seconds range from 0 through 59. This allows up to two leap seconds to maintain synchronization with sideral time.  
   
- Implementations for the following existing OLE DB structs have been modified to support the new [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] date and time data types. The definitions, however, have not changed.  
+ Implementations for the following existing OLE DB structs have been modified to support the new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] date and time data types. The definitions, however, have not changed.  
   
 -   DBTYPE_DATE (This is an automation DATE type. It is internally represented as a `double`.. The whole part is the number of days since December 30, 1899 and the fractional part is the fraction of a day. This type has an accuracy of 1 second, so has an effective scale of 0.)  
   
@@ -155,7 +155,7 @@ enum SQLVARENUM {
 };  
 ```  
   
- Applications migrating to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client that use `sql_variant` and rely on the limited precision of `datetime` will have to be updated if the underlying schema is updated to use `datetime2` rather than `datetime`.  
+ Applications migrating to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client that use `sql_variant` and rely on the limited precision of `datetime` will have to be updated if the underlying schema is updated to use `datetime2` rather than `datetime`.  
   
  The access macros for SSVARIANT have also been extended with the addition of the following:  
   
@@ -169,12 +169,12 @@ enum SQLVARENUM {
 ## Data Type Mapping in ITableDefinition::CreateTable  
  The following type mapping is used with DBCOLUMNDESC structures used by ITableDefinition::CreateTable:  
   
-|OLE DB data type (*wType*)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data type|Notes|  
+|OLE DB data type (*wType*)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type|Notes|  
 |----------------------------------|-----------------------------------------|-----------|  
 |DBTYPE_DBDATE|date||  
-|DBTYPE_DBTIMESTAMP|`datetime2`(p)|The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider inspects the DBCOLUMDESC *bScale* member to determine the fractional seconds precision.|  
-|DBTYPE_DBTIME2|`time`(p)|The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider inspects the DBCOLUMDESC *bScale* member to determine the fractional seconds precision.|  
-|DBTYPE_DBTIMESTAMPOFFSET|`datetimeoffset`(p)|The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider inspects the DBCOLUMDESC *bScale* member to determine the fractional seconds precision.|  
+|DBTYPE_DBTIMESTAMP|`datetime2`(p)|The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider inspects the DBCOLUMDESC *bScale* member to determine the fractional seconds precision.|  
+|DBTYPE_DBTIME2|`time`(p)|The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider inspects the DBCOLUMDESC *bScale* member to determine the fractional seconds precision.|  
+|DBTYPE_DBTIMESTAMPOFFSET|`datetimeoffset`(p)|The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider inspects the DBCOLUMDESC *bScale* member to determine the fractional seconds precision.|  
   
  When an application specifies DBTYPE_DBTIMESTAMP in *wType*, it can override the mapping to `datetime2` by supplying a type name in *pwszTypeName*. If `datetime` is specified, *bScale* must be 3. If `smalldatetime` is specified, *bScale* must be 0. If *bScale* is not consistent with *wType* and *pwszTypeName*,DB_E_BADSCALE is returned.  
   

@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Using Server Cursors
-  If an ODBC application sets any of the ODBC cursor attributes to anything other than the defaults, the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver requests the server to implement an API server cursor of the same type. Using API server cursors frees memory on the client and can significantly reduce network traffic between the client and server.  
+  If an ODBC application sets any of the ODBC cursor attributes to anything other than the defaults, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver requests the server to implement an API server cursor of the same type. Using API server cursors frees memory on the client and can significantly reduce network traffic between the client and server.  
   
  A potential drawback of API server cursors is that they currently do not support all SQL statements. API server cursors cannot be used to execute:  
   
@@ -32,7 +32,7 @@ manager: "jhubbard"
   
 -   An EXECUTE statement referencing a remote stored procedure.  
   
- When connected to an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], executing a statement with these characteristics using a server cursor causes the cursor being converted to a default result set. When connected to earlier versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], it causes an error.  
+ When connected to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], executing a statement with these characteristics using a server cursor causes the cursor being converted to a default result set. When connected to earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], it causes an error.  
   
 ## See Also  
  [How Cursors Are Implemented](../../../2014/database-engine/dev-guide/how-cursors-are-implemented.md)  

@@ -16,9 +16,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Update Progress
-  Use the Installation Progress page to monitor Setup as it applies the update to your instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and its components.  
+  Use the Installation Progress page to monitor Setup as it applies the update to your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and its components.  
   
 ## Options  
- The table provides the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] product name, its instance name, and the installation status.  
+ The table provides the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] product name, its instance name, and the installation status.  
   
   

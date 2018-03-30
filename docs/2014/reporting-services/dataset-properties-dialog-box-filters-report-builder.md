@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: 933a6f44-4eb7-4e73-9c40-ac0fd17b23d3
 caps.latest.revision: 14
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Dataset Properties Dialog Box, Filters (Report Builder)

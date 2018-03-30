@@ -16,15 +16,15 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Cluster Node Configuration (Complete)
-  Use the Cluster Node Configuration (Complete) page to specify an existing instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that has been prepared for clustering.To install or upgrade a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster, you must run the Setup program on each node of the failover cluster. To add a node to an existing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster, you must run [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup on the node that is to be added to the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance.  
+  Use the Cluster Node Configuration (Complete) page to specify an existing instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that has been prepared for clustering.To install or upgrade a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster, you must run the Setup program on each node of the failover cluster. To add a node to an existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster, you must run [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup on the node that is to be added to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instance.  
   
 ## Options  
  From the drop-down boxes:  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance name — Select the instance name for the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name — Select the instance name for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster.  
   
--   Name of this node — This field is pre-populated with the computer name where the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup program is running.  
+-   Name of this node — This field is pre-populated with the computer name where the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup program is running.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Failover Cluster Network Name — This field is not pre-populated. Specify the network name for the new [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance. This is the name that identifies the failover cluster instance on the network.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Failover Cluster Network Name — This field is not pre-populated. Specify the network name for the new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instance. This is the name that identifies the failover cluster instance on the network.  
   
   

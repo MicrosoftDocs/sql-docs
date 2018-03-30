@@ -23,9 +23,9 @@ manager: "jhubbard"
 # Assemblies (Database Engine)
   The topics in this section provide information to help you understand, design, and implement assemblies.  
   
- Assemblies are DLL files used in an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to deploy functions, stored procedures, triggers, user-defined aggregates, and user-defined types that are written in one of the managed code languages hosted by the [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] common language runtime (CLR), instead of in [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+ Assemblies are DLL files used in an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to deploy functions, stored procedures, triggers, user-defined aggregates, and user-defined types that are written in one of the managed code languages hosted by the [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime (CLR), instead of in [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- An assembly in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is an object that references a managed application module (.dll file) that was created in the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] common language runtime. An assembly contains class metadata and managed code. Uploading an assembly to an instance of SQL Server is the first step toward creating any of the following database objects:  
+ An assembly in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is an object that references a managed application module (.dll file) that was created in the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime. An assembly contains class metadata and managed code. Uploading an assembly to an instance of SQL Server is the first step toward creating any of the following database objects:  
   
 -   CLR functions. For more information, see [Create CLR Functions](../../../2014/database-engine/create-clr-functions.md).  
   
@@ -37,7 +37,7 @@ manager: "jhubbard"
   
 -   User-defined types. For more information, see [Using User-Defined Types](../../../2014/database-engine/dev-guide/using-user-defined-types.md).  
   
- Assemblies perform the following functions in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
+ Assemblies perform the following functions in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 -   Contain the managed code that runs the functionality of one or more of the CLR database objects previously listed.  
   

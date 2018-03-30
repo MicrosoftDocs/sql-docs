@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 23eed41b-283a-49df-a3aa-062dde8d6354
 caps.latest.revision: 25
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # General Properties Page, Resources (Report Manager)

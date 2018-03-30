@@ -24,7 +24,7 @@ manager: "jhubbard"
   
  In this lesson, you do the following tasks:  
   
--   You add a data source view to the [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] data source.  
+-   You add a data source view to the [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] data source.  
   
 -   You add the case and nested tables to this view.  
   
@@ -45,7 +45,7 @@ manager: "jhubbard"
   
 2.  On the **Welcome to the Data Source View Wizard** page, click **Next**.  
   
-3.  On the **Select a Data Source** page, under **Relational data sources**, select the [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] data source that you created in the Basic Data Mining Tutorial. Click **Next**.  
+3.  On the **Select a Data Source** page, under **Relational data sources**, select the [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] data source that you created in the Basic Data Mining Tutorial. Click **Next**.  
   
 4.  On the **Select Tables and Views** page, select the following tables, and then click the right arrow to include them in the new data source view:  
   
@@ -55,7 +55,7 @@ manager: "jhubbard"
   
 5.  Click **Next**.  
   
-6.  On the **Completing the Wizard** page, by default the data source view is named [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)]. Change the name to `Orders`, and then click **Finish**.  
+6.  On the **Completing the Wizard** page, by default the data source view is named [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]. Change the name to `Orders`, and then click **Finish**.  
   
      Data Source View Designer opens and the `Orders` data source view appears.  
   

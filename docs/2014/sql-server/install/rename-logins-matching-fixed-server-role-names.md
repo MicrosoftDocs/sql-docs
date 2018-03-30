@@ -24,7 +24,7 @@ manager: "jhubbard"
   Upgrade Advisor detected one or more user-defined login names that match the names of fixed server roles. Fixed server role names are reserved. Rename the login before you upgrade.  
   
 ## Component  
- [!INCLUDE[ssDE](../../../includes/ssde-md.md)]  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## Description  
  The following fixed server role names are reserved and cannot be used as user-defined login names.  
@@ -62,6 +62,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Database Engine Upgrade Issues](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;new&#93;](../Topic/SQL%20Server%202014%20Upgrade%20Advisor%20[new].md)  
+ [SQL Server 2014 Upgrade Advisor &#91;new&#93;](~/2014/sql-server/install/sql-server-2014-upgrade-advisor.md)  
   
   

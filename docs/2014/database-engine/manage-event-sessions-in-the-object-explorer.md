@@ -75,10 +75,10 @@ STATE = STOP
   
 3.  In the **Save As** dialog box, select a location to save the file, type the file name in the **File name** box, and then click **Save**.  
   
-     If you save the file to the default [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] template location, the template will appear in the dropdown list of predefined templates when you use the **New Session Wizard** and **New Session** dialog.  
+     If you save the file to the default [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] template location, the template will appear in the dropdown list of predefined templates when you use the **New Session Wizard** and **New Session** dialog.  
   
 ## Import an Extended Events Session Template  
- Using **Object Explorer**, you can import a template for an Extended Events session. For example, you may want to do this to create a session from a template that was exported from another instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Using **Object Explorer**, you can import a template for an Extended Events session. For example, you may want to do this to create a session from a template that was exported from another instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  To import an Extended Events session, you must have the necessary `ALTER ANY EVENT SESSION` permissions.  
   
@@ -111,10 +111,10 @@ STATE = STOP
   
 4.  After you finish revising the event session, click **OK**.  
   
-## Script an Event Session Definition Using [!INCLUDE[tsql](../../includes/tsql-md.md)]  
- Both the New Session Wizard and the New Session dialog have a Script option that generates the [!INCLUDE[tsql](../../includes/tsql-md.md)] that defines the Extended Events session.  
+## Script an Event Session Definition Using [!INCLUDE[tsql](../includes/tsql-md.md)]  
+ Both the New Session Wizard and the New Session dialog have a Script option that generates the [!INCLUDE[tsql](../includes/tsql-md.md)] that defines the Extended Events session.  
   
- You can access the [!INCLUDE[tsql](../../includes/tsql-md.md)] for an existing Extended Events session by right clicking the session name, selecting **Script Session as**, and then selecting **Create to**.  
+ You can access the [!INCLUDE[tsql](../includes/tsql-md.md)] for an existing Extended Events session by right clicking the session name, selecting **Script Session as**, and then selecting **Create to**.  
   
 ## Delete an Extended Events Session  
  You can delete an Extended Events session:  
@@ -126,7 +126,7 @@ STATE = STOP
  When you delete an event session, all configuration information is removed and the session definition no longer appears in the sys.server_event_sessions catalog view.  
   
 > [!NOTE]  
->  system_health and AlwaysOn_health are included with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; do not delete them. system_health is enabled by default (for more information, see [Use the system_health Session](../../2014/database-engine/use-the-system-health-session.md)). AlwaysOn_health is off by default. These sessions collect data that can be useful for diagnosing performance issues.  
+>  system_health and AlwaysOn_health are included with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]; do not delete them. system_health is enabled by default (for more information, see [Use the system_health Session](../../2014/database-engine/use-the-system-health-session.md)). AlwaysOn_health is off by default. These sessions collect data that can be useful for diagnosing performance issues.  
   
  To delete an Extended Events session, you must have the ALTER ANY EVENT SESSION permission.  
   

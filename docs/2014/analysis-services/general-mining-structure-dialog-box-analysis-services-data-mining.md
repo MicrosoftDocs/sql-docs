@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # General (Mining Structure Dialog Box) (Analysis Services - Data Mining)
-  Use the **General** page of **Mining Structure Properties** dialog box in **SQL Server Management Studio** to set the general properties of a mining structure in an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database.  
+  Use the **General** page of **Mining Structure Properties** dialog box in **SQL Server Management Studio** to set the general properties of a mining structure in an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database.  
   
 ## Options  
   

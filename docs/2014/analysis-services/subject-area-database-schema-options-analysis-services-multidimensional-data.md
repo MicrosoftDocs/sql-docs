@@ -43,7 +43,7 @@ manager: "mblythe"
  Specifies how the wizard populates the time tables. The following table describes the possible values for this option.  
   
 > [!NOTE]  
->  This option is enabled only if Schema Generation Wizard is called from an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project, using [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] in project mode.  
+>  This option is enabled only if Schema Generation Wizard is called from an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project, using [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] in project mode.  
   
 |Value|Description|  
 |-----------|-----------------|  

@@ -17,7 +17,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SqlErrorLogFile Class
-  Provides properties for viewing information about a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] log file.  
+  Provides properties for viewing information about a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log file.  
   
 ## Syntax  
   
@@ -40,7 +40,7 @@ class SQLErrorLogFile
 |||  
 |-|-|  
 |ArchiveNumber|Data type: `uint32`<br /><br /> Access type: Read-only<br /><br /> <br /><br /> The archive number for the log file.|  
-|InstanceName|Data type: `string`<br /><br /> Access type: Read-only<br /><br /> Qualifiers: Key<br /><br /> <br /><br /> The name of the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] where the log file resides.|  
+|InstanceName|Data type: `string`<br /><br /> Access type: Read-only<br /><br /> Qualifiers: Key<br /><br /> <br /><br /> The name of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] where the log file resides.|  
 |LastModified|Data type: `datetime`<br /><br /> Access type: Read-only<br /><br /> <br /><br /> The date that the log file was last modified.|  
 |LogFileSize|Data type: `uint32`<br /><br /> Access type: Read-only<br /><br /> <br /><br /> The log file size, in bytes.|  
 |Name|Data type: `string`<br /><br /> Access type: Read-only<br /><br /> Qualifiers: Key<br /><br /> <br /><br /> The name of the log file.|  
@@ -54,7 +54,7 @@ class SQLErrorLogFile
 |Namespace|\root\Microsoft\SqlServer\ComputerManagement10|  
   
 ## Example  
- The following example retrieves information about all [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] log files on a specified instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. To run the example, replace \<*Instance_Name*> with the name of the instance, for example, 'Instance1'.  
+ The following example retrieves information about all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log files on a specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. To run the example, replace \<*Instance_Name*> with the name of the instance, for example, 'Instance1'.  
   
 ```  
 on error resume next  
@@ -81,14 +81,14 @@ Next
 ```  
   
 ## Security  
- To connect to a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] log file through WMI, you must have the following permissions on both the local and remote computers:  
+ To connect to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log file through WMI, you must have the following permissions on both the local and remote computers:  
   
 -   Read access to the **Root\Microsoft\SqlServer\ComputerManagement10** WMI namespace. By default, everyone has read access through the Enable Account permission.  
   
     > [!NOTE]  
     >  For information about how to verify WMI permissions, see the Security section of the topic [View Offline Log Files](../../../2014/database-engine/view-offline-log-files.md).  
   
--   Read permission to the folder that contains the error logs. By default the error logs are located in the following path (where \<*Drive>* represents the drive where you installed [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and \<*InstanceName*> is the name of the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]):  
+-   Read permission to the folder that contains the error logs. By default the error logs are located in the following path (where \<*Drive>* represents the drive where you installed [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and \<*InstanceName*> is the name of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]):  
   
      **\<Drive>:\Program Files\Microsoft SQL Server\MSSQL11** **.\<InstanceName>\MSSQL\Log**  
   

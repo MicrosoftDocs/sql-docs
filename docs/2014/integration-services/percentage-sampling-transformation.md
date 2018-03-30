@@ -44,7 +44,7 @@ manager: "jhubbard"
   
  The transformation has one input and two outputs. It does not support an error output.  
   
- You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer or programmatically.  
   
  For more information about the properties that you can set in the **Percentage Sampling Transformation Editor** dialog box, see [Percentage Sampling Transformation Editor](../../2014/integration-services/percentage-sampling-transformation-editor.md).  
   

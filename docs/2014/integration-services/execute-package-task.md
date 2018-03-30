@@ -22,7 +22,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Execute Package Task
-  The Execute Package task extends the enterprise capabilities of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] by letting packages run other packages as part of a workflow.  
+  The Execute Package task extends the enterprise capabilities of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] by letting packages run other packages as part of a workflow.  
   
  You can use the Execute Package task for the following purposes:  
   
@@ -36,7 +36,7 @@ manager: "jhubbard"
   
  A package that runs other packages is generally referred to as the parent package, and the packages that a parent workflow runs are called child packages.  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes tasks that perform workflow operations, such as executing executables and batch files. For more information, see [Execute Process Task](../../2014/integration-services/execute-process-task.md).  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes tasks that perform workflow operations, such as executing executables and batch files. For more information, see [Execute Process Task](../../2014/integration-services/execute-process-task.md).  
   
 ## Running Packages  
  The Execute Package task can run child packages that are contained in the same project that contains the parent package. You select a child package from the project by setting the **ReferenceType** property to **Project Reference**, and then setting the **PackageNameFromProjectReference** property.  
@@ -44,9 +44,9 @@ manager: "jhubbard"
 > [!NOTE]  
 >  The **ReferenceType** option is ready-only and set to **External Reference** if the project that contains the package has not been converted to the project deployment model. For more information about conversion, see [Deploy Projects to Integration Services Server](../../2014/integration-services/deploy-projects-to-integration-services-server.md).  
   
- The Execute Package task can also run packages stored in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb database and packages stored in the file system. The task uses an OLE DB connection manager to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or a File connection manager to access the file system. For more information, see [OLE DB Connection Manager](../../2014/integration-services/ole-db-connection-manager.md) and [Flat File Connection Manager](../../2014/integration-services/flat-file-connection-manager.md).  
+ The Execute Package task can also run packages stored in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb database and packages stored in the file system. The task uses an OLE DB connection manager to connect to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] or a File connection manager to access the file system. For more information, see [OLE DB Connection Manager](../../2014/integration-services/ole-db-connection-manager.md) and [Flat File Connection Manager](../../2014/integration-services/flat-file-connection-manager.md).  
   
- The Execute Package task can also run a database maintenance plan, which lets you manage both [!INCLUDE[ssIS](../../includes/ssis-md.md)] packages and database maintenance plans in the same [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] solution. A database maintenance plan is similar to an [!INCLUDE[ssIS](../../includes/ssis-md.md)] package, but a plan can include only database maintenance tasks, and it is always stored in the msdb database.  
+ The Execute Package task can also run a database maintenance plan, which lets you manage both [!INCLUDE[ssIS](../includes/ssis-md.md)] packages and database maintenance plans in the same [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] solution. A database maintenance plan is similar to an [!INCLUDE[ssIS](../includes/ssis-md.md)] package, but a plan can include only database maintenance tasks, and it is always stored in the msdb database.  
   
  If you choose a package stored in the file system, you must provide the name and location of the package. The package can reside anywhere in the file system; it does not have to be in the same folder as the parent package.  
   
@@ -54,7 +54,7 @@ manager: "jhubbard"
   
  Alternatively, sometimes you want the parent and child packages to fail together as one unit, or you might not want to incur the additional overhead of another process. For example, if a child process fails and subsequent processing in the parent process of the package depends on success of the child process, the child package should run in the process of the parent package.  
   
- By default, the ExecuteOutOfProcess property of the Execute Package task is set to `False`, and the child package runs in the same process as the parent package. If you set this property to `True`, the child package runs in a separate process. This may slow down the launching of the child package. In addition, if you set the property to `True`, you cannot debug the package in a tools-only install. You must install [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. For more information, see [Install Integration Services](../../2014/sql-server/install/install-integration-services.md)  
+ By default, the ExecuteOutOfProcess property of the Execute Package task is set to `False`, and the child package runs in the same process as the parent package. If you set this property to `True`, the child package runs in a separate process. This may slow down the launching of the child package. In addition, if you set the property to `True`, you cannot debug the package in a tools-only install. You must install [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. For more information, see [Install Integration Services](../../2014/sql-server/install/install-integration-services.md)  
   
 ## Extending Transactions  
  The transaction that the parent package uses can extend to the child package; therefore, the work both packages perform can be committed or rolled back. For example, the database inserts that the parent package performs can be committed or rolled back, depending on the database inserts that the child package performs, and vice versa. For more information, see [Inherited Transactions](../../2014/integration-services/inherited-transactions.md).  
@@ -75,7 +75,7 @@ manager: "jhubbard"
   
 -   **Package Configurations**  
   
-     [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides a configuration type, the Parent Package Variable configuration, for passing values from parent to child packages. The configuration is built on the child package and uses a variable in the parent package. The configuration is mapped to a variable in the child package, or to the property of an object in the child package. The variable can also be used in the scripts used by the Script task or Script component.  
+     [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides a configuration type, the Parent Package Variable configuration, for passing values from parent to child packages. The configuration is built on the child package and uses a variable in the parent package. The configuration is mapped to a variable in the child package, or to the property of an object in the child package. The variable can also be used in the scripts used by the Script task or Script component.  
   
 -   **Parameters**  
   
@@ -98,15 +98,15 @@ manager: "jhubbard"
  Child packages can access parent package variables by using the Script task. When you enter the name of the parent package variable on the **Script** page in the **Script Task Editor**, don’t include **User:** in the variable name. Otherwise, the child package doesn’t locate the variable when you run the parent package. For more information about using the Script task to access parent package variables, see this blog entry, [SSIS: Accessing variables in a parent package](http://go.microsoft.com/fwlink/?LinkId=257729), on consultingblogs.emc.com.  
   
 ## Configuring the Execute Package Task  
- You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer or programmatically.  
   
- For more information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click one of the following topics:  
+ For more information about the properties that you can set in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click one of the following topics:  
   
 -   [Execute Package Task Editor](../../2014/integration-services/execute-package-task-editor.md)  
   
 -   [Expressions Page](../../2014/integration-services/expressions-page.md)  
   
- For more information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
+ For more information about how to set these properties in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click the following topic:  
   
 -   [Set the Properties of a Task or Container](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)  
   

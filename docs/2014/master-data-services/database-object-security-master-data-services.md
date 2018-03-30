@@ -19,13 +19,13 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Database Object Security (Master Data Services)
-  In the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database, data is stored in multiple database tables and is visible in views. Information that you might have secured in the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web application is visible to users with access to the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database.  
+  In the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database, data is stored in multiple database tables and is visible in views. Information that you might have secured in the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web application is visible to users with access to the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.  
   
- Specifically, employee salary information might be contained in an Employee model, or company financial information might be in an Account model. You can deny a user access to these models in the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] user interface, but users with access to the database can view this data.  
+ Specifically, employee salary information might be contained in an Employee model, or company financial information might be in an Account model. You can deny a user access to these models in the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] user interface, but users with access to the database can view this data.  
   
- You can grant permissions to database objects to make specific data available to users. For more information on granting permissions, see [GRANT Object Permissions &#40;Transact-SQL&#41;](../Topic/GRANT%20Object%20Permissions%20\(Transact-SQL\).md). For more information about securing SQL server, see [Securing SQL Server](../../2014/database-engine/securing-sql-server.md).  
+ You can grant permissions to database objects to make specific data available to users. For more information on granting permissions, see [GRANT Object Permissions &#40;Transact-SQL&#41;](~/t-sql/statements/grant-object-permissions-transact-sql.md). For more information about securing SQL server, see [Securing SQL Server](../../2014/database-engine/securing-sql-server.md).  
   
- The following tasks require access to the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database:  
+ The following tasks require access to the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database:  
   
 -   [Staging Data](#Staging)  
   
@@ -89,7 +89,7 @@ manager: "jhubbard"
  For more information, see [Change the System Administrator Account &#40;Master Data Services&#41;](../../2014/master-data-services/change-the-system-administrator-account-master-data-services.md).  
   
 ##  <a name="SysSettings"></a> Configuring System Settings  
- There are system settings that you can configure to control behavior in [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. You can adjust these settings in [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] or if you have UPDATE access, you can adjust these settings directly in the mdm.tblSystemSetting database table. For more information, see [System Settings &#40;Master Data Services&#41;](../../2014/master-data-services/system-settings-master-data-services.md).  
+ There are system settings that you can configure to control behavior in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. You can adjust these settings in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] or if you have UPDATE access, you can adjust these settings directly in the mdm.tblSystemSetting database table. For more information, see [System Settings &#40;Master Data Services&#41;](../../2014/master-data-services/system-settings-master-data-services.md).  
   
 ## See Also  
  [Security &#40;Master Data Services&#41;](../../2014/master-data-services/security-master-data-services.md)  

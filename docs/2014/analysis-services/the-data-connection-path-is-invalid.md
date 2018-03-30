@@ -23,7 +23,7 @@ manager: "mblythe"
 |||  
 |-|-|  
 |Applies to|PowerPivot for SharePoint|  
-|Product Version|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|Product Version|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]|  
 |Cause|Excel Services is configured to only allow data connections from .odc files that are in a trusted data connection library.|  
 |Message Text|The data connection path in the workbook points to a file on the local drive or is an invalid URI. The following connections failed to refresh: PowerPivot Data|  
   

@@ -16,7 +16,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Rename User-defined Functions
-  You can rename user-defined functions in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  You can rename user-defined functions in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -72,10 +72,10 @@ manager: "jhubbard"
   
  This task cannot be performed using Transact-SQL statements. To rename a user-defined function using Transact-SQL, you must first delete the existing function and then re-create it with the new name. Ensure that all code and applications that used the function’s old name now use the new name.  
   
- For more information, see [CREATE FUNCTION &#40;Transact-SQL&#41;](../Topic/CREATE%20FUNCTION%20\(Transact-SQL\).md) and [DROP FUNCTION &#40;Transact-SQL&#41;](../Topic/DROP%20FUNCTION%20\(Transact-SQL\).md).  
+ For more information, see [CREATE FUNCTION &#40;Transact-SQL&#41;](~/t-sql/statements/create-function-transact-sql.md) and [DROP FUNCTION &#40;Transact-SQL&#41;](~/t-sql/statements/drop-function-transact-sql.md).  
   
 ## See Also  
- [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../Topic/sys.sql_expression_dependencies%20\(Transact-SQL\).md)   
+ [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
  [View User-defined Functions](../../2014/database-engine/view-user-defined-functions.md)  
   
   

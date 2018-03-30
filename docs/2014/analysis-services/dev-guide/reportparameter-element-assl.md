@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # ReportParameter Element (ASSL)
-  Contains the name and value of a parameter that is passed to a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] report at run time.  
+  Contains the name and value of a parameter that is passed to a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report at run time.  
   
 ## Syntax  
   

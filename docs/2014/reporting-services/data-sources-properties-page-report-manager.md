@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: f37edda0-19e6-489e-b544-8751fa6b6cfb
 caps.latest.revision: 35
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Data Sources Properties Page (Report Manager)
@@ -49,7 +49,7 @@ manager: "mblythe"
  Specify the data processing extension that is used to process data from the data source. For the list of built-in data extensions, see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../2014/reporting-services/data-sources-supported-by-reporting-services-ssrs.md). Additional data processing extensions may be available from third-party vendors.  
   
  **Connection string**  
- Specify the connection string that the report server uses to connect to the data source. The connection type determines the syntax you should use. For example, a connection string for the XML data processing extension is a URL to an XML document. In most cases, a typical connection string specifies the database server and a data file. The following example illustrates a connection string used to connect to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database that is named MyData:  
+ Specify the connection string that the report server uses to connect to the data source. The connection type determines the syntax you should use. For example, a connection string for the XML data processing extension is a URL to an XML document. In most cases, a typical connection string specifies the database server and a data file. The following example illustrates a connection string used to connect to a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database that is named MyData:  
   
  `data source=<a SQL Server instance>;initial catalog=MyData`  
   
@@ -64,17 +64,17 @@ manager: "mblythe"
  **Credentials supplied by the user running the report**  
  Each user must type in a user name and password to access the data source. You can define the prompt text that requests user credentials. The default text string is "Enter a user name and password to access the data source."  
   
- Select **Use as Windows credentials when connecting to the data source** if the credentials that the user provides are Windows Authentication credentials. Do not select this check box if you are using database authentication (for example, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication).  
+ Select **Use as Windows credentials when connecting to the data source** if the credentials that the user provides are Windows Authentication credentials. Do not select this check box if you are using database authentication (for example, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication).  
   
  **Credentials stored securely in the report server**  
  Store an encrypted user name and password in the report server database. Select this option to run a report unattended (for example, reports that are initiated by schedules or events instead of user action). If you are using default security, the user name must be a Windows domain account. Specify the account in this format: \<domain>\\<username\>. The account you specify must have log on locally permissions on the computer that hosts the data source used by the report.  
   
- Select **Use as Windows credentials when connecting to the data source** if the credentials are Windows Authentication credentials. Do not select this check box if you are using database authentication (for example, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication).  
+ Select **Use as Windows credentials when connecting to the data source** if the credentials are Windows Authentication credentials. Do not select this check box if you are using database authentication (for example, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication).  
   
- Select **Impersonate the authenticated user after a connection has been made to the data source** to allow delegation of credentials, but only if a data source supports impersonation. For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases, this option sets the SETUSER function.  
+ Select **Impersonate the authenticated user after a connection has been made to the data source** to allow delegation of credentials, but only if a data source supports impersonation. For [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] databases, this option sets the SETUSER function.  
   
 > [!TIP]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]only supports Windows account credentials. Therefore select both options "Use as Windows credentials when connecting to the data source" and "Impersonate the authenticated user after a connection has been made to the data source" for an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data source.  
+>  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]only supports Windows account credentials. Therefore select both options "Use as Windows credentials when connecting to the data source" and "Impersonate the authenticated user after a connection has been made to the data source" for an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data source.  
   
  **Windows integrated security**  
  Use the Windows credentials of the current user to access the data source. Select this option when the credentials that are used to access a data source are the same as those used to log on to the network domain. This option works best when Kerberos authentication is enabled for your domain, or when the data source is on the same computer as the report server. If Kerberos is not enabled, Windows credentials can be passed to one other computer. If additional computer connections are required, you will get an error instead of the data you expect.  

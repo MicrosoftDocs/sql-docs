@@ -16,18 +16,18 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Changes to CPU and memory limits for SQL Server Reporting Services Standard and Enterprise
-  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Reporting Services Standard and Enterprise supports a maximum of 64 gigabytes of system memory.  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Reporting Services Standard and Enterprise supports a maximum of 64 gigabytes of system memory.  
   
 ## Component  
- [!INCLUDE[ssDE](../../../includes/ssde-md.md)]  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ### Description  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Reporting Services Standard and Enterprise supports a maximum of 64 gigabytes of system memory. You may need to reconfigure your current system settings to align with the new limits.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Reporting Services Standard and Enterprise supports a maximum of 64 gigabytes of system memory. You may need to reconfigure your current system settings to align with the new limits.  
   
- For more information about CPU and memory limits for other editions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], see [Compute Capacity Limits by Edition of SQL Server](../../../2014/getting-started/compute-capacity-limits-by-edition-of-sql-server.md), and [Memory Supported by the Editions of SQL Server](http://go.microsoft.com/fwlink/?LinkId=212633).  
+ For more information about CPU and memory limits for other editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Compute Capacity Limits by Edition of SQL Server](../../../2014/getting-started/compute-capacity-limits-by-edition-of-sql-server.md), and [Memory Supported by the Editions of SQL Server](http://go.microsoft.com/fwlink/?LinkId=212633).  
   
 ## Corrective Action  
- You may need to reconfigure your current system settings to align with the new CPU and memory limits. For more information, see [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../Topic/ALTER%20SERVER%20CONFIGURATION%20\(Transact-SQL\).md), and [Server Memory Server Configuration Options](../../../2014/database-engine/server-memory-server-configuration-options.md).  
+ You may need to reconfigure your current system settings to align with the new CPU and memory limits. For more information, see [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](~/t-sql/statements/alter-server-configuration-transact-sql.md), and [Server Memory Server Configuration Options](../../../2014/database-engine/server-memory-server-configuration-options.md).  
   
 ## See Also  
  [Features Supported by the Editions of SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   

@@ -24,7 +24,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # View or Change the Recovery Model of a Database (SQL Server)
-  This topic describes how to view or change the recovery model of a database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. A *recovery model* is a database property that controls how transactions are logged, whether the transaction log requires (and allows) backing up, and what kinds of restore operations are available. Three recovery models exist: simple, full, and bulk-logged. Typically, a database uses the full recovery model or simple recovery model. A database can be switched to another recovery model at any time. The **model** database sets the default recovery model of new databases.  
+  This topic describes how to view or change the recovery model of a database in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)]. A *recovery model* is a database property that controls how transactions are logged, whether the transaction log requires (and allows) backing up, and what kinds of restore operations are available. Three recovery models exist: simple, full, and bulk-logged. Typically, a database uses the full recovery model or simple recovery model. A database can be switched to another recovery model at any time. The **model** database sets the default recovery model of new databases.  
   
  **In This Topic**  
   
@@ -70,7 +70,7 @@ manager: "jhubbard"
   
 #### To view or change the recovery model  
   
-1.  After connecting to the appropriate instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in Object Explorer, click the server name to expand the server tree.  
+1.  After connecting to the appropriate instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], in Object Explorer, click the server name to expand the server tree.  
   
 2.  Expand **Databases**, and, depending on the database, either select a user database or expand **System Databases** and select a system database.  
   
@@ -82,17 +82,17 @@ manager: "jhubbard"
   
 6.  Optionally, to change the recovery model select a different model list. The choices are **Full**, **Bulk-logged**, or **Simple**.  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To view the recovery model  
   
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to query the [sys.databases](../Topic/sys.databases%20\(Transact-SQL\).md) catalog view to learn the recovery model of the **model** database.  
+3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to query the [sys.databases](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view to learn the recovery model of the **model** database.  
   
 ```tsql  
 SELECT name, recovery_model_desc  
@@ -104,11 +104,11 @@ GO
   
 #### To change the recovery model  
   
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to change the recovery model in the `model` database to `FULL` by using the `SET RECOVERY` option of the [ALTER DATABASE](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md) statement.  
+3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to change the recovery model in the `model` database to `FULL` by using the `SET RECOVERY` option of the [ALTER DATABASE](~/t-sql/statements/alter-database-transact-sql-set-options.md) statement.  
   
 ```tsql  
 USE master ;  
@@ -156,13 +156,13 @@ ALTER DATABASE model SET RECOVERY FULL ;
   
 ##  <a name="RelatedContent"></a> Related Content  
   
--   [Database Maintenance Plans](http://msdn.microsoft.com/library/ms187658.aspx) (in [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Books Online)  
+-   [Database Maintenance Plans](http://msdn.microsoft.com/library/ms187658.aspx) (in [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] Books Online)  
   
 ## See Also  
  [Recovery Models &#40;SQL Server&#41;](../../2014/database-engine/recovery-models-sql-server.md)   
  [The Transaction Log &#40;SQL Server&#41;](../../2014/database-engine/the-transaction-log-sql-server.md)   
- [ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20\(Transact-SQL\).md)   
- [sys.databases &#40;Transact-SQL&#41;](../Topic/sys.databases%20\(Transact-SQL\).md)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)   
+ [sys.databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [Recovery Models &#40;SQL Server&#41;](../../2014/database-engine/recovery-models-sql-server.md)  
   
   

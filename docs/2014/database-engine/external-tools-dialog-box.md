@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # External Tools Dialog Box
-  Use the **External Tools** dialog box to add external tools such as SQLCMD or Notepad to the **Tools** menu. Adding external tools allows you to easily launch other applications while working in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] environment. You can specify arguments and a working directory when launching the tool. In addition, the output from some tools can be displayed in the **Output** window. The **External Tools** dialog box is available on the **Tools** menu.  
+  Use the **External Tools** dialog box to add external tools such as SQLCMD or Notepad to the **Tools** menu. Adding external tools allows you to easily launch other applications while working in the [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] environment. You can specify arguments and a working directory when launching the tool. In addition, the output from some tools can be displayed in the **Output** window. The **External Tools** dialog box is available on the **Tools** menu.  
   
 ## Options  
  **Menu contents**  
@@ -48,7 +48,7 @@ manager: "jhubbard"
  Specify the variables that are passed to the tool when the tool is selected on the menu. Arguments can specify values that are passed to the tool or command when it is launched. For example, a value can specify a file name or directory. Use the arrow button to select from a list of predefined arguments. You can add more than one. For a complete list of predefined arguments and their definitions, see [Arguments for External Tools](../../2014/database-engine/arguments-for-external-tools.md). You can also enter custom arguments (for example, command line switches), depending on the command or tool you use.  
   
  **Use Output window**  
- Opens the [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Output window to display output of the command being run. Not all tools present output in a format that can be presented in the Output window. For more information, see [Output Window](../../2014/database-engine/output-window.md).  
+ Opens the [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Output window to display output of the command being run. Not all tools present output in a format that can be presented in the Output window. For more information, see [Output Window](../../2014/database-engine/output-window.md).  
   
  **Treat output as Unicode**  
  Interprets the output as Unicode.  
@@ -68,7 +68,7 @@ manager: "jhubbard"
 |Box|Value|  
 |---------|-----------|  
 |**Title**|DAC|  
-|**Command**|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\SQLCMD.exe|  
+|**Command**|[!INCLUDE[ssInstallPath](../includes/ssinstallpath-md.md)]Tools\Binn\SQLCMD.exe|  
 |**Arguments**|-A|  
   
 ## See Also  

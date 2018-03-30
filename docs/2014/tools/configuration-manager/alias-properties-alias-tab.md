@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 2d1498e2-129c-4ce7-88e5-408e4037243c
 caps.latest.revision: 20
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # &lt;Alias&gt; Properties (Alias Tab)
@@ -31,7 +31,7 @@ manager: "jhubbard"
  The protocol used for the connection.  
   
  **Server**  
- The name of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance being connected to.  
+ The name of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance being connected to.  
   
 ## See Also  
  [Creating a Valid Connection String Using Shared Memory Protocol](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   

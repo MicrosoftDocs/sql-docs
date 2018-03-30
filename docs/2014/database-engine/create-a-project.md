@@ -35,7 +35,7 @@ manager: "jhubbard"
      In the **Templates** box, select a template. A brief description of the selected project template appears beneath the **Templates** box.  
   
      **Name**  
-     Enter the name of the script project you want to create. A folder with the same name as the project is also created in the location displayed in the **Location** field. For some projects, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] creates source and other supporting files and adds them to the new project folder.  
+     Enter the name of the script project you want to create. A folder with the same name as the project is also created in the location displayed in the **Location** field. For some projects, [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] creates source and other supporting files and adds them to the new project folder.  
   
     > [!NOTE]  
     >  For some project types, the **Name** text box is unavailable because specifying the location sets the name. For example, Web applications and Web services are located on a Web server and derive their name from the virtual directory specified on that server.  
@@ -92,7 +92,7 @@ manager: "jhubbard"
   
 4.  Click **OK**.  
   
- You can set a name for the script project, but the folder names are established by [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] and cannot be changed. You can configure the drive and path specification for the common set of folders by using the **Add New Project** dialog box. Right-click the solution icon in **Solution Explorer**, and then click **Add**. The default location for script project folders is: C:\Documents and Settings\\*username*\My Documents\SQL Server Management Studio\Projects\\.  
+ You can set a name for the script project, but the folder names are established by [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] and cannot be changed. You can configure the drive and path specification for the common set of folders by using the **Add New Project** dialog box. Right-click the solution icon in **Solution Explorer**, and then click **Add**. The default location for script project folders is: C:\Documents and Settings\\*username*\My Documents\SQL Server Management Studio\Projects\\.  
   
 ## See Also  
  [Solution Explorer](../../2014/database-engine/solution-explorer.md)   

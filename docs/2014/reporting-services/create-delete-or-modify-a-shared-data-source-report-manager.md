@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2
 caps.latest.revision: 47
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Create, Delete, or Modify a Shared Data Source (Report Manager)
@@ -45,7 +45,7 @@ shared data source icon
   
 7.  For **Connection string**, specify the connection string that the report server uses to connect to the data source. It is recommended that you do not specify credentials in the connection string.  
   
-     The following example illustrates a connection string for connecting to the local [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database:  
+     The following example illustrates a connection string for connecting to the local [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database:  
   
     ```  
     data source=<localservername>; initial catalog=AdventureWorks2012  
@@ -92,7 +92,7 @@ shared data source icon
   
          Hover over the item, click the drop-down list, and from the context menu, click **Delete**.  
   
-         [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+         [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## See Also  
  [Data Connections, Data Sources, and Connection Strings in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   

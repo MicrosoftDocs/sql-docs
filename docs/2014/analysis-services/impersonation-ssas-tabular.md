@@ -39,7 +39,7 @@ manager: "mblythe"
   
  **Understanding server side credentials**  
   
- In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], credentials are specified for each data source by using the **Impersonation Information** page in the Table Import Wizard or by editing an existing data source connection on the **Existing Connections** dialog.  
+ In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], credentials are specified for each data source by using the **Impersonation Information** page in the Table Import Wizard or by editing an existing data source connection on the **Existing Connections** dialog.  
   
  When data is imported or processed, the credentials specified in the **Impersonation Information** page are used to connect to the data source and fetch the data. This is a *server side* operation running in the context of a client application because the Analysis Services server hosting the workspace database connects to the data source and fetches the data.  
   
@@ -86,9 +86,9 @@ manager: "mblythe"
  When creating a new model by importing from an existing model on an Analysis Services server, the impersonation credentials are passed from the existing model database to the new model workspace database. If necessary, you can change the credentials on the new model by using the **Existing Connections** dialog.  
   
 ##  <a name="bkmk_conf_imp_info"></a> Configuring Impersonation  
- Where, and in what context, a model exists will determine how impersonation information is configured. For models being authored in the [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], you can configure impersonation information on the **Impersonation Information** page in the Table Import Wizard or by editing a data source connection on the **Existing Connections** dialog. To view existing connections, in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], on the **Model** menu, click **Existing Connections**.  
+ Where, and in what context, a model exists will determine how impersonation information is configured. For models being authored in the [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], you can configure impersonation information on the **Impersonation Information** page in the Table Import Wizard or by editing a data source connection on the **Existing Connections** dialog. To view existing connections, in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], on the **Model** menu, click **Existing Connections**.  
   
- For models that are deployed to an Analysis Services server, impersonation information can be configured by clicking the ellipsis (...) of the **Data Source Impersonation Info** property in the **Database Properties** dialog box of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ For models that are deployed to an Analysis Services server, impersonation information can be configured by clicking the ellipsis (...) of the **Data Source Impersonation Info** property in the **Database Properties** dialog box of [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 ## See Also  
  [DirectQuery Mode &#40;SSAS Tabular&#41;](../../2014/analysis-services/directquery-mode-ssas-tabular.md)   

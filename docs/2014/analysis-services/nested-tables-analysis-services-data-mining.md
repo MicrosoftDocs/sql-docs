@@ -20,7 +20,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Nested Tables (Analysis Services - Data Mining)
-  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], data must be fed to a data mining algorithm as a series of cases that are contained within a case table. However, not all cases can be described by a single row of data. For example, a case might be derived from two tables: one table that contains customer information, and another table that contains customer purchases. A single customer in the customer information table might have multiple items in the customer purchases table, which makes it difficult to describe the data by using a single row. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] provides a unique method for handling these cases, by using *nested tables*. The concept of a nested table is demonstrated in the following illustration.  
+  In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], data must be fed to a data mining algorithm as a series of cases that are contained within a case table. However, not all cases can be described by a single row of data. For example, a case might be derived from two tables: one table that contains customer information, and another table that contains customer purchases. A single customer in the customer information table might have multiple items in the customer purchases table, which makes it difficult to describe the data by using a single row. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] provides a unique method for handling these cases, by using *nested tables*. The concept of a nested table is demonstrated in the following illustration.  
   
  ![Two tables combined by using a nested table](../../2014/analysis-services/media/nested-tables.gif "Two tables combined by using a nested table")  
   
@@ -31,12 +31,12 @@ manager: "mblythe"
  The data in a nested table can be used for prediction or for input, or for both. For example, you might have two nested table columns in a model: one nested table column might contain a list of the products that a customer has purchased, while the other nested table column contains information about the customer's hobbies and interests, possibly obtained from a survey. In this scenario, you could use the customer's hobbies and interests as an input for analyzing purchasing behavior, and predicting likely purchases.  
   
 ## Joining Case Tables and Nested Tables  
- In order to create a nested table, the two source tables must contain a defined relationship so that the items in one table can be related to the other table. In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], you can define this relationship in the data source view.  
+ In order to create a nested table, the two source tables must contain a defined relationship so that the items in one table can be related to the other table. In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], you can define this relationship in the data source view.  
   
 > [!NOTE]  
 >  The **CustomerKey** field is the relational key that is used to link the case table and the nested table within the data source view definition, and to establish the relationship of the columns within the mining structure. However, typically you should not use this relational key in mining models built on that structure. Usually it is best to omit the relational key column from the mining model if it serves only to join the tables and does not provide information that is interesting for analysis.  
   
- You can create nested tables programmatically by either using Data Mining Extensions (DMX) or Analysis Management Objects (AMO), or you can use the Data Mining Wizard and Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+ You can create nested tables programmatically by either using Data Mining Extensions (DMX) or Analysis Management Objects (AMO), or you can use the Data Mining Wizard and Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 ## Using Nested Table Columns in a Mining Model  
  In the case table, the key is often a customer ID, a product name, or date in a series: data that uniquely identifies a row in the table. . However, in nested tables, the key is typically not the relational key (or foreign key) but rather the column that represents the attribute that you are modeling.  
@@ -55,7 +55,7 @@ manager: "mblythe"
  For example, if the nested table contains the columns **Product**, **ProductQuantity**, and **ProductPrice**, you might choose **Product** as the nested table key, but add **ProductQuantity** to the mining structure to use as input.  
   
 ## Filtering Nested Table Data  
- In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], you can create filters on the data that is used to train or test a data mining model. A filer can be used to affect the composition of the model, or to test the model on a subset of cases. Filters can also be applied to nested tables. However, there are limitations on the syntax that can be used with nested tables.  
+ In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], you can create filters on the data that is used to train or test a data mining model. A filer can be used to affect the composition of the model, or to test the model on a subset of cases. Filters can also be applied to nested tables. However, there are limitations on the syntax that can be used with nested tables.  
   
  Often when you apply a filter to a nested table you are testing for the existence or nonexistence of an attribute. For example, you can apply a filter that restricts the cases used in the model to only those cases that have a specified value in the nested table. Or, you could restrict the cases used in the model to customers who have not purchased a particular item.  
   

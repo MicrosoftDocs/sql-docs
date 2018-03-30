@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: 98ab86fd-ed94-4cda-9c68-047d589bdea6
 caps.latest.revision: 18
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # InstanceName Property (WMI MSReportServer_Instance)
@@ -43,7 +43,7 @@ public string InstanceName;
  [MSReportServer_ConfigurationSetting Class](../../2014/reporting-services/msreportserver-configurationsetting-class.md)  
   
 ## Requirements  
- **Namespace:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspc](../includes/ssrswminmspc-md.md)]  
   
 ## See Also  
  [MSReportServer_Instance Members](../../2014/reporting-services/msreportserver-instance-members.md)  

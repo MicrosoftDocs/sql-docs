@@ -17,11 +17,11 @@ helpviewer_keywords:
 ms.assetid: 0eaa2101-006e-4015-9979-3468b50e0aaa
 caps.latest.revision: 10
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # View Statistics Properties
-  You can display current query optimization statistics for a table or indexed view in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Statistics objects include a header with metadata about the statistics, a histogram with the distribution of values in the first key column of the statistics object, and a density vector to measure cross-column correlation. For more information about histograms and density vectors, see [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../Topic/DBCC%20SHOW_STATISTICS%20\(Transact-SQL\).md)  
+  You can display current query optimization statistics for a table or indexed view in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)]. Statistics objects include a header with metadata about the statistics, a histogram with the distribution of values in the first key column of the statistics object, and a density vector to measure cross-column correlation. For more information about histograms and density vectors, see [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)  
   
  **In This Topic**  
   
@@ -135,7 +135,7 @@ manager: "jhubbard"
   
 #### To view statistics properties  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -149,11 +149,11 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../Topic/DBCC%20SHOW_STATISTICS%20\(Transact-SQL\).md).  
+ For more information, see [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md).  
   
 #### To find all of the statistics on a table or view  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -178,6 +178,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [sys.stats &#40;Transact-SQL&#41;](../Topic/sys.stats%20\(Transact-SQL\).md).  
+ For more information, see [sys.stats &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-stats-transact-sql.md).  
   
   

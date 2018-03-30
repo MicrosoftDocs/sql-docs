@@ -15,7 +15,7 @@ f1_keywords:
 ms.assetid: 144a5da4-a3c3-4856-942e-7b7c60e2f6fa
 caps.latest.revision: 10
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Image Properties Dialog Box, Size (Report Builder and SSRS)

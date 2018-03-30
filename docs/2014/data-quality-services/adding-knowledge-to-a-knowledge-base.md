@@ -16,7 +16,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Adding Knowledge to a Knowledge Base
-  This topic describes the ways in which you can add knowledge to a knowledge base in [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS). Before you can perform data quality operations, you have to have knowledge about the data. You acquire that knowledge by building and maintaining a data quality knowledge base, and adding to it knowledge related to a specific type of data source. The knowledge base is a repository of knowledge about your data that enables you to understand your data and maintain its integrity.  
+  This topic describes the ways in which you can add knowledge to a knowledge base in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Before you can perform data quality operations, you have to have knowledge about the data. You acquire that knowledge by building and maintaining a data quality knowledge base, and adding to it knowledge related to a specific type of data source. The knowledge base is a repository of knowledge about your data that enables you to understand your data and maintain its integrity.  
   
  The knowledge base contains data domains that relate to the data source. For each data domain, the DQKB stores all identified terms, spelling errors, validation and business rules, and reference data that can be used to perform data quality actions on the data source. DQS uses this knowledge to identify incorrect or invalid data, or perform matching.  
   
@@ -54,7 +54,7 @@ manager: "jhubbard"
 -   For more information in documentation, see [Import a Domain from a .dqs File](../../2014/data-quality-services/import-a-domain-from-a-dqs-file.md) or [Import a Knowledge Base from a .dqs File](../../2014/data-quality-services/import-a-knowledge-base-from-a-dqs-file.md).  
   
 ##  <a name="Excel"></a> Import Knowledge from an Excel File  
- You can import domain values from an Excel spreadsheet file into an existing domain or knowledge base. To do so, you must first create an Excel spreadsheet with the domain values that you want to import, and ensure that Excel is installed on the [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] computer for you to be able to import values using [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]. You cannot export domain values from a domain or knowledge base to an Excel file.  
+ You can import domain values from an Excel spreadsheet file into an existing domain or knowledge base. To do so, you must first create an Excel spreadsheet with the domain values that you want to import, and ensure that Excel is installed on the [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] computer for you to be able to import values using [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. You cannot export domain values from a domain or knowledge base to an Excel file.  
   
 -   For more information in documentation, see [Import Values from an Excel File into a Domain](../../2014/data-quality-services/import-values-from-an-excel-file-into-a-domain.md) or [Import Domains from an Excel File in Knowledge Discovery](../../2014/data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md).  
   

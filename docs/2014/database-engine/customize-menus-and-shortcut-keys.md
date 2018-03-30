@@ -156,7 +156,7 @@ manager: "jhubbard"
 6.  In the **Customize** dialog box, click **Close**.  
   
 > [!NOTE]  
->  Some commands are available only when [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] is displaying relevant content. If no commands on the menu are available, the menu item will not be available.  
+>  Some commands are available only when [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] is displaying relevant content. If no commands on the menu are available, the menu item will not be available.  
   
 ## See Also  
  [SQL Server Management Studio Keyboard Shortcuts](../../2014/database-engine/sql-server-management-studio-keyboard-shortcuts.md)  

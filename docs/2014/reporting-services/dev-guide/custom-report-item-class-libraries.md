@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: f18c5d8f-1d6b-4f0b-8657-c14896c2ce0d
 caps.latest.revision: 27
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Custom Report Item Class Libraries
@@ -120,7 +120,7 @@ manager: "jhubbard"
 |`EditValue`|Invokes the Expression Editor, initialized with the given object value.|  
   
 ### Microsoft.ReportDesigner.IFieldsDataObject  
- This class is a collection of [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] fields, and is used to support drag-and-drop events in the design environment. Inherits from `IReportItemDataObject`.  
+ This class is a collection of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fields, and is used to support drag-and-drop events in the design environment. Inherits from `IReportItemDataObject`.  
   
 #### Public Properties  
   

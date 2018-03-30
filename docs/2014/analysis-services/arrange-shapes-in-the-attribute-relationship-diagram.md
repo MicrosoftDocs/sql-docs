@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Arrange Shapes in the Attribute Relationship Diagram
-  You can change the layout of the shapes on the **Attribute Relationships** tab of the Dimension Structure view in Dimension Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+  You can change the layout of the shapes on the **Attribute Relationships** tab of the Dimension Structure view in Dimension Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 ### To arrange shapes in the attribute relationship diagram  
   

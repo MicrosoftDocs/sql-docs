@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Set the Polling Interval for Target Servers
-  This topic describes how to set the frequency that [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent refreshes information from the master to the target servers. A job is a specified series of actions that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent performs. A multiserver job is a job that a master server runs on one or more target servers.  
+  This topic describes how to set the frequency that [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent refreshes information from the master to the target servers. A job is a specified series of actions that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent performs. A multiserver job is a job that a master server runs on one or more target servers.  
   
 -   **Before you begin:**  [Security](#Security)  
   
@@ -38,7 +38,7 @@ manager: "jhubbard"
 ##  <a name="SSMS"></a> Using SQL Server Management Studio  
  **To set the polling interval for target servers**  
   
-1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], and then expand that instance.  
+1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], and then expand that instance.  
   
 2.  Right-click **SQL Server Agent**, point to **Multi Server Administration**, and then click **Manage Target Servers**.  
   
@@ -61,9 +61,9 @@ manager: "jhubbard"
   
 2.  On the toolbar, click **New Query**.  
   
-3.  In the query window, use the [sp_post_msx_operation &#40;Transact-SQL&#41;](../Topic/sp_post_msx_operation%20\(Transact-SQL\).md) system stored procedure to set the polling interval for target servers.  
+3.  In the query window, use the [sp_post_msx_operation &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql.md) system stored procedure to set the polling interval for target servers.  
   
 ## See Also  
- [dbo.sysdownloadlist &#40;Transact-SQL&#41;](../Topic/dbo.sysdownloadlist%20\(Transact-SQL\).md)  
+ [dbo.sysdownloadlist &#40;Transact-SQL&#41;](~/relational-databases/system-tables/dbo-sysdownloadlist-transact-sql.md)  
   
   

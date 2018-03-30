@@ -18,7 +18,7 @@ ms.author: "jroth"
 manager: "jhubbard"
 ---
 # Add IP Address Dialog Box (SQL Server Management Studio)
-  This F1 help topic describes the options of the **Add IP Address** dialog box. This dialog box accessed from the **New Availability Group Listener** dialog box and the **Listener** tab of the **Specify Replicas** page of the [!INCLUDE[ssAoNewAgWiz](../../includes/ssaonewagwiz-md.md)] or the [!INCLUDE[ssAoAddRepWiz](../../includes/ssaoaddrepwiz-md.md)] of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  This F1 help topic describes the options of the **Add IP Address** dialog box. This dialog box accessed from the **New Availability Group Listener** dialog box and the **Listener** tab of the **Specify Replicas** page of the [!INCLUDE[ssAoNewAgWiz](../includes/ssaonewagwiz-md.md)] or the [!INCLUDE[ssAoAddRepWiz](../includes/ssaoaddrepwiz-md.md)] of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
 ## Prerequisites  
  Before you begin to add subnets to an availability group listener, ensure that know the IP address for each subnet and, for an IPv4 address, the subnet mask.  

@@ -16,7 +16,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # The Oracle CDC Databases
-  An Oracle CDC Instance is associated with a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database by the same name on the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. This database is called the Oracle CDC database (or the CDC database).  
+  An Oracle CDC Instance is associated with a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database by the same name on the target [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance. This database is called the Oracle CDC database (or the CDC database).  
   
  The CDC database is created and configured using the Oracle CDC Designer Console and it contains the following elements:  
   
@@ -31,30 +31,30 @@ manager: "jhubbard"
  The `cdc` schema is initially accessible only to the members of the **dbowner** fixed database role. Access to the change tables and change functions is determined by the same security model as the SQL Server CDC. For more information about the security model, see [Security Model](http://go.microsoft.com/fwlink/?LinkId=231151).  
   
 ## Creating the CDC Database  
- In most cases, the CDC database is created using the CDC Designer Console, but it can also be created with a CDC deployment script that is generated using the CDC Designer Console. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system administrator can change the database settings if necessary (for items such as for storage, security, or availability).  
+ In most cases, the CDC database is created using the CDC Designer Console, but it can also be created with a CDC deployment script that is generated using the CDC Designer Console. The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] system administrator can change the database settings if necessary (for items such as for storage, security, or availability).  
   
  For more information about using the CDC Designer Console to create the database tables and the necessary scripts, see [Use the New Instance Wizard](../../2014/integration-services/use-the-new-instance-wizard.md).  
   
 ## CDC Database User Roles  
- When a CDC Database is created and enabled for CDC, a database user called **cdc_service** is created in the CDC database and is associated with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login that the Oracle CDC Service was configured with. This user is made a member of the **db_datareader**, **db_datawriter**, and **db_ddladmin** database roles. If the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login is also the associated with the `dbo` user then the **cdc_service** is not created.  
+ When a CDC Database is created and enabled for CDC, a database user called **cdc_service** is created in the CDC database and is associated with the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] login that the Oracle CDC Service was configured with. This user is made a member of the **db_datareader**, **db_datawriter**, and **db_ddladmin** database roles. If the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] login is also the associated with the `dbo` user then the **cdc_service** is not created.  
   
  This role assignment allows the Oracle CDC Service to update the tables under the `cdc` schema with captured data and with control information.  
   
  When a CDC database is created and CDC source Oracle tables are set up, the CDC database owner can grant SELECT permission of mirror tables and define SQL Server CDC gating roles to control who accesses the change data.  
   
 ## Mirror Tables  
- For each captured table, \<schema-name>.\<table-name>, in the Oracle source database, a similar empty table is created in the CDC Database, with the same schema and table name. Oracle source tables with the schema name `cdc` (not case sensitive) cannot be captured because the `cdc` schema in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is reserved for the SQL Server CDC.  
+ For each captured table, \<schema-name>.\<table-name>, in the Oracle source database, a similar empty table is created in the CDC Database, with the same schema and table name. Oracle source tables with the schema name `cdc` (not case sensitive) cannot be captured because the `cdc` schema in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is reserved for the SQL Server CDC.  
   
  The mirror tables are empty; no data is stored in them. They are used to enable the standard SQL Server CDC infrastructure that is used by the Oracle CDC Instance. To prevent data from being inserted or updated into the mirror tables, all UPDATE, DELETE, and INSERT operations are denied for PUBLIC. This ensures that they cannot be modified.  
   
 ## Access to Change Data  
- Because of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security model used to gain access to the change data that is associated with a capture instance, the user must be granted `select` access to all the captured columns of the associated mirror table (access permissions to the original Oracle tables do not provide access to the change tables in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). For information on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security model, see [Security Model](http://go.microsoft.com/fwlink/?LinkId=231151).  
+ Because of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] security model used to gain access to the change data that is associated with a capture instance, the user must be granted `select` access to all the captured columns of the associated mirror table (access permissions to the original Oracle tables do not provide access to the change tables in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]). For information on the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] security model, see [Security Model](http://go.microsoft.com/fwlink/?LinkId=231151).  
   
  In addition, if a gating role is specified when the capture instance is created, the caller must also be a member of the specified gating role. Other general change data capture functions for accessing metadata are accessible to all database users through the PUBLIC role, although access to the returned metadata is usually gated by using select access to the underlying source tables, and by membership in any defined gating roles.  
   
  Change data may be read by calling special table-based functions generated by the SQL Server CDC component when a capture instance is created. For more information about this function, see [Change Data Capture Functions (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=231152).  
   
- Accessing CDC data through the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] CDC Source component is subject to the same rules.  
+ Accessing CDC data through the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] CDC Source component is subject to the same rules.  
   
 ## The CDC Database Tables  
  This section describes the following tables in the CDC database.  
@@ -78,7 +78,7 @@ manager: "jhubbard"
   
  When capture is initially enabled for table `<schema-name>.<table-name>`, the default capture instance name is `<schema-name>_<table-name>`. For example, the default capture instance name for the Oracle HR.EMPLOYEES table is HR_EMPLOYEES and the associated change table is [cdc]. [HR_EMPLOYEES_CT].  
   
- The capture tables are written to by the Oracle CDC Instance. They are read using special table-valued functions generated by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] when the capture instance is created. For example, `fn_cdc_get_all_changes_HR_EMPLOYEES`. For more information about these CDC functions see [Change Data Capture Functions (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=231152).  
+ The capture tables are written to by the Oracle CDC Instance. They are read using special table-valued functions generated by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] when the capture instance is created. For example, `fn_cdc_get_all_changes_HR_EMPLOYEES`. For more information about these CDC functions see [Change Data Capture Functions (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=231152).  
   
 ###  <a name="BKMK_cdclsn_time_mapping"></a> cdc.lsn_time_mapping  
  The **[cdc].[lsn_time_mapping]** table is generated by the SQL Server CDC component. Its use in the case of Oracle CDC is different than its normal use.  
@@ -112,11 +112,11 @@ manager: "jhubbard"
 |target_max_batched_transactions|100|1|1000|True|The maximum number of Oracle transactions that can be processed as one transaction in SQL Server CT tables update.|  
 |target_idle_lsn_update_interval|10|0|1|False|The interval (in seconds) for updating the **lsn_time_mapping** table when the captured tables have no activity.|  
 |trace_retention_period|24|1|24*31|False|The amount of time (in hours to keep messages in the trace table).|  
-|sql_reconnect_interval|2|2|3600|False|The amount of time (in seconds) to wait before reconnecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This interval is used in addition to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client’s connect timeout.|  
-|sql_reconnect_limit|-1|-1|-1|False|The maximum number of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reconnections. The default -1 means that the process tries to reconnect until it stops.|  
+|sql_reconnect_interval|2|2|3600|False|The amount of time (in seconds) to wait before reconnecting to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. This interval is used in addition to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] client’s connect timeout.|  
+|sql_reconnect_limit|-1|-1|-1|False|The maximum number of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reconnections. The default -1 means that the process tries to reconnect until it stops.|  
 |cdc_restart_limit|6|-1|3600|False|In most cases, the CDC service restarts an abnormally ended CDC instance automatically. This property defines after how many failures per hour the service stops to restart the instance. The value -1 means that the instance should be always restarted.<br /><br /> The Service returns to restart the instance after any update of the configuration table.|  
 |cdc_memory_report|0|0|1000|False|If the value of the parameter was changed, the CDC Instance prints its memory report on the trace table.|  
-|target_command_timeout|600|1|3600|False|Command timeout working with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|target_command_timeout|600|1|3600|False|Command timeout working with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
 |source_character_set|-|-|-|True|Can be set to a specific  Oracle encoding to be used instead of the Oracle database codepage. This may be of use when the actual encoding the character data is using is different than the one expressed by the Oracle database codepage.|  
 |source_error_retry_interval|30|1|3600|False|Used before retry on several errors such as a connection error or temporary lack of synchronization between system tables.|  
 |source_prefetch_size|100|1|10000|True|Size of the prefetch batch.|  
@@ -125,7 +125,7 @@ manager: "jhubbard"
 |source_reconnect_interval|30|1|3600|False|How long (in seconds) to wait before trying to re-connect to the source database.|  
 |source_reconnect_limit|-1|-1||False|The maximum number of the source database reconnections. The default -1 means that the process tries to reconnect until it is stopped.|  
 |source_command_timeout|30|1|3600|False|Connection timeout working with Oracle.|  
-|source_connection_timeout|30|1|3600|False|Connection timeout working with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|source_connection_timeout|30|1|3600|False|Connection timeout working with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
 |trace_data_errors|True|-|-|False|Boolean. **True** indicates to log data conversion and truncation errors.|  
 |CDC_stop_on_breaking_schema_changes|False|-|-|False|Boolean. **True** indicates to stop when breaking schema change is detected.<br /><br /> **False** indicates to drop the mirror table and capture instance.|  
 |source_oracle_home||-|-|False|Can be set to a specific Oracle Home path or an Oracle Home Name that the CDC instance will use to connect to Oracle.|  
@@ -151,7 +151,7 @@ manager: "jhubbard"
 |current_cn|The most recent change number (CN) known to be in the source database.|  
 |software_version|The internal version of the Oracle CDC Service.|  
 |completed_transactions|The number of transactions processed since the CDC was last reset.|  
-|written_changes|The number of change records written to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] change tables.|  
+|written_changes|The number of change records written to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] change tables.|  
 |read_changes|The number of change records read from the source Oracle transaction log.|  
 |staged_transactions|The number of currently active transactions that are staged in the **cdc.xdbcdc_staged_transactions** table.|  
   

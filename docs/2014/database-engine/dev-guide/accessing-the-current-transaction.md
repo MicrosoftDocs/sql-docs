@@ -21,7 +21,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Accessing the Current Transaction
-  If a transaction is active at the point at which common language runtime (CLR) code running on [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is entered, the transaction is exposed through the `System.Transactions.Transaction` class. The `Transaction.Current` property is used to access the current transaction. In most cases it is not necessary to access the transaction explicitly. For database connections, ADO.NET checks `Transaction.Current` automatically when the `Connection.Open` method is called, and transparently enlists the connection in that transaction (unless the `Enlist` keyword is set to false in the connection string).  
+  If a transaction is active at the point at which common language runtime (CLR) code running on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is entered, the transaction is exposed through the `System.Transactions.Transaction` class. The `Transaction.Current` property is used to access the current transaction. In most cases it is not necessary to access the transaction explicitly. For database connections, ADO.NET checks `Transaction.Current` automatically when the `Connection.Open` method is called, and transparently enlists the connection in that transaction (unless the `Enlist` keyword is set to false in the connection string).  
   
  You might want to use the `Transaction` object directly in the following scenarios:  
   
@@ -40,9 +40,9 @@ manager: "jhubbard"
 ## Canceling an External Transaction  
  You can cancel external transactions from a managed procedure or function in the following ways:  
   
--   The managed procedure or function can return a value by using an output parameter. The calling [!INCLUDE[tsql](../../../includes/tsql-md.md)] procedure can check the returned value and, if appropriate, execute `ROLLBACK TRANSACTION`.  
+-   The managed procedure or function can return a value by using an output parameter. The calling [!INCLUDE[tsql](../../includes/tsql-md.md)] procedure can check the returned value and, if appropriate, execute `ROLLBACK TRANSACTION`.  
   
--   The managed procedure or function can throw a custom exception. The calling [!INCLUDE[tsql](../../../includes/tsql-md.md)] procedure can catch the exception thrown by the managed procedure or function in a try/catch block and execute `ROLLBACK TRANSACTION`.  
+-   The managed procedure or function can throw a custom exception. The calling [!INCLUDE[tsql](../../includes/tsql-md.md)] procedure can catch the exception thrown by the managed procedure or function in a try/catch block and execute `ROLLBACK TRANSACTION`.  
   
 -   The managed procedure or function can cancel the current transaction by calling the `Transaction.Rollback` method if a certain condition is met.  
   
@@ -53,17 +53,17 @@ Msg 3994, Level 16, State 1, Procedure uspRollbackFromProc, Line 0
 Transaction is not allowed to roll back inside a user defined routine, trigger or aggregate because the transaction is not started in that CLR level. Change application logic to enforce strict transaction nesting.  
 ```  
   
- This exception is expected and the try/catch block is necessary for code execution to continue. Without the try/catch block, the exception will be immediately thrown to the calling [!INCLUDE[tsql](../../../includes/tsql-md.md)] procedure and managed code execution will finish. When the managed code finishes execution, another exception is raised:  
+ This exception is expected and the try/catch block is necessary for code execution to continue. Without the try/catch block, the exception will be immediately thrown to the calling [!INCLUDE[tsql](../../includes/tsql-md.md)] procedure and managed code execution will finish. When the managed code finishes execution, another exception is raised:  
   
 ```  
 Msg 3991, Level 16, State 1, Procedure uspRollbackFromProc, Line 1   
 The context transaction which was active before entering user defined routine, trigger or aggregate " uspRollbackFromProc " has been ended inside of it, which is not allowed. Change application logic to enforce strict transaction nesting. The statement has been terminated.  
 ```  
   
- This exception is also expected, and for execution to continue, you must have a try/catch block around the [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement that performs the action that fires the trigger. Despite the two exceptions thrown, the transaction is rolled back and the changes are not committed.  
+ This exception is also expected, and for execution to continue, you must have a try/catch block around the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement that performs the action that fires the trigger. Despite the two exceptions thrown, the transaction is rolled back and the changes are not committed.  
   
 ### Example  
- The following is an example of a transaction being rolled back from a managed procedure by using the `Transaction.Rollback` method. Notice the try/catch block around the `Transaction.Rollback` method in the managed code. The [!INCLUDE[tsql](../../../includes/tsql-md.md)] script creates an assembly and managed stored procedure. Be aware that the `EXEC uspRollbackFromProc` statement is wrapped in a try/catch block, so that the exception thrown when the managed procedure completes execution is caught.  
+ The following is an example of a transaction being rolled back from a managed procedure by using the `Transaction.Rollback` method. Notice the try/catch block around the `Transaction.Rollback` method in the managed code. The [!INCLUDE[tsql](../../includes/tsql-md.md)] script creates an assembly and managed stored procedure. Be aware that the `EXEC uspRollbackFromProc` statement is wrapped in a try/catch block, so that the exception thrown when the managed procedure completes execution is caught.  
   
 ```csharp  
 using System;  

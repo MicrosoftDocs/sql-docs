@@ -16,7 +16,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Schedule SSAS Administrative Tasks with SQL Server Agent
-  Using the SQL Server Agent service, you can schedule [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] administrative tasks to run in the order and times that you need. Scheduled tasks help you automate processes that run on regular or predictable cycles. You can schedule administrative tasks, such as cube processing, to run during times of slow business activity. You can also determine the order in which tasks run by creating job steps within a SQL Server Agent job. For example, you can process a cube and then perform a backup of the cube.  
+  Using the SQL Server Agent service, you can schedule [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] administrative tasks to run in the order and times that you need. Scheduled tasks help you automate processes that run on regular or predictable cycles. You can schedule administrative tasks, such as cube processing, to run during times of slow business activity. You can also determine the order in which tasks run by creating job steps within a SQL Server Agent job. For example, you can process a cube and then perform a backup of the cube.  
   
  Job steps give you control over flow of execution. If one job fails, you can configure SQL Server Agent to continue to run the remaining tasks or to stop execution. You can also configure SQL Server Agent to send notifications about the success or failure of job execution.  
   
@@ -25,18 +25,18 @@ manager: "mblythe"
 ## Prerequisites  
  SQL Server Agent service must be installed.  
   
- By default, jobs run under the service account. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], the default account for SQL Server Agent is NT Service\SQLAgent$\<instancename>. To perform a backup or processing task, this account must be a system administrator on the Analysis Services instance. For more information, see [Grant Server Administrator Permissions &#40;Analysis Services&#41;](../../2014/analysis-services/grant-server-administrator-permissions-analysis-services.md).  
+ By default, jobs run under the service account. In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], the default account for SQL Server Agent is NT Service\SQLAgent$\<instancename>. To perform a backup or processing task, this account must be a system administrator on the Analysis Services instance. For more information, see [Grant Server Administrator Permissions &#40;Analysis Services&#41;](../../2014/analysis-services/grant-server-administrator-permissions-analysis-services.md).  
   
  You should also have a test database to work with. You can deploy the AdventureWorks multidimensional sample database or a project from the Analysis Services multidimensional tutorial to use in this walkthrough. For more information, see [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](../../2014/tutorials/install-sample-data-and-projects.md).  
   
 ## Example 1: Processing a dimension in a scheduled task  
  This example demonstrates how to create and schedule a job that processes a dimension.  
   
- An [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] scheduled task is an XMLA script that is embedded into a SQL Server Agent job. This job is scheduled to run at desired times and frequency. Because the SQL Server Agent is part of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you work with both the Database Engine and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] to create and schedule an administrative task.  
+ An [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] scheduled task is an XMLA script that is embedded into a SQL Server Agent job. This job is scheduled to run at desired times and frequency. Because the SQL Server Agent is part of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], you work with both the Database Engine and [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] to create and schedule an administrative task.  
   
 ###  <a name="bkmk_CreateScript"></a> Create a script for processing a dimension in a SQL Server Agent job  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connect to [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Open a database folder and find a dimension. Right-click the dimension and select **Process**.  
+1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], connect to [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Open a database folder and find a dimension. Right-click the dimension and select **Process**.  
   
 2.  In the **Process Dimension** dialog box, in the **Process Options** column under **Object list**, verify that the option for this column is **Process Full**. If it is not, under **Process Options**, click the option, and then select **Process Full** from the drop-down list.  
   
@@ -79,7 +79,7 @@ manager: "mblythe"
   
 6.  In the **New Job Step** dialog box, enter a step name in **Step Name**.  
   
-7.  In **Server**, type **localhost** for a default instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and **localhost\\**\<*instance name*> for a named instance.  
+7.  In **Server**, type **localhost** for a default instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] and **localhost\\**\<*instance name*> for a named instance.  
   
      If you will be running the job from a remote computer, use the server name and instance name where the job will run. Use the format \<*server name*> for a default instance, and \<*server name*>\\<*instance name*> for a named instance.  
   
@@ -104,7 +104,7 @@ manager: "mblythe"
 15. When the job finishes, click **Close**.  
   
 ## Example 2: Batch processing a dimension and a partition in a scheduled task  
- The procedures in this example demonstrate how to create and schedule a job that batch processes an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database dimension, and at the same time to process a  cube partition that depends on the dimension for aggregation. For more information about batch processing of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects, see [Batch Processing &#40;Analysis Services&#41;](../../2014/analysis-services/batch-processing-analysis-services.md).  
+ The procedures in this example demonstrate how to create and schedule a job that batch processes an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database dimension, and at the same time to process a  cube partition that depends on the dimension for aggregation. For more information about batch processing of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objects, see [Batch Processing &#40;Analysis Services&#41;](../../2014/analysis-services/batch-processing-analysis-services.md).  
   
 ###  <a name="bkmk_BatchProcess"></a> Create a script for batch processing a dimension and partition in a SQL Server Agent job  
   
@@ -183,7 +183,7 @@ manager: "mblythe"
   
 ###  <a name="bkmk_Scheduling"></a> Create and schedule the batch processing job  
   
-1.  Connect to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and then open Object Explorer.  
+1.  Connect to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], and then open Object Explorer.  
   
 2.  Expand **SQL Server Agent**. Start the service if is not running.  
   

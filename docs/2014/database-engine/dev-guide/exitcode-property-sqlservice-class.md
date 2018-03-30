@@ -25,7 +25,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # ExitCode Property (SqlService Class)
-  Gets or sets the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Win32 error code that defines problems encountered when starting and stopping the service.  
+  Gets or sets the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Win32 error code that defines problems encountered when starting and stopping the service.  
   
 ## Syntax  
   

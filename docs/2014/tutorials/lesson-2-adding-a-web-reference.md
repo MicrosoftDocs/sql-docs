@@ -12,15 +12,15 @@ ms.topic: "article"
 ms.assetid: a2c2b8b8-6b13-45ca-ab3b-1582447b6807
 caps.latest.revision: 29
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Lesson 2: Adding a Web Reference
-  Web service discovery is the process by which a client locates a Web service and obtains its service description. The process of Web service discovery in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] involves interrogating a Web site following a predetermined algorithm. The goal of the process is to locate the service description, which is an XML document that uses the Web Services Description Language (WSDL).  
+  Web service discovery is the process by which a client locates a Web service and obtains its service description. The process of Web service discovery in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] involves interrogating a Web site following a predetermined algorithm. The goal of the process is to locate the service description, which is an XML document that uses the Web Services Description Language (WSDL).  
   
  The service description describes what services are available and how to interact with those services. Without a service description, it is impossible to programmatically interact with a Web service.  
   
- Your application must have a means to communicate with the Web service and to locate it at run time. Adding a Web reference to your project for the Web service does this by generating a proxy class that interfaces with the Web service and provides a local representation of the Web service. For more information, see "How to: Generate an XML Web Service Proxy" in your [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] documentation.  
+ Your application must have a means to communicate with the Web service and to locate it at run time. Adding a Web reference to your project for the Web service does this by generating a proxy class that interfaces with the Web service and provides a local representation of the Web service. For more information, see "How to: Generate an XML Web Service Proxy" in your [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] documentation.  
   
 ### To add a Web reference  
   
@@ -40,7 +40,7 @@ manager: "mblythe"
   
 6.  Click **Add Reference** to add a Web reference for the target Web service.  
   
-     [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] downloads the service description and generates a proxy class to interface between your application and the Report Server Web service. You will also need to add a reference to the <xref:System.Web.Services> namespace for your Web reference to work.  
+     [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] downloads the service description and generates a proxy class to interface between your application and the Report Server Web service. You will also need to add a reference to the <xref:System.Web.Services> namespace for your Web reference to work.  
   
 7.  On the Project menu, click **Add Reference**.  
   

@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Assign Aggregation Design Dialog Box (Analysis Services - Multidimensional Data)
-  Use the **Assign Aggregation Design** dialog box in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to assign aggregation designs to one or more destination partitions. You can display the **Assign Aggregation Design** dialog box by right-clicking a partition or aggregation design in **Object Explorer** and selecting **Assign Aggregation Design**.  
+  Use the **Assign Aggregation Design** dialog box in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to assign aggregation designs to one or more destination partitions. You can display the **Assign Aggregation Design** dialog box by right-clicking a partition or aggregation design in **Object Explorer** and selecting **Assign Aggregation Design**.  
   
 ## Options  
   

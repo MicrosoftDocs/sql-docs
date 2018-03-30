@@ -39,12 +39,12 @@ manager: "mblythe"
   
 -   A SELECT clause that determines the query axes of an MDX SELECT statement. For more information about the construction of query axes in a SELECT clause, see [Specifying the Contents of a Query Axis &#40;MDX&#41;](../../2014/analysis-services/specifying-the-contents-of-a-query-axis-mdx.md).  
   
--   A FROM clause that determines which cube will be queried. For more information about the FROM clause, see [SELECT Statement &#40;MDX&#41;](../Topic/SELECT%20Statement%20\(MDX\).md).  
+-   A FROM clause that determines which cube will be queried. For more information about the FROM clause, see [SELECT Statement &#40;MDX&#41;](~/mdx/mdx-data-manipulation-select.md).  
   
 -   An optional WHERE clause that determines which members or tuples to use on the slicer axis to restrict the data returned. For more information about the construction of a slicer axis in a WHERE clause, see [Specifying the Contents of a Slicer Axis &#40;MDX&#41;](../../2014/analysis-services/specifying-the-contents-of-a-slicer-axis-mdx.md).  
   
 > [!NOTE]  
->  For more detailed information about the various clauses of the SELECT statement, see [SELECT Statement &#40;MDX&#41;](../Topic/SELECT%20Statement%20\(MDX\).md).  
+>  For more detailed information about the various clauses of the SELECT statement, see [SELECT Statement &#40;MDX&#41;](~/mdx/mdx-data-manipulation-select.md).  
   
 ## SELECT Statement Syntax  
  The following syntax shows a basic SELECT statement that includes the use of the SELECT, FROM, and WHERE clauses:  
@@ -58,7 +58,7 @@ FROM <SELECT subcube clause>
 [ <SELECT cell property list clause> ]  
 ```  
   
- The MDX SELECT statement supports optional syntax, such as the WITH keyword, the use of MDX functions to create calculated members for inclusion in an axis or slicer axis, and the ability to return the values of specific cell properties as part of the query. For more information about the MDX SELECT statement, see [SELECT Statement &#40;MDX&#41;](../Topic/SELECT%20Statement%20\(MDX\).md).  
+ The MDX SELECT statement supports optional syntax, such as the WITH keyword, the use of MDX functions to create calculated members for inclusion in an axis or slicer axis, and the ability to return the values of specific cell properties as part of the query. For more information about the MDX SELECT statement, see [SELECT Statement &#40;MDX&#41;](~/mdx/mdx-data-manipulation-select.md).  
   
 ### Comparing the Syntax of the MDX SELECT Statement to SQL  
  The syntax format for the MDX SELECT statement is similar to that of SQL syntax. However, there are several fundamental differences:  
@@ -108,6 +108,6 @@ WHERE ( [Sales Territory].[Southwest] )
   
 ## See Also  
  [Key Concepts in MDX &#40;Analysis Services&#41;](../../2014/analysis-services/key-concepts-in-mdx-analysis-services.md)   
- [SELECT Statement &#40;MDX&#41;](../Topic/SELECT%20Statement%20\(MDX\).md)  
+ [SELECT Statement &#40;MDX&#41;](~/mdx/mdx-data-manipulation-select.md)  
   
   

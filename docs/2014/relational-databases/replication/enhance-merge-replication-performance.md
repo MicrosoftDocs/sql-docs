@@ -21,7 +21,7 @@ helpviewer_keywords:
 ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 caps.latest.revision: 47
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Enhance Merge Replication Performance
@@ -31,9 +31,9 @@ manager: "jhubbard"
   
 -   Index columns used in row filters and join filters.  
   
-     When you use a row filter on a published article, create an index on each of the columns that is used in the filter's WHERE clause. Without an index, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] has to read each row in the table to determine whether the row should be included in the partition. With an index, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] can quickly locate which rows should be included. The fastest processing takes place if replication can fully resolve the WHERE clause of the filter from the index alone.  
+     When you use a row filter on a published article, create an index on each of the columns that is used in the filter's WHERE clause. Without an index, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has to read each row in the table to determine whether the row should be included in the partition. With an index, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can quickly locate which rows should be included. The fastest processing takes place if replication can fully resolve the WHERE clause of the filter from the index alone.  
   
-     Indexing all the columns used in join filters is also important. Each time the Merge Agent runs, it searches the base table to determine which rows in a parent table and which rows in related tables are included in a partition. Creating an index on the joined columns avoids having [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] read each row in the table every time the Merge Agent runs.  
+     Indexing all the columns used in join filters is also important. Each time the Merge Agent runs, it searches the base table to determine which rows in a parent table and which rows in related tables are included in a partition. Creating an index on the joined columns avoids having [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] read each row in the table every time the Merge Agent runs.  
   
      For more information on filtering, see [Filter Published Data for Merge Replication](../../../2014/relational-databases/replication/filter-published-data-for-merge-replication.md).  
   
@@ -43,9 +43,9 @@ manager: "jhubbard"
   
 ## Publication Design  
   
--   Use a publication compatibility level of 90RTM ([!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] or a later version).  
+-   Use a publication compatibility level of 90RTM ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or a later version).  
   
-     Unless one or more Subscribers use a different version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], specify that the publication must support only [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] or a later version. This allows the publication to take advantage of new features and performance optimizations.  
+     Unless one or more Subscribers use a different version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], specify that the publication must support only [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or a later version. This allows the publication to take advantage of new features and performance optimizations.  
   
 -   Use appropriate publication retention settings.  
   
@@ -94,13 +94,13 @@ manager: "jhubbard"
 ## Merge Agent Parameters  
  For information about the Merge Agent and its parameters, see [Replication Merge Agent](../../../2014/relational-databases/replication/replication-merge-agent.md).  
   
--   Upgrade all Subscribers for pull subscriptions to [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] or a later version.  
+-   Upgrade all Subscribers for pull subscriptions to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or a later version.  
   
-     Upgrading the Subscriber to [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] or a later version upgrades the Merge Agent used by the subscriptions at that Subscriber. To take advantage of many of the new features and performance optimizations, the Merge Agent from [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] or a later version is required.  
+     Upgrading the Subscriber to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or a later version upgrades the Merge Agent used by the subscriptions at that Subscriber. To take advantage of many of the new features and performance optimizations, the Merge Agent from [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or a later version is required.  
   
 -   If a subscription is synchronized over a fast connection and changes are sent from the Publisher and Subscriber, use the **–ParallelUploadDownload** parameter for the Merge Agent.  
   
-     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduced a new Merge Agent parameter: **–ParallelUploadDownload**. Setting this parameter allows the Merge Agent to process in parallel the changes uploaded to the Publisher and those downloaded to the Subscriber. This is useful in high volume environments with high network bandwidth. Agent parameters can be specified in agent profiles and on the command line. For more information, see:  
+     [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introduced a new Merge Agent parameter: **–ParallelUploadDownload**. Setting this parameter allows the Merge Agent to process in parallel the changes uploaded to the Publisher and those downloaded to the Subscriber. This is useful in high volume environments with high network bandwidth. Agent parameters can be specified in agent profiles and on the command line. For more information, see:  
   
     -   [Work with Replication Agent Profiles](../../../2014/relational-databases/replication/work-with-replication-agent-profiles.md)  
   

@@ -15,7 +15,7 @@ f1_keywords:
 ms.assetid: 9d78f8de-959b-456f-8947-687fa6e2ba91
 caps.latest.revision: 7
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Hide an Item (Report Builder and SSRS)
@@ -26,7 +26,7 @@ manager: "mblythe"
  The following procedures describe how to show or hide a report item in a rendered report based on a constant or an expression.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ### To hide a report item  
   

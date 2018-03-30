@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 40d245a2-0631-470e-81b3-1feb47e028cb
 caps.latest.revision: 13
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "jhubbard"
 ---
 # Obsolete extensions were detected on the report server computer (Upgrade Advisor)
@@ -22,10 +22,10 @@ manager: "jhubbard"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Native mode &#124; [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint mode.|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode.|  
   
 ## Component  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## Description  
  The report server is configured to use one or more extensions that have been discontinued in this release. Discontinued extensions include:  
@@ -39,7 +39,7 @@ manager: "jhubbard"
  If you require these extensions, do not upgrade until you find an alternate solution to these requirements. You might need to obtain or build a custom rendering extension that provides the same or similar functionality.  
   
 ## Corrective Action  
- Evaluate the current set of features that are included in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] to determine whether supported functionality meets your requirements.  
+ Evaluate the current set of features that are included in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] to determine whether supported functionality meets your requirements.  
   
 ## See Also  
  [Reporting Services Upgrade Issues &#40;Upgrade Advisor&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  

@@ -40,7 +40,7 @@ StrValue
   
 ## Parts  
  *object*  
- A [ClientNetworkProtocolProperty Class](../../../2014/database-engine/dev-guide/clientnetworkprotocolproperty-class.md) object that represents an attribute of the network protocol used by the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] client.  
+ A [ClientNetworkProtocolProperty Class](../../../2014/database-engine/dev-guide/clientnetworkprotocolproperty-class.md) object that represents an attribute of the network protocol used by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client.  
   
 #### Parameters  
   

@@ -25,9 +25,9 @@ manager: "jhubbard"
   
 ### To move a FILESTREAM-enabled database  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], click **New Query** to open the Query Editor.  
+1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], click **New Query** to open the Query Editor.  
   
-2.  Copy the following [!INCLUDE[tsql](../../includes/tsql-md.md)] script into the Query Editor, and then click **Execute**. This script displays the location of the physical database files that the FILESTREAM database uses.  
+2.  Copy the following [!INCLUDE[tsql](../includes/tsql-md.md)] script into the Query Editor, and then click **Execute**. This script displays the location of the physical database files that the FILESTREAM database uses.  
   
     ```tsql  
     USE Archive  
@@ -35,7 +35,7 @@ manager: "jhubbard"
     SELECT type_desc, name, physical_name from sys.database_files  
     ```  
   
-3.  Copy the following [!INCLUDE[tsql](../../includes/tsql-md.md)] script into the Query Editor, and then click **Execute**. This code takes the `Archive` database offline.  
+3.  Copy the following [!INCLUDE[tsql](../includes/tsql-md.md)] script into the Query Editor, and then click **Execute**. This code takes the `Archive` database offline.  
   
     ```tsql  
     USE master  
@@ -45,7 +45,7 @@ manager: "jhubbard"
   
 4.  Create the folder `C:\moved_location`, and then move the files and folders that are listed in step 2 into it.  
   
-5.  Copy the following [!INCLUDE[tsql](../../includes/tsql-md.md)] script into the Query Editor, and then click **Execute**. This script sets the `Archive` database online.  
+5.  Copy the following [!INCLUDE[tsql](../includes/tsql-md.md)] script into the Query Editor, and then click **Execute**. This script sets the `Archive` database online.  
   
     ```tsql  
     CREATE DATABASE Archive ON  
@@ -60,6 +60,6 @@ manager: "jhubbard"
     ```  
   
 ## See Also  
- [sp_detach_db &#40;Transact-SQL&#41;](../Topic/sp_detach_db%20\(Transact-SQL\).md)  
+ [sp_detach_db &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)  
   
   

@@ -30,7 +30,7 @@ manager: "mblythe"
   
 ### To enable use of DirectQuery in a model  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the solution file.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the solution file.  
   
 2.  In Object Explorer, double-click the Model.bim file.  
   

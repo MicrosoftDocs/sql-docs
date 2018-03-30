@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: de6ece78-79de-484d-9224-ca0f7645815f
 caps.latest.revision: 18
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_1204
@@ -31,11 +31,11 @@ manager: "jhubbard"
 |Message Text|The instance of the SQL Server Database Engine cannot obtain a LOCK resource at this time. Rerun your statement when there are fewer active users. Ask the database administrator to check the lock and memory configuration for this instance, or to check for long-running transactions.|  
   
 ## Explanation  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot obtain a lock resource. This can be caused by either of the following reasons:  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cannot obtain a lock resource. This can be caused by either of the following reasons:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot allocate more memory from the operating system, either because other processes are using it, or because the server is operating with the **max server memory** option configured.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cannot allocate more memory from the operating system, either because other processes are using it, or because the server is operating with the **max server memory** option configured.  
   
--   The lock manager will not use more than 60 percent of the memory available to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   The lock manager will not use more than 60 percent of the memory available to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## User Action  
  If you suspect that SQL Server cannot allocate sufficient memory, try the following:  

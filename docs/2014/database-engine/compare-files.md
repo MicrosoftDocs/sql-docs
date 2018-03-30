@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Compare Files
   You can compare files to determine how a file has progressed to its present state. For example, if you detect a defect in a build of your code project after a particular source file version is checked in, you can compare the current file version to a previous one. This helps you to pinpoint the code that introduced the defect.  
   
- You can use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to compare a local copy of a project or file to the version stored in source control, or to compare two local files. Also, using the **History** command, you can compare any two source-controlled versions.  
+ You can use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to compare a local copy of a project or file to the version stored in source control, or to compare two local files. Also, using the **History** command, you can compare any two source-controlled versions.  
   
 ### To compare files  
   

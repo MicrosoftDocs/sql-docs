@@ -47,14 +47,14 @@ manager: "jhubbard"
 |Option|How to Rebuild the DAC Instance|  
 |------------|-------------------------------------|  
 |Delete registration|Register a DAC from the database left in place.|  
-|Detach database|Re-attach the database by using **sp_attachdb** or [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], and then register a new DAC instance from the database.|  
+|Detach database|Re-attach the database by using **sp_attachdb** or [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], and then register a new DAC instance from the database.|  
 |Delete database|Restore the database from a full backup made before the DAC was deleted, and then register a new DAC instance from the database.|  
   
 > [!WARNING]  
 >  Rebuilding a DAC instance by registering a DAC from a restored or re-attached database will not recreate some parts of the original DAC, such as the server selection policy.  
   
 ###  <a name="Permissions"></a> Permissions  
- A DAC can only be deleted by members of the **sysadmin** or **serveradmin** fixed server roles, or by the database owner. The built-in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system administrator account named **sa** can also launch the wizard.  
+ A DAC can only be deleted by members of the **sysadmin** or **serveradmin** fixed server roles, or by the database owner. The built-in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] system administrator account named **sa** can also launch the wizard.  
   
 ##  <a name="UsingDeleteDACWizard"></a> Using the Delete Data-tier Application Wizard  
  **To Delete a DAC Using a Wizard**  
@@ -93,7 +93,7 @@ manager: "jhubbard"
   
  **Detach database** - Removes the metadata defining the data-tier application and detaches the associated database.  
   
- The database can no longer be referenced by that instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], but the data and log files remain intact.  
+ The database can no longer be referenced by that instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)], but the data and log files remain intact.  
   
  **Delete database** - Removes the metadata defining the DAC and drops the associated database.  
   

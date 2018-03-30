@@ -24,7 +24,7 @@ manager: "jhubbard"
 # Access FILESTREAM Data with OpenSqlFilestream
   The OpenSqlFilestream API obtains a Win32 compatible file handle for a FILESTREAM binary large object (BLOB) that is stored in the file system. The handle can be passed to any of the following Win32 APIs: [ReadFile](http://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](http://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](http://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](http://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](http://go.microsoft.com/fwlink/?LinkId=86426), or [FlushFileBuffers](http://go.microsoft.com/fwlink/?LinkId=86427). If you pass this handle to any other Win32 API, the error ERROR_ACCESS_DENIED is returned. The handle must be closed by passing it to the Win32 [CloseHandle](http://go.microsoft.com/fwlink/?LinkId=86428) API before the transaction is committed or rolled back. Failing to close the handle will cause server-side resource leaks.  
   
- All FILESTREAM data container access must be performed in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transaction. [!INCLUDE[tsql](../../includes/tsql-md.md)] statements can also be executed in the same transaction. This maintains consistency between the SQL data and FILESTREAM BLOB data.  
+ All FILESTREAM data container access must be performed in a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] transaction. [!INCLUDE[tsql](../includes/tsql-md.md)] statements can also be executed in the same transaction. This maintains consistency between the SQL data and FILESTREAM BLOB data.  
   
  To access the FILESTREAM BLOB by using Win32, [Windows Authorization](../../2014/database-engine/choose-an-authentication-mode.md) must be enabled.  
   
@@ -46,7 +46,7 @@ ULONGOpenOptions,LPBYTEFilestreamTransactionContext,SIZE_TFilestreamTransactionC
   
 #### Parameters  
  *FilestreamPath*  
- [in] Is the `nvarchar(max)` path that is returned by the [PathName](../Topic/PathName%20\(Transact-SQL\).md) function. PathName must be called from the context of an account that has [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SELECT or UPDATE permissions on the FILESTREAM table and column.  
+ [in] Is the `nvarchar(max)` path that is returned by the [PathName](~/relational-databases/system-functions/pathname-transact-sql.md) function. PathName must be called from the context of an account that has [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] SELECT or UPDATE permissions on the FILESTREAM table and column.  
   
  *DesiredAccess*  
  [in] Sets the mode used to access FILESTREAM BLOB data. This value is passed to the [DeviceIoControl Function](http://go.microsoft.com/fwlink/?LinkId=105527).  
@@ -73,7 +73,7 @@ ULONGOpenOptions,LPBYTEFilestreamTransactionContext,SIZE_TFilestreamTransactionC
 |SQL_FILESTREAM_OPEN_FLAG_RANDOM_ACCESS|0x00000010L|A file is accessed randomly. The system can use this as a hint to optimize file caching.|  
   
  *FilestreamTransactionContext*  
- [in] The value that is returned by the [GET_FILESTREAM_TRANSACTION_CONTEXT](../Topic/GET_FILESTREAM_TRANSACTION_CONTEXT%20\(Transact-SQL\).md) function.  
+ [in] The value that is returned by the [GET_FILESTREAM_TRANSACTION_CONTEXT](~/t-sql/functions/get-filestream-transaction-context-transact-sql.md) function.  
   
  *FilestreamTransactionContextLength*  
  [in] Number of bytes in the `varbinary(max)` data that is returned by the GET_FILESTREAM_TRANSACTION_CONTEXT function. The function returns an array of N bytes. N is determined by the function and is a property of the byte array that is returned.  
@@ -87,14 +87,14 @@ ULONGOpenOptions,LPBYTEFilestreamTransactionContext,SIZE_TFilestreamTransactionC
 ## Examples  
  The following examples show you how to use the `OpenSqlFilestream` API to obtain a Win32 handle.  
   
- [!code-csharp[FILESTREAM#FS_CS_ReadAndWriteBLOB](../../snippets/csharp/SQL15/tsql/filestream/cs/filestream.cs#fs_cs_readandwriteblob)]  
+ [!code-csharp[FILESTREAM#FS_CS_ReadAndWriteBLOB](../snippets/tsql/SQL15/tsql/filestream/cs/filestream.cs#fs_cs_readandwriteblob)]  
   
- [!code-vb[FILESTREAM#FS_VB_ReadAndWriteBLOB](../../snippets/visualbasic/SQL15/tsql/filestream/vb/filestream.vb#fs_vb_readandwriteblob)]  
+ [!code-vb[FILESTREAM#FS_VB_ReadAndWriteBLOB](../snippets/tsql/SQL15/tsql/filestream/vb/filestream.vb#fs_vb_readandwriteblob)]  
   
- [!code-cpp[FILESTREAM#FS_CPP_WriteBLOB](../../snippets/cpp/SQL15/tsql/filestream/cpp/filestream.cpp#fs_cpp_writeblob)]  
+ [!code-cpp[FILESTREAM#FS_CPP_WriteBLOB](../snippets/tsql/SQL15/tsql/filestream/cpp/filestream.cpp#fs_cpp_writeblob)]  
   
 ## Remarks  
- The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client must be installed to use this API. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client is installed with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client tools. For more information, see [Installing SQL Server Native Client](../../2014/database-engine/dev-guide/installing-sql-server-native-client.md).  
+ The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client must be installed to use this API. The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client is installed with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] or [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] client tools. For more information, see [Installing SQL Server Native Client](../../2014/database-engine/dev-guide/installing-sql-server-native-client.md).  
   
 ## See Also  
  [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;](../../2014/database-engine/binary-large-object-blob-data-sql-server.md)   

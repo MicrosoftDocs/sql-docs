@@ -20,12 +20,12 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Disconnect Users and Sessions on Analysis Services Server
-  An administrator of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] may want to end user activity as part of workload management. You do this by canceling sessions and connections. Sessions can be formed automatically when a query is run (implicit), or named at the time of creation by the administrator (explicit). Connections are open conduits over which queries can be run. Both sessions and connections can be ended while they are active. For example, an administrator may want to end processing for a session if the processing is taking too long or if some doubt has arisen as to whether the command being executed was written correctly.  
+  An administrator of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] may want to end user activity as part of workload management. You do this by canceling sessions and connections. Sessions can be formed automatically when a query is run (implicit), or named at the time of creation by the administrator (explicit). Connections are open conduits over which queries can be run. Both sessions and connections can be ended while they are active. For example, an administrator may want to end processing for a session if the processing is taking too long or if some doubt has arisen as to whether the command being executed was written correctly.  
   
 ## Ending Sessions and Connections  
  To manage sessions and connections, you can use Dynamic Management Views (DMVs) and XMLA:  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connect to an Analysis Services instance.  
+1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], connect to an Analysis Services instance.  
   
 2.  Paste any one of the following DMV queries in an MDX query window to get a list of all sessions, connections, and commands that are currently executing:  
   
@@ -65,7 +65,7 @@ manager: "mblythe"
   
  Ending a SPID cancels a particular commend.  
   
- In rare cases, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] will not close a connection if it cannot track all the sessions and SPIDs associated with the connection (for example, when multiple sessions are open in an HTTP scenario).  
+ In rare cases, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] will not close a connection if it cannot track all the sessions and SPIDs associated with the connection (for example, when multiple sessions are open in an HTTP scenario).  
   
  For more information about the XMLA referenced in this topic, see [Execute Method &#40;XMLA&#41;](../../2014/analysis-services/dev-guide/execute-method-xmla.md) and [Cancel Element &#40;XMLA&#41;](../../2014/analysis-services/dev-guide/cancel-element-xmla.md).  
   

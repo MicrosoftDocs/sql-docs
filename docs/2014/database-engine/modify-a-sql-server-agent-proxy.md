@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Modify a SQL Server Agent Proxy
-  This topic describes how to modify a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  This topic describes how to modify a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent proxy in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -39,9 +39,9 @@ manager: "jhubbard"
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxies use credentials to store information about Windows user accounts. The user specified in the credential must have "Log on as a batch job" permission on the computer on which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent proxies use credentials to store information about Windows user accounts. The user specified in the credential must have "Log on as a batch job" permission on the computer on which [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is running.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent checks subsystem access for a proxy and gives access to the proxy each time the job step runs. If the proxy no longer has access to the subsystem, the job step fails. Otherwise, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent impersonates the user that is specified in the proxy and runs the job step.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent checks subsystem access for a proxy and gives access to the proxy each time the job step runs. If the proxy no longer has access to the subsystem, the job step fails. Otherwise, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent impersonates the user that is specified in the proxy and runs the job step.  
   
 -   If the login for the user has access to the proxy, or the user belongs to any role with access to the proxy, the user can use the proxy in a job step.  
   
@@ -52,9 +52,9 @@ manager: "jhubbard"
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   
-#### To modify a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy  
+#### To modify a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent proxy  
   
-1.  In **Object Explorer**, click the plus sign to expand the server that contains the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy account that you want to modify.  
+1.  In **Object Explorer**, click the plus sign to expand the server that contains the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent proxy account that you want to modify.  
   
 2.  Click the plus sign to expand **SQL Server Agent**.  
   
@@ -70,9 +70,9 @@ manager: "jhubbard"
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
-#### To modify a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy  
+#### To modify a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent proxy  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -88,6 +88,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [sp_update_proxy &#40;Transact-SQL&#41;](../Topic/sp_update_proxy%20\(Transact-SQL\).md).  
+ For more information, see [sp_update_proxy &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-update-proxy-transact-sql.md).  
   
   

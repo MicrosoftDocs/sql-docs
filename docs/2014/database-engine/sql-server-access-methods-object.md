@@ -15,31 +15,31 @@ helpviewer_keywords:
 ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
 caps.latest.revision: 33
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # SQL Server, Access Methods Object
-  The **Access Methods** object in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides counters to monitor how the logical data within the database is accessed. Physical access to the database pages on disk is monitored using the **Buffer Manager** counters. Monitoring the methods used to access data stored in the database can help you to determine whether query performance can be improved by adding or modifying indexes, adding or moving partitions, adding files or file groups, defragmenting indexes, or by rewriting queries. The **Access Methods** counters can also be used to monitor the amount of data, indexes, and free space within the database, thereby indicating data volume and fragmentation for each server instance. Excessive index fragmentation can impair performance.  
+  The **Access Methods** object in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provides counters to monitor how the logical data within the database is accessed. Physical access to the database pages on disk is monitored using the **Buffer Manager** counters. Monitoring the methods used to access data stored in the database can help you to determine whether query performance can be improved by adding or modifying indexes, adding or moving partitions, adding files or file groups, defragmenting indexes, or by rewriting queries. The **Access Methods** counters can also be used to monitor the amount of data, indexes, and free space within the database, thereby indicating data volume and fragmentation for each server instance. Excessive index fragmentation can impair performance.  
   
  For more detailed information about data volume, fragmentation and usage, use the following dynamic management views:  
   
--   [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../Topic/sys.dm_db_index_operational_stats%20\(Transact-SQL\).md)  
+-   [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)  
   
--   [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../Topic/sys.dm_db_index_physical_stats%20\(Transact-SQL\).md)  
+-   [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)  
   
--   [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](../Topic/sys.dm_db_partition_stats%20\(Transact-SQL\).md)  
+-   [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)  
   
--   [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../Topic/sys.dm_db_index_usage_stats%20\(Transact-SQL\).md)  
+-   [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)  
   
  For space consumption in **tempdb** at the file, task and session level, use these dynamic management views:  
   
--   [sys.dm_db_file_space_usage &#40;Transact-SQL&#41;](../Topic/sys.dm_db_file_space_usage%20\(Transact-SQL\).md)  
+-   [sys.dm_db_file_space_usage &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)  
   
--   [sys.dm_db_task_space_usage &#40;Transact-SQL&#41;](../Topic/sys.dm_db_task_space_usage%20\(Transact-SQL\).md)  
+-   [sys.dm_db_task_space_usage &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)  
   
--   [sys.dm_db_session_space_usage &#40;Transact-SQL&#41;](../Topic/sys.dm_db_session_space_usage%20\(Transact-SQL\).md)  
+-   [sys.dm_db_session_space_usage &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  
   
- This table describes the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Access Methods** counters.  
+ This table describes the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **Access Methods** counters.  
   
 |SQL Server Access Methods counters|Description|  
 |----------------------------------------|-----------------|  
@@ -54,8 +54,8 @@ manager: "jhubbard"
 |**Deferred Dropped rowsets**|The number of rowsets created as a result of aborted online index build operations that are waiting to be dropped by the background task that cleans up deferred dropped rowsets.|  
 |**Dropped rowset cleanups/sec**|The number of rowsets per second created as a result of aborted online index build operations that were successfully dropped by the background task that cleans up deferred dropped rowsets.|  
 |**Dropped rowsets skipped/sec**|The number of rowsets per second created as a result of aborted online index build operations that were skipped by the background task that cleans up deferred dropped rowsets created.|  
-|**Extent Deallocations/sec**|Number of extents deallocated per second in all databases in this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**Extents Allocated/sec**|Number of extents allocated per second in all databases in this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**Extent Deallocations/sec**|Number of extents deallocated per second in all databases in this instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
+|**Extents Allocated/sec**|Number of extents allocated per second in all databases in this instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
 |**Failed AU cleanup batches/sec**|The number of batches per second that failed and required retry, by the background task that cleans up deferred dropped allocation units. Failure could be due to lack of memory or disk space, hardware failure and other reasons.|  
 |**Failed leaf page cookie**|The number of times that a leaf page cookie could not be used during an index search since changes happened on the leaf page. The cookie is used to speed up index search.|  
 |**Failed tree page cookie**|The number of times that a tree page cookie could not be used during an index search since changes happened on the parent pages of those tree pages. The cookie is used to speed up index search.|  
@@ -70,11 +70,11 @@ manager: "jhubbard"
 |**LobSS Provider Destroy Count**|Count of LobSSP destroyed.|  
 |**LobSS Provider Truncation Count**|Count of LobSSP truncated.|  
 |**Mixed page allocations/sec**|Number of pages allocated per second from mixed extents. These could be used for storing the IAM pages and the first eight pages that are allocated to an allocation unit.|  
-|**Page compression attempts/sec**|Number of pages evaluated for page-level compression. Includes pages that were not compressed because significant savings could be achieved. Includes all objects in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For information about specific objects, see [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../Topic/sys.dm_db_index_operational_stats%20\(Transact-SQL\).md).|  
-|**Page Deallocations/sec**|Number of pages deallocated per second in all databases in this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e. These include pages from mixed extents and uniform extents.|  
+|**Page compression attempts/sec**|Number of pages evaluated for page-level compression. Includes pages that were not compressed because significant savings could be achieved. Includes all objects in the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For information about specific objects, see [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md).|  
+|**Page Deallocations/sec**|Number of pages deallocated per second in all databases in this instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]e. These include pages from mixed extents and uniform extents.|  
 |**Page Splits/sec**|Number of page splits per second that occur as the result of overflowing index pages.|  
-|**Pages Allocated/sec**|Number of pages allocated per second in all databases in this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. These include pages allocations from both mixed extents and uniform extents.|  
-|**Pages compressed/sec**|Number of data pages that are compressed by using PAGE compression. Includes all objects in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For information about specific objects, see [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../Topic/sys.dm_db_index_operational_stats%20\(Transact-SQL\).md).|  
+|**Pages Allocated/sec**|Number of pages allocated per second in all databases in this instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. These include pages allocations from both mixed extents and uniform extents.|  
+|**Pages compressed/sec**|Number of data pages that are compressed by using PAGE compression. Includes all objects in the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For information about specific objects, see [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md).|  
 |**Probe Scans/sec**|Number of probe scans per second that are used to find at most one single qualified row in an index or base table directly.|  
 |**Range Scans/sec**|Number of qualified range scans through indexes per second.|  
 |**Scan Point Revalidations/sec**|Number of times per second that the scan point had to be revalidated to continue the scan.|  

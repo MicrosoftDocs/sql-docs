@@ -17,13 +17,13 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Sparse Columns Support (OLE DB)
-  This topic provides information about [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB support for sparse columns. For more information about sparse columns, see [Sparse Columns Support in SQL Server Native Client](../../../2014/database-engine/dev-guide/sparse-columns-support-in-sql-server-native-client.md). For a sample, see [Display Column and Catalog Metadata for Sparse Columns &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md).  
+  This topic provides information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB support for sparse columns. For more information about sparse columns, see [Sparse Columns Support in SQL Server Native Client](../../../2014/database-engine/dev-guide/sparse-columns-support-in-sql-server-native-client.md). For a sample, see [Display Column and Catalog Metadata for Sparse Columns &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md).  
   
 ## OLE DB Statement Metadata  
- Beginning with [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], a new DBCOLUMNFLAGS flag value, DBCOLUMNFLAGS_SS_ISCOLUMNSET, is available. This value should be set for columns that are `column_set` values. The DBCOLUMNFLAGS flag can be retrieved through the *dwFlags* parameter of IColumnsInfo::GetColumnsInfo and the DBCOLUMN_FLAGS column of the rowset returned by IColumnsRowset::GetColumnsRowset.  
+ Beginning with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], a new DBCOLUMNFLAGS flag value, DBCOLUMNFLAGS_SS_ISCOLUMNSET, is available. This value should be set for columns that are `column_set` values. The DBCOLUMNFLAGS flag can be retrieved through the *dwFlags* parameter of IColumnsInfo::GetColumnsInfo and the DBCOLUMN_FLAGS column of the rowset returned by IColumnsRowset::GetColumnsRowset.  
   
 ## OLE DB Catalog Metadata  
- Two additional [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-specific columns have been added to DBSCHEMA_COLUMNS.  
+ Two additional [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-specific columns have been added to DBSCHEMA_COLUMNS.  
   
 |Column name|Data type|Value/comments|  
 |-----------------|---------------|---------------------|  
@@ -33,7 +33,7 @@ manager: "jhubbard"
  Two additional schema rowsets have also been added. These rowsets have the same structure as DBSCHEMA_COLUMNS but return different content. DBSCHEMA_COLUMNS_EXTENDED returns all columns regardless of `column_set` membership. DBSCHEMA_SPARSE_COLUMN_SET returns only columns that are members of the sparse `column_set`.  
   
 ## OLE DB DataTypeCompatibility Behavior  
- Behavior with `DataTypeCompatibility=80` (in the connection string) is consistent with a [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] client, as follows:  
+ Behavior with `DataTypeCompatibility=80` (in the connection string) is consistent with a [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] client, as follows:  
   
 -   The new schema rowsets are not visible, and there are no rows for them in the schema rowsets rowset.  
   
@@ -44,7 +44,7 @@ manager: "jhubbard"
 -   DBCOMPUTEMODE_NOTCOMPUTED is set for `column_set` columns.  
   
 ## OLE DB Support for Sparse Columns  
- The following OLE DB interfaces were modified in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client to support sparse columns:  
+ The following OLE DB interfaces were modified in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client to support sparse columns:  
   
 |Type or member function|Description|  
 |-----------------------------|-----------------|  
@@ -54,7 +54,7 @@ manager: "jhubbard"
 |IDBSchemaRowset::GetSchemas|IDBSchemaRowset::GetSchemas includes the GUIDs for the new rowsets DBSCHEMA_COLUMNS_EXTENDED and DBSCHEMA_SPARSE_COLUMN_SET in the list of available schema rowsets.|  
 |ICommand::Execute|If **select \* from** *table* is used, it returns all columns that are not members of the sparse `column_set`, plus an XML column that contains values of all non-null columns that are members of the sparse `column_set`, if present.|  
 |IOpenRowset::OpenRowset|IOpenRowset::OpenRowset returns a rowset with the same columns as ICommand::Execute, with a **select \*** query on the same table.|  
-|ITableDefinition|There is no change to this interface for sparse columns or for `column_set` columns. Applications that have to make schema modifications must execute the appropriate [!INCLUDE[tsql](../../../includes/tsql-md.md)] directly.|  
+|ITableDefinition|There is no change to this interface for sparse columns or for `column_set` columns. Applications that have to make schema modifications must execute the appropriate [!INCLUDE[tsql](../../includes/tsql-md.md)] directly.|  
   
 ## See Also  
  [SQL Server Native Client &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/sql-server-native-client-ole-db.md)  

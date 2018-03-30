@@ -16,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 caps.latest.revision: 42
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Configure Publishing and Distribution
-  This topic describes how to configure publishing and distribution in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or Replication Management Objects (RMO).  
+  This topic describes how to configure publishing and distribution in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or Replication Management Objects (RMO).  
   
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
@@ -33,7 +33,7 @@ manager: "jhubbard"
   
 #### To configure distribution  
   
-1.  In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], connect to the server that will be the Distributor (in many cases, the Publisher and Distributor are the same server), and then expand the server node.  
+1.  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connect to the server that will be the Distributor (in many cases, the Publisher and Distributor are the same server), and then expand the server node.  
   
 2.  Right-click the **Replication** folder, and then click **Configure Distribution**.  
   
@@ -56,34 +56,34 @@ manager: "jhubbard"
   
 #### To configure publishing using a local distributor  
   
-1.  Execute [sp_get_distributor &#40;Transact-SQL&#41;](../Topic/sp_get_distributor%20\(Transact-SQL\).md) to determine if the server is already configured as a Distributor.  
+1.  Execute [sp_get_distributor &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-get-distributor-transact-sql.md) to determine if the server is already configured as a Distributor.  
   
-    -   If the value of **installed** in the result set is **0**, execute [sp_adddistributor &#40;Transact-SQL&#41;](../Topic/sp_adddistributor%20\(Transact-SQL\).md) at the Distributor on the master database.  
+    -   If the value of **installed** in the result set is **0**, execute [sp_adddistributor &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md) at the Distributor on the master database.  
   
-    -   If the value of **distribution db installed** in the result set is **0**, execute [sp_adddistributiondb &#40;Transact-SQL&#41;](../Topic/sp_adddistributiondb%20\(Transact-SQL\).md) at the Distributor on the master database. Specify the name of the distribution database for **@database**. Optionally, you can specify the maximum transactional retention period for **@max_distretention** and the history retention period for **@history_retention**. If a new database is being created, specify the desired database property parameters.  
+    -   If the value of **distribution db installed** in the result set is **0**, execute [sp_adddistributiondb &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md) at the Distributor on the master database. Specify the name of the distribution database for **@database**. Optionally, you can specify the maximum transactional retention period for **@max_distretention** and the history retention period for **@history_retention**. If a new database is being created, specify the desired database property parameters.  
   
-2.  At the Distributor, which is also the Publisher, execute [sp_adddistpublisher &#40;Transact-SQL&#41;](../Topic/sp_adddistpublisher%20\(Transact-SQL\).md), specifying the UNC share that will be used as default snapshot folder for **@working_directory**.  
+2.  At the Distributor, which is also the Publisher, execute [sp_adddistpublisher &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md), specifying the UNC share that will be used as default snapshot folder for **@working_directory**.  
   
-3.  At the Publisher, execute [sp_replicationdboption &#40;Transact-SQL&#41;](../Topic/sp_replicationdboption%20\(Transact-SQL\).md). Specify the database being published for **@dbname**, the type of replication for **@optname**, and a value of `true` for **@value**.  
+3.  At the Publisher, execute [sp_replicationdboption &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md). Specify the database being published for **@dbname**, the type of replication for **@optname**, and a value of `true` for **@value**.  
   
 #### To configure publishing using a remote distributor  
   
-1.  Execute [sp_get_distributor &#40;Transact-SQL&#41;](../Topic/sp_get_distributor%20\(Transact-SQL\).md) to determine if the server is already configured as a Distributor.  
+1.  Execute [sp_get_distributor &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-get-distributor-transact-sql.md) to determine if the server is already configured as a Distributor.  
   
-    -   If the value of **installed** in the result set is **0**, execute [sp_adddistributor &#40;Transact-SQL&#41;](../Topic/sp_adddistributor%20\(Transact-SQL\).md) at the Distributor on the master database. Specify a strong password for **@password**. This password for the **distributor_admin** account will be used by the Publisher when connecting to the Distributor.  
+    -   If the value of **installed** in the result set is **0**, execute [sp_adddistributor &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md) at the Distributor on the master database. Specify a strong password for **@password**. This password for the **distributor_admin** account will be used by the Publisher when connecting to the Distributor.  
   
-    -   If the value of **distribution db installed** in the result set is **0**, execute [sp_adddistributiondb &#40;Transact-SQL&#41;](../Topic/sp_adddistributiondb%20\(Transact-SQL\).md) at the Distributor on the master database. Specify the name of the distribution database for **@database**. Optionally, you can specify the maximum transactional retention period for **@max_distretention** and the history retention period for **@history_retention**. If a new database is being created, specify the desired database property parameters.  
+    -   If the value of **distribution db installed** in the result set is **0**, execute [sp_adddistributiondb &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md) at the Distributor on the master database. Specify the name of the distribution database for **@database**. Optionally, you can specify the maximum transactional retention period for **@max_distretention** and the history retention period for **@history_retention**. If a new database is being created, specify the desired database property parameters.  
   
-2.  At the Distributor, execute [sp_adddistpublisher &#40;Transact-SQL&#41;](../Topic/sp_adddistpublisher%20\(Transact-SQL\).md), specifying the UNC share that will be used as default snapshot folder for **@working_directory**. If the Distributor will use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication when connecting to the Publisher, you must also specify a value of **0** for **@security_mode** and the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login information for **@login** and **@password**.  
+2.  At the Distributor, execute [sp_adddistpublisher &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md), specifying the UNC share that will be used as default snapshot folder for **@working_directory**. If the Distributor will use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication when connecting to the Publisher, you must also specify a value of **0** for **@security_mode** and the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login information for **@login** and **@password**.  
   
-3.  At the Publisher on the master database, execute [sp_adddistributor &#40;Transact-SQL&#41;](../Topic/sp_adddistributor%20\(Transact-SQL\).md). Specify the strong password used in step 1 for **@password**. This password will be used by the Publisher when connecting to the Distributor.  
+3.  At the Publisher on the master database, execute [sp_adddistributor &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md). Specify the strong password used in step 1 for **@password**. This password will be used by the Publisher when connecting to the Distributor.  
   
-4.  At the Publisher, execute [sp_replicationdboption &#40;Transact-SQL&#41;](../Topic/sp_replicationdboption%20\(Transact-SQL\).md). Specify the database being published for **@dbname**, the type of replication for **@optname**, and a value of true for **@value**.  
+4.  At the Publisher, execute [sp_replicationdboption &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md). Specify the database being published for **@dbname**, the type of replication for **@optname**, and a value of true for **@value**.  
   
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
  The following example demonstrates how to configure publishing and distribution programmatically. In this example, the name of the server that is being configured as a publisher and a local distributor is supplied using scripting variables. Replication publishing and distribution can be configured programmatically using replication stored procedures.  
   
- [!code-sql[HowTo#AddDistPub](../../../snippets/tsql/SQL15/replication/howto/tsql/adddistpub.sql#adddistpub)]  
+ [!code-sql[HowTo#AddDistPub](../../snippets/tsql/SQL15/replication/howto/tsql/adddistpub.sql#adddistpub)]  
   
 ##  <a name="RMOProcedure"></a> Using Replication Management Objects (RMO)  
   
@@ -128,7 +128,7 @@ manager: "jhubbard"
 5.  Install the Distributor by calling the <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> method. Specify a secure password (used by the Publisher when connecting to the remote Distributor) and the <xref:Microsoft.SqlServer.Replication.DistributionDatabase> object from step 3. For more information, see [Secure the Distributor](../../../2014/relational-databases/replication/secure-the-distributor.md).  
   
     > [!IMPORTANT]  
-    >  When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](http://go.microsoft.com/fwlink/?LinkId=34733) provided by the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  
+    >  When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](http://go.microsoft.com/fwlink/?LinkId=34733) provided by the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
   
 6.  Create an instance of the <xref:Microsoft.SqlServer.Replication.DistributionPublisher> class.  
   
@@ -158,9 +158,9 @@ manager: "jhubbard"
 ###  <a name="PShellExample"></a> Example (RMO)  
  You can programmatically configure replication publishing and distribution by using Replication Management Objects (RMO).  
   
- [!code-csharp[HowTo#rmo_AddDistPub](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_adddistpub)]  
+ [!code-csharp[HowTo#rmo_AddDistPub](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_adddistpub)]  
   
- [!code-vb[HowTo#rmo_vb_AddDistPub](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_adddistpub)]  
+ [!code-vb[HowTo#rmo_vb_AddDistPub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_adddistpub)]  
   
 ## See Also  
  [View and Modify Distributor and Publisher Properties](../../../2014/relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

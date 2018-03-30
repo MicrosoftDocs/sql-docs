@@ -20,7 +20,7 @@ manager: "jhubbard"
   
 ### To create a clustering mining model  
   
-1.  Switch to the **Mining Models** tab in Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+1.  Switch to the **Mining Models** tab in Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
      Notice that the designer displays two columns, one for the mining structure and one for the `TM_Decision_Tree` mining model, which you created in the previous lesson.  
   
@@ -30,9 +30,9 @@ manager: "jhubbard"
   
 4.  In **Algorithm name**, select **Microsoft Clustering**.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
- The new model now appears in the **Mining Models** tab of Data Mining Designer. This model, built with the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering algorithm, groups customers with similar characteristics into clusters and predicts bike buying for each cluster. Although you can modify the column usage and properties for the new model, no changes to the `TM_Clustering` model are necessary for this tutorial.  
+ The new model now appears in the **Mining Models** tab of Data Mining Designer. This model, built with the [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering algorithm, groups customers with similar characteristics into clusters and predicts bike buying for each cluster. Although you can modify the column usage and properties for the new model, no changes to the `TM_Clustering` model are necessary for this tutorial.  
   
 ### To create a Naive Bayes mining model  
   
@@ -42,7 +42,7 @@ manager: "jhubbard"
   
 3.  In **Algorithm name**, select **Microsoft Naive Bayes**, then click **OK**.  
   
-     A message appears stating that the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes algorithm does not support the **Age** and **Yearly Income** columns, which are continuous.  
+     A message appears stating that the [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes algorithm does not support the **Age** and **Yearly Income** columns, which are continuous.  
   
 4.  Click **Yes** to acknowledge the message and continue.  
   

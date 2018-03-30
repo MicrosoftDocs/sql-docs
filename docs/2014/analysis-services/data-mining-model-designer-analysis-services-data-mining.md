@@ -20,7 +20,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Data Mining Model Designer (Analysis Services - Data Mining)
-  This section contains the F1 Help topics for the Data Mining Model Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. You will use this design space to create, manage, and work with data mining models.  
+  This section contains the F1 Help topics for the Data Mining Model Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. You will use this design space to create, manage, and work with data mining models.  
   
  For a walkthrough of how to build a data mining model, see the following tutorials and topics:  
   

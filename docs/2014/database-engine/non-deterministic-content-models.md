@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 9d4513e7-dd19-4491-b7c7-28bc7c2f8589
 caps.latest.revision: 12
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Non-Deterministic Content Models
-  Before [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 (SP1), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rejected XML schemas that had non-deterministic content models.  
+  Before [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] Service Pack 1 (SP1), [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] rejected XML schemas that had non-deterministic content models.  
   
- Beginning with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1, however, non-deterministic content models are accepted if the occurrence constraints are 0,1, or unbounded.  
+ Beginning with [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] SP1, however, non-deterministic content models are accepted if the occurrence constraints are 0,1, or unbounded.  
   
 ## Example: Non-deterministic content model rejected  
  The following example attempts to create an XML schema with a non-deterministic content model. The code fails because it is not clear whether the `<root>` element should have a sequence of two `<a>` elements or if the `<root>` element should have two sequences, each with an `<a>` element.  
@@ -58,7 +58,7 @@ GO
 ```  
   
 ## Example: Non-deterministic content model accepted  
- The following schema would be rejected in versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] before [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1.  
+ The following schema would be rejected in versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] before [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] SP1.  
   
 ```  
 CREATE XML SCHEMA COLLECTION MyCollection AS '  

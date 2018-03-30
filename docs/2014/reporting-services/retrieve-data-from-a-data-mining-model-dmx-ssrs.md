@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d9cd3624-1594-4707-8887-55437dd7e07c
 caps.latest.revision: 17
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Retrieve Data from a Data Mining Model (DMX) (SSRS)
-  To use data from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data mining model in your report, you must define a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data source and one or more report datasets. When you create the data source definition, you must specify a connection string and credentials so that you can access the data source from your client computer.  
+  To use data from a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data mining model in your report, you must define a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data source and one or more report datasets. When you create the data source definition, you must specify a connection string and credentials so that you can access the data source from your client computer.  
   
  You can create an embedded data source definition for use by a single report or a shared data source definition that can be used by multiple reports. The procedures in this topic describe how to create an embedded data source. For more information about shared data sources, see [Embedded and Shared Data Connections or Data Sources &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) and [Create, Modify, and Delete Shared Data Sources &#40;SSRS&#41;](../../2014/reporting-services/create-modify-and-delete-shared-data-sources-ssrs.md).  
   
- After you create a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data source, you can create one or more datasets. For each dataset, you use a Data Mining Prediction Expression (DMX) query designer to create a DMX query that specifies the field collection. For more information, see [Analysis Services DMX Query Designer User Interface](../../2014/reporting-services/analysis-services-dmx-query-designer-user-interface.md).  
+ After you create a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data source, you can create one or more datasets. For each dataset, you use a Data Mining Prediction Expression (DMX) query designer to create a DMX query that specifies the field collection. For more information, see [Analysis Services DMX Query Designer User Interface](../../2014/reporting-services/analysis-services-dmx-query-designer-user-interface.md).  
   
  After you create a dataset, the name of the dataset appears in the Report Data pane as a node under its data source.  
   
@@ -41,9 +41,9 @@ manager: "mblythe"
   
 4.  From the **Type** drop-down list, select **Microsoft SQL Server Analysis Services**.  
   
-5.  Specify a connection string that works with your [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data source.  
+5.  Specify a connection string that works with your [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data source.  
   
-     Contact your database administrator for connection information and for the credentials to use to connect to the data source. The following connection string example specifies the sample [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)] database on the local client.  
+     Contact your database administrator for connection information and for the credentials to use to connect to the data source. The following connection string example specifies the sample [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] database on the local client.  
   
     ```  
     Data Source=localhost;Initial Catalog=AdventureWorksDW2012  
@@ -56,17 +56,17 @@ manager: "mblythe"
     > [!NOTE]  
     >  To test the data source connection, click **Edit**. In the **Connection Properties** dialog box, click **Test Connection**. If the test is successful, you will see the information message "Test connection succeeded." If the test fails, you will see a warning message with more information about why the test was not successful.  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
      The data source appears in the Report Data pane.  
   
 ### To create a dataset for a Microsoft SQL Server Analysis Services  
   
-1.  In the **Report Data** pane, right-click the name of the data source that connects to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data source, and then click **Add Dataset**.  
+1.  In the **Report Data** pane, right-click the name of the data source that connects to a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data source, and then click **Add Dataset**.  
   
 2.  In the **Dataset Properties** dialog box, type a name in the **Name** text box.  
   
-3.  In the **Data source box**, verify that the name is the name of a data source that connects to an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data source.  
+3.  In the **Data source box**, verify that the name is the name of a data source that connects to an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data source.  
   
 4.  Click **Query Designer** to open the graphical query designer to build a query interactively. If the query designer opens in MDX mode, click **Command Type DMX** (![Change to DMX query language view](../../2014/reporting-services/media/rsqdicon-commandtypedmx.gif "Change to DMX query language view")) on the toolbar to switch to the data mining query designer. For more information, see [Analysis Services DMX Query Designer User Interface](../../2014/reporting-services/analysis-services-dmx-query-designer-user-interface.md).  
   
@@ -74,7 +74,7 @@ manager: "mblythe"
   
 5.  After you create and run your query to see sample results, click **OK**.  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
      The dataset and its field collection appear in the Report Data pane under the data source node.  
   

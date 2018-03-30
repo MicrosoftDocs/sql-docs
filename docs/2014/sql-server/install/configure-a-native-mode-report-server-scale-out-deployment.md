@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 caps.latest.revision: 11
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "jhubbard"
 ---
 # Configure a Native Mode Report Server Scale-Out Deployment (SSRS Configuration Manager)
@@ -36,7 +36,7 @@ manager: "jhubbard"
   
  **To plan, install, and configure a scale-out deployment, follow these steps:**  
   
--   Review [Install SQL Server 2014 from the Installation Wizard &#40;Setup&#41;](../../../2014/sql-server/install/install-sql-server-2014-from-the-installation-wizard-setup.md) in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online for instructions on how to install report server instances.  
+-   Review [Install SQL Server 2014 from the Installation Wizard &#40;Setup&#41;](../../../2014/sql-server/install/install-sql-server-2014-from-the-installation-wizard-setup.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online for instructions on how to install report server instances.  
   
 -   If you are planning to host the scale-out deployment on a network load balanced (NLB) cluster, you should configure the NLB cluster before you configure the scale-out deployment. For more information, see [Configure a Report Server on a Network Load Balancing Cluster](../../../2014/reporting-services/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
   
@@ -46,7 +46,7 @@ manager: "jhubbard"
   
     -   Use Setup to install each report server instance that will be joined to the scale-out deployment.  
   
-         To avoid database compatibility errors when connecting the server instances to the shared database, be sure that all instances are the same version. For example, if you create the report server database using a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] report server instance, all other instances in the same deployment must also be [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+         To avoid database compatibility errors when connecting the server instances to the shared database, be sure that all instances are the same version. For example, if you create the report server database using a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] report server instance, all other instances in the same deployment must also be [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
     -   Use the Reporting Services Configuration manager to connect each report server to the shared database. You can only connect to and configure one report server at a time.  
   
@@ -54,25 +54,25 @@ manager: "jhubbard"
   
 ### To install a SQL Server instance to host the report server databases  
   
-1.  Install a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance on a computer that will host the report server databases. At a minimum, install [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] and [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
+1.  Install a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance on a computer that will host the report server databases. At a minimum, install [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
-2.  If necessary, enable the report server for remote connections. Some versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] do not enable remote TCP/IP and Named Pipes connections by default. To confirm whether remote connections are allowed, use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager and view the network configuration settings of the target instance. If the remote instance is also a named instance, verify that the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Browser service is enabled and running on the target server. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Browser provides the port number that is used to connect to the named instance.  
+2.  If necessary, enable the report server for remote connections. Some versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do not enable remote TCP/IP and Named Pipes connections by default. To confirm whether remote connections are allowed, use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager and view the network configuration settings of the target instance. If the remote instance is also a named instance, verify that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser service is enabled and running on the target server. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser provides the port number that is used to connect to the named instance.  
   
 ### To install the first report server instance  
   
-1.  Install the first report server instance that is part of the deployment. When you install [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], choose the **Install but do not configure server** option on the Report Server Installation Options page.  
+1.  Install the first report server instance that is part of the deployment. When you install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], choose the **Install but do not configure server** option on the Report Server Installation Options page.  
   
-2.  Start the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Configuration tool.  
+2.  Start the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool.  
   
-3.  Configure the Report Server Web service URL, Report Manager URL, and the report server database. For more information, see [Configure a Report Server &#40;Reporting Services Native Mode&#41;](../../../2014/reporting-services/configure-a-report-server-reporting-services-native-mode.md) in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online.  
+3.  Configure the Report Server Web service URL, Report Manager URL, and the report server database. For more information, see [Configure a Report Server &#40;Reporting Services Native Mode&#41;](../../../2014/reporting-services/configure-a-report-server-reporting-services-native-mode.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
-4.  Verify that the report server is operational. For more information, see [Verify a Reporting Services Installation](../../../2014/sql-server/install/verify-a-reporting-services-installation.md) in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online.  
+4.  Verify that the report server is operational. For more information, see [Verify a Reporting Services Installation](../../../2014/sql-server/install/verify-a-reporting-services-installation.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
 ### To install and configure the second report server instance  
   
-1.  Run Setup to install a second instance of [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] on a different computer or as a named instance on the same computer. When you install Reporting Services, choose the **Install but do not configure server** option on the Report Server Installation Options page.  
+1.  Run Setup to install a second instance of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] on a different computer or as a named instance on the same computer. When you install Reporting Services, choose the **Install but do not configure server** option on the Report Server Installation Options page.  
   
-2.  Start the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Configuration tool and connect to the new instance you just installed.  
+2.  Start the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool and connect to the new instance you just installed.  
   
 3.  Connect the report server to the same database you used for the first report server instance:  
   
@@ -98,7 +98,7 @@ manager: "jhubbard"
   
 ### To join the second report server instance to the scale-out deployment  
   
-1.  Open the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Configuration tool, and reconnect to the first report server instance. The first report server is already initialized for reversible encryption operations, so it can be used to join additional report server instances to the scale-out deployment.  
+1.  Open the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool, and reconnect to the first report server instance. The first report server is already initialized for reversible encryption operations, so it can be used to join additional report server instances to the scale-out deployment.  
   
 2.  Click **Scale-out Deployment** to open the Scale-out Deployment page. You should see two entries, one for each report server instance that is connected to the report server database. The first report server instance should be joined. The second report server should be "Waiting to join". If you do not see similar entries for your deployment, verify you are connected to the first report server that is already configured and initialized to use the report server database.  
   
@@ -109,7 +109,7 @@ manager: "jhubbard"
     > [!NOTE]  
     >  **Issue:** When you attempt to join a Reporting Services report server instance to the scale-out deployment, you may experience error messages similar to ‘Access Denied’.  
     >   
-    >  **Workaround:** Back up the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] encryption key from the first [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] instance and restore the key to the second [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] report server. Then try to join the second server to the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] scale-out deployment.  
+    >  **Workaround:** Back up the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] encryption key from the first [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instance and restore the key to the second [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server. Then try to join the second server to the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] scale-out deployment.  
   
 4.  You should now be able to verify that both report server instances are operational. To verify the second instance, you can use the Reporting Services Configuration tool to connect to the report server and click the Web Service URL or the Report Manager URL.  
   

@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
 caps.latest.revision: 21
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Data Alert Designer
@@ -40,7 +40,7 @@ manager: "mblythe"
 -   Provide a description of alert to include in alert message.  
   
 > [!NOTE]  
->  Because the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data alerts feature is available only when you install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in SharePoint mode, the report on which you want to create an alert must be saved, deployed, or uploaded to a SharePoint document library.  
+>  Because the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] data alerts feature is available only when you install [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in SharePoint mode, the report on which you want to create an alert must be saved, deployed, or uploaded to a SharePoint document library.  
 >   
 >  Data alerts cannot be created on reports that use Windows Integrated authentication or prompts for credentials. The reports must use stored credentials. For more information, see [Specify Credential and Connection Information for Report Data Sources](../../2014/reporting-services/specify-credential-and-connection-information-for-report-data-sources.md).  
   
@@ -59,7 +59,7 @@ manager: "mblythe"
   
  If the report is parameterized and you do not see the data and columns that you expect in the report data feed, rerun the report using the appropriate parameter values. The columns and values must be present in the report to be included in the data feed.  
   
- Depending on the layout of the report, it might not be intuitive how many data feeds a report has, nor what data is included in which data feed. The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Atom rendering extension generates the data feeds that you use with alerts. The Atom rendering extension provides report data as flattened rowsets, a tabular format in which all columns have the same number of rows. These rowsets are the contents of the data feeds. Because report layout is often complex and contains multiple peer or nested data regions, multiple data feeds are needed to make available all the report data.. For more information about how data feeds are generated from reports, see [Generating Data Feeds from Reports &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/generating-data-feeds-from-reports-report-builder-and-ssrs.md) and see [Generate Data Feeds from a Report &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/generate-data-feeds-from-a-report-report-builder-and-ssrs.md).  
+ Depending on the layout of the report, it might not be intuitive how many data feeds a report has, nor what data is included in which data feed. The [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]Atom rendering extension generates the data feeds that you use with alerts. The Atom rendering extension provides report data as flattened rowsets, a tabular format in which all columns have the same number of rows. These rowsets are the contents of the data feeds. Because report layout is often complex and contains multiple peer or nested data regions, multiple data feeds are needed to make available all the report data.. For more information about how data feeds are generated from reports, see [Generating Data Feeds from Reports &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/generating-data-feeds-from-reports-report-builder-and-ssrs.md) and see [Generate Data Feeds from a Report &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/generate-data-feeds-from-a-report-report-builder-and-ssrs.md).  
   
  When you choose a data feed, the data from the feed displays in a table with rows and columns in the alert data pane of Data Alert Designer. The metadata from the data source that the report uses or the report itself specifies the column names and the data feed populates the field list that you use to define rules in the data condition. The data feed also provides metadata such as the data types of table columns that restrict the values and comparison operators that you can use with fields when you create the rules.  
   
@@ -131,7 +131,7 @@ manager: "mblythe"
   
 -   String data type comparisons are: **is**, **is not**, and **contains**  
   
- When you create a rule, you specify whether to use to use a value or field in the comparison by choosing **Value Entry Mode** or **Field Selection Mode**. If you choose **Value Entry Mode**, you provide a list of values to compare to. A comparison that includes multiple OR clauses is very similar to the IN logical comparison in [!INCLUDE[tsql](../../includes/tsql-md.md)], which is a list of values to test for a match. For more information, see [IN &#40;Transact-SQL&#41;](../Topic/IN%20\(Transact-SQL\).md).  
+ When you create a rule, you specify whether to use to use a value or field in the comparison by choosing **Value Entry Mode** or **Field Selection Mode**. If you choose **Value Entry Mode**, you provide a list of values to compare to. A comparison that includes multiple OR clauses is very similar to the IN logical comparison in [!INCLUDE[tsql](../includes/tsql-md.md)], which is a list of values to test for a match. For more information, see [IN &#40;Transact-SQL&#41;](~/t-sql/language-elements/in-transact-sql.md).  
   
  If you choose **Field Selection Mode**, the comparison is between two fields, row by row. The two fields must have compatible data types (for example, two numeric fields) or the comparison is not valid. A list of fields displays automatically when you choose **Field Selection Mode**.  
   
@@ -157,7 +157,7 @@ manager: "mblythe"
  If you want to receive a data alert message as soon as possible when report data follow the specified rules, you can schedule the alert to run often. When the report data does not change, you and other recipients might receive many redundant messages. If you want to receive messages only, when the results from applying the rules change, select the **Send message only if results change** option.  
   
 > [!IMPORTANT]  
->  It is recommended that you do not use a recurrence pattern that is more frequent than daily unless you have an important business reason to do so. Processing data alert definition in real time is not a supported scenario. Processing data alert definitions too frequently impacts the performance of the report server and the overall [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] deployment.  
+>  It is recommended that you do not use a recurrence pattern that is more frequent than daily unless you have an important business reason to do so. Processing data alert definition in real time is not a supported scenario. Processing data alert definitions too frequently impacts the performance of the report server and the overall [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] deployment.  
   
 ### Email Settings  
  You specify the email addresses of recipients to receive data alert messages by email in the **Recipient(s)** option. Multiple email addresses are separated by semicolons, the same way that you do in Microsoft Office Outlook email messages. You can also specify distribution groups as recipients, which makes it easier and more efficient to manage the recipient list. If SharePoint can determine your email address when you are creating an alert definition, your email address is automatically added to the recipients list; otherwise, you need to explicitly add yourself as a recipient.  

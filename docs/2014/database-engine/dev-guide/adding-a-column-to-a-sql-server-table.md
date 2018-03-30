@@ -22,13 +22,13 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Adding a Column to a SQL Server Table
-  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider exposes the **ITableDefinition::AddColumn** function. This allows consumers to add a column to a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] table.  
+  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider exposes the **ITableDefinition::AddColumn** function. This allows consumers to add a column to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table.  
   
- When you add a column to a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] table, the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider consumer is constrained as follows:  
+ When you add a column to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider consumer is constrained as follows:  
   
 -   If DBPROP_COL_AUTOINCREMENT is VARIANT_TRUE, DBPROP_COL_NULLABLE must be VARIANT_FALSE.  
   
--   If the column is defined by using the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **timestamp** data type, DBPROP_COL_NULLABLE must be VARIANT_FALSE.  
+-   If the column is defined by using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **timestamp** data type, DBPROP_COL_NULLABLE must be VARIANT_FALSE.  
   
 -   For any other column definition, DBPROP_COL_NULLABLE must be VARIANT_TRUE.  
   
@@ -38,6 +38,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Tables and Indexes](../../../2014/database-engine/dev-guide/tables-and-indexes.md)   
- [ALTER TABLE &#40;Transact-SQL&#41;](../Topic/ALTER%20TABLE%20\(Transact-SQL\).md)  
+ [ALTER TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-table-transact-sql.md)  
   
   

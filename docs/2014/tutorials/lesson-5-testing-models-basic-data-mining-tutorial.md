@@ -18,7 +18,7 @@ manager: "jhubbard"
 # Lesson 5: Testing Models (Basic Data Mining Tutorial)
   Now that you have processed the model by using the targeted mailing scenario training set, you will test your models against the testing set. Validation is an important step in the data mining process. Knowing how well your targeted mailing mining models perform against real data is important before you deploy the models into a production environment.  
   
- Because the data in the testing set already contains known values for bike buying, it is easy to determine whether the model's predictions are correct. The model that performs the best will be used by the [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] marketing department to identify the customers for their targeted mailing campaign.  
+ Because the data in the testing set already contains known values for bike buying, it is easy to determine whether the model's predictions are correct. The model that performs the best will be used by the [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] marketing department to identify the customers for their targeted mailing campaign.  
   
  In this lesson you will validate your models using multiple methods:  
   

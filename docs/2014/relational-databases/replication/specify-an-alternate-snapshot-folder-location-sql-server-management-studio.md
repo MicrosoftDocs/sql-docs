@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 9293f0eb-5531-47ec-b6e2-0392823ce5cc
 caps.latest.revision: 40
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Specify an Alternate Snapshot Folder Location (SQL Server Management Studio)
@@ -35,7 +35,7 @@ manager: "jhubbard"
   
      To compress the snapshot files, select **Compress snapshot files in this location**. Compression is typically used for low bandwidth connections and alternate snapshot locations on removable media, such as a CD-ROM.  
   
-2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## See Also  
  [Alternate Snapshot Folder Locations](../../../2014/relational-databases/replication/alternate-snapshot-folder-locations.md)   

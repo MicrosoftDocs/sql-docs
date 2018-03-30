@@ -18,7 +18,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Options (SQL Server AlwaysOn, Dashboard Page)
-  Use the **SQL Server AlwaysOn Dashboard** page of the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**Options** dialog box to configure the AlwaysOn Dashboard.  
+  Use the **SQL Server AlwaysOn Dashboard** page of the [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]**Options** dialog box to configure the AlwaysOn Dashboard.  
   
  **To access this page:**  
   
@@ -30,7 +30,7 @@ manager: "jhubbard"
   
 -   The **Refresh interval (in seconds)** field displays the number of seconds at which the dashboard will refresh. The default value is 30. When automatic refresh is enabled, you can edit this field to change the refresh interval.  
   
--   The **Number of connection retries** displays the number of times that the dashboard will attempt to connect to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that hosts an availability replica for an availability group that the Dashboard is monitoring. The default value is 65535. When automatic refresh is enabled, you can edit this field to change the number of connection retries.  
+-   The **Number of connection retries** displays the number of times that the dashboard will attempt to connect to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that hosts an availability replica for an availability group that the Dashboard is monitoring. The default value is 65535. When automatic refresh is enabled, you can edit this field to change the number of connection retries.  
   
  **Enable your user-defined AlwaysOn policy.**  
  If you have defined your own AlwaysOn policy, click this option to enable your policy.  

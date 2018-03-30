@@ -22,7 +22,7 @@ manager: "mblythe"
   
  **To view the Create Attribute Relationship dialog box**  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], in Solution Explorer, double-click a dimension to open the Dimension Designer, and then click the **Attribute Relationship** tab.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], in Solution Explorer, double-click a dimension to open the Dimension Designer, and then click the **Attribute Relationship** tab.  
   
 2.  On the toolbar, click the New Attribute Relationship icon.  
   
@@ -32,7 +32,7 @@ manager: "mblythe"
   
  **To view the Edit Attribute Relationship dialog box**  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], in Solution Explorer, double-click a dimension to open the Dimension Designer, and then click the **Attribute Relationship** tab.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], in Solution Explorer, double-click a dimension to open the Dimension Designer, and then click the **Attribute Relationship** tab.  
   
 2.  In the attribute relationship diagram or **Attribute Relationships** list, right-click an attribute relationship, and then click **Edit Attribute Relationship**.  
   

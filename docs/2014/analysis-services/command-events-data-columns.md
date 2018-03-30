@@ -34,7 +34,7 @@ manager: "mblythe"
 |-----------------|-----------------|  
 |ConnectionID|Contains the unique connection ID associated with the command event.|  
 |TextData|Contains the text data associated with the command event.|  
-|ServerName|Contains the name of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance on which the command event occurred.|  
+|ServerName|Contains the name of the [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance on which the command event occurred.|  
 |CurrentTime|Contains the current time of the command event.|  
 |DatabaseName|Contains the name of the database in which the command is running.|  
 |EventSubclass|Contains the class of event within the command event. Values are:<br /><br /> 0: Create<br />1: Alter<br />2: Delete<br />3: Process<br />4: DesignAggregations<br />5: WBInsert<br />6: WBUpdate<br />7: WBDelete<br />8: Backup<br />9: Restore<br />10: MergePartitions<br />11: Subscribe<br />12: Batch<br />13: BeginTransaction<br />14: CommitTransaction<br />15: RollbackTransaction<br />16: GetTransactionState<br />17: Cancel<br />18: Synchronize<br />19: Import80MiningModels<br />20: Attach<br />21: Detach<br />22: SetAuthContext<br />23: ImageLoad<br />24: ImageSave<br />10000: Other|  
@@ -52,7 +52,7 @@ manager: "mblythe"
 |-----------------|-----------------|  
 |ConnectionID|Contains the unique connection ID associated with the command event.|  
 |TextData|Contains the text data associated with the command event.|  
-|ServerName|Contains the name of the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance on which the command event occurred.|  
+|ServerName|Contains the name of the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance on which the command event occurred.|  
 |CurrentTime|Contains the current time of the command event. For filtering, the formats are *YYYY*-*MM*-*DD* and *YYYY*-*MM*-*DD HH*:*MM*:*SS*.|  
 |DatabaseName|Contains the name of the database in which the command is running.|  
 |Duration|Contains the approximate amount of time between the command begin and the command end event.|  

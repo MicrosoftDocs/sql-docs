@@ -16,10 +16,10 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Open and Configure Object Explorer
-  Open Object Explorer by using the **View** menu in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Configure Obect Explorer options by using **Options** on the **Tools** menu.  
+  Open Object Explorer by using the **View** menu in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Configure Obect Explorer options by using **Options** on the **Tools** menu.  
   
 ## Viewing Object Explorer  
- Object Explorer is visible in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] by default. If you cannot see Object Explorer, on the **View** menu, click **Object Explorer**.  
+ Object Explorer is visible in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] by default. If you cannot see Object Explorer, on the **View** menu, click **Object Explorer**.  
   
 ## Configuring Object Explorer Options  
  To configure the Object Explorer settings, on the **Tools** menu, click **Options**, and then click **SQL Server Object Explorer**.  

@@ -18,16 +18,16 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Column Conversion Details Dialog Box (SQL Server Import and Export Wizard)
-  Use the **Column Conversion Details** dialog box to review detailed conversion information about an individual column. This conversion information contains the column's data type at the source and the destination, and the conversion that the wizard will perform. This page also lists the data type mapping files that the wizard uses to determine the data type conversions that are required. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installs these data type mapping files during setup.  
+  Use the **Column Conversion Details** dialog box to review detailed conversion information about an individual column. This conversion information contains the column's data type at the source and the destination, and the conversion that the wizard will perform. This page also lists the data type mapping files that the wizard uses to determine the data type conversions that are required. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] installs these data type mapping files during setup.  
   
  **To open the Column Conversion Details dialog box**  
   
-1.  On the **Review Data Type Issues** page of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard, in the **Table** list, select a table.  
+1.  On the **Review Data Type Issues** page of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Import and Export Wizard, in the **Table** list, select a table.  
   
 2.  In the **Data type mapping** list, double-click the row that contains the column for which you want to view conversion details.  
   
- To learn more about the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard, see [SQL Server Import and Export Wizard](../../2014/integration-services/sql-server-import-and-export-wizard.md). To learn about the options for starting the wizard, and about the permissions required to run the wizard successfully, see [Run the SQL Server Import and Export Wizard](../../2014/integration-services/run-the-sql-server-import-and-export-wizard.md).  
+ To learn more about the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Import and Export Wizard, see [SQL Server Import and Export Wizard](../../2014/integration-services/sql-server-import-and-export-wizard.md). To learn about the options for starting the wizard, and about the permissions required to run the wizard successfully, see [Run the SQL Server Import and Export Wizard](../../2014/integration-services/run-the-sql-server-import-and-export-wizard.md).  
   
- The purpose of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard is to copy data from a source to a destination. The wizard can also create a destination database and destination tables for you. However, if you have to copy multiple databases or tables, or other kinds of database objects, you should use the Copy Database Wizard instead. For more information, see [Use the Copy Database Wizard](../../2014/database-engine/use-the-copy-database-wizard.md).  
+ The purpose of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Import and Export Wizard is to copy data from a source to a destination. The wizard can also create a destination database and destination tables for you. However, if you have to copy multiple databases or tables, or other kinds of database objects, you should use the Copy Database Wizard instead. For more information, see [Use the Copy Database Wizard](../../2014/database-engine/use-the-copy-database-wizard.md).  
   
   

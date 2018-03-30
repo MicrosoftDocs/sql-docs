@@ -42,13 +42,13 @@ manager: "jhubbard"
   
  `SUBSTRING(FirstName,1,1) == "B"`  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes functions and operators that you can use to create the expressions that evaluate input data and direct output data. For more information, see [Integration Services &#40;SSIS&#41; Expressions](../../2014/integration-services/integration-services-ssis-expressions.md).  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes functions and operators that you can use to create the expressions that evaluate input data and direct output data. For more information, see [Integration Services &#40;SSIS&#41; Expressions](../../2014/integration-services/integration-services-ssis-expressions.md).  
   
  The Conditional Split transformation includes the `FriendlyExpression` custom property. This property can be updated by a property expression when the package is loaded. For more information, see [Use Property Expressions in Packages](../../2014/integration-services/use-property-expressions-in-packages.md) and [Transformation Custom Properties](../../2014/integration-services/transformation-custom-properties.md).  
   
  This transformation has one input, one or more outputs, and one error output.  
   
- You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer or programmatically.  
   
  For more information about the properties that you can set in the **Conditional Split Transformation Editor** dialog box, see [Conditional Split Transformation Editor](../../2014/integration-services/conditional-split-transformation-editor.md).  
   

@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: e00dface-70f8-434b-9763-8ebee18737d2
 caps.latest.revision: 44
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # How to: Deploy a Data Processing Extension to a Report Server
@@ -66,7 +66,7 @@ manager: "jhubbard"
     </CodeGroup>  
     ```  
   
- URL membership is only one of many membership conditions you might choose for your data processing extension. For more information about code access security in [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], see [Secure Development &#40;Reporting Services&#41;](../../../2014/reporting-services/dev-guide/secure-development-reporting-services.md).  
+ URL membership is only one of many membership conditions you might choose for your data processing extension. For more information about code access security in [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], see [Secure Development &#40;Reporting Services&#41;](../../../2014/reporting-services/dev-guide/secure-development-reporting-services.md).  
   
 ## Verifying the Deployment  
  You can verify whether your data processing extension was deployed successfully to the report server by using the Web service <xref:ReportService2010.ReportingService2010.ListExtensions%2A> method. You can also open Report Manager and verify that your extension is included in the list of available data sources. For more information about Report Manager and data sources, see [Create, Modify, and Delete Shared Data Sources &#40;SSRS&#41;](../../../2014/reporting-services/create-modify-and-delete-shared-data-sources-ssrs.md).  

@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 166cf9c1-0750-4866-8381-542e4fbfe65a
 caps.latest.revision: 5
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Add a Moving Average to a Chart (Report Builder and SSRS)
@@ -22,10 +22,10 @@ manager: "mblythe"
   
  When a moving average formula is added in Design mode, the line series that is added is only a visual placeholder. The chart will calculate the data points of each formula during report processing.  
   
- Built-in support for trend lines is not available in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+ Built-in support for trend lines is not available in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ### To add a calculated moving average to a series on the chart  
   

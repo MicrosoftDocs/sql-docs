@@ -24,13 +24,13 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Create Package Configurations
-  You create package configurations by using the **Package Configuration Organizer** dialog box and the Package Configuration Wizard. To access these tools, click **Package Configurations** on the **SSIS** menu in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+  You create package configurations by using the **Package Configuration Organizer** dialog box and the Package Configuration Wizard. To access these tools, click **Package Configurations** on the **SSIS** menu in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 > [!NOTE]  
 >  You can also access the **Package Configuration Organizer**, by clicking the ellipsis button next to the **Configuration** property. The Configuration property appears in the properties window for the package.  
   
 > [!NOTE]  
->  Configurations are available for the package deployment model. Parameters are used in place of configurations for the project deployment model. The project deployment model enables you to deploy [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] projects to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. For more information about the deployment models, see [Deployment of Projects and Packages](../../2014/integration-services/deployment-of-projects-and-packages.md).  
+>  Configurations are available for the package deployment model. Parameters are used in place of configurations for the project deployment model. The project deployment model enables you to deploy [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] projects to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server. For more information about the deployment models, see [Deployment of Projects and Packages](../../2014/integration-services/deployment-of-projects-and-packages.md).  
   
  In the **Package Configuration Organizer** dialog box, you can enable packages to use configurations, add and delete configurations, and set the preferred order in which configurations should be loaded.  
   
@@ -75,17 +75,17 @@ manager: "jhubbard"
 |------------|-----------------|  
 |**Configuration Name**|The name of the configuration.|  
 |**Configuration Type**|The configuration type.|  
-|**Configuration String**|The location of the configuration. The location can be a path, an environment variable, a Registry key, a parent package variable name, or a table in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.|  
+|**Configuration String**|The location of the configuration. The location can be a path, an environment variable, a Registry key, a parent package variable name, or a table in a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database.|  
 |**Target Object**|The name of the object with a property that has a configuration. If the configuration is an XML configuration file, the column is blank, because the configuration can update multiple objects.|  
 |**Target Property**|The name of the property. If the configuration writes to an XML configuration file or a SQL Server table, the column is blank, because the configuration can update multiple objects.|  
   
 ### To create a package configuration  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project that contains the package you want.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project that contains the package you want.  
   
 2.  In Solution Explorer, double-click the package to open it.  
   
-3.  In [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the **Control Flow**, **Data Flow**, **Event Handler**, or **Package Explorer** tab.  
+3.  In [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click the **Control Flow**, **Data Flow**, **Event Handler**, or **Package Explorer** tab.  
   
 4.  On the **SSIS** menu, click **Package Configurations**.  
   

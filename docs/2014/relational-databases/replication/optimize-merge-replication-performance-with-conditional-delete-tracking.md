@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 58f120a3-ea3a-4e97-93f0-0eb4e580ecf2
 caps.latest.revision: 22
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Optimize Merge Replication Performance with Conditional Delete Tracking
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
  With merge replication you can specify that deletes for one or more articles should not be tracked by replication triggers and system tables. If you specify this option for an article, deletes are not tracked or replicated from the Publisher or any Subscribers. This option is available to support a number of application scenarios and to provide a performance optimization for cases in which the replication of deletes is not necessary or desirable. Performance is enhanced in three ways: metadata for deletes is not stored; deletes are not enumerated during synchronization; deletes are not replicated to and applied at the Subscriber.  
   
@@ -44,7 +44,7 @@ manager: "jhubbard"
   
  **To specify that deletes should not be tracked**  
   
--   Replication [!INCLUDE[tsql](../../../includes/tsql-md.md)] programming: [Specify That Deletes Should Not Be Tracked For Merge Articles &#40;Replication Transact-SQL Programming&#41;](../../../2014/relational-databases/replication/specify-that-deletes-should-not-be-tracked-for-merge-articles.md)  
+-   Replication [!INCLUDE[tsql](../../includes/tsql-md.md)] programming: [Specify That Deletes Should Not Be Tracked For Merge Articles &#40;Replication Transact-SQL Programming&#41;](../../../2014/relational-databases/replication/specify-that-deletes-should-not-be-tracked-for-merge-articles.md)  
   
 ## See Also  
  [Article Options for Merge Replication](../../../2014/relational-databases/replication/article-options-for-merge-replication.md)   

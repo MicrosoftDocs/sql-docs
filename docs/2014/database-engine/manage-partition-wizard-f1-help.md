@@ -25,7 +25,7 @@ helpviewer_keywords:
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 caps.latest.revision: 12
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Manage Partition Wizard F1 Help
@@ -33,7 +33,7 @@ manager: "jhubbard"
   
 ### To start the Manage Partition Wizard  
   
--   In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], select the database, right-click the table on which you want to create partitions, point to **Storage**, and then click **Manage Partition**.  
+-   In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], select the database, right-click the table on which you want to create partitions, point to **Storage**, and then click **Manage Partition**.  
   
      `Note` If **Manage Partition** is unavailable, you may have selected a table that does not contain partitions. Click **Create Partition** on the **Storage** submenu and use the **Create Partition Wizard** to create partitions in your table.  
   
@@ -174,7 +174,7 @@ manager: "jhubbard"
  Use the **New Job Schedule** page to view and change the properties of the schedule.  
   
 ### Options  
- Select the type of schedule you want for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job.  
+ Select the type of schedule you want for the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent job.  
   
  **Name**  
  Type a new name for the schedule.  

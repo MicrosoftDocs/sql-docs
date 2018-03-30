@@ -45,7 +45,7 @@ manager: "jhubbard"
   
     ```  
   
-     For detailed information, see [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../Topic/CREATE%20CREDENTIAL%20\(Transact-SQL\).md) in SQL Server Books Online.  
+     For detailed information, see [CREATE CREDENTIAL &#40;Transact-SQL&#41;](~/t-sql/statements/create-credential-transact-sql.md) in SQL Server Books Online.  
   
 5.  To see all available credentials, you can run the following statement in the query window:  
   
@@ -53,7 +53,7 @@ manager: "jhubbard"
     SELECT * from sys.credentials  
     ```  
   
-     For more information on sys.credentials, see [sys.credentials &#40;Transact-SQL&#41;](../Topic/sys.credentials%20\(Transact-SQL\).md) in SQL Server Books Online.  
+     For more information on sys.credentials, see [sys.credentials &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-credentials-transact-sql.md) in SQL Server Books Online.  
   
  **Next Lesson:**  
   

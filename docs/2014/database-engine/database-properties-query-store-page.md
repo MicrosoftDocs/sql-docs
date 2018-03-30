@@ -14,15 +14,15 @@ f1_keywords:
 ms.assetid: da47d75e-291a-4305-acef-4b0aaf5215da
 caps.latest.revision: 8
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Database Properties (Query Store Page)
-  Access this page from the principal database, and use it to configure and to modify the properties of the database query store. These options can also be configure by using the [ALTER DATABASE SET options](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md). For information about the query store, see [Monitoring Performance By Using the Query Store](../../2014/database-engine/monitoring-performance-by-using-the-query-store.md).  
+  Access this page from the principal database, and use it to configure and to modify the properties of the database query store. These options can also be configure by using the [ALTER DATABASE SET options](~/t-sql/statements/alter-database-transact-sql-set-options.md). For information about the query store, see [Monitoring Performance By Using the Query Store](../../2014/database-engine/monitoring-performance-by-using-the-query-store.md).  
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
+|**Applies to**: [!INCLUDE[sqldbesa](../includes/sqldbesa-md.md)].|  
   
 ## Options  
  Enable  
@@ -58,10 +58,10 @@ manager: "jhubbard"
  The right chart shows the portion of the query store quota which is currently used up. Note that the quota is not shown in the left chart. The quota may exceed the current size of the database.  
   
 ## Remarks  
- The query store feature provides DBAs with insight on query plan choice and performance. It simplifies performance troubleshooting by enabling you to quickly find performance differences caused by changes in query plans. The feature automatically captures a history of queries, plans, and runtime statistics, and retains these for your review. It separates data by time windows, allowing you to see database usage patterns and understand when query plan changes happened on the server. The query store can be configured by using this query store database property page, or by using the [ALTER DATABASE SET](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md) option. The query store presents information by using a [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] dialog box. For more information about query store, see [Monitoring Performance By Using the Query Store](../../2014/database-engine/monitoring-performance-by-using-the-query-store.md).  
+ The query store feature provides DBAs with insight on query plan choice and performance. It simplifies performance troubleshooting by enabling you to quickly find performance differences caused by changes in query plans. The feature automatically captures a history of queries, plans, and runtime statistics, and retains these for your review. It separates data by time windows, allowing you to see database usage patterns and understand when query plan changes happened on the server. The query store can be configured by using this query store database property page, or by using the [ALTER DATABASE SET](~/t-sql/statements/alter-database-transact-sql-set-options.md) option. The query store presents information by using a [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] dialog box. For more information about query store, see [Monitoring Performance By Using the Query Store](../../2014/database-engine/monitoring-performance-by-using-the-query-store.md).  
   
 ## See Also  
- [Query Store Stored Procedures &#40;Transact-SQL&#41;](../Topic/Query%20Store%20Stored%20Procedures%20\(Transact-SQL\).md)   
- [Query Store Catalog Views &#40;Transact-SQL&#41;](../Topic/Query%20Store%20Catalog%20Views%20\(Transact-SQL\).md)  
+ [Query Store Stored Procedures &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
+ [Query Store Catalog Views &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  
   
   

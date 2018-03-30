@@ -16,21 +16,21 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Master Data Services Add-in for Microsoft Excel
-  With the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], master lists of reference data can be distributed to everyone at your organization who uses Excel. Security determines which data users can view and update.  
+  With the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)], master lists of reference data can be distributed to everyone at your organization who uses Excel. Security determines which data users can view and update.  
   
  You can load filtered lists of data from MDS into Excel, where you can work with it just as you would any other data. When you are done, you can publish the data back to MDS, where it is centrally stored.  
   
- If you are an administrator, use the [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] to create entities and attributes and to load them with data. This eliminates the need to use any other tools to load data into your models.  
+ If you are an administrator, use the [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] to create entities and attributes and to load them with data. This eliminates the need to use any other tools to load data into your models.  
   
- In the [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], you can use Data Quality Services (DQS) to match data before loading it into MDS. This helps to prevent duplicate data in MDS.  
+ In the [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)], you can use Data Quality Services (DQS) to match data before loading it into MDS. This helps to prevent duplicate data in MDS.  
   
 > [!IMPORTANT]  
->  You can continue using the [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 version of Master Data Services Add-In for Excel after upgrading Master Data Services and Data Quality Services to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. However, any earlier version of the Master Data Services Add-In for Excel will not work after upgrading to SQL Server 2014 CTP2. You can download the [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 version of Master Data Services Add-In for Excel from [here](http://go.microsoft.com/fwlink/?LinkId=328664).  
+>  You can continue using the [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] SP1 version of Master Data Services Add-In for Excel after upgrading Master Data Services and Data Quality Services to [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] CTP2. However, any earlier version of the Master Data Services Add-In for Excel will not work after upgrading to SQL Server 2014 CTP2. You can download the [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] SP1 version of Master Data Services Add-In for Excel from [here](http://go.microsoft.com/fwlink/?LinkId=328664).  
   
 ## Terms  
  When working with the Add-in, you may encounter the following terms.  
   
--   The *MDS repository* is where all master data is stored. It is a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database that is configured to store MDS data. To work with data from the repository, you load data it into Excel; when you’re done working with it, you publish changes back to the repository. Administrators can add new entities and attributes to the repository.  
+-   The *MDS repository* is where all master data is stored. It is a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database that is configured to store MDS data. To work with data from the repository, you load data it into Excel; when you’re done working with it, you publish changes back to the repository. Administrators can add new entities and attributes to the repository.  
   
 -   *MDS-managed data* is data that is stored in the MDS repository and that you load into Excel, where the data is displayed as highlighted rows. You can add data that is not MDS-managed to your worksheet, and it is not affected when you refresh the MDS-managed data.  
   
@@ -46,7 +46,7 @@ manager: "jhubbard"
   
 |Task Description|Topic|  
 |----------------------|-----------|  
-|Create a connection to a [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] repository.|[Connect to an MDS Repository &#40;MDS Add-in for Excel&#41;](../../2014/master-data-services/connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
+|Create a connection to a [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] repository.|[Connect to an MDS Repository &#40;MDS Add-in for Excel&#41;](../../2014/master-data-services/connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
 |Load MDS-managed data into Excel.|[Load Data from MDS into Excel](../../2014/master-data-services/load-data-from-mds-into-excel.md)|  
 |Save a shortcut query that you can use open the currently displayed MDS-managed data in the future.|[Save a Shortcut Query File &#40;MDS Add-in for Excel&#41;](../../2014/master-data-services/save-a-shortcut-query-file-mds-add-in-for-excel.md)|  
 |Share shortcuts with others.|[Email a Shortcut Query File &#40;MDS Add-in for Excel&#41;](../../2014/master-data-services/email-a-shortcut-query-file-mds-add-in-for-excel.md)|  

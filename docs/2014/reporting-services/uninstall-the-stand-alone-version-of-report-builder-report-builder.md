@@ -12,11 +12,11 @@ ms.topic: "article"
 ms.assetid: 009538c6-4941-4393-b14b-9144cffdbdaf
 caps.latest.revision: 8
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Uninstall the Stand-Alone Version of Report Builder (Report Builder)
-  You can uninstall the stand-alone version of Report Builder from the control panel or the command line. You cannot uninstall the [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] version of Report Builder without uninstalling [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].  
+  You can uninstall the stand-alone version of Report Builder from the control panel or the command line. You cannot uninstall the [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] version of Report Builder without uninstalling [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)].  
   
  Uninstalling Report Builder from the command line uses syntax that is identical to the syntax you use to install Report Builder, except you use the /x option instead of the /i option. Command lines for uninstalling can also include the /quiet option and other standard options. If the Report Builder Windows Installer Package (ReportBuilder3_x86.msi) has been removed, you cannot use the command line easily to uninstall Report Builder. To learn more about how you might be able to remove Report Builder by using its GUID, see the documentation for the msiexec program in the msdn library.  
   
@@ -28,7 +28,7 @@ manager: "mblythe"
   
 2.  In the Control Panel, click **Programs and Features**.  
   
-3.  Locate [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Report Builder in the **Name** list and click it.  
+3.  Locate [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Report Builder in the **Name** list and click it.  
   
 4.  Click **Uninstall**.  
   

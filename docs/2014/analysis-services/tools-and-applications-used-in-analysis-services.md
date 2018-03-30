@@ -22,7 +22,7 @@ manager: "mblythe"
  Tabular and multidimensional models are created from project templates in a solution built inside the Visual Studio shell. The project template provides the designers for creating models, cubes, dimensions, and roles that comprise an Analysis Services solution.  
   
 ### Download SQL Server Data Tools for Business Intelligence (SSDT-BI)  
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] for Business Intelligence (SSDT-BI), previously known as Business Intelligence Development Studio (BIDS), is used to create Analysis Services models, Reporting Services reports, and Integration Services packages. You can download SSDT-BI from the following locations:  
+ [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] for Business Intelligence (SSDT-BI), previously known as Business Intelligence Development Studio (BIDS), is used to create Analysis Services models, Reporting Services reports, and Integration Services packages. You can download SSDT-BI from the following locations:  
   
 -   [Download SSDT-BI for Visual Studio 2013](http://go.microsoft.com/fwlink/p/?LinkId=396526)  
   

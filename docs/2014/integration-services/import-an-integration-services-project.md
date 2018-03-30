@@ -16,11 +16,11 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Import an Integration Services Project
-  Use the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]**Import Project Wizard** to create a project from an existing deployment file (.ispac) or from a project deployed to Integration services catalog. This feature is especially useful when you do not have the original copy of the project but you want to create one from an .ispac file or SSISDB catalog.  
+  Use the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]**Import Project Wizard** to create a project from an existing deployment file (.ispac) or from a project deployed to Integration services catalog. This feature is especially useful when you do not have the original copy of the project but you want to create one from an .ispac file or SSISDB catalog.  
   
 ### To Import a Project  
   
-1.  In [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], click **New** > **Project** on the **File** menu.  
+1.  In [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], click **New** > **Project** on the **File** menu.  
   
 2.  In the **Installed Templates** area of the **New Project** window, expand **Business Intelligence**, and click **Integration Services**.  
   

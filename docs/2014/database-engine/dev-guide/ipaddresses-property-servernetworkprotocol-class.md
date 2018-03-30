@@ -37,7 +37,7 @@ object
   
 ## Parts  
  *object*  
- A `ServerNetworkProtocol` object that represents the network protocol used by the instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ A `ServerNetworkProtocol` object that represents the network protocol used by the instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Property Value/Return Value  
  An array of [ServerNetworkProtocolIPAdress Class](../../../2014/database-engine/dev-guide/servernetworkprotocolipaddress-class.md) objects that represent the IP addresses supported by the server network protocol.  

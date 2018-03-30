@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 75c8c1f8-60bc-44a8-944b-d18d1f6bda11
 caps.latest.revision: 36
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Initialize a Transactional Subscription Without a Snapshot
@@ -42,7 +42,7 @@ manager: "jhubbard"
   
  To initialize a subscription with a backup, you first must enable the option when you create a publication, and then specify values for a number of options when you create a subscription. Publications can be enabled through the New Publication Wizard or programmatically. However, the values required for the subscription options can only be specified programmatically.  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Enable Initialization with a Backup for Transactional Publications &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/enable-initialization-with-backup-for-transactional-publications.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Enable Initialization with a Backup for Transactional Publications &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/enable-initialization-with-backup-for-transactional-publications.md)  
   
 -   Replication Transact-SQL programming: [Initialize a Transactional Subscription from a Backup &#40;Replication Transact-SQL Programming&#41;](../../../2014/relational-databases/replication/initialize-a-transactional-subscription-from-a-backup.md)  
   
@@ -65,7 +65,7 @@ manager: "jhubbard"
 -   Subscribed timestamp columns at the restored database must be converted to **binary(8)** columns: copy the content of the tables containing timestamp columns to new tables with matching schemas except having **binary(8)** columns in place of the timestamp columns, drop the original tables, and rename the new tables with the same names as the original tables.  
   
 ## Initializing a subscription with an alternative method  
- It is possible to initialize a subscription using any method that allows you to copy the publication database schema and data to the Subscriber, such as [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]. When you use an alternative method to initialize the Subscriber, replication support objects are copied to the Subscriber.  
+ It is possible to initialize a subscription using any method that allows you to copy the publication database schema and data to the Subscriber, such as [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. When you use an alternative method to initialize the Subscriber, replication support objects are copied to the Subscriber.  
   
  Unlike initializing with a backup, you or your application must ensure the data and schema are properly synchronized at the time you add the subscription. If, for example, there is activity on the Publisher between the time data and schema are copied to the Subscriber and the time at which the subscription is added, changes resulting from this activity might not be replicated to the Subscriber.  
   

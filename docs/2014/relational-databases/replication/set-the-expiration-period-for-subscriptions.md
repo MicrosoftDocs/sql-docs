@@ -17,11 +17,11 @@ helpviewer_keywords:
 ms.assetid: 542f0613-5817-42d0-b841-fb2c94010665
 caps.latest.revision: 34
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Set the Expiration Period for Subscriptions
-  This topic describes how to set the expiration period for subscriptions in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)]. The expiration period for subscriptions determines the period of time before a subscription expires and is removed. For more information, see [Subscription Expiration and Deactivation](../../../2014/relational-databases/replication/subscription-expiration-and-deactivation.md).  
+  This topic describes how to set the expiration period for subscriptions in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The expiration period for subscriptions determines the period of time before a subscription expires and is removed. For more information, see [Subscription Expiration and Deactivation](../../../2014/relational-databases/replication/subscription-expiration-and-deactivation.md).  
   
  **In This Topic**  
   
@@ -61,11 +61,11 @@ manager: "jhubbard"
   
 #### To set the expiration period for a subscription to a snapshot or transactional publication  
   
-1.  At the Publisher, execute [sp_addpublication](../Topic/sp_addpublication%20\(Transact-SQL\).md). Specify the desired subscription expiration period, in hours, for **@retention**. The default expiration period is 336 hours. For more information, see [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md).  
+1.  At the Publisher, execute [sp_addpublication](~/relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md). Specify the desired subscription expiration period, in hours, for **@retention**. The default expiration period is 336 hours. For more information, see [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md).  
   
 #### To set the expiration period for a subscription to a merge publication  
   
-1.  At the Publisher, execute [sp_addmergepublication](../Topic/sp_addmergepublication%20\(Transact-SQL\).md). Specify the desired value for the subscription expiration period for **@retention**. Specify the units in which the expiration period is expressed for **@retention_period_unit**, which can be one of the following:  
+1.  At the Publisher, execute [sp_addmergepublication](~/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Specify the desired value for the subscription expiration period for **@retention**. Specify the units in which the expiration period is expressed for **@retention_period_unit**, which can be one of the following:  
   
     -   **1** = week  
   
@@ -77,11 +77,11 @@ manager: "jhubbard"
   
 #### To change the expiration period for a subscription to a snapshot or transactional publication  
   
-1.  At the Publisher, execute [sp_changepublication](../Topic/sp_changepublication%20\(Transact-SQL\).md). Specify **retention** for **@property** and the new subscription expiration period, in hours, for **@value**.  
+1.  At the Publisher, execute [sp_changepublication](~/relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md). Specify **retention** for **@property** and the new subscription expiration period, in hours, for **@value**.  
   
 #### To change the expiration period for a subscription to a merge publication  
   
-1.  At the Publisher, execute [sp_helpmergepublication](../Topic/sp_helpmergepublication%20\(Transact-SQL\).md), specifying **@publication** and **@publisher**. Note the value of **retention_period_unit** in the result set, which can be one of the following:  
+1.  At the Publisher, execute [sp_helpmergepublication](~/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md), specifying **@publication** and **@publisher**. Note the value of **retention_period_unit** in the result set, which can be one of the following:  
   
     -   **0** = day  
   
@@ -91,9 +91,9 @@ manager: "jhubbard"
   
     -   **3** = year  
   
-2.  At the Publisher, execute [sp_changemergepublication](../Topic/sp_changemergepublication%20\(Transact-SQL\).md). Specify **retention** for **@property** and the new subscription expiration period, as text based on the retention period unit from step 1, for **@value**.  
+2.  At the Publisher, execute [sp_changemergepublication](~/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Specify **retention** for **@property** and the new subscription expiration period, as text based on the retention period unit from step 1, for **@value**.  
   
-3.  (Optional) At the Publisher, execute [sp_changemergepublication](../Topic/sp_changemergepublication%20\(Transact-SQL\).md). Specify **retention_period_unit** for **@property** and a new unit for the subscription expiration period for **@value**.  
+3.  (Optional) At the Publisher, execute [sp_changemergepublication](~/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Specify **retention_period_unit** for **@property** and a new unit for the subscription expiration period for **@value**.  
   
 ## See Also  
  [Replication System Stored Procedures Concepts](../../../2014/relational-databases/replication/dev-guide/replication-system-stored-procedures-concepts.md)   

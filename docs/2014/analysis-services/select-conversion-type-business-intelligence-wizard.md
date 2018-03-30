@@ -21,7 +21,7 @@ manager: "mblythe"
   Use the **Select Conversion Type** page to define the relationship between local currencies and reporting currencies for transactions stored in multiple currencies. A local currency is the currency in which the transactions for measures selected in the **Select Measures** page are stored. A reporting currency is the currency in which the transactions selected in the **Select Measures** page are translated.  
   
 > [!NOTE]  
->  This page does not appear if the Business Intelligence Wizard was started from Dimension Designer or by right-clicking a dimension in Solution Explorer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+>  This page does not appear if the Business Intelligence Wizard was started from Dimension Designer or by right-clicking a dimension in Solution Explorer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 ## Options  
  **Many-to-many**  

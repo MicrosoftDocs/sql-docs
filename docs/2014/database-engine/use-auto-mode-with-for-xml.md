@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 7140d656-1d42-4f01-a533-5251429f4450
 caps.latest.revision: 29
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Use AUTO Mode with FOR XML
@@ -137,7 +137,7 @@ FOR XML AUTO, ELEMENTS
 -   [Examples: Using AUTO Mode](../../2014/database-engine/examples-using-auto-mode.md)  
   
 ## See Also  
- [SELECT &#40;Transact-SQL&#41;](../Topic/SELECT%20\(Transact-SQL\).md)   
+ [SELECT &#40;Transact-SQL&#41;](~/t-sql/queries/select-transact-sql.md)   
  [FOR XML &#40;SQL Server&#41;](../../2014/database-engine/for-xml-sql-server.md)  
   
   

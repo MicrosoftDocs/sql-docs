@@ -12,14 +12,14 @@ ms.topic: "article"
 ms.assetid: c1490ff0-5b8a-43c1-8d22-e459395db4f6
 caps.latest.revision: 10
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Report Design Tips (Report Builder and SSRS)
   Use the following tips to help design your reports.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ##  <a name="DesigningReports"></a> Designing Reports  
   
@@ -53,7 +53,7 @@ manager: "mblythe"
   
         2.  **Data region as a data feed.** With appropriate permissions, a report reader can create an ATOM data feed from a data region.  
   
--   Use underscores instead of spaces in report names. If you download a report from Report Manager, spaces are replaced by underscores. If you use the download feature to save reports locally, and then include them in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], using underscores helps to keep report dependencies for subreports and drillthrough links accurate.  
+-   Use underscores instead of spaces in report names. If you download a report from Report Manager, spaces are replaced by underscores. If you use the download feature to save reports locally, and then include them in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], using underscores helps to keep report dependencies for subreports and drillthrough links accurate.  
   
 ##  <a name="Data"></a> Working with Data  
   
@@ -99,7 +99,7 @@ manager: "mblythe"
   
     -   To work with row groups and column groups in a tablix data region, select the group from the Grouping pane.  
   
- In Report Designer in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], you can select from the drop-down list of objects in the Properties pane toolbar or from the hierarchical view of report items in the Document Outline window. You can select items in this pane and see which item is selected on the design surface. To open the Document Outline window, from the **View** menu, point to **Other Windows**, and then click **Document Outline**.  
+ In Report Designer in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], you can select from the drop-down list of objects in the Properties pane toolbar or from the hierarchical view of report items in the Document Outline window. You can select items in this pane and see which item is selected on the design surface. To open the Document Outline window, from the **View** menu, point to **Other Windows**, and then click **Document Outline**.  
   
 ##  <a name="ReportItems"></a> Working with Specific Types of Report Items  
   

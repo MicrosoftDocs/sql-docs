@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Options Dialog Boxes F1 Help
-  This section contains the F1 Help for the dialog boxes available by clicking **Options** on the **Tools** menu in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  This section contains the F1 Help for the dialog boxes available by clicking **Options** on the **Tools** menu in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
  [Options &#40;Designers-Analysis Services Designers-General&#41;](../../2014/database-engine/options-designers-analysis-services-designers-general.md)  
   

@@ -24,13 +24,13 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Isolate Performance Problems
-  It is often more effective to use several [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Microsoft Windows tools together to isolate database performance problems than to use one tool at a time. For example, the graphical Execution Plan feature, also called Showplan, helps you quickly recognize deadlocks in a single query. However, you can recognize some other performance problems more easily if you use the monitoring features of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Windows together.  
+  It is often more effective to use several [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] or Microsoft Windows tools together to isolate database performance problems than to use one tool at a time. For example, the graphical Execution Plan feature, also called Showplan, helps you quickly recognize deadlocks in a single query. However, you can recognize some other performance problems more easily if you use the monitoring features of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and Windows together.  
   
- [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] can be used to monitor and troubleshoot Transact-SQL and application-related problems. System Monitor can be used to monitor hardware and other system-related problems.  
+ [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] can be used to monitor and troubleshoot Transact-SQL and application-related problems. System Monitor can be used to monitor hardware and other system-related problems.  
   
  You can monitor the following areas to troubleshoot problems:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stored procedures or batches of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements submitted by user applications.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] stored procedures or batches of [!INCLUDE[tsql](../includes/tsql-md.md)] statements submitted by user applications.  
   
 -   User activity, such as blocking locks or deadlocks.  
   
@@ -38,7 +38,7 @@ manager: "jhubbard"
   
  Problems can include:  
   
--   Application development errors involving incorrectly written [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.  
+-   Application development errors involving incorrectly written [!INCLUDE[tsql](../includes/tsql-md.md)] statements.  
   
 -   Hardware errors, such as disk- or network-related errors.  
   

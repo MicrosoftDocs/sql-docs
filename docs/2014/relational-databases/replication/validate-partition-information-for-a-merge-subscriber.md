@@ -16,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: c059553e-df2c-4333-ba79-e8d6e2890c34
 caps.latest.revision: 35
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Validate Partition Information for a Merge Subscriber
-  When you define a parameterized row filter for a merge publication, you use a function that references Subscriber information, such as the Subscriber's login name. By default, replication validates Subscriber information based on that function before each synchronization and whenever a snapshot is applied at the Subscriber. The validation process ensures that data is partitioned correctly for each Subscriber. Validation behavior is controlled by the **validate_subscriber_info** publication property, which can be changed using [sp_changemergepublication &#40;Transact-SQL&#41;](../Topic/sp_changemergepublication%20\(Transact-SQL\).md) or on the **Subscription Options** page of the **Publication Properties** dialog box. For more information about changing publication properties, see [View and Modify Publication Properties](../../../2014/relational-databases/replication/view-and-modify-publication-properties.md).  
+  When you define a parameterized row filter for a merge publication, you use a function that references Subscriber information, such as the Subscriber's login name. By default, replication validates Subscriber information based on that function before each synchronization and whenever a snapshot is applied at the Subscriber. The validation process ensures that data is partitioned correctly for each Subscriber. Validation behavior is controlled by the **validate_subscriber_info** publication property, which can be changed using [sp_changemergepublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) or on the **Subscription Options** page of the **Publication Properties** dialog box. For more information about changing publication properties, see [View and Modify Publication Properties](../../../2014/relational-databases/replication/view-and-modify-publication-properties.md).  
   
 ## How Partition Validation Works  
  When a publication is filtered, for example, using the function **SUSER_SNAME()**, the Merge Agent applies the initial snapshot to each Subscriber based on data that is valid for the **SUSER_SNAME()** expression.  

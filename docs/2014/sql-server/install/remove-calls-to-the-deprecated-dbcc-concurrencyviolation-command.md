@@ -19,10 +19,10 @@ manager: "jhubbard"
   Upgrade Advisor detected the use of the DBCC CONCURRENCYVIOLATION command. This command is no longer available. Executing this command returns error 2526.  
   
 ## Component  
- [!INCLUDE[ssDE](../../../includes/ssde-md.md)]  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## Description  
- No recent version of edition of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] includes a workload governor; therefore the command has been removed.  
+ No recent version of edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes a workload governor; therefore the command has been removed.  
   
 ## Corrective Action  
  Update applications and scripts to remove references to this deprecated command.  

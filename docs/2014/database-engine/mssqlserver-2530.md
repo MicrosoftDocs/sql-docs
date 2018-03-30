@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 5d4be07a-38a5-4b25-819c-4dcb4636cc15
 caps.latest.revision: 11
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_2530
@@ -45,8 +45,8 @@ manager: "jhubbard"
   
 ## See Also  
  [Enable Indexes and Constraints](../../2014/database-engine/enable-indexes-and-constraints.md)   
- [ALTER INDEX &#40;Transact-SQL&#41;](../Topic/ALTER%20INDEX%20\(Transact-SQL\).md)   
- [CREATE INDEX &#40;Transact-SQL&#41;](../Topic/CREATE%20INDEX%20\(Transact-SQL\).md)   
- [DBCC DBREINDEX &#40;Transact-SQL&#41;](../Topic/DBCC%20DBREINDEX%20\(Transact-SQL\).md)  
+ [ALTER INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-index-transact-sql.md)   
+ [CREATE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md)   
+ [DBCC DBREINDEX &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md)  
   
   

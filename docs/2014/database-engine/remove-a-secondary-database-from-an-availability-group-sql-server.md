@@ -22,7 +22,7 @@ ms.author: "jroth"
 manager: "jhubbard"
 ---
 # Remove a Secondary Database from an Availability Group (SQL Server)
-  This topic describes how to remove a secondary database from an AlwaysOn availability group by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  This topic describes how to remove a secondary database from an AlwaysOn availability group by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
 -   **Before you begin:**  
   
@@ -76,7 +76,7 @@ manager: "jhubbard"
   
 1.  Connect to the server instance that hosts the secondary replica.  
   
-2.  Use the [SET HADR clause of the ALTER DATABASE](../Topic/ALTER%20DATABASE%20SET%20HADR%20\(Transact-SQL\).md) statement, as follows:  
+2.  Use the [SET HADR clause of the ALTER DATABASE](~/t-sql/statements/alter-database-transact-sql-set-hadr.md) statement, as follows:  
   
      ALTER DATABASE *database_name* SET HADR OFF  
   
@@ -104,7 +104,7 @@ manager: "jhubbard"
     ```  
   
     > [!NOTE]  
-    >  To view the syntax of a cmdlet, use the `Get-Help` cmdlet in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../2014/database-engine/get-help-sql-server-powershell.md).  
+    >  To view the syntax of a cmdlet, use the `Get-Help` cmdlet in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../2014/database-engine/get-help-sql-server-powershell.md).  
   
  **To set up and use the SQL Server PowerShell provider**  
   
@@ -120,7 +120,7 @@ manager: "jhubbard"
   
 -   If you no longer need the secondary database, you can drop it.  
   
-     For more information, see [DROP DATABASE &#40;Transact-SQL&#41;](../Topic/DROP%20DATABASE%20\(Transact-SQL\).md) or [Delete a Database](../../2014/database-engine/delete-a-database.md).  
+     For more information, see [DROP DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/drop-database-audit-specification-transact-sql.md) or [Delete a Database](../../2014/database-engine/delete-a-database.md).  
   
 -   If you want to access a removed secondary database after it has been removed from the availability group, you can recover the database. However, if you recover a removed secondary database, two divergent, independent databases that have the same name are online. You must make sure that clients can access only the current primary database.  
   

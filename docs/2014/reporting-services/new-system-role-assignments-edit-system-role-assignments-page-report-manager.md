@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a
 caps.latest.revision: 26
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # New System Role Assignments: Edit System Role Assignments Page (Report Manager)
@@ -49,9 +49,9 @@ manager: "mblythe"
  **Roles**  
  Provides a list of system-level roles that you can assign to other users. You can specify multiple roles for a single role assignment.  
   
- Report Manager does not display the tasks in each role or provide a way to add or modify the tasks. You must use the roles as they are defined. To create, modify, or delete roles, use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. For more information, see [Create, Delete, or Modify a Role &#40;Management Studio&#41;](../../2014/reporting-services/create-delete-or-modify-a-role-management-studio.md).  
+ Report Manager does not display the tasks in each role or provide a way to add or modify the tasks. You must use the roles as they are defined. To create, modify, or delete roles, use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. For more information, see [Create, Delete, or Modify a Role &#40;Management Studio&#41;](../../2014/reporting-services/create-delete-or-modify-a-role-management-studio.md).  
   
- Note that if you are using [!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)] with Advanced Services, you must use the default roles that are provided.  
+ Note that if you are using [!INCLUDE[ssExpressEd2005](../includes/ssexpressed2005-md.md)] with Advanced Services, you must use the default roles that are provided.  
   
  **Descriptions**  
  Shows additional information about the role. For predefined roles such as System User or System Administrator, the description summarizes the tasks that each role supports.  

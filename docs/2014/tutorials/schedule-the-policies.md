@@ -37,7 +37,7 @@ manager: "jhubbard"
     >  To view the evaluation results after a scheduled policy runs, open the Policy History log on the target instance. To open the log, right-click **Policy Management**, and then click **View History**.  
   
 ## Summary  
- You configured scheduled policies to run on a single instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If you want to deploy scheduled policies to multiple instances, continue to the next task in this tutorial.  
+ You configured scheduled policies to run on a single instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. If you want to deploy scheduled policies to multiple instances, continue to the next task in this tutorial.  
   
 ## Next Steps  
  [Deploy Scheduled Policies to Multiple Instances](../../2014/tutorials/deploy-scheduled-policies-to-multiple-instances.md)  

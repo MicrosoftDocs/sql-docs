@@ -12,20 +12,20 @@ ms.topic: "article"
 ms.assetid: 8d47dde7-c941-4280-a934-e2fe3f9a938f
 caps.latest.revision: 18
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "jhubbard"
 ---
 # PowerPivot for SharePoint 2010 Installation
-  [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] is a collection of server components that provide query processing and management control over [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] workbooks that you publish to SharePoint. Services include the Analysis Services engine and [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] System Service.  
+  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] is a collection of server components that provide query processing and management control over [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks that you publish to SharePoint. Services include the Analysis Services engine and [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System Service.  
   
 > [!NOTE]  
->  For information regarding [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] and installation with SharePoint Server 2013, see the following:  
+>  For information regarding [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] and installation with SharePoint Server 2013, see the following:  
 >   
 >  -   The “SQL Server 2012 SP1” section of [Overview of SQL Server Servicing Installation](../../../2014/sql-server/install/overview-of-sql-server-servicing-installation.md).  
   
- Analysis Services provides server-side processing for Excel workbooks that contain [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] data. [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] System Service works alongside Analysis Services, adding SharePoint integration, load balancing and connection management. [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] extends Excel Services by pairing its large scale data processing capability with the data rendering services that Excel provides.  
+ Analysis Services provides server-side processing for Excel workbooks that contain [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System Service works alongside Analysis Services, adding SharePoint integration, load balancing and connection management. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] extends Excel Services by pairing its large scale data processing capability with the data rendering services that Excel provides.  
   
- To install [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)], use the [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]installation media.  
+ To install [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], use the [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]installation media.  
   
  For instructions on advanced deployment scenarios, see [Deployment Checklist: Reporting Services, Power View, and PowerPivot for SharePoint](../../../2014/sql-server/install/deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md) and [Deployment Checklist: Scale-out by adding PowerPivot Servers to a SharePoint 2010 farm](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md).  
   

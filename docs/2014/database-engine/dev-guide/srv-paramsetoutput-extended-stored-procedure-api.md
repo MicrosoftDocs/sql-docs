@@ -29,7 +29,7 @@ manager: "jhubbard"
 # srv_paramsetoutput (Extended Stored Procedure API)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
   
  Sets the value of a return parameter. This function supersedes the **srv_paramset** function.  
   

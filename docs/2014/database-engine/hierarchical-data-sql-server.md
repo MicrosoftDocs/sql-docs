@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 caps.latest.revision: 39
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Hierarchical Data (SQL Server)
@@ -37,7 +37,7 @@ manager: "jhubbard"
   
 -   A graph of links between Web pages  
   
- Use [hierarchyid](../Topic/hierarchyid%20\(Transact-SQL\).md) as a data type to create tables with a hierarchical structure, or to describe the hierarchical structure of data that is stored in another location. Use the [hierarchyid functions](../Topic/hierarchyid%20Data%20Type%20Method%20Reference.md) in [!INCLUDE[tsql](../../includes/tsql-md.md)] to query and manage hierarchical data.  
+ Use [hierarchyid](~/t-sql/data-types/hierarchyid-data-type-method-reference.md) as a data type to create tables with a hierarchical structure, or to describe the hierarchical structure of data that is stored in another location. Use the [hierarchyid functions](~/t-sql/data-types/hierarchyid-data-type-method-reference.md) in [!INCLUDE[tsql](../includes/tsql-md.md)] to query and manage hierarchical data.  
   
 ##  <a name="keyprops"></a> Key Properties of hierarchyid  
  A value of the `hierarchyid` data type represents a position in a tree hierarchy. Values for `hierarchyid` have the following properties:  
@@ -52,7 +52,7 @@ manager: "jhubbard"
   
 -   Support for arbitrary insertions and deletions  
   
-     By using the [GetDescendant](../Topic/GetDescendant%20\(Database%20Engine\).md) method, it is always possible to generate a sibling to the right of any given node, to the left of any given node, or between any two siblings. The comparison property is maintained when an arbitrary number of nodes is inserted or deleted from the hierarchy. Most insertions and deletions preserve the compactness property. However, insertions between two nodes will produce hierarchyid values with a slightly less compact representation.  
+     By using the [GetDescendant](~/t-sql/data-types/getdescendant-database-engine.md) method, it is always possible to generate a sibling to the right of any given node, to the left of any given node, or between any two siblings. The comparison property is maintained when an arbitrary number of nodes is inserted or deleted from the hierarchy. Most insertions and deletions preserve the compactness property. However, insertions between two nodes will produce hierarchyid values with a slightly less compact representation.  
   
   
 ##  <a name="limits"></a> Limitations of hierarchyid  
@@ -120,7 +120,7 @@ GO
   
   
 ### XML  
- An XML document is a tree, and therefore a single XML data type instance can represent a complete hierarchy. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] when an XML index is created, `hierarchyid` values are used internally to represent the position in the hierarchy.  
+ An XML document is a tree, and therefore a single XML data type instance can represent a complete hierarchy. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] when an XML index is created, `hierarchyid` values are used internally to represent the position in the hierarchy.  
   
  Using XML data type can be superior when all the following are true:  
   
@@ -223,7 +223,7 @@ SELECT CAST(Level AS nvarchar(100)) AS [Converted Level], *
 FROM SimpleDemo ORDER BY Level;  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+ [!INCLUDE[ssResult](../includes/ssresult-md.md)]  
   
 ```  
 Converted Level  Level     Location         LocationType  
@@ -357,7 +357,7 @@ GO
 SELECT * FROM Org_T2  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+ [!INCLUDE[ssResult](../includes/ssresult-md.md)]  
   
 ```  
 EmployeeId LastChild EmployeeName  
@@ -387,7 +387,7 @@ GO
   
   
 ###  <a name="findclr"></a> Finding Ancestors by Using the CLR  
- A common operation involving two nodes in a hierarchy is to find the lowest common ancestor. This can be written in either [!INCLUDE[tsql](../../includes/tsql-md.md)] or CLR, because the `hierarchyid` type is available in both. CLR is recommended because performance will be faster.  
+ A common operation involving two nodes in a hierarchy is to find the lowest common ancestor. This can be written in either [!INCLUDE[tsql](../includes/tsql-md.md)] or CLR, because the `hierarchyid` type is available in both. CLR is recommended because performance will be faster.  
   
  Use the following CLR code to list ancestors and to find the lowest common ancestor:  
   
@@ -424,7 +424,7 @@ public partial class HierarchyId_Operations
 }  
 ```  
   
- To use the **ListAncestor** and **CommonAncestor** methods in the following [!INCLUDE[tsql](../../includes/tsql-md.md)] examples, build the DLL and create the **HierarchyId_Operations** assembly in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by executing code similar to the following:  
+ To use the **ListAncestor** and **CommonAncestor** methods in the following [!INCLUDE[tsql](../includes/tsql-md.md)] examples, build the DLL and create the **HierarchyId_Operations** assembly in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] by executing code similar to the following:  
   
 ```  
 CREATE ASSEMBLY HierarchyId_Operations   
@@ -436,7 +436,7 @@ GO
 ###  <a name="ancestors"></a> Listing Ancestors  
  Creating a list of ancestors of a node is a common operation, for instance to show position in an organization. One way of doing this is by using a table-valued-function using the **HierarchyId_Operations** class defined above:  
   
- Using [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
+ Using [!INCLUDE[tsql](../includes/tsql-md.md)]:  
   
 ```  
 CREATE FUNCTION ListAncestors (@node hierarchyid)  
@@ -463,7 +463,7 @@ GO
   
   
 ###  <a name="lowestcommon"></a> Finding the Lowest Common Ancestor  
- Using the **HierarchyId_Operations** class defined above, create the following [!INCLUDE[tsql](../../includes/tsql-md.md)] function to find the lowest common ancestor involving two nodes in a hierarchy:  
+ Using the **HierarchyId_Operations** class defined above, create the following [!INCLUDE[tsql](../includes/tsql-md.md)] function to find the lowest common ancestor involving two nodes in a hierarchy:  
   
 ```  
 CREATE FUNCTION CommonAncestor (@node1 hierarchyid, @node2 hierarchyid)  
@@ -522,8 +522,8 @@ GO
   
   
 ## See Also  
- [hierarchyid Data Type Method Reference](../Topic/hierarchyid%20Data%20Type%20Method%20Reference.md)   
+ [hierarchyid Data Type Method Reference](~/t-sql/data-types/hierarchyid-data-type-method-reference.md)   
  [Tutorial: Using the hierarchyid Data Type](../../2014/tutorials/tutorial-using-the-hierarchyid-data-type.md)   
- [hierarchyid &#40;Transact-SQL&#41;](../Topic/hierarchyid%20\(Transact-SQL\).md)  
+ [hierarchyid &#40;Transact-SQL&#41;](~/t-sql/data-types/hierarchyid-data-type-method-reference.md)  
   
   

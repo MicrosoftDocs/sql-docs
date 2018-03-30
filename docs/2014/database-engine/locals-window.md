@@ -16,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: 59bea640-7823-4b4d-832c-f384d83cca2f
 caps.latest.revision: 15
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Locals Window
-  The **Locals** window displays information about the local expressions in the current scope of the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger. The scope is set to the current call stack frame that is selected in the **Call Stack** window. You must be in debug mode to display the local expressions.  
+  The **Locals** window displays information about the local expressions in the current scope of the [!INCLUDE[tsql](../includes/tsql-md.md)] debugger. The scope is set to the current call stack frame that is selected in the **Call Stack** window. You must be in debug mode to display the local expressions.  
   
 ## Task List  
  **To access the Locals window**  
@@ -33,14 +33,14 @@ manager: "jhubbard"
   
 ## Columns  
  **Name**  
- Is the name of the local expression. The [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger lists variables, parameters, and the system functions that have names that start with @@.  
+ Is the name of the local expression. The [!INCLUDE[tsql](../includes/tsql-md.md)] debugger lists variables, parameters, and the system functions that have names that start with @@.  
   
  **Value**  
  Displays the value that is currently assigned to the local expression. This column is blank when no value has been assigned to the expression.  
   
  If the length of an expression is larger than the width of the **Value** column, a tooltip displays the full value when you move the pointer over the **Value** cell for that expression.  
   
- A magnifying glass icon in a **Value** cell indicates that the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger visualizer is available. In the list, you can specify **Text Visualizer**, **XML Visualizer**, or **HTML Visualizer**. To start a debugger visualizer, click the magnifying glass icon. The [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger opens a dialog box that displays the data in a format appropriate to the data type.  
+ A magnifying glass icon in a **Value** cell indicates that the [!INCLUDE[tsql](../includes/tsql-md.md)] debugger visualizer is available. In the list, you can specify **Text Visualizer**, **XML Visualizer**, or **HTML Visualizer**. To start a debugger visualizer, click the magnifying glass icon. The [!INCLUDE[tsql](../includes/tsql-md.md)] debugger opens a dialog box that displays the data in a format appropriate to the data type.  
   
  **Type**  
  Displays the data type of the expression.  
@@ -51,6 +51,6 @@ manager: "jhubbard"
  [Watch Window](../../2014/database-engine/watch-window.md)   
  [Call Stack Window](../../2014/database-engine/call-stack-window.md)   
  [QuickWatch Dialog Box](../../2014/database-engine/quickwatch-dialog-box.md)   
- [Expressions &#40;Transact-SQL&#41;](../Topic/Expressions%20\(Transact-SQL\).md)  
+ [Expressions &#40;Transact-SQL&#41;](~/t-sql/language-elements/expressions-transact-sql.md)  
   
   

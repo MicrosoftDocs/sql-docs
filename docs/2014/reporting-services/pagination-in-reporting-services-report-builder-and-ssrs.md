@@ -12,11 +12,11 @@ ms.topic: "article"
 ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
 caps.latest.revision: 8
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Pagination in Reporting Services (Report Builder  and SSRS)
-  Pagination refers to the number of pages within a report and how report items are arranged on these pages. Pagination in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] varies depending on the rendering extension you use to view and deliver the report. When you run a report on the report server, the report uses the HTML renderer. HTML follows a specific set of pagination rules. If you export the same report to PDF, for example, the PDF renderer is used and a different set of rules are applied; therefore, the report paginates differently. To successfully design an easy-to-read report for your users that is optimized for the renderer that you plan to use to deliver your report, you need to understand the rules used to control pagination in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+  Pagination refers to the number of pages within a report and how report items are arranged on these pages. Pagination in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] varies depending on the rendering extension you use to view and deliver the report. When you run a report on the report server, the report uses the HTML renderer. HTML follows a specific set of pagination rules. If you export the same report to PDF, for example, the PDF renderer is used and a different set of rules are applied; therefore, the report paginates differently. To successfully design an easy-to-read report for your users that is optimized for the renderer that you plan to use to deliver your report, you need to understand the rules used to control pagination in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
  This topic discusses the impact of the physical page size and the report layout on how hard page break renderers render the report. You can set properties to modify the physical page size and margins, and divide the report into columns, by using the **Report Properties** pane, the **Properties** pane, or the **Page Setup** dialog box. You access the **Report Properties** pane by clicking the blue area outside the report body. You access the **Page Setup** dialog box by clicking **Run** on the Home tab, and then clicking **Page Setup** on the Run tab.  
   
@@ -24,10 +24,10 @@ manager: "mblythe"
 >  If you have designed a report to be one page wide, but it renders across multiple pages, check that the width of the report body, including margins, is not larger than the physical page size width. To prevent empty pages from being added to your report, you can reduce the container size by dragging the container corner to the left.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## The Report Body  
- The report body is a rectangular container displayed as white space on the design surface. It can grow or shrink to accommodate the report items contained within it. The report body does not reflect the physical page size and, in fact, the report body can grow beyond the boundaries of the physical page size to span multiple report pages. Some renderers, such as [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)], Word, HTML and MHTML, render reports that grow or shrink depending on the contents of the page. Reports rendered in these formats are optimized for screen-based viewing, such as in a Web browser. These renderers add vertical page breaks when required.  
+ The report body is a rectangular container displayed as white space on the design surface. It can grow or shrink to accommodate the report items contained within it. The report body does not reflect the physical page size and, in fact, the report body can grow beyond the boundaries of the physical page size to span multiple report pages. Some renderers, such as [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)], Word, HTML and MHTML, render reports that grow or shrink depending on the contents of the page. Reports rendered in these formats are optimized for screen-based viewing, such as in a Web browser. These renderers add vertical page breaks when required.  
   
  You can format the report body so that there is a border color, border style and border width. You can also add a background color and background image.  
   

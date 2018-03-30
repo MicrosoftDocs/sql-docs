@@ -44,7 +44,7 @@ manager: "mblythe"
 ##### Adding or Removing Dimensions  
  Drag the hierarchies or dimensions to the row or filter areas.  
   
- If you want to work with multiple dimensions, use Analyze in Excel. Analyze in Excel is a shortcut that starts Excel if it is installed on the same computer as [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Excel will open a workbook that contains an existing connection to the current database and a PivotTable Field List that is preloaded with measures and dimensions. For more information, see [Analyze in Excel &#40;Browser Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/analyze-in-excel-browser-cube-designer-analysis-services-multidimensional-data.md).  
+ If you want to work with multiple dimensions, use Analyze in Excel. Analyze in Excel is a shortcut that starts Excel if it is installed on the same computer as [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Excel will open a workbook that contains an existing connection to the current database and a PivotTable Field List that is preloaded with measures and dimensions. For more information, see [Analyze in Excel &#40;Browser Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/analyze-in-excel-browser-cube-designer-analysis-services-multidimensional-data.md).  
   
  To remove a dimension, either drag it out of the Data pane, or right-click it and then click **Delete** on the shortcut menu.  
   

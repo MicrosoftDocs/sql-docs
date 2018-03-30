@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 75522821-6daf-44ac-88bd-aa5b35258007
 caps.latest.revision: 4
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Database Engine Cross-Instance Features

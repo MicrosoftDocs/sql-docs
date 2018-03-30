@@ -38,7 +38,7 @@ manager: "jhubbard"
  This destination has one output. It does not support an error output.  
   
 ## Configuration of the Flat File Destination  
- You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer or programmatically.  
   
  For more information about the properties that you can set in the **Flat File Source Editor** dialog box, click one of the following topics:  
   

@@ -53,7 +53,7 @@ LOG(97.34)
 LOG(Length)   
 ```  
   
- This example uses the variable **Length**. The variable must have a numeric data type or the expression must include an explicit cast to a numeric [!INCLUDE[ssIS](../../includes/ssis-md.md)] data type. If **Length** is 234.567, the function returns 2.370266913465859.  
+ This example uses the variable **Length**. The variable must have a numeric data type or the expression must include an explicit cast to a numeric [!INCLUDE[ssIS](../includes/ssis-md.md)] data type. If **Length** is 234.567, the function returns 2.370266913465859.  
   
 ```  
 LOG(@Length)   

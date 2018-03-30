@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 caps.latest.revision: 28
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Configure Report Manager (Native Mode)
@@ -22,7 +22,7 @@ manager: "mblythe"
   
 -   [Configure Report Manager to use the default URL](#ConfigureRMURL)  
   
-     Report Manager is a Web application that users access in a Web browser. Minimally, you must define the URL used to open the application in a browser window. The URL consists of a host name, port, and virtual directory. Default values for this URL include the host name and port values that you defined for the Report Server Web service URL, plus the **reports** virtual directory name. If you have a named instance, the virtual directory is **reports_instance**, where **instance** is the name of your [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instance.  
+     Report Manager is a Web application that users access in a Web browser. Minimally, you must define the URL used to open the application in a browser window. The URL consists of a host name, port, and virtual directory. Default values for this URL include the host name and port values that you defined for the Report Server Web service URL, plus the **reports** virtual directory name. If you have a named instance, the virtual directory is **reports_instance**, where **instance** is the name of your [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] instance.  
   
 -   **Run Report Manager from a remote computer**. Depending on the configuration of your network, you may need to enable port 80 on computers to allow requests with Report Manager.  
   
@@ -45,7 +45,7 @@ manager: "mblythe"
   
 -   [Turn off Report Manager](#DisableRM)  
   
-     When you install a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instance that uses native mode, Report Manager is enabled by default. However, you can turn Report Manager off if you have a custom front-end application that provides equivalent functionality, if you only want to use the SOAP or URL Access interfaces to access the report server, or if you are using a Report Manager from a different report server instance.  
+     When you install a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] instance that uses native mode, Report Manager is enabled by default. However, you can turn Report Manager off if you have a custom front-end application that provides equivalent functionality, if you only want to use the SOAP or URL Access interfaces to access the report server, or if you are using a Report Manager from a different report server instance.  
   
 ## Prerequisites  
  To use Report Manager, you must satisfy the following prerequisites:  
@@ -57,22 +57,22 @@ manager: "mblythe"
 -   You must also have Internet Explorer 7.0 or later with scripting enabled. For more information, see [Planning for Reporting Services and Power View Browser Support &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   
 ##  <a name="ConfigureRMURL"></a> Configure Report Manager to use the default URL  
- By default, the Report Manager URL consists of a unique virtual directory name, plus the port and host name that is defined for the Report Server Web service that runs in the same instance. In most cases, the host name is the network name of the report server computer, but it can also be an IP address or host header that resolves the computer. To configure Report Manager to use the default URL, use the **Report Manager URL** page in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool.  
+ By default, the Report Manager URL consists of a unique virtual directory name, plus the port and host name that is defined for the Report Server Web service that runs in the same instance. In most cases, the host name is the network name of the report server computer, but it can also be an IP address or host header that resolves the computer. To configure Report Manager to use the default URL, use the **Report Manager URL** page in the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Configuration tool.  
   
 #### To configure the default Report Manager URL and virtual directory  
   
-1.  Start the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool and connect to the report server instance.  
+1.  Start the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Configuration tool and connect to the report server instance.  
   
-2.  In the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool, click **Report Manager URL** to open the page for configuring the URL.  
+2.  In the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Configuration tool, click **Report Manager URL** to open the page for configuring the URL.  
   
 3.  Enter a unique virtual directory name for Report Manager.  
   
 4.  Click **Apply**.  
   
-5.  If you are using [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] or Windows Server 2008, additional steps might be required before you can use Report Manager. For more information, see [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../../2014/reporting-services/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+5.  If you are using [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)] or Windows Server 2008, additional steps might be required before you can use Report Manager. For more information, see [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../../2014/reporting-services/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 ##  <a name="ConfigureSpecificURL"></a> Configure Report Manager to use a specific report server URL  
- When you configure URLs in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool, Report Manager automatically detects and uses any new and updated URLs for the report server that runs in the same server instance. If your deployment requires that you use a single, static URL for all report server requests, you can specify that URL in the RSReportServer.config file.  
+ When you configure URLs in the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Configuration tool, Report Manager automatically detects and uses any new and updated URLs for the report server that runs in the same server instance. If your deployment requires that you use a single, static URL for all report server requests, you can specify that URL in the RSReportServer.config file.  
   
 #### To configure a static report server URL  
   
@@ -87,7 +87,7 @@ manager: "mblythe"
  For more information about the configuration file, see [Modify a Reporting Services Configuration File &#40;RSreportserver.config&#41;](../../2014/reporting-services/modify-a-reporting-services-configuration-file-rsreportserver-config.md) and [RSReportServer Configuration File](../../2014/reporting-services/rsreportserver-configuration-file.md).  
   
 ##  <a name="ConfigureRemoteRS"></a> Configure Report Manager to use a remote report server  
- For deployment configurations that place Report Manager and the report server on different computers, you must have two separate installations of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Report Manager is embedded in the Report Server service and cannot be installed by itself. If you want to run Report Manager on a different computer within its own process, you must install a second report server. Both server instances must be [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] report servers.  
+ For deployment configurations that place Report Manager and the report server on different computers, you must have two separate installations of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Report Manager is embedded in the Report Server service and cannot be installed by itself. If you want to run Report Manager on a different computer within its own process, you must install a second report server. Both server instances must be [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] report servers.  
   
 #### To connect Report Manager to a remote report server instance  
   
@@ -95,7 +95,7 @@ manager: "mblythe"
   
 2.  Configure the first installation that will host the report server:  
   
-    1.  Start the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool.  
+    1.  Start the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Configuration tool.  
   
     2.  Click **Web Service URL** to configure a host name, port, and virtual directory for the report server.  
   
@@ -103,7 +103,7 @@ manager: "mblythe"
   
 3.  Configure the second installation that will host Report Manager:  
   
-    1.  Start the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool.  
+    1.  Start the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Configuration tool.  
   
     2.  Click **Report Manager URL** to enter a virtual directory name for Report Manager.  
   
@@ -135,7 +135,7 @@ manager: "mblythe"
  For more information about turning off features, see [Turn Reporting Services Features On or Off](../../2014/reporting-services/turn-reporting-services-features-on-or-off.md).  
   
 ##  <a name="ModifyTitle"></a> Customize Styles or Application Title  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] does not support customization of the Report Manager style sheets. However, if you have expertise in Web development, you can modify the styles at your own risk. For more information about which files contain style information, see [Customize Style Sheets for HTML Viewer and Report Manager](../../2014/reporting-services/customize-style-sheets-for-html-viewer-and-report-manager.md).  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] does not support customization of the Report Manager style sheets. However, if you have expertise in Web development, you can modify the styles at your own risk. For more information about which files contain style information, see [Customize Style Sheets for HTML Viewer and Report Manager](../../2014/reporting-services/customize-style-sheets-for-html-viewer-and-report-manager.md).  
   
  Report Manager has an application title that appears at the top of the page. By default, the title is **SQL Server Reporting Services**. This title can be customized. To change the title, use the Site Settings page in Report Manager. To modify application settings in Report Manager, you must be assigned to the **System Administrator** role to set properties on the Site Settings page. To view the application title, users must be assigned to the **System User** role.  
   
@@ -166,7 +166,7 @@ manager: "mblythe"
   
 4.  Save your changes and close the file.  
   
- For more information about how to modify the configuration file, see [Modify a Reporting Services Configuration File &#40;RSreportserver.config&#41;](../../2014/reporting-services/modify-a-reporting-services-configuration-file-rsreportserver-config.md). For more information about disabling features in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], see [Turn Reporting Services Features On or Off](../../2014/reporting-services/turn-reporting-services-features-on-or-off.md).  
+ For more information about how to modify the configuration file, see [Modify a Reporting Services Configuration File &#40;RSreportserver.config&#41;](../../2014/reporting-services/modify-a-reporting-services-configuration-file-rsreportserver-config.md). For more information about disabling features in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], see [Turn Reporting Services Features On or Off](../../2014/reporting-services/turn-reporting-services-features-on-or-off.md).  
   
 ## See Also  
  [Report Manager  &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   

@@ -21,7 +21,7 @@ manager: "jhubbard"
   This rule checks the max worker threads server option for potentially incorrect settings. Setting the max worker threads option to a small value may prevent enough threads from servicing incoming client requests in a timely manner and could lead to "thread starvation". However, setting the option to a large value can waste address space, because each active thread consumes 512 KB on 32-bit servers and up to 4 MB on 64-bit servers.  
   
 ## Best Practices Recommendations  
- Set the max worker threads option to 0. This enables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to automatically determine the correct number of active worker threads based on user requests.  
+ Set the max worker threads option to 0. This enables [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to automatically determine the correct number of active worker threads based on user requests.  
   
 ## For More Information  
  [Configure the max worker threads Server Configuration Option](../../2014/database-engine/configure-the-max-worker-threads-server-configuration-option.md)  

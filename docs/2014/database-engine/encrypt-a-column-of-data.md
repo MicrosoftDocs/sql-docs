@@ -15,11 +15,11 @@ helpviewer_keywords:
 ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
 caps.latest.revision: 25
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Encrypt a Column of Data
-  This topic describes how to encrypt a column of data by using symmetric encryption in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] using [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  This topic describes how to encrypt a column of data by using symmetric encryption in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] using [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -48,7 +48,7 @@ manager: "jhubbard"
   
 #### To encrypt a column of data using a simple symmetric encryption  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -111,7 +111,7 @@ manager: "jhubbard"
   
 #### To encrypt a column of data using symmetric encryption that includes an authenticator  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -174,12 +174,12 @@ manager: "jhubbard"
   
  For more information, see the following:  
   
--   [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../Topic/CREATE%20CERTIFICATE%20\(Transact-SQL\).md)  
+-   [CREATE CERTIFICATE &#40;Transact-SQL&#41;](~/t-sql/statements/create-certificate-transact-sql.md)  
   
--   [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../Topic/CREATE%20SYMMETRIC%20KEY%20\(Transact-SQL\).md)  
+-   [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](~/t-sql/statements/create-symmetric-key-transact-sql.md)  
   
--   [ALTER TABLE &#40;Transact-SQL&#41;](../Topic/ALTER%20TABLE%20\(Transact-SQL\).md)  
+-   [ALTER TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-table-transact-sql.md)  
   
--   [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../Topic/OPEN%20SYMMETRIC%20KEY%20\(Transact-SQL\).md)  
+-   [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](~/t-sql/statements/open-symmetric-key-transact-sql.md)  
   
   

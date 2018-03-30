@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 01da29ee-bf67-433f-8148-587a7e8d1d76
 caps.latest.revision: 10
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_10532
@@ -38,7 +38,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Plan Guides](../../2014/database-engine/plan-guides.md)   
- [sp_create_plan_guide &#40;Transact-SQL&#41;](../Topic/sp_create_plan_guide%20\(Transact-SQL\).md)   
- [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](../Topic/sp_create_plan_guide_from_handle%20\(Transact-SQL\).md)  
+ [sp_create_plan_guide &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
+ [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)  
   
   

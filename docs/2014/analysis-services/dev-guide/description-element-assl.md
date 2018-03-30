@@ -58,9 +58,9 @@ manager: "mblythe"
 ## Remarks  
  The value of a `Description` element has the following restrictions:  
   
--   The value cannot contain leading or trailing spaces. If leading or trailing spaces are included in the value of a `Description` element, those spaces will be implicitly removed by [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+-   The value cannot contain leading or trailing spaces. If leading or trailing spaces are included in the value of a `Description` element, those spaces will be implicitly removed by [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
--   The value cannot contain control characters. If control characters are included in the value of a `Description` element, those characters will be implicitly removed by [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+-   The value cannot contain control characters. If control characters are included in the value of a `Description` element, those characters will be implicitly removed by [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ## See Also  
  [Name Element &#40;ASSL&#41;](../../../2014/analysis-services/dev-guide/name-element-assl.md)   

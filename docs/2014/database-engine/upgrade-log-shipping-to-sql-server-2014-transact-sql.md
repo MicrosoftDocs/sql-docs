@@ -18,10 +18,10 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Upgrade Log Shipping to SQL Server 2014 (Transact-SQL)
-  It is possible to preserve log shipping configurations when upgrading from [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], or [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. This topic describes alternative scenarios and best practices for upgrading a log shipping configuration.  
+  It is possible to preserve log shipping configurations when upgrading from [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)], or [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] to [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. This topic describes alternative scenarios and best practices for upgrading a log shipping configuration.  
   
 > [!NOTE]  
->  [Backup compression](../../2014/database-engine/backup-compression-sql-server.md) was introduced in [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]. An upgraded log shipping configuration uses the **backup compression default** server-level configuration option to control whether backup compression is used for the transaction log backup files. The backup compression behavior of log backups can be specified for each log shipping configuration. For more information, see [Configure Log Shipping &#40;SQL Server&#41;](../../2014/database-engine/configure-log-shipping-sql-server.md).  
+>  [Backup compression](../../2014/database-engine/backup-compression-sql-server.md) was introduced in [!INCLUDE[ssEnterpriseEd10](../includes/ssenterpriseed10-md.md)]. An upgraded log shipping configuration uses the **backup compression default** server-level configuration option to control whether backup compression is used for the transaction log backup files. The backup compression behavior of log backups can be specified for each log shipping configuration. For more information, see [Configure Log Shipping &#40;SQL Server&#41;](../../2014/database-engine/configure-log-shipping-sql-server.md).  
   
   
 ##  <a name="ProtectData"></a> Protect Your Data Before the Upgrade  
@@ -33,12 +33,12 @@ manager: "jhubbard"
   
      For more information, see [Create a Full Database Backup &#40;SQL Server&#41;](../../2014/database-engine/create-a-full-database-backup-sql-server.md).  
   
-2.  Run the [DBCC CHECKDB](../Topic/DBCC%20CHECKDB%20\(Transact-SQL\).md) command on every primary database.  
+2.  Run the [DBCC CHECKDB](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) command on every primary database.  
   
 ##  <a name="UpgradeMonitor"></a> Upgrading the Monitor Server Instance  
  The monitor server instance, if any, can be upgraded at any time.  
   
- While the monitor server is being upgraded, the log shipping configuration continues to work, but its status is not recorded in the tables on the monitor. Any alerts that have been configured will not be triggered while the monitor server is being upgraded. After the upgrade, you can update the information in the monitor tables by executing the [sp_refresh_log_shipping_monitor](../Topic/sp_refresh_log_shipping_monitor%20\(Transact-SQL\).md) system stored procedure.  
+ While the monitor server is being upgraded, the log shipping configuration continues to work, but its status is not recorded in the tables on the monitor. Any alerts that have been configured will not be triggered while the monitor server is being upgraded. After the upgrade, you can update the information in the monitor tables by executing the [sp_refresh_log_shipping_monitor](~/relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md) system stored procedure.  
   
 ##  <a name="UpgradeSingleSecondary"></a> Upgrading Log Shipping Configurations with a Single Secondary Server  
  The upgrade process described in this section assumes a configuration consisting of the primary server and only one secondary server. This configuration is represented in the following illustration, which shows a primary server instance, A, and a single secondary server instance, B.  
@@ -49,24 +49,24 @@ manager: "jhubbard"
  
   
 ###  <a name="UpgradeSecondary"></a> Upgrading the Secondary Server Instance  
- The upgrade process involves upgrading the secondary server instances of a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or higher log shipping configuration to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] before upgrading the primary server instance. Always upgrade the secondary server instance first. If the primary server were upgraded before a secondary server, log shipping would fail because a backup created on a newer version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot be restored on an older version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ The upgrade process involves upgrading the secondary server instances of a [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] or higher log shipping configuration to [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] before upgrading the primary server instance. Always upgrade the secondary server instance first. If the primary server were upgraded before a secondary server, log shipping would fail because a backup created on a newer version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cannot be restored on an older version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- Log shipping continues throughout the upgrade process because the upgraded secondary servers continue to restore the log backups from the [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or higher primary server. The process for upgrading the secondary server instances depends partly on whether the log shipping configuration possesses multiple secondary servers. For more information, see [Upgrading Multiple Secondary Server Instances](#MultipleSecondaries), later in this topic.  
+ Log shipping continues throughout the upgrade process because the upgraded secondary servers continue to restore the log backups from the [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] or higher primary server. The process for upgrading the secondary server instances depends partly on whether the log shipping configuration possesses multiple secondary servers. For more information, see [Upgrading Multiple Secondary Server Instances](#MultipleSecondaries), later in this topic.  
   
  While the secondary server instance is being upgraded, the log shipping copy and restore jobs do not run, so unrestored transaction log backups will accumulate. The amount of accumulation depends on the frequency of scheduled backup on the primary server. Also, if a separate monitor server has been configured, alerts might be raised indicating restores have not been performed for longer than the configured interval.  
   
  Once the secondary server has been upgraded, the log shipping agents jobs resume and continue to copy and restore log backups from the primary server instance, server A. The amount of time required for the secondary server to bring the secondary database up to date varies, depending on the time taken to upgrade the secondary server and the frequency of the backups on the primary server.  
   
 > [!NOTE]  
->  During the server upgrade, the secondary database is not upgraded to a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] database. It will get upgraded only if it is brought online.  
+>  During the server upgrade, the secondary database is not upgraded to a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] database. It will get upgraded only if it is brought online.  
   
 > [!IMPORTANT]  
->  The RESTORE WITH STANDBY option is not supported for a database that requires upgrading. If an upgraded secondary database has been configured by using RESTORE WITH STANDBY, transaction logs can no longer be restored after upgrade. To resume log shipping on that secondary database, you will need to set up log shipping again on that standby server. For more information about the STANDBY option, see [RESTORE Arguments &#40;Transact-SQL&#41;](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md).  
+>  The RESTORE WITH STANDBY option is not supported for a database that requires upgrading. If an upgraded secondary database has been configured by using RESTORE WITH STANDBY, transaction logs can no longer be restored after upgrade. To resume log shipping on that secondary database, you will need to set up log shipping again on that standby server. For more information about the STANDBY option, see [RESTORE Arguments &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
 ###  <a name="UpgradePrimary"></a> Upgrading the Primary Server Instance  
  When planning an upgrade, a significant consideration is the amount of time that your database will be unavailable. The simplest upgrade scenario involves the database being unavailable while you upgrade the primary server (scenario 1, below).  
   
- At the cost of a more complicated upgrade process, you can maximize your database availability by failing over the [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or higher primary server to a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] secondary server before upgrading the original primary server (scenario 2, below). There are two variants of the failover scenario. You can switch back to the original primary server and keep the original log shipping configuration. Alternatively, you can remove the original log shipping configuration before upgrading the original primary server and later create a new configuration using the new primary server. This section describes both these scenarios.  
+ At the cost of a more complicated upgrade process, you can maximize your database availability by failing over the [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] or higher primary server to a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] secondary server before upgrading the original primary server (scenario 2, below). There are two variants of the failover scenario. You can switch back to the original primary server and keep the original log shipping configuration. Alternatively, you can remove the original log shipping configuration before upgrading the original primary server and later create a new configuration using the new primary server. This section describes both these scenarios.  
   
 > [!IMPORTANT]  
 >  Be sure to upgrade the secondary server instance before upgrading the primary server instance. For more information, see [Upgrading the Secondary Server Instance](#UpgradeSecondary), earlier in this topic.  
@@ -80,7 +80,7 @@ manager: "jhubbard"
 #### Scenario 2: Upgrade Primary Server Instance with Failover  
  This scenario maximizes availability and minimizes downtime. It utilizes a controlled failover to the secondary server instance, which keeps the database available while the original primary server instance is upgraded. Downtime is limited to the relatively short time required to fail over, rather than the time required to upgrade the primary server instance.  
   
- Upgrading the primary server instance with failover involves three general procedures: performing a controlled failover to the secondary server, upgrading the original primary server instance to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], and setting up log shipping on a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] primary server instance. These procedures are described in this section.  
+ Upgrading the primary server instance with failover involves three general procedures: performing a controlled failover to the secondary server, upgrading the original primary server instance to [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], and setting up log shipping on a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] primary server instance. These procedures are described in this section.  
   
 > [!IMPORTANT]  
 >  If you plan to have the secondary server instance as the new primary server instance, you need to remove the log shipping configuration. Log shipping will need to be reconfigured from the new primary to the new secondary, after the original primary server instance has been upgraded. For more information, see [Remove Log Shipping &#40;SQL Server&#41;](../../2014/database-engine/remove-log-shipping-sql-server.md).  
@@ -104,13 +104,13 @@ manager: "jhubbard"
   
 2.  On the secondary server:  
   
-    1.  Ensure that all backups taken automatically by the log shipping backup jobs have been applied. To check which backup jobs have been applied, use the [sp_help_log_shipping_monitor](../Topic/sp_help_log_shipping_monitor%20\(Transact-SQL\).md) system stored procedure on the monitor server or on the primary and secondary servers. The same file should be listed in the **last_backup_file**, **last_copied_file**, and **last_restored_file** columns. If any of the backup files have not been copied and restored, manually invoke the agent copy and restore jobs for the log shipping configuration.  
+    1.  Ensure that all backups taken automatically by the log shipping backup jobs have been applied. To check which backup jobs have been applied, use the [sp_help_log_shipping_monitor](~/relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-transact-sql.md) system stored procedure on the monitor server or on the primary and secondary servers. The same file should be listed in the **last_backup_file**, **last_copied_file**, and **last_restored_file** columns. If any of the backup files have not been copied and restored, manually invoke the agent copy and restore jobs for the log shipping configuration.  
   
          For information about starting a job, see [Start a Job](../../2014/database-engine/start-a-job.md).  
   
     2.  Copy your the final log backup file that you created in step 1 from the file share to the local location that is used by log shipping on the secondary server.  
   
-    3.  Restore the final log backup specifying WITH RECOVERY to bring the database online. As part of being brought online, the database will upgraded to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+    3.  Restore the final log backup specifying WITH RECOVERY to bring the database online. As part of being brought online, the database will upgraded to [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
          The following example restores the tail log backup of the `AdventureWorks` database on the secondary database. The example uses the WITH RECOVERY option, which brings the database online:  
   
@@ -128,13 +128,13 @@ manager: "jhubbard"
   
     5.  Take care that the transaction log of the secondary database does not fill while the database is online. To prevent the transaction log from filling, you might need to back it up. If so, we recommend that you back it up to a shared location, a *backup share*, to make the backups available for restoring on the other server instance.  
   
-#####  <a name="Procedure2 "></a> Procedure 2: Upgrade the Original Primary Server Instance to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
- After you upgrade the original primary server instance to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], the database will still be offline and in the format.  
+#####  <a name="Procedure2 "></a> Procedure 2: Upgrade the Original Primary Server Instance to [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
+ After you upgrade the original primary server instance to [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], the database will still be offline and in the format.  
   
-#####  <a name="Procedure3"></a> Procedure 3: Set Up Log Shipping on [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+#####  <a name="Procedure3"></a> Procedure 3: Set Up Log Shipping on [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
  The rest of the upgrade process depends on whether log shipping is still configured, as follows:  
   
--   If you have kept the [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]or higher log shipping configuration, switch back to the original primary server instance. For more information, see [To Switch Back to the Original Primary Server Instance](#SwitchToOrigPrimary), later in this section.  
+-   If you have kept the [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]or higher log shipping configuration, switch back to the original primary server instance. For more information, see [To Switch Back to the Original Primary Server Instance](#SwitchToOrigPrimary), later in this section.  
   
 -   If you removed the log shipping configuration before failing over, create a new log shipping configuration in which the original secondary server instance is the new primary server instance. For more information, see [To Keep the Old Secondary Server Instance As the New Primary Server Instance](#KeepOldSecondaryAsNewPrimary), later in this section.  
   
@@ -149,7 +149,7 @@ manager: "jhubbard"
     GO  
     ```  
   
-2.  If any transaction log backups were taken on the interim primary database, other than the tail backup that you created in step 1, restore those log backups using WITH NORECOVERY to the offline database on the original primary server (server A). The database is upgraded to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] format when the first log backup is restored.  
+2.  If any transaction log backups were taken on the interim primary database, other than the tail backup that you created in step 1, restore those log backups using WITH NORECOVERY to the offline database on the original primary server (server A). The database is upgraded to [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] format when the first log backup is restored.  
   
 3.  Restore the tail-log backup, `Switchback_AW_20080315.trn`, on the original primary database (on server A) using WITH RECOVERY to bring the database online.  
   
@@ -167,12 +167,12 @@ manager: "jhubbard"
   
 2.  Back up the log from the new primary database (on server B).  
   
-3.  Restore the log backups to the new secondary server instance (server A) using WITH NORECOVERY. The first restore operation updates the database to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+3.  Restore the log backups to the new secondary server instance (server A) using WITH NORECOVERY. The first restore operation updates the database to [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
 4.  Configure log shipping with the former secondary server (server B) as the primary server instance.  
   
     > [!IMPORTANT]  
-    >  If you use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], specify that the secondary database is already initialized.  
+    >  If you use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], specify that the secondary database is already initialized.  
   
      For more information, see [Configure Log Shipping &#40;SQL Server&#41;](../../2014/database-engine/configure-log-shipping-sql-server.md).  
   

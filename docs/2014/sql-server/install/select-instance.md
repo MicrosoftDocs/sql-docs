@@ -18,10 +18,10 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Select Instance
-  Use the Select Instance page of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Installation Wizard to specify the instance of [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)], or [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] that you would like to upgrade to [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)].  
+  Use the Select Instance page of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard to specify the instance of [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], or [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] that you would like to upgrade to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
 ## Options  
- Use the radio buttons to specify whether to upgrade the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and its shared components, or to upgrade only the shared components. Shared components in this [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] release are the following:  
+ Use the radio buttons to specify whether to upgrade the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and its shared components, or to upgrade only the shared components. Shared components in this [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] release are the following:  
   
 -   Management Tools – Basic  
   
@@ -33,13 +33,13 @@ manager: "jhubbard"
   
 -   Client Tools SDK  
   
--   [!INCLUDE[ssDQSClient](../../../includes/ssdqsclient-md.md)]  
+-   [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]  
   
--   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]  
+-   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
   
--   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] - SharePoint  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] - SharePoint  
   
--   [!INCLUDE[ssMDSshort](../../../includes/ssmdsshort-md.md)]  
+-   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]  
   
  For more information about supported upgrade scenarios and upgrade known issues, see [Supported Version and Edition Upgrades](../../../2014/sql-server/install/supported-version-and-edition-upgrades.md).  
   

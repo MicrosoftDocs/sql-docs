@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 5e83c617-4aa2-4755-bcc5-a798c46b97e4
 caps.latest.revision: 18
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_5228
@@ -36,7 +36,7 @@ manager: "jhubbard"
 ## User Action  
   
 ### Look for Hardware Failure  
- Run hardware diagnostics and correct any problems. Also examine the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows system and application logs and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log to see whether the error occurred as the result of hardware failure. Fix any hardware-related problems that are contained in the logs.  
+ Run hardware diagnostics and correct any problems. Also examine the [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows system and application logs and the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] error log to see whether the error occurred as the result of hardware failure. Fix any hardware-related problems that are contained in the logs.  
   
  If you have persistent data corruption problems, try to swap out different hardware components to isolate the problem. Check to make sure that the system does not have write-caching enabled on the disk controller. If you suspect write-caching to be the problem, contact your hardware vendor.  
   
@@ -57,6 +57,6 @@ manager: "jhubbard"
  Running REPAIR will cause the specified index and all its dependent indexes to be rebuilt.  
   
 ## See Also  
- [DBCC CHECKDB &#40;Transact-SQL&#41;](../Topic/DBCC%20CHECKDB%20\(Transact-SQL\).md)  
+ [DBCC CHECKDB &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
   
   

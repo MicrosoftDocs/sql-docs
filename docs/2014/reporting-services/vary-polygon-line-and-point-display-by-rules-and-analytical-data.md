@@ -22,7 +22,7 @@ f1_keywords:
 ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
 caps.latest.revision: 13
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Vary Polygon, Line, and Point Display by Rules and Analytical Data (Report Builder and SSRS)
@@ -39,7 +39,7 @@ manager: "mblythe"
  In addition to controlling the display of map elements on a layer, you can control the layer transparency to allow layers that are drawn earlier to show through layers that are drawn later. For more information about changing options that affect the map or the entire map layer, see [Customize the Data and Display of a Map or Map Layer &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ##  <a name="Rules"></a> Understanding Rules  
  You can set four types of rules that enable the report processor to automatically adjust display properties for map elements on a layer. Rules vary depending on the map element type: polygons, lines, or points.  

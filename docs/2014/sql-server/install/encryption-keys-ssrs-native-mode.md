@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: cc7e6f84-80e1-4b5e-9409-d0e074edd147
 caps.latest.revision: 7
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "jhubbard"
 ---
 # Encryption Keys (SSRS Native Mode)
@@ -22,16 +22,16 @@ manager: "jhubbard"
   
 -   Changing the service account for the Report Server service.  
   
--   Migrating a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] installation to a different computer.  
+-   Migrating a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation to a different computer.  
   
 -   Configuring a new report server instance to share or use an existing report server database.  
   
- [!INCLUDE[applies](../../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Native mode.  
+ [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode.  
   
 > [!IMPORTANT]  
 >  Periodically changing the Reporting Services encryption key is a security best practice. A recommended time to change the key is immediately following a major version upgrade of Reporting Services. Changing the key after an upgrade minimizes additional service interruption caused by changing the Reporting Services encryption key outside of the upgrade cycle.  
   
- Restoring the symmetric key is necessary if you updated the user account of the Report Server service (and you used a tool other than the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Configuration Manager to change the account), or if you are migrating a report server installation to a new server.  
+ Restoring the symmetric key is necessary if you updated the user account of the Report Server service (and you used a tool other than the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager to change the account), or if you are migrating a report server installation to a new server.  
   
  To protect the symmetric key from unauthorized access, the symmetric key is encrypted using the private key of the Report Server service. Only the Report Server service is able to unlock and use the symmetric key to store sensitive data in the report server database. If you change the identity of the Report Server service, or if you migrate the report server to a new computer, the private key of the Report Server service will no longer be able to unlock the symmetric key. To restore access to the symmetric key, re-encrypt the symmetric key using the private key of the new Report Server service identity. Restoring the symmetric key is the process by which the re-encryption occurs.  
   
@@ -40,7 +40,7 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  The action of deleting and recreating the symmetric key cannot be reversed or undone. Deleting or recreating the key can have important ramifications on your current installation. If you delete the key, any existing data encrypted by the symmetric key will also deleted. Deleted data includes connection strings to external report data sources, stored connection strings, and some subscription information.  
   
- To open this page, start the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Configuration Manager and select the link in the navigation pane. For more information, see [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ To open this page, start the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager and select the link in the navigation pane. For more information, see [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## Options  
  **Backup**  

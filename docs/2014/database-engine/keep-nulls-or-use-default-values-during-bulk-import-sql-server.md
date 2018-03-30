@@ -37,7 +37,7 @@ manager: "jhubbard"
  To run the examples in this topic, you need to create a sample table and data file.  
   
 ### Sample Table  
- The examples require that a table named **MyTestDefaultCol2** be created in the **AdventureWorks** sample database under the **dbo** schema. To create this table, in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor, execute:  
+ The examples require that a table named **MyTestDefaultCol2** be created in the **AdventureWorks** sample database under the **dbo** schema. To create this table, in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Query Editor, execute:  
   
 ```  
 USE AdventureWorks;  
@@ -54,7 +54,7 @@ GO
  Notice that the second table column, `Col2`, has a default value.  
   
 ### Sample Format File  
- Some of the bulk-import examples use a non-XML format file, `MyTestDefaultCol2-f-c.Fmt` that corresponds exactly to the `MyTestDefaultCol2` table. To create this format file, at the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows command prompt, enter:  
+ Some of the bulk-import examples use a non-XML format file, `MyTestDefaultCol2-f-c.Fmt` that corresponds exactly to the `MyTestDefaultCol2` table. To create this format file, at the [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows command prompt, enter:  
   
 ```  
 bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.Fmt -t, -r\n -T  
@@ -85,7 +85,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
 > [!NOTE]  
 >  These qualifiers disable checking of DEFAULT definitions on a table by these bulk-import commands. However, for any concurrent INSERT statements, DEFAULT definitions are expected.  
   
- For more information, see [bcp Utility](../../2014/database-engine/bcp-utility.md) and [BULK INSERT &#40;Transact-SQL&#41;](../Topic/BULK%20INSERT%20\(Transact-SQL\).md).  
+ For more information, see [bcp Utility](../../2014/database-engine/bcp-utility.md) and [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md).  
   
 ### Examples  
  The examples in this section bulk import using **bcp** or BULK INSERT and keep null values.  
@@ -106,7 +106,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
 |------------|-----------------|  
 |`-f`|Specifies that the command is using a format file..|  
 |`-k`|Specifies that empty columns should retain a null value during the operation, rather than have any default values for the columns inserted.|  
-|`-T`|Specifies that the bcp utility connects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with a trusted connection.|  
+|`-T`|Specifies that the bcp utility connects to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] with a trusted connection.|  
   
  At the Windows command prompt, enter.  
   
@@ -116,7 +116,7 @@ bcp AdventureWorks..MyTestDefaultCol2 in C:\MyTestEmptyField2-c.Dat -f C:\MyTest
 ```  
   
 #### Using BULK INSERT and Keeping Null Values  
- The following example demonstrates how to use the KEEPNULLS option in a BULK INSERT statement. From a query tool, such as [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor, execute:  
+ The following example demonstrates how to use the KEEPNULLS option in a BULK INSERT statement. From a query tool, such as [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Query Editor, execute:  
   
 ```  
 USE AdventureWorks;  
@@ -140,7 +140,7 @@ GO
 |INSERT ... SELECT * FROM OPENROWSET(BULK...)|WITH(KEEPDEFAULTS)|Table hint|  
   
 > [!NOTE]  
->  for more information, see [INSERT &#40;Transact-SQL&#41;](../Topic/INSERT%20\(Transact-SQL\).md), [SELECT &#40;Transact-SQL&#41;](../Topic/SELECT%20\(Transact-SQL\).md), [OPENROWSET &#40;Transact-SQL&#41;](../Topic/OPENROWSET%20\(Transact-SQL\).md), and [Table Hints &#40;Transact-SQL&#41;](../Topic/Table%20Hints%20\(Transact-SQL\).md)  
+>  for more information, see [INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/insert-transact-sql.md), [SELECT &#40;Transact-SQL&#41;](~/t-sql/queries/select-transact-sql.md), [OPENROWSET &#40;Transact-SQL&#41;](~/t-sql/functions/openrowset-transact-sql.md), and [Table Hints &#40;Transact-SQL&#41;](~/t-sql/queries/hints-transact-sql-table.md)  
   
 ### Examples  
  The following INSERT ... SELECT * FROM OPENROWSET(BULK...) example bulk imports data and keeps the default values.  
@@ -154,7 +154,7 @@ GO
 |`1`|`NULL`|`DataField3`|  
 |`2`|`NULL`|`DataField3`|  
   
- To insert the default value, "`Default value of Col2`", instead of "`NULL`", you need to use KEEPDEFAULTS table hint, as demonstrated in the following example. From a query tool, such as [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor, execute:  
+ To insert the default value, "`Default value of Col2`", instead of "`NULL`", you need to use KEEPDEFAULTS table hint, as demonstrated in the following example. From a query tool, such as [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Query Editor, execute:  
   
 ```  
 USE AdventureWorks;  
@@ -208,10 +208,10 @@ GO
 -   [Specify File Storage Type by Using bcp &#40;SQL Server&#41;](../../2014/database-engine/specify-file-storage-type-by-using-bcp-sql-server.md)  
   
 ## See Also  
- [BACKUP &#40;Transact-SQL&#41;](../Topic/BACKUP%20\(Transact-SQL\).md)   
- [OPENROWSET &#40;Transact-SQL&#41;](../Topic/OPENROWSET%20\(Transact-SQL\).md)   
+ [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)   
+ [OPENROWSET &#40;Transact-SQL&#41;](~/t-sql/functions/openrowset-transact-sql.md)   
  [bcp Utility](../../2014/database-engine/bcp-utility.md)   
- [BULK INSERT &#40;Transact-SQL&#41;](../Topic/BULK%20INSERT%20\(Transact-SQL\).md)   
- [Table Hints &#40;Transact-SQL&#41;](../Topic/Table%20Hints%20\(Transact-SQL\).md)  
+ [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md)   
+ [Table Hints &#40;Transact-SQL&#41;](~/t-sql/queries/hints-transact-sql-table.md)  
   
   

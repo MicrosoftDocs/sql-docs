@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 52613d52-fc78-4870-93f0-7d393ab9c335
 caps.latest.revision: 21
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # rsInternalError - Reporting Services Error
@@ -23,10 +23,10 @@ manager: "mblythe"
   
 |||  
 |-|-|  
-|Product Name|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|Product Name|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|  
 |Event ID|rsInternalError|  
 |Event Source|Microsoft.ReportingServices.Diagnostics.Utilities.ErrorStrings|  
-|Component|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
+|Component|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|  
 |Message Text|An internal error occurred on the report server. See the error log for more details.|  
   
 ## Explanation  

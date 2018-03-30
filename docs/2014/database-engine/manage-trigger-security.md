@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: e94720a8-a3a2-4364-b0a3-bbe86e3ce4d5
 caps.latest.revision: 18
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Manage Trigger Security
@@ -37,7 +37,7 @@ manager: "jhubbard"
 ## Trigger Security Best Practices  
  You can take the following measures to prevent trigger code from executing under escalated privileges:  
   
--   Be aware of the DML and DDL triggers that exist in the database and on the server instance by querying the [sys.triggers](../Topic/sys.triggers%20\(Transact-SQL\).md) and [sys.server_triggers](../Topic/sys.server_triggers%20\(Transact-SQL\).md) catalog views. The following query returns all DML and database-level DDL triggers in the current database, and all server-level DDL triggers on the server instance:  
+-   Be aware of the DML and DDL triggers that exist in the database and on the server instance by querying the [sys.triggers](~/relational-databases/system-catalog-views/sys-triggers-transact-sql.md) and [sys.server_triggers](~/relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md) catalog views. The following query returns all DML and database-level DDL triggers in the current database, and all server-level DDL triggers on the server instance:  
   
     ```  
     SELECT type, name, parent_class_desc FROM sys.triggers  
@@ -45,7 +45,7 @@ manager: "jhubbard"
     SELECT type, name, parent_class_desc FROM sys.server_triggers ;  
     ```  
   
--   Use [DISABLE TRIGGER](../Topic/DISABLE%20TRIGGER%20\(Transact-SQL\).md) to disable triggers that can harm the integrity of the database or server if the triggers execute under escalated privileges. The following statement disables all database-level DDL triggers in the current database:  
+-   Use [DISABLE TRIGGER](~/t-sql/statements/disable-trigger-transact-sql.md) to disable triggers that can harm the integrity of the database or server if the triggers execute under escalated privileges. The following statement disables all database-level DDL triggers in the current database:  
   
     ```  
     DISABLE TRIGGER ALL ON DATABASE  
@@ -91,7 +91,7 @@ manager: "jhubbard"
     ```  
   
 ## See Also  
- [CREATE TRIGGER &#40;Transact-SQL&#41;](../Topic/CREATE%20TRIGGER%20\(Transact-SQL\).md)   
+ [CREATE TRIGGER &#40;Transact-SQL&#41;](~/t-sql/statements/create-trigger-transact-sql.md)   
  [DML Triggers](../../2014/database-engine/dml-triggers.md)   
  [DDL Triggers](../../2014/database-engine/ddl-triggers.md)  
   

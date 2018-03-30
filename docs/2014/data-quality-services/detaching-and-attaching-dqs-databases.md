@@ -27,7 +27,7 @@ manager: "jhubbard"
   
 -   Ensure that there are no running activities or processes in DQS. This can be verified using the **Activity Monitoring** screen. For detailed information about working in this screen, see [Monitor DQS Activities](../../2014/data-quality-services/monitor-dqs-activities.md).  
   
--   Ensure that there are no users logged on the [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)].  
+-   Ensure that there are no users logged on the [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)].  
   
 ###  <a name="Security"></a> Security  
   
@@ -55,7 +55,7 @@ manager: "jhubbard"
  You can also detach DQS databases using the Transact-SQL statements by using the sp_detach_db stored procedure. For more information about detaching databases using Transact-SQL statements, see [Using Transact-SQL](../../2014/database-engine/detach-a-database.md#TsqlProcedure) in [Detach a Database](../../2014/database-engine/detach-a-database.md).  
   
 ##  <a name="Attach"></a> Attach DQS Databases  
- Use the following instructions to attach a DQS database to the same SQL Server instance (from where you detached) or a different SQL Server instance where [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] is installed.  
+ Use the following instructions to attach a DQS database to the same SQL Server instance (from where you detached) or a different SQL Server instance where [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] is installed.  
   
 1.  Start Microsoft SQL Server Management Studio, and connect to the appropriate SQL Server instance.  
   

@@ -18,7 +18,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Specify an Interval of Change Data
-  In the control flow of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package that performs an incremental load of change data, the first task is to calculate the endpoints of the change interval. These endpoints are `datetime` values and will be stored in package variables for use later in the package.  
+  In the control flow of an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package that performs an incremental load of change data, the first task is to calculate the endpoints of the change interval. These endpoints are `datetime` values and will be stored in package variables for use later in the package.  
   
 > [!NOTE]  
 >  For a description of the overall process of designing the control flow, see [Change Data Capture &#40;SSIS&#41;](../../2014/integration-services/change-data-capture-ssis.md).  
@@ -28,7 +28,7 @@ manager: "jhubbard"
   
 #### To set up package variables  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open a new [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open a new [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project.  
   
 2.  In the **Variables** window, create the following variables:  
   
@@ -43,9 +43,9 @@ manager: "jhubbard"
  If you calculate the endpoints in a master package that executes multiple child packages, you can use Parent Package Variable configurations to pass the values of these variables to each child package. For more information, see [Execute Package Task](../../2014/integration-services/execute-package-task.md) and [Use the Values of Variables and Parameters in a Child Package](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md).  
   
 ## Calculate a Starting Point and an Ending Point for Change Data  
- After you set up the package variables for the interval endpoints, you can calculate the actual values for those endpoints and map those values to the corresponding package variables. Because those endpoints are `datetime` values, you will have to use functions that can calculate or work with `datetime` values. Both the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] expression language and Transact-SQL have functions that work with `datetime` values:  
+ After you set up the package variables for the interval endpoints, you can calculate the actual values for those endpoints and map those values to the corresponding package variables. Because those endpoints are `datetime` values, you will have to use functions that can calculate or work with `datetime` values. Both the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] expression language and Transact-SQL have functions that work with `datetime` values:  
   
- Functions in the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] expression language that work with `datetime` values  
+ Functions in the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] expression language that work with `datetime` values  
  -   [DATEADD &#40;SSIS Expression&#41;](../../2014/integration-services/dateadd-ssis-expression.md)  
   
 -   [DATEDIFF &#40;SSIS Expression&#41;](../../2014/integration-services/datediff-ssis-expression.md)  
@@ -63,21 +63,21 @@ manager: "jhubbard"
 -   [YEAR &#40;SSIS Expression&#41;](../../2014/integration-services/year-ssis-expression.md)  
   
  Functions in Transact-SQL that work with `datetime` values  
- [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../Topic/Date%20and%20Time%20Data%20Types%20and%20Functions%20\(Transact-SQL\).md).  
+ [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](~/t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
  Before you use any one of these `datetime` functions to calculate the endpoints, you have to determine whether the interval is fixed and occurs on a regular schedule. Typically, you want to apply changes that have occurred in source tables to destination tables on a regular schedule. For example, you might want to apply those changes on an hourly, daily, or weekly basis.  
   
  After you understand whether your change interval is fixed or is more random, you can calculate the endpoints:  
   
--   **Calculating the starting date and time**. You use the ending date and time from the previous load as the current starting date and time. If you use a fixed interval for incremental loads, you can calculate this value by using the `datetime` functions of Transact-SQL or of the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] expression language. Otherwise, you might have to persist the endpoints between executions, and use an Execute SQL task or a Script task to load the previous endpoint.  
+-   **Calculating the starting date and time**. You use the ending date and time from the previous load as the current starting date and time. If you use a fixed interval for incremental loads, you can calculate this value by using the `datetime` functions of Transact-SQL or of the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] expression language. Otherwise, you might have to persist the endpoints between executions, and use an Execute SQL task or a Script task to load the previous endpoint.  
   
--   **Calculating the ending date and time**. If you use a fixed interval for incremental loads, calculate the current ending date and time as an offset from the starting date and time. Again, you can calculate this value by using the `datetime` functions of Transact-SQL or of the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] expression language.  
+-   **Calculating the ending date and time**. If you use a fixed interval for incremental loads, calculate the current ending date and time as an offset from the starting date and time. Again, you can calculate this value by using the `datetime` functions of Transact-SQL or of the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] expression language.  
   
  In the following procedure, the change interval uses a fixed interval and assumes that the incremental load package is run daily without exception. Otherwise, change data for missed intervals would be lost. The starting point for the interval is midnight the day before yesterday, that is, between 24 and 48 hours ago. The ending point for the interval is midnight yesterday, that is, the previous night, between 0 and 24 hours ago.  
   
 #### To calculate the starting point and ending point for the capture interval  
   
-1.  On the **Control Flow** tab of [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, add an Execute SQL Task to the package.  
+1.  On the **Control Flow** tab of [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, add an Execute SQL Task to the package.  
   
 2.  Open the **Execute SQL Task Editor**, and on the **General** page of the editor, select the following options:  
   
@@ -98,7 +98,7 @@ manager: "jhubbard"
 3.  On the **Result Set** page of the **Execute SQL Task Editor**, map the ExtractStartTime result to the ExtractStartTime package variable, and map the ExtractEndTime result to the ExtractEndTime package variable.  
   
     > [!NOTE]  
-    >  When you use an expression to set the value of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] variable, the expression is evaluated every time that that the value of the variable is accessed.  
+    >  When you use an expression to set the value of an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] variable, the expression is evaluated every time that that the value of the variable is accessed.  
   
 ## Next Step  
  After you calculate the starting point and ending point for a range of changes, the next step is to determine whether the change data is ready.  

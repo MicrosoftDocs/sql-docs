@@ -12,11 +12,11 @@ ms.topic: "article"
 ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
 caps.latest.revision: 4
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Generate Scripts (SQL Server Management Studio)
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] provides two mechanisms for generating [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts. You can create scripts for multiple objects by using the **Generate and Publish Scripts Wizard.**. You can also generate a script for individual objects or multiple objects by using the **Script as** menu in **Object Explorer**.  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] provides two mechanisms for generating [!INCLUDE[tsql](../includes/tsql-md.md)] scripts. You can create scripts for multiple objects by using the **Generate and Publish Scripts Wizard.**. You can also generate a script for individual objects or multiple objects by using the **Script as** menu in **Object Explorer**.  
   
 1.  **Choose a method:**  [Generate and Publish Scripts Wizard](#GenPubScriptWiz), [Object Explorer Script As Menu](#OEScriptAsMenu)  
   
@@ -26,7 +26,7 @@ manager: "jhubbard"
  Choose the mechanism that best meets your requirements.  
   
 ###  <a name="GenPubScriptWiz"></a> Generate and Publish Scripts Wizard  
- Use the **Generate and Publish Scripts Wizard** to create a [!INCLUDE[tsql](../../includes/tsql-md.md)] script for many objects. The wizard generates a script of all the objects in a database, or a subset of the objects that you select. The wizard has many options for your scripts, such as whether to include permissions, collation, constraints, and so on. For instructions on using the wizard, see [Generate and Publish Scripts Wizard](../../2014/database-engine/generate-and-publish-scripts-wizard.md).  
+ Use the **Generate and Publish Scripts Wizard** to create a [!INCLUDE[tsql](../includes/tsql-md.md)] script for many objects. The wizard generates a script of all the objects in a database, or a subset of the objects that you select. The wizard has many options for your scripts, such as whether to include permissions, collation, constraints, and so on. For instructions on using the wizard, see [Generate and Publish Scripts Wizard](../../2014/database-engine/generate-and-publish-scripts-wizard.md).  
   
 ###  <a name="OEScriptAsMenu"></a> Object Explorer Script As Menu  
  You can use the **Object Explorer Script as** menu to script a single object, script multiple objects, or script multible statements for a single objects. You can choose one of several types of scripts; for example to create, alter, or drop the object. You can save the script in a Query Editor window, to a file, or to the Clipboard. The script is created in Unicode format.  
@@ -34,7 +34,7 @@ manager: "jhubbard"
 ##  <a name="ScriptSingleObject"></a> To generate a script of a single object  
  **To script a single object**  
   
-1.  In Object Explorer, connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and then expand that instance.  
+1.  In Object Explorer, connect to an instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] and then expand that instance.  
   
 2.  Expand **Databases**, and then expand the database containing the object to be scripted.  
   
@@ -51,7 +51,7 @@ manager: "jhubbard"
   
  Sometimes you may want a script with multiple options, such as drop a procedure and then create a procedure, or create a table and then alter a table. The processes below for generating scripts of multiple objects also work if you need to create a script that references different types of objects, such as tables, views, and stored procedures.  
   
-1.  In Object Explorer, connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and then expand that instance.  
+1.  In Object Explorer, connect to an instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] and then expand that instance.  
   
 2.  Expand **Databases**, and then expand the database containing the objects to be scripted.  
   
@@ -68,7 +68,7 @@ manager: "jhubbard"
   
  You can use the **Object Explorer Details** pane to generate a script for mutliple objects of the same category.  
   
-1.  In Object Explorer, connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and then expand that instance.  
+1.  In Object Explorer, connect to an instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] and then expand that instance.  
   
 2.  Expand **Databases**, and then expand the database containing the objects to be scripted.  
   

@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
 caps.latest.revision: 16
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Lesson 5: Formatting a Report (Reporting Services)
@@ -39,7 +39,7 @@ manager: "mblythe"
   
 4.  In the **Type** box, select **January 31, 2000**.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 6.  Preview the report to see the change to the `[Date]` field and then change back to design view.  
   
@@ -64,7 +64,7 @@ manager: "mblythe"
   
      If the sample text is:**$12,345.00**, then your settings are correct.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 6.  Preview the report to see the change to the `[LineTotal]` field and then change back to design view.  
   

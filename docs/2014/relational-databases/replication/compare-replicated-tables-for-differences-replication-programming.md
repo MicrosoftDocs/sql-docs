@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: cd253a17-0c85-42b4-912c-690169ebe799
 caps.latest.revision: 19
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Compare Replicated Tables for Differences (Replication Programming)
-  Article validation is used to determine if published data for table articles at the Publisher and Subscriber are not identical, which can indicate non-convergence. For more information, see [Validate Replicated Data](../../../2014/relational-databases/replication/validate-replicated-data.md). However, validation only returns pass or fail information and does not provide any information about what is different between the source and destination tables. The **tablediff** command prompt utility returns detailed difference information between two tables and can even generate a [!INCLUDE[tsql](../../../includes/tsql-md.md)] script to bring a subscription into convergence with data at the Publisher.  
+  Article validation is used to determine if published data for table articles at the Publisher and Subscriber are not identical, which can indicate non-convergence. For more information, see [Validate Replicated Data](../../../2014/relational-databases/replication/validate-replicated-data.md). However, validation only returns pass or fail information and does not provide any information about what is different between the source and destination tables. The **tablediff** command prompt utility returns detailed difference information between two tables and can even generate a [!INCLUDE[tsql](../../includes/tsql-md.md)] script to bring a subscription into convergence with data at the Publisher.  
   
 > [!NOTE]  
->  The **tablediff** utility is only supported for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] servers.  
+>  The **tablediff** utility is only supported for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servers.  
   
 ### To compare replicated tables for differences using tablediff  
   
@@ -41,7 +41,7 @@ manager: "jhubbard"
     -   (Optional) **-sourceuser** and **-sourcepassword** when using SQL Server Authentication to connect to the Publisher.  
   
         > [!IMPORTANT]  
-        >  When possible, use Windows Authentication. If you must use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication, prompt users to enter security credentials at runtime. If you must store credentials in a script file, you must secure the file to prevent unauthorized access.  
+        >  When possible, use Windows Authentication. If you must use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, prompt users to enter security credentials at runtime. If you must store credentials in a script file, you must secure the file to prevent unauthorized access.  
   
     -   **-destinationserver** - name of the server on which the data is being compared, usually a Subscriber.  
   
@@ -51,10 +51,10 @@ manager: "jhubbard"
   
     -   (Optional) **-destinationschema** - schema owner of the destination table, if not the default schema.  
   
-    -   (Optional) **-destinationuser** and **-destinationpassword** when using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication to connect to the Subscriber.  
+    -   (Optional) **-destinationuser** and **-destinationpassword** when using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication to connect to the Subscriber.  
   
         > [!IMPORTANT]  
-        >  When possible, use Windows Authentication. If you must use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication, prompt users to enter security credentials at runtime. If you must store credentials in a script file, you must secure the file to prevent unauthorized access.  
+        >  When possible, use Windows Authentication. If you must use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, prompt users to enter security credentials at runtime. If you must store credentials in a script file, you must secure the file to prevent unauthorized access.  
   
     -   (Optional) Use **-c** to do a column-level comparison.  
   
@@ -64,7 +64,7 @@ manager: "jhubbard"
   
     -   (Optional) Specify a table in the subscription database into which to insert results for **-et**. If the table already exists, specify **-dt** to first drop the table.  
   
-    -   (Optional) Use **-f** to generate a [!INCLUDE[tsql](../../../includes/tsql-md.md)] file to fix data at the Subscriber so that it matches data at the Publisher. Use **-df** to specify the number of [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements in each file.  
+    -   (Optional) Use **-f** to generate a [!INCLUDE[tsql](../../includes/tsql-md.md)] file to fix data at the Subscriber so that it matches data at the Publisher. Use **-df** to specify the number of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements in each file.  
   
     -   (Optional) Use **-rc** and **-ri** to specify the number of times to retry an operation and the retry interval.  
   

@@ -29,7 +29,7 @@ manager: "jhubbard"
   
  With the [ServerNetworkProtocolIPAddress Class](../../../2014/database-engine/dev-guide/servernetworkprotocolipaddress-class.md) you can perform the following tasks:  
   
--   Check the name of the instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   Check the name of the instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   Check the IP address name and the protocol name.  
   

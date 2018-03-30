@@ -25,7 +25,7 @@ manager: "jhubbard"
 # Multiple Flat Files Connection Manager
   A Multiple Flat Files connection manager enables a package to access data in multiple flat files. For example, a Flat File source can use a Multiple Flat Files connection manager when the Data Flow task is inside a loop container, such as the For Loop container. On each loop of the container, the Flat File source loads data from the next file name that the Multiple Flat Files connection manager provides.  
   
- When you add a Multiple Flat Files connection manager to a package, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] creates a connection manager that will resolve to a Multiple Flat Files connection at run time, sets the properties on the Multiple Flat Files connection manager, and adds the Multiple Flat Files connection manager to the `Connections` collection of the package.  
+ When you add a Multiple Flat Files connection manager to a package, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] creates a connection manager that will resolve to a Multiple Flat Files connection at run time, sets the properties on the Multiple Flat Files connection manager, and adds the Multiple Flat Files connection manager to the `Connections` collection of the package.  
   
  The `ConnectionManagerType` property of the connection manager is set to `MULTIFLATFILE`.  
   
@@ -56,9 +56,9 @@ manager: "jhubbard"
  If you update column lengths in the Multiple Flat Files connection manager after you have added and configured the Flat File source that uses the connection manager, you do not have to manually resize the output columns in the Flat File source. When you open the **Flat File Source** dialog box, the Flat File source provides an option to synchronize the column metadata.  
   
 ## Configuration of the Multiple Flat Files Connection Manager  
- You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer or programmatically.  
   
- For more information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click one of the following topics:  
+ For more information about the properties that you can set in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click one of the following topics:  
   
 -   [Multiple Flat Files Connection Manager Editor &#40;General Page&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-general-page.md)  
   

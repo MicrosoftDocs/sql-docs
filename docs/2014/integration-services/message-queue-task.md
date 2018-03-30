@@ -23,7 +23,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Message Queue Task
-  The Message Queue task allows you to use Message Queuing (also known as MSMQ) to send and receive messages between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages, or to send messages to an application queue that is processed by a custom application. These messages can take the form of simple text, files, or variables and their values.  
+  The Message Queue task allows you to use Message Queuing (also known as MSMQ) to send and receive messages between [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages, or to send messages to an application queue that is processed by a custom application. These messages can take the form of simple text, files, or variables and their values.  
   
  By using the Message Queue task, you can coordinate operations throughout your enterprise. Messages can be queued and delivered later if the destination is unavailable or busy; for example, the task can queue messages for the offline laptop computer of sales representatives, who receive their messages when they connect to the network. You can use the Message Queue task for the following purposes:  
   
@@ -37,7 +37,7 @@ manager: "jhubbard"
   
  The task uses an MSMQ connection manager to connect to a message queue. For more information, see [MSMQ Connection Manager](../../2014/integration-services/msmq-connection-manager.md). For more information about Message Queuing, see the [MSDN Library](http://go.microsoft.com/fwlink/?LinkId=7022).  
   
- The Message Queue task requires that the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service be installed. Some [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components that you may select for installation on the **Components to Install** page or the **Feature Selection** page of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard install a partial subset of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] components. These components are useful for specific tasks, but the functionality of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] will be limited. For example, the [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] option installs the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] components required to design a package, but the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service is not installed, and therefore the Message Queue task is not functional. To ensure a complete installation of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], you must select [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] on the **Components to Install** page. For more information about installing and running the Message Queue task, see [Install Integration Services](../../2014/sql-server/install/install-integration-services.md).  
+ The Message Queue task requires that the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service be installed. Some [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components that you may select for installation on the **Components to Install** page or the **Feature Selection** page of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Installation Wizard install a partial subset of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] components. These components are useful for specific tasks, but the functionality of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] will be limited. For example, the [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] option installs the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] components required to design a package, but the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service is not installed, and therefore the Message Queue task is not functional. To ensure a complete installation of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], you must select [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] on the **Components to Install** page. For more information about installing and running the Message Queue task, see [Install Integration Services](../../2014/sql-server/install/install-integration-services.md).  
   
 > [!NOTE]  
 >  The Message Queue task fails to comply with Federal Information Processing Standard (FIPS) 140-2 when the computer's operating system is configured in FIPS mode and the task uses encryption. If the Message Queue task does not use encryption, the task can run successfully.  
@@ -84,7 +84,7 @@ manager: "jhubbard"
 |`MSMQTaskTimeOut`|Indicates that the task timed out.|  
   
 ## Configuration of the Message Queue Task  
- You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically. For information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click one of the following topics:  
+ You can set properties through [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer or programmatically. For information about the properties that you can set in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click one of the following topics:  
   
 -   [Message Queue Task Editor &#40;General Page&#41;](../../2014/integration-services/message-queue-task-editor-general-page.md)  
   
@@ -97,7 +97,7 @@ manager: "jhubbard"
  For information about programmatically setting these properties, see the documentation for the **Microsoft.SqlServer.Dts.Tasks.MessageQueueTask.MessageQueueTask** class in the Developer Guide.  
   
 ## Related Tasks  
- For more information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, see [Set the Properties of a Task or Container](../../2014/integration-services/set-the-properties-of-a-task-or-container.md).  
+ For more information about how to set these properties in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, see [Set the Properties of a Task or Container](../../2014/integration-services/set-the-properties-of-a-task-or-container.md).  
   
 ## See Also  
  [Integration Services Tasks](../../2014/integration-services/integration-services-tasks.md)   

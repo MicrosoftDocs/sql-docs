@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Manually Process Data (SSAS Tabular)
-  This topic describes how to manually process workspace data in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+  This topic describes how to manually process workspace data in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
  When you author a tabular model that uses external data, you can manually refresh the data by using the Process command. You can process a single table, all tables in the model, or one or more partitions. Whenever you process data, you may also need to recalculate data.  Processing data means getting the latest data from external sources. Recalculating means updating the result of any formula that uses the data.  
   
@@ -38,20 +38,20 @@ manager: "mblythe"
   
 #### To process data for all tables using the same connection  
   
-1.  In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], click on the **Model** menu, and then click **Existing Connections**.  
+1.  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], click on the **Model** menu, and then click **Existing Connections**.  
   
 2.  In the **Existing Connections** dialog box, select a connection, and then click **Process**.  
   
 #### To process data for one or more partitions  
   
-1.  In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], click the **Model** menu, then point to **Process**, and then click **Process Partitions**.  
+1.  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], click the **Model** menu, then point to **Process**, and then click **Process Partitions**.  
   
 2.  In the **Process Partitions** dialog box, in **Mode**, select one of the following process modes:  
   
     |Mode|Description|  
     |----------|-----------------|  
     |**Process Default**|Detects the process state of a partition object, and performs processing necessary to deliver unprocessed or partially processed partition objects to a fully processed state. Data for empty tables and partitions is loaded; hierarchies, calculated columns, and relationships are built or rebuilt.|  
-    |**Process Full**|Processes a partition object and all the objects that it contains. When Process Full is run for an object that has already been processed, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] drops all data in the object, and then processes the object. This kind of processing is required when a structural change has been made to an object.|  
+    |**Process Full**|Processes a partition object and all the objects that it contains. When Process Full is run for an object that has already been processed, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] drops all data in the object, and then processes the object. This kind of processing is required when a structural change has been made to an object.|  
     |**Process Data**|Load data into a partition or a table without rebuilding hierarchies or relationships or recalculating calculated columns and measures.|  
     |**Process Clear**|Removes all data from a partition.|  
     |**Process Add**|Incrementally update partition with new data.|  

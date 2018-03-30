@@ -16,14 +16,14 @@ dev_langs:
 ms.assetid: 7021ecb7-8fb5-4d8c-b984-3d34fcde8be2
 caps.latest.revision: 15
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Options (Text Editor - Transact-SQL- General Page)
-  Use the **General** options dialog box to change the general editing behavior of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor, which is used to edit [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts. To display these settings, click **Options** on the **Tools** menu, expand the **Transact-SQL** subfolder, and then click **General**.  
+  Use the **General** options dialog box to change the general editing behavior of the [!INCLUDE[ssDE](../includes/ssde-md.md)] Query Editor, which is used to edit [!INCLUDE[tsql](../includes/tsql-md.md)] scripts. To display these settings, click **Options** on the **Tools** menu, expand the **Transact-SQL** subfolder, and then click **General**.  
   
 ## Setting Options in Multiple Locations  
- Options for the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor can also be set in the **All Languages General** dialog. If you use the **All Languages** dialogs to set different options for the other [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] editors, such as the DMX or MDX editors, you must reset the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor options using this dialog.  
+ Options for the [!INCLUDE[ssDE](../includes/ssde-md.md)] Query Editor can also be set in the **All Languages General** dialog. If you use the **All Languages** dialogs to set different options for the other [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] editors, such as the DMX or MDX editors, you must reset the [!INCLUDE[ssDE](../includes/ssde-md.md)] Query Editor options using this dialog.  
   
 ## Statement Completion  
  **Auto list members**  

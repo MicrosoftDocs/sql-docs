@@ -27,7 +27,7 @@ manager: "jhubbard"
 # ClientNetLibInfo Class
   The [ClientNetLibInfo Class](../../../2014/database-engine/dev-guide/clientnetlibinfo-class.md) represents information about the client network library.  
   
- The client network library file lets the client instance communicate over a network with an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] using a specific network protocol.  
+ The client network library file lets the client instance communicate over a network with an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using a specific network protocol.  
   
 ## See Also  
  [Configure Client Protocols](http://technet.microsoft.com/library/ms181035.aspx)  

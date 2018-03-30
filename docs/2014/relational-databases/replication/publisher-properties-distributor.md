@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: ab6ada76-0f99-43fe-b524-baac7b1bc483
 caps.latest.revision: 18
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Publisher Properties - Distributor
@@ -30,7 +30,7 @@ manager: "jhubbard"
   
 -   The Snapshot Agent and Log Reader Agent for Oracle publications.  
   
- Select **Impersonate agent process account** to make connections to the Publisher using the context of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows account under which these agents run, or specify **SQL Server Authentication**, and then enter a value for **Login** and **Password**. It is recommended that you select **Impersonate agent process account**. For more information on agent security, see [Replication Agent Security Model](../../../2014/relational-databases/replication/replication-agent-security-model.md).  
+ Select **Impersonate agent process account** to make connections to the Publisher using the context of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows account under which these agents run, or specify **SQL Server Authentication**, and then enter a value for **Login** and **Password**. It is recommended that you select **Impersonate agent process account**. For more information on agent security, see [Replication Agent Security Model](../../../2014/relational-databases/replication/replication-agent-security-model.md).  
   
  The Windows accounts under which these agents run are specified in the New Publication Wizard. These accounts can be changed:  
   

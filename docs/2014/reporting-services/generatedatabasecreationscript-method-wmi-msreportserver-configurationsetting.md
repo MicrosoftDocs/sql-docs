@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: 25232dc7-00fe-4cd1-8a1c-7e36d552de00
 caps.latest.revision: 25
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # GenerateDatabaseCreationScript Method (WMI MSReportServer_ConfigurationSetting)
@@ -50,7 +50,7 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
  Indicates whether to create database in native mode or SharePoint mode.  
   
 > [!IMPORTANT]  
->  Beginning in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], *IsSharePointMode*=`True` is not supported because in SharePoint mode, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] is a SharePoint shared service and is not controlled by the WMI provider. You should always set this parameter to `False`.  
+>  Beginning in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], *IsSharePointMode*=`True` is not supported because in SharePoint mode, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] is a SharePoint shared service and is not controlled by the WMI provider. You should always set this parameter to `False`.  
   
  *Script*  
  [out] A string containing the generated SQL script.  
@@ -64,16 +64,16 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
 ## Remarks  
  This method generates an SQL script that creates report server databases for the version of the report server currently connected to.  
   
- The value supplied in the *DatabaseName* parameter must conform to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database naming conventions.  
+ The value supplied in the *DatabaseName* parameter must conform to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database naming conventions.  
   
  The method does not check the existence of the database when generating the script.  
   
  This method does not check for the existence of the report server database when generating the script.  
   
- The generated script supports [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005, and [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
+ The generated script supports [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2005, and [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)].  
   
 ## Requirements  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../includes/ssrswminmspca-md.md)]  
   
 ## See Also  
  [MSReportServer_ConfigurationSetting Members](../../2014/reporting-services/msreportserver-configurationsetting-members.md)  

@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: e64f7695-2f23-4adb-b83d-52f147cc1a2f
 caps.latest.revision: 35
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Security Audit Event Category (SQL Server Profiler)
@@ -48,18 +48,18 @@ manager: "jhubbard"
 |[Audit Database Operation Event Class](../../2014/database-engine/audit-database-operation-event-class.md)|Indicates that various operations such as checkpoint or subscribe query notification have occurred.|  
 |[Audit Database Principal Impersonation Event Class](../../2014/database-engine/audit-database-principal-impersonation-event-class.md)|Indicates that an impersonation has occurred within the database scope.|  
 |[Audit Database Principal Management Event Class](../../2014/database-engine/audit-database-principal-management-event-class.md)|Indicates that principals have been created, altered, or dropped from a database.|  
-|[Audit Database Scope GDR Event Class](../../2014/database-engine/audit-database-scope-gdr-event-class.md)|Indicates that a GRANT, REVOKE, or DENY has been issued for a statement permission by a user in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|[Audit Database Scope GDR Event Class](../../2014/database-engine/audit-database-scope-gdr-event-class.md)|Indicates that a GRANT, REVOKE, or DENY has been issued for a statement permission by a user in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
 |[Audit DBCC Event Class](../../2014/database-engine/audit-dbcc-event-class.md)|Indicates that a DBCC command has been issued.|  
 |[Audit Fulltext Event Class](../../2014/database-engine/audit-fulltext-event-class.md)|Indicates that a full-text event has occured.|  
-|[Audit Login Change Password Event Class](../../2014/database-engine/audit-login-change-password-event-class.md)|Indicates that a user has changed their [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login password.|  
+|[Audit Login Change Password Event Class](../../2014/database-engine/audit-login-change-password-event-class.md)|Indicates that a user has changed their [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] login password.|  
 |[Audit Login Change Property Event Class](../../2014/database-engine/audit-login-change-property-event-class.md)|Indicates that **sp_defaultdb**, **sp_defaultlanguage**, or ALTER LOGIN was used to modify a property of a login.|  
-|[Audit Login Event Class](../../2014/database-engine/audit-login-event-class.md)|Indicates that a user has successfully logged into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|[Audit Login Failed Event Class](../../2014/database-engine/audit-login-failed-event-class.md)|Indicates that a user attempted to log in to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and failed.|  
-|[Audit Login GDR Event Class](../../2014/database-engine/audit-login-gdr-event-class.md)|Indicates that a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows login right was added or removed.|  
-|[Audit Logout Event Class](../../2014/database-engine/audit-logout-event-class.md)|Indicates that a user has logged out of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|[Audit Login Event Class](../../2014/database-engine/audit-login-event-class.md)|Indicates that a user has successfully logged into [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
+|[Audit Login Failed Event Class](../../2014/database-engine/audit-login-failed-event-class.md)|Indicates that a user attempted to log in to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and failed.|  
+|[Audit Login GDR Event Class](../../2014/database-engine/audit-login-gdr-event-class.md)|Indicates that a [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows login right was added or removed.|  
+|[Audit Logout Event Class](../../2014/database-engine/audit-logout-event-class.md)|Indicates that a user has logged out of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
 |[Audit Object Derived Permission Event Class](../../2014/database-engine/audit-object-derived-permission-event-class.md)|Indicates that a CREATE, ALTER, or DROP was issued for an object.|  
 |[Audit Schema Object Access Event Class](../../2014/database-engine/audit-schema-object-access-event-class.md)|Indicates that an object permission (such as SELECT) has been used.|  
-|[Audit Schema Object GDR Event Class](../../2014/database-engine/audit-schema-object-gdr-event-class.md)|Indicates that a GRANT, REVOKE, or DENY was issued for a schema object permission by a user in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|[Audit Schema Object GDR Event Class](../../2014/database-engine/audit-schema-object-gdr-event-class.md)|Indicates that a GRANT, REVOKE, or DENY was issued for a schema object permission by a user in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
 |[Audit Schema Object Management Event Class](../../2014/database-engine/audit-schema-object-management-event-class.md)|Indicates that a server object has been created, altered, or dropped.|  
 |[Audit Schema Object Take Ownership Event Class](../../2014/database-engine/audit-schema-object-take-ownership-event-class.md)|Indicates that the permissions to change the owner of schema object have been checked.|  
 |[Audit Server Alter Trace Event Class](../../2014/database-engine/audit-server-alter-trace-event-class.md)|Indicates that the ALTER TRACE permission has been checked.|  
@@ -70,7 +70,7 @@ manager: "jhubbard"
 |[Audit Server Principal Impersonation Event Class](../../2014/database-engine/audit-server-principal-impersonation-event-class.md)|Indicates that an impersonation has occurred within the server scope.|  
 |[Audit Server Principal Management Event Class](../../2014/database-engine/audit-server-principal-management-event-class.md)|Indicates that a CREATE, ALTER, or DROP has occurred for a server principal.|  
 |[Audit Server Scope GDR Event Class](../../2014/database-engine/audit-server-scope-gdr-event-class.md)|Indicates that a GDR event has occurred for server permissions.|  
-|[Audit Server Starts and Stops Event Class](../../2014/database-engine/audit-server-starts-and-stops-event-class.md)|Indicates that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service state has been modified.|  
+|[Audit Server Starts and Stops Event Class](../../2014/database-engine/audit-server-starts-and-stops-event-class.md)|Indicates that the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] service state has been modified.|  
 |[Audit Statement Permission Event Class](../../2014/database-engine/audit-statement-permission-event-class.md)|Indicates that a statement permission has been used.|  
   
 ## Related Content  

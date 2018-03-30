@@ -18,13 +18,13 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Process a Mining Model
-  In the Mining Models tab of Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], you can either process a specific mining model that is associated with a mining structure or you can process all the models that are associated with the structure.  
+  In the Mining Models tab of Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], you can either process a specific mining model that is associated with a mining structure or you can process all the models that are associated with the structure.  
   
  You can process a mining model by using the following tools:  
   
--   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]  
+-   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]  
   
  You can also use an XMLA Process command. For more information, see  [Tools and Approaches for Processing &#40;Analysis Services&#41;](../../2014/analysis-services/tools-and-approaches-for-processing-analysis-services.md).  
   

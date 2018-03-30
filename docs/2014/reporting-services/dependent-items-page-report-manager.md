@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 4dcfb311-e9c3-4c5d-b2e0-018d79f37d2e
 caps.latest.revision: 29
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Dependent Items Page (Report Manager)

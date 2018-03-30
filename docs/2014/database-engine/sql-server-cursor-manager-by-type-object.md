@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: d67fbd8a-7554-4a16-96f1-d9ee857a95e3
 caps.latest.revision: 13
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # SQL Server, Cursor Manager by Type Object
@@ -40,8 +40,8 @@ manager: "jhubbard"
 |-----------------------------|-----------------|  
 |**_Total**|Information for all cursors.|  
 |**API Cursor**|Only the API cursor information.|  
-|**TSQL Global Cursor**|Only the [!INCLUDE[tsql](../../includes/tsql-md.md)] global cursor information.|  
-|**TSQL Local Cursor**|Only the [!INCLUDE[tsql](../../includes/tsql-md.md)] local cursor information.|  
+|**TSQL Global Cursor**|Only the [!INCLUDE[tsql](../includes/tsql-md.md)] global cursor information.|  
+|**TSQL Local Cursor**|Only the [!INCLUDE[tsql](../includes/tsql-md.md)] local cursor information.|  
   
 ## See Also  
  [Monitor Resource Usage &#40;System Monitor&#41;](../../2014/database-engine/monitor-resource-usage-system-monitor.md)  

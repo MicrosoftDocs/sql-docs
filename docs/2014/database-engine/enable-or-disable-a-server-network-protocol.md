@@ -22,17 +22,17 @@ helpviewer_keywords:
 ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
 caps.latest.revision: 28
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Enable or Disable a Server Network Protocol
-  All network protocols are installed by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup, but may or may not be enabled. This topic describes how to enable or disable a server network protocol in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager or PowerShell. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] must be stopped and restarted for the change to take effect.  
+  All network protocols are installed by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Setup, but may or may not be enabled. This topic describes how to enable or disable a server network protocol in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager or PowerShell. The [!INCLUDE[ssDE](../includes/ssde-md.md)] must be stopped and restarted for the change to take effect.  
   
 > [!IMPORTANT]  
->  During setup of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] a login is added for the BUILTIN\Users group. This allows all authenticated users of the computer to access the instance of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] as a member of the public role. The BUILTIN\Users login can be safely removed to restrict [!INCLUDE[ssDE](../../includes/ssde-md.md)] access to computer users who have individual logins or are members of other Windows groups with logins.  
+>  During setup of [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] a login is added for the BUILTIN\Users group. This allows all authenticated users of the computer to access the instance of [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] as a member of the public role. The BUILTIN\Users login can be safely removed to restrict [!INCLUDE[ssDE](../includes/ssde-md.md)] access to computer users who have individual logins or are members of other Windows groups with logins.  
   
 > [!WARNING]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[msCoName](../../includes/msconame-md.md)] data providers for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] support TLS 1.0 and SSL 3.0. If you enforce a different protocol (such as TLS 1.1 or TLS 1.2) by making changes in the operating system SChannel layer, your connections to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might fail.  
+>  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and [!INCLUDE[msCoName](../includes/msconame-md.md)] data providers for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] support TLS 1.0 and SSL 3.0. If you enforce a different protocol (such as TLS 1.1 or TLS 1.2) by making changes in the operating system SChannel layer, your connections to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] might fail.  
   
  **In This Topic**  
   
@@ -46,7 +46,7 @@ manager: "jhubbard"
   
 #### To enable a server network protocol  
   
-1.  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, in the console pane, expand **SQL Server  Network Configuration**.  
+1.  In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager, in the console pane, expand **SQL Server  Network Configuration**.  
   
 2.  In the console pane, click **Protocols for** *\<instance name>*.  
   
@@ -54,7 +54,7 @@ manager: "jhubbard"
   
 4.  In the console pane, click **SQL Server Services**.  
   
-5.  In the details pane, right-click **SQL Server (***\<instance name>***)**, and then click **Restart**, to stop and restart the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service.  
+5.  In the details pane, right-click **SQL Server (***\<instance name>***)**, and then click **Restart**, to stop and restart the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] service.  
   
 ##  <a name="PowerShellProcedure"></a> Using SQL Server PowerShell  
   
@@ -66,7 +66,7 @@ manager: "jhubbard"
   
 3.  Import the **sqlps** module by entering `Import-Module “sqlps”`  
   
-4.  Execute the following statements to enable both the TCP and named pipes protocols. Replace `<computer_name>` with the name of the computer that is running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If you are configuring a named instance, replace `MSSQLSERVER` with the instance name.  
+4.  Execute the following statements to enable both the TCP and named pipes protocols. Replace `<computer_name>` with the name of the computer that is running [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. If you are configuring a named instance, replace `MSSQLSERVER` with the instance name.  
   
      To disable protocols, set the `IsEnabled` properties to `$false`.  
   
@@ -94,7 +94,7 @@ manager: "jhubbard"
   
 #### To configure the protocols for the local computer  
   
--   When the script is run locally and configures the local computer, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell can make the script more flexible by dynamically determining the local computer name. To retrieve the local computer name, replace the line setting the `$uri` variable with the following line.  
+-   When the script is run locally and configures the local computer, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell can make the script more flexible by dynamically determining the local computer name. To retrieve the local computer name, replace the line setting the `$uri` variable with the following line.  
   
     ```  
     $uri = "ManagedComputer[@Name='" + (get-item env:\computername).Value + "']/ServerInstance[@Name='MSSQLSERVER']/ServerProtocol[@Name='Tcp']"  
@@ -102,7 +102,7 @@ manager: "jhubbard"
   
 #### To restart the Database Engine by using SQL Server PowerShell  
   
--   After you enable or disable protocols, you must stop and restart the [!INCLUDE[ssDE](../../includes/ssde-md.md)] for the change to take effect. Execute the following statements to stop and start the default instance by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. To stop and start a named instance replace `'MSSQLSERVER'` with `'MSSQL$<instance_name>'`.  
+-   After you enable or disable protocols, you must stop and restart the [!INCLUDE[ssDE](../includes/ssde-md.md)] for the change to take effect. Execute the following statements to stop and start the default instance by using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell. To stop and start a named instance replace `'MSSQLSERVER'` with `'MSSQL$<instance_name>'`.  
   
     ```  
     # Get a reference to the ManagedComputer class.  

@@ -19,15 +19,15 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQL Server Agent, JobSteps Object
-  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent **JobSteps** performance object contains performance counters that report information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job steps. The table below lists the counters that this object contains.  
+  The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent **JobSteps** performance object contains performance counters that report information about [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent job steps. The table below lists the counters that this object contains.  
   
  The table below contains the **SQLAgent:JobSteps** counters.  
   
 |Name|Description|  
 |----------|-----------------|  
 |**Active steps**|This counter reports the number of job steps currently running.|  
-|**Queued steps**|This counter reports the number of job steps that are ready for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to run, but which have not yet started running.|  
-|**Total step retries**|This counter reports the total number of times that [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has retried a job step since the last server restart.|  
+|**Queued steps**|This counter reports the number of job steps that are ready for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent to run, but which have not yet started running.|  
+|**Total step retries**|This counter reports the total number of times that [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has retried a job step since the last server restart.|  
   
  Each counter in the object contains the following instances:  
   
@@ -39,13 +39,13 @@ manager: "jhubbard"
 |**ANALYSISQUERY**|Information for job steps that use the ANALYSISQUERY subsystem.|  
 |**CmdExec**|Information for job steps that use the **CmdExec** subsystem.|  
 |**Distribution**|Information for job steps that use the **Distribution** subsystem.|  
-|**Dts**|Information for job steps that use the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] subsystem.|  
+|**Dts**|Information for job steps that use the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] subsystem.|  
 |**LogReader**|Information for job steps that use the **LogReader** subsystem.|  
 |**Merge**|Information for job steps that use the **Merge** subsystem.|  
 |**PowerShell**|Information for job steps that use the **PowerShell** subsystem.|  
 |**QueueReader**|Information for job steps that use the **QueueReader** subsystem.|  
 |**Snapshot**|Information for job steps that use the **Snapshot** subsystem.|  
-|**TSQL**|Information for job steps that execute [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
+|**TSQL**|Information for job steps that execute [!INCLUDE[tsql](../includes/tsql-md.md)].|  
   
 ## See Also  
  [Manage Job Steps](../../2014/database-engine/manage-job-steps.md)   

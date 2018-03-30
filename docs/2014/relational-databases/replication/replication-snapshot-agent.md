@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 caps.latest.revision: 40
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Replication Snapshot Agent
@@ -76,13 +76,13 @@ manager: "jhubbard"
  Prints all available parameters.  
   
  **-Publisher**  *server_name*[**\\***instance_name*]  
- Is the name of the Publisher. Specify server_name for the default instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server. Specify *server_name***\\***instance_name* for a named instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server.  
+ Is the name of the Publisher. Specify server_name for the default instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on that server. Specify *server_name***\\***instance_name* for a named instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on that server.  
   
  **-Publication** *publication*  
  Is the name of the publication. This parameter is only valid if the publication is set to always have a snapshot available for new or reinitialized subscriptions.  
   
  **-70Subscribers**  
- Must be used if any Subscribers are running [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] version 7.0.  
+ Must be used if any Subscribers are running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version 7.0.  
   
  **-BcpBatchSize** *bcp*_ *batch*\_ *size*  
  Is the number of rows to send in a bulk copy operation. When performing a **bcp in** operation, the batch size is the number of rows to send to the server as one transaction, and also the number of rows that must be sent before the Distribution Agent logs a **bcp** progress message. When performing a **bcp out** operation, a fixed batch size of 1000 is used. A value of 0 indicates no message logging.  
@@ -91,7 +91,7 @@ manager: "jhubbard"
  Is the path of the agent definition file. An agent definition file contains command line arguments for the agent. The content of the file is parsed as an executable file. Use double quotation marks (") to specify argument values containing arbitrary characters.  
   
  **-Distributor** *server_name*[**\\***instance_name*]  
- Is the Distributor name. Specify *server_name* for the default instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server. Specify *server_name***\\***instance_name* for a named instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server.  
+ Is the Distributor name. Specify *server_name* for the default instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on that server. Specify *server_name***\\***instance_name* for a named instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on that server.  
   
  **-DistributorDeadlockPriority** [**-1**|**0**|**1**]  
  Is the priority of the Snapshot Agent connection to the Distributor when a deadlock occurs. This parameter is specified to resolve deadlocks that may occur between the Snapshot Agent and user applications during snapshot generation.  
@@ -103,19 +103,19 @@ manager: "jhubbard"
 |**1**|Snapshot Agent has priority when a deadlock occurs at the Distributor.|  
   
  **-DistributorLogin** *distributor_login*  
- Is the login used when connecting to the Distributor using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication.  
+ Is the login used when connecting to the Distributor using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.  
   
  **-DistributorPassword** *distributor_password*  
- Is the password used when connecting to the Distributor using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication. .  
+ Is the password used when connecting to the Distributor using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. .  
   
  **-DistributorSecurityMode** [ **0**| **1**]  
- Specifies the security mode of the Distributor. A value of **0** indicates [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication Mode (default), and a value of **1** indicates Windows Authentication Mode.  
+ Specifies the security mode of the Distributor. A value of **0** indicates [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication Mode (default), and a value of **1** indicates Windows Authentication Mode.  
   
  **-DynamicFilterHostName** *dynamic_filter_host_name*  
- Is used to set a value for [HOST_NAME &#40;Transact-SQL&#41;](../Topic/HOST_NAME%20\(Transact-SQL\).md) in filtering when a dynamic snapshot is created. For example, if the subset filter clause `rep_id = HOST_NAME()` is specified for an article, and you set the **DynamicFilterHostName** property to "FBJones" before calling the Merge Agent, only rows having "FBJones" in the **rep_id** column will be replicated.  
+ Is used to set a value for [HOST_NAME &#40;Transact-SQL&#41;](~/t-sql/functions/host-name-transact-sql.md) in filtering when a dynamic snapshot is created. For example, if the subset filter clause `rep_id = HOST_NAME()` is specified for an article, and you set the **DynamicFilterHostName** property to "FBJones" before calling the Merge Agent, only rows having "FBJones" in the **rep_id** column will be replicated.  
   
  **-DynamicFilterLogin** *dynamic_filter_login*  
- Is used to set a value for [SUSER_SNAME &#40;Transact-SQL&#41;](../Topic/SUSER_SNAME%20\(Transact-SQL\).md)in filtering when a dynamic snapshot is created. For example, if the subset filter clause `user_id = SUSER_SNAME()` is specified for an article, and you set the **DynamicFilterLogin** property to "rsmith" before calling the **Run** method of the **SQLSnapshot** object, only rows having "rsmith" in the **user_id** column will be included in the snapshot.  
+ Is used to set a value for [SUSER_SNAME &#40;Transact-SQL&#41;](~/t-sql/functions/suser-sname-transact-sql.md)in filtering when a dynamic snapshot is created. For example, if the subset filter clause `user_id = SUSER_SNAME()` is specified for an article, and you set the **DynamicFilterLogin** property to "rsmith" before calling the **Run** method of the **SQLSnapshot** object, only rows having "rsmith" in the **user_id** column will be included in the snapshot.  
   
  **-DynamicSnapshotLocation** *dynamic_snapshot_location*  
  Is the location where the dynamic snapshot should be generated.  
@@ -132,7 +132,7 @@ manager: "jhubbard"
  For more information, see [Security Overview &#40;Replication&#41;](../../../2014/relational-databases/replication/security-overview-replication.md).  
   
  **-FieldDelimiter** *field_delimiter*  
- Is the character or character sequence that marks the end of a field in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bulk-copy data file. The default is \n\<x$3>\n.  
+ Is the character or character sequence that marks the end of a field in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bulk-copy data file. The default is \n\<x$3>\n.  
   
  **-HistoryVerboseLevel** [ **1**| **2**| **3**]  
  Specifies the amount of history logged during a snapshot operation. You can minimize the effect of history logging on performance by selecting **1**.  
@@ -163,7 +163,7 @@ manager: "jhubbard"
 >  This parameter is used for performance tuning of **bcp** performance from an Oracle Publisher.  
   
  **-KeepAliveMessageInterval** *keep_alive_interval*  
- Is the amount of time, in seconds, that the Snapshot Agent waits before logging "waiting for backend message" to the [MSsnapshot_history](../Topic/MSsnapshot_history%20\(Transact-SQL\).md) table. The default value is 300 seconds.  
+ Is the amount of time, in seconds, that the Snapshot Agent waits before logging "waiting for backend message" to the [MSsnapshot_history](~/relational-databases/system-tables/mssnapshot-history-transact-sql.md) table. The default value is 300 seconds.  
   
  **-LoginTimeOut** *login_time_out_seconds*  
  Is the number of seconds before the login times out. The default is **15** seconds.  
@@ -175,7 +175,7 @@ manager: "jhubbard"
  Is if irrelevant deletes are sent to the Subscriber. Irrelevant deletes are DELETE commands that are sent to Subscribers for rows that do not belong to the Subscriber's partition. Irrelevant deletes do not affect data integrity or convergence, but they can result in unnecessary network traffic. The default value of **MaxNetworkOptimization** is **0**. Setting **MaxNetworkOptimization** to **1** minimizing the chances of irrelevant deletes thereby reducing network traffic and maximizing network optimization. Setting this parameter to **1** can also increase the storage of metadata and cause performance to degrade at the Publisher if multiple levels of join filters and complex subset filters are present. You should carefully assess your replication topology and set **MaxNetworkOptimization** to **1** only if network traffic from irrelevant deletes is unacceptably high.  
   
 > [!NOTE]  
->  Setting this parameter to **1** is useful only when the synchronization optimization option of the merge publication is set to **true** (the **@keep_partition_changes** parameter of [sp_addmergepublication &#40;Transact-SQL&#41;](../Topic/sp_addmergepublication%20\(Transact-SQL\).md)).  
+>  Setting this parameter to **1** is useful only when the synchronization optimization option of the merge publication is set to **true** (the **@keep_partition_changes** parameter of [sp_addmergepublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)).  
   
  **-Output** *output_path_and_file_name*  
  Is the path of the agent output file. If the file name is not provided, the output is sent to the console. If the specified file name exists, the output is appended to the file.  
@@ -190,7 +190,7 @@ manager: "jhubbard"
 |**2**|All error messages and progress report messages are printed, which is useful for debugging.|  
   
  **-PacketSize** *packet_size*  
- Is the packet size (in bytes) used by the Snapshot Agent when connecting to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. The default value is 8192 bytes.  
+ Is the packet size (in bytes) used by the Snapshot Agent when connecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The default value is 8192 bytes.  
   
 > [!NOTE]  
 >  Do not change the packet size unless you are certain that it will improve performance. For most applications, the default packet size is best.  
@@ -211,16 +211,16 @@ manager: "jhubbard"
 |**1**|Snapshot Agent has priority when a deadlock occurs at the Publisher.|  
   
  **-PublisherFailoverPartner** *server_name*[**\\***instance_name*]  
- Specifies the failover partner instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] participating in a database mirroring session with the publication database. For more information, see [Database Mirroring and Replication &#40;SQL Server&#41;](../../../2014/database-engine/database-mirroring-and-replication-sql-server.md).  
+ Specifies the failover partner instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] participating in a database mirroring session with the publication database. For more information, see [Database Mirroring and Replication &#40;SQL Server&#41;](../../../2014/database-engine/database-mirroring-and-replication-sql-server.md).  
   
  **-PublisherLogin** *publisher_login*  
- Is the login used when connecting to the Publisher using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication.  
+ Is the login used when connecting to the Publisher using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.  
   
  **-PublisherPassword**  *publisher_password*  
- Is the password used when connecting to the Publisher using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication. .  
+ Is the password used when connecting to the Publisher using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. .  
   
  **-PublisherSecurityMode** [ **0**| **1**]  
- Specifies the security mode of the Publisher. A value of **0** indicates [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication (default), and a value of **1** indicates Windows Authentication Mode.  
+ Specifies the security mode of the Publisher. A value of **0** indicates [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication (default), and a value of **1** indicates Windows Authentication Mode.  
   
  **-QueryTimeOut** *query_time_out_seconds*  
  Is the number of seconds before the query times out. The default is 1800 seconds.  
@@ -229,10 +229,10 @@ manager: "jhubbard"
  Specifies the type of replication. A value of **1** indicates transactional replication, and a value of **2** indicates merge replication.  
   
  **-RowDelimiter** *row_delimiter*  
- Is the character or character sequence that marks the end of a row in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bulk-copy data file. The default is \n\<,@g>\n.  
+ Is the character or character sequence that marks the end of a row in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bulk-copy data file. The default is \n\<,@g>\n.  
   
  **-StartQueueTimeout** *start_queue_timeout_seconds*  
- Is the maximum number of seconds that the Snapshot Agent waits when the number of concurrent dynamic snapshot processes running is at the limit set by the **@max_concurrent_dynamic_snapshots** property of [sp_addmergepublication &#40;Transact-SQL&#41;](../Topic/sp_addmergepublication%20\(Transact-SQL\).md). If the maximum number of seconds is reached and the Snapshot Agent is still waiting, it will exit. A value of 0 means that the agent waits indefinitely, although it can be canceled.  
+ Is the maximum number of seconds that the Snapshot Agent waits when the number of concurrent dynamic snapshot processes running is at the limit set by the **@max_concurrent_dynamic_snapshots** property of [sp_addmergepublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). If the maximum number of seconds is reached and the Snapshot Agent is still waiting, it will exit. A value of 0 means that the agent waits indefinitely, although it can be canceled.  
   
  \- **UsePerArticleContentsView** *use_per_article_contents_view*  
  This parameter has been deprecated and is supported for backward-compatibility only.  
@@ -240,7 +240,7 @@ manager: "jhubbard"
 ## Remarks  
   
 > [!IMPORTANT]  
->  If you have installed [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent to run under a Local System account rather than under a Domain User account (the default), the service can access only the local computer. If the Snapshot Agent that runs under [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent is configured to use Windows Authentication Mode when it logs in to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], the Snapshot Agent fails. The default setting is [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication.  
+>  If you have installed [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to run under a Local System account rather than under a Domain User account (the default), the service can access only the local computer. If the Snapshot Agent that runs under [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is configured to use Windows Authentication Mode when it logs in to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the Snapshot Agent fails. The default setting is [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.  
   
  To start the Snapshot Agent, execute **snapshot.exe** from the command prompt. For information, see [Replication Agent Executables](../../../2014/relational-databases/replication/dev-guide/replication-agent-executables-concepts.md).  
   

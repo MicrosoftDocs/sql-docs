@@ -31,7 +31,7 @@ ms.author: "mblythe"
 manager: "mblythe"
 ---
 # Discover Method (XMLA)
-  Retrieves information, such as the list of available databases or details about a specific object, from an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. The data retrieved with the `Discover` method depends on the values of the parameters passed to it.  
+  Retrieves information, such as the list of available databases or details about a specific object, from an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. The data retrieved with the `Discover` method depends on the values of the parameters passed to it.  
   
  **Namespace** urn:schemas-microsoft-com:xml-analysis  
   
@@ -64,10 +64,10 @@ manager: "mblythe"
 |Child elements|[Properties](../../../2014/analysis-services/dev-guide/properties-element-xmla.md), [RequestType](../../../2014/analysis-services/dev-guide/requesttype-element-xmla.md), [Restrictions](../../../2014/analysis-services/dev-guide/restrictions-element-xmla.md)|  
   
 ## Remarks  
- The `Discover` method requests metadata about [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instances and objects. Metadata is returned using the XMLA [Rowset](../../../2014/analysis-services/dev-guide/rowset-data-type-xmla.md) data type.  
+ The `Discover` method requests metadata about [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instances and objects. Metadata is returned using the XMLA [Rowset](../../../2014/analysis-services/dev-guide/rowset-data-type-xmla.md) data type.  
   
 ## Example  
- In the following code sample, the client sends the `Discover` call to request a list of cubes from the [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] sample [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] database:  
+ In the following code sample, the client sends the `Discover` call to request a list of cubes from the [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] sample [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database:  
   
 ```  
 <Discover xmlns="urn:schemas-microsoft-com:xml-analysis">  

@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
 caps.latest.revision: 40
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # ReportingServicesService Configuration File
@@ -80,7 +80,7 @@ manager: "mblythe"
 |**TraceListeners**|Specifies a target for outputting trace log content. You can specify multiple targets using a comma to separate each one. Valid values include:<br /><br /> DebugWindow (default)<br /><br /> File (default)<br /><br /> StdOut|  
 |**TraceFileMode**|Specifies whether trace logs contain data for a 24-hour period. You should have one unique trace log for each component on each day. This value is set to "Unique (default)". Do not modify this value.|  
 |**Components**|Specifies the components for which trace logs are created. The default value is `all`. Other valid values for this setting include the names of internal components. Do not modify this value.|  
-|**Runtime**|Specifies configuration settings that support backward compatibility with the previous version. Runtime settings are used to redirect requests that target the previous version of Microsoft.ReportingServices.Interfaces to the new version.<br /><br /> All of the configuration settings in this section are described in the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] product documentation. For more information, search for "Runtime Schema Settings" on the MSDN Web site or in the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] documentation.|  
+|**Runtime**|Specifies configuration settings that support backward compatibility with the previous version. Runtime settings are used to redirect requests that target the previous version of Microsoft.ReportingServices.Interfaces to the new version.<br /><br /> All of the configuration settings in this section are described in the [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] product documentation. For more information, search for "Runtime Schema Settings" on the MSDN Web site or in the [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] documentation.|  
   
 ## See Also  
  [Reporting Services Configuration Files](../../2014/reporting-services/reporting-services-configuration-files.md)   

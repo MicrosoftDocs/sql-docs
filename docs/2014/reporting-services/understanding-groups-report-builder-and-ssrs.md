@@ -15,7 +15,7 @@ f1_keywords:
 ms.assetid: c32d4d89-45e4-4f77-a3e9-0429f53f9d6f
 caps.latest.revision: 7
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Understanding Groups (Report Builder and SSRS)
@@ -28,7 +28,7 @@ manager: "mblythe"
  The following sections help describe the various aspects of groups.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## What Makes a Group?  
  A group has a name and a set of group expressions that you specify. The set of group expressions can be a single dataset field reference or a combination of multiple expressions. At runtime, group expressions are combined, if the group has multiple expressions, and applied to data in a group. For example, you have a group that uses a date field to organize the data in the data region. At run time, data is organized by date, and then displayed with totals other dataset values for each date.  
@@ -77,7 +77,7 @@ manager: "mblythe"
   
      When you create a group for a data region, Report Builder and Report Designer automatically add rows or columns to the data region and use these rows or columns to display group data.  
   
--   **Recursive hierarchy groups** A recursive hierarchy group organizes data from a single report dataset that includes multiple levels. For example, a recursive hierarchy group could display an organization hierarchy, for example, [Employee] that reports to [Employee]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides group properties and built-in functions to enable you to create groups for this kind of report data. For more information, see [Creating Recursive Hierarchy Groups &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
+-   **Recursive hierarchy groups** A recursive hierarchy group organizes data from a single report dataset that includes multiple levels. For example, a recursive hierarchy group could display an organization hierarchy, for example, [Employee] that reports to [Employee]. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] provides group properties and built-in functions to enable you to create groups for this kind of report data. For more information, see [Creating Recursive Hierarchy Groups &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
  The following list summarizes the way you work with groups for each data region:  
   

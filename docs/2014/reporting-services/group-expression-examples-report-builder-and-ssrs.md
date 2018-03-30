@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 34cd0249-fc74-4cf2-ba11-7b072992bfd2
 caps.latest.revision: 23
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Group Expression Examples (Report Builder and SSRS)
@@ -26,7 +26,7 @@ manager: "mblythe"
  To merge two or more groups that are based on simple field expressions, add each field to the group expressions list in the group definition.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## Examples of Group Expressions  
  The following table provides examples of group expressions that you can use to define a group.  
@@ -38,7 +38,7 @@ manager: "mblythe"
 |Group by the first letter of the last name.|`=Fields!LastName.Value.Substring(0,1)`|  
 |Group by parameter, based on user selection.<br /><br /> In this example, the parameter `GroupBy` must be based on an available values list that provides a valid choice to group on.|`=Fields(Parameters!GroupBy.Value).Value`|  
 |Group by three separate age ranges:<br /><br /> "Under 21", "Between 21 and 50", and "Over 50".|`=IIF(First(Fields!Age.Value)<21,"Under 21",(IIF(First(Fields!Age.Value)>=21 AND First(Fields!Age.Value)<=50,"Between 21 and 50","Over 50")))`|  
-|Group by many age ranges. This example shows custom code, written in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET, that returns a string for the following ranges:<br /><br /> 25 or Under<br /><br /> 26 to 50<br /><br /> 51 to 75<br /><br /> Over 75|`=Code.GetRangeValueByAge(Fields!Age.Value)`<br /><br /> Custom code:<br /><br /> `Function GetRangeValueByAge(ByVal age As Integer) As String`<br /><br /> `Select Case age`<br /><br /> `Case 0 To 25`<br /><br /> `GetRangeValueByByAge = "25 or Under"`<br /><br /> `Case 26 To 50`<br /><br /> `GetRangeValueByByAge = "26 to 50"`<br /><br /> `Case 51 to 75`<br /><br /> `GetRangeValueByByAge = "51 to 75"`<br /><br /> `Case Else`<br /><br /> `GetRangeValueByByAge = "Over 75"`<br /><br /> `End Select`<br /><br /> `Return GetRangeValueByByAge`<br /><br /> `End Function`|  
+|Group by many age ranges. This example shows custom code, written in [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET, that returns a string for the following ranges:<br /><br /> 25 or Under<br /><br /> 26 to 50<br /><br /> 51 to 75<br /><br /> Over 75|`=Code.GetRangeValueByAge(Fields!Age.Value)`<br /><br /> Custom code:<br /><br /> `Function GetRangeValueByAge(ByVal age As Integer) As String`<br /><br /> `Select Case age`<br /><br /> `Case 0 To 25`<br /><br /> `GetRangeValueByByAge = "25 or Under"`<br /><br /> `Case 26 To 50`<br /><br /> `GetRangeValueByByAge = "26 to 50"`<br /><br /> `Case 51 to 75`<br /><br /> `GetRangeValueByByAge = "51 to 75"`<br /><br /> `Case Else`<br /><br /> `GetRangeValueByByAge = "Over 75"`<br /><br /> `End Select`<br /><br /> `Return GetRangeValueByByAge`<br /><br /> `End Function`|  
   
 ## See Also  
  [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/filter-group-and-sort-data-report-builder-and-ssrs.md)   

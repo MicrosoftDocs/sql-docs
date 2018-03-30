@@ -22,7 +22,7 @@ manager: "mblythe"
   
  **To view the pane that contains the attribute relationship diagram**  
   
--   In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], in Solution Explorer, double-click a dimension to open the Dimension Designer, and then click the **Attribute Relationship** tab.  
+-   In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], in Solution Explorer, double-click a dimension to open the Dimension Designer, and then click the **Attribute Relationship** tab.  
   
 ## Using the Attribute Relationship Diagram  
  Use the attribute relationship diagram to create, edit or delete attribute relationships. The attribute relationship diagram will also highlight problematic attribute relationships and display a description of the issue in a tooltip.  

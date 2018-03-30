@@ -22,7 +22,7 @@ manager: "mblythe"
 # Data Source View Designer (Analysis Services - Multidimensional Data)
   A data source view (DSV) is a logical view of an external relational data source used to create cubes and dimensions in a multidimensional model.  
   
- After a DSV is generated, you can use the **Data Source View Designer** in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to work directly on the DSV, which can be useful if the underlying data source is missing data elements needed in a multidimensional model.  
+ After a DSV is generated, you can use the **Data Source View Designer** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to work directly on the DSV, which can be useful if the underlying data source is missing data elements needed in a multidimensional model.  
   
  To open **Data Source View Designer** :  
   

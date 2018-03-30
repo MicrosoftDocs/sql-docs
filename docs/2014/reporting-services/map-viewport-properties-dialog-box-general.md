@@ -15,7 +15,7 @@ f1_keywords:
 ms.assetid: 6c9c773e-5c56-4571-95ed-8a157cfdfe52
 caps.latest.revision: 6
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Map Viewport Properties Dialog Box, General

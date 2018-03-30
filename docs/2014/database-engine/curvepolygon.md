@@ -12,14 +12,14 @@ ms.topic: "article"
 ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 caps.latest.revision: 18
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # CurvePolygon
   A `CurvePolygon` is a topologically closed surface defined by an exterior bounding ring and zero or more interior rings  
   
 > [!IMPORTANT]  
->  For a detailed description and examples of spatial features introduced in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], including the `CurvePolygon` subtype, download the white paper, [New Spatial Features in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
+>  For a detailed description and examples of spatial features introduced in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], including the `CurvePolygon` subtype, download the white paper, [New Spatial Features in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
   
  The following criteria define attributes of a `CurvePolygon` instance:  
   
@@ -184,8 +184,8 @@ SELECT @g1.STIsValid() AS G1, @g2.STIsValid() AS G2;
  [Polygon](../../2014/database-engine/polygon.md)   
  [CircularString](../../2014/database-engine/circularstring.md)   
  [CompoundCurve](../../2014/database-engine/compoundcurve.md)   
- [geometry Data Type Method Reference](../Topic/geometry%20Data%20Type%20Method%20Reference.md)   
- [geography Data Type Method Reference](../Topic/geography%20Data%20Type%20Method%20Reference.md)   
+ [geometry Data Type Method Reference](~/t-sql/spatial-geometry/spatial-types-geometry-transact-sql.md)   
+ [geography Data Type Method Reference](~/t-sql/spatial-geography/spatial-types-geography.md)   
  [Spatial Data Types Overview](../../2014/database-engine/spatial-data-types-overview.md)  
   
   

@@ -35,10 +35,10 @@ manager: "jhubbard"
  Save the package to run later, with the option to run it immediately.  
   
 > [!NOTE]  
->  In [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], the option to save the package created by the wizard is not available.  
+>  In [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], the option to save the package created by the wizard is not available.  
   
  **SQL Server**  
- Select this option to save the package to the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb` database.  
+ Select this option to save the package to the [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] `msdb` database.  
   
 > [!NOTE]  
 >  This option is available only if you have selected the **Save SSIS Package** option.  

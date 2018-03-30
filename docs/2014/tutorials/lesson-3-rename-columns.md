@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 5fc8ba1a-2b30-4775-9b3b-c09dee711b3e
 caps.latest.revision: 19
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Lesson 3: Rename Columns

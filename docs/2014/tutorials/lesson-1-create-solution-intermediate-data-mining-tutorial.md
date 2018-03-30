@@ -19,9 +19,9 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Lesson 1: Creating the Intermediate Data Mining Solution (Intermediate Data Mining Tutorial)
-  In the Basic Data Mining tutorial, you created an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project that contains a simple data mining solution based on the new [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)] database.  
+  In the Basic Data Mining tutorial, you created an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project that contains a simple data mining solution based on the new [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] database.  
   
- For this tutorial, you will create a separate [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project by using [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. You will create a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data source that uses [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)], and add several new data source views to that data source, to support the scenarios and model types.  
+ For this tutorial, you will create a separate [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project by using [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. You will create a [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data source that uses [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)], and add several new data source views to that data source, to support the scenarios and model types.  
   
  This lesson consists of the following task:  
   

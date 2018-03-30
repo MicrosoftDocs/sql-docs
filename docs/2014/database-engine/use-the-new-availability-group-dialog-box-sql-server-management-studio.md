@@ -18,7 +18,7 @@ ms.author: "jroth"
 manager: "jhubbard"
 ---
 # Use the New Availability Group Dialog Box (SQL Server Management Studio)
-  This topic contains information about how to use the **New Availability Group** dialog box of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to create an AlwaysOn availability group on instances of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] that are enabled for [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. An *availability group* defines a set of user databases that will fail over as a single unit and a set of failover partners, known as *availability replicas*, that support failover.  
+  This topic contains information about how to use the **New Availability Group** dialog box of [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to create an AlwaysOn availability group on instances of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] that are enabled for [!INCLUDE[ssHADR](../includes/sshadr-md.md)]. An *availability group* defines a set of user databases that will fail over as a single unit and a set of failover partners, known as *availability replicas*, that support failover.  
   
 > [!NOTE]  
 >  For an introduction to availability groups, see [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/overview-of-alwayson-availability-groups-sql-server.md).  
@@ -33,7 +33,7 @@ manager: "jhubbard"
   
 ###  <a name="PrerequisitesRestrictions"></a> Prerequisites  
   
--   Before creating an availability group, verify that the instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that host availability replicas reside on different Windows Server Failover Clustering (WSFC) node within the same WSFC failover cluster. Also, verify that each of the server instance is enabled for [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] and meets all other [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] prerequisites. For more information, we strongly recommend that you read [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/prereqs-restrictions-recommendations-always-on-availability.md).  
+-   Before creating an availability group, verify that the instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that host availability replicas reside on different Windows Server Failover Clustering (WSFC) node within the same WSFC failover cluster. Also, verify that each of the server instance is enabled for [!INCLUDE[ssHADR](../includes/sshadr-md.md)] and meets all other [!INCLUDE[ssHADR](../includes/sshadr-md.md)] prerequisites. For more information, we strongly recommend that you read [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 -   Before you create an availability group, ensure that every server instance that will host an availability replica has a fully functioning database mirroring endpoint. For more information, see [The Database Mirroring Endpoint &#40;SQL Server&#41;](../../2014/database-engine/the-database-mirroring-endpoint-sql-server.md).  
   

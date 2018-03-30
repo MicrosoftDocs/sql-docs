@@ -24,22 +24,22 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # SQL Server Destination
-  The SQL Server destination connects to a local [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database and bulk loads data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables and views. You cannot use the SQL Server destination in packages that access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database on a remote server. Instead, the packages should use the OLE DB destination. For more information, see [OLE DB Destination](../../2014/integration-services/ole-db-destination.md).  
+  The SQL Server destination connects to a local [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database and bulk loads data into [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tables and views. You cannot use the SQL Server destination in packages that access a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database on a remote server. Instead, the packages should use the OLE DB destination. For more information, see [OLE DB Destination](../../2014/integration-services/ole-db-destination.md).  
   
 ## Permissions  
  Users who execute packages that include the SQL Server destination require the "Create global objects" permission. You can grant this permission to users by using the Local Security Policy tool opened from the **Administrative Tools** menu. If you receive an error message when executing a package that uses the SQL Server destination, make sure that the account running the package has the "Create global objects" permission.  
   
 ## Bulk Inserts  
- If you attempt to use the SQL Server destination to bulk load data into a remote SQL Server database, you may see an error message similar to the following: "An OLE DB record is available. Source: "Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client" Hresult: 0x80040E14 Description: "Could not bulk load because SSIS file mapping object 'Global\DTSQLIMPORT ' could not be opened. Operating system error code 2 (The system cannot find the file specified.). Make sure you are accessing a local server via Windows security.""  
+ If you attempt to use the SQL Server destination to bulk load data into a remote SQL Server database, you may see an error message similar to the following: "An OLE DB record is available. Source: "Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client" Hresult: 0x80040E14 Description: "Could not bulk load because SSIS file mapping object 'Global\DTSQLIMPORT ' could not be opened. Operating system error code 2 (The system cannot find the file specified.). Make sure you are accessing a local server via Windows security.""  
   
- The SQL Server destination offers the same high-speed insertion of data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that the Bulk Insert task provides; however, by using the SQL Server destination, a package can apply transformations to column data before the data is loaded into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ The SQL Server destination offers the same high-speed insertion of data into [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that the Bulk Insert task provides; however, by using the SQL Server destination, a package can apply transformations to column data before the data is loaded into [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- For loading data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you should consider using the SQL Server destination instead of the OLE DB destination.  
+ For loading data into [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], you should consider using the SQL Server destination instead of the OLE DB destination.  
   
 ### Bulk Insert Options  
  If the SQL Server destination uses a fast-load data access mode, you can specify the following fast load options:  
   
--   Retain identity values from the imported data file, or use unique values assigned by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Retain identity values from the imported data file, or use unique values assigned by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 -   Retain null values during the bulk load operation.  
   
@@ -57,7 +57,7 @@ manager: "jhubbard"
   
 -   Specify the columns in the input that contain sorted data.  
   
- For more information about bulk load options, see [BULK INSERT &#40;Transact-SQL&#41;](../Topic/BULK%20INSERT%20\(Transact-SQL\).md).  
+ For more information about bulk load options, see [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md).  
   
 #### Performance Improvements  
  To improve the performance of a bulk insert and the access to table data during the bulk insert operation, you should change the default options as follows:  
@@ -81,11 +81,11 @@ manager: "jhubbard"
   
  This destination uses an OLE DB connection manager to connect to a data source, and the connection manager specifies the OLE DB provider to use. For more information, see [OLE DB Connection Manager](../../2014/integration-services/ole-db-connection-manager.md).  
   
- An [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project also provides the data source object from which you can create an OLE DB connection manager. This makes data sources and data source views available to the SQL Server destination.  
+ An [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project also provides the data source object from which you can create an OLE DB connection manager. This makes data sources and data source views available to the SQL Server destination.  
   
  The SQL Server destination has one input. It does not support an error output.  
   
- You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer or programmatically.  
   
  For more information about the properties that you can set in the **SQL Server Destination Editor** dialog box, click one of the following topics:  
   

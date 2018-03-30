@@ -21,13 +21,13 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # ISQLServerErrorInfo (OLE DB)
-  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider defines the **ISQLServerErrorInfo** error interface. This interface returns details from a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] error, including its severity and state.  
+  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider defines the **ISQLServerErrorInfo** error interface. This interface returns details from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error, including its severity and state.  
   
 ## In This Section  
   
 |Method|Description|  
 |------------|-----------------|  
-|[ISQLServerErrorInfo::GetErrorInfo &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/isqlservererrorinfo-geterrorinfo-ole-db.md)|Returns a pointer to a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider SSERRORINFO structure that contains the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] error details.|  
+|[ISQLServerErrorInfo::GetErrorInfo &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/isqlservererrorinfo-geterrorinfo-ole-db.md)|Returns a pointer to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider SSERRORINFO structure that contains the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error details.|  
   
 ## See Also  
  [Interfaces &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/interfaces-ole-db.md)   

@@ -12,17 +12,17 @@ ms.topic: "article"
 ms.assetid: edc0c75f-0530-4e6d-85aa-3385301bfd00
 caps.latest.revision: 8
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # ReportItems Collection References (Report Builder and SSRS)
   The `ReportItems` built-in collection is the set of text boxes from report items such as rows of a data region or text boxes on the report design surface. The `ReportItems` collection includes text boxes that are in the current scope of a page header, page footer, or report body. This collection is determined at run time by the report processor and the report renderer. The current scope changes as the report processor successively combines report data and the report item layout elements as the user views pages of a report. You can use the `ReportItems` built-in collection to produce dictionary-style page headers that show the first and last items on each page.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## Using the ReportItems Value Property  
- Items within the `ReportItems` collection have only one property: Value. The value for a `ReportItems` item can be used to display or calculate data from another field in the report. To access the value of the current text box, you can use the [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] built-in global Me.Value or simply Value. In report functions such as First and aggregate functions, use the fully qualified syntax.  
+ Items within the `ReportItems` collection have only one property: Value. The value for a `ReportItems` item can be used to display or calculate data from another field in the report. To access the value of the current text box, you can use the [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] built-in global Me.Value or simply Value. In report functions such as First and aggregate functions, use the fully qualified syntax.  
   
  For example:  
   

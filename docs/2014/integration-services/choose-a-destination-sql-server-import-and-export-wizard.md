@@ -22,14 +22,14 @@ manager: "jhubbard"
   
  To learn more about this wizard, see [SQL Server Import and Export Wizard](../../2014/integration-services/sql-server-import-and-export-wizard.md). To learn about the options for starting the wizard, as well as the permissions required to run the wizard successfully, see [Run the SQL Server Import and Export Wizard](../../2014/integration-services/run-the-sql-server-import-and-export-wizard.md).  
   
- The purpose of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard is to copy data from a source to a destination. The wizard can also create a destination database and destination tables for you. However, if you have to copy multiple databases or tables, or other kinds of database objects, you should use the Copy Database Wizard instead. For more information, see [Use the Copy Database Wizard](../../2014/database-engine/use-the-copy-database-wizard.md).  
+ The purpose of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Import and Export Wizard is to copy data from a source to a destination. The wizard can also create a destination database and destination tables for you. However, if you have to copy multiple databases or tables, or other kinds of database objects, you should use the Copy Database Wizard instead. For more information, see [Use the Copy Database Wizard](../../2014/database-engine/use-the-copy-database-wizard.md).  
   
 ## Static Options  
  **Destination**  
- Choose the data provider that matches the data storage format of the destination. There may be more than one provider available for your data source. For example, with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] you can use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, the .NET Framework Data Provider for SQL Server, or the Microsoft OLE DB Provider for SQL Server.  
+ Choose the data provider that matches the data storage format of the destination. There may be more than one provider available for your data source. For example, with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] you can use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client, the .NET Framework Data Provider for SQL Server, or the Microsoft OLE DB Provider for SQL Server.  
   
 > [!NOTE]  
->  If the data source is [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007 or [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 2007, the data source requires a different data source provider than earlier versions of Excel or Access. For more information, see [Connect to an Excel Workbook](../../2014/integration-services/connect-to-an-excel-workbook.md) and [Connect to an Access Database](../../2014/integration-services/connect-to-an-access-database.md).  
+>  If the data source is [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel 2007 or [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Access 2007, the data source requires a different data source provider than earlier versions of Excel or Access. For more information, see [Connect to an Excel Workbook](../../2014/integration-services/connect-to-an-excel-workbook.md) and [Connect to an Access Database](../../2014/integration-services/connect-to-an-access-database.md).  
   
 > [!NOTE]  
 >  To save data to an ODBC destination, select the .NET Framework Data Provider for ODBC.  
@@ -47,16 +47,16 @@ manager: "jhubbard"
  Specify whether the package should use Microsoft Windows Authentication to log in to the database. Windows Authentication is recommended for better security.  
   
  **Use SQL Server Authentication**  
- Specify whether the package should use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication to log in to the database. If you use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, you must provide a user name and password.  
+ Specify whether the package should use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication to log in to the database. If you use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication, you must provide a user name and password.  
   
  **User name**  
- Specify a user name for the database connection when you are using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.  
+ Specify a user name for the database connection when you are using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication.  
   
  **Password**  
- Provide the password for the database connection when you are using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.  
+ Provide the password for the database connection when you are using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication.  
   
  **Database**  
- Select from the list of databases on the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or create a new database by clicking **New**.  
+ Select from the list of databases on the specified instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], or create a new database by clicking **New**.  
   
  **Refresh**  
  Restore the list of available databases by clicking **Refresh**.  
@@ -110,7 +110,7 @@ manager: "jhubbard"
  Select the version of Excel that is used by the destination workbook.  
   
 > [!NOTE]  
->  When you export data to a [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] destination, the wizard uses the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Excel Destination component. For information on some usage considerations and known issues, see [Excel Destination](../../2014/integration-services/excel-destination.md).  
+>  When you export data to a [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] destination, the wizard uses the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Excel Destination component. For information on some usage considerations and known issues, see [Excel Destination](../../2014/integration-services/excel-destination.md).  
   
 ### Destination = Microsoft Access  
   

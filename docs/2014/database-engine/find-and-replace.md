@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
 caps.latest.revision: 23
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Find and Replace
@@ -69,7 +69,7 @@ manager: "jhubbard"
   
 ## Look In  
  **Look in**  
- Select the location to look for the text specified in **Find what**. Options are **Current Document**, which searches the document window that had focus when the dialog box was opened, and **All Open Documents**, which searches all document windows that are currently open in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ Select the location to look for the text specified in **Find what**. Options are **Current Document**, which searches the document window that had focus when the dialog box was opened, and **All Open Documents**, which searches all document windows that are currently open in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 ## Find Options  
  You can expand or collapse the **Find Options** section. The following options can be selected or cleared.  

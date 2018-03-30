@@ -24,14 +24,14 @@ helpviewer_keywords:
 ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
 caps.latest.revision: 46
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Database Engine Query Editor (SQL Server Management Studio)
-  Use the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor to create and run scripts containing [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. The editor also supports running scripts that contain **sqlcmd** commands.  
+  Use the [!INCLUDE[ssDE](../includes/ssde-md.md)] Query Editor to create and run scripts containing [!INCLUDE[tsql](../includes/tsql-md.md)] statements. The editor also supports running scripts that contain **sqlcmd** commands.  
   
 ## Transact-SQL F1 Help  
- The [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor supports linking you to the reference topic for a specific [!INCLUDE[tsql](../../includes/tsql-md.md)] statement when you select F1. To do so, highlight the name of a Transact-SQL statement and then select F1. The help search engine will then search for a topic that has an F1 help attribute that matches the string you highlighted.  
+ The [!INCLUDE[ssDE](../includes/ssde-md.md)] Query Editor supports linking you to the reference topic for a specific [!INCLUDE[tsql](../includes/tsql-md.md)] statement when you select F1. To do so, highlight the name of a Transact-SQL statement and then select F1. The help search engine will then search for a topic that has an F1 help attribute that matches the string you highlighted.  
   
  If the help search engine does not find a topic with an F1 help keyword that exactly matches the string you highlighted, then this topic is displayed. In that case, there are two approaches to finding the help you are looking for:  
   
@@ -46,10 +46,10 @@ manager: "jhubbard"
     -   The name of a system stored procedure table, or view, such as sys.data_spaces or sp_tableoption.  
   
 ## Working With the Database Engine Query Editor  
- The [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor is one of four editors implemented in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For a description of the functionality implemented in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor and the main tasks you can perform using the editor, see [Query and Text Editors &#40;SQL Server Management Studio&#41;](../../2014/database-engine/query-and-text-editors-sql-server-management-studio.md).  
+ The [!INCLUDE[ssDE](../includes/ssde-md.md)] Query Editor is one of four editors implemented in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. For a description of the functionality implemented in the [!INCLUDE[ssDE](../includes/ssde-md.md)] Query Editor and the main tasks you can perform using the editor, see [Query and Text Editors &#40;SQL Server Management Studio&#41;](../../2014/database-engine/query-and-text-editors-sql-server-management-studio.md).  
   
 ## SQL Editor Toolbar  
- When the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor is open, the SQL Editor toolbar appears with the following buttons.  
+ When the [!INCLUDE[ssDE](../includes/ssde-md.md)] Query Editor is open, the SQL Editor toolbar appears with the following buttons.  
   
  **Connect**  
  Opens the **Connect to Server** dialog box. Use this dialog box to establish a connection to a server.  
@@ -70,7 +70,7 @@ manager: "jhubbard"
  Executes the selected code or, if no code is selected, executes all the code in the Query Editor.  
   
  **Debug**  
- Enables the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger. This debugger supports debugging actions such as setting breakpoints, watching variables, and stepping through code.  
+ Enables the [!INCLUDE[tsql](../includes/tsql-md.md)] debugger. This debugger supports debugging actions such as setting breakpoints, watching variables, and stepping through code.  
   
  **Cancel Executing Query**  
  Sends a cancellation request to the server. Some queries cannot be canceled immediately, but must wait for a suitable cancellation condition. When transactions are canceled, delays might occur while transactions are rolled back.  
@@ -85,7 +85,7 @@ manager: "jhubbard"
  Opens the **Query Options** dialog box. Use this dialog box to configure the default options for query execution and for query results.  
   
  **IntelliSense Enabled**  
- Specifies whether IntelliSense functionality is available in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor.  
+ Specifies whether IntelliSense functionality is available in the [!INCLUDE[ssDE](../includes/ssde-md.md)] Query Editor.  
   
  **Include Actual Execution Plan**  
  Executes the query, returns the query results, and the execution plan that was used for the query. These appear as a graphical query plan in the **Execution plan** window.  
@@ -117,19 +117,19 @@ manager: "jhubbard"
  **Specify Values for Template Parameters**  
  Opens a dialog box that you can use to specify values for parameters in stored procedures and functions.  
   
- You can also add the SQL Editor toolbar by selecting the **View** menu, selecting **Toolbars**, and then selecting **SQL Editor**. If you add the SQL Editor toolbar when no [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor windows are open, all the buttons are unavailable.  
+ You can also add the SQL Editor toolbar by selecting the **View** menu, selecting **Toolbars**, and then selecting **SQL Editor**. If you add the SQL Editor toolbar when no [!INCLUDE[ssDE](../includes/ssde-md.md)] Query Editor windows are open, all the buttons are unavailable.  
   
 ## SQL Editor Toolbar  
- When a [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor window is open, you can add the Debug toolbar by selecting the **View** menu, selecting **Toolbars**, and then selecting **Debug**. If you add the Debug toolbar when no [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor windows are open, all the buttons are unavailable.  
+ When a [!INCLUDE[ssDE](../includes/ssde-md.md)] Query Editor window is open, you can add the Debug toolbar by selecting the **View** menu, selecting **Toolbars**, and then selecting **Debug**. If you add the Debug toolbar when no [!INCLUDE[ssDE](../includes/ssde-md.md)] Query Editor windows are open, all the buttons are unavailable.  
   
  **Continue**  
- Runs the code in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor window until a breakpoint is encountered.  
+ Runs the code in the [!INCLUDE[ssDE](../includes/ssde-md.md)] Query Editor window until a breakpoint is encountered.  
   
  **Break All**  
  Sets the debugger to break all processes to which the debugger is attached when a break occurs.  
   
  **Stop Debugging**  
- Takes the selected [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor window out of debug mode, and restores the standard execution mode.  
+ Takes the selected [!INCLUDE[ssDE](../includes/ssde-md.md)] Query Editor window out of debug mode, and restores the standard execution mode.  
   
  **Show Next Statement**  
  Moves the cursor to the next statement to be executed.  

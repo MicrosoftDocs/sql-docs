@@ -38,7 +38,7 @@ manager: "mblythe"
 |**Paste**|Note: This option is disabled.|  
 |**Delete**|Select to delete the selected cube dimension, measure group, or dimension relationship from the cube.|  
 |**Rename**|Select to rename the selected cube dimension, measure group, or dimension relationship.|  
-|**Properties**|Select to display the **Properties** window in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] for the selected cube dimension, measure group, or dimension relationship.|  
+|**Properties**|Select to display the **Properties** window in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] for the selected cube dimension, measure group, or dimension relationship.|  
   
 ## See Also  
  [Cube Objects &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dev-guide/cube-objects-analysis-services-multidimensional-data.md)   

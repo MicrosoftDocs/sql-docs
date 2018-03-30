@@ -16,15 +16,15 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Prepare SQL Server for Oracle CDC-View Script
-  This dialog box shows the Prepare SQL script that creates the MSXDBCDC database. This database is must be on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance for it to be used with Oracle CDC for SQL Server.  
+  This dialog box shows the Prepare SQL script that creates the MSXDBCDC database. This database is must be on a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance for it to be used with Oracle CDC for SQL Server.  
   
  Do the following in the Prepare SQL Server Script dialog box.  
   
  **Save As**  
- Saves the script in a text file that you can save in any location you want. You can then run the scripts at a later time by pasting the script into the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ Saves the script in a text file that you can save in any location you want. You can then run the scripts at a later time by pasting the script into the [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
  **Copy**  
- Copies the script to the clipboard. You can then paste the script into the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to run them and create the MSXDBCDC database.  
+ Copies the script to the clipboard. You can then paste the script into the [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to run them and create the MSXDBCDC database.  
   
 ## See Also  
  [Prepare SQL Server for CDC](../../2014/integration-services/prepare-sql-server-for-cdc.md)  

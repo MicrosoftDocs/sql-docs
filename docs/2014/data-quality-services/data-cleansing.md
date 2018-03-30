@@ -16,9 +16,9 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Data Cleansing
-  Data cleansing is the process of analyzing the quality of data in a data source, manually approving/rejecting the suggestions by the system, and thereby making changes to the data. Data cleansing in [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) includes a computer-assisted process that analyzes how data conforms to the knowledge in a knowledge base, and an interactive process that enables the data steward to review and modify computer-assisted process results to ensure that the data cleansing is exactly as they want to be done.  
+  Data cleansing is the process of analyzing the quality of data in a data source, manually approving/rejecting the suggestions by the system, and thereby making changes to the data. Data cleansing in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) includes a computer-assisted process that analyzes how data conforms to the knowledge in a knowledge base, and an interactive process that enables the data steward to review and modify computer-assisted process results to ensure that the data cleansing is exactly as they want to be done.  
   
- The data steward can also perform data cleansing in the Integration Services packaging process. In this case, the data steward would use the [!INCLUDE[ssDQSCleansingLong](../../includes/ssdqscleansinglong-md.md)] that automatically performs data cleansing using an existing knowledge base. For more information, see [DQS Cleansing Transformation](../../2014/integration-services/dqs-cleansing-transformation.md).  
+ The data steward can also perform data cleansing in the Integration Services packaging process. In this case, the data steward would use the [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] that automatically performs data cleansing using an existing knowledge base. For more information, see [DQS Cleansing Transformation](../../2014/integration-services/dqs-cleansing-transformation.md).  
   
  The data cleansing feature in DQS has the following benefits:  
   
@@ -50,7 +50,7 @@ manager: "jhubbard"
   
  The data cleansing process finds the best match of an instance of data to known data domain values. The process applies data quality knowledge to all source data, unlike the knowledge discovery process, which runs on a percentage of the sample data.  
   
- The computer-assisted process displays data quality information in [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] that will be used for the interactive cleansing process. Apart from the adherence to the syntax error rules, DQS also uses reference data and advanced algorithms to categorize data using *confidence level*. The confidence level indicates the extent of certainty of DQS for the correction or suggestion. The confidence level is based on the following threshold values:  
+ The computer-assisted process displays data quality information in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] that will be used for the interactive cleansing process. Apart from the adherence to the syntax error rules, DQS also uses reference data and advanced algorithms to categorize data using *confidence level*. The confidence level indicates the extent of certainty of DQS for the correction or suggestion. The confidence level is based on the following threshold values:  
   
 -   An *auto-correction threshold* value above which DQS will suggest a change and make it unless the data steward rejects it. You can specify the auto correction threshold value in the **General Settings** tab in the **Configuration** screen. For more information, see [Configure Threshold Values for Cleansing and Matching](../../2014/data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
@@ -74,13 +74,13 @@ manager: "jhubbard"
 > [!NOTE]  
 >  In the **Suggested**, **Corrected**, and **Correct** tabs, DQS displays the leading value for a domain, if applicable, in the **Correct To** column against the respective domain value.  
   
- The data steward uses [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] to see the changes that DQS has proposed and to decide whether to implement them or not. He or she can verify that values DQS has designated as correct are in fact correct. He or she can verify that changes already made by DQS, with a high confidence level, should be made. He or she can decide whether to approve auto-suggested changes. And he or she can review values that have not been changed, just in case they want to make a change not found by the computer-assisted process.  
+ The data steward uses [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] to see the changes that DQS has proposed and to decide whether to implement them or not. He or she can verify that values DQS has designated as correct are in fact correct. He or she can verify that changes already made by DQS, with a high confidence level, should be made. He or she can decide whether to approve auto-suggested changes. And he or she can review values that have not been changed, just in case they want to make a change not found by the computer-assisted process.  
   
  DQS will merge any changes that the data steward has made with the results of the computer-assisted data cleansing. These changes will stay with the project; however, they will not be added to the knowledge base. During data cleansing, the associated knowledge base is read-only.  
   
  When the data cleansing process has completed, you can choose to export the processed data to a new table in a SQL Server database, .csv file, or Excel file. The source data on which cleansing is performed is maintained in its original state. The data steward can use the separate cleansed data to correct the actual source data.  
   
- The following illustration displays how data cleansing is done using the [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] application:  
+ The following illustration displays how data cleansing is done using the [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] application:  
   
  ![Data Cleansing in Data Quality Client](../../2014/data-quality-services/media/dqs-cleansingindqsclient.gif "Data Cleansing in Data Quality Client")  
   

@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: f8fd2d8d-a4af-4b6a-ba51-9123b7e4c9bf
 caps.latest.revision: 16
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_10001
@@ -34,7 +34,7 @@ manager: "jhubbard"
  Distributed query processing encountered a generic error while calling into the OLE DB provider.  
   
 ## User Action  
- Collect OLE DB trace events using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] and  provide this data to product support for the OLE DB provider.  
+ Collect OLE DB trace events using [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] and  provide this data to product support for the OLE DB provider.  
   
 ## See Also  
  [SQL Server Profiler Templates and Permissions](../../2014/database-engine/sql-server-profiler-templates-and-permissions.md)   

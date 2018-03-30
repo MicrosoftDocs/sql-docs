@@ -12,11 +12,11 @@ ms.topic: "article"
 ms.assetid: dda91d4f-77cc-4898-ad03-810ece5f8e74
 caps.latest.revision: 7
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Register a Service Principal Name (SPN) for a Report Server
-  If you are deploying [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in a network that uses the Kerberos protocol for mutual authentication, you must create a Service Principal Name (SPN) for the Report Server service if you configure it to run as a domain user account.  
+  If you are deploying [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in a network that uses the Kerberos protocol for mutual authentication, you must create a Service Principal Name (SPN) for the Report Server service if you configure it to run as a domain user account.  
   
 ## About SPNs  
  An SPN is a unique identifier for a service on a network that uses Kerberos authentication. It consists of a service class, a host name, and a port. On a network that uses Kerberos authentication, an SPN for the server must be registered under either a built-in computer account (such as NetworkService or LocalSystem) or user account. SPNs are registered for built-in accounts automatically. However, when you run a service under a domain user account, you must manually register the SPN for the account you want to use.  
@@ -38,7 +38,7 @@ Setspn -s http/<computername>.<domainname>:<port> <domain-user-account>
   
  **SetSPN** is available with Windows Server. The `-s` argument adds a SPN after validating no duplicate exists. **NOTE:-s** is available in Windows Server starting with Windows Server 2008.  
   
- `HTTP` is the service class. The Report Server Web service runs in HTTP.SYS. A by-product of creating an SPN for HTTP is that all Web applications on the same computer that run in HTTP.SYS (including applications hosted in IIS) will be granted tickets based on the domain user account. If those services run under a different account, the authentication requests will fail. To avoid this problem, be sure to configure all HTTP applications to run under the same account, or consider creating host headers for each application and then creating separate SPNs for each host header. When you configure host headers, DNS changes are required regardless of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configuration.  
+ `HTTP` is the service class. The Report Server Web service runs in HTTP.SYS. A by-product of creating an SPN for HTTP is that all Web applications on the same computer that run in HTTP.SYS (including applications hosted in IIS) will be granted tickets based on the domain user account. If those services run under a different account, the authentication requests will fail. To avoid this problem, be sure to configure all HTTP applications to run under the same account, or consider creating host headers for each application and then creating separate SPNs for each host header. When you configure host headers, DNS changes are required regardless of the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] configuration.  
   
  The values that you specify for \<*computername*>, \<*domainname*>, and \<*port*> identify the unique network address of the computer that hosts the report server. This can be a local host name or a fully qualified domain name (FQDN). If you only have one domain and are using port 80, you can omit \<*domainname*> and \<*port*> from your command line. \<*domain-user-account*> is the user account under which the Report Server service runs and for which the SPN must be registered.  
   
@@ -46,7 +46,7 @@ Setspn -s http/<computername>.<domainname>:<port> <domain-user-account>
   
 #### To register an SPN for a Report Server service running as a domain user  
   
-1.  Install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and configure the Report Server service to run as a domain user account. Note that users will not be able to connect to the report server until you complete the following steps.  
+1.  Install [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] and configure the Report Server service to run as a domain user account. Note that users will not be able to connect to the report server until you complete the following steps.  
   
 2.  Log on to the domain controller as domain administrator.  
   

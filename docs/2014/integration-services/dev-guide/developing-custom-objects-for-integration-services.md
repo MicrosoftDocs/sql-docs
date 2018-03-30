@@ -20,7 +20,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Developing Custom Objects for Integration Services
-  When the control flow and data flow objects that are included with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] do not completely meet your requirements, you can develop many types of custom objects on your own including:  
+  When the control flow and data flow objects that are included with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] do not completely meet your requirements, you can develop many types of custom objects on your own including:  
   
 -   **Custom tasks**.  
   
@@ -32,12 +32,12 @@ manager: "jhubbard"
   
 -   **Custom data flow components.** Can be configured as sources, transformations, or destinations.  
   
- The [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] object model facilitates this custom development with base classes that provide a consistent and reliable framework for your custom implementation.  
+ The [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] object model facilitates this custom development with base classes that provide a consistent and reliable framework for your custom implementation.  
   
  If you do not have to reuse custom functionality across multiple packages, the Script task and the Script component give you the full power of a managed programming language with significantly less infrastructure code to write. For more information, see [Comparing Scripting Solutions and Custom Objects](../../../2014/integration-services/dev-guide/comparing-scripting-solutions-and-custom-objects.md).  
   
 ## Steps in Developing a Custom Object for Integration Services  
- When you develop a custom object for use in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], you develop a Class Library (a DLL) that will be loaded at design time and run time by SSIS Designer and by the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] runtime. The most important methods that you must implement are not methods that you call from your own code, but methods that the runtime calls at appropriate times to initialize and validate your component and to invoke its functionality.  
+ When you develop a custom object for use in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], you develop a Class Library (a DLL) that will be loaded at design time and run time by SSIS Designer and by the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] runtime. The most important methods that you must implement are not methods that you call from your own code, but methods that the runtime calls at appropriate times to initialize and validate your component and to invoke its functionality.  
   
  Here are the steps that you follow in developing a custom object:  
   
@@ -56,7 +56,7 @@ manager: "jhubbard"
 7.  Build, deploy, and debug your new custom object as described in [Building, Deploying, and Debugging Custom Objects](../../../2014/integration-services/dev-guide/building-deploying-and-debugging-custom-objects.md).  
   
 ## Base Classes, Attributes, and Important Methods  
- This table provides an easy reference to the most important elements in the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] object model for each type of custom object that you can develop.  
+ This table provides an easy reference to the most important elements in the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] object model for each type of custom object that you can develop.  
   
 |Custom object|Base class|Attribute|Important methods|  
 |-------------------|----------------|---------------|-----------------------|  
@@ -90,10 +90,10 @@ manager: "jhubbard"
 ## Providing a Custom User Interface  
  To allow users of your custom object to configure its properties, you may have to develop a custom user interface also. In those cases where a custom user interface is not strictly required, you may choose to create one to provide a more user-friendly interface than the default editor.  
   
- In a custom user interface project or assembly, you generally have two classes —a class that implements an [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] interface for user interfaces for the specific type of custom object, and the Windows form that it displays to gather information from the user. The interfaces that you implement have only a few methods, and a custom user interface is not difficult to develop.  
+ In a custom user interface project or assembly, you generally have two classes —a class that implements an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] interface for user interfaces for the specific type of custom object, and the Windows form that it displays to gather information from the user. The interfaces that you implement have only a few methods, and a custom user interface is not difficult to develop.  
   
 > [!NOTE]  
->  Many [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] log providers have a custom user interface that implements <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI> and replaces the **Configuration** text box with a filtered drop-down list of available connection managers. However custom user interfaces for custom log providers are not implemented in this release of [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]. Specifying a value for the <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute.UITypeName%2A> property of the <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> has no effect.  
+>  Many [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] log providers have a custom user interface that implements <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI> and replaces the **Configuration** text box with a filtered drop-down list of available connection managers. However custom user interfaces for custom log providers are not implemented in this release of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Specifying a value for the <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute.UITypeName%2A> property of the <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> has no effect.  
   
  The following table provides an easy reference to the interfaces that you must implement when you develop a custom user interface for each type of custom object. It also explains what the user sees if you choose not to develop a custom user interface for your object, or if you fail to link your object to its user interface by using the `UITypeName` property in the object's attribute. Although the powerful Advanced Editor may be satisfactory for a data flow component, the Properties window is a less user-friendly solution for tasks and connection managers, and a custom ForEach enumerator cannot be configured at all without a custom form.  
   
@@ -101,7 +101,7 @@ manager: "jhubbard"
 |-------------------|-----------------------------------|----------------------------------------------------------------------|  
 |Task|<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI>|Properties window only|  
 |Connection manager|<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI>|Properties window only|  
-|Log provider|<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI><br /><br /> (Not implemented in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)])|Text box in **Configuration** column|  
+|Log provider|<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI><br /><br /> (Not implemented in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)])|Text box in **Configuration** column|  
 |Enumerator|<xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumeratorUI>|Properties window only. Enumerator Configuration area of editor is empty.|  
 |Data flow component|<xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI>|Advanced Editor|  
   
@@ -111,7 +111,7 @@ manager: "jhubbard"
   
 ||  
 |-|  
-|![Integration Services icon (small)](../../../2014/integration-services/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
+|![Integration Services icon (small)](../../../2014/integration-services/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
   
 ## See Also  
  [Persisting Custom Objects](../../../2014/integration-services/dev-guide/persisting-custom-objects.md)   

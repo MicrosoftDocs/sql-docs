@@ -52,11 +52,11 @@ manager: "jhubbard"
   
  If the XML data file contains elements that are not in the XSD, these elements are ignored and no output is generated for them. On the other hand, if the XML data file is missing elements that are represented in the XSD, the output will contain columns with null values.  
   
- When the data is extracted from the XML data file, it is converted to an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data type. However, the XML source cannot convert the XML data to the DT_TIME2 or DT_DBTIMESTAMP2 data types because the source does not support these data types. For more information, see [Integration Services Data Types](../../2014/integration-services/integration-services-data-types.md).  
+ When the data is extracted from the XML data file, it is converted to an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] data type. However, the XML source cannot convert the XML data to the DT_TIME2 or DT_DBTIMESTAMP2 data types because the source does not support these data types. For more information, see [Integration Services Data Types](../../2014/integration-services/integration-services-data-types.md).  
   
  The XSD or inline schema may specify the data type for elements, but if it does not, the **XML Source Editor** dialog box assigns the Unicode string data type (DT_WSTR) to the column in the output that contains the element, and sets the column length to 255 characters.  
   
- If the schema specifies the maximum length of an element, the length of output column is set to this value. If the maximum length is greater than the length supported by the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data type to which the element is converted, then the data is truncated to the maximum length of the data type. For example, if a string has a length of 5000, it is truncated to 4000 characters because the maximum length of the DT_WSTR data type is 4000 characters; likewise, byte data is truncated to 8000 characters, the maximum length of the DT_BYTES data type. If the schema specifies no maximum length, the default length of columns with either data type is set to 255. Data truncation in the XML source is handled the same way as truncation in other data flow components. For more information, see [Error Handling in Data](../../2014/integration-services/error-handling-in-data.md).  
+ If the schema specifies the maximum length of an element, the length of output column is set to this value. If the maximum length is greater than the length supported by the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] data type to which the element is converted, then the data is truncated to the maximum length of the data type. For example, if a string has a length of 5000, it is truncated to 4000 characters because the maximum length of the DT_WSTR data type is 4000 characters; likewise, byte data is truncated to 8000 characters, the maximum length of the DT_BYTES data type. If the schema specifies no maximum length, the default length of columns with either data type is set to 255. Data truncation in the XML source is handled the same way as truncation in other data flow components. For more information, see [Error Handling in Data](../../2014/integration-services/error-handling-in-data.md).  
   
  You can modify the data type and the column length. For more information, see [Integration Services Data Types](../../2014/integration-services/integration-services-data-types.md).  
   
@@ -67,9 +67,9 @@ manager: "jhubbard"
   
  The XML source supports multiple regular outputs and multiple error outputs.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes the **XML Source Edito**r dialog box for configuring the XML source. This dialog box is available in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes the **XML Source Edito**r dialog box for configuring the XML source. This dialog box is available in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer.  
   
- You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer or programmatically.  
   
  For more information about the properties that you can set in the **XML Source Editor** dialog box, click one of the following topics:  
   

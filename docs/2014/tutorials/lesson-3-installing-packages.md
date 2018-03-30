@@ -12,13 +12,13 @@ ms.topic: "article"
 ms.assetid: 87bc4d82-39d8-424f-886f-98cf1e4bb07a
 caps.latest.revision: 14
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Lesson 3: Installing Packages
   In [Lesson 2: Creating the Deployment Bundle](../../2014/tutorials/lesson-2-creating-the-deployment-bundle.md), you built a deployment utility and created the deployment bundle that contains the items that you must install packages on another computer. You also verified the file list in the deployment bundle and examined the contents of the manifest file that was created when you built the deployment utility.  
   
- In this lesson, you will copy the deployment bundle to the destination computer and then run the Package Installation Wizard to install the packages, package dependencies, and ancillary files on that computer. The packages will be installed in the **msdb**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database and the other items will be installed in the file system. After you complete the package installation, you will test the deployment by running the packages from [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] using the Execute Package Utility.  
+ In this lesson, you will copy the deployment bundle to the destination computer and then run the Package Installation Wizard to install the packages, package dependencies, and ancillary files on that computer. The packages will be installed in the **msdb**[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database and the other items will be installed in the file system. After you complete the package installation, you will test the deployment by running the packages from [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] using the Execute Package Utility.  
   
  **Estimated time to complete this lesson:** 30 minutes  
   
@@ -36,6 +36,6 @@ manager: "jhubbard"
   
 ||  
 |-|  
-|![Integration Services icon (small)](../../2014/integration-services/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
+|![Integration Services icon (small)](../../2014/integration-services/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
   
   

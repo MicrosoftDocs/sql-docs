@@ -25,23 +25,23 @@ ms.author: "mblythe"
 manager: "jhubbard"
 ---
 # SQL Server Identifiers in PowerShell
-  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider for Windows PowerShell uses [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifiers in Windows PowerShell paths. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifiers can contain characters that Windows PowerShell does not support in paths. You must escape these characters or use special encoding for them when using the identifiers in Windows PowerShell paths.  
+  The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provider for Windows PowerShell uses [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] identifiers in Windows PowerShell paths. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] identifiers can contain characters that Windows PowerShell does not support in paths. You must escape these characters or use special encoding for them when using the identifiers in Windows PowerShell paths.  
   
 ## SQL Server Identifiers in Windows PowerShell Paths  
- Windows PowerShell providers expose data hierarchies using a path structure similar to that used for the Windows file system. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider implements paths to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objects. For the [!INCLUDE[ssDE](../../includes/ssde-md.md)], the drive is set to SQLSERVER:, the first folder is set to \SQL, and the database objects are referenced as containers and items. This is the path to the Vendor table in the Purchasing schema of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database in a default instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]:  
+ Windows PowerShell providers expose data hierarchies using a path structure similar to that used for the Windows file system. The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provider implements paths to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] objects. For the [!INCLUDE[ssDE](../includes/ssde-md.md)], the drive is set to SQLSERVER:, the first folder is set to \SQL, and the database objects are referenced as containers and items. This is the path to the Vendor table in the Purchasing schema of the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database in a default instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)]:  
   
 ```  
 SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.Vendor  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifiers are the names of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objects, such as table or column names. There are two types of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifiers:  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] identifiers are the names of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] objects, such as table or column names. There are two types of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] identifiers:  
   
 -   Regular identifiers are limited to a set of characters that are also supported in Windows PowerShell paths. These names can be used in Windows PowerShell paths without being changed.  
   
 -   Delimited identifiers can use characters not supported in Windows PowerShell path names. Delimited identifiers are called bracketed identifiers if they are enclosed in brackets ([IdentifierName]) and quoted identifiers if they are enclosed in double quotes ("IdentifierName"). If a delimited identifier uses characters not supported in Windows PowerShell paths, the characters must either be encoded or escaped before using the identifier as a container or item name. Encoding works for all characters. Some characters, such as the colon character (:), cannot be escaped.  
   
 ## SQL Server Identifiers in cmdlets  
- Some [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cmdlets have a parameter that takes an identifier as input. The parameter values are typically supplied as quoted string constants or in string variables. When identifiers are supplied as string constants or in variables, there is no conflict with the set of characters that are supported by Windows PowerShell.  
+ Some [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cmdlets have a parameter that takes an identifier as input. The parameter values are typically supplied as quoted string constants or in string variables. When identifiers are supplied as string constants or in variables, there is no conflict with the set of characters that are supported by Windows PowerShell.  
   
 ## SQL Server Identifier Tasks  
   

@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: ed079327-0bb0-4245-adb5-e46a90cf3586
 caps.latest.revision: 19
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # MSReportServer_Instance Methods

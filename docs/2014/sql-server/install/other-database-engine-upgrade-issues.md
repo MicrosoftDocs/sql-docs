@@ -21,7 +21,7 @@ manager: "jhubbard"
   The following upgrade issues cannot be detected by the current version of Upgrade Advisor. Review the issues listed below to evaluate their potential impact to your systems.  
   
 ## Multiple Database Engine Deprecated Features  
- The following [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements or options are deprecated:  
+ The following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements or options are deprecated:  
   
 -   NO_LOG and TRUNCATE_ONLY options of BACKUP LOG  
   
@@ -47,7 +47,7 @@ manager: "jhubbard"
   
 -   syssegments  
   
- Use of the VIA protocol to connect to the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] is deprecated.  
+ Use of the VIA protocol to connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)] is deprecated.  
   
 ## New Data Types  
  The following will be reserved system types. Rename the existing conflicting user defined types either before or after upgrade.  

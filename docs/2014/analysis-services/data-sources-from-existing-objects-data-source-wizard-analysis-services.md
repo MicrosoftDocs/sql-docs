@@ -28,7 +28,7 @@ manager: "mblythe"
  Select a data source on which you want to base the new data source from the list of data sources, which is grouped by project.  
   
  **Create a data source based on an Analysis Services project**  
- Select to create a new data source that references another [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project in the current solution. The new data source acquires settings from the `TargetServer` and `TargetDatabase` properties of the selected project. When a project that uses the new data source is built, refreshed, or deployed, the new data source acquires settings from the data source you specify when you select this option.  
+ Select to create a new data source that references another [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project in the current solution. The new data source acquires settings from the `TargetServer` and `TargetDatabase` properties of the selected project. When a project that uses the new data source is built, refreshed, or deployed, the new data source acquires settings from the data source you specify when you select this option.  
   
  **Project**  
  Select the project that you want to reference in the new data source.  

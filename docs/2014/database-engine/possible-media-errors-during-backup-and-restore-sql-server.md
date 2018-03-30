@@ -29,7 +29,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Possible Media Errors During Backup and Restore (SQL Server)
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] gives you the option of recovering a database despite detected errors. An important new error-detection mechanism is the optional creation of a backup checksum that can be created by a backup operation and validated by a restore operation. You can control whether an operation checks for errors and whether the operation stops or continues on encountering an error. If a backup contains a backup checksum, RESTORE and RESTORE VERIFYONLY statements can check for errors.  
+  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] gives you the option of recovering a database despite detected errors. An important new error-detection mechanism is the optional creation of a backup checksum that can be created by a backup operation and validated by a restore operation. You can control whether an operation checks for errors and whether the operation stops or continues on encountering an error. If a backup contains a backup checksum, RESTORE and RESTORE VERIFYONLY statements can check for errors.  
   
 > [!NOTE]  
 >  Mirrored backups provide up to four copies (mirrors) of a media set, providing alternative copies for recovering from errors caused by damaged media. For more information, see [Mirrored Backup Media Sets &#40;SQL Server&#41;](../../2014/database-engine/mirrored-backup-media-sets-sql-server.md).  
@@ -37,7 +37,7 @@ manager: "jhubbard"
   
   
 ##  <a name="BckChecksums"></a> Backup Checksums  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports three types of checksums: a checksum on pages, a checksum in log blocks, and a backup checksum. When generating a backup checksum, BACKUP verifies that the data read from the database is consistent with any checksum or torn-page indication that is present in the database.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supports three types of checksums: a checksum on pages, a checksum in log blocks, and a backup checksum. When generating a backup checksum, BACKUP verifies that the data read from the database is consistent with any checksum or torn-page indication that is present in the database.  
   
  The BACKUP statement optionally computes a backup checksum on the backup stream; if page-checksum or torn-page information is present on a given page, when backing up the page, BACKUP also verifies the checksum and torn-page status and the page ID, of the page. When creating a backup checksum, a backup operation does not add any checksums to pages. Pages are backed up as they exist in the database, and the pages are unmodified by backup.  
   
@@ -52,11 +52,11 @@ manager: "jhubbard"
      If the backup operation encounters a page error during verification, the backup fails.  
   
     > [!NOTE]  
-    >  For more information about page checksums and torn page detection, see the PAGE_VERIFY option of the ALTER DATABASE statement. For more information, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md).  
+    >  For more information about page checksums and torn page detection, see the PAGE_VERIFY option of the ALTER DATABASE statement. For more information, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-set-options.md).  
   
 2.  Regardless of whether page checksums are present, BACKUP generates a separate backup checksum for the backup streams. Restore operations can optionally use the backup checksum to validate that the backup is not corrupted. The backup checksum is stored on the backup media, not on the database pages. The backup checksum can optionally be used at restore time.  
   
-3.  The backup set is flagged as containing backup checksums (in the **has_backup_checksums** column of **msdb..backupset)**. For more information, see [backupset &#40;Transact-SQL&#41;](../Topic/backupset%20\(Transact-SQL\).md).  
+3.  The backup set is flagged as containing backup checksums (in the **has_backup_checksums** column of **msdb..backupset)**. For more information, see [backupset &#40;Transact-SQL&#41;](~/relational-databases/system-tables/backupset-transact-sql.md).  
   
  During a restore operation, if backup checksums are present on the backup media, by default, both the RESTORE and RESTORE VERIFYONLY statements verify the backup checksums and page checksums. If there is no backup checksum, either restore operation proceeds without any verification; this is because without a backup checksum, restore cannot reliably verify page checksums.  
   
@@ -65,11 +65,11 @@ manager: "jhubbard"
   
  If a BACKUP operation continues after encountering errors, the operation performs the following steps:  
   
-1.  Flags the backup set on the backup media as containing errors and tracks the page in the **suspect_pages** table in the **msdb** database. For more information, see [suspect_pages &#40;Transact-SQL&#41;](../Topic/suspect_pages%20\(Transact-SQL\).md).  
+1.  Flags the backup set on the backup media as containing errors and tracks the page in the **suspect_pages** table in the **msdb** database. For more information, see [suspect_pages &#40;Transact-SQL&#41;](~/relational-databases/system-tables/suspect-pages-transact-sql.md).  
   
 2.  Logs the error in the SQL Server error log.  
   
-3.  Marks the backup set as containing this type of error (in the **is_damaged** column of **msdb.backupset)**. For more information, see [backupset &#40;Transact-SQL&#41;](../Topic/backupset%20\(Transact-SQL\).md).  
+3.  Marks the backup set as containing this type of error (in the **is_damaged** column of **msdb.backupset)**. For more information, see [backupset &#40;Transact-SQL&#41;](~/relational-databases/system-tables/backupset-transact-sql.md).  
   
 4.  Issues a message that the backup was successfully generated, but contains page errors.  
   
@@ -83,11 +83,11 @@ manager: "jhubbard"
 -   [Specify Whether a Backup or Restore Operation Continues or Stops After Encountering an Error &#40;SQL Server&#41;](../../2014/database-engine/specify-if-backup-or-restore-continues-or-stops-after-error.md)  
   
 ## See Also  
- [ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20\(Transact-SQL\).md)   
- [BACKUP &#40;Transact-SQL&#41;](../Topic/BACKUP%20\(Transact-SQL\).md)   
- [backupset &#40;Transact-SQL&#41;](../Topic/backupset%20\(Transact-SQL\).md)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)   
+ [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)   
+ [backupset &#40;Transact-SQL&#41;](~/relational-databases/system-tables/backupset-transact-sql.md)   
  [Mirrored Backup Media Sets &#40;SQL Server&#41;](../../2014/database-engine/mirrored-backup-media-sets-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
- [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md)  
+ [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)   
+ [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
   

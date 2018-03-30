@@ -52,7 +52,7 @@ manager: "mblythe"
 |NTCanonicalUserName|40|8|User name in canonical form. For example, engineering.microsoft.com/software/someone.|  
 |SPID|41|1|Contains the server process ID (SPID) that uniquely identifies the user session associated with the reported event. The SPID directly corresponds to the session GUID used by XML for Analysis (XMLA).|  
 |TextData|42|9|Contains the text data associated with the reported event.|  
-|ServerName|43|8|Contains the name of the instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] on which the reported event occurred.|  
+|ServerName|43|8|Contains the name of the instance of [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] on which the reported event occurred.|  
   
 ## Progress Report End–Data Columns  
   
@@ -85,7 +85,7 @@ manager: "mblythe"
 |NTCanonicalUserName|40|8|Contains the Windows user name associated with the reported event. The user name is in canonical form. For example, engineering.microsoft.com/software/user.|  
 |SPID|41|1|Contains the server process ID (SPID) that uniquely identifies the user session associated with the reported event. The SPID directly corresponds to the session GUID used by XML for Analysis (XMLA).|  
 |TextData|42|9|Contains the text data associated with the reported event.|  
-|ServerName|43|8|Contains the name of the instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] on which the reported event occurred.|  
+|ServerName|43|8|Contains the name of the instance of [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] on which the reported event occurred.|  
   
 ## Progress Report Current–Data Columns  
   
@@ -109,7 +109,7 @@ manager: "mblythe"
 |SessionID|39|8|Contains the session ID associated with the reported event.|  
 |SPID|41|1|Contains the server process ID (SPID) that uniquely identifies the user session associated with the reported event. The SPID directly corresponds to the session GUID used by XML for Analysis (XMLA).|  
 |TextData|42|9|Contains the text data associated with the reported event.|  
-|ServerName|43|8|Contains the name of the instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] on which the reported event occurred.|  
+|ServerName|43|8|Contains the name of the instance of [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] on which the reported event occurred.|  
   
 ## Progress Report Error–Data Columns  
   
@@ -137,7 +137,7 @@ manager: "mblythe"
 |SessionID|39|8|Contains the session ID associated with the reported event.|  
 |SPID|41|1|Contains the server process ID (SPID) that uniquely identifies the user session associated with the reported event. The SPID directly corresponds to the session GUID used by XML for Analysis (XMLA).|  
 |TextData|42|9|Contains the text data associated with the reported event.|  
-|ServerName|43|8|Contains the name of the instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] on which the reported event occurred.|  
+|ServerName|43|8|Contains the name of the instance of [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] on which the reported event occurred.|  
   
 ## See Also  
  [Progress Reports Event Category](../../2014/analysis-services/progress-reports-event-category.md)  

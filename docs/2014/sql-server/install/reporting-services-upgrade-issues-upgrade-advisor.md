@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: d9663f25-98d7-4508-ae3c-55a7277211bd
 caps.latest.revision: 42
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "jhubbard"
 ---
 # Reporting Services Upgrade Issues (Upgrade Advisor)
-  The following topics describe the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] issues that might affect your upgrade to [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. The topics describe actions that you can take to mitigate the effect of these changes on your environment.  
+  The following topics describe the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] issues that might affect your upgrade to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. The topics describe actions that you can take to mitigate the effect of these changes on your environment.  
   
- Upgrade Advisor analyzes a report server installation. If only client components are installed (for example, if Report Designer is the only [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] component installed on the computer), no issues will be reported.  
+ Upgrade Advisor analyzes a report server installation. If only client components are installed (for example, if Report Designer is the only [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] component installed on the computer), no issues will be reported.  
   
- Depending on how you configured your installation, you may encounter additional issues that are not reported by Upgrade Advisor. These issues do not prevent a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] upgrade from succeeding, but they may affect how reports and applications run after an upgrade is finished. To learn about these issues, see "Reporting Services Backward Compatibility" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online.  
+ Depending on how you configured your installation, you may encounter additional issues that are not reported by Upgrade Advisor. These issues do not prevent a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] upgrade from succeeding, but they may affect how reports and applications run after an upgrade is finished. To learn about these issues, see "Reporting Services Backward Compatibility" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
- If you cannot use Setup to upgrade a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] installation, you can install a new [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] instance and migrate your existing installation to the new instance. For more information, see "Upgrade and Migrate Reporting Services" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online, [Upgrade and Migrate Reporting Services](../../../2014/sql-server/install/upgrade-and-migrate-reporting-services.md).  
+ If you cannot use Setup to upgrade a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation, you can install a new [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instance and migrate your existing installation to the new instance. For more information, see "Upgrade and Migrate Reporting Services" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online, [Upgrade and Migrate Reporting Services](../../../2014/sql-server/install/upgrade-and-migrate-reporting-services.md).  
   
  The following topics describe known issues that are reported by Upgrade Advisor, and explain how you can modify your existing installation to allow an upgrade to occur.  
   
 > [!IMPORTANT]  
->  Upgrade Advisor must be installed on the report server to analyze an instance of [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] does not support remote analysis.  
+>  Upgrade Advisor must be installed on the report server to analyze an instance of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] does not support remote analysis.  
 >   
 >  For more information, see [Installing Upgrade Advisor](../../../2014/sql-server/install/installing-upgrade-advisor.md).  
   

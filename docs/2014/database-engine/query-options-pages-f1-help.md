@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: fad98caa-8a29-4b88-8464-f60a5c4fc00e
 caps.latest.revision: 16
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Query Options Pages F1 Help
-  This section contains the F1 Help topics for the **Query Options** pages in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  This section contains the F1 Help topics for the **Query Options** pages in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
  [Analysis Services Query Execution Options &#40;General Page&#41;](../../2014/database-engine/analysis-services-query-execution-options-general-page.md)  
   

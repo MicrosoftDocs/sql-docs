@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 5ad8b31c-43b0-4481-a31b-090cbed4a438
 caps.latest.revision: 16
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Lesson 3: Load a Report Definition from the Report Server
@@ -20,7 +20,7 @@ manager: "mblythe"
   
 ### To load a report definition  
   
-1.  Add a private field at the top of the `ReportUpdater` class (module if you are using [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) for the `Report` class. This field will be used to maintain a reference to report that is loaded from the report server for the life of the application.  
+1.  Add a private field at the top of the `ReportUpdater` class (module if you are using [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) for the `Report` class. This field will be used to maintain a reference to report that is loaded from the report server for the life of the application.  
   
     ```csharp  
     private Report _report;  
@@ -30,7 +30,7 @@ manager: "mblythe"
     Private m_report As Report  
     ```  
   
-2.  Replace the code for the `LoadReportDefinition()` method in the Program.cs file (Module1.vb for [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) with the following code:  
+2.  Replace the code for the `LoadReportDefinition()` method in the Program.cs file (Module1.vb for [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) with the following code:  
   
     ```csharp  
     private void LoadReportDefinition()  

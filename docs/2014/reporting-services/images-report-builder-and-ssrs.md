@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: fcc2db5c-5c26-4607-ae2b-f65c80360536
 caps.latest.revision: 10
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Images (Report Builder and SSRS)
@@ -21,7 +21,7 @@ manager: "mblythe"
  Storing logos on a server is a good idea because you can use the same logo in many reports.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ##  <a name="ComparingImages"></a> Comparing External, Embedded, and Data-Bound Images  
  When you use a server-based or other external image in a report, the image item contains a path that points to an image on the report server or wherever it exists on the Web. When you use an embedded image, however, the image data is stored within the report definition and does not exist as a separate file.  
@@ -35,7 +35,7 @@ manager: "mblythe"
 
   
 ##  <a name="ImagesReportParts"></a> Images as Report Parts  
- You can save images separately from a report as report parts. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
+ You can save images separately from a report as report parts. [!INCLUDE[ssRBrptparts](../includes/ssrbrptparts-md.md)]  
   
  
   

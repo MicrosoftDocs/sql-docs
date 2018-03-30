@@ -26,18 +26,18 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Use Performance Objects
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent includes performance objects and counters to monitor how the service is performing. These performance objects allow you to use Performance Monitor, a Windows tool, to identify what the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service is doing in the background. For example, you can identify how many active jobs the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service is currently running to identify those jobs that are blocked.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent includes performance objects and counters to monitor how the service is performing. These performance objects allow you to use Performance Monitor, a Windows tool, to identify what the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent service is doing in the background. For example, you can identify how many active jobs the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent service is currently running to identify those jobs that are blocked.  
   
- The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service performance objects and counters exist for each instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is installed on a computer. Performance objects are named according to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that each object represents.  
+ The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent service performance objects and counters exist for each instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that is installed on a computer. Performance objects are named according to the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that each object represents.  
   
- The following table shows how the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service performance objects are named:  
+ The following table shows how the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent service performance objects are named:  
   
 |Instance type|Object name|  
 |-------------------|-----------------|  
 |Default|**SQLAgent:** *object*:*counter*|  
 |Named|**SQLAgent$**<br /> ***instance_name* :** *object*:*counter*|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes the following performance objects for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] includes the following performance objects for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent.  
   
 |Object name|Description|  
 |-----------------|-----------------|  

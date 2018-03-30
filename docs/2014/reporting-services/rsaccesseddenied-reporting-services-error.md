@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2f76b1bf-96a2-4755-b76b-84e933220efc
 caps.latest.revision: 20
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # rsAccessedDenied - Reporting Services Error
-  The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] error **rsAccessedDenied** occurs when a user does not have permission to perform an action. For, example, they do not have a role assignment that allows them to open a report or they did not open their browser with the required permissions.  
+  The [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] error **rsAccessedDenied** occurs when a user does not have permission to perform an action. For, example, they do not have a role assignment that allows them to open a report or they did not open their browser with the required permissions.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode &#124; SharePoint mode|  
+|**[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Native mode &#124; SharePoint mode|  
   
 -   If the error occurred while accessing the report server directly through a URL, the exception is mapped to an HTTP 401 error.  
   
@@ -34,10 +34,10 @@ manager: "mblythe"
   
 |||  
 |-|-|  
-|**Product Name**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|**Product Name**|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|  
 |**Event ID**|rsAccessedDenied|  
 |**Event Source**|Microsoft.ReportingServices.Diagnostics.Utilities.ErrorStrings|  
-|**Component**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
+|**Component**|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|  
 |**Message Text**|The permissions granted to user 'mydomain\myAccount' are insufficient for performing this operation. (rsAccessDenied) (ReportingServicesLibrary)|  
   
 ## User Action  

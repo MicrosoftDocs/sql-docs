@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # PushedDataSource Data Type (ASSL)
-  Defines a primitive data type that represents a data source (such as a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] package) used for "pushing" data into a [Cube](../../../2014/analysis-services/dev-guide/cube-element-assl.md) element.  
+  Defines a primitive data type that represents a data source (such as a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package) used for "pushing" data into a [Cube](../../../2014/analysis-services/dev-guide/cube-element-assl.md) element.  
   
 ## Syntax  
   

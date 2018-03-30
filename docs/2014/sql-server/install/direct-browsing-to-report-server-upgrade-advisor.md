@@ -12,21 +12,21 @@ ms.topic: "article"
 ms.assetid: 3d2814a4-318a-45ed-b093-1e852fab561f
 caps.latest.revision: 6
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "jhubbard"
 ---
 # Direct Browsing to Report Server (Upgrade Advisor)
-  Upgrade Advisor detected your current installation of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] is browsing directly to the report server virtual directory.  
+  Upgrade Advisor detected your current installation of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] is browsing directly to the report server virtual directory.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint mode.|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode.|  
   
 ## Component  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## Description  
- Upgrade Advisor detected your current installation of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] is browsing directly to the report server virtual directory, for example **http://\<server name>/ReportServer**. This is not supported in current versions of [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
+ Upgrade Advisor detected your current installation of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] is browsing directly to the report server virtual directory, for example **http://\<server name>/ReportServer**. This is not supported in current versions of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 > [!NOTE]  
 >  This rule is a warning and upgrade is not blocked.  

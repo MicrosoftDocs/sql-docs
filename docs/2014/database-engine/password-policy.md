@@ -34,13 +34,13 @@ helpviewer_keywords:
 ms.assetid: c0040c0a-a18f-45b9-9c40-0625685649b1
 caps.latest.revision: 39
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Password Policy
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can use Windows password policy mechanisms. The password policy applies to a login that uses [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication, and to a contained database user with password.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] can use Windows password policy mechanisms. The password policy applies to a login that uses [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] authentication, and to a contained database user with password.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can apply the same complexity and expiration policies used in Windows to passwords used inside [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This functionality depends on the `NetValidatePasswordPolicy` API.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] can apply the same complexity and expiration policies used in Windows to passwords used inside [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. This functionality depends on the `NetValidatePasswordPolicy` API.  
   
 ## Password Complexity  
  Password complexity policies are designed to deter brute force attacks by increasing the number of possible passwords. When password complexity policy is enforced, new passwords must meet the following guidelines:  
@@ -62,10 +62,10 @@ manager: "jhubbard"
  Passwords can be up to 128 characters long. You should use passwords that are as long and complex as possible.  
   
 ## Password Expiration  
- Password expiration policies are used to manage the lifespan of a password. When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enforces password expiration policy, users are reminded to change old passwords, and accounts that have expired passwords are disabled.  
+ Password expiration policies are used to manage the lifespan of a password. When [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] enforces password expiration policy, users are reminded to change old passwords, and accounts that have expired passwords are disabled.  
   
 ## Policy Enforcement  
- The enforcement of password policy can be configured separately for each SQL Server login. Use [ALTER LOGIN &#40;Transact-SQL&#41;](../Topic/ALTER%20LOGIN%20\(Transact-SQL\).md) to configure the password policy options of a SQL Server login. The following rules apply to the configuration of password policy enforcement:  
+ The enforcement of password policy can be configured separately for each SQL Server login. Use [ALTER LOGIN &#40;Transact-SQL&#41;](~/t-sql/statements/alter-login-transact-sql.md) to configure the password policy options of a SQL Server login. The following rules apply to the configuration of password policy enforcement:  
   
 -   When CHECK_POLICY is changed to ON, the following behaviors occur:  
   
@@ -100,13 +100,13 @@ manager: "jhubbard"
  The security policy might be set in Windows, or might be received from the domain. To view the password policy on the computer, use the Local Security Policy MMC snap-in (**secpol.msc**).  
   
 ## Related Tasks  
- [CREATE LOGIN &#40;Transact-SQL&#41;](../Topic/CREATE%20LOGIN%20\(Transact-SQL\).md)  
+ [CREATE LOGIN &#40;Transact-SQL&#41;](~/t-sql/statements/create-login-transact-sql.md)  
   
- [ALTER LOGIN &#40;Transact-SQL&#41;](../Topic/ALTER%20LOGIN%20\(Transact-SQL\).md)  
+ [ALTER LOGIN &#40;Transact-SQL&#41;](~/t-sql/statements/alter-login-transact-sql.md)  
   
- [CREATE USER &#40;Transact-SQL&#41;](../Topic/CREATE%20USER%20\(Transact-SQL\).md)  
+ [CREATE USER &#40;Transact-SQL&#41;](~/t-sql/statements/create-user-transact-sql.md)  
   
- [ALTER USER &#40;Transact-SQL&#41;](../Topic/ALTER%20USER%20\(Transact-SQL\).md)  
+ [ALTER USER &#40;Transact-SQL&#41;](~/t-sql/statements/alter-user-transact-sql.md)  
   
  [Create a Login](../../2014/database-engine/create-a-login.md)  
   

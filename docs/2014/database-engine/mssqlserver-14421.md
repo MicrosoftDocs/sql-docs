@@ -65,10 +65,10 @@ manager: "jhubbard"
     >  Different time zones for the two server instances should not cause a problem.  
   
 ## See Also  
- [log_shipping_monitor_secondary &#40;Transact-SQL&#41;](../Topic/log_shipping_monitor_secondary%20\(Transact-SQL\).md)   
+ [log_shipping_monitor_secondary &#40;Transact-SQL&#41;](~/relational-databases/system-tables/log-shipping-monitor-secondary-transact-sql.md)   
  [About Log Shipping &#40;SQL Server&#41;](../../2014/database-engine/about-log-shipping-sql-server.md)   
- [sp_help_log_shipping_monitor_secondary &#40;Transact-SQL&#41;](../Topic/sp_help_log_shipping_monitor_secondary%20\(Transact-SQL\).md)   
- [sp_refresh_log_shipping_monitor &#40;Transact-SQL&#41;](../Topic/sp_refresh_log_shipping_monitor%20\(Transact-SQL\).md)   
+ [sp_help_log_shipping_monitor_secondary &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-secondary-transact-sql.md)   
+ [sp_refresh_log_shipping_monitor &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   
  [About Log Shipping &#40;SQL Server&#41;](../../2014/database-engine/about-log-shipping-sql-server.md)  
   
   

@@ -29,7 +29,7 @@ manager: "jhubbard"
 |Topic|Description|  
 |-----------|-----------------|  
 |[Mount Tape Event Class](../../2014/database-engine/mount-tape-event-class.md)|Indicates that a tape mount request has been received.|  
-|[Server Memory Change Event Class](../../2014/database-engine/server-memory-change-event-class.md)|Indicates that [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memory usage has changed.|  
+|[Server Memory Change Event Class](../../2014/database-engine/server-memory-change-event-class.md)|Indicates that [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] memory usage has changed.|  
 |[Trace File Close Event Class](../../2014/database-engine/trace-file-close-event-class.md)|Indicates that a trace file has been closed during a trace file rollover.|  
   
   

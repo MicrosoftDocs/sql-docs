@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 814b4653-572a-48c7-847f-b310ba0f3046
 caps.latest.revision: 30
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Create Data-driven Subscription Page (Report Manager)
@@ -23,7 +23,7 @@ manager: "mblythe"
  This page is available to users with advanced permissions. If you are using default security, data-driven subscriptions cannot be used for reports located in a My Reports folder.  
   
 > [!NOTE]  
->  This feature is not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+>  This feature is not available in every edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ## Navigation  
  Use the following procedure to navigate to this location in the user interface (UI).  

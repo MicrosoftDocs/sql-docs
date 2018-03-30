@@ -49,12 +49,12 @@ manager: "mblythe"
 FROM [Adventure Works]  
 ```  
   
- For more information about the FROM clause in the MDX SELECT statement, see [SELECT Statement &#40;MDX&#41;](../Topic/SELECT%20Statement%20\(MDX\).md).  
+ For more information about the FROM clause in the MDX SELECT statement, see [SELECT Statement &#40;MDX&#41;](~/mdx/mdx-data-manipulation-select.md).  
   
 ## Refining the Context  
  Although the FROM clause specifies the cube context as within a single cube, this does not have to limit you from working with data from more than one cube at a time.  
   
- You can use the MDX [LookupCube](../Topic/LookupCube%20\(MDX\).md) function to retrieve data from cubes outside the cube context. Additionally, functions such as the [Filter](../Topic/Filter%20\(MDX\).md) function, are available that allow temporary restriction of the context while evaluating the query.  
+ You can use the MDX [LookupCube](~/mdx/lookupcube-mdx.md) function to retrieve data from cubes outside the cube context. Additionally, functions such as the [Filter](~/mdx/filter-mdx.md) function, are available that allow temporary restriction of the context while evaluating the query.  
   
 ## See Also  
  [MDX Query Fundamentals &#40;Analysis Services&#41;](../../2014/analysis-services/mdx-query-fundamentals-analysis-services.md)  

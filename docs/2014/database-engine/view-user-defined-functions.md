@@ -24,7 +24,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # View User-defined Functions
-  You can gain information about the definition or properties of a user-defined function in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. You may need to see the definition of the function to understand how its data is derived from the source tables or to see the data defined by the function.  
+  You can gain information about the definition or properties of a user-defined function in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)]. You may need to see the definition of the function to understand how its data is derived from the source tables or to see the data defined by the function.  
   
 > [!IMPORTANT]  
 >  If you change the name of an object referenced by a function, you must modify that function so that its text reflects the new name. Therefore, before renaming an object, display the dependencies of the object first to determine if any functions are affected by the proposed change.  
@@ -105,13 +105,13 @@ manager: "jhubbard"
      Indicates if the object was created with the quoted identifier option.  
   
      **Schema bound**  
-     Indicates whether the function is schema-bound. Values are True and False. For information about schema-bound functions, see the SCHEMABINDING section of [CREATE FUNCTION &#40;Transact-SQL&#41;](../Topic/CREATE%20FUNCTION%20\(Transact-SQL\).md).  
+     Indicates whether the function is schema-bound. Values are True and False. For information about schema-bound functions, see the SCHEMABINDING section of [CREATE FUNCTION &#40;Transact-SQL&#41;](~/t-sql/statements/create-function-transact-sql.md).  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To get the definition and properties of a function  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -148,11 +148,11 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [sys.sql_modules &#40;Transact-SQL&#41;](../Topic/sys.sql_modules%20\(Transact-SQL\).md) and [OBJECT_DEFINITION &#40;Transact-SQL&#41;](../Topic/OBJECT_DEFINITION%20\(Transact-SQL\).md).  
+ For more information, see [sys.sql_modules &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) and [OBJECT_DEFINITION &#40;Transact-SQL&#41;](~/t-sql/functions/object-definition-transact-sql.md).  
   
 #### To get the dependencies of a function  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -178,6 +178,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../Topic/sys.sql_expression_dependencies%20\(Transact-SQL\).md) and [sys.objects &#40;Transact-SQL&#41;](../Topic/sys.objects%20\(Transact-SQL\).md).  
+ For more information, see [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) and [sys.objects &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-objects-transact-sql.md).  
   
   

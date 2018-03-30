@@ -25,18 +25,18 @@ helpviewer_keywords:
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
 caps.latest.revision: 44
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # OPENXML (SQL Server)
-  OPENXML, a [!INCLUDE[tsql](../../includes/tsql-md.md)] keyword, provides a rowset over in-memory XML documents that is similar to a table or a view. OPENXML allows access to XML data as though it is a relational rowset. It does this by providing a rowset view of the internal representation of an XML document. The records in the rowset can be stored in database tables.  
+  OPENXML, a [!INCLUDE[tsql](../includes/tsql-md.md)] keyword, provides a rowset over in-memory XML documents that is similar to a table or a view. OPENXML allows access to XML data as though it is a relational rowset. It does this by providing a rowset view of the internal representation of an XML document. The records in the rowset can be stored in database tables.  
   
- OPENXML can be used in SELECT and SELECT INTO statements wherever rowset providers, a view, or OPENROWSET can appear as the source. For information about the syntax of OPENXML, see [OPENXML &#40;Transact-SQL&#41;](../Topic/OPENXML%20\(Transact-SQL\).md).  
+ OPENXML can be used in SELECT and SELECT INTO statements wherever rowset providers, a view, or OPENROWSET can appear as the source. For information about the syntax of OPENXML, see [OPENXML &#40;Transact-SQL&#41;](~/t-sql/functions/openxml-transact-sql.md).  
   
  To write queries against an XML document by using OPENXML, you must first call `sp_xml_preparedocument`. This parses the XML document and returns a handle to the parsed document that is ready for consumption. The parsed document is a document object model (DOM) tree representation of various nodes in the XML document. The document handle is passed to OPENXML. OPENXML then provides a rowset view of the document, based on the parameters passed to it.  
   
 > [!NOTE]  
->  `sp_xml_preparedocument` uses a SQL-updated version of the MSXML parser, Msxmlsql.dll. This version of the MSXML parser was designed to support [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and remain backward compatible with MSXML version 2.6.  
+>  `sp_xml_preparedocument` uses a SQL-updated version of the MSXML parser, Msxmlsql.dll. This version of the MSXML parser was designed to support [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and remain backward compatible with MSXML version 2.6.  
   
  The internal representation of an XML document must be removed from memory by calling the **sp_xml_removedocument** system stored procedure to free the memory.  
   
@@ -195,9 +195,9 @@ EXEC sp_xml_removedocument @docHandle;
 -   For multiple subelements that have the same name, the first node is returned.  
   
 ## See Also  
- [sp_xml_preparedocument &#40;Transact-SQL&#41;](../Topic/sp_xml_preparedocument%20\(Transact-SQL\).md)   
- [sp_xml_removedocument &#40;Transact-SQL&#41;](../Topic/sp_xml_removedocument%20\(Transact-SQL\).md)   
- [OPENXML &#40;Transact-SQL&#41;](../Topic/OPENXML%20\(Transact-SQL\).md)   
+ [sp_xml_preparedocument &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql.md)   
+ [sp_xml_removedocument &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)   
+ [OPENXML &#40;Transact-SQL&#41;](~/t-sql/functions/openxml-transact-sql.md)   
  [XML Data &#40;SQL Server&#41;](../../2014/database-engine/xml-data-sql-server.md)  
   
   

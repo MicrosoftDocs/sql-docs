@@ -15,11 +15,11 @@ helpviewer_keywords:
 ms.assetid: 4da73ca1-6c06-4e96-8ab8-2ecba30b6c86
 caps.latest.revision: 18
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Event Notifications
-  Event notifications send information about events to a [!INCLUDE[ssSB](../../includes/sssb-md.md)] service. Event notifications execute in response to a variety of [!INCLUDE[tsql](../../includes/tsql-md.md)] data definition language (DDL) statements and SQL Trace events by sending information about these events to a [!INCLUDE[ssSB](../../includes/sssb-md.md)] service.  
+  Event notifications send information about events to a [!INCLUDE[ssSB](../includes/sssb-md.md)] service. Event notifications execute in response to a variety of [!INCLUDE[tsql](../includes/tsql-md.md)] data definition language (DDL) statements and SQL Trace events by sending information about these events to a [!INCLUDE[ssSB](../includes/sssb-md.md)] service.  
   
  Event notifications can be used to do the following:  
   
@@ -32,9 +32,9 @@ manager: "jhubbard"
 ## Event Notifications Benefits  
  Event notifications run asynchronously, outside the scope of a transaction. Therefore, unlike DDL triggers, event notifications can be used inside a database application to respond to events without using any resources defined by the immediate transaction.  
   
- Unlike SQL Trace, event notifications can be used to perform an action inside an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in response to a SQL Trace event.  
+ Unlike SQL Trace, event notifications can be used to perform an action inside an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in response to a SQL Trace event.  
   
- Event data can be used by applications that are running together with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to track progress and make decisions. For example, the following event notification sends a notice to a certain service every time an `ALTER TABLE` statement is issued in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database.  
+ Event data can be used by applications that are running together with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to track progress and make decisions. For example, the following event notification sends a notice to a certain service every time an `ALTER TABLE` statement is issued in the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] sample database.  
   
 ```  
 USE AdventureWorks2012;  
@@ -47,9 +47,9 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 ```  
   
 ## Event Notifications Concepts  
- When an event notification is created, one or more [!INCLUDE[ssSB](../../includes/sssb-md.md)] conversations between an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the target service you specify are opened. The conversations typically remain open as long as the event notification exists as an object on the server instance. In some error cases the conversations can close before the event notification is dropped. These conversations are never shared between event notifications. Every event notification has its own exclusive conversations. Ending a conversation explicitly prevents the target service from receiving more messages, and the conversation will not reopen the next time the event notification fires.  
+ When an event notification is created, one or more [!INCLUDE[ssSB](../includes/sssb-md.md)] conversations between an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and the target service you specify are opened. The conversations typically remain open as long as the event notification exists as an object on the server instance. In some error cases the conversations can close before the event notification is dropped. These conversations are never shared between event notifications. Every event notification has its own exclusive conversations. Ending a conversation explicitly prevents the target service from receiving more messages, and the conversation will not reopen the next time the event notification fires.  
   
- Event information is delivered to the [!INCLUDE[ssSB](../../includes/sssb-md.md)] service as a variable of type `xml` that provides information about when an event occurs, about the database object affected, the [!INCLUDE[tsql](../../includes/tsql-md.md)] batch statement involved, and other information. For more information about the XML schema produced by event notifications, see [EVENTDATA &#40;Transact-SQL&#41;](../Topic/EVENTDATA%20\(Transact-SQL\).md).  
+ Event information is delivered to the [!INCLUDE[ssSB](../includes/sssb-md.md)] service as a variable of type `xml` that provides information about when an event occurs, about the database object affected, the [!INCLUDE[tsql](../includes/tsql-md.md)] batch statement involved, and other information. For more information about the XML schema produced by event notifications, see [EVENTDATA &#40;Transact-SQL&#41;](~/t-sql/functions/eventdata-transact-sql.md).  
   
 ### Event Notifications vs. Triggers  
  The following table compares and contrasts triggers and event notifications.  
@@ -82,15 +82,15 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |After being initiated, the firing of traces cannot be controlled. Stop times and filter times can be used to specify when they initiate. Traces are accessed by polling the corresponding trace file.|Event notifications can be controlled by using the WAITFOR statement against the queue that receives the message generated by the event notification. They can be accessed by polling the queue.|  
 |ALTER TRACE is the least permission that is required to create a trace. Permission is also required to create a trace file on the corresponding computer.|Least permission depends on the type of event notification being created. RECEIVE permission is also needed on the corresponding queue.|  
 |Traces can be received remotely.|Event notifications can be received remotely.|  
-|Trace events are implemented by using system stored procedures.|Event notifications are implemented by using a combination of [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssSB](../../includes/sssb-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)] statements.|  
-|Trace event data can be accessed programmatically by querying the corresponding trace table, parsing the trace file, or using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) TraceReader Class.|Event data is accessed programmatically by issuing XQuery against the XML-formatted event data, or by using the SMO Event classes.|  
+|Trace events are implemented by using system stored procedures.|Event notifications are implemented by using a combination of [!INCLUDE[ssDE](../includes/ssde-md.md)] and [!INCLUDE[ssSB](../includes/sssb-md.md)][!INCLUDE[tsql](../includes/tsql-md.md)] statements.|  
+|Trace event data can be accessed programmatically by querying the corresponding trace table, parsing the trace file, or using the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects (SMO) TraceReader Class.|Event data is accessed programmatically by issuing XQuery against the XML-formatted event data, or by using the SMO Event classes.|  
   
 ## Event Notification Tasks  
   
 |Task|Topic|  
 |----------|-----------|  
 |Describes how to create and implement event notifications.|[Implement Event Notifications](../../2014/database-engine/implement-event-notifications.md)|  
-|Describes how to configure [!INCLUDE[ssSB](../../includes/sssb-md.md)] dialog security for event notifications that send messages to a service broker on a remote server.|[Configure Dialog Security for Event Notifications](../../2014/database-engine/configure-dialog-security-for-event-notifications.md)|  
+|Describes how to configure [!INCLUDE[ssSB](../includes/sssb-md.md)] dialog security for event notifications that send messages to a service broker on a remote server.|[Configure Dialog Security for Event Notifications](../../2014/database-engine/configure-dialog-security-for-event-notifications.md)|  
 |Describes how to return information about event notifications.|[Get Information About Event Notifications](../../2014/database-engine/get-information-about-event-notifications.md)|  
   
 ## See Also  

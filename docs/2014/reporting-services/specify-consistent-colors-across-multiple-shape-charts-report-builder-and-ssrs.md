@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: d52f68e9-2ba7-4bff-9053-4089e5164ab4
 caps.latest.revision: 6
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Specify Consistent Colors across Multiple Shape Charts (Report Builder and SSRS)
@@ -25,7 +25,7 @@ manager: "mblythe"
  The legend is connected to the series, so any color you specify for the series will automatically be shown on the legend.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ### To specify consistent colors across multiple sparkline shape charts in a table or matrix  
   
@@ -59,7 +59,7 @@ manager: "mblythe"
     > [!NOTE]  
     >  You will need to replace the "Color1" strings with your own colors. You can use named colors, for example "Red", or you can use six-digit hexadecimal value that represent the color, such as "#FFFFFF" for black. If you have more than three colors defined, you will need to extend the array of colors so that the number of colors in the array matches the number of points in your shape chart. You can add new colors to the array by specifying a comma-separated list of string values that contain named colors or hexadecimal representations of colors.  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 4.  Right-click on the shape chart and select **Series Properties**.  
   

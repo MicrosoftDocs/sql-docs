@@ -30,7 +30,7 @@ manager: "mblythe"
  Choose a mining model from those in the current mining structure. The mining model will open in its associated viewer.  
   
  **Viewer**  
- Choose a viewer to use to explore the selected mining model. You can use the custom viewer, or the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Mining Content Viewer. You can also use plug-in viewers if available.  
+ Choose a viewer to use to explore the selected mining model. You can use the custom viewer, or the [!INCLUDE[msCoName](../includes/msconame-md.md)] Mining Content Viewer. You can also use plug-in viewers if available.  
   
  **Zoom In**  
  Zoom in to get a more detailed view of the nodes and branches in the decision tree. In a complex model, decision trees can have many levels of branching.  

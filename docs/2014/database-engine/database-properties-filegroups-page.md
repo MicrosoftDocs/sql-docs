@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: 8d06e859-73dd-4019-b6e8-99c5c5297697
 caps.latest.revision: 30
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Database Properties (Filegroups Page)
@@ -24,7 +24,7 @@ manager: "jhubbard"
   
  If FILESTREAM is not enabled, the **Filestream** section will not be available. You can enable FILESTREAM storage by using [Server Properties (Advanced Page)](../../2014/database-engine/server-properties-advanced-page.md).  
   
- For information about how [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses row filegroups, see [Database Files and Filegroups](../../2014/database-engine/database-files-and-filegroups.md). For more information about FILESTREAM data and filegroups, see [FILESTREAM &#40;SQL Server&#41;](../../2014/database-engine/filestream-sql-server.md).  
+ For information about how [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses row filegroups, see [Database Files and Filegroups](../../2014/database-engine/database-files-and-filegroups.md). For more information about FILESTREAM data and filegroups, see [FILESTREAM &#40;SQL Server&#41;](../../2014/database-engine/filestream-sql-server.md).  
   
  Memory-optimized file groups are required for a database to contain one or more memory-optimized tables.  
   
@@ -61,7 +61,7 @@ manager: "jhubbard"
  Removes the selected filegroup row from the grid.  
   
 ## See Also  
- [ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20\(Transact-SQL\).md)   
- [sys.databases &#40;Transact-SQL&#41;](../Topic/sys.databases%20\(Transact-SQL\).md)  
+ [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)   
+ [sys.databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
   
   

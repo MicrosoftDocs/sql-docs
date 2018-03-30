@@ -34,7 +34,7 @@ manager: "jhubbard"
   
  The HTTP connection manager can point to a Web site or to a Web Service Description Language (WSDL) file. The URL of the HTTP connection manager that points to a WSDL file includes the `?WSDL` parameter: for example, `http://MyServer/MyWebService/MyPage.asmx?WSDL`.  
   
- The WSDL file must be available locally to configure the Web Service task using the **Web Service Task Editor** dialog box that [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer provides.  
+ The WSDL file must be available locally to configure the Web Service task using the **Web Service Task Editor** dialog box that [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer provides.  
   
 -   If the HTTP connection manager points to a Web site, the WSDL file must be copied manually to a local computer.  
   
@@ -58,9 +58,9 @@ manager: "jhubbard"
 |`WSTaskInfo`|Descriptive information about the task.|  
   
 ## Configuration of the Web Service Task  
- You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer or programmatically.  
   
- For more information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click one of the following topics:  
+ For more information about the properties that you can set in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click one of the following topics:  
   
 -   [Web Service Task Editor &#40;General Page&#41;](../../2014/integration-services/web-service-task-editor-general-page.md)  
   
@@ -70,7 +70,7 @@ manager: "jhubbard"
   
 -   [Expressions Page](../../2014/integration-services/expressions-page.md)  
   
- For more information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
+ For more information about how to set these properties in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click the following topic:  
   
 -   [Set the Properties of a Task or Container](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)  
   

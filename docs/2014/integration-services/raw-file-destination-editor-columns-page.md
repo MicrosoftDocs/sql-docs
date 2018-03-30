@@ -30,7 +30,7 @@ manager: "jhubbard"
   
 ##  <a name="open"></a> Open the Raw File Destination Editor  
   
-1.  Add the Raw File destination to an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package, in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+1.  Add the Raw File destination to an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package, in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 2.  Right-click the component and then click **Edit**.  
   

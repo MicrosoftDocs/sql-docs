@@ -19,9 +19,9 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Storage Settings Dialog Box (Analysis Services - Multidimensional Data)
-  Use the **Storage Settings** dialog box in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to set the proactive caching, storage, and notification settings for a dimension, cube, measure group, or partition. You can display the **Storage Settings** dialog box in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] by:  
+  Use the **Storage Settings** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to set the proactive caching, storage, and notification settings for a dimension, cube, measure group, or partition. You can display the **Storage Settings** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] by:  
   
--   Clicking the ellipsis button (**...**) for the `ProactiveCaching` property value of a dimension, cube, measure group, or partition in the **Properties** window of [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+-   Clicking the ellipsis button (**...**) for the `ProactiveCaching` property value of a dimension, cube, measure group, or partition in the **Properties** window of [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 -   Expanding a measure group in the **Partitions** tab of **Cube Designer** and clicking **Storage Settings**.  
   

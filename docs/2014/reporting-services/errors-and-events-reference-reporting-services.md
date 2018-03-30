@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 818b4cc1-e65d-4f1a-bf7d-fe269e6dd739
 caps.latest.revision: 40
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Errors and Events Reference (Reporting Services)
-  This topic provides information about errors and events for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] log files also contain error information. For more information about the types of log files that are available and how to view the logs, see [Reporting Services Log Files and Sources](../../2014/reporting-services/reporting-services-log-files-and-sources.md).  
+  This topic provides information about errors and events for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. The [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] log files also contain error information. For more information about the types of log files that are available and how to view the logs, see [Reporting Services Log Files and Sources](../../2014/reporting-services/reporting-services-log-files-and-sources.md).  
   
 ## Cause and Resolution for Reporting Services Error Messages  
- Cause and resolution information is available for the errors most frequently searched for on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Web sites. For more information, see [Cause and Resolution of Reporting Services Errors](../../2014/reporting-services/cause-and-resolution-of-reporting-services-errors.md).  
+ Cause and resolution information is available for the errors most frequently searched for on the [!INCLUDE[msCoName](../includes/msconame-md.md)] Web sites. For more information, see [Cause and Resolution of Reporting Services Errors](../../2014/reporting-services/cause-and-resolution-of-reporting-services-errors.md).  
   
 ## Report Server Events  
- The following report server events are recorded in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows application log.  
+ The following report server events are recorded in the [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows application log.  
   
 |Event ID|Type|Category|Source|Description|  
 |--------------|----------|--------------|------------|-----------------|  
@@ -54,7 +54,7 @@ manager: "mblythe"
 |125|Information|Activation|Report Server|The key used for encrypting data was successfully extracted. For more information about keys, see [Configure and Manage Encryption Keys &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-and-manage-encryption-keys-ssrs-configuration-manager.md).|  
 |126|Information|Activation|Report Server|The key used for encrypting data was successfully applied. For more information about keys, see [Configure and Manage Encryption Keys &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-and-manage-encryption-keys-ssrs-configuration-manager.md).|  
 |127|Information|Activation|Report Server|Encrypted content was successfully removed from the report server database. For more information about deleting non-recoverable encrypted data, see [Configure and Manage Encryption Keys &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-and-manage-encryption-keys-ssrs-configuration-manager.md).|  
-|128|Error|Activation|Report Server|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] components from different editions cannot be used together.|  
+|128|Error|Activation|Report Server|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] components from different editions cannot be used together.|  
 |129|Error|Management|Report Server<br /><br /> Scheduling and Delivery Processor|An encrypted configuration file setting in cannot be decrypted.|  
 |130|Error|Management|Report Server<br /><br /> Scheduling and Delivery Processor|*\<Source>* cannot find the configuration file. Configuration files are required by the report server.|  
 |131|Error|Security|Report Server<br /><br /> Scheduling and Delivery Processor|An encrypted user data value could not be decrypted.|  

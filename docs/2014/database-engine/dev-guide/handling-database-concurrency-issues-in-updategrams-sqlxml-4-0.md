@@ -100,7 +100,7 @@ manager: "jhubbard"
   
 -   Specify the timestamp column (if available) in the **\<before>** block.  
   
-     Instead of specifying all the record columns in the `<before`> block, you can just specify the timestamp column (if the table has one) along with the primary key column(s) in the **\<before>** block. The database updates the timestamp column to a unique value after each update of the record. In this case, the updategram compares the value of the timestamp with the corresponding value in the database. The timestamp value stored in the database is a binary value. Therefore, the timestamp column must be specified in the schema as `dt:type="bin.hex"`, `dt:type="bin.base64"`, or `sql:datatype="timestamp"`. (You can specify either the `xml` data type or the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data type.)  
+     Instead of specifying all the record columns in the `<before`> block, you can just specify the timestamp column (if the table has one) along with the primary key column(s) in the **\<before>** block. The database updates the timestamp column to a unique value after each update of the record. In this case, the updategram compares the value of the timestamp with the corresponding value in the database. The timestamp value stored in the database is a binary value. Therefore, the timestamp column must be specified in the schema as `dt:type="bin.hex"`, `dt:type="bin.base64"`, or `sql:datatype="timestamp"`. (You can specify either the `xml` data type or the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type.)  
   
 #### To test the updategram  
   

@@ -19,7 +19,7 @@ ms.author: "jroth"
 manager: "jhubbard"
 ---
 # Add a Secondary Replica to an Availability Group (SQL Server)
-  This topic describes how to add a secondary replica to an existing AlwaysOn availability group by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  This topic describes how to add a secondary replica to an existing AlwaysOn availability group by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
 -   **Before you begin:**  
   
@@ -73,11 +73,11 @@ manager: "jhubbard"
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  **To add a replica**  
   
-1.  Connect to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that hosts the primary replica.  
+1.  Connect to the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that hosts the primary replica.  
   
-2.  Add the new secondary replica to the availability group by using the ADD REPLICA ON clause of the ALTER AVAILABILITY GROUP statement. The ENDPOINT_URL, AVAILABILITY_MODE, and FAILOVER_MODE options are required in an ADD REPLICA ON clause. The other replica options— BACKUP_PRIORITY, SECONDARY_ROLE, PRIMARY_ROLE, and SESSION_TIMEOUT—are optional. For more information, see [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../Topic/ALTER%20AVAILABILITY%20GROUP%20\(Transact-SQL\).md).  
+2.  Add the new secondary replica to the availability group by using the ADD REPLICA ON clause of the ALTER AVAILABILITY GROUP statement. The ENDPOINT_URL, AVAILABILITY_MODE, and FAILOVER_MODE options are required in an ADD REPLICA ON clause. The other replica options— BACKUP_PRIORITY, SECONDARY_ROLE, PRIMARY_ROLE, and SESSION_TIMEOUT—are optional. For more information, see [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](~/t-sql/statements/alter-availability-group-transact-sql.md).  
   
-     For example, the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement creates a new replica to an availability group named `MyAG` on the default server instance hosted by `COMPUTER04`, whose endpoint URL is `TCP://COMPUTER04.Adventure-Works.com:5022'`. This replica supports manual failover and asynchronous-commit availability mode.  
+     For example, the following [!INCLUDE[tsql](../includes/tsql-md.md)] statement creates a new replica to an availability group named `MyAG` on the default server instance hosted by `COMPUTER04`, whose endpoint URL is `TCP://COMPUTER04.Adventure-Works.com:5022'`. This replica supports manual failover and asynchronous-commit availability mode.  
   
     ```  
     ALTER AVAILABILITY GROUP MyAG ADD REPLICA ON 'COMPUTER04'   
@@ -113,7 +113,7 @@ manager: "jhubbard"
     ```  
   
     > [!NOTE]  
-    >  To view the syntax of a cmdlet, use the `Get-Help` cmdlet in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../2014/database-engine/get-help-sql-server-powershell.md).  
+    >  To view the syntax of a cmdlet, use the `Get-Help` cmdlet in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../2014/database-engine/get-help-sql-server-powershell.md).  
   
  **To set up and use the SQL Server PowerShell provider**  
   
@@ -148,7 +148,7 @@ manager: "jhubbard"
 -   [Change the Session-Timeout Period for an Availability Replica &#40;SQL Server&#41;](../../2014/database-engine/change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  
   
 ## See Also  
- [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../Topic/ALTER%20AVAILABILITY%20GROUP%20\(Transact-SQL\).md)   
+ [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](~/t-sql/statements/alter-availability-group-transact-sql.md)   
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/overview-of-alwayson-availability-groups-sql-server.md)   
  [Creation and Configuration of Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/creation-and-configuration-of-availability-groups-sql-server.md)   
  [Use the AlwaysOn Dashboard &#40;SQL Server Management Studio&#41;](../../2014/database-engine/use-the-alwayson-dashboard-sql-server-management-studio.md)   

@@ -19,7 +19,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Assign Functional Area Permissions (Master Data Services)
-  Assign functional area permission to grant users or groups access to the functional areas of [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].  
+  Assign functional area permission to grant users or groups access to the functional areas of [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
 ## Prerequisites  
  To perform this procedure:  
@@ -28,7 +28,7 @@ manager: "jhubbard"
   
 ### To assign functional area permissions  
   
-1.  In [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], click **User and Group Permissions**.  
+1.  In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], click **User and Group Permissions**.  
   
 2.  On the **Users** or **Groups** page, select the row for the user or group that you want to edit.  
   

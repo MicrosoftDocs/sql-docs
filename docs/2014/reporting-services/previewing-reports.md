@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 85117f6c-828e-45c9-810f-e700d9bfba67
 caps.latest.revision: 42
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Previewing Reports
@@ -34,7 +34,7 @@ manager: "mblythe"
   
 -   By clicking **Start** on the **Debug** menu.  
   
--   By clicking the **Start** button on the [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] standard toolbar.  
+-   By clicking the **Start** button on the [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] standard toolbar.  
   
 -   By pressing F5.  
   

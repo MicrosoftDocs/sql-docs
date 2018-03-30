@@ -25,14 +25,14 @@ f1_keywords:
 ms.assetid: 0f5f0d2a-9537-4152-b441-b40d7f04cf4c
 caps.latest.revision: 6
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Formatting Lines, Colors, and Images (Report Builder and SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] gives you the ability to format lines, colors, data regions, images, and other report items.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] gives you the ability to format lines, colors, data regions, images, and other report items.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## Borders, Lines and Gridlines  
  Borders, lines, and gridlines can visually tie items together on the page and help your report readers easily read the contents of the report. Using the predefined border styles, you can quickly add a border around a text box, a group of text boxes, or an image. In addition, you can change the style, width, and color for the borders, lines, and gridlines. Borders are added around the entire item selected or around a border along an edge of the item, for example, a border along the bottom of a text box.  

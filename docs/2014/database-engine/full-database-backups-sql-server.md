@@ -31,7 +31,7 @@ manager: "jhubbard"
 >  As a database increases in size full database backups take more time to finish and require more storage space. Therefore, for a large database, you might want to supplement a full database backup with a series of *differential database backups*. For more information, see [Differential Backups &#40;SQL Server&#41;](../../2014/database-engine/differential-backups-sql-server.md).  
   
 > [!IMPORTANT]  
->  TRUSTWORTHY is set to OFF on a database backup. For information about how to set TRUSTWORTHY to ON, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md).  
+>  TRUSTWORTHY is set to OFF on a database backup. For information about how to set TRUSTWORTHY to ON, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  **In This Topic:**  
   
@@ -48,7 +48,7 @@ manager: "jhubbard"
   
  ![Shows work-loss exposure between database backups](../../2014/database-engine/media/bnr-rmsimple-1-fulldb-backups.gif "Shows work-loss exposure between database backups")  
   
-### Example ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
+### Example ([!INCLUDE[tsql](../includes/tsql-md.md)])  
  The following example shows how to create a full database backup by using WITH FORMAT to overwrite any existing backups and create a new media set.  
   
 ```  
@@ -66,8 +66,8 @@ GO
   
  For information about how to create log backups, see [Transaction Log Backups &#40;SQL Server&#41;](../../2014/database-engine/transaction-log-backups-sql-server.md).  
   
-### Example ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
- The following example shows how to create a full database backup by using WITH FORMAT to overwrite any existing backups and create a new media set. Then, the example backs up the transaction log. In a real-life situation, you would have to perform a series of regular log backups. For this example, the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database is set to use the full recovery model.  
+### Example ([!INCLUDE[tsql](../includes/tsql-md.md)])  
+ The following example shows how to create a full database backup by using WITH FORMAT to overwrite any existing backups and create a new media set. Then, the example backs up the transaction log. In a real-life situation, you would have to perform a series of regular log backups. For this example, the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] sample database is set to use the full recovery model.  
   
 ```  
 USE master;  

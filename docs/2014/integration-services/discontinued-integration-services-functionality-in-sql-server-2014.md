@@ -19,7 +19,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Discontinued Integration Services Functionality in SQL Server 2014
-  This topic describes [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] features that are no longer available in the current release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+  This topic describes [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] features that are no longer available in the current release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
  There are no discontinued Integration Services features in SQL Server 2014.  
   

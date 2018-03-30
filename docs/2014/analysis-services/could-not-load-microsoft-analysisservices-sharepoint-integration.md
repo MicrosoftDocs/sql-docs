@@ -23,7 +23,7 @@ manager: "mblythe"
 |||  
 |-|-|  
 |Applies to|PowerPivot for SharePoint|  
-|Product Version|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|Product Version|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]|  
 |Cause|Powerpivotwebapp solution is not deployed or did not deploy correctly.|  
 |Message Text|Could not load file or assembly 'Microsoft.AnalysisServices.SharePoint.Integration'|  
   

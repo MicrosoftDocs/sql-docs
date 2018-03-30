@@ -27,7 +27,7 @@ manager: "mblythe"
   
 2.  On the **Dimension Structure** tab, in the **Data Source View** pane, in the table to which you want to bind the attribute, select the column, and then drag the column to the **Attributes** pane.  
   
-     [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] creates the new attribute that has the same name as the column to which it is bound. If there are multiple attributes that use the same column, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] appends a number to the attribute name.  
+     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] creates the new attribute that has the same name as the column to which it is bound. If there are multiple attributes that use the same column, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] appends a number to the attribute name.  
   
 ## See Also  
  [Dimensions in Multidimensional Models](../../2014/analysis-services/dimensions-in-multidimensional-models.md)   

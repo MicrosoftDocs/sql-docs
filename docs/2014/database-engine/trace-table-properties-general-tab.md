@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Trace Table Properties (General Tab)
   Use the **General** tab of the **Trace Table Properties** dialog box to view the properties of a trace table.  
   
- To view this window, use [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to open a trace table, and then on the **File** menu, click **Properties**.  
+ To view this window, use [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] to open a trace table, and then on the **File** menu, click **Properties**.  
   
 ## Options  
  **Table name**  

@@ -20,15 +20,15 @@ manager: "mblythe"
 # Create a Data Mining Query by Using XMLA
   You can create a variety of queries against data mining objects by using AMO, DMX, or XML/A.  
   
- XML is used for communication between the Analysis Services server and all clients. Therefore, although it is generally much easier to create content queries by using DMX, you can write queries by using the DISCOVER and COMMAND statements in XML/A, either by using a client that supports the SOAP protocol, or by creating an XML/A query in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ XML is used for communication between the Analysis Services server and all clients. Therefore, although it is generally much easier to create content queries by using DMX, you can write queries by using the DISCOVER and COMMAND statements in XML/A, either by using a client that supports the SOAP protocol, or by creating an XML/A query in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
- This topic explains how to use the XML/A templates that are available in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to create a model content query against a mining model stored on the current server.  
+ This topic explains how to use the XML/A templates that are available in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to create a model content query against a mining model stored on the current server.  
   
 ## Querying Data Mining Schema Rowsets by Using XML/A  
   
 #### To open an XML/A template  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], on the **View** menu, click **Template Explorer**.  
+1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], on the **View** menu, click **Template Explorer**.  
   
 2.  Click the cube icon to open the list of Analysis Services templates.  
   

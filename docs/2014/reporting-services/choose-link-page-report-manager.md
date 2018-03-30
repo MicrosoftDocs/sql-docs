@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: a89a555d-efa3-45d6-951e-db78ec6a2c8e
 caps.latest.revision: 22
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Choose Link Page (Report Manager)

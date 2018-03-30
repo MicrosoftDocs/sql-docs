@@ -22,11 +22,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Set Source Control Options
-  Before you take advantage of the source control features built into [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], you should configure your source control options for the various environments in which you work.  
+  Before you take advantage of the source control features built into [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], you should configure your source control options for the various environments in which you work.  
   
- You configure source control options by using the **Options** dialog box to configure one or more source control roles. A role consists of a general description of the setting in which you use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], and the source control options associated with that setting.  
+ You configure source control options by using the **Options** dialog box to configure one or more source control roles. A role consists of a general description of the setting in which you use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], and the source control options associated with that setting.  
   
- For example, if you are an independent database developer, you generally do not create conflicts with other users by keeping files checked out after you check them in. Consequently, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] defines an Independent Developer role. For this role, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] automatically selects the **Keep items checked out when checking in** option.  
+ For example, if you are an independent database developer, you generally do not create conflicts with other users by keeping files checked out after you check them in. Consequently, [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] defines an Independent Developer role. For this role, [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] automatically selects the **Keep items checked out when checking in** option.  
   
  Because you can define and customize roles, you can work in varying development settings without having to completely reconfigure source control every time you move from one setting to another.  
   
@@ -50,7 +50,7 @@ manager: "jhubbard"
   
     |Role|Description|  
     |----------|-----------------|  
-    |**Visual SourceSafe**|Specifies that you want to use the settings most commonly used by [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual SourceSafe users.|  
+    |**Visual SourceSafe**|Specifies that you want to use the settings most commonly used by [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe users.|  
     |**Independent Developer**|Specifies that you are working independently.|  
     |**Custom**|Specifies that you have modified the settings for a role.|  
   
@@ -58,7 +58,7 @@ manager: "jhubbard"
      Automatically updates the source control signal icons in Solution Explorer as an item's status changes. If you experience delays when performing server-intensive operations, especially when opening a solution or project from source control, clearing this check box could improve performance.  
   
      **Login ID**  
-     Specifies the user name to use to log in to the source control provider. If supported by your source control provider, this name will be filled in automatically in the **Login** dialog box to reach your source control server. To make this option active, disable automatic user logins by using your source control provider's administrator program, and then restart [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+     Specifies the user name to use to log in to the source control provider. If supported by your source control provider, this name will be filled in automatically in the **Login** dialog box to reach your source control server. To make this option active, disable automatic user logins by using your source control provider's administrator program, and then restart [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
      **Advanced**  
      Displays additional options for adding items to source control. These options vary depending on your source control provider. Help for these options is provided by the source control program.  
@@ -67,14 +67,14 @@ manager: "jhubbard"
   
 5.  In the **Source Control Environment Settings** box, select the role on which you want to set source control options.  
   
-     [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] automatically selects the default source control options for the role you have selected. If you clear any of the default options, the **Source Control Environment Settings** box displays the **Custom** option to indicate that you have customized the originally selected role.  
+     [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] automatically selects the default source control options for the role you have selected. If you clear any of the default options, the **Source Control Environment Settings** box displays the **Custom** option to indicate that you have customized the originally selected role.  
   
      **Source Control Environment Settings**  
-     Specifies the role that you want to use. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] defines the following roles.  
+     Specifies the role that you want to use. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] defines the following roles.  
   
     |Role|Description|  
     |----------|-----------------|  
-    |**Visual SourceSafe**|Specifies that you want to use the settings most commonly used by [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual SourceSafe users.|  
+    |**Visual SourceSafe**|Specifies that you want to use the settings most commonly used by [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe users.|  
     |**Independent Developer**|Specifies that you are working independently.|  
     |**Custom**|Specifies that you have modified the settings for a role.|  
   
@@ -84,7 +84,7 @@ manager: "jhubbard"
      Specifies that when you check in items to update the source control store, the items should remain checked out to you. If you want to change this option for a specific check-in, click the **Options** arrow in the **Check in** dialog box, and then clear the **Keep****checked out** check box.  
   
      **Checked-in items**  
-     Displays a list of options that specify how [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] should behave when you attempt to edit an item that is not checked out. The following tables describe the available options.  
+     Displays a list of options that specify how [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] should behave when you attempt to edit an item that is not checked out. The following tables describe the available options.  
   
      **Saving**  
   

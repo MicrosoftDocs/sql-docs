@@ -21,16 +21,16 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Deploy Packages by Using the Deployment Utility
-  When you have built a deployment utility to install packages from an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project on a different computer than the one on which the deployment utility was built, you must first copy the deployment folder to the destination computer.  
+  When you have built a deployment utility to install packages from an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project on a different computer than the one on which the deployment utility was built, you must first copy the deployment folder to the destination computer.  
   
- The path of the deployment folder is specified in the DeploymentOutputPath property of the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project for which you created the deployment utility. The default path is bin\Deployment, relative to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project. For more information, see [Create a Deployment Utility](../../2014/integration-services/create-a-deployment-utility.md).  
+ The path of the deployment folder is specified in the DeploymentOutputPath property of the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project for which you created the deployment utility. The default path is bin\Deployment, relative to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project. For more information, see [Create a Deployment Utility](../../2014/integration-services/create-a-deployment-utility.md).  
   
  You use the Package Installation Wizard to install the packages. To launch the wizard, double-click the deployment utility file after you have copied the deployment folder to the server. This file is named \<project name>.SSISDeploymentManifest, and can be found in the deployment folder on the destination computer.  
   
 > [!NOTE]  
->  Depending on the version of the package that you are deploying, you might encounter an error if you have different versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installed side-by-side. This error can occur because the .SSISDeploymentManifest file name extension is the same for all versions of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Double-clicking the file calls the installer (dtsinstall.exe) for the most recently installed version of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], which might not be the same version as the deployment utility file. To work around this problem, run the correct version of dtsinstall.exe from the command line, and provide the path of the deployment utility file.  
+>  Depending on the version of the package that you are deploying, you might encounter an error if you have different versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] installed side-by-side. This error can occur because the .SSISDeploymentManifest file name extension is the same for all versions of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Double-clicking the file calls the installer (dtsinstall.exe) for the most recently installed version of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], which might not be the same version as the deployment utility file. To work around this problem, run the correct version of dtsinstall.exe from the command line, and provide the path of the deployment utility file.  
   
- The Package Installation Wizard guides you through the steps to install packages to the file system or to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You can configure the installation in the following ways:  
+ The Package Installation Wizard guides you through the steps to install packages to the file system or to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. You can configure the installation in the following ways:  
   
 -   Choosing the location type and location to install the packages.  
   
@@ -38,7 +38,7 @@ manager: "jhubbard"
   
 -   Validating the packages after they are installed on the target server.  
   
- The file-based dependencies for packages are always installed to the file system. If you install a package to the file system, the dependencies are installed in the same folder as the one that you specify for the package. If you install a package to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can specify the folder in which to store the file-based dependencies.  
+ The file-based dependencies for packages are always installed to the file system. If you install a package to the file system, the dependencies are installed in the same folder as the one that you specify for the package. If you install a package to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], you can specify the folder in which to store the file-based dependencies.  
   
  If the package includes configurations that you want to modify for use on the destination computer, you can update the values of the properties by using the wizard.  
   
@@ -54,7 +54,7 @@ manager: "jhubbard"
   
 4.  Optionally, select **Validate packages after installation** to validate packages after they are installed on the target server.  
   
-5.  On the **Specify Target SQL Server** page, specify the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to install the packages to and select an authentication mode. If you select [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, you must provide a user name and a password.  
+5.  On the **Specify Target SQL Server** page, specify the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to install the packages to and select an authentication mode. If you select [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication, you must provide a user name and a password.  
   
 6.  On the **Select Installation Folder** page, specify the folder in the file system for the package dependencies that will be installed.  
   

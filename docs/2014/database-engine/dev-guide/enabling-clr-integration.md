@@ -34,22 +34,22 @@ RECONFIGURE;
 GO  
 ```  
   
- You can disable CLR integration by setting the **clr enabled** option to 0. When you disable CLR integration, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stops executing all CLR routines and unloads all application domains.  
+ You can disable CLR integration by setting the **clr enabled** option to 0. When you disable CLR integration, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stops executing all CLR routines and unloads all application domains.  
   
 > [!NOTE]  
 >  To enable CLR integration, you must have ALTER SETTINGS server level permission, which is implicitly held by members of the **sysadmin** and **serveradmin** fixed server roles.  
   
 > [!NOTE]  
->  Computers configured with large amounts of memory and a large number of processors may fail to load the CLR integration feature of SQL Server when starting the server. To address this issue, start the server by using the **-gmemory_to_reserve**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service startup option, and specify a memory value large enough. For more information, see [Database Engine Service Startup Options](../../../2014/database-engine/database-engine-service-startup-options.md).  
+>  Computers configured with large amounts of memory and a large number of processors may fail to load the CLR integration feature of SQL Server when starting the server. To address this issue, start the server by using the **-gmemory_to_reserve**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service startup option, and specify a memory value large enough. For more information, see [Database Engine Service Startup Options](../../../2014/database-engine/database-engine-service-startup-options.md).  
   
 > [!NOTE]  
 >  Common language runtime (CLR) execution is not supported under lightweight pooling. Before enabling CLR integration, you must disable lightweight pooling. For more information, see [lightweight pooling Server Configuration Option](../../../2014/database-engine/lightweight-pooling-server-configuration-option.md).  
   
 ## See Also  
- [sp_configure &#40;Transact-SQL&#41;](../Topic/sp_configure%20\(Transact-SQL\).md)   
+ [sp_configure &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [clr enabled Server Configuration Option](../../../2014/database-engine/clr-enabled-server-configuration-option.md)   
- [RECONFIGURE &#40;Transact-SQL&#41;](../Topic/RECONFIGURE%20\(Transact-SQL\).md)   
- [GRANT &#40;Transact-SQL&#41;](../Topic/GRANT%20\(Transact-SQL\).md)   
+ [RECONFIGURE &#40;Transact-SQL&#41;](~/t-sql/language-elements/reconfigure-transact-sql.md)   
+ [GRANT &#40;Transact-SQL&#41;](~/t-sql/statements/grant-transact-sql.md)   
  [Server-Level Roles](../../../2014/database-engine/server-level-roles.md)  
   
   

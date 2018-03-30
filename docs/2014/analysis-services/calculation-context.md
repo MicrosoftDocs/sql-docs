@@ -28,7 +28,7 @@ manager: "mblythe"
 2.  The WHERE clause (if applicable) - this clause, which is also known as the *slicer axis*, on which you specify a set, tuple, or member that restricts the members returned on the column and row axis by a query. Conceptually, the default member of every attribute hierarchy that is not explicitly specified on column or row axis is part of the slicer axis.  
   
     > [!NOTE]  
-    >  When cell coordinates for a particular attribute are specified on both the slicer axis and on another axis, the coordinates specified in the function may take precedence in determining the members of the set on the axis. The [Filter (MDX)](../Topic/Filter%20\(MDX\).md) and [Order (MDX)](../Topic/Order%20\(MDX\).md) functions are examples of such functions - you can filter or order a result by attribute members that are excluded from the calculation context by the WHERE clause, or by a SELECT statement in the FROM clause.  
+    >  When cell coordinates for a particular attribute are specified on both the slicer axis and on another axis, the coordinates specified in the function may take precedence in determining the members of the set on the axis. The [Filter (MDX)](~/mdx/filter-mdx.md) and [Order (MDX)](~/mdx/order-mdx.md) functions are examples of such functions - you can filter or order a result by attribute members that are excluded from the calculation context by the WHERE clause, or by a SELECT statement in the FROM clause.  
   
 3.  The named sets and calculated members defined in the query or expression.  
   

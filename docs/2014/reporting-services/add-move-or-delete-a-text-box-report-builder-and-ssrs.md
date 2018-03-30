@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: f042cf81-d933-4ac7-9287-c074a46bde98
 caps.latest.revision: 5
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Add, Move, or Delete a Text Box (Report Builder and SSRS)
@@ -26,7 +26,7 @@ manager: "mblythe"
 >  When you click a text box, you're immediately editing the text in the text box. To select the text box itself, not the text in it, press ESC.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ### To add a text box  
   

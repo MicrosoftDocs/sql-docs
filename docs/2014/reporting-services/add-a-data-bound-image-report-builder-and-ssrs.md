@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: df4c38d4-bfcc-41c4-aa6d-952ca6fd7a2e
 caps.latest.revision: 7
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Add a Data-Bound Image (Report Builder and SSRS)
@@ -21,7 +21,7 @@ manager: "mblythe"
  Adding a data-bound image to a page header or page footer requires additional steps. For more information, see [Page Headers and Footers &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/page-headers-and-footers-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ### To add a data-bound image  
   
@@ -41,7 +41,7 @@ manager: "mblythe"
   
 8.  In **Use this MIME type**, select the MIME type, or file format, of the image—for example, bmp.  
   
-9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
      An image placeholder appears on the report design surface.  
   

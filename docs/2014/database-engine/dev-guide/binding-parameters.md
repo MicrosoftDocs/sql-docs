@@ -45,15 +45,15 @@ manager: "jhubbard"
   
      Row-wise binding is specified by calling **SQLSetStmtAttr** with *Attribute* set to SQL_ATTR_PARAM_BIND_TYPE and *ValuePtr* set to the size of the structure holding the program variables.  
   
- When the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver sends character or binary string parameters to the server, it pads the values to the length specified in **SQLBindParameter** *ColumnSize* parameter. If an ODBC 2.x application specifies 0 for *ColumnSize*, the driver pads the parameter value to the precision of the data type. The precision is 8000 when connected to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] servers, 255 when connected to earlier versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. *ColumnSize* is in bytes for variant columns.  
+ When the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver sends character or binary string parameters to the server, it pads the values to the length specified in **SQLBindParameter** *ColumnSize* parameter. If an ODBC 2.x application specifies 0 for *ColumnSize*, the driver pads the parameter value to the precision of the data type. The precision is 8000 when connected to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servers, 255 when connected to earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *ColumnSize* is in bytes for variant columns.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports defining names for stored procedure parameters. ODBC 3.5 also introduced support for named parameters used when calling [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stored procedures. This support can be used to:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports defining names for stored procedure parameters. ODBC 3.5 also introduced support for named parameters used when calling [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stored procedures. This support can be used to:  
   
 -   Call a stored procedure and provide values for a subset of the parameters defined for the stored procedure.  
   
 -   Specify the parameters in a different order in the application than the order specified when the stored procedure was created.  
   
- Named parameters are only supported when using the [!INCLUDE[tsql](../../../includes/tsql-md.md)] `EXECUTE` statement or the ODBC CALL escape sequence to execute a stored procedure.  
+ Named parameters are only supported when using the [!INCLUDE[tsql](../../includes/tsql-md.md)] `EXECUTE` statement or the ODBC CALL escape sequence to execute a stored procedure.  
   
  If `SQL_DESC_NAME` is set for a stored procedure parameter, all stored procedure parameters in the query should also set `SQL_DESC_NAME`.  If literals are used in stored procedure calls, where parameters have `SQL_DESC_NAME` set, the literals should use the format *'name*=*value*', where *name* is the stored procedure parameter name (for example, @p1). For more information, see [Binding Parameters by Name (Named Parameters)](http://go.microsoft.com/fwlink/?LinkId=167215).  
   

@@ -23,7 +23,7 @@ manager: "mblythe"
 |||  
 |-|-|  
 |Applies to:|PowerPivot for SharePoint installation|  
-|Product Version|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|Product Version|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]|  
 |Cause|See below.|  
 |Message Text|Unable to refresh data for a data connection in the workbook. Try again or contact your system administrator. The following connections failed to refresh: PowerPivot Data|  
   

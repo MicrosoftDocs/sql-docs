@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: 7ce656c2-6e60-4625-8955-1daff641070c
 caps.latest.revision: 28
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Publication Information, All Subscriptions (Snapshot Publication)
@@ -34,7 +34,7 @@ manager: "jhubbard"
  Filter settings are specific to each grid. Column selection and sorting are applied to all grids of the same type, such as the publications grid for each Publisher.  
   
  **Show**  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and later versions only. Select the subscription states to display for the selected subscription type. For example, you can select to display only those subscriptions that have an error.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only. Select the subscription states to display for the selected subscription type. For example, you can select to display only those subscriptions that have an error.  
   
  **Status**  
  The status of each subscription, which is determined by the status of the Snapshot Agent or the Distribution Agent (the higher priority status is displayed).  
@@ -43,9 +43,9 @@ manager: "jhubbard"
   
 -   Error  
   
--   Expiring soon/Expired ([!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and later versions only)  
+-   Expiring soon/Expired ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only)  
   
--   Uninitialized subscription ([!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and later versions only)  
+-   Uninitialized subscription ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only)  
   
 -   Retrying failed command  
   

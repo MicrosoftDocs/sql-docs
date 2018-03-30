@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 caps.latest.revision: 11
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Tutorial: Creating a Matrix Report (Report Builder)
@@ -20,7 +20,7 @@ manager: "mblythe"
   
  ![rs_CreateMatixReportTutorial](../../2014/tutorials/media/rs-creatematixreporttutorial.gif "rs_CreateMatixReportTutorial")  
   
- An enhanced version of the report you will create in this tutorial is available as a sample [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Report Builder report. For more information about downloading this sample report and others, see [Report Builder sample reports](http://go.microsoft.com/fwlink/?LinkId=184851).  
+ An enhanced version of the report you will create in this tutorial is available as a sample [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Report Builder report. For more information about downloading this sample report and others, see [Report Builder sample reports](http://go.microsoft.com/fwlink/?LinkId=184851).  
   
 ##  <a name="BackToTop"></a> What You Will Learn  
  In this tutorial, you will learn how to:  
@@ -284,7 +284,7 @@ manager: "mblythe"
   
      This is the RGB hex value for a gray blue color used in the Slate style.  
   
-9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 10. Click **Run** to preview your report.  
   
@@ -316,7 +316,7 @@ manager: "mblythe"
   
 8.  In the **Font** list, select **Times New Roman**; in **Size** select **24 pt**, in **Color** select **Maroon**, and in **Style** select **Italic**.  
   
-9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 10. Click **Run** to preview the report.  
   

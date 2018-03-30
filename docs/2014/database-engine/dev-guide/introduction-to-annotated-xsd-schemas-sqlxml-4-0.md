@@ -49,7 +49,7 @@ manager: "jhubbard"
  You can use an XSD schema with annotations that describe the mapping to a database, query the database, and return the results in the form of an XML document. Annotations are provided to map an XSD schema to database tables and columns. XPath queries can be specified against the XML view created by the XSD schema to query the database and obtain results as an XML.  
   
 > [!NOTE]  
->  In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0, the XSD schema language supports the annotations introduced with annotated XML-Data Reduced (XDR) schema language in [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)]. Annotated XDR is deprecated in SQLXML 4.0.  
+>  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0, the XSD schema language supports the annotations introduced with annotated XML-Data Reduced (XDR) schema language in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Annotated XDR is deprecated in SQLXML 4.0.  
   
  In the context of the relational database, it is useful to map the arbitrary XSD schema to a relational store. One way to achieve this is to annotate the XSD schema. An XSD schema with the annotations is referred to as a *mapping schema*, which provides information pertaining to how XML data is to be mapped to the relational store. A mapping schema is, in effect, an XML view of the relational data. These mappings can be used to retrieve relational data as an XML document.  
   

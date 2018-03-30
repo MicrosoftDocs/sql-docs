@@ -22,15 +22,15 @@ manager: "jhubbard"
 # Unloading an Extended Stored Procedure DLL
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Use CLR Integration instead.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR Integration instead.  
   
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] loads an extended stored procedure DLL as soon as a call is made to one of the functions of the DLL. The DLL remains loaded until the server is shut down or until the system administrator uses the DBCC statement to unload it. For example, this command unloads the **xp_hello.dll**, allowing the system administrator to copy a newer version of this file to the directory without shutting down the server:  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] loads an extended stored procedure DLL as soon as a call is made to one of the functions of the DLL. The DLL remains loaded until the server is shut down or until the system administrator uses the DBCC statement to unload it. For example, this command unloads the **xp_hello.dll**, allowing the system administrator to copy a newer version of this file to the directory without shutting down the server:  
   
 ```  
 DBCC xp_hello(FREE)  
 ```  
   
 ## See Also  
- [DBCC dllname &#40;FREE&#41; &#40;Transact-SQL&#41;](../Topic/DBCC%20dllname%20\(FREE\)%20\(Transact-SQL\).md)  
+ [DBCC dllname &#40;FREE&#41; &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-dllname-free-transact-sql.md)  
   
   

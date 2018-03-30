@@ -19,7 +19,7 @@ f1_keywords:
 ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
 caps.latest.revision: 10
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Indicators (Report Builder and SSRS)
@@ -39,15 +39,15 @@ manager: "mblythe"
   
  ![rs_IndicatorTableTrafficLight](../../2014/reporting-services/media/rs-indicatortabletrafficlight.gif "rs_IndicatorTableTrafficLight")  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides built-in indicator sets and indicator icons to use as is, but you can also customize individual indicator icons and indicators sets to suit your needs.  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] provides built-in indicator sets and indicator icons to use as is, but you can also customize individual indicator icons and indicators sets to suit your needs.  
   
  For more information about using indicators as KPIs, see [Tutorial: Adding a KPI to Your Report &#40;Report Builder&#41;](../../2014/tutorials/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
   
 > [!NOTE]  
->  You can publish indicators separately from a report as report parts. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
+>  You can publish indicators separately from a report as report parts. [!INCLUDE[ssRBrptparts](../includes/ssrbrptparts-md.md)]  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ##  <a name="ComparingIndicatorsToGauges"></a> Comparing Indicators to Gauges  
  Although they look very different, indicators are just simple gauges. Both indicators and gauges display a single data value. The key differences are that gauges have elements such as frames and  pointers. Indicators have only states, icons, and (optionally) labels. Indicator states are similar to gauge ranges.  

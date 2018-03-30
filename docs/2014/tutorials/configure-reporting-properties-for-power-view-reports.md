@@ -18,7 +18,7 @@ manager: "jhubbard"
 # Configure Reporting Properties for Power View Reports
   In this supplemental lesson, you will set reporting properties for the Adventure Works Internet Sales Model project. Reporting properties make it easier for end-users to select and display model data in Power View. You will also set properties to hide certain columns and tables, and create new data for use in charts.  
   
- After completing this lesson and re-deploying the model to a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance integrated with SharePoint and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], you can create a data source, specify the data connection information, launch Power View, and design reports against the model.  
+ After completing this lesson and re-deploying the model to a [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance integrated with SharePoint and [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], you can create a data source, specify the data connection information, launch Power View, and design reports against the model.  
   
  This lesson does not describe how to create and use Power View reports. This lesson is meant to provide tabular model authors an introduction to those properties and settings that affect how model data will appear in Power View. To learn more about creating Power View reports, see [Tutorial: Create a Sample Report in Power View](http://go.microsoft.com/fwlink/?LinkId=221204).  
   
@@ -31,7 +31,7 @@ manager: "jhubbard"
   
 -   The Adventure Works Internet Sales Model (completed through this tutorial) ready to be deployed or already deployed to an Analysis Services instance running in Tabular mode.  
   
--   A SharePoint site integrated with [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] running in Tabular mode and [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], configured to support Power View reports.  
+-   A SharePoint site integrated with [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] running in Tabular mode and [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)], configured to support Power View reports.  
   
 -   You must have sufficient permissions to create a data connection on the SharePoint site that points to the Adventure Works Internet Sales Model.  
   
@@ -212,7 +212,7 @@ manager: "jhubbard"
   
 #### To redeploy the Adventure Works Internet Sales tabular model  
   
--   In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], click the **Build** menu, and then click **Deploy Adventure Works Internet Sales Model**.  
+-   In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], click the **Build** menu, and then click **Deploy Adventure Works Internet Sales Model**.  
   
      The **Deploy** dialog box appears and displays the deployment status of the metadata as well as each table included in the model.  
   

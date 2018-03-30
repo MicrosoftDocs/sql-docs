@@ -16,9 +16,9 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # How to Prepare SQL Server for CDC
-  The Oracle CDC service requires all target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances to contain the MSXDBCDC database. You create this database using the Prepare SQL Server action in the CDC Service Configuration Console.This task is done one time only for each target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
+  The Oracle CDC service requires all target [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instances to contain the MSXDBCDC database. You create this database using the Prepare SQL Server action in the CDC Service Configuration Console.This task is done one time only for each target [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance.  
   
- The following describes how to prepare a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database for Oracle Change Data Capture using the CDC Service Configuration Console. This process creates the MSXDBCDC database and defines the required tables, stored procedures, and other required artifacts.  
+ The following describes how to prepare a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database for Oracle Change Data Capture using the CDC Service Configuration Console. This process creates the MSXDBCDC database and defines the required tables, stored procedures, and other required artifacts.  
   
  Preparing the SQL Server for Oracle CDC is done by the Oracle CDC Service Administrator. For more information about the CDC Service Administrator role, see [User Roles for Change Data Capture Service for Oracle by Attunity](../../2014/integration-services/user-roles-for-change-data-capture-service-for-oracle-by-attunity.md).  
   
@@ -34,7 +34,7 @@ manager: "jhubbard"
   
      To Prepare the SQL Server instance for Oracle CDC, the login must have write permission to the MSXDBCDC database. Enter the credentials for a login that has write permission to the MSXDBCDC database, such as a member of the `sysasmin` role.  
   
- **Note**: You can click **View Script** to view a read-only version of the setup script. A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system administrator can copy this script into the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Console to edit and execute it, if necessary.  
+ **Note**: You can click **View Script** to view a read-only version of the setup script. A [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] system administrator can copy this script into the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Console to edit and execute it, if necessary.  
   
 ## See Also  
  [Prepare SQL Server for CDC](../../2014/integration-services/prepare-sql-server-for-cdc.md)  

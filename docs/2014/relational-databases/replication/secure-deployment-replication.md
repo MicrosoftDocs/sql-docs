@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 9c8c284a-e497-48b7-b2e2-c96a0e940e67
 caps.latest.revision: 12
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Secure Deployment (Replication)
@@ -38,7 +38,7 @@ manager: "jhubbard"
  Includes information about virtual private networks and Web synchronization.  
   
  [Security Considerations for SQL Server Compact Replication](../../../2014/relational-databases/replication/security-considerations-for-sql-server-compact-replication.md)  
- Discusses Securing connectivity between an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../../includes/ssde-md.md)] and [!INCLUDE[ssEW](../../../includes/ssew-md.md)].  
+ Discusses Securing connectivity between an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssEW](../../includes/ssew-md.md)].  
   
 ## See Also  
  [Security Overview &#40;Replication&#41;](../../../2014/relational-databases/replication/security-overview-replication.md)   

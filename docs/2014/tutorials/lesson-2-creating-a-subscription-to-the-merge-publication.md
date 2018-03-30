@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 06722baa-9065-443e-b1d5-99036cf89074
 caps.latest.revision: 16
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Lesson 2: Creating a Subscription to the Merge Publication
-  In this lesson, you will create the subscription using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. You will then set permissions on the subscription database and manually generate the filtered data snapshot for the new subscription. This lesson requires that you have completed the previous lesson, [Lesson 1: Publishing Data Using Merge Replication](../../2014/tutorials/lesson-1-publishing-data-using-merge-replication.md).  
+  In this lesson, you will create the subscription using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. You will then set permissions on the subscription database and manually generate the filtered data snapshot for the new subscription. This lesson requires that you have completed the previous lesson, [Lesson 1: Publishing Data Using Merge Replication](../../2014/tutorials/lesson-1-publishing-data-using-merge-replication.md).  
   
 ### To create the subscription  
   
-1.  Connect to the Subscriber in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expand the server node, expand the **Replication** folder, right-click the **Local Subscriptions** folder, and then click **New Subscriptions**.  
+1.  Connect to the Subscriber in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], expand the server node, expand the **Replication** folder, right-click the **Local Subscriptions** folder, and then click **New Subscriptions**.  
   
      The New Subscription Wizard launches.  
   
@@ -48,7 +48,7 @@ manager: "jhubbard"
   
 ### Setting database permissions at the Subscriber  
   
-1.  Connect to the Subscriber in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expand **Databases**, **SalesOrdersReplica**, and **Security**, right-click **Users**, and then select **New User**.  
+1.  Connect to the Subscriber in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], expand **Databases**, **SalesOrdersReplica**, and **Security**, right-click **Users**, and then select **New User**.  
   
 2.  On the **General** page, enter \<*Machine_Name>***\repl_merge** in the **User name** box, click the ellipsis (**…**) button, click **Browse**, select \<*Machine_Name>***\repl_merge**, click **OK**, click **Check Names**, and then click **OK**.  
   
@@ -56,7 +56,7 @@ manager: "jhubbard"
   
 ### To create the filtered data snapshot for the subscription  
   
-1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expand the server node, and then expand the **Replication** folder.  
+1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], expand the server node, and then expand the **Replication** folder.  
   
 2.  In the **Local Publications** folder, right-click the **AdvWorksSalesOrdersMerge** publication, and then click **Properties**.  
   

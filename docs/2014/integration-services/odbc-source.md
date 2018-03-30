@@ -78,7 +78,7 @@ manager: "jhubbard"
   
  To open the **Advanced Editor** dialog box:  
   
--   In the **Data Flow** screen of your [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] project, right click the ODBC source and select **Show Advanced Editor**.  
+-   In the **Data Flow** screen of your [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] project, right click the ODBC source and select **Show Advanced Editor**.  
   
  For more information about the properties that you can set in the Advanced Editor dialog box, see [ODBC Source Custom Properties](../../2014/integration-services/odbc-source-custom-properties.md).  
   

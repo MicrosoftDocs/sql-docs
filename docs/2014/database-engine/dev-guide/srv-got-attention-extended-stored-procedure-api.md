@@ -29,7 +29,7 @@ manager: "jhubbard"
 # srv_got_attention (Extended Stored Procedure API)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
   
  Checks whether the current connection or task needs to be aborted and returns TRUE if the connection is killed or the batch is aborted  
   

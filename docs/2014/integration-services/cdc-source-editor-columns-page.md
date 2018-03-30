@@ -25,7 +25,7 @@ manager: "jhubbard"
 ## Task List  
  **To open the CDC Source Editor Columns Page**  
   
-1.  In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], open the [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] package that has the CDC source.  
+1.  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], open the [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] package that has the CDC source.  
   
 2.  On the **Data Flow** tab, double-click the CDC source.  
   

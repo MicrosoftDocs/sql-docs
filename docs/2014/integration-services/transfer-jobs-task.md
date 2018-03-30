@@ -20,7 +20,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Transfer Jobs Task
-  The Transfer Jobs task transfers one or more [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs between instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  The Transfer Jobs task transfers one or more [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent jobs between instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  The Transfer Jobs task can be configured to transfer all jobs, or only specified jobs. You can also indicate whether the transferred jobs are enabled at the destination.  
   
@@ -35,7 +35,7 @@ manager: "jhubbard"
  At run time, the Transfer Jobs task connects to the source and destination servers by using one or two SMO connection managers. The SMO connection manager is configured separately from the Transfer Jobs task, and then is referenced in the Transfer Jobs task. The SMO connection manager specifies the server and the authentication mode to use when accessing the server. For more information, see [SMO Connection Manager](../../2014/integration-services/smo-connection-manager.md).  
   
 ## Transferring Jobs Between Instances of SQL Server  
- The Transfer Jobs task supports a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] source and destination. There are no restrictions on which version to use as a source or destination.  
+ The Transfer Jobs task supports a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] source and destination. There are no restrictions on which version to use as a source or destination.  
   
 ## Events  
  The Transfer Jobs task raises an information event that reports the number of jobs transferred and a warning event when a job is overwritten. The task does not report incremental progress of the job transfer; it reports only 0% and 100% completion.  
@@ -53,12 +53,12 @@ manager: "jhubbard"
  In addition, a log entry for the `OnInformation` event reports the number of jobs that were transferred and a log entry for the `OnWarning` event is written for each job on the destination that is overwritten.  
   
 ## Security and Permissions  
- To transfer jobs, the user must be a member of the sysadmin fixed server role or one of the fixed [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent fixed database roles on the msdb database on the both the source and destination instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ To transfer jobs, the user must be a member of the sysadmin fixed server role or one of the fixed [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent fixed database roles on the msdb database on the both the source and destination instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## Configuration of the Transfer Jobs Task  
- You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer or programmatically.  
   
- For information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click one of the following topics:  
+ For information about the properties that you can set in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click one of the following topics:  
   
 -   [Transfer Jobs Task Editor &#40;General Page&#41;](../../2014/integration-services/transfer-jobs-task-editor-general-page.md)  
   
@@ -71,7 +71,7 @@ manager: "jhubbard"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.TransferJobsTask.TransferJobsTask>  
   
 ## Related Tasks  
- For more information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
+ For more information about how to set these properties in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click the following topic:  
   
 -   [Set the Properties of a Task or Container](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)  
   

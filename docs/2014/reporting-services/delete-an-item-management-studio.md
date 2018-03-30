@@ -16,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: 57381914-3106-4dc4-acd4-7ed5b565cca6
 caps.latest.revision: 29
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Delete an Item (Management Studio)
-  When connected to a report server instance in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], you can delete role definitions and shared schedules. You cannot delete reports, models, or other items on a report server. To delete report server content, use Report Manager instead. Or, if the report server is configured for SharePoint integrated mode, use the item management features in the SharePoint library that contains your content.  
+  When connected to a report server instance in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], you can delete role definitions and shared schedules. You cannot delete reports, models, or other items on a report server. To delete report server content, use Report Manager instead. Or, if the report server is configured for SharePoint integrated mode, use the item management features in the SharePoint library that contains your content.  
   
 ### To delete an item in the report server folder namespace  
   
@@ -30,7 +30,7 @@ manager: "mblythe"
   
 3.  Right-click the item, and click **Delete**.  
   
-4.  When prompted, [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  When prompted, [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## See Also  
  [Connect to a Report Server in Management Studio](../../2014/reporting-services/connect-to-a-report-server-in-management-studio.md)   

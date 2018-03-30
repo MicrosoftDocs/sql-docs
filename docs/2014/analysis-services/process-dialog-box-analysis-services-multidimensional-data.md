@@ -18,9 +18,9 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Process Dialog Box (Analysis Services - Multidimensional Data)
-  Use the **Process** dialog box in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] and [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to process [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects. You can display the **Process** dialog box in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] by:  
+  Use the **Process** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] and [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to process [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objects. You can display the **Process** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] by:  
   
--   Right-clicking an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project, cube, dimension, or mining structure in **Solution Explorer** and selecting **Process**.  
+-   Right-clicking an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project, cube, dimension, or mining structure in **Solution Explorer** and selecting **Process**.  
   
 -   Selecting **Process** from the toolbar on every page of **Cube Designer**, every page of **Dimension Designer**, or the **Mining Structure** and **Mining Models** pages of **Data Mining Model Designer**.  
   
@@ -28,11 +28,11 @@ manager: "mblythe"
   
  You can display the **Process** dialog box in **SQL Server Management Studio** by:  
   
--   Right-clicking an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database, cube, measure group, partition, dimension, mining structure, or mining model in **Object Explorer** and selecting **Process**.  
+-   Right-clicking an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database, cube, measure group, partition, dimension, mining structure, or mining model in **Object Explorer** and selecting **Process**.  
   
 ## Options  
  **Object list**  
- Select the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects to be processed and the processing options and settings to be applied. The grid contains the following columns:  
+ Select the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objects to be processed and the processing options and settings to be applied. The grid contains the following columns:  
   
  **Object Name**  
  Displays the name of the object to be processed. The icon to the left of the name indicates the object type.  

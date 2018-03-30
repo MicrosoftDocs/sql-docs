@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Proactive Caching (Partition Properties Dialog Box) (SSMS)
-  Use the **Proactive Caching** page of the **Partition Properties** dialog box in SQL Server Management Studio to set the storage and proactive caching properties of a partition in a measure group for a cube in an [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database.  
+  Use the **Proactive Caching** page of the **Partition Properties** dialog box in SQL Server Management Studio to set the storage and proactive caching properties of a partition in a measure group for a cube in an [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database.  
   
 ## Options  
  **Standard setting**  

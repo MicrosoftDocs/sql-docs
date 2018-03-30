@@ -19,7 +19,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Technical Reference (Integration Services)
-  Find the tools, languages, and programming reference documentation for [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  Find the tools, languages, and programming reference documentation for [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
  ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") **Change Data Capture Service and Designer**  
  [Change Data Capture Service for Oracle by Attunity](../../2014/integration-services/change-data-capture-service-for-oracle-by-attunity.md)  
@@ -30,10 +30,10 @@ manager: "jhubbard"
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
  ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") **Transact-SQL Reference**  
- [Views &#40;Integration Services Catalog&#41;](../Topic/Views%20\(Integration%20Services%20Catalog\).md)  
+ [Views &#40;Integration Services Catalog&#41;](~/integration-services/system-views/views-integration-services-catalog.md)  
   
- [Stored Procedures &#40;Integration Services Catalog&#41;](../Topic/Stored%20Procedures%20\(Integration%20Services%20Catalog\).md)  
+ [Stored Procedures &#40;Integration Services Catalog&#41;](~/integration-services/system-stored-procedures/stored-procedures-integration-services-catalog.md)  
   
- [Functions &#40;Integration Services Catalog&#41;](../Topic/Functions%20\(Integration%20Services%20Catalog\).md)  
+ [Functions &#40;Integration Services Catalog&#41;](~/integration-services/functions-dm-execution-performance-counters.md)  
   
   

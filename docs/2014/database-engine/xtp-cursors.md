@@ -16,7 +16,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # XTP Cursors
-  The XTP Cursors performance object contains counters related to internal XTP engine cursors. Cursors are the low-level building blocks the XTP engine uses to process [!INCLUDE[tsql](../../includes/tsql-md.md)] queries. As such, you do not typically have direct control over them.  
+  The XTP Cursors performance object contains counters related to internal XTP engine cursors. Cursors are the low-level building blocks the XTP engine uses to process [!INCLUDE[tsql](../includes/tsql-md.md)] queries. As such, you do not typically have direct control over them.  
   
  This table describes the **XTP Cursors** counters.  
   

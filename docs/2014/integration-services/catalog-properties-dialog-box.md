@@ -19,9 +19,9 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Catalog Properties Dialog Box
-  Use the Catalog Properties dialog box to configure the SSISDB catalog. Catalog properties define how sensitive data is encrypted, how operations and project versioning data is retained, and when validation operations time out. The SSISDB catalog is a central storage and administration point for [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] projects, packages, parameters, and environments.  
+  Use the Catalog Properties dialog box to configure the SSISDB catalog. Catalog properties define how sensitive data is encrypted, how operations and project versioning data is retained, and when validation operations time out. The SSISDB catalog is a central storage and administration point for [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] projects, packages, parameters, and environments.  
   
- You can also view catalog properties in the catalog.catalog_property view, and set the properties by using the catalog.configure_catalog stored procedure. For more information, see [catalog.catalog_properties &#40;SSISDB Database&#41;](../Topic/catalog.catalog_properties%20\(SSISDB%20Database\).md) and [catalog.configure_catalog &#40;SSISDB Database&#41;](../Topic/catalog.configure_catalog%20\(SSISDB%20Database\).md).  
+ You can also view catalog properties in the catalog.catalog_property view, and set the properties by using the catalog.configure_catalog stored procedure. For more information, see [catalog.catalog_properties &#40;SSISDB Database&#41;](~/integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) and [catalog.configure_catalog &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md).  
   
  For information on how to create the SSISDB catalog, see [Create the SSIS Catalog](../../2014/integration-services/create-the-ssis-catalog.md).  
   
@@ -33,7 +33,7 @@ manager: "jhubbard"
   
 ##  <a name="open_dialog"></a> Open the Catalog Properties Dialog Box  
   
-1.  Open [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+1.  Open [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
 2.  Connect Microsoft SQL Server Database Engine.  
   

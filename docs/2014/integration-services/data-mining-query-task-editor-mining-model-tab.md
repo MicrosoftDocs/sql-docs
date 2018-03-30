@@ -36,12 +36,12 @@ manager: "jhubbard"
   
 ## Mining Model Tab Options  
  **Connection**  
- Select an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] connection manager in the list or click **New** to create a new connection manager.  
+ Select an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] connection manager in the list or click **New** to create a new connection manager.  
   
  **Related Topics:**  [Analysis Services Connection Manager](../../2014/integration-services/analysis-services-connection-manager.md)  
   
  **New**  
- Create a new [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] connection manager.  
+ Create a new [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] connection manager.  
   
  **Related Topics:** [Add Analysis Services Connection Manager Dialog Box UI Reference](../../2014/integration-services/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   

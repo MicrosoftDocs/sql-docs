@@ -23,7 +23,7 @@ ms.author: "jroth"
 manager: "jhubbard"
 ---
 # Configure Read-Only Routing for an Availability Group (SQL Server)
-  To configure an AlwaysOn availability group to support read-only routing in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], you can use either [!INCLUDE[tsql](../../includes/tsql-md.md)] or PowerShell. *Read-only routing* refers to the ability of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to route qualifying read-only connection requests to an available AlwaysOn [readable secondary replica](../../2014/database-engine/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) (that is, a replica that is configured to allow read-only workloads when running under the secondary role). To support read-only routing, the availability group must possess an [availability group listener](../../2014/database-engine/listeners-client-connectivity-application-failover.md). Read-only clients must direct their connection requests to this listener, and the client's connection strings must specify the application intent as "read-only." That is, they must be *read-intent connection requests*.  
+  To configure an AlwaysOn availability group to support read-only routing in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], you can use either [!INCLUDE[tsql](../includes/tsql-md.md)] or PowerShell. *Read-only routing* refers to the ability of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to route qualifying read-only connection requests to an available AlwaysOn [readable secondary replica](../../2014/database-engine/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) (that is, a replica that is configured to allow read-only workloads when running under the secondary role). To support read-only routing, the availability group must possess an [availability group listener](../../2014/database-engine/listeners-client-connectivity-application-failover.md). Read-only clients must direct their connection requests to this listener, and the client's connection strings must specify the application intent as "read-only." That is, they must be *read-intent connection requests*.  
   
 > [!NOTE]  
 >  For information about how to configure a readable secondary replica, see [Configure Read-Only Access on an Availability Replica &#40;SQL Server&#41;](../../2014/database-engine/configure-read-only-access-on-an-availability-replica-sql-server.md).  
@@ -31,7 +31,7 @@ manager: "jhubbard"
 
   
     > [!NOTE]  
-    >  Configuring read-only routing is not supported by [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+    >  Configuring read-only routing is not supported by [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 
   
@@ -76,7 +76,7 @@ manager: "jhubbard"
   
 1.  Connect to the server instance that hosts the primary replica.  
   
-2.  If you are specifying a replica for a new availability group, use the [CREATE AVAILABILITY GROUP](../Topic/CREATE%20AVAILABILITY%20GROUP%20\(Transact-SQL\).md)[!INCLUDE[tsql](../../includes/tsql-md.md)] statement. If you are adding or modifying a replica for an existing availability group, use the [ALTER AVAILABILITY GROUP](../Topic/ALTER%20AVAILABILITY%20GROUP%20\(Transact-SQL\).md)[!INCLUDE[tsql](../../includes/tsql-md.md)] statement.  
+2.  If you are specifying a replica for a new availability group, use the [CREATE AVAILABILITY GROUP](~/t-sql/statements/create-availability-group-transact-sql.md)[!INCLUDE[tsql](../includes/tsql-md.md)] statement. If you are adding or modifying a replica for an existing availability group, use the [ALTER AVAILABILITY GROUP](~/t-sql/statements/alter-availability-group-transact-sql.md)[!INCLUDE[tsql](../includes/tsql-md.md)] statement.  
   
     -   To configure read-only routing for the secondary role, in the ADD REPLICA or MODIFY REPLICA WITH clause, specify the SECONDARY_ROLE option, as follows:  
   
@@ -88,7 +88,7 @@ manager: "jhubbard"
          Is a string, such as a system name, a fully qualified domain name, or an IP address, that unambiguously identifies the destination computer system.  
   
          *port*  
-         Is a port number that is used by the Database Engine of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
+         Is a port number that is used by the Database Engine of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance.  
   
          For example:   `SECONDARY_ROLE (READ_ONLY_ROUTING_URL = N'TCP://COMPUTER01.contoso.com:1433')`  
   
@@ -164,7 +164,7 @@ GO
         >  You must set the read-only routing URL of a replica before configuring its read-only routing list.  
   
     > [!NOTE]  
-    >  To view the syntax of a cmdlet, use the `Get-Help` cmdlet in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../2014/database-engine/get-help-sql-server-powershell.md).  
+    >  To view the syntax of a cmdlet, use the `Get-Help` cmdlet in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../2014/database-engine/get-help-sql-server-powershell.md).  
   
  **To set up and use the SQL Server PowerShell provider**  
   
@@ -218,9 +218,9 @@ Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationInt
 ##  <a name="RelatedTasks"></a> Related Tasks  
  **To view read-only routing configurations**  
   
--   [sys.availability_read_only_routing_lists &#40;Transact-SQL&#41;](../Topic/sys.availability_read_only_routing_lists%20\(Transact-SQL\).md)  
+-   [sys.availability_read_only_routing_lists &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql.md)  
   
--   [sys.availability_replicas &#40;Transact-SQL&#41;](../Topic/sys.availability_replicas%20\(Transact-SQL\).md) (**read_only_routing_url** column)  
+-   [sys.availability_replicas &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md) (**read_only_routing_url** column)  
   
  **To configure client connection access**  
   

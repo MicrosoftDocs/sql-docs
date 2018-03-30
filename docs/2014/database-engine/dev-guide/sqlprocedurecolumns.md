@@ -21,13 +21,13 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQLProcedureColumns
-  `SQLProcedureColumns` returns one row reporting the return value attributes of all [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stored procedures.  
+  `SQLProcedureColumns` returns one row reporting the return value attributes of all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stored procedures.  
   
  `SQLProcedureColumns` returns SQL_SUCCESS whether or not values exist for *CatalogName*, *SchemaName*, *ProcName*, or *ColumnName* parameters. **SQLFetch** returns SQL_NO_DATA when invalid values are used in these parameters.  
   
  `SQLProcedureColumns` can be executed on a static server cursor. An attempt to execute `SQLProcedureColumns` on an updatable (dynamic or keyset) cursor will return SQL_SUCCESS_WITH_INFO indicating that the cursor type has been changed.  
   
- The following table lists the columns returned by the result set and how they have been extended to handle the **udt** and **xml** data types through the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver:  
+ The following table lists the columns returned by the result set and how they have been extended to handle the **udt** and **xml** data types through the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver:  
   
 |Column name|Description|  
 |-----------------|-----------------|  
@@ -59,9 +59,9 @@ manager: "jhubbard"
 |SS_TYPE_CATALOG_NAME|Returns the name of the catalog that contains the table or CLR user-defined type.|  
 |SS_TYPE_SCHEMA_NAME|Returns the name of the schema that contains the table or CLR user-defined type.|  
   
- The SS_TYPE_CATALOG_NAME and SS_TYPE_SCHEMA_NAME columns are available in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] and later versions to return the catalog and schema, respectively, for table-valued parameters. These columns are populated for table-valued parameters, and also for CLR user-defined type parameters. (Existing schema and catalog columns for CLR user-defined type parameters are not affected by this additional functionality. They are also populated to maintain backward compatibility).  
+ The SS_TYPE_CATALOG_NAME and SS_TYPE_SCHEMA_NAME columns are available in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions to return the catalog and schema, respectively, for table-valued parameters. These columns are populated for table-valued parameters, and also for CLR user-defined type parameters. (Existing schema and catalog columns for CLR user-defined type parameters are not affected by this additional functionality. They are also populated to maintain backward compatibility).  
   
- In conformance with the ODBC specification, SS_TYPE_CATALOG_NAME and SS_TYPE_SCHEMA_NAME appear before all driver-specific columns added in previous versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], and after all columns mandated by ODBC itself.  
+ In conformance with the ODBC specification, SS_TYPE_CATALOG_NAME and SS_TYPE_SCHEMA_NAME appear before all driver-specific columns added in previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and after all columns mandated by ODBC itself.  
   
  For more information about table-valued parameters, see [Table-Valued Parameters &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/table-valued-parameters-odbc.md).  
   

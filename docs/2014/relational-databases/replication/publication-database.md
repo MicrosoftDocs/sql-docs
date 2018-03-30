@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: a9fafc9b-9963-4b59-97a0-3472158fa665
 caps.latest.revision: 22
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Publication Database
@@ -34,6 +34,6 @@ manager: "jhubbard"
  [Publish Data and Database Objects](../../../2014/relational-databases/replication/publish-data-and-database-objects.md)   
  [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md)   
  [View and Modify Distributor and Publisher Properties](../../../2014/relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [sp_replicationdboption &#40;Transact-SQL&#41;](../Topic/sp_replicationdboption%20\(Transact-SQL\).md)  
+ [sp_replicationdboption &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)  
   
   

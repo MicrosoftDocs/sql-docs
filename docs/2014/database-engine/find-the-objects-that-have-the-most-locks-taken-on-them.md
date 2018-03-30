@@ -25,7 +25,7 @@ manager: "jhubbard"
   
  For example, you are monitoring your production server for any possible bottlenecks. You suspect that there might be highly contested resources, and would like to know how many locks are taken on those objects. Once the most frequently locked objects are identified, steps can be taken to optimize access to the contended objects.  
   
- To do this, use Query Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ To do this, use Query Editor in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 ### To find the objects that have the most locks  
   
@@ -104,10 +104,10 @@ manager: "jhubbard"
 -   lock_count  
   
 ## See Also  
- [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../Topic/CREATE%20EVENT%20SESSION%20\(Transact-SQL\).md)   
- [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../Topic/ALTER%20EVENT%20SESSION%20\(Transact-SQL\).md)   
- [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](../Topic/sys.dm_xe_session_targets%20\(Transact-SQL\).md)   
- [sys.dm_xe_sessions &#40;Transact-SQL&#41;](../Topic/sys.dm_xe_sessions%20\(Transact-SQL\).md)   
- [sys.server_event_sessions &#40;Transact-SQL&#41;](../Topic/sys.server_event_sessions%20\(Transact-SQL\).md)  
+ [CREATE EVENT SESSION &#40;Transact-SQL&#41;](~/t-sql/statements/create-event-session-transact-sql.md)   
+ [ALTER EVENT SESSION &#40;Transact-SQL&#41;](~/t-sql/statements/alter-event-session-transact-sql.md)   
+ [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md)   
+ [sys.dm_xe_sessions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-xe-sessions-transact-sql.md)   
+ [sys.server_event_sessions &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql.md)  
   
   

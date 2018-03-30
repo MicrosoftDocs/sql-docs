@@ -20,7 +20,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Refresh Data Source View Dialog Box
-  Use the **Refresh Data Source View** dialog box in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to accept or cancel the changes that will occur as a result of refreshing the data source view. The dialog box shows the changes that will be made to the data source view as a result of changes made to the underlying data source. Click **OK** to accept the changes and refresh the data source view, or **Cancel** to ignore the changes and leave the data source view unchanged. You can display the **Refresh Data Source View** dialog box by:  
+  Use the **Refresh Data Source View** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to accept or cancel the changes that will occur as a result of refreshing the data source view. The dialog box shows the changes that will be made to the data source view as a result of changes made to the underlying data source. Click **OK** to accept the changes and refresh the data source view, or **Cancel** to ignore the changes and leave the data source view unchanged. You can display the **Refresh Data Source View** dialog box by:  
   
 -   Clicking **Refresh Data Source View** on the **Toolbar** pane of **Data Source View Designer**.  
   

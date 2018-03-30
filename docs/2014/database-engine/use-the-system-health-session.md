@@ -21,7 +21,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Use the system_health Session
-  The system_health session is an Extended Events session that is included by default with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This session starts automatically when the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] starts, and runs without any noticeable performance effects. The session collects system data that you can use to help troubleshoot performance issues in the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Therefore, we recommend that you do not stop or delete the session.  
+  The system_health session is an Extended Events session that is included by default with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. This session starts automatically when the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] starts, and runs without any noticeable performance effects. The session collects system data that you can use to help troubleshoot performance issues in the [!INCLUDE[ssDE](../includes/ssde-md.md)]. Therefore, we recommend that you do not stop or delete the session.  
   
  The session collects information that includes the following:  
   
@@ -29,7 +29,7 @@ manager: "jhubbard"
   
 -   The sql_text and session_id for any sessions that encounter a memory-related error. The errors include 17803, 701, 802, 8645, 8651, 8657 and 8902.  
   
--   A record of any non-yielding scheduler problems. (These appear in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log as error 17883.)  
+-   A record of any non-yielding scheduler problems. (These appear in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] error log as error 17883.)  
   
 -   Any deadlocks that are detected.  
   
@@ -37,7 +37,7 @@ manager: "jhubbard"
   
 -   The callstack, sql_text, and session_id for any sessions that have waited on locks for > 30 seconds.  
   
--   The callstack, sql_text, and session_id for any sessions that have waited for a long time for preemptive waits. The duration varies by wait type. A preemptive wait is where [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is waiting for external API calls.  
+-   The callstack, sql_text, and session_id for any sessions that have waited for a long time for preemptive waits. The duration varies by wait type. A preemptive wait is where [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is waiting for external API calls.  
   
 -   The callstack and session_id for CLR allocation and virtual allocation failures.  
   
@@ -66,11 +66,11 @@ WHERE xe.name = 'system_health'
  To view the session data from the event file, use the Extended Events user interface available in Management Studio. See [View Event Session Data](../../2014/database-engine/view-event-session-data.md) for more information.  
   
 ## Restoring the system_health Session  
- If you delete the system_health session, you can restore it by executing the **u_tables.sql** file in Query Editor. This file is located in the following folder, where C: represents the drive where you installed the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] program files:  
+ If you delete the system_health session, you can restore it by executing the **u_tables.sql** file in Query Editor. This file is located in the following folder, where C: represents the drive where you installed the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] program files:  
   
  C:\Program Files\Microsoft SQL Server\MSSQL12.\<*instanceid*>\MSSQL\Install  
   
- Be aware that after you restore the session, you must start the session by using the ALTER EVENT SESSION statement or by using the **Extended Events** node in Object Explorer. Otherwise, the session starts automatically the next time that you restart the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service.  
+ Be aware that after you restore the session, you must start the session by using the ALTER EVENT SESSION statement or by using the **Extended Events** node in Object Explorer. Otherwise, the session starts automatically the next time that you restart the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] service.  
   
 ## See Also  
  [Extended Events Tools](../../2014/database-engine/extended-events-tools.md)  

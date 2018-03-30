@@ -17,11 +17,11 @@ helpviewer_keywords:
 ms.assetid: 0475aded-c8fe-4337-a2b5-4df0ec4c46af
 caps.latest.revision: 51
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Manage Report Data Sources
-  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], reports, report models, and data-driven subscriptions retrieve data from external data sources. To connect to an external data source, a report server uses data source connection information that is defined in or referenced from the report, model, or subscription. Data source connection properties are always defined with the report or model when you create it, but can be independently managed after the report or model is published to a report server.  
+  In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], reports, report models, and data-driven subscriptions retrieve data from external data sources. To connect to an external data source, a report server uses data source connection information that is defined in or referenced from the report, model, or subscription. Data source connection properties are always defined with the report or model when you create it, but can be independently managed after the report or model is published to a report server.  
   
  To manage report data sources, you can use Report Manager for a native mode report server or application pages on a SharePoint site if you deployed the report server in SharePoint integrated mode.  
   

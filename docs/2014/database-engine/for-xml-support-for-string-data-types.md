@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: bf069da8-de1e-44d2-a1fb-ade383076ac1
 caps.latest.revision: 22
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # FOR XML Support for String Data Types

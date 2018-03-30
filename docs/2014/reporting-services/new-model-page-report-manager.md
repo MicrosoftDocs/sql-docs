@@ -12,11 +12,11 @@ ms.topic: "article"
 ms.assetid: 27d5bf66-b0e7-489e-a830-ffe2ec8e5350
 caps.latest.revision: 11
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # New Model Page (Report Manager)
-  Use this page to generate a default report model from a shared data source. You can only generate report models from [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] multidimensional data sources, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relational data sources, and Oracle relational data sources.  
+  Use this page to generate a default report model from a shared data source. You can only generate report models from [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] multidimensional data sources, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] relational data sources, and Oracle relational data sources.  
   
  Models that you generate in Report Manager are based on the schema of the shared data source. Entities, folders, and fields are created for all tables and columns in the data source. You cannot exclude items, nor can you set options that determine how the model is generated. If you want to customize or refine a model, you must use Model Designer instead.  
   

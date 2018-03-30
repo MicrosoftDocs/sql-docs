@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 2addc9be-67d0-423d-a457-192fe9d7d058
 caps.latest.revision: 18
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Tutorial: Writing Transact-SQL Statements
-  Welcome to the Writing [!INCLUDE[tsql](../../includes/tsql-md.md)] Statements tutorial. This tutorial is intended for users who are new to writing SQL statements. It will help new users get started by reviewing some basic statements for creating tables and inserting data. This tutorial uses [!INCLUDE[tsql](../../includes/tsql-md.md)], the [!INCLUDE[msCoName](../../includes/msconame-md.md)] implementation of the SQL standard. This tutorial is intended as a brief introduction to the [!INCLUDE[tsql](../../includes/tsql-md.md)] language and not as a replacement for a [!INCLUDE[tsql](../../includes/tsql-md.md)] class. The statements in this tutorial are intentionally simple, and are not meant to represent the complexity found in a typical production database.  
+  Welcome to the Writing [!INCLUDE[tsql](../includes/tsql-md.md)] Statements tutorial. This tutorial is intended for users who are new to writing SQL statements. It will help new users get started by reviewing some basic statements for creating tables and inserting data. This tutorial uses [!INCLUDE[tsql](../includes/tsql-md.md)], the [!INCLUDE[msCoName](../includes/msconame-md.md)] implementation of the SQL standard. This tutorial is intended as a brief introduction to the [!INCLUDE[tsql](../includes/tsql-md.md)] language and not as a replacement for a [!INCLUDE[tsql](../includes/tsql-md.md)] class. The statements in this tutorial are intentionally simple, and are not meant to represent the complexity found in a typical production database.  
   
 > [!NOTE]  
->  Novice users of databases will usually find it easier to work with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], instead of writing [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.  
+>  Novice users of databases will usually find it easier to work with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], instead of writing [!INCLUDE[tsql](../includes/tsql-md.md)] statements.  
   
 ## Finding More Information  
- To find more information about any specific statement, either search for the statement by name in SQL Server Books Online, or use the Contents to browse the 1,800 language elements listed alphabetically under [Transact-SQL Reference &#40;Database Engine&#41;](../Topic/Transact-SQL%20Reference%20\(Database%20Engine\).md). Another good strategy for finding information is to search for key words that are related to the subject matter you are interested in. For example, if you want to know how to return a part of a date (such as the month), search the index for **dates [SQL Server]**, and then select **dateparts**. This takes you to the topic [DATEPART &#40;Transact-SQL&#41;](../Topic/DATEPART%20\(Transact-SQL\).md). As another example, to find out how to work with strings, search for **string functions**. This takes you to the topic [String Functions &#40;Transact-SQL&#41;](../Topic/String%20Functions%20\(Transact-SQL\).md).  
+ To find more information about any specific statement, either search for the statement by name in SQL Server Books Online, or use the Contents to browse the 1,800 language elements listed alphabetically under [Transact-SQL Reference &#40;Database Engine&#41;](~/t-sql/language-reference.md). Another good strategy for finding information is to search for key words that are related to the subject matter you are interested in. For example, if you want to know how to return a part of a date (such as the month), search the index for **dates [SQL Server]**, and then select **dateparts**. This takes you to the topic [DATEPART &#40;Transact-SQL&#41;](~/t-sql/functions/datepart-transact-sql.md). As another example, to find out how to work with strings, search for **string functions**. This takes you to the topic [String Functions &#40;Transact-SQL&#41;](~/t-sql/functions/string-functions-transact-sql.md).  
   
 ## What You Will Learn  
  This tutorial shows you how to create a database, create a table in the database, insert data into the table, update the data, read the data, delete the data, and then delete the table. You will create views and stored procedures and configure a user to the database and the data.  
@@ -47,9 +47,9 @@ manager: "jhubbard"
   
  Your system must have the following installed:  
   
--   Any edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Any edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
--   Either [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or Management Studio Express.  
+-   Either [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or Management Studio Express.  
   
 -   Internet Explorer 6 or later.  
   

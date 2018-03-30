@@ -16,9 +16,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Monitor SQL Server Components
-  Monitoring is important because [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a service in a dynamic environment. The data in the application changes. The type of access that users require changes. The way that users connect changes. The types of applications accessing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] may even change, but [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatically manages system-level resources, such as memory and disk space, to minimize the need for extensive system-level manual tuning. Monitoring lets administrators identify performance trends to determine if changes are necessary.  
+  Monitoring is important because [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provides a service in a dynamic environment. The data in the application changes. The type of access that users require changes. The way that users connect changes. The types of applications accessing [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] may even change, but [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] automatically manages system-level resources, such as memory and disk space, to minimize the need for extensive system-level manual tuning. Monitoring lets administrators identify performance trends to determine if changes are necessary.  
   
- To monitor any component of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] effectively:  
+ To monitor any component of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] effectively:  
   
 1.  Determine your monitoring goals.  
   
@@ -35,7 +35,7 @@ manager: "jhubbard"
  These steps are discussed in turn below.  
   
 ## Determine Your Monitoring Goals  
- To monitor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] effectively you should clearly identify your reason for monitoring. Reasons can include the following:  
+ To monitor [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] effectively you should clearly identify your reason for monitoring. Reasons can include the following:  
   
 -   Establish a baseline for performance.  
   
@@ -60,7 +60,7 @@ manager: "jhubbard"
 -   Determining when to modify your hardware configuration.  
   
 ## Select the Appropriate Tool  
- After determining why you are monitoring, you should select the appropriate tools for that type of monitoring. The Windows operating system and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provide a complete set of tools to monitor servers in transaction-intensive environments. These tools clearly reveal the condition of an instance of the SQL Server Database Engine or an instance of SQL Server Analysis Services.  
+ After determining why you are monitoring, you should select the appropriate tools for that type of monitoring. The Windows operating system and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provide a complete set of tools to monitor servers in transaction-intensive environments. These tools clearly reveal the condition of an instance of the SQL Server Database Engine or an instance of SQL Server Analysis Services.  
   
  Windows provides the following tools for monitoring applications that are running on a server:  
   
@@ -72,17 +72,17 @@ manager: "jhubbard"
   
  For more information about Windows Server or Windows tools, see the Windows documentation.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the following tools for monitoring components of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provides the following tools for monitoring components of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
 -   SQL Trace  
   
--   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]  
+-   [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]  
   
 -   Distributed Replay Utility  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Activity Monitor  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Activity Monitor  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Graphical Showplan  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Graphical Showplan  
   
 -   Stored procedures  
   
@@ -92,10 +92,10 @@ manager: "jhubbard"
   
 -   Trace flags  
   
- For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] monitoring tools, see [Performance Monitoring and Tuning Tools](../../2014/database-engine/performance-monitoring-and-tuning-tools.md).  
+ For more information about [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] monitoring tools, see [Performance Monitoring and Tuning Tools](../../2014/database-engine/performance-monitoring-and-tuning-tools.md).  
   
 ## Identify the Components to Monitor  
- The third step to monitoring an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is to identify the components that you monitor. For example, if you are using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to trace a server you can define the trace to collect data about specific events. You can also exclude events that do not apply to your situation.  
+ The third step to monitoring an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is to identify the components that you monitor. For example, if you are using [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] to trace a server you can define the trace to collect data about specific events. You can also exclude events that do not apply to your situation.  
   
 ## Select Metrics for Monitored Components  
  After identifying the components to monitor, determine the metrics for components you monitor. For example, after selecting the events to include in a trace, you can choose to include only specific data about the events. Limiting the trace to data that is relevant to the trace minimizes the system resources required to perform the tracing.  
@@ -114,24 +114,24 @@ manager: "jhubbard"
   
 2.  Monitor (capture) events.  
   
-     As soon as it is enabled, active monitoring captures data from the specified application, instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or operating system. For example, when disk activity is monitored using System Monitor, monitoring captures event data, such as disk reads and writes, and displays it on the screen. For more information, see [Monitor Resource Usage &#40;System Monitor&#41;](../../2014/database-engine/monitor-resource-usage-system-monitor.md).  
+     As soon as it is enabled, active monitoring captures data from the specified application, instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], or operating system. For example, when disk activity is monitored using System Monitor, monitoring captures event data, such as disk reads and writes, and displays it on the screen. For more information, see [Monitor Resource Usage &#40;System Monitor&#41;](../../2014/database-engine/monitor-resource-usage-system-monitor.md).  
   
 3.  Save captured event data.  
   
-     Saving captured event data lets you analyze it later or even replay it using the Distributed Replay Utility or [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Captured event data is saved to a file that can be loaded back into the tool that originally created it for analysis. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] permits event data to be saved to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table. Saving captured event data is important when you are creating a performance baseline. The performance baseline data is saved and used, when comparing recently captured event data, to determine whether performance is optimal. For more information, see [SQL Server Profiler Templates and Permissions](../../2014/database-engine/sql-server-profiler-templates-and-permissions.md).  
+     Saving captured event data lets you analyze it later or even replay it using the Distributed Replay Utility or [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]. Captured event data is saved to a file that can be loaded back into the tool that originally created it for analysis. [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] permits event data to be saved to a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] table. Saving captured event data is important when you are creating a performance baseline. The performance baseline data is saved and used, when comparing recently captured event data, to determine whether performance is optimal. For more information, see [SQL Server Profiler Templates and Permissions](../../2014/database-engine/sql-server-profiler-templates-and-permissions.md).  
   
 4.  Create trace templates that contain the settings specified to capture the events.  
   
-     Trace templates include specifications about the events themselves, event data, and filters that are used to capture data. These templates can be used to monitor a specific set of events later without redefining the events, event data, and filters. For example, if you want to frequently monitor the number of deadlocks, and the users involved in those deadlocks, you can create a template defining those events, event data, and event filters; save the template; and reapply the filter the next time that you want to monitor deadlocks. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] uses trace templates for this purpose. For more information, see [Set Trace Definition Defaults &#40;SQL Server Profiler&#41;](../../2014/database-engine/set-trace-definition-defaults-sql-server-profiler.md) and [Create a Trace Template &#40;SQL Server Profiler&#41;](../../2014/database-engine/create-a-trace-template-sql-server-profiler.md).  
+     Trace templates include specifications about the events themselves, event data, and filters that are used to capture data. These templates can be used to monitor a specific set of events later without redefining the events, event data, and filters. For example, if you want to frequently monitor the number of deadlocks, and the users involved in those deadlocks, you can create a template defining those events, event data, and event filters; save the template; and reapply the filter the next time that you want to monitor deadlocks. [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] uses trace templates for this purpose. For more information, see [Set Trace Definition Defaults &#40;SQL Server Profiler&#41;](../../2014/database-engine/set-trace-definition-defaults-sql-server-profiler.md) and [Create a Trace Template &#40;SQL Server Profiler&#41;](../../2014/database-engine/create-a-trace-template-sql-server-profiler.md).  
   
 5.  Analyze captured event data.  
   
-     To be analyzed, the captured event data is loaded into the application that captured the data. For example, a captured trace from [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] can be reloaded into [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] for viewing and analysis. For more information, see [View and Analyze Traces with SQL Server Profiler](../../2014/database-engine/view-and-analyze-traces-with-sql-server-profiler.md).  
+     To be analyzed, the captured event data is loaded into the application that captured the data. For example, a captured trace from [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] can be reloaded into [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] for viewing and analysis. For more information, see [View and Analyze Traces with SQL Server Profiler](../../2014/database-engine/view-and-analyze-traces-with-sql-server-profiler.md).  
   
-     Analyzing event data involves determining what is occurring and why. This information lets you make changes that can improve performance, such as adding more memory, changing indexes, correcting coding problems with Transact-SQL statements or stored procedures, and so on, depending on the type of analysis performed. For example, you can use the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor to analyze a captured trace from [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] and make index recommendations based on the results.  
+     Analyzing event data involves determining what is occurring and why. This information lets you make changes that can improve performance, such as adding more memory, changing indexes, correcting coding problems with Transact-SQL statements or stored procedures, and so on, depending on the type of analysis performed. For example, you can use the [!INCLUDE[ssDE](../includes/ssde-md.md)] Tuning Advisor to analyze a captured trace from [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] and make index recommendations based on the results.  
   
 6.  Replay captured event data.  
   
-     Event replay lets you establish a test copy of the database environment from which the data was captured, and then repeat the captured events as they occurred originally on the real system. This capability is only available with the Distributed Replay Utility or [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. You can replay the events at the same speed as they originally occurred, as fast as possible (to stress the system), or more likely, one step at a time (to analyze the system after each event has occurred). By analyzing the exact events in a test environment, you can prevent harm to the production system. For more information, see [Replay Traces](../../2014/database-engine/replay-traces.md).  
+     Event replay lets you establish a test copy of the database environment from which the data was captured, and then repeat the captured events as they occurred originally on the real system. This capability is only available with the Distributed Replay Utility or [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]. You can replay the events at the same speed as they originally occurred, as fast as possible (to stress the system), or more likely, one step at a time (to analyze the system after each event has occurred). By analyzing the exact events in a test environment, you can prevent harm to the production system. For more information, see [Replay Traces](../../2014/database-engine/replay-traces.md).  
   
   

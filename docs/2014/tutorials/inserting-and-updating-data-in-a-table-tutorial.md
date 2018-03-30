@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 514dc87a-b829-43b5-8fc8-1a400a260284
 caps.latest.revision: 12
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Inserting and Updating Data in a Table (Tutorial)
@@ -85,7 +85,7 @@ manager: "jhubbard"
  [Reading the Data in a Table &#40;Tutorial&#41;](../../2014/tutorials/reading-the-data-in-a-table-tutorial.md)  
   
 ## See Also  
- [INSERT &#40;Transact-SQL&#41;](../Topic/INSERT%20\(Transact-SQL\).md)   
- [UPDATE &#40;Transact-SQL&#41;](../Topic/UPDATE%20\(Transact-SQL\).md)  
+ [INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/insert-transact-sql.md)   
+ [UPDATE &#40;Transact-SQL&#41;](~/t-sql/queries/update-transact-sql.md)  
   
   

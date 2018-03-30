@@ -24,7 +24,7 @@ ms.author: "jroth"
 manager: "jhubbard"
 ---
 # Manually Prepare a Secondary Database for an Availability Group (SQL Server)
-  This topic describes how to prepare a secondary database for an AlwaysOn availability group in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or PowerShell. Preparing a secondary database requires two steps: (1) restoring a recent database backup of the primary database and subsequent log backups onto each server instance that hosts the secondary replica, using RESTORE WITH NORECOVERY, and (2) joining the restored database to the availability group.  
+  This topic describes how to prepare a secondary database for an AlwaysOn availability group in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../includes/tsql-md.md)], or PowerShell. Preparing a secondary database requires two steps: (1) restoring a recent database backup of the primary database and subsequent log backups onto each server instance that hosts the secondary replica, using RESTORE WITH NORECOVERY, and (2) joining the restored database to the availability group.  
   
 > [!TIP]  
 >  If you have an existing log shipping configuration, you might be able to convert the log shipping primary database along with one or more of its secondary databases to an AlwaysOn primary database and one or more AlwaysOn secondary databases. For more information, see [Prerequisites for Migrating from Log Shipping to AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/prereqs-migrating-log-shipping-to-always-on-availability-groups.md).  
@@ -67,7 +67,7 @@ manager: "jhubbard"
   
 ###  <a name="Recommendations"></a> Recommendations  
   
--   On stand-alone instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], we recommend that, if possible, the file path (including the drive letter) of a given secondary database be identical to the path of the corresponding primary database. This is because if you move the database files when creating a secondary database, a later add-file operation might fail on the secondary database and cause the secondary database to be suspended.  
+-   On stand-alone instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], we recommend that, if possible, the file path (including the drive letter) of a given secondary database be identical to the path of the corresponding primary database. This is because if you move the database files when creating a secondary database, a later add-file operation might fail on the secondary database and cause the secondary database to be suspended.  
   
 -   Before preparing your secondary databases, we strongly recommend that you suspend scheduled log backups on the databases in the availability group until the initialization of secondary replicas has completed.  
   
@@ -75,9 +75,9 @@ manager: "jhubbard"
  When a database is backed up, the [TRUSTWORTHY database property](../../2014/database-engine/trustworthy-database-property.md) is set to OFF. Therefore, TRUSTWORTHY is always OFF on a newly restored database.  
   
 ####  <a name="Permissions"></a> Permissions  
- BACKUP DATABASE and BACKUP LOG permissions default to members of the **sysadmin** fixed server role and the **db_owner** and **db_backupoperator** fixed database roles. For more information, see [BACKUP &#40;Transact-SQL&#41;](../Topic/BACKUP%20\(Transact-SQL\).md).  
+ BACKUP DATABASE and BACKUP LOG permissions default to members of the **sysadmin** fixed server role and the **db_owner** and **db_backupoperator** fixed database roles. For more information, see [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md).  
   
- When the database being restored does not exist on the server instance, the RESTORE statement requires CREATE DATABASE permissions. For more information, see [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md).  
+ When the database being restored does not exist on the server instance, the RESTORE statement requires CREATE DATABASE permissions. For more information, see [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md).  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   
@@ -145,9 +145,9 @@ manager: "jhubbard"
 >  For information about how to perform these backup and restore operations, see [Related Backup and Restore Tasks](#RelatedTasks), later in this topic.  
   
 ###  <a name="ExampleTsql"></a> Transact-SQL Example  
- The following example prepares a secondary database. This example uses the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database, which uses the simple recovery model by default.  
+ The following example prepares a secondary database. This example uses the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] sample database, which uses the simple recovery model by default.  
   
-1.  To use the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database, modify it to use the full recovery model:  
+1.  To use the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database, modify it to use the full recovery model:  
   
     ```  
     USE master;  
@@ -157,7 +157,7 @@ manager: "jhubbard"
     GO  
     ```  
   
-2.  After modifying the recovery model of the database from SIMPLE to FULL, create a full backup, which can be used to create the secondary database. Because the recovery model has just been changed, the WITH FORMAT option is specified to create a new media set. This is useful to separate the backups under the full recovery model from any previous backups made under the simple recovery model. For the purpose of this example, the backup file (C:\\[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].bak) is created on the same drive as the database.  
+2.  After modifying the recovery model of the database from SIMPLE to FULL, create a full backup, which can be used to create the secondary database. Because the recovery model has just been changed, the WITH FORMAT option is specified to create a new media set. This is useful to separate the backups under the full recovery model from any previous backups made under the simple recovery model. For the purpose of this example, the backup file (C:\\[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)].bak) is created on the same drive as the database.  
   
     > [!NOTE]  
     >  For a production database, you should always back up to a separate device.  
@@ -193,7 +193,7 @@ manager: "jhubbard"
         > [!IMPORTANT]  
         >  If the path names of the primary and secondary databases differ, you cannot add a file. This is because on receiving the log for the add file operation, the server instance of the secondary replica attempts to place the new file in the same path as used by the primary database.  
   
-         For example, the following command restores a backup of a primary database that resides in the data directory of the default instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA. The restore database operation must move the database to the data directory of a remote instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] named  (*AlwaysOn1*), which hosts the secondary replica on another cluster node. There, the data and log files are restored to the *C:\Program Files\Microsoft SQL Server\MSSQL12.ALWAYSON1\MSSQL\DATA* directory . The restore operation uses WITH NORECOVERY, to leave the secondary database in the restoring database.  
+         For example, the following command restores a backup of a primary database that resides in the data directory of the default instance of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA. The restore database operation must move the database to the data directory of a remote instance of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] named  (*AlwaysOn1*), which hosts the secondary replica on another cluster node. There, the data and log files are restored to the *C:\Program Files\Microsoft SQL Server\MSSQL12.ALWAYSON1\MSSQL\DATA* directory . The restore operation uses WITH NORECOVERY, to leave the secondary database in the restoring database.  
   
         ```  
         RESTORE DATABASE MyDB1  
@@ -206,7 +206,7 @@ manager: "jhubbard"
         GO  
         ```  
   
-5.  After you restore the full backup, you must create a log backup on the primary database. For example, the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement backs up the log to the a backup file named *E:\MyDB1_log.bak*:  
+5.  After you restore the full backup, you must create a log backup on the primary database. For example, the following [!INCLUDE[tsql](../includes/tsql-md.md)] statement backs up the log to the a backup file named *E:\MyDB1_log.bak*:  
   
     ```  
     BACKUP LOG MyDB1   
@@ -216,7 +216,7 @@ manager: "jhubbard"
   
 6.  Before you can join the database to the secondary replica, you must apply the required log backup (and any subsequent log backups).  
   
-     For example, the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement restores the first log from *C:\MyDB1.bak*:  
+     For example, the following [!INCLUDE[tsql](../includes/tsql-md.md)] statement restores the first log from *C:\MyDB1.bak*:  
   
     ```  
     RESTORE LOG MyDB1   
@@ -227,7 +227,7 @@ manager: "jhubbard"
   
 7.  If any additional log backups occur before the database joins the secondary replica, you must also restore all of those log backups, in sequence, to the server instance that hosts the secondary replica using RESTORE WITH NORECOVERY.  
   
-     For example, the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement restores two additional logs from *E:\MyDB1_log.bak*:  
+     For example, the following [!INCLUDE[tsql](../includes/tsql-md.md)] statement restores two additional logs from *E:\MyDB1_log.bak*:  
   
     ```  
     RESTORE LOG MyDB1   
@@ -252,7 +252,7 @@ manager: "jhubbard"
 4.  To restore the database and log backups of each primary database, use the `restore-SqlDatabase` cmdlet, specifying the `NoRecovery` restore parameter. If the file paths differ between the computers that host the primary replica and the target secondary replica, also use the `RelocateFile` restore parameter.  
   
     > [!NOTE]  
-    >  To view the syntax of a cmdlet, use the `Get-Help` cmdlet in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../2014/database-engine/get-help-sql-server-powershell.md).  
+    >  To view the syntax of a cmdlet, use the `Get-Help` cmdlet in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../2014/database-engine/get-help-sql-server-powershell.md).  
   
 5.  To complete configuration of the secondary database, you need to join it to the availability group. For more information, [Join a Secondary Database to an Availability Group &#40;SQL Server&#41;](../../2014/database-engine/join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
@@ -280,9 +280,9 @@ Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -R
   
 ## See Also  
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/overview-of-alwayson-availability-groups-sql-server.md)   
- [BACKUP &#40;Transact-SQL&#41;](../Topic/BACKUP%20\(Transact-SQL\).md)   
- [RESTORE Arguments &#40;Transact-SQL&#41;](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)   
+ [RESTORE Arguments &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-arguments-transact-sql.md)   
+ [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)   
  [Troubleshoot a Failed Add-File Operation &#40;AlwaysOn Availability Groups&#41;](../../2014/database-engine/troubleshoot-a-failed-add-file-operation-alwayson-availability-groups.md)  
   
   

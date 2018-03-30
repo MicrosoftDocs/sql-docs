@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: e0c50b6e-89e7-4b4d-8fe5-c90682c5d1b1
 caps.latest.revision: 10
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Update Credentials in Report Data Sources from a SharePoint Site
@@ -52,7 +52,7 @@ manager: "mblythe"
   
 8.  To verify the data source can connect by using the updated credentials, click **Test connection**.  
   
-9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ### To update a shared data source to use stored credentials  
   
@@ -80,7 +80,7 @@ manager: "mblythe"
   
 7.  Verify that Enable this data source is selected.  
   
-8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## See Also  
  [Upload Documents to a SharePoint Library &#40;Reporting Services in SharePoint Mode&#41;](../../2014/reporting-services/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)  

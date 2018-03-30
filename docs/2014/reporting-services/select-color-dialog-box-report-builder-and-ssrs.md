@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: ac7089a3-5c7b-4f53-8348-180610e86da2
 caps.latest.revision: 10
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Select Color Dialog Box (Report Builder and SSRS)
@@ -44,7 +44,7 @@ manager: "mblythe"
  When you pick a color, the center of the square determines the color. Use the color slider to change the range of the chosen color. The x and y coordinates represent the other two colors. For example, if you pick green, the slider shows the range of green values, the x and y coordinates represent red and blue values respectively.  
   
  **Standard palette color**  
- Use for named colors from the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] `KnownColor` enumeration.  
+ Use for named colors from the [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] `KnownColor` enumeration.  
   
  **Color system**  
  Specify RGB or HSB colors. This choice changes the display to show RGB or HSB values, which are updated interactively when you use a color circle or color square for the **Color selector**.  

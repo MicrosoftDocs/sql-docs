@@ -16,7 +16,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Refreshing Data (MDS Add-in for Excel)
-  In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], refresh data when you want to get the latest information from the MDS repository without opening a new worksheet. You can refresh either all cells or a selection of cells. This can be useful when you have inserted columns with custom formulas or other data that is not managed in MDS and you want to preserve it.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)], refresh data when you want to get the latest information from the MDS repository without opening a new worksheet. You can refresh either all cells or a selection of cells. This can be useful when you have inserted columns with custom formulas or other data that is not managed in MDS and you want to preserve it.  
   
 ## When You Can Refresh MDS-Managed Data  
  You can refresh MDS-managed data in an active worksheet if the active worksheet already contains MDS-managed data. If you have changed attribute values or added members to the worksheet, you must publish your changes before you can refresh.  
@@ -25,7 +25,7 @@ manager: "jhubbard"
  You have the choice of refreshing all cells or refreshing only selected cells. The selected cells must be contiguous. If a set of contiguous cells is selected, all MDS managed cells in that set will be updated to display the values currently stored on the server. Unchanged rows and columns that are not managed by MDS are not affected in any way.  
   
 ## What Happens When You Refresh MDS-Managed Data  
- When you refresh data in the [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], what happens to the MDS-managed data in the sheet depends on what has changed in the MDS repository since you last loaded the data.  
+ When you refresh data in the [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)], what happens to the MDS-managed data in the sheet depends on what has changed in the MDS repository since you last loaded the data.  
   
 -   If new members have been added to repository, they are added to the end of the worksheet and are highlighted in green.  
   
@@ -44,7 +44,7 @@ manager: "jhubbard"
   
 |Task Description|Topic|  
 |----------------------|-----------|  
-|Create a connection to a [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database.|[Connect to an MDS Repository &#40;MDS Add-in for Excel&#41;](../../2014/master-data-services/connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
+|Create a connection to a [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.|[Connect to an MDS Repository &#40;MDS Add-in for Excel&#41;](../../2014/master-data-services/connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
 |Load MDS data into Excel.|[Load Data from MDS into Excel](../../2014/master-data-services/load-data-from-mds-into-excel.md)|  
   
 ## Related Content  

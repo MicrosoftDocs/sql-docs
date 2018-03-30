@@ -15,11 +15,11 @@ helpviewer_keywords:
 ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 caps.latest.revision: 34
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Set or Change the Database Collation
-  This topic describes how set and change the database collation in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. If no collation is specified, the server collation is used.  
+  This topic describes how set and change the database collation in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)]. If no collation is specified, the server collation is used.  
   
  **In This Topic**  
   
@@ -43,11 +43,11 @@ manager: "jhubbard"
   
 -   Windows Unicode-only collations can only be used with the COLLATE clause to apply collations to the `nchar`, `nvarchar`, and `ntext` data types on column level and expression-level data. They cannot be used with the COLLATE clause to change the collation of a database or server instance.  
   
--   If the specified collation or the collation used by the referenced object uses a code page that is not supported by Windows, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] displays an error.  
+-   If the specified collation or the collation used by the referenced object uses a code page that is not supported by Windows, the [!INCLUDE[ssDE](../includes/ssde-md.md)] displays an error.  
   
 ###  <a name="Recommendations"></a> Recommendations  
   
--   You can find the supported collation names in [Windows Collation Name &#40;Transact-SQL&#41;](../Topic/Windows%20Collation%20Name%20\(Transact-SQL\).md) and [SQL Server Collation Name &#40;Transact-SQL&#41;](../Topic/SQL%20Server%20Collation%20Name%20\(Transact-SQL\).md); or you can use the [sys.fn_helpcollations &#40;Transact-SQL&#41;](../Topic/sys.fn_helpcollations%20\(Transact-SQL\).md) system function.  
+-   You can find the supported collation names in [Windows Collation Name &#40;Transact-SQL&#41;](~/t-sql/statements/windows-collation-name-transact-sql.md) and [SQL Server Collation Name &#40;Transact-SQL&#41;](~/t-sql/statements/sql-server-collation-name-transact-sql.md); or you can use the [sys.fn_helpcollations &#40;Transact-SQL&#41;](~/relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) system function.  
   
 -   When you change the database collation, you change the following:  
   
@@ -57,7 +57,7 @@ manager: "jhubbard"
   
     -   The `char`, `varchar`, `text`, `nchar`, `nvarchar`, or `ntext` system data types, and all user-defined data types based on these system data types, are changed to the new default collation.  
   
--   You can change the collation of any new objects that are created in a user database by using the COLLATE clause of the [ALTER DATABASE](../Topic/ALTER%20DATABASE%20\(Transact-SQL\).md) statement. This statement does not change the collation of the columns in any existing user-defined tables. These can be changed by using the COLLATE clause of [ALTER TABLE](../Topic/ALTER%20TABLE%20\(Transact-SQL\).md).  
+-   You can change the collation of any new objects that are created in a user database by using the COLLATE clause of the [ALTER DATABASE](~/t-sql/statements/alter-database-transact-sql.md) statement. This statement does not change the collation of the columns in any existing user-defined tables. These can be changed by using the COLLATE clause of [ALTER TABLE](~/t-sql/statements/alter-table-transact-sql.md).  
   
 ###  <a name="Security"></a> Security  
   
@@ -72,7 +72,7 @@ manager: "jhubbard"
   
 #### To set or change the database collation  
   
-1.  In **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], expand that instance, and then expand **Databases**.  
+1.  In **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], expand that instance, and then expand **Databases**.  
   
 2.  If you are creating a new database, right-click **Databases** and then click **New Database**. If you do not want the default collation, click the **Options** page, and select a collation from the **Collation** drop-down list.  
   
@@ -84,11 +84,11 @@ manager: "jhubbard"
   
 #### To set the database collation  
   
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use the [COLLATE](../Topic/COLLATE%20\(Transact-SQL\).md) clause to specify a collation name. The example creates the database `MyOptionsTest` that uses the `Latin1_General_100_CS_AS_SC` collation. After you create the database, execute the `SELECT` statement to verify the setting.  
+3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use the [COLLATE](~/t-sql/statements/collations.md) clause to specify a collation name. The example creates the database `MyOptionsTest` that uses the `Latin1_General_100_CS_AS_SC` collation. After you create the database, execute the `SELECT` statement to verify the setting.  
   
 ```tsql  
 USE master;  
@@ -110,11 +110,11 @@ GO
   
 #### To change the database collation  
   
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use the [COLLATE](../Topic/COLLATE%20\(Transact-SQL\).md) clause in an [ALTER DATABASE](../Topic/ALTER%20DATABASE%20\(Transact-SQL\).md) statement to change the collation name. Execute the `SELECT` statement to verify the change.  
+3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use the [COLLATE](~/t-sql/statements/collations.md) clause in an [ALTER DATABASE](~/t-sql/statements/alter-database-transact-sql.md) statement to change the collation name. Execute the `SELECT` statement to verify the change.  
   
 ```tsql  
 USE master;  
@@ -133,15 +133,15 @@ GO
   
 ## See Also  
  [Collation and Unicode Support](../../2014/database-engine/collation-and-unicode-support.md)   
- [sys.fn_helpcollations &#40;Transact-SQL&#41;](../Topic/sys.fn_helpcollations%20\(Transact-SQL\).md)   
- [sys.databases &#40;Transact-SQL&#41;](../Topic/sys.databases%20\(Transact-SQL\).md)   
- [SQL Server Collation Name &#40;Transact-SQL&#41;](../Topic/SQL%20Server%20Collation%20Name%20\(Transact-SQL\).md)   
- [Windows Collation Name &#40;Transact-SQL&#41;](../Topic/Windows%20Collation%20Name%20\(Transact-SQL\).md)   
- [COLLATE &#40;Transact-SQL&#41;](../Topic/COLLATE%20\(Transact-SQL\).md)   
- [Collation Precedence &#40;Transact-SQL&#41;](../Topic/Collation%20Precedence%20\(Transact-SQL\).md)   
- [CREATE TABLE &#40;Transact-SQL&#41;](../Topic/CREATE%20TABLE%20\(Transact-SQL\).md)   
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../Topic/CREATE%20DATABASE%20\(SQL%20Server%20Transact-SQL\).md)   
- [ALTER TABLE &#40;Transact-SQL&#41;](../Topic/ALTER%20TABLE%20\(Transact-SQL\).md)   
- [ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20\(Transact-SQL\).md)  
+ [sys.fn_helpcollations &#40;Transact-SQL&#41;](~/relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)   
+ [sys.databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
+ [SQL Server Collation Name &#40;Transact-SQL&#41;](~/t-sql/statements/sql-server-collation-name-transact-sql.md)   
+ [Windows Collation Name &#40;Transact-SQL&#41;](~/t-sql/statements/windows-collation-name-transact-sql.md)   
+ [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   
+ [Collation Precedence &#40;Transact-SQL&#41;](~/t-sql/statements/collation-precedence-transact-sql.md)   
+ [CREATE TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/create-table-transact-sql.md)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](~/t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [ALTER TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-table-transact-sql.md)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)  
   
   

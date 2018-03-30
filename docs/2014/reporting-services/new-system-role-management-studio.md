@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: 7b4a0b98-975b-478a-8359-7db39ccbb347
 caps.latest.revision: 27
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # New System Role (Management Studio)
@@ -35,7 +35,7 @@ manager: "mblythe"
  Provide a description that explains how to use the role and enumerates what the role supports.  
   
  **Task**  
- Select the system-level tasks that can be performed through this role. You cannot create new tasks or modify the existing tasks that are supported by [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. You cannot choose item-level tasks for a system role definition.  
+ Select the system-level tasks that can be performed through this role. You cannot create new tasks or modify the existing tasks that are supported by [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. You cannot choose item-level tasks for a system role definition.  
   
  **Task Description**  
  Shows a description of the task that enumerates the operations or permissions that the task supports.  

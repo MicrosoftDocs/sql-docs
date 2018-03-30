@@ -16,7 +16,7 @@ ms.author: "sstein"
 manager: "jhubbard"
 ---
 # Migrating Check and Foreign Key Constraints
-  Check and foreign key constraints are not supported in [!INCLUDE[hek_2](../../includes/hek-2-md.md)] in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. These constructs are usually used to enforce logical data integrity in the schema and can be important to maintaining the functional correctness of applications.  
+  Check and foreign key constraints are not supported in [!INCLUDE[hek_2](../includes/hek-2-md.md)] in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. These constructs are usually used to enforce logical data integrity in the schema and can be important to maintaining the functional correctness of applications.  
   
  Logical integrity checks on a table such as check and foreign key constraints require additional processing on transactions and should generally be avoided for performance-sensitive applications. However, if such checks are crucial to your application, there exist two workarounds.  
   
@@ -26,7 +26,7 @@ manager: "jhubbard"
  This workaround has the advantage of having minimal impact on performance because data modification is not blocked by constraint checks. However, if a change that violates one or more constraints does occur, the process to roll back that change could take a long time.  
   
 ## Enforcing Constraints Before an Insert, Update, or Delete Operation  
- This workaround emulates the behavior of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] constraints. The constraints are checked before data modification occurs and will terminate the transaction if a check fails. This method incurs a performance penalty on data modifications, but ensures that data inside a table always satisfies the constraints.  
+ This workaround emulates the behavior of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] constraints. The constraints are checked before data modification occurs and will terminate the transaction if a check fails. This method incurs a performance penalty on data modifications, but ensures that data inside a table always satisfies the constraints.  
   
  Use this workaround when logical data integrity is crucial to correctness and modifications that violate a constraint are likely. However, to guarantee integrity, all data modifications must occur through stored procedures that include these enforcements. Modifications through ad-hoc queries and other stored procedures will not enforce these constraints and therefore may violate them with no warning.  
   
@@ -97,7 +97,7 @@ GO
   
  After converting to a memory-optimized table, the definition for [Sales].[SalesOrderDetail] is as follows:  
   
- Note that rowguid is no longer a ROWGUIDCOL as it is not supported in [!INCLUDE[hek_2](../../includes/hek-2-md.md)]. The column has been removed. In addition, LineTotal is a computed column and out of scope for this article, so it also has been removed.  
+ Note that rowguid is no longer a ROWGUIDCOL as it is not supported in [!INCLUDE[hek_2](../includes/hek-2-md.md)]. The column has been removed. In addition, LineTotal is a computed column and out of scope for this article, so it also has been removed.  
   
 ```tsql  
 USE [AdventureWorks2012]  

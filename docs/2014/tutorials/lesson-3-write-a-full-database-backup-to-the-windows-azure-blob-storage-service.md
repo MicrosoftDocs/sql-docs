@@ -21,9 +21,9 @@ manager: "jhubbard"
 ## Perform a Full Database Backup to the Windows Azure Blob Storage Service  
  To create a full database backup, use the following steps:  
   
-1.  Connect to [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+1.  Connect to [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
-2.  In the **Object Explorer**, connect to the instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+2.  In the **Object Explorer**, connect to the instance of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
 3.  On the Standard menu bar, click **New Query**.  
   

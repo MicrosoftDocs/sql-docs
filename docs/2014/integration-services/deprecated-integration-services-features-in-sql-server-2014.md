@@ -19,8 +19,8 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Deprecated Integration Services Features in SQL Server 2014
-  This topic describes the deprecated [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] features that are still available in the current release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. These features are scheduled to be removed in a future release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Deprecated features should not be used in new applications.  
+  This topic describes the deprecated [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] features that are still available in the current release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. These features are scheduled to be removed in a future release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Deprecated features should not be used in new applications.  
   
- There are no deprecated [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] features in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ There are no deprecated [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] features in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
   

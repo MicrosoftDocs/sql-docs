@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 9055bd4a-89cc-4059-9474-e213d7bcc36d
 caps.latest.revision: 18
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Publisher Properties - Publisher, General

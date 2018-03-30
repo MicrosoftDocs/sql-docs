@@ -23,7 +23,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQLXMLOLEDB Provider (SQLXML 4.0)
-  The SQLXMLOLEDB Provider is an OLE DB provider that exposes [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML functionality through ADO.  
+  The SQLXMLOLEDB Provider is an OLE DB provider that exposes [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML functionality through ADO.  
   
 ## In This Section  
  [Introduction to the SQLXMLOLEDB Provider &#40;SQLXML 4.0&#41;](../../../2014/database-engine/dev-guide/introduction-to-the-sqlxmloledb-provider-sqlxml-4-0.md)  

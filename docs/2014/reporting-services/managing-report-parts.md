@@ -12,11 +12,11 @@ ms.topic: "article"
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 caps.latest.revision: 6
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Managing Report Parts
-  Beginning with [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], report parts can be published to report servers and re-used in other reports and by other users if they have the appropriate permissions.  
+  Beginning with [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], report parts can be published to report servers and re-used in other reports and by other users if they have the appropriate permissions.  
   
  Report parts can be reused by multiple users and in multiple reports. Users can search for report parts on the server and add them to a report.  Users can also be informed of updates to the report part on the server, and republish new versions of a report part. Those report authoring actions can be affected by and controlled by reporting services security permissions.  This topic reviews report part properties and behavior after they are on the server.  
   
@@ -24,12 +24,12 @@ manager: "mblythe"
  To manage report parts, you can use Report Manager for a report server in native mode, or application pages for a report server in SharePoint integrated mode.  
   
 ### Server-side interaction and search  
- Report parts can be published to a report server in either native mode or SharePoint integrated mode. Users can use the report part gallery feature in a report authoring application such as [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Report Builder to find and add report parts to their reports. When a user searches for a report part, the search looks at the report server catalog regardless of which mode the server was installed for.  
+ Report parts can be published to a report server in either native mode or SharePoint integrated mode. Users can use the report part gallery feature in a report authoring application such as [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Report Builder to find and add report parts to their reports. When a user searches for a report part, the search looks at the report server catalog regardless of which mode the server was installed for.  
   
  When report parts are published from a report authoring application such as Report Builder to a report server in SharePoint integrated mode, the report server catalog is also updated, and searches from the gallery to accurately reflect the new or update report part.  
   
 #### Directly uploading report parts to a SharePoint folder  
- If a report part is uploaded directly to a SharePoint document folder instead of being published from a report authoring application, the report server catalog is not updated. Searches from the report part gallery will not find the uploaded report part. To help keep your SharePoint folders and report server catalog synchronized, you can activate the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] file sync feature on the SharePoint server. For more information, see [Activate the Report Server File Sync Feature in SharePoint Central Administration](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md).  
+ If a report part is uploaded directly to a SharePoint document folder instead of being published from a report authoring application, the report server catalog is not updated. Searches from the report part gallery will not find the uploaded report part. To help keep your SharePoint folders and report server catalog synchronized, you can activate the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] file sync feature on the SharePoint server. For more information, see [Activate the Report Server File Sync Feature in SharePoint Central Administration](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md).  
   
  The files can also be synchronized by calling some of the reporting services management APIs such as GetProperties and SetProperties.  
   

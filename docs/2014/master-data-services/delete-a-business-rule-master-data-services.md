@@ -19,7 +19,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Delete a Business Rule (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], delete a business rule when it is no longer needed.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], delete a business rule when it is no longer needed.  
   
 > [!NOTE]  
 >  You can prevent data from being validated against a business rule by excluding it, rather than deleting it. For more information, see [Exclude a Business Rule &#40;Master Data Services&#41;](../../2014/master-data-services/exclude-a-business-rule-master-data-services.md).  
@@ -33,7 +33,7 @@ manager: "jhubbard"
   
 ### To delete a business rule  
   
-1.  In [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], click **System Administration**.  
+1.  In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], click **System Administration**.  
   
 2.  From the menu bar, point to **Manage** and click **Business Rules**.  
   

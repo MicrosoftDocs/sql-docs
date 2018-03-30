@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 007638fc-3a24-4460-adbe-545ded5d6f88
 caps.latest.revision: 36
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # TCP - IP Properties (Protocols Tab)
   Use the **TCP/IP Properties** dialog box to configure the options for the TCP/IP protocol. Click **TCP/IP** in the left pane, to show individual IP address configurations in the details pane.  
   
- Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] must be restarted before the changes take effect.  
+ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be restarted before the changes take effect.  
   
 ## Options  
  **Enabled**  
@@ -33,7 +33,7 @@ manager: "jhubbard"
  Specify whether SQL Server will listen on all the IP addresses that are bound to network cards on the computer. If set to **No**, configure each IP address separately using the properties dialog box for each IP address. If set to **Yes**, the settings of the **IPAll** properties box will apply to all IP addresses. Default value is **Yes**.  
   
  **No Delay**  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] does not implement changes to this property.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not implement changes to this property.  
   
 ## See Also  
  [Choosing a Network Protocol](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   

@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: b8773596-5b98-4355-a4ab-4412e1317c67
 caps.latest.revision: 19
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # SetDatabaseLogonTimeout Method (WMI MSReportServer_ConfigurationSetting)
@@ -49,7 +49,7 @@ public void SetDatabaseLogonTimeout(Int32 LogonTimeout,
  Returns an *HRESULT* indicating success or failure of the method call. A value of 0 indicates that the method call was successful. A non-zero value indicates that an error has occurred.  
   
 ## Requirements  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../includes/ssrswminmspca-md.md)]  
   
 ## See Also  
  [MSReportServer_ConfigurationSetting Members](../../2014/reporting-services/msreportserver-configurationsetting-members.md)  

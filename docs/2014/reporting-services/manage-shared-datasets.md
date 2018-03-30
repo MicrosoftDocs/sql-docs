@@ -12,20 +12,20 @@ ms.topic: "article"
 ms.assetid: 2cbb1fa3-959e-4df6-9887-ebc93cc1b686
 caps.latest.revision: 6
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Manage Shared Datasets
-  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], shared datasets retrieve data from shared data sources that connect to external data sources. A shared dataset provides a way to share a query to help provide a consistent set of data for multiple reports. The dataset query can include dataset parameters. You can configure a shared dataset to cache query results for specific parameter combinations on first use or by specifying a schedule. You can use shared dataset caching in combination with report caching and report data feeds to help manage access to a data source.  
+  In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], shared datasets retrieve data from shared data sources that connect to external data sources. A shared dataset provides a way to share a query to help provide a consistent set of data for multiple reports. The dataset query can include dataset parameters. You can configure a shared dataset to cache query results for specific parameter combinations on first use or by specifying a schedule. You can use shared dataset caching in combination with report caching and report data feeds to help manage access to a data source.  
   
- Shared datasets use only shared data sources, not embedded data sources. A shared dataset can be based on any data source for a supported [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data extension or on a report model.  
+ Shared datasets use only shared data sources, not embedded data sources. A shared dataset can be based on any data source for a supported [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] data extension or on a report model.  
   
 ## Creating and Using Shared Datasets  
  To create a shared dataset, you must use an application that creates a shared dataset definition file (.rsd). You can use one of the following applications to create a shared dataset:  
   
 -   Report Builder   Use shared dataset design mode and save the shared dataset to a report server or SharePoint site.  
   
--   Report Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] Create shared datasets under the Shared Dataset folder in Solution Explorer. To publish a shared dataset, deploy it to a report server or SharePoint site.  
+-   Report Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] Create shared datasets under the Shared Dataset folder in Solution Explorer. To publish a shared dataset, deploy it to a report server or SharePoint site.  
   
 -   Upload a shared dataset definition (.rsd) file   You can upload a file to the report server or SharePoint site. On a SharePoint site. An uploaded file is not validated against the schema until the shared dataset is cached or used in a report.  
   

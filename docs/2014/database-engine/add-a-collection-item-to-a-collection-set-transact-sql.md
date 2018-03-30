@@ -21,7 +21,7 @@ manager: "jhubbard"
 # Add a Collection Item to a Collection Set (Transact-SQL)
   You can add a collection item to an existing collection set using the stored procedures that are provided with the data collector.  
   
- Carry out the following steps using Query Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ Carry out the following steps using Query Editor in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 ### Add a collection item to a collection set  
   
@@ -38,7 +38,7 @@ manager: "jhubbard"
     ```  
   
     > [!NOTE]  
-    >  You can also stop the collection set by using Object Explorer in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information, see [Start or Stop a Collection Set](../../2014/database-engine/start-or-stop-a-collection-set.md).  
+    >  You can also stop the collection set by using Object Explorer in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. For more information, see [Start or Stop a Collection Set](../../2014/database-engine/start-or-stop-a-collection-set.md).  
   
 2.  Declare the collection set that you want to add the collection item to. The following code provides an example of how to declare the collection set ID.  
   
@@ -97,6 +97,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Create a Custom Collection Set That Uses the Generic T-SQL Query Collector Type &#40;Transact-SQL&#41;](../../2014/database-engine/create-custom-collection-set-generic-t-sql-query-collector-type.md)   
- [Data Collector Stored Procedures &#40;Transact-SQL&#41;](../Topic/Data%20Collector%20Stored%20Procedures%20\(Transact-SQL\).md)  
+ [Data Collector Stored Procedures &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)  
   
   

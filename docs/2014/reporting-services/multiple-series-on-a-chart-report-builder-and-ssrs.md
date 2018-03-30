@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: b99e4398-1fba-4824-958f-5c75d10485ea
 caps.latest.revision: 5
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Multiple Series on a Chart (Report Builder and SSRS)
@@ -21,7 +21,7 @@ manager: "mblythe"
  In addition to using chart features, it is important to decide which chart type should be used for your data. If the fields in your dataset are related, consider using a range chart.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## Using Stacked and 100% Stacked Charts  
  Stacked charts are commonly used to display multiple series in one chart area. Consider using stacked charts when the data that you are trying to show is closely related. It is also a good practice to show four or less series on a stacked chart. If you want to compare the proportion that each series contributes to the whole, use a 100% stacked area, bar, or column chart. These charts calculate the relative percentage that each series contributes to the category. For more information, see [Area Charts &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/area-charts-report-builder-and-ssrs.md), [Bar Charts &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/bar-charts-report-builder-and-ssrs.md) and [Column Charts &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/column-charts-report-builder-and-ssrs.md).  

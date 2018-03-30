@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: b54ec058-b910-450b-a634-6092a4f6d840
 caps.latest.revision: 12
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Enter Data Source Credentials Dialog Box (Report Builder)

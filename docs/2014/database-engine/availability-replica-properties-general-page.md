@@ -32,7 +32,7 @@ manager: "jhubbard"
  Name of the availability group. This is a user-specified name that must be unique within the Windows Server Failover Cluster (WSFC).  
   
  **Server instance**  
- Server name of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is hosting this replica and, for a non-default instance, its instance name.  
+ Server name of the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that is hosting this replica and, for a non-default instance, its instance name.  
   
  **Role**  
  **Primary**  

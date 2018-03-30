@@ -16,11 +16,11 @@ ms.author: "barbkess"
 manager: "jhubbard"
 ---
 # SQL Server Transaction Locking and Row Versioning Guide
-  In any database, mismanagement of transactions often leads to contention and performance problems in systems that have many users. As the number of users that access the data increases, it becomes important to have applications that use transactions efficiently. This guide describes the locking and row versioning mechanisms the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] uses to ensure the physical integrity of each transaction and provides information on how applications can control transactions efficiently.  
+  In any database, mismanagement of transactions often leads to contention and performance problems in systems that have many users. As the number of users that access the data increases, it becomes important to have applications that use transactions efficiently. This guide describes the locking and row versioning mechanisms the [!INCLUDE[ssDEnoversion](includes/ssdenoversion-md.md)] uses to ensure the physical integrity of each transaction and provides information on how applications can control transactions efficiently.  
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] through [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] unless noted otherwise.|  
+|**Applies to**: [!INCLUDE[ssVersion2005](includes/ssversion2005-md.md)] through [!INCLUDE[ssCurrent](includes/sscurrent-md.md)] unless noted otherwise.|  
   
 ##  <a name="Top"></a> In This Guide  
  [Transaction Basics](#Basics)  
@@ -48,30 +48,30 @@ manager: "jhubbard"
  Modifications made by concurrent transactions must be isolated from the modifications made by any other concurrent transactions. A transaction either recognizes data in the state it was in before another concurrent transaction modified it, or it recognizes the data after the second transaction has completed, but it does not recognize an intermediate state. This is referred to as serializability because it results in the ability to reload the starting data and replay a series of transactions to end up with the data in the same state it was in after the original transactions were performed.  
   
  Durability  
- After a fully durable transaction has completed, its effects are permanently in place in the system. The modifications persist even in the event of a system failure. [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]and later enable delayed durable transactions. Delayed durable transactions commit before the transaction log record is persisted to disk. For more information on delayed transaction durability see the topic [Transaction Durability](../2014/database-engine/control-transaction-durability.md).  
+ After a fully durable transaction has completed, its effects are permanently in place in the system. The modifications persist even in the event of a system failure. [!INCLUDE[ssSQL14](includes/sssql14-md.md)]and later enable delayed durable transactions. Delayed durable transactions commit before the transaction log record is persisted to disk. For more information on delayed transaction durability see the topic [Transaction Durability](../2014/database-engine/control-transaction-durability.md).  
   
- SQL programmers are responsible for starting and ending transactions at points that enforce the logical consistency of the data. The programmer must define the sequence of data modifications that leave the data in a consistent state relative to the organization's business rules. The programmer includes these modification statements in a single transaction so that the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] can enforce the physical integrity of the transaction.  
+ SQL programmers are responsible for starting and ending transactions at points that enforce the logical consistency of the data. The programmer must define the sequence of data modifications that leave the data in a consistent state relative to the organization's business rules. The programmer includes these modification statements in a single transaction so that the [!INCLUDE[ssDEnoversion](includes/ssdenoversion-md.md)] can enforce the physical integrity of the transaction.  
   
- It is the responsibility of an enterprise database system, such as an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)], to provide mechanisms ensuring the physical integrity of each transaction. The [!INCLUDE[ssDE](../includes/ssde-md.md)] provides:  
+ It is the responsibility of an enterprise database system, such as an instance of the [!INCLUDE[ssDE](includes/ssde-md.md)], to provide mechanisms ensuring the physical integrity of each transaction. The [!INCLUDE[ssDE](includes/ssde-md.md)] provides:  
   
 -   Locking facilities that preserve transaction isolation.  
   
--   Logging facilities ensure transaction durability. For fully durable transactions the log record is hardened to disk before the transactions commits. Thus, even if the server hardware, operating system, or the instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)] itself fails, the instance uses the transaction logs upon restart to automatically roll back any uncompleted transactions to the point of the system failure. Delayed durable transactions commit before the transaction log record is hardened to disk. Such transactions may be lost if there is a system failure before the log record is hardened to disk. For more information on delayed transaction durability see the topic [Transaction Durability](../2014/database-engine/control-transaction-durability.md).  
+-   Logging facilities ensure transaction durability. For fully durable transactions the log record is hardened to disk before the transactions commits. Thus, even if the server hardware, operating system, or the instance of the [!INCLUDE[ssDE](includes/ssde-md.md)] itself fails, the instance uses the transaction logs upon restart to automatically roll back any uncompleted transactions to the point of the system failure. Delayed durable transactions commit before the transaction log record is hardened to disk. Such transactions may be lost if there is a system failure before the log record is hardened to disk. For more information on delayed transaction durability see the topic [Transaction Durability](../2014/database-engine/control-transaction-durability.md).  
   
--   Transaction management features that enforce transaction atomicity and consistency. After a transaction has started, it must be successfully completed (committed), or the [!INCLUDE[ssDE](../includes/ssde-md.md)] undoes all of the data modifications made since the transaction started. This operation is referred to as rolling back a transaction because it returns the data to the state it was prior to those changes.  
+-   Transaction management features that enforce transaction atomicity and consistency. After a transaction has started, it must be successfully completed (committed), or the [!INCLUDE[ssDE](includes/ssde-md.md)] undoes all of the data modifications made since the transaction started. This operation is referred to as rolling back a transaction because it returns the data to the state it was prior to those changes.  
   
 ### Controlling Transactions  
- Applications control transactions mainly by specifying when a transaction starts and ends. This can be specified by using either [!INCLUDE[tsql](../includes/tsql-md.md)] statements or database application programming interface (API) functions. The system must also be able to correctly handle errors that terminate a transaction before it completes. For more information, see [Transaction Statements &#40;Transact-SQL&#41;](../Topic/Transaction%20Statements%20(Transact-SQL).md), [Transactions in ODBC](http://technet.microsoft.com/library/ms131281.aspx) and [Transactions in SQL Server Native Client (OLEDB)](http://msdn.microsoft.com/library/ms130918.aspx).  
+ Applications control transactions mainly by specifying when a transaction starts and ends. This can be specified by using either [!INCLUDE[tsql](includes/tsql-md.md)] statements or database application programming interface (API) functions. The system must also be able to correctly handle errors that terminate a transaction before it completes. For more information, see [Transaction Statements &#40;Transact-SQL&#41;](~/t-sql/language-elements/transactions-transact-sql.md), [Transactions in ODBC](http://technet.microsoft.com/library/ms131281.aspx) and [Transactions in SQL Server Native Client (OLEDB)](http://msdn.microsoft.com/library/ms130918.aspx).  
   
- By default, transactions are managed at the connection level. When a transaction is started on a connection, all [!INCLUDE[tsql](../includes/tsql-md.md)] statements executed on that connection are part of the transaction until the transaction ends. However, under a multiple active result set (MARS) session, a [!INCLUDE[tsql](../includes/tsql-md.md)] explicit or implicit transaction becomes a batch-scoped transaction that is managed at the batch level. When the batch completes, if the batch-scoped transaction is not committed or rolled back, it is automatically rolled back by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For more information, see [Multiple Active Result Sets (MARS) in SQL Server](http://msdn.microsoft.com/library/ms345109(v=SQL.90).aspx).  
+ By default, transactions are managed at the connection level. When a transaction is started on a connection, all [!INCLUDE[tsql](includes/tsql-md.md)] statements executed on that connection are part of the transaction until the transaction ends. However, under a multiple active result set (MARS) session, a [!INCLUDE[tsql](includes/tsql-md.md)] explicit or implicit transaction becomes a batch-scoped transaction that is managed at the batch level. When the batch completes, if the batch-scoped transaction is not committed or rolled back, it is automatically rolled back by [!INCLUDE[ssNoVersion](includes/ssnoversion-md.md)]. For more information, see [Multiple Active Result Sets (MARS) in SQL Server](http://msdn.microsoft.com/library/ms345109(v=SQL.90).aspx).  
   
 #### Starting Transactions  
- Using API functions and [!INCLUDE[tsql](../includes/tsql-md.md)] statements, you can start transactions in an instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] as explicit, autocommit, or implicit transactions.  
+ Using API functions and [!INCLUDE[tsql](includes/tsql-md.md)] statements, you can start transactions in an instance of the [!INCLUDE[ssDEnoversion](includes/ssdenoversion-md.md)] as explicit, autocommit, or implicit transactions.  
   
  **Explicit Transactions**  
- An explicit transaction is one in which you explicitly define both the start and end of the transaction through an API function or by issuing the [!INCLUDE[tsql](../includes/tsql-md.md)] BEGIN TRANSACTION, COMMIT TRANSACTION, COMMIT WORK, ROLLBACK TRANSACTION, or ROLLBACK WORK [!INCLUDE[tsql](../includes/tsql-md.md)] statements. When the transaction ends, the connection returns to the transaction mode it was in before the explicit transaction was started, either implicit or autocommit mode.  
+ An explicit transaction is one in which you explicitly define both the start and end of the transaction through an API function or by issuing the [!INCLUDE[tsql](includes/tsql-md.md)] BEGIN TRANSACTION, COMMIT TRANSACTION, COMMIT WORK, ROLLBACK TRANSACTION, or ROLLBACK WORK [!INCLUDE[tsql](includes/tsql-md.md)] statements. When the transaction ends, the connection returns to the transaction mode it was in before the explicit transaction was started, either implicit or autocommit mode.  
   
- You can use all [!INCLUDE[tsql](../includes/tsql-md.md)] statements in an explicit transaction, except for the following statements:  
+ You can use all [!INCLUDE[tsql](includes/tsql-md.md)] statements in an explicit transaction, except for the following statements:  
   
 ||||  
 |-|-|-|  
@@ -88,9 +88,9 @@ manager: "jhubbard"
  Autocommit mode is the default transaction management mode of the SQL Server Database Engine. Every Transact-SQL statement is committed or rolled back when it completes. If a statement completes successfully, it is committed; if it encounters any error, it is rolled back. A connection to an instance of the Database Engine operates in autocommit mode whenever this default mode has not been overridden by either explicit or implicit transactions. Autocommit mode is also the default mode for ADO, OLE DB, ODBC, and DB-Library.  
   
  **Implicit Transactions**  
- When a connection is operating in implicit transaction mode, the instance of the Database Engine automatically starts a new transaction after the current transaction is committed or rolled back. You do nothing to delineate the start of a transaction; you only commit or roll back each transaction. Implicit transaction mode generates a continuous chain of transactions. Set implicit transaction mode on through either an API function or the [!INCLUDE[tsql](../includes/tsql-md.md)] SET IMPLICIT_TRANSACTIONS ON statement.  
+ When a connection is operating in implicit transaction mode, the instance of the Database Engine automatically starts a new transaction after the current transaction is committed or rolled back. You do nothing to delineate the start of a transaction; you only commit or roll back each transaction. Implicit transaction mode generates a continuous chain of transactions. Set implicit transaction mode on through either an API function or the [!INCLUDE[tsql](includes/tsql-md.md)] SET IMPLICIT_TRANSACTIONS ON statement.  
   
- After implicit transaction mode has been set on for a connection, the instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)] automatically starts a transaction when it first executes any of these statements:  
+ After implicit transaction mode has been set on for a connection, the instance of the [!INCLUDE[ssDE](includes/ssde-md.md)] automatically starts a transaction when it first executes any of these statements:  
   
 ||||  
 |-|-|-|  
@@ -100,22 +100,22 @@ manager: "jhubbard"
 |DROP|OPEN|UPDATE|  
   
  **Batch-scoped Transactions**  
- Applicable only to multiple active result sets (MARS), a [!INCLUDE[tsql](../includes/tsql-md.md)] explicit or implicit transaction that starts under a MARS session becomes a batch-scoped transaction. A batch-scoped transaction that is not committed or rolled back when a batch completes is automatically rolled back by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ Applicable only to multiple active result sets (MARS), a [!INCLUDE[tsql](includes/tsql-md.md)] explicit or implicit transaction that starts under a MARS session becomes a batch-scoped transaction. A batch-scoped transaction that is not committed or rolled back when a batch completes is automatically rolled back by [!INCLUDE[ssNoVersion](includes/ssnoversion-md.md)].  
   
  **Distributed Transactions**  
- Distributed transactions span two or more servers known as resource managers. The management of the transaction must be coordinated between the resource managers by a server component called a transaction manager. Each instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] can operate as a resource manager in distributed transactions coordinated by transaction managers, such as [!INCLUDE[msCoName](../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC), or other transaction managers that support the Open Group XA specification for distributed transaction processing. For more information, see the MS DTC documentation.  
+ Distributed transactions span two or more servers known as resource managers. The management of the transaction must be coordinated between the resource managers by a server component called a transaction manager. Each instance of the [!INCLUDE[ssDEnoversion](includes/ssdenoversion-md.md)] can operate as a resource manager in distributed transactions coordinated by transaction managers, such as [!INCLUDE[msCoName](includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC), or other transaction managers that support the Open Group XA specification for distributed transaction processing. For more information, see the MS DTC documentation.  
   
- A transaction within a single instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)] that spans two or more databases is actually a distributed transaction. The instance manages the distributed transaction internally; to the user, it operates as a local transaction.  
+ A transaction within a single instance of the [!INCLUDE[ssDE](includes/ssde-md.md)] that spans two or more databases is actually a distributed transaction. The instance manages the distributed transaction internally; to the user, it operates as a local transaction.  
   
  At the application, a distributed transaction is managed much the same as a local transaction. At the end of the transaction, the application requests the transaction to be either committed or rolled back. A distributed commit must be managed differently by the transaction manager to minimize the risk that a network failure may result in some resource managers successfully committing while others roll back the transaction. This is achieved by managing the commit process in two phases (the prepare phase and the commit phase), which is known as a two-phase commit (2PC).  
   
  Prepare phase  
- When the transaction manager receives a commit request, it sends a prepare command to all of the resource managers involved in the transaction. Each resource manager then does everything required to make the transaction durable, and all buffers holding log images for the transaction are flushed to disk. As each resource manager completes the prepare phase, it returns success or failure of the prepare to the transaction manager. [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] introduced delayed transaction durability. Delayed durable transactions commit before log images for the transaction are flushed to disk. For more information on delayed transaction durability see the topic [Transaction Durability](../2014/database-engine/control-transaction-durability.md).  
+ When the transaction manager receives a commit request, it sends a prepare command to all of the resource managers involved in the transaction. Each resource manager then does everything required to make the transaction durable, and all buffers holding log images for the transaction are flushed to disk. As each resource manager completes the prepare phase, it returns success or failure of the prepare to the transaction manager. [!INCLUDE[ssSQL14](includes/sssql14-md.md)] introduced delayed transaction durability. Delayed durable transactions commit before log images for the transaction are flushed to disk. For more information on delayed transaction durability see the topic [Transaction Durability](../2014/database-engine/control-transaction-durability.md).  
   
  Commit phase  
  If the transaction manager receives successful prepares from all of the resource managers, it sends commit commands to each resource manager. The resource managers can then complete the commit. If all of the resource managers report a successful commit, the transaction manager then sends a success notification to the application. If any resource manager reported a failure to prepare, the transaction manager sends a rollback command to each resource manager and indicates the failure of the commit to the application.  
   
- [!INCLUDE[ssDE](../includes/ssde-md.md)] applications can manage distributed transactions either through [!INCLUDE[tsql](../includes/tsql-md.md)] or the database API. For more information, see [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../Topic/BEGIN%20DISTRIBUTED%20TRANSACTION%20(Transact-SQL).md).  
+ [!INCLUDE[ssDE](includes/ssde-md.md)] applications can manage distributed transactions either through [!INCLUDE[tsql](includes/tsql-md.md)] or the database API. For more information, see [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](~/t-sql/language-elements/begin-distributed-transaction-transact-sql.md).  
   
 #### Ending Transactions  
  You can end transactions with either a COMMIT or ROLLBACK statement, or through a corresponding API function.  
@@ -130,14 +130,14 @@ manager: "jhubbard"
 >  Under connections enabled to support multiple active result sets (MARS), an explicit transaction started through an API function cannot be committed while there are pending requests for execution. Any attempt to commit this type of  transaction while there are outstanding operations running will result in an error.  
   
 #### Errors During Transaction Processing  
- If an error prevents the successful completion of a transaction, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] automatically rolls back the transaction and frees all resources held by the transaction. If the client's network connection to an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)] is broken, any outstanding transactions for the connection are rolled back when the network notifies the instance of the break. If the client application fails or if the client computer goes down or is restarted, this also breaks the connection, and the instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)] rolls back any outstanding connections when the network notifies it of the break. If the client logs off the application, any outstanding transactions are rolled back.  
+ If an error prevents the successful completion of a transaction, [!INCLUDE[ssNoVersion](includes/ssnoversion-md.md)] automatically rolls back the transaction and frees all resources held by the transaction. If the client's network connection to an instance of the [!INCLUDE[ssDE](includes/ssde-md.md)] is broken, any outstanding transactions for the connection are rolled back when the network notifies the instance of the break. If the client application fails or if the client computer goes down or is restarted, this also breaks the connection, and the instance of the [!INCLUDE[ssDE](includes/ssde-md.md)] rolls back any outstanding connections when the network notifies it of the break. If the client logs off the application, any outstanding transactions are rolled back.  
   
- If a run-time statement error (such as a constraint violation) occurs in a batch, the default behavior in the [!INCLUDE[ssDE](../includes/ssde-md.md)] is to roll back only the statement that generated the error. You can change this behavior using the SET XACT_ABORT statement. After SET XACT_ABORT ON is executed, any run-time statement error causes an automatic rollback of the current transaction. Compile errors, such as syntax errors, are not affected by SET XACT_ABORT. For more information, see [SET XACT_ABORT &#40;Transact-SQL&#41;](../Topic/SET%20XACT_ABORT%20(Transact-SQL).md).  
+ If a run-time statement error (such as a constraint violation) occurs in a batch, the default behavior in the [!INCLUDE[ssDE](includes/ssde-md.md)] is to roll back only the statement that generated the error. You can change this behavior using the SET XACT_ABORT statement. After SET XACT_ABORT ON is executed, any run-time statement error causes an automatic rollback of the current transaction. Compile errors, such as syntax errors, are not affected by SET XACT_ABORT. For more information, see [SET XACT_ABORT &#40;Transact-SQL&#41;](~/t-sql/statements/set-xact-abort-transact-sql.md).  
   
- When errors occur, corrective action (COMMIT or ROLLBACK) should be included in application code. One effective tool for handling errors, including those in transactions, is the [!INCLUDE[tsql](../includes/tsql-md.md)] TRY…CATCH construct. For more information with examples that include transactions, see [TRY...CATCH &#40;Transact-SQL&#41;](../Topic/TRY...CATCH%20(Transact-SQL).md). Beginning with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], you can use the THROW statement to raise an exception and transfers execution to a CATCH block of a TRY…CATCH construct. For more information, see [THROW &#40;Transact-SQL&#41;](../Topic/THROW%20(Transact-SQL).md).  
+ When errors occur, corrective action (COMMIT or ROLLBACK) should be included in application code. One effective tool for handling errors, including those in transactions, is the [!INCLUDE[tsql](includes/tsql-md.md)] TRY…CATCH construct. For more information with examples that include transactions, see [TRY...CATCH &#40;Transact-SQL&#41;](~/t-sql/language-elements/try-catch-transact-sql.md). Beginning with [!INCLUDE[ssSQL11](includes/sssql11-md.md)], you can use the THROW statement to raise an exception and transfers execution to a CATCH block of a TRY…CATCH construct. For more information, see [THROW &#40;Transact-SQL&#41;](~/t-sql/language-elements/throw-transact-sql.md).  
   
 ##### Compile and Run-time Errors in Autocommit mode  
- In autocommit mode, it sometimes appears as if an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)] has rolled back an entire batch instead of just one SQL statement. This happens if the error encountered is a compile error, not a run-time error. A compile error prevents the [!INCLUDE[ssDE](../includes/ssde-md.md)] from building an execution plan, so nothing in the batch is executed. Although it appears that all of the statements before the one generating the error were rolled back, the error prevented anything in the batch from being executed. In the following example, none of the `INSERT` statements in the third batch are executed because of a compile error. It appears that the first two `INSERT` statements are rolled back when they are never executed.  
+ In autocommit mode, it sometimes appears as if an instance of the [!INCLUDE[ssDE](includes/ssde-md.md)] has rolled back an entire batch instead of just one SQL statement. This happens if the error encountered is a compile error, not a run-time error. A compile error prevents the [!INCLUDE[ssDE](includes/ssde-md.md)] from building an execution plan, so nothing in the batch is executed. Although it appears that all of the statements before the one generating the error were rolled back, the error prevented anything in the batch from being executed. In the following example, none of the `INSERT` statements in the third batch are executed because of a compile error. It appears that the first two `INSERT` statements are rolled back when they are never executed.  
   
 ```  
 CREATE TABLE TestBatch (Cola INT PRIMARY KEY, Colb CHAR(3));  
@@ -163,7 +163,7 @@ SELECT * FROM TestBatch;  -- Returns rows 1 and 2.
 GO  
 ```  
   
- The [!INCLUDE[ssDE](../includes/ssde-md.md)] uses deferred name resolution, in which object names are not resolved until execution time. In the following example, the first two `INSERT` statements are executed and committed, and those two rows remain in the `TestBatch` table after the third `INSERT` statement generates a run-time error by referring to a table that does not exist.  
+ The [!INCLUDE[ssDE](includes/ssde-md.md)] uses deferred name resolution, in which object names are not resolved until execution time. In the following example, the first two `INSERT` statements are executed and committed, and those two rows remain in the `TestBatch` table after the third `INSERT` statement generates a run-time error by referring to a table that does not exist.  
   
 ```  
 CREATE TABLE TestBatch (Cola INT PRIMARY KEY, Colb CHAR(3));  
@@ -176,10 +176,10 @@ SELECT * FROM TestBatch;  -- Returns rows 1 and 2.
 GO  
 ```  
   
- ![Arrow icon used with Back to Top link](../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Guide](#Top)  
+ ![Arrow icon used with Back to Top link](../2014/data-quality-services/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Guide](#Top)  
   
 ##  <a name="Lock_Basics"></a> Locking and Row Versioning Basics  
- The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] uses the following mechanisms to ensure the integrity of transactions and maintain the consistency of databases when multiple users are accessing data at the same time:  
+ The [!INCLUDE[ssDEnoversion](includes/ssdenoversion-md.md)] uses the following mechanisms to ensure the integrity of transactions and maintain the consistency of databases when multiple users are accessing data at the same time:  
   
 -   Locking  
   
@@ -187,11 +187,11 @@ GO
   
 -   Row versioning  
   
-     When a row versioning-based isolation level is enabled, the [!INCLUDE[ssDE](../includes/ssde-md.md)] maintains versions of each row that is modified. Applications can specify that a transaction use the row versions to view data as it existed at the start of the transaction or query instead of protecting all reads with locks. By using row versioning, the chance that a read operation will block other transactions is greatly reduced.  
+     When a row versioning-based isolation level is enabled, the [!INCLUDE[ssDE](includes/ssde-md.md)] maintains versions of each row that is modified. Applications can specify that a transaction use the row versions to view data as it existed at the start of the transaction or query instead of protecting all reads with locks. By using row versioning, the chance that a read operation will block other transactions is greatly reduced.  
   
  Locking and row versioning prevent users from reading uncommitted data and prevent multiple users from attempting to change the same data at the same time. Without locking or row versioning, queries executed against that data could produce unexpected results by returning data that has not yet been committed in the database.  
   
- Applications can choose transaction isolation levels, which define the level of protection for the transaction from modifications made by other transactions. Table-level hints can be specified for individual [!INCLUDE[tsql](../includes/tsql-md.md)] statements to further tailor behavior to fit the requirements of the application.  
+ Applications can choose transaction isolation levels, which define the level of protection for the transaction from modifications made by other transactions. Table-level hints can be specified for individual [!INCLUDE[tsql](includes/tsql-md.md)] statements to further tailor behavior to fit the requirements of the application.  
   
 ### Managing Concurrent Data Access  
  Users who access a resource at the same time are said to be accessing the resource concurrently. Concurrent data access requires mechanisms to prevent adverse effects when multiple users try to modify resources that other users are actively using.  
@@ -245,7 +245,7 @@ GO
   
     -   Missing a updated row or seeing an updated row multiple times  
   
-         Transactions that are running at the READ UNCOMMITTED level do not issue shared locks to prevent other transactions from modifying data read by the current transaction. Transactions that are running at the READ COMMITTED level do issue shared locks, but the row or page locks are released after the row is read. In either case, when you are scanning an index, if another user changes the index key column of the row during your read, the row might appear again if the key change moved the row to a position ahead of your scan. Similarly, the row might not appear if the key change moved the row to a position in the index that you had already read. To avoid this, use the SERIALIZABLE or HOLDLOCK hint, or row versioning. For more information, see [Table Hints &#40;Transact-SQL&#41;](../Topic/Table%20Hints%20(Transact-SQL).md).  
+         Transactions that are running at the READ UNCOMMITTED level do not issue shared locks to prevent other transactions from modifying data read by the current transaction. Transactions that are running at the READ COMMITTED level do issue shared locks, but the row or page locks are released after the row is read. In either case, when you are scanning an index, if another user changes the index key column of the row during your read, the row might appear again if the key change moved the row to a position ahead of your scan. Similarly, the row might not appear if the key change moved the row to a position in the index that you had already read. To avoid this, use the SERIALIZABLE or HOLDLOCK hint, or row versioning. For more information, see [Table Hints &#40;Transact-SQL&#41;](~/t-sql/queries/hints-transact-sql-table.md).  
   
     -   Missing one or more rows that were not the target of update  
   
@@ -264,7 +264,7 @@ GO
   
      In optimistic concurrency control, users do not lock data when they read it. When a user updates data, the system checks to see if another user changed the data after it was read. If another user updated the data, an error is raised. Typically, the user receiving the error rolls back the transaction and starts over. This is called optimistic because it is mainly used in environments where there is low contention for data, and where the cost of occasionally rolling back a transaction is lower than the cost of locking data when read.  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supports a range of concurrency control. Users specify the type of concurrency control by selecting transaction isolation levels for connections or concurrency options on cursors. These attributes can be defined using [!INCLUDE[tsql](../includes/tsql-md.md)] statements, or through the properties and attributes of database application programming interfaces (APIs) such as ADO, ADO.NET, OLE DB, and ODBC.  
+ [!INCLUDE[ssNoVersion](includes/ssnoversion-md.md)] supports a range of concurrency control. Users specify the type of concurrency control by selecting transaction isolation levels for connections or concurrency options on cursors. These attributes can be defined using [!INCLUDE[tsql](includes/tsql-md.md)] statements, or through the properties and attributes of database application programming interfaces (APIs) such as ADO, ADO.NET, OLE DB, and ODBC.  
   
 #### Isolation Levels in the Database Engine  
  Transactions specify an isolation level that defines the degree to which one transaction must be isolated from resource or data modifications made by other transactions. Isolation levels are described in terms of which concurrency side-effects, such as dirty reads or phantom reads, are allowed.  
@@ -289,21 +289,21 @@ GO
  A lower isolation level increases the ability of many users to access data at the same time, but increases the number of concurrency effects (such as dirty reads or lost updates) users might encounter. Conversely, a higher isolation level reduces the types of concurrency effects that users may encounter, but requires more system resources and increases the chances that one transaction will block another. Choosing the appropriate isolation level depends on balancing the data integrity requirements of the application against the overhead of each isolation level. The highest isolation level, serializable, guarantees that a transaction will retrieve exactly the same data every time it repeats a read operation, but it does this by performing a level of locking that is likely to impact other users in multi-user systems. The lowest isolation level, read uncommitted, may retrieve data that has been modified but not committed by other transactions. All of the concurrency side effects can happen in read uncommitted, but there is no read locking or versioning, so overhead is minimized.  
   
 ##### Database Engine Isolation Levels  
- The ISO standard defines the following isolation levels, all of which are supported by the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]:  
+ The ISO standard defines the following isolation levels, all of which are supported by the [!INCLUDE[ssDEnoversion](includes/ssdenoversion-md.md)]:  
   
 |Isolation Level|Definition|  
 |---------------------|----------------|  
 |Read uncommitted|The lowest isolation level where transactions are isolated only enough to ensure that physically corrupt data is not read. In this level, dirty reads are allowed, so one transaction may see not-yet-committed changes made by other transactions.|  
-|Read committed|Allows a transaction to read data previously read (not modified) by another transaction without waiting for the first transaction to complete. The [!INCLUDE[ssDE](../includes/ssde-md.md)] keeps write locks (acquired on selected data) until the end of the transaction, but read locks are released as soon as the SELECT operation is performed. This is the [!INCLUDE[ssDE](../includes/ssde-md.md)] default level.|  
-|Repeatable read|The [!INCLUDE[ssDE](../includes/ssde-md.md)] keeps read and write locks that are acquired on selected data until the end of the transaction. However, because range-locks are not managed, phantom reads can occur.|  
-|Serializable|The highest level where transactions are completely isolated from one another. The [!INCLUDE[ssDE](../includes/ssde-md.md)] keeps read and write locks acquired on selected data to be released at the end of the transaction. Range-locks are acquired when a SELECT operation uses a ranged WHERE clause, especially to avoid phantom reads.<br /><br /> **Note:** DDL operations and transactions on replicated tables may fail when serializable isolation level is requested. This is because replication queries use hints that may be incompatible with serializable isolation level.|  
+|Read committed|Allows a transaction to read data previously read (not modified) by another transaction without waiting for the first transaction to complete. The [!INCLUDE[ssDE](includes/ssde-md.md)] keeps write locks (acquired on selected data) until the end of the transaction, but read locks are released as soon as the SELECT operation is performed. This is the [!INCLUDE[ssDE](includes/ssde-md.md)] default level.|  
+|Repeatable read|The [!INCLUDE[ssDE](includes/ssde-md.md)] keeps read and write locks that are acquired on selected data until the end of the transaction. However, because range-locks are not managed, phantom reads can occur.|  
+|Serializable|The highest level where transactions are completely isolated from one another. The [!INCLUDE[ssDE](includes/ssde-md.md)] keeps read and write locks acquired on selected data to be released at the end of the transaction. Range-locks are acquired when a SELECT operation uses a ranged WHERE clause, especially to avoid phantom reads.<br /><br /> **Note:** DDL operations and transactions on replicated tables may fail when serializable isolation level is requested. This is because replication queries use hints that may be incompatible with serializable isolation level.|  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] also supports two additional transaction isolation levels that use row versioning. One is an implementation of read committed isolation, and one is a transaction isolation level, snapshot.  
+ [!INCLUDE[ssNoVersion](includes/ssnoversion-md.md)] also supports two additional transaction isolation levels that use row versioning. One is an implementation of read committed isolation, and one is a transaction isolation level, snapshot.  
   
 |Row Versioning Isolation Level|Definition|  
 |------------------------------------|----------------|  
 |Read Committed Snapshot|When the READ_COMMITTED_SNAPSHOT database option is set ON, read committed isolation uses row versioning to provide statement-level read consistency. Read operations require only SCH-S table level locks and no page or row locks. That is, the Database Engine uses row versioning to present each statement with a transactionally consistent snapshot of the data as it existed at the start of the statement. Locks are not used to protect the data from updates by other transactions. A user-defined function can return data that was committed after the time the statement containing the UDF began.<br /><br /> When the READ_COMMITTED_SNAPSHOT database option is set OFF, which is the default setting, read committed isolation uses shared locks to prevent other transactions from modifying rows while the current transaction is running a read operation. The shared locks also block the statement from reading rows modified by other transactions until the other transaction is completed. Both implementations meet the ISO definition of read committed isolation.|  
-|Snapshot|The snapshot isolation level uses row versioning to provide transaction-level read consistency. Read operations acquire no page or row locks; only SCH-S table locks are acquired. When reading rows modified by another transaction, they retrieve the version of the row that existed when the transaction started. You can only use Snapshot isolation against a database when the ALLOW_SNAPSHOT_ISOLATION database option is set ON. By default, this option is set OFF for user databases.<br /><br /> **Note:**  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not support versioning of metadata. For this reason, there are restrictions on what DDL operations can be performed in an explicit transaction that is running under snapshot isolation. The following DDL statements are not permitted under snapshot isolation after a BEGIN TRANSACTION statement: ALTER TABLE, CREATE INDEX, CREATE XML INDEX, ALTER INDEX, DROP INDEX, DBCC REINDEX, ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME, or any common language runtime (CLR) DDL statement. These statements are permitted when you are using snapshot isolation within implicit transactions. An implicit transaction, by definition, is a single statement that makes it possible to enforce the semantics of snapshot isolation, even with DDL statements. Violations of this principle can cause error 3961: "Snapshot isolation transaction failed in database '%.*ls' because the object accessed by the statement has been modified by a DDL statement in another concurrent transaction since the start of this transaction. It is not allowed because the metadata is not versioned. A concurrent update to metadata could lead to inconsistency if mixed with snapshot isolation."|  
+|Snapshot|The snapshot isolation level uses row versioning to provide transaction-level read consistency. Read operations acquire no page or row locks; only SCH-S table locks are acquired. When reading rows modified by another transaction, they retrieve the version of the row that existed when the transaction started. You can only use Snapshot isolation against a database when the ALLOW_SNAPSHOT_ISOLATION database option is set ON. By default, this option is set OFF for user databases.<br /><br /> **Note:**  [!INCLUDE[ssNoVersion](includes/ssnoversion-md.md)] does not support versioning of metadata. For this reason, there are restrictions on what DDL operations can be performed in an explicit transaction that is running under snapshot isolation. The following DDL statements are not permitted under snapshot isolation after a BEGIN TRANSACTION statement: ALTER TABLE, CREATE INDEX, CREATE XML INDEX, ALTER INDEX, DROP INDEX, DBCC REINDEX, ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME, or any common language runtime (CLR) DDL statement. These statements are permitted when you are using snapshot isolation within implicit transactions. An implicit transaction, by definition, is a single statement that makes it possible to enforce the semantics of snapshot isolation, even with DDL statements. Violations of this principle can cause error 3961: "Snapshot isolation transaction failed in database '%.*ls' because the object accessed by the statement has been modified by a DDL statement in another concurrent transaction since the start of this transaction. It is not allowed because the metadata is not versioned. A concurrent update to metadata could lead to inconsistency if mixed with snapshot isolation."|  
   
  The following table shows the concurrency side effects enabled by the different isolation levels.  
   
@@ -315,12 +315,12 @@ GO
 |**Snapshot**|No|No|No|  
 |**Serializable**|No|No|No|  
   
- For more information about the specific types of locking or row versioning controlled by each transaction isolation level, see [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../Topic/SET%20TRANSACTION%20ISOLATION%20LEVEL%20(Transact-SQL).md).  
+ For more information about the specific types of locking or row versioning controlled by each transaction isolation level, see [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](~/t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
- Transaction isolation levels can be set using [!INCLUDE[tsql](../includes/tsql-md.md)] or through a database API.  
+ Transaction isolation levels can be set using [!INCLUDE[tsql](includes/tsql-md.md)] or through a database API.  
   
- [!INCLUDE[tsql](../includes/tsql-md.md)]  
- [!INCLUDE[tsql](../includes/tsql-md.md)] scripts use the SET TRANSACTION ISOLATION LEVEL statement.  
+ [!INCLUDE[tsql](includes/tsql-md.md)]  
+ [!INCLUDE[tsql](includes/tsql-md.md)] scripts use the SET TRANSACTION ISOLATION LEVEL statement.  
   
  ADO  
  ADO applications set the `IsolationLevel` property of the **Connection** object to adXactReadUncommitted, adXactReadCommitted, adXactRepeatableRead, or adXactReadSerializable.  
@@ -338,23 +338,23 @@ GO
   
  For snapshot transactions, applications call `SQLSetConnectAttr` with Attribute set to SQL_COPT_SS_TXN_ISOLATION and ValuePtr set to SQL_TXN_SS_SNAPSHOT. A snapshot transaction can be retrieved using either SQL_COPT_SS_TXN_ISOLATION or SQL_ATTR_TXN_ISOLATION.  
   
- ![Arrow icon used with Back to Top link](../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Guide](#Top)  
+ ![Arrow icon used with Back to Top link](../2014/data-quality-services/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Guide](#Top)  
   
 ##  <a name="Lock_Engine"></a> Locking in the Database Engine  
- Locking is a mechanism used by the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] to synchronize access by multiple users to the same piece of data at the same time.  
+ Locking is a mechanism used by the [!INCLUDE[ssDEnoversion](includes/ssdenoversion-md.md)] to synchronize access by multiple users to the same piece of data at the same time.  
   
- Before a transaction acquires a dependency on the current state of a piece of data, such as by reading or modifying the data, it must protect itself from the effects of another transaction modifying the same data. The transaction does this by requesting a lock on the piece of data. Locks have different modes, such as shared or exclusive. The lock mode defines the level of dependency the transaction has on the data. No transaction can be granted a lock that would conflict with the mode of a lock already granted on that data to another transaction. If a transaction requests a lock mode that conflicts with a lock that has already been granted on the same data, the instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)] will pause the requesting transaction until the first lock is released.  
+ Before a transaction acquires a dependency on the current state of a piece of data, such as by reading or modifying the data, it must protect itself from the effects of another transaction modifying the same data. The transaction does this by requesting a lock on the piece of data. Locks have different modes, such as shared or exclusive. The lock mode defines the level of dependency the transaction has on the data. No transaction can be granted a lock that would conflict with the mode of a lock already granted on that data to another transaction. If a transaction requests a lock mode that conflicts with a lock that has already been granted on the same data, the instance of the [!INCLUDE[ssDE](includes/ssde-md.md)] will pause the requesting transaction until the first lock is released.  
   
  When a transaction modifies a piece of data, it holds the lock protecting the modification until the end of the transaction. How long a transaction holds the locks acquired to protect read operations depends on the transaction isolation level setting. All locks held by a transaction are released when the transaction completes (either commits or rolls back).  
   
- Applications do not typically request locks directly. Locks are managed internally by a part of the [!INCLUDE[ssDE](../includes/ssde-md.md)] called the lock manager. When an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)] processes a [!INCLUDE[tsql](../includes/tsql-md.md)] statement, the [!INCLUDE[ssDE](../includes/ssde-md.md)] query processor determines which resources are to be accessed. The query processor determines what types of locks are required to protect each resource based on the type of access and the transaction isolation level setting. The query processor then requests the appropriate locks from the lock manager. The lock manager grants the locks if there are no conflicting locks held by other transactions.  
+ Applications do not typically request locks directly. Locks are managed internally by a part of the [!INCLUDE[ssDE](includes/ssde-md.md)] called the lock manager. When an instance of the [!INCLUDE[ssDE](includes/ssde-md.md)] processes a [!INCLUDE[tsql](includes/tsql-md.md)] statement, the [!INCLUDE[ssDE](includes/ssde-md.md)] query processor determines which resources are to be accessed. The query processor determines what types of locks are required to protect each resource based on the type of access and the transaction isolation level setting. The query processor then requests the appropriate locks from the lock manager. The lock manager grants the locks if there are no conflicting locks held by other transactions.  
   
 ### Lock Granularity and Hierarchies  
- The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] has multigranular locking that allows different types of resources to be locked by a transaction. To minimize the cost of locking, the [!INCLUDE[ssDE](../includes/ssde-md.md)] locks resources automatically at a level appropriate to the task. Locking at a smaller granularity, such as rows, increases concurrency but has a higher overhead because more locks must be held if many rows are locked. Locking at a larger granularity, such as tables, are expensive in terms of concurrency because locking an entire table restricts access to any part of the table by other transactions. However, it has a lower overhead because fewer locks are being maintained.  
+ The [!INCLUDE[ssDEnoversion](includes/ssdenoversion-md.md)] has multigranular locking that allows different types of resources to be locked by a transaction. To minimize the cost of locking, the [!INCLUDE[ssDE](includes/ssde-md.md)] locks resources automatically at a level appropriate to the task. Locking at a smaller granularity, such as rows, increases concurrency but has a higher overhead because more locks must be held if many rows are locked. Locking at a larger granularity, such as tables, are expensive in terms of concurrency because locking an entire table restricts access to any part of the table by other transactions. However, it has a lower overhead because fewer locks are being maintained.  
   
- The [!INCLUDE[ssDE](../includes/ssde-md.md)] often has to acquire locks at multiple levels of granularity to fully protect a resource. This group of locks at multiple levels of granularity is called a lock hierarchy. For example, to fully protect a read of an index, an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)] may have to acquire share locks on rows and intent share locks on the pages and table.  
+ The [!INCLUDE[ssDE](includes/ssde-md.md)] often has to acquire locks at multiple levels of granularity to fully protect a resource. This group of locks at multiple levels of granularity is called a lock hierarchy. For example, to fully protect a read of an index, an instance of the [!INCLUDE[ssDE](includes/ssde-md.md)] may have to acquire share locks on rows and intent share locks on the pages and table.  
   
- The following table shows the resources that the [!INCLUDE[ssDE](../includes/ssde-md.md)] can lock.  
+ The following table shows the resources that the [!INCLUDE[ssDE](includes/ssde-md.md)] can lock.  
   
 |Resource|Description|  
 |--------------|-----------------|  
@@ -371,12 +371,12 @@ GO
 |DATABASE|The entire database.|  
   
 > [!NOTE]  
->  HoBT and TABLE locks can be affected by the LOCK_ESCALATION option of [ALTER TABLE](../Topic/ALTER%20TABLE%20(Transact-SQL).md).  
+>  HoBT and TABLE locks can be affected by the LOCK_ESCALATION option of [ALTER TABLE](~/t-sql/statements/alter-table-transact-sql.md).  
   
 ### Lock Modes  
- The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] locks resources using different lock modes that determine how the resources can be accessed by concurrent transactions.  
+ The [!INCLUDE[ssDEnoversion](includes/ssdenoversion-md.md)] locks resources using different lock modes that determine how the resources can be accessed by concurrent transactions.  
   
- The following table shows the resource lock modes that the [!INCLUDE[ssDE](../includes/ssde-md.md)] uses.  
+ The following table shows the resource lock modes that the [!INCLUDE[ssDE](includes/ssde-md.md)] uses.  
   
 |Lock mode|Description|  
 |---------------|-----------------|  
@@ -402,15 +402,15 @@ GO
  Data modification statements, such as INSERT, UPDATE, and DELETE combine both modification and read operations. The statement first performs read operations to acquire data before performing the required modification operations. Data modification statements, therefore, typically request both shared locks and exclusive locks. For example, an UPDATE statement might modify rows in one table based on a join with another table. In this case, the UPDATE statement requests shared locks on the rows read in the join table in addition to requesting exclusive locks on the updated rows.  
   
 #### Intent Locks  
- The [!INCLUDE[ssDE](../includes/ssde-md.md)] uses intent locks to protect placing a shared (S) lock or exclusive (X) lock on a resource lower in the lock hierarchy. Intent locks are named intent locks because they are acquired before a lock at the lower level, and therefore signal intent to place locks at a lower level.  
+ The [!INCLUDE[ssDE](includes/ssde-md.md)] uses intent locks to protect placing a shared (S) lock or exclusive (X) lock on a resource lower in the lock hierarchy. Intent locks are named intent locks because they are acquired before a lock at the lower level, and therefore signal intent to place locks at a lower level.  
   
  Intent locks serve two purposes:  
   
 -   To prevent other transactions from modifying the higher-level resource in a way that would invalidate the lock at the lower level.  
   
--   To improve the efficiency of the [!INCLUDE[ssDE](../includes/ssde-md.md)] in detecting lock conflicts at the higher level of granularity.  
+-   To improve the efficiency of the [!INCLUDE[ssDE](includes/ssde-md.md)] in detecting lock conflicts at the higher level of granularity.  
   
- For example, a shared intent lock is requested at the table level before shared (S) locks are requested on pages or rows within that table. Setting an intent lock at the table level prevents another transaction from subsequently acquiring an exclusive (X) lock on the table containing that page. Intent locks improve performance because the [!INCLUDE[ssDE](../includes/ssde-md.md)] examines intent locks only at the table level to determine if a transaction can safely acquire a lock on that table. This removes the requirement to examine every row or page lock on the table to determine if a transaction can lock the entire table.  
+ For example, a shared intent lock is requested at the table level before shared (S) locks are requested on pages or rows within that table. Setting an intent lock at the table level prevents another transaction from subsequently acquiring an exclusive (X) lock on the table containing that page. Intent locks improve performance because the [!INCLUDE[ssDE](includes/ssde-md.md)] examines intent locks only at the table level to determine if a transaction can safely acquire a lock on that table. This removes the requirement to examine every row or page lock on the table to determine if a transaction can lock the entire table.  
   
  Intent locks include intent shared (IS), intent exclusive (IX), and shared with intent exclusive (SIX).  
   
@@ -424,14 +424,14 @@ GO
 |Update intent exclusive (UIX)|A combination of U and IX locks, as a result of acquiring these locks separately and simultaneously holding both locks.|  
   
 #### Schema Locks  
- The [!INCLUDE[ssDE](../includes/ssde-md.md)] uses schema modification (Sch-M) locks during a table data definition language (DDL) operation, such as adding a column or dropping a table. During the time that it is held, the Sch-M lock prevents concurrent access to the table. This means the Sch-M lock blocks all outside operations until the lock is released.  
+ The [!INCLUDE[ssDE](includes/ssde-md.md)] uses schema modification (Sch-M) locks during a table data definition language (DDL) operation, such as adding a column or dropping a table. During the time that it is held, the Sch-M lock prevents concurrent access to the table. This means the Sch-M lock blocks all outside operations until the lock is released.  
   
  Some data manipulation language (DML) operations, such as table truncation, use Sch-M locks to prevent access to affected tables by concurrent operations.  
   
- The [!INCLUDE[ssDE](../includes/ssde-md.md)] uses schema stability (Sch-S) locks when compiling and executing queries. Sch-S locks do not block any transactional locks, including exclusive (X) locks. Therefore, other transactions, including those with X locks on a table, continue to run while a query is being compiled. However, concurrent DDL operations, and concurrent DML operations that acquire Sch-M locks, cannot be performed on the table.  
+ The [!INCLUDE[ssDE](includes/ssde-md.md)] uses schema stability (Sch-S) locks when compiling and executing queries. Sch-S locks do not block any transactional locks, including exclusive (X) locks. Therefore, other transactions, including those with X locks on a table, continue to run while a query is being compiled. However, concurrent DDL operations, and concurrent DML operations that acquire Sch-M locks, cannot be performed on the table.  
   
 #### Bulk Update Locks  
- Bulk update (BU) locks allow multiple threads to bulk load data concurrently into the same table while preventing other processes that are not bulk loading data from accessing the table. The [!INCLUDE[ssDE](../includes/ssde-md.md)] uses bulk update (BU) locks when both of the following conditions are true.  
+ Bulk update (BU) locks allow multiple threads to bulk load data concurrently into the same table while preventing other processes that are not bulk loading data from accessing the table. The [!INCLUDE[ssDE](includes/ssde-md.md)] uses bulk update (BU) locks when both of the following conditions are true.  
   
 -   You use the Transact-SQL BULK INSERT statement, or the OPENROWSET(BULK) function, or you use one of the Bulk Insert API commands such as .NET SqlBulkCopy, OLEDB Fast Load APIs, or the ODBC Bulk Copy APIs to bulk copy data into a table.  
   
@@ -441,7 +441,7 @@ GO
 >  Unlike the BULK INSERT statement, which holds a less restrictive Bulk Update lock, INSERT INTO…SELECT with the TABLOCK hint holds an exclusive (X) lock on the table. This means that you cannot insert rows using parallel insert operations.  
   
 #### Key-Range Locks  
- Key-range locks protect a range of rows implicitly included in a record set being read by a [!INCLUDE[tsql](../includes/tsql-md.md)] statement while using the serializable transaction isolation level. Key-range locking prevents phantom reads. By protecting the ranges of keys between rows, it also prevents phantom insertions or deletions into a record set accessed by a transaction.  
+ Key-range locks protect a range of rows implicitly included in a record set being read by a [!INCLUDE[tsql](includes/tsql-md.md)] statement while using the serializable transaction isolation level. Key-range locking prevents phantom reads. By protecting the ranges of keys between rows, it also prevents phantom insertions or deletions into a record set accessed by a transaction.  
   
 ### Lock Compatibility  
  Lock compatibility controls whether multiple transactions can acquire locks on the same resource at the same time. If a resource is already locked by another transaction, a new lock request can be granted only if the mode of the requested lock is compatible with the mode of the existing lock. If the mode of the requested lock is not compatible with the existing lock, the transaction requesting the new lock waits for the existing lock to be released or for the lock timeout interval to expire. For example, no lock modes are compatible with exclusive locks. While an exclusive (X) lock is held, no other transaction can acquire a lock of any kind (shared, update, or exclusive) on that resource until the exclusive (X) lock is released. Alternatively, if a shared (S) lock has been applied to a resource, other transactions can also acquire a shared lock or an update (U) lock on that item even if the first transaction has not completed. However, other transactions cannot acquire an exclusive lock until the shared lock has been released.  
@@ -461,12 +461,12 @@ GO
 > [!NOTE]  
 >  An intent exclusive (IX) lock is compatible with an IX lock mode because IX means the intention is to update only some of the rows rather than all of them. Other transactions that attempt to read or update some of the rows are also permitted as long as they are not the same rows being updated by other transactions. Further, if two transactions attempt to update the same row, both transactions will be granted an IX lock at table and page level. However, one transaction will be granted an X lock at row level. The other transaction must wait until the row-level lock is removed.  
   
- Use the following table to determine the compatibility of all the lock modes available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ Use the following table to determine the compatibility of all the lock modes available in [!INCLUDE[ssNoVersion](includes/ssnoversion-md.md)].  
   
  ![Diagram showing lock compatibility matrix](../2014/media/lockconflicttable.gif "Diagram showing lock compatibility matrix")  
   
 ### Key-Range Locking  
- Key-range locks protect a range of rows implicitly included in a record set being read by a [!INCLUDE[tsql](../includes/tsql-md.md)] statement while using the serializable transaction isolation level. The serializable isolation level requires that any query executed during a transaction must obtain the same set of rows every time it is executed during the transaction. A key range lock protects this requirement by preventing other transactions from inserting new rows whose keys would fall in the range of keys read by the serializable transaction.  
+ Key-range locks protect a range of rows implicitly included in a record set being read by a [!INCLUDE[tsql](includes/tsql-md.md)] statement while using the serializable transaction isolation level. The serializable isolation level requires that any query executed during a transaction must obtain the same set of rows every time it is executed during the transaction. A key range lock protects this requirement by preventing other transactions from inserting new rows whose keys would fall in the range of keys read by the serializable transaction.  
   
  Key-range locking prevents phantom reads. By protecting the ranges of keys between rows, it also prevents phantom insertions into a set of records accessed by a transaction.  
   
@@ -574,7 +574,7 @@ DELETE mytable
   
  An exclusive (X) lock is placed on the index entry corresponding to the name `Bob`. Other transactions can insert or delete values before or after the deleted value `Bob`. However, any transaction that attempts to read, insert, or delete the value `Bob` will be blocked until the deleting transaction either commits or rolls back.  
   
- Range delete can be executed using three basic lock modes: row, page, or table lock. The row, page, or table locking strategy is decided by query optimizer or can be specified by the user through optimizer hints such as ROWLOCK, PAGLOCK, or TABLOCK. When PAGLOCK or TABLOCK is used, the [!INCLUDE[ssDE](../includes/ssde-md.md)] immediately deallocates an index page if all rows are deleted from this page. In contrast, when ROWLOCK is used, all deleted rows are marked only as deleted; they are removed from the index page later using a background task.  
+ Range delete can be executed using three basic lock modes: row, page, or table lock. The row, page, or table locking strategy is decided by query optimizer or can be specified by the user through optimizer hints such as ROWLOCK, PAGLOCK, or TABLOCK. When PAGLOCK or TABLOCK is used, the [!INCLUDE[ssDE](includes/ssde-md.md)] immediately deallocates an index page if all rows are deleted from this page. In contrast, when ROWLOCK is used, all deleted rows are marked only as deleted; they are removed from the index page later using a background task.  
   
 ##### Insert Operation  
  When inserting a value within a transaction, the range the value falls into does not have to be locked for the duration of the transaction performing the insert operation. Locking the inserted key value until the end of the transaction is sufficient to maintain serializability. For example, given this INSERT statement:  
@@ -590,17 +590,17 @@ INSERT mytable VALUES ('Dan');
   
  ![Diagram showing cost versus granularity](../2014/media/lockcht.gif "Diagram showing cost versus granularity")  
   
- The [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] uses a dynamic locking strategy to determine the most cost-effective locks. The [!INCLUDE[ssDE](../includes/ssde-md.md)] automatically determines what locks are most appropriate when the query is executed, based on the characteristics of the schema and query. For example, to reduce the overhead of locking, the optimizer may choose page-level locks in an index when performing an index scan.  
+ The [!INCLUDE[msCoName](includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](includes/ssdenoversion-md.md)] uses a dynamic locking strategy to determine the most cost-effective locks. The [!INCLUDE[ssDE](includes/ssde-md.md)] automatically determines what locks are most appropriate when the query is executed, based on the characteristics of the schema and query. For example, to reduce the overhead of locking, the optimizer may choose page-level locks in an index when performing an index scan.  
   
  Dynamic locking has the following advantages:  
   
 -   Simplified database administration. Database administrators do not have to adjust lock escalation thresholds.  
   
--   Increased performance. The [!INCLUDE[ssDE](../includes/ssde-md.md)] minimizes system overhead by using locks appropriate to the task.  
+-   Increased performance. The [!INCLUDE[ssDE](includes/ssde-md.md)] minimizes system overhead by using locks appropriate to the task.  
   
--   Application developers can concentrate on development. The [!INCLUDE[ssDE](../includes/ssde-md.md)] adjusts locking automatically.  
+-   Application developers can concentrate on development. The [!INCLUDE[ssDE](includes/ssde-md.md)] adjusts locking automatically.  
   
- In [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] and later versions, the behavior of lock escalation has changed with the introduction of the LOCK_ESCALATION option. For more information, see the LOCK_ESCALATION option of [ALTER TABLE](../Topic/ALTER%20TABLE%20(Transact-SQL).md).  
+ In [!INCLUDE[ssKatmai](includes/sskatmai-md.md)] and later versions, the behavior of lock escalation has changed with the introduction of the LOCK_ESCALATION option. For more information, see the LOCK_ESCALATION option of [ALTER TABLE](~/t-sql/statements/alter-table-transact-sql.md).  
   
 ### Deadlocking  
  A deadlock occurs when two or more tasks permanently block each other by each task having a lock on a resource which the other tasks are trying to lock. For example:  
@@ -615,19 +615,19 @@ INSERT mytable VALUES ('Dan');
   
  Transaction A cannot complete until transaction B completes, but transaction B is blocked by transaction A. This condition is also called a cyclic dependency: Transaction A has a dependency on transaction B, and transaction B closes the circle by having a dependency on transaction A.  
   
- Both transactions in a deadlock will wait forever unless the deadlock is broken by an external process. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] deadlock monitor periodically checks for tasks that are in a deadlock. If the monitor detects a cyclic dependency, it chooses one of the tasks as a victim and terminates its transaction with an error. This allows the other task to complete its transaction. The application with the transaction that terminated with an error can retry the transaction, which usually completes after the other deadlocked transaction has finished.  
+ Both transactions in a deadlock will wait forever unless the deadlock is broken by an external process. The [!INCLUDE[ssDEnoversion](includes/ssdenoversion-md.md)] deadlock monitor periodically checks for tasks that are in a deadlock. If the monitor detects a cyclic dependency, it chooses one of the tasks as a victim and terminates its transaction with an error. This allows the other task to complete its transaction. The application with the transaction that terminated with an error can retry the transaction, which usually completes after the other deadlocked transaction has finished.  
   
- Deadlocking is often confused with normal blocking. When a transaction requests a lock on a resource locked by another transaction, the requesting transaction waits until the lock is released. By default, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] transactions do not time out, unless LOCK_TIMEOUT is set. The requesting transaction is blocked, not deadlocked, because the requesting transaction has not done anything to block the transaction owning the lock. Eventually, the owning transaction will complete and release the lock, and then the requesting transaction will be granted the lock and proceed.  
+ Deadlocking is often confused with normal blocking. When a transaction requests a lock on a resource locked by another transaction, the requesting transaction waits until the lock is released. By default, [!INCLUDE[ssNoVersion](includes/ssnoversion-md.md)] transactions do not time out, unless LOCK_TIMEOUT is set. The requesting transaction is blocked, not deadlocked, because the requesting transaction has not done anything to block the transaction owning the lock. Eventually, the owning transaction will complete and release the lock, and then the requesting transaction will be granted the lock and proceed.  
   
  Deadlocks are sometimes called a deadly embrace.  
   
- Deadlock is a condition that can occur on any system with multiple threads, not just on a relational database management system, and can occur for resources other than locks on database objects. For example, a thread in a multithreaded operating system might acquire one or more resources, such as blocks of memory. If the resource being acquired is currently owned by another thread, the first thread may have to wait for the owning thread to release the target resource. The waiting thread is said to have a dependency on the owning thread for that particular resource. In an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)], sessions can deadlock when acquiring nondatabase resources, such as memory or threads.  
+ Deadlock is a condition that can occur on any system with multiple threads, not just on a relational database management system, and can occur for resources other than locks on database objects. For example, a thread in a multithreaded operating system might acquire one or more resources, such as blocks of memory. If the resource being acquired is currently owned by another thread, the first thread may have to wait for the owning thread to release the target resource. The waiting thread is said to have a dependency on the owning thread for that particular resource. In an instance of the [!INCLUDE[ssDE](includes/ssde-md.md)], sessions can deadlock when acquiring nondatabase resources, such as memory or threads.  
   
  ![Diagram showing transaction deadlock](../2014/media/dedlck1.gif "Diagram showing transaction deadlock")  
   
  In the illustration, transaction T1 has a dependency on transaction T2 for the **Part** table lock resource. Similarly, transaction T2 has a dependency on transaction T1 for the **Supplier** table lock resource. Because these dependencies form a cycle, there is a deadlock between transactions T1 and T2.  
   
- Deadlocks can also occur when a table is partitioned and the LOCK_ESCALATION setting of ALTER TABLE is set to AUTO. When LOCK_ESCALATION is set to AUTO, concurrency increases by allowing the [!INCLUDE[ssDE](../includes/ssde-md.md)] to lock table partitions at the HoBT level instead of at the TABLE level. However, when separate transactions hold partition locks in a table and want a lock somewhere on the other transactions partition, this causes a deadlock. This type of deadlock can be avoided by setting LOCK_ESCALATION to TABLE; although this setting will reduce concurrency by forcing large updates to a partition to wait for a table lock.  
+ Deadlocks can also occur when a table is partitioned and the LOCK_ESCALATION setting of ALTER TABLE is set to AUTO. When LOCK_ESCALATION is set to AUTO, concurrency increases by allowing the [!INCLUDE[ssDE](includes/ssde-md.md)] to lock table partitions at the HoBT level instead of at the TABLE level. However, when separate transactions hold partition locks in a table and want a lock somewhere on the other transactions partition, this causes a deadlock. This type of deadlock can be avoided by setting LOCK_ESCALATION to TABLE; although this setting will reduce concurrency by forcing large updates to a partition to wait for a table lock.  
   
 #### Detecting and Ending Deadlocks  
  A deadlock occurs when two or more tasks permanently block each other by each task having a lock on a resource which the other tasks are trying to lock. The following graph presents a high level view of a deadlock state where:  
@@ -640,7 +640,7 @@ INSERT mytable VALUES ('Dan');
   
  ![Diagram showing tasks in a deadlock state](../2014/media/task-deadlock-state.gif "Diagram showing tasks in a deadlock state")  
   
- The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] automatically detects deadlock cycles within [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. The [!INCLUDE[ssDE](../includes/ssde-md.md)] chooses one of the sessions as a deadlock victim and the current transaction is terminated with an error to break the deadlock.  
+ The [!INCLUDE[ssDEnoversion](includes/ssdenoversion-md.md)] automatically detects deadlock cycles within [!INCLUDE[ssNoVersion](includes/ssnoversion-md.md)]. The [!INCLUDE[ssDE](includes/ssde-md.md)] chooses one of the sessions as a deadlock victim and the current transaction is terminated with an error to break the deadlock.  
   
 ##### Resources That Can Deadlock  
  Each user session might have one or more tasks running on its behalf where each task might acquire or wait to acquire a variety of resources. The following types of resources can cause blocking that could result in a deadlock.  
@@ -651,7 +651,7 @@ INSERT mytable VALUES ('Dan');
   
 -   **Memory**. When concurrent requests are waiting for memory grants that cannot be satisfied with the available memory, a deadlock can occur. For example, two concurrent queries, Q1 and Q2, execute as user-defined functions that acquire 10MB and 20MB of memory respectively. If each query needs 30MB and the total available memory is 20MB, then Q1 and Q2 must wait for each other to release memory, and this results in a deadlock.  
   
--   **Parallel query execution-related resources** Coordinator, producer, or consumer threads associated with an exchange port may block each other causing a deadlock usually when including at least one other process that is not a part of the parallel query. Also, when a parallel query starts execution, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] determines the degree of parallelism, or the number of worker threads, based upon the current workload. If the system workload unexpectedly changes, for example, where new queries start running on the server or the system runs out of worker threads, then a deadlock could occur.  
+-   **Parallel query execution-related resources** Coordinator, producer, or consumer threads associated with an exchange port may block each other causing a deadlock usually when including at least one other process that is not a part of the parallel query. Also, when a parallel query starts execution, [!INCLUDE[ssNoVersion](includes/ssnoversion-md.md)] determines the degree of parallelism, or the number of worker threads, based upon the current workload. If the system workload unexpectedly changes, for example, where new queries start running on the server or the system runs out of worker threads, then a deadlock could occur.  
   
 -   **Multiple Active Result Sets (MARS) resources**. These resources are used to control interleaving of multiple active requests under MARS. For more information, see [Multiple Active Result Sets (MARS) in SQL Server](http://msdn.microsoft.com/library/ms345109(v=SQL.90).aspx).  
   
@@ -668,44 +668,44 @@ INSERT mytable VALUES ('Dan');
     U2:    Rs2=Command2.Execute("select colA from sometable");  
     ```  
   
-     The stored procedure executing from user request U1 has acquired the session mutex. If the stored procedure takes a long time to execute, it is assumed by the [!INCLUDE[ssDE](../includes/ssde-md.md)] that the stored procedure is waiting for input from the user. User request U2 is waiting for the session mutex while the user is waiting for the result set from U2, and U1 is waiting for a user resource. This is deadlock state logically illustrated as:  
+     The stored procedure executing from user request U1 has acquired the session mutex. If the stored procedure takes a long time to execute, it is assumed by the [!INCLUDE[ssDE](includes/ssde-md.md)] that the stored procedure is waiting for input from the user. User request U2 is waiting for the session mutex while the user is waiting for the result set from U2, and U1 is waiting for a user resource. This is deadlock state logically illustrated as:  
   
  ![Logic diagram showing user process deadlock.](../2014/media/udb9-logicflowexamplec.gif "Logic diagram showing user process deadlock.")  
   
 ##### Deadlock Detection  
- All of the resources listed in the section above participate in the [!INCLUDE[ssDE](../includes/ssde-md.md)] deadlock detection scheme. Deadlock detection is performed by a lock monitor thread that periodically initiates a search through all of the tasks in an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)]. The following points describe the search process:  
+ All of the resources listed in the section above participate in the [!INCLUDE[ssDE](includes/ssde-md.md)] deadlock detection scheme. Deadlock detection is performed by a lock monitor thread that periodically initiates a search through all of the tasks in an instance of the [!INCLUDE[ssDE](includes/ssde-md.md)]. The following points describe the search process:  
   
 -   The default interval is 5 seconds.  
   
 -   If the lock monitor thread finds deadlocks, the deadlock detection interval will drop from 5 seconds to as low as 100 milliseconds depending on the frequency of deadlocks.  
   
--   If the lock monitor thread stops finding deadlocks, the [!INCLUDE[ssDE](../includes/ssde-md.md)] increases the intervals between searches to 5 seconds.  
+-   If the lock monitor thread stops finding deadlocks, the [!INCLUDE[ssDE](includes/ssde-md.md)] increases the intervals between searches to 5 seconds.  
   
 -   If a deadlock has just been detected, it is assumed that the next threads that must wait for a lock are entering the deadlock cycle. The first couple of lock waits after a deadlock has been detected will immediately trigger a deadlock search rather than wait for the next deadlock detection interval. For example, if the current interval is 5 seconds, and a deadlock was just detected, the next lock wait will kick off the deadlock detector immediately. If this lock wait is part of a deadlock, it will be detected right away rather than during next deadlock search.  
   
- The [!INCLUDE[ssDE](../includes/ssde-md.md)] typically performs periodic deadlock detection only. Because the number of deadlocks encountered in the system is usually small, periodic deadlock detection helps to reduce the overhead of deadlock detection in the system.  
+ The [!INCLUDE[ssDE](includes/ssde-md.md)] typically performs periodic deadlock detection only. Because the number of deadlocks encountered in the system is usually small, periodic deadlock detection helps to reduce the overhead of deadlock detection in the system.  
   
  When the lock monitor initiates deadlock search for a particular thread, it identifies the resource on which the thread is waiting. The lock monitor then finds the owner(s) for that particular resource and recursively continues the deadlock search for those threads until it finds a cycle. A cycle identified in this manner forms a deadlock.  
   
- After a deadlock is detected, the [!INCLUDE[ssDE](../includes/ssde-md.md)] ends a deadlock by choosing one of the threads as a deadlock victim. The [!INCLUDE[ssDE](../includes/ssde-md.md)] terminates the current batch being executed for the thread, rolls back the transaction of the deadlock victim, and returns a 1205 error to the application. Rolling back the transaction for the deadlock victim releases all locks held by the transaction. This allows the transactions of the other threads to become unblocked and continue. The 1205 deadlock victim error records information about the threads and resources involved in a deadlock in the error log.  
+ After a deadlock is detected, the [!INCLUDE[ssDE](includes/ssde-md.md)] ends a deadlock by choosing one of the threads as a deadlock victim. The [!INCLUDE[ssDE](includes/ssde-md.md)] terminates the current batch being executed for the thread, rolls back the transaction of the deadlock victim, and returns a 1205 error to the application. Rolling back the transaction for the deadlock victim releases all locks held by the transaction. This allows the transactions of the other threads to become unblocked and continue. The 1205 deadlock victim error records information about the threads and resources involved in a deadlock in the error log.  
   
- By default, the [!INCLUDE[ssDE](../includes/ssde-md.md)] chooses as the deadlock victim the session running the transaction that is least expensive to roll back. Alternatively, a user can specify the priority of sessions in a deadlock situation using the SET DEADLOCK_PRIORITY statement. DEADLOCK_PRIORITY can be set to LOW, NORMAL, or HIGH, or alternatively can be set to any integer value in the range (-10 to 10). The deadlock priority defaults to NORMAL. If two sessions have different deadlock priorities, the session with the lower priority is chosen as the deadlock victim. If both sessions have the same deadlock priority, the session with the transaction that is least expensive to roll back is chosen. If sessions involved in the deadlock cycle have the same deadlock priority and the same cost, a victim is chosen randomly.  
+ By default, the [!INCLUDE[ssDE](includes/ssde-md.md)] chooses as the deadlock victim the session running the transaction that is least expensive to roll back. Alternatively, a user can specify the priority of sessions in a deadlock situation using the SET DEADLOCK_PRIORITY statement. DEADLOCK_PRIORITY can be set to LOW, NORMAL, or HIGH, or alternatively can be set to any integer value in the range (-10 to 10). The deadlock priority defaults to NORMAL. If two sessions have different deadlock priorities, the session with the lower priority is chosen as the deadlock victim. If both sessions have the same deadlock priority, the session with the transaction that is least expensive to roll back is chosen. If sessions involved in the deadlock cycle have the same deadlock priority and the same cost, a victim is chosen randomly.  
   
  When working with CLR, the deadlock monitor automatically detects deadlock for synchronization resources (monitors, reader/writer lock and thread join) accessed inside managed procedures. However, the deadlock is resolved by throwing an exception in the procedure that was selected to be the deadlock victim. It is important to understand that the exception does not automatically release resources currently owned by the victim; the resources must be explicitly released. Consistent with exception behavior, the exception used to identify a deadlock victim can be caught and dismissed.  
   
 ##### Deadlock Information Tools  
- To view deadlock information, the [!INCLUDE[ssDE](../includes/ssde-md.md)] provides monitoring tools in the form of two trace flags, and the deadlock graph event in [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)].  
+ To view deadlock information, the [!INCLUDE[ssDE](includes/ssde-md.md)] provides monitoring tools in the form of two trace flags, and the deadlock graph event in [!INCLUDE[ssSqlProfiler](includes/sssqlprofiler-md.md)].  
   
 ###### Trace Flag 1204 and Trace Flag 1222  
- When deadlocks occur, trace flag 1204 and trace flag 1222 return information that is captured in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] error log. Trace flag 1204 reports deadlock information formatted by each node involved in the deadlock. Trace flag 1222 formats deadlock information, first by processes and then by resources. It is possible to enable both trace flags to obtain two representations of the same deadlock event.  
+ When deadlocks occur, trace flag 1204 and trace flag 1222 return information that is captured in the [!INCLUDE[ssNoVersion](includes/ssnoversion-md.md)] error log. Trace flag 1204 reports deadlock information formatted by each node involved in the deadlock. Trace flag 1222 formats deadlock information, first by processes and then by resources. It is possible to enable both trace flags to obtain two representations of the same deadlock event.  
   
  In addition to defining the properties of trace flag 1204 and 1222, the following table also shows the similarities and differences.  
   
 |Property|Trace Flag 1204 and Trace Flag 1222|Trace Flag 1204 only|Trace Flag 1222 only|  
 |--------------|-----------------------------------------|--------------------------|--------------------------|  
-|Output format|Output is captured in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] error log.|Focused on the nodes involved in the deadlock. Each node has a dedicated section, and the final section describes the deadlock victim.|Returns information in an XML-like format that does not conform to an XML Schema Definition (XSD) schema. The format has three major sections. The first section declares the deadlock victim. The second section describes each process involved in the deadlock. The third section describes the resources that are synonymous with nodes in trace flag 1204.|  
-|Identifying attributes|**SPID:\<x> ECID:\<x>.** Identifies the system process ID thread in cases of parallel processes. The entry `SPID:<x> ECID:0`, where \<x> is replaced by the SPID value, represents the main thread. The entry `SPID:<x> ECID:<y>`, where \<x> is replaced by the SPID value and \<y> is greater than 0, represents the sub-threads for the same SPID.<br /><br /> **BatchID** (**sbid** for trace flag 1222). Identifies the batch from which code execution is requesting or holding a lock. When Multiple Active Result Sets (MARS) is disabled, the BatchID value is 0. When MARS is enabled, the value for active batches is 1 to *n*. If there are no active batches in the session, BatchID is 0.<br /><br /> **Mode**. Specifies the type of lock for a particular resource that is requested, granted, or waited on by a thread. Mode can be IS (Intent Shared), S (Shared), U (Update), IX (Intent Exclusive), SIX (Shared with Intent Exclusive), and X (Exclusive).<br /><br /> **Line #** (**line** for trace flag 1222). Lists the line number in the current batch of statements that was being executed when the deadlock occurred.<br /><br /> **Input Buf** (**inputbuf** for trace flag 1222). Lists all the statements in the current batch.|**Node**. Represents the entry number in the deadlock chain.<br /><br /> **Lists**. The lock owner can be part of these lists:<br /><br /> **Grant List**. Enumerates the current owners of the resource.<br /><br /> **Convert List**. Enumerates the current owners that are trying to convert their locks to a higher level.<br /><br /> **Wait List**. Enumerates current new lock requests for the resource.<br /><br /> **Statement Type**. Describes the type of DML statement (SELECT, INSERT, UPDATE, or DELETE) on which the threads have permissions.<br /><br /> **Victim Resource Owner**. Specifies the participating thread that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] chooses as the victim to break the deadlock cycle. The chosen thread and all existing sub-threads are terminated.<br /><br /> **Next Branch**. Represents the two or more sub-threads from the same SPID that are involved in the deadlock cycle.|**deadlock victim**. Represents the physical memory address of the task (see [sys.dm_os_tasks &#40;Transact-SQL&#41;](../Topic/sys.dm_os_tasks%20(Transact-SQL).md)) that was selected as a deadlock victim. It may be 0 (zero) in the case of an unresolved deadlock. A task that is rolling back cannot be chosen as a deadlock victim.<br /><br /> **executionstack**. Represents [!INCLUDE[tsql](../includes/tsql-md.md)] code that is being executed at the time the deadlock occurs.<br /><br /> **priority**. Represents deadlock priority. In certain cases, the [!INCLUDE[ssDE](../includes/ssde-md.md)] may opt to alter the deadlock priority for a short duration to achieve better concurrency.<br /><br /> **logused**. Log space used by the task.<br /><br /> **owner id**. The ID of the transaction that has control of the request.<br /><br /> **status**. State of the task. It is one of the following values:<br /><br /> >> **pending**. Waiting for a worker thread.<br /><br /> >> **runnable**. Ready to run but waiting for a quantum.<br /><br /> >> **running**. Currently running on the scheduler.<br /><br /> >> **suspended**. Execution is suspended.<br /><br /> >> **done**. Task has completed.<br /><br /> >> **spinloop**. Waiting for a spinlock to become free.<br /><br /> **waitresource**. The resource needed by the task.<br /><br /> **waittime**. Time in milliseconds waiting for the resource.<br /><br /> **schedulerid**. Scheduler associated with this task. See [sys.dm_os_schedulers &#40;Transact-SQL&#41;](../Topic/sys.dm_os_schedulers%20(Transact-SQL).md).<br /><br /> **hostname**. The name of the workstation.<br /><br /> **isolationlevel**. The current transaction isolation level.<br /><br /> **Xactid**. The ID of the transaction that has control of the request.<br /><br /> **currentdb**. The ID of the database.<br /><br /> **lastbatchstarted**. The last time a client process started batch execution.<br /><br /> **lastbatchcompleted**. The last time a client process completed batch execution.<br /><br /> **clientoption1 and clientoption2**. Set options on this client connection. This is a bitmask that includes information about options usually controlled by SET statements such as SET NOCOUNT and SET XACTABORT.<br /><br /> **associatedObjectId**. Represents the HoBT (heap or b-tree) ID.|  
-|Resource attributes|**RID**. Identifies the single row within a table on which a lock is held or requested. RID is represented as RID: *db_id:file_id:page_no:row_no*. For example, `RID: 6:1:20789:0`.<br /><br /> **OBJECT**. Identifies the table on which a lock is held or requested. OBJECT is represented as OBJECT: *db_id:object_id*. For example, `TAB: 6:2009058193`.<br /><br /> **KEY**. Identifies the key range within an index on which a lock is held or requested. KEY is represented as KEY: *db_id:hobt_id* (*index key hash value*). For example, `KEY: 6:72057594057457664 (350007a4d329)`.<br /><br /> **PAG**. Identifies the page resource on which a lock is held or requested. PAG is represented as PAG: *db_id:file_id:page_no*. For example, `PAG: 6:1:20789`.<br /><br /> **EXT**. Identifies the extent structure. EXT is represented as EXT: *db_id:file_id:extent_no*. For example, `EXT: 6:1:9`.<br /><br /> **DB**. Identifies the database lock. **DB is represented in one of the following ways:**<br /><br /> DB: *db_id*<br /><br /> DB: *db_id*[BULK-OP-DB], which identifies the database lock taken by the backup database.<br /><br /> DB: *db_id*[BULK-OP-LOG], which identifies the lock taken by the backup log for that particular database.<br /><br /> **APP**. Identifies the lock taken by an application resource. APP is represented as APP: *lock_resource*. For example, `APP: Formf370f478`.<br /><br /> **METADATA**. Represents metadata resources involved in a deadlock. Because METADATA has many subresources, the value returned depends upon the subresource that has deadlocked. For example, METADATA.USER_TYPE returns `user_type_id =` \<*integer_value*>. For more information about METADATA resources and subresources, see [sys.dm_tran_locks &#40;Transact-SQL&#41;](../Topic/sys.dm_tran_locks%20(Transact-SQL).md).<br /><br /> **HOBT**. Represents a heap or b-tree involved in a deadlock.|None exclusive to this trace flag.|None exclusive to this trace flag.|  
+|Output format|Output is captured in the [!INCLUDE[ssNoVersion](includes/ssnoversion-md.md)] error log.|Focused on the nodes involved in the deadlock. Each node has a dedicated section, and the final section describes the deadlock victim.|Returns information in an XML-like format that does not conform to an XML Schema Definition (XSD) schema. The format has three major sections. The first section declares the deadlock victim. The second section describes each process involved in the deadlock. The third section describes the resources that are synonymous with nodes in trace flag 1204.|  
+|Identifying attributes|**SPID:\<x> ECID:\<x>.** Identifies the system process ID thread in cases of parallel processes. The entry `SPID:<x> ECID:0`, where \<x> is replaced by the SPID value, represents the main thread. The entry `SPID:<x> ECID:<y>`, where \<x> is replaced by the SPID value and \<y> is greater than 0, represents the sub-threads for the same SPID.<br /><br /> **BatchID** (**sbid** for trace flag 1222). Identifies the batch from which code execution is requesting or holding a lock. When Multiple Active Result Sets (MARS) is disabled, the BatchID value is 0. When MARS is enabled, the value for active batches is 1 to *n*. If there are no active batches in the session, BatchID is 0.<br /><br /> **Mode**. Specifies the type of lock for a particular resource that is requested, granted, or waited on by a thread. Mode can be IS (Intent Shared), S (Shared), U (Update), IX (Intent Exclusive), SIX (Shared with Intent Exclusive), and X (Exclusive).<br /><br /> **Line #** (**line** for trace flag 1222). Lists the line number in the current batch of statements that was being executed when the deadlock occurred.<br /><br /> **Input Buf** (**inputbuf** for trace flag 1222). Lists all the statements in the current batch.|**Node**. Represents the entry number in the deadlock chain.<br /><br /> **Lists**. The lock owner can be part of these lists:<br /><br /> **Grant List**. Enumerates the current owners of the resource.<br /><br /> **Convert List**. Enumerates the current owners that are trying to convert their locks to a higher level.<br /><br /> **Wait List**. Enumerates current new lock requests for the resource.<br /><br /> **Statement Type**. Describes the type of DML statement (SELECT, INSERT, UPDATE, or DELETE) on which the threads have permissions.<br /><br /> **Victim Resource Owner**. Specifies the participating thread that [!INCLUDE[ssNoVersion](includes/ssnoversion-md.md)] chooses as the victim to break the deadlock cycle. The chosen thread and all existing sub-threads are terminated.<br /><br /> **Next Branch**. Represents the two or more sub-threads from the same SPID that are involved in the deadlock cycle.|**deadlock victim**. Represents the physical memory address of the task (see [sys.dm_os_tasks &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)) that was selected as a deadlock victim. It may be 0 (zero) in the case of an unresolved deadlock. A task that is rolling back cannot be chosen as a deadlock victim.<br /><br /> **executionstack**. Represents [!INCLUDE[tsql](includes/tsql-md.md)] code that is being executed at the time the deadlock occurs.<br /><br /> **priority**. Represents deadlock priority. In certain cases, the [!INCLUDE[ssDE](includes/ssde-md.md)] may opt to alter the deadlock priority for a short duration to achieve better concurrency.<br /><br /> **logused**. Log space used by the task.<br /><br /> **owner id**. The ID of the transaction that has control of the request.<br /><br /> **status**. State of the task. It is one of the following values:<br /><br /> >> **pending**. Waiting for a worker thread.<br /><br /> >> **runnable**. Ready to run but waiting for a quantum.<br /><br /> >> **running**. Currently running on the scheduler.<br /><br /> >> **suspended**. Execution is suspended.<br /><br /> >> **done**. Task has completed.<br /><br /> >> **spinloop**. Waiting for a spinlock to become free.<br /><br /> **waitresource**. The resource needed by the task.<br /><br /> **waittime**. Time in milliseconds waiting for the resource.<br /><br /> **schedulerid**. Scheduler associated with this task. See [sys.dm_os_schedulers &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).<br /><br /> **hostname**. The name of the workstation.<br /><br /> **isolationlevel**. The current transaction isolation level.<br /><br /> **Xactid**. The ID of the transaction that has control of the request.<br /><br /> **currentdb**. The ID of the database.<br /><br /> **lastbatchstarted**. The last time a client process started batch execution.<br /><br /> **lastbatchcompleted**. The last time a client process completed batch execution.<br /><br /> **clientoption1 and clientoption2**. Set options on this client connection. This is a bitmask that includes information about options usually controlled by SET statements such as SET NOCOUNT and SET XACTABORT.<br /><br /> **associatedObjectId**. Represents the HoBT (heap or b-tree) ID.|  
+|Resource attributes|**RID**. Identifies the single row within a table on which a lock is held or requested. RID is represented as RID: *db_id:file_id:page_no:row_no*. For example, `RID: 6:1:20789:0`.<br /><br /> **OBJECT**. Identifies the table on which a lock is held or requested. OBJECT is represented as OBJECT: *db_id:object_id*. For example, `TAB: 6:2009058193`.<br /><br /> **KEY**. Identifies the key range within an index on which a lock is held or requested. KEY is represented as KEY: *db_id:hobt_id* (*index key hash value*). For example, `KEY: 6:72057594057457664 (350007a4d329)`.<br /><br /> **PAG**. Identifies the page resource on which a lock is held or requested. PAG is represented as PAG: *db_id:file_id:page_no*. For example, `PAG: 6:1:20789`.<br /><br /> **EXT**. Identifies the extent structure. EXT is represented as EXT: *db_id:file_id:extent_no*. For example, `EXT: 6:1:9`.<br /><br /> **DB**. Identifies the database lock. **DB is represented in one of the following ways:**<br /><br /> DB: *db_id*<br /><br /> DB: *db_id*[BULK-OP-DB], which identifies the database lock taken by the backup database.<br /><br /> DB: *db_id*[BULK-OP-LOG], which identifies the lock taken by the backup log for that particular database.<br /><br /> **APP**. Identifies the lock taken by an application resource. APP is represented as APP: *lock_resource*. For example, `APP: Formf370f478`.<br /><br /> **METADATA**. Represents metadata resources involved in a deadlock. Because METADATA has many subresources, the value returned depends upon the subresource that has deadlocked. For example, METADATA.USER_TYPE returns `user_type_id =` \<*integer_value*>. For more information about METADATA resources and subresources, see [sys.dm_tran_locks &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).<br /><br /> **HOBT**. Represents a heap or b-tree involved in a deadlock.|None exclusive to this trace flag.|None exclusive to this trace flag.|  
   
 ###### Trace Flag 1204 Example  
  The following example shows the output when trace flag 1204 is turned on. In this case, the table in Node 1 is a heap with no indexes, and the table in Node 2 is a heap with a nonclustered index. The index key in Node 2 is being updated when the deadlock occurs.  
@@ -814,18 +814,18 @@ deadlock-list
 ```  
   
 ###### Profiler Deadlock Graph Event  
- This is an event in [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] that presents a graphical depiction of the tasks and resources involved in a deadlock. The following example shows the output from [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] when the deadlock graph event is turned on.  
+ This is an event in [!INCLUDE[ssSqlProfiler](includes/sssqlprofiler-md.md)] that presents a graphical depiction of the tasks and resources involved in a deadlock. The following example shows the output from [!INCLUDE[ssSqlProfiler](includes/sssqlprofiler-md.md)] when the deadlock graph event is turned on.  
   
  ![Logic flow diagram showing user process deadlock.](../2014/media/udb9-profilerdeadlockgraphc.gif "Logic flow diagram showing user process deadlock.")  
   
- For more information about running the [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] deadlock graph, see [Save Deadlock Graphs &#40;SQL Server Profiler&#41;](../2014/database-engine/save-deadlock-graphs-sql-server-profiler.md).  
+ For more information about running the [!INCLUDE[ssSqlProfiler](includes/sssqlprofiler-md.md)] deadlock graph, see [Save Deadlock Graphs &#40;SQL Server Profiler&#41;](../2014/database-engine/save-deadlock-graphs-sql-server-profiler.md).  
   
 #### Handling Deadlocks  
- When an instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] chooses a transaction as a deadlock victim, it terminates the current batch, rolls back the transaction, and returns error message 1205 to the application.  
+ When an instance of the [!INCLUDE[ssDEnoversion](includes/ssdenoversion-md.md)] chooses a transaction as a deadlock victim, it terminates the current batch, rolls back the transaction, and returns error message 1205 to the application.  
   
  `Your transaction (process ID #52) was deadlocked on {lock | communication buffer | thread} resources with another process and has been chosen as the deadlock victim. Rerun your transaction.`  
   
- Because any application submitting [!INCLUDE[tsql](../includes/tsql-md.md)] queries can be chosen as the deadlock victim, applications should have an error handler that can trap error message 1205. If an application does not trap the error, the application can proceed unaware that its transaction has been rolled back and errors can occur.  
+ Because any application submitting [!INCLUDE[tsql](includes/tsql-md.md)] queries can be chosen as the deadlock victim, applications should have an error handler that can trap error message 1205. If an application does not trap the error, the application can proceed unaware that its transaction has been rolled back and errors can occur.  
   
  Implementing an error handler that traps error message 1205 allows an application to handle the deadlock situation and take remedial action (for example, automatically resubmitting the query that was involved in the deadlock). By resubmitting the query automatically, the user does not need to know that a deadlock occurred.  
   
@@ -886,7 +886,7 @@ deadlock-list
  Using bound connections, two or more connections opened by the same application can cooperate with each other. Any locks acquired by the secondary connections are held as if they were acquired by the primary connection, and vice versa. Therefore they do not block each other.  
   
 ### Lock Partitioning  
- For large computer systems, locks on frequently referenced objects can become a performance bottleneck as acquiring and releasing locks place contention on internal locking resources. Lock partitioning enhances locking performance by splitting a single lock resource into multiple lock resources. This feature is only available for systems with 16 or more CPUs, and is automatically enabled and cannot be disabled. Only object locks can be partitioned.Object locks that have a subtype are not partitioned. For more information, see [sys.dm_tran_locks &#40;Transact-SQL&#41;](../Topic/sys.dm_tran_locks%20(Transact-SQL).md).  
+ For large computer systems, locks on frequently referenced objects can become a performance bottleneck as acquiring and releasing locks place contention on internal locking resources. Lock partitioning enhances locking performance by splitting a single lock resource into multiple lock resources. This feature is only available for systems with 16 or more CPUs, and is automatically enabled and cannot be disabled. Only object locks can be partitioned.Object locks that have a subtype are not partitioned. For more information, see [sys.dm_tran_locks &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).  
   
 #### Understanding Lock Partitioning  
  Locking tasks access several shared resources, two of which are optimized by lock partitioning:  
@@ -902,24 +902,24 @@ deadlock-list
      Once the spinlock is acquired, lock structures are stored in memory and then accessed and possibly modified. Distributing lock access across multiple resources helps to eliminate the need to transfer memory blocks between CPUs, which will help to improve performance.  
   
 #### Implementing and Monitoring Lock Partitioning  
- Lock partitioning is turned on by default for systems with 16 or more CPUs. When lock partitioning is enabled, an informational message is recorded in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] error log.  
+ Lock partitioning is turned on by default for systems with 16 or more CPUs. When lock partitioning is enabled, an informational message is recorded in the [!INCLUDE[ssNoVersion](includes/ssnoversion-md.md)] error log.  
   
  When acquiring locks on a partitioned resource:  
   
 -   Only NL, SCH-S, IS, IU, and IX lock modes are acquired on a single partition.  
   
--   Shared (S), exclusive (X), and other locks in modes other than NL, SCH-S, IS, IU, and IX must be acquired on all partitions starting with partition ID 0 and following in partition ID order. These locks on a partitioned resource will use more memory than locks in the same mode on a non-partitioned resource since each partition is effectively a separate lock. The memory increase is determined by the number of partitions. The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] lock counters in the Windows Performance Monitor will display information about memory used by partitioned and non-partitioned locks.  
+-   Shared (S), exclusive (X), and other locks in modes other than NL, SCH-S, IS, IU, and IX must be acquired on all partitions starting with partition ID 0 and following in partition ID order. These locks on a partitioned resource will use more memory than locks in the same mode on a non-partitioned resource since each partition is effectively a separate lock. The memory increase is determined by the number of partitions. The [!INCLUDE[ssNoVersion](includes/ssnoversion-md.md)] lock counters in the Windows Performance Monitor will display information about memory used by partitioned and non-partitioned locks.  
   
  A transaction is assigned to a partition when the transaction starts. For the transaction, all lock requests that can be partitioned use the partition assigned to that transaction. By this method, access to lock resources of the same object by different transactions is distributed across different partitions.  
   
- The resource_lock_partition column in the sys.dm_tran_locks Dynamic Management View provides the lock partition ID for a lock partitioned resource. For more information, see [sys.dm_tran_locks &#40;Transact-SQL&#41;](../Topic/sys.dm_tran_locks%20(Transact-SQL).md).  
+ The resource_lock_partition column in the sys.dm_tran_locks Dynamic Management View provides the lock partition ID for a lock partitioned resource. For more information, see [sys.dm_tran_locks &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).  
   
- Under the Locks event in [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)], the BigintData1 column provides the lock partition ID for a lock partitioned resource.  
+ Under the Locks event in [!INCLUDE[ssSqlProfiler](includes/sssqlprofiler-md.md)], the BigintData1 column provides the lock partition ID for a lock partitioned resource.  
   
 #### Working with Lock Partitioning  
  The following code examples illustrate lock partitioning. In the examples, two transactions are executed in two different sessions in order to show lock partitioning behavior on a computer system with 16 CPUs.  
   
- These [!INCLUDE[tsql](../includes/tsql-md.md)] statements create test objects that are used in the examples that follow.  
+ These [!INCLUDE[tsql](includes/tsql-md.md)] statements create test objects that are used in the examples that follow.  
   
 ```  
 -- Create a test table.  
@@ -999,12 +999,12 @@ BEGIN TRANSACTION
         WITH (TABLOCKX, HOLDLOCK);  
 ```  
   
- ![Arrow icon used with Back to Top link](../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Guide](#Top)  
+ ![Arrow icon used with Back to Top link](../2014/data-quality-services/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Guide](#Top)  
   
 ##  <a name="Row_versioning"></a> Row Versioning-based Isolation Levels in the Database Engine  
  Starting with SQL Server 2005, the Database Engine offers an implementation of an existing transaction isolation level, read committed, that provides a statement level snapshot using row versioning. SQL Server Database Engine also offers a transaction isolation level, snapshot, that provides a transaction level snapshot also using row versioning.  
   
- Row versioning is a general framework in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that invokes a copy-on-write mechanism when a row is modified or deleted. This requires that while the transaction is running, the old version of the row must be available for transactions that require an earlier transactionally consistent state. Row versioning is used to do the following:  
+ Row versioning is a general framework in [!INCLUDE[ssNoVersion](includes/ssnoversion-md.md)] that invokes a copy-on-write mechanism when a row is modified or deleted. This requires that while the transaction is running, the old version of the row must be available for transactions that require an earlier transactionally consistent state. Row versioning is used to do the following:  
   
 -   Build the **inserted** and **deleted** tables in triggers. Any rows modified by the trigger are versioned. This includes the rows modified by the statement that launched the trigger, as well as any data modifications made by the trigger.  
   
@@ -1030,14 +1030,14 @@ BEGIN TRANSACTION
   
     -   When the ALLOW_SNAPSHOT_ISOLATION database option is ON, transactions can set the snapshot isolation level.  
   
- When either READ_COMMITTED_SNAPSHOT or ALLOW_SNAPSHOT_ISOLATION database option is set ON, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] assigns a transaction sequence number (XSN) to each transaction that manipulates data using row versioning. Transactions start at the time a BEGIN TRANSACTION statement is executed. However, the transaction sequence number starts with the first read or write operation after the BEGIN TRANSACTION statement. The transaction sequence number is incremented by one each time it is assigned.  
+ When either READ_COMMITTED_SNAPSHOT or ALLOW_SNAPSHOT_ISOLATION database option is set ON, the [!INCLUDE[ssDEnoversion](includes/ssdenoversion-md.md)] assigns a transaction sequence number (XSN) to each transaction that manipulates data using row versioning. Transactions start at the time a BEGIN TRANSACTION statement is executed. However, the transaction sequence number starts with the first read or write operation after the BEGIN TRANSACTION statement. The transaction sequence number is incremented by one each time it is assigned.  
   
- When either the READ_COMMITTED_SNAPSHOT or ALLOW_SNAPSHOT_ISOLATION database options are ON, logical copies (versions) are maintained for all data modifications performed in the database. Every time a row is modified by a specific transaction, the instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)] stores a version of the previously committed image of the row in `tempdb`. Each version is marked with the transaction sequence number of the transaction that made the change. The versions of modified rows are chained using a link list. The newest row value is always stored in the current database and chained to the versioned rows stored in `tempdb`.  
+ When either the READ_COMMITTED_SNAPSHOT or ALLOW_SNAPSHOT_ISOLATION database options are ON, logical copies (versions) are maintained for all data modifications performed in the database. Every time a row is modified by a specific transaction, the instance of the [!INCLUDE[ssDE](includes/ssde-md.md)] stores a version of the previously committed image of the row in `tempdb`. Each version is marked with the transaction sequence number of the transaction that made the change. The versions of modified rows are chained using a link list. The newest row value is always stored in the current database and chained to the versioned rows stored in `tempdb`.  
   
 > [!NOTE]  
 >  For modification of large objects (LOBs), only the changed fragment is copied to the version store in `tempdb`.  
   
- Row versions are held long enough to satisfy the requirements of transactions running under row versioning-based isolation levels. The [!INCLUDE[ssDE](../includes/ssde-md.md)] tracks the earliest useful transaction sequence number and periodically deletes all row versions stamped with transaction sequence numbers that are lower than the earliest useful sequence number.  
+ Row versions are held long enough to satisfy the requirements of transactions running under row versioning-based isolation levels. The [!INCLUDE[ssDE](includes/ssde-md.md)] tracks the earliest useful transaction sequence number and periodically deletes all row versions stamped with transaction sequence numbers that are lower than the earliest useful sequence number.  
   
  When both database options are set to OFF, only rows modified by triggers or MARS sessions, or read by ONLINE index operations, are versioned. Those row versions are released when no longer needed. A background thread periodically executes to remove stale row versions.  
   
@@ -1049,7 +1049,7 @@ BEGIN TRANSACTION
   
  All queries, including transactions running under row versioning-based isolation levels, acquire Sch-S (schema stability) locks during compilation and execution. Because of this, queries are blocked when a concurrent transaction holds a Sch-M (schema modification) lock on the table. For example, a data definition language (DDL) operation acquires a Sch-M lock before it modifies the schema information of the table. Query transactions, including those running under a row versioning-based isolation level, are blocked when attempting to acquire a Sch-S lock. Conversely, a query holding a Sch-S lock blocks a concurrent transaction that attempts to acquire a Sch-M lock.  
   
- When a transaction using the snapshot isolation level starts, the instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)] records all of the currently active transactions. When the snapshot transaction reads a row that has a version chain, the [!INCLUDE[ssDE](../includes/ssde-md.md)] follows the chain and retrieves the row where the transaction sequence number is:  
+ When a transaction using the snapshot isolation level starts, the instance of the [!INCLUDE[ssDE](includes/ssde-md.md)] records all of the currently active transactions. When the snapshot transaction reads a row that has a version chain, the [!INCLUDE[ssDE](includes/ssde-md.md)] follows the chain and retrieves the row where the transaction sequence number is:  
   
 -   Closest to but lower than the sequence number of the snapshot transaction reading the row.  
   
@@ -1057,7 +1057,7 @@ BEGIN TRANSACTION
   
  Read operations performed by a snapshot transaction retrieve the last version of each row that had been committed at the time the snapshot transaction started. This provides a transactionally consistent snapshot of the data as it existed at the start of the transaction.  
   
- Read-committed transactions using row versioning operate in much the same way. The difference is that the read-committed transaction does not use its own transaction sequence number when choosing row versions. Each time a statement is started, the read-committed transaction reads the latest transaction sequence number issued for that instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)]. This is the transaction sequence number used to select the correct row versions for that statement. This allows read-committed transactions to see a snapshot of the data as it exists at the start of each statement.  
+ Read-committed transactions using row versioning operate in much the same way. The difference is that the read-committed transaction does not use its own transaction sequence number when choosing row versions. Each time a statement is started, the read-committed transaction reads the latest transaction sequence number issued for that instance of the [!INCLUDE[ssDE](includes/ssde-md.md)]. This is the transaction sequence number used to select the correct row versions for that statement. This allows read-committed transactions to see a snapshot of the data as it exists at the start of each statement.  
   
 > [!NOTE]  
 >  Even though read-committed transactions using row versioning provides a transactionally consistent view of the data at a statement level, row versions generated or accessed by this type of transaction are maintained until the transaction completes.  
@@ -1065,7 +1065,7 @@ BEGIN TRANSACTION
 ### Behavior When Modifying Data  
  In a read-committed transaction using row versioning, the selection of rows to update is done using a blocking scan where an update (U) lock is taken on the data row as data values are read. This is the same as a read-committed transaction that does not use row versioning. If the data row does not meet the update criteria, the update lock is released on that row and the next row is locked and scanned.  
   
- Transactions running under snapshot isolation take an optimistic approach to data modification by acquiring locks on data before performing the modification only to enforce constraints. Otherwise, locks are not acquired on data until the data is to be modified. When a data row meets the update criteria, the snapshot transaction verifies that the data row has not been modified by a concurrent transaction that committed after the snapshot transaction began. If the data row has been modified outside of the snapshot transaction, an update conflict occurs and the snapshot transaction is terminated. The update conflict is handled by the [!INCLUDE[ssDE](../includes/ssde-md.md)] and there is no way to disable the update conflict detection.  
+ Transactions running under snapshot isolation take an optimistic approach to data modification by acquiring locks on data before performing the modification only to enforce constraints. Otherwise, locks are not acquired on data until the data is to be modified. When a data row meets the update criteria, the snapshot transaction verifies that the data row has not been modified by a concurrent transaction that committed after the snapshot transaction began. If the data row has been modified outside of the snapshot transaction, an update conflict occurs and the snapshot transaction is terminated. The update conflict is handled by the [!INCLUDE[ssDE](includes/ssde-md.md)] and there is no way to disable the update conflict detection.  
   
 > [!NOTE]  
 >  Update operations running under snapshot isolation internally execute under read committed isolation when the snapshot transaction accesses any of the following:  
@@ -1090,7 +1090,7 @@ BEGIN TRANSACTION
 |Update conflict detection.|None.|Integrated support. Cannot be disabled.|  
   
 ### Row Versioning Resource Usage  
- The row versioning framework supports the following features available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
+ The row versioning framework supports the following features available in [!INCLUDE[ssNoVersion](includes/ssnoversion-md.md)]:  
   
 -   Triggers  
   
@@ -1109,7 +1109,7 @@ BEGIN TRANSACTION
  Row versioning-based isolation levels increase the resources needed by data modifications. Enabling these options causes all data modifications for the database to be versioned. A copy of the data before modification is stored in tempdb even when there are no active transactions using row versioning-based isolation. The data after modification includes a pointer to the versioned data stored in tempdb. For large objects, only part of the object that changed is copied to tempdb.  
   
 #### Space Used in tempdb  
- For each instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)], tempdb must have enough space to hold the row versions generated for every database in the instance. The database administrator must ensure that tempdb has ample space to support the version store. There are two version stores in tempdb:  
+ For each instance of the [!INCLUDE[ssDE](includes/ssde-md.md)], tempdb must have enough space to hold the row versions generated for every database in the instance. The database administrator must ensure that tempdb has ample space to support the version store. There are two version stores in tempdb:  
   
 -   The online index build version store is used for online index builds in all databases.  
   
@@ -1126,7 +1126,7 @@ BEGIN TRANSACTION
 > [!NOTE]  
 >  When a trigger is invoked inside a transaction, the row versions created by the trigger are maintained until the end of the transaction, even though the row versions are no longer needed after the trigger completes. This also applies to read-committed transactions that use row versioning. With this type of transaction, a transactionally consistent view of the database is needed only for each statement in the transaction. This means that the row versions created for a statement in the transaction are no longer needed after the statement completes. However, row versions created by each statement in the transaction are maintained until the transaction completes.  
   
- When tempdb runs out of space, the [!INCLUDE[ssDE](../includes/ssde-md.md)] forces the version stores to shrink. During the shrink process, the longest running transactions that have not yet generated row versions are marked as victims. A message 3967 is generated in the error log for each victim transaction. If a transaction is marked as a victim, it can no longer read the row versions in the version store. When it attempts to read row versions, message 3966 is generated and the transaction is rolled back. If the shrinking process succeeds, space becomes available in tempdb. Otherwise, tempdb runs out of space and the following occurs:  
+ When tempdb runs out of space, the [!INCLUDE[ssDE](includes/ssde-md.md)] forces the version stores to shrink. During the shrink process, the longest running transactions that have not yet generated row versions are marked as victims. A message 3967 is generated in the error log for each victim transaction. If a transaction is marked as a victim, it can no longer read the row versions in the version store. When it attempts to read row versions, message 3966 is generated and the transaction is rolled back. If the shrinking process succeeds, space becomes available in tempdb. Otherwise, tempdb runs out of space and the following occurs:  
   
 -   Write operations continue to execute but do not generate versions. An information message (3959) appears in the error log, but the transaction that writes data is not affected.  
   
@@ -1155,48 +1155,48 @@ BEGIN TRANSACTION
   
  If you use any of the row versioning features, you might need to allocate additional disk space for the database to accommodate the 14 bytes per database row. Adding the row versioning information can cause index page splits or the allocation of a new data page if there is not enough space available on the current page. For example, if the average row length is 100 bytes, the additional 14 bytes cause an existing table to grow up to 14 percent.  
   
- Decreasing the [fill factor](../2014/database-engine/specify-fill-factor-for-an-index.md) might help to prevent or decrease fragmentation of index pages. To view fragmentation information for the data and indexes of a table or view, you can use [DBCC SHOWCONTIG](../Topic/DBCC%20SHOWCONTIG%20(Transact-SQL).md).  
+ Decreasing the [fill factor](../2014/database-engine/specify-fill-factor-for-an-index.md) might help to prevent or decrease fragmentation of index pages. To view fragmentation information for the data and indexes of a table or view, you can use [DBCC SHOWCONTIG](~/t-sql/database-console-commands/dbcc-showcontig-transact-sql.md).  
   
 #### Space Used in Large Objects  
- The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] supports six data types that can hold large strings up to 2 gigabytes (GB) in length: `nvarchar(max)`, `varchar(max)`, `varbinary(max)`, `ntext`, `text`, and `image`. Large strings stored using these data types are stored in a series of data fragments that are linked to the data row. Row versioning information is stored in each fragment used to store these large strings. Data fragments are a collection of pages dedicated to large objects in a table.  
+ The [!INCLUDE[ssDEnoversion](includes/ssdenoversion-md.md)] supports six data types that can hold large strings up to 2 gigabytes (GB) in length: `nvarchar(max)`, `varchar(max)`, `varbinary(max)`, `ntext`, `text`, and `image`. Large strings stored using these data types are stored in a series of data fragments that are linked to the data row. Row versioning information is stored in each fragment used to store these large strings. Data fragments are a collection of pages dedicated to large objects in a table.  
   
- As new large values are added to a database, they are allocated using a maximum of 8040 bytes of data per fragment. Earlier versions of the [!INCLUDE[ssDE](../includes/ssde-md.md)] stored up to 8080 bytes of `ntext`, `text`, or `image` data per fragment.  
+ As new large values are added to a database, they are allocated using a maximum of 8040 bytes of data per fragment. Earlier versions of the [!INCLUDE[ssDE](includes/ssde-md.md)] stored up to 8080 bytes of `ntext`, `text`, or `image` data per fragment.  
   
- Existing `ntext`, `text`, and `image` large object (LOB) data is not updated to make space for the row versioning information when a database is upgraded to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] from an earlier version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. However, the first time the LOB data is modified, it is dynamically upgraded to enable storage of versioning information. This will happen even if row versions are not generated. After the LOB data is upgraded, the maximum number of bytes stored per fragment is reduced from 8080 bytes to 8040 bytes. The upgrade process is equivalent to deleting the LOB value and reinserting the same value. The LOB data is upgraded even if only one byte is modified. This is a one-time operation for each `ntext`, `text`, or `image` column, but each operation may generate a large amount of page allocations and I/O activity depending upon the size of the LOB data. It may also generate a large amount of logging activity if the modification is fully logged. WRITETEXT and UPDATETEXT operations are minimally logged if database recovery mode is not set to FULL.  
+ Existing `ntext`, `text`, and `image` large object (LOB) data is not updated to make space for the row versioning information when a database is upgraded to [!INCLUDE[ssNoVersion](includes/ssnoversion-md.md)] from an earlier version of [!INCLUDE[ssNoVersion](includes/ssnoversion-md.md)]. However, the first time the LOB data is modified, it is dynamically upgraded to enable storage of versioning information. This will happen even if row versions are not generated. After the LOB data is upgraded, the maximum number of bytes stored per fragment is reduced from 8080 bytes to 8040 bytes. The upgrade process is equivalent to deleting the LOB value and reinserting the same value. The LOB data is upgraded even if only one byte is modified. This is a one-time operation for each `ntext`, `text`, or `image` column, but each operation may generate a large amount of page allocations and I/O activity depending upon the size of the LOB data. It may also generate a large amount of logging activity if the modification is fully logged. WRITETEXT and UPDATETEXT operations are minimally logged if database recovery mode is not set to FULL.  
   
- The `nvarchar(max)`, `varchar(max)`, and `varbinary(max)` data types are not available in earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Therefore, they have no upgrade issues.  
+ The `nvarchar(max)`, `varchar(max)`, and `varbinary(max)` data types are not available in earlier versions of [!INCLUDE[ssNoVersion](includes/ssnoversion-md.md)]. Therefore, they have no upgrade issues.  
   
  Enough disk space should be allocated to accommodate this requirement.  
   
 #### Monitoring Row Versioning and the Version Store  
- For monitoring row versioning, version store, and snapshot isolation processes for performance and problems, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provides tools in the form of Dynamic Management Views (DMVs) and performance counters in Windows System Monitor.  
+ For monitoring row versioning, version store, and snapshot isolation processes for performance and problems, [!INCLUDE[ssNoVersion](includes/ssnoversion-md.md)] provides tools in the form of Dynamic Management Views (DMVs) and performance counters in Windows System Monitor.  
   
 ##### DMVs  
  The following DMVs provide information about the current system state of tempdb and the version store, as well as transactions using row versioning.  
   
- sys.dm_db_file_space_usage. Returns space usage information for each file in the database. For more information, see [sys.dm_db_file_space_usage &#40;Transact-SQL&#41;](../Topic/sys.dm_db_file_space_usage%20(Transact-SQL).md).  
+ sys.dm_db_file_space_usage. Returns space usage information for each file in the database. For more information, see [sys.dm_db_file_space_usage &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md).  
   
- sys.dm_db_session_space_usage. Returns page allocation and deallocation activity by session for the database. For more information, see [sys.dm_db_session_space_usage &#40;Transact-SQL&#41;](../Topic/sys.dm_db_session_space_usage%20(Transact-SQL).md).  
+ sys.dm_db_session_space_usage. Returns page allocation and deallocation activity by session for the database. For more information, see [sys.dm_db_session_space_usage &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md).  
   
- sys.dm_db_task_space_usage. Returns page allocation and deallocation activity by task for the database. For more information, see [sys.dm_db_task_space_usage &#40;Transact-SQL&#41;](../Topic/sys.dm_db_task_space_usage%20(Transact-SQL).md).  
+ sys.dm_db_task_space_usage. Returns page allocation and deallocation activity by task for the database. For more information, see [sys.dm_db_task_space_usage &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md).  
   
- sys.dm_tran_top_version_generators. Returns a virtual table for the objects producing the most versions in the version store. It groups the top 256 aggregated record lengths by database_id and rowset_id. Use this function to find the largest consumers of the version store. For more information, see [sys.dm_tran_top_version_generators &#40;Transact-SQL&#41;](../Topic/sys.dm_tran_top_version_generators%20(Transact-SQL).md).  
+ sys.dm_tran_top_version_generators. Returns a virtual table for the objects producing the most versions in the version store. It groups the top 256 aggregated record lengths by database_id and rowset_id. Use this function to find the largest consumers of the version store. For more information, see [sys.dm_tran_top_version_generators &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-tran-top-version-generators-transact-sql.md).  
   
- sys.dm_tran_version_store. Returns a virtual table that displays all version records in the common version store. For more information, see [sys.dm_tran_version_store &#40;Transact-SQL&#41;](../Topic/sys.dm_tran_version_store%20(Transact-SQL).md).  
+ sys.dm_tran_version_store. Returns a virtual table that displays all version records in the common version store. For more information, see [sys.dm_tran_version_store &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md).  
   
 > [!NOTE]  
 >  sys.dm_tran_top_version_generators and sys.dm_tran_version_store are potentially very expensive functions to run, since both query the entire version store, which could be very large.  
   
- sys.dm_tran_active_snapshot_database_transactions. Returns a virtual table for all active transactions in all databases within the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance that use row versioning. System transactions do not appear in this DMV. For more information, see [sys.dm_tran_active_snapshot_database_transactions &#40;Transact-SQL&#41;](../Topic/sys.dm_tran_active_snapshot_database_transactions%20(Transact-SQL).md).  
+ sys.dm_tran_active_snapshot_database_transactions. Returns a virtual table for all active transactions in all databases within the [!INCLUDE[ssNoVersion](includes/ssnoversion-md.md)] instance that use row versioning. System transactions do not appear in this DMV. For more information, see [sys.dm_tran_active_snapshot_database_transactions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md).  
   
- sys.dm_tran_transactions_snapshot. Returns a virtual table that displays snapshots taken by each transaction. The snapshot contains the sequence number of the active transactions that use row versioning. For more information, see [sys.dm_tran_transactions_snapshot &#40;Transact-SQL&#41;](../Topic/sys.dm_tran_transactions_snapshot%20(Transact-SQL).md).  
+ sys.dm_tran_transactions_snapshot. Returns a virtual table that displays snapshots taken by each transaction. The snapshot contains the sequence number of the active transactions that use row versioning. For more information, see [sys.dm_tran_transactions_snapshot &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-tran-transactions-snapshot-transact-sql.md).  
   
- sys.dm_tran_current_transaction. Returns a single row that displays row versioning-related state information of the transaction in the current session. For more information, see [sys.dm_tran_current_transaction &#40;Transact-SQL&#41;](../Topic/sys.dm_tran_current_transaction%20(Transact-SQL).md).  
+ sys.dm_tran_current_transaction. Returns a single row that displays row versioning-related state information of the transaction in the current session. For more information, see [sys.dm_tran_current_transaction &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-tran-current-transaction-transact-sql.md).  
   
- sys.dm_tran_current_snapshot. Returns a virtual table that displays all active transactions at the time the current snapshot isolation transaction starts. If the current transaction is using snapshot isolation, this function returns no rows. sys.dm_tran_current_snapshot is similar to sys.dm_tran_transactions_snapshot, except that it returns only the active transactions for the current snapshot. For more information, see [sys.dm_tran_current_snapshot &#40;Transact-SQL&#41;](../Topic/sys.dm_tran_current_snapshot%20(Transact-SQL).md).  
+ sys.dm_tran_current_snapshot. Returns a virtual table that displays all active transactions at the time the current snapshot isolation transaction starts. If the current transaction is using snapshot isolation, this function returns no rows. sys.dm_tran_current_snapshot is similar to sys.dm_tran_transactions_snapshot, except that it returns only the active transactions for the current snapshot. For more information, see [sys.dm_tran_current_snapshot &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-tran-current-snapshot-transact-sql.md).  
   
 ##### Performance Counters  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] performance counters provide information about the system performance impacted by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] processes. The following performance counters monitor tempdb and the version store, as well as transactions using row versioning. The performance counters are contained in the SQLServer:Transactions performance object.  
+ [!INCLUDE[ssNoVersion](includes/ssnoversion-md.md)] performance counters provide information about the system performance impacted by [!INCLUDE[ssNoVersion](includes/ssnoversion-md.md)] processes. The following performance counters monitor tempdb and the version store, as well as transactions using row versioning. The performance counters are contained in the SQLServer:Transactions performance object.  
   
  **Free Space in tempdb (KB)**. Monitors the amount, in kilobytes (KB), of free space in the tempdb database. There must be enough free space in tempdb to handle the version store that supports snapshot isolation.  
   
@@ -1219,7 +1219,7 @@ BEGIN TRANSACTION
   
  **Version Store unit creation**. Monitors the total number of version store units created to store row versions since the instance was started.  
   
- **Version Store unit truncation**. Monitors the total number of version store units truncated since the instance was started. A version store unit is truncated when [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] determines that none of the version rows stored in the version store unit are needed to run active transactions.  
+ **Version Store unit truncation**. Monitors the total number of version store units truncated since the instance was started. A version store unit is truncated when [!INCLUDE[ssNoVersion](includes/ssnoversion-md.md)] determines that none of the version rows stored in the version store unit are needed to run active transactions.  
   
  **Update conflict ratio**. Monitors the ratio of update snapshot transaction that have update conflicts to the total number of update snapshot transactions.  
   
@@ -1444,16 +1444,16 @@ GO
   
  When the READ_COMMITTED_SNAPSHOT database option is set ON, the mechanisms used to support the option are activated immediately. When setting the READ_COMMITTED_SNAPSHOT option, only the connection executing the ALTER DATABASE command is allowed in the database. There must be no other open connection in the database until ALTER DATABASE is complete. The database does not have to be in single-user mode.  
   
- The following [!INCLUDE[tsql](../includes/tsql-md.md)] statement enables READ_COMMITTED_SNAPSHOT:  
+ The following [!INCLUDE[tsql](includes/tsql-md.md)] statement enables READ_COMMITTED_SNAPSHOT:  
   
 ```  
 ALTER DATABASE AdventureWorks2012  
     SET READ_COMMITTED_SNAPSHOT ON;  
 ```  
   
- When the ALLOW_SNAPSHOT_ISOLATION database option is set ON, the instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] does not generate row versions for modified data until all active transactions that have modified data in the database complete. If there are active modification transactions, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sets the state of the option to PENDING_ON. After all of the modification transactions complete, the state of the option is changed to ON. Users cannot start a snapshot transaction in that database until the option is fully ON. The database passes through a PENDING_OFF state when the database administrator sets the ALLOW_SNAPSHOT_ISOLATION option to OFF.  
+ When the ALLOW_SNAPSHOT_ISOLATION database option is set ON, the instance of the [!INCLUDE[ssDEnoversion](includes/ssdenoversion-md.md)] does not generate row versions for modified data until all active transactions that have modified data in the database complete. If there are active modification transactions, [!INCLUDE[ssNoVersion](includes/ssnoversion-md.md)] sets the state of the option to PENDING_ON. After all of the modification transactions complete, the state of the option is changed to ON. Users cannot start a snapshot transaction in that database until the option is fully ON. The database passes through a PENDING_OFF state when the database administrator sets the ALLOW_SNAPSHOT_ISOLATION option to OFF.  
   
- The following [!INCLUDE[tsql](../includes/tsql-md.md)] statement will enable ALLOW_SNAPSHOT_ISOLATION:  
+ The following [!INCLUDE[tsql](includes/tsql-md.md)] statement will enable ALLOW_SNAPSHOT_ISOLATION:  
   
 ```  
 ALTER DATABASE AdventureWorks2012  
@@ -1478,7 +1478,7 @@ ALTER DATABASE AdventureWorks2012
  Users cannot set the READ_COMMITTED_SNAPSHOT option ON in master, tempdb, or msdb.  
   
 ### Using Row Versioning-based Isolation Levels  
- The row versioning framework is always enabled in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], and is used by multiple features. Besides providing row versioning-based isolation levels, it is used to support modifications made in triggers and multiple active result sets (MARS) sessions, and to support data reads for ONLINE index operations.  
+ The row versioning framework is always enabled in [!INCLUDE[ssNoVersion](includes/ssnoversion-md.md)], and is used by multiple features. Besides providing row versioning-based isolation levels, it is used to support modifications made in triggers and multiple active result sets (MARS) sessions, and to support data reads for ONLINE index operations.  
   
  Row versioning-based isolation levels are enabled at the database level. Any application accessing objects from enabled databases can run queries using the following isolation levels:  
   
@@ -1540,7 +1540,7 @@ ALTER DATABASE AdventureWorks2012
   
 -   Distributed transactions, including queries in distributed partitioned databases, are not supported under snapshot isolation.  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not keep multiple versions of system metadata. Data definition language (DDL) statements on tables and other database objects (indexes, views, data types, stored procedures, and common language runtime functions) change metadata. If a DDL statement modifies an object, any concurrent reference to the object under snapshot isolation causes the snapshot transaction to fail. Read-committed transactions do not have this limitation when the READ_COMMITTED_SNAPSHOT database option is ON.  
+-   [!INCLUDE[ssNoVersion](includes/ssnoversion-md.md)] does not keep multiple versions of system metadata. Data definition language (DDL) statements on tables and other database objects (indexes, views, data types, stored procedures, and common language runtime functions) change metadata. If a DDL statement modifies an object, any concurrent reference to the object under snapshot isolation causes the snapshot transaction to fail. Read-committed transactions do not have this limitation when the READ_COMMITTED_SNAPSHOT database option is ON.  
   
      For example, a database administrator executes the following `ALTER INDEX` statement.  
   
@@ -1557,17 +1557,17 @@ ALTER DATABASE AdventureWorks2012
     > [!NOTE]  
     >  BULK INSERT operations may cause changes to target table metadata (for example, when disabling constraint checks). When this happens, concurrent snapshot isolation transactions accessing bulk inserted tables fail.  
   
- ![Arrow icon used with Back to Top link](../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Guide](#Top)  
+ ![Arrow icon used with Back to Top link](../2014/data-quality-services/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Guide](#Top)  
   
 ## Customizing Locking and Row Versioning  
   
 ### Customizing the Lock Time-Out  
- When an instance of the [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] cannot grant a lock to a transaction because another transaction already owns a conflicting lock on the resource, the first transaction becomes blocked waiting for the existing lock to be released. By default, there is no mandatory time-out period and no way to test whether a resource is locked before locking it, except to attempt to access the data (and potentially get blocked indefinitely).  
+ When an instance of the [!INCLUDE[msCoName](includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](includes/ssdenoversion-md.md)] cannot grant a lock to a transaction because another transaction already owns a conflicting lock on the resource, the first transaction becomes blocked waiting for the existing lock to be released. By default, there is no mandatory time-out period and no way to test whether a resource is locked before locking it, except to attempt to access the data (and potentially get blocked indefinitely).  
   
 > [!NOTE]  
->  In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], use the **sys.dm_os_waiting_tasks** dynamic management view to determine whether a process is being blocked and who is blocking it. In earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], use the **sp_who** system stored procedure.  
+>  In [!INCLUDE[ssNoVersion](includes/ssnoversion-md.md)], use the **sys.dm_os_waiting_tasks** dynamic management view to determine whether a process is being blocked and who is blocking it. In earlier versions of [!INCLUDE[ssNoVersion](includes/ssnoversion-md.md)], use the **sp_who** system stored procedure.  
   
- The LOCK_TIMEOUT setting allows an application to set a maximum time that a statement waits on a blocked resource. When a statement has waited longer than the LOCK_TIMEOUT setting, the blocked statement is canceled automatically, and error message 1222 (`Lock request time-out period exceeded`) is returned to the application. Any transaction containing the statement, however, is not rolled back or canceled by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Therefore, the application must have an error handler that can trap error message 1222. If an application does not trap the error, the application can proceed unaware that an individual statement within a transaction has been canceled, and errors can occur because statements later in the transaction might depend on the statement that was never executed.  
+ The LOCK_TIMEOUT setting allows an application to set a maximum time that a statement waits on a blocked resource. When a statement has waited longer than the LOCK_TIMEOUT setting, the blocked statement is canceled automatically, and error message 1222 (`Lock request time-out period exceeded`) is returned to the application. Any transaction containing the statement, however, is not rolled back or canceled by [!INCLUDE[ssNoVersion](includes/ssnoversion-md.md)]. Therefore, the application must have an error handler that can trap error message 1222. If an application does not trap the error, the application can proceed unaware that an individual statement within a transaction has been canceled, and errors can occur because statements later in the transaction might depend on the statement that was never executed.  
   
  Implementing an error handler that traps error message 1222 allows an application to handle the time-out situation and take remedial action, such as: automatically resubmitting the statement that was blocked or rolling back the entire transaction.  
   
@@ -1579,9 +1579,9 @@ GO
 ```  
   
 ### Customizing Transaction Isolation Level  
- READ COMMITTED is the default isolation level for the [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. If an application must operate at a different isolation level, it can use the following methods to set the isolation level:  
+ READ COMMITTED is the default isolation level for the [!INCLUDE[msCoName](includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](includes/ssdenoversion-md.md)]. If an application must operate at a different isolation level, it can use the following methods to set the isolation level:  
   
--   Run the [SET TRANSACTION ISOLATION LEVEL](../Topic/SET%20TRANSACTION%20ISOLATION%20LEVEL%20(Transact-SQL).md) statement.  
+-   Run the [SET TRANSACTION ISOLATION LEVEL](~/t-sql/statements/set-transaction-isolation-level-transact-sql.md) statement.  
   
 -   ADO.NET applications that use the System.Data.SqlClient managed namespace can specify an *IsolationLevel* option by using the SqlConnection.BeginTransaction method.  
   
@@ -1591,7 +1591,7 @@ GO
   
 -   Applications that use ODBC can set the SQL_COPT_SS_TXN_ISOLATION attribute by using SQLSetConnectAttr.  
   
- When the isolation level is specified, the locking behavior for all queries and data manipulation language (DML) statements in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] session operates at that isolation level. The isolation level remains in effect until the session terminates or until the isolation level is set to another level.  
+ When the isolation level is specified, the locking behavior for all queries and data manipulation language (DML) statements in the [!INCLUDE[ssNoVersion](includes/ssnoversion-md.md)] session operates at that isolation level. The isolation level remains in effect until the session terminates or until the isolation level is set to another level.  
   
  The following example sets the `SERIALIZABLE` isolation level:  
   
@@ -1608,7 +1608,7 @@ GO
   
  The isolation level can be overridden for individual query or DML statements, if necessary, by specifying a table-level hint. Specifying a table-level hint does not affect other statements in the session. We recommend that table-level hints be used to change the default behavior only when absolutely necessary.  
   
- The [!INCLUDE[ssDE](../includes/ssde-md.md)] might have to acquire locks when reading metadata even when the isolation level is set to a level where share locks are not requested when reading data. For example, a transaction running at the read-uncommitted isolation level does not acquire share locks when reading data, but might sometime request locks when reading a system catalog view. This means it is possible for a read uncommitted transaction to cause blocking when querying a table when a concurrent transaction is modifying the metadata of that table.  
+ The [!INCLUDE[ssDE](includes/ssde-md.md)] might have to acquire locks when reading metadata even when the isolation level is set to a level where share locks are not requested when reading data. For example, a transaction running at the read-uncommitted isolation level does not acquire share locks when reading data, but might sometime request locks when reading a system catalog view. This means it is possible for a read uncommitted transaction to cause blocking when querying a table when a concurrent transaction is modifying the metadata of that table.  
   
  To determine the transaction isolation level currently set, use the `DBCC USEROPTIONS` statement as shown in the following example. The result set may vary from the result set on your system.  
   
@@ -1621,7 +1621,7 @@ DBCC USEROPTIONS;
 GO  
 ```  
   
- [!INCLUDE[ssResult](../includes/ssresult-md.md)]  
+ [!INCLUDE[ssResult](includes/ssresult-md.md)]  
   
  `Set Option                   Value`  
   
@@ -1648,14 +1648,14 @@ GO
  `DBCC execution completed. If DBCC printed error messages, contact your system administrator.`  
   
 ### Locking Hints  
- Locking hints can be specified for individual table references in the SELECT, INSERT, UPDATE, and DELETE statements. The hints specify the type of locking or row versioning the instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] uses for the table data. Table-level locking hints can be used when a finer control of the types of locks acquired on an object is required. These locking hints override the current transaction isolation level for the session.  
+ Locking hints can be specified for individual table references in the SELECT, INSERT, UPDATE, and DELETE statements. The hints specify the type of locking or row versioning the instance of the [!INCLUDE[ssDEnoversion](includes/ssdenoversion-md.md)] uses for the table data. Table-level locking hints can be used when a finer control of the types of locks acquired on an object is required. These locking hints override the current transaction isolation level for the session.  
   
- For more information about the specific locking hints and their behaviors, see [Table Hints &#40;Transact-SQL&#41;](../Topic/Table%20Hints%20(Transact-SQL).md).  
+ For more information about the specific locking hints and their behaviors, see [Table Hints &#40;Transact-SQL&#41;](~/t-sql/queries/hints-transact-sql-table.md).  
   
 > [!NOTE]  
->  The [!INCLUDE[ssDE](../includes/ssde-md.md)] query optimizer almost always chooses the correct locking level. We recommend that table-level locking hints be used to change the default locking behavior only when necessary. Disallowing a locking level can adversely affect concurrency.  
+>  The [!INCLUDE[ssDE](includes/ssde-md.md)] query optimizer almost always chooses the correct locking level. We recommend that table-level locking hints be used to change the default locking behavior only when necessary. Disallowing a locking level can adversely affect concurrency.  
   
- The [!INCLUDE[ssDE](../includes/ssde-md.md)] might have to acquire locks when reading metadata, even when processing a select with a locking hint that prevents requests for share locks when reading data. For example, a SELECT using the NOLOCK hint does not acquire share locks when reading data, but might sometime request locks when reading a system catalog view. This means it is possible for a SELECT statement using NOLOCK to be blocked.  
+ The [!INCLUDE[ssDE](includes/ssde-md.md)] might have to acquire locks when reading metadata, even when processing a select with a locking hint that prevents requests for share locks when reading data. For example, a SELECT using the NOLOCK hint does not acquire share locks when reading data, but might sometime request locks when reading a system catalog view. This means it is possible for a SELECT statement using NOLOCK to be blocked.  
   
  As shown in the following example, if the transaction isolation level is set to `SERIALIZABLE`, and the table-level locking hint `NOLOCK` is used with the `SELECT` statement, key-range locks typically used to maintain serializable transactions are not taken.  
   
@@ -1686,10 +1686,10 @@ GO
   
  The only lock taken that references `HumanResources.Employee` is a schema stability (Sch-S) lock. In this case, serializability is no longer guaranteed.  
   
- In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], the LOCK_ESCALATION option of ALTER TABLE can disfavor table locks, and enable HoBT locks on partitioned tables. This option is not a locking hint, but can but used to reduce lock escalation. For more information, see [ALTER TABLE &#40;Transact-SQL&#41;](../Topic/ALTER%20TABLE%20(Transact-SQL).md).  
+ In [!INCLUDE[ssCurrent](includes/sscurrent-md.md)], the LOCK_ESCALATION option of ALTER TABLE can disfavor table locks, and enable HoBT locks on partitioned tables. This option is not a locking hint, but can but used to reduce lock escalation. For more information, see [ALTER TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-table-transact-sql.md).  
   
 ###  <a name="Customize"></a> Customizing Locking for an Index  
- The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] uses a dynamic locking strategy that automatically chooses the best locking granularity for queries in most cases. We recommend that you do not override the default locking levels, which have page and row locking on, unless table or index access patterns are well understood and consistent, and there is a resource contention problem to solve. Overriding a locking level can significantly impede concurrent access to a table or index. For example, specifying only table-level locks on a large table that users access heavily can cause bottlenecks because users must wait for the table-level lock to be released before accessing the table.  
+ The [!INCLUDE[ssDEnoversion](includes/ssdenoversion-md.md)] uses a dynamic locking strategy that automatically chooses the best locking granularity for queries in most cases. We recommend that you do not override the default locking levels, which have page and row locking on, unless table or index access patterns are well understood and consistent, and there is a resource contention problem to solve. Overriding a locking level can significantly impede concurrent access to a table or index. For example, specifying only table-level locks on a large table that users access heavily can cause bottlenecks because users must wait for the table-level lock to be released before accessing the table.  
   
  There are a few cases where disallowing page or row locking can be beneficial, if the access patterns are well understood and consistent. For example, a database application uses a lookup table that is updated weekly in a batch process. Concurrent readers access the table with a shared (S) lock and the weekly batch update accesses the table with an exclusive (X) lock. Turning off page and row locking on the table reduces the locking overhead throughout the week by allowing readers to concurrently access the table through shared table locks. When the batch job runs, it can complete the update efficiently because it obtains an exclusive table lock.  
   
@@ -1705,7 +1705,7 @@ GO
 |Row level|Page-level and table-level locks|  
 |Page level and row level|Table-level locks|  
   
- ![Arrow icon used with Back to Top link](../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Guide](#Top)  
+ ![Arrow icon used with Back to Top link](../2014/data-quality-services/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Guide](#Top)  
   
 ##  <a name="Advanced"></a> Advanced Transaction Information  
   
@@ -1747,7 +1747,7 @@ SELECT * FROM TestTrans;
 GO  
 ```  
   
- Committing inner transactions is ignored by the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. The transaction is either committed or rolled back based on the action taken at the end of the outermost transaction. If the outer transaction is committed, the inner nested transactions are also committed. If the outer transaction is rolled back, then all inner transactions are also rolled back, regardless of whether or not the inner transactions were individually committed.  
+ Committing inner transactions is ignored by the [!INCLUDE[ssDEnoversion](includes/ssdenoversion-md.md)]. The transaction is either committed or rolled back based on the action taken at the end of the outermost transaction. If the outer transaction is committed, the inner nested transactions are also committed. If the outer transaction is rolled back, then all inner transactions are also rolled back, regardless of whether or not the inner transactions were individually committed.  
   
  Each call to COMMIT TRANSACTION or COMMIT WORK applies to the last executed BEGIN TRANSACTION. If the BEGIN TRANSACTION statements are nested, then a COMMIT statement applies only to the last nested transaction, which is the innermost transaction. Even if a COMMIT TRANSACTION *transaction_name* statement within a nested transaction refers to the transaction name of the outer transaction, the commit applies only to the innermost transaction.  
   
@@ -1763,13 +1763,13 @@ GO
 > [!NOTE]  
 >  A session must have an active user transaction in order for **sp_getbindtoken** or **srv_getbindtoken** to succeed.  
   
- Bind tokens must be transmitted from the application code that makes the first session to the application code that subsequently binds their sessions to the first session. There is no [!INCLUDE[tsql](../includes/tsql-md.md)] statement or API function that an application can use to get the bind token for a transaction started by another process. Some of the methods that can be used to transmit a bind token include the following:  
+ Bind tokens must be transmitted from the application code that makes the first session to the application code that subsequently binds their sessions to the first session. There is no [!INCLUDE[tsql](includes/tsql-md.md)] statement or API function that an application can use to get the bind token for a transaction started by another process. Some of the methods that can be used to transmit a bind token include the following:  
   
 -   If the sessions are all initiated from the same application process, bind tokens can be stored in global memory or passed into functions as a parameter.  
   
 -   If the sessions are made from separate application processes, bind tokens can be transmitted using interprocess communication (IPC), such as a remote procedure call (RPC) or dynamic data exchange (DDE).  
   
--   Bind tokens can be stored in a table in an instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] that can be read by processes wanting to bind to the first session.  
+-   Bind tokens can be stored in a table in an instance of the [!INCLUDE[ssDEnoversion](includes/ssdenoversion-md.md)] that can be read by processes wanting to bind to the first session.  
   
  Only one session in a set of bound sessions can be active at any time. If one session is executing a statement on the instance or has results pending from the instance, no other session bound to it can access the instance until the current session finishes processing or cancels the current statement. If the instance is busy processing a statement from another of the bound sessions, an error occurs indicating that the transaction space is in use and the session should retry later.  
   
@@ -1780,23 +1780,23 @@ GO
   
 -   Local bound session  
   
-     Allows bound sessions to share the transaction space of a single transaction in a single instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
+     Allows bound sessions to share the transaction space of a single transaction in a single instance of the [!INCLUDE[ssDE](includes/ssde-md.md)].  
   
 -   Distributed bound session  
   
-     Allows bound sessions to share the same transaction across two or more instances until the entire transaction is either committed or rolled back by using [!INCLUDE[msCoName](../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC).  
+     Allows bound sessions to share the same transaction across two or more instances until the entire transaction is either committed or rolled back by using [!INCLUDE[msCoName](includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC).  
   
  Distributed bound sessions are not identified by a character string bind token; they are identified by distributed transaction identification numbers. If a bound session is involved in a local transaction and executes an RPC on a remote server with SET REMOTE_PROC_TRANSACTIONS ON, the local bound transaction is automatically promoted to a distributed bound transaction by MS DTC and an MS DTC session is started.  
   
 #### When to Use Bound Sessions  
- In earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], bound sessions were primarily used in developing extended stored procedures that must execute [!INCLUDE[tsql](../includes/tsql-md.md)] statements on behalf of the process that calls them. Having the calling process pass in a bind token as one parameter of the extended stored procedure allows the procedure to join the transaction space of the calling process, thereby integrating the extended stored procedure with the calling process.  
+ In earlier versions of [!INCLUDE[ssNoVersion](includes/ssnoversion-md.md)], bound sessions were primarily used in developing extended stored procedures that must execute [!INCLUDE[tsql](includes/tsql-md.md)] statements on behalf of the process that calls them. Having the calling process pass in a bind token as one parameter of the extended stored procedure allows the procedure to join the transaction space of the calling process, thereby integrating the extended stored procedure with the calling process.  
   
- In the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], stored procedures written using CLR are more secure, scalable, and stable than extended stored procedures. CLR-stored procedures use the **SqlContext** object to join the context of the calling session, not **sp_bindsession**.  
+ In the [!INCLUDE[ssDEnoversion](includes/ssdenoversion-md.md)], stored procedures written using CLR are more secure, scalable, and stable than extended stored procedures. CLR-stored procedures use the **SqlContext** object to join the context of the calling session, not **sp_bindsession**.  
   
  Bound sessions can be used to develop three-tier applications in which business logic is incorporated into separate programs that work cooperatively on a single business transaction. These programs must be coded to carefully coordinate their access to a database. Because the two sessions share the same locks, the two programs must not try to modify the same data at the same time. At any point in time, only one session can be doing work as part of the transaction; there can be no parallel execution. The transaction can only be switched between sessions at well-defined yield points, such as when all DML statements have completed and their results have been retrieved.  
   
 ### Coding Efficient Transactions  
- It is important to keep transactions as short as possible. When a transaction is started, a database management system (DBMS) must hold many resources until the end of the transaction to protect the atomicity, consistency, isolation, and durability (ACID) properties of the transaction. If data is modified, the modified rows must be protected with exclusive locks that prevent any other transaction from reading the rows, and exclusive locks must be held until the transaction is committed or rolled back. Depending on transaction isolation level settings, SELECT statements may acquire locks that must be held until the transaction is committed or rolled back. Especially in systems with many users, transactions must be kept as short as possible to reduce locking contention for resources between concurrent connections. Long-running, inefficient transactions may not be a problem with small numbers of users, but they are intolerable in a system with thousands of users. Beginning with [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supports delayed durable transactions. Delayed durable transactions do not guarantee durability. See the topic [Transaction Durability](../2014/database-engine/control-transaction-durability.md) for more information.  
+ It is important to keep transactions as short as possible. When a transaction is started, a database management system (DBMS) must hold many resources until the end of the transaction to protect the atomicity, consistency, isolation, and durability (ACID) properties of the transaction. If data is modified, the modified rows must be protected with exclusive locks that prevent any other transaction from reading the rows, and exclusive locks must be held until the transaction is committed or rolled back. Depending on transaction isolation level settings, SELECT statements may acquire locks that must be held until the transaction is committed or rolled back. Especially in systems with many users, transactions must be kept as short as possible to reduce locking contention for resources between concurrent connections. Long-running, inefficient transactions may not be a problem with small numbers of users, but they are intolerable in a system with thousands of users. Beginning with [!INCLUDE[ssSQL14](includes/sssql14-md.md)][!INCLUDE[ssNoVersion](includes/ssnoversion-md.md)] supports delayed durable transactions. Delayed durable transactions do not guarantee durability. See the topic [Transaction Durability](../2014/database-engine/control-transaction-durability.md) for more information.  
   
 #### Coding Guidelines  
  These are guidelines for coding efficient transactions:  
@@ -1828,7 +1828,7 @@ GO
      This lessens the number of locked rows, thereby reducing contention between transactions.  
   
 #### Avoiding Concurrency and Resource Problems  
- To prevent concurrency and resource problems, manage implicit transactions carefully. When using implicit transactions, the next [!INCLUDE[tsql](../includes/tsql-md.md)] statement after COMMIT or ROLLBACK automatically starts a new transaction. This can cause a new transaction to be opened while the application browses through data, or even when it requires input from the user. After completing the last transaction required to protect data modifications, turn off implicit transactions until a transaction is once again required to protect data modifications. This process lets the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] use autocommit mode while the application is browsing data and getting input from the user.  
+ To prevent concurrency and resource problems, manage implicit transactions carefully. When using implicit transactions, the next [!INCLUDE[tsql](includes/tsql-md.md)] statement after COMMIT or ROLLBACK automatically starts a new transaction. This can cause a new transaction to be opened while the application browses through data, or even when it requires input from the user. After completing the last transaction required to protect data modifications, turn off implicit transactions until a transaction is once again required to protect data modifications. This process lets the [!INCLUDE[ssDEnoversion](includes/ssdenoversion-md.md)] use autocommit mode while the application is browsing data and getting input from the user.  
   
  In addition, when the snapshot isolation level is enabled, although a new transaction will not hold locks, a long-running transaction will prevent the old versions from being removed from `tempdb`.  
   
@@ -1848,16 +1848,16 @@ GO
   
      This dynamic management view returns information about transactions at the database level. For a long-running transaction, columns of particular interest include the time of the first log record (**database_transaction_begin_time**), the current state of the transaction (**database_transaction_state**), and the log sequence number (LSN) of the begin record in the transaction log (**database_transaction_begin_lsn**).  
   
-     For more information, see [sys.dm_tran_database_transactions &#40;Transact-SQL&#41;](../Topic/sys.dm_tran_database_transactions%20(Transact-SQL).md).  
+     For more information, see [sys.dm_tran_database_transactions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md).  
   
 -   DBCC OPENTRAN  
   
-     This statement lets you identify the user ID of the owner of the transaction, so you can potentially track down the source of the transaction for a more orderly termination (committing it rather than rolling it back). For more information, see [DBCC OPENTRAN &#40;Transact-SQL&#41;](../Topic/DBCC%20OPENTRAN%20(Transact-SQL).md).  
+     This statement lets you identify the user ID of the owner of the transaction, so you can potentially track down the source of the transaction for a more orderly termination (committing it rather than rolling it back). For more information, see [DBCC OPENTRAN &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-opentran-transact-sql.md).  
   
 #### Stopping a Transaction  
- You may have to use the KILL statement. Use this statement very carefully, however, especially when critical processes are running. For more information, see [KILL &#40;Transact-SQL&#41;](../Topic/KILL%20(Transact-SQL).md).  
+ You may have to use the KILL statement. Use this statement very carefully, however, especially when critical processes are running. For more information, see [KILL &#40;Transact-SQL&#41;](~/t-sql/language-elements/kill-transact-sql.md).  
   
- ![Arrow icon used with Back to Top link](../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Guide](#Top)  
+ ![Arrow icon used with Back to Top link](../2014/data-quality-services/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Guide](#Top)  
   
 ## See Also  
  [SQL Server 2005 Row Versioning-Based Transaction Isolation](http://msdn.microsoft.com/library/ms345124(v=sql.90).aspx)   

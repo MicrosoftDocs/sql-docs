@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: 7ad59850-8135-4c4d-95e9-6d705b6d77a8
 caps.latest.revision: 17
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # General Properties Page, Models (Report Manager)
@@ -41,7 +41,7 @@ manager: "mblythe"
  Type a description of the model. This description appears in the Contents page to users who have permission to access the modelt.  
   
  **Hidden in list view**  
- Select this check box to hide the item when the folder is set in list view. List view is a mode for viewing folder contents that is supported in Report Manager. You can set this option in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to define how this item is viewed in Report Manager. For more information about view modes in Report Manager, see [Contents Page &#40;Report Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md).  
+ Select this check box to hide the item when the folder is set in list view. List view is a mode for viewing folder contents that is supported in Report Manager. You can set this option in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] to define how this item is viewed in Report Manager. For more information about view modes in Report Manager, see [Contents Page &#40;Report Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md).  
   
  **Apply**  
  Click to save your changes.  
@@ -53,11 +53,11 @@ manager: "mblythe"
  Click to relocate a model within the report server folder hierarchy. Clicking this button opens the Move Items page, on which you can browse through folders for a new folder location. For more information, see [Move Items Page &#40;Report Manager&#41;](../../2014/reporting-services/move-items-page-report-manager.md).  
   
  **Save**  
- Click to save a read-only copy of the model definition. Depending on the file associations defined on your computer, the file will open in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] or a different application. In most cases, the model opens as an XML file.  
+ Click to save a read-only copy of the model definition. Depending on the file associations defined on your computer, the file will open in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] or a different application. In most cases, the model opens as an XML file.  
   
  The copy that you open is identical to the original model definition that was initially published to the report server. Any properties that were set on the model after it was published (such as data source properties) are not reflected in the file that you open.  
   
- You can modify the model definition and save it as a new file in a shared folder, and upload the model definition to the report server as a new item. Modifications that you make to the model definition while it is open in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] (or another application) are not saved directly to the report server. You must upload the file to publish the modified model to the report server.  
+ You can modify the model definition and save it as a new file in a shared folder, and upload the model definition to the report server as a new item. Modifications that you make to the model definition while it is open in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] (or another application) are not saved directly to the report server. You must upload the file to publish the modified model to the report server.  
   
  Note that if you want to open the report model in Model Designer, you should save the model as .smdl file, and then add the .smdl file to a project in Model Designer.  
   

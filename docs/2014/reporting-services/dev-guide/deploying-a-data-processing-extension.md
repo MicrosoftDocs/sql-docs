@@ -17,11 +17,11 @@ helpviewer_keywords:
 ms.assetid: e5c0b5a9-1386-47cb-aade-96653ecfaa54
 caps.latest.revision: 34
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Deploying a Data Processing Extension
-  Once you have written and compiled your [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data processing extension into a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] library, you need to make it discoverable by the report server and by Report Designer. This is as easy as copying the extension to the appropriate directories and adding entries to the appropriate [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] configuration files.  
+  Once you have written and compiled your [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension into a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] library, you need to make it discoverable by the report server and by Report Designer. This is as easy as copying the extension to the appropriate directories and adding entries to the appropriate [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configuration files.  
   
 ## Configuration-File Extension Element  
  Data processing extensions that you deploy to the report server or Report Designer need to be entered as **Extension** elements in the configuration files. These files are RSReportServer.config for the report server and RSReportDesigner.config for Report Designer.  
@@ -30,7 +30,7 @@ manager: "jhubbard"
   
 |Attribute|Description|  
 |---------------|-----------------|  
-|`Name`|A unique name for the extension, for example, "SQL" for the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data processing extension or "OLEDB" for the OLE DB data processing extension. The maximum length for the `Name` attribute is 255 characters. The name must be unique among all entries within the **Extension** element of a configuration file.|  
+|`Name`|A unique name for the extension, for example, "SQL" for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data processing extension or "OLEDB" for the OLE DB data processing extension. The maximum length for the `Name` attribute is 255 characters. The name must be unique among all entries within the **Extension** element of a configuration file.|  
 |`Type`|A comma-separated list that includes the fully qualified namespace along with the name of the assembly.|  
 |`Visible`|A value of `false` indicates that the data processing extension should not be visible in user interfaces. If the attribute is not included, the default value is `true`.|  
   

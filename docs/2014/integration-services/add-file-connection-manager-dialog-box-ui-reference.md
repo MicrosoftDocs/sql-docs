@@ -25,7 +25,7 @@ manager: "jhubbard"
  To learn more about the Multiple Files connection manager, see [Multiple Files Connection Manager](../../2014/integration-services/multiple-files-connection-manager.md).  
   
 > [!NOTE]  
->  The built-in tasks and data flow components in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] do not use the Multiple Files connection manager. However, you can use this connection manager in the Script task or Script component.  
+>  The built-in tasks and data flow components in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] do not use the Multiple Files connection manager. However, you can use this connection manager in the Script task or Script component.  
   
 ## Options  
  **Usage type**  

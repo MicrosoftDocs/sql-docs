@@ -17,7 +17,7 @@ ms.author: "mblythe"
 manager: "mblythe"
 ---
 # Technical Reference for BI Annotations to CSDL
-  This section lists the elements, attribute, and properties in CSDL that are used to represent [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] tabular models. Some elements are new; others have been annotated or extended to support business intelligence modeling.  
+  This section lists the elements, attribute, and properties in CSDL that are used to represent [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tabular models. Some elements are new; others have been annotated or extended to support business intelligence modeling.  
   
  For an overview of tabular models and how the entities, relationships, and formulas are represented in CSDL, see [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](../../../2014/analysis-services/dev-guide/csdl-annotations-for-business-intelligence-csdlbi.md).  
   

@@ -22,16 +22,16 @@ manager: "jhubbard"
   
 2.  Recreate the Windows service account if the corresponding service account was removed.  
   
- You cannot use the Repair operation to add or remove components. To add or remove components, check or uncheck the corresponding component in the Feature tree on the **Feature Selection** page in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup.  
+ You cannot use the Repair operation to add or remove components. To add or remove components, check or uncheck the corresponding component in the Feature tree on the **Feature Selection** page in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup.  
   
 ### To repair a failed installation of Distributed Replay  
   
 1.  From the **Start** menu, click **Control Panel**, and then double-click **Add or Remove Programs**.  
   
-2.  Select [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] in the **Uninstall or change a program** window, and then in the [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] dialog box, click **Repair**.  
+2.  Select [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] in the **Uninstall or change a program** window, and then in the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dialog box, click **Repair**.  
   
-3.  Follow the steps in the [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] wizard, and on the **Select Features** page, select the Distributed Replay components you want to repair, and then click **Next.**.  
+3.  Follow the steps in the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] wizard, and on the **Select Features** page, select the Distributed Replay components you want to repair, and then click **Next.**.  
   
-4.  Complete the [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Installation Wizard to repair the selected Distributed Replay features.  
+4.  Complete the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Installation Wizard to repair the selected Distributed Replay features.  
   
   

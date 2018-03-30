@@ -16,16 +16,16 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Lesson 2: Evaluate Best Practices Policies on a Scheduled Basis
-  You can configure scheduled evaluations of best practices policies on one or more instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. To configure best practices policies to run on a scheduled basis, you must import the policies into the target instance.  
+  You can configure scheduled evaluations of best practices policies on one or more instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. To configure best practices policies to run on a scheduled basis, you must import the policies into the target instance.  
   
  To deploy scheduled policies to multiple servers, you can import the policies to one instance, configure the schedules for each policy, export the scheduled policies to a folder, and then deploy the scheduled policies to target instances through Registered Servers.  
   
 > [!IMPORTANT]  
->  The target instances must be running [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or a later version. Automation requires the policies to be stored locally on the instance, which is not supported by versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that are earlier than [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
+>  The target instances must be running [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] or a later version. Automation requires the policies to be stored locally on the instance, which is not supported by versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that are earlier than [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)].  
   
  In this lesson, you will do the following:  
   
--   Import the best practices policies into an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Import the best practices policies into an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 -   Configure the policies to run on a schedule.  
   

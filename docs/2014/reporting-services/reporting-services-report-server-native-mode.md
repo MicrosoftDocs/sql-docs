@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 caps.latest.revision: 23
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Reporting Services Report Server (Native Mode)
-  A report server configured for native mode runs as an application server that provides all processing and management capability exclusively through [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]components.  
+  A report server configured for native mode runs as an application server that provides all processing and management capability exclusively through [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]components.  
   
- You can use either [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or Report Manager to manage [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] reports. Use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configuration manager to manage a report server in native mode.  
+ You can use either [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] or Report Manager to manage [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] reports. Use the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] configuration manager to manage a report server in native mode.  
   
  If the report server is configured for SharePoint mode, you must use the content management pages on the SharePoint site to manage reports, shared data sources, and other report server items.  
   
@@ -37,7 +37,7 @@ manager: "mblythe"
 -   [Referencing an Image Resource from a Report](#bkmk_referenceimage)  
   
 ##  <a name="bkmk_sum"></a> Summary of Native Mode  
- A [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] native mode installation consists of several server-side features that you need to manage and maintain. The server features include the following:  
+ A [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] native mode installation consists of several server-side features that you need to manage and maintain. The server features include the following:  
   
 -   The Report Server Web service, which runs within the Report Server service.  
   
@@ -45,23 +45,23 @@ manager: "mblythe"
   
 -   The report server database.  
   
- To fully administer a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation, you must have the following permissions:  
+ To fully administer a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] installation, you must have the following permissions:  
   
 -   Membership in the local Administrator group on the report server computer. If your installation includes server features that run on remote computers, you must have administrator permissions on those computers if you want to manage those servers over a remote connection.  
   
--   Database administrator permissions for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance that hosts the database.  
+-   Database administrator permissions for the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance that hosts the database.  
   
--   If you are installing [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] on a domain controller, you must be a domain administrator.  
+-   If you are installing [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] on a domain controller, you must be a domain administrator.  
   
 ##  <a name="bkmk_managecontent"></a> Managing content  
- In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], content management refers to the management of reports, models, folders, resources, and shared data sources. All these items can be managed independently of each other through properties and security settings. Any item can be moved to a different location in the report server folder namespace. To manage items effectively, you need to know which tasks a content manager performs.  
+ In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], content management refers to the management of reports, models, folders, resources, and shared data sources. All these items can be managed independently of each other through properties and security settings. Any item can be moved to a different location in the report server folder namespace. To manage items effectively, you need to know which tasks a content manager performs.  
   
 > [!NOTE]  
 >  Content management is different from report server administration. For more information about how to manage the environment in which a report server runs, see [Administration (Reporting Services)](../../2014/reporting-services/reporting-services-report-server-native-mode.md).  
   
  Content management includes the following tasks:  
   
--   Securing the report server site and items by applying the role-based security provided with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+-   Securing the report server site and items by applying the role-based security provided with [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
 -   Structuring the report server folder hierarchy by adding, modifying, and deleting folders.  
   
@@ -77,7 +77,7 @@ manager: "mblythe"
   
  Permission to perform management tasks are provided through two predefined roles: **System Administrator** and **Content Manager**. Effective management of report server content requires that you are assigned to both roles. For more information about these predefined roles, see [Roles and Permissions &#40;Reporting Services&#41;](../../2014/reporting-services/roles-and-permissions-reporting-services.md).  
   
- Tools for managing report server content include [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or Report Manager. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] allows you to set defaults and enable features. Report Manager is used to grant user access to report server items and operations, view and use reports and other content types, and view and use all shared items and report distribution features.  
+ Tools for managing report server content include [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] or Report Manager. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] allows you to set defaults and enable features. Report Manager is used to grant user access to report server items and operations, view and use reports and other content types, and view and use all shared items and report distribution features.  
   
 ##  <a name="bkmk_manageresources"></a> Securing and Managing a Resource  
  A resource is a managed item that is stored on a report server, but is not processed by a report server. Typically, a resource provides external content to report users. Examples include an image in a .jpg file or an HTML file that describes the business rules used in a report. The JPG or HTML file is stored on the report server, but the report server passes the file directly to the browser rather than processing it first.  

@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Dimension Relationships
-  Dimension usage defines the relationships between a cube dimension and the measure groups in a cube. A cube dimension is an instance of a database dimension that is used in a specific cube. A cube can, and frequently does, have cube dimensions that are not directly related to a measure group, but which might be indirectly related to the measure group through another dimension or measure group. When you add a database dimension or measure group to a cube, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] tries to determine dimension usage by examining relationships between the dimension tables and fact tables in the cube's data source view, and by examining the relationships between attributes in dimensions. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] automatically sets the dimension usage settings for the relationships that it can detect.  
+  Dimension usage defines the relationships between a cube dimension and the measure groups in a cube. A cube dimension is an instance of a database dimension that is used in a specific cube. A cube can, and frequently does, have cube dimensions that are not directly related to a measure group, but which might be indirectly related to the measure group through another dimension or measure group. When you add a database dimension or measure group to a cube, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tries to determine dimension usage by examining relationships between the dimension tables and fact tables in the cube's data source view, and by examining the relationships between attributes in dimensions. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] automatically sets the dimension usage settings for the relationships that it can detect.  
   
  A relationship between a dimension and a measure group consists of the dimension and fact tables participating in the relationship and a granularity attribute that specifies the granularity of the dimension in the particular measure group.  
   
@@ -54,7 +54,7 @@ manager: "mblythe"
  For more information about referenced relationships, see [Define a Referenced Relationship and Referenced Relationship Properties](../../../2014/analysis-services/define-a-referenced-relationship-and-referenced-relationship-properties.md).  
   
 ## Fact Dimension Relationships  
- Fact dimensions, frequently referred to as degenerate dimensions, are standard dimensions that are constructed from attribute columns in fact tables instead of from attribute columns in dimension tables. Useful dimensional data is sometimes stored in a fact table to reduce duplication. For example, the following diagram displays the **FactResellerSales** fact table, from the [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] sample database.  
+ Fact dimensions, frequently referred to as degenerate dimensions, are standard dimensions that are constructed from attribute columns in fact tables instead of from attribute columns in dimension tables. Useful dimensional data is sometimes stored in a fact table to reduce duplication. For example, the following diagram displays the **FactResellerSales** fact table, from the [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] sample database.  
   
  ![Columns in fact table can support dimensions](../../../2014/analysis-services/dev-guide/media/as-factdim.gif "Columns in fact table can support dimensions")  
   
@@ -66,7 +66,7 @@ manager: "mblythe"
 >  Fact dimensions are frequently used to support drillthrough actions. For more information about actions, see [Actions &#40;Analysis Services - Multidimensional Data&#41;](../../../2014/analysis-services/actions-analysis-services-multidimensional-data.md).  
   
 > [!NOTE]  
->  Fact dimensions must be incrementally updated after every update to the measure group that is referenced by the fact relationship. If the fact dimension is a ROLAP dimension, the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] processing engine drops any caches and incrementally processes the measure group.  
+>  Fact dimensions must be incrementally updated after every update to the measure group that is referenced by the fact relationship. If the fact dimension is a ROLAP dimension, the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] processing engine drops any caches and incrementally processes the measure group.  
   
  For more information about fact relationships, see [Define a Fact Relationship and Fact Relationship Properties](../../../2014/analysis-services/define-a-fact-relationship-and-fact-relationship-properties.md).  
   
@@ -75,7 +75,7 @@ manager: "mblythe"
   
  ![Logical schema/many-to-many dimension relationship](../../../2014/analysis-services/dev-guide/media/as-many-dimension1.gif "Logical schema/many-to-many dimension relationship")  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] lets you define a many-to-many relationship between a dimension and a fact table.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] lets you define a many-to-many relationship between a dimension and a fact table.  
   
 > [!NOTE]  
 >  To support a many-to-many dimension relationship, the data source view must have established a foreign key relationship between all the tables involved, as shown in the previous diagram. Otherwise, you will be unable to select the correct intermediate measure group when establishing the relationship in the **Dimension Usage** tab of Dimension Designer.  

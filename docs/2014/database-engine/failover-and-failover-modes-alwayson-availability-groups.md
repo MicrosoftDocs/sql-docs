@@ -48,14 +48,14 @@ manager: "jhubbard"
  Forced failover (with possible data loss)  
  A failover that can be initiated by a database administrator when no secondary replica is SYNCHRONIZED with the primary replica or the primary replica is not running and no secondary replica is failover ready. Forced failover risks possible data loss and is recommended strictly for disaster recovery. Forced failover is also known as forced manual failover because it can only be initiated manually. This is the only form of failover supported by in asynchronous-commit availability mode.  
   
- [!INCLUDE[ssFosAutoC](../../includes/ssfosautoc-md.md)]  
- Within a given availability group, a pair of availability replicas (including the current primary replica) that are configured for synchronous-commit mode with automatic failover, if any. An[!INCLUDE[ssFosAuto](../../includes/ssfosauto-md.md)]takes effect only if the secondary replica is currently SYNCHRONIZED with the primary replica.  
+ [!INCLUDE[ssFosAutoC](../includes/ssfosautoc-md.md)]  
+ Within a given availability group, a pair of availability replicas (including the current primary replica) that are configured for synchronous-commit mode with automatic failover, if any. An[!INCLUDE[ssFosAuto](../includes/ssfosauto-md.md)]takes effect only if the secondary replica is currently SYNCHRONIZED with the primary replica.  
   
- [!INCLUDE[ssFosSyncC](../../includes/ssfossyncc-md.md)]  
- Within a given availability group, a set of two or three availability replicas (including the current primary replica) that are configured for synchronous-commit mode, if any. A [!INCLUDE[ssFosSync](../../includes/ssfossync-md.md)]takes effect only if the secondary replicas are configured for manual failover mode and at least one secondary replica is currently SYNCHRONIZED with the primary replica.  
+ [!INCLUDE[ssFosSyncC](../includes/ssfossyncc-md.md)]  
+ Within a given availability group, a set of two or three availability replicas (including the current primary replica) that are configured for synchronous-commit mode, if any. A [!INCLUDE[ssFosSync](../includes/ssfossync-md.md)]takes effect only if the secondary replicas are configured for manual failover mode and at least one secondary replica is currently SYNCHRONIZED with the primary replica.  
   
- [!INCLUDE[ssFosEntireC](../../includes/ssfosentirec-md.md)]  
- Within a given availability group, the set of all availability replicas whose operational state is currently ONLINE, regardless of availability mode and of failover mode. The [!INCLUDE[ssFosEntire](../../includes/ssfosentire-md.md)]becomes relevant when no secondary replica is currently SYNCHRONIZED with the primary replica.  
+ [!INCLUDE[ssFosEntireC](../includes/ssfosentirec-md.md)]  
+ Within a given availability group, the set of all availability replicas whose operational state is currently ONLINE, regardless of availability mode and of failover mode. The [!INCLUDE[ssFosEntire](../includes/ssfosentire-md.md)]becomes relevant when no secondary replica is currently SYNCHRONIZED with the primary replica.  
   
 ##  <a name="Overview"></a> Overview of Failover  
  The following table summarizes which forms of failover are supported under different availability and failover modes. For each pairing, the effective availability mode and failover mode is determined by the intersection of the modes of the primary replica plus the modes of one or more secondary replicas.  
@@ -76,13 +76,13 @@ manager: "jhubbard"
 ### Failover Sets  
  The forms of failover that are possible for a given availability group can be understood in terms of failover sets. A failover set consists of the primary replica and secondary replicas that support a given form of failover, as follows:  
   
--   **[!INCLUDE[ssFosAutoC](../../includes/ssfosautoc-md.md)] (optional):**  Within a given availability group, a pair of availability replicas (including the current primary replica) that are configured for synchronous-commit mode with automatic failover, if any. An automatic failover set takes effect only if the secondary replica is currently SYNCHRONIZED with the primary replica.  
+-   **[!INCLUDE[ssFosAutoC](../includes/ssfosautoc-md.md)] (optional):**  Within a given availability group, a pair of availability replicas (including the current primary replica) that are configured for synchronous-commit mode with automatic failover, if any. An automatic failover set takes effect only if the secondary replica is currently SYNCHRONIZED with the primary replica.  
   
--   **[!INCLUDE[ssFosSyncC](../../includes/ssfossyncc-md.md)] (optional):**  Within a given availability group, a set of two or three availability replicas (including the current primary replica) that are configured for synchronous-commit mode, if any. A synchronous-commit failover set takes effect only if the secondary replicas are configured for manual failover mode and at least one secondary replica is currently SYNCHRONIZED with the primary replica.  
+-   **[!INCLUDE[ssFosSyncC](../includes/ssfossyncc-md.md)] (optional):**  Within a given availability group, a set of two or three availability replicas (including the current primary replica) that are configured for synchronous-commit mode, if any. A synchronous-commit failover set takes effect only if the secondary replicas are configured for manual failover mode and at least one secondary replica is currently SYNCHRONIZED with the primary replica.  
   
--   **[!INCLUDE[ssFosEntireC](../../includes/ssfosentirec-md.md)] :**  Within a given availability group, the set of all availability replicas whose operational state is currently ONLINE, regardless of availability mode and of failover mode. The entire failover set becomes relevant when no secondary replica is currently SYNCHRONIZED with the primary replica.  
+-   **[!INCLUDE[ssFosEntireC](../includes/ssfosentirec-md.md)] :**  Within a given availability group, the set of all availability replicas whose operational state is currently ONLINE, regardless of availability mode and of failover mode. The entire failover set becomes relevant when no secondary replica is currently SYNCHRONIZED with the primary replica.  
   
- When you configure an availability replica as synchronous commit with automatic failover, the availability replica becomes part of the [!INCLUDE[ssFosAuto](../../includes/ssfosauto-md.md)]. However whether the set takes effect depends the current primary. The forms of failover that are actually possible at a given time depends on what failover sets are currently in effect.  
+ When you configure an availability replica as synchronous commit with automatic failover, the availability replica becomes part of the [!INCLUDE[ssFosAuto](../includes/ssfosauto-md.md)]. However whether the set takes effect depends the current primary. The forms of failover that are actually possible at a given time depends on what failover sets are currently in effect.  
   
  For example, consider an availability group that has four availability replicas, as follows:  
   
@@ -203,7 +203,7 @@ manager: "jhubbard"
 ###  <a name="ForcedFailoverHowWorks"></a> How Forced Failover Works  
  Forcing failover initiates a transition of the primary role to a target replica whose role is in the SECONDARY or RESOLVING state. The failover target becomes the new primary replica and immediately serves its copies of the databases to clients. When the former primary replica becomes available, it will transition to the secondary role and its databases will become secondary databases.  
   
- All secondary databases (including the former primary databases, when they become available) are SUSPENDED. Depending on the previous data synchronization state of a suspended secondary database, it might be suitable for salvaging missing committed data for that primary database. On a secondary replica that is configured for read-only access, you can query the secondary databases to manually discover missing data. Then you can issue [!INCLUDE[tsql](../../includes/tsql-md.md)] statements on the new primary databases to make any necessary changes.  
+ All secondary databases (including the former primary databases, when they become available) are SUSPENDED. Depending on the previous data synchronization state of a suspended secondary database, it might be suitable for salvaging missing committed data for that primary database. On a secondary replica that is configured for read-only access, you can query the secondary databases to manually discover missing data. Then you can issue [!INCLUDE[tsql](../includes/tsql-md.md)] statements on the new primary databases to make any necessary changes.  
   
 ###  <a name="ForcedFailoverRisks"></a> Risks of Forcing Failover  
  It is essential to understand that forcing failover can cause data loss. Data loss is possible because the target replica cannot communicate with the primary replica and, therefore, cannot guarantee that the databases are synchronized. Forcing failover starts a new recovery fork. Because the original primary databases and secondary databases are on different recovery forks, each of them now contains data that the other database does not contain: each original primary database contains whatever changes were not yet sent from its send queue to the former secondary database (the unsent log); the former secondary databases contain whatever changes occur after failover was forced.  
@@ -233,7 +233,7 @@ manager: "jhubbard"
   
 1.  Connect to the primary replica.  
   
-2.  Query the `last_commit_lsn` (LSN of the last committed transaction) and `last_commit_time` (time of the last commit) columns of the [sys.dm_hadr_database_replica_states](../Topic/sys.dm_hadr_database_replica_states%20\(Transact-SQL\).md) dynamic management view.  
+2.  Query the `last_commit_lsn` (LSN of the last committed transaction) and `last_commit_time` (time of the last commit) columns of the [sys.dm_hadr_database_replica_states](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) dynamic management view.  
   
 3.  Compare the values returned for each primary database and each of its secondary databases. The difference between their Last Commit LSNs indicate the amount of lag.  
   

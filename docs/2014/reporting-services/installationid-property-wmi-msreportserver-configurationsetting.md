@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: 39df58b1-86e0-438e-a22b-280feb3ac033
 caps.latest.revision: 37
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # InstallationID Property (WMI MSReportServer_ConfigurationSetting)
@@ -37,7 +37,7 @@ public string InstanceID;
 ```  
   
 ## Requirements  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../includes/ssrswminmspca-md.md)]  
   
 ## See Also  
  [MSReportServer_ConfigurationSetting Members](../../2014/reporting-services/msreportserver-configurationsetting-members.md)  

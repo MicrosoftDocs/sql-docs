@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: cdd84ad8-7c6a-41ac-bf51-1b0973434829
 caps.latest.revision: 31
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Select the Data Source
@@ -31,7 +31,7 @@ manager: "mblythe"
  Type a name for the connection to the data source. The data source name must be unique within the report.  
   
  **Type**  
- Select the type of data source you are using (for example, if you are using a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, choose [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]).  
+ Select the type of data source you are using (for example, if you are using a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database, choose [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]).  
   
  **Connection string**  
  Type a connection string for the data source. For more information about connection strings, see [Data Connections, Data Sources, and Connection Strings in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).  

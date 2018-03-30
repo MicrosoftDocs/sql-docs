@@ -39,7 +39,7 @@ manager: "mblythe"
  The decisions that you make about which columns of data to use in the model, and how to use and process that data, greatly affect the results of analysis. The following topics provide information to help you understand these choices.  
   
 ### Using Feature Selection  
- Most data mining algorithms in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] use a process called *feature selection* to select only the most useful attributes for addition to a model. Reducing the number of columns and attributes can improve performance and the quality of the model. The feature selection methods that are available differ depending on the algorithm that you choose.  
+ Most data mining algorithms in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] use a process called *feature selection* to select only the most useful attributes for addition to a model. Reducing the number of columns and attributes can improve performance and the quality of the model. The feature selection methods that are available differ depending on the algorithm that you choose.  
   
  [Feature Selection &#40;Data Mining&#41;](../../2014/analysis-services/feature-selection-data-mining.md).  
   
@@ -57,9 +57,9 @@ manager: "mblythe"
  You don’t need to physically remove columns from the mining structure; you can just flag the column as **Ignore**. The column is removed from the mining model, but can still be used by other mining models in the structure, ore referenced in a drillthrough query.  
   
 ### Creating Aliases for Model Columns  
- When [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] creates the mining model, it uses the same column names that are in the mining structure. You can add an alias to any column in the mining model. This might make it easier to understand the column contents or usage, or make the name shorter for convenience in creating queries. Aliases are also helpful when you want to create a copy of a column and name it something descriptive.  
+ When [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] creates the mining model, it uses the same column names that are in the mining structure. You can add an alias to any column in the mining model. This might make it easier to understand the column contents or usage, or make the name shorter for convenience in creating queries. Aliases are also helpful when you want to create a copy of a column and name it something descriptive.  
   
- You create an alias by editing the `Name` property of the mining model column. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] continues to use the original name as the ID of the column, and the new value that you type for `Name` becomes the column alias, and appears in the grid in parentheses next to the column usage.  
+ You create an alias by editing the `Name` property of the mining model column. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] continues to use the original name as the ID of the column, and the new value that you type for `Name` becomes the column alias, and appears in the grid in parentheses next to the column usage.  
   
  ![aliases on mining model columns](../../2014/analysis-services/media/modelcolumnalias-income.gif "aliases on mining model columns")  
   

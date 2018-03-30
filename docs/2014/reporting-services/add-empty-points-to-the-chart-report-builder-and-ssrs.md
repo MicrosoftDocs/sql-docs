@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 2b056119-439f-494f-83cf-ee0c05dc6487
 caps.latest.revision: 7
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Add Empty Points to the Chart (Report Builder and SSRS)
@@ -23,7 +23,7 @@ manager: "mblythe"
  For more information, see [Empty and Null Data Points in Charts &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ### To specify empty points on a chart  
   

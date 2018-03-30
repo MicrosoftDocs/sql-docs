@@ -25,7 +25,7 @@ manager: "mblythe"
   
  The **Create Mining Structure Wizard** helps you build a new data mining structure. A structure is a collection of data extracted from a specified data source.  A mining structure can be updated with new data at the source, but when you create the mining structure, you define data types and names that define how the data is used for analysis.  
   
- You can use the following data sources to build your structure: an Excel table, an Excel range, or any data in an external data source that has already been defined as an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data source view.  
+ You can use the following data sources to build your structure: an Excel table, an Excel range, or any data in an external data source that has already been defined as an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data source view.  
   
  For each structure, you have the option of setting aside some of the data to use for testing and validation. By creating this *holdout data set* when you set up your data sources, you can ensure that all models that are based on the structure are able to use a consistent data set for testing.  
   
@@ -38,7 +38,7 @@ manager: "mblythe"
   
  When you add a new model to a structure, you analyze the data by using a different algorithm, or with different parameters. This option is particularly useful if you want to create a model using one of the algorithms not exposed in the Data Mining Client tools.  
   
- For example, you can use any of the algorithms supported by [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], such as:  
+ For example, you can use any of the algorithms supported by [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], such as:  
   
 -   Linear regression  
   
@@ -46,9 +46,9 @@ manager: "mblythe"
   
 -   Association analysis on nested data sets  
   
- To see what kind of mining structures are available, you can browse the models and structures stored in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] by clicking either **Manage Models** or **Browse**.  
+ To see what kind of mining structures are available, you can browse the models and structures stored in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] by clicking either **Manage Models** or **Browse**.  
   
- You are limited to data mining structures that were created during the current session, or mining structures that were saved to an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+ You are limited to data mining structures that were created during the current session, or mining structures that were saved to an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
  For more information, see [Add Model to Structure &#40;Data Mining Add-ins for Excel&#41;](../../2014/analysis-services/add-model-to-structure-data-mining-add-ins-for-excel.md).  
   

@@ -15,7 +15,7 @@ f1_keywords:
 ms.assetid: 95299049-71ba-427f-b723-775cb696243f
 caps.latest.revision: 39
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Dataset Properties Dialog Box, Options
@@ -43,8 +43,8 @@ manager: "mblythe"
 ## See Also  
  [Set the Locale for a Report or Text Box &#40;Reporting Services&#41;](../../2014/reporting-services/set-the-locale-for-a-report-or-text-box-reporting-services.md)   
  [Add Data to a Report &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-data-to-a-report-report-builder-and-ssrs.md)   
- [Windows Collation Name &#40;Transact-SQL&#41;](../Topic/Windows%20Collation%20Name%20\(Transact-SQL\).md)   
- [SQL Server Collation Name &#40;Transact-SQL&#41;](../Topic/SQL%20Server%20Collation%20Name%20\(Transact-SQL\).md)   
+ [Windows Collation Name &#40;Transact-SQL&#41;](~/t-sql/statements/windows-collation-name-transact-sql.md)   
+ [SQL Server Collation Name &#40;Transact-SQL&#41;](~/t-sql/statements/sql-server-collation-name-transact-sql.md)   
  [Aggregate Function &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/aggregate-function-report-builder-and-ssrs.md)  
   
   

@@ -50,7 +50,7 @@ manager: "mblythe"
 |1|Ashton|chris.ashton@contoso.com|.05|255|2010-01-03|SLR Camera|15|  
 |2|Jaworski|michal.jaworski@contoso.com|.10|254|2010-01-03|Budget Movie-Maker|27|  
   
- This approach can work, but it involves storing a lot of redundant data, such as the customer e-mail address for every order. Storage is cheap, but you have to make sure you update every row for that customer if the e-mail address changes. One solution to this problem is to split the data into multiple tables and define relationships between those tables. This is the approach used in *relational databases* like [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For example, a database that you import into a model might represent order data by using three related tables:  
+ This approach can work, but it involves storing a lot of redundant data, such as the customer e-mail address for every order. Storage is cheap, but you have to make sure you update every row for that customer if the e-mail address changes. One solution to this problem is to split the data into multiple tables and define relationships between those tables. This is the approach used in *relational databases* like [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For example, a database that you import into a model might represent order data by using three related tables:  
   
 ### Customers  
   

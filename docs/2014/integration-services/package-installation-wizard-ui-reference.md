@@ -27,16 +27,16 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Package Installation Wizard UI Reference
-  Use the **Package Installation Wizard** to deploy a [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project, including the packages and miscellaneous files it contains and any package dependencies.  
+  Use the **Package Installation Wizard** to deploy a [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project, including the packages and miscellaneous files it contains and any package dependencies.  
   
- Before you deploy packages, you can create configurations and then deploy them with the packages. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] uses configurations to dynamically update properties of packages and package objects at run time. For example, the connection string of an OLE DB connection can be set dynamically at run time by providing a configuration that maps a value to the property that contains the connection string.  
+ Before you deploy packages, you can create configurations and then deploy them with the packages. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] uses configurations to dynamically update properties of packages and package objects at run time. For example, the connection string of an OLE DB connection can be set dynamically at run time by providing a configuration that maps a value to the property that contains the connection string.  
   
- You cannot run the Package Installation Wizard until you build an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project and create a deployment utility. For more information, see [Deploy Packages by Using the Deployment Utility](../../2014/integration-services/deploy-packages-by-using-the-deployment-utility.md).  
+ You cannot run the Package Installation Wizard until you build an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project and create a deployment utility. For more information, see [Deploy Packages by Using the Deployment Utility](../../2014/integration-services/deploy-packages-by-using-the-deployment-utility.md).  
   
  The following sections describe pages of the wizard.  
   
 ## Welcome to the Package Installation Wizard Page  
- Use the **Package Installation Wizard** to deploy an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project for which you built a package deployment utility.  
+ Use the **Package Installation Wizard** to deploy an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project for which you built a package deployment utility.  
   
  **Do not show this starting page again**  
  Select to skip the starting page when you run the wizard again.  
@@ -84,14 +84,14 @@ manager: "jhubbard"
  Go to the Finish the Package Installation Wizard page. Use this option if you have backtracked through the wizard pages to revise your choices and have specified all the required options.  
   
 ## Deploy SSIS Packages Page  
- Use the **Deploy SSIS Packages** page to specify where to install [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages and their dependencies.  
+ Use the **Deploy SSIS Packages** page to specify where to install [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages and their dependencies.  
   
 ### Options  
  **File system deployment**  
  Deploy packages and dependencies in a specified folder in the file system.  
   
  **SQL Server deployment**  
- Deploy packages and dependencies in an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use this option if [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] shares packages between servers. Any package dependencies are installed in the specified folder in the file system.  
+ Deploy packages and dependencies in an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Use this option if [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] shares packages between servers. Any package dependencies are installed in the specified folder in the file system.  
   
  **Validate packages after installation**  
  Indicate whether to validate packages after installation.  
@@ -125,7 +125,7 @@ manager: "jhubbard"
  Skip to the Finish the Package Installation Wizard page. Use this option if you have backtracked through the wizard pages to revise your choices and if have specified all of the required options.  
   
 ## Specify Target SQL Server Page  
- Use the **Specify Target SQL Server** page to specify options for deploying the package to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Use the **Specify Target SQL Server** page to specify options for deploying the package to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ### Options  
  **Server name**  
@@ -135,7 +135,7 @@ manager: "jhubbard"
  Specify whether to use Windows Authentication to log on to the server. Windows Authentication is recommended for better security.  
   
  **Use SQL Server Authentication**  
- Specify whether the package should use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication to log on to the server. If you use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, you must provide a user name and password.  
+ Specify whether the package should use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication to log on to the server. If you use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication, you must provide a user name and password.  
   
  **User name**  
  Specify a user name.  
@@ -152,7 +152,7 @@ manager: "jhubbard"
 >  If you do not enter a valid package path, the following error message appears: "One or more arguments are invalid."  
   
  **Rely on server storage for encryption**  
- Select to use security features of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to help secure the packages.  
+ Select to use security features of the [!INCLUDE[ssDE](../includes/ssde-md.md)] to help secure the packages.  
   
  **Next**  
  Go to the next page in the wizard.  
@@ -161,7 +161,7 @@ manager: "jhubbard"
  Skip to the Finish the Package Installation Wizard page. Use this option if you have backtracked through the wizard pages to revise your choices and have specified all of the required options.  
   
 ## Finish the Package Installation Page  
- Use the **Finish the Package Installation Wizard** page to view a summary of the package installation results. This page provides details such as the name of the deployed [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project, the packages that were installed, the configuration files, and the installation location.  
+ Use the **Finish the Package Installation Wizard** page to view a summary of the package installation results. This page provides details such as the name of the deployed [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project, the packages that were installed, the configuration files, and the installation location.  
   
  **Finish**  
  Exit the wizard by clicking **Finish**.  

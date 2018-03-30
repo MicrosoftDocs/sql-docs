@@ -20,7 +20,7 @@ manager: "mblythe"
   
  How you use a data feed depends on whether you are using built-in export features in applications that support Atom data feeds, or creating and using custom data services. Applications that are able to publish and read Atom XML data provide seamless data transfer that hides the mechanics of data feeds and data services from users. To a user, he or she is simply moving data from one application to another.  
   
- [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and Microsoft SharePoint 2010 provide data feeds that can be used in PowerPivot workbooks. You can use the information in this topic to learn how to access data feeds from reports and lists that you already have.  
+ [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] and Microsoft SharePoint 2010 provide data feeds that can be used in PowerPivot workbooks. You can use the information in this topic to learn how to access data feeds from reports and lists that you already have.  
   
  This topic contains the following sections:  
   
@@ -35,7 +35,7 @@ manager: "mblythe"
 ##  <a name="prereq"></a> Prerequisites  
  You must have the PowerPivot for Excel to import a data feed into Excel 2010.  
   
- You must have a Web service or a data service that provides data in the Atom 1.0 format. Both [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and SharePoint 2010 can provide data in this format.  
+ You must have a Web service or a data service that provides data in the Atom 1.0 format. Both [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] and SharePoint 2010 can provide data in this format.  
   
  Before you can export a SharePoint list as a data feed, you must install ADO.NET Data Services on the SharePoint server. For more information, see [Install ADO.NET Data Services to support data feed exports of SharePoint lists](../../2014/sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md).  
   

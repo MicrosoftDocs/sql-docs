@@ -16,7 +16,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Instance Selection (Upgrade)
-  Use the Instance Selection (Upgrade) page to specify the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to upgrade.  
+  Use the Instance Selection (Upgrade) page to specify the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to upgrade.  
   
 ## Options  
  All components of an instance must be upgraded at the same time. You cannot add or remove features during the upgrade.  

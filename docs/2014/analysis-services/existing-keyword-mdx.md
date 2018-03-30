@@ -37,7 +37,7 @@ Existing Set_Expression
  By default, sets are evaluated within the context of the cube that contains the members of the set. The `Existing` keyword forces a specified set to be evaluated within the current context instead.  
   
 ## Example  
- The following example returns the count of the resellers whose sales have declined over the previous time period, based on user-selected State-Province member values evaluated using the `Aggregate` function. The [Hierarchize &#40;MDX&#41;](../Topic/Hierarchize%20\(MDX\).md) and [DrilldownLevel (MDX)](../Topic/DrilldownLevel%20\(MDX\).md) functions are used to return values for declining sales for product categories in the Product dimension. The `Existing` keyword forces the the set in the `Filter` function to be evaluated in the current context - that is, for the Washington and Oregon members of the State-Province attribute hierarchy.  
+ The following example returns the count of the resellers whose sales have declined over the previous time period, based on user-selected State-Province member values evaluated using the `Aggregate` function. The [Hierarchize &#40;MDX&#41;](~/mdx/hierarchize-mdx.md) and [DrilldownLevel (MDX)](~/mdx/drilldownlevel-mdx.md) functions are used to return values for declining sales for product categories in the Product dimension. The `Existing` keyword forces the the set in the `Filter` function to be evaluated in the current context - that is, for the Washington and Oregon members of the State-Province attribute hierarchy.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS  
@@ -75,13 +75,13 @@ WHERE
 ```  
   
 ## See Also  
- [Count &#40;Set&#41; &#40;MDX&#41;](../Topic/Count%20\(Set\)%20\(MDX\).md)   
- [AddCalculatedMembers &#40;MDX&#41;](../Topic/AddCalculatedMembers%20\(MDX\).md)   
- [Aggregate &#40;MDX&#41;](../Topic/Aggregate%20\(MDX\).md)   
- [Filter &#40;MDX&#41;](../Topic/Filter%20\(MDX\).md)   
- [Properties &#40;MDX&#41;](../Topic/Properties%20\(MDX\).md)   
- [DrilldownLevel &#40;MDX&#41;](../Topic/DrilldownLevel%20\(MDX\).md)   
- [Hierarchize &#40;MDX&#41;](../Topic/Hierarchize%20\(MDX\).md)   
- [MDX Function Reference &#40;MDX&#41;](../Topic/MDX%20Function%20Reference%20\(MDX\).md)  
+ [Count &#40;Set&#41; &#40;MDX&#41;](~/mdx/count-set-mdx.md)   
+ [AddCalculatedMembers &#40;MDX&#41;](~/mdx/addcalculatedmembers-mdx.md)   
+ [Aggregate &#40;MDX&#41;](~/mdx/aggregate-mdx.md)   
+ [Filter &#40;MDX&#41;](~/mdx/filter-mdx.md)   
+ [Properties &#40;MDX&#41;](~/mdx/properties-mdx.md)   
+ [DrilldownLevel &#40;MDX&#41;](~/mdx/drilldownlevel-mdx.md)   
+ [Hierarchize &#40;MDX&#41;](~/mdx/hierarchize-mdx.md)   
+ [MDX Function Reference &#40;MDX&#41;](~/mdx/mdx-function-reference-mdx.md)  
   
   

@@ -16,7 +16,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # SSIS Package Upgrade Wizard F1 Help
-  Use the SSIS Package Upgrade Wizard to upgrade [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] packages and [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] packages to the package format for the current release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+  Use the SSIS Package Upgrade Wizard to upgrade [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] packages and [!INCLUDE[ssISversion10](../includes/ssisversion10-md.md)] packages to the package format for the current release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
  **To run the SSIS Package Upgrade Wizard**  
   

@@ -20,11 +20,11 @@ helpviewer_keywords:
 ms.assetid: 88534e8e-2877-41cd-b5c2-b1d33a0fd203
 caps.latest.revision: 22
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # GenerateDatabaseUpgradeScript Method (WMI MSReportServer_ConfigurationSetting)
-  Generates a script that can be used to upgrade the report server database to the [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] schema.  
+  Generates a script that can be used to upgrade the report server database to the [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] schema.  
   
 ## Syntax  
   
@@ -57,10 +57,10 @@ public void GenerateDatabaseUpgradeScript (string DatabaseName,
  Returns an *HRESULT* indicating success or failure of the method call. A value of 0 indicates that the method call was successful. A non-zero value indicates that an error has occurred.  
   
 ## Remarks  
- The generated script supports [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], and [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
+ The generated script supports [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], and [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)].  
   
 ## Requirements  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../includes/ssrswminmspca-md.md)]  
   
 ## See Also  
  [MSReportServer_ConfigurationSetting Members](../../2014/reporting-services/msreportserver-configurationsetting-members.md)  

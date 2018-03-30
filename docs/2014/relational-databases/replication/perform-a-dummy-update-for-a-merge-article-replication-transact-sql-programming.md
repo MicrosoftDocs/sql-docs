@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 2f339210-4d85-4843-bd94-e86f7100d3ef
 caps.latest.revision: 30
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Perform a Dummy Update for a Merge Article (Replication Transact-SQL Programming)
@@ -27,7 +27,7 @@ manager: "jhubbard"
   
 1.  Execute the operation (for example, UPDATETEXT) on a row in a merge published table  that requires a dummy update.  
   
-2.  At the server (Publisher or Subscriber) on the database where the change was made, execute [sp_mergedummyupdate &#40;Transact-SQL&#41;](../Topic/sp_mergedummyupdate%20\(Transact-SQL\).md). Specify the table on which the change was made for **@source_object**, and the unique identifier of the changed row for **@rowguid**.  
+2.  At the server (Publisher or Subscriber) on the database where the change was made, execute [sp_mergedummyupdate &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-mergedummyupdate-transact-sql.md). Specify the table on which the change was made for **@source_object**, and the unique identifier of the changed row for **@rowguid**.  
   
 3.  Synchronize the subscription to replicate the changed row.  
   

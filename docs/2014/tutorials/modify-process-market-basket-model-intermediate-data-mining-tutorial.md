@@ -38,11 +38,11 @@ manager: "jhubbard"
   
      MINIMUM_SUPPORT = 0.01  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ### To process the mining model  
   
-1.  On the **Mining Model** menu of [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], select **Process Mining Structure and All Models.**  
+1.  On the **Mining Model** menu of [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], select **Process Mining Structure and All Models.**  
   
 2.  At the warning asking whether you want to build and deploy the project, click **Yes**.  
   

@@ -18,13 +18,13 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Implement a Signing Policy by Setting a Registry Value
-  You can use an optional registry value to manage an organization's policy for loading signed or unsigned packages. If you use this registry value, you must create this registry value on each computer on which [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages will run and on which you want to enforce the policy. After the registry value has been set, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] will check or verify the signatures before loading packages.  
+  You can use an optional registry value to manage an organization's policy for loading signed or unsigned packages. If you use this registry value, you must create this registry value on each computer on which [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages will run and on which you want to enforce the policy. After the registry value has been set, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] will check or verify the signatures before loading packages.  
   
  This procedure in this topic describes how to add the optional `BlockedSignatureStates` DWORD value to the HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS registry key. The data value in `BlockedSignatureStates` determines whether a package should be blocked if it has an untrusted signature, has an invalid signature, or is unsigned. With regard to the status of signatures used to sign packages, the `BlockedSignatureStates` registry value uses the following definitions:  
   
 -   A *valid signature* is one that can be read successfully.  
   
--   An *invalid signature* is one for which the decrypted checksum (the one-way hash of the package code encrypted by a private key) does not match the decrypted checksum that is calculated as part of the process of loading [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages.  
+-   An *invalid signature* is one for which the decrypted checksum (the one-way hash of the package code encrypted by a private key) does not match the decrypted checksum that is calculated as part of the process of loading [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages.  
   
 -   A *trusted signature* is one that is created by using a digital certificate signed by a Trusted Root Certification Authority. This setting does not require the signer to be found in the user's list of Trusted Publishers.  
   

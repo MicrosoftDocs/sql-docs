@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 caps.latest.revision: 15
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Tutorial: Ownership Chains and Context Switching
-  This tutorial uses a scenario to illustrate [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security concepts involving ownership chains and user context switching.  
+  This tutorial uses a scenario to illustrate [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] security concepts involving ownership chains and user context switching.  
   
 > [!NOTE]  
->  To run the code in this tutorial you must have both Mixed Mode security configured and the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database installed. For more information about Mixed Mode security, see [Choose an Authentication Mode](../../2014/database-engine/choose-an-authentication-mode.md).  
+>  To run the code in this tutorial you must have both Mixed Mode security configured and the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database installed. For more information about Mixed Mode security, see [Choose an Authentication Mode](../../2014/database-engine/choose-an-authentication-mode.md).  
   
 ## Scenario  
- In this scenario, two users need accounts to access purchase order data stored in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. The requirements are as follows:  
+ In this scenario, two users need accounts to access purchase order data stored in the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database. The requirements are as follows:  
   
 -   The first account (TestManagerUser) must be able to see all details in every purchase order.  
   
@@ -46,7 +46,7 @@ manager: "jhubbard"
  Each code block in this example is explained in line. To copy the complete example, see [Complete Example](#CompleteExample) at the end of this tutorial.  
   
 ## 1. Configure the Environment  
- Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and the following code to open the `AdventureWorks2012` database, and use the `CURRENT_USER` [!INCLUDE[tsql](../../includes/tsql-md.md)] statement to check that the dbo user is displayed as the context.  
+ Use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] and the following code to open the `AdventureWorks2012` database, and use the `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] statement to check that the dbo user is displayed as the context.  
   
 ```  
 USE AdventureWorks2012;  
@@ -55,9 +55,9 @@ SELECT CURRENT_USER AS 'Current User Name';
 GO  
 ```  
   
- For more information about the CURRENT_USER statement, see [CURRENT_USER &#40;Transact-SQL&#41;](../Topic/CURRENT_USER%20\(Transact-SQL\).md).  
+ For more information about the CURRENT_USER statement, see [CURRENT_USER &#40;Transact-SQL&#41;](~/t-sql/functions/current-user-transact-sql.md).  
   
- Use this code as the dbo user to create two users on the server and in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
+ Use this code as the dbo user to create two users on the server and in the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database.  
   
 ```  
 CREATE LOGIN TestManagerUser   
@@ -76,7 +76,7 @@ CREATE USER TestEmployeeUser
 GO   
 ```  
   
- For more information about the CREATE USER statement, see [CREATE USER &#40;Transact-SQL&#41;](../Topic/CREATE%20USER%20\(Transact-SQL\).md). For more information about the CREATE LOGIN statement, see [CREATE LOGIN &#40;Transact-SQL&#41;](../Topic/CREATE%20LOGIN%20\(Transact-SQL\).md).  
+ For more information about the CREATE USER statement, see [CREATE USER &#40;Transact-SQL&#41;](~/t-sql/statements/create-user-transact-sql.md). For more information about the CREATE LOGIN statement, see [CREATE LOGIN &#40;Transact-SQL&#41;](~/t-sql/statements/create-login-transact-sql.md).  
   
  Use the following code to change the ownership of the `Purchasing` schema to the `TestManagerUser` account. This allows that account to use all Data Manipulation Language (DML) statement access (such as `SELECT` and `INSERT` permissions) on the objects it contains. `TestManagerUser` is also granted the ability to create stored procedures.  
   
@@ -93,7 +93,7 @@ GRANT CREATE PROCEDURE
 GO  
 ```  
   
- For more information about the GRANT statement, see [GRANT &#40;Transact-SQL&#41;](../Topic/GRANT%20\(Transact-SQL\).md). For more information about stored procedures, see [Stored Procedures &#40;Database Engine&#41;](../../2014/database-engine/stored-procedures-database-engine.md). For a poster of all [!INCLUDE[ssDE](../../includes/ssde-md.md)] permissions, see [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
+ For more information about the GRANT statement, see [GRANT &#40;Transact-SQL&#41;](~/t-sql/statements/grant-transact-sql.md). For more information about stored procedures, see [Stored Procedures &#40;Database Engine&#41;](../../2014/database-engine/stored-procedures-database-engine.md). For a poster of all [!INCLUDE[ssDE](../includes/ssde-md.md)] permissions, see [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
   
 ## 2. Create a Stored Procedure to Access Data  
  To switch context within a database, use the EXECUTE AS statement. EXECUTE AS requires IMPERSONATE permissions.  
@@ -151,10 +151,10 @@ REVERT;
 GO  
 ```  
   
- For more information about the REVERT statement, see [REVERT &#40;Transact-SQL&#41;](../Topic/REVERT%20\(Transact-SQL\).md).  
+ For more information about the REVERT statement, see [REVERT &#40;Transact-SQL&#41;](~/t-sql/statements/revert-transact-sql.md).  
   
 ## 3. Access Data Through the Stored Procedure  
- `TestEmployeeUser` has no permissions on the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database objects other than a login and the rights assigned to the public database role. The following code returns an error when `TestEmployeeUser` attempts to access base tables.  
+ `TestEmployeeUser` has no permissions on the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database objects other than a login and the rights assigned to the public database role. The following code returns an error when `TestEmployeeUser` attempts to access base tables.  
   
 ```  
 EXECUTE AS LOGIN = 'TestEmployeeUser'  

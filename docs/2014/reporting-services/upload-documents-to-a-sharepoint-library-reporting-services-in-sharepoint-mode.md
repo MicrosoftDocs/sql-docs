@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 93bd1b19-061b-409f-8dc2-ec416b2f4b39
 caps.latest.revision: 10
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Upload Documents to a SharePoint Library (Reporting Services in SharePoint Mode)
@@ -25,7 +25,7 @@ manager: "mblythe"
  You cannot upload a data source (.rds) file. However, you can publish .rds files from a design tool, such as Report Designer, to a SharePoint library. During publication, a new .rsds file is created from the original .rds file in the solution. You can also create a new .rsds file in a SharePoint library and then set data source connection properties in the uploaded reports and models to use the new connection.  
   
 > [!NOTE]  
->  The report server must be configured for SharePoint mode, and the instance of the SharePoint product must have the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Add-in that provides program files for storing and accessing report server items from a SharePoint site.  
+>  The report server must be configured for SharePoint mode, and the instance of the SharePoint product must have the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Add-in that provides program files for storing and accessing report server items from a SharePoint site.  
   
  To upload a document to a library, you must have the "Add Items" permission at the site level. If you are using default security settings, this permission is granted to members of the **Owners** group who have the Full Control level of permission and to the **Members** group who have the Contribute level of permission.  
   

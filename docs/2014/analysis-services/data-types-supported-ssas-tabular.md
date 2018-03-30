@@ -66,7 +66,7 @@ manager: "mblythe"
 >  You cannot import from a **varchar(max)** column that contains a string length of more than 131,072 characters.  
   
 ### Table Data Type  
- In addition, DAX uses a *table* data type. This data type is used by DAX in many functions, such as aggregations and time intelligence calculations. Some functions require a reference to a table; other functions return a table that can then be used as input to other functions. In some functions that require a table as input, you can specify an expression that evaluates to a table; for some functions, a reference to a base table is required. For information about the requirements of specific functions, see [DAX Function Reference](../Topic/DAX%20Function%20Reference.md).  
+ In addition, DAX uses a *table* data type. This data type is used by DAX in many functions, such as aggregations and time intelligence calculations. Some functions require a reference to a table; other functions return a table that can then be used as input to other functions. In some functions that require a table as input, you can specify an expression that evaluates to a table; for some functions, a reference to a base table is required. For information about the requirements of specific functions, see [DAX Function Reference](https://msdn.microsoft.com/library/ee634396.aspx).  
   
 ##  <a name="bkmk_implicit"></a> Implicit and Explicit Data Type Conversion in DAX Formulas  
  Each DAX function has specific requirements as to the types of data that are used as inputs and outputs. For example, some functions require integers for some arguments and dates for others; other functions require text or tables.  
@@ -79,7 +79,7 @@ manager: "mblythe"
   
 -   If you add values in two columns, and one value happens to be represented as text ("12") and the other as a number (12), DAX implicitly converts the string to a number and then does the addition for a numeric result. The following expression returns 44: = "22" + 22  
   
--   If you attempt to concatenate two numbers, the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] add-in will present them as strings and then concatenate. The following expression returns "1234": = 12 & 34  
+-   If you attempt to concatenate two numbers, the [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] add-in will present them as strings and then concatenate. The following expression returns "1234": = 12 & 34  
   
  The following table summarizes the implicit data type conversions that are performed in formulas. In general, semantic model designer behaves like Microsoft Excel, and performs implicit conversions whenever possible when required by the specified operation.  
   
@@ -186,7 +186,7 @@ manager: "mblythe"
 |BLANK OR BLANK|BLANK|Error|  
 |BLANK AND BLANK|BLANK|Error|  
   
- For details on how a particular function or operator handles blanks, see the individual topics for each DAX function, in the section, [DAX Function Reference](../Topic/DAX%20Function%20Reference.md).  
+ For details on how a particular function or operator handles blanks, see the individual topics for each DAX function, in the section, [DAX Function Reference](https://msdn.microsoft.com/library/ee634396.aspx).  
   
 ## See Also  
  [Data Sources &#40;SSAS Tabular&#41;](../../2014/analysis-services/data-sources-ssas-tabular.md)   

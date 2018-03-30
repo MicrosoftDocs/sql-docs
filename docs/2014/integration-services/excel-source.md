@@ -21,7 +21,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Excel Source
-  The Excel source extracts data from worksheets or ranges in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel workbooks.  
+  The Excel source extracts data from worksheets or ranges in [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel workbooks.  
   
  The Excel source provides four different data access modes for extracting data:  
   
@@ -41,9 +41,9 @@ manager: "jhubbard"
  The Excel source has one regular output and one error output.  
   
 ## Usage Considerations  
- The Excel Connection Manager uses the [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet 4.0 and its supporting Excel ISAM (Indexed Sequential Access Method) driver to connect and read and write data to Excel data sources.  
+ The Excel Connection Manager uses the [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB Provider for Jet 4.0 and its supporting Excel ISAM (Indexed Sequential Access Method) driver to connect and read and write data to Excel data sources.  
   
- Many existing [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base articles document the behavior of this provider and driver, and although these articles are not specific to [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] or its predecessor Data Transformation Services, you may want to know about certain behaviors that can lead to unexpected results. For general information on the use and behavior of the Excel driver, see [HOWTO: Use ADO with Excel Data from Visual Basic or VBA](http://support.microsoft.com/kb/257819).  
+ Many existing [!INCLUDE[msCoName](../includes/msconame-md.md)] Knowledge Base articles document the behavior of this provider and driver, and although these articles are not specific to [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] or its predecessor Data Transformation Services, you may want to know about certain behaviors that can lead to unexpected results. For general information on the use and behavior of the Excel driver, see [HOWTO: Use ADO with Excel Data from Visual Basic or VBA](http://support.microsoft.com/kb/257819).  
   
  The following behaviors of the Jet provider with the Excel driver can lead to unexpected results when reading data from an Excel data source.  
   
@@ -53,7 +53,7 @@ manager: "jhubbard"
   
 -   **Truncated text**. When the driver determines that an Excel column contains text data, the driver selects the data type (string or memo) based on the longest value that it samples. If the driver does not discover any values longer than 255 characters in the rows that it samples, it treats the column as a 255-character string column instead of a memo column. Therefore, values longer than 255 characters may be truncated. To import data from a memo column without truncation, you must make sure that the memo column in at least one of the sampled rows contains a value longer than 255 characters, or you must increase the number of rows sampled by the driver to include such a row. You can increase the number of rows sampled by increasing the value of **TypeGuessRows** under the **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Jet\4.0\Engines\Excel** registry key. For more information, see [PRB: Transfer of Data from Jet 4.0 OLEDB Source Fails w/ Error](http://support.microsoft.com/kb/281517).  
   
--   **Data types**. The Excel driver recognizes only a limited set of data types. For example, all numeric columns are interpreted as doubles (DT_R8), and all string columns (other than memo columns) are interpreted as 255-character Unicode strings (DT_WSTR). [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] maps the Excel data types as follows:  
+-   **Data types**. The Excel driver recognizes only a limited set of data types. For example, all numeric columns are interpreted as doubles (DT_R8), and all string columns (other than memo columns) are interpreted as 255-character Unicode strings (DT_WSTR). [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] maps the Excel data types as follows:  
   
     -   Numeric – double-precision float (DT_R8)  
   
@@ -67,7 +67,7 @@ manager: "jhubbard"
   
     -   Memo – Unicode text stream (DT_NTEXT)  
   
--   **Data type and length conversions**. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] does not implicitly convert data types. As a result, you may need to use Derived Column or Data Conversion transformations to convert Excel data explicitly before loading it into a non-Excel destination, or to convert non-Excel data before loading it into an Excel destination. In this case, it may be useful to create the initial package by using the Import and Export Wizard, which configures the necessary conversions for you. Some examples of the conversions that may be required include the following:  
+-   **Data type and length conversions**. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] does not implicitly convert data types. As a result, you may need to use Derived Column or Data Conversion transformations to convert Excel data explicitly before loading it into a non-Excel destination, or to convert non-Excel data before loading it into an Excel destination. In this case, it may be useful to create the initial package by using the Import and Export Wizard, which configures the necessary conversions for you. Some examples of the conversions that may be required include the following:  
   
     -   Conversion between Unicode Excel string columns and non-Unicode string columns with specific codepages  
   
@@ -76,7 +76,7 @@ manager: "jhubbard"
     -   Conversion between double-precision Excel numeric columns and numeric columns of other types  
   
 ## Excel Source Configuration  
- You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer or programmatically.  
   
  For more information about the properties that you can set in the **Excel Source Editor** dialog box, click one of the following topics:  
   

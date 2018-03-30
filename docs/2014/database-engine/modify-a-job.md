@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Modify a Job
-  This topic describes how to change the properties of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or SQL Server Management Objects.  
+  This topic describes how to change the properties of [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent jobs in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../includes/tsql-md.md)], or SQL Server Management Objects.  
   
  **In This Topic**  
   
@@ -41,7 +41,7 @@ manager: "jhubbard"
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
- A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent master job cannot be targeted at both local and remote servers.  
+ A [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent master job cannot be targeted at both local and remote servers.  
   
 ###  <a name="Security"></a> Security  
  Unless you are a member of the **sysadmin** fixed server role, you can only modify jobs that you own. For detailed information, see [Implement SQL Server Agent Security](../../2014/database-engine/implement-sql-server-agent-security.md).  
@@ -50,7 +50,7 @@ manager: "jhubbard"
   
 #### To modify a job  
   
-1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], and then expand that instance.  
+1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], and then expand that instance.  
   
 2.  Expand **SQL Server Agent**, expand **Jobs**, right-click the job you want to modify, and then click **Properties**.  
   
@@ -66,21 +66,21 @@ manager: "jhubbard"
   
 3.  In the query window, use the following system stored procedures to modify a job.  
   
-    -   Execute [sp_update_job &#40;Transact-SQL&#41;](../Topic/sp_update_job%20\(Transact-SQL\).md) to change the attributes of a job.  
+    -   Execute [sp_update_job &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-update-job-transact-sql.md) to change the attributes of a job.  
   
-    -   Execute [sp_update_schedule &#40;Transact-SQL&#41;](../Topic/sp_update_schedule%20\(Transact-SQL\).md) to change the scheduling details for a job definition.  
+    -   Execute [sp_update_schedule &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md) to change the scheduling details for a job definition.  
   
-    -   Execute [sp_add_jobstep &#40;Transact-SQL&#41;](../Topic/sp_add_jobstep%20\(Transact-SQL\).md) to add new job steps.  
+    -   Execute [sp_add_jobstep &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md) to add new job steps.  
   
-    -   Execute [sp_update_jobstep &#40;Transact-SQL&#41;](../Topic/sp_update_jobstep%20\(Transact-SQL\).md) to change pre-existing job steps.  
+    -   Execute [sp_update_jobstep &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md) to change pre-existing job steps.  
   
-    -   Execute [sp_delete_jobstep &#40;Transact-SQL&#41;](../Topic/sp_delete_jobstep%20\(Transact-SQL\).md) to remove a job step from a job.  
+    -   Execute [sp_delete_jobstep &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md) to remove a job step from a job.  
   
     -   Additional stored procedures to modify any SQL Server Agent master job:  
   
-        -   Execute [sp_delete_jobserver &#40;Transact-SQL&#41;](../Topic/sp_delete_jobserver%20\(Transact-SQL\).md) to delete a server currently associated with a job.  
+        -   Execute [sp_delete_jobserver &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md) to delete a server currently associated with a job.  
   
-        -   Execute [sp_add_jobserver &#40;Transact-SQL&#41;](../Topic/sp_add_jobserver%20\(Transact-SQL\).md) to associate a server with the current job.  
+        -   Execute [sp_add_jobserver &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md) to associate a server with the current job.  
   
 ##  <a name="SMO"></a> Using SQL Server Management Objects  
  **To modify a job**  

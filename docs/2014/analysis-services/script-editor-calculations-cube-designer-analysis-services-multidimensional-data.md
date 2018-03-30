@@ -27,7 +27,7 @@ manager: "mblythe"
 |**Expression**|Type the Multidimensional Expressions (MDX) expressions and statements for the script command selected in the **Metadata** pane (in form view) or the entire cube script (in script view).<br /><br /> Drag selected elements from the **Calculation Tools** pane to this option to include the MDX syntax for the selected element.|  
   
 ## See Also  
- [Multidimensional Expressions &#40;MDX&#41; Reference](../Topic/Multidimensional%20Expressions%20\(MDX\)%20Reference.md)   
+ [Multidimensional Expressions &#40;MDX&#41; Reference](~/mdx/multidimensional-expressions-mdx-reference.md)   
  [Cube Designer &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/cube-designer-analysis-services-multidimensional-data.md)   
  [Toolbar &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [Script Organizer &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/script-organizer-cube-designer-analysis-services-multidimensional-data.md)   

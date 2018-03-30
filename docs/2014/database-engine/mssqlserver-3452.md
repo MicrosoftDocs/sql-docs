@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: bf838f02-7186-4b33-b01e-361b0c02de1f
 caps.latest.revision: 17
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_3452
@@ -31,7 +31,7 @@ manager: "jhubbard"
 |Message Text|Recovery of database '%.*ls' (%d) detected possible identity value inconsistency in table ID %d. Run DBCC CHECKIDENT ('%.\*ls').|  
   
 ## Explanation  
- During the upgrade to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], the process to recover the identity values in the database found an inconsistency in the metadata.  
+ During the upgrade to [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], the process to recover the identity values in the database found an inconsistency in the metadata.  
   
 ## User Action  
  Run DBCC CHECKIDENT.  

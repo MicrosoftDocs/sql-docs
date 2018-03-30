@@ -17,7 +17,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQL Server Native Client Errors
-  This section contains the topic that describes an error that can occur when you install [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
+  This section contains the topic that describes an error that can occur when you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
  [MSSQLSERVER_50000](../../../2014/database-engine/dev-guide/mssqlserver-50000.md)  
   

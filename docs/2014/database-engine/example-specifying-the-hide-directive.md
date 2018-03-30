@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 87504d87-1cbd-412a-9041-47884b6efcec
 caps.latest.revision: 10
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Example: Specifying the HIDE Directive
@@ -34,7 +34,7 @@ manager: "jhubbard"
   
  This query generates the XML you want. The query identifies two column groups having 1 and 2 as Tag values in the column names.  
   
- This query uses the [query() Method (xml Data Type)](../Topic/query\(\)%20Method%20\(xml%20Data%20Type\).md) of the **xml** data type to query the CatalogDescription column of **xml** type in order to retrieve the summary description. The query also uses the [value() Method (xml Data Type)](../Topic/value\(\)%20Method%20\(xml%20Data%20Type\).md) of the **xml** data type to retrieve the ProductModelID value from the CatalogDescription column. This value is not required in the resulting XML, but is required to sort the resulting rowset. Therefore, the column name, `[Summary!2!ProductModelID!HIDE]`, includes the **HIDE** directive. If this column is not included in the SELECT statement, you will have to sort the rowset by `[ProductModel!1!ProdModelID]` and `[Summary!2!SummaryDescription]` that is **xml** type and you cannot use the **xml** type column in ORDER BY. Therefore, the additional `[Summary!2!ProductModelID!HIDE]` column is added and is then specified in the ORDER BY clause.  
+ This query uses the [query() Method (xml Data Type)](~/t-sql/xml/query-method-xml-data-type.md) of the **xml** data type to query the CatalogDescription column of **xml** type in order to retrieve the summary description. The query also uses the [value() Method (xml Data Type)](~/t-sql/xml/value-method-xml-data-type.md) of the **xml** data type to retrieve the ProductModelID value from the CatalogDescription column. This value is not required in the resulting XML, but is required to sort the resulting rowset. Therefore, the column name, `[Summary!2!ProductModelID!HIDE]`, includes the **HIDE** directive. If this column is not included in the SELECT statement, you will have to sort the rowset by `[ProductModel!1!ProdModelID]` and `[Summary!2!SummaryDescription]` that is **xml** type and you cannot use the **xml** type column in ORDER BY. Therefore, the additional `[Summary!2!ProductModelID!HIDE]` column is added and is then specified in the ORDER BY clause.  
   
 ```  
 USE AdventureWorks2012;  

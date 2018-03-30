@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: 016ac5f8-ce40-4627-aceb-11747d54fed1
 caps.latest.revision: 8
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Distributor Information, Subscription Watch List (Snapshot Publication, SQL Server 2005 and Later)

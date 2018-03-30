@@ -16,9 +16,9 @@ ms.author: "sstein"
 manager: "jhubbard"
 ---
 # Collations and Code Pages
-  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] has restrictions on supported code pages for (var)char columns in memory-optimized tables and supported collations used in indexes and natively compiled stored procedures.  
+  [!INCLUDE[hek_2](../includes/hek-2-md.md)] has restrictions on supported code pages for (var)char columns in memory-optimized tables and supported collations used in indexes and natively compiled stored procedures.  
   
- The code page for a (var)char value determines the mapping between characters and the byte representation that is stored in the table. For example, with the Windows Latin 1 code page (1252; the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] default), the character 'a' corresponds to the byte 0x61.  
+ The code page for a (var)char value determines the mapping between characters and the byte representation that is stored in the table. For example, with the Windows Latin 1 code page (1252; the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] default), the character 'a' corresponds to the byte 0x61.  
   
  The code page of a (var)char value is determined by the collation associated with the value. For example, the collation SQL_Latin1_General_CP1_CI_AS has the associated code page 1252.  
   
@@ -74,11 +74,11 @@ GO
     select * from sys.fn_helpcollations() where name like '%BIN2'  
     ```  
   
-     If you access the table through interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)], you can use the `COLLATE` keyword to change the collation with expressions or sort operations. See the last example for a sample of this.  
+     If you access the table through interpreted [!INCLUDE[tsql](../includes/tsql-md.md)], you can use the `COLLATE` keyword to change the collation with expressions or sort operations. See the last example for a sample of this.  
   
 -   Natively compiled stored procedures cannot use parameters, local variables, or string constants of (var)char type if the database collation is not a code page 1252 collation.  
   
--   All expressions and sort operations inside natively compiled stored procedures must use BIN2 collations. The implication is that all comparisons and sort operations are based on the Unicode code points of the characters (binary representations). For example all sorting is case sensitive ('Z' comes before 'a'). If necessary, use interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)] for case-insensitive sorting and comparison.  
+-   All expressions and sort operations inside natively compiled stored procedures must use BIN2 collations. The implication is that all comparisons and sort operations are based on the Unicode code points of the characters (binary representations). For example all sorting is case sensitive ('Z' comes before 'a'). If necessary, use interpreted [!INCLUDE[tsql](../includes/tsql-md.md)] for case-insensitive sorting and comparison.  
   
 -   Truncation of UTF-16 data is not supported inside natively compiled stored procedures. This means that n(var)char(*n*) values cannot be converted to type n(var)char(*i*), if *i* < *n*, if the collation has _SC property. For example, the following is not supported:  
   

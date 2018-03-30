@@ -25,7 +25,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Deploy a Database By Using a DAC
-  Use the **Deploy a Database to SQL Azure** Wizard to deploy a database between an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] server, or between two [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]servers.  
+  Use the **Deploy a Database to SQL Azure** Wizard to deploy a database between an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)] and a [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] server, or between two [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]servers.  
   
 ##  <a name="BeforeBegin"></a> Before You Begin  
  The wizard uses a Data-tier Application (DAC) BACPAC archive file to deploy both the data and the definitions of database objects. It performs a DAC export operation from the source database, and a DAC import to the destination.  
@@ -33,20 +33,20 @@ manager: "jhubbard"
 ###  <a name="DBOptSettings"></a> Database Options and Settings  
  By default, the database created during the deployment will have the default settings from the CREATE DATABASE statement. The exception is that the database collation and compatibility level are set to the values from the source database.  
   
- Database options, such as TRUSTWORTHY, DB_CHAINING and HONOR_BROKER_PRIORITY, cannot be adjusted as part of the deployment process. Physical properties, such as the number of filegroups, or the numbers and sizes of files cannot be altered as part of the deployment process. After the deployment completes, you can use the ALTER DATABASE statement, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell to tailor the database.  
+ Database options, such as TRUSTWORTHY, DB_CHAINING and HONOR_BROKER_PRIORITY, cannot be adjusted as part of the deployment process. Physical properties, such as the number of filegroups, or the numbers and sizes of files cannot be altered as part of the deployment process. After the deployment completes, you can use the ALTER DATABASE statement, [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], or [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell to tailor the database.  
   
 ###  <a name="LimitationsRestrictions"></a> Limitations and Restrictions  
  The **Deploy Database** wizard supports deploying a database:  
   
--   From an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+-   From an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)] to [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)].  
   
--   From [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+-   From [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] to an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
--   Between two [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] servers.  
+-   Between two [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] servers.  
   
- The wizard does not support deploying databases between two instances of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ The wizard does not support deploying databases between two instances of the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
- An instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] must be running [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) or later to work with the wizard. If a database on an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] contains objects not supported on [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], you cannot use the wizard to deploy the database to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. If a database on [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] contains objects not supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you cannot use the wizard to deploy the database to instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ An instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)] must be running [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] Service Pack 4 (SP4) or later to work with the wizard. If a database on an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)] contains objects not supported on [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)], you cannot use the wizard to deploy the database to [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]. If a database on [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] contains objects not supported by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], you cannot use the wizard to deploy the database to instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ###  <a name="Security"></a> Security  
  To improve security, SQL Server Authentication logins are stored in a DAC BACPAC file without a password. When the BACPAC is imported, the login is created as a disabled login with a generated password. To enable the logins, log in using a login that has ALTER ANY LOGIN permission and use ALTER LOGIN to enable the login and assign a new password that can be communicated to the user. This is not needed for Windows Authentication logins because their passwords are not managed by SQL Server.  
@@ -54,12 +54,12 @@ manager: "jhubbard"
 #### Permissions  
  The wizard requires DAC export permissions on the source database. The login requires at least ALTER ANY LOGIN and database scope VIEW DEFINITION permissions, as well as SELECT permissions on **sys.sql_expression_dependencies**. Exporting a DAC can be done by members of the securityadmin fixed server role who are also members of the database_owner fixed database role in the database from which the DAC is exported. Members of the sysadmin fixed server role or the built-in SQL Server system administrator account named **sa** can also export a DAC.  
   
- The wizard requires DAC import permissions on the destination instance or server. The login must be a member of the **sysadmin** or **serveradmin** fixed server roles, or in the **dbcreator** fixed server role and have ALTER ANY LOGIN permissions. The built-in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system administrator account named **sa** can also import a DAC. Importing a DAC with logins to [!INCLUDE[ssSDS](../../includes/sssds-md.md)] requires membership in the loginmanager or serveradmin roles. Importing a DAC without logins to [!INCLUDE[ssSDS](../../includes/sssds-md.md)] requires membership in the dbmanager or serveradmin roles.  
+ The wizard requires DAC import permissions on the destination instance or server. The login must be a member of the **sysadmin** or **serveradmin** fixed server roles, or in the **dbcreator** fixed server role and have ALTER ANY LOGIN permissions. The built-in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] system administrator account named **sa** can also import a DAC. Importing a DAC with logins to [!INCLUDE[ssSDS](../includes/sssds-md.md)] requires membership in the loginmanager or serveradmin roles. Importing a DAC without logins to [!INCLUDE[ssSDS](../includes/sssds-md.md)] requires membership in the dbmanager or serveradmin roles.  
   
 ##  <a name="UsingDeployDACWizard"></a> Using the Deploy Database Wizard  
  **To migrate a database using the Deploy Database Wizard**  
   
-1.  Connect to the location of the database you want to deploy. You can specify either an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)] or a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] server.  
+1.  Connect to the location of the database you want to deploy. You can specify either an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)] or a [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] server.  
   
 2.  In **Object Explorer**, expand the node for the instance that has the database.  
   
@@ -97,9 +97,9 @@ manager: "jhubbard"
   
 -   **New database name** – Specify a name for the new database.  
   
- **[!INCLUDE[ssSDS](../../includes/sssds-md.md)] database settings:**  
+ **[!INCLUDE[ssSDS](../includes/sssds-md.md)] database settings:**  
   
--   **[!INCLUDE[ssSDS](../../includes/sssds-md.md)] edition** – Select the edition of [!INCLUDE[ssSDS](../../includes/sssds-md.md)] from the drop-down menu.  
+-   **[!INCLUDE[ssSDS](../includes/sssds-md.md)] edition** – Select the edition of [!INCLUDE[ssSDS](../includes/sssds-md.md)] from the drop-down menu.  
   
 -   **Maximum database size** – Select the maximum database size from the drop-down menu.  
   

@@ -1,0 +1,11 @@
+### YamlMime:XRefMap
+sorted: true
+hrefUpdated: true
+references:
+- uid: Microsoft.SqlServer.Replication.PartitionOptions.NonOverlappingSingleSubscription
+  commentId: F:Microsoft.SqlServer.Replication.PartitionOptions.NonOverlappingSingleSubscription
+  href: https://msdn.microsoft.com/library/microsoft.sqlserver.replication.partitionoptions(v=sql.120).aspx
+  name: NonOverlappingSingleSubscription
+  name.vb: NonOverlappingSingleSubscription
+  fullName: Microsoft.SqlServer.Replication.PartitionOptions.NonOverlappingSingleSubscription
+  fullName.vb: Microsoft.SqlServer.Replication.PartitionOptions.NonOverlappingSingleSubscription

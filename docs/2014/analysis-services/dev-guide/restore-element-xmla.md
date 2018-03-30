@@ -29,7 +29,7 @@ ms.author: "mblythe"
 manager: "mblythe"
 ---
 # Restore Element (XMLA)
-  Restores a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] database from a backup file.  
+  Restores a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database from a backup file.  
   
 ## Syntax  
   
@@ -65,7 +65,7 @@ manager: "mblythe"
 |Child elements|[AllowOverwrite](../../../2014/analysis-services/dev-guide/allowoverwrite-element-xmla.md), [DatabaseName](../../../2014/analysis-services/dev-guide/databasename-element-xmla.md), [DatabaseID](../../../2014/analysis-services/dev-guide/databaseid-element-xmla.md), [File](../../../2014/analysis-services/dev-guide/file-element-xmla.md), [Locations](../../../2014/analysis-services/dev-guide/locations-element-xmla.md), [Password](../../../2014/analysis-services/dev-guide/password-element-xmla.md), [Security](../../../2014/analysis-services/dev-guide/security-element-xmla.md), [DbStorageLocation](../../../2014/analysis-services/dev-guide/dbstoragelocation-element.md)|  
   
 ## Remarks  
- The `Restore` command restores an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] database specified in the `DatabaseName` element from a backup file and optionally restores remote partitions from remote backup files.  
+ The `Restore` command restores an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database specified in the `DatabaseName` element from a backup file and optionally restores remote partitions from remote backup files.  
   
  Depending on the storage mode used by objects stored in the backup file, the `Restore` command restores information as listed in the following table.  
   
@@ -75,12 +75,12 @@ manager: "mblythe"
 |Hybrid OLAP (HOLAP)|Aggregations and metadata|  
 |Relational OLAP (ROLAP)|Metadata|  
   
- During a `Restore` command, an exclusive lock is placed on the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] database specified in the `DatabaseName` element. The lock is released after the `Restore` command has completed.  
+ During a `Restore` command, an exclusive lock is placed on the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database specified in the `DatabaseName` element. The lock is released after the `Restore` command has completed.  
   
  For more information about backing up and restoring databases, see [Backing Up, Restoring, and Synchronizing Databases &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 > [!IMPORTANT]  
->  For each backup file, the user who runs the restore command must have permission to read from the backup location specified for each file. To restore an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] database that is not installed on the server, the user must also be a member of the server role for that [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance. To overwrite an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] database, the user must have one of the following roles: a member of the server role for the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance, or a member of a database role with Full Control (Administrator) permissions on the database to be restored.  
+>  For each backup file, the user who runs the restore command must have permission to read from the backup location specified for each file. To restore an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database that is not installed on the server, the user must also be a member of the server role for that [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance. To overwrite an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database, the user must have one of the following roles: a member of the server role for the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance, or a member of a database role with Full Control (Administrator) permissions on the database to be restored.  
   
 > [!NOTE]  
 >  After restoring an existing database, the user who restored the database might lose access to the restored database. This loss of access can occur if, at the time that the backup was performed, the user was not a member of the server role or was not a member of the database role with Full Control (Administrator) permissions.  

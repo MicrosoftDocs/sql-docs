@@ -26,7 +26,7 @@ manager: "mblythe"
   
  If you are creating a filter to apply to an external test data set, first you use the **Data Set Filter** dialog box to choose a table from the list of tables in a data source view. Then, you use the **Filter** dialog box to build conditions that apply only to that table.  
   
- After you have created a set of conditions that apply to a single table, [!INCLUDE[clickOK](../../includes/clickok-md.md)]. The changes that you made in the **Filter** dialog box are automatically added to the filter expression in the parent dialog box, **Data Set Filter** or **Model Filter**.  
+ After you have created a set of conditions that apply to a single table, [!INCLUDE[clickOK](../includes/clickok-md.md)]. The changes that you made in the **Filter** dialog box are automatically added to the filter expression in the parent dialog box, **Data Set Filter** or **Model Filter**.  
   
  If you apply the filter to the new data set, the existing data mining model is used to evaluate only those cases in the data set that meet the conditions. However, if you apply the filter to the mining model itself, the accuracy of the model is assessed for only those cases within the mining model that meet those criteria.  
   

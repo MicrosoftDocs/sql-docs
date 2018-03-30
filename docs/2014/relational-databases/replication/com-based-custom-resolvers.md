@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 94195797-ad7a-4962-a8e3-b259cd13aa38
 caps.latest.revision: 35
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # COM-Based Custom Resolvers
@@ -24,7 +24,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  It is recommended to use a business logic handler rather than a COM-based custom resolver if possible. For more information on business logic handlers, see [Execute Business Logic During Merge Synchronization](../../../2014/relational-databases/replication/execute-business-logic-during-merge-synchronization.md).  
   
- To build a custom COM resolver, you can use the type library that is provided in the replrec.dll; by default, this library is installed at [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM.  
+ To build a custom COM resolver, you can use the type library that is provided in the replrec.dll; by default, this library is installed at [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM.  
   
  Before writing a custom COM resolver, you need to decide:  
   

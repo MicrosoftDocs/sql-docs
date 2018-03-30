@@ -26,7 +26,7 @@ manager: "jhubbard"
  Turn off the trustworthy bit or revoke sysadmin permissions from the dbo database role.  
   
 ## For More Information  
- [ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20\(Transact-SQL\).md)  
+ [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)  
   
 ## See Also  
  [Monitor and Enforce Best Practices by Using Policy-Based Management](../../2014/database-engine/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  

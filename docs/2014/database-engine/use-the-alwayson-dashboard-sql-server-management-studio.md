@@ -21,7 +21,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Use the AlwaysOn Dashboard (SQL Server Management Studio)
-  Database administrators use the AlwaysOn Dashboard to obtains an at-a-glance view the health of an AlwaysOn availability group and its availability replicas and databases in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Some of the typical uses for the AlwaysOn Dashboard are:  
+  Database administrators use the AlwaysOn Dashboard to obtains an at-a-glance view the health of an AlwaysOn availability group and its availability replicas and databases in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Some of the typical uses for the AlwaysOn Dashboard are:  
   
 -   Choosing a replica for a manual failover.  
   
@@ -52,7 +52,7 @@ manager: "jhubbard"
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
 ###  <a name="Prerequisites"></a> Prerequisites  
- You must be connected to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (server instance) that hosts either the primary replica or a secondary replica of an availability group.  
+ You must be connected to the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (server instance) that hosts either the primary replica or a secondary replica of an availability group.  
   
 ###  <a name="Security"></a> Security  
   
@@ -61,12 +61,12 @@ manager: "jhubbard"
   
 ##  <a name="SSMSProcedure"></a> To start the AlwaysOn Dashboard  
   
-1.  In Object Explorer, connect to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on which you want to run the AlwaysOn Dashboard.  
+1.  In Object Explorer, connect to the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on which you want to run the AlwaysOn Dashboard.  
   
 2.  Expand the **AlwaysOn High Availability** node, right-click the **Availability Groups** node, and then click **Show Dashboard**.  
   
 ###  <a name="DashboardOptions"></a> To Change AlwaysOn Dashboard Options  
- You can use the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**Options** dialog box to configure the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AlwaysOn Dashboard behavior for automatic refreshing and enabling an auto-defined AlwaysOn policy.  
+ You can use the [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]**Options** dialog box to configure the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] AlwaysOn Dashboard behavior for automatic refreshing and enabling an auto-defined AlwaysOn policy.  
   
 1.  From the **Tools** menu, click **Options**.  
   
@@ -122,7 +122,7 @@ manager: "jhubbard"
  The name of the server instance that hosts the availability replica. This column is shown by default.  
   
  **Role**  
- Indicates the current role of the availability replica, either **Primary** or **Secondary**. For information about [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] roles, see [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/overview-of-alwayson-availability-groups-sql-server.md). This column is shown by default.  
+ Indicates the current role of the availability replica, either **Primary** or **Secondary**. For information about [!INCLUDE[ssHADR](../includes/sshadr-md.md)] roles, see [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/overview-of-alwayson-availability-groups-sql-server.md). This column is shown by default.  
   
  **Failover Mode**  
  Displays the failover mode for which the replica is configured. The possible failover mode values are:  
@@ -220,7 +220,7 @@ manager: "jhubbard"
  The name of the availability database. This value is shown by default.  
   
  **Replica**  
- The name of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that hosts the availability replica. This value is shown by default.  
+ The name of the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that hosts the availability replica. This value is shown by default.  
   
  **Synchronization State**  
  Indicates whether the availability database is currently synchronized with primary replica. This value is shown by default. The possible synchronization states are:  
@@ -351,7 +351,7 @@ manager: "jhubbard"
 -   [Use AlwaysOn Policies to View the Health of an Availability Group &#40;SQL Server&#41;](../../2014/database-engine/use-alwayson-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
 ## See Also  
- [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../Topic/sys.dm_os_performance_counters%20\(Transact-SQL\).md)   
+ [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)   
  [Monitoring of Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/monitoring-of-availability-groups-sql-server.md)  
   
   

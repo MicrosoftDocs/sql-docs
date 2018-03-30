@@ -18,11 +18,11 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Cube Wizard F1 Help
-  Use the Cube Wizard to create a cube for a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+  Use the Cube Wizard to create a cube for a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
  **To open the Cube Wizard**  
   
- In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], in **Solution Explorer**, right-click the **Cubes** folder for an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project, and then click **New Cube**. After you create a cube by using the Cube Wizard, you can use Cube Designer to modify its properties in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+ In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], in **Solution Explorer**, right-click the **Cubes** folder for an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project, and then click **New Cube**. After you create a cube by using the Cube Wizard, you can use Cube Designer to modify its properties in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 ## In This Section  
   

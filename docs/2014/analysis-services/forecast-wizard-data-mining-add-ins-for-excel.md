@@ -21,7 +21,7 @@ manager: "mblythe"
 # Forecast Wizard (Data Mining Add-ins for Excel)
   ![Associate wizard in Data Mining ribbon](../../2014/analysis-services/media/dmc-forecast.gif "Associate wizard in Data Mining ribbon")  
   
- The Forecast wizard helps you predict values in a time series. The Forecast wizard uses the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series algorithm, which is a regression algorithm for use in predicting continuous columns, such as product sales.  
+ The Forecast wizard helps you predict values in a time series. The Forecast wizard uses the [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series algorithm, which is a regression algorithm for use in predicting continuous columns, such as product sales.  
   
  Each forecasting model must contain a case series, which is the column that distinguishes between points in a sequence. For example, if you are using historical data to forecast sales over a period of several months, you would use a column containing a series of dates as the case series.  
   
@@ -35,7 +35,7 @@ manager: "mblythe"
   
 2.  In the **Select Source Data**, choose the Excel table, range, or external data source to use as inputs.  
   
-     If you use an external data source, you can define custom view or queries and save it as an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data source.  
+     If you use an external data source, you can define custom view or queries and save it as an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data source.  
   
 3.  On the **Forecasting** page, for **Time stamp**, select a column that contains unique numeric value (this includes date and time values) that can be used as the case series. The data source must be sorted in ascending order by this column.  
   

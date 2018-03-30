@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: d151e2c5-cf50-4cb3-a829-8f32455dbd66
 caps.latest.revision: 33
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Specify the Processing Order of Merge Articles
-  Beginning with [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], it is possible to override the default order of article processing for merge publications. This is useful, for example, if you define referential integrity through triggers and those triggers must fire in a certain order.  
+  Beginning with [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], it is possible to override the default order of article processing for merge publications. This is useful, for example, if you define referential integrity through triggers and those triggers must fire in a certain order.  
   
  **To specify the processing order of articles**  
   
 -   Replication Transact-SQL programming: [Specify the Processing Order of Merge Table Articles &#40;Replication Transact-SQL Programming&#41;](../../../2014/relational-databases/replication/specify-the-processing-order-of-merge-table-articles.md)  
   
 ## How Processing Order is Determined  
- During merge synchronization, articles are, by default, processed in the order required by the dependencies between objects, including the declarative referential integrity (DRI) constraints defined on the base tables. Processing involves enumerating the changes to a table and then applying those changes. If no DRI is present but join filters or logical records exist between table articles, the articles are processed in the order required by the filters and logical records. Articles not related to any other article through DRI, join filters, logical records, or other dependencies are processed according to the article nickname in the [sysmergearticles &#40;Transact-SQL&#41;](../Topic/sysmergearticles%20\(Transact-SQL\).md) system table.  
+ During merge synchronization, articles are, by default, processed in the order required by the dependencies between objects, including the declarative referential integrity (DRI) constraints defined on the base tables. Processing involves enumerating the changes to a table and then applying those changes. If no DRI is present but join filters or logical records exist between table articles, the articles are processed in the order required by the filters and logical records. Articles not related to any other article through DRI, join filters, logical records, or other dependencies are processed according to the article nickname in the [sysmergearticles &#40;Transact-SQL&#41;](~/relational-databases/system-tables/sysmergearticles-transact-sql.md) system table.  
   
  Consider a publication that includes the tables **SalesOrderHeader** and **SalesOrderDetail** with a primary key column **SalesOrderID** in the **SalesOrderHeader** table and a corresponding foreign key column **SalesOrderID** in the **SalesOrderDetail** table. During synchronization, merge replication prevents foreign key violations by inserting any new rows in **SalesOrderHeader** before inserting associated rows in **SalesOrderDetail**. Similarly, rows are deleted from **SalesOrderDetail** before the associated row is deleted from **SalesOrderHeader**.  
   

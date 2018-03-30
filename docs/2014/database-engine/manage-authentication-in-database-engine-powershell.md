@@ -16,16 +16,16 @@ ms.author: "mblythe"
 manager: "jhubbard"
 ---
 # Manage Authentication in Database Engine PowerShell
-  By default, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell components use Windows Authentication when connecting to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. You can use SQL Server Authentication by either defining a PowerShell virtual drive, or by specifying the `–Username` and `–Password` parameters for `Invoke-Sqlcmd`.  
+  By default, the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell components use Windows Authentication when connecting to an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)]. You can use SQL Server Authentication by either defining a PowerShell virtual drive, or by specifying the `–Username` and `–Password` parameters for `Invoke-Sqlcmd`.  
   
 1.  **Before you begin:**  [Permissions](#Permissions)  
   
 2.  **To set authentication, using:**  [A Virtual Drive](#SQLAuthVirtDrv), [Invoke-Sqlcmd](#SQLAuthInvSqlCmd)  
   
 ##  <a name="Permissions"></a> Permissions  
- All actions you can perform in an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] are controlled by the permissions granted to the authentication credentials used to connect to the instance. By default, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider and cmdlets use the Windows account under which it is running to make a Windows Authentication connection to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ All actions you can perform in an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)] are controlled by the permissions granted to the authentication credentials used to connect to the instance. By default, the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provider and cmdlets use the Windows account under which it is running to make a Windows Authentication connection to the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
- To make a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication connection you must supply a SQL Server Authentication login ID and password. When using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider, you must associate the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login credentials with a virtual drive, and then use the change directory command (`cd`) to connect to that drive. In Windows PowerShell, security credentials can only be associated with virtual drives.  
+ To make a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication connection you must supply a SQL Server Authentication login ID and password. When using the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provider, you must associate the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] login credentials with a virtual drive, and then use the change directory command (`cd`) to connect to that drive. In Windows PowerShell, security credentials can only be associated with virtual drives.  
   
 ##  <a name="SQLAuthVirtDrv"></a> SQL Server Authentication Using a Virtual Drive  
  **To create a virtual drive associated with a SQL Server Authentication login**  
@@ -43,9 +43,9 @@ manager: "jhubbard"
 2.  Invoke the function to create a virtual drive with the supplied credentials.  
   
 ### Example (Virtual Drive)  
- This example creates a function named **sqldrive** that you can use to create a virtual drive that is associated with the specified [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication login and instance.  
+ This example creates a function named **sqldrive** that you can use to create a virtual drive that is associated with the specified [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication login and instance.  
   
- The **sqldrive** function prompts you to enter the password for your login, masking the password as you type it in. Then, whenever you use the change directory command (`cd`) to connect to a path by using the virtual drive name, all operations are performed by using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication login credentials that you supplied when you created the drive.  
+ The **sqldrive** function prompts you to enter the password for your login, masking the password as you type it in. Then, whenever you use the change directory command (`cd`) to connect to a path by using the virtual drive name, all operations are performed by using the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication login credentials that you supplied when you created the drive.  
   
 ```  
 ## Create a function that specifies the login and prompts for the password.  

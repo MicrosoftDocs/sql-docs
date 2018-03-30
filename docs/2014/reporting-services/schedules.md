@@ -19,11 +19,11 @@ helpviewer_keywords:
 ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
 caps.latest.revision: 50
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Schedules
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides shared schedules and report-specific schedules to help you control processing and distribution of reports. The difference between the two types of schedules is how they are defined, stored, and managed. The internal construction of the two types of schedules is the same. All schedules specify a type of recurrence: monthly, weekly, or daily. Within the recurrence type, you set the intervals and range for how often an event is to occur. The type of recurrence pattern and how those patterns are specified is the same whether you create a shared schedule or a report-specific schedule.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] provides shared schedules and report-specific schedules to help you control processing and distribution of reports. The difference between the two types of schedules is how they are defined, stored, and managed. The internal construction of the two types of schedules is the same. All schedules specify a type of recurrence: monthly, weekly, or daily. Within the recurrence type, you set the intervals and range for how often an event is to occur. The type of recurrence pattern and how those patterns are specified is the same whether you create a shared schedule or a report-specific schedule.  
   
  In this topic:  
   
@@ -60,12 +60,12 @@ manager: "mblythe"
   
  You can create a shared schedule if you want to use the same schedule information for many reports or subscriptions. Shared schedules are defined separately, and then referenced in reports, shared datasets, and subscriptions that need schedule information.  
   
- When you create a schedule, the report saves the schedule information in the report server database or for SharePoint mode, the service application database. The report server also creates a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job that is used to trigger the schedule. Schedule processing is based on the local time of the report server that contains the schedule. The time format follows the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows operating system standard.  
+ When you create a schedule, the report saves the schedule information in the report server database or for SharePoint mode, the service application database. The report server also creates a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent job that is used to trigger the schedule. Schedule processing is based on the local time of the report server that contains the schedule. The time format follows the [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows operating system standard.  
   
  For details on how to create and manage schedules, see [Create, Modify, and Delete Schedules](../../2014/reporting-services/create-modify-and-delete-schedules.md).  
   
 > [!NOTE]  
->  Schedule operations are not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+>  Schedule operations are not available in every edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
   
 ##  <a name="bkmk_compare"></a> Comparing Shared and Report-Specific Schedules  
  Both types of schedules yield the same output:.  
@@ -99,7 +99,7 @@ manager: "mblythe"
 |Create, modify, or delete report-specific schedules in a user-defined subscription|Manage individual subscriptions|Browser, Report Builder, My Reports, Content Manager|Visitors, Members|  
 |Create, modify, or delete report-specific schedules for all other scheduled operations|Manage report history, manage all subscriptions, manage reports|Content Manager|Owners|  
   
- For more information about security in Native mode [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], see [Predefined Roles](../../2014/reporting-services/predefined-roles.md), [Granting Permissions on a Native Mode Report Server](../../2014/reporting-services/granting-permissions-on-a-native-mode-report-server.md) and [Tasks and Permissions](../../2014/reporting-services/tasks-and-permissions.md). For SharePoint mode, see [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../2014/reporting-services/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
+ For more information about security in Native mode [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], see [Predefined Roles](../../2014/reporting-services/predefined-roles.md), [Granting Permissions on a Native Mode Report Server](../../2014/reporting-services/granting-permissions-on-a-native-mode-report-server.md) and [Tasks and Permissions](../../2014/reporting-services/tasks-and-permissions.md). For SharePoint mode, see [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../2014/reporting-services/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
   
 ##  <a name="bkmk_how_scheduling_works"></a> How Scheduling and Delivery Processing Works  
  The Scheduling and Delivery Processor provides the following functionality:  
@@ -124,7 +124,7 @@ manager: "mblythe"
   
      Before the events are processed, the Scheduling and Delivery Processor performs an authentication step to verify that the subscription owner has permission to view the report.  
   
- Reporting Services maintains an event queue for all scheduled operations. It polls the queue at regular intervals to check for new events. By default, the queue is scanned at 10 second intervals. You can change the interval by modifying the `PollingInterval`, `IsNotificationService`, and `IsEventService` configuration settings in the RSReportServer.config file. SharePoint mode also uses the RSreporserver.config for these settings and the values apply to all [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service applications. For more information, see [RSReportServer Configuration File](../../2014/reporting-services/rsreportserver-configuration-file.md).  
+ Reporting Services maintains an event queue for all scheduled operations. It polls the queue at regular intervals to check for new events. By default, the queue is scanned at 10 second intervals. You can change the interval by modifying the `PollingInterval`, `IsNotificationService`, and `IsEventService` configuration settings in the RSReportServer.config file. SharePoint mode also uses the RSreporserver.config for these settings and the values apply to all [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service applications. For more information, see [RSReportServer Configuration File](../../2014/reporting-services/rsreportserver-configuration-file.md).  
   
 ##  <a name="bkmk_serverdependencies"></a> Server Dependencies  
  The Scheduling and Delivery Processor requires that the Report Server service and SQL Server Agent are started. The Schedule and Delivery Processing feature must be enabled through the `ScheduleEventsAndReportDeliveryEnabled` property of the **Surface Area Configuration for Reporting Services** facet in Policy-Based Management. Both SQL Server Agent and the Report Server service must running in order for scheduled operations to occur.  

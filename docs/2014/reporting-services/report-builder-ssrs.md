@@ -12,11 +12,11 @@ ms.topic: "article"
 ms.assetid: 32be8fcc-e87d-4c45-a644-dff45776a981
 caps.latest.revision: 10
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Report Builder (SSRS)
-  Report Builder is a report authoring environment for business users who prefer to work in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office environment. When you design a report, you specify where to get the data, which data to get, and how to display the data. When you run the report, the report processor takes all the information you have specified, retrieves the data, and combines it with the report layout to generate the report.  
+  Report Builder is a report authoring environment for business users who prefer to work in the [!INCLUDE[msCoName](../includes/msconame-md.md)] Office environment. When you design a report, you specify where to get the data, which data to get, and how to display the data. When you run the report, the report processor takes all the information you have specified, retrieves the data, and combines it with the report layout to generate the report.  
   
 ## Benefits of Report Builder  
  Report Builder enables you to:  
@@ -35,7 +35,7 @@ manager: "mblythe"
   
 -   Preview reports in HTML or print format.  
   
--   Export reports to other file formats such as [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)].  
+-   Export reports to other file formats such as [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)].  
   
 -   Save your report and related items s to a SharePoint library, a report server, or your local computer.  
   

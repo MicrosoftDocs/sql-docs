@@ -16,21 +16,21 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Deploy a Model Deployment Package by Using MDSModelDeploy
-  In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], use the MDSModelDeploy tool to deploy a package that contains either:  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], use the MDSModelDeploy tool to deploy a package that contains either:  
   
 -   Model objects only.  
   
 -   Model objects and data.  
   
- If you want to deploy a package that contains model objects only, you can use the model deployment wizard in the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application instead. For more information, see [Deploy a Model Deployment Package by Using the Wizard](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md).  
+ If you want to deploy a package that contains model objects only, you can use the model deployment wizard in the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] web application instead. For more information, see [Deploy a Model Deployment Package by Using the Wizard](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md).  
   
 > [!IMPORTANT]  
->  Packages can be deployed to the edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] they were created in only. This means that packages created in [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] cannot be deployed to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] or higher.  
+>  Packages can be deployed to the edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] they were created in only. This means that packages created in [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] cannot be deployed to [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] or higher.  
   
 ## Prerequisites  
  To perform this procedure:  
   
--   You must have permission to access the **System Administration** functional area in the target [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] environment.  
+-   You must have permission to access the **System Administration** functional area in the target [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] environment.  
   
 -   A model deployment package must exist. For more information, see  [Create a Model Deployment Package by Using MDSModelDeploy](../../2014/master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   

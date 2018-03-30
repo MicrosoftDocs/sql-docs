@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: d742fd30-347a-452f-b5fc-b03232360c6b
 caps.latest.revision: 35
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Script to Grant Oracle Permissions
-  The script provided in this topic is used during the configuration of an Oracle database that will publish data using [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] replication. This script is also available in the following directory after installation: *\<drive>*:\\\Program Files\Microsoft SQL Server\\*\<InstanceName>*\MSSQL\Install\oracleadmin.sql. For more information about configuring the Oracle database, see [Configure an Oracle Publisher](../../../2014/relational-databases/replication/configure-an-oracle-publisher.md).  
+  The script provided in this topic is used during the configuration of an Oracle database that will publish data using [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] replication. This script is also available in the following directory after installation: *\<drive>*:\\\Program Files\Microsoft SQL Server\\*\<InstanceName>*\MSSQL\Install\oracleadmin.sql. For more information about configuring the Oracle database, see [Configure an Oracle Publisher](../../../2014/relational-databases/replication/configure-an-oracle-publisher.md).  
   
 > [!NOTE]  
 >  This script includes the statement `GRANT CREATE ANY TRIGGER TO &&AdminLogin;`, which is required for the triggers used by transactional replication. If you will use only snapshot replication, remove this line from the script.  

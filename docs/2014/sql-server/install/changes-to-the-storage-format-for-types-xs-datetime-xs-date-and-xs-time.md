@@ -21,17 +21,17 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Changes to the storage format for types xs:dateTime, xs:date, and xs:time
-  The XMLDATETIME rule identifies whether or not your databases contain typed XML data that will become invalid after upgrading to [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+  The XMLDATETIME rule identifies whether or not your databases contain typed XML data that will become invalid after upgrading to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ## Component  
- [!INCLUDE[ssDE](../../../includes/ssde-md.md)]  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## Description  
- The storage format in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] for types xs:dateTime, xs:date, and xs:time has been changed to support values with or without time zone information and to allow for preservation of the time zone.  
+ The storage format in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] for types xs:dateTime, xs:date, and xs:time has been changed to support values with or without time zone information and to allow for preservation of the time zone.  
   
- If an XML Schema Collection references one of those types, XML indexes on all columns that are associated with the collection will be disabled after upgrade to [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. You will be able to query them by using SELECT and/or XQUERIES, but the XML index will not be used. If a negative year value is encountered, a runtime error will result.  
+ If an XML Schema Collection references one of those types, XML indexes on all columns that are associated with the collection will be disabled after upgrade to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. You will be able to query them by using SELECT and/or XQUERIES, but the XML index will not be used. If a negative year value is encountered, a runtime error will result.  
   
- Additionally, [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] does not support values with negative years.  
+ Additionally, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] does not support values with negative years.  
   
  The XMLDATETIME rule checks if any of your XML Schema Collections reference one of the affected types and if there are any XML columns typed by such collections.  
   
@@ -179,9 +179,9 @@ EXECUTE DateTimeInvestigation 1;
   
 -   Retype the XML column with a schema collection that doesn't use xs:date or xs:dateTime (use xs:string for example)  
   
- After you have reconciled negative year issues, you can upgrade to [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+ After you have reconciled negative year issues, you can upgrade to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- To use XML indexes in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] after the upgrade, you must rebuild XML indexes or retype XML columns for all columns that use xs:date, xs:time or xs:dateTime.  
+ To use XML indexes in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] after the upgrade, you must rebuild XML indexes or retype XML columns for all columns that use xs:date, xs:time or xs:dateTime.  
   
 ## See Also  
  [Database Engine Upgrade Issues](../../../2014/sql-server/install/database-engine-upgrade-issues.md)  

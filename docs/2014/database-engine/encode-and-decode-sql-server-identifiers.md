@@ -25,7 +25,7 @@ manager: "jhubbard"
 ## Before You Begin  
  Characters that are not supported in Windows PowerShell path names can be represented, or encoded, as the "%" character followed by the hexadecimal value for the bit pattern that represents the character, as in "**%**xx". Encoding can always be used to handle characters that are not supported in Windows PowerShell paths.  
   
- The **Encode-SqlName** cmdlet takes as input a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifier. It outputs a string with all the characters that are not supported by the Windows PowerShell language encoded with "%xx". The **Decode-SqlName** cmdlet takes as input an encoded [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifier and returns the original identifier.  
+ The **Encode-SqlName** cmdlet takes as input a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] identifier. It outputs a string with all the characters that are not supported by the Windows PowerShell language encoded with "%xx". The **Decode-SqlName** cmdlet takes as input an encoded [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] identifier and returns the original identifier.  
   
 ###  <a name="LimitationsRestrictions"></a> Limitations and Restrictions  
  The `Encode-Sqlname` and `Decode-Sqlname` cmdlets only encode or decode the characters that are allowed in SQL Server delimited identifiers, but are not supported in PowerShell paths. These are the characters encoded by **Encode-SqlName** and decoded by **Decode-SqlName**:  

@@ -67,7 +67,7 @@ manager: "mblythe"
 |`DataSourcePermissionID`|`DBTYPE_WSTR`|Optional.|  
 |`ObjectExpansion`|`DBTYPE_WSTR`|Optional.|  
   
- The restriction, `ObjectExpansion`, is available for every major object of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. The client typically uses restrictions to describe the OLAP objects for which the DDL is to be returned, and uses the `ObjectExpansion` restriction to define the degree of expansion in the returned DDL. The following table indicates whether the enumeration value is allowed for [Alter Element &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/alter-element-xmla.md) commands.  
+ The restriction, `ObjectExpansion`, is available for every major object of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. The client typically uses restrictions to describe the OLAP objects for which the DDL is to be returned, and uses the `ObjectExpansion` restriction to define the degree of expansion in the returned DDL. The following table indicates whether the enumeration value is allowed for [Alter Element &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/alter-element-xmla.md) commands.  
   
 |Enumeration Value|Description|  
 |-----------------------|-----------------|  

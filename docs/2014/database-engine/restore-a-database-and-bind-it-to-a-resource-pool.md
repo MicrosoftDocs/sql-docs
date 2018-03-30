@@ -41,7 +41,7 @@ RESTORE DATABASE IMOLTP_DB
 ```  
   
 ###  <a name="bkmk_createPool"></a> Create the resource pool  
- The following [!INCLUDE[tsql](../../includes/tsql-md.md)] creates a resource pool named Pool_IMOLTP with 50% of memory available for its use.  After the pool is created, the Resource Governor is reconfigured to include Pool_IMOLTP.  
+ The following [!INCLUDE[tsql](../includes/tsql-md.md)] creates a resource pool named Pool_IMOLTP with 50% of memory available for its use.  After the pool is created, the Resource Governor is reconfigured to include Pool_IMOLTP.  
   
 ```tsql  
 CREATE RESOURCE POOL Pool_IMOLTP WITH (MAX_MEMORY_PERCENT = 50);  
@@ -52,7 +52,7 @@ GO
 ###  <a name="bkmk_bind"></a> Bind the database and resource pool  
  Use the system function `sp_xtp_bind_db_resource_pool` to bind the database to the resource pool. The function takes two parameters: the database name followed by the resource pool name.  
   
- The following [!INCLUDE[tsql](../../includes/tsql-md.md)] defines a binding of the database IMOLTP_DB to the resource pool Pool_IMOLTP. The binding does not become effective until you complete the next step.  
+ The following [!INCLUDE[tsql](../includes/tsql-md.md)] defines a binding of the database IMOLTP_DB to the resource pool Pool_IMOLTP. The binding does not become effective until you complete the next step.  
   
 ```tsql  
 EXEC sp_xtp_bind_db_resource_pool 'IMOLTP_DB', 'Pool_IMOLTP'  
@@ -68,12 +68,12 @@ RESTORE DATABASE IMOLTP_DB
 ```  
   
 ###  <a name="bkmk_Monitor"></a> Monitor the resource pool performance  
- Once the database is bound to the named resource pool and restored with recovery, monitor the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Resource Pool Stats Object. For more information see [SQL Server, Resource Pool Stats Object](../../2014/database-engine/sql-server-resource-pool-stats-object.md).  
+ Once the database is bound to the named resource pool and restored with recovery, monitor the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Resource Pool Stats Object. For more information see [SQL Server, Resource Pool Stats Object](../../2014/database-engine/sql-server-resource-pool-stats-object.md).  
   
 ## See Also  
  [Bind a Database with Memory-Optimized Tables to a Resource Pool](../../2014/database-engine/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
- [sys.sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](../Topic/sys.sp_xtp_bind_db_resource_pool%20\(Transact-SQL\).md)   
+ [sys.sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)   
  [SQL Server, Resource Pool Stats Object](../../2014/database-engine/sql-server-resource-pool-stats-object.md)   
- [sys.dm_resource_governor_resource_pools](../Topic/sys.sp_xtp_unbind_db_resource_pool%20\(Transact-SQL\).md)  
+ [sys.dm_resource_governor_resource_pools](~/relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)  
   
   

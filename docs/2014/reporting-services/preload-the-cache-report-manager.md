@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 caps.latest.revision: 34
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Preload the Cache (Report Manager)
@@ -25,7 +25,7 @@ manager: "mblythe"
   
 1.  Create a cache refresh plan for the report. This is the preferred method.  
   
-2.  Use a data-driven subscription to preload the cache with instances of parameterized reports. This was the only way to preload the cache in versions of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] earlier than [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. For more information, see [Caching Reports &#40;SSRS&#41;](../../2014/reporting-services/caching-reports-ssrs.md).  
+2.  Use a data-driven subscription to preload the cache with instances of parameterized reports. This was the only way to preload the cache in versions of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] earlier than [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]. For more information, see [Caching Reports &#40;SSRS&#41;](../../2014/reporting-services/caching-reports-ssrs.md).  
   
  The following conditions must be met before you can cache a report or a shared dataset:  
   
@@ -33,7 +33,7 @@ manager: "mblythe"
   
 -   The shared data sources for the shared dataset or the report must be configured to use stored credentials or no credentials.  
   
--   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service must be running.  
+-   The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent service must be running.  
   
 ### To preload the cache by creating a cache refresh plan  
   
@@ -60,7 +60,7 @@ manager: "mblythe"
   
 8.  Configure the schedule  
   
-9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ### To preload the cache with a user-specific report by using a data-driven subscription  
   
@@ -76,7 +76,7 @@ manager: "mblythe"
   
 6.  Specify a data source type and then click **Next** to configure the data source.  
   
-7.  Specify the connection type, connection string, and credentials for accessing the data source that contains subscriber data. The following example illustrates a connection string used to connect to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database called Subscribers:  
+7.  Specify the connection type, connection string, and credentials for accessing the data source that contains subscriber data. The following example illustrates a connection string used to connect to a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database called Subscribers:  
   
     ```  
     data source=<servername>; initial catalog=Subscribers  

@@ -51,15 +51,15 @@ manager: "jhubbard"
     GO  
     ```  
   
-     For more information, see [CREATE LOGIN &#40;Transact-SQL&#41;](../Topic/CREATE%20LOGIN%20\(Transact-SQL\).md).  
+     For more information, see [CREATE LOGIN &#40;Transact-SQL&#41;](~/t-sql/statements/create-login-transact-sql.md).  
   
-     To view the logins on this server instance, you can use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement:  
+     To view the logins on this server instance, you can use the following [!INCLUDE[tsql](../includes/tsql-md.md)] statement:  
   
     ```  
     SELECT * FROM sys.server_principals  
     ```  
   
-     For more information, see [sys.server_principals &#40;Transact-SQL&#41;](../Topic/sys.server_principals%20\(Transact-SQL\).md).  
+     For more information, see [sys.server_principals &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
 2.  Create a user for that login.  
   
@@ -71,21 +71,21 @@ manager: "jhubbard"
     GO  
     ```  
   
-     For more information, see [CREATE USER &#40;Transact-SQL&#41;](../Topic/CREATE%20USER%20\(Transact-SQL\).md).  
+     For more information, see [CREATE USER &#40;Transact-SQL&#41;](~/t-sql/statements/create-user-transact-sql.md).  
   
-     To view the users on this server instance, you can use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement:  
+     To view the users on this server instance, you can use the following [!INCLUDE[tsql](../includes/tsql-md.md)] statement:  
   
     ```  
     SELECT * FROM sys.sysusers;  
     ```  
   
-     For more information, see [sys.sysusers &#40;Transact-SQL&#41;](../Topic/sys.sysusers%20\(Transact-SQL\).md).  
+     For more information, see [sys.sysusers &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/sys-sysusers-transact-sql.md).  
   
 3.  Obtain the certificate for the mirroring endpoint of the other server instance.  
   
      If you have not already done so when configuring outbound connections, obtain a copy of the certificate for the mirroring endpoint of the remote server instance. To do this, back up the certificate on that server instance as described in [Allow a Database Mirroring Endpoint to Use Certificates for Outbound Connections &#40;Transact-SQL&#41;](../../2014/database-engine/database-mirroring-use-certificates-for-outbound-connections.md). When copying a certificate to another system, use a secure copy method. Be extremely careful to keep all of your certificates secure.  
   
-     For more information, see [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](../Topic/BACKUP%20CERTIFICATE%20\(Transact-SQL\).md).  
+     For more information, see [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](~/t-sql/statements/backup-certificate-transact-sql.md).  
   
 4.  Associate the certificate with the user created in step 2.  
   
@@ -99,19 +99,19 @@ manager: "jhubbard"
     GO  
     ```  
   
-     For more information, see [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../Topic/CREATE%20CERTIFICATE%20\(Transact-SQL\).md).  
+     For more information, see [CREATE CERTIFICATE &#40;Transact-SQL&#41;](~/t-sql/statements/create-certificate-transact-sql.md).  
   
-     To view the certificates on this server instance, use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement:  
+     To view the certificates on this server instance, use the following [!INCLUDE[tsql](../includes/tsql-md.md)] statement:  
   
     ```  
     SELECT * FROM sys.certificates  
     ```  
   
-     For more information, see [sys.certificates &#40;Transact-SQL&#41;](../Topic/sys.certificates%20\(Transact-SQL\).md).  
+     For more information, see [sys.certificates &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-certificates-transact-sql.md).  
   
 5.  Grant CONNECT permission on the login for the remote mirroring endpoint.  
   
-     For example, to grant permission on HOST_A to the remote server instance on HOST_B to connect to its local login—that is, to connect to `HOST_B_login`—use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements:  
+     For example, to grant permission on HOST_A to the remote server instance on HOST_B to connect to its local login—that is, to connect to `HOST_B_login`—use the following [!INCLUDE[tsql](../includes/tsql-md.md)] statements:  
   
     ```  
     USE master;  
@@ -119,7 +119,7 @@ manager: "jhubbard"
     GO  
     ```  
   
-     For more information, see [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](../Topic/GRANT%20Endpoint%20Permissions%20\(Transact-SQL\).md).  
+     For more information, see [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](~/t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
   
  This completes setting up certificate authentication for HOST_B to log in to HOST_A.  
   
@@ -162,7 +162,7 @@ GO
   
 ## See Also  
  [Transport Security for Database Mirroring and AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/transport-security-database-mirroring-always-on-availability.md)   
- [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](../Topic/GRANT%20Endpoint%20Permissions%20\(Transact-SQL\).md)   
+ [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](~/t-sql/statements/grant-endpoint-permissions-transact-sql.md)   
  [Set Up an Encrypted Mirror Database](../../2014/database-engine/set-up-an-encrypted-mirror-database.md)   
  [The Database Mirroring Endpoint &#40;SQL Server&#41;](../../2014/database-engine/the-database-mirroring-endpoint-sql-server.md)   
  [Troubleshoot Database Mirroring Configuration &#40;SQL Server&#41;](../../2014/database-engine/troubleshoot-database-mirroring-configuration-sql-server.md)  

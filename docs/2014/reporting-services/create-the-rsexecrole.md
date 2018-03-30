@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
 caps.latest.revision: 22
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Create the RSExecRole
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] uses a predefined database role called `RSExecRole` to grant report server permissions to the report server database. The `RSExecRole` role is created automatically with the report server database. As a rule, you should never modify it or assign other users to the role. However, when you move a report server database to a new or different [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)], must re-create the role in the Master and MSDB system databases.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] uses a predefined database role called `RSExecRole` to grant report server permissions to the report server database. The `RSExecRole` role is created automatically with the report server database. As a rule, you should never modify it or assign other users to the role. However, when you move a report server database to a new or different [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)], must re-create the role in the Master and MSDB system databases.  
   
  Using the following instructions, you will perform the following steps:  
   
@@ -33,20 +33,20 @@ manager: "mblythe"
   
 -   Back up the encryption keys so that you can restore them after the database is moved. This is step does not directly affect your ability to create and provision the `RSExecRole`, but you must have a backup of the keys in order to verify your work. For more information, see [Back Up and Restore Reporting Services Encryption Keys](../../2014/sql-server/install/back-up-and-restore-reporting-services-encryption-keys.md).  
   
--   Verify you are logged on as a user account that has `sysadmin` permissions on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
+-   Verify you are logged on as a user account that has `sysadmin` permissions on the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance.  
   
--   Verify [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service is installed and running on the instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance that you plan to use.  
+-   Verify [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent service is installed and running on the instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)] instance that you plan to use.  
   
 -   Attach the reportservertempdb and reportserver databases. You are not required to attach the databases to create the actual role, but they must be attached before you can test your work.  
   
  The instructions for manually creating the `RSExecRole` are intended to be used within the context of migrating a report server installation. Important tasks such as backing up and moving the report server database are not addressed in this topic, but are documented in the Database Engine documentation.  
   
 ## Create RSExecRole in Master  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] uses extended stored procedures for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service to support scheduled operations. The following steps explain how to grant Execute permissions for the procedures to the `RSExecRole` role.  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] uses extended stored procedures for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent service to support scheduled operations. The following steps explain how to grant Execute permissions for the procedures to the `RSExecRole` role.  
   
 #### To create RSExecRole in the Master system database using Management Studio  
   
-1.  Start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] and connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance that hosts the report server database.  
+1.  Start [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] and connect to the [!INCLUDE[ssDE](../includes/ssde-md.md)] instance that hosts the report server database.  
   
 2.  Open **Databases**.  
   
@@ -186,9 +186,9 @@ manager: "mblythe"
 ## Move the Report Server Database  
  After you create the roles, you can move the report server database to new SQL Server instance. For more information, see [Moving the Report Server Databases to Another Computer &#40;SSRS Native Mode&#41;](../../2014/reporting-services/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
   
- If you are upgrading the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], you can upgrade it before or after moving the database.  
+ If you are upgrading the [!INCLUDE[ssDE](../includes/ssde-md.md)] to [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], you can upgrade it before or after moving the database.  
   
- The report server database will be upgraded to the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] automatically when the report server connects to it. There are no specific steps required for upgrading the database.  
+ The report server database will be upgraded to the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] automatically when the report server connects to it. There are no specific steps required for upgrading the database.  
   
 ## Restore Encryption Keys and Verify Your Work  
  If you have attached the report server databases, you should now be able to complete the following steps to verify your work.  

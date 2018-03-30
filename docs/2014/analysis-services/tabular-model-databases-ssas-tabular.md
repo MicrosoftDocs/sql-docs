@@ -16,7 +16,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Tabular Model Databases (SSAS Tabular)
-  A tabular model database is an Analysis Services database that you create in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] using the Analysis Services Tabular model project template, where tables and relationships are the primary structures for representing data.  
+  A tabular model database is an Analysis Services database that you create in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] using the Analysis Services Tabular model project template, where tables and relationships are the primary structures for representing data.  
   
 ## Benefits of Using Tabular Model Databases  
  Tabular model databases are easier to build than multidimensional databases, particularly if you have a relational database background. Otherwise, administrative tasks are similar if not identical to database administration of a multidimensional database. The same tools and approaches apply.  

@@ -22,10 +22,10 @@ manager: "jhubbard"
 # ADO Connection Manager
   An ADO connection manager enables a package to connect to ActiveX Data Objects (ADO) objects, such as a recordset. This connection manager is typically used in custom tasks written in an earlier version of a language, such as Microsoft Visual Basic 6.0, or in custom tasks that are part of an existing application that uses ADO to connect to a data source.  
   
- When you add an ADO connection manager to a package, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] creates a connection manager that will resolve to an ADO connection at run time, sets the connection manager properties, and adds the connection manager to the `Connections` collection on the package. The `ConnectionManagerType` property of the connection manager is set to `ADO`.  
+ When you add an ADO connection manager to a package, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] creates a connection manager that will resolve to an ADO connection at run time, sets the connection manager properties, and adds the connection manager to the `Connections` collection on the package. The `ConnectionManagerType` property of the connection manager is set to `ADO`.  
   
 ## Troubleshooting the ADO Connection Manager  
- When being read by an ADO connection manager, certain [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] date data types will generate the results shown in the following table.  
+ When being read by an ADO connection manager, certain [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] date data types will generate the results shown in the following table.  
   
 |SQL Server Data type|Result|  
 |--------------------------|------------|  
@@ -33,7 +33,7 @@ manager: "jhubbard"
 |`datetime2`|The ADO connection manager truncates the millisecond value.|  
   
 > [!NOTE]  
->  For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types and how they map to [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data types, see [Data Types &#40;Transact-SQL&#41;](../Topic/Data%20Types%20\(Transact-SQL\).md) and [Integration Services Data Types](../../2014/integration-services/integration-services-data-types.md).  
+>  For more information about [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] data types and how they map to [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] data types, see [Data Types &#40;Transact-SQL&#41;](~/t-sql/data-types/data-types-transact-sql.md) and [Integration Services Data Types](../../2014/integration-services/integration-services-data-types.md).  
   
 ## Configuring the ADO Connection Manager  
  You can configure an ADO connection manager in the following ways:  
@@ -46,9 +46,9 @@ manager: "jhubbard"
   
 -   Indicate whether the connection that is created from the connection manager is retained at run time.  
   
- You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer or programmatically.  
   
- For more information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
+ For more information about the properties that you can set in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click the following topic:  
   
 -   [Configure OLE DB Connection Manager](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   

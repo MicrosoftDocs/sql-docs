@@ -21,7 +21,7 @@ ms.author: "jroth"
 manager: "jhubbard"
 ---
 # Perform a Planned Manual Failover of an Availability Group (SQL Server)
-  This topic describes how to perform a manual failover without data loss (a *planned manual failover*) on an AlwaysOn availability group by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. An availability group fails over at the level of an availability replica. A planned manual failover, like any [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] failover, transitions a secondary replica to primary role and, concurrently, transitions the former primary replica to the secondary role.  
+  This topic describes how to perform a manual failover without data loss (a *planned manual failover*) on an AlwaysOn availability group by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. An availability group fails over at the level of an availability replica. A planned manual failover, like any [!INCLUDE[ssHADR](../includes/sshadr-md.md)] failover, transitions a secondary replica to primary role and, concurrently, transitions the former primary replica to the secondary role.  
   
  A planned manual failover, which is supported only when the primary replica and the target secondary replica are running in synchronous-commit mode and are currently synchronized, preserves all the data in the secondary databases that are joined to the availability group on the target secondary replica. Once the former primary replica transitions to the secondary role, its databases become secondary databases and begin synchronizing with the new primary databases. After they all transition into the SYNCHRONIZED state, the new secondary replica becomes eligible to serve as the target of a future planned manual failover.  
   
@@ -38,7 +38,7 @@ manager: "jhubbard"
 -   Cross-database consistency across databases within the availability group is not maintained on failover.  
   
     > [!NOTE]  
-    >  Cross-database transactions and distributed transactions are not supported by [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. For more information, see [Cross-Database Transactions Not Supported For Database Mirroring or AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/transactions-always-on-availability-and-database-mirroring.md).  
+    >  Cross-database transactions and distributed transactions are not supported by [!INCLUDE[ssHADR](../includes/sshadr-md.md)]. For more information, see [Cross-Database Transactions Not Supported For Database Mirroring or AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/transactions-always-on-availability-and-database-mirroring.md).  
   
 ###  <a name="Prerequisites"></a> Prerequisites and Restrictions  
   
@@ -47,7 +47,7 @@ manager: "jhubbard"
 -   The target secondary replica must currently be synchronized with the primary replica. This requires that all the secondary databases on this secondary replica must have been joined to the availability group and be synchronized with their corresponding primary databases (that is, the local secondary databases must be SYNCHRONIZED).  
   
     > [!TIP]  
-    >  To determine the failover readiness of an secondary replica, query the **is_failover_ready** column in the [sys.dm_hadr_database_cluster_states](../Topic/sys.dm_hadr_database_replica_cluster_states%20\(Transact-SQL\).md) dynamic management view, or look at the **Failover Readiness** column of the [AlwaysOn Group Dashboard](../../2014/database-engine/use-the-alwayson-dashboard-sql-server-management-studio.md).  
+    >  To determine the failover readiness of an secondary replica, query the **is_failover_ready** column in the [sys.dm_hadr_database_cluster_states](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md) dynamic management view, or look at the **Failover Readiness** column of the [AlwaysOn Group Dashboard](../../2014/database-engine/use-the-alwayson-dashboard-sql-server-management-studio.md).  
   
 -   This task is supported only on the target secondary replica. You must be connected to the server instance that hosts the target secondary replica.  
   
@@ -72,7 +72,7 @@ manager: "jhubbard"
   
 1.  Connect to the server instance that hosts the target secondary replica.  
   
-2.  Use the [ALTER AVAILABILITY GROUP](../Topic/ALTER%20AVAILABILITY%20GROUP%20\(Transact-SQL\).md) statement, as follows:  
+2.  Use the [ALTER AVAILABILITY GROUP](~/t-sql/statements/alter-availability-group-transact-sql.md) statement, as follows:  
   
      ALTER AVAILABILITY GROUP *group_name* FAILOVER  
   
@@ -92,7 +92,7 @@ manager: "jhubbard"
 2.  Use the `Switch-SqlAvailabilityGroup` cmdlet.  
   
     > [!NOTE]  
-    >  To view the syntax of a cmdlet, use the `Get-Help` cmdlet in the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../2014/database-engine/get-help-sql-server-powershell.md).  
+    >  To view the syntax of a cmdlet, use the `Get-Help` cmdlet in the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../2014/database-engine/get-help-sql-server-powershell.md).  
   
      The following example manually fails over the *MyAg* availability group to the secondary replica with the specified path.  
   
@@ -107,7 +107,7 @@ manager: "jhubbard"
 -   [Get Help SQL Server PowerShell](../../2014/database-engine/get-help-sql-server-powershell.md)  
   
 ##  <a name="FollowUp"></a> Follow Up: After Manually Failing Over an Availability Group  
- If you failed over outside of the [!INCLUDE[ssFosAuto](../../includes/ssfosauto-md.md)] of the availability group, adjust the quorum votes of the WSFC nodes to reflect your new availability group configuration. For more information, see [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../2014/database-engine/windows-server-failover-clustering-wsfc-with-sql-server.md).  
+ If you failed over outside of the [!INCLUDE[ssFosAuto](../includes/ssfosauto-md.md)] of the availability group, adjust the quorum votes of the WSFC nodes to reflect your new availability group configuration. For more information, see [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../2014/database-engine/windows-server-failover-clustering-wsfc-with-sql-server.md).  
   
 ## See Also  
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/overview-of-alwayson-availability-groups-sql-server.md)   

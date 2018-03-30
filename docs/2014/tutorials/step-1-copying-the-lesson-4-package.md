@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 8aa7d690-4649-4c0a-ac6f-9504637ee426
 caps.latest.revision: 25
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Step 1: Copying the Lesson 4 Package
@@ -20,7 +20,7 @@ manager: "jhubbard"
   
 ### To copy the Lesson 4 package  
   
-1.  If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools is not already open, click **Start**, point to **All Programs**, point to **Microsoft SQL Server 2012**, and then click **SQL Server Data Tools**.  
+1.  If [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools is not already open, click **Start**, point to **All Programs**, point to **Microsoft SQL Server 2012**, and then click **SQL Server Data Tools**.  
   
 2.  On the **File** menu, click **Open**, click **Project/Solution**, select **SSIS Tutorial** and click **Open**, and then double-click **SSIS Tutorial.sln**.  
   
@@ -40,7 +40,7 @@ manager: "jhubbard"
   
 ### To add the completed Lesson 4 package  
   
-1.  Open [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools and open the SSIS Tutorial project.  
+1.  Open [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools and open the SSIS Tutorial project.  
   
 2.  In Solution Explorer, right-click **SSIS Packages**, and click **Add Existing Package**.  
   

@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Executing a DiffGram by Using SQLXML Managed Classes
-  This example shows how to execute a DiffGram file in the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework environment to apply data updates to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tables using SQLXML Managed Classes (Microsoft.Data.SqlXml).  
+  This example shows how to execute a DiffGram file in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework environment to apply data updates to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables using SQLXML Managed Classes (Microsoft.Data.SqlXml).  
   
  In this example, the DiffGram updates customer information (CompanyName and ContactName) for customer ALFKI.  
   
@@ -162,7 +162,7 @@ class Test
 6.  Save the C# code (DiffgramSample.cs) that is provided above in the same folder in which the DiffGramSchema.xml and MyDiffGram.xml were stored in previous steps.  
   
     > [!NOTE]  
-    >  You will need to update the name of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance in the connection string from '`MyServer`' to the actual name of your installed instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+    >  You will need to update the name of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance in the connection string from '`MyServer`' to the actual name of your installed instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
      If you store the files in a different folder, you will have to edit the code and specify the appropriate directory path for the mapping schema.  
   

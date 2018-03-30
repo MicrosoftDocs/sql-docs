@@ -20,7 +20,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Replace Table with Other Table Dialog Box
-  Use the **Replace Table with Other Table** dialog box in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to replace an existing table in a data source view with a table in the underlying data source that is not yet included in the data source view. You can display the **Replace Table with Other Table** dialog box by right-clicking the name of a table in the **Diagram** or **Tables** pane of **Data Source View Designer** and selecting **With Other Table** from **Replace Table**.  
+  Use the **Replace Table with Other Table** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to replace an existing table in a data source view with a table in the underlying data source that is not yet included in the data source view. You can display the **Replace Table with Other Table** dialog box by right-clicking the name of a table in the **Diagram** or **Tables** pane of **Data Source View Designer** and selecting **With Other Table** from **Replace Table**.  
   
 ## Options  
  **Data source**  

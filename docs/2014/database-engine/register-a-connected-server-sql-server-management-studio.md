@@ -21,7 +21,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Register a Connected Server (SQL Server Management Studio)
-  This topic describes how to register servers in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. By registering the server, you can save the connection information for servers that you access frequently. A server can be registered before connecting, or at the time of connection from Object Explorer.  
+  This topic describes how to register servers in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. By registering the server, you can save the connection information for servers that you access frequently. A server can be registered before connecting, or at the time of connection from Object Explorer.  
   
  **In This Topic**  
   
@@ -36,7 +36,7 @@ manager: "jhubbard"
 1.  In Object Explorer, right-click a server to which you already are connected, and then click **Register**.  
   
      **Server name**  
-     Enter the name you want to use for the registered server. Registering a local or remote server using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] lets you store the server connection information for future connections. This field defaults to the server name entered when you were connecting to the server. You can retain this server name or enter another easy-to-use name for the server.  
+     Enter the name you want to use for the registered server. Registering a local or remote server using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] lets you store the server connection information for future connections. This field defaults to the server name entered when you were connecting to the server. You can retain this server name or enter another easy-to-use name for the server.  
   
      **Server description**  
      Enter an optional description of the server. The maximum number of characters allowed is 250.  

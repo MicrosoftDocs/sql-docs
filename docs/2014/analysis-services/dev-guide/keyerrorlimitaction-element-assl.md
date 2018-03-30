@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # KeyErrorLimitAction Element (ASSL)
-  Specifies the action [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] takes when the key error count that is specified in the [KeyErrorLimit](../../../2014/analysis-services/dev-guide/keyerrorlimit-element-assl.md) element is reached.  
+  Specifies the action [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] takes when the key error count that is specified in the [KeyErrorLimit](../../../2014/analysis-services/dev-guide/keyerrorlimit-element-assl.md) element is reached.  
   
 ## Syntax  
   

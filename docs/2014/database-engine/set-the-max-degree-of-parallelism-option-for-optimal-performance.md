@@ -28,6 +28,6 @@ manager: "jhubbard"
   
  [Configure the max degree of parallelism Server Configuration Option](../../2014/database-engine/configure-the-max-degree-of-parallelism-server-configuration-option.md)  
   
- [sp_configure &#40;Transact-SQL&#41;](../Topic/sp_configure%20\(Transact-SQL\).md)  
+ [sp_configure &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   

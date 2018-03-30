@@ -15,7 +15,7 @@ f1_keywords:
 ms.assetid: c2218b93-f7fe-46ef-995f-d7dadf9752ec
 caps.latest.revision: 12
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Image Properties Dialog Box, General (Report Builder and SSRS)

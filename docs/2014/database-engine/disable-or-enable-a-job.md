@@ -21,7 +21,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Disable or Enable a Job
-  This topic describes how to disable a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. When you disable a job, it is not deleted and can be enabled again when necessary.  
+  This topic describes how to disable a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent job in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)]. When you disable a job, it is not deleted and can be enabled again when necessary.  
   
  **In This Topic**  
   
@@ -44,7 +44,7 @@ manager: "jhubbard"
   
 #### To disable or enable a job  
   
-1.  In **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], and then expand that instance.  
+1.  In **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], and then expand that instance.  
   
 2.  Expand **SQL Server Agent**.  
   
@@ -56,7 +56,7 @@ manager: "jhubbard"
   
 #### To disable or enable a job  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -75,6 +75,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [sp_update_job &#40;Transact-SQL&#41;](../Topic/sp_update_job%20\(Transact-SQL\).md).  
+ For more information, see [sp_update_job &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-update-job-transact-sql.md).  
   
   

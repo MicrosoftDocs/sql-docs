@@ -23,7 +23,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Setting Properties
-  Properties are values that store descriptive information about the object. For example, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] configuration options are represented by the <xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A> object's properties. Properties can be accessed either directly or indirectly by using the property collection. Accessing properties directly uses the following syntax:  
+  Properties are values that store descriptive information about the object. For example, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configuration options are represented by the <xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A> object's properties. Properties can be accessed either directly or indirectly by using the property collection. Accessing properties directly uses the following syntax:  
   
  `objInstance.PropertyName`  
   
@@ -36,9 +36,9 @@ manager: "jhubbard"
   
  Sometimes a property is not available for the following reasons:  
   
--   The server version does not support the property, such as if you try to access a property that represents a new [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] feature on an older version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   The server version does not support the property, such as if you try to access a property that represents a new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] feature on an older version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   The server does not provide data for the property, such as if you try to access a property that represents a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] component that is not installed.  
+-   The server does not provide data for the property, such as if you try to access a property that represents a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] component that is not installed.  
   
  You can handle these circumstances by catching the <xref:Microsoft.SqlServer.Management.Smo.UnknownPropertyException> and the <xref:Microsoft.SqlServer.Management.Smo.PropertyCannotBeRetrievedException> SMO exceptions.  
   
@@ -56,7 +56,7 @@ manager: "jhubbard"
  The <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> method sets the property loading behavior for the rest of application or until it is reset. You can save the original behavior by using the <xref:Microsoft.SqlServer.Management.Smo.Server.GetDefaultInitFields%2A> method and restore it as required.  
   
 ## Examples  
- [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  
+ [!INCLUDE[ssChooseProgEnv](../../includes/sschooseprogenv-md.md)]  
   
 ## Getting and Setting a Property in Visual Basic  
  This code example shows how to get the <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> property of the <xref:Microsoft.SqlServer.Management.Smo.Information> object and how to set the <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> property of the <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> property to the `ExecuteSql` member of the <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> enumerated type.  
@@ -117,14 +117,14 @@ tb.Create();
 ```  
   
 ## Iterating Through All Properties of an Object in Visual Basic  
- This code example iterates through the `Properties` collection of the <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> object and displays them on the [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Output screen.  
+ This code example iterates through the `Properties` collection of the <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> object and displays them on the [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Output screen.  
   
- In the example, the <xref:Microsoft.SqlServer.Management.Smo.Property> object has been put in square parentheses because it is also a [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] keyword.  
+ In the example, the <xref:Microsoft.SqlServer.Management.Smo.Property> object has been put in square parentheses because it is also a [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] keyword.  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBProperties3](SMO How to#SMO_VBProperties3)]  -->  
   
 ## Iterating Through All Properties of an Object in Visual C#  
- This code example iterates through the `Properties` collection of the <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> object and displays them on the [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Output screen.  
+ This code example iterates through the `Properties` collection of the <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> object and displays them on the [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Output screen.  
   
 ```  
 {   
@@ -149,14 +149,14 @@ sp.QuotedIdentifierStatus = false;
 ## Setting Default Initialization Fields in Visual Basic  
  This code example shows how to minimize the number of object properties initialized in an SMO program. You have to include the `using System.Collections.Specialized`; statement to use the <xref:System.Collections.Specialized.StringCollection> object.  
   
- [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] can be used to compare the number statements sent to the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] with this optimization.  
+ [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] can be used to compare the number statements sent to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with this optimization.  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBDefaultInitFields1](SMO How to#SMO_VBDefaultInitFields1)]  -->  
   
 ## Setting Default Initialization Fields in Visual C#  
  This code example shows how to minimize the number of object properties initialized in an SMO program. You have to include the `using System.Collections.Specialized`; statement to use the <xref:System.Collections.Specialized.StringCollection> object.  
   
- [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] can be used to compare the number statements sent to the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] with this optimization.  
+ [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] can be used to compare the number statements sent to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with this optimization.  
   
 ```  
 {   

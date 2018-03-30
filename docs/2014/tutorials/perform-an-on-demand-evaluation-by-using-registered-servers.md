@@ -16,10 +16,10 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Perform an On-Demand Evaluation by Using Registered Servers
-  You can perform an on-demand evaluation of best practices policies against one or more instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using Registered Servers. You can use either local server groups or a central management server.  
+  You can perform an on-demand evaluation of best practices policies against one or more instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] by using Registered Servers. You can use either local server groups or a central management server.  
   
 > [!NOTE]  
->  You can perform an on-demand evaluation of best practices policies against server group members that are running [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or a later version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. However, you may receive an exception error if there are some properties that are referred to by a policy that are not supported in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].  
+>  You can perform an on-demand evaluation of best practices policies against server group members that are running [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] or a later version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. However, you may receive an exception error if there are some properties that are referred to by a policy that are not supported in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] or [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)].  
   
 ## Prerequisites  
  To perform this task, you must have configured one or more server registrations in Registered Servers. For more information, see the following topics:  
@@ -32,7 +32,7 @@ manager: "jhubbard"
   
 ### To evaluate best practices policies against a server group  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], on the **View** menu, click **Registered Servers**.  
+1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], on the **View** menu, click **Registered Servers**.  
   
 2.  Expand **Database Engine**, and then expand either **Local Server Groups**, or **Central Management Servers**, depending on your configuration.  
   
@@ -68,7 +68,7 @@ manager: "jhubbard"
 7.  For some policy failures, Policy-Based Management enables you to immediately enforce policy compliance on the target. For such failures, a check box will appear next to the failed policy. If you select the check box, or click the row with the failed policy, check boxes appear in the **Target details** pane next to the target instances that failed the evaluation. If any of the check boxes are selected, the **Apply** button becomes available. When you click **Apply**, the noncompliant setting will be automatically updated on the target instances that you selected.  
   
     > [!CAUTION]  
-    >  Make sure that you fully understand the policy setting before automatically updating a target instance. We recommend that after you select one or more check boxes, you click **Script**, and choose an output location so that you can review the underlying [!INCLUDE[tsql](../../includes/tsql-md.md)] code before you apply the changes.  
+    >  Make sure that you fully understand the policy setting before automatically updating a target instance. We recommend that after you select one or more check boxes, you click **Script**, and choose an output location so that you can review the underlying [!INCLUDE[tsql](../includes/tsql-md.md)] code before you apply the changes.  
   
 8.  To view detailed results for a policy, click the policy in the **Results** table. The **Target details** table shows the details for each instance.  
   

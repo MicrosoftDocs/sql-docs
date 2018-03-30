@@ -24,7 +24,7 @@ manager: "jhubbard"
   
  The hashing function used for hash indexes has the following characteristics:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has one hash function that is used for all hash indexes.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has one hash function that is used for all hash indexes.  
   
 -   The hash function is deterministic. The same index key is always mapped to the same bucket in the hash index.  
   

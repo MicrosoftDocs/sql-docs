@@ -12,16 +12,16 @@ ms.topic: "article"
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
 caps.latest.revision: 9
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Hyperion Essbase Connection Type (SSRS)
-  To include data from a [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] external data source in your report, you must have a dataset that is based on a report data source of type [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]. This built-in data source type is based on the data extension for [!INCLUDE[extEssbase](../../includes/extessbase-md.md)], which enables you to retrieve multidimensional data from a [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] external data source.  
+  To include data from a [!INCLUDE[extEssbase](../includes/extessbase-md.md)] external data source in your report, you must have a dataset that is based on a report data source of type [!INCLUDE[extEssbase](../includes/extessbase-md.md)]. This built-in data source type is based on the data extension for [!INCLUDE[extEssbase](../includes/extessbase-md.md)], which enables you to retrieve multidimensional data from a [!INCLUDE[extEssbase](../includes/extessbase-md.md)] external data source.  
   
  Use the information in this topic to build a data source. For step-by-step instructions, see [Add and Verify a Data Connection or Data Source &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-and-verify-a-data-connection-or-data-source-report-builder-and-ssrs.md).  
   
 ##  <a name="Connection"></a> Connection String  
- The following connection string example specifies a [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] data source on a server that uses port 13080 and XML for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (XMLA) over the Internet using SOAP, connecting to a sample catalog:  
+ The following connection string example specifies a [!INCLUDE[extEssbase](../includes/extessbase-md.md)] data source on a server that uses port 13080 and XML for [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] (XMLA) over the Internet using SOAP, connecting to a sample catalog:  
   
 ```  
 Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample  
@@ -49,11 +49,11 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
      For more information, see [Hyperion Essbase Query Designer User Interface &#40;Report Builder&#41;](../../2014/reporting-services/hyperion-essbase-query-designer-user-interface-report-builder.md).  
   
--   Import an existing MDX query from a report. Use the **Import** query button to browse to an .rdl file and import a query. You can import a query from a report that contains an embedded dataset that is based on a [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] data source. Importing an MDX query directly from an .mdx file is not supported.  
+-   Import an existing MDX query from a report. Use the **Import** query button to browse to an .rdl file and import a query. You can import a query from a report that contains an embedded dataset that is based on a [!INCLUDE[extEssbase](../includes/extessbase-md.md)] data source. Importing an MDX query directly from an .mdx file is not supported.  
   
  At design time, run the query to view a result set. After you build the query, view the dataset field collection that is generated from the metadata in the Report Data pane. When the report runs, the actual data is returned from the external data source.  
   
- The [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] data processing extension supports extended dataset field properties. These are values that are available from the external data source but that do not appear in the Report Data pane. For more information, see [Extended Field Properties](#Extended) later in this topic.  
+ The [!INCLUDE[extEssbase](../includes/extessbase-md.md)] data processing extension supports extended dataset field properties. These are values that are available from the external data source but that do not appear in the Report Data pane. For more information, see [Extended Field Properties](#Extended) later in this topic.  
   
   
 ##  <a name="Parameters"></a> Parameters  
@@ -63,7 +63,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ##  <a name="Extended"></a> Extended Field Properties  
- The [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] data processing extension supports extended field properties. Extended field properties are properties in addition to `Value` and `IsMissing` that are defined for a dataset field by the data processing extension. Extended properties include predefined properties and custom properties. Predefined properties are properties common to multiple data sources. Custom properties are unique to each data source.  
+ The [!INCLUDE[extEssbase](../includes/extessbase-md.md)] data processing extension supports extended field properties. Extended field properties are properties in addition to `Value` and `IsMissing` that are defined for a dataset field by the data processing extension. Extended properties include predefined properties and custom properties. Predefined properties are properties common to multiple data sources. Custom properties are unique to each data source.  
   
  Extended field properties do not appear in the Report Data pane as items that you can drag onto your report layout. Instead, you drag the parent field of the property onto the report and then change the default property from `Value` to the property you want to use.  
   
@@ -76,7 +76,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
 ### Predefined Field Properties  
  Predefined field properties that are typically supported by multiple data providers and that appear in the underlying MDX query for a report dataset. For example, the MDX dimension property MEMBER_UNIQUE_NAME is mapped to the predefined report dataset field property `UniqueName`. To include the unique name value in a text box, use the expression `=Fields!`*\<FieldName>*`.UniqueName`.  
   
- The following table provides a list of predefined field properties that you can use for a [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] data source.  
+ The following table provides a list of predefined field properties that you can use for a [!INCLUDE[extEssbase](../includes/extessbase-md.md)] data source.  
   
 |**Property**|**Type**|**Description or expected value**|  
 |------------------|--------------|---------------------------------------|  
@@ -97,7 +97,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
 -   *Fields!FieldName("PropertyName")*  
   
- The following table shows the custom field property that you can use for a [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] data source.  
+ The following table shows the custom field property that you can use for a [!INCLUDE[extEssbase](../includes/extessbase-md.md)] data source.  
   
 |**Property**|**Type**|**Description or expected value**|  
 |------------------|--------------|---------------------------------------|  
@@ -105,7 +105,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ##  <a name="Remarks"></a> Remarks  
- Not all report delivery modes are supported by this data provider. Delivering reports through data-driven subscriptions is not supported for this data processing extension. For more information, see [Use an External Data Source for Subscriber Data &#40;Data-Driven Subscription&#41;](../../2014/reporting-services/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md) in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+ Not all report delivery modes are supported by this data provider. Delivering reports through data-driven subscriptions is not supported for this data processing extension. For more information, see [Use an External Data Source for Subscriber Data &#40;Data-Driven Subscription&#41;](../../2014/reporting-services/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md) in the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
   
  For more information, see [Using SQL Server 2005 Reporting Services with Hyperion Essbase](http://go.microsoft.com/fwlink/?LinkId=81970).  
   
@@ -135,7 +135,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
  [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/dataset-fields-collection-report-builder-and-ssrs.md)  
  Provides information about the field collection that is generated by the dataset query.  
   
- [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../2014/reporting-services/data-sources-supported-by-reporting-services-ssrs.md) in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+ [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../2014/reporting-services/data-sources-supported-by-reporting-services-ssrs.md) in the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
  Provides in-depth information about platform and version support for each data extension.  
   
  [Using SQL Server 2005 Reporting Services with Hyperion Essbase](http://go.microsoft.com/fwlink/?LinkId=81970)  

@@ -57,14 +57,14 @@ manager: "mblythe"
   
 -   Create a data mining model manually, by clicking **Advanced** and then clicking **Add Model to Structure**.  
   
--   Use any of the modeling wizards in the Data Mining Client, and click **Parameters** to control the behavior of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] data mining algorithms.  
+-   Use any of the modeling wizards in the Data Mining Client, and click **Parameters** to control the behavior of the [!INCLUDE[msCoName](../includes/msconame-md.md)] data mining algorithms.  
   
 -   Click **Query** to open the Query Model wizard, and then click **Advanced** to open the **Data Mining Advanced Query Editor**. In this editor, you can build models by using DMX templates.  
   
  You can also modify the behavior of mining models that are already created, or you can filter the results, by setting parameters in the mining model viewer.  
   
 ## List of Algorithm Parameters  
- All [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithms can be customized by setting parameters. Because the best parameter settings depend on the composition of your data, a full explanation of the effects of changing parameters is beyond the scope of this topic.  
+ All [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithms can be customized by setting parameters. Because the best parameter settings depend on the composition of your data, a full explanation of the effects of changing parameters is beyond the scope of this topic.  
   
  The following table lists the parameters, describes their functionality, and provides links to more technical information.  
   

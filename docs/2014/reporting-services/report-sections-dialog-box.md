@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 1ff14dfa-d56b-449f-bef1-cc217f3c14b7
 caps.latest.revision: 8
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Report Sections Dialog Box

@@ -16,7 +16,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Business Rule Actions (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], business rule actions are the consequence of business rule condition evaluations. If a condition is true, the action is initiated.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], business rule actions are the consequence of business rule condition evaluations. If a condition is true, the action is initiated.  
   
 > [!NOTE]  
 >  For default value and change value actions, if the generated value exceeds the maximum length of the attribute, the generated value is truncated.  
@@ -60,7 +60,7 @@ manager: "jhubbard"
 |**must have a maximum length of**|The selected attribute **must have a maximum length of** the specified value.<br /><br /> This action is valid for text and link values.|  
   
 ## External Action  
- **External** actions interact with applications outside of [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
+ **External** actions interact with applications outside of [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
 |Action Name|Description|  
 |-----------------|-----------------|  

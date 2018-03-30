@@ -16,6 +16,6 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Alerts Node (SQL Server Agent F1 Help)
-  This section contains the F1 Help for the **Alerts** node of Object Explorer in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  This section contains the F1 Help for the **Alerts** node of Object Explorer in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
   

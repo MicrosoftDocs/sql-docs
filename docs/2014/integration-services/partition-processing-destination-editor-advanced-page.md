@@ -29,7 +29,7 @@ manager: "jhubbard"
   
 ## Options  
  **Use default error configuration.**  
- Specify whether to use the default [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] error handling. By default, this value is `True`.  
+ Specify whether to use the default [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] error handling. By default, this value is `True`.  
   
  **Key error action**  
  Specify how to handle records that have unacceptable key values.  

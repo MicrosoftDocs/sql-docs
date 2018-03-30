@@ -23,7 +23,7 @@ manager: "jhubbard"
   
 #### To rename an attribute  
   
-1.  Switch to **Dimension Designer** for the Customer dimension in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. To do this, double-click the **Customer** dimension in the **Dimensions** node of Solution Explorer.  
+1.  Switch to **Dimension Designer** for the Customer dimension in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. To do this, double-click the **Customer** dimension in the **Dimensions** node of Solution Explorer.  
   
 2.  In the **Attributes** pane, right-click **English Country Region Name**, and then click **Rename**. Change the name of the attribute to `Country-Region`.  
   
@@ -59,7 +59,7 @@ manager: "jhubbard"
   
 #### To add a named calculation  
   
-1.  Open the **[!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] DW 2012** data source view by double-clicking it in the **Data Source Views** folder in Solution Explorer.  
+1.  Open the **[!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW 2012** data source view by double-clicking it in the **Data Source Views** folder in Solution Explorer.  
   
 2.  In the **Tables** pane on the left, right-click **Customer**, and then click **New Named Calculation**.  
   
@@ -224,7 +224,7 @@ manager: "jhubbard"
   
      The relationship type is **Rigid** because relationships between the members will not change over time. For example, it would be unusual for a city to become part of a different state or province.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 6.  In the diagram, right-click the `State-Province` attribute and then select **New Attribute Relationship**.  
   
@@ -241,7 +241,7 @@ manager: "jhubbard"
   
 #### To deploy the changes, process the objects, and view the changes  
   
-1.  On the **Build** menu of [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], click **Deploy Analysis Services Tutorial**.  
+1.  On the **Build** menu of [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], click **Deploy Analysis Services Tutorial**.  
   
 2.  After you receive the **Deployment Completed Successfully** message, click the **Browser** tab of Dimension Designer for the Customer dimension, and then click the Reconnect button on the left side of the toolbar of the designer.  
   
@@ -249,7 +249,7 @@ manager: "jhubbard"
   
      The browser displays the customers in the city.  
   
-4.  Switch to **Cube Designer** for the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Tutorial cube. To do this, double-click the **Analysis Services Tutorial** cube in the **Cubes** node of **Solution Explorer**.  
+4.  Switch to **Cube Designer** for the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial cube. To do this, double-click the **Analysis Services Tutorial** cube in the **Cubes** node of **Solution Explorer**.  
   
 5.  Click the **Browser** tab, and then click the Reconnect button on the toolbar of the designer.  
   

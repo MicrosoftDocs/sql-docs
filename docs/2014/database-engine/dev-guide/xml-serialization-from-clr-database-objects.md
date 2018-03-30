@@ -28,11 +28,11 @@ manager: "jhubbard"
   
 -   Converting a user-defined type (UDT) to XML.  
   
- Performing XML serialization by invoking the `XmlSerializer` class normally generates an additional serialization assembly that is overloaded into the project with the source assembly. However, for security purposes, this overload is disabled in the CLR. Therefore, to call a web service or perform conversion from UDT to XML inside [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], the assembly must be created manually using a tool called **Sgen.exe** provided with the .NET Framework that generates the necessary serialization assemblies. When invoking `XmlSerializer`, the serialization assembly must be created manually by following these steps:  
+ Performing XML serialization by invoking the `XmlSerializer` class normally generates an additional serialization assembly that is overloaded into the project with the source assembly. However, for security purposes, this overload is disabled in the CLR. Therefore, to call a web service or perform conversion from UDT to XML inside [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the assembly must be created manually using a tool called **Sgen.exe** provided with the .NET Framework that generates the necessary serialization assemblies. When invoking `XmlSerializer`, the serialization assembly must be created manually by following these steps:  
   
 1.  Run the **Sgen.exe** tool that is provided with the .NET Framework SDK to create the assembly containing the XML serializers for the source assembly.  
   
-2.  Register the generated assembly in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] using the `CREATE ASSEMBLY` statement.  
+2.  Register the generated assembly in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using the `CREATE ASSEMBLY` statement.  
   
  For information about errors that you may receive when performing XML serialization, see the following Microsoft Support article: ["Cannot load dynamically generated serialization assembly"](http://support.microsoft.com/kb/913668).  
   
@@ -40,6 +40,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Data Access from CLR Database Objects](../../../2014/database-engine/dev-guide/data-access-from-clr-database-objects.md)   
- [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../Topic/CREATE%20ASSEMBLY%20\(Transact-SQL\).md)  
+ [CREATE ASSEMBLY &#40;Transact-SQL&#41;](~/t-sql/statements/create-assembly-transact-sql.md)  
   
   

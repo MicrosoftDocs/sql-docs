@@ -27,7 +27,7 @@ manager: "jhubbard"
  The XslPath property of the SqlXmlCommand object is used to specify the XSL file and its directory path.  
   
 > [!NOTE]  
->  In the code, you must provide the name of the instance of Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in the connection string.  
+>  In the code, you must provide the name of the instance of Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in the connection string.  
   
 ```  
 using System;  
@@ -90,7 +90,7 @@ class Test
 </xsl:stylesheet>  
 ```  
   
- To test this example, you must have the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework installed on your computer.  
+ To test this example, you must have the [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework installed on your computer.  
   
 ### To test the application  
   
@@ -112,7 +112,7 @@ class Test
  Instead of applying an XSL transformation in the middle tier, as described previously, you can apply an XSL transformation on the client side (in the .NET Framework). The following revised C# code shows how the XSL transformation is applied in the .NET Framework.  
   
 > [!NOTE]  
->  In the code, you must provide the name of the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in the connection string.  
+>  In the code, you must provide the name of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in the connection string.  
   
 ```  
 using System;  

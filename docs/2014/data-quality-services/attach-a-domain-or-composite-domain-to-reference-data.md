@@ -31,7 +31,7 @@ manager: "jhubbard"
 ## Before You Begin  
   
 ###  <a name="Prerequisites"></a> Prerequisites  
- You must have configured [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) to use reference data services. See [Configure DQS to Use Reference Data](../../2014/data-quality-services/configure-dqs-to-use-reference-data.md).  
+ You must have configured [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) to use reference data services. See [Configure DQS to Use Reference Data](../../2014/data-quality-services/configure-dqs-to-use-reference-data.md).  
   
 ###  <a name="Security"></a> Security  
   
@@ -40,9 +40,9 @@ manager: "jhubbard"
   
 ##  <a name="Map"></a> Map domains to reference data from Melissa Data  
   
-1.  [!INCLUDE[ssDQSInitialStep](../../includes/ssdqsinitialstep-md.md)] [Run the Data Quality Client Application](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Run the Data Quality Client Application](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  In the [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] home screen, under **Knowledge Base Management**, click **New knowledge base**.  
+2.  In the [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] home screen, under **Knowledge Base Management**, click **New knowledge base**.  
   
 3.  In the **New knowledge base** screen, type a name for the new knowledge base, click the **Domain Management** activity, and click **Create**.  
   

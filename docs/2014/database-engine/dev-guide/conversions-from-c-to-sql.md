@@ -19,9 +19,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Conversions from C to SQL
-  This topic lists issues to consider when you convert from C types to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] date/time types.  
+  This topic lists issues to consider when you convert from C types to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] date/time types.  
   
- The conversions described in the following table apply to conversions made on the client. In cases where the client specifies fractional second precision for a parameter that differs from that defined on the server, the client conversion might succeed but the server will return an error when `SQLExecute` or `SQLExecuteDirect` is called. In particular, ODBC treats any truncation of fractional seconds as an error, whereas the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] behavior is to round; for example, rounding occurs when you go from `datetime2(6)` to `datetime2(2)`. Datetime column values are rounded to 1/300th of a second and smalldatetime columns have seconds set to zero by the server.  
+ The conversions described in the following table apply to conversions made on the client. In cases where the client specifies fractional second precision for a parameter that differs from that defined on the server, the client conversion might succeed but the server will return an error when `SQLExecute` or `SQLExecuteDirect` is called. In particular, ODBC treats any truncation of fractional seconds as an error, whereas the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] behavior is to round; for example, rounding occurs when you go from `datetime2(6)` to `datetime2(2)`. Datetime column values are rounded to 1/300th of a second and smalldatetime columns have seconds set to zero by the server.  
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
@@ -59,7 +59,7 @@ manager: "jhubbard"
 |11|If the byte length of the data does not equal the size of the struct required by the SQL type, a diagnostic record is generated with SQLSTATE 22003 and the message "Numeric value out of range".|  
 |12|If the byte length of the data is 4 or 8, the data is sent to the server in raw TDS smalldatetime or datetime format. If the byte length of the data exactly matches the size of SQL_TIMESTAMP_STRUCT, the data is converted to the TDS format for datetime2.|  
 |13|If truncation with data loss occurs, a diagnostic record is generated with SQLSTATE 22001 and the message "String data, right truncated".<br /><br /> The number of fractional seconds digits (the scale) is determined from the destination column’s size according to the following:<br /><br /> **Type:** SQL_C_TYPE_TIMESTAMP<br /><br /> Implied Scale<br /><br /> 0<br /><br /> 19<br /><br /> Implied Scale<br /><br /> 1..9<br /><br /> 21..29<br /><br /> However, for SQL_C_TYPE_TIMESTAMP, if the fractional seconds can be represented with three digits without data loss and the column size is 23 or larger, then exactly three fractional seconds' digits are generated. This behavior ensures backwards compatibility for applications developed using older ODBC drivers.<br /><br /> For column sizes larger than the range in the table, a scale of 9 is implied. This conversion should allow for up to nine fractional seconds digits, the maximum allowed by ODBC.<br /><br /> A column size of zero implies unlimited size for variable length character types in ODBC (9 digits, unless the 3-digit rule for SQL_C_TYPE_TIMESTAMP applies). Specifying a column size of zero with a fixed length character type is an error.|  
-|N/A|Existing [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and earlier behavior is maintained.|  
+|N/A|Existing [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and earlier behavior is maintained.|  
   
 ## See Also  
  [Date and Time Improvements &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/date-and-time-improvements-odbc.md)  

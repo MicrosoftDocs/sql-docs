@@ -32,7 +32,7 @@ manager: "mblythe"
  Drag a selected element to the **Action Form Editor**, **Drillthrough Action Form Editor**, or **Report Action Form Editor** pane to include the MDX syntax for that element at the selected location in the pane.  
   
 > [!NOTE]  
->  In project mode, the **Calculation Tools** dialog box reads information for this option from an XML file named MDXFunctions.xml, included with [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. In online mode, information for this option is retrieved from the MDSCHEMA_FUNCTIONS schema rowset for the instance.  
+>  In project mode, the **Calculation Tools** dialog box reads information for this option from an XML file named MDXFunctions.xml, included with [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. In online mode, information for this option is retrieved from the MDSCHEMA_FUNCTIONS schema rowset for the instance.  
   
  **Templates**  
  Displays the predefined templates available for actions.  

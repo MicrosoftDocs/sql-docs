@@ -21,7 +21,7 @@ helpviewer_keywords:
 ms.assetid: 816d2bda-ed72-43ec-aa4d-7ee3dc25fd8a
 caps.latest.revision: 38
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Replication System Stored Procedures Concepts
@@ -223,7 +223,7 @@ REM -- The following must be supplied on one line.
   
 ## See Also  
  [Replication Programming Concepts](../../../../2014/relational-databases/replication/dev-guide/replication-programming-concepts.md)   
- [Replication Stored Procedures &#40;Transact-SQL&#41;](../Topic/Replication%20Stored%20Procedures%20\(Transact-SQL\).md)   
+ [Replication Stored Procedures &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [Scripting Replication](../../../../2014/relational-databases/replication/scripting-replication.md)  
   
   

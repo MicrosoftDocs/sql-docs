@@ -23,7 +23,7 @@ manager: "jhubbard"
   
  To list the data sources visible to the SQLOLEDB enumerator, the consumer calls the [ISourcesRowset::GetSourcesRowset](http://go.microsoft.com/fwlink/?LinkId=120312) method. This method returns a rowset of information about the currently visible data sources.  
   
- Depending on the network library used, the appropriate domain is searched for the data sources. For named pipes, it is the domain to which the client is logged on. For AppleTalk, it is the default zone. For SPX/IPX, it is the list of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installations found in the bindery. For Banyan VINES, it is the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installations found on the local network. Multiprotocol and TCP/IP sockets are not supported.  
+ Depending on the network library used, the appropriate domain is searched for the data sources. For named pipes, it is the domain to which the client is logged on. For AppleTalk, it is the default zone. For SPX/IPX, it is the list of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installations found in the bindery. For Banyan VINES, it is the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installations found on the local network. Multiprotocol and TCP/IP sockets are not supported.  
   
  When the server is turned off or on, it can take few minutes to update the information in these domains.  
   
@@ -47,7 +47,7 @@ manager: "jhubbard"
 6.  Retrieve data from the rowset's copy of the row by calling `IRowset::GetData`, and process it.  
   
 ## Example  
- Compile with ole32.lib and execute the following C++ code listing. This application connects to your computer's default [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. On some Windows operating systems, you will need to change (localhost) or (local) to the name of your [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. To connect to a named instance, change the connection string from L"(local)" to L"(local)\\\name" , where name is the named instance. By default, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express installs to a named instance. Make sure your INCLUDE environment variable includes the directory that contains sqlncli.h.  
+ Compile with ole32.lib and execute the following C++ code listing. This application connects to your computer's default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. On some Windows operating systems, you will need to change (localhost) or (local) to the name of your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. To connect to a named instance, change the connection string from L"(local)" to L"(local)\\\name" , where name is the named instance. By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express installs to a named instance. Make sure your INCLUDE environment variable includes the directory that contains sqlncli.h.  
   
 ```  
 // compile with: ole32.lib  

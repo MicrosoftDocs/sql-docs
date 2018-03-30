@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Create a Custom Collection Set That Uses the Generic T-SQL Query Collector Type (Transact-SQL)
-  You can create a custom collection set with collection items that use the Generic T-SQL Query collector type by using the stored procedures that are provided with the data collector. Accomplishing this task involves using Query Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to carry out the following procedures:  
+  You can create a custom collection set with collection items that use the Generic T-SQL Query collector type by using the stored procedures that are provided with the data collector. Accomplishing this task involves using Query Editor in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to carry out the following procedures:  
   
 -   Configure upload schedules.  
   
@@ -113,7 +113,7 @@ manager: "jhubbard"
     GO  
     ```  
   
-     You can also do a visual check in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. In Object Explorer, expand the **Management** node, and then expand **Data Collection**. The new collection set will be displayed. The red circle icon for the collection set indicates that the collection set is stopped.  
+     You can also do a visual check in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. In Object Explorer, expand the **Management** node, and then expand **Data Collection**. The new collection set will be displayed. The red circle icon for the collection set indicates that the collection set is stopped.  
   
 ## Example  
  The following code sample combines the examples that are documented in the previous steps. Note that the collection frequency that is set for the collection item (5 seconds) is ignored because the collection set collection mode is set to 0, which is cached mode. For more information, see [Data Collection](../../2014/database-engine/data-collection.md).  
@@ -159,7 +159,7 @@ GO
 ```  
   
 ## See Also  
- [Data Collector Stored Procedures &#40;Transact-SQL&#41;](../Topic/Data%20Collector%20Stored%20Procedures%20\(Transact-SQL\).md)   
+ [Data Collector Stored Procedures &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [Manage Schedules](../../2014/database-engine/manage-schedules.md)   
  [Start or Stop a Collection Set](../../2014/database-engine/start-or-stop-a-collection-set.md)  
   

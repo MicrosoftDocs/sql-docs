@@ -28,27 +28,27 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # CLR Stored Procedures
-  Stored procedures are routines that cannot be used in scalar expressions. Unlike scalar functions, they can return tabular results and messages to the client, invoke data definition language (DDL) and data manipulation language (DML) statements, and return output parameters. For information about the advantages of CLR integration and choosing between managed code and [!INCLUDE[tsql](../../../includes/tsql-md.md)], see [Overview of CLR Integration](../../../2014/database-engine/dev-guide/overview-of-clr-integration.md).  
+  Stored procedures are routines that cannot be used in scalar expressions. Unlike scalar functions, they can return tabular results and messages to the client, invoke data definition language (DDL) and data manipulation language (DML) statements, and return output parameters. For information about the advantages of CLR integration and choosing between managed code and [!INCLUDE[tsql](../../includes/tsql-md.md)], see [Overview of CLR Integration](../../../2014/database-engine/dev-guide/overview-of-clr-integration.md).  
   
 ## Requirements for CLR Stored Procedures  
- In the common language runtime (CLR), stored procedures are implemented as public static methods on a class in a [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] assembly. The static method can either be declared as void, or return an integer value. If it returns an integer value, the integer returned is treated as the return code from the procedure. For example:  
+ In the common language runtime (CLR), stored procedures are implemented as public static methods on a class in a [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] assembly. The static method can either be declared as void, or return an integer value. If it returns an integer value, the integer returned is treated as the return code from the procedure. For example:  
   
  `EXECUTE @return_status = procedure_name`  
   
  The @return_status variable will contain the value returned by the method. If the method is declared void, the return code is 0.  
   
- If the method takes parameters, the number of parameters in the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] implementation should be the same as the number of parameters used in the [!INCLUDE[tsql](../../../includes/tsql-md.md)] declaration of the stored procedure.  
+ If the method takes parameters, the number of parameters in the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] implementation should be the same as the number of parameters used in the [!INCLUDE[tsql](../../includes/tsql-md.md)] declaration of the stored procedure.  
   
- Parameters passed to a CLR stored procedure can be any of the native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] types that have an equivalent in managed code. For the [!INCLUDE[tsql](../../../includes/tsql-md.md)] syntax to create the procedure, these types should be specified with the most appropriate native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] type equivalent. For more information about type conversions, see [Mapping CLR Parameter Data](../../../2014/database-engine/dev-guide/mapping-clr-parameter-data.md).  
+ Parameters passed to a CLR stored procedure can be any of the native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types that have an equivalent in managed code. For the [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax to create the procedure, these types should be specified with the most appropriate native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type equivalent. For more information about type conversions, see [Mapping CLR Parameter Data](../../../2014/database-engine/dev-guide/mapping-clr-parameter-data.md).  
   
 ### Table-Valued Parameters  
- Table-valued parameters (TVPs), user-defined table types that are passed into a procedure or function, provide an efficient way to pass multiple rows of data to the server. TVPs provide similar functionality to parameter arrays, but offer greater flexibility and closer integration with [!INCLUDE[tsql](../../../includes/tsql-md.md)]. They also provide the potential for better performance. TVPs also help reduce the number of round trips to the server. Instead of sending multiple requests to the server, such as with a list of scalar parameters, data can be sent to the server as a TVP. A user-defined table type cannot be passed as a table-valued parameter to, or be returned from, a managed stored procedure or function executing in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] process. For more information about TVPs, see [Use Table-Valued Parameters &#40;Database Engine&#41;](../../../2014/database-engine/use-table-valued-parameters-database-engine.md).  
+ Table-valued parameters (TVPs), user-defined table types that are passed into a procedure or function, provide an efficient way to pass multiple rows of data to the server. TVPs provide similar functionality to parameter arrays, but offer greater flexibility and closer integration with [!INCLUDE[tsql](../../includes/tsql-md.md)]. They also provide the potential for better performance. TVPs also help reduce the number of round trips to the server. Instead of sending multiple requests to the server, such as with a list of scalar parameters, data can be sent to the server as a TVP. A user-defined table type cannot be passed as a table-valued parameter to, or be returned from, a managed stored procedure or function executing in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process. For more information about TVPs, see [Use Table-Valued Parameters &#40;Database Engine&#41;](../../../2014/database-engine/use-table-valued-parameters-database-engine.md).  
   
 ## Returning Results from CLR Stored Procedures  
- Information may be returned from [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] stored procedures in several ways. This includes output parameters, tabular results, and messages.  
+ Information may be returned from [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] stored procedures in several ways. This includes output parameters, tabular results, and messages.  
   
 ### OUTPUT Parameters and CLR Stored Procedures  
- As with [!INCLUDE[tsql](../../../includes/tsql-md.md)] stored procedures, information may be returned from [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] stored procedures using OUTPUT parameters. The [!INCLUDE[tsql](../../../includes/tsql-md.md)] DML syntax used for creating [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] stored procedures is the same as that used for creating stored procedures written in [!INCLUDE[tsql](../../../includes/tsql-md.md)]. The corresponding parameter in the implementation code in the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] class should use a pass-by-reference parameter as the argument. Note that Visual Basic does not support output parameters in the same way that Visual C# does. You must specify the parameter by reference and apply the \<Out()> attribute to represent an OUTPUT parameter, as in the following:  
+ As with [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures, information may be returned from [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] stored procedures using OUTPUT parameters. The [!INCLUDE[tsql](../../includes/tsql-md.md)] DML syntax used for creating [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] stored procedures is the same as that used for creating stored procedures written in [!INCLUDE[tsql](../../includes/tsql-md.md)]. The corresponding parameter in the implementation code in the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] class should use a pass-by-reference parameter as the argument. Note that Visual Basic does not support output parameters in the same way that Visual C# does. You must specify the parameter by reference and apply the \<Out()> attribute to represent an OUTPUT parameter, as in the following:  
   
 ```  
 Imports System.Runtime.InteropServices  
@@ -126,7 +126,7 @@ Partial Public Class StoredProcedures
 End Class  
 ```  
   
- Once the assembly containing the above CLR stored procedure has been built and created on the server, the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] is used to create the procedure in the database, and specifies *sum* as an OUTPUT parameter.  
+ Once the assembly containing the above CLR stored procedure has been built and created on the server, the following [!INCLUDE[tsql](../../includes/tsql-md.md)] is used to create the procedure in the database, and specifies *sum* as an OUTPUT parameter.  
   
 ```  
 CREATE PROCEDURE PriceSum (@sum int OUTPUT)  
@@ -136,7 +136,7 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 -- AS EXTERNAL NAME TestStoredProc.[MyNS.StoredProcedures].PriceSum  
 ```  
   
- Note that *sum* is declared as an `int` SQL Server data type, and that the *value* parameter defined in the CLR stored procedure is specified as a `SqlInt32` CLR data type. When a calling program executes the CLR stored procedure, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] automatically converts the `SqlInt32` CLR data type to an `int`[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data type.  For more information about which CLR data types can and cannot be converted, see [Mapping CLR Parameter Data](../../../2014/database-engine/dev-guide/mapping-clr-parameter-data.md).  
+ Note that *sum* is declared as an `int` SQL Server data type, and that the *value* parameter defined in the CLR stored procedure is specified as a `SqlInt32` CLR data type. When a calling program executes the CLR stored procedure, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatically converts the `SqlInt32` CLR data type to an `int`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type.  For more information about which CLR data types can and cannot be converted, see [Mapping CLR Parameter Data](../../../2014/database-engine/dev-guide/mapping-clr-parameter-data.md).  
   
 ### Returning Tabular Results and Messages  
  Returning tabular results and messages to the client is done through the `SqlPipe` object, which is obtained by using the `Pipe` property of the `SqlContext` class. The `SqlPipe` object has a `Send` method. By calling the `Send` method, you can transmit data through the pipe to the calling application.  
@@ -369,7 +369,7 @@ End Class
   
  The first `Send` sends a message to the client, while the second sends a tabular result using `SqlDataReader`.  
   
- Note that these examples are for illustrative purposes only. CLR functions are more appropriate than simple [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements for computation-intensive applications. An almost equivalent [!INCLUDE[tsql](../../../includes/tsql-md.md)] stored procedure to the previous example is:  
+ Note that these examples are for illustrative purposes only. CLR functions are more appropriate than simple [!INCLUDE[tsql](../../includes/tsql-md.md)] statements for computation-intensive applications. An almost equivalent [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure to the previous example is:  
   
 ```  
 CREATE PROCEDURE HelloWorld() AS  
@@ -380,7 +380,7 @@ END;
 ```  
   
 > [!NOTE]  
->  Messages and result sets are retrieved differently in the client application. For instance, [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] result sets appear in the **Results** view, and messages appear in the **Messages** pane.  
+>  Messages and result sets are retrieved differently in the client application. For instance, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] result sets appear in the **Results** view, and messages appear in the **Messages** pane.  
   
  If the above Visual C# code is saved in a file MyFirstUdp.cs and compiled with:  
   
@@ -395,7 +395,7 @@ vbc /t:library /out:MyFirstUdp.dll MyFirstUdp.vb
 ```  
   
 > [!NOTE]  
->  Beginning with [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], Visual C++ database objects (such as stored procedures) compiled with `/clr:pure` are not supported for execution.  
+>  Beginning with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], Visual C++ database objects (such as stored procedures) compiled with `/clr:pure` are not supported for execution.  
   
  The resulting assembly can be registered, and the entry point invoked, with the following DDL:  
   

@@ -59,7 +59,7 @@ manager: "mblythe"
 ## Remarks  
  For `Backup` commands, the `AllowOverwrite` element determines whether the command can overwrite the backup file specified in the `File` element.  
   
- For `Restore` elements, the `AllowOverwrite` element determines whether the command can overwrite the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] database specified in the `DatabaseName` element.  
+ For `Restore` elements, the `AllowOverwrite` element determines whether the command can overwrite the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database specified in the `DatabaseName` element.  
   
 ## See Also  
  [DatabaseName Element &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/databasename-element-xmla.md)   

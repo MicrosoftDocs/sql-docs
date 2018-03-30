@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 caps.latest.revision: 11
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Promote Frequently Used XML Values with Computed Columns
@@ -219,7 +219,7 @@ SqlDbType.NVarChar,50);
 }  
 ```  
   
- Next, create an assembly and a [!INCLUDE[tsql](../../includes/tsql-md.md)] user-defined function, SQL_streaming_xml_tvf (not shown), that corresponds to the CLR function, streaming_xml_tvf. The user-defined function is used to define the table-valued function, CLR_udf_XML2Table, for rowset generation:  
+ Next, create an assembly and a [!INCLUDE[tsql](../includes/tsql-md.md)] user-defined function, SQL_streaming_xml_tvf (not shown), that corresponds to the CLR function, streaming_xml_tvf. The user-defined function is used to define the table-valued function, CLR_udf_XML2Table, for rowset generation:  
   
 ```  
 create function CLR_udf_XML2Table (@pk int, @xCol xml)  

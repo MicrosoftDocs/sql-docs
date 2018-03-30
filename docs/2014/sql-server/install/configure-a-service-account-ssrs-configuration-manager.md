@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 25000ad5-3f80-4210-8331-d4754dc217e0
 caps.latest.revision: 7
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "jhubbard"
 ---
 # Configure a Service Account (SSRS Configuration Manager)
-  In a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] installation, the Report Server Web service, Report Manager, and the background processing application run within a single service. The account under which the service runs is defined during Setup when you specify the account in the Service Identity page, but you can use the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Configuration tool if you want use a different account or update the password.  
+  In a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation, the Report Server Web service, Report Manager, and the background processing application run within a single service. The account under which the service runs is defined during Setup when you specify the account in the Service Identity page, but you can use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool if you want use a different account or update the password.  
   
- If you have a report server that is configured to use SharePoint Integrated mode and you change the service account by using the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Configuration tool, you must also open SharePoint Central Administration and use the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] **Grant Database Access** page to re-apply the report server and instance settings. This step will grant the new service account access to the SharePoint databases, which is required for integrating [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] with [!INCLUDE[SPF2010](../../../includes/spf2010-md.md)] or [!INCLUDE[SPS2010](../../../includes/sps2010-md.md)].  
+ If you have a report server that is configured to use SharePoint Integrated mode and you change the service account by using the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool, you must also open SharePoint Central Administration and use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Grant Database Access** page to re-apply the report server and instance settings. This step will grant the new service account access to the SharePoint databases, which is required for integrating [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] with [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] or [!INCLUDE[SPS2010](../../includes/sps2010-md.md)].  
   
- Always use the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Configuration tool to update the service account so that other settings that depend on the service identity can be updated concurrently.  
+ Always use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool to update the service account so that other settings that depend on the service identity can be updated concurrently.  
   
 > [!NOTE]  
 >  Built-in Windows service accounts (Local Service or Network Service) are not supported as report server service accounts on a computer that is a domain controller.  
@@ -34,7 +34,7 @@ manager: "jhubbard"
   
 ### To configure the Report Server service account  
   
-1.  Start the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Configuration manager and connect to the report server.  
+1.  Start the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration manager and connect to the report server.  
   
 2.  On the Service Account page, select the option that describes the type of account you want to use. For recommendations about which account type to specify, see [Configure the Report Server Service Account &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
   
@@ -46,7 +46,7 @@ manager: "jhubbard"
   
 5.  When prompted to back up the symmetric key, type a file name and location for the symmetric key backup, type a password to lock and unlock the file, and then click **OK**.  
   
-6.  If the report server uses the service account to connect to the report server database, the connection information will be updated to use the new account or password. Updating the connection information requires that you connect to the database. If the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **Database Connection** dialog box appears, enter credentials that have permission to connect to the database, and then click **OK**.  
+6.  If the report server uses the service account to connect to the report server database, the connection information will be updated to use the new account or password. Updating the connection information requires that you connect to the database. If the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Database Connection** dialog box appears, enter credentials that have permission to connect to the database, and then click **OK**.  
   
 7.  When prompted to restore the symmetric key, type the password you specified in step 5, and then click **OK**.  
   

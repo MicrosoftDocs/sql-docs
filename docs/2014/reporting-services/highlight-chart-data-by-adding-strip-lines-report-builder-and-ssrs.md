@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: addd6137-4b6e-4e88-a7e8-9600fcd1ccce
 caps.latest.revision: 6
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Highlight Chart Data by Adding Strip Lines (Report Builder and SSRS)
@@ -27,7 +27,7 @@ manager: "mblythe"
  Strip lines are not applicable to Shape or Polar chart types.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ### To display interlaced strip lines at regular intervals on a chart  
   

@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
 caps.latest.revision: 8
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Aggregate Functions Reference (Report Builder and SSRS)
@@ -45,7 +45,7 @@ manager: "mblythe"
  To determine the valid scopes for a function, see the individual function reference topic. For more information and for examples, see [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ##  <a name="CalculatingAggregates"></a> Built-in Aggregate Functions  
  The following built-in functions calculate summary values for a set of non-null numeric data in the default scope or the named scope.  
@@ -148,7 +148,7 @@ manager: "mblythe"
 |[Previous](../../2014/reporting-services/previous-function-report-builder-and-ssrs.md)|Returns the value or the specified aggregate value for the previous instance of an item within the specified scope.|  
   
 ##  <a name="RetrievingServerAggregates"></a> Retrieving Server Aggregates  
- The following built-in function retrieves custom aggregates from the data provider. For example, using an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data source type, you can retrieve aggregates calculated on the data source server for use in a group header.  
+ The following built-in function retrieves custom aggregates from the data provider. For example, using an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data source type, you can retrieve aggregates calculated on the data source server for use in a group header.  
   
 |**Function**|**Description**|  
 |------------------|---------------------|  

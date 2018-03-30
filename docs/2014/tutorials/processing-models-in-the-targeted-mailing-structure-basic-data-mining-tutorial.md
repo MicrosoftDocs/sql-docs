@@ -16,11 +16,11 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Processing Models in the Targeted Mailing Structure (Basic Data Mining Tutorial)
-  Before you can browse or work with the mining models that you have created, you must deploy the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project and process the mining structure and mining models.  
+  Before you can browse or work with the mining models that you have created, you must deploy the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project and process the mining structure and mining models.  
   
 -   *Deploying* sends the project to a server and creates any objects in that project on the server.  
   
--   *Processing* populates [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects with data from relational data sources.  
+-   *Processing* populates [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objects with data from relational data sources.  
   
  Models cannot be used until they have been deployed and processed. Also, when you make any changes to the model, such as adding new data, you must redeploy and reprocess the models.  
   
@@ -33,7 +33,7 @@ manager: "jhubbard"
   
 #### To set the Holdout Seed  
   
-1.  Click on the **Mining Structure** tab or the **Mining Models** tab in Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+1.  Click on the **Mining Structure** tab or the **Mining Models** tab in Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
      **Targeted Mailing MiningStructure** displays in the **Properties** pane.  
   

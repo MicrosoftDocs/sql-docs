@@ -42,7 +42,7 @@ manager: "mblythe"
 |Level members|A member within the level in **Target object** is selected.|  
   
  **Target object**  
- Select the object to which the action is to be associated. The [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance returns to the client only those actions that apply to the selected object. The list of available objects is constrained by the choice of **Target type**.  
+ Select the object to which the action is to be associated. The [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance returns to the client only those actions that apply to the selected object. The list of available objects is constrained by the choice of **Target type**.  
   
  **Condition (Optional)**  
  Enter the Multidimensional Expressions (MDX) expression that describes an optional condition, used in conjunction with **Target object**, which further restricts when the action is available. The expression must return a Boolean value that, if true, indicates the action is available.  
@@ -81,7 +81,7 @@ manager: "mblythe"
   
 |Value|Description|  
 |-----------|-----------------|  
-|Batch|The action should run as part of a batch operation or an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] task.|  
+|Batch|The action should run as part of a batch operation or an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] task.|  
 |Interactive|The action runs when the user invokes the action.|  
 |On Open|The action runs when the cube is first opened.|  
   

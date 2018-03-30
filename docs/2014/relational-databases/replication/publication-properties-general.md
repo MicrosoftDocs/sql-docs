@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: 7912362f-c4d6-4f60-bd39-dee1f656ed18
 caps.latest.revision: 24
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Publication Properties, General
@@ -36,14 +36,14 @@ manager: "jhubbard"
  **Subscription expiration**  
  Select one of the options for subscription expiration: **Subscriptions never expire** or **Subscriptions expire**, with an explicit time period (**Interval**).  
   
- For snapshot and transactional publications, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recommends that you accept the default of **Subscriptions never expire**.  
+ For snapshot and transactional publications, [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends that you accept the default of **Subscriptions never expire**.  
   
- For merge replication, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recommends that you accept the default of **Subscriptions expire** and set as low a value as possible for **Interval**. As the subscription expiration period increases, so does the amount of metadata stored, which can affect performance. Balance the need for Subscribers to be disconnected or simply not to synchronize for an extended period against the potential performance issues of storing and processing a large amount of metadata.  
+ For merge replication, [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends that you accept the default of **Subscriptions expire** and set as low a value as possible for **Interval**. As the subscription expiration period increases, so does the amount of metadata stored, which can affect performance. Balance the need for Subscribers to be disconnected or simply not to synchronize for an extended period against the potential performance issues of storing and processing a large amount of metadata.  
   
  For more information, see [Subscription Expiration and Deactivation](../../../2014/relational-databases/replication/subscription-expiration-and-deactivation.md).  
   
  **Compatibility level**  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and later versions only; merge publications only. Select the minimum [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] version required for Subscribers that synchronize with this publication. There are a number of rules associated with determining the compatibility level.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only; merge publications only. Select the minimum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version required for Subscribers that synchronize with this publication. There are a number of rules associated with determining the compatibility level.  
   
 ## See Also  
  [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md)   

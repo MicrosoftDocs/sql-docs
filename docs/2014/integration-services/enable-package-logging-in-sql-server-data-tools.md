@@ -21,13 +21,13 @@ manager: "jhubbard"
   This procedure describes how to add logs to a package, configure package-level logging, and save the logging configuration to an XML file. You can add logs only at the package level, but the package does not have to perform logging to enable logging in the containers that the package includes.  
   
 > [!IMPORTANT]  
->  If you deploy the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, the logging level that you set for the package execution overrides the package logging that you configure using [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+>  If you deploy the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server, the logging level that you set for the package execution overrides the package logging that you configure using [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
  By default, the containers in the package use the same logging configuration as their parent container. For information about setting logging options for individual containers, see [Configure Logging by Using a Saved Configuration File](../../2014/integration-services/configure-logging-by-using-a-saved-configuration-file.md).  
   
 ### To enable logging in a package  
   
-1.  In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], open the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project that contains the package you want.  
+1.  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], open the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project that contains the package you want.  
   
 2.  On the **SSIS** menu, click **Logging**.  
   
@@ -37,11 +37,11 @@ manager: "jhubbard"
   
     -   For Text files, use a File connection manager. For more information, see [File Connection Manager](../../2014/integration-services/file-connection-manager.md)  
   
-    -   For [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], use a File connection manager.  
+    -   For [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)], use a File connection manager.  
   
-    -   For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use an OLE DB connection manager. For more information, see [OLE DB Connection Manager](../../2014/integration-services/ole-db-connection-manager.md).  
+    -   For [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], use an OLE DB connection manager. For more information, see [OLE DB Connection Manager](../../2014/integration-services/ole-db-connection-manager.md).  
   
-    -   For Windows Event Log, do nothing. [!INCLUDE[ssIS](../../includes/ssis-md.md)] automatically creates the log.  
+    -   For Windows Event Log, do nothing. [!INCLUDE[ssIS](../includes/ssis-md.md)] automatically creates the log.  
   
     -   For XML files, use a File connection manager.  
   

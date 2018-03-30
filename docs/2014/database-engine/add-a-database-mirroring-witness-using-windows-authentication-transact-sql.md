@@ -125,7 +125,7 @@ manager: "jhubbard"
  For a complete example showing security setup, preparing the mirror database, setting up the partners, and adding a witness, see [Setting Up Database Mirroring &#40;SQL Server&#41;](../../2014/database-engine/setting-up-database-mirroring-sql-server.md).  
   
 ## See Also  
- [ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20\(Transact-SQL\).md)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)   
  [Allow Network Access to a Database Mirroring Endpoint Using Windows Authentication &#40;SQL Server&#41;](../../2014/database-engine/database-mirroring-allow-network-access-windows-authentication.md)   
  [Create a Database Mirroring Endpoint for Windows Authentication &#40;Transact-SQL&#41;](../../2014/database-engine/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
  [Establish a Database Mirroring Session Using Windows Authentication &#40;Transact-SQL&#41;](../../2014/database-engine/database-mirroring-establish-session-windows-authentication.md)   

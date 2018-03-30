@@ -12,14 +12,14 @@ ms.topic: "article"
 ms.assetid: 55b28ba9-b6d5-4ea9-8103-db8a72f42982
 caps.latest.revision: 9
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # SQL Server, Memory Node
-  The **Memory Node** object in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides counters to monitor server memory usage on NUMA nodes.  
+  The **Memory Node** object in Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provides counters to monitor server memory usage on NUMA nodes.  
   
 ## Memory Node Counters  
- This table describes the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Memory Node** counters.  
+ This table describes the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **Memory Node** counters.  
   
 |SQL Server Memory Manager counters|Description|  
 |----------------------------------------|-----------------|  
@@ -33,6 +33,6 @@ manager: "jhubbard"
 ## See Also  
  [Monitor Resource Usage &#40;System Monitor&#41;](../../2014/database-engine/monitor-resource-usage-system-monitor.md)   
  [SQL Server, Buffer Manager Object](../../2014/database-engine/sql-server-buffer-manager-object.md)   
- [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../Topic/sys.dm_os_performance_counters%20\(Transact-SQL\).md)  
+ [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)  
   
   

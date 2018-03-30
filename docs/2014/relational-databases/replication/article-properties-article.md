@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 caps.latest.revision: 36
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Article Properties - &lt;Article&gt;
@@ -27,9 +27,9 @@ manager: "jhubbard"
   
  Each property in the **Article Properties** dialog box includes a description. Click a property, and its description is displayed at the bottom of the dialog box. This topic provides additional information on a number of properties. The properties are grouped into the following categories:  
   
--   Properties that apply to all [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] publications.  
+-   Properties that apply to all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publications.  
   
--   Properties that apply to transactional publications from [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   Properties that apply to transactional publications from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   Properties that apply to merge publications.  
   
@@ -37,22 +37,22 @@ manager: "jhubbard"
   
 ## Options for all publications  
  **Copy table partitioning schemes** and **Copy index partitioning schemes**  
- [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduced table partitioning and index partitioning, which are unrelated to the partitioning replication offers through row and column filters. The **Copy table partitioning schemes** and **Copy index partitioning schemes** options specify whether partitioning schemes should be copied to the Subscriber. For more information about partitioning, see [Partitioned Tables and Indexes](../../../2014/database-engine/partitioned-tables-and-indexes.md).  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introduced table partitioning and index partitioning, which are unrelated to the partitioning replication offers through row and column filters. The **Copy table partitioning schemes** and **Copy index partitioning schemes** options specify whether partitioning schemes should be copied to the Subscriber. For more information about partitioning, see [Partitioned Tables and Indexes](../../../2014/database-engine/partitioned-tables-and-indexes.md).  
   
  **Convert data types**  
- Determines whether to convert from user-defined data types to base data types when creating objects at the Subscriber. User-defined data types include the user-defined CLR types introduced in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Specify a value of **True** if you will replicate these data types to previous versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]; this ensures they can be handled properly at the Subscriber.  
+ Determines whether to convert from user-defined data types to base data types when creating objects at the Subscriber. User-defined data types include the user-defined CLR types introduced in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Specify a value of **True** if you will replicate these data types to previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; this ensures they can be handled properly at the Subscriber.  
   
  **Create schemas at Subscriber**  
- [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduced schemas, which are defined using the CREATE SCHEMA statement. A schema is the owner of an object; it is used in a multi-part name, such as \<Database>.\<Schema>.\<Object>. If you have objects in the database owned by schemas other than DBO, replication can create these schemas at the Subscriber, so that published objects can be created.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introduced schemas, which are defined using the CREATE SCHEMA statement. A schema is the owner of an object; it is used in a multi-part name, such as \<Database>.\<Schema>.\<Object>. If you have objects in the database owned by schemas other than DBO, replication can create these schemas at the Subscriber, so that published objects can be created.  
   
- If you will replicate data to versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prior to [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]:  
+ If you will replicate data to versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prior to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]:  
   
 -   Set this option to **False**, because previous versions do not support CREATE SCHEMA.  
   
 -   For each schema, add a user to the subscription database with the same name as the schema.  
   
  **Convert XML to NTEXT**, **Convert MAX data types to NTEXT and IMAGE**, **Convert new datetime to NVARCHAR**, **Convert filestream to MAX data types**, **Convert large CLR to MAX data types**, **Convert hierarchyId to MAX data types**, and **Convert spatial to MAX data types**.  
- Determines whether to convert the data types and attributes as described. Specify a value of **True** if you will replicate these data types to earlier versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. This ensures they can be handled properly at the Subscriber.  
+ Determines whether to convert the data types and attributes as described. Specify a value of **True** if you will replicate these data types to earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This ensures they can be handled properly at the Subscriber.  
   
  **Destination object name**  
  The name of the object created in the subscription database. This option cannot be changed for articles in publications that are enabled for peer-to-peer transactional replication.  
@@ -64,7 +64,7 @@ manager: "jhubbard"
   
 -   For articles in Oracle publications: by default, the owner is specified as **dbo**.  
   
--   For articles in publications that use character mode snapshots (which are used for non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers and [!INCLUDE[ssEW](../../../includes/ssew-md.md)] Subscribers): by default, the owner is left blank. The owner defaults to the owner associated with the account used by the Distribution Agent or Merge Agent to connect to the Subscriber.  
+-   For articles in publications that use character mode snapshots (which are used for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers and [!INCLUDE[ssEW](../../includes/ssew-md.md)] Subscribers): by default, the owner is left blank. The owner defaults to the owner associated with the account used by the Distribution Agent or Merge Agent to connect to the Subscriber.  
   
  This option cannot be changed for articles in publications that are enabled for peer-to-peer transactional replication.  
   
@@ -76,7 +76,7 @@ manager: "jhubbard"
  If, in the **Statement Delivery** section of this dialog box, you select to use stored procedures to propagate changes to Subscribers (the default), select whether to copy the procedures to each Subscriber. If you select **False**, you must copy the procedures manually, or the Distribution Agent will fail when attempting to deliver changes.  
   
  **Statement delivery**  
- The options in this section apply to all tables, including indexed views that are replicated as tables. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recommends that you use the default options unless your application requires different functionality. By default, transactional replication propagates changes to Subscribers through a set of stored procedures that are installed on each Subscriber. When an insert, update, or delete occurs on a table at the Publisher, the operation is translated into a call to a stored procedure at the Subscriber.  
+ The options in this section apply to all tables, including indexed views that are replicated as tables. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends that you use the default options unless your application requires different functionality. By default, transactional replication propagates changes to Subscribers through a set of stored procedures that are installed on each Subscriber. When an insert, update, or delete occurs on a table at the Publisher, the operation is translated into a call to a stored procedure at the Subscriber.  
   
  The **delivery statement** options specify whether to use a stored procedure, and if so, which format should be used for parameters passed to the procedure. The **stored procedure** options allow you to use the procedures that replication automatically creates or substitute custom procedures you have created.  
   
@@ -122,18 +122,18 @@ manager: "jhubbard"
  If you select the default resolver, conflicts are resolved based on the priority assigned to each Subscriber or the first change written to the Publisher, depending on the type of subscriptions used. For more information, see [Detect and Resolve Merge Replication Conflicts](../../../2014/relational-databases/replication/detect-and-resolve-merge-replication-conflicts.md).  
   
  **Use a custom resolver (registered at the Distributor)**  
- If you choose to use an article resolver (either one supplied by [!INCLUDE[msCoName](../../../includes/msconame-md.md)] or one you have written), you must select a resolver from the list-box. For more information, see [Advanced Merge Replication Conflict Detection and Resolution](../../../2014/relational-databases/replication/advanced-merge-replication-conflict-detection-and-resolution.md).  
+ If you choose to use an article resolver (either one supplied by [!INCLUDE[msCoName](../../includes/msconame-md.md)] or one you have written), you must select a resolver from the list-box. For more information, see [Advanced Merge Replication Conflict Detection and Resolution](../../../2014/relational-databases/replication/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
- If the resolver requires any input, specify it in **Enter information needed by the resolver** text box. For more information about input required by [!INCLUDE[msCoName](../../../includes/msconame-md.md)] custom resolvers, see [Microsoft COM-Based Resolvers](../../../2014/relational-databases/replication/microsoft-com-based-resolvers.md).  
+ If the resolver requires any input, specify it in **Enter information needed by the resolver** text box. For more information about input required by [!INCLUDE[msCoName](../../includes/msconame-md.md)] custom resolvers, see [Microsoft COM-Based Resolvers](../../../2014/relational-databases/replication/microsoft-com-based-resolvers.md).  
   
  **Allow Subscriber to resolve conflicts interactively during on-demand synchronization**  
  Select this option if Subscribers will use on-demand synchronization (the default for merge replication) and you want to resolve conflicts interactively. Specify on-demand synchronization on the **Synchronization Schedule** page of the New Subscription Wizard. To resolve conflicts interactively, use the Interactive Resolver user interface. For more information, see [Interactive Conflict Resolution](../../../2014/relational-databases/replication/interactive-conflict-resolution.md).  
   
  **Require verification of a digital signature before merging**  
- All COM-based resolvers supplied by [!INCLUDE[msCoName](../../../includes/msconame-md.md)] are signed. Select this option to verify that the resolver is valid when synchronizing.  
+ All COM-based resolvers supplied by [!INCLUDE[msCoName](../../includes/msconame-md.md)] are signed. Select this option to verify that the resolver is valid when synchronizing.  
   
 ## Options for Oracle publications  
- The **Article Properties** dialog box for Oracle publications has two tabs: **Properties** and **Data Mapping**. Oracle publications do not support all of the properties that [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] publications support. For more information, see [Design Considerations and Limitations for Oracle Publishers](../../../2014/relational-databases/replication/design-considerations-and-limitations-for-oracle-publishers.md).  
+ The **Article Properties** dialog box for Oracle publications has two tabs: **Properties** and **Data Mapping**. Oracle publications do not support all of the properties that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publications support. For more information, see [Design Considerations and Limitations for Oracle Publishers](../../../2014/relational-databases/replication/design-considerations-and-limitations-for-oracle-publishers.md).  
   
 ### Properties tab  
  **Copy INSERT, UPDATE, and DELETE stored procedures**  
@@ -142,15 +142,15 @@ manager: "jhubbard"
  **Destination object owner**  
  If you enter a value other than **dbo**:  
   
--   For Subscribers running [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] or later, you must ensure that a schema is created at the Subscriber with the same name as the value you enter. For more information, see [CREATE SCHEMA &#40;Transact-SQL&#41;](../Topic/CREATE%20SCHEMA%20\(Transact-SQL\).md).  
+-   For Subscribers running [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or later, you must ensure that a schema is created at the Subscriber with the same name as the value you enter. For more information, see [CREATE SCHEMA &#40;Transact-SQL&#41;](~/t-sql/statements/create-schema-transact-sql.md).  
   
--   For Subscribers running versions prior to [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], for each schema, add a user to the subscription database with the same name as the schema.  
+-   For Subscribers running versions prior to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], for each schema, add a user to the subscription database with the same name as the schema.  
   
  **Tablespace name**  
  The tablespace in which to create the replication change tracking tables on the Oracle server instance. For more information, see [Manage Oracle Tablespaces](../../../2014/relational-databases/replication/manage-oracle-tablespaces.md).  
   
  **Statement delivery**  
- The options in this section apply to all tables in transactional publications. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recommends that you use the default options unless your application requires different functionality. By default, transactional replication propagates changes to Subscribers through a set of stored procedures that are installed on each Subscriber. When an insert, update, or delete occurs on a table at the Publisher, the operation is translated into a call to a stored procedure at the Subscriber.  
+ The options in this section apply to all tables in transactional publications. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends that you use the default options unless your application requires different functionality. By default, transactional replication propagates changes to Subscribers through a set of stored procedures that are installed on each Subscriber. When an insert, update, or delete occurs on a table at the Publisher, the operation is translated into a call to a stored procedure at the Subscriber.  
   
  The **delivery statement** options specify whether to use a stored procedure, and if so, which format should be used for parameters passed to the procedure. The **stored procedure** options allow you to use the procedures that replication automatically creates or substitute custom procedures you have created.  
   
@@ -164,11 +164,11 @@ manager: "jhubbard"
  The Oracle data type for the column at the Publisher (read-only). The data type can only be changed directly in the Oracle database. For more information, see the Oracle documentation.  
   
  **Subscriber data type**  
- The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data type to which the Oracle data type is mapped when data is replicated:  
+ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type to which the Oracle data type is mapped when data is replicated:  
   
 -   For some data types there is only one possible mapping, in which case the column in the property grid is read-only.  
   
--   For some types, there is more than one type that you can select. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recommends that you use the default mapping unless your application requires a different mapping. For more information, see [Data Type Mapping for Oracle Publishers](../../../2014/relational-databases/replication/data-type-mapping-for-oracle-publishers.md).  
+-   For some types, there is more than one type that you can select. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends that you use the default mapping unless your application requires a different mapping. For more information, see [Data Type Mapping for Oracle Publishers](../../../2014/relational-databases/replication/data-type-mapping-for-oracle-publishers.md).  
   
 ## See Also  
  [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md)   

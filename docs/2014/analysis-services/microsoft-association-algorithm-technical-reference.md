@@ -26,9 +26,9 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Microsoft Association Algorithm Technical Reference
-  The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules algorithm is a straightforward implementation of the well-known Apriori algorithm.  
+  The [!INCLUDE[msCoName](../includes/msconame-md.md)] Association Rules algorithm is a straightforward implementation of the well-known Apriori algorithm.  
   
- Both the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm and the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules algorithm can be used to analyze associations, but the rules that are found by each algorithm can differ. In a decision trees model, the splits that lead to specific rules are based on information gain, whereas in an association model, rules are based completely on confidence. Therefore, in an association model, a strong rule, or one that has high confidence, might not necessarily be interesting because it does not provide new information.  
+ Both the [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees algorithm and the [!INCLUDE[msCoName](../includes/msconame-md.md)] Association Rules algorithm can be used to analyze associations, but the rules that are found by each algorithm can differ. In a decision trees model, the splits that lead to specific rules are based on information gain, whereas in an association model, rules are based completely on confidence. Therefore, in an association model, a strong rule, or one that has high confidence, might not necessarily be interesting because it does not provide new information.  
   
 ## Implementation of the Microsoft Association Algorithm  
  The Apriori algorithm does not analyze patterns, but rather generates and then counts *candidate itemsets*. An item can represent an event, a product, or the value of an attribute, depending on the type of data that is being analyzed.  
@@ -48,18 +48,18 @@ manager: "mblythe"
   
  By default, the support for any particular item or itemset represents a count of the cases that contain that item or items. However, you can also express MINIMUM_SUPPORT as a percentage of the total cases in the data set, by typing the number as a decimal value less than 1. For example, if you specify a MINIMUM_SUPPORT value of 0.03, it means that at least 3% of the total cases in the data set must contain this item or itemset for inclusion in the model. You should experiment with your model to determine whether using a count or percentage makes more sense.  
   
- In contrast, the threshold for rules is expressed not as a count or percentage, but as a probability, sometimes referred to as *confidence*. For example, if the itemset {A,B,C} occurs in 50 cases, but the itemset {A,B,D} also occurs in 50 cases, and the itemset {A,B} in another 50 cases, it is obvious that {A,B} is not a strong predictor of {C}. Therefore, to weight a particular outcomes against all known outcomes, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] calculates the probability of the individual rule (such as If {A,B} Then {C}) by dividing the support for the itemset {A,B,C} by the support for all related itemsets.  
+ In contrast, the threshold for rules is expressed not as a count or percentage, but as a probability, sometimes referred to as *confidence*. For example, if the itemset {A,B,C} occurs in 50 cases, but the itemset {A,B,D} also occurs in 50 cases, and the itemset {A,B} in another 50 cases, it is obvious that {A,B} is not a strong predictor of {C}. Therefore, to weight a particular outcomes against all known outcomes, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] calculates the probability of the individual rule (such as If {A,B} Then {C}) by dividing the support for the itemset {A,B,C} by the support for all related itemsets.  
   
  You can restrict the number of rules that a model produces by setting a value for MINIMUM_PROBABILITY.  
   
- For each rule that is created, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] outputs a score that indicates its *importance*, which is alsoreferred to as *lift*. Lift Importance is calculated differently for itemsets and rules.  
+ For each rule that is created, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] outputs a score that indicates its *importance*, which is alsoreferred to as *lift*. Lift Importance is calculated differently for itemsets and rules.  
   
- The importance of an itemset is calculated as the probability of the itemset divided by the compound probability of the individual items in the itemset. For example, if an itemset contains {A,B}, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] first counts all the cases that contain this combination A and B, and divides that by the total number of cases, and then normalizes the probability.  
+ The importance of an itemset is calculated as the probability of the itemset divided by the compound probability of the individual items in the itemset. For example, if an itemset contains {A,B}, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] first counts all the cases that contain this combination A and B, and divides that by the total number of cases, and then normalizes the probability.  
   
- The importance of a rule is calculated by the log likelihood of the right-hand side of the rule, given the left-hand side of the rule. For example, in the rule `If {A} Then {B}`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] calculates the ratio of cases with A and B over cases with B but without A, and then normalizes that ratio by using a logarithmic scale.  
+ The importance of a rule is calculated by the log likelihood of the right-hand side of the rule, given the left-hand side of the rule. For example, in the rule `If {A} Then {B}`, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] calculates the ratio of cases with A and B over cases with B but without A, and then normalizes that ratio by using a logarithmic scale.  
   
 ### Feature Selection  
- The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules algorithm does not perform any kind of automatic feature selection. Instead, the algorithm provides parameters that control the data that is used by the algorithm. This might include limits on the size of each itemset, or setting the maximum and minimum support required to add an itemset to the model.  
+ The [!INCLUDE[msCoName](../includes/msconame-md.md)] Association Rules algorithm does not perform any kind of automatic feature selection. Instead, the algorithm provides parameters that control the data that is used by the algorithm. This might include limits on the size of each itemset, or setting the maximum and minimum support required to add an itemset to the model.  
   
 -   To filter out items and events that are too common and therefore uninteresting, decrease the value of MAXIMUM_SUPPORT to remove very frequent itemsets from the model.  
   
@@ -68,10 +68,10 @@ manager: "mblythe"
 -   To filter out rules, increase the value of MINIMUM_PROBABILITY.  
   
 ## Customizing the Microsoft Association Rules Algorithm  
- The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules algorithm supports several parameters that affect the behavior, performance, and accuracy of the resulting mining model.  
+ The [!INCLUDE[msCoName](../includes/msconame-md.md)] Association Rules algorithm supports several parameters that affect the behavior, performance, and accuracy of the resulting mining model.  
   
 ### Setting Algorithm Parameters  
- You can change the parameters for a mining model at any time by using the Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. You can also change parameters programmatically by using the <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> collection in AMO, or by using the [MiningModels Element &#40;ASSL&#41;](../../2014/analysis-services/dev-guide/miningmodels-element-assl.md) in XMLA. The following table describes each parameter.  
+ You can change the parameters for a mining model at any time by using the Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. You can also change parameters programmatically by using the <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> collection in AMO, or by using the [MiningModels Element &#40;ASSL&#41;](../../2014/analysis-services/dev-guide/miningmodels-element-assl.md) in XMLA. The following table describes each parameter.  
   
 > [!NOTE]  
 >  You cannot change the parameters in an existing model by using a DMX statement; you must specify the parameters in the DMX CREATE MODEL or ALTER STRUCTURE… ADD MODEL when you create the model.  
@@ -105,7 +105,7 @@ manager: "mblythe"
  The default is 1.  
   
 > [!NOTE]  
->  You cannot reduce model processing time by increasing the minimum value, because [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] must calculate probabilities for single items anyway as part of processing. However, by setting this value higher you can filter out smaller itemsets.  
+>  You cannot reduce model processing time by increasing the minimum value, because [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] must calculate probabilities for single items anyway as part of processing. However, by setting this value higher you can filter out smaller itemsets.  
   
  *MINIMUM_PROBABILITY*  
  Specifies the minimum probability that a rule is true.  
@@ -133,10 +133,10 @@ manager: "mblythe"
  For example, if the value is set to 3, the algorithm caches only 3 items for prediction. You cannot see additional predictions that might be equally probable to the 3 items that are returned.  
   
 ### Modeling Flags  
- The following modeling flags are supported for use with the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules algorithm.  
+ The following modeling flags are supported for use with the [!INCLUDE[msCoName](../includes/msconame-md.md)] Association Rules algorithm.  
   
  NOT NULL  
- Indicates that the column cannot contain a null. An error will result if [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] encounters a null during model training.  
+ Indicates that the column cannot contain a null. An error will result if [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] encounters a null during model training.  
   
  Applies to the mining structure column.  
   
@@ -149,7 +149,7 @@ manager: "mblythe"
  An association model must contain a key column, input columns, and a single predictable column.  
   
 ### Input and Predictable Columns  
- The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules algorithm supports the specific input columns and predictable columns that are listed in the following table. For more information about the meaning of content types in a mining model, see [Content Types &#40;Data Mining&#41;](../../2014/analysis-services/content-types-data-mining.md).  
+ The [!INCLUDE[msCoName](../includes/msconame-md.md)] Association Rules algorithm supports the specific input columns and predictable columns that are listed in the following table. For more information about the meaning of content types in a mining model, see [Content Types &#40;Data Mining&#41;](../../2014/analysis-services/content-types-data-mining.md).  
   
 |Column|Content types|  
 |------------|-------------------|  

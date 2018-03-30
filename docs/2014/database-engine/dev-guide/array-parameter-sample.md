@@ -28,21 +28,21 @@ manager: "jhubbard"
 ## Prerequisites  
  To create and run this project the following the following software must be installed:  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] or [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express. You can obtain [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express free of charge from the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express Documentation and Samples [Web site](http://go.microsoft.com/fwlink/?LinkId=31046)  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. You can obtain [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express free of charge from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [Web site](http://go.microsoft.com/fwlink/?LinkId=31046)  
   
--   The AdventureWorks database that is available at the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Developer [Web site](http://go.microsoft.com/fwlink/?linkid=62796)  
+-   The AdventureWorks database that is available at the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Developer [Web site](http://go.microsoft.com/fwlink/?linkid=62796)  
   
 -   .NET Framework SDK 2.0 or later or Microsoft Visual Studio 2005 or later. You can obtain .NET Framework SDK free of charge.  
   
 -   In addition, the following conditions must be met:  
   
--   The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance you are using must have CLR integration enabled.  
+-   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance you are using must have CLR integration enabled.  
   
 -   In order to enable CLR integration, perform the following steps:  
   
     #### Enabling CLR Integration  
   
-    -   Execute the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] commands:  
+    -   Execute the following [!INCLUDE[tsql](../../includes/tsql-md.md)] commands:  
   
      `sp_configure 'clr enabled', 1`  
   
@@ -55,9 +55,9 @@ manager: "jhubbard"
     > [!NOTE]  
     >  To enable CLR, you must have `ALTER SETTINGS` server level permission, which is implicitly held by members of the `sysadmin` and `serveradmin` fixed server roles.  
   
--   The AdventureWorks database must be installed on the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance you are using.  
+-   The AdventureWorks database must be installed on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance you are using.  
   
--   If you are not an administrator for the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance you are using, you must have an administrator grant you **CreateAssembly**  permission to complete the installation.  
+-   If you are not an administrator for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance you are using, you must have an administrator grant you **CreateAssembly**  permission to complete the installation.  
   
 ## Building the Sample  
   
@@ -77,7 +77,7 @@ manager: "jhubbard"
   
 5.  In c:\MySample, create `Program.vb` (for the Visual Basic sample) or `Program.cs` (for the C# sample) and copy the appropriate Visual Basic or C# sample code (below) into the file.  
   
-6.  Locate the appropriate line in the file Program (around line 24) and replace `XXX` with the name of your instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+6.  Locate the appropriate line in the file Program (around line 24) and replace `XXX` with the name of your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
     -   `Dim connection As New SqlConnection("data source=XXX;initial catalog=AdventureWorks;Integrated Security=SSPI")`  
   
@@ -89,7 +89,7 @@ manager: "jhubbard"
   
     -   `Csc /reference:ContactTypeNames.dll /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Data.dll /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.dll /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll /out:TestArrayParameter.exe Program.cs`  
   
-8.  Copy the [!INCLUDE[tsql](../../../includes/tsql-md.md)] installation code into a file and save it as `Install.sql` in the sample directory.  
+8.  Copy the [!INCLUDE[tsql](../../includes/tsql-md.md)] installation code into a file and save it as `Install.sql` in the sample directory.  
   
 9. If the sample is installed in a directory other then `C:\MySample\`, edit the file `Install.sql` as indicated to point to that location.  
   
@@ -101,7 +101,7 @@ manager: "jhubbard"
   
     -   `TestArrayParameter "Executive Sales Representative" "Executive Sales Manager"`  
   
-12. Copy the [!INCLUDE[tsql](../../../includes/tsql-md.md)] cleanup script into a file and save it as `cleanup.sql` in the sample directory.  
+12. Copy the [!INCLUDE[tsql](../../includes/tsql-md.md)] cleanup script into a file and save it as `cleanup.sql` in the sample directory.  
   
 13. Execute the script with the  following command  
   
@@ -624,7 +624,7 @@ Class Program
 End Class  
 ```  
   
- This is the [!INCLUDE[tsql](../../../includes/tsql-md.md)] installation script (`Install.sql`), which deploys the assembly and creates the stored procedure and functions in the database.  
+ This is the [!INCLUDE[tsql](../../includes/tsql-md.md)] installation script (`Install.sql`), which deploys the assembly and creates the stored procedure and functions in the database.  
   
 ```  
 USE AdventureWorks  
@@ -685,7 +685,7 @@ WHERE [Name] NOT IN (SELECT [Name] FROM Person.ContactType);
 GO  
 ```  
   
- The following [!INCLUDE[tsql](../../../includes/tsql-md.md)] removes the assembly and stored procedure from the database.  
+ The following [!INCLUDE[tsql](../../includes/tsql-md.md)] removes the assembly and stored procedure from the database.  
   
 ```  
 USE AdventureWorks  

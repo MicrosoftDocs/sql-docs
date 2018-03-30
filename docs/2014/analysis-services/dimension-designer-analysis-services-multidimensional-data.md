@@ -18,11 +18,11 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Dimension Designer (Analysis Services - Multidimensional Data)
-  Use Dimension Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to browse the data that the dimension contains, and to modify various properties of an existing dimension: attributes, hierarchies, levels, attribute relationships, and translations.  
+  Use Dimension Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to browse the data that the dimension contains, and to modify various properties of an existing dimension: attributes, hierarchies, levels, attribute relationships, and translations.  
   
  **To display Dimension Designer**  
   
--   In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], in **Solution Explorer**, use one of the following procedures procedures:  
+-   In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], in **Solution Explorer**, use one of the following procedures procedures:  
   
     -   Right-click a dimension and then click **Open** or **View Designer**.  
   

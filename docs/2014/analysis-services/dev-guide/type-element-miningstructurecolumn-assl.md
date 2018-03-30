@@ -60,7 +60,7 @@ manager: "mblythe"
   
 |Value|Description|  
 |-----------|-----------------|  
-|*Long*|A 64-bit signed integer. This data type maps to the `Int64` data type in the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework and the DBTYPE_I8 data type in OLE DB.|  
+|*Long*|A 64-bit signed integer. This data type maps to the `Int64` data type in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework and the DBTYPE_I8 data type in OLE DB.|  
 |*Boolean*|A Boolean value. This data type maps to the `Boolean` data type in the .NET Framework and the DBTYPE_BOOL data type in OLE DB.|  
 |*Text*|A null-terminated stream of Unicode characters. This data type maps to the `String` data type in the .NET Framework and the DBTYPE_WSTR data type in OLE DB.|  
 |*Double*|A double-precision floating point number within the range -1.79E +308 through 1.79E +308. This data type maps to the `Double` data type in the .NET Framework and the DBTYPE_R8 data type in OLE DB.|  

@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 4cc3498d-5449-4c4e-b1f9-3271831c725a
 caps.latest.revision: 19
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_8651
@@ -42,7 +42,7 @@ manager: "jhubbard"
   
 2.  Start collecting performance monitor counters for **SQL Server: Buffer Manager**, **SQL Server: Memory Manager**.  
   
-3.  Check the following [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memory configuration parameters:  
+3.  Check the following [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] memory configuration parameters:  
   
     -   **max server memory**  
   
@@ -54,13 +54,13 @@ manager: "jhubbard"
   
 4.  Check the workload (for example, number of concurrent sessions, currently executing queries).  
   
- The following actions may make more memory available to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+ The following actions may make more memory available to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
--   If applications besides [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are consuming resources, try stopping running these applications or consider running them on a separate server. This will remove external memory pressure.  
+-   If applications besides [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] are consuming resources, try stopping running these applications or consider running them on a separate server. This will remove external memory pressure.  
   
 -   If you have configured **max server memory,** increase its setting.  
   
- Run the following DBCC commands to free several [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memory caches.  
+ Run the following DBCC commands to free several [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] memory caches.  
   
 -   DBCC FREESYSTEMCACHE  
   
@@ -71,9 +71,9 @@ manager: "jhubbard"
  If the problem continues, you will need to investigate further and possibly reduce workload.  
   
 ## See Also  
- [DBCC FREESYSTEMCACHE &#40;Transact-SQL&#41;](../Topic/DBCC%20FREESYSTEMCACHE%20\(Transact-SQL\).md)   
- [DBCC FREESESSIONCACHE &#40;Transact-SQL&#41;](../Topic/DBCC%20FREESESSIONCACHE%20\(Transact-SQL\).md)   
- [DBCC FREEPROCCACHE &#40;Transact-SQL&#41;](../Topic/DBCC%20FREEPROCCACHE%20\(Transact-SQL\).md)   
+ [DBCC FREESYSTEMCACHE &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md)   
+ [DBCC FREESESSIONCACHE &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-freesessioncache-transact-sql.md)   
+ [DBCC FREEPROCCACHE &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)   
  [Server Configuration Options &#40;SQL Server&#41;](../../2014/database-engine/server-configuration-options-sql-server.md)   
  [SQL Server, Buffer Manager Object](../../2014/database-engine/sql-server-buffer-manager-object.md)   
  [SQL Server, Memory Manager Object](../../2014/database-engine/sql-server-memory-manager-object.md)  

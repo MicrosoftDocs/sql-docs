@@ -27,7 +27,7 @@ manager: "mblythe"
 ## The Query  
  The query is to provide a matrix in which the Packages measure can be compared across routes and times.  
   
- In the following MDX query example, the Route and Time hierarchies are the query axes, and the Measures dimension is the slicer axis. The [Members](../Topic/Members%20\(Set\)%20\(MDX\).md) function indicates that MDX will use the members of the hierarchy or level to construct a set. The use of the `Members` function means that you do not have to explicitly state each member of a specific hierarchy or level in an MDX query.  
+ In the following MDX query example, the Route and Time hierarchies are the query axes, and the Measures dimension is the slicer axis. The [Members](~/mdx/members-set-mdx.md) function indicates that MDX will use the members of the hierarchy or level to construct a set. The use of the `Members` function means that you do not have to explicitly state each member of a specific hierarchy or level in an MDX query.  
   
 ```  
 SELECT  

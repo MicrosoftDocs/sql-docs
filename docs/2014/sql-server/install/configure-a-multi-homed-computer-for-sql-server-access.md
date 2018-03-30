@@ -20,12 +20,12 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Configure a Multi-Homed Computer for SQL Server Access
-  When a server must provide a connection to two or more networks or network subnets, a typical scenario uses a multi-homed computer. Frequently this computer is located in a perimeter network (also known as DMZ, demilitarized zone, or screened subnet). This topic describes how to configure [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and Windows Firewall with Advanced Security to provide for network connections to an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in a multi-homed environment.  
+  When a server must provide a connection to two or more networks or network subnets, a typical scenario uses a multi-homed computer. Frequently this computer is located in a perimeter network (also known as DMZ, demilitarized zone, or screened subnet). This topic describes how to configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Windows Firewall with Advanced Security to provide for network connections to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in a multi-homed environment.  
   
 > [!NOTE]  
 >  A multi-homed computer has multiple network adapters or has been configured to use multiple IP addresses for a single network adapter. A dual-homed computer has two network adapters or has been configured to use two IP addresses for a single network adapter.  
   
- Before you continue in this topic, you should be familiar with the information provided in the topic [Configure the Windows Firewall to Allow SQL Server Access](../../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md). This topic contains basic information about how [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] components work with the firewall.  
+ Before you continue in this topic, you should be familiar with the information provided in the topic [Configure the Windows Firewall to Allow SQL Server Access](../../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md). This topic contains basic information about how [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components work with the firewall.  
   
  **Assumptions for this example:**  
   
@@ -36,24 +36,24 @@ manager: "jhubbard"
     > [!NOTE]  
     >  IPv4 addresses are a series of four numbers known as octets. Each number is less than 255, separated by periods, such as 127.0.0.1. IPv6 addresses are a series of eight hexadecimal numbers separated by colons, such as fe80:4898:23:3:49a6:f5c1:2452:b994.  
   
--   Firewall rules could allow access through a specific port, such as port 1433. Or firewall rules could allow access to the [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] program (sqlservr.exe). Neither method is better than the other. Because a server in a perimeter network is more vulnerable to attack than servers on an intranet, this topic assumes that you want to have more precise control, and individually select the ports that you open. For that reason, this topic assumes that you will configure [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to listen on a fixed port. For more information about the ports that [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] uses, see [Configure the Windows Firewall to Allow SQL Server Access](../../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
+-   Firewall rules could allow access through a specific port, such as port 1433. Or firewall rules could allow access to the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] program (sqlservr.exe). Neither method is better than the other. Because a server in a perimeter network is more vulnerable to attack than servers on an intranet, this topic assumes that you want to have more precise control, and individually select the ports that you open. For that reason, this topic assumes that you will configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to listen on a fixed port. For more information about the ports that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses, see [Configure the Windows Firewall to Allow SQL Server Access](../../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
--   This example configures access to the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] by using TCP port 1433. The other ports that are the different [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] components use can be configured by using the same general steps.  
+-   This example configures access to the [!INCLUDE[ssDE](../../includes/ssde-md.md)] by using TCP port 1433. The other ports that are the different [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components use can be configured by using the same general steps.  
   
  **The general steps in this example are as follows:**  
   
 -   Determine the IP addresses on the computer.  
   
--   Configure [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to listen on a specific TCP port.  
+-   Configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to listen on a specific TCP port.  
   
 -   Configure Windows Firewall with Advanced Security.  
   
 ## Optional Procedures  
- If you already know the IP addresses available to your computer and that are used by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], you can skip these procedures.  
+ If you already know the IP addresses available to your computer and that are used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can skip these procedures.  
   
 #### To determine the IP addresses available on the computer  
   
-1.  On the computer on which [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is installed, click **Start**, click **Run**, type `cmd` and then [!INCLUDE[clickOK](../../../includes/clickok-md.md)].  
+1.  On the computer on which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed, click **Start**, click **Run**, type `cmd` and then [!INCLUDE[clickOK](../../includes/clickok-md.md)].  
   
 2.  In the Command Prompt window, type `ipconfig,` and then press ENTER to list the IP addresses available on this computer.  
   
@@ -62,26 +62,26 @@ manager: "jhubbard"
   
 3.  Note the IPv4 addresses and IPv6 addresses that are being used. The other information in the list, such as temporary addresses, subnet masks, and default gateways is important information for configuring a TCP/IP network. But this information is not used in this example.  
   
-#### To determine the IP addresses and ports used by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+#### To determine the IP addresses and ports used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-1.  Click **Start**, point to **All Programs**, point to [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], point to **Configuration Tools**, and then click **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager**.  
+1.  Click **Start**, point to **All Programs**, point to [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], point to **Configuration Tools**, and then click **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager**.  
   
-2.  In **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager**, in the console pane, expand **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Network Configuration**, expand **Protocols for \<instance name>**, and then double-click **TCP/IP**.  
+2.  In **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager**, in the console pane, expand **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Network Configuration**, expand **Protocols for \<instance name>**, and then double-click **TCP/IP**.  
   
 3.  In the **TCP/IP Properties** dialog box, on the **IP Addresses** tab, several IP addresses appear in the format **IP1**, **IP2**, up to **IPAll**. One of these is for the IP address of the loopback adapter, 127.0.0.1. Additional IP addresses appear for each IP Address configured on the computer.  
   
-4.  For any IP address if the **TCP Dynamic Ports** dialog box contains **0**, this indicates that the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] is listening on dynamic ports. This example uses fixed ports instead of dynamic ports which could change upon restart. Therefore if the **TCP Dynamic Ports** dialog box contains **0**, delete the 0.  
+4.  For any IP address if the **TCP Dynamic Ports** dialog box contains **0**, this indicates that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] is listening on dynamic ports. This example uses fixed ports instead of dynamic ports which could change upon restart. Therefore if the **TCP Dynamic Ports** dialog box contains **0**, delete the 0.  
   
 5.  Note the TCP port that is listed for each IP address that you want to configure. For this example, assume that both IP addresses are listening on the default port, 1433.  
   
-6.  If you do not want [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to use some of the available ports, on the **Protocol** tab, change the **Listen All** value to **No**; and on the **IP Addresses** tab, change the **Active** value to **No** for the IP addresses that you do not want to use.  
+6.  If you do not want [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to use some of the available ports, on the **Protocol** tab, change the **Listen All** value to **No**; and on the **IP Addresses** tab, change the **Active** value to **No** for the IP addresses that you do not want to use.  
   
 ## Configuring Windows Firewall with Advanced Security  
- After you know the IP addresses that the computer uses and the ports that [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] uses, you can create firewall rules, and then configure those rules for specific IP addresses.  
+ After you know the IP addresses that the computer uses and the ports that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses, you can create firewall rules, and then configure those rules for specific IP addresses.  
   
 #### To create a firewall rule  
   
-1.  On the computer on which [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is installed, log on as an administrator..  
+1.  On the computer on which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed, log on as an administrator..  
   
 2.  Click **Start**, click **Run**, type `wf.msc`, and click **OK**.  
   
@@ -93,7 +93,7 @@ manager: "jhubbard"
   
 6.  Right-click **Inbound Rules**, and then click **New Rule** to open the **New Inbound Rule Wizard**.  
   
-7.  You could create a rule for the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] program. However, because this example uses a fixed port, select **Port**, and then click **Next**.  
+7.  You could create a rule for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] program. However, because this example uses a fixed port, select **Port**, and then click **Next**.  
   
 8.  On the **Protocols and Ports** page, select **TCP**.  
   
@@ -112,7 +112,7 @@ manager: "jhubbard"
   
 12. On the **Name** page, provide a name and description for the rule, and then click **Finish**.  
   
-13. Repeat this procedure to create another rule for each IP address that [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] will use.  
+13. Repeat this procedure to create another rule for each IP address that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will use.  
   
  After you have created one or more rules, perform the following steps to configure each IP address on the computer to use a rule.  
   
@@ -126,7 +126,7 @@ manager: "jhubbard"
   
 4.  In the **IP Address** dialog box, select **This IP address or subnet**, and then type one of the IP addresses that you want to configure.  
   
-5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 6.  In the **Remote IP address** area, select **These IP addresses**, and then click **Add**.  
   

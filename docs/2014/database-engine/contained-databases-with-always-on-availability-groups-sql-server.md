@@ -19,7 +19,7 @@ ms.author: "jroth"
 manager: "jhubbard"
 ---
 # Contained Databases with Always On Availability Groups (SQL Server)
-  This topic contains information about the using a contained database with [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  This topic contains information about the using a contained database with [!INCLUDE[ssHADR](../includes/sshadr-md.md)] in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
  **In this Topic:**  
   

@@ -15,7 +15,7 @@ f1_keywords:
 ms.assetid: 05819637-729b-4cf6-82de-91a99f184ec6
 caps.latest.revision: 6
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Add Interactive Sort to a Table or Matrix (Report Builder and SSRS)
@@ -26,7 +26,7 @@ manager: "mblythe"
  When you view the report, columns that support interactive sorting have arrow icons that change to indicate the sort order. The first time you click an interactive sort button, items are sorted in ascending order. Subsequent clicks toggle the sort order between ascending and descending order.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ##  <a name="BackToTop"></a> In this Article  
  [Sorting Detail Rows for a Table with No Groups](#SortingDetailRows)  
@@ -54,7 +54,7 @@ manager: "mblythe"
   
 5.  In **Sort by**, specify a sort expression. From the drop-down list, select the field that corresponds to the column for which you are defining a sort action (for example, for a column heading named "Title", choose `[Title]`). Specifying a sort expression is required.  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 7.  Repeat steps 1-6 for every column to which you want to add an interactive sort button.  
   
@@ -80,7 +80,7 @@ manager: "mblythe"
     > [!NOTE]  
     >  For complex group expressions, manually set the **Sort by** expression to the same value as the group expression.  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
  To verify the sort action, click **Run** to preview the report, and then click the interactive sort buttons.  
   
@@ -103,7 +103,7 @@ manager: "mblythe"
   
     -   **Groups** Click **Groups** to sort the child group values. For this option, the **Sort by** expression is automatically filled in from the group expression.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
  To verify the sort action, click **Run** to preview the report, and then click the interactive sort buttons.  
   
@@ -134,7 +134,7 @@ manager: "mblythe"
   
 7.  Type the expression that specifies all fields that you want to group by. For example, the following group expression combines a field named Color and a field named Size: `=Fields!Color.Value & Fields!Size.Value`.  
   
-8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
      You have now defined the group. Next, drag the fields to display to the tablix body area of the matrix. Add the fields that you chose to group by in step 7 to the tablix body area, each in its own column.  
   
@@ -156,7 +156,7 @@ manager: "mblythe"
   
 14. From the drop-down list, select the name of the group you created in step 5. The group expression is automatically copied to the **Sort by** text box.  
   
-15. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+15. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
      You have added the sort button to the text box.  
   
@@ -195,7 +195,7 @@ manager: "mblythe"
   
 10. In Sort by, from the drop-down list, choose the same field that you chose in step 6 to group by.  
   
-11. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 12. In the matrix, right-click the text box in the column header to which you want to add an interactive sort button, and then click **Text Box Properties**.  
   
@@ -209,7 +209,7 @@ manager: "mblythe"
   
 17. Select **Also apply this sort to other groups and data regions within**. In the text box, type the name of the dataset, for example, "SalesData".  
   
-18. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+18. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
  To verify the sort action, click **Run** to preview the report, and then click the interactive sort button. The matrix sorts by the combined values of the group expression, although each individual value displays in its own column.  
   

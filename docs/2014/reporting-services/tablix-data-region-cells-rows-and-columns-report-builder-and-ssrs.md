@@ -17,7 +17,7 @@ f1_keywords:
 ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
 caps.latest.revision: 6
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Tablix Data Region Cells, Rows, and Columns (Report Builder) and SSRS
@@ -28,7 +28,7 @@ manager: "mblythe"
  To understand how to customize a tablix data region, you should first understand how to interpret the visual cues you see when you select a tablix data region on the design surface.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## Understanding Tablix Visual Cues  
  Visual cues on a tablix data region help you work with a tablix data region to display the data you want.  

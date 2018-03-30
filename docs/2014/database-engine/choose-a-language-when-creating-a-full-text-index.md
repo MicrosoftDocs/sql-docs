@@ -21,20 +21,20 @@ helpviewer_keywords:
 ms.assetid: 670a5181-ab80-436a-be96-d9498fbe2c09
 caps.latest.revision: 48
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Choose a Language When Creating a Full-Text Index
   When creating a full-text index, you need to specify a column-level language for the indexed column. The [word breaker and stemmers](../../2014/database-engine/configure-and-manage-word-breakers-and-stemmers-for-search.md) of the specified language will be used by full-text queries on the column. There are a couple of things to consider when choosing the column language when creating a full-text index. These considerations relate to how your text is tokenized and then indexed by Full-Text Engine.  
   
 > [!NOTE]  
->  To specify a column-level language for a column of full-text index, use the LANGUAGE *language_term* clause when specifying the column. For more information, see [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../Topic/CREATE%20FULLTEXT%20INDEX%20\(Transact-SQL\).md) and [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../Topic/ALTER%20FULLTEXT%20INDEX%20\(Transact-SQL\).md).  
+>  To specify a column-level language for a column of full-text index, use the LANGUAGE *language_term* clause when specifying the column. For more information, see [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-fulltext-index-transact-sql.md) and [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-fulltext-index-transact-sql.md).  
   
 ##  <a name="langsupp"></a> Language Support in Full-Text Search  
  This section provides an introduction to word breakers and stemmers, and discusses how full-text search uses the LCID of the column-level language.  
   
 ### Introduction to Word Breakers and Stemmers  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions include a complete new family of word breakers and stemmers that are significantly better than the those previously available in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] and later versions include a complete new family of word breakers and stemmers that are significantly better than the those previously available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
 >  The Microsoft Natural Language Group (MS NLG) implemented and supports these new linguistic components.  
@@ -47,7 +47,7 @@ manager: "jhubbard"
   
 -   Security  
   
-     The new word breakers are enabled by default in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] thanks to security improvements in linguistic components. We highly recommend that external components such as word breakers and filters be signed  to improve the overall security and robustness of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You can configure full-text to verify that these components are signed as follows:  
+     The new word breakers are enabled by default in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] thanks to security improvements in linguistic components. We highly recommend that external components such as word breakers and filters be signed  to improve the overall security and robustness of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. You can configure full-text to verify that these components are signed as follows:  
   
     ```  
     EXEC sp_fulltext_service 'verify_signature';  
@@ -57,14 +57,14 @@ manager: "jhubbard"
   
      Word breakers have been redesigned, and testing has shown that the new word breakers provide better semantic quality than previous word breakers. This increases the recall accuracy.  
   
--   Coverage for a vast list of languages, word breakers are included in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] out of the box and enabled by default .  
+-   Coverage for a vast list of languages, word breakers are included in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] out of the box and enabled by default .  
   
- For a list of the languages for which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes a word breaker and stemmers, see [sys.fulltext_languages &#40;Transact-SQL&#41;](../Topic/sys.fulltext_languages%20\(Transact-SQL\).md).  
+ For a list of the languages for which [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] includes a word breaker and stemmers, see [sys.fulltext_languages &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
   
 
   
 ### How Full-Text Search Uses the Name of the Column-Level Language  
- When creating a full-text index, you need to specify a valid language name for each column. If a language name is valid but not returned by the [sys.fulltext_languages &#40;Transact-SQL&#41;](../Topic/sys.fulltext_languages%20\(Transact-SQL\).md) catalog view, full-text search falls back to the closest available language name of the same language family, if any. Otherwise, full-text search falls back to the Neutral word breaker. This fall-back behavior might affect the recall accuracy. Therefore we strongly recommend that you specify a valid and available language name for each column when creating a full-text index.  
+ When creating a full-text index, you need to specify a valid language name for each column. If a language name is valid but not returned by the [sys.fulltext_languages &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md) catalog view, full-text search falls back to the closest available language name of the same language family, if any. Otherwise, full-text search falls back to the Neutral word breaker. This fall-back behavior might affect the recall accuracy. Therefore we strongly recommend that you specify a valid and available language name for each column when creating a full-text index.  
   
 > [!NOTE]  
 >  The LCID is used against all data types eligible for full-text indexing (such as `char` or `nchar`). If you have the sort order of a `char`, `varchar`, or `text` type column set to a language setting different from the language identified by the LCID, the LCID is used anyway during full-text indexing and querying of those columns.  
@@ -114,19 +114,19 @@ manager: "jhubbard"
 
   
 ##  <a name="nondef"></a> Specifying a Non-default Column-Level Language in a Full-Text Query  
- By default, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], full-text search will parse the query terms using the language specified for each column that is included in the full-text clause. To override this behavior, specify a nondefault language at query time. For supported languages whose resources are installed, the LANGUAGE *language_term* clause of a [CONTAINS](../Topic/CONTAINS%20\(Transact-SQL\).md), [CONTAINSTABLE](../Topic/CONTAINSTABLE%20\(Transact-SQL\).md), [FREETEXT](../Topic/FREETEXT%20\(Transact-SQL\).md), or [FREETEXTTABLE](../Topic/FREETEXTTABLE%20\(Transact-SQL\).md) query can be used to specify the language used for word breaking, stemming, thesaurus, and stopword processing of the query terms.  
+ By default, in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], full-text search will parse the query terms using the language specified for each column that is included in the full-text clause. To override this behavior, specify a nondefault language at query time. For supported languages whose resources are installed, the LANGUAGE *language_term* clause of a [CONTAINS](~/t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](~/relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](~/t-sql/queries/freetext-transact-sql.md), or [FREETEXTTABLE](~/relational-databases/system-functions/freetexttable-transact-sql.md) query can be used to specify the language used for word breaking, stemming, thesaurus, and stopword processing of the query terms.  
   
 
   
 ## See Also  
- [CONTAINS &#40;Transact-SQL&#41;](../Topic/CONTAINS%20\(Transact-SQL\).md)   
- [CONTAINSTABLE &#40;Transact-SQL&#41;](../Topic/CONTAINSTABLE%20\(Transact-SQL\).md)   
- [Data Types &#40;Transact-SQL&#41;](../Topic/Data%20Types%20\(Transact-SQL\).md)   
- [FREETEXT &#40;Transact-SQL&#41;](../Topic/FREETEXT%20\(Transact-SQL\).md)   
- [FREETEXTTABLE &#40;Transact-SQL&#41;](../Topic/FREETEXTTABLE%20\(Transact-SQL\).md)   
+ [CONTAINS &#40;Transact-SQL&#41;](~/t-sql/queries/contains-transact-sql.md)   
+ [CONTAINSTABLE &#40;Transact-SQL&#41;](~/relational-databases/system-functions/containstable-transact-sql.md)   
+ [Data Types &#40;Transact-SQL&#41;](~/t-sql/data-types/data-types-transact-sql.md)   
+ [FREETEXT &#40;Transact-SQL&#41;](~/t-sql/queries/freetext-transact-sql.md)   
+ [FREETEXTTABLE &#40;Transact-SQL&#41;](~/relational-databases/system-functions/freetexttable-transact-sql.md)   
  [Configure and Manage Filters for Search](../../2014/database-engine/configure-and-manage-filters-for-search.md)   
- [sp_fulltext_service &#40;Transact-SQL&#41;](../Topic/sp_fulltext_service%20\(Transact-SQL\).md)   
- [sys.fulltext_languages &#40;Transact-SQL&#41;](../Topic/sys.fulltext_languages%20\(Transact-SQL\).md)   
+ [sp_fulltext_service &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)   
+ [sys.fulltext_languages &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)   
  [Configure and Manage Word Breakers and Stemmers for Search](../../2014/database-engine/configure-and-manage-word-breakers-and-stemmers-for-search.md)  
   
   

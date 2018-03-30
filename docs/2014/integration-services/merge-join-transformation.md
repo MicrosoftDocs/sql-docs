@@ -49,7 +49,7 @@ manager: "jhubbard"
  You no longer have to configure the value of the `MaxBuffersPerInput` property because Microsoft has made changes that reduce the risk that the Merge Join transformation will consume excessive memory. This problem sometimes occurred when the multiple inputs of the Merge Join produced data at uneven rates.  
   
 ## Related Tasks  
- You can set properties through the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through the [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer or programmatically.  
   
  For information about how to set properties of this transformation, click one of the following topics:  
   

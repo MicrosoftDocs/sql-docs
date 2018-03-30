@@ -42,7 +42,7 @@ manager: "jhubbard"
  The **IColumnsInfo** and **IColumnsRowset** interfaces are used to extract information about the columns in the rowset. The **IColumnsInfo** interface returns a limited set of information, whereas **IColumnsRowset** provides all the metadata.  
   
 > [!NOTE]  
->  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] version 7.0 and earlier, the optional metadata column DBCOLUMN_COMPUTEMODE returned by **IColumnsInfo::GetColumnsInfo** returns DBSTATUS_S_ISNULL (instead of the values describing whether the column is computed) because it cannot be determined whether the underlying column is computed.  
+>  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version 7.0 and earlier, the optional metadata column DBCOLUMN_COMPUTEMODE returned by **IColumnsInfo::GetColumnsInfo** returns DBSTATUS_S_ISNULL (instead of the values describing whether the column is computed) because it cannot be determined whether the underlying column is computed.  
   
  The ordinals are used to specify a binding to a column. A binding is a structure that associates an element of the consumer's structure with a column. The binding can bind the data value, length, and status value of the column.  
   

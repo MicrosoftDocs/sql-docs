@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
 caps.latest.revision: 41
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Use Nested FOR XML Queries
@@ -37,7 +37,7 @@ SELECT @x
 --<row ProductModelID="119" Name="Bike Wash" />  
 ```  
   
- You can additionally process the XML returned in the variable, `@x`, by using one of the `xml` data type methods. For example, you can retrieve the `ProductModelID` attribute value by using the [value() method](../Topic/value\(\)%20Method%20\(xml%20Data%20Type\).md).  
+ You can additionally process the XML returned in the variable, `@x`, by using one of the `xml` data type methods. For example, you can retrieve the `ProductModelID` attribute value by using the [value() method](~/t-sql/xml/value-method-xml-data-type.md).  
   
 ```  
 DECLARE @i int;  
@@ -64,7 +64,7 @@ FOR XML RAW, TYPE,ROOT('myRoot');
 </myRoot>  
 ```  
   
- Because the result is of `xml` type, you can specify one of the `xml` data type methods directly against this XML, as shown in the following query. In the query, the [query() method (xml Data Type)](../Topic/query\(\)%20Method%20\(xml%20Data%20Type\).md) is used to retrieve the first <`row`> element child of the <`myRoot`> element.  
+ Because the result is of `xml` type, you can specify one of the `xml` data type methods directly against this XML, as shown in the following query. In the query, the [query() method (xml Data Type)](~/t-sql/xml/query-method-xml-data-type.md) is used to retrieve the first <`row`> element child of the <`myRoot`> element.  
   
 ```  
 SELECT  (SELECT ProductModelID, Name  
@@ -121,9 +121,9 @@ FOR XML AUTO, TYPE;
  Shows how to generate siblings by using a nested AUTO mode query  
   
  [Use Nested FOR XML Queries in ASP.NET](../../2014/database-engine/use-nested-for-xml-queries-in-asp-net.md)  
- Demonstrates how an ASPX application can use FOR XML to return XML from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Demonstrates how an ASPX application can use FOR XML to return XML from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  [Shape XML with Nested FOR XML Queries](../../2014/database-engine/shape-xml-with-nested-for-xml-queries.md)  
- Shows how to use nested FOR XML queries to control the structure of an XML document created by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Shows how to use nested FOR XML queries to control the structure of an XML document created by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
   

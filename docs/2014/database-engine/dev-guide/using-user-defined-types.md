@@ -28,18 +28,18 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Using User-Defined Types
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduced user-defined types (UDTs). UDTs extend the SQL type system by allowing you to store objects and custom data structures in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database. UDTs can contain multiple data types and can have behaviors, differentiating them from the traditional alias data types that consist of a single [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] system data type. UDTs are defined using any of the languages supported by the .NET common language runtime (CLR) that produce verifiable code. This includes Microsoft Visual C#<sup>®</sup> and Visual Basic<sup>®</sup> .NET. The data is exposed as fields and properties of a .NET class or structure, and behaviors are defined by methods of the class or structure.  
+  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introduced user-defined types (UDTs). UDTs extend the SQL type system by allowing you to store objects and custom data structures in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. UDTs can contain multiple data types and can have behaviors, differentiating them from the traditional alias data types that consist of a single [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system data type. UDTs are defined using any of the languages supported by the .NET common language runtime (CLR) that produce verifiable code. This includes Microsoft Visual C#<sup>®</sup> and Visual Basic<sup>®</sup> .NET. The data is exposed as fields and properties of a .NET class or structure, and behaviors are defined by methods of the class or structure.  
   
- A UDT can be used as the column definition of a table, as a variable in a [!INCLUDE[tsql](../../../includes/tsql-md.md)] batch, or as an argument of a [!INCLUDE[tsql](../../../includes/tsql-md.md)] function or stored procedure.  
+ A UDT can be used as the column definition of a table, as a variable in a [!INCLUDE[tsql](../../includes/tsql-md.md)] batch, or as an argument of a [!INCLUDE[tsql](../../includes/tsql-md.md)] function or stored procedure.  
   
 ## SQL Server Native Client OLE DB Provider  
- The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider supports UDTs as binary types with metadata information, which allows you to manage UDTs as objects. UDT columns are exposed as DBTYPE_UDT, and their metadata are exposed through the core OLE DB interface **IColumnRowset**, and the new [ISSCommandWithParameters](../../../2014/database-engine/dev-guide/isscommandwithparameters-ole-db.md) interface.  
+ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider supports UDTs as binary types with metadata information, which allows you to manage UDTs as objects. UDT columns are exposed as DBTYPE_UDT, and their metadata are exposed through the core OLE DB interface **IColumnRowset**, and the new [ISSCommandWithParameters](../../../2014/database-engine/dev-guide/isscommandwithparameters-ole-db.md) interface.  
   
 > [!NOTE]  
 >  The **IRowsetFind::FindNextRow** method does not work with the UDT data type. DB_E_BADCOMPAREOP is returned if the UDT is used as a search column type.  
   
 ### Data Bindings and Coercions  
- The following table describes the binding and coercion that occurs when using the listed data types with a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] UDT. UDT columns are exposed through the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider as DBTYPE_UDT. You can get metadata through the appropriate schema rowsets so you can manage your own defined types as objects.  
+ The following table describes the binding and coercion that occurs when using the listed data types with a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UDT. UDT columns are exposed through the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider as DBTYPE_UDT. You can get metadata through the appropriate schema rowsets so you can manage your own defined types as objects.  
   
 |Data type|To Server<br /><br /> **UDT**|To Server<br /><br /> **non-UDT**|From Server<br /><br /> **UDT**|From Server<br /><br /> **non-UDT**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
@@ -76,7 +76,7 @@ manager: "jhubbard"
  Data conversions supplied by OLE DB core services (**IDataConvert**) are not applicable to DBTYPE_UDT. No other bindings are supported.  
   
 ### OLE DB Rowset Additions and Changes  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client adds new values or changes to many of the core OLE DB schema rowsets.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client adds new values or changes to many of the core OLE DB schema rowsets.  
   
 #### The PROCEDURE_PARAMETERS Schema Rowset  
  The following additions have been made to the PROCEDURE_PARAMETERS schema rowset.  
@@ -89,7 +89,7 @@ manager: "jhubbard"
 |SS_UDT_ASSEMBLY_TYPENAME|DBTYPE_WSTR|The Assembly Qualified Name, which includes the type name and all the assembly identification necessary to be referenced by the CLR.|  
   
 #### The SQL_ASSEMBLIES Schema Rowset  
- The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider exposes a new provider specific schema rowset that describes the registered UDTs. The ASSEMBLY server may be specified as a DBTYPE_WSTR, but is not present in the rowset. If not specified, the rowset will default to the current server. The SQL_ASSEMBLIES schema rowset is defined in the following table.  
+ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider exposes a new provider specific schema rowset that describes the registered UDTs. The ASSEMBLY server may be specified as a DBTYPE_WSTR, but is not present in the rowset. If not specified, the rowset will default to the current server. The SQL_ASSEMBLIES schema rowset is defined in the following table.  
   
 |Column name|Type|Description|  
 |-----------------|----------|-----------------|  
@@ -101,7 +101,7 @@ manager: "jhubbard"
 |ASSEMBLY_BINARY|DBTYPE_BYTES|The binary representation of the assembly.|  
   
 #### The SQL_ASSEMBLIES_ DEPENDENCIES Schema Rowset  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider exposes a new provider-specific schema rowset that describes the assembly dependencies for a specified server. ASSEMBLY_SERVER may be specified by the caller as a DBTYPE_WSTR, but is not present in the rowset. If not specified, the rowset will default to the current server. The SQL_ASSEMBLY_DEPENDENCIES schema rowset is defined in the following table.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider exposes a new provider-specific schema rowset that describes the assembly dependencies for a specified server. ASSEMBLY_SERVER may be specified by the caller as a DBTYPE_WSTR, but is not present in the rowset. If not specified, the rowset will default to the current server. The SQL_ASSEMBLY_DEPENDENCIES schema rowset is defined in the following table.  
   
 |Column name|Type|Description|  
 |-----------------|----------|-----------------|  
@@ -111,7 +111,7 @@ manager: "jhubbard"
 |REFERENCED_ASSEMBLY_ID|DBTYPE_UI4|The object id of the referenced assembly.|  
   
 #### The SQL_USER_TYPES Schema Rowset  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider exposes new schema rowset, SQL_USER_TYPES, that describes when the registered UDTs for a specified server is added. UDT_SERVER must be specified as a DBTYPE_WSTR by the caller but is not present in the rowset. The SQL_USER_TYPES schema rowset is defined in the following table.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider exposes new schema rowset, SQL_USER_TYPES, that describes when the registered UDTs for a specified server is added. UDT_SERVER must be specified as a DBTYPE_WSTR by the caller but is not present in the rowset. The SQL_USER_TYPES schema rowset is defined in the following table.  
   
 |Column name|Type|Description|  
 |-----------------|----------|-----------------|  
@@ -131,10 +131,10 @@ manager: "jhubbard"
 |SS_UDT_ASSEMBLY_TYPENAME|DBTYPE_WSTR|Full type name (AQN) includes type name prefixed by namespace if applicable.|  
   
 ### OLE DB Property Set Additions and Changes  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client adds new values or changes to many of the core OLE DB property sets.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client adds new values or changes to many of the core OLE DB property sets.  
   
 #### The DBPROPSET_SQLSERVERPARAMETER Property Set  
- In order to support UDTs through OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client implements the new DBPROPSET_SQLSERVERPARAMETER property set which contains the following values.  
+ In order to support UDTs through OLE DB, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client implements the new DBPROPSET_SQLSERVERPARAMETER property set which contains the following values.  
   
 |Name|Type|Description|  
 |----------|----------|-----------------|  
@@ -145,7 +145,7 @@ manager: "jhubbard"
  SSPROP_PARAM_UDT_NAME is mandatory. SSPROP_PARAM_UDT_CATALOGNAME and SSPROP_PARAM_UDT_SCHEMANAME are optional. If any of the properties are specified incorrectly DB_E_ERRORSINCOMMAND will be returned. If both SSPROP_PARAM_UDT_CATALOGNAME and SSPROP_PARAM_UDT_SCHEMANAME are not specified, then the UDT must be defined in the same database and schema as the table. If the UDT definition is not in the same schema as the table (but is in the same database), then SSPROP_PARAM_UDT_SCHEMANAME must be specified. If the UDT definition is in a different database then both SSPROP_PARAM_UDT_CATALOGNAME and SSPROP_PARAM_UDT_SCHEMANAME must be specified.  
   
 #### The DBPROPSET_SQLSERVERCOLUMN Property Set  
- To support the creation of tables in the **ITableDefinition** interface, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client adds the following three new columns to the DBPROPSET_SQLSERVERCOLUMN property set.  
+ To support the creation of tables in the **ITableDefinition** interface, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client adds the following three new columns to the DBPROPSET_SQLSERVERCOLUMN property set.  
   
 |Name|Description|Type|Description|  
 |----------|-----------------|----------|-----------------|  
@@ -167,16 +167,16 @@ manager: "jhubbard"
  If the UDT definition is in a different database, both SSPROP_COL_UDT_CATALOGNAME and SSPROP_COL_UDT_SCHEMANAME must be specified.  
   
 ### OLE DB Interface Additions and Changes  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client adds new values or changes to many of the core OLE DB interfaces.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client adds new values or changes to many of the core OLE DB interfaces.  
   
 #### The ISSCommandWithParameters Interface  
- To support UDTs through OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client implements a number of changes, including the addition of the **ISSCommandWithParameters** interface. This new interface inherits from the core OLE DB interface **ICommandWithParameters**. In addition to the three methods inherited from **ICommandWithParameters**; **GetParameterInfo**, **MapParameterNames**, and **SetParameterInfo**; **ISSCommandWithParameters** provides the **GetParameterProperties** and **SetParameterProperties** methods that are used to handle server specific data types.  
+ To support UDTs through OLE DB, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client implements a number of changes, including the addition of the **ISSCommandWithParameters** interface. This new interface inherits from the core OLE DB interface **ICommandWithParameters**. In addition to the three methods inherited from **ICommandWithParameters**; **GetParameterInfo**, **MapParameterNames**, and **SetParameterInfo**; **ISSCommandWithParameters** provides the **GetParameterProperties** and **SetParameterProperties** methods that are used to handle server specific data types.  
   
 > [!NOTE]  
 >  The **ISSCommandWithParameters** interface also makes use of the new SSPARAMPROPS structure.  
   
 #### The IColumnsRowset Interface  
- In addition to the **ISSCommandWithParameters** interface, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client also adds new values to the rowset returned from calling the **IColumnsRowset::GetColumnRowset** method including the following.  
+ In addition to the **ISSCommandWithParameters** interface, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client also adds new values to the rowset returned from calling the **IColumnsRowset::GetColumnRowset** method including the following.  
   
 |Column Name|Type|Description|  
 |-----------------|----------|-----------------|  
@@ -188,7 +188,7 @@ manager: "jhubbard"
  You can differentiate a server UDT column from other binary types when the DBCOLUMN_TYPE is set to DBTYPE_UDT by looking at the added UDT metadata specified above. If that data is partially complete, the server type is a UDT. For non-UDT server types, these columns are always returned as NULL.  
   
 ## SQL Server Native Client ODBC Driver  
- A number of changes have been made in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver to support UDTs. The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver maps the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] UDT to SQL_SS_UDT driver-specific SQL data type identifier. UDT columns are surfaced as SQL_SS_UDT. If you map a UDT column explicitly to another type in a SQL statement by using the **ToString** or **ToXMLString** methods of the UDT or via the **CAST/CONVERT** function, the type of the column in the result set reflects the actual type the column was converted to  
+ A number of changes have been made in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver to support UDTs. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver maps the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UDT to SQL_SS_UDT driver-specific SQL data type identifier. UDT columns are surfaced as SQL_SS_UDT. If you map a UDT column explicitly to another type in a SQL statement by using the **ToString** or **ToXMLString** methods of the UDT or via the **CAST/CONVERT** function, the type of the column in the result set reflects the actual type the column was converted to  
   
 ### SQLColAttribute, SQLDescribeParam, SQLGetDescField  
  Four new driver-specific descriptor fields have been added to provide additional information for either a UDT column of a result set, or a UDT parameter of stored procedure/parameterized query, to be retrieved via the [SQLColAttribute](../../../2014/database-engine/dev-guide/sqlcolattribute.md), [SQLDescribeParam](../../../2014/database-engine/dev-guide/sqldescribeparam.md), and [SQLGetDescField](../../../2014/database-engine/dev-guide/sqlgetdescfield.md) functions.  

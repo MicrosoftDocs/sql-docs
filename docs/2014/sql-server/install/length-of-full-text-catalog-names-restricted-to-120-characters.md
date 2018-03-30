@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Length of full-text catalog names restricted to 120 characters
-  The length of full-text catalog names is restricted to 120 characters, reduced from the 128 character restriction in previous releases of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  The length of full-text catalog names is restricted to 120 characters, reduced from the 128 character restriction in previous releases of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Description  
  This change does not affect existing catalog names; however, scripts that create full-text catalogs with names longer than 120 characters result in an error. The catalog names are used to generate logical file names that correspond to catalogs.  

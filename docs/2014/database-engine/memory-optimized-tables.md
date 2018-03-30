@@ -16,7 +16,7 @@ ms.author: "sstein"
 manager: "jhubbard"
 ---
 # Memory-Optimized Tables
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In-Memory OLTP helps improve performance of OLTP applications through efficient, memory-optimized data access, native compilation of business logic, and lock- and latch free algorithms. The In-Memory OLTP feature includes memory-optimized tables and table types, as well as native compilation of [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures for efficient access to these tables.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] In-Memory OLTP helps improve performance of OLTP applications through efficient, memory-optimized data access, native compilation of business logic, and lock- and latch free algorithms. The In-Memory OLTP feature includes memory-optimized tables and table types, as well as native compilation of [!INCLUDE[tsql](../includes/tsql-md.md)] stored procedures for efficient access to these tables.  
   
  For more information about memory-optimized tables, see:  
   

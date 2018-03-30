@@ -16,12 +16,12 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Lesson 1: Creating the Bike Buyer Mining Structure
-  In this lesson, you will create a mining structure that allows you to predict whether a potential customer of [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] will purchase a bicycle. If you are unfamiliar with mining structures and their role in data mining, see [Mining Structures &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/mining-structures-analysis-services-data-mining.md).  
+  In this lesson, you will create a mining structure that allows you to predict whether a potential customer of [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] will purchase a bicycle. If you are unfamiliar with mining structures and their role in data mining, see [Mining Structures &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/mining-structures-analysis-services-data-mining.md).  
   
  The Bike Buyer mining structure that you will create in this lesson supports adding mining models based on the [Microsoft Clustering Algorithm](../../2014/analysis-services/microsoft-clustering-algorithm.md)[Microsoft Decision Trees Algorithm](../../2014/analysis-services/microsoft-decision-trees-algorithm.md). In later lessons, you will use the clustering mining models to explore the different ways in which customers can be grouped, and will use decision tree mining models to predict whether or not a potential customer will purchase a bicycle.  
   
 ## CREATE MINING STRUCTURE Statement  
- To create a mining structure, you use the [CREATE MINING STRUCTURE &#40;DMX&#41;](../Topic/CREATE%20MINING%20STRUCTURE%20\(DMX\).md) statement. The code in the statement can be broken into the following parts:  
+ To create a mining structure, you use the [CREATE MINING STRUCTURE &#40;DMX&#41;](~/dmx/create-mining-structure-dmx.md) statement. The code in the statement can be broken into the following parts:  
   
 -   Naming the structure.  
   
@@ -48,7 +48,7 @@ WITH HOLDOUT (<holdout specifier>)
 CREATE MINING STRUCTURE [<mining structure name>]  
 ```  
   
- For information about naming an object in Data Mining Extensions (DMX), see [Identifiers &#40;DMX&#41;](../Topic/Identifiers%20\(DMX\).md).  
+ For information about naming an object in Data Mining Extensions (DMX), see [Identifiers &#40;DMX&#41;](~/dmx/identifiers-dmx.md).  
   
  The next line of the code defines the key column for the mining structure, which uniquely identifies an entity in the source data:  
   
@@ -76,7 +76,7 @@ CREATE MINING STRUCTURE [<mining structure name>]
 WITH HOLDOUT (<holdout specifier>)  
 ```  
   
- You specify some portion of the data to use for testing mining models that are related to the structure, and the remaining data is used for training the models. By default, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] creates a test data set that contains 30 percent of all case data. You will add the specification that the test data set should contain 30 percent of the cases up to a maximum of 1000 cases. If 30 percent of the cases is less than 1000, the test data set will contain the smaller amount.  
+ You specify some portion of the data to use for testing mining models that are related to the structure, and the remaining data is used for training the models. By default, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] creates a test data set that contains 30 percent of all case data. You will add the specification that the test data set should contain 30 percent of the cases up to a maximum of 1000 cases. If 30 percent of the cases is less than 1000, the test data set will contain the smaller amount.  
   
 ## Lesson Tasks  
  You will perform the following tasks in this lesson:  
@@ -88,15 +88,15 @@ WITH HOLDOUT (<holdout specifier>)
 -   Execute the query.  
   
 ## Creating the Query  
- The first step is to connect to an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and create a new DMX query in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ The first step is to connect to an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] and create a new DMX query in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 #### To create a new DMX query in SQL Server Management Studio  
   
-1.  Open [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+1.  Open [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
-2.  In the **Connect to Server** dialog box, for **Server type**, select **Analysis Services**. In **Server name**, type `LocalHost`, or type the name of the instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] that you want to connect to for this lesson. Click **Connect**.  
+2.  In the **Connect to Server** dialog box, for **Server type**, select **Analysis Services**. In **Server name**, type `LocalHost`, or type the name of the instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] that you want to connect to for this lesson. Click **Connect**.  
   
-3.  In **Object Explorer**, right-click the instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], point to **New Query**, and then click **DMX** to open the **Query Editor** and a new, blank query.  
+3.  In **Object Explorer**, right-click the instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], point to **New Query**, and then click **DMX** to open the **Query Editor** and a new, blank query.  
   
 ## Altering the Query  
  The next step is to modify the CREATE MINING STRUCTURE statement described above to create the Bike Buyer mining structure.  

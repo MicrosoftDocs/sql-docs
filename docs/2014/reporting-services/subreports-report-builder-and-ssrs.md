@@ -26,7 +26,7 @@ manager: "mblythe"
  In this illustration, the contact information displayed in the main Sales Order report actually comes from a Contacts subreport.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## Comparing Subreports and Nested Data Regions  
  If you're thinking of using subreports to display separate groups of data, consider using data regions, such as tables, matrices, and charts, instead. Reports with data regions only may perform better than reports that include subreports.  

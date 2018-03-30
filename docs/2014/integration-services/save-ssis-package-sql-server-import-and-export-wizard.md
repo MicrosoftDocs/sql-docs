@@ -18,10 +18,10 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Save SSIS Package (SQL Server Import and Export Wizard)
-  Use the **Save SSIS Package** page to name, describe, and save a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Integration Services ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) package to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb` database or to a file that has the .dtsx extension.  
+  Use the **Save SSIS Package** page to name, describe, and save a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Integration Services ([!INCLUDE[ssIS](../includes/ssis-md.md)]) package to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] `msdb` database or to a file that has the .dtsx extension.  
   
 > [!NOTE]  
->  In [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], the option to save the package created by the wizard is not available.  
+>  In [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], the option to save the package created by the wizard is not available.  
   
  To learn more about this wizard, see [SQL Server Import and Export Wizard](../../2014/integration-services/sql-server-import-and-export-wizard.md). To learn about the options for starting the wizard, and about the permissions required to run the wizard successfully, see [Run the SQL Server Import and Export Wizard](../../2014/integration-services/run-the-sql-server-import-and-export-wizard.md).  
   
@@ -35,25 +35,25 @@ manager: "jhubbard"
  Provide a description for the package. As a best practice, describe the package in terms of its purpose, to make packages self-documenting and easier to maintain.  
   
  **Target**  
- View the target ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or file) that was previously specified for the destination file.  
+ View the target ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] or file) that was previously specified for the destination file.  
   
 ## Target Dynamic Options  
   
 ### Target = SQL Server  
  **Server name**  
- When you have selected a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destination, type or select the destination server name.  
+ When you have selected a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] destination, type or select the destination server name.  
   
  **Use Windows Authentication**  
- When you have selected a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destination, specify whether to connect to the server by using Windows Integrated Authentication. This is the preferred authentication method.  
+ When you have selected a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] destination, specify whether to connect to the server by using Windows Integrated Authentication. This is the preferred authentication method.  
   
  **Use SQL Server Authentication**  
- When you have selected a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destination, specify whether to connect to the server by using SQL Server Authentication.  
+ When you have selected a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] destination, specify whether to connect to the server by using SQL Server Authentication.  
   
  **User name**  
- When you have selected a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destination, and have specified SQL Server Authentication, type the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user name.  
+ When you have selected a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] destination, and have specified SQL Server Authentication, type the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] user name.  
   
  **Password**  
- When you have selected a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destination, and have specified SQL Server Authentication, type the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] password.  
+ When you have selected a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] destination, and have specified SQL Server Authentication, type the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] password.  
   
 ### Target = File System  
  **File name**  

@@ -24,7 +24,7 @@ manager: "jhubbard"
 -   [SQL Server Express LocalDB Instance API Reference](../../../2014/database-engine/dev-guide/sql-server-express-localdb-instance-api-reference.md)  
   
 ## Code Sample  
- The following sample demonstrates the LocalDB API.  Make sure that LocalDB is installed on the computer before running this sample.  You can install LocalDB from setup in the [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Express.  
+ The following sample demonstrates the LocalDB API.  Make sure that LocalDB is installed on the computer before running this sample.  You can install LocalDB from setup in the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Express.  
   
 ```  
 // compile with: Advapi32.lib  

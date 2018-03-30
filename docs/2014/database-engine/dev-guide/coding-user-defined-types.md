@@ -56,7 +56,7 @@ using System.Data.SqlTypes;
 using Microsoft.SqlServer.Server;  
 ```  
   
- The `Microsoft.SqlServer.Server` namespace contains the objects required for various attributes of your UDT, and the `System.Data.SqlTypes` namespace contains the classes that represent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native data types available to the assembly. There may of course be additional namespaces that your assembly requires in order to function correctly. The `Point` UDT also uses the `System.Text` namespace for working with strings.  
+ The `Microsoft.SqlServer.Server` namespace contains the objects required for various attributes of your UDT, and the `System.Data.SqlTypes` namespace contains the classes that represent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native data types available to the assembly. There may of course be additional namespaces that your assembly requires in order to function correctly. The `Point` UDT also uses the `System.Text` namespace for working with strings.  
   
 > [!NOTE]  
 >  Visual C++ database objects, such as UDTs, compiled with `/clr:pure` are not supported for execution.  
@@ -87,9 +87,9 @@ public struct Point : INullable
 ```  
   
 ## Implementing Nullability  
- In addition to specifying the attributes for your assemblies correctly, your UDT must also support nullability. UDTs loaded into [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] are null-aware, but in order for the UDT to recognize a null value, the UDT must implement the `System.Data.SqlTypes.INullable` interface.  
+ In addition to specifying the attributes for your assemblies correctly, your UDT must also support nullability. UDTs loaded into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are null-aware, but in order for the UDT to recognize a null value, the UDT must implement the `System.Data.SqlTypes.INullable` interface.  
   
- You must create a property named `IsNull`, which is needed to determine whether a value is null from within CLR code. When [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] finds a null instance of a UDT, the UDT is persisted using normal null-handling methods. The server does not waste time serializing or deserializing the UDT if it does not have to, and it does not waste space to store a null UDT. This check for nulls is performed every time a UDT is brought over from the CLR, which means that using the [!INCLUDE[tsql](../../../includes/tsql-md.md)] IS NULL construct to check for null UDTs should always work. The `IsNull` property is also used by the server to test whether an instance is null. Once the server determines that the UDT is null, it can use its native null handling.  
+ You must create a property named `IsNull`, which is needed to determine whether a value is null from within CLR code. When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] finds a null instance of a UDT, the UDT is persisted using normal null-handling methods. The server does not waste time serializing or deserializing the UDT if it does not have to, and it does not waste space to store a null UDT. This check for nulls is performed every time a UDT is brought over from the CLR, which means that using the [!INCLUDE[tsql](../../includes/tsql-md.md)] IS NULL construct to check for null UDTs should always work. The `IsNull` property is also used by the server to test whether an instance is null. Once the server determines that the UDT is null, it can use its native null handling.  
   
  The `get()` method of `IsNull` is not special-cased in any way. If a `Point` variable `@p` is `Null`, then `@p.IsNull` will, by default, evaluate to "NULL", not "1". This is because the `SqlMethod(OnNullCall)` attribute of the `IsNull get()` method defaults to false. Because the object is `Null`, when the property is requested the object is not deserialized, the method is not called, and a default value of "NULL" is returned.  
   
@@ -154,7 +154,7 @@ FROM Points
 WHERE location.IsNull = 0;  
 ```  
   
- Both queries return the IDs of points with non-`Null` locations. In Query 1, normal null-handling is used, and there no deserialization of UDTs is required. Query 2, on the other hand, has to deserialize each non-`Null` object and call into the CLR to obtain the value of the `IsNull` property. Clearly, using `IS NULL` will exhibit better performance and there should never be a reason to read the `IsNull` property of a UDT from [!INCLUDE[tsql](../../../includes/tsql-md.md)] code.  
+ Both queries return the IDs of points with non-`Null` locations. In Query 1, normal null-handling is used, and there no deserialization of UDTs is required. Query 2, on the other hand, has to deserialize each non-`Null` object and call into the CLR to obtain the value of the `IsNull` property. Clearly, using `IS NULL` will exhibit better performance and there should never be a reason to read the `IsNull` property of a UDT from [!INCLUDE[tsql](../../includes/tsql-md.md)] code.  
   
  So, what is the use of the `IsNull` property? First, it is needed to determine whether a value is `Null` from within CLR code. Second, the server needs a way to test whether an instance is `Null`, so this property is used by the server. After it determines it is `Null`, then it can use its native null handling to handle it.  
   
@@ -286,7 +286,7 @@ public Int32 Y
 ```  
   
 ## Validating UDT Values  
- When working with UDT data, [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] automatically converts binary values to UDT values. This conversion process involves checking that values are appropriate for the serialization format of the type and ensuring that the value can be deserialized correctly. This ensures that the value can be converted back to binary form. In the case of byte-ordered UDTs, this also ensures that the resulting binary value matches the original binary value. This prevents invalid values from being persisted in the database. In some cases, this level of checking may be inadequate. Additional validation may be required when UDT values are required to be in an expected domain or range. For example, a UDT that implements a date might require the day value to be a positive number that falls within a certain range of valid values.  
+ When working with UDT data, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] automatically converts binary values to UDT values. This conversion process involves checking that values are appropriate for the serialization format of the type and ensuring that the value can be deserialized correctly. This ensures that the value can be converted back to binary form. In the case of byte-ordered UDTs, this also ensures that the resulting binary value matches the original binary value. This prevents invalid values from being persisted in the database. In some cases, this level of checking may be inadequate. Additional validation may be required when UDT values are required to be in an expected domain or range. For example, a UDT that implements a date might require the day value to be a positive number that falls within a certain range of valid values.  
   
  The `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.ValidationMethodName` property of the `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` allows you to supply the name of a validation method that the server runs when data is assigned to a UDT or converted to a UDT. `ValidationMethodName` is also called during the running of the bcp utility, BULK INSERT, DBCC CHECKDB, DBCC CHECKFILEGROUP, DBCC CHECKTABLE, distributed query, and tabular data stream (TDS) remote procedure call (RPC) operations. The default value for `ValidationMethodName` is null, indicating that there is no validation method.  
   
@@ -364,7 +364,7 @@ private bool ValidatePoint()
 ```  
   
 ### Validation Method Limitations  
- The server calls the validation method when the server is performing conversions, not when data is inserted by setting individual properties or when data is inserted using a [!INCLUDE[tsql](../../../includes/tsql-md.md)] INSERT statement.  
+ The server calls the validation method when the server is performing conversions, not when data is inserted by setting individual properties or when data is inserted using a [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT statement.  
   
  You must explicitly call the validation method from property setters and the `Parse` method if you want the validation method to execute in all situations. This is not a requirement, and in some cases may not even be desirable.  
   
@@ -489,7 +489,7 @@ public Int32 Y
 ```  
   
 ## Coding UDT Methods  
- When coding UDT methods, consider whether the algorithm used could possibly change over time. If so, you may want to consider creating a separate class for the methods your UDT uses. If the algorithm changes, you can recompile the class with the new code and load the assembly into [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] without affecting the UDT. In many cases UDTs can be reloaded using the [!INCLUDE[tsql](../../../includes/tsql-md.md)] ALTER ASSEMBLY statement, but that could potentially cause problems with existing data. For example, the `Currency` UDT included with the **AdventureWorks** sample database uses a **ConvertCurrency** function to convert currency values, which is implemented in a separate class. It is possible that conversion algorithms may change in unpredictable ways in the future, or that new functionality may be required. Separating the **ConvertCurrency** function from the `Currency` UDT implementation provides greater flexibility when planning for future changes.  
+ When coding UDT methods, consider whether the algorithm used could possibly change over time. If so, you may want to consider creating a separate class for the methods your UDT uses. If the algorithm changes, you can recompile the class with the new code and load the assembly into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] without affecting the UDT. In many cases UDTs can be reloaded using the [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER ASSEMBLY statement, but that could potentially cause problems with existing data. For example, the `Currency` UDT included with the **AdventureWorks** sample database uses a **ConvertCurrency** function to convert currency values, which is implemented in a separate class. It is possible that conversion algorithms may change in unpredictable ways in the future, or that new functionality may be required. Separating the **ConvertCurrency** function from the `Currency` UDT implementation provides greater flexibility when planning for future changes.  
   
 ### Example  
  The `Point` class contains three simple methods for calculating distance: **Distance**, **DistanceFrom** and **DistanceFromXY**. Each returns a `double` calculating the distance from `Point` to zero, the distance from a specified point to `Point`, and the distance from specified X and Y coordinates to `Point`. **Distance** and **DistanceFrom** each call **DistanceFromXY**, and demonstrate how to use different arguments for each method.  
@@ -547,7 +547,7 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
  The following table describes some of the relevant `Microsoft.SqlServer.Server.SqlMethodAttribute` properties that can be used in UDT methods, and lists their default values.  
   
  DataAccess  
- Indicates whether the function involves access to user data stored in the local instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Default is `DataAccessKind`.`None`.  
+ Indicates whether the function involves access to user data stored in the local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Default is `DataAccessKind`.`None`.  
   
  IsDeterministic  
  Indicates whether the function produces the same output values given the same input values and the same database state. Default is `false`.  
@@ -562,18 +562,18 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
  Indicates whether the method is called when null reference input arguments are specified. Default is `true`.  
   
 ### Example  
- The `Microsoft.SqlServer.Server.SqlMethodAttribute.IsMutator` property allows you to mark a method that allows a change in the state of an instance of a UDT. [!INCLUDE[tsql](../../../includes/tsql-md.md)] does not allow you to set two UDT properties in the SET clause of one UPDATE statement. However, you can have a method marked as a mutator that changes the two members.  
+ The `Microsoft.SqlServer.Server.SqlMethodAttribute.IsMutator` property allows you to mark a method that allows a change in the state of an instance of a UDT. [!INCLUDE[tsql](../../includes/tsql-md.md)] does not allow you to set two UDT properties in the SET clause of one UPDATE statement. However, you can have a method marked as a mutator that changes the two members.  
   
 > [!NOTE]  
 >  Mutator methods are not allowed in queries. They can be called only in assignment statements or data modification statements. If a method marked as mutator does not return `void` (or is not a `Sub` in Visual Basic), CREATE TYPE fails with an error.  
   
- The following statement assumes the existence of a `Triangles` UDT that has a `Rotate` method. The following [!INCLUDE[tsql](../../../includes/tsql-md.md)] update statement invokes the `Rotate` method:  
+ The following statement assumes the existence of a `Triangles` UDT that has a `Rotate` method. The following [!INCLUDE[tsql](../../includes/tsql-md.md)] update statement invokes the `Rotate` method:  
   
 ```  
 UPDATE Triangles SET t.RotateY(0.6) WHERE id=5  
 ```  
   
- The `Rotate` method is decorated with the `SqlMethod` attribute setting `IsMutator` to `true` so that [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] can mark the method as a mutator method. The code also sets `OnNullCall` to `false`, which indicates to the server that the method returns a null reference (`Nothing` in Visual Basic) if any of the input parameters are null references.  
+ The `Rotate` method is decorated with the `SqlMethod` attribute setting `IsMutator` to `true` so that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can mark the method as a mutator method. The code also sets `OnNullCall` to `false`, which indicates to the server that the method returns a null reference (`Nothing` in Visual Basic) if any of the input parameters are null references.  
   
 ```vb  
 <SqlMethod(IsMutator:=True, OnNullCall:=False)> _  
@@ -599,17 +599,17 @@ public void Rotate(double anglex, double angley, double anglez)
  When implementing a UDT with a user-defined format, you must implement `Read` and `Write` methods that implement the Microsoft.SqlServer.Server.IBinarySerialize interface to handle serializing and deserializing UDT data. You must also specify the `MaxByteSize` property of the `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute`.  
   
 ### The Currency UDT  
- The `Currency` UDT is included with the CLR samples that can be installed with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], beginning with [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
+ The `Currency` UDT is included with the CLR samples that can be installed with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], beginning with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
  The `Currency` UDT supports handling amounts of money in the monetary system of a particular culture. You must define two fields: a `string` for `CultureInfo`, which specifies who issued the currency (en-us, for example) and a `decimal` for `CurrencyValue`, the amount of money.  
   
  Although it is not used by the server for performing comparisons, the `Currency` UDT implements the `System.IComparable` interface, which exposes a single method, `System.IComparable.CompareTo`. This is used on the client side in situations where it is desirable to accurately compare or order currency values within cultures.  
   
- Code running in the CLR compares the culture separately from the currency value. For [!INCLUDE[tsql](../../../includes/tsql-md.md)] code, the following actions determine the comparison:  
+ Code running in the CLR compares the culture separately from the currency value. For [!INCLUDE[tsql](../../includes/tsql-md.md)] code, the following actions determine the comparison:  
   
-1.  Set the `IsByteOrdered` attribute to true, which tells [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to use the persisted binary representation on disk for comparisons.  
+1.  Set the `IsByteOrdered` attribute to true, which tells [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to use the persisted binary representation on disk for comparisons.  
   
-2.  Use the `Write` method for the `Currency` UDT to determine how the UDT is persisted on disk and therefore how UDT values are compared and ordered for [!INCLUDE[tsql](../../../includes/tsql-md.md)] operations.  
+2.  Use the `Write` method for the `Currency` UDT to determine how the UDT is persisted on disk and therefore how UDT values are compared and ordered for [!INCLUDE[tsql](../../includes/tsql-md.md)] operations.  
   
 3.  Save the `Currency` UDT using the following binary format:  
   
@@ -617,7 +617,7 @@ public void Rotate(double anglex, double angley, double anglez)
   
     2.  Use bytes 20 and above to contain the decimal value of the currency.  
   
- The purpose of the padding is to ensure that the culture is completely separated from the currency value, so that when one UDT is compared against another in [!INCLUDE[tsql](../../../includes/tsql-md.md)] code, culture bytes are compared against culture bytes, and currency byte values are compared against currency byte values.  
+ The purpose of the padding is to ensure that the culture is completely separated from the currency value, so that when one UDT is compared against another in [!INCLUDE[tsql](../../includes/tsql-md.md)] code, culture bytes are compared against culture bytes, and currency byte values are compared against currency byte values.  
   
  For the complete code listing for the `Currency` UDT, follow the directions for installing the CLR samples in [SQL Server Database Engine Samples](http://msftengprodsamples.codeplex.com/).  
   

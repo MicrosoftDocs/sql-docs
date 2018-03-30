@@ -21,7 +21,7 @@ helpviewer_keywords:
 ms.assetid: e75fe1e5-197b-4c65-859b-370821cad003
 caps.latest.revision: 45
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # MSReportServer_ConfigurationSetting Properties
@@ -31,11 +31,11 @@ manager: "mblythe"
   
 |||  
 |-|-|  
-|[ConnectionPoolSize](../../2014/reporting-services/connectionpoolsize-property-wmi-msreportserver-configurationsetting.md)|Returns the connection pool size used by the report server to communicate with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance that hosts the report server database. Read-only.|  
-|[DatabaseLogonAccount](../../2014/reporting-services/databaselogonaccount-property-wmi-msreportserver-configurationsetting.md)|Specifies the logon account used by the report server to connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance that hosts the report server database. Read-only.|  
+|[ConnectionPoolSize](../../2014/reporting-services/connectionpoolsize-property-wmi-msreportserver-configurationsetting.md)|Returns the connection pool size used by the report server to communicate with the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] instance that hosts the report server database. Read-only.|  
+|[DatabaseLogonAccount](../../2014/reporting-services/databaselogonaccount-property-wmi-msreportserver-configurationsetting.md)|Specifies the logon account used by the report server to connect to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] instance that hosts the report server database. Read-only.|  
 |[DatabaseLogonTimeout](../../2014/reporting-services/databaselogontimeout-property-wmi-msreportserver-configurationsetting.md)|Specifies the number of seconds to wait before an attempt to log on to the report server database fails. Read-only.|  
-|[DatabaseLogonType](../../2014/reporting-services/databaselogontype-property-wmi-msreportserver-configurationsetting.md)|Specifies whether the report server uses a Windows service account, a Windows user account, or a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login to access the report server database. Read-only.|  
-|[DatabaseName](../../2014/reporting-services/databasename-property-wmi-msreportserver-configurationsetting.md)|Specifies the name of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance that hosts the report server database.|  
+|[DatabaseLogonType](../../2014/reporting-services/databaselogontype-property-wmi-msreportserver-configurationsetting.md)|Specifies whether the report server uses a Windows service account, a Windows user account, or a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] login to access the report server database. Read-only.|  
+|[DatabaseName](../../2014/reporting-services/databasename-property-wmi-msreportserver-configurationsetting.md)|Specifies the name of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance that hosts the report server database.|  
 |[DatabaseQueryTimeout](../../2014/reporting-services/databasequerytimeout-property-wmi-msreportserver-configurationsetting.md)|Specifies the number of seconds that must elapse before the command fails or times out. The report server is timing the process against the SQL Server catalog, not a data source for the report.|  
 |[DatabaseServerName](../../2014/reporting-services/databaseservername-property-wmi-msreportserver-configurationsetting.md)|Specifies the name of the server on which the report server database is installed.|  
 |[InstallationID Property](../../2014/reporting-services/installationid-property-wmi-msreportserver-configurationsetting.md)|Returns a unique identifier for a specific report server instance.|  

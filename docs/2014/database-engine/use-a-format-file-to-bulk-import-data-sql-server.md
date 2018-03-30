@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Use a Format File to Bulk Import Data (SQL Server)
-  This topic illustrates the use of a format file in bulk-import operations. The format file maps the fields of the data file to the columns of the table.  You can use a non-XML or XML format file to bulk import data when using a **bcp** command or a BULK INSERT or INSERT ... SELECT * FROM OPENROWSET(BULK...) [!INCLUDE[tsql](../../includes/tsql-md.md)] command.  
+  This topic illustrates the use of a format file in bulk-import operations. The format file maps the fields of the data file to the columns of the table.  You can use a non-XML or XML format file to bulk import data when using a **bcp** command or a BULK INSERT or INSERT ... SELECT * FROM OPENROWSET(BULK...) [!INCLUDE[tsql](../includes/tsql-md.md)] command.  
   
 > [!IMPORTANT]  
 >  For a format file to work with a Unicode character data file, all the input fields must be Unicode text strings (that is, either fixed-size or character-terminated Unicode strings).  
@@ -36,7 +36,7 @@ manager: "jhubbard"
 |INSERT ... SELECT * FROM OPENROWSET(BULK...)|FORMATFILE = '*format_file_path*'|  
 |**bcp** … **in**|**-f** *format_file*|  
   
- For more information, see [bcp Utility](../../2014/database-engine/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](../Topic/BULK%20INSERT%20\(Transact-SQL\).md), or [OPENROWSET &#40;Transact-SQL&#41;](../Topic/OPENROWSET%20\(Transact-SQL\).md).  
+ For more information, see [bcp Utility](../../2014/database-engine/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md), or [OPENROWSET &#40;Transact-SQL&#41;](~/t-sql/functions/openrowset-transact-sql.md).  
   
 > [!NOTE]  
 >  To bulk export or import SQLXML data, use one of the following data types in your format file: SQLCHAR or SQLVARYCHAR (the data is sent in the client code page or in the code page implied by the collation), SQLNCHAR or SQLNVARCHAR (the data is sent as Unicode), or SQLBINARY or SQLVARYBIN (the data is sent without any conversion).  
@@ -45,7 +45,7 @@ manager: "jhubbard"
  The examples in this section illustrate how to use format files to bulk-import data by using the **bcp** command and the BULK INSERT, and INSERT ... SELECT * FROM OPENROWSET(BULK...) statements. Before you can run one of the bulk-import examples, you need to create a sample table, data file, and a format file.  
   
 ### Sample Table  
- The examples require that a table named **myTestFormatFiles** table be created in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database under the **dbo** schema. To create this table, in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor, execute:  
+ The examples require that a table named **myTestFormatFiles** table be created in the [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] sample database under the **dbo** schema. To create this table, in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Query Editor, execute:  
   
 ```  
 USE AdventureWorks2012;  
@@ -60,7 +60,7 @@ GO
 ```  
   
 ### Sample Data File  
- The examples use a sample data file, `myTestFormatFiles-c.Dat`, which contains the following records. To create the data file, at the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows command prompt, enter:  
+ The examples use a sample data file, `myTestFormatFiles-c.Dat`, which contains the following records. To create the data file, at the [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows command prompt, enter:  
   
 ```  
 10,Field2,Field3,Field4  
@@ -133,9 +133,9 @@ bcp AdventureWorks2012..myTestFormatFiles in C:\myTestFormatFiles-c.Dat -f C:\my
 >  For more information about this command, see [bcp Utility](../../2014/database-engine/bcp-utility.md).  
   
 ### Using BULK INSERT  
- The following example uses BULK INSERT to bulk import data from the `myTestFormatFiles-c.Dat` data file into `HumanResources.myTestFormatFiles` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database. This example uses a non-XML format file, `MyTestFormatFiles.Fmt`. The example deletes any existing table rows before importing the data file.  
+ The following example uses BULK INSERT to bulk import data from the `myTestFormatFiles-c.Dat` data file into `HumanResources.myTestFormatFiles` table in the [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] sample database. This example uses a non-XML format file, `MyTestFormatFiles.Fmt`. The example deletes any existing table rows before importing the data file.  
   
- In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor, execute:  
+ In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Query Editor, execute:  
   
 ```  
 USE AdventureWorks2012;  
@@ -151,12 +151,12 @@ GO
 ```  
   
 > [!NOTE]  
->  For more information about this statement, see [BULK INSERT &#40;Transact-SQL&#41;](../Topic/BULK%20INSERT%20\(Transact-SQL\).md).  
+>  For more information about this statement, see [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md).  
   
 ### Using the OPENROWSET Bulk Rowset Provider  
  The following example uses `INSERT ... SELECT * FROM OPENROWSET(BULK...)` to bulk import data from the `myTestFormatFiles-c.Dat` data file into `HumanResources.myTestFormatFiles` table in the `AdventureWorks` sample database. This example uses an XML format file, `MyTestFormatFiles.Xml`. The example deletes any existing table rows before importing the data file.  
   
- In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor, execute:  
+ In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Query Editor, execute:  
   
 ```  
 USE AdventureWorks2012;  
@@ -179,7 +179,7 @@ DROP TABLE myTestFormatFiles
 ```  
   
 > [!NOTE]  
->  For more information about the OPENROWSET BULK clause, see [OPENROWSET &#40;Transact-SQL&#41;](../Topic/OPENROWSET%20\(Transact-SQL\).md).  
+>  For more information about the OPENROWSET BULK clause, see [OPENROWSET &#40;Transact-SQL&#41;](~/t-sql/functions/openrowset-transact-sql.md).  
   
 ## Additional Examples  
  [Create a Format File &#40;SQL Server&#41;](../../2014/database-engine/create-a-format-file-sql-server.md)  
@@ -192,8 +192,8 @@ DROP TABLE myTestFormatFiles
   
 ## See Also  
  [bcp Utility](../../2014/database-engine/bcp-utility.md)   
- [BULK INSERT &#40;Transact-SQL&#41;](../Topic/BULK%20INSERT%20\(Transact-SQL\).md)   
- [OPENROWSET &#40;Transact-SQL&#41;](../Topic/OPENROWSET%20\(Transact-SQL\).md)   
+ [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md)   
+ [OPENROWSET &#40;Transact-SQL&#41;](~/t-sql/functions/openrowset-transact-sql.md)   
  [Non-XML Format Files &#40;SQL Server&#41;](../../2014/database-engine/non-xml-format-files-sql-server.md)   
  [XML Format Files &#40;SQL Server&#41;](../../2014/database-engine/xml-format-files-sql-server.md)  
   

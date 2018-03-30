@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Export Registered Server Information (SQL Server Management Studio)
-  This topic describes how to save and export registered server information in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]and distribute it to other employees or servers. You can use this export feature to present a consistent user interface on multiple computers.  
+  This topic describes how to save and export registered server information in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]and distribute it to other employees or servers. You can use this export feature to present a consistent user interface on multiple computers.  
   
  Exporting and then importing Registered Server files lets you easily configure several computers with the same servers in Registered Servers. This is useful when managing a large number of servers from computers in several locations, or when you want to configure a less experienced user with basic connection settings.  
   

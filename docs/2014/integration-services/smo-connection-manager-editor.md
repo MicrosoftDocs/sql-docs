@@ -20,28 +20,28 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # SMO Connection Manager Editor
-  Use the **SMO Connection Manager Editor** to configure a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connection for use by the various tasks that transfer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objects.  
+  Use the **SMO Connection Manager Editor** to configure a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] connection for use by the various tasks that transfer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] objects.  
   
  To learn more about the SMO connection manager, see [SMO Connection Manager](../../2014/integration-services/smo-connection-manager.md).  
   
 ## Options  
  **Server name**  
- Type the name of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance or select the server name from the list.  
+ Type the name of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance or select the server name from the list.  
   
  **Refresh**  
- Refresh the list of available [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances that can be detected on the network.  
+ Refresh the list of available [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instances that can be detected on the network.  
   
  **Use Windows Authentication**  
- Use Windows Authentication to connect to the selected [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
+ Use Windows Authentication to connect to the selected [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance.  
   
  **Use SQL Server Authentication**  
- Use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication to connect to the selected [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
+ Use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication to connect to the selected [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance.  
   
  **User name**  
- If you have selected [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication, enter the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user name.  
+ If you have selected [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] authentication, enter the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] user name.  
   
  **Password**  
- If you have selected [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication, enter the password.  
+ If you have selected [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] authentication, enter the password.  
   
  **Test Connection**  
  Test the connection as configured.  

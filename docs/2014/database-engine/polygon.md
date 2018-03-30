@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 caps.latest.revision: 25
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Polygon
@@ -144,15 +144,15 @@ SELECT @g.ToString()
  The geometry instance returned above is a `Point(1 3)`.  If the `Polygon` given is `POLYGON((1 3, 1 5, 1 3, 1 3))` then `MakeValid()` would return `LINESTRING(1 3, 1 5)`.  
   
 ## See Also  
- [STArea &#40;geometry Data Type&#41;](../Topic/STArea%20\(geometry%20Data%20Type\).md)   
- [STExteriorRing &#40;geometry Data Type&#41;](../Topic/STExteriorRing%20\(geometry%20Data%20Type\).md)   
- [STNumInteriorRing &#40;geometry Data Type&#41;](../Topic/STNumInteriorRing%20\(geometry%20Data%20Type\).md)   
- [STInteriorRingN &#40;geometry Data Type&#41;](../Topic/STInteriorRingN%20\(geometry%20Data%20Type\).md)   
- [STCentroid &#40;geometry Data Type&#41;](../Topic/STCentroid%20\(geometry%20Data%20Type\).md)   
- [STPointOnSurface &#40;geometry Data Type&#41;](../Topic/STPointOnSurface%20\(geometry%20Data%20Type\).md)   
+ [STArea &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/starea-geometry-data-type.md)   
+ [STExteriorRing &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stexteriorring-geometry-data-type.md)   
+ [STNumInteriorRing &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stnuminteriorring-geometry-data-type.md)   
+ [STInteriorRingN &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stinteriorringn-geometry-data-type.md)   
+ [STCentroid &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stcentroid-geometry-data-type.md)   
+ [STPointOnSurface &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stpointonsurface-geometry-data-type.md)   
  [MultiPolygon](../../2014/database-engine/multipolygon.md)   
  [Spatial Data &#40;SQL Server&#41;](../../2014/database-engine/spatial-data-sql-server.md)   
- [STIsValid &#40;geography Data Type&#41;](../Topic/STIsValid%20\(geography%20Data%20Type\).md)   
- [STIsValid &#40;geometry Data Type&#41;](../Topic/STIsValid%20\(geometry%20Data%20Type\).md)  
+ [STIsValid &#40;geography Data Type&#41;](~/t-sql/spatial-geography/stisvalid-geography-data-type.md)   
+ [STIsValid &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stisvalid-geometry-data-type.md)  
   
   

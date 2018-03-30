@@ -23,7 +23,7 @@ manager: "mblythe"
 |||  
 |-|-|  
 |Applies to|PowerPivot for SharePoint|  
-|Product Version|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|Product Version|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]|  
 |Cause|The data connection failed.|  
 |Message Text|An error occurred during an attempt to establish a connection to the external data source. The following connections failed to refresh: PowerPivot Data|  
   

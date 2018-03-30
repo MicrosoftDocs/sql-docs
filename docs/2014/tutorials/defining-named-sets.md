@@ -24,7 +24,7 @@ manager: "jhubbard"
   
 ## Defining a Core Products Named Set  
   
-1.  Switch to the **Calculations** tab of Cube Designer for the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Tutorial cube, and then click **Form View** on the toolbar.  
+1.  Switch to the **Calculations** tab of Cube Designer for the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial cube, and then click **Form View** on the toolbar.  
   
 2.  Click **[Total Sales Ratio to All Products]** in the **Script Organizer** pane, and then click **New Named Set** on the toolbar of the **Calculations** tab.  
   
@@ -37,7 +37,7 @@ manager: "jhubbard"
 4.  On the **Metadata** tab in the **Calculation Tools** pane, expand **Product**, expand **Category**, expand `Members`, and then expand **All Products**.  
   
     > [!NOTE]  
-    >  If you cannot view any metadata in the **Calculation Tools** pane, click **Reconnect** on the toolbar. If this does not work, you may have to process the cube or start the instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+    >  If you cannot view any metadata in the **Calculation Tools** pane, click **Reconnect** on the toolbar. If this does not work, you may have to process the cube or start the instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
 5.  Drag **Bikes** into the **Expression** box.  
   
@@ -57,7 +57,7 @@ manager: "jhubbard"
   
 5.  Drag the **Reseller Name** level into the parenthesis for the Exists set expression.  
   
-     You will use the Members function to return all members of this set. For more information, see [Members &#40;Set&#41; &#40;MDX&#41;](../Topic/Members%20\(Set\)%20\(MDX\).md).  
+     You will use the Members function to return all members of this set. For more information, see [Members &#40;Set&#41; &#40;MDX&#41;](~/mdx/members-set-mdx.md).  
   
 6.  After the partial set expression, type a period, and then add the Members function. Your expression should look like the following:  
   
@@ -75,9 +75,9 @@ manager: "jhubbard"
   
 9. In the Properties window, change the `DiscretizationMethod` property to **Automatic**, and then change the `DiscretizationBucketCount` property to `5`. For more information, see [Group Attribute Members &#40;Discretization&#41;](../../2014/analysis-services/group-attribute-members-discretization.md).  
   
-10. On the **Build** menu of [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], click **Deploy Analysis Services Tutorial**.  
+10. On the **Build** menu of [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], click **Deploy Analysis Services Tutorial**.  
   
-11. When deployment has successfully completed, switch to Cube Designer for the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Tutorial cube, and then click **Reconnect** on the toolbar of the **Calculations** tab.  
+11. When deployment has successfully completed, switch to Cube Designer for the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial cube, and then click **Reconnect** on the toolbar of the **Calculations** tab.  
   
 12. On the **Metadata** tab in the **Calculation Tools** pane, expand **Number of Employees** in the **Reseller** dimension, expand `Members`, and then expand **All Resellers**.  
   
@@ -101,11 +101,11 @@ manager: "jhubbard"
     /* named sets */  
     ```  
   
-     You have now defined two named sets, which are visible in the **Script Organizer** pane. You are now ready to deploy these named sets, and then to browse these measures in the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Tutorial cube.  
+     You have now defined two named sets, which are visible in the **Script Organizer** pane. You are now ready to deploy these named sets, and then to browse these measures in the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial cube.  
   
 ## Browsing the Cube by Using the New Named Sets  
   
-1.  On the **Build** menu of [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], click **Deploy Analysis Services Tutorial**.  
+1.  On the **Build** menu of [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], click **Deploy Analysis Services Tutorial**.  
   
 2.  When deployment has successfully completed, click the **Browser** tab, and then click **Reconnect**.  
   

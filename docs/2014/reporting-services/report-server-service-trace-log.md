@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
 caps.latest.revision: 49
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Report Server Service Trace Log
-  The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server trace log is an ASCII text file that contains detailed information for Report Server service operations, including operations performed by the Report Server Web service, Report Manager, and background processing. The trace log file includes redundant information that is recorded in other log files, plus additional information that is not otherwise available. Trace log information might be useful if you are debugging an application that includes a report server, or investigating a specific problem that was written to the event log or execution log.  
+  The [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report server trace log is an ASCII text file that contains detailed information for Report Server service operations, including operations performed by the Report Server Web service, Report Manager, and background processing. The trace log file includes redundant information that is recorded in other log files, plus additional information that is not otherwise available. Trace log information might be useful if you are debugging an application that includes a report server, or investigating a specific problem that was written to the event log or execution log.  
   
 > [!NOTE]  
->  In previous releases, there were multiple trace log files, one for each application. The following files are obsolete and are no longer created in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions: ReportServerWebApp_*\<timestamp>*.log, ReportServer_*\<timestamp>*.log, and ReportServerService_main_*\<timestamp>*.log.  
+>  In previous releases, there were multiple trace log files, one for each application. The following files are obsolete and are no longer created in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] and later versions: ReportServerWebApp_*\<timestamp>*.log, ReportServer_*\<timestamp>*.log, and ReportServerService_main_*\<timestamp>*.log.  
   
  **In this topic:**  
   
@@ -43,7 +43,7 @@ manager: "mblythe"
   
  The trace log is created daily, starting with the first entry that occurs after midnight (local time), and whenever the service is restarted. The timestamp is based on Coordinated Universal Time (UTC). The file is in EN-US format. By default, trace logs are limited to 32 megabytes and by default they are deleted after 14 days.  
   
- View a short video that demonstrates the use of Microsoft Power Query to view [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] log files.  
+ View a short video that demonstrates the use of Microsoft Power Query to view [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] log files.  
   
  ![view a video about Power Query and SSRS logs](../../2014/reporting-services/media/generic-video-thumbnail.png "view a video about Power Query and SSRS logs")  
   
@@ -92,14 +92,14 @@ manager: "mblythe"
 <add name="Directory" value="U:\logs\" />  
 ```  
   
- For more information, see [Knowledge Base Article 913046](http://support.microsoft.com/?kbid=913046) on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Web site.  
+ For more information, see [Knowledge Base Article 913046](http://support.microsoft.com/?kbid=913046) on the [!INCLUDE[msCoName](../includes/msconame-md.md)] Web site.  
   
 ##  <a name="bkmk_log_file_fields"></a> Log File Fields  
  The following fields can be found in a trace log:  
   
 -   System information, including operating system, version, number of processors, and memory.  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] component and version information.  
+-   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] component and version information.  
   
 -   Events logged the Application log.  
   

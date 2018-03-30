@@ -16,16 +16,16 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Lesson 3: Processing the Time Series Structure and Models
-  In this lesson, you will use the [INSERT INTO &#40;DMX&#41;](../Topic/INSERT%20INTO%20\(DMX\).md) statement to process the time series mining structures and mining models that you created.  
+  In this lesson, you will use the [INSERT INTO &#40;DMX&#41;](~/dmx/insert-into-dmx.md) statement to process the time series mining structures and mining models that you created.  
   
- When you process a mining structure, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] reads the source data and builds the structures that support mining models. You always have to process a mining model and structure when you first create it. If you specify the mining structure when using INSERT INTO, the statement processes the mining structure and all its associated mining models.  
+ When you process a mining structure, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] reads the source data and builds the structures that support mining models. You always have to process a mining model and structure when you first create it. If you specify the mining structure when using INSERT INTO, the statement processes the mining structure and all its associated mining models.  
   
  When you add a mining model to a mining structure that has already been processed, you can use the `INSERT INTO MINING MODEL` statement to process just the new mining model by using the existing data.  
   
  For more information about processing mining models, see [Processing Requirements and Considerations &#40;Data Mining&#41;](../../2014/analysis-services/processing-requirements-and-considerations-data-mining.md).  
   
 ## INSERT INTO Statement  
- In order to train the time series mining structure and all its associated mining models, use the [INSERT INTO &#40;DMX&#41;](../Topic/INSERT%20INTO%20\(DMX\).md) statement. The code in the statement can be broken into the following parts.  
+ In order to train the time series mining structure and all its associated mining models, use the [INSERT INTO &#40;DMX&#41;](~/dmx/insert-into-dmx.md) statement. The code in the statement can be broken into the following parts.  
   
 -   Identifying the mining structure  
   
@@ -63,7 +63,7 @@ INSERT INTO MINING STRUCTURE [<mining structure name>]
 OPENQUERY (<source data definition>)  
 ```  
   
- In this lesson, you use `OPENQUERY` to define the source data. For more information about other methods of defining a query on the source data, see [&#60;source data query&#62;](../Topic/%3Csource%20data%20query%3E.md).  
+ In this lesson, you use `OPENQUERY` to define the source data. For more information about other methods of defining a query on the source data, see [&#60;source data query&#62;](~/dmx/source-data-query.md).  
   
 ## Lesson Tasks  
  You will perform the following task in this lesson:  
@@ -76,7 +76,7 @@ OPENQUERY (<source data definition>)
   
 #### To process the mining structure and related mining models by using INSERT INTO  
   
-1.  In **Object Explorer**, right-click the instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], point to **New Query**, and then click **DMX**.  
+1.  In **Object Explorer**, right-click the instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], point to **New Query**, and then click **DMX**.  
   
      Query Editor opens and contains a new, blank query.  
   
@@ -120,7 +120,7 @@ OPENQUERY (<source data definition>)
     FROM vTimeSeries ORDER BY [ReportingDate]')  
     ```  
   
-     The source query references the  [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)] data source defined in the IntermediateTutorial sample project. It uses this data source to access the view vTimeSeries. This view contains the source data that will be used to train the mining model. If you are not familiar with this project or this views, see[Lesson 2: Building a Forecasting Scenario &#40;Intermediate Data Mining Tutorial&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
+     The source query references the  [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] data source defined in the IntermediateTutorial sample project. It uses this data source to access the view vTimeSeries. This view contains the source data that will be used to train the mining model. If you are not familiar with this project or this views, see[Lesson 2: Building a Forecasting Scenario &#40;Intermediate Data Mining Tutorial&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
   
      The complete statement should now be as follows:  
   
@@ -148,7 +148,7 @@ OPENQUERY (<source data definition>)
   
 ## See Also  
  [Processing Requirements and Considerations &#40;Data Mining&#41;](../../2014/analysis-services/processing-requirements-and-considerations-data-mining.md)   
- [&#60;source data query&#62;](../Topic/%3Csource%20data%20query%3E.md)   
- [OPENQUERY &#40;DMX&#41;](../Topic/OPENQUERY%20\(DMX\).md)  
+ [&#60;source data query&#62;](~/dmx/source-data-query.md)   
+ [OPENQUERY &#40;DMX&#41;](~/dmx/source-data-query-openquery.md)  
   
   

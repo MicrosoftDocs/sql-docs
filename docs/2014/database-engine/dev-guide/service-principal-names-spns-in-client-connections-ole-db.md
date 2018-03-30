@@ -24,23 +24,23 @@ manager: "jhubbard"
   
 |Keyword|Description|Value|  
 |-------------|-----------------|-----------|  
-|ServerSPN|Server SPN|The SPN for the server. The default value is an empty string, which causes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client to use the default, provider-generated SPN.|  
-|FailoverPartnerSPN|Failover Partner SPN|The SPN for the failover partner. The default value is an empty string, which causes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client to use the default, provider-generated SPN.|  
+|ServerSPN|Server SPN|The SPN for the server. The default value is an empty string, which causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client to use the default, provider-generated SPN.|  
+|FailoverPartnerSPN|Failover Partner SPN|The SPN for the failover partner. The default value is an empty string, which causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client to use the default, provider-generated SPN.|  
   
 ## Data Source Initialization Properties  
  The following properties in the `DBPROPSET_SQLSERVERDBINIT` property set allow applications to specify SPNs.  
   
 |Name|Type|Usage|  
 |----------|----------|-----------|  
-|SSPROP_INIT_SERVERSPN|VT_BSTR, read/write|Specifies the SPN for the server. The default value is an empty string, which causes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client to use the default, provider-generated SPN.|  
-|SSPROP_INIT_FAILOVERPARTNERSPN|VT_BSTR, read/write|Specifies the SPN for the failover partner. The default value is an empty string, which causes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client to use the default, provider-generated SPN.|  
+|SSPROP_INIT_SERVERSPN|VT_BSTR, read/write|Specifies the SPN for the server. The default value is an empty string, which causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client to use the default, provider-generated SPN.|  
+|SSPROP_INIT_FAILOVERPARTNERSPN|VT_BSTR, read/write|Specifies the SPN for the failover partner. The default value is an empty string, which causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client to use the default, provider-generated SPN.|  
   
 ## Data Source Properties  
  The following properties in the `DBPROPSET_SQLSERVERDATASOURCEINFO` property set allow applications to discover the authentication method.  
   
 |Name|Type|Usage|  
 |----------|----------|-----------|  
-|SSPROP_INTEGRATEDAUTHENTICATIONMETHOD|VT_BSTR, readonly|Returns the authentication method used for the connection. The value returned to the application is the value that Windows returns to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. The following are possible values:<br /><br /> -   "NTLM", which is returned when a connection is opened using NTLM authentication.<br />-   "Kerberos", which is returned when a connection is opened using Kerberos authentication.<br /><br /> If a connection has been opened and the authentication method cannot be determined, VT_EMPTY is returned.<br /><br /> This property can only be read when a data source has been initialized. If you attempt to read the property before a data source has been initialized, IDBProperties::GetProperies will return DB_S_ERRORSOCCURRED or DB_E_ERRORSOCCURRED, as appropriate, and DBPROPSTATUS_NOTSUPPORTED will be set in DBPROPSET_PROPERTIESINERROR for this property. This behavior is in accordance with the OLE DB core specification.|  
+|SSPROP_INTEGRATEDAUTHENTICATIONMETHOD|VT_BSTR, readonly|Returns the authentication method used for the connection. The value returned to the application is the value that Windows returns to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. The following are possible values:<br /><br /> -   "NTLM", which is returned when a connection is opened using NTLM authentication.<br />-   "Kerberos", which is returned when a connection is opened using Kerberos authentication.<br /><br /> If a connection has been opened and the authentication method cannot be determined, VT_EMPTY is returned.<br /><br /> This property can only be read when a data source has been initialized. If you attempt to read the property before a data source has been initialized, IDBProperties::GetProperies will return DB_S_ERRORSOCCURRED or DB_E_ERRORSOCCURRED, as appropriate, and DBPROPSTATUS_NOTSUPPORTED will be set in DBPROPSET_PROPERTIESINERROR for this property. This behavior is in accordance with the OLE DB core specification.|  
 |SSPROP_MUTUALLYAUTHENICATED|VT_BOOL, readonly|Returns VARIANT_TRUE if the servers on the connection were mutually authenticated; otherwise, returns VARIANT_FALSE.<br /><br /> This property can only be read when a data source has been initialized. If there is an attempt to read the property before a data source has been initialized, IDBProperties::GetProperies will return DB_S_ERRORSOCCURRED or DB_E_ERRORSOCCURRED, as appropriate, and DBPROPSTATUS_NOTSUPPORTED will be set in DBPROPSET_PROPERTIESINERROR for this property. This behavior is in accordance with the OLE DB core specification<br /><br /> If this attribute is queried for a connection that did not use Windows Authentication, VARIANT_FALSE is returned.|  
   
 ## OLE DB API Support for SPNs  

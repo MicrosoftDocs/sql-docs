@@ -29,7 +29,7 @@ manager: "jhubbard"
 -   Prevent data quality problems before they are introduced into the data warehouse.  
   
 > [!IMPORTANT]  
->  The Data Profiling task works only with data that is stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. It does not work with third-party or file-based data sources.  
+>  The Data Profiling task works only with data that is stored in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. It does not work with third-party or file-based data sources.  
   
 ## Data Profiling Overview  
  Data quality is important to every business. As enterprises build analytical and business intelligence systems on top of their transactional systems, the reliability of key performance indicators and of data mining predictions depends completely on the validity of the data on which they are based. But although the importance of valid data for business decision-making is increasing, the challenge of making sure of this data's validity is also increasing. Data is streaming into the enterprise constantly from diverse systems and sources, and a large numbers of users.  
@@ -51,7 +51,7 @@ manager: "jhubbard"
  The statistics that a data profile provides gives you the information that you need in order to effectively minimize the quality issues that might occur from using the source data.  
   
 ## Integration Services and Data Profiling  
- In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], the data profiling process consist of the following steps:  
+ In [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], the data profiling process consist of the following steps:  
   
  **Step 1: Setting up the Data Profiling Task**  
  The Data Profiling task is a task that you use to configure the profiles that you want to compute. You then run the package that contains the Data Profiling task to compute the profiles. The task saves the profile output in XML format to a file or a package variable.  

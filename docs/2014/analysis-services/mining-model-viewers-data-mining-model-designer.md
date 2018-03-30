@@ -32,7 +32,7 @@ manager: "mblythe"
  Choose a mining model to view that is contained in the current mining structure. The mining model will first open in its associated custom viewer.  
   
  **Viewer**  
- Choose a viewer to use to explore the selected mining model. This list includes the viewers that [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] provides for each mining model, the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Mining Content Viewer, and any plug-in viewers.  
+ Choose a viewer to use to explore the selected mining model. This list includes the viewers that [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] provides for each mining model, the [!INCLUDE[msCoName](../includes/msconame-md.md)] Mining Content Viewer, and any plug-in viewers.  
   
  The following diagram shows a custom viewer and the generic viewer for the same model.  
   

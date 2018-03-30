@@ -21,13 +21,13 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Installation Prerequisites
-  For [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to install successfully, the following software components are required on the installation computer. They will be installed by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup:  
+  For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to install successfully, the following software components are required on the installation computer. They will be installed by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup:  
   
--   [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] version 4.0 for all editions of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]  
+-   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] version 4.0 for all editions of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup support files  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup support files  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client  
   
 > [!NOTE]  
 >  These components are not removed if Setup fails or is canceled. To remove them, use **Add or Remove Programs** in Control Panel.  

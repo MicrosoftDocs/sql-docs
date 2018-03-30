@@ -12,11 +12,11 @@ ms.topic: "article"
 ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 caps.latest.revision: 42
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Step 2: Adding and Configuring a Flat File Connection Manager
-  In this task, you add a Flat File connection manager to the package that you just created. A Flat File connection manager enables a package to extract data from a flat file. Using the Flat File connection manager, you can specify the file name and location, the locale and code page, and the file format, including column delimiters, to apply when the package extracts data from the flat file. In addition, you can manually specify the data type for the individual columns, or use the **Suggest Column Types** dialog box to automatically map the columns of extracted data to [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data types.  
+  In this task, you add a Flat File connection manager to the package that you just created. A Flat File connection manager enables a package to extract data from a flat file. Using the Flat File connection manager, you can specify the file name and location, the locale and code page, and the file format, including column delimiters, to apply when the package extracts data from the flat file. In addition, you can manually specify the data type for the individual columns, or use the **Suggest Column Types** dialog box to automatically map the columns of extracted data to [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] data types.  
   
  You must create a new Flat File connection manager for each file format that you work with. Because this tutorial extracts data from multiple flat files that have exactly the same data format, you will need to add and configure only one Flat File connection manager for your package.  
   
@@ -38,7 +38,7 @@ manager: "jhubbard"
   
 4.  In the **Open** dialog box, locate the SampleCurrencyData.txt file on your machine.  
   
-     The sample data is included with the [!INCLUDE[ssIS](../../includes/ssis-md.md)] lesson packages. To download the sample data and the lesson packages, do the following.  
+     The sample data is included with the [!INCLUDE[ssIS](../includes/ssis-md.md)] lesson packages. To download the sample data and the lesson packages, do the following.  
   
     1.  Navigate to [Integration Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=275027)  
   
@@ -75,11 +75,11 @@ manager: "jhubbard"
   
 1.  In the **Flat File Connection Manager Editor** dialog box, click **Suggest Types**.  
   
-     [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] automatically suggests the most appropriate data types based on the first 200 rows of data. You can also change these suggestion options to sample more or less data, to specify the default data type for integer or Boolean data, or to add spaces as padding to string columns.  
+     [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] automatically suggests the most appropriate data types based on the first 200 rows of data. You can also change these suggestion options to sample more or less data, to specify the default data type for integer or Boolean data, or to add spaces as padding to string columns.  
   
-     For now, make no changes to the options in the **Suggest Column Types** dialog box, and click **OK** to have [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] suggest data types for columns. This returns you to the **Advanced** pane of the **Flat File Connection Manager Editor** dialog box, where you can view the column data types suggested by [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. (If you click **Cancel**, no suggestions are made to column metadata and the default string (DT_STR) data type is used.)  
+     For now, make no changes to the options in the **Suggest Column Types** dialog box, and click **OK** to have [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] suggest data types for columns. This returns you to the **Advanced** pane of the **Flat File Connection Manager Editor** dialog box, where you can view the column data types suggested by [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. (If you click **Cancel**, no suggestions are made to column metadata and the default string (DT_STR) data type is used.)  
   
-     In this tutorial, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] suggests the data types shown in the second column of the following table for the data from the SampleCurrencyData.txt file. However, the data types that are required for the columns in the destination, which will be defined in a later step, are shown in the last column of the following table.  
+     In this tutorial, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] suggests the data types shown in the second column of the following table for the data from the SampleCurrencyData.txt file. However, the data types that are required for the columns in the destination, which will be defined in a later step, are shown in the last column of the following table.  
   
     |Flat File Column|Suggested Type|Destination Column|Destination Type|  
     |----------------------|--------------------|------------------------|----------------------|  

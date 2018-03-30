@@ -16,7 +16,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Manage Roles by using SSMS (SSAS Tabular)
-  You can create, edit, and manage roles for a deployed tabular model by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  You can create, edit, and manage roles for a deployed tabular model by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
  Tasks in this topic:  
   
@@ -29,14 +29,14 @@ manager: "mblythe"
 -   [To delete a role](#bkmk_deletet_role)  
   
 > [!CAUTION]  
->  Re-deploying a tabular model project with roles defined by using Role Manager in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] will overwrite roles defined in a deployed tabular model.  
+>  Re-deploying a tabular model project with roles defined by using Role Manager in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] will overwrite roles defined in a deployed tabular model.  
   
 > [!CAUTION]  
->  Using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to manage a tabular model workspace database while the model project is open in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] may cause the Model.bim file to become corrupted. When creating and managing roles for a tabular model workspace database, use Role Manager in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
+>  Using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to manage a tabular model workspace database while the model project is open in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] may cause the Model.bim file to become corrupted. When creating and managing roles for a tabular model workspace database, use Role Manager in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
   
 ###  <a name="bkmk_new_role"></a> To create a new role  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expand the tabular model database for which you want to create a new role, then right click on **Roles**, and then click **New Role**.  
+1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], expand the tabular model database for which you want to create a new role, then right click on **Roles**, and then click **New Role**.  
   
 2.  In the **Create Role** dialog box, in the Select a page window, click **General**.  
   
@@ -61,23 +61,23 @@ manager: "mblythe"
 8.  In the row filters window, select a table, then click on the **DAX Filter** field, and then in the **DAX Filter - \<tablename>** field, type a DAX formula.  
   
     > [!NOTE]  
-    >  The DAX Filter - \<tablename> field does not contain an AutoComplete query editor or insert function feature. To use AutoComplete when writing a DAX formula, you must use a DAX formula editor in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
+    >  The DAX Filter - \<tablename> field does not contain an AutoComplete query editor or insert function feature. To use AutoComplete when writing a DAX formula, you must use a DAX formula editor in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
   
 9. Click **Ok** to save the role.  
   
 ###  <a name="bkmk_copy_role"></a> To copy a role  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expand the tabular model database that contains the role you want to copy, then expand **Roles**, then right click on the role, and then click **Duplicate**.  
+1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], expand the tabular model database that contains the role you want to copy, then expand **Roles**, then right click on the role, and then click **Duplicate**.  
   
 ###  <a name="bkmk_edit_role"></a> To edit a role  
   
--   In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expand the tabular model database that contains the role you want to edit, then expand **Roles**, then right click on the role, and then click **Properties**.  
+-   In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], expand the tabular model database that contains the role you want to edit, then expand **Roles**, then right click on the role, and then click **Properties**.  
   
      In the **Role Properties** \<rolename> dialog box, you can change permissions, add or remove members, and add/edit row filters.  
   
 ###  <a name="bkmk_deletet_role"></a> To delete a role  
   
--   In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expand the tabular model database that contains the role you want to delete, then expand **Roles**, then right click on the role, and then click **Delete**.  
+-   In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], expand the tabular model database that contains the role you want to delete, then expand **Roles**, then right click on the role, and then click **Delete**.  
   
 ## See Also  
  [Roles &#40;SSAS Tabular&#41;](../../2014/analysis-services/roles-ssas-tabular.md)  

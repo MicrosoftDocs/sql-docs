@@ -25,7 +25,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # bcp_colptr
-  Sets the program variable data address for the current copy into [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Sets the program variable data address for the current copy into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Syntax  
   

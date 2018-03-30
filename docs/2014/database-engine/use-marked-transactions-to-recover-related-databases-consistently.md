@@ -26,7 +26,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Use Marked Transactions to Recover Related Databases Consistently (Full Recovery Model)
-  This topic is relevant only for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases that are using the full or bulk-logged recovery models.  
+  This topic is relevant only for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] databases that are using the full or bulk-logged recovery models.  
   
  When you make related updates to two or more databases, *related databases*, you can use transaction marks to recover them to a logically consistent point. However, this recovery loses any transaction that is committed after the mark that was used as the recovery point. Marking transactions is suitable only when you are testing related databases or when you are willing to lose recently committed transactions.  
   
@@ -64,12 +64,12 @@ manager: "jhubbard"
   
 -   Because transaction marks consume log space, use them only for transactions that play a significant role in the database recovery strategy.  
   
--   After a marked transaction commits, a row is inserted in the [logmarkhistory](../Topic/logmarkhistory%20\(Transact-SQL\).md) table in **msdb**.  
+-   After a marked transaction commits, a row is inserted in the [logmarkhistory](~/relational-databases/system-tables/logmarkhistory-transact-sql.md) table in **msdb**.  
   
 -   If a marked transaction spans multiple databases on the same database server or on different servers, the marks must be recorded in the logs of all the affected databases.  
   
 ## Creating the Marked Transactions  
- To create a marked transaction, use the [BEGIN TRANSACTION](../Topic/BEGIN%20TRANSACTION%20\(Transact-SQL\).md) statement and the WITH MARK [*description*] clause. The optional *description* is a textual description of the mark. A mark name for the transaction is required. A mark name can be reused. The transaction log records the mark name, description, database, user, datetime information, and the log sequence number (LSN). The datetime information is used along with the mark name to uniquely identify the mark.  
+ To create a marked transaction, use the [BEGIN TRANSACTION](~/t-sql/language-elements/begin-transaction-transact-sql.md) statement and the WITH MARK [*description*] clause. The optional *description* is a textual description of the mark. A mark name for the transaction is required. A mark name can be reused. The transaction log records the mark name, description, database, user, datetime information, and the log sequence number (LSN). The datetime information is used along with the mark name to uniquely identify the mark.  
   
  **To create marked transactions in a set of databases:**  
   
@@ -123,7 +123,7 @@ RESTORE LOG AdventureWorks
 ## Forcing a Mark to Spread to Other Servers  
  A transaction mark name is not automatically distributed to another server as the transaction spreads there. To force the mark to spread to the other servers, a stored procedure must be written that contains a BEGIN TRAN *name* WITH MARK statement. That stored procedure must then be executed on the remote server under the scope of the transaction in the originating server.  
   
- For example, consider a partitioned database that exists on multiple instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. On each instance is a database named `coyote`. First, in every database, create a stored procedure, for example, `sp_SetMark`.  
+ For example, consider a partitioned database that exists on multiple instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. On each instance is a database named `coyote`. First, in every database, create a stored procedure, for example, `sp_SetMark`.  
   
 ```tsql  
 CREATE PROCEDURE sp_SetMark  
@@ -172,12 +172,12 @@ GO
  For information about how to recover a database that contains marked transactions to or just before a particular mark, see [Recovery of Related  Databases That Contain Marked Transaction](../../2014/database-engine/recovery-of-related-databases-that-contain-marked-transaction.md).  
   
 ## See Also  
- [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../Topic/BEGIN%20DISTRIBUTED%20TRANSACTION%20\(Transact-SQL\).md)   
+ [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](~/t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
  [Back Up and Restore of System Databases &#40;SQL Server&#41;](../../2014/database-engine/back-up-and-restore-of-system-databases-sql-server.md)   
- [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../Topic/BEGIN%20TRANSACTION%20\(Transact-SQL\).md)   
+ [BEGIN TRANSACTION &#40;Transact-SQL&#41;](~/t-sql/language-elements/begin-transaction-transact-sql.md)   
  [Apply Transaction Log Backups &#40;SQL Server&#41;](../../2014/database-engine/apply-transaction-log-backups-sql-server.md)   
  [Full Database Backups &#40;SQL Server&#41;](../../2014/database-engine/full-database-backups-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)   
  [Recovery of Related  Databases That Contain Marked Transaction](../../2014/database-engine/recovery-of-related-databases-that-contain-marked-transaction.md)  
   
   

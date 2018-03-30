@@ -22,9 +22,9 @@ manager: "mblythe"
   
  **To display warnings**  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project.  
   
-2.  In **Solution Explorer**, right-click the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project, click **Edit Database**, and then click the **Warnings** tab.  
+2.  In **Solution Explorer**, right-click the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project, click **Edit Database**, and then click the **Warnings** tab.  
   
 ## Options  
  **Description**  

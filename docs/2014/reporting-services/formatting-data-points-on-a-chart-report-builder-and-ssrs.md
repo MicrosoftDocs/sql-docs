@@ -15,7 +15,7 @@ f1_keywords:
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
 caps.latest.revision: 7
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Formatting Data Points on a Chart (Report Builder and SSRS)
@@ -24,7 +24,7 @@ manager: "mblythe"
  One or more data points form a series. By default, all formatting options are applied to all data points in the series. If you want to specify properties for individual data points, you can specify a field or expression on the series that formats individual data point at run time based on the dataset.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## Adding ToolTips and Drillthrough Actions to Data Points  
  You can add ToolTips to each data point by setting the value of the **ToolTip** property on the series. By displaying ToolTips, you can give your users the ability to see any information related to the data point, such as the group name, the value of the data point and the percentage of the data point relative to the series total. For more information, see [Show ToolTips on a Series &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/show-tooltips-on-a-series-report-builder-and-ssrs.md).  
@@ -74,7 +74,7 @@ manager: "mblythe"
 |#MAX|Maximum of all Y values in the series.|All|`=Max(Fields!MyDataField.Value)`|  
 |#FIRST|First of all Y values in the series.|All|`=First(Fields!MyDataField.Value)`|  
   
- To format the keyword, enclose a [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] format string in parentheses. For example, to specify the value of the data point in a ToolTip as a number with two decimal places, include the format string "N2" in braces, such as "#VALY{N2}" for the **ToolTip** property on the series. For more information about [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] format strings, see [Formatting Types](http://go.microsoft.com/fwlink/?LinkId=112024) on MSDN. For more information about formatting numbers in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], see [Formatting Numbers and Dates &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/formatting-numbers-and-dates-report-builder-and-ssrs.md).  
+ To format the keyword, enclose a [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] format string in parentheses. For example, to specify the value of the data point in a ToolTip as a number with two decimal places, include the format string "N2" in braces, such as "#VALY{N2}" for the **ToolTip** property on the series. For more information about [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] format strings, see [Formatting Types](http://go.microsoft.com/fwlink/?LinkId=112024) on MSDN. For more information about formatting numbers in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], see [Formatting Numbers and Dates &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/formatting-numbers-and-dates-report-builder-and-ssrs.md).  
   
  For more information about adding keywords to a chart, see [Show ToolTips on a Series &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/show-tooltips-on-a-series-report-builder-and-ssrs.md), [Change the Text of a Legend Item &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/change-the-text-of-a-legend-item-report-builder-and-ssrs.md).  
   

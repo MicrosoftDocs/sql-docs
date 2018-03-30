@@ -1,0 +1,11 @@
+### YamlMime:XRefMap
+sorted: true
+hrefUpdated: true
+references:
+- uid: Microsoft.AnalysisServices.AdomdClient.AdomdDataReader.Item*
+  commentId: Overload:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader.Item*
+  href: https://msdn.microsoft.com/library/microsoft.analysisservices.adomdclient.adomddatareader.item(v=sql.120).aspx
+  name: Item*
+  name.vb: Item*
+  fullName: AdomdDataReader.Item*
+  fullName.vb: AdomdDataReader.Item*

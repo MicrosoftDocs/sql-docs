@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 13396239-6100-48ce-aa34-461358d99c92
 caps.latest.revision: 29
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Modify a Stored Procedure
     
-##  <a name="Top"></a> This topic describes how to modify a stored procedure in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+##  <a name="Top"></a> This topic describes how to modify a stored procedure in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
 -   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Security](#Security)  
   
@@ -30,7 +30,7 @@ manager: "jhubbard"
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures cannot be modified to be CLR stored procedures and vice versa.  
+ [!INCLUDE[tsql](../includes/tsql-md.md)] stored procedures cannot be modified to be CLR stored procedures and vice versa.  
   
  If the previous procedure definition was created using WITH ENCRYPTION or WITH RECOMPILE, these options are enabled only if they are included in the ALTER PROCEDURE statement.  
   
@@ -49,7 +49,7 @@ manager: "jhubbard"
 ###  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  **To modify a procedure in Management Studio**  
   
-1.  In Object Explorer, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)] and then expand that instance.  
+1.  In Object Explorer, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)] and then expand that instance.  
   
 2.  Expand **Databases**, expand the database in which the procedure belongs, and then expand **Programmability**.  
   
@@ -61,7 +61,7 @@ manager: "jhubbard"
   
 6.  To save the modifications to the procedure definition, on the **Query** menu, click **Execute**.  
   
-7.  To save the updated procedure definition as a [!INCLUDE[tsql](../../includes/tsql-md.md)] script, on the **File** menu, click **Save As**. Accept the file name or replace it with a new name, and then click **Save**.  
+7.  To save the updated procedure definition as a [!INCLUDE[tsql](../includes/tsql-md.md)] script, on the **File** menu, click **Save As**. Accept the file name or replace it with a new name, and then click **Save**.  
   
 > [!IMPORTANT]  
 >  Validate all user input. Do not concatenate user input before you validate it. Never execute a command constructed from unvalidated user input.  
@@ -69,13 +69,13 @@ manager: "jhubbard"
 ###  <a name="TsqlProcedure"></a> Using Transact-SQL  
  **To modify a procedure in Query Editor**  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)] and then expand that instance.  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)] and then expand that instance.  
   
-2.  Expand **Databases**, expand the database in which the procedure belongs. Or, from the tool bar, select the database from the list of available databases. For this example, select the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
+2.  Expand **Databases**, expand the database in which the procedure belongs. Or, from the tool bar, select the database from the list of available databases. For this example, select the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database.  
   
 3.  On the **File** menu, click **New Query**.  
   
-4.  Copy and paste the following example into the query editor. The example creates the `uspVendorAllInfo` procedure, which returns the names of all the vendors in the [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] database, the products they supply, their credit ratings, and their availability.  
+4.  Copy and paste the following example into the query editor. The example creates the `uspVendorAllInfo` procedure, which returns the names of all the vendors in the [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] database, the products they supply, their credit ratings, and their availability.  
   
     ```  
   
@@ -134,7 +134,7 @@ manager: "jhubbard"
   
 7.  To save the modifications to the procedure definition, on the **Query** menu, click **Execute**.  
   
-8.  To save the updated procedure definition as a [!INCLUDE[tsql](../../includes/tsql-md.md)] script, on the **File** menu, click **Save As**. Accept the file name or replace it with a new name, and then click **Save**.  
+8.  To save the updated procedure definition as a [!INCLUDE[tsql](../includes/tsql-md.md)] script, on the **File** menu, click **Save As**. Accept the file name or replace it with a new name, and then click **Save**.  
   
 9. To run the modified stored procedure, execute the following example.  
   
@@ -145,6 +145,6 @@ manager: "jhubbard"
     ```  
   
 ## See Also  
- [ALTER PROCEDURE &#40;Transact-SQL&#41;](../Topic/ALTER%20PROCEDURE%20\(Transact-SQL\).md)  
+ [ALTER PROCEDURE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-procedure-transact-sql.md)  
   
   

@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: b324a80f-4319-4cb2-847b-1910c49d90e0
 caps.latest.revision: 34
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Security Role Requirements for Replication
@@ -44,7 +44,7 @@ manager: "jhubbard"
 |Modify or drop a subscription at the Subscriber.|**db_owner** database role on the subscription database at the Subscriber or **sysadmin** server role on the Subscriber.|  
 |Mark a subscription for reinitialization.|Push subscription: **db_owner** database role in the publication database at the Publisher or **sysadmin** server role on the Publisher.<br /><br /> Pull subscription: **db_owner** database role in the subscription database at the Subscriber or **sysadmin** server role on the Subscriber.|  
 |View replication activity, errors, and history using Replication Monitor. A user cannot modify agent profiles, schedules, and so on, unless the user is a member of the **sysadmin** server role.|**replmonitor** database role on the distribution database at the Distributor or **sysadmin** server role on the Distributor.|  
-|Maintain replication agents.|**db_owner** database role in the appropriate database or **sysadmin** server role on the appropriate server.<br /><br /> If the agent was created by a user in the **sysadmin** role, and a proxy account was not specified for the agent, the agent runs under the context of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent account. In this case, a user in the **db_owner** role cannot modify the job associated with the agent.|  
+|Maintain replication agents.|**db_owner** database role in the appropriate database or **sysadmin** server role on the appropriate server.<br /><br /> If the agent was created by a user in the **sysadmin** role, and a proxy account was not specified for the agent, the agent runs under the context of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent account. In this case, a user in the **db_owner** role cannot modify the job associated with the agent.|  
 |Start or stop a replication agent.|Owner of the agent job or **sysadmin** server role on the appropriate server.|  
   
 ## See Also  

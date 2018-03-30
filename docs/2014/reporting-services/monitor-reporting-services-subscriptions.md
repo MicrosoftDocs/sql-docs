@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 caps.latest.revision: 33
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Monitor Reporting Services Subscriptions
-  You can monitor [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] subscriptions from the user interface, Windows PowerShell, or log files. The options available to you for monitoring depend on what mode of report server you are running.  
+  You can monitor [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] subscriptions from the user interface, Windows PowerShell, or log files. The options available to you for monitoring depend on what mode of report server you are running.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode|  
+|**[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Native mode &#124; [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint mode|  
   
  **In this topic:**  
   
@@ -39,7 +39,7 @@ manager: "mblythe"
 -   [Managing Inactive Subscriptions](#bkmk_manage_inactive)  
   
 ##  <a name="bkmk_native_mode"></a> Native mode user interface  
- Individual [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] users can monitor the status of a subscription using the **My Subscriptions** page or the **Subscriptions** tab in Report Manager. Subscription pages include columns that indicate when the subscription was last run and the status of the subscription. Status messages are updated when the subscription is scheduled to process. If the trigger never occurs (for example, a report execution snapshot is never refreshed or a schedule never runs), the status message will not be updated.  
+ Individual [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] users can monitor the status of a subscription using the **My Subscriptions** page or the **Subscriptions** tab in Report Manager. Subscription pages include columns that indicate when the subscription was last run and the status of the subscription. Status messages are updated when the subscription is scheduled to process. If the trigger never occurs (for example, a report execution snapshot is never refreshed or a schedule never runs), the status message will not be updated.  
   
  The following table describes the possible values for the **Status** column.  
   
@@ -92,7 +92,7 @@ manager: "mblythe"
 4.  Select **Manage Subscriptions**  
   
 ### SharePoint ULS Log files  
- Subscription related information is written to the SharePoint ULS log. For more information on configuring [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] events for the ULS log, see [Turn on Reporting Services events for the SharePoint trace log &#40;ULS&#41;](../../2014/reporting-services/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md).  The following is an example ULS log entry related to [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] subscriptions.  
+ Subscription related information is written to the SharePoint ULS log. For more information on configuring [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] events for the ULS log, see [Turn on Reporting Services events for the SharePoint trace log &#40;ULS&#41;](../../2014/reporting-services/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md).  The following is an example ULS log entry related to [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] subscriptions.  
   
 ||||||||  
 |-|-|-|-|-|-|-|  

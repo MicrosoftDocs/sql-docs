@@ -29,7 +29,7 @@ manager: "mblythe"
   
 ||  
 |-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)] SharePoint mode and Native mode|  
+|[!INCLUDE[applies](../includes/applies-md.md)] SharePoint mode and Native mode|  
   
  For a demonstration on how to add a parameter to a report, see [Tutorial: Adding Parameters to a Report (SSRS)](http://technet.microsoft.com/library/aa337432\(v=SQL.105\).aspx)  
 
@@ -148,7 +148,7 @@ manager: "mblythe"
   
  Use the query designer for the data source to help build a parameterized query.  
   
--   For [!INCLUDE[tsql](../../includes/tsql-md.md)] queries, different data sources support different syntax for parameters. Support ranges from parameters that are identified in the query by position or by name. For more information, see topics for specific external data source types in [Add Data to a Report &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-data-to-a-report-report-builder-and-ssrs.md). In the relational query designer, you must select the parameter option for a filter to create a parameterized query. For more information, see [Relational Query Designer User Interface &#40;Report Builder&#41;](../../2014/reporting-services/relational-query-designer-user-interface-report-builder.md).  
+-   For [!INCLUDE[tsql](../includes/tsql-md.md)] queries, different data sources support different syntax for parameters. Support ranges from parameters that are identified in the query by position or by name. For more information, see topics for specific external data source types in [Add Data to a Report &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-data-to-a-report-report-builder-and-ssrs.md). In the relational query designer, you must select the parameter option for a filter to create a parameterized query. For more information, see [Relational Query Designer User Interface &#40;Report Builder&#41;](../../2014/reporting-services/relational-query-designer-user-interface-report-builder.md).  
   
 -   For queries that are based on a multidimensional data source such as Microsoft SQL Server Analysis Services, SAP NetWeaver BI, or Hyperion Essbase, you can specify whether to create a parameter based on a filter that you specify in the query designer. For more information, see the query designer topic in [Query Designers &#40;Report Builder&#41;](../../2014/reporting-services/query-designers-report-builder.md) that corresponds to the data extension.  
   

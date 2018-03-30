@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Cursor Programming Details (ODBC)
-  Choosing the correct cursor type can improve application performance. Under certain conditions, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] may implicitly convert a cursor type when you execute an SQL statement that is not supported by the cursor type you requested.  
+  Choosing the correct cursor type can improve application performance. Under certain conditions, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] may implicitly convert a cursor type when you execute an SQL statement that is not supported by the cursor type you requested.  
   
 ## In This Section  
   

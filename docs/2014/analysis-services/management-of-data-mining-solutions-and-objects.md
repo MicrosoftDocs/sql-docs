@@ -19,9 +19,9 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Management of Data Mining Solutions and Objects
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] provides client tools that you can use to manage existing mining structures and mining models. This section describes the management operations that you can perform using each environment.  
+  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] provides client tools that you can use to manage existing mining structures and mining models. This section describes the management operations that you can perform using each environment.  
   
- In addition to these tools, you can manage data mining objects programmatically, by using AMO, or use other clients that connect to an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database, such as the Data Mining Add-ins for [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007.  
+ In addition to these tools, you can manage data mining objects programmatically, by using AMO, or use other clients that connect to an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database, such as the Data Mining Add-ins for [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 2007.  
   
 ## In this Section  
  [Moving Data Mining Objects](../../2014/analysis-services/moving-data-mining-objects.md)  
@@ -31,17 +31,17 @@ manager: "mblythe"
  [Using SQL Server Profiler to Monitor Data Mining &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/using-sql-server-profiler-to-monitor-data-mining-analysis-services-data-mining.md)  
   
 ## Location of Data Mining Objects  
- Mining structures and models that have been processed are stored in an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+ Mining structures and models that have been processed are stored in an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
- If you create a connection to an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database in `Immediate` mode when developing your data mining objects, any objects that you create are immediately added to the server as you work. However, if you design data mining objects in **Offline** mode, which is the default when you work in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], the mining objects that you create are only metadata containers until you deploy them to an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Therefore, any time that you make a change to an object, you must redeploy the object to the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server. For more information about data mining architecture, see [Physical Architecture &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/physical-architecture-analysis-services-data-mining.md).  
+ If you create a connection to an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database in `Immediate` mode when developing your data mining objects, any objects that you create are immediately added to the server as you work. However, if you design data mining objects in **Offline** mode, which is the default when you work in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], the mining objects that you create are only metadata containers until you deploy them to an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Therefore, any time that you make a change to an object, you must redeploy the object to the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] server. For more information about data mining architecture, see [Physical Architecture &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/physical-architecture-analysis-services-data-mining.md).  
   
 > [!NOTE]  
->  Some clients, such as the Data Mining Add-ins for [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007, also let you create session mining models and mining structures, which use a connection to an instance but store the mining structure and models on the server only for the duration of the session. You can still manage these models through the client, the same as you would structures and models stored in an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database, but the objects are not persisted after you disconnect from the instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+>  Some clients, such as the Data Mining Add-ins for [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 2007, also let you create session mining models and mining structures, which use a connection to an instance but store the mining structure and models on the server only for the duration of the session. You can still manage these models through the client, the same as you would structures and models stored in an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database, but the objects are not persisted after you disconnect from the instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
 ## Managing Data Mining Objects in SQL Server Data Tools  
- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] offers features that make it easy to create, browse, and edit data mining objects.  
+ [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] offers features that make it easy to create, browse, and edit data mining objects.  
   
- The following links provide information on how you can modify data mining objects by using [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]:  
+ The following links provide information on how you can modify data mining objects by using [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]:  
   
 -   [Edit the Data Source View used for a Mining Structure](../../2014/analysis-services/edit-the-data-source-view-used-for-a-mining-structure.md)  
   
@@ -53,7 +53,7 @@ manager: "mblythe"
   
 -   [View or Change Algorithm Parameters](../../2014/analysis-services/view-or-change-algorithm-parameters.md)  
   
- Typically you will use [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] as a tool for developing new projects and adding to existing projects, and then manage projects and objects that have been deployed by using tools such as [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ Typically you will use [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] as a tool for developing new projects and adding to existing projects, and then manage projects and objects that have been deployed by using tools such as [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
  However, you can directly modify objects that are already deployed to an instance of ssASnoversion by using the `Immediate` option and connecting to the server in Online mode. For more information, see [Connect in Online Mode to an Analysis Services Database](../../2014/analysis-services/connect-in-online-mode-to-an-analysis-services-database.md).  
   
@@ -63,7 +63,7 @@ manager: "mblythe"
  If you do not have the solution file that was used to create the data mining project or objects, you can import the existing project from the server using the Analysis Services Import wizard, make modifications to the objects, and then redeploy using the `Incremental` option. For more information, see [Import a Data Mining Project using the Analysis Services Import Wizard](../../2014/analysis-services/import-a-data-mining-project-using-the-analysis-services-import-wizard.md).  
   
 ## Managing Data Mining Objects in SQL Server Management Studio  
- In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], you can script, process, or delete mining structures and mining models. You can view only a limited set of properties by using Object Explorer; however, you can view additional metadata about mining models by opening a **DMX Query** window and selecting a mining structure.  
+ In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], you can script, process, or delete mining structures and mining models. You can view only a limited set of properties by using Object Explorer; however, you can view additional metadata about mining models by opening a **DMX Query** window and selecting a mining structure.  
   
 -   [Create a DMX Query in SQL Server Management Studio](../../2014/analysis-services/create-a-dmx-query-in-sql-server-management-studio.md)  
   
@@ -80,16 +80,16 @@ manager: "mblythe"
  **Restrictions:** None.  
   
 ### Data Mining Extensions (DMX)  
- Data Mining Extensions (DMX) can be used with other command interfaces such as [!INCLUDE[vstecado](../../includes/vstecado-md.md)] or ADOMD.Net to create, delete, and query mining structures and mining models.  
+ Data Mining Extensions (DMX) can be used with other command interfaces such as [!INCLUDE[vstecado](../includes/vstecado-md.md)] or ADOMD.Net to create, delete, and query mining structures and mining models.  
   
--   [Data Mining Extensions &#40;DMX&#41; Data Definition Statements](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Data%20Definition%20Statements.md)  
+-   [Data Mining Extensions &#40;DMX&#41; Data Definition Statements](~/dmx/dmx-statements-data-definition.md)  
   
  **Restrictions:** Some properties cannot be changed by using DMX.  
   
 ### XML for Analysis (XMLA)  
- XML for Analysis (XMLA) is the data definition language for all of Analysis Services. XMLA gives you control over most data mining objects and server operations. All management operations between the client and the server can be performed by using XMLA. For convenience, you can use the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripting Language (ASSL) to wrap the XML.  
+ XML for Analysis (XMLA) is the data definition language for all of Analysis Services. XMLA gives you control over most data mining objects and server operations. All management operations between the client and the server can be performed by using XMLA. For convenience, you can use the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Scripting Language (ASSL) to wrap the XML.  
   
- **Restrictions:** [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] generates some XMLA statements that are supported for internal use only, and cannot be used in XML DDL scripts.  
+ **Restrictions:** [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] generates some XMLA statements that are supported for internal use only, and cannot be used in XML DDL scripts.  
   
 ## See Also  
  [Developer's Guide &#40;Analysis Services&#41;](../../2014/analysis-services/dev-guide/developer-s-guide-analysis-services.md)  

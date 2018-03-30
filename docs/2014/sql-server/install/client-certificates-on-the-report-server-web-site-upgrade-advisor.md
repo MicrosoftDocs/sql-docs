@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 5ecce26b-99df-4109-8e51-d150d369dff7
 caps.latest.revision: 12
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "jhubbard"
 ---
 # Client certificates on the report server web site (Upgrade Advisor)
@@ -22,13 +22,13 @@ manager: "jhubbard"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Native mode.|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode.|  
   
 ## Component  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## Description  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] does not support the use of client certificates to authenticate users. Upgrade can continue, but client certificates will not be used by the upgraded report server.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] does not support the use of client certificates to authenticate users. Upgrade can continue, but client certificates will not be used by the upgraded report server.  
   
 ## Corrective Action  
  You will have to use a separate solution such as ISA Server to ensure any client certificate authentication requirements are addressed.  

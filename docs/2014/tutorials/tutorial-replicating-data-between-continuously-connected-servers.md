@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 caps.latest.revision: 20
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Tutorial: Replicating Data Between Continuously Connected Servers
   Replication is a good solution to the problem of moving data between continuously connected servers. Using replication's wizards, you can easily configure and administer a replication topology. This tutorial shows you how to configure a replication topology for continuously connected servers.  
   
 ## What You Will Learn  
- This tutorial will show you how to publish data from one database to another using transactional replication. The first lesson shows how to use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to create a publication. Later lessons show how to create and validate a subscription and how to measure latency.  
+ This tutorial will show you how to publish data from one database to another using transactional replication. The first lesson shows how to use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to create a publication. Later lessons show how to create and validate a subscription and how to measure latency.  
   
 ## Requirements  
  This tutorial is intended for users who are familiar with basic database operations, but who have limited experience with replication. This tutorial requires that you have completed the previous tutorial, [Preparing the Server for Replication](../../2014/tutorials/tutorial-preparing-the-server-for-replication.md).  
@@ -32,19 +32,19 @@ manager: "jhubbard"
   
 -   At the Publisher server (source):  
   
-    -   Any edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], except Express ([!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]) or [!INCLUDE[ssEW](../../includes/ssew-md.md)]. These editions cannot be replication Publishers.  
+    -   Any edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], except Express ([!INCLUDE[ssExpress](../includes/ssexpress-md.md)]) or [!INCLUDE[ssEW](../includes/ssew-md.md)]. These editions cannot be replication Publishers.  
   
-    -   [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] sample database. To enhance security, the sample databases are not installed by default.  
+    -   [!INCLUDE[ssSampleDBUserInputNonLocal](../includes/sssampledbuserinputnonlocal-md.md)] sample database. To enhance security, the sample databases are not installed by default.  
   
 -   Subscriber server (destination):  
   
-    -   Any edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], except [!INCLUDE[ssEW](../../includes/ssew-md.md)]. [!INCLUDE[ssEW](../../includes/ssew-md.md)] cannot be a Subscriber in transactional replication.  
+    -   Any edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], except [!INCLUDE[ssEW](../includes/ssew-md.md)]. [!INCLUDE[ssEW](../includes/ssew-md.md)] cannot be a Subscriber in transactional replication.  
   
     > [!NOTE]  
-    >  Replication is not installed on [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] by default.  
+    >  Replication is not installed on [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] by default.  
   
 > [!NOTE]  
->  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], you must connect to the Publisher and Subscriber using a login that is a member of the **sysadmin** fixed server role.  
+>  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], you must connect to the Publisher and Subscriber using a login that is a member of the **sysadmin** fixed server role.  
   
  **Estimated time to complete this tutorial: 30 minutes.**  
   

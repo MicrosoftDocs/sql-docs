@@ -28,11 +28,11 @@ manager: "jhubbard"
  **Upgrade Advisor Settings**  
  You can review all the information and parameters that you entered for each component, and the parameters that apply across all of Upgrade Advisor. The reporting options, including the output directory, are listed.  
   
- **Send reports to [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. These reports may contain personal information.**  
- Selecting this option submits your analysis to the [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] team. This information is used to improve future releases.  
+ **Send reports to [!INCLUDE[msCoName](../../includes/msconame-md.md)]. These reports may contain personal information.**  
+ Selecting this option submits your analysis to the [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] team. This information is used to improve future releases.  
   
  **View privacy statement.**  
- Click this link to read the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Privacy Policy on the Internet.  
+ Click this link to read the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Privacy Policy on the Internet.  
   
 ## See Also  
  [Working with Upgrade Advisor](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   

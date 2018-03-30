@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 31c81898-11ca-4d2f-afea-2fbc71e19ce4
 caps.latest.revision: 20
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Distributor Properties, Publishers
@@ -27,7 +27,7 @@ manager: "jhubbard"
  Select the servers that are allowed to use this Distributor. Click the Properties button **(...)** next to a Publisher to view and set additional properties.  
   
  **Add**  
- If the server you want to allow is not listed, click **Add** to add a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Publisher or Oracle Publisher to the list of available Publishers. If the server you add is the first server to use this Distributor as a remote Distributor, you are prompted to provide an administrative link password.  
+ If the server you want to allow is not listed, click **Add** to add a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher or Oracle Publisher to the list of available Publishers. If the server you add is the first server to use this Distributor as a remote Distributor, you are prompted to provide an administrative link password.  
   
  **Administrative link password**  
  Use to specify or update the password for the connection replication makes between the Publisher and the remote Distributor using the **distributor_admin** login:  

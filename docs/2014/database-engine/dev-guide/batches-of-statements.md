@@ -24,7 +24,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Batches of Statements
-  A batch of [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements contains two or more statements, separated by a semicolon (;), built into a single string passed to **SQLExecDirect** or [SQLPrepare Function](http://go.microsoft.com/fwlink/?LinkId=59360). For example:  
+  A batch of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements contains two or more statements, separated by a semicolon (;), built into a single string passed to **SQLExecDirect** or [SQLPrepare Function](http://go.microsoft.com/fwlink/?LinkId=59360). For example:  
   
 ```  
 SQLExecDirect(hstmt,   
@@ -36,7 +36,7 @@ SQLExecDirect(hstmt,
   
  Batches can always be used when the ODBC cursor attributes are set to the defaults of a forward-only, read-only cursor with a rowset size of 1.  
   
- If a batch is executed when using server cursors against [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], the server cursor is implicitly converted to a default result set. **SQLExecDirect** or **SQLExecute** return SQL_SUCCESS_WITH_INFO, and a call to **SQLGetDiagRec** returns:  
+ If a batch is executed when using server cursors against [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the server cursor is implicitly converted to a default result set. **SQLExecDirect** or **SQLExecute** return SQL_SUCCESS_WITH_INFO, and a call to **SQLGetDiagRec** returns:  
   
 ```  
 szSqlState = "01S02", pfNativeError = 0  

@@ -22,7 +22,7 @@ manager: "jhubbard"
   Use this dialog box to create or modify indexes, primary keys, and unique keys. To access this dialog box, open the table definition for the table with the index or key, right-click the table definition grid, and then click **Indexes/Keys**.  
   
 > [!NOTE]  
->  If the table is published for replication, you must make schema changes using the Transact-SQL statement [ALTER TABLE](../Topic/ALTER%20TABLE%20\(Transact-SQL\).md) or SQL Server Management Objects (SMO). When schema changes are made using the Table Designer or the Database Diagram Designer, it attempts to drop and recreate the table. You cannot drop published objects, therefore the schema change will fail.  
+>  If the table is published for replication, you must make schema changes using the Transact-SQL statement [ALTER TABLE](~/t-sql/statements/alter-table-transact-sql.md) or SQL Server Management Objects (SMO). When schema changes are made using the Table Designer or the Database Diagram Designer, it attempts to drop and recreate the table. You cannot drop published objects, therefore the schema change will fail.  
   
 ## Options  
  **Selected Primary/Unique Key or Index**  
@@ -89,9 +89,9 @@ manager: "jhubbard"
  **Ignore Duplicate Keys**  
  Specify what happens when a row is inserted during a bulk insert operation whose key value equals an existing key value. If you choose:  
   
--   **Yes** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] issues a warning, ignores the offending incoming row, and tries to insert the remaining rows.  
+-   **Yes** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] issues a warning, ignores the offending incoming row, and tries to insert the remaining rows.  
   
--   **No** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] issues an error message and rolls back the entire bulk insert operation.  
+-   **No** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] issues an error message and rolls back the entire bulk insert operation.  
   
  **Included Columns**  
  Displays a comma-separated list of the names of all the columns that constitute the index key. Subkey columns can only be specified for nonclustered indexes. This property is hidden for XML indexes.  
@@ -106,7 +106,7 @@ manager: "jhubbard"
  Specify whether page-level locking is allowed on this index. Allowing or disallowing page-level locking affects database performance. The recommended setting is **Yes**.  
   
  **Re-compute Statistics**  
- Specify whether the underlying [!INCLUDE[ssDE](../../includes/ssde-md.md)] computes new statistics when the index is created. Re-computing statistics slows the building of indexes but will very likely improve query performance.  
+ Specify whether the underlying [!INCLUDE[ssDE](../includes/ssde-md.md)] computes new statistics when the index is created. Re-computing statistics slows the building of indexes but will very likely improve query performance.  
   
  **Row Locks Allowed**  
  Specify whether row-level locking is allowed on this index. Allowing or disallowing row-level locking affects database performance. The recommended setting is **Yes**.  

@@ -18,7 +18,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Confirm Delete Page
-  Use the **Confirm Delete** page to indicate whether [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] displays a confirmation message when you delete certain components.  
+  Use the **Confirm Delete** page to indicate whether [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] displays a confirmation message when you delete certain components.  
   
 ## Options  
  **Ask for confirmation when you are deleting tasks.**  

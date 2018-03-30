@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 824b7131-44a6-4815-89e6-62b7bab060e3
 caps.latest.revision: 20
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Create and Manage Full-Text Catalogs
@@ -36,24 +36,24 @@ manager: "jhubbard"
     > [!NOTE]  
     >  Full-text catalog IDs begin at 00005 and are incremented by one for each new catalog created.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
   
   
 ##  <a name="props"></a> Viewing the Properties of a Full-Text Catalog  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] functions such as FULLTEXTCATALOGPROPERTY can be used to obtain the value of various properties related to full-text indexing. This information is useful for administering and troubleshooting full-text search.  
+ [!INCLUDE[tsql](../includes/tsql-md.md)] functions such as FULLTEXTCATALOGPROPERTY can be used to obtain the value of various properties related to full-text indexing. This information is useful for administering and troubleshooting full-text search.  
   
  The following table lists the properties that are related to full-text catalogs.  
   
 |Property|Description|Function|  
 |--------------|-----------------|--------------|  
-|`AccentSensitivity`|Accent-sensitivity setting.|[FULLTEXTCATALOGPROPERTY](../Topic/FULLTEXTCATALOGPROPERTY%20\(Transact-SQL\).md)|  
+|`AccentSensitivity`|Accent-sensitivity setting.|[FULLTEXTCATALOGPROPERTY](~/t-sql/functions/fulltextcatalogproperty-transact-sql.md)|  
 |`ImportStatus`|Whether the full-text catalog is being imported.|FULLTEXTCATALOGPROPERTY|  
 |`IndexSize`|Size of the full-text catalog in megabytes (MB).|FULLTEXTCATALOGPROPERTY|  
 |`ItemCount`|Number of full-text indexed items currently in the full-text catalog.|FULLTEXTCATALOGPROPERTY|  
 |`MergeStatus`|Whether a master merge is in progress.|FULLTEXTCATALOGPROPERTY|  
 |`PopulateCompletionAge`|Difference in seconds between the completion of the last full-text index population and 01/01/1990 00:00:00.|FULLTEXTCATALOGPROPERTY|  
-|`PopulateStatus`|Populate status.<br /><br /> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|FULLTEXTCATALOGPROPERTY|  
+|`PopulateStatus`|Populate status.<br /><br /> [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)]|FULLTEXTCATALOGPROPERTY|  
 |`UniqueKeyCount`|Number of unique keys in the full-text catalog.|FULLTEXTCATALOGPROPERTY|  
   
   
@@ -105,6 +105,6 @@ manager: "jhubbard"
   
   
 ## See Also  
- [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../Topic/CREATE%20FULLTEXT%20CATALOG%20\(Transact-SQL\).md)  
+ [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](~/t-sql/statements/create-fulltext-catalog-transact-sql.md)  
   
   

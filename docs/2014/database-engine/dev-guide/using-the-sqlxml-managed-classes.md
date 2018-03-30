@@ -22,12 +22,12 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Using the SQLXML Managed Classes
-  This section provides sample applications that demonstrate how to use the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML Managed Classes.  
+  This section provides sample applications that demonstrate how to use the [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML Managed Classes.  
   
- For information about accessing and modifying data in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] within the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework, and about using DiffGrams to update data in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tables, see [Accessing SQLXML Functionality in the .NET Environment](../../../2014/database-engine/dev-guide/accessing-sqlxml-functionality-in-the-net-environment.md).  
+ For information about accessing and modifying data in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] within the [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, and about using DiffGrams to update data in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables, see [Accessing SQLXML Functionality in the .NET Environment](../../../2014/database-engine/dev-guide/accessing-sqlxml-functionality-in-the-net-environment.md).  
   
 > [!NOTE]  
->  You can also write [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio applications to bulk load XML documents by using XML Bulk Load. For more information, see [Performing Bulk Load of XML Data &#40;SQLXML 4.0&#41;](../../../2014/database-engine/dev-guide/performing-bulk-load-of-xml-data-sqlxml-4-0.md). You must add a reference to the XML Bulk Load DLL (Xblkld4.dll) in your application. This is a COM DLL for which Visual Studio .NET automatically creates the wrapper library.  
+>  You can also write [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio applications to bulk load XML documents by using XML Bulk Load. For more information, see [Performing Bulk Load of XML Data &#40;SQLXML 4.0&#41;](../../../2014/database-engine/dev-guide/performing-bulk-load-of-xml-data-sqlxml-4-0.md). You must add a reference to the XML Bulk Load DLL (Xblkld4.dll) in your application. This is a COM DLL for which Visual Studio .NET automatically creates the wrapper library.  
   
 ## In This Section  
  [Executing SQL Queries &#40;SQLXML Managed Classes&#41;](../../../2014/database-engine/dev-guide/executing-sql-queries-sqlxml-managed-classes.md)  

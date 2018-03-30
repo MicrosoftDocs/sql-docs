@@ -58,7 +58,7 @@ manager: "mblythe"
 |Child elements|[AllowBrowsing](../../../2014/analysis-services/dev-guide/allowbrowsing-element-assl.md), [AllowDrillThrough](../../../2014/analysis-services/dev-guide/allowdrillthrough-element-assl.md)|  
   
 ## Remarks  
- In [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], you can enable drillthrough on mining structures by adding the `AllowDrillthrough` permission to the [MiningStructurePermissions](../../../2014/analysis-services/dev-guide/miningstructurepermissions-element-assl.md) collection. If `AllowDrillthrough` is enabled on both the mining structure and the mining model, any member of a role that has [AllowDrillThrough Element &#40;ASSL&#41;](../../../2014/analysis-services/dev-guide/allowdrillthrough-element-assl.md) permissions on the model can query the data mining model, and return structure columns that were not included in the model, by using the following syntax:  
+ In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], you can enable drillthrough on mining structures by adding the `AllowDrillthrough` permission to the [MiningStructurePermissions](../../../2014/analysis-services/dev-guide/miningstructurepermissions-element-assl.md) collection. If `AllowDrillthrough` is enabled on both the mining structure and the mining model, any member of a role that has [AllowDrillThrough Element &#40;ASSL&#41;](../../../2014/analysis-services/dev-guide/allowdrillthrough-element-assl.md) permissions on the model can query the data mining model, and return structure columns that were not included in the model, by using the following syntax:  
   
 ```  
 SELECT StructureColumn('<column name>') FROM <model>.CASES  

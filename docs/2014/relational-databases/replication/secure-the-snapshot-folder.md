@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 3cd877d1-ffb8-48fd-a72b-98eb948aad27
 caps.latest.revision: 44
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Secure the Snapshot Folder
@@ -25,7 +25,7 @@ manager: "jhubbard"
   
  When configuring a Distributor through the Configure Distribution Wizard or the New Publication Wizard, the snapshot folder defaults to a local path: X:\Program Files\Microsoft SQL Server\\*\<instance>*\MSSQL\ReplData. If you are using a remote Distributor or pull subscriptions, you must specify a UNC network share (such as \\\\<*computername>*\snapshot) rather than a local path.  
   
- When granting permissions to access the snapshot folder, you must grant them according to the way in which the folder is accessed. The following dialog box tabs are used in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 2003:  
+ When granting permissions to access the snapshot folder, you must grant them according to the way in which the folder is accessed. The following dialog box tabs are used in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 2003:  
   
 -   If you specify a local path, grant permissions through the **Security** tab of the **Properties** dialog box for the folder.  
   
@@ -37,7 +37,7 @@ manager: "jhubbard"
  For more information about setting permissions for local paths and network shares, see the Windows documentation.  
   
 > [!NOTE]  
->  If a publication is dropped, replication attempts to remove the snapshot folder under the security context of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service account. If this account does not have sufficient privileges, log in with an account that does have sufficient privileges and remove the folder manually. Removing a folder requires the **Modify** privilege if the folder is a local path or the **Full Control** privilege if the folder is a network path.  
+>  If a publication is dropped, replication attempts to remove the snapshot folder under the security context of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account. If this account does not have sufficient privileges, log in with an account that does have sufficient privileges and remove the folder manually. Removing a folder requires the **Modify** privilege if the folder is a local path or the **Full Control** privilege if the folder is a network path.  
   
 ## Delivering Snapshots Through FTP  
  It is recommended as a security best practice that snapshots be stored in a UNC share, but snapshots can be stored in an FTP share and then delivered to a Subscriber through FTP. When configuring the FTP server, ensure that the virtual directory exposes an underlying UNC share that permits write access by the Snapshot Agent for the publication.  

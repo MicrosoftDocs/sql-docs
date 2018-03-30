@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 caps.latest.revision: 25
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Tutorial: Create a Quick Chart Report Offline (Report Builder)
@@ -25,7 +25,7 @@ manager: "mblythe"
  !["My First Pie Chart" in Run view](../../2014/reporting-services/media/rs-my1stpierunview.gif ""My First Pie Chart" in Run view")  
   
 ## Prerequisites  
- Whether you use XML data or a [!INCLUDE[tsql](../../includes/tsql-md.md)] query, you need to have access to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Report Builder. You can run the stand-alone version or the ClickOnce version available from Report Manager or a SharePoint site. Only the first step, how to open Report Builder, is different for ClickOnce versions. For more information, see [Install, Uninstall, and Report Builder Support](../../2014/reporting-services/install-uninstall-and-report-builder-support.md).  
+ Whether you use XML data or a [!INCLUDE[tsql](../includes/tsql-md.md)] query, you need to have access to [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Report Builder. You can run the stand-alone version or the ClickOnce version available from Report Manager or a SharePoint site. Only the first step, how to open Report Builder, is different for ClickOnce versions. For more information, see [Install, Uninstall, and Report Builder Support](../../2014/reporting-services/install-uninstall-and-report-builder-support.md).  
   
 ##  <a name="TwoWays"></a> Two Ways To Do This Tutorial  
   
@@ -34,16 +34,16 @@ manager: "mblythe"
 -   [Create the pie chart with a Transact-SQL query that contains data](#CreatePieQueryData)  
   
 ### Using XML data for this tutorial  
- You can use XML data that you copy from this topic and paste into the wizard. You don't need to be connected to a report server or a report server in SharePoint integrated mode, and you don't need access to an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ You can use XML data that you copy from this topic and paste into the wizard. You don't need to be connected to a report server or a report server in SharePoint integrated mode, and you don't need access to an instance of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
  [Create the pie chart with XML data](#CreatePieChartXML)  
   
 ### Using a Transact-SQL query that contains data for this tutorial  
- You can copy a query with data included in it from this topic and paste it into the wizard. You will need the name of an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and credentials sufficient for read-only access to any database. The dataset query in the tutorial uses literal data, but the query must be processed by an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] to return the metadata that is required for a report dataset.  
+ You can copy a query with data included in it from this topic and paste it into the wizard. You will need the name of an instance of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] and credentials sufficient for read-only access to any database. The dataset query in the tutorial uses literal data, but the query must be processed by an instance of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] to return the metadata that is required for a report dataset.  
   
- The advantage of using the [!INCLUDE[tsql](../../includes/tsql-md.md)] query is that all the other Report Builder tutorials use the same method, so when you do the other tutorials, you will already know what to do.  
+ The advantage of using the [!INCLUDE[tsql](../includes/tsql-md.md)] query is that all the other Report Builder tutorials use the same method, so when you do the other tutorials, you will already know what to do.  
   
- The [!INCLUDE[tsql](../../includes/tsql-md.md)] query does require a few other prerequisites. For more information, see [Prerequisites for Tutorials &#40;Report Builder&#41;](../../2014/tutorials/prerequisites-for-tutorials-report-builder.md).  
+ The [!INCLUDE[tsql](../includes/tsql-md.md)] query does require a few other prerequisites. For more information, see [Prerequisites for Tutorials &#40;Report Builder&#41;](../../2014/tutorials/prerequisites-for-tutorials-report-builder.md).  
   
  [Create the pie chart with a Transact-SQL query that contains data](#CreatePieQueryData)  
   
@@ -130,9 +130,9 @@ manager: "mblythe"
   
  ![Arrow icon used with Back to Top link](../../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#TwoWays)  
   
-##  <a name="CreatePieQueryData"></a> Creating the pie chart with a [!INCLUDE[tsql](../../includes/tsql-md.md)] query  
+##  <a name="CreatePieQueryData"></a> Creating the pie chart with a [!INCLUDE[tsql](../includes/tsql-md.md)] query  
   
-#### To create the pie chart with a [!INCLUDE[tsql](../../includes/tsql-md.md)] query that contains data  
+#### To create the pie chart with a [!INCLUDE[tsql](../includes/tsql-md.md)] query that contains data  
   
 1.  Click **Start**, point to **Programs**, point to **Microsoft SQL Server 2012 Report Builder**, and then click **Report Builder**.  
   
@@ -209,7 +209,7 @@ manager: "mblythe"
 ##  <a name="WhatsNext"></a> What's Next?  
  Now that you have created your first report in Report Builder, you are ready to try the other tutorials and to start creating reports from your own data. To run Report Builder, you need permission to access your data sources, such as databases, with a *connection string*, which actually connects you to the data source. Your system administrator will have this information and can set you up.  
   
- To work through the other tutorials, you need the name of an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and credentials sufficient for read-only access to any database. Your system administrator can also set that up for you.  
+ To work through the other tutorials, you need the name of an instance of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] and credentials sufficient for read-only access to any database. Your system administrator can also set that up for you.  
   
  Finally, to save your reports to a report server or a SharePoint site that is integrated with a report server, you need the URL and permissions. You can run any report you create directly from your computer, but reports have more functionality when run from the report server or SharePoint site. You need permissions to run your reports or others from the report server or SharePoint site where they are published. Talk to your system administrator to obtain access.  
   

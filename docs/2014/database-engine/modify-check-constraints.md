@@ -17,11 +17,11 @@ helpviewer_keywords:
 ms.assetid: f22daef8-e350-40ef-8ff0-b5f87d1d9e56
 caps.latest.revision: 18
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Modify Check Constraints
-  You can modify a check constraint in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)] when you want to change the constraint expression or the options that enable or disable the constraint for specific conditions.  
+  You can modify a check constraint in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)] when you want to change the constraint expression or the options that enable or disable the constraint for specific conditions.  
   
  **In This Topic**  
   
@@ -72,6 +72,6 @@ manager: "jhubbard"
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  **To modify a check constraint**  
   
- To modify a `CHECK` constraint using [!INCLUDE[tsql](../../includes/tsql-md.md)], you must first delete the existing `CHECK` constraint and then re-create it with the new definition. For more information, see [Delete Check Constraints](../../2014/database-engine/delete-check-constraints.md) and [Create Check Constraints](../../2014/database-engine/create-check-constraints.md).  
+ To modify a `CHECK` constraint using [!INCLUDE[tsql](../includes/tsql-md.md)], you must first delete the existing `CHECK` constraint and then re-create it with the new definition. For more information, see [Delete Check Constraints](../../2014/database-engine/delete-check-constraints.md) and [Create Check Constraints](../../2014/database-engine/create-check-constraints.md).  
   
 ###  <a name="TsqlExample"></a>  

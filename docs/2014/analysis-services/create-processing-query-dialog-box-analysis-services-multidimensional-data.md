@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Create Processing Query Dialog Box (Analysis Services - Multidimensional Data)
-  Use the **Create Processing Query** dialog box in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to create a processing query in the **Notifications** tab of the **Storage Options** dialog box. A processing query is query that returns a rowset containing the changes made to a table associated with an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] object since the last time the table was polled, in order to incrementally update the multidimensional OLAP (MOLAP) cache for the object. Analysis Services uses another query, referred to as a polling query, to poll a table associated with an object and determine whether the table has changed. Processing queries are not necessary when fully updating the MOLAP cache for the object.  
+  Use the **Create Processing Query** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to create a processing query in the **Notifications** tab of the **Storage Options** dialog box. A processing query is query that returns a rowset containing the changes made to a table associated with an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] object since the last time the table was polled, in order to incrementally update the multidimensional OLAP (MOLAP) cache for the object. Analysis Services uses another query, referred to as a polling query, to poll a table associated with an object and determine whether the table has changed. Processing queries are not necessary when fully updating the MOLAP cache for the object.  
   
  Typically, the processing query is parameterized, and two parameters are currently supported:  
   
@@ -26,7 +26,7 @@ manager: "mblythe"
   
 -   The singleton value returned by the polling query during the current scheduled polling.  
   
- For example, the queries listed in the following table could be used to incrementally update the Customer dimension in the Adventure Works DW sample [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project.  
+ For example, the queries listed in the following table could be used to incrementally update the Customer dimension in the Adventure Works DW sample [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project.  
   
 |Query type|Query statement|  
 |----------------|---------------------|  

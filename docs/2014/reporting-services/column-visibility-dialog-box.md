@@ -15,7 +15,7 @@ f1_keywords:
 ms.assetid: ca59d1cd-d782-4298-aa61-4f312c32eb50
 caps.latest.revision: 14
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Column Visibility Dialog Box

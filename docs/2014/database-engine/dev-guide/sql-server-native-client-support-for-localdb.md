@@ -17,7 +17,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQL Server Native Client Support for LocalDB
-  Beginning in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], a lightweight version of SQL Server, called LocalDB, will be available. This topic discusses how to connect to a database in a LocalDB instance.  
+  Beginning in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], a lightweight version of SQL Server, called LocalDB, will be available. This topic discusses how to connect to a database in a LocalDB instance.  
   
 ## Remarks  
  For more information about LocalDB, including how to install LocalDB and configure your LocalDB instance, see:  

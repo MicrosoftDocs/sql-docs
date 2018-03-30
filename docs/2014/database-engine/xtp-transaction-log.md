@@ -16,14 +16,14 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # XTP Transaction Log
-  The XTP Transaction Log performance object contains counters related to XTP transaction logging in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  The XTP Transaction Log performance object contains counters related to XTP transaction logging in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  This table describes the **XTP Transaction Log** counters.  
   
 |Counter|Description|  
 |-------------|-----------------|  
-|**Log bytes written/sec**|The number of bytes written to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transaction log by the XTP engine (on average), per second.|  
-|**Log records written/sec**|The number of records written to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transaction log by the XTP engine (on average), per second.|  
+|**Log bytes written/sec**|The number of bytes written to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] transaction log by the XTP engine (on average), per second.|  
+|**Log records written/sec**|The number of records written to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] transaction log by the XTP engine (on average), per second.|  
   
 ## See Also  
  [XTP &#40;In-Memory OLTP&#41; Performance Counters](../../2014/database-engine/xtp-in-memory-oltp-performance-counters.md)  

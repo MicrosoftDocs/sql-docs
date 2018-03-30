@@ -29,7 +29,7 @@ ms.author: "mblythe"
 manager: "mblythe"
 ---
 # EndSession Element (XMLA)
-  Uses the SOAP header in a SOAP request message to end an existing session on an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+  Uses the SOAP header in a SOAP request message to end an existing session on an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
  **Namespace** urn:schemas-microsoft-com:xml-analysis  
   
@@ -70,10 +70,10 @@ manager: "mblythe"
   
 |Attribute|Description|  
 |---------------|-----------------|  
-|SessionId|Required `String` attribute that identifies the session to be ended. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] uses a globally unique identifier (GUID) to identify a session.|  
+|SessionId|Required `String` attribute that identifies the session to be ended. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] uses a globally unique identifier (GUID) to identify a session.|  
   
 ## Remarks  
- The `EndSession` header element is part of the SOAP request sent to an existing, explicitly started session on an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance. If the `EndSession` header element is sent, but contains a session identifier that is no longer valid, a SOAP fault is returned that indicates that the session cannot be found.  
+ The `EndSession` header element is part of the SOAP request sent to an existing, explicitly started session on an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance. If the `EndSession` header element is sent, but contains a session identifier that is no longer valid, a SOAP fault is returned that indicates that the session cannot be found.  
   
 ## See Also  
  [BeginSession Element &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/beginsession-element-xmla.md)   

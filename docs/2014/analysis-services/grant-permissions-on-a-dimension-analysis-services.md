@@ -43,7 +43,7 @@ manager: "mblythe"
 ## Set permissions on a database dimension  
  Database dimensions are standalone objects within a database, allowing for dimension reuse within the same model. Consider a DATE database dimension that is used multiple times in a model, as Order Date, Ship Date, and Due Date cube dimensions. Because cubes and database dimensions are peer objects in a database, you can set processing permissions independently on each object.  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connect to the instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], expand **Roles** for the appropriate database in Object Explorer, and then click a database role (or create a new database role).  
+1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], connect to the instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], expand **Roles** for the appropriate database in Object Explorer, and then click a database role (or create a new database role).  
   
 2.  In the **Dimensions** pane, the dimension set should be set to **All database dimensions**.  
   
@@ -56,7 +56,7 @@ manager: "mblythe"
 ## Set permissions on a cube dimension  
  Cube dimensions are database dimensions that have been added to a cube. As such, they are structurally dependent on associated measure groups. Although you can process these objects atomically, in terms of authorization, it makes sense to treat the cube and cube dimensions as a single entity.  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connect to the instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], expand **Roles** for the appropriate database in Object Explorer, and then click a database role (or create a new database role).  
+1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], connect to the instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], expand **Roles** for the appropriate database in Object Explorer, and then click a database role (or create a new database role).  
   
 2.  In the **Dimensions** pane, change the dimension set to \<cube-name> **cube dimensions**.  
   

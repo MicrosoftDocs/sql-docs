@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 2cd846e7-5bf3-4144-8772-703c4f439a2a
 caps.latest.revision: 41
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Replication Programming Concepts
@@ -107,7 +107,7 @@ manager: "jhubbard"
 |[Replication Management Objects Concepts](../../../../2014/relational-databases/replication/dev-guide/replication-management-objects-concepts.md)|Managed code|Administration, monitoring, and synchronization.|  
 |<xref:Microsoft.SqlServer.Replication>|Managed code|Synchronization.|  
 |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|Managed code|Creation of business logic handlers to integrate custom logic with the merge synchronization process.|  
-|[Replication Stored Procedures &#40;Transact-SQL&#41;](../Topic/Replication%20Stored%20Procedures%20\(Transact-SQL\).md)|Scripting|Administration and monitoring.|  
+|[Replication Stored Procedures &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)|Scripting|Administration and monitoring.|  
 |[Replication Agent Executables Concepts](../../../../2014/relational-databases/replication/dev-guide/replication-agent-executables-concepts.md)|Scripting|Synchronization.|  
   
 ## Example  

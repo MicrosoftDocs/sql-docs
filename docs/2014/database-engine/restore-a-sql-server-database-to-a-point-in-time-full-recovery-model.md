@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Restore a SQL Server Database to a Point in Time (Full Recovery Model)
-  This topic describes how to restore a database to a point in time in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. This topic is relevant only for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases that use the full or bulk-logged recovery models.  
+  This topic describes how to restore a database to a point in time in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)]. This topic is relevant only for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] databases that use the full or bulk-logged recovery models.  
   
 > [!IMPORTANT]  
 >  Under the bulk-logged recovery model, if a log backup contains bulk-logged changes, point-in-time recovery is not possible to a point within that backup. The database must be recovered to the end of the transaction log backup.  
@@ -55,7 +55,7 @@ manager: "jhubbard"
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  **To restore a database to a point in time**  
   
-1.  In Object Explorer, connect to the appropriate instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], and expand the server tree.  
+1.  In Object Explorer, connect to the appropriate instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], and expand the server tree.  
   
 2.  Expand **Databases**. Depending on the database, either select a user database or expand **System Databases**, and then select a system database.  
   
@@ -86,7 +86,7 @@ manager: "jhubbard"
   
 7.  In the **Restore to** section, click **Specific date and time**.  
   
-8.  Use either the **Date** and **Time** boxes or the slider bar to specify a specific date and time to where the restore should stop. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  Use either the **Date** and **Time** boxes or the slider bar to specify a specific date and time to where the restore should stop. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
     > [!NOTE]  
     >  Use the **Timeline Interval** box to change the amount of time displayed on the timeline.  
@@ -117,7 +117,7 @@ manager: "jhubbard"
   
 12. **Take tail-log backup before restore** will be selected if it is necessary for the point in time that you have selected. You do not need to modify this setting, but you can choose to backup the tail of the log even if it is not required.  
   
-13. Restore operations may fail if there are active connections to the database. Check the **Close existing connections option** to ensure that all active connections between [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] and the database are closed. This check box sets the database to single user mode before performing the restore operations, and sets the database to multi-user mode when complete.  
+13. Restore operations may fail if there are active connections to the database. Check the **Close existing connections option** to ensure that all active connections between [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] and the database are closed. This check box sets the database to single user mode before performing the restore operations, and sets the database to multi-user mode when complete.  
   
 14. Select **Prompt before restoring each backup** if you wish to be prompted between each restore operation. This is not usually necessary unless the database is large and you wish to monitor the status of the restore operation.  
   
@@ -128,7 +128,7 @@ manager: "jhubbard"
   
  To help you identify which database backup to restore, you can optionally specify your WITH STOPAT clause in your RESTORE DATABASE statement to raise an error if a data backup is too recent for the specified target time. The complete data backup is always restored, even if it contains the target time.  
   
- **Basic [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax**  
+ **Basic [!INCLUDE[tsql](../includes/tsql-md.md)] syntax**  
   
  RESTORE LOG *database_name* FROM <backup_device> WITH STOPAT **=*`time`*,** RECOVERY…  
   
@@ -159,7 +159,7 @@ manager: "jhubbard"
  The following example restores a database to its state as of `12:00 AM` on `April 15, 2020` and shows a restore operation that involves multiple log backups. On the backup device, `AdventureWorksBackups`, the full database backup to be restored is the third backup set on the device (`FILE = 3`), the first log backup is the fourth backup set (`FILE = 4`), and the second log backup is the fifth backup set (`FILE = 5`).  
   
 > [!IMPORTANT]  
->  The [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database uses the simple recovery model. To permit log backups, before taking a full database backup, the database was set to use the full recovery model, using `ALTER DATABASE AdventureWorks SET RECOVERY FULL`.  
+>  The [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database uses the simple recovery model. To permit log backups, before taking a full database backup, the database was set to use the full recovery model, using `ALTER DATABASE AdventureWorks SET RECOVERY FULL`.  
   
 ```  
 RESTORE DATABASE AdventureWorks  
@@ -191,8 +191,8 @@ GO
 -   [Recover to a Log Sequence Number &#40;SQL Server&#41;](../../2014/database-engine/recover-to-a-log-sequence-number-sql-server.md)  
   
 ## See Also  
- [backupset &#40;Transact-SQL&#41;](../Topic/backupset%20\(Transact-SQL\).md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
- [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)  
+ [backupset &#40;Transact-SQL&#41;](~/relational-databases/system-tables/backupset-transact-sql.md)   
+ [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)   
+ [RESTORE HEADERONLY &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-headeronly-transact-sql.md)  
   
   

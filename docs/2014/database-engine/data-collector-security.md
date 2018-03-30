@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Data Collector Security
-  The data collector uses the role-based security model implemented by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. This model lets the database administrator run the various data collector tasks in a security context that has only the permissions required to perform that task. This approach is also used for operations involving internal tables, which can only be accessed by using a stored procedure or view. No permissions are granted to internal tables. Instead, permissions are checked on the user of the stored procedure or view that is used to access a table.  
+  The data collector uses the role-based security model implemented by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent. This model lets the database administrator run the various data collector tasks in a security context that has only the permissions required to perform that task. This approach is also used for operations involving internal tables, which can only be accessed by using a stored procedure or view. No permissions are granted to internal tables. Instead, permissions are checked on the user of the stored procedure or view that is used to access a table.  
   
 > [!IMPORTANT]  
 >  Another key aspect of this security model is concentric permissions. Under concentric permissions, more privileged roles inherit the permissions of less privileged roles on objects (including alerts, operators, jobs, schedules, and proxies). For more information, see [SQL Server Agent Fixed Database Roles](../../2014/database-engine/sql-server-agent-fixed-database-roles.md).  
@@ -28,12 +28,12 @@ manager: "jhubbard"
  The following sections describe data collection security in general, as well as the roles you must grant to users so they can configure and use the data collector, and carry out tasks associated with the management data warehouse.  
   
 ## General Security  
- The data collector is installed according to the documented standards specified for [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ The data collector is installed according to the documented standards specified for [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
 ### Network Security  
  Sensitive information can be passed between target instances, the relational instance associated with the configuration server, the collection sets that are running, and the server that hosts the management data warehouse.  
   
- To protect any data that is transferred over a network, the standard security mechanisms are implemented, such as protocol encryption for [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+ To protect any data that is transferred over a network, the standard security mechanisms are implemented, such as protocol encryption for [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
 ## Permissions for Configuring and Using the Data Collector  
  Depending on the task, users must be members of one or more of the fixed database roles provided for the data collector. In order of most-privileged to least-privileged access, the roles are as follows:  
@@ -46,10 +46,10 @@ manager: "jhubbard"
   
  These roles are stored in the msdb database. By default, no user is a member of these database roles. User membership in these roles must be granted explicitly.  
   
- Users who are members of the `sysadmin` fixed server role have full access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent objects and data collector views. However, they need to be explicitly added to data collector roles.  
+ Users who are members of the `sysadmin` fixed server role have full access to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent objects and data collector views. However, they need to be explicitly added to data collector roles.  
   
 > [!IMPORTANT]  
->  Members of the db_ssisadmin role and the dc_admin role may be able to elevate their privileges to sysadmin. This elevation of privilege can occur because these roles can modify [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages and [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages can be executed by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using the sysadmin security context of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. To guard against this elevation of privilege when running maintenance plans, data collection sets, and other [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages, configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs that run packages to use a proxy account with limited privileges or only add sysadmin members to the db_ssisadmin and dc_admin roles.  
+>  Members of the db_ssisadmin role and the dc_admin role may be able to elevate their privileges to sysadmin. This elevation of privilege can occur because these roles can modify [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages and [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages can be executed by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using the sysadmin security context of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent. To guard against this elevation of privilege when running maintenance plans, data collection sets, and other [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages, configure [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent jobs that run packages to use a proxy account with limited privileges or only add sysadmin members to the db_ssisadmin and dc_admin roles.  
   
 ### dc_admin Role  
  Users assigned to the `dc_admin` role have full administrator access (Create, Read, Update, and Delete) to the data collector configuration on a server instance. Members of this role can perform the following operations:  

@@ -22,7 +22,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Establishing Connections in ADOMD.NET
-  In ADOMD.NET, you use the <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> object to open connections with analytical data sources, such as [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] databases. When the connection is no longer needed, you should explicitly close the connection.  
+  In ADOMD.NET, you use the <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> object to open connections with analytical data sources, such as [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] databases. When the connection is no longer needed, you should explicitly close the connection.  
   
 ## Opening a Connection  
  To open a connection in ADOMD.NET, you must first specify a connection string to a valid analytical data source and database. Then, you must explicitly open the connection to that data source.  
@@ -55,7 +55,7 @@ System.Diagnostics.Debug.Writeline(advwrksConnection.ConnectionString);
 ## Closing a Connection  
  We recommended that you explicitly close an <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> object as soon as you no longer need the connection. To explicitly close the connection, you use the `Close` and `Dispose` methods of the <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> object.  
   
- A connection that is not explicitly closed, but is allowed to fall out of scope, may not release server resources quickly enough to enable high-concurrency [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] client applications to efficiently open new connections. Depending on how you created the connection, the session used by the <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> object can remain active if the connection is not explicitly closed.  
+ A connection that is not explicitly closed, but is allowed to fall out of scope, may not release server resources quickly enough to enable high-concurrency [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] client applications to efficiently open new connections. Depending on how you created the connection, the session used by the <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> object can remain active if the connection is not explicitly closed.  
   
  For more information about sessions, see [Working with Connections and Sessions in ADOMD.NET](../../../2014/analysis-services/dev-guide/working-with-connections-and-sessions-in-adomd-net.md).  
   

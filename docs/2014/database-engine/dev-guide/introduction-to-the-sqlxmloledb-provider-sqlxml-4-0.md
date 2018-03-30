@@ -21,7 +21,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Introduction to the SQLXMLOLEDB Provider (SQLXML 4.0)
-  The SQLXMLOLEDB Provider is an OLE DB provider that exposes [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML functionality through ActiveX Data Objects (ADO). However, the provider can execute commands only in the "write to an output stream" mode of ADO. The SQLXMLOLEDB Provider is not a rowset provider. When you execute a command, you must specify the adExecuteStream flag, which directs ADO to use the output stream that you have specified.  
+  The SQLXMLOLEDB Provider is an OLE DB provider that exposes [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML functionality through ActiveX Data Objects (ADO). However, the provider can execute commands only in the "write to an output stream" mode of ADO. The SQLXMLOLEDB Provider is not a rowset provider. When you execute a command, you must specify the adExecuteStream flag, which directs ADO to use the output stream that you have specified.  
   
  The following example shows the syntax for the Execute command in which the adExecuteStream flag is specified:  
   
@@ -38,7 +38,7 @@ oTestCommand.Execute , , adExecuteStream
   
 |Connection<br /><br /> property|Default<br /><br /> (if any)|Description|  
 |-----------------------------|----------------------------|-----------------|  
-|Data Provider||Provides the PROGID of the OLE DB provider through which SQLXMLOLEDB executes the commands. Beginning in SQLXML 4.0 and [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], this provider is contained within the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client; therefore, this property value is restricted to "SQLNCLI11". For more information, see [SQL Server Native Client Programming](../../../2014/database-engine/dev-guide/sql-server-native-client-programming.md).|  
+|Data Provider||Provides the PROGID of the OLE DB provider through which SQLXMLOLEDB executes the commands. Beginning in SQLXML 4.0 and [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], this provider is contained within the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client; therefore, this property value is restricted to "SQLNCLI11". For more information, see [SQL Server Native Client Programming](../../../2014/database-engine/dev-guide/sql-server-native-client-programming.md).|  
   
  The SQLXMLOLEDB Provider exposes the following provider-specific command properties.  
   

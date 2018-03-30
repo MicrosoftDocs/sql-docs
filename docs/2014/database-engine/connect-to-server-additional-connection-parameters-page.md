@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Connect to Server (Additional Connection Parameters Page)
-  The **Connect to** dialog box of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] presents the most common connection string values as options. Use the **Additional Connection Parameters** page to add more connection parameters to the connection string.  
+  The **Connect to** dialog box of [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] presents the most common connection string values as options. Use the **Additional Connection Parameters** page to add more connection parameters to the connection string.  
   
 -   Additional connection parameters can be any ODBC connection parameter.  
   
@@ -37,14 +37,14 @@ manager: "jhubbard"
   
 ### To show the Additional Connection Parameters page  
   
-1.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], on the **Query** menu, point to **Connection**, and then click **Connect**.  
+1.  In [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], on the **Query** menu, point to **Connection**, and then click **Connect**.  
   
 2.  In the **Connect to** dialog box, click **Options**, and then click the **Additional Connection Parameters** tab.  
   
 ## Examples  
   
 ### Example A: Connecting to the Database Engine  
- To connect to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database on a server named ACCOUNTING, enter the following in the **Additional connection parameters** page:  
+ To connect to the [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] database on a server named ACCOUNTING, enter the following in the **Additional connection parameters** page:  
   
 ```  
 ;SERVER=ACCOUNTING;DATABASE=AdventureWorks2012  

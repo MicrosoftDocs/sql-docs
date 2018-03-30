@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Running Stored Procedures
-  A stored procedure is an executable object stored in a database. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports:  
+  A stored procedure is an executable object stored in a database. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports:  
   
 -   Stored procedures:  
   
@@ -52,7 +52,7 @@ manager: "jhubbard"
   
 -   Added functionality  
   
-     Extended stored procedures can use C and C++ features not available in [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements.  
+     Extended stored procedures can use C and C++ features not available in [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.  
   
      For an example of how to call a stored procedure, see [Process Return Codes and Output Parameters &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/process-return-codes-and-output-parameters-odbc.md).  
   

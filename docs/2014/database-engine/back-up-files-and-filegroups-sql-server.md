@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Back Up Files and Filegroups (SQL Server)
-  This topic describes how to back up files and filegroups in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or PowerShell. When the database size and performance requirements make a full database backup impractical, you can create a file backup instead. A *file backup* contains all the data in one or more files (or filegroups). For more information about file backups, see [Full File Backups &#40;SQL Server&#41;](../../2014/database-engine/full-file-backups-sql-server.md) and [Differential Backups &#40;SQL Server&#41;](../../2014/database-engine/differential-backups-sql-server.md).  
+  This topic describes how to back up files and filegroups in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../includes/tsql-md.md)], or PowerShell. When the database size and performance requirements make a full database backup impractical, you can create a file backup instead. A *file backup* contains all the data in one or more files (or filegroups). For more information about file backups, see [Full File Backups &#40;SQL Server&#41;](../../2014/database-engine/full-file-backups-sql-server.md) and [Differential Backups &#40;SQL Server&#41;](../../2014/database-engine/differential-backups-sql-server.md).  
   
  **In This Topic**  
   
@@ -54,20 +54,20 @@ manager: "jhubbard"
   
 ###  <a name="Recommendations"></a> Recommendations  
   
--   By default, every successful backup operation adds an entry in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log and in the system event log. If you back up the log very frequently, these success messages accumulate quickly, resulting in huge error logs that can make finding other messages difficult. In such cases you can suppress these log entries by using trace flag 3226 if none of your scripts depend on those entries. For more information, see [Trace Flags &#40;Transact-SQL&#41;](../Topic/Trace%20Flags%20\(Transact-SQL\).md).  
+-   By default, every successful backup operation adds an entry in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] error log and in the system event log. If you back up the log very frequently, these success messages accumulate quickly, resulting in huge error logs that can make finding other messages difficult. In such cases you can suppress these log entries by using trace flag 3226 if none of your scripts depend on those entries. For more information, see [Trace Flags &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   
 ###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> Permissions  
  BACKUP DATABASE and BACKUP LOG permissions default to members of the **sysadmin** fixed server role and the **db_owner** and **db_backupoperator** fixed database roles.  
   
- Ownership and permission problems on the backup device's physical file can interfere with a backup operation. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be able to read and write to the device; the account under which the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service runs must have write permissions. However, [sp_addumpdevice](../Topic/sp_addumpdevice%20\(Transact-SQL\).md), which adds an entry for a backup device in the system tables, does not check file access permissions. Such problems on the backup device's physical file may not appear until the physical resource is accessed when the backup or restore is attempted.  
+ Ownership and permission problems on the backup device's physical file can interfere with a backup operation. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] must be able to read and write to the device; the account under which the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] service runs must have write permissions. However, [sp_addumpdevice](~/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), which adds an entry for a backup device in the system tables, does not check file access permissions. Such problems on the backup device's physical file may not appear until the physical resource is accessed when the backup or restore is attempted.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   
 #### To back up database files and filegroups  
   
-1.  After connecting to the appropriate instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in Object Explorer, click the server name to expand the server tree.  
+1.  After connecting to the appropriate instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], in Object Explorer, click the server name to expand the server tree.  
   
 2.  Expand **Databases**, and, depending on the database, either select a user database or expand **System Databases** and select a system database.  
   
@@ -127,7 +127,7 @@ manager: "jhubbard"
     > [!NOTE]  
     >  The options in the **Transaction log** section are inactive unless you are backing up a transaction log (as specified in the **Backup type** section of the **General** page).  
   
-16. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] and later versions support [backup compression](../../2014/database-engine/backup-compression-sql-server.md). By default, whether a backup is compressed depends on the value of the **backup-compression default** server configuration option. However, regardless of the current server-level default, you can compress a backup by checking **Compress backup**, and you can prevent compression by checking **Do not compress backup**.  
+16. [!INCLUDE[ssEnterpriseEd10](../includes/ssenterpriseed10-md.md)] and later versions support [backup compression](../../2014/database-engine/backup-compression-sql-server.md). By default, whether a backup is compressed depends on the value of the **backup-compression default** server configuration option. However, regardless of the current server-level default, you can compress a backup by checking **Compress backup**, and you can prevent compression by checking **Do not compress backup**.  
   
      **To view the current backup compression default**  
   
@@ -137,7 +137,7 @@ manager: "jhubbard"
   
 #### To back up files and filegroups  
   
-1.  To create a file or filegroup backup, use a [BACKUP DATABASE <file_or_filegroup>](../Topic/BACKUP%20\(Transact-SQL\).md) statement. Minimally, this statement must specify the following:  
+1.  To create a file or filegroup backup, use a [BACKUP DATABASE <file_or_filegroup>](~/t-sql/statements/backup-transact-sql.md) statement. Minimally, this statement must specify the following:  
   
     -   The database name.  
   
@@ -145,7 +145,7 @@ manager: "jhubbard"
   
     -   The backup device on which the full backup will be written.  
   
-     The basic [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax for a file backup is:  
+     The basic [!INCLUDE[tsql](../includes/tsql-md.md)] syntax for a file backup is:  
   
      BACKUP DATABASE *database*  
   
@@ -232,8 +232,8 @@ GO
   
 ## See Also  
  [Backup Overview &#40;SQL Server&#41;](../../2014/database-engine/backup-overview-sql-server.md)   
- [BACKUP &#40;Transact-SQL&#41;](../Topic/BACKUP%20\(Transact-SQL\).md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)   
+ [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)   
  [Backup History and Header Information &#40;SQL Server&#41;](../../2014/database-engine/backup-history-and-header-information-sql-server.md)   
  [Back Up Database &#40;General Page&#41;](../../2014/database-engine/back-up-database-general-page.md)   
  [Back Up Database &#40;Backup Options Page&#41;](../../2014/database-engine/back-up-database-backup-options-page.md)   

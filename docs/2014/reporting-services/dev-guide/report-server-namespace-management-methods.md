@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 2aa43ce9-f51e-408a-8ce0-b40d3dd62561
 caps.latest.revision: 37
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Report Server Namespace Management Methods
@@ -59,7 +59,7 @@ manager: "jhubbard"
 |<xref:ReportService2010.ReportingService2010.SetProperties%2A>|Sets one or more properties of an item.|  
 |<xref:ReportService2010.ReportingService2010.SetItemDefinition%2A>|Sets the definition or content for a specified item. This method applies to the `Report`, `Model`, `Dataset`, `Component`, `Resource`, and `DataSource` item types.|  
 |<xref:ReportService2010.ReportingService2010.SetSystemProperties%2A>|Sets one or more system properties in the report server or SharePoint farm.|  
-|<xref:ReportService2010.ReportingService2010.ValidateExtensionSettings%2A>|Validates [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] extension settings.|  
+|<xref:ReportService2010.ReportingService2010.ValidateExtensionSettings%2A>|Validates [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] extension settings.|  
   
 ## See Also  
  [Building Applications Using the Web Service and the .NET Framework](../../../2014/reporting-services/dev-guide/building-applications-using-the-web-service-and-the-net-framework.md)   

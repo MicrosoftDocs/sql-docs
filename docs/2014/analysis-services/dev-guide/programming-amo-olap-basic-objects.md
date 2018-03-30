@@ -22,7 +22,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Programming AMO OLAP Basic Objects
-  Creating complex [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objects is simple and straightforward but requires attention to detail. This topic explains the programming details of OLAP basic objects. This topic contains the following sections:  
+  Creating complex [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects is simple and straightforward but requires attention to detail. This topic explains the programming details of OLAP basic objects. This topic contains the following sections:  
   
 -   [Dimension Objects](#Dim)  
   
@@ -504,7 +504,7 @@ static void FullProcessAllPartitions(MeasureGroup mg)
   
 -   Partitions reside on the same server; remote partitions can be merged if on the same server.  
   
- Unlike previous versions, in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] it is not necessary that all source partitions have identical aggregations design.  
+ Unlike previous versions, in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] it is not necessary that all source partitions have identical aggregations design.  
   
  The resulting set of aggregations for the target partition is the same set of aggregations as of the state before running merge command.  
   

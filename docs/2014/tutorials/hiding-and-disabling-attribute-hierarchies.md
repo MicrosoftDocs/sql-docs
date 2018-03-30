@@ -27,15 +27,15 @@ manager: "jhubbard"
      By default, an (All) level is defined for all attribute hierarchies. To disable the (All) level for an enabled attribute hierarchy, set the value for this property to **False**.  
   
     > [!NOTE]  
-    >  An attribute that has its **IsAggregatable** property set to false can only be used as the root of a user-defined hierarchy and must have a default member specified (otherwise, one will be chosen for you by the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] engine).  
+    >  An attribute that has its **IsAggregatable** property set to false can only be used as the root of a user-defined hierarchy and must have a default member specified (otherwise, one will be chosen for you by the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] engine).  
   
 -   **AttributeHierarchyOrdered**  
   
-     By default, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] orders the members of enabled attribute hierarchies during processing, and then stores the members by the value of the **OrderBy** property, such as by Name or Key. If you do not care about ordering, you can increase processing performance by setting the value of this property to **False**.  
+     By default, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] orders the members of enabled attribute hierarchies during processing, and then stores the members by the value of the **OrderBy** property, such as by Name or Key. If you do not care about ordering, you can increase processing performance by setting the value of this property to **False**.  
   
 -   **AttributeHierarchyOptimizedState**  
   
-     By default, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] creates an index for each enabled attribute hierarchy during processing, to improve query performance. If you do not plan to use an attribute hierarchy for browsing, you can increase processing performance by setting the value of this property to **NotOptimized**. However, if you use a hidden hierarchy as the key attribute for the dimension, creating an index of the attribute members will still improve performance.  
+     By default, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] creates an index for each enabled attribute hierarchy during processing, to improve query performance. If you do not plan to use an attribute hierarchy for browsing, you can increase processing performance by setting the value of this property to **NotOptimized**. However, if you use a hidden hierarchy as the key attribute for the dimension, creating an index of the attribute members will still improve performance.  
   
  These properties do not apply if an attribute hierarchy is disabled.  
   

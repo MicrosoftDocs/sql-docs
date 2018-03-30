@@ -21,7 +21,7 @@ manager: "mblythe"
   Use this pane to browse the members of the currently selected hierarchy and language. To select a hierarchy or language to browse, use the **Hierarchy** and **Language** options on the **Toolbar** pane. For more information about the Toolbar pane, see [Toolbar &#40;Browser Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md).  
   
 ## Writeback Mode  
- The functionality of this pane changes if writeback mode is enabled. The selected dimension must be write-enabled (in other words, the `WriteEnabled` property of the dimension must be set to true) and the dimension must be deployed to an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance in order to enable writeback mode.  
+ The functionality of this pane changes if writeback mode is enabled. The selected dimension must be write-enabled (in other words, the `WriteEnabled` property of the dimension must be set to true) and the dimension must be deployed to an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance in order to enable writeback mode.  
   
  To enable writeback mode, you can either select **Writeback** from the **Toolbar** pane, or right-click the **Level and Members** pane and select **Writeback** from the context menu.  
   

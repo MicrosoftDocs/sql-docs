@@ -57,7 +57,7 @@ manager: "jhubbard"
   
  This transformation has one input, one output, and one error output.  
   
- You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer or programmatically.  
   
  For more information about the properties that you can set in the **Export Column Transformation Editor** dialog box, see [Export Column Transformation Editor &#40;Columns Page&#41;](../../2014/integration-services/export-column-transformation-editor-columns-page.md).  
   

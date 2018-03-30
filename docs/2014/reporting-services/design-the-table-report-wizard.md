@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: c64c659b-2926-4773-8cbb-0d8d22b640f3
 caps.latest.revision: 26
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Design the Table (Report Wizard)

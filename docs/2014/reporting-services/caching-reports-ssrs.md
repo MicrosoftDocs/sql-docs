@@ -24,7 +24,7 @@ helpviewer_keywords:
 ms.assetid: 146542c3-8efd-4b89-a8d8-77d22896630e
 caps.latest.revision: 43
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Caching Reports (SSRS)
@@ -35,7 +35,7 @@ manager: "mblythe"
  Caching is a performance-enhancement technique. The contents of the cache are volatile and can change as reports are added, replaced, or removed. If you require a more predictable caching strategy, you should create a report snapshot. For more information, see [Set Report Processing Properties](../../2014/reporting-services/set-report-processing-properties.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stores temporary files in a database to support user sessions and report processing. These files are cached for internal use and to support a consistent viewing experience during a single browser session. For more information about how internal-use temporary files are cached, see [Report Server Database &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-server-database-ssrs-native-mode.md).  
+>  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] stores temporary files in a database to support user sessions and report processing. These files are cached for internal use and to support a consistent viewing experience during a single browser session. For more information about how internal-use temporary files are cached, see [Report Server Database &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-server-database-ssrs-native-mode.md).  
   
 ## Cached Instances  
  A cached instance of a report is based on the intermediate format of a report. The report server generally caches one instance of a report based on the report name. However, if a report can contain different data based on query parameters, multiple versions of the report may be cached at any given time. For example, suppose you have a parameterized report that takes a region code as a parameter value. If four different users specify four unique region codes, four cached copies are created.  

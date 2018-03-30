@@ -15,7 +15,7 @@ f1_keywords:
 ms.assetid: 557ecf70-62b1-47f5-9322-0ebdc809d018
 caps.latest.revision: 12
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Row Visibility Dialog Box

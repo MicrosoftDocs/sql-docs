@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
 caps.latest.revision: 18
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Create and Manage Subscriptions for SharePoint Mode Report Servers
-  You can create [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] subscriptions to deliver reports from a SharePoint Web application that is integrated with a SharePoint mode report server. Subscriptions can deliver reports to a document library, file folder, or as e-mail. This topic summarizes the requirements and steps for creating a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] subscription.  
+  You can create [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] subscriptions to deliver reports from a SharePoint Web application that is integrated with a SharePoint mode report server. Subscriptions can deliver reports to a document library, file folder, or as e-mail. This topic summarizes the requirements and steps for creating a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] subscription.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode &#124; SharePoint 2010 and SharePoint 2013|  
+|**[!INCLUDE[applies](../includes/applies-md.md)]**<br /><br /> [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint mode &#124; SharePoint 2010 and SharePoint 2013|  
   
  When you create a subscription, there are three ways to specify its delivery:  
   
@@ -53,7 +53,7 @@ manager: "mblythe"
   
  When you create a subscription, you can select an output file format. Not every report works well in every format. Before you select a format in a subscription, open the report and export it to different formats to verify that it appears as expected.  
   
- Users require **Edit Items** list permission in SharePoint if they want to be able to create [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] subscriptions. For more information, see [SharePoint Site and List Permission Reference for Report Server Items](../../2014/reporting-services/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
+ Users require **Edit Items** list permission in SharePoint if they want to be able to create [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] subscriptions. For more information, see [SharePoint Site and List Permission Reference for Report Server Items](../../2014/reporting-services/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
   
 > [!IMPORTANT]  
 >  A subscription that delivers a report to a library or to a shared folder creates a new, static file that is based on the original report, but it is not a true report definition that runs in the Report Viewer Web Part. If the original report has interactive features (such as drillthrough links) or dynamic content, those features will not be available in the static file that is delivered to the target location. If you select a "Web Page" you can preserve some interactivity, but because the document is not an .rdl file that runs in the Report Viewer, clicking through a report creates new pages in the browser session that you must scroll through to return to the site.  
@@ -132,7 +132,7 @@ manager: "mblythe"
   
 8.  In **Report Contents**, specify whether you want to embed the actual report in the body of the message.  
   
-     The rendering format and browser determine whether the report is embedded or attached. If your browser supports HTML 4.0 and MHTML, and you select the Web archive rendering format, the report is embedded as part of the message. All other rendering formats (CSV, PDF, and so on) deliver reports as attachments. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] does not check the size of the attachment or message before sending the report. If the attachment or message exceeds the maximum limit allowed by your mail server, the report will not be delivered. Choose one of the other delivery options (such as URL or notification) for large reports.  
+     The rendering format and browser determine whether the report is embedded or attached. If your browser supports HTML 4.0 and MHTML, and you select the Web archive rendering format, the report is embedded as part of the message. All other rendering formats (CSV, PDF, and so on) deliver reports as attachments. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] does not check the size of the attachment or message before sending the report. If the attachment or message exceeds the maximum limit allowed by your mail server, the report will not be delivered. Choose one of the other delivery options (such as URL or notification) for large reports.  
   
 9. In **Delivery Event**, specify a schedule or event that causes the subscription to run. You can create a custom schedule, select a shared schedule if one is available, or run the subscription whenever the data is refreshed for a report that runs with snapshot data. For more information about schedules and data processing, see [Set Processing Options &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../2014/reporting-services/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
   

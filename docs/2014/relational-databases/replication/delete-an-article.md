@@ -21,11 +21,11 @@ helpviewer_keywords:
 ms.assetid: 185b58fc-38c0-4abe-822e-6ec20066c863
 caps.latest.revision: 41
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Delete an Article
-  This topic describes how to delete an article in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../../../includes/tsql-md.md)] or Replication Management Objects (RMO). For information about the conditions under which articles can be dropped and whether dropping an article requires a new snapshot or the reinitialization of subscriptions, see [Add Articles to and Drop Articles from Existing Publications](../../../2014/relational-databases/replication/add-articles-to-and-drop-articles-from-existing-publications.md).  
+  This topic describes how to delete an article in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../../includes/tsql-md.md)] or Replication Management Objects (RMO). For information about the conditions under which articles can be dropped and whether dropping an article requires a new snapshot or the reinitialization of subscriptions, see [Add Articles to and Drop Articles from Existing Publications](../../../2014/relational-databases/replication/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
@@ -33,25 +33,25 @@ manager: "jhubbard"
   
 #### To delete an article from a snapshot or transactional publication  
   
-1.  Execute [sp_droparticle &#40;Transact-SQL&#41;](../Topic/sp_droparticle%20\(Transact-SQL\).md) to delete an article, specified by **@article**, from a publication, specified by **@publication**. Specify a value of **1** for **@force_invalidate_snapshot**.  
+1.  Execute [sp_droparticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md) to delete an article, specified by **@article**, from a publication, specified by **@publication**. Specify a value of **1** for **@force_invalidate_snapshot**.  
   
 2.  (Optional) To remove the published object from the database entirely, execute the `DROP <objectname>` command at the Publisher on the publication database.  
   
 #### To delete an article from a merge publication  
   
-1.  Execute [sp_dropmergearticle &#40;Transact-SQL&#41;](../Topic/sp_dropmergearticle%20\(Transact-SQL\).md) to delete an article, specified by **@article**, from a publication, specified by **@publication**. If necessary, specify a value of **1** for **@force_invalidate_snapshot** and a value of **1** for **@force_reinit_subscription**.  
+1.  Execute [sp_dropmergearticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) to delete an article, specified by **@article**, from a publication, specified by **@publication**. If necessary, specify a value of **1** for **@force_invalidate_snapshot** and a value of **1** for **@force_reinit_subscription**.  
   
 2.  (Optional) To remove the published object from the database entirely, execute the `DROP <objectname>` command at the Publisher on the publication database.  
   
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
  The following example deletes an article from a transactional publication. Because this change invalidates the existing snapshot, a value of **1** is specified for the **@force_invalidate_snapshot** parameter.  
   
- [!code-sql[HowTo#sp_droparticle](../../../snippets/tsql/SQL15/replication/howto/tsql/droptranpub.sql#sp_droparticle)]  
+ [!code-sql[HowTo#sp_droparticle](../../snippets/tsql/SQL15/replication/howto/tsql/droptranpub.sql#sp_droparticle)]  
   
  The following example deletes two articles from a merge publication. Because these changes invalidate the existing snapshot, a value of **1** is specified for the **@force_invalidate_snapshot** parameter.  
   
- [!code-sql[HowTo#sp_dropmergearticle](../../../snippets/tsql/SQL15/replication/howto/tsql/dropmergepub.sql#sp_dropmergearticle)]
- [!code-sql[HowTo#sp_dropmergearticle](../../../snippets/tsql/SQL15/replication/howto/tsql/dropmergearticles.sql#sp_dropmergearticle)]  
+ [!code-sql[HowTo#sp_dropmergearticle](../../snippets/tsql/SQL15/replication/howto/tsql/dropmergepub.sql#sp_dropmergearticle)]
+ [!code-sql[HowTo#sp_dropmergearticle](../../snippets/tsql/SQL15/replication/howto/tsql/dropmergearticles.sql#sp_dropmergearticle)]  
   
 ##  <a name="RMOProcedure"></a> Using Replication Management Objects (RMO)  
  You can delete articles programmatically by using Replication Management Objects (RMO). The RMO classes you use to delete an article depend on the type of publication to which the article belongs.  

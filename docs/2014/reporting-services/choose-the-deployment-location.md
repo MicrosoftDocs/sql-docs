@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: 3b19b8a3-000d-48a4-b4a2-4f7da078a0c6
 caps.latest.revision: 24
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Choose the Deployment Location

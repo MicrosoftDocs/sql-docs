@@ -17,11 +17,11 @@ helpviewer_keywords:
 ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
 caps.latest.revision: 42
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # View and Modify Distributor and Publisher Properties
-  This topic describes how to view and modify Distributor and Publisher properties in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or Replication Management Objects (RMO).  
+  This topic describes how to view and modify Distributor and Publisher properties in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or Replication Management Objects (RMO).  
   
  **In This Topic**  
   
@@ -43,7 +43,7 @@ manager: "jhubbard"
   
 ###  <a name="Recommendations"></a> Recommendations  
   
--   For Publishers running versions prior to [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], a user in the **sysadmin** fixed server role can register Subscribers on the **Subscribers** page. Beginning with [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], it is no longer necessary to explicitly register Subscribers for replication.  
+-   For Publishers running versions prior to [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], a user in the **sysadmin** fixed server role can register Subscribers on the **Subscribers** page. Beginning with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], it is no longer necessary to explicitly register Subscribers for replication.  
   
 ###  <a name="Security"></a> Security  
  When possible, prompt users to enter security credentials at runtime.  
@@ -52,7 +52,7 @@ manager: "jhubbard"
   
 #### To view and modify Distributor properties  
   
-1.  Connect to the Distributor in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], and then expand the server node.  
+1.  Connect to the Distributor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], and then expand the server node.  
   
 2.  Right-click the **Replication** folder, and then click **Distributor Properties**.  
   
@@ -70,7 +70,7 @@ manager: "jhubbard"
   
 #### To view and modify Publisher properties  
   
-1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], and then expand the server node.  
+1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], and then expand the server node.  
   
 2.  Right-click the **Replication** folder, and then click **Publisher Properties**.  
   
@@ -85,40 +85,40 @@ manager: "jhubbard"
   
 #### To view Distributor and distribution database properties  
   
-1.  Execute [sp_helpdistributor](../Topic/sp_helpdistributor%20\(Transact-SQL\).md) to return information about the Distributor, distribution database, and working directory.  
+1.  Execute [sp_helpdistributor](~/relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md) to return information about the Distributor, distribution database, and working directory.  
   
-2.  Execute [sp_helpdistributiondb](../Topic/sp_helpdistributiondb%20\(Transact-SQL\).md) to return properties of a specified distribution database.  
+2.  Execute [sp_helpdistributiondb](~/relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md) to return properties of a specified distribution database.  
   
 #### To change Distributor and distribution database properties  
   
-1.  At the Distributor, execute [sp_changedistributor_property](../Topic/sp_changedistributor_property%20\(Transact-SQL\).md) to modify Distributor properties.  
+1.  At the Distributor, execute [sp_changedistributor_property](~/relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md) to modify Distributor properties.  
   
-2.  At the Distributor, execute [sp_changedistributiondb](../Topic/sp_changedistributiondb%20\(Transact-SQL\).md) to modify distribution database properties.  
+2.  At the Distributor, execute [sp_changedistributiondb](~/relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md) to modify distribution database properties.  
   
-3.  At the Distributor, execute [sp_changedistributor_password](../Topic/sp_changedistributor_password%20\(Transact-SQL\).md) to change the Distributor password.  
+3.  At the Distributor, execute [sp_changedistributor_password](~/relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md) to change the Distributor password.  
   
     > [!IMPORTANT]  
     >  When possible, prompt users to enter security credentials at runtime. If you must store credentials in a script file, secure the file to prevent unauthorized access.  
   
-4.  At the Distributor, execute [sp_changedistpublisher](../Topic/sp_changedistpublisher%20\(Transact-SQL\).md) to change the properties of a Publisher using the Distributor.  
+4.  At the Distributor, execute [sp_changedistpublisher](~/relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md) to change the properties of a Publisher using the Distributor.  
   
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
- The following example [!INCLUDE[tsql](../../../includes/tsql-md.md)] script returns information about the Distributor and distribution database.  
+ The following example [!INCLUDE[tsql](../../includes/tsql-md.md)] script returns information about the Distributor and distribution database.  
   
- [!code-sql[HowTo#sp_helpdistributor](../../../snippets/tsql/SQL15/replication/howto/tsql/changedistpub.sql#sp_helpdistributor)]  
+ [!code-sql[HowTo#sp_helpdistributor](../../snippets/tsql/SQL15/replication/howto/tsql/changedistpub.sql#sp_helpdistributor)]  
   
- [!code-sql[HowTo#sp_helpdistributiondb](../../../snippets/tsql/SQL15/replication/howto/tsql/changedistpub.sql#sp_helpdistributiondb)]  
+ [!code-sql[HowTo#sp_helpdistributiondb](../../snippets/tsql/SQL15/replication/howto/tsql/changedistpub.sql#sp_helpdistributiondb)]  
   
  This example changes retention periods for the Distributor, the password used when connecting to the Distributor, and the interval at which the Distributor checks the status of various replication agents (also known as the heartbeat interval).  
   
 > [!IMPORTANT]  
 >  When possible, prompt users to enter security credentials at runtime. If you must store credentials in a script file, secure the file to prevent unauthorized access.  
   
- [!code-sql[HowTo#sp_changedistributor_property](../../../snippets/tsql/SQL15/replication/howto/tsql/changedistpub.sql#sp_changedistributor_property)]  
+ [!code-sql[HowTo#sp_changedistributor_property](../../snippets/tsql/SQL15/replication/howto/tsql/changedistpub.sql#sp_changedistributor_property)]  
   
- [!code-sql[HowTo#sp_changedistributiondb](../../../snippets/tsql/SQL15/replication/howto/tsql/changedistpub.sql#sp_changedistributiondb)]  
+ [!code-sql[HowTo#sp_changedistributiondb](../../snippets/tsql/SQL15/replication/howto/tsql/changedistpub.sql#sp_changedistributiondb)]  
   
- [!code-sql[HowTo#sp_changedistributor_password](../../../snippets/tsql/SQL15/replication/howto/tsql/changedistpub.sql#sp_changedistributor_password)]  
+ [!code-sql[HowTo#sp_changedistributor_password](../../snippets/tsql/SQL15/replication/howto/tsql/changedistpub.sql#sp_changedistributor_password)]  
   
 ##  <a name="RMOProcedure"></a> Using Replication Management Objects (RMO)  
   
@@ -171,7 +171,7 @@ manager: "jhubbard"
 5.  Call the <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A> method. Pass the new password value for the *password* parameter.  
   
     > [!IMPORTANT]  
-    >  When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](http://go.microsoft.com/fwlink/?LinkId=34733) provided by the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  
+    >  When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](http://go.microsoft.com/fwlink/?LinkId=34733) provided by the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
   
 6.  (Optional) Perform the following steps to change the password at each remote Publisher that uses this Distributor:  
   
@@ -191,9 +191,9 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  To avoid storing credentials in the code, the new Distributor password is supplied at runtime.  
   
- [!code-csharp[HowTo#rmo_ChangeDistPub](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_changedistpub)]  
+ [!code-csharp[HowTo#rmo_ChangeDistPub](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_changedistpub)]  
   
- [!code-vb[HowTo#rmo_vb_ChangeDistPub](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_changedistpub)]  
+ [!code-vb[HowTo#rmo_vb_ChangeDistPub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_changedistpub)]  
   
 ## See Also  
  [Replication Management Objects Concepts](../../../2014/relational-databases/replication/dev-guide/replication-management-objects-concepts.md)   

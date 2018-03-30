@@ -12,11 +12,11 @@ ms.topic: "article"
 ms.assetid: 0070daa6-56b0-4663-83b2-44c96acafad8
 caps.latest.revision: 30
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Lesson 1: Creating the Web Service Client Project
-  For this walkthrough, you will create a simple console application that accesses the Report Server Web service. This walkthrough assumes you are developing in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
+  For this walkthrough, you will create a simple console application that accesses the Report Server Web service. This walkthrough assumes you are developing in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
   
 ### To create a console application  
   
@@ -30,9 +30,9 @@ manager: "mblythe"
   
 5.  In the **Location** box, enter the path where you want to save your project, or click **Browse** to navigate to the folder.  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] A collapsed view of your project appears in Solution Explorer.  
+6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] A collapsed view of your project appears in Solution Explorer.  
   
-     In Solution Explorer, expand the project node. A file with the default name of Program.cs (Module1.vb for [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) has been added to your project.  
+     In Solution Explorer, expand the project node. A file with the default name of Program.cs (Module1.vb for [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) has been added to your project.  
   
 ## See Also  
  [Lesson 2: Adding a Web Reference](../../2014/tutorials/lesson-2-adding-a-web-reference.md)   

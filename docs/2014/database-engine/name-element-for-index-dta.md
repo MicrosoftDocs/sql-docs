@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 2300e9cf-f0a8-49e6-b1f5-45ffe03ccb5f
 caps.latest.revision: 13
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Name Element for Index (DTA)

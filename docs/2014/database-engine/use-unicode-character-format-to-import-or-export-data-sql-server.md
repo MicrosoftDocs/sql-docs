@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Use Unicode Character Format to Import or Export Data (SQL Server)
-  Unicode character format is recommended for bulk transfer of data between multiple instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using a data file that contains extended/DBCS characters. The Unicode character data format allows data to be exported from a server by using a code page that differs from the code page used by the client that is performing the operation. In such cases, use of Unicode character format has the following advantages:  
+  Unicode character format is recommended for bulk transfer of data between multiple instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] by using a data file that contains extended/DBCS characters. The Unicode character data format allows data to be exported from a server by using a code page that differs from the code page used by the client that is performing the operation. In such cases, use of Unicode character format has the following advantages:  
   
 -   If the source and destination data are Unicode data types, use of Unicode character format preserves all of the character data.  
   
@@ -44,7 +44,7 @@ manager: "jhubbard"
 |**bcp**|**-w**|Uses the Unicode character format.|  
 |BULK INSERT|DATAFILETYPE **='**widechar**'**|Uses Unicode character format when bulk importing data.|  
   
- For more information, see [bcp Utility](../../2014/database-engine/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](../Topic/BULK%20INSERT%20\(Transact-SQL\).md), or [OPENROWSET &#40;Transact-SQL&#41;](../Topic/OPENROWSET%20\(Transact-SQL\).md).  
+ For more information, see [bcp Utility](../../2014/database-engine/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md), or [OPENROWSET &#40;Transact-SQL&#41;](~/t-sql/functions/openrowset-transact-sql.md).  
   
 > [!NOTE]  
 >  Alternatively, you can specify formatting on a per-field basis in a format file. For more information, see [Format Files for Importing or Exporting Data &#40;SQL Server&#41;](../../2014/database-engine/format-files-for-importing-or-exporting-data-sql-server.md).  
@@ -53,7 +53,7 @@ manager: "jhubbard"
  The following examples demonstrate how to bulk export Unicode character data using **bcp** and to bulk import the same data using BULK INSERT.  
   
 ### Sample Table  
- The examples require that a table named `myTestUniCharData` table be created in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database under the `dbo` schema. Before you can run the examples, you must create this table. To create this table, in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor, execute:  
+ The examples require that a table named `myTestUniCharData` table be created in the [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] sample database under the `dbo` schema. Before you can run the examples, you must create this table. To create this table, in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Query Editor, execute:  
   
 ```  
 USE AdventureWorks2012;  
@@ -83,9 +83,9 @@ SELECT Col1,Col2,Col3 FROM myTestUniCharData;
 |----------------|-----------------|  
 |**-w**|Specifies Unicode character format.|  
 |**-t** `,`|Specifies a comma (`,`) as the field terminator.<br /><br /> Note: The default field terminator is the tab Unicode character (\t). For more information, see [Specify Field and Row Terminators &#40;SQL Server&#41;](../../2014/database-engine/specify-field-and-row-terminators-sql-server.md).|  
-|**-T**|Specifies that the **bcp** utility connects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with a trusted connection using integrated security. If **-T** is not specified, you need to specify **-U** and **-P** to successfully log in.|  
+|**-T**|Specifies that the **bcp** utility connects to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] with a trusted connection using integrated security. If **-T** is not specified, you need to specify **-U** and **-P** to successfully log in.|  
   
- The following example bulk exports data in Unicode character format from the `myTestUniCharData` table into a new data file named `myTestUniCharData-w.Dat` data file that uses the comma (`,`) as the field terminator. At the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows command prompt, enter:  
+ The following example bulk exports data in Unicode character format from the `myTestUniCharData` table into a new data file named `myTestUniCharData-w.Dat` data file that uses the comma (`,`) as the field terminator. At the [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows command prompt, enter:  
   
 ```  
 bcp AdventureWorks2012..myTestUniCharData out C:\myTestUniCharData-w.Dat -w -t, -T  
@@ -93,7 +93,7 @@ bcp AdventureWorks2012..myTestUniCharData out C:\myTestUniCharData-w.Dat -w -t, 
 ```  
   
 ### Using BULK INSERT to Bulk Import Unicode Character Data  
- The following example uses `BULK INSERT` to import the data in the `myTestUniCharData-w.Dat` data file into the `myTestUniCharData` table. The nondefault field terminator (`,`) must be declared in the statement. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor, execute:  
+ The following example uses `BULK INSERT` to import the data in the `myTestUniCharData-w.Dat` data file into the `myTestUniCharData` table. The nondefault field terminator (`,`) must be declared in the statement. In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Query Editor, execute:  
   
 ```  
 USE AdventureWorks2012;  
@@ -123,9 +123,9 @@ GO
   
 ## See Also  
  [bcp Utility](../../2014/database-engine/bcp-utility.md)   
- [BULK INSERT &#40;Transact-SQL&#41;](../Topic/BULK%20INSERT%20\(Transact-SQL\).md)   
- [OPENROWSET &#40;Transact-SQL&#41;](../Topic/OPENROWSET%20\(Transact-SQL\).md)   
- [Data Types &#40;Transact-SQL&#41;](../Topic/Data%20Types%20\(Transact-SQL\).md)   
+ [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md)   
+ [OPENROWSET &#40;Transact-SQL&#41;](~/t-sql/functions/openrowset-transact-sql.md)   
+ [Data Types &#40;Transact-SQL&#41;](~/t-sql/data-types/data-types-transact-sql.md)   
  [Collation and Unicode Support](../../2014/database-engine/collation-and-unicode-support.md)  
   
   

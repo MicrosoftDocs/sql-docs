@@ -16,7 +16,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Change the Order of Attributes
-  In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], you can change the order of attributes.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], you can change the order of attributes.  
   
 ## Prerequisites  
  To perform this procedure:  
@@ -27,7 +27,7 @@ manager: "jhubbard"
   
 ### To change the order of an attribute  
   
-1.  In [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], click **System Administration**.  
+1.  In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], click **System Administration**.  
   
 2.  On the **Model View** page, from the menu bar, point to **Manage** and click **Entities**.  
   

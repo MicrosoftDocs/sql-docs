@@ -21,7 +21,7 @@ manager: "jhubbard"
 # Monitor System Activity Using Extended Events
   This procedure illustrates how Extended Events can be used with Event Tracing for Windows (ETW) to monitor system activity. The procedure also shows how the CREATE EVENT SESSION, ALTER EVENT SESSION, and DROP EVENT SESSION statements are used.  
   
- Accomplishing these tasks involves using Query Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to carry out the following procedure. The procedure also requires using the command prompt to run ETW commands.  
+ Accomplishing these tasks involves using Query Editor in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to carry out the following procedure. The procedure also requires using the command prompt to run ETW commands.  
   
 ### To monitor system activity using Extended Events  
   
@@ -114,11 +114,11 @@ manager: "jhubbard"
     ```  
   
 ## See Also  
- [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../Topic/CREATE%20EVENT%20SESSION%20\(Transact-SQL\).md)   
- [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../Topic/ALTER%20EVENT%20SESSION%20\(Transact-SQL\).md)   
- [DROP EVENT SESSION &#40;Transact-SQL&#41;](../Topic/DROP%20EVENT%20SESSION%20\(Transact-SQL\).md)   
- [Extended Events Catalog Views &#40;Transact-SQL&#41;](../Topic/Extended%20Events%20Catalog%20Views%20\(Transact-SQL\).md)   
- [Extended Events Dynamic Management Views](../Topic/Extended%20Events%20Dynamic%20Management%20Views.md)   
+ [CREATE EVENT SESSION &#40;Transact-SQL&#41;](~/t-sql/statements/create-event-session-transact-sql.md)   
+ [ALTER EVENT SESSION &#40;Transact-SQL&#41;](~/t-sql/statements/alter-event-session-transact-sql.md)   
+ [DROP EVENT SESSION &#40;Transact-SQL&#41;](~/t-sql/statements/drop-event-session-transact-sql.md)   
+ [Extended Events Catalog Views &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql   
+ [Extended Events Dynamic Management Views](~/relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
  [SQL Server Extended Events Targets](../../2014/database-engine/sql-server-extended-events-targets.md)  
   
   

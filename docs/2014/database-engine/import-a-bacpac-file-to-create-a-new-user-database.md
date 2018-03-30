@@ -32,7 +32,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Import a BACPAC File to Create a New User Database
-  Import a data-tier application (DAC) file – a .bacpac file – to create a copy of the original database, with the data, on a new instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], or to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Export-import operations can be combined to migrate a DAC or database between instances, or to create a logical backup, such as creating an on-premise copy of a database deployed in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+  Import a data-tier application (DAC) file – a .bacpac file – to create a copy of the original database, with the data, on a new instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)], or to [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]. Export-import operations can be combined to migrate a DAC or database between instances, or to create a logical backup, such as creating an on-premise copy of a database deployed in [!INCLUDE[ssSDS](../includes/sssds-md.md)].  
   
 ## Before You Begin  
  The import process builds a new DAC in two stages.  
@@ -41,18 +41,18 @@ manager: "jhubbard"
   
 2.  The import bulk copies in the data from the export file.  
   
- There is a sample application in the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Labs that can be used to test exporting and importing DACs and databases. For instructions on how to download and use the sample, see [Database Import and Export for Windows Azure SQL Database](http://go.microsoft.com/fwlink/?LinkId=219404).  
+ There is a sample application in the [!INCLUDE[ssSDS](../includes/sssds-md.md)] Labs that can be used to test exporting and importing DACs and databases. For instructions on how to download and use the sample, see [Database Import and Export for Windows Azure SQL Database](http://go.microsoft.com/fwlink/?LinkId=219404).  
   
 ## SQL Server Utility  
- If you import a DAC to a managed instance of the Database Engine, the imported DAC is incorporated into the SQL Server Utility the next time the utility collection set is sent from the instance to the utility control point. The DAC will then be present in the **Deployed Data-tier Applications** node of the [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Deployed Data-tier Applications** details page.  
+ If you import a DAC to a managed instance of the Database Engine, the imported DAC is incorporated into the SQL Server Utility the next time the utility collection set is sent from the instance to the utility control point. The DAC will then be present in the **Deployed Data-tier Applications** node of the [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Deployed Data-tier Applications** details page.  
   
 ## Database Options and Settings  
  By default, the database created during the import will have all of the default settings from the CREATE DATABASE statement, except that the database collation and compatibility level are set to the values defined in the DAC export file. A DAC export file uses the values from the original database.  
   
- Some database options, such as TRUSTWORTHY, DB_CHAINING, and HONOR_BROKER_PRIORITY, cannot be adjusted as part of the import process. Physical properties, such as the number of filegroups, or the numbers and sizes of files cannot be altered as part of the import process. After the import completes, you can use the ALTER DATABASE statement, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell to tailor the database. For more information, see [Databases](../../2014/database-engine/databases.md).  
+ Some database options, such as TRUSTWORTHY, DB_CHAINING, and HONOR_BROKER_PRIORITY, cannot be adjusted as part of the import process. Physical properties, such as the number of filegroups, or the numbers and sizes of files cannot be altered as part of the import process. After the import completes, you can use the ALTER DATABASE statement, [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], or [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell to tailor the database. For more information, see [Databases](../../2014/database-engine/databases.md).  
   
 ## Limitations and Restrictions  
- A DAC can be imported to [!INCLUDE[ssSDS](../../includes/sssds-md.md)], or an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] running [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) or later. If you export a DAC from a higher version, the DAC may contain objects not supported by [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. You cannot deploy those DACs to instances of [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+ A DAC can be imported to [!INCLUDE[ssSDS](../includes/sssds-md.md)], or an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)] running [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] Service Pack 4 (SP4) or later. If you export a DAC from a higher version, the DAC may contain objects not supported by [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]. You cannot deploy those DACs to instances of [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)].  
   
 ## Prerequisites  
  We recommend that you do not import a DAC export file from unknown or untrusted sources. Such files could contain malicious code that might execute unintended Transact-SQL code or cause errors by modifying the schema. Before you use an export file from an unknown or untrusted source, unpack the DAC and examine the code, like stored procedures and other user-defined code. For more information about how to perform these checks, see [Validate a DAC Package](../../2014/database-engine/validate-a-dac-package.md).  
@@ -61,12 +61,12 @@ manager: "jhubbard"
  To improve security, SQL Server Authentication logins are stored in a DAC export file without a password. When the file is imported, the login is created as a disabled login with a generated password. To enable the logins, log in using a login that has ALTER ANY LOGIN permission and use ALTER LOGIN to enable the login and assign a new password that can be communicated to the user. This is not needed for Windows Authentication logins because their passwords are not managed by SQL Server.  
   
 ## Permissions  
- A DAC can only be imported by members of the **sysadmin** or **serveradmin** fixed server roles, or by logins that are in the **dbcreator** fixed server role and have ALTER ANY LOGIN permissions. The built-in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system administrator account named **sa** can also import a DAC. Importing a DAC with logins to [!INCLUDE[ssSDS](../../includes/sssds-md.md)] requires membership in the loginmanager or serveradmin roles. Importing a DAC without logins to [!INCLUDE[ssSDS](../../includes/sssds-md.md)] requires membership in the dbmanager or serveradmin roles.  
+ A DAC can only be imported by members of the **sysadmin** or **serveradmin** fixed server roles, or by logins that are in the **dbcreator** fixed server role and have ALTER ANY LOGIN permissions. The built-in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] system administrator account named **sa** can also import a DAC. Importing a DAC with logins to [!INCLUDE[ssSDS](../includes/sssds-md.md)] requires membership in the loginmanager or serveradmin roles. Importing a DAC without logins to [!INCLUDE[ssSDS](../includes/sssds-md.md)] requires membership in the dbmanager or serveradmin roles.  
   
 ## Using the Import Data-tier Application Wizard  
  **To launch the wizard, use the following steps:**  
   
-1.  Connect to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], whether on-premise or in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+1.  Connect to the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], whether on-premise or in [!INCLUDE[ssSDS](../includes/sssds-md.md)].  
   
 2.  In **Object Explorer**, right-click on **Databases**, and then select the **Import Data-tier Application** menu item to launch the wizard.  
   
@@ -123,7 +123,7 @@ manager: "jhubbard"
   
 -   **New database name** – Provide a name for the imported database.  
   
--   **Edition of [!INCLUDE[ssSDS](../../includes/sssds-md.md)]** – Specify [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Business or [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Web. For more information about editions of [!INCLUDE[ssSDS](../../includes/sssds-md.md)], see this [SQL Database](http://www.windowsazure.com/home/tour/database/) web site.  
+-   **Edition of [!INCLUDE[ssSDS](../includes/sssds-md.md)]** – Specify [!INCLUDE[ssSDS](../includes/sssds-md.md)] Business or [!INCLUDE[ssSDS](../includes/sssds-md.md)] Web. For more information about editions of [!INCLUDE[ssSDS](../includes/sssds-md.md)], see this [SQL Database](http://www.windowsazure.com/home/tour/database/) web site.  
   
 -   **Maximum database size (GB)** – Use the drop-down menu to specify the maximum size for your database.  
   

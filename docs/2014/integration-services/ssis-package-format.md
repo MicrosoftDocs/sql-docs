@@ -16,7 +16,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # SSIS Package Format
-  In the current release of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], significant changes were made to the package format (.dtsx file) to make it easier to read the format and to compare packages. You can also more reliably merge packages that don’t contain conflicting changes or changes stored in binary format.  
+  In the current release of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], significant changes were made to the package format (.dtsx file) to make it easier to read the format and to compare packages. You can also more reliably merge packages that don’t contain conflicting changes or changes stored in binary format.  
   
  To view the current DTSX package file format, see [\[MS-DTSX\]: Data Transformation Services Package XML File Format Specification](http://go.microsoft.com/fwlink/?LinkId=233251).  
   
@@ -28,7 +28,7 @@ manager: "jhubbard"
   
 -   Most objects within a package that can be referred to by other objects now have a `refId` attribute defined in the package XML. Instead of persisting lineage IDs, the `refID` is now persisted. Lineage IDs are still used within the runtime and regenerated when the package is loaded.  
   
-     The `refId` value is a unique string that is readable and understandable, compared to GUIDs or integer values. The string is similar to path values used for package configurations in previous releases of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+     The `refId` value is a unique string that is readable and understandable, compared to GUIDs or integer values. The string is similar to path values used for package configurations in previous releases of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
      If you are merging changes between two versions of a package, the `refId` can be used in find/replace operations to ensure that all references to that object have been correctly updated.  
   

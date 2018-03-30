@@ -25,7 +25,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # GeneralFlags Property (ServerSettings Class)
-  Gets the general flags associated with the instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Gets the general flags associated with the instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Syntax  
   
@@ -37,10 +37,10 @@ object
   
 ## Parts  
  *object*  
- A [ServerSettings Class](../../../2014/database-engine/dev-guide/serversettings-class.md) object that represents server settings on an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ A [ServerSettings Class](../../../2014/database-engine/dev-guide/serversettings-class.md) object that represents server settings on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Property Value/Return Value  
- An array of [ServerSettingsGeneralFlag Class](../../../2014/database-engine/dev-guide/serversettingsgeneralflag-class.md) objects that specifies the general flags associated with the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ An array of [ServerSettingsGeneralFlag Class](../../../2014/database-engine/dev-guide/serversettingsgeneralflag-class.md) objects that specifies the general flags associated with the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Remarks  
   

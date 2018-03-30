@@ -21,7 +21,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Parameters and Return Codes in the Execute SQL Task
-  SQL statements and stored procedures frequently use `input` parameters, `output` parameters, and return codes. In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], the Execute SQL task supports the `Input`, `Output`, and `ReturnValue` parameter types. You use the `Input` type for input parameters, `Output` for output parameters, and `ReturnValue` for return codes.  
+  SQL statements and stored procedures frequently use `input` parameters, `output` parameters, and return codes. In [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], the Execute SQL task supports the `Input`, `Output`, and `ReturnValue` parameter types. You use the `Input` type for input parameters, `Output` for output parameters, and `ReturnValue` for return codes.  
   
 > [!NOTE]  
 >  You can use parameters in an Execute SQL task only if the data provider supports them.  
@@ -43,23 +43,23 @@ manager: "jhubbard"
 -   [Configuring parameters and return codes in the Execute SQL Task Editor](#Configure_parameters_and_return_codes)  
   
 ##  <a name="Parameter_names_and_markers"></a> Using Parameter Names and Markers  
- Depending on the connection type that the Execute SQL task uses, the syntax of the SQL command uses different parameter markers. For example, the [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection manager type requires that the SQL command uses a parameter marker in the format **@varParameter**, whereas OLE DB connection type requires the question mark (?) parameter marker.  
+ Depending on the connection type that the Execute SQL task uses, the syntax of the SQL command uses different parameter markers. For example, the [!INCLUDE[vstecado](../includes/vstecado-md.md)] connection manager type requires that the SQL command uses a parameter marker in the format **@varParameter**, whereas OLE DB connection type requires the question mark (?) parameter marker.  
   
- The names that you can use as parameter names in the mappings between variables and parameters also vary by connection manager type. For example, the [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection manager type uses a user-defined name with a @ prefix, whereas the OLE DB connection manager type requires that you use the numeric value of a 0-based ordinal as the parameter name.  
+ The names that you can use as parameter names in the mappings between variables and parameters also vary by connection manager type. For example, the [!INCLUDE[vstecado](../includes/vstecado-md.md)] connection manager type uses a user-defined name with a @ prefix, whereas the OLE DB connection manager type requires that you use the numeric value of a 0-based ordinal as the parameter name.  
   
  The following table summarizes the requirements for SQL commands for the connection manager types that the Execute SQL task can use.  
   
 |Connection type|Parameter marker|Parameter name|Example SQL command|  
 |---------------------|----------------------|--------------------|-------------------------|  
 |ADO|?|Param1, Param2, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
-|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|@\<parameter name>|@\<parameter name>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = @parmContactID|  
+|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|@\<parameter name>|@\<parameter name>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = @parmContactID|  
 |ODBC|?|1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |EXCEL and OLE DB|?|0, 1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
 ### Using Parameters with ADO.NET and ADO Connection Managers  
- [!INCLUDE[vstecado](../../includes/vstecado-md.md)] and ADO connection managers have specific requirements for SQL commands that use parameters:  
+ [!INCLUDE[vstecado](../includes/vstecado-md.md)] and ADO connection managers have specific requirements for SQL commands that use parameters:  
   
--   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection managers require that the SQL command use parameter names as parameter markers. This means that variables can be mapped directly to parameters. For example, the variable `@varName` is mapped to the parameter named `@parName` and provides a value to the parameter `@parName`.  
+-   [!INCLUDE[vstecado](../includes/vstecado-md.md)] connection managers require that the SQL command use parameter names as parameter markers. This means that variables can be mapped directly to parameters. For example, the variable `@varName` is mapped to the parameter named `@parName` and provides a value to the parameter `@parName`.  
   
 -   ADO connection managers require that the SQL command use question marks (?) as parameter markers. However, you can use any user-defined name, except for integer values, as parameter names.  
   
@@ -80,22 +80,22 @@ manager: "jhubbard"
 ##  <a name="Date_and_time_data_types"></a> Using Parameters with Date and Time Data Types  
   
 ### Using Date and Time Parameters with ADO.NET and ADO Connection Managers  
- When reading data of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types, `time` and `datetimeoffset`, an Execute SQL task that uses either an [!INCLUDE[vstecado](../../includes/vstecado-md.md)] or ADO connection manager has the following additional requirements:  
+ When reading data of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] types, `time` and `datetimeoffset`, an Execute SQL task that uses either an [!INCLUDE[vstecado](../includes/vstecado-md.md)] or ADO connection manager has the following additional requirements:  
   
--   For `time` data, an [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection manager requires this data to be stored in a parameter whose parameter type is `Input` or `Output`, and whose data type is `string`.  
+-   For `time` data, an [!INCLUDE[vstecado](../includes/vstecado-md.md)] connection manager requires this data to be stored in a parameter whose parameter type is `Input` or `Output`, and whose data type is `string`.  
   
--   For `datetimeoffset` data, an [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection manager requires this data to be stored in one of the following parameters:  
+-   For `datetimeoffset` data, an [!INCLUDE[vstecado](../includes/vstecado-md.md)] connection manager requires this data to be stored in one of the following parameters:  
   
     -   A parameter whose parameter type is `Input` and whose data type is `string`.  
   
-    -   A parameter whose parameter type is `Output` or `ReturnValue`, and whose data type is `datetimeoffset`, `string`, or `datetime2`. If you select a parameter whose data type is either `string` or `datetime2`, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] converts the data to either string or datetime2.  
+    -   A parameter whose parameter type is `Output` or `ReturnValue`, and whose data type is `datetimeoffset`, `string`, or `datetime2`. If you select a parameter whose data type is either `string` or `datetime2`, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] converts the data to either string or datetime2.  
   
 -   An ADO connection manager requires that either `time` or `datetimeoffset` data be stored in a parameter whose parameter type is `Input` or `Output`, and whose data type is `adVarWchar`.  
   
- For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types and how they map to [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data types, see [Data Types &#40;Transact-SQL&#41;](../Topic/Data%20Types%20\(Transact-SQL\).md) and [Integration Services Data Types](../../2014/integration-services/integration-services-data-types.md).  
+ For more information about [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] data types and how they map to [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] data types, see [Data Types &#40;Transact-SQL&#41;](~/t-sql/data-types/data-types-transact-sql.md) and [Integration Services Data Types](../../2014/integration-services/integration-services-data-types.md).  
   
 ### Using Date and Time Parameters with OLE DB Connection Managers  
- When using an OLE DB connection manager, an Execute SQL task has specific storage requirements for data of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types, `date`, `time`, `datetime`, `datetime2`, and `datetimeoffset`. You must store this data in one of the following parameter types:  
+ When using an OLE DB connection manager, an Execute SQL task has specific storage requirements for data of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] data types, `date`, `time`, `datetime`, `datetime2`, and `datetimeoffset`. You must store this data in one of the following parameter types:  
   
 -   An input parameter of the NVARCHAR data type.  
   
@@ -111,7 +111,7 @@ manager: "jhubbard"
  If the data is not stored in the appropriate input or output parameter, the package fails.  
   
 ### Using Date and Time Parameters with ODBC Connection Managers  
- When using an ODBC connection manager, an Execute SQL task has specific storage requirements for data with one of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types, `date`, `time`, `datetime`, `datetime2`, or `datetimeoffset`. You must store this data in one of the following parameter types:  
+ When using an ODBC connection manager, an Execute SQL task has specific storage requirements for data with one of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] data types, `date`, `time`, `datetime`, `datetime2`, or `datetimeoffset`. You must store this data in one of the following parameter types:  
   
 -   An `input` parameter of the SQL_WVARCHAR data type  
   
@@ -131,13 +131,13 @@ manager: "jhubbard"
   
  You can use parameter markers to dynamically provide parameter values. The rules for which parameter markers and parameter names can be used in the SQL statement depend on the type of connection manager that the Execute SQL uses.  
   
- The following table lists examples of the SELECT command by connection manager type. The INSERT, UPDATE, and DELETE statements are similar. The examples use SELECT to return products from the **Product** table in [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] that have a **ProductID** greater than and less than the values specified by two parameters.  
+ The following table lists examples of the SELECT command by connection manager type. The INSERT, UPDATE, and DELETE statements are similar. The examples use SELECT to return products from the **Product** table in [!INCLUDE[ssSampleDBUserInputNonLocal](../includes/sssampledbuserinputnonlocal-md.md)] that have a **ProductID** greater than and less than the values specified by two parameters.  
   
 |Connection type|SELECT syntax|  
 |---------------------|-------------------|  
 |EXCEL, ODBC, and OLEDB|`SELECT* FROM Production.Product WHERE ProductId > ? AND ProductID < ?`|  
 |ADO|`SELECT* FROM Production.Product WHERE ProductId > ? AND ProductID < ?`|  
-|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|`SELECT* FROM Production.Product WHERE ProductId > @parmMinProductID AND ProductID < @parmMaxProductID`|  
+|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|`SELECT* FROM Production.Product WHERE ProductId > @parmMinProductID AND ProductID < @parmMaxProductID`|  
   
  The examples would require parameters that have the following names:  
   
@@ -145,23 +145,23 @@ manager: "jhubbard"
   
 -   The ADO connection type could use any two parameter names, such as Param1 and Param2, but the parameters must be mapped by their ordinal position in the parameter list.  
   
--   The [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection type uses the parameter names @parmMinProductID and @parmMaxProductID.  
+-   The [!INCLUDE[vstecado](../includes/vstecado-md.md)] connection type uses the parameter names @parmMinProductID and @parmMaxProductID.  
   
 ##  <a name="Stored_procedures"></a> Using Parameters with Stored Procedures  
  SQL commands that run stored procedures can also use parameter mapping. The rules for how to use parameter markers and parameter names depends on the type of connection manager that the Execute SQL uses, just like the rules for parameterized queries.  
   
- The following table lists examples of the EXEC command by connection manager type. The examples run the **uspGetBillOfMaterials** stored procedure in [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)]. The stored procedure uses the `@StartProductID` and `@CheckDate` `input` parameters.  
+ The following table lists examples of the EXEC command by connection manager type. The examples run the **uspGetBillOfMaterials** stored procedure in [!INCLUDE[ssSampleDBUserInputNonLocal](../includes/sssampledbuserinputnonlocal-md.md)]. The stored procedure uses the `@StartProductID` and `@CheckDate` `input` parameters.  
   
 |Connection type|EXEC syntax|  
 |---------------------|-----------------|  
 |EXCEL and OLEDB|`EXEC uspGetBillOfMaterials ?, ?`|  
 |ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> For more information about ODBC call syntax, see the topic, [Procedure Parameters](http://go.microsoft.com/fwlink/?LinkId=89462), in the ODBC Programmer's Reference in the  MSDN Library.|  
 |ADO|If IsQueryStoredProcedure is set to `False`, `EXEC uspGetBillOfMaterials ?, ?`<br /><br /> If IsQueryStoredProcedure is set to `True`, `uspGetBillOfMaterials`|  
-|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|If IsQueryStoredProcedure is set to `False`, `EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> If IsQueryStoredProcedure is set to `True`, `uspGetBillOfMaterials`|  
+|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|If IsQueryStoredProcedure is set to `False`, `EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> If IsQueryStoredProcedure is set to `True`, `uspGetBillOfMaterials`|  
   
  To use output parameters, the syntax requires that the OUTPUT keyword follow each parameter marker. For example, the following output parameter syntax is correct: `EXEC myStoredProcedure ? OUTPUT`.  
   
- For more information about using input and output parameters with Transact-SQL stored procedures, see [EXECUTE &#40;Transact-SQL&#41;](../Topic/EXECUTE%20\(Transact-SQL\).md).  
+ For more information about using input and output parameters with Transact-SQL stored procedures, see [EXECUTE &#40;Transact-SQL&#41;](~/t-sql/language-elements/execute-transact-sql.md).  
   
 ##  <a name="Return_codes"></a> Getting Values of Return Codes  
  A stored procedure can return an integer value, called a return code, to indicate the execution status of a procedure. To implement return codes in the Execute SQL task, you use parameters of the `ReturnValue` type.  
@@ -175,18 +175,18 @@ manager: "jhubbard"
 |EXCEL and OLEDB|`EXEC ? = myStoredProcedure 1`|  
 |ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> For more information about ODBC call syntax, see the topic, [Procedure Parameters](http://go.microsoft.com/fwlink/?LinkId=89462), in the ODBC Programmer's Reference in the  MSDN Library.|  
 |ADO|If IsQueryStoreProcedure is set to `False`, `EXEC ? = myStoredProcedure 1`<br /><br /> If IsQueryStoreProcedure is set to `True`, `myStoredProcedure`|  
-|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|Set IsQueryStoreProcedure is set to `True`.<br /><br /> `myStoredProcedure`|  
+|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|Set IsQueryStoreProcedure is set to `True`.<br /><br /> `myStoredProcedure`|  
   
  In the syntax shown in the previous table, the Execute SQL task uses the **Direct Input** source type to run the stored procedure. The Execute SQL task can also use the **File Connection** source type to run a stored procedure. Regardless of whether the Execute SQL task uses the **Direct Input** or **File Connection** source type, use a parameter of the `ReturnValue` type to implement the return code. For more information about how to configure the source type of the SQL statement that the Execute SQL task runs, see [Execute SQL Task Editor &#40;General Page&#41;](../../2014/integration-services/execute-sql-task-editor-general-page.md).  
   
- For more information about using return codes with Transact-SQL stored procedures, see [RETURN &#40;Transact-SQL&#41;](../Topic/RETURN%20\(Transact-SQL\).md).  
+ For more information about using return codes with Transact-SQL stored procedures, see [RETURN &#40;Transact-SQL&#41;](~/t-sql/language-elements/return-transact-sql.md).  
   
 ##  <a name="Configure_parameters_and_return_codes"></a> Configuring Parameters and Return Codes in the Execute SQL Task  
- For more information about the properties of parameters and return codes that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
+ For more information about the properties of parameters and return codes that you can set in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click the following topic:  
   
 -   [Execute SQL Task Editor &#40;Parameter Mapping Page&#41;](../../2014/integration-services/execute-sql-task-editor-parameter-mapping-page.md)  
   
- For more information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
+ For more information about how to set these properties in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click the following topic:  
   
 -   [Set the Properties of a Task or Container](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)  
   

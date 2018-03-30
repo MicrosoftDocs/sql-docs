@@ -23,14 +23,14 @@ ms.author: "jroth"
 manager: "jhubbard"
 ---
 # Availability Modes (Always On Availability Groups)
-  In [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], the *availability mode* is a replica property that determines whether a given availability replica can run in synchronous-commit mode. For each availability replica, the availability mode must be configured for either synchronous-commit mode or asynchronous-commit mode.  If the primary replica is configured for *asynchronous-commit mode*, it does not wait for any secondary replica to write incoming transaction log records to disk (to *harden the log*). If a given secondary replica is configured for asynchronous-commit mode, the primary replica does not wait for that secondary replica to harden the log. If both the primary replica and a given secondary replica are both configured for *synchronous-commit mode*, the primary replica waits for the secondary replica to confirm that it has hardened the log (unless the secondary replica fails to ping the primary replica within the primary's *session-timeout period*).  
+  In [!INCLUDE[ssHADR](../includes/sshadr-md.md)], the *availability mode* is a replica property that determines whether a given availability replica can run in synchronous-commit mode. For each availability replica, the availability mode must be configured for either synchronous-commit mode or asynchronous-commit mode.  If the primary replica is configured for *asynchronous-commit mode*, it does not wait for any secondary replica to write incoming transaction log records to disk (to *harden the log*). If a given secondary replica is configured for asynchronous-commit mode, the primary replica does not wait for that secondary replica to harden the log. If both the primary replica and a given secondary replica are both configured for *synchronous-commit mode*, the primary replica waits for the secondary replica to confirm that it has hardened the log (unless the secondary replica fails to ping the primary replica within the primary's *session-timeout period*).  
   
 > [!NOTE]  
 >  If primary's session-timeout period is exceeded by a secondary replica, the primary replica temporarily shifts into asynchronous-commit mode for that secondary replica. When the secondary replica reconnects with the primary replica, they resume synchronous-commit mode.  
   
   
 ##  <a name="SupportedAvModes"></a> Supported Availability Modes  
- [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] supports two availability modes—asynchronous-commit mode and synchronous-commit mode, as follows:  
+ [!INCLUDE[ssHADR](../includes/sshadr-md.md)] supports two availability modes—asynchronous-commit mode and synchronous-commit mode, as follows:  
   
 -   *Asynchronous-commit mode* is a disaster-recovery solution that works well when the availability replicas are distributed over considerable distances. If every secondary replica is running under asynchronous-commit mode, the primary replica does not wait for any of the secondary replicas to harden the log. Rather, immediately after writing the log record to the local log file, the primary replica sends the transaction confirmation to the client. The primary replica runs with minimum transaction latency in relation to a secondary replica that is configured for asynchronous-commit mode.  If the current primary is configured for asynchronous commit availability mode, it will commit transactions asynchronously for all secondary replicas regardless of their individual availability mode settings.  
   
@@ -83,7 +83,7 @@ manager: "jhubbard"
 -   You change any secondary replica to synchronous-commit availability mode. This causes that secondary replica to be marked as  in the PARTIALLY_HEALTHY synchronization-health state. until all of its databases are in the SYNCHRONIZED synchronization state.  
   
 > [!TIP]  
->  To view the synchronization health of an availability group, availability replica, or availability database, query the **synchronization_health** or **synchronization_health_desc** column of [sys.dm_hadr_availability_group_states](../Topic/sys.dm_hadr_availability_group_states%20\(Transact-SQL\).md), [sys.dm_hadr_availability_replica_states](../Topic/sys.dm_hadr_availability_replica_states%20\(Transact-SQL\).md), or [sys.dm_hadr_database_replica_states](../Topic/sys.dm_hadr_database_replica_states%20\(Transact-SQL\).md), respectively.  
+>  To view the synchronization health of an availability group, availability replica, or availability database, query the **synchronization_health** or **synchronization_health_desc** column of [sys.dm_hadr_availability_group_states](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md), [sys.dm_hadr_availability_replica_states](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md), or [sys.dm_hadr_database_replica_states](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md), respectively.  
   
 ###  <a name="HowSyncWorks"></a> How Synchronization Works on a Secondary Replica  
  Under the synchronous-commit mode, after a secondary replica joins the availability group and establishes a session with the primary replica, the secondary replica writes incoming log records to disk (*hardens the log*) and sends a confirmation message to the primary replica. Once the hardened log on the secondary database has caught up the end of log on the primary database, the state of the secondary database is set to SYNCHRONIZED. The time required for synchronization depends essentially on how far the secondary database was behind the primary database at the start of the session (measured by the number of log records initially received from the primary replica), the work load on the primary database, and the speed of the computer of the server instance that hosts the secondary replica.  
@@ -112,7 +112,7 @@ manager: "jhubbard"
  Furthermore, for an automatic failover to be possible at a given time, this secondary replica must be synchronized with the primary replica (that is, the secondary databases are all synchronized), and the Windows Server Failover Clustering (WSFC) cluster must have quorum. If the primary replica becomes unavailable under these conditions, automatic failover occurs. The secondary replica switches to the role of primary, and it offers its database as the primary database. For more information, see the "Automatic Failover " section of the [Failover and Failover Modes &#40;AlwaysOn Availability Groups&#41;](../../2014/database-engine/failover-and-failover-modes-alwayson-availability-groups.md) topic.  
   
 > [!NOTE]  
->  For information about WSFC quorum and [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], see For more information, see [WSFC Quorum Modes and Voting Configuration &#40;SQL Server&#41;](../../2014/database-engine/wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
+>  For information about WSFC quorum and [!INCLUDE[ssHADR](../includes/sshadr-md.md)], see For more information, see [WSFC Quorum Modes and Voting Configuration &#40;SQL Server&#41;](../../2014/database-engine/wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
  **To change the availability mode and failover mode**  
@@ -139,11 +139,11 @@ manager: "jhubbard"
   
  **To view availability group, availability replica, and database states**  
   
--   [sys.dm_hadr_availability_group_states &#40;Transact-SQL&#41;](../Topic/sys.dm_hadr_availability_group_states%20\(Transact-SQL\).md)  
+-   [sys.dm_hadr_availability_group_states &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md)  
   
--   [sys.dm_hadr_availability_replica_states &#40;Transact-SQL&#41;](../Topic/sys.dm_hadr_availability_replica_states%20\(Transact-SQL\).md)  
+-   [sys.dm_hadr_availability_replica_states &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md)  
   
--   [sys.dm_hadr_database_replica_states &#40;Transact-SQL&#41;](../Topic/sys.dm_hadr_database_replica_states%20\(Transact-SQL\).md)  
+-   [sys.dm_hadr_database_replica_states &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)  
   
 ##  <a name="RelatedContent"></a> Related Content  
   

@@ -15,7 +15,7 @@ f1_keywords:
 ms.assetid: e1367556-736e-4a6b-b9e7-10432a3e50b5
 caps.latest.revision: 36
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Dataset Properties Dialog Box, Fields

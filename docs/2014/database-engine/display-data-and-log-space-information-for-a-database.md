@@ -21,11 +21,11 @@ helpviewer_keywords:
 ms.assetid: c7b99463-4bab-4e9b-9217-fcb0898dc757
 caps.latest.revision: 26
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Display Data and Log Space Information for a Database
-  This topic describes how to display the data and log space information for a database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  This topic describes how to display the data and log space information for a database in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -50,7 +50,7 @@ manager: "jhubbard"
   
 #### To display data and log space information for a database  
   
-1.  In Object Explorer, connect to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and then expand that instance.  
+1.  In Object Explorer, connect to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and then expand that instance.  
   
 2.  Expand **Databases**.  
   
@@ -60,11 +60,11 @@ manager: "jhubbard"
   
 #### To display data and log space information for a database by using sp_spaceused  
   
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example uses the [sp_spaceused](../Topic/sp_spaceused%20\(Transact-SQL\).md) system stored procedure to report disk space information for the `Vendor` table and its indexes.  
+3.  Copy and paste the following example into the query window and click **Execute**. This example uses the [sp_spaceused](~/relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) system stored procedure to report disk space information for the `Vendor` table and its indexes.  
   
 ```tsql  
 USE AdventureWorks2012;  
@@ -75,11 +75,11 @@ GO
   
 #### To display data and log space information for a database by querying sys.database_files  
   
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example queries the [sys.database_files](../Topic/sys.database_files%20\(Transact-SQL\).md) catalog view to return specific information about the data and log files in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
+3.  Copy and paste the following example into the query window and click **Execute**. This example queries the [sys.database_files](~/relational-databases/system-catalog-views/sys-database-files-transact-sql.md) catalog view to return specific information about the data and log files in the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database.  
   
 ```tsql  
 USE AdventureWorks2012;  
@@ -91,9 +91,9 @@ GO
 ```  
   
 ## See Also  
- [SELECT &#40;Transact-SQL&#41;](../Topic/SELECT%20\(Transact-SQL\).md)   
- [sys.database_files &#40;Transact-SQL&#41;](../Topic/sys.database_files%20\(Transact-SQL\).md)   
- [sp_spaceused &#40;Transact-SQL&#41;](../Topic/sp_spaceused%20\(Transact-SQL\).md)   
+ [SELECT &#40;Transact-SQL&#41;](~/t-sql/queries/select-transact-sql.md)   
+ [sys.database_files &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
+ [sp_spaceused &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)   
  [Add Data or Log Files to a Database](../../2014/database-engine/add-data-or-log-files-to-a-database.md)   
  [Delete Data or Log Files from a Database](../../2014/database-engine/delete-data-or-log-files-from-a-database.md)  
   

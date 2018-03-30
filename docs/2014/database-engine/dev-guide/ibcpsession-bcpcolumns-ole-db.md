@@ -23,7 +23,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # IBCPSession::BCPColumns (OLE DB)
-  Sets the number of fields that are to be bound to the columns in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] table.  
+  Sets the number of fields that are to be bound to the columns in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table.  
   
 ## Syntax  
   

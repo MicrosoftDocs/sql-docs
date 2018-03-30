@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: 3eb1b73f-ddb3-4d09-be6e-811c414698e9
 caps.latest.revision: 23
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Snapshot Folder
@@ -27,7 +27,7 @@ manager: "jhubbard"
  Enter the path for the folder where you want snapshot files stored.  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recommends that you use a network share as a snapshot folder location. Local paths (those starting with a drive letter, such as C:\\) are not accessible to agents on other computers.  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends that you use a network share as a snapshot folder location. Local paths (those starting with a drive letter, such as C:\\) are not accessible to agents on other computers.  
   
 ## See Also  
  [Alternate Snapshot Folder Locations](../../../2014/relational-databases/replication/alternate-snapshot-folder-locations.md)   

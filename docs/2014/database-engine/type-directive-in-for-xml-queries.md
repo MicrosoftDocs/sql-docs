@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
 caps.latest.revision: 40
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # TYPE Directive in FOR XML Queries
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] support for the [xml &#40;Transact-SQL&#41;](../Topic/xml%20\(Transact-SQL\).md) enables you to optionally request that the result of a FOR XML query be returned as `xml` data type by specifying the TYPE directive. This allows you to process the result of a FOR XML query on the server. For example, you can specify an XQuery against it, assign the result to an `xml` type variable, or write [Nested FOR XML queries](../../2014/database-engine/use-nested-for-xml-queries.md).  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] support for the [xml &#40;Transact-SQL&#41;](~/t-sql/xml/xml-transact-sql.md) enables you to optionally request that the result of a FOR XML query be returned as `xml` data type by specifying the TYPE directive. This allows you to process the result of a FOR XML query on the server. For example, you can specify an XQuery against it, assign the result to an `xml` type variable, or write [Nested FOR XML queries](../../2014/database-engine/use-nested-for-xml-queries.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns XML data type instance data to the client as a result of different server-constructs such as FOR XML queries that use the TYPE directive, or where the `xml` data type is used to return XML instance data values from SQL table columns and output parameters. In client application code, the ADO.NET provider requests this XML data type information to be sent in a binary encoding from the server. However, if you are using FOR XML without the TYPE directive, the XML data comes back as a string type. In any case, the client provider will always be able to handle either form of XML. Note that top-level FOR XML without the TYPE directive cannot be used with cursors.  
+>  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] returns XML data type instance data to the client as a result of different server-constructs such as FOR XML queries that use the TYPE directive, or where the `xml` data type is used to return XML instance data values from SQL table columns and output parameters. In client application code, the ADO.NET provider requests this XML data type information to be sent in a binary encoding from the server. However, if you are using FOR XML without the TYPE directive, the XML data comes back as a string type. In any case, the client provider will always be able to handle either form of XML. Note that top-level FOR XML without the TYPE directive cannot be used with cursors.  
   
 ## Examples  
  The following examples illustrate the use of the TYPE directive with FOR XML queries.  
@@ -71,7 +71,7 @@ GO
 ### Querying results of a FOR XML query  
  The FOR XML queries return XML. Therefore, you can apply `xml` type methods, such as `query()` and `value()`, to the XML result returned by FOR XML queries.  
   
- In the following query, the `query()` method of the `xml` data type is used to query the result of the `FOR XML` query. For more information, see [query&#40;&#41; Method &#40;xml Data Type&#41;](../Topic/query\(\)%20Method%20\(xml%20Data%20Type\).md).  
+ In the following query, the `query()` method of the `xml` data type is used to query the result of the `FOR XML` query. For more information, see [query&#40;&#41; Method &#40;xml Data Type&#41;](~/t-sql/xml/query-method-xml-data-type.md).  
   
 ```  
 USE AdventureWorks2012;  
@@ -101,7 +101,7 @@ FOR XML AUTO, TYPE).query('/Person.Person[1]');
   
  `</Person.Person>`  
   
- In the following query, the `value()` method of the `xml` data type is used to retrieve a value from the XML result returned by the `SELECT…FOR XML` query. For more information, see [value&#40;&#41; Method &#40;xml Data Type&#41;](../Topic/value\(\)%20Method%20\(xml%20Data%20Type\).md).  
+ In the following query, the `value()` method of the `xml` data type is used to retrieve a value from the XML result returned by the `SELECT…FOR XML` query. For more information, see [value&#40;&#41; Method &#40;xml Data Type&#41;](~/t-sql/xml/value-method-xml-data-type.md).  
   
 ```  
 USE AdventureWorks2012;  

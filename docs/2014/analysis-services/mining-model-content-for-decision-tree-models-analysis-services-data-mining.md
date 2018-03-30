@@ -20,7 +20,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Mining Model Content for Decision Tree Models (Analysis Services - Data Mining)
-  This topic describes mining model content that is specific to models that use the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm. For a general explanation of mining model content for all model types, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/mining-model-content-analysis-services-data-mining.md). It is important to remember that The Microsoft Decision Trees algorithm is a hybrid algorithm that can create models with very different functions: a decision tree can represent associations, rules, or even linear regression. The structure of the tree is essentially the same, but how you interpret the information will depend on the purpose for which you created the model.  
+  This topic describes mining model content that is specific to models that use the [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees algorithm. For a general explanation of mining model content for all model types, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/mining-model-content-analysis-services-data-mining.md). It is important to remember that The Microsoft Decision Trees algorithm is a hybrid algorithm that can create models with very different functions: a decision tree can represent associations, rules, or even linear regression. The structure of the tree is essentially the same, but how you interpret the information will depend on the purpose for which you created the model.  
   
 ##  <a name="bkmk_Top"></a> Understanding the Structure of a Decision Trees Model  
  A decision trees model has a single parent node that represents the model and its metadata. Underneath the parent node are independent trees that represent the predictable attributes that you select. For example, if you set up your decision tree model to predict whether customers will purchase something, and provide inputs for gender and income, the model would create a single tree for the purchasing attribute, with many branches that divide on conditions related to gender and income.  
@@ -43,7 +43,7 @@ manager: "mblythe"
  The Microsoft Decision Trees algorithm does not allow continuous data types as inputs; therefore, if any columns have a continuous numeric data type, the values are discretized. The algorithm performs its own discretization at the point of a split for all continuous attributes.  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] automatically chooses a method for bucketing continuous attributes; however, you can control how continuous values in the inputs are discretized by setting the content type of the mining structure column to `Discretized` and then setting the <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> or <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> property.  
+>  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] automatically chooses a method for bucketing continuous attributes; however, you can control how continuous values in the inputs are discretized by setting the content type of the mining structure column to `Discretized` and then setting the <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> or <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> property.  
   
 ##  <a name="bkmk_ModelContent"></a> Model Content for a Decision Trees Model  
  This section provides details and examples only for those columns in the mining model content that have particular relevance for decision trees models. For information about general-purpose columns in the schema rowset, and explanations of mining model terminology, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/mining-model-content-analysis-services-data-mining.md).  
@@ -196,7 +196,7 @@ manager: "mblythe"
  The attribute represented by the XML fragment can be either simple or complex. A simple attribute contains the name of the model column, and the value of the attribute. If the model column contains a nested table, the nested table attribute is represented as a concatenation of the table name, the key value, and the attribute.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supports version 2.0 of the PMML standard, with extensions to support the use of nested table. If your data contains nested tables and you generate a PMML version of the model, all elements in the model that include the predicates are marked as an extension.  
+>  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supports version 2.0 of the PMML standard, with extensions to support the use of nested table. If your data contains nested tables and you generate a PMML version of the model, all elements in the model that include the predicates are marked as an extension.  
   
 ###  <a name="bkmk_NodeDist_Discrete"></a> Node Distribution for Discrete Attributes  
  In a decision trees model, the NODE_DISTRIBUTION table contains useful statistics. However, the type of statistics depends on whether the tree predicts a discrete or continuous attribute. This section describes the meaning of the node distribution statistics for discrete attributes.  
@@ -229,7 +229,7 @@ manager: "mblythe"
   
  Probability = (support for state + support for prior state) / (node support plus the prior node support)  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] uses probabilities for each node to compare the stored probability with the prior probability to determine whether the path from the parent to the child node indicates a strong inference.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] uses probabilities for each node to compare the stored probability with the prior probability to determine whether the path from the parent to the child node indicates a strong inference.  
   
  When making predictions, the probability of the distribution must be balanced with the probability of the node, to smoothen the probabilities. For example, if a split in the tree separates cases by a ratio of 9000/1000, the tree is very unbalanced. As a result, a prediction coming from the small branch should not carry the same weight as a prediction coming from a branch with many cases.  
   
@@ -259,7 +259,7 @@ manager: "mblythe"
   
  For all other nodes in the tree (except leaf nodes), the score for each node represents the best split score for the current node, minus the split score for the parent node. Typically, the split score for a parent node should always be better than the split score on any one of its child nodes. That is because a decision trees model ideally splits on the most important attributes first.  
   
- There are many ways of calculating a score for a split, depending on the algorithm parameter you choose. A discussion of how the scores are calculated for each of the scoring methods is beyond the scope of this topic. For more information, see "[Learning Bayesian Networks: The Combination of Knowledge and Statistical Data](http://go.microsoft.com/fwlink/?LinkId=45963)", on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Research Web site.  
+ There are many ways of calculating a score for a split, depending on the algorithm parameter you choose. A discussion of how the scores are calculated for each of the scoring methods is beyond the scope of this topic. For more information, see "[Learning Bayesian Networks: The Combination of Knowledge and Statistical Data](http://go.microsoft.com/fwlink/?LinkId=45963)", on the [!INCLUDE[msCoName](../includes/msconame-md.md)] Research Web site.  
   
 > [!NOTE]  
 >  If you create a decision trees model that has both continuous and discrete predictable attributes, you will see completely different scores in the (All) nodes that represent each tree type. Each model should be considered independently, and the methods used for scoring regression are completely different from those used for scoring classification. The node score values cannot be compared.  

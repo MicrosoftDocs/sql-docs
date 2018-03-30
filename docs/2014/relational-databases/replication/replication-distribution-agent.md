@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 caps.latest.revision: 62
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Replication Distribution Agent
@@ -88,13 +88,13 @@ manager: "jhubbard"
  Prints all available parameters.  
   
  **-Publisher** *server_name*[**\\***i**nstance_name*]  
- Is the name of the Publisher. Specify *server_name* for the default instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server. Specify *server_name***\\***instance_name* for a named instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server.  
+ Is the name of the Publisher. Specify *server_name* for the default instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on that server. Specify *server_name***\\***instance_name* for a named instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on that server.  
   
  **-PublisherDB** *publisher_database*  
  Is the name of the Publisher database.  
   
  **-Subscriber** *server_name*[**\\***instance_name*]  
- Is the name of the Subscriber. Specify *server_name* for the default instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server. Specify *server_name***\\***instance_name* for a named instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server.  
+ Is the name of the Subscriber. Specify *server_name* for the default instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on that server. Specify *server_name***\\***instance_name* for a named instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on that server.  
   
  **-SubscriberDB** *subscriber_database*  
  Is the name of the Subscriber database.  
@@ -127,7 +127,7 @@ manager: "jhubbard"
  Is the Distributor password.  
   
  **-DistributorSecurityMode** [ **0**| **1**]  
- Specifies the security mode of the Distributor. A value of 0 indicates [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication Mode, and a value of 1 indicates Windows Authentication Mode (default).  
+ Specifies the security mode of the Distributor. A value of 0 indicates [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication Mode, and a value of 1 indicates Windows Authentication Mode (default).  
   
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  Is the level of Secure Sockets Layer (SSL) encryption used by the Distribution Agent when making connections.  
@@ -232,25 +232,25 @@ manager: "jhubbard"
  Is the path to the Jet database (.mdb file) if **SubscriberType** is **2** (allows a connection to a Jet database without an ODBC Data Source Name (DSN)).  
   
  **-SubscriberLogin** *subscriber_login*  
- Is the Subscriber login name. If **SubscriberSecurityMode** is **0** (for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication), this parameter must be specified.  
+ Is the Subscriber login name. If **SubscriberSecurityMode** is **0** (for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication), this parameter must be specified.  
   
  **-SubscriberPassword** *subscriber_password*  
- Is the Subscriber password. If **SubscriberSecurityMode** is **0** (for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication), this parameter must be specified.  
+ Is the Subscriber password. If **SubscriberSecurityMode** is **0** (for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication), this parameter must be specified.  
   
  **-SubscriberSecurityMode** [ **0**| **1**]  
- Specifies the security mode of the Subscriber. A value of **0** indicates [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication, and a value of **1** indicates Windows Authentication Mode (default).  
+ Specifies the security mode of the Subscriber. A value of **0** indicates [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, and a value of **1** indicates Windows Authentication Mode (default).  
   
  **-SubscriberType** [ **0**| **1**| **3**]  
  Specifies the type of Subscriber connection used by the Distribution Agent.  
   
 |SubscriberType value|Description|  
 |--------------------------|-----------------|  
-|**0**|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
+|**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**1**|ODBC data source|  
 |**3**|OLE DB data source|  
   
  **-SubscriptionStreams** [**0**|**1**|**2**|...**64**]  
- Is the number of connections allowed per Distribution Agent to apply batches of changes in parallel to a Subscriber, while maintaining many of the transactional characteristics present when using a single thread. For a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Publisher, a range of values from 1 to 64 is supported. This parameter is only supported when the Publisher and Distributor are running on [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] or later versions. This parameter is not supported or must be 0 for non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers or peer-to-peer subscriptions.  
+ Is the number of connections allowed per Distribution Agent to apply batches of changes in parallel to a Subscriber, while maintaining many of the transactional characteristics present when using a single thread. For a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher, a range of values from 1 to 64 is supported. This parameter is only supported when the Publisher and Distributor are running on [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or later versions. This parameter is not supported or must be 0 for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers or peer-to-peer subscriptions.  
   
 > [!NOTE]  
 >  If one of the connections fails to execute or commit, all connections will abort the current batch, and the agent will use a single stream to retry the failed batches. Before this retry phase completes, there can be temporary transactional inconsistencies at the Subscriber. After the failed batches are successfully committed, the Subscriber is brought back to a state of transactional consistency.  
@@ -259,10 +259,10 @@ manager: "jhubbard"
 >  When you specify a value of 2 or greater for **-SubscriptionStreams**, the order in which transactions are received at the Subscriber may differ from the order in which they were made at the Publisher. If this behavior causes constraint violations during synchronization, you should use the NOT FOR REPLICATION option to disable the enforcement of constraints during synchronization. For more information, see [Control the Behavior of Triggers and Constraints During Synchronization &#40;Replication Transact-SQL Programming&#41;](../../../2014/relational-databases/replication/control-behavior-of-triggers-and-constraints-in-synchronization.md).  
   
 > [!NOTE]  
->  Subscriptionstreams do not work for articles configured to deliver [!INCLUDE[tsql](../../../includes/tsql-md.md)]. To use subscriptionstreams, configure articles to deliver stored procedure calls instead.  
+>  Subscriptionstreams do not work for articles configured to deliver [!INCLUDE[tsql](../../includes/tsql-md.md)]. To use subscriptionstreams, configure articles to deliver stored procedure calls instead.  
   
  **-SubscriptionTableName** *subscription_table*  
- Is the name of the subscription table generated or used at the given Subscriber. When not specified, the [MSreplication_subscriptions &#40;Transact-SQL&#41;](../Topic/MSreplication_subscriptions%20\(Transact-SQL\).md) table is used. Use this option for database management systems (DBMS) that do not support long file names.  
+ Is the name of the subscription table generated or used at the given Subscriber. When not specified, the [MSreplication_subscriptions &#40;Transact-SQL&#41;](~/relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) table is used. Use this option for database management systems (DBMS) that do not support long file names.  
   
  **-SubscriptionType** [ **0**| **1**| **2**]  
  Specifies the subscription type for distribution. A value of **0** indicates a push subscription, a value of **1** indicates a pull subscription, and a value of **2** indicates an anonymous subscription.  
@@ -274,7 +274,7 @@ manager: "jhubbard"
  Must be specified as a parameter for a publication that allows data transformation.  
   
  **-UseInprocLoader**  
- Improves the performance of the initial snapshot by causing the Distribution Agent to use the BULK INSERT command when applying snapshot files to the Subscriber. This parameter is deprecated because it is not compatible with the XML data type. If you are not replicating XML data, this parameter can be used. This parameter cannot be used with character mode snapshots or non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers. If you use this parameter, the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service account at the Subscriber must have read permissions on the directory where the snapshot .bcp data files are located. When this parameter is not used, the agent (for non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers) or the ODBC driver loaded by the agent (for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers) reads from the files, so the security context of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service account is not used.  
+ Improves the performance of the initial snapshot by causing the Distribution Agent to use the BULK INSERT command when applying snapshot files to the Subscriber. This parameter is deprecated because it is not compatible with the XML data type. If you are not replicating XML data, this parameter can be used. This parameter cannot be used with character mode snapshots or non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers. If you use this parameter, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account at the Subscriber must have read permissions on the directory where the snapshot .bcp data files are located. When this parameter is not used, the agent (for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers) or the ODBC driver loaded by the agent (for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers) reads from the files, so the security context of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account is not used.  
   
  **-UseOledbStreaming**  
  When specified, enables the binding of binary large object data as a stream. Use **-OledbStreamThreshold** to specify the size, in bytes, above which a stream will be used.  
@@ -282,7 +282,7 @@ manager: "jhubbard"
 ## Remarks  
   
 > [!IMPORTANT]  
->  If you have installed [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent to run under a local system account rather than under a domain user account (the default), the service can only access the local computer. If the Distribution Agent that runs under [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent is configured to use Windows Authentication Mode when it logs in to an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], the Distribution Agent fails. The default setting is [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication. For information on changing security accounts, see [View and Modify Replication Security Settings](../../../2014/relational-databases/replication/view-and-modify-replication-security-settings.md).  
+>  If you have installed [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to run under a local system account rather than under a domain user account (the default), the service can only access the local computer. If the Distribution Agent that runs under [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is configured to use Windows Authentication Mode when it logs in to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the Distribution Agent fails. The default setting is [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. For information on changing security accounts, see [View and Modify Replication Security Settings](../../../2014/relational-databases/replication/view-and-modify-replication-security-settings.md).  
   
  To start the Distribution Agent, execute **distrib.exe** from the command prompt. For information, see [Replication Agent Executables Concepts](../../../2014/relational-databases/replication/dev-guide/replication-agent-executables-concepts.md).  
   

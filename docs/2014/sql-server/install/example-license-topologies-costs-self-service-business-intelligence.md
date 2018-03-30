@@ -12,13 +12,13 @@ ms.topic: "article"
 ms.assetid: 682b8711-407a-48d1-9807-415d4c24dad6
 caps.latest.revision: 13
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "jhubbard"
 ---
 # Example License Topologies and Costs  for SQL Server 2014 Self-Service Business Intelligence
-  This topic illustrates high-level considerations for selecting the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence edition or the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise edition. The topic includes several sample on-premises Microsoft self-service Business Intelligence (BI) topologies. The examples include the editions and licenses you can utilize to optimize the balance between cost and performance. The topologies, number of servers and, licensing cost are provided **only as examples**. Microsoft [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] and Microsoft SharePoint 2013 introduced several changes in licensing that provide more options in how you can license your servers, users, and devices. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Licensing supports the same Business Intelligence related scenarios.  
+  This topic illustrates high-level considerations for selecting the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Business Intelligence edition or the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition. The topic includes several sample on-premises Microsoft self-service Business Intelligence (BI) topologies. The examples include the editions and licenses you can utilize to optimize the balance between cost and performance. The topologies, number of servers and, licensing cost are provided **only as examples**. Microsoft [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and Microsoft SharePoint 2013 introduced several changes in licensing that provide more options in how you can license your servers, users, and devices. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Licensing supports the same Business Intelligence related scenarios.  
   
--   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] is available in the Business Intelligence edition and offers per core licensing for some editions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] is available in the Business Intelligence edition and offers per core licensing for some editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   SharePoint 2013 simplified SharePoint Server licensing for extranet and internet scenarios as well as options for SharePoint Online.  
   
@@ -49,9 +49,9 @@ manager: "jhubbard"
   
 -   Interactive PowerPivot workbooks in the browser.  
   
--   Interactive [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] reports in SharePoint.  
+-   Interactive [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] reports in SharePoint.  
   
--   [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Gallery, Schedule Data refresh, Management Dashboard.  
+-   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Gallery, Schedule Data refresh, Management Dashboard.  
   
 -   Reporting Services in SharePoint mode, including Data Alerts.  
   
@@ -68,7 +68,7 @@ manager: "jhubbard"
   
 -   The SQL Server BI edition uses both Server licenses and Client Access Licenses (CAL).  
   
--   CAL licenses are based on each user or device connected to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], regardless of the number of the servers they connect to.  
+-   CAL licenses are based on each user or device connected to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], regardless of the number of the servers they connect to.  
   
 -   Core licensing requires all the cores in the server to be covered by a license. There is a minimum of **four** core licenses required for each physical processor in the server.  
   
@@ -80,7 +80,7 @@ manager: "jhubbard"
 |Business Intelligence|**(Yes)** $8592 + $199 per CAL|Not applicable|  
 |Standard|**(Yes)**|**(Yes)**|  
   
- For more information on sample [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] license prices, see:  
+ For more information on sample [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] license prices, see:  
   
 -   [Licensing for Virtual Environments](http://www.microsoft.com/licensing/about-licensing/virtualization.aspx) (http://www.microsoft.com/licensing/about-licensing/virtualization.aspx).  
   
@@ -125,8 +125,8 @@ manager: "jhubbard"
   
 -   [How to Buy SharePoint](http://sharepoint.microsoft.com/en-in/Pages/buy.aspx) (http://sharepoint.microsoft.com/en-in/Pages/buy.aspx).  
   
-##  <a name="bkmk_3tier_powerpivot"></a> 3 Tier Topology with Separate [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Servers  
- This example illustrates that with 800 or less users, it is least expensive to use the SQL Server BI edition for the SharePoint application servers and [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint servers. However when there are 800 users or more, SQL Server Enterprise Edition is less expensive. Core licensing is independent of the number of users, and therefore there is a cost threshold point when you compare core and CAL license costs and the number of user’s increases. From the threshold point onwards the Enterprise Edition is the least expensive solution. To determine the cost threshold, compare costs based on the number of cores to be licensed versus the number of end-user or end device CALs to be licensed.  
+##  <a name="bkmk_3tier_powerpivot"></a> 3 Tier Topology with Separate [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Servers  
+ This example illustrates that with 800 or less users, it is least expensive to use the SQL Server BI edition for the SharePoint application servers and [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint servers. However when there are 800 users or more, SQL Server Enterprise Edition is less expensive. Core licensing is independent of the number of users, and therefore there is a cost threshold point when you compare core and CAL license costs and the number of user’s increases. From the threshold point onwards the Enterprise Edition is the least expensive solution. To determine the cost threshold, compare costs based on the number of cores to be licensed versus the number of end-user or end device CALs to be licensed.  
   
 -   This example is an intranet deployment; therefore SharePoint CAL licensing applies for SharePoint 2013.  
   
@@ -134,9 +134,9 @@ manager: "jhubbard"
   
      The SharePoint service application databases run on database role (4) servers.  
   
--   [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint runs on separate servers (3). [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 runs outside the SharePoint farm and can be installed on servers that do not include a SharePoint installation, improving performance.  
+-   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint runs on separate servers (3). [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 runs outside the SharePoint farm and can be installed on servers that do not include a SharePoint installation, improving performance.  
   
--   The Database role (4) uses SQL Server Enterprise so that [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] feature, AlwaysOn Availability Groups, is available.  
+-   The Database role (4) uses SQL Server Enterprise so that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] feature, AlwaysOn Availability Groups, is available.  
   
  ![bi_license_3tiers_and_ASseparate](../../../2014/sql-server/install/media/bi-license-3tiers-and-asseparate.gif "bi_license_3tiers_and_ASseparate")  
   
@@ -155,7 +155,7 @@ manager: "jhubbard"
   
 -   Analysis Services in PowerPivot mode (2) runs outside the farm but PowerPivot is running **on the same physical** servers in the other application role.  
   
--   The Database role (3) uses SQL Server Enterprise so that the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] feature, AlwaysOn Availability Groups is available.  
+-   The Database role (3) uses SQL Server Enterprise so that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] feature, AlwaysOn Availability Groups is available.  
   
  ![bi_license_3tiers](../../../2014/sql-server/install/media/bi-license-3tiers.gif "bi_license_3tiers")  
   
@@ -168,7 +168,7 @@ manager: "jhubbard"
  ![bi_license_3tiers_calcs3](../../../2014/sql-server/install/media/bi-license-3tiers-calcs3.gif "bi_license_3tiers_calcs3")  
   
 ##  <a name="bkmk_2tier"></a> 2 Tier Topology  
- With only 2 tiers, the SQL Server Enterprise Edition is used so that the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] feature AlwaysOn Availability Groups is available for the SQL Server Database Engine. Therefore there are not cost differences to compare between SQL Server editions. The only variable is SharePoint CAL pricing based on the number of users.  
+ With only 2 tiers, the SQL Server Enterprise Edition is used so that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] feature AlwaysOn Availability Groups is available for the SQL Server Database Engine. Therefore there are not cost differences to compare between SQL Server editions. The only variable is SharePoint CAL pricing based on the number of users.  
   
 -   This example is an intranet deployment; therefore SharePoint CAL licensing applies for SharePoint 2013.  
   

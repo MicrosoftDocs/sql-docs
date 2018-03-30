@@ -29,7 +29,7 @@ manager: "jhubbard"
 # srv_parammaxlen (Extended Stored Procedure API)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
   
  Returns the maximum data length of a remote stored procedure call parameter. This function has been superseded by the **srv_paraminfo** function.  
   
@@ -57,7 +57,7 @@ n
 ## Returns  
  The maximum length, in bytes, of the parameter data. If there is no *n*th parameter or if there is no remote stored procedure, it returns -1.  
   
- This function returns the following values, if the parameter is one of the following [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data types.  
+ This function returns the following values, if the parameter is one of the following [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types.  
   
 |New data types|Input data length|  
 |--------------------|-----------------------|  

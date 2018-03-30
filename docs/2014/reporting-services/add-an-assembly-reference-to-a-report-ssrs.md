@@ -18,11 +18,11 @@ helpviewer_keywords:
 ms.assetid: 0a03939e-48ce-4c30-b227-98533f2e0ccb
 caps.latest.revision: 42
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Add an Assembly Reference to a Report (SSRS)
-  When you embed custom code that contains references to [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] classes that are not in <xref:System.Math> or <xref:System.Convert>, you must provide an assembly reference to the report so that the report processor can resolve the names. For more information, see [Add Code to a Report &#40;SSRS&#41;](../../2014/reporting-services/add-code-to-a-report-ssrs.md).  
+  When you embed custom code that contains references to [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] classes that are not in <xref:System.Math> or <xref:System.Convert>, you must provide an assembly reference to the report so that the report processor can resolve the names. For more information, see [Add Code to a Report &#40;SSRS&#41;](../../2014/reporting-services/add-code-to-a-report-ssrs.md).  
   
 ### To add an assembly reference to a report  
   
@@ -37,7 +37,7 @@ manager: "mblythe"
     > [!NOTE]  
     >  Specify a class and instance name only for instance-based members. Do not specify static members in the **Classes** list. For more information, see [Custom Code and Assembly References in Expressions in Report Designer &#40;SSRS&#41;](../../2014/reporting-services/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## See Also  
  [Using Custom Assemblies with Reports](../../2014/reporting-services/dev-guide/using-custom-assemblies-with-reports.md)   

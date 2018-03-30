@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 2d746550-f8cc-4e97-8a06-d0f03cffc18d
 caps.latest.revision: 23
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Reports, Report Parts, and Report Definitions (Report Builder and SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] uses a variety of terms to describe a report in different states, including the initial definition, the published report, and the viewed report as it appears to the user.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] uses a variety of terms to describe a report in different states, including the initial definition, the published report, and the viewed report as it appears to the user.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## Report Definition (.rdl) Files  
  A report definition is a file that you create in Report Builder or Report Designer. It provides a complete description of data source connections, queries used to retrieve data, expressions, parameters, images, text boxes, tables, and any other design-time elements that you might include in a report. Although report definitions can be complex, at a minimum they specify a query and other report content, report properties, and a report layout.  
@@ -37,12 +37,12 @@ manager: "mblythe"
 ## Report Part (.rsc) Files  
  A report part definition is an XML fragment of a report definition file. You create report parts by creating a report definition, and then selecting report items in the report to publish separately as report parts. Report parts include data regions, rectangles and their contained items, and images. You can save a report part with its dependent datasets and shared data source references so it can be reused in other reports.  
   
- [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
+ [!INCLUDE[ssRBrptparts](../includes/ssrbrptparts-md.md)]  
   
 ## Published Reports  
  After you create an .rdl file, you can save it locally, or save it to a personal folder (such as the My Reports folder) on the report server. When the report is ready for others to see, you publish it by saving it from Report Builder to a public folder on the report server, uploading it through Report Manager, or deploying a report project solution from Report Designer. A published report is an item that is stored in a report server database and managed on a report server or SharePoint site.  
   
- A published report is secured through role assignments using the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] role-based security model. Published reports are accessed through URLs, SharePoint Web parts, or Report Manager, or you can navigate to and open them in Report Builder.  
+ A published report is secured through role assignments using the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] role-based security model. Published reports are accessed through URLs, SharePoint Web parts, or Report Manager, or you can navigate to and open them in Report Builder.  
   
 ### Report Snapshots  
  A report can also be published as a snapshot that contains both layout information and data as of the time the report was initially run. Report snapshots are not saved in a particular rendering format. Instead, report snapshots are rendered in a final viewing format (such as HTML) only when a user or an application requests it. For more information, see [Finding and Viewing Reports in Report Manager &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/finding-and-viewing-reports-in-report-manager-report-builder-and-ssrs.md).  
@@ -54,7 +54,7 @@ manager: "mblythe"
   
 -   Find and run a report in Report Manager.  
   
--   Find and run a report on a SharePoint site that is integrated with a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server.  
+-   Find and run a report on a SharePoint site that is integrated with a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report server.  
   
 -   Subscribe to a report, which is delivered to an e-mail inbox or a file share in an output format that you specify.  
   

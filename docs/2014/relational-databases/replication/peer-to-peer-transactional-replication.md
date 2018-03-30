@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 caps.latest.revision: 68
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Peer-to-Peer Transactional Replication
@@ -92,7 +92,7 @@ manager: "jhubbard"
   
 ### General Considerations  
   
--   Peer-to-peer replication is available only in Enterprise versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   Peer-to-peer replication is available only in Enterprise versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   All databases that participate in peer-to-peer replication should contain identical schema and data:  
   
@@ -121,7 +121,7 @@ manager: "jhubbard"
   
 -   Timestamp columns.  
   
--   Non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Publishers and Subscribers.  
+-   Non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers and Subscribers.  
   
 -   Immediate updating and queued updating subscriptions.  
   
@@ -129,7 +129,7 @@ manager: "jhubbard"
   
 -   Partial subscriptions.  
   
--   Attachable subscriptions and transformable subscriptions. (Both of these options were deprecated in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].)  
+-   Attachable subscriptions and transformable subscriptions. (Both of these options were deprecated in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].)  
   
 -   Shared Distribution Agents.  
   
@@ -152,7 +152,7 @@ manager: "jhubbard"
 ### Maintenance Considerations  
  The following actions require the system to be quiesced. This means stopping activity on published tables at all nodes and making sure that each node has received all changes from all other nodes.  
   
--   Adding a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] node to an existing topology  
+-   Adding a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] node to an existing topology  
   
 -   Adding an article to an existing publication  
   

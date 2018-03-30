@@ -23,7 +23,7 @@ ms.author: "jroth"
 manager: "jhubbard"
 ---
 # Use the Availability Group Wizard (SQL Server Management Studio)
-  This topic describes how to use the New Availability Group Wizard (in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) to create and configure an AlwaysOn availability group in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. An *availability group* defines a set of user databases that will fail over as a single unit and a set of failover partners, known as *availability replicas*, that support failover.  
+  This topic describes how to use the New Availability Group Wizard (in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]) to create and configure an AlwaysOn availability group in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. An *availability group* defines a set of user databases that will fail over as a single unit and a set of failover partners, known as *availability replicas*, that support failover.  
   
 > [!NOTE]  
 >  For an introduction to availability groups, see [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/overview-of-alwayson-availability-groups-sql-server.md).  
@@ -37,7 +37,7 @@ manager: "jhubbard"
 -   **To create and configure an availability group, using:**  [New Availability Group Wizard (SQL Server Management Studio)](#RunAGwiz)  
   
 > [!NOTE]  
->  As an alternative to using the New Availability Group Wizard, you can use [!INCLUDE[tsql](../../includes/tsql-md.md)] or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell cmdlets. For more information, see [Create an Availability Group &#40;Transact-SQL&#41;](../../2014/database-engine/create-an-availability-group-transact-sql.md) or [Create an Availability Group &#40;SQL Server PowerShell&#41;](../../2014/database-engine/create-an-availability-group-sql-server-powershell.md).  
+>  As an alternative to using the New Availability Group Wizard, you can use [!INCLUDE[tsql](../includes/tsql-md.md)] or [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell cmdlets. For more information, see [Create an Availability Group &#40;Transact-SQL&#41;](../../2014/database-engine/create-an-availability-group-transact-sql.md) or [Create an Availability Group &#40;SQL Server PowerShell&#41;](../../2014/database-engine/create-an-availability-group-sql-server-powershell.md).  
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
  We strongly recommend that you read this section before attempting to create your first availability group.  
@@ -45,19 +45,19 @@ manager: "jhubbard"
 ###  <a name="PrerequisitesRestrictions"></a> Prerequisites, Restrictions, and Recommendations  
  In most cases, you can use the New Availability Group Wizard to complete all of the tasks require to create and configure an availability group. However, you might need to complete some of the tasks manually.  
   
--   Before creating an availability group, verify that the instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that host availability replicas reside on different Windows Server Failover Clustering (WSFC) node within the same WSFC failover cluster. Also, verify that each of the server instance meets all other [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] prerequisites. For more information, we strongly recommend that you read [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/prereqs-restrictions-recommendations-always-on-availability.md).  
+-   Before creating an availability group, verify that the instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that host availability replicas reside on different Windows Server Failover Clustering (WSFC) node within the same WSFC failover cluster. Also, verify that each of the server instance meets all other [!INCLUDE[ssHADR](../includes/sshadr-md.md)] prerequisites. For more information, we strongly recommend that you read [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/prereqs-restrictions-recommendations-always-on-availability.md).  
   
--   If a server instance that you select to host an availability replica is running under a domain user account and does not yet have a database mirroring endpoint, the wizard can create the endpoint and grant CONNECT permission to the server instance service account. However, if the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service is running as a built-in account, such as Local System, Local Service, or Network Service, or a nondomain account, you must use certificates for endpoint authentication, and the wizard will be unable to create a database mirroring endpoint on the server instance. In this case, we recommend that you create the database mirroring endpoints manually before you launch the New Availability Group Wizard.  
+-   If a server instance that you select to host an availability replica is running under a domain user account and does not yet have a database mirroring endpoint, the wizard can create the endpoint and grant CONNECT permission to the server instance service account. However, if the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] service is running as a built-in account, such as Local System, Local Service, or Network Service, or a nondomain account, you must use certificates for endpoint authentication, and the wizard will be unable to create a database mirroring endpoint on the server instance. In this case, we recommend that you create the database mirroring endpoints manually before you launch the New Availability Group Wizard.  
   
      `To use certificates for a database mirroring endpoint:`  
   
-     [CREATE ENDPOINT &#40;Transact-SQL&#41;](../Topic/CREATE%20ENDPOINT%20\(Transact-SQL\).md)  
+     [CREATE ENDPOINT &#40;Transact-SQL&#41;](~/t-sql/statements/create-endpoint-transact-sql.md)  
   
      [Use Certificates for a Database Mirroring Endpoint &#40;Transact-SQL&#41;](../../2014/database-engine/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
 -   SQL Server Failover Cluster Instances (FCIs) do not support automatic failover by availability groups, so any availability replica that is hosted by an FCI can only be configured for manual failover.  
   
--   If a database is encrypted or even contains a Database Encryption Key (DEK), you cannot use the [!INCLUDE[ssAoNewAgWiz](../../includes/ssaonewagwiz-md.md)] or [!INCLUDE[ssAoAddDbWiz](../../includes/ssaoadddbwiz-md.md)] to add the database to an availability group. Even if an encrypted database has been decrypted, its log backups might contain encrypted data. In this case, full initial data synchronization could fail on the database. This is because the restore log operation might require the certificate that was used by the database encryption keys (DEKs), and that certificate might be unavailable.  
+-   If a database is encrypted or even contains a Database Encryption Key (DEK), you cannot use the [!INCLUDE[ssAoNewAgWiz](../includes/ssaonewagwiz-md.md)] or [!INCLUDE[ssAoAddDbWiz](../includes/ssaoadddbwiz-md.md)] to add the database to an availability group. Even if an encrypted database has been decrypted, its log backups might contain encrypted data. In this case, full initial data synchronization could fail on the database. This is because the restore log operation might require the certificate that was used by the database encryption keys (DEKs), and that certificate might be unavailable.  
   
      To make a decrypted database eligible to add to an availability group using the wizard:  
   
@@ -77,7 +77,7 @@ manager: "jhubbard"
   
     -   No primary database name can exist on any server instance that hosts a secondary replica. This means that none of the new secondary databases can exist yet.  
   
-    -   You will need to specify a network share in order for the wizard to create and access backups. For the primary replica, the account used to start the [!INCLUDE[ssDE](../../includes/ssde-md.md)] must have read and write file-system permissions on a network share. For secondary replicas, the account must have read permission on the network share.  
+    -   You will need to specify a network share in order for the wizard to create and access backups. For the primary replica, the account used to start the [!INCLUDE[ssDE](../includes/ssde-md.md)] must have read and write file-system permissions on a network share. For secondary replicas, the account must have read permission on the network share.  
   
         > [!IMPORTANT]  
         >  The log backups will be part of your log backup chain. Store the log backup files appropriately.  
@@ -101,7 +101,7 @@ manager: "jhubbard"
   
 4.  The first time you run this wizard, an **Introduction** page appears. To bypass this page in the future, you can click **Do not show this page again**. After reading this page, click **Next**.  
   
-5.  On the **Specify Availability Group Name** page, enter the name of the new availability group in the **Availability group name** field. This name must be a valid [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifier that is unique on the WSFC failover cluster and in your domain as a whole. The maximum length for an availability group name is 128 characters.  
+5.  On the **Specify Availability Group Name** page, enter the name of the new availability group in the **Availability group name** field. This name must be a valid [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] identifier that is unique on the WSFC failover cluster and in your domain as a whole. The maximum length for an availability group name is 128 characters.  
   
 6.  On the **Select Databases** page, the grid lists user databases on the connected server instance that are eligible to become the *availability databases*. Select one or more of the listed databases to participate in the new availability group. These databases will initially be the initial *primary databases*.  
   
@@ -113,7 +113,7 @@ manager: "jhubbard"
   
     |Tab|Brief Description|  
     |---------|-----------------------|  
-    |**Replicas**|Use this tab to specify each instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that will host a secondary replica. Note that the server instance to which you are currently connected must host the primary replica.|  
+    |**Replicas**|Use this tab to specify each instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that will host a secondary replica. Note that the server instance to which you are currently connected must host the primary replica.|  
     |**Endpoints**|Use this tab to verify any existing database mirroring endpoints and also, if this endpoint is lacking on a server instance whose service accounts use Windows Authentication, to create the endpoint automatically. **Note:**  If any server instance is running under a non-domain user account, you need to do make a manual change to your server instance before you can proceed in the wizard. For more information, see [Prerequisites](#PrerequisitesRestrictions), earlier in this topic.|  
     |**Backup Preferences**|Use this tab to specify your backup preference for the availability group as a whole and your backup priorities for the individual availability replicas.|  
     |**Listener**|Use this tab to create an availability group listener. By default, the wizard does not create a listener.|  
@@ -141,7 +141,7 @@ manager: "jhubbard"
 10. On the **Summary** page, review your choices for the new availability group. To make a change, click **Previous** to return to the relevant page. After making the change, click **Next** to return to the **Summary** page.  
   
     > [!IMPORTANT]  
-    >  When the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account of a server instance that will host a new availability replica does not already exist as a login, the New Availability Group Wizard needs to create the login. On the **Summary** page, the wizard displays the information for the login that is to be created. If you click **Finish**, the wizard creates this login for the SQL Server service account and grants the login CONNECT permission.  
+    >  When the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] service account of a server instance that will host a new availability replica does not already exist as a login, the New Availability Group Wizard needs to create the login. On the **Summary** page, the wizard displays the information for the login that is to be created. If you click **Finish**, the wizard creates this login for the SQL Server service account and grants the login CONNECT permission.  
   
      If you are satisfied with your selections, optionally click **Script** to create a script of the steps the wizard will execute. Then, to create and configure the new availability group, click **Finish**.  
   
@@ -186,7 +186,7 @@ manager: "jhubbard"
   
  **To troubleshoot AlwaysOn Availability Groups configuration**  
   
--   [Troubleshoot AlwaysOn Availability Groups Configuration &#40;SQL Server&#41;deleted](../Topic/Troubleshoot%20AlwaysOn%20Availability%20Groups%20Configuration%20\(SQL%20Server\)deleted.md)  
+-   [Troubleshoot AlwaysOn Availability Groups Configuration &#40;SQL Server&#41;deleted](troubleshoot-alwayson-availability-groups-configuration-sql-server.md)  
   
 -   [Troubleshoot a Failed Add-File Operation &#40;AlwaysOn Availability Groups&#41;](../../2014/database-engine/troubleshoot-a-failed-add-file-operation-alwayson-availability-groups.md)  
   

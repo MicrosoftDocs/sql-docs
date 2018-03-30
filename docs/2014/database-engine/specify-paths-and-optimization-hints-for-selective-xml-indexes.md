@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
 caps.latest.revision: 11
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Specify Paths and Optimization Hints for Selective XML Indexes
@@ -20,14 +20,14 @@ manager: "jhubbard"
   
  You specify node paths and optimization hints at the same time in one of the following statements:  
   
--   In the **FOR** clause of a **CREATE** statement. For more information, see [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](../Topic/CREATE%20SELECTIVE%20XML%20INDEX%20\(Transact-SQL\).md).  
+-   In the **FOR** clause of a **CREATE** statement. For more information, see [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-selective-xml-index-transact-sql.md).  
   
--   In the **ADD** clause of an **ALTER** statement. For more information, see [ALTER INDEX &#40;Selective XML Indexes&#41;](../Topic/ALTER%20INDEX%20\(Selective%20XML%20Indexes\).md).  
+-   In the **ADD** clause of an **ALTER** statement. For more information, see [ALTER INDEX &#40;Selective XML Indexes&#41;](~/t-sql/statements/alter-index-selective-xml-indexes.md).  
   
  For more information about selective XML indexes, see [Selective XML Indexes &#40;SXI&#41;](../../2014/database-engine/selective-xml-indexes-sxi.md).  
   
 ##  <a name="untyped"></a> Understanding XQuery and SQL Server Types in Untyped XML  
- Selective XML indexes support two type systems: XQuery types and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types. The indexed path can be used either to match an XQuery expression, or to match the return type of the value() method of the XML data type.  
+ Selective XML indexes support two type systems: XQuery types and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] types. The indexed path can be used either to match an XQuery expression, or to match the return type of the value() method of the XML data type.  
   
 -   When a path to index is not annotated, or is annotated with the XQUERY keyword, the path matches an XQuery expression. There are two variations for XQUERY-annotated node paths:  
   
@@ -35,13 +35,13 @@ manager: "jhubbard"
   
     -   If you specify the XQUERY keyword and the XQuery data type, and optionally other optimization hints, then you can achieve the best possible performance and the most efficient possible storage. However, a cast can fail.  
   
--   When a path to index is annotated with the SQL keyword, the path matches the return type of the value() method of the XML data type. Specify the appropriate [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type, which is the return type that you expect from the value() method.  
+-   When a path to index is annotated with the SQL keyword, the path matches the return type of the value() method of the XML data type. Specify the appropriate [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] data type, which is the return type that you expect from the value() method.  
   
- There are subtle differences between the XQuery expressions XML type system and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type system applied to the value() method of the XML data type. These differences include the following:  
+ There are subtle differences between the XQuery expressions XML type system and the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] type system applied to the value() method of the XML data type. These differences include the following:  
   
--   The XQuery type system is aware of trailing spaces. For example, according to XQuery type semantics, the strings "abc" and "abc " are not equal, while in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] these strings are equal.  
+-   The XQuery type system is aware of trailing spaces. For example, according to XQuery type semantics, the strings "abc" and "abc " are not equal, while in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] these strings are equal.  
   
--   XQuery floating point data types support special values of +/- zero and +/- infinity. These special values are not supported in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] floating point data types.  
+-   XQuery floating point data types support special values of +/- zero and +/- infinity. These special values are not supported in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] floating point data types.  
   
 ### XQuery Types in Untyped XML  
   
@@ -106,11 +106,11 @@ pathY = '/a/b/d' as XQUERY 'xs:string' MAXLENGTH(200) SINGLETON
   
 ### SQL Server Types in Untyped XML  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types match the return value of the value() method.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] types match the return value of the value() method.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types support this optimization hint: SINGLETON.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] types support this optimization hint: SINGLETON.  
   
- Specifying a type is mandatory for paths that return [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types. Use the same [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type that you would use in the value() method.  
+ Specifying a type is mandatory for paths that return [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] types. Use the same [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] type that you would use in the value() method.  
   
  Consider the following query:  
   
@@ -134,7 +134,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
 
   
 ##  <a name="typed"></a> Understanding Selective XML Index support for typed XML  
- Typed XML in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is a schema associated with a given XML document. The schema defines overall document structure and types of nodes. If a schema exists, Selective XML Index applies the schema structure when the user promotes paths, so there is no need to specify the XQUERY types for paths.  
+ Typed XML in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is a schema associated with a given XML document. The schema defines overall document structure and types of nodes. If a schema exists, Selective XML Index applies the schema structure when the user promotes paths, so there is no need to specify the XQUERY types for paths.  
   
  Selective XML Index supports following XSD types:  
   
@@ -362,7 +362,7 @@ WHERE T.xmldata.exist('
 |**MAXLENGTH**|Yes|Yes|  
   
 ### Optimization Hints and Data Types  
- You can index nodes as XQuery data types or as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types. The following table shows which optimization hints are supported with each data type.  
+ You can index nodes as XQuery data types or as [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] data types. The following table shows which optimization hints are supported with each data type.  
   
 |Optimization hint|XQuery data types|SQL data types|  
 |-----------------------|-----------------------|--------------------|  
@@ -390,7 +390,7 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
  If a query requires the value of a node that has been indexed with the node() hint, then the selective XML index cannot be used.  
   
 ### SINGLETON optimization hint  
- Applies to: XQuery or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types  
+ Applies to: XQuery or [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] data types  
   
  The SINGLETON optimization hint specifies the cardinality of a node. This hint improves query performance since it is known in advance that a node appears at most one time within its parent or ancestor.  
   
@@ -403,14 +403,14 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
 ### DATA TYPE optimization hint  
  Applies to: XQuery data types  
   
- The DATA TYPE optimization hint lets you specify an XQuery or a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type for the indexed node. The data type is used for the column in the data table of the selective XML index that corresponds to the indexed node.  
+ The DATA TYPE optimization hint lets you specify an XQuery or a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] data type for the indexed node. The data type is used for the column in the data table of the selective XML index that corresponds to the indexed node.  
   
  When casting an existing value to the specified data type fails, the insert operation (into the index) does not fail; however, a null value is inserted into the data table of the index.  
   
 ### MAXLENGTH optimization hint  
  Applies to: XQuery data types  
   
- The MAXLENGTH optimization hint lets you limit the length of xs:string data. MAXLENGTH is not relevant for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types since you specify the length when you specify the VARCHAR or NVARCHAR date types.  
+ The MAXLENGTH optimization hint lets you limit the length of xs:string data. MAXLENGTH is not relevant for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] data types since you specify the length when you specify the VARCHAR or NVARCHAR date types.  
   
  When an existing string is longer than the specified MAXLENGTH, then inserting that value into the index fails.  
   

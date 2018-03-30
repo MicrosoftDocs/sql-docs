@@ -18,7 +18,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # SSIS Package Essentials
-  A package is the object that implements [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] functionality to extract, transform, and load data. You create a package by using the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. You can also create a package by running the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard or the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Connections Project Wizard. For more information, [Create Packages in SQL Server Data Tools](../../2014/integration-services/create-packages-in-sql-server-data-tools.md) in SSIS Designer and [Import Project Wizard](../../2014/integration-services/import-project-wizard.md).  
+  A package is the object that implements [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] functionality to extract, transform, and load data. You create a package by using the [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. You can also create a package by running the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Import and Export Wizard or the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Connections Project Wizard. For more information, [Create Packages in SQL Server Data Tools](../../2014/integration-services/create-packages-in-sql-server-data-tools.md) in SSIS Designer and [Import Project Wizard](../../2014/integration-services/import-project-wizard.md).  
   
  A basic package includes the following elements:  
   

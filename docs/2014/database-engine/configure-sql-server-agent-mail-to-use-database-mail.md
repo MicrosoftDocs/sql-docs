@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Configure SQL Server Agent Mail to Use Database Mail
-  This topic describes how to configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to use Database Mail to send notification and alerts in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  This topic describes how to configure [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent to use Database Mail to send notification and alerts in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 -   **Before you begin:**  
   
@@ -37,9 +37,9 @@ manager: "jhubbard"
   
 -   Enable Database Mail.  
   
--   Create a Database Mail account for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account to use.  
+-   Create a Database Mail account for the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent service account to use.  
   
--   Create a Database Mail profile for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account to use and add the user to the **DatabaseMailUserRole** in the **msdb** database.  
+-   Create a Database Mail profile for the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent service account to use and add the user to the **DatabaseMailUserRole** in the **msdb** database.  
   
 -   Set the profile as the default profile for the **msdb** database.  
   
@@ -51,7 +51,7 @@ manager: "jhubbard"
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  **To configure SQL Server Agent to use Database Mail**  
   
--   In Object Explorer, expand a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
+-   In Object Explorer, expand a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance.  
   
 -   Right-click **SQL Server Agent**, and then click **Properties**.  
   

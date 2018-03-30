@@ -20,17 +20,17 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Create a New OLAP Mining Structure
-  You can use the Data Mining Wizard in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] to create a mining structure that uses data from a multidimensional model. Mining models that are based on OLAP cubes can use the column and values in fact tables, dimensions, and measure groups as attributes for analysis.  
+  You can use the Data Mining Wizard in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] to create a mining structure that uses data from a multidimensional model. Mining models that are based on OLAP cubes can use the column and values in fact tables, dimensions, and measure groups as attributes for analysis.  
   
 ### To create a new OLAP mining structure  
   
-1.  In Solution Explorer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], right-click the **Mining Structures** folder in an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project, and then click **New Mining Structure** to open the Data Mining Wizard.  
+1.  In Solution Explorer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], right-click the **Mining Structures** folder in an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project, and then click **New Mining Structure** to open the Data Mining Wizard.  
   
 2.  On the **Welcome to the Data Mining Wizard** page, click **Next**.  
   
 3.  On the **Select the Definition Method** page, select **From existing cube**, and then click **Next**.  
   
-     If you get an error with the message, Unable to retrieve a list of supported data mining algorithms, open the **Project Properties** dialog box and verify that you have specified the name of an Analysis Services instance that supports multidimensional models. You cannot create mining models on an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] that supports tabular modeling.  
+     If you get an error with the message, Unable to retrieve a list of supported data mining algorithms, open the **Project Properties** dialog box and verify that you have specified the name of an Analysis Services instance that supports multidimensional models. You cannot create mining models on an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] that supports tabular modeling.  
   
 4.  On the **Create the Data Mining Structure** page, decide whether you will create a mining structure only, or a mining structure plus one related mining model. Generally it is easier to create a mining model at the same time, so that you can be prompted to include necessary columns.  
   

@@ -62,7 +62,7 @@ manager: "mblythe"
   
  The available properties and their values can be obtained by using the DISCOVER_PROPERTIES request type with the `Discover` method. There is no required order for the properties listed in the `PropertyList` element.  
   
- For more information regarding the XMLA properties supported by [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], see [Supported XMLA Properties &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/supported-xmla-properties-xmla.md).  
+ For more information regarding the XMLA properties supported by [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], see [Supported XMLA Properties &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/supported-xmla-properties-xmla.md).  
   
 ## Example  
   

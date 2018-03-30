@@ -21,7 +21,7 @@ helpviewer_keywords:
 ms.assetid: f7500a2b-61cb-41b5-816d-27609a6c58e7
 caps.latest.revision: 45
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Validate Replicated Data
@@ -35,10 +35,10 @@ manager: "jhubbard"
   
  **To validate data**  
   
- To validate all articles in a subscription, use [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], stored procedures or Replication Management Objects (RMO). For more information, see [Validate Data at the Subscriber](../../../2014/relational-databases/replication/validate-data-at-the-subscriber.md). To validate individual articles in snapshot and transactional publications, you must use stored procedures.  
+ To validate all articles in a subscription, use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], stored procedures or Replication Management Objects (RMO). For more information, see [Validate Data at the Subscriber](../../../2014/relational-databases/replication/validate-data-at-the-subscriber.md). To validate individual articles in snapshot and transactional publications, you must use stored procedures.  
   
 ## Data Validation Results  
- When validation is complete, the Distribution Agent or Merge Agent logs messages regarding success or failure (replication does not report which rows failed). These messages can be viewed in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], Replication Monitor, and replication system tables. The how-to topic listed above demonstrates how to run validation and view the results.  
+ When validation is complete, the Distribution Agent or Merge Agent logs messages regarding success or failure (replication does not report which rows failed). These messages can be viewed in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], Replication Monitor, and replication system tables. The how-to topic listed above demonstrates how to run validation and view the results.  
   
  To handle validation failures, consider the following:  
   
@@ -61,22 +61,22 @@ manager: "jhubbard"
   
 -   Binary checksum can be used with any published table. Checksum cannot validate tables with column filters, or logical table structures where column offsets differ (due to ALTER TABLE statements that drop or add columns).  
   
--   Replication validation uses the `checksum` and **binary_checksum** functions. For  information about their behavior, see  [CHECKSUM &#40;Transact-SQL&#41;](../Topic/CHECKSUM%20\(Transact-SQL\).md) and [BINARY_CHECKSUM  &#40;Transact-SQL&#41;](../Topic/BINARY_CHECKSUM%20%20\(Transact-SQL\).md).  
+-   Replication validation uses the `checksum` and **binary_checksum** functions. For  information about their behavior, see  [CHECKSUM &#40;Transact-SQL&#41;](~/t-sql/functions/checksum-transact-sql.md) and [BINARY_CHECKSUM  &#40;Transact-SQL&#41;](~/t-sql/functions/binary-checksum-transact-sql.md).  
   
 -   Validation by using binary checksum or checksum can incorrectly report a failure if data types are different at the Subscriber than they are at the Publisher. This can occur if you do any one of the following:  
   
-    -   Explicitly set schema options to map data types for earlier versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+    -   Explicitly set schema options to map data types for earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-    -   Set the publication compatibility level for a merge publication to an earlier version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], and published tables contain one or more data types that must be mapped for this version.  
+    -   Set the publication compatibility level for a merge publication to an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and published tables contain one or more data types that must be mapped for this version.  
   
     -   Manually initialize a subscription and are using different data types at the Subscriber.  
   
 -   Binary checksum and checksum validations are not supported for transformable subscriptions for transactional replication.  
   
--   Validation is not supported for data replicated to non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers.  
+-   Validation is not supported for data replicated to non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers.  
   
 ## How Data Validation Works  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] validates data by calculating a row count or a checksum at the Publisher and then comparing those values to the row count or checksum calculated at the Subscriber. One value is calculated for the entire publication table and one value is calculated for the entire subscription table, but data in `text`, `ntext`, or `image` columns is not included in the calculations.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] validates data by calculating a row count or a checksum at the Publisher and then comparing those values to the row count or checksum calculated at the Subscriber. One value is calculated for the entire publication table and one value is calculated for the entire subscription table, but data in `text`, `ntext`, or `image` columns is not included in the calculations.  
   
  While the calculations are performed, shared locks are placed temporarily on tables for which row counts or checksums are being run, but the calculations are completed quickly and the shared locks removed, usually in a matter of seconds.  
   

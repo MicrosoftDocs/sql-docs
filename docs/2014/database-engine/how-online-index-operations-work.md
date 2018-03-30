@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: eef0c9d1-790d-46e4-a758-d0bf6742e6ae
 caps.latest.revision: 27
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # How Online Index Operations Work
@@ -36,7 +36,7 @@ manager: "jhubbard"
   
 -   **Target**  
   
-     The target or targets is the new index (or heap) or a set of new indexes that is being created or rebuilt. User insert, update, and delete operations to the source are applied by the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] to the target during the index operation. For example, if the online index operation is rebuilding a clustered index, the target is the rebuilt clustered index; the [!INCLUDE[ssDE](../../includes/ssde-md.md)] does not rebuild nonclustered indexes when a clustered index is rebuilt.  
+     The target or targets is the new index (or heap) or a set of new indexes that is being created or rebuilt. User insert, update, and delete operations to the source are applied by the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] to the target during the index operation. For example, if the online index operation is rebuilding a clustered index, the target is the rebuilt clustered index; the [!INCLUDE[ssDE](../includes/ssde-md.md)] does not rebuild nonclustered indexes when a clustered index is rebuilt.  
   
      The target index is not searched while processing SELECT statements until the index operation is committed. Internally, the index is marked as write-only.  
   

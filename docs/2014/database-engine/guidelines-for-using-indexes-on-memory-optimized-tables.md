@@ -18,17 +18,17 @@ ms.author: "sstein"
 manager: "jhubbard"
 ---
 # Guidelines for Using Indexes on Memory-Optimized Tables
-  Indexes are used for efficiently accessing data in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables. Specifying the right indexes can dramatically improve query performance. Consider, for example, the query:  
+  Indexes are used for efficiently accessing data in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tables. Specifying the right indexes can dramatically improve query performance. Consider, for example, the query:  
   
 ```tsql  
 SELECT c1, c2 FROM t WHERE c1 = 1;  
 ```  
   
- If there is no index on column c1, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will need to scan the entire table t, and then filter on the rows that satisfy the condition c1=1. However, if t has an index on column c1, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can seek directly on the value 1 and retrieve the rows.  
+ If there is no index on column c1, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] will need to scan the entire table t, and then filter on the rows that satisfy the condition c1=1. However, if t has an index on column c1, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] can seek directly on the value 1 and retrieve the rows.  
   
- When searching for records that have a specific value, or range of values, for one or more columns in the table, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can use an index on those columns to quickly locate the corresponding records. Both disk-based and memory-optimized tables benefit from indexes. There are, however, certain differences between index structures that need to be considered when using memory-optimized tables. (Indexes on memory-optimized tables are referred to as memory-optimized indexes.) Some of the key differences are:  
+ When searching for records that have a specific value, or range of values, for one or more columns in the table, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] can use an index on those columns to quickly locate the corresponding records. Both disk-based and memory-optimized tables benefit from indexes. There are, however, certain differences between index structures that need to be considered when using memory-optimized tables. (Indexes on memory-optimized tables are referred to as memory-optimized indexes.) Some of the key differences are:  
   
--   Memory-optimized indexes must be created with [CREATE TABLE &#40;Transact-SQL&#41;](../Topic/CREATE%20TABLE%20\(Transact-SQL\).md). Disk-based indexes can be created with `CREATE TABLE` and `CREATE INDEX`.  
+-   Memory-optimized indexes must be created with [CREATE TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/create-table-transact-sql.md). Disk-based indexes can be created with `CREATE TABLE` and `CREATE INDEX`.  
   
 -   Memory-optimized indexes exist only in memory. Index structures are not persisted to disk and index operations are not logged in the transaction log. The index structure is created when the memory-optimized table is created in memory, both during CREATE TABLE and during database startup.  
   
@@ -59,7 +59,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
  When querying a memory-optimized table with inequality predicates, nonclustered indexes will perform better than nonclustered hash indexes.  
   
- The hash index requires a key (to hash) to seek into the index. If an index key consists of two columns and you only provide the first column, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not have a complete key to hash. This will result in an index scan query plan. Usage determines which columns should be indexed.  
+ The hash index requires a key (to hash) to seek into the index. If an index key consists of two columns and you only provide the first column, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not have a complete key to hash. This will result in an index scan query plan. Usage determines which columns should be indexed.  
   
  When a column in a nonclustered index has the same value in many rows (index key columns have a lot of duplicate values), performance can degrade for updates, inserts, and deletions.  One way to improve performance in this situation is to add another column to the nonclustered index.  
   

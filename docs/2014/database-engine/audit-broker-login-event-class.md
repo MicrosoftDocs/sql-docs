@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Audit Broker Login Event Class
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creates an **Audit Broker Login** event to report audit messages related to Service Broker transport security.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] creates an **Audit Broker Login** event to report audit messages related to Service Broker transport security.  
   
 ## Audit Broker Login Event Class Data Columns  
   
@@ -28,7 +28,7 @@ manager: "jhubbard"
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|Unused in this event class.|10|Yes|  
 |**ClientProcessID**|**int**|Unused in this event class.|9|Yes|  
-|**DatabaseID**|**int**|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] displays the name of the database if the **ServerName** data column is captured in the trace and the server is available. Determine the value for a database by using the DB_ID function.|3|Yes|  
+|**DatabaseID**|**int**|[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] displays the name of the database if the **ServerName** data column is captured in the trace and the server is available. Determine the value for a database by using the DB_ID function.|3|Yes|  
 |**EventClass**|**int**|The type of event class captured. Always **159** for **Audit Broker Login**.|27|No|  
 |**EventSequence**|**int**|Sequence number for this event.|51|No|  
 |**EventSubClass**|**int**|The type of event subclass, providing further information about each event class. The table below lists the event subclass values for this event.|21|Yes|  
@@ -61,8 +61,8 @@ manager: "jhubbard"
 |6|Authorization Failure|An Authorization Failure event reports that Service Broker denied authorization for the connection. For Windows Authentication, this event reports that the security identifier for the connection does not match a database user. For certificate-based authentication, this event reports that the public key delivered in the message does not correspond to a certificate in the database.|  
   
 ## See Also  
- [CREATE ENDPOINT &#40;Transact-SQL&#41;](../Topic/CREATE%20ENDPOINT%20\(Transact-SQL\).md)   
- [ALTER ENDPOINT &#40;Transact-SQL&#41;](../Topic/ALTER%20ENDPOINT%20\(Transact-SQL\).md)   
+ [CREATE ENDPOINT &#40;Transact-SQL&#41;](~/t-sql/statements/create-endpoint-transact-sql.md)   
+ [ALTER ENDPOINT &#40;Transact-SQL&#41;](~/t-sql/statements/alter-endpoint-transact-sql.md)   
  [SQL Server Service Broker](../../2014/database-engine/sql-server-service-broker.md)  
   
   

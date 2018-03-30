@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 8b591801-42d5-49fa-b710-bf7e6917accf
 caps.latest.revision: 33
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Using the RenderedOutputFile Class for a Delivery Extension

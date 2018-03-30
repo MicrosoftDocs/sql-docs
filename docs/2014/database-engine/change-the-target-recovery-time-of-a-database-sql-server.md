@@ -16,7 +16,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Change the Target Recovery Time of a Database (SQL Server)
-  This topic describes how to set the change the target recovery time of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. By default, the target recovery time is 0, and the database uses *automatic checkpoints* (which are controlled by the **recovery interval** server option). Setting the target recovery time to greater than 0 causes the database to use the *indirect-checkpoints* and establishes an upper-bound on recovery time for this database.  
+  This topic describes how to set the change the target recovery time of a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)]. By default, the target recovery time is 0, and the database uses *automatic checkpoints* (which are controlled by the **recovery interval** server option). Setting the target recovery time to greater than 0 causes the database to use the *indirect-checkpoints* and establishes an upper-bound on recovery time for this database.  
   
 > [!NOTE]  
 >  The upper-bound that is specified for a given database by its target recovery time setting could be exceeded if a long-running transaction causes excessive UNDO times.  
@@ -40,7 +40,7 @@ manager: "jhubbard"
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  **To change the target recovery time**  
   
-1.  In **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], and expand that instance.  
+1.  In **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], and expand that instance.  
   
 2.  Right-click the database you want to change, and click the **Properties** command.  
   
@@ -51,9 +51,9 @@ manager: "jhubbard"
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  **To change the target recovery time**  
   
-1.  Connect to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] where the database resides.  
+1.  Connect to the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] where the database resides.  
   
-2.  Use the following [ALTER DATABASE](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)statement, as follows:  
+2.  Use the following [ALTER DATABASE](~/t-sql/statements/alter-database-transact-sql-set-options.md)statement, as follows:  
   
      TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDS | MINUTES }  
   
@@ -66,7 +66,7 @@ manager: "jhubbard"
      MINUTES  
      Indicates that *target_recovery_time* is expressed as the number of minutes.  
   
-     The following example sets the target recovery time of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to `60` seconds.  
+     The following example sets the target recovery time of the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database to `60` seconds.  
   
     ```  
     ALTER DATABASE AdventureWorks2012 SET TARGET_RECOVERY_TIME = 60 SECONDS;  
@@ -74,6 +74,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Database Checkpoints &#40;SQL Server&#41;](../../2014/database-engine/database-checkpoints-sql-server.md)   
- [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)  
+ [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-set-options.md)  
   
   

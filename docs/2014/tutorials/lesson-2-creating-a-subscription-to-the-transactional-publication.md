@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5995b7d2-7c06-46f5-b96c-2bee879bcda2
 caps.latest.revision: 13
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Lesson 2: Creating a Subscription to the Transactional Publication
-  In this lesson, you will create a subscription using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. This lesson requires that you have completed the previous lesson, [Lesson 1: Publishing Data Using Transactional Replication](../../2014/tutorials/lesson-1-publishing-data-using-transactional-replication.md).  
+  In this lesson, you will create a subscription using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. This lesson requires that you have completed the previous lesson, [Lesson 1: Publishing Data Using Transactional Replication](../../2014/tutorials/lesson-1-publishing-data-using-transactional-replication.md).  
   
 ### To create the subscription  
   
-1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expand the server node, and then expand the **Replication** folder.  
+1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], expand the server node, and then expand the **Replication** folder.  
   
 2.  In the **Local Publications** folder, right-click the **AdvWorksProductTrans** publication, and then click **New Subscriptions**.  
   
@@ -44,7 +44,7 @@ manager: "jhubbard"
   
 ### Setting database permissions at the Subscriber  
   
-1.  Connect to the Subscriber in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expand **Databases**, **ProductReplica**, and **Security**, right-click **Users**, and then select **New User**.  
+1.  Connect to the Subscriber in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], expand **Databases**, **ProductReplica**, and **Security**, right-click **Users**, and then select **New User**.  
   
 2.  On the **General** page, in the **User type** list, select **Windows user**.  
   
@@ -54,7 +54,7 @@ manager: "jhubbard"
   
 ### To view the synchronization status of the subscription  
   
-1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expand the server node, and then expand the **Replication** folder.  
+1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], expand the server node, and then expand the **Replication** folder.  
   
 2.  In the **Local Publications** folder, expand the **AdvWorksProductTrans** publication, right-click the subscription in the **ProductReplica** database, and then click **View Synchronization Status**.  
   

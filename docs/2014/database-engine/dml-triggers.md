@@ -16,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
 caps.latest.revision: 26
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # DML Triggers
-  DML triggers is a special type of stored procedure that automatically takes effect when a data manipulation language (DML) event takes place that affects the table or view defined in the trigger. DML events include INSERT, UPDATE, or DELETE statements. DML triggers can be used to enforce business rules and data integrity, query other tables, and include complex [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. The trigger and the statement that fires it are treated as a single transaction, which can be rolled back from within the trigger. If a severe error is detected (for example, insufficient disk space), the entire transaction automatically rolls back.  
+  DML triggers is a special type of stored procedure that automatically takes effect when a data manipulation language (DML) event takes place that affects the table or view defined in the trigger. DML events include INSERT, UPDATE, or DELETE statements. DML triggers can be used to enforce business rules and data integrity, query other tables, and include complex [!INCLUDE[tsql](../includes/tsql-md.md)] statements. The trigger and the statement that fires it are treated as a single transaction, which can be rolled back from within the trigger. If a severe error is detected (for example, insufficient disk space), the entire transaction automatically rolls back.  
   
 ## DML Trigger Benefits  
  DML triggers are similar to constraints in that they can enforce entity integrity or domain integrity. In general, entity integrity should always be enforced at the lowest level by indexes that are part of PRIMARY KEY and UNIQUE constraints or are created independently of constraints. Domain integrity should be enforced through CHECK constraints, and referential integrity (RI) should be enforced through FOREIGN KEY constraints. DML triggers are most useful when the features supported by constraints cannot meet the functional needs of the application.  
@@ -63,7 +63,7 @@ manager: "jhubbard"
 |`text`, `ntext`, and `image` column references in **inserted** and **deleted** tables|Not allowed|Allowed|  
   
  CLR Triggers  
- A CLR Trigger can be either an AFTER or INSTEAD OF trigger. A CLR trigger can also be a DDL trigger. Instead of executing a [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure, a CLR trigger executes one or more methods written in managed code that are members of an assembly created in the .NET Framework and uploaded in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ A CLR Trigger can be either an AFTER or INSTEAD OF trigger. A CLR trigger can also be a DDL trigger. Instead of executing a [!INCLUDE[tsql](../includes/tsql-md.md)] stored procedure, a CLR trigger executes one or more methods written in managed code that are members of an assembly created in the .NET Framework and uploaded in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## Related Tasks  
   
@@ -81,10 +81,10 @@ manager: "jhubbard"
 |Describes how to manage trigger security.|[Manage Trigger Security](../../2014/database-engine/manage-trigger-security.md)|  
   
 ## See Also  
- [CREATE TRIGGER &#40;Transact-SQL&#41;](../Topic/CREATE%20TRIGGER%20\(Transact-SQL\).md)   
- [ALTER TRIGGER &#40;Transact-SQL&#41;](../Topic/ALTER%20TRIGGER%20\(Transact-SQL\).md)   
- [DROP TRIGGER &#40;Transact-SQL&#41;](../Topic/DROP%20TRIGGER%20\(Transact-SQL\).md)   
- [DISABLE TRIGGER &#40;Transact-SQL&#41;](../Topic/DISABLE%20TRIGGER%20\(Transact-SQL\).md)   
- [Trigger Functions &#40;Transact-SQL&#41;](../Topic/Trigger%20Functions%20\(Transact-SQL\).md)  
+ [CREATE TRIGGER &#40;Transact-SQL&#41;](~/t-sql/statements/create-trigger-transact-sql.md)   
+ [ALTER TRIGGER &#40;Transact-SQL&#41;](~/t-sql/statements/alter-trigger-transact-sql.md)   
+ [DROP TRIGGER &#40;Transact-SQL&#41;](~/t-sql/statements/drop-trigger-transact-sql.md)   
+ [DISABLE TRIGGER &#40;Transact-SQL&#41;](~/t-sql/statements/disable-trigger-transact-sql.md)   
+ [Trigger Functions &#40;Transact-SQL&#41;](~/t-sql/functions/trigger-functions-transact-sql.md)  
   
   

@@ -16,9 +16,9 @@ ms.author: "sstein"
 manager: "jhubbard"
 ---
 # Monitor and Troubleshoot Memory Usage
-  [!INCLUDE[hek_1](../../includes/hek-1-md.md)] consumes memory in different patterns than disk-based tables. You can monitor the amount of memory allocated and used by memory-optimized tables and indexes in your database using the DMVs or performance counters provided for memory and the garbage collection subsystem.  This gives you visibility at both the system and database level and lets you prevent problems due to memory exhaustion.  
+  [!INCLUDE[hek_1](../includes/hek-1-md.md)] consumes memory in different patterns than disk-based tables. You can monitor the amount of memory allocated and used by memory-optimized tables and indexes in your database using the DMVs or performance counters provided for memory and the garbage collection subsystem.  This gives you visibility at both the system and database level and lets you prevent problems due to memory exhaustion.  
   
- This topic covers monitoring your [!INCLUDE[hek_2](../../includes/hek-2-md.md)] memory usage.  
+ This topic covers monitoring your [!INCLUDE[hek_2](../includes/hek-2-md.md)] memory usage.  
   
 ## Sections in this topic  
   
@@ -39,7 +39,7 @@ manager: "jhubbard"
   
  The following steps create a database with three memory-optimized tables that you can use in the remainder of this topic. In the example, we mapped the database to a resource pool so that we can control how much memory can be taken by memory-optimized tables.  
   
-1.  Launch [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+1.  Launch [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 2.  Click **New Query**.  
   
@@ -123,13 +123,13 @@ manager: "jhubbard"
   
 ##  <a name="bkmk_Monitoring"></a> Monitoring Memory Usage  
   
-###  <a name="bkmk_UsingSSMS"></a> Using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ships with built-in standard reports to monitor the memory consumed by in-memory tables. You can access these reports using Object Explorer as described [here](http://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx). You can also use the object explorer to monitor memory consumed by individual memory-optimized tables.  
+###  <a name="bkmk_UsingSSMS"></a> Using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]  
+ [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] ships with built-in standard reports to monitor the memory consumed by in-memory tables. You can access these reports using Object Explorer as described [here](http://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx). You can also use the object explorer to monitor memory consumed by individual memory-optimized tables.  
   
 #### Consumption at the database level  
  You can monitor memory use at the database level as follows.  
   
-1.  Launch [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and connect to a server.  
+1.  Launch [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] and connect to a server.  
   
 2.  In Object Explorer, right-click the database you want reports on.  
   
@@ -207,7 +207,7 @@ PGPOOL: 64K               0                    0                    0
 PGPOOL:  4K               0                    0                    0  
 ```  
   
- For more information see [sys.dm_xtp_system_memory_consumers &#40;Transact-SQL&#41;](../Topic/sys.dm_xtp_system_memory_consumers%20\(Transact-SQL\).md).  
+ For more information see [sys.dm_xtp_system_memory_consumers &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-xtp-system-memory-consumers-transact-sql.md).  
   
 #### Memory consumption at run-time when accessing memory-optimized tables  
  You can determine the memory consumed by run time structures, such as the procedure cache with the following query: run this query to get the memory used by run-time structures such as for the procedure cache. All run-time structures are tagged with XTP.  
@@ -240,10 +240,10 @@ memory_object_address pages_ in_bytes bytes_used type
 0x00000001F813E040    16842752            NULL       MEMOBJ_XTPBLOCKALLOC  
 ```  
   
- For more information see [sys.dm_os_memory_objects (Transact-SQL)](../Topic/sys.dm_os_memory_objects%20\(Transact-SQL\).md).  
+ For more information see [sys.dm_os_memory_objects (Transact-SQL)](~/relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).  
   
-#### Memory consumed by [!INCLUDE[hek_2](../../includes/hek-2-md.md)] engine across the instance  
- Memory allocated to the [!INCLUDE[hek_2](../../includes/hek-2-md.md)] engine and the memory-optimized objects is managed the same way as any other memory consumer within a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. The clerks of type MEMORYCLERK_XTP accounts for all the memory allocated to [!INCLUDE[hek_2](../../includes/hek-2-md.md)] engine. Use the following query to find all the memory used by the [!INCLUDE[hek_2](../../includes/hek-2-md.md)] engine.  
+#### Memory consumed by [!INCLUDE[hek_2](../includes/hek-2-md.md)] engine across the instance  
+ Memory allocated to the [!INCLUDE[hek_2](../includes/hek-2-md.md)] engine and the memory-optimized objects is managed the same way as any other memory consumer within a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance. The clerks of type MEMORYCLERK_XTP accounts for all the memory allocated to [!INCLUDE[hek_2](../includes/hek-2-md.md)] engine. Use the following query to find all the memory used by the [!INCLUDE[hek_2](../includes/hek-2-md.md)] engine.  
   
 ```tsql  
 -- this DMV accounts for all memory used by the hek_2 engine  
@@ -266,7 +266,7 @@ MEMORYCLERK_XTP      DB_ID_5    0              1358
 MEMORYCLERK_XTP      Default    64             0  
 ```  
   
- For more information see [sys.dm_os_memory_clerks (Transact-SQL)](../Topic/sys.dm_os_memory_clerks%20\(Transact-SQL\).md).  
+ For more information see [sys.dm_os_memory_clerks (Transact-SQL)](~/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).  
   
 ##  <a name="bkmk_MemOptObjects"></a> Managing memory consumed by memory-optimized objects  
  You can control the total memory consumed by memory-optimized tables by binding it to a named resource pool as described in the topic [Bind a Database with Memory-Optimized Tables to a Resource Pool](../../2014/database-engine/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md).  

@@ -24,7 +24,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Retrieving Error Information
-  This example obtains information from the various error interfaces exposed by the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider.  
+  This example obtains information from the various error interfaces exposed by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider.  
   
 ```  
 // DumpErrorInfo queries SQLOLEDB error interfaces, retrieving available  

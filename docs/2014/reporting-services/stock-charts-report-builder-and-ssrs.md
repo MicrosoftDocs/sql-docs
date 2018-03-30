@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: f75ca11e-b7f5-4ac0-ba17-fe6f82742dad
 caps.latest.revision: 7
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Stock Charts (Report Builder and SSRS)
@@ -20,10 +20,10 @@ manager: "mblythe"
   
  ![Stock chart](../../2014/reporting-services/media/rs-stockchart.gif "Stock chart")  
   
- An example of a stock chart is available as a sample [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Report Builder report. For more information about downloading this sample report and others, see [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][Report Builder and Report Designer sample reports](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ An example of a stock chart is available as a sample [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Report Builder report. For more information about downloading this sample report and others, see [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][Report Builder and Report Designer sample reports](http://go.microsoft.com/fwlink/?LinkId=198283).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## Variations  
   
@@ -35,7 +35,7 @@ manager: "mblythe"
   
 -   When axis labels are generated, labeling usually begins at zero.  In general, stock prices do not fluctuate to the same degree as other data sets. For this reason, you may want to disable the axis labels from starting at zero, in order to get a better view of your data. To do this, set **IncludeZero** to **false** in the **Axis Properties** dialog box or the Properties window. For more information about how the chart generates axis labels, see [Formatting Axis Labels on a Chart &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides many calculated formulas for use with stock charts, including Price Indicator, Relative Strength Index, MACD and more.  
+-   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] provides many calculated formulas for use with stock charts, including Price Indicator, Relative Strength Index, MACD and more.  
   
 ## See Also  
  [Range Charts &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/range-charts-report-builder-and-ssrs.md)   

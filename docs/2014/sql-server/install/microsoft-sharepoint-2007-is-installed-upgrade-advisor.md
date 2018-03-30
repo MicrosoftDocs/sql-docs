@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 6f1da295-d9b7-4948-99d3-ebd3587337c6
 caps.latest.revision: 6
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "jhubbard"
 ---
 # Microsoft SharePoint 2007 is Installed (Upgrade Advisor)
@@ -20,13 +20,13 @@ manager: "jhubbard"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint mode.|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode.|  
   
 ## Component  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## Description  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] will not upgrade or install on SharePoint 2007. Upgrade is blocked.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] will not upgrade or install on SharePoint 2007. Upgrade is blocked.  
   
 ## Corrective Action  
  To continue with upgrade, you must either uninstall SharePoint 2007 or upgrade SharePoint 2007 to a SharePoint 2010 product. After you have updated your SharePoint installation, re-run Upgrade Advisor to confirm that there are no other upgrade issues.  

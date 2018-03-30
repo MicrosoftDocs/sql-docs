@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 88cd0936-b202-4ab8-90f2-d9c3f66d37f4
 caps.latest.revision: 12
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # ListSSLCertificates Method (WMI MSReportServer_ConfigurationSetting)
@@ -56,7 +56,7 @@ public void ListSSLCertificates(out string[] CertificateHash,
 ## Remarks  
   
 ## Requirements  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../includes/ssrswminmspca-md.md)]  
   
 ## See Also  
  [MSReportServer_ConfigurationSetting Members](../../2014/reporting-services/msreportserver-configurationsetting-members.md)  

@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 caps.latest.revision: 27
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Feature Reference (Reporting Services)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] includes several tools and applications that you can use to create, manage, and view reports. This section provides specific topics describing the dialog boxes, Web pages, and wizards of these tools and applications.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] includes several tools and applications that you can use to create, manage, and view reports. This section provides specific topics describing the dialog boxes, Web pages, and wizards of these tools and applications.  
   
- To access a user interface topic while the tool or application is running, press F1 or click **Help** while the dialog box, Web page, or wizard is open. For more information about starting the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] tools, see [Tutorial: How to Locate and Start Reporting Services Tools &#40;SSRS&#41;](../../2014/reporting-services/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md).  
+ To access a user interface topic while the tool or application is running, press F1 or click **Help** while the dialog box, Web page, or wizard is open. For more information about starting the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] tools, see [Tutorial: How to Locate and Start Reporting Services Tools &#40;SSRS&#41;](../../2014/reporting-services/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md).  
   
 ## In This Section  
  [Report Designer F1 Help](../../2014/reporting-services/report-designer-f1-help.md)  
@@ -33,10 +33,10 @@ manager: "mblythe"
  Provides help for Report Manager, a Web application used to manage a single report server instance  
   
  [Reporting Services Configuration Manager F1 Help Topics &#40;SSRS Native Mode&#41;](../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
- Provides help for the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool used for deploying and managing report server instances.  
+ Provides help for the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Configuration tool used for deploying and managing report server instances.  
   
  [Report Server in Management Studio F1 Help](../../2014/reporting-services/report-server-in-management-studio-f1-help.md)  
- Provides help for dialog boxes used to manage reports and report servers in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+ Provides help for dialog boxes used to manage reports and report servers in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
  [HTML Viewer and the Report Toolbar](../../2014/reporting-services/html-viewer-and-the-report-toolbar.md)  
  Provides help for the HTML Viewer component used for viewing reports in a Web browser.  

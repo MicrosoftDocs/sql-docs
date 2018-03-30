@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 64bd53f4-2f31-4732-8c2e-64c7b54b6972
 caps.latest.revision: 7
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Set Text Box Orientation (Report Builder and SSRS)
@@ -21,7 +21,7 @@ manager: "mblythe"
  The WritingMode property, which you use to specify text orientation, is not available in the **Text Box Properties** dialog box. You need to open the Properties pane and set the property there. The available values for the WritingMode property are **Horizontal** (text reading left to right), **Vertical** (text reading top to bottom), **Rotate270** (text reading bottom to top). You must manually size the column width and the row height to accommodate the text.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ### To set text orientation  
   

@@ -43,7 +43,7 @@ manager: "jhubbard"
   
  This transformation has one input and two outputs. It has no error output.  
   
- You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer or programmatically.  
   
  For more information about the properties that you can set in the **Row Sampling Transformation Editor** dialog box, see [Row Sampling Transformation Editor &#40;Sampling Page&#41;](../../2014/integration-services/row-sampling-transformation-editor-sampling-page.md).  
   

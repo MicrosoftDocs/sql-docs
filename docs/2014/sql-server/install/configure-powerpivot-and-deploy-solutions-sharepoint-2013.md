@@ -12,17 +12,17 @@ ms.topic: "article"
 ms.assetid: 6401fd92-f43b-450e-8298-12db644c25bc
 caps.latest.revision: 10
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "jhubbard"
 ---
 # Configure PowerPivot and Deploy Solutions (SharePoint 2013)
-  This topics describes the deployment and configuration of middle-tier enhancements to the PowerPivot features in [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] including PowerPivot Gallery, Schedule data refresh, Management Dashboard, and data providers. Run **PowerPivot for SharePoint 2013 Configuration** tool to complete the following:  
+  This topics describes the deployment and configuration of middle-tier enhancements to the PowerPivot features in [!INCLUDE[SPS2013](../../includes/sps2013-md.md)] including PowerPivot Gallery, Schedule data refresh, Management Dashboard, and data providers. Run **PowerPivot for SharePoint 2013 Configuration** tool to complete the following:  
   
 -   Deploy SharePoint solution files.  
   
 -   Create a PowerPivot service application.  
   
--   Configure an Excel Services Application to use an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] server in SharePoint mode. For information on backend services and installing a [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] server in SharePoint mode, see [PowerPivot for SharePoint 2013 Installation](../../../2014/sql-server/install/powerpivot-for-sharepoint-2013-installation.md).  
+-   Configure an Excel Services Application to use an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server in SharePoint mode. For information on backend services and installing a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server in SharePoint mode, see [PowerPivot for SharePoint 2013 Installation](../../../2014/sql-server/install/powerpivot-for-sharepoint-2013-installation.md).  
   
  For information on installing the PowerPivot for SharePoint 2013 Configuration tool, see [Install or Uninstall the PowerPivot for SharePoint Add-in &#40;SharePoint 2013&#41;](../../../2014/sql-server/install/install-or-uninstall-the-powerpivot-for-sharepoint-add-in-sharepoint-2013.md)  
   
@@ -35,7 +35,7 @@ manager: "jhubbard"
  [Troubleshoot Issues](#bkmk_troubleshoot_issues)  
   
 ##  <a name="bkmk_run_configuration_tool"></a> Run PowerPivot for SharePoint 2013 configuration  
- **Note:** The [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] setup wizard installs two different configuration tools for [!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]. They each support a different version of SharePoint.  
+ **Note:** The [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] setup wizard installs two different configuration tools for [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]. They each support a different version of SharePoint.  
   
 |Name|Description|  
 |----------|-----------------|  
@@ -48,7 +48,7 @@ manager: "jhubbard"
   
  Either login as the account that installed SharePoint or configure the setup account as the primary administrator of the SharePoint Central Administration Site.  
   
-1.  On the **Start** menu, click **All Programs**, and then click [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], click **Configuration Tools**, and then click **PowerPivot For SharePoint 2013 Configuration**. Toold is listed only when PowerPivot for SharePoint is installed on the local server.  
+1.  On the **Start** menu, click **All Programs**, and then click [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], click **Configuration Tools**, and then click **PowerPivot For SharePoint 2013 Configuration**. Toold is listed only when PowerPivot for SharePoint is installed on the local server.  
   
 2.  Click **Configure or Repair PowerPivot for SharePoint** and then click **OK**.  
   
@@ -62,7 +62,7 @@ manager: "jhubbard"
   
     3.  **Passphrase**: Enter a passphrase. If you are creating a new SharePoint farm, the passphrase is used whenever you add a server or application to the SharePoint farm. If the farm already exists, enter the passphrase that allows you to add a server application to the farm.  
   
-    4.  **PowerPivot Server for Excel Services**: Type the name of an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] SharePoint mode server. In a single-server deployment, it is the same as the database server. `[ServerName]\powerpivot`  
+    4.  **PowerPivot Server for Excel Services**: Type the name of an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] SharePoint mode server. In a single-server deployment, it is the same as the database server. `[ServerName]\powerpivot`  
   
     5.  Click **Create Site Collection** in the left window. Note **Site URL** so you can reference it in later steps. If the SharePoint server is not already configured, then the configuration wizard defaults the web application, and site collection URLs to the root of `http://[ServerName]`. To modify the defaults review the following pages in the left window: **Create Default Web application** and **Deploy Web Application Solution**  
   

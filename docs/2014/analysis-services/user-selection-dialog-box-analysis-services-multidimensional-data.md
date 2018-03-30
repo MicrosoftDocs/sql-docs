@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # User Selection Dialog Box (Analysis Services - Multidimensional Data)
-  Use the **User Selection** dialog box in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to select users on which to filter queries stored in the query log for the Usage-Based Optimization Wizard.  
+  Use the **User Selection** dialog box in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] and [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to select users on which to filter queries stored in the query log for the Usage-Based Optimization Wizard.  
   
  To open the **User Selection** dialog box, in the Usage-Based Optimization Wizard, on the **Specify Query Criteria** page, for the **Users** option, click the ellipsis (...) button.  
   

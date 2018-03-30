@@ -25,7 +25,7 @@ manager: "jhubbard"
  You can easily access more information about a component from the toolbox, by clicking the component to view a description at the bottom of the toolbox. Click the Help button next to the description to display the Books Online topic. For certain components, you can also access samples that demonstrate how to configure and use the components. The samples are available on [MSDN](http://go.microsoft.com/fwlink/?LinkId=259189). To access the samples from the **SSIS Toolbox**, click the **Find Samples** link that appears below the description.  
   
 > [!NOTE]  
->  Unlike previous versions of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], you cannot remove installed components from the toolbox.  
+>  Unlike previous versions of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], you cannot remove installed components from the toolbox.  
   
  In the **SSIS Toolbox**, control flow and data flow components are organized into categories.  You can expand and collapse categories for viewing and you can change the organization of components according to your preferences.  You can restore the default organization, by right-clicking inside the toolbox and then click **Restore Toolbox Defaults**.  
   

@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
 caps.latest.revision: 40
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Lesson 2: Modifying the Report Data Source Properties
@@ -50,9 +50,9 @@ manager: "mblythe"
   
 6.  Click **Credentials stored securely in the report server**.  
   
-7.  Type your user name (use the format *domain\user*) and password. If you do not have permission to access the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database, specify a login that does.  
+7.  Type your user name (use the format *domain\user*) and password. If you do not have permission to access the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database, specify a login that does.  
   
-8.  Click **Use as windows credentials when connecting to the data source**, and then click **OK**. If you are not using a domain account (for example, if you are using a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login), do not click this checkbox.  
+8.  Click **Use as windows credentials when connecting to the data source**, and then click **OK**. If you are not using a domain account (for example, if you are using a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] login), do not click this checkbox.  
   
 9. Click **Test Connection** to verify you can connect to the data source.  
   
@@ -62,7 +62,7 @@ manager: "mblythe"
   
 ##  <a name="bkmk_modify_dataset"></a> To Modify the AdventureWorksDataset  
   
-1.  Open the Sales Orders report in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  
+1.  Open the Sales Orders report in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]  
   
 2.  Right-click the dataset `AdventureWorksDataset` and click **Dataset Properties**.  
   

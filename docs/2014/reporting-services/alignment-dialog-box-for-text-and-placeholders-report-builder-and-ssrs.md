@@ -17,7 +17,7 @@ f1_keywords:
 ms.assetid: ea2bbcec-03d8-42e7-8f8e-3cccd9548586
 caps.latest.revision: 9
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Alignment Dialog Box for Text and Placeholders (Report Builder and SSRS)
@@ -27,7 +27,7 @@ manager: "mblythe"
  **Horizontal**  
  Specify a value or type an expression that evaluates to the position where the text is positioned horizontally within a selected cell or data region. Click the **Expression** (*fx*) button to edit the expression.  
   
--   **General** Display the text as calculated by [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. For more information about how general text alignment is calculated, see [Formatting Text and Placeholders &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/formatting-text-and-placeholders-report-builder-and-ssrs.md).  
+-   **General** Display the text as calculated by [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. For more information about how general text alignment is calculated, see [Formatting Text and Placeholders &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/formatting-text-and-placeholders-report-builder-and-ssrs.md).  
   
 -   **Left** Display the text as aligned to the left.  
   

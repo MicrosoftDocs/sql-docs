@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 0d03eb20-28a7-4ceb-8903-7f9420a620f7
 caps.latest.revision: 11
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_17194
@@ -40,7 +40,7 @@ manager: "jhubbard"
   
  To determine a possible solution for other error message values, use the operating system command **net helpmsg** and specify the decimal value of the error code.  
   
- For more information about how to connect to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Server Network Configuration](../../2014/database-engine/server-network-configuration.md) and [Client Network Configuration](../../2014/database-engine/client-network-configuration.md).  
+ For more information about how to connect to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see [Server Network Configuration](../../2014/database-engine/server-network-configuration.md) and [Client Network Configuration](../../2014/database-engine/client-network-configuration.md).  
   
 ## Internal-Only  
   

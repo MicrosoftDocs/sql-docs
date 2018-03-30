@@ -12,15 +12,15 @@ ms.topic: "article"
 ms.assetid: e0040fec-e2b7-4099-ae01-3b9bb9128bbd
 caps.latest.revision: 9
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Reporting Services Site Settings and Site Features(SharePoint Mode)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode has several site level custom features and site feature that can be managed from the SharePoint Site Settings page. The settings are site wide and affect all [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service applications. You must have Content Manager and System Administrator permissions to view this page.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint mode has several site level custom features and site feature that can be managed from the SharePoint Site Settings page. The settings are site wide and affect all [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service applications. You must have Content Manager and System Administrator permissions to view this page.  
   
 |Site Setting|Description|  
 |------------------|-----------------|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Site Settings|Site wide settings described in this topic.|  
+|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Site Settings|Site wide settings described in this topic.|  
 |Manage Data Alerts|Management of the Data Alerting feature.|  
 |Report Server File Sync|A Site level feature that is deactivated by default.<br /><br /> Synchronizes Report Server files (.rdl, .rsds, .smdl, .rsd, .rsc, .rdlx) from a SharePoint document library to the report server when files are added or updated in the directly within the document library.<br /><br /> For more information, see [Activate the Report Server File Sync Feature in SharePoint Central Administration](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)|  
   

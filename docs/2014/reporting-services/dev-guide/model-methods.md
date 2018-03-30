@@ -13,7 +13,7 @@ ms.topic: "reference"
 ms.assetid: d3e658c9-bb22-480b-a3d5-bcde8f537ab2
 caps.latest.revision: 3
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Model Methods

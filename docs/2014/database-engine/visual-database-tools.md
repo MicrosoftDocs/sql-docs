@@ -16,7 +16,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Visual Database Tools
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] includes visual designers for building [!INCLUDE[tsql](../../includes/tsql-md.md)] queries, tables, and diagramming databases.  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] includes visual designers for building [!INCLUDE[tsql](../includes/tsql-md.md)] queries, tables, and diagramming databases.  
   
 ## Related Tasks  
  Use the following tasks to get started with Visual Database Tools:  

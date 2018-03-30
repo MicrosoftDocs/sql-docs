@@ -20,12 +20,12 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Integration Services Error and Message Reference
-  The following tables list predefined [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] errors, warnings, and informational messages, in ascending numerical order within each category, along with their numeric codes and symbolic names. Each of these errors is defined as a field in the <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> class in the <xref:Microsoft.SqlServer.Dts.Runtime> namespace.  
+  The following tables list predefined [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] errors, warnings, and informational messages, in ascending numerical order within each category, along with their numeric codes and symbolic names. Each of these errors is defined as a field in the <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> class in the <xref:Microsoft.SqlServer.Dts.Runtime> namespace.  
   
  This list may be useful when you encounter an error code without its description. The list does not include troubleshooting information at this time.  
   
 > [!IMPORTANT]  
->  Many of the error messages that you may see while working with [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] come from other components. In this topic, you will find all the errors raised by [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] components. If you do not see your error in the list, the error was raised by a component outside [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. These may include OLE DB providers, other database components such as the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , or other services or components such as the file system, the SMTP server, Message Queuing (also known as MSMQ), and so forth. To find information about these external error messages, see the documentation specific to the component.  
+>  Many of the error messages that you may see while working with [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] come from other components. In this topic, you will find all the errors raised by [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] components. If you do not see your error in the list, the error was raised by a component outside [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. These may include OLE DB providers, other database components such as the [!INCLUDE[ssDE](../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , or other services or components such as the file system, the SMTP server, Message Queuing (also known as MSMQ), and so forth. To find information about these external error messages, see the documentation specific to the component.  
   
  This list cadontains the following groups of messages:  
   
@@ -42,7 +42,7 @@ manager: "jhubbard"
 -   [Data Flow Component Error Messages (DTSBC_E_*)](#msgPipeline)  
   
 ##  <a name="msgError"></a> Error Messages  
- The symbolic names of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] error messages begin with `DTS_E_`.  
+ The symbolic names of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] error messages begin with `DTS_E_`.  
   
 |Hexadecimal code|Decimal Code|Symbolic Name|Description|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -56,7 +56,7 @@ manager: "jhubbard"
 |0xC00060AB|-1073717077|DTS_E_INVALIDSSISSERVERNAME|Invalid server name "%1". SSIS service does not support multi-instance, use just server name instead of "server name\instance".|  
 |0xC0008445|-1073707963|DTS_E_SCRIPTMIGRATIONFAILED64BIT|Migration for VSA scripts can not be done on 64 bit platforms due to lack of Visual Tools for Applications designer support. Run the migration under WOW64 on 64 bit platforms.|  
 |0xC000931A|-1073704166|DTS_E_COMMANDDESTINATIONADAPTERSTATIC_ERRORSINCOMMAND|The command execution generated errors.|  
-|0xC000F427|-1073679321|DTS_E_SSISSTANDALONENOTINSTALLED|To run a SSIS package outside of [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] you must install %1 of Integration Services or higher.|  
+|0xC000F427|-1073679321|DTS_E_SSISSTANDALONENOTINSTALLED|To run a SSIS package outside of [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] you must install %1 of Integration Services or higher.|  
 |0xC0010001|-1073676287|DTS_E_VARIABLENOTFOUND|The variable cannot be found. This occurs when an attempt is made to retrieve a variable from the Variables collection on a container during execution of the package, and the variable is not there. The variable name may have changed or the variable is not being created.|  
 |0xC0010003|-1073676285|DTS_E_VARIABLEREADONLY|Error trying to write to a read-only variable, "%1".|  
 |0xC0010004|-1073676284|DTS_E_MANAGEDCOMPONENTSTORENOTFOUND|Unable to find the directories containing Tasks and Data Flow Task components. Check the integrity of your installation.|  
@@ -2016,7 +2016,7 @@ manager: "jhubbard"
 |||DTS_E_COMPONENTINITFAILED|Component %1!s! failed to initialize due to error 0x%2!8.8X! "%3!s!".|  
   
 ##  <a name="msgWarning"></a> Warning Messages  
- The symbolic names of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] warning messages begin with `DTS_W_`.  
+ The symbolic names of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] warning messages begin with `DTS_W_`.  
   
 |Hexadecimal code|Decimal Code|Symbolic Name|Description|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2162,7 +2162,7 @@ manager: "jhubbard"
 |0x930D|37645|DTS_W_EXTERNALTABLECOLSOUTOFSYNC|The table "%1" has changed. New columns might have been added to the table.|  
   
 ##  <a name="msgInfo"></a> Informational Messages  
- The symbolic names of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] informational messages begin with `DTS_I_`.  
+ The symbolic names of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] informational messages begin with `DTS_I_`.  
   
 |Hexadecimal code|Decimal Code|Symbolic Name|Description|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2261,7 +2261,7 @@ manager: "jhubbard"
 |0x4020F42C|1075901484|DTS_I_OLEDBDESTZEROMAXCOMMITSIZE|The Maximum insert commit size property of the OLE DB destination "%1" is set to 0. This property setting can cause the running package to stop responding. For more information, see the F1 Help topic for OLE DB Destination Editor (Connection Manager Page).|  
   
 ##  <a name="msgGeneral"></a> General and Event Messages  
- The symbolic names of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] error messages begin with `DTS_MSG_`.  
+ The symbolic names of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] error messages begin with `DTS_MSG_`.  
   
 |Hexadecimal code|Decimal Code|Symbolic Name|Description|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2300,7 +2300,7 @@ manager: "jhubbard"
 |0x4010310E|1074802958|DTS_MSG_EVENTLOGENTRY_INFORMATION|Event Name: %1<br /><br /> Message: %9<br /><br /> Operator: %2<br /><br /> Source Name: %3<br /><br /> Source ID: %4<br /><br /> Execution ID: %5<br /><br /> Start Time: %6<br /><br /> End Time: %7<br /><br /> Data Code: %8|  
   
 ##  <a name="msgSuccess"></a> Success Messages  
- The symbolic names of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] success messages begin with `DTS_S_`.  
+ The symbolic names of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] success messages begin with `DTS_S_`.  
   
 |Hexadecimal code|Decimal Code|Symbolic Name|Description|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2309,7 +2309,7 @@ manager: "jhubbard"
 |0x200001|2097153|DTS_S_EXPREVALTRUNCATIONOCCURRED|A truncation occurred during evaluation of the expression. The truncation occurred during evaluation, which may include any point in an intermediate step.|  
   
 ##  <a name="msgPipeline"></a> Data Flow Component Error Messages  
- The symbolic names of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] error messages begin with `DTSBC_E_`, where "BC" refers to the native base class from which most Microsoft data flow components are derived.  
+ The symbolic names of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] error messages begin with `DTSBC_E_`, where "BC" refers to the native base class from which most Microsoft data flow components are derived.  
   
 |Hexadecimal code|Decimal Code|Symbolic Name|Description|  
 |----------------------|------------------|-------------------|-----------------|  

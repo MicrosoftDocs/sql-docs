@@ -22,7 +22,7 @@ ms.author: "jroth"
 manager: "jhubbard"
 ---
 # Use the Object Explorer Details to Monitor Availability Groups (SQL Server Management Studio)
-  This topic describes how to use the **Object Explorer Details** pane of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to monitor and manage existing AlwaysOn availability groups, availability replicas, and availability databases.  
+  This topic describes how to use the **Object Explorer Details** pane of [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to monitor and manage existing AlwaysOn availability groups, availability replicas, and availability databases.  
   
 > [!NOTE]  
 >  For information about using the Object Explorer Details pane, see [Object Explorer Details Pane](../../2014/database-engine/object-explorer-details-pane.md).  
@@ -42,14 +42,14 @@ manager: "jhubbard"
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
 ###  <a name="Prerequisites"></a> Prerequisites  
- You must be connected to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (server instance) that hosts either the primary replica or a secondary replica.  
+ You must be connected to the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (server instance) that hosts either the primary replica or a secondary replica.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  **To monitor availability groups, availability replicas, and availability databases**  
   
 1.  On the View menu, click **Object Explorer Details**, or press the **F7** key.  
   
-2.  In Object Explorer, connect to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on which you want to monitor an availability group, and click the server name to expand the server tree.  
+2.  In Object Explorer, connect to the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on which you want to monitor an availability group, and click the server name to expand the server tree.  
   
 3.  Expand the **AlwaysOn High Availability** node and the **Availability Groups** node.  
   
@@ -78,7 +78,7 @@ manager: "jhubbard"
  Displays the name of the server instance that hosts the availability replica, along with an icon that indicates the current connection state of the server instance to the local server instance.  
   
  **Role**  
- Indicates the current role of the availability replica, either **Primary** or **Secondary**. For information about [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] roles, see [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/overview-of-alwayson-availability-groups-sql-server.md).  
+ Indicates the current role of the availability replica, either **Primary** or **Secondary**. For information about [!INCLUDE[ssHADR](../includes/sshadr-md.md)] roles, see [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/overview-of-alwayson-availability-groups-sql-server.md).  
   
  **Connection Mode in Secondary Role**  
  Indicates whether the databases of a given availability replica that is performing the secondary role (that is, is acting as a secondary replica) can accept connections from clients.  
@@ -141,7 +141,7 @@ manager: "jhubbard"
 >  For information about performance counters for availability databases, see [SQL Server, Database Replica](../../2014/database-engine/sql-server-database-replica.md).  
   
 ## See Also  
- [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../Topic/sys.dm_os_performance_counters%20\(Transact-SQL\).md)   
+ [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)   
  [Use the AlwaysOn Dashboard &#40;SQL Server Management Studio&#41;](../../2014/database-engine/use-the-alwayson-dashboard-sql-server-management-studio.md)   
  [View Availability Group Properties &#40;SQL Server&#41;](../../2014/database-engine/view-availability-group-properties-sql-server.md)   
  [View Availability Replica Properties &#40;SQL Server&#41;](../../2014/database-engine/view-availability-replica-properties-sql-server.md)  

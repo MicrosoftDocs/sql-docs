@@ -21,7 +21,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQL Server Parameters
-  On this page, set parameters that the analyzer will use for [!INCLUDE[ssDE](../../../includes/ssde-md.md)] analysis. You can analyze one, several, or all databases, analyze trace files that were created by using [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)], and analyze SQL batch files.  
+  On this page, set parameters that the analyzer will use for [!INCLUDE[ssDE](../../includes/ssde-md.md)] analysis. You can analyze one, several, or all databases, analyze trace files that were created by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], and analyze SQL batch files.  
   
 > [!NOTE]  
 >  Some upgrade issues can be detected only if you submit trace files or SQL batch files to be analyzed.  
@@ -38,16 +38,16 @@ manager: "jhubbard"
   
  If you enable **Analyze trace file(s)**, **Next** is disabled until you enter a path name and a file name.  
   
- **Analyze [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] batch file(s)**  
- Select this check box to analyze [!INCLUDE[tsql](../../../includes/tsql-md.md)] batch files in the file system.  
+ **Analyze [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] batch file(s)**  
+ Select this check box to analyze [!INCLUDE[tsql](../../includes/tsql-md.md)] batch files in the file system.  
   
- **Path to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] batch file(s)**  
+ **Path to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] batch file(s)**  
  You can analyze one or more batch files. You can browse to a location and select multiple files, or you can type multiple file names. Use the full path name to each file, include the file name, and separate entries by using the pipe character (|).  
   
  If you enable **Analyze SQL batch file(s)**, the **Next** button is disabled until you enter a path name and a file name.  
   
  **SQL Batch Separator**  
- The text that is used to separate batches of [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements. The default value is **GO**.  
+ The text that is used to separate batches of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. The default value is **GO**.  
   
 ## See Also  
  [Working with Upgrade Advisor](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   

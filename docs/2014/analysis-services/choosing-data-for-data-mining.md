@@ -79,7 +79,7 @@ manager: "mblythe"
   
  You might also decide to treat numbers as discrete when the values are clearly separated, and there is no possibility of fractional values, or fractional values are not useful.  
   
- *Continuous* numeric data can contain an infinite number of fractional values. An income column is an example of a continuous attribute column. If you specify that a column is numeric, every value in that column must be a number, except for nulls. Note that in Excel, timestamps and any other date-time representation that can be converted to an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type can be considered.  
+ *Continuous* numeric data can contain an infinite number of fractional values. An income column is an example of a continuous attribute column. If you specify that a column is numeric, every value in that column must be a number, except for nulls. Note that in Excel, timestamps and any other date-time representation that can be converted to an [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] data type can be considered.  
   
  **Converting Numbers to Categorical Variables**  
   
@@ -112,7 +112,7 @@ manager: "mblythe"
 ### Excel Number Formats  
  Excel is an easy tool to use because it is forgiving – you can put just about any kind of data anywhere! However, before you begin to look for patterns and analyze correlations, you need to impose some structure or constraints on your data.  
   
- By default, when you import numeric data into [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel, the numbers are stored in a decimal format with two decimal places. If this is not an appropriate number format, you should change to another numeric format, or change the number of decimal places.  
+ By default, when you import numeric data into [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel, the numbers are stored in a decimal format with two decimal places. If this is not an appropriate number format, you should change to another numeric format, or change the number of decimal places.  
   
  One option is to use the [Relabel](../../2014/analysis-services/relabel-sql-server-data-mining-add-ins.md) tool to change the way that numbers are displayed or grouped.  
   
@@ -150,7 +150,7 @@ manager: "mblythe"
   
  **Naïve Bayes models**  
   
--   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes algorithm cannot use continuous columns as input. That means you must either bin numbers, or if there are few enough values, handle them as discrete values.  
+-   The [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes algorithm cannot use continuous columns as input. That means you must either bin numbers, or if there are few enough values, handle them as discrete values.  
   
 -   This type of model also cannot predict continuous values. Therefore, if you want to predict a continuous number such as income (for example) you should first bin the values into meaningful ranges. If you are not sure what the appropriate ranges are, you can use the clustering algorithm to identify clumps of numbers in your data.  
   
@@ -203,7 +203,7 @@ manager: "mblythe"
   
  Typically the key column is a numeric or text identifier that should not be used for analysis, only for tracking records. The exceptions are time series keys and sequence keys.  
   
- **Nested table keys** are used only when you get data from an external data source that has been defined as an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data source view. For more information about nested tables, see [http://msdn.microsoft.com/library/ms175659.aspx](http://msdn.microsoft.com/library/ms175659.aspx):  
+ **Nested table keys** are used only when you get data from an external data source that has been defined as an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data source view. For more information about nested tables, see [http://msdn.microsoft.com/library/ms175659.aspx](http://msdn.microsoft.com/library/ms175659.aspx):  
   
  This content type can be used with the following data types: `Date`, `Double`, `Long`, and `Text`.  
   
@@ -218,7 +218,7 @@ manager: "mblythe"
  This content type is supported by the following data types: `Double`, `Long`, and `Date`.  
   
  **Table**  
- This content type also is used only when you get data from an external data source that has been defined as an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data source view.  
+ This content type also is used only when you get data from an external data source that has been defined as an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data source view.  
   
  What it means is that each row of data actually contains a nested data table, with one or more columns and one or more rows.  
   

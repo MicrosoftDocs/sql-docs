@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 2da24891-0b6d-4d3c-8b18-81b98752642f
 caps.latest.revision: 16
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Report Builder Help for Dialog Boxes, Panes, and Wizards

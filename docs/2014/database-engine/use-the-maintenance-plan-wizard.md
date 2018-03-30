@@ -40,7 +40,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Use the Maintenance Plan Wizard
-  This topic describes how to create a single server or multiserver maintenance plan using the Maintenance Plan Wizard in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. The Maintenance Plan Wizard creates a maintenance plan that [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent can run on a regular basis. This allows you to perform various database administration tasks, including backups, database integrity checks, or database statistics updates, at specified intervals.  
+  This topic describes how to create a single server or multiserver maintenance plan using the Maintenance Plan Wizard in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. The Maintenance Plan Wizard creates a maintenance plan that [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent can run on a regular basis. This allows you to perform various database administration tasks, including backups, database integrity checks, or database statistics updates, at specified intervals.  
   
  **In This Topic**  
   
@@ -58,7 +58,7 @@ manager: "jhubbard"
   
 -   To create a multiserver maintenance plan, a multiserver environment containing one master server and one or more target servers must be configured. Multiserver maintenance plans must be created and maintained on the master server. These plans can be viewed, but not maintained, on target servers.  
   
--   Members of the **db_ssisadmin** and **dc_admin** roles may be able to elevate their privileges to **sysadmin**. This elevation of privilege can occur because these roles can modify [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages; these packages can be executed by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using the **sysadmin** security context of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. To guard against this elevation of privilege when running maintenance plans, data collection sets, and other [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages, configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs that run packages to use a proxy account with limited privileges or only add **sysadmin** members to the **db_ssisadmin** and **dc_admin** roles.  
+-   Members of the **db_ssisadmin** and **dc_admin** roles may be able to elevate their privileges to **sysadmin**. This elevation of privilege can occur because these roles can modify [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages; these packages can be executed by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using the **sysadmin** security context of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent. To guard against this elevation of privilege when running maintenance plans, data collection sets, and other [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages, configure [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent jobs that run packages to use a proxy account with limited privileges or only add **sysadmin** members to the **db_ssisadmin** and **dc_admin** roles.  
   
 ###  <a name="Security"></a> Security  
   
@@ -138,7 +138,7 @@ manager: "jhubbard"
   
     6.  Click **Next**.  
   
-6.  On the **Select Target Servers** page, select the servers where you want to run the maintenance plan. This page is only visible on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances that are configured as master servers.  
+6.  On the **Select Target Servers** page, select the servers where you want to run the maintenance plan. This page is only visible on [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instances that are configured as master servers.  
   
     > [!NOTE]  
     >  To create a multiserver maintenance plan, a multiserver environment containing one master server and one or more target servers must be configured, and the local server should be configured as a master server. In multiserver environments, this page displays the **(local)** master server and all corresponding target servers.  
@@ -155,7 +155,7 @@ manager: "jhubbard"
   
 #### Define Database Check Integrity (CHECKDB) Tasks  
   
-1.  On the **Define Database Check Integrity Task** page, choose the database or databases where the allocation and structural integrity of user and system tables and indexes will be checked. By running the `DBCC CHECKDB`[!INCLUDE[tsql](../../includes/tsql-md.md)] statement, this task ensures that any integrity problems with the database are reported, thereby allowing them to be addressed later by a system administrator or database owner. For more information, see [DBCC CHECKDB &#40;Transact-SQL&#41;](../Topic/DBCC%20CHECKDB%20\(Transact-SQL\).md)When complete, click **Next**.  
+1.  On the **Define Database Check Integrity Task** page, choose the database or databases where the allocation and structural integrity of user and system tables and indexes will be checked. By running the `DBCC CHECKDB`[!INCLUDE[tsql](../includes/tsql-md.md)] statement, this task ensures that any integrity problems with the database are reported, thereby allowing them to be addressed later by a system administrator or database owner. For more information, see [DBCC CHECKDB &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)When complete, click **Next**.  
   
      The following options are available on this page.  
   
@@ -164,15 +164,15 @@ manager: "jhubbard"
   
     -   **All databases**  
   
-         Generate a maintenance plan that runs this task against all [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases except **tempdb**.  
+         Generate a maintenance plan that runs this task against all [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] databases except **tempdb**.  
   
     -   **System databases**  
   
-         Generate a maintenance plan that runs this task against [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system databases except **tempdb** and user-created databases.  
+         Generate a maintenance plan that runs this task against [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] system databases except **tempdb** and user-created databases.  
   
     -   **All user databases (excluding master, model, msdb, tempdb)**  
   
-         Generate a maintenance plan that runs this task against all user-created databases. No maintenance tasks are run against the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system databases.  
+         Generate a maintenance plan that runs this task against all user-created databases. No maintenance tasks are run against the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] system databases.  
   
     -   **These databases**  
   
@@ -183,7 +183,7 @@ manager: "jhubbard"
   
 #### Define Database Shrink Tasks  
   
-1.  On the **Define Shrink Database Task** page, create a task that attempts to reduce the size of the selected databases by using the `DBCC SHRINKDATABASE` statement, with either the `NOTRUNCATE` or `TRUNCATEONLY` option. For more information, see [DBCC SHRINKDATABASE &#40;Transact-SQL&#41;](../Topic/DBCC%20SHRINKDATABASE%20\(Transact-SQL\).md). When complete, click **Next**.  
+1.  On the **Define Shrink Database Task** page, create a task that attempts to reduce the size of the selected databases by using the `DBCC SHRINKDATABASE` statement, with either the `NOTRUNCATE` or `TRUNCATEONLY` option. For more information, see [DBCC SHRINKDATABASE &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md). When complete, click **Next**.  
   
     > [!WARNING]  
     >  Data that is moved to shrink a file can be scattered to any available location in the file. This causes index fragmentation and can slow the performance of queries that search a range of the index. To eliminate the fragmentation, consider rebuilding the indexes on the file after shrinking.  
@@ -207,7 +207,7 @@ manager: "jhubbard"
   
 #### Define the Index Tasks  
   
-1.  On the **Define Reorganize Index Task** page, select the server or servers where you'll be moving index pages into a more efficient search order. This task uses the `ALTER INDEX … REORGANIZE` statement. For more information, see [ALTER INDEX &#40;Transact-SQL&#41;](../Topic/ALTER%20INDEX%20\(Transact-SQL\).md). When complete, click **Next**.  
+1.  On the **Define Reorganize Index Task** page, select the server or servers where you'll be moving index pages into a more efficient search order. This task uses the `ALTER INDEX … REORGANIZE` statement. For more information, see [ALTER INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-index-transact-sql.md). When complete, click **Next**.  
   
      The following options are available on this page.  
   
@@ -223,7 +223,7 @@ manager: "jhubbard"
      **Compact large objects** check box  
      Deallocate space for tables and views when possible. This option uses `ALTER INDEX … LOB_COMPACTION = ON`.  
   
-2.  On the **Define Rebuild Index Task** page, select the database or databases where you'll be re-creating multiple indexes. This task uses the `ALTER INDEX … REBUILD PARTITION` statement. For more information, see [ALTER INDEX &#40;Transact-SQL&#41;](../Topic/ALTER%20INDEX%20\(Transact-SQL\).md).) When complete, click **Next**.  
+2.  On the **Define Rebuild Index Task** page, select the database or databases where you'll be re-creating multiple indexes. This task uses the `ALTER INDEX … REBUILD PARTITION` statement. For more information, see [ALTER INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-index-transact-sql.md).) When complete, click **Next**.  
   
      The following options are available on this page.  
   
@@ -255,11 +255,11 @@ manager: "jhubbard"
      Uses the `ONLINE` option which allows users to access the underlying table or clustered index data and any associated nonclustered indexes during index operations. Selecting this option activates additional options for rebuilding indexes that do not allow for online rebuilds: **Do not rebuild indexes** and **Rebuild indexes offline**.  
   
     > [!NOTE]  
-    >  Online index operations are not available in every edition of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For more information, see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+    >  Online index operations are not available in every edition of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. For more information, see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 #### Define the Update Statistics Task  
   
-1.  On the **Define Update Statistics Task** page, define the database or databases on which table and index statistics will be updated. This task uses the `UPDATE STATISTICS` statement. For more information, see [UPDATE STATISTICS &#40;Transact-SQL&#41;](../Topic/UPDATE%20STATISTICS%20\(Transact-SQL\).md) When finished, click **Next**  
+1.  On the **Define Update Statistics Task** page, define the database or databases on which table and index statistics will be updated. This task uses the `UPDATE STATISTICS` statement. For more information, see [UPDATE STATISTICS &#40;Transact-SQL&#41;](~/t-sql/statements/update-statistics-transact-sql.md) When finished, click **Next**  
   
      The following options are available on this page.  
   
@@ -300,7 +300,7 @@ manager: "jhubbard"
      Chose the type of task data to delete/  
   
      **Backup and restore history**  
-     Retaining records of when recent backups were created can help [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] create a recovery plan when you want to restore a database. The retention period should be at least the frequency of full database backups.  
+     Retaining records of when recent backups were created can help [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] create a recovery plan when you want to restore a database. The retention period should be at least the frequency of full database backups.  
   
      **SQL Server Agent Job history**  
      This history can help you troubleshoot failed jobs, or determine why database actions occurred.  
@@ -313,11 +313,11 @@ manager: "jhubbard"
   
 #### Define the Execute Agent Job Task  
   
-1.  On the **Define Execute Agent Job Task** page, under **Available SQL Server Agent jobs**, choose the job or jobs to run. This option will not be available if you have no SQL Agent jobs. This task uses the `EXEC sp_start_job` statement. For more information, see [sp_start_job &#40;Transact-SQL&#41;](../Topic/sp_start_job%20\(Transact-SQL\).md)When finished, click **Next**.  
+1.  On the **Define Execute Agent Job Task** page, under **Available SQL Server Agent jobs**, choose the job or jobs to run. This option will not be available if you have no SQL Agent jobs. This task uses the `EXEC sp_start_job` statement. For more information, see [sp_start_job &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)When finished, click **Next**.  
   
 #### Define Backup Tasks  
   
-1.  On the **Define Backup Database (Full) Task** page, select the database or databases on which to run a full backup. This task uses the `BACKUP DATABASE` statement. For more information, see [BACKUP &#40;Transact-SQL&#41;](../Topic/BACKUP%20\(Transact-SQL\).md). When finished, click **Next**.  
+1.  On the **Define Backup Database (Full) Task** page, select the database or databases on which to run a full backup. This task uses the `BACKUP DATABASE` statement. For more information, see [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md). When finished, click **Next**.  
   
      The following options are available on this page.  
   
@@ -397,7 +397,7 @@ manager: "jhubbard"
      Only keys residing in the Extensible Key Management (EKM) are supported.  
   
      **Set backup compression**  list  
-     In [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (or later versions), select one the following [backup compression](../../2014/database-engine/backup-compression-sql-server.md) values:  
+     In [!INCLUDE[ssEnterpriseEd10](../includes/ssenterpriseed10-md.md)] (or later versions), select one the following [backup compression](../../2014/database-engine/backup-compression-sql-server.md) values:  
   
     |||  
     |-|-|  
@@ -405,9 +405,9 @@ manager: "jhubbard"
     |**Compress backup**|Click to compress the backup, regardless of the server-level default.<br /><br /> **\*\* Important \*\*** By default, compression significantly increases CPU usage, and the additional CPU consumed by the compression process might adversely affect concurrent operations. Therefore, you might want to create low-priority compressed backups in a session whose CPU usage is limited by the Resource Governor. For more information, see [Use Resource Governor to Limit CPU Usage by Backup Compression &#40;Transact-SQL&#41;](../../2014/database-engine/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).|  
     |**Do not compress backup**|Click to create an uncompressed backup, regardless of the server-level default.|  
   
-2.  On the **Define Backup Database (Differential) Task** page, select the database or databases on which to run a partial backup. See the definition list in step 16, above, for more information about the available options on this page. This task uses the `BACKUP DATABASE … WITH DIFFERENTIAL` statement. For more information, see [BACKUP &#40;Transact-SQL&#41;](../Topic/BACKUP%20\(Transact-SQL\).md).  When finished, click **Next**.  
+2.  On the **Define Backup Database (Differential) Task** page, select the database or databases on which to run a partial backup. See the definition list in step 16, above, for more information about the available options on this page. This task uses the `BACKUP DATABASE … WITH DIFFERENTIAL` statement. For more information, see [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md).  When finished, click **Next**.  
   
-3.  On the **Define Backup Database (Transaction Log) Task** page, select the database or databases on which to run a backup for a transaction log. See the definition list in step 16, above, for more information about the available options on this page. This task uses the `BACKUP LOG` statement. For more information, see [BACKUP &#40;Transact-SQL&#41;](../Topic/BACKUP%20\(Transact-SQL\).md). When finished, click **Next**.  
+3.  On the **Define Backup Database (Transaction Log) Task** page, select the database or databases on which to run a backup for a transaction log. See the definition list in step 16, above, for more information about the available options on this page. This task uses the `BACKUP LOG` statement. For more information, see [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md). When finished, click **Next**.  
   
 #### Define Maintenance Cleanup Tasks  
   
@@ -453,7 +453,7 @@ manager: "jhubbard"
   
 #### Select Report Options  
   
-1.  On the **Select Report Options** page, select options for saving or distributing a report of the maintenance plan actions. This task uses the `EXEC sp_notify_operator` statement. For more information, see [sp_notify_operator &#40;Transact-SQL&#41;](../Topic/sp_notify_operator%20\(Transact-SQL\).md).When finished, click **Next**.  
+1.  On the **Select Report Options** page, select options for saving or distributing a report of the maintenance plan actions. This task uses the `EXEC sp_notify_operator` statement. For more information, see [sp_notify_operator &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-notify-operator-transact-sql.md).When finished, click **Next**.  
   
      The following options are available on this page.  
   
@@ -464,7 +464,7 @@ manager: "jhubbard"
      Specify the location of the file that will contain the report.  
   
      **E-mail report** check box  
-     Send an e-mail when a task fails. To use this task you must have Database Mail enabled and correctly configured with MSDB as a Mail Host Database, and have a [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent operator with a valid e-mail address.  
+     Send an e-mail when a task fails. To use this task you must have Database Mail enabled and correctly configured with MSDB as a Mail Host Database, and have a [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent operator with a valid e-mail address.  
   
      **Agent operator**  
      Specify the recipient of the e-mail.  

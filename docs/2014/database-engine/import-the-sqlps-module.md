@@ -16,7 +16,7 @@ ms.author: "mblythe"
 manager: "jhubbard"
 ---
 # Import the SQLPS Module
-  The recommended way to manage [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from PowerShell is to import the `sqlps` module into a Windows PowerShell 2.0 environment. The module loads and registers the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] snap-ins and manageability assemblies.  
+  The recommended way to manage [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] from PowerShell is to import the `sqlps` module into a Windows PowerShell 2.0 environment. The module loads and registers the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] snap-ins and manageability assemblies.  
   
 1.  **Before You Begin:**  [Security](#Security)  
   
@@ -29,11 +29,11 @@ manager: "jhubbard"
   
 -   Run Windows PowerShell script files.  
   
--   Run [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cmdlets.  
+-   Run [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cmdlets.  
   
--   Use the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider paths to navigate through the hierarchy of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objects.  
+-   Use the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provider paths to navigate through the hierarchy of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] objects.  
   
--   Use the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] manageability object models (such as Microsoft.SqlServer.Management.Smo) to manage [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objects.  
+-   Use the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] manageability object models (such as Microsoft.SqlServer.Management.Smo) to manage [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] objects.  
   
 > [!NOTE]  
 >  The verbs used in the names of two SQL Server cmdlets (`Encode-Sqlname` and `Decode-Sqlname`) do not match the approved verbs for Windows PowerShell 2.0. This has no effect on their operation, but Windows PowerShell raises a warning when the `sqlps` module is imported to a session.  

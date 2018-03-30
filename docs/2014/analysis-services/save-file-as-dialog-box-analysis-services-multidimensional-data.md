@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Save File As Dialog Box (Analysis Services - Multidimensional Data)
-  The **Save File As** dialog box displays a list of available files in log and data folders defined for an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance. You can either select a listed file, or you can specify a different folder and file if needed. The **Save File As** dialog box is displayed by:  
+  The **Save File As** dialog box displays a list of available files in log and data folders defined for an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance. You can either select a listed file, or you can specify a different folder and file if needed. The **Save File As** dialog box is displayed by:  
   
 -   Clicking **Browse** on the **Backup Database** dialog box.  
   

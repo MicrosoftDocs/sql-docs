@@ -14,13 +14,13 @@ f1_keywords:
 ms.assetid: 2dad800f-10a1-453c-8761-2935b9826d84
 caps.latest.revision: 39
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Design the Query
   Use this page of the Report Wizard to create a query by typing the query manually, by using Query Builder to interactively build a query, or by importing a query from another report.  
   
- The data source type you chose on the Select the Data Source page, a previous page in the Report Wizard, determines the query you can enter on this page. For example, if the data source type is [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can enter [!INCLUDE[tsql](../../includes/tsql-md.md)] statements or stored procedure names. If the data source type is [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], the Query pane is disabled and you cannot enter a query directly. You can specify the query by using Query Builder.  
+ The data source type you chose on the Select the Data Source page, a previous page in the Report Wizard, determines the query you can enter on this page. For example, if the data source type is [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], you can enter [!INCLUDE[tsql](../includes/tsql-md.md)] statements or stored procedure names. If the data source type is [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], the Query pane is disabled and you cannot enter a query directly. You can specify the query by using Query Builder.  
   
 ## Options  
  **Query string**  
@@ -32,13 +32,13 @@ manager: "mblythe"
  For more information about query designers, see [Reporting Services Query Designers](../../2014/reporting-services/reporting-services-query-designers.md).  
   
 ## Example  
- For the data source type **Microsoft SQL Server**, the following query retrieves a list of last names from the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database `Person` table.  
+ For the data source type **Microsoft SQL Server**, the following query retrieves a list of last names from the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database `Person` table.  
   
 ```  
 SELECT LastName FROM Person.Person;  
 ```  
   
- For the data source type **Microsoft SQL Server**, the following query runs the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] stored procedure `uspGetEmployeeManagers` for the employee with identification number 1:  
+ For the data source type **Microsoft SQL Server**, the following query runs the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] stored procedure `uspGetEmployeeManagers` for the employee with identification number 1:  
   
 ```  
 EXEC uspgetEmployeeManagers '1';  

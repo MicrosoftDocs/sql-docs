@@ -44,7 +44,7 @@ manager: "mblythe"
   
 3.  On the welcome page of the **Decision Tree Visio Shape Wizard**, click **Next**.  
   
-4.  On the **Select a Data Source** page of the **Cluster Wizard**, choose a connection to an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server that has the model you want to visualize.  
+4.  On the **Select a Data Source** page of the **Cluster Wizard**, choose a connection to an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] server that has the model you want to visualize.  
   
 5.  Select an appropriate mining model, and click **Next**.  
   

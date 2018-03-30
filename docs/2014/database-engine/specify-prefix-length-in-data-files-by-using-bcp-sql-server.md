@@ -34,17 +34,17 @@ manager: "jhubbard"
 >  After you interactively specify all of the fields in a **bcp** command, the command prompts you save your responses for each field in a non-XML format file. For more information about non-XML format files, see [Non-XML Format Files &#40;SQL Server&#41;](../../2014/database-engine/non-xml-format-files-sql-server.md).  
   
 ## Overview of Prefix Length  
- To store the prefix length of a field, you need enough bytes to represent the maximum length of the field. The number of bytes that are required also depends upon the file storage type, the nullability of a column, and whether the data is being stored in the data file in its native or character format. For example, a `text` or `image` data type requires four prefix characters to store the field length, but a `varchar` data type requires two characters. In the data file, these length-prefix characters are stored in the internal binary data format of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ To store the prefix length of a field, you need enough bytes to represent the maximum length of the field. The number of bytes that are required also depends upon the file storage type, the nullability of a column, and whether the data is being stored in the data file in its native or character format. For example, a `text` or `image` data type requires four prefix characters to store the field length, but a `varchar` data type requires two characters. In the data file, these length-prefix characters are stored in the internal binary data format of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  When you use native format, use length prefixes rather than field terminators. Native format data might conflict with terminators because a native-format data file is stored in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] internal binary data format.  
+>  When you use native format, use length prefixes rather than field terminators. Native format data might conflict with terminators because a native-format data file is stored in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] internal binary data format.  
   
 ##  <a name="PrefixLengthsExport"></a> Prefix Lengths for Bulk Export  
   
 > [!NOTE]  
 >  The default value that is provided at the prefix-length prompt when you export a field indicates the most efficient prefix length for the field.  
   
- Null values are represented as an empty field. To indicate that the field is empty (represents NULL), the field prefix contains the value -1; that is, it requires at least 1 byte. Note that if a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table column allows null values, the column requires a prefix length of 1 or greater, depending on the file storage type.  
+ Null values are represented as an empty field. To indicate that the field is empty (represents NULL), the field prefix contains the value -1; that is, it requires at least 1 byte. Note that if a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] table column allows null values, the column requires a prefix length of 1 or greater, depending on the file storage type.  
   
  When you bulk export data and store it in either native data types or character format, use the prefix lengths shown in the following table.  
   
@@ -79,7 +79,7 @@ manager: "jhubbard"
 |UDT (a user-defined data type)|8|8|8|8|  
 |XML|8|8|8|8|  
   
- <sup>1</sup> The `ntext`, `text`, and `image` data types will be removed in a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using these data types in new development work, and plan to modify applications that currently use them. Use `nvarchar(max)`, `varchar(max)`, and `varbinary(max)` instead.  
+ <sup>1</sup> The `ntext`, `text`, and `image` data types will be removed in a future version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Avoid using these data types in new development work, and plan to modify applications that currently use them. Use `nvarchar(max)`, `varchar(max)`, and `varbinary(max)` instead.  
   
 ##  <a name="PrefixLengthsImport"></a> Prefix Lengths for Bulk Import  
  When data is bulk imported, the prefix length is the value that was specified when the data file was created originally. If the data file was not created by a **bcp** command, length prefix characters probably do not exist. In this instance, specify 0 for the prefix length.  
@@ -89,7 +89,7 @@ manager: "jhubbard"
   
 ## See Also  
  [bcp Utility](../../2014/database-engine/bcp-utility.md)   
- [Data Types &#40;Transact-SQL&#41;](../Topic/Data%20Types%20\(Transact-SQL\).md)   
+ [Data Types &#40;Transact-SQL&#41;](~/t-sql/data-types/data-types-transact-sql.md)   
  [Specify Field Length by Using bcp &#40;SQL Server&#41;](../../2014/database-engine/specify-field-length-by-using-bcp-sql-server.md)   
  [Specify Field and Row Terminators &#40;SQL Server&#41;](../../2014/database-engine/specify-field-and-row-terminators-sql-server.md)   
  [Specify File Storage Type by Using bcp &#40;SQL Server&#41;](../../2014/database-engine/specify-file-storage-type-by-using-bcp-sql-server.md)  

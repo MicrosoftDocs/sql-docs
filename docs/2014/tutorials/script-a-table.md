@@ -12,11 +12,11 @@ ms.topic: "article"
 ms.assetid: ea88d736-849e-4368-b55d-06aeee097bf3
 caps.latest.revision: 29
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Script a Table
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] can create scripts to select, insert, update, and delete tables, and to create, alter, drop, or execute stored procedures.  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] can create scripts to select, insert, update, and delete tables, and to create, alter, drop, or execute stored procedures.  
   
  Sometimes you want a script with multiple options, such as drop a procedure and then create a procedure, or create a table then alter a table. To create combined scripts, save the first script to a Query Editor window and the second to the clipboard so you can paste it into the window after the first script.  
   
@@ -24,7 +24,7 @@ manager: "jhubbard"
   
 #### To create the insert script for a table  
   
-1.  In Object Explorer, expand your server, expand **Databases**, expand [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], expand **Tables**, right-click **HumanResources.Employee**, and then point to **Script Table As**.  
+1.  In Object Explorer, expand your server, expand **Databases**, expand [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)], expand **Tables**, right-click **HumanResources.Employee**, and then point to **Script Table As**.  
   
 2.  The shortcut menu has seven available scripting options: **CREATE To**, **DROP To**, **DROP and CREATE To**, **SELECT To**, **INSERT To**, **UPDATE To**, and **DELETE To**. Point to **UPDATE To**, and then click **New Query Editor Window**.  
   

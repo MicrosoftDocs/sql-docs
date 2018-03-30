@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 147f7b93-1804-4e0b-9e17-57a51d035b2a
 caps.latest.revision: 11
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Lesson 3: Validating the Subscription and Measuring Latency
@@ -22,7 +22,7 @@ manager: "jhubbard"
   
 ### To insert a tracer token and view information on the token  
   
-1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expand the server node, right-click the **Replication** folder, and then click **Launch Replication Monitor**.  
+1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], expand the server node, right-click the **Replication** folder, and then click **Launch Replication Monitor**.  
   
      Replication Monitor launches.  
   

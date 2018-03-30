@@ -32,9 +32,9 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Content Types (Data Mining)
-  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], you can define the both the physical data type for a column in a mining structure, and a logical content type for the column when used in a model,  
+  In [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], you can define the both the physical data type for a column in a mining structure, and a logical content type for the column when used in a model,  
   
- The *data type* determines how algorithms process the data in those columns when you create mining models. Defining the data type of a column gives the algorithm information about the type of data in the columns, and how to process the data. Each data type in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supports one or more content types for data mining.  
+ The *data type* determines how algorithms process the data in those columns when you create mining models. Defining the data type of a column gives the algorithm information about the type of data in the columns, and how to process the data. Each data type in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supports one or more content types for data mining.  
   
  The *content type* describes the behavior of the content that the column contains. For example, if the content in a column repeats in a specific interval, such as days of the week, you can specify the content type of that column as cyclical.  
   
@@ -97,22 +97,22 @@ manager: "mblythe"
   
  Cyclical columns are considered both ordered and discrete in terms of content type.  
   
- This content type is supported by all the data mining data types in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. However, most algorithms treat cyclical values as discrete values and do not perform special processing.  
+ This content type is supported by all the data mining data types in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. However, most algorithms treat cyclical values as discrete values and do not perform special processing.  
   
 ## Ordered  
  The *Ordered* content type also indicates that the column contains values that define a sequence or order. However, in this content type the values used for ordering do not imply any distance or magnitude relationship between values in the set. For example, if an ordered attribute column contains information about skill levels in rank order from one to five, there is no implied information in the distance between skill levels; a skill level of five is not necessarily five times better than a skill level of one.  
   
  Ordered attribute columns are considered to be discrete in terms of content type.  
   
- This content type is supported by all the data mining data types in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. However, however, most algorithms treat ordered values as discrete values and do not perform special processing.  
+ This content type is supported by all the data mining data types in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. However, however, most algorithms treat ordered values as discrete values and do not perform special processing.  
   
 ## Classified  
  In addition to the preceding content types that are in common use with all models, for some data types you can use classified columns to define content types. For more information about classified columns, see [Classified Columns &#40;Data Mining&#41;](../../2014/analysis-services/classified-columns-data-mining.md).  
   
 ## See Also  
- [Content Types &#40;DMX&#41;](../Topic/Content%20Types%20\(DMX\).md)   
+ [Content Types &#40;DMX&#41;](~/dmx/content-types-dmx.md)   
  [Data Types &#40;Data Mining&#41;](../../2014/analysis-services/data-types-data-mining.md)   
- [Data Types &#40;DMX&#41;](../Topic/Data%20Types%20\(DMX\).md)   
+ [Data Types &#40;DMX&#41;](~/dmx/data-types-dmx.md)   
  [Change the Properties of a Mining Structure](../../2014/analysis-services/change-the-properties-of-a-mining-structure.md)   
  [Mining Structure Columns](../../2014/analysis-services/mining-structure-columns.md)  
   

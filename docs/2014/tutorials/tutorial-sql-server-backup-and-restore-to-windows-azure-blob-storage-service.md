@@ -34,9 +34,9 @@ manager: "jhubbard"
  In this lesson, you issue a T-SQL statement to restore from the database backup you created in the previous lesson.  
   
 ### Requirements  
- To complete this tutorial, you must be familiar with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup and restore concepts and T-SQL syntax. To use this tutorial, your system must meet the following requirements:  
+ To complete this tutorial, you must be familiar with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] backup and restore concepts and T-SQL syntax. To use this tutorial, your system must meet the following requirements:  
   
--   An instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], and AdventureWorks2012 database installed.  
+-   An instance of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], and AdventureWorks2012 database installed.  
   
      The SQL Server instance can be on-premises or in a Windows Azure Virtual Machine.  
   
@@ -45,7 +45,7 @@ manager: "jhubbard"
 -   The user account that is used to issue BACKUP or RESTORE commands should be in the **db_backup operator** database role with **Alter any credential** permissions.  
   
 ### Additional Reading  
- Following are some recommended reading to understand the concepts, best practices when using Windows Azure Blob storage service for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups.  
+ Following are some recommended reading to understand the concepts, best practices when using Windows Azure Blob storage service for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] backups.  
   
 1.  [SQL Server Backup and Restore with Windows Azure Blob Storage Service](../../2014/database-engine/sql-server-backup-and-restore-with-windows-azure-blob-storage-service.md)  
   

@@ -19,7 +19,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Package Properties Dialog Box
-  Use the **Package Properties** dialog box to view properties for packages that are stored on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.  
+  Use the **Package Properties** dialog box to view properties for packages that are stored on the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server.  
   
  For more information, see [Integration Services &#40;SSIS&#41; Server](../../2014/integration-services/integration-services-ssis-server.md).  
   
@@ -31,9 +31,9 @@ manager: "jhubbard"
   
 ##  <a name="open_dialog"></a> Open the Package Properties dialog box  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connect to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.  
+1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], connect to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server.  
   
-     You’re connecting to the instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] that hosts the SSISDB database.  
+     You’re connecting to the instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] that hosts the SSISDB database.  
   
 2.  In Object Explorer, expand the tree to display the **Integration Services Catalogs** node.  
   
@@ -57,7 +57,7 @@ manager: "jhubbard"
  **Entry Point**  
  The value of `True` indicates that the package is started directly. The value of `False` indicates that the package is started by another package using the Execute Package task. The default value is `True`.  
   
- You set this property in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] for both the parent package and the child packages by right-clicking the package in Solution Explorer and then clicking **Entry-point Package**.  
+ You set this property in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] for both the parent package and the child packages by right-clicking the package in Solution Explorer and then clicking **Entry-point Package**.  
   
  **Description**  
  Displays the optional description of the package.  

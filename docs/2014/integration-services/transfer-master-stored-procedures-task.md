@@ -20,7 +20,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Transfer Master Stored Procedures Task
-  The Transfer Master Stored Procedures task transfers one or more user-defined stored procedures between **master** databases on instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. To transfer a stored procedure from the **master** database, the owner of the procedure must be dbo.  
+  The Transfer Master Stored Procedures task transfers one or more user-defined stored procedures between **master** databases on instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. To transfer a stored procedure from the **master** database, the owner of the procedure must be dbo.  
   
  The Transfer Master Stored Procedures task can be configured to transfer all stored procedures or only specified stored procedures. This task does not copy system stored procedures.  
   
@@ -35,7 +35,7 @@ manager: "jhubbard"
  At run time, the Transfer Master Stored Procedures task connects to the source and destination servers by using two SMO connection managers. The SMO connection managers are configured separately from the Transfer Master Stored Procedures task, and then referenced in the Transfer Master Stored Procedures task. The SMO connection managers specify the server and the authentication mode to use when accessing the server. For more information, see [SMO Connection Manager](../../2014/integration-services/smo-connection-manager.md).  
   
 ## Transferring Stored Procedures Between Instances of SQL Server  
- The Transfer Master Stored Procedures task supports a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] source and destination.  
+ The Transfer Master Stored Procedures task supports a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] source and destination.  
   
 ## Events  
  The task raises an information event that reports the number of stored procedures transferred and a warning event when a stored procedure is overwritten.  
@@ -58,9 +58,9 @@ manager: "jhubbard"
  The user must have permission to view the list of stored procedure in the **master** database on the source, and must be a member of the sysadmin server role or have permission to created stored procedures in the **master** database on the destination server.  
   
 ## Configuration of the Transfer Master Stored Procedures Task  
- You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer or programmatically.  
   
- For information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click one of the following topics:  
+ For information about the properties that you can set in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click one of the following topics:  
   
 -   [Transfer Master Stored Procedures Task Editor &#40;General Page&#41;](../../2014/integration-services/transfer-master-stored-procedures-task-editor-general-page.md)  
   
@@ -75,7 +75,7 @@ manager: "jhubbard"
 ### Configuring the Transfer Master Stored Procedures Task Programmatically  
   
 ## Related Tasks  
- For more information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
+ For more information about how to set these properties in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click the following topic:  
   
 -   [Set the Properties of a Task or Container](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)  
   

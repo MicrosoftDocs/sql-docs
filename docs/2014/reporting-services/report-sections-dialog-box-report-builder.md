@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: 56407152-a962-49dd-a080-aef11bb6f829
 caps.latest.revision: 8
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Report Sections Dialog Box (Report Builder)

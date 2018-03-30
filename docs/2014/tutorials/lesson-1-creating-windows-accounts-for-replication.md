@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 65c3816b-47f0-448c-a4a4-ebd3e2a58820
 caps.latest.revision: 17
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Lesson 1: Creating Windows Accounts for Replication
@@ -29,7 +29,7 @@ manager: "jhubbard"
 |Merge Agent|Publisher and Subscriber|\<*machine_name*>\repl_merge|  
   
 > [!NOTE]  
->  In the replication tutorials, the Publisher and Distributor share the same instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The Publisher and Subscriber may share the same instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], but it is not a requirement. If the Publisher and Subscriber share the same instance, the steps that are used to create accounts at the Subscriber are not required.  
+>  In the replication tutorials, the Publisher and Distributor share the same instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. The Publisher and Subscriber may share the same instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], but it is not a requirement. If the Publisher and Subscriber share the same instance, the steps that are used to create accounts at the Subscriber are not required.  
   
 ### To create local Windows accounts for replication agents at the Publisher  
   

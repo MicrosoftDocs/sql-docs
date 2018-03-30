@@ -12,14 +12,14 @@ ms.topic: "article"
 ms.assetid: 4f3b2c7d-3669-457f-899b-b758d1db3426
 caps.latest.revision: 6
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Rendering Data Regions (Report Builder and SSRS)
   In addition to the general rendering behaviors that apply to all report items, data regions have additional pagination and rendering behaviors that they follow. Data region-specific rendering rules include how a data region grows, how special cells such as the corner cell or header cells are rendered, and how a data region for right-to-left reading is rendered. This topic discusses how the various parts of a data region are rendered.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## Tablix Data Regions  
  The tablix data region, which enables you to create tables, matrices, and lists, is rendered as a grid comprised of columns and rows. The intersection of a row and a column is a cell. When rendered, this cell can contain data or other report items, such as images, rectangles, text boxes, or subreports. A tablix data region can grow vertically and/or horizontally. In addition, the corner cell, the data region header cells, and the data region body cells may grow based on their contents. If the data region spans multiple pages, report items that are set to repeat with the data region are rendered on every page on which the data region is displayed. For more information, see [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/tables-matrices-and-lists-report-builder-and-ssrs.md).  

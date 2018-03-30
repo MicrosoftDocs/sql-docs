@@ -23,7 +23,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Change Roles Between Primary and Secondary Log Shipping Servers (SQL Server)
-  After you have failed over a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log shipping configuration to a secondary server, you can configure your secondary database to act as the primary database. Then, you will be able to swap primary and secondary databases as needed.  
+  After you have failed over a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] log shipping configuration to a secondary server, you can configure your secondary database to act as the primary database. Then, you will be able to swap primary and secondary databases as needed.  
   
 ## Performing the Initial Role Change  
  The first time you want to fail over to the secondary database and make it your new primary database, there is a series of steps you must take. After you have followed these initial steps, you will be able to swap roles between the primary database and the secondary database easily.  
@@ -32,7 +32,7 @@ manager: "jhubbard"
   
 2.  Disable the log shipping backup job on the original primary server, and the copy and restore jobs on the original secondary server.  
   
-3.  On your secondary database (the database you want to be the new primary), configure log shipping using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information, see [Configure Log Shipping &#40;SQL Server&#41;](../../2014/database-engine/configure-log-shipping-sql-server.md). Include the following steps:  
+3.  On your secondary database (the database you want to be the new primary), configure log shipping using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. For more information, see [Configure Log Shipping &#40;SQL Server&#41;](../../2014/database-engine/configure-log-shipping-sql-server.md). Include the following steps:  
   
     1.  Use the same share for creating backups that you created for the original primary server.  
   
@@ -44,7 +44,7 @@ manager: "jhubbard"
   
     1.  **On the new primary server**  
   
-         Execute the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements:  
+         Execute the following [!INCLUDE[tsql](../includes/tsql-md.md)] statements:  
   
         ```  
         -- Statement to execute on the new primary server  
@@ -56,7 +56,7 @@ manager: "jhubbard"
   
     2.  **On the new secondary server**  
   
-         Execute the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements:  
+         Execute the following [!INCLUDE[tsql](../includes/tsql-md.md)] statements:  
   
         ```  
         -- Statement to execute on the new secondary server  

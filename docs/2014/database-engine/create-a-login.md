@@ -24,11 +24,11 @@ helpviewer_keywords:
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 caps.latest.revision: 25
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Create a Login
-  This topic describes how to create a login in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. A login is the identity of the person or process that is connecting to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  This topic describes how to create a login in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)]. A login is the identity of the person or process that is connecting to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **In This Topic**  
   
@@ -47,12 +47,12 @@ manager: "jhubbard"
 -   **Follow Up:**  [Steps to take after you create a login](#FollowUp)  
   
 ##  <a name="Background"></a> Background  
- A login is a security principal, or an entity that can be authenticated by a secure system. Users need a login to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You can create a login based on a Windows principal (such as a domain user or a Windows domain group) or you can create a login that is not based on a Windows principal (such as an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login).  
+ A login is a security principal, or an entity that can be authenticated by a secure system. Users need a login to connect to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. You can create a login based on a Windows principal (such as a domain user or a Windows domain group) or you can create a login that is not based on a Windows principal (such as an [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] login).  
   
 > [!NOTE]  
->  To use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] must use mixed mode authentication. For more information, see [Choose an Authentication Mode](../../2014/database-engine/choose-an-authentication-mode.md).  
+>  To use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication, the [!INCLUDE[ssDE](../includes/ssde-md.md)] must use mixed mode authentication. For more information, see [Choose an Authentication Mode](../../2014/database-engine/choose-an-authentication-mode.md).  
   
- As a security principal, permissions can be granted to logins. The scope of a login is the whole [!INCLUDE[ssDE](../../includes/ssde-md.md)]. To connect to a specific database on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a login must be mapped to a database user. Permissions inside the database are granted and denied to the database user, not the login. Permissions that have the scope of the whole instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (for example, the `CREATE ENDPOINT` permission) can be granted to a login.  
+ As a security principal, permissions can be granted to logins. The scope of a login is the whole [!INCLUDE[ssDE](../includes/ssde-md.md)]. To connect to a specific database on the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], a login must be mapped to a database user. Permissions inside the database are granted and denied to the database user, not the login. Permissions that have the scope of the whole instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (for example, the `CREATE ENDPOINT` permission) can be granted to a login.  
   
 ##  <a name="Security"></a> Security  
   
@@ -83,7 +83,7 @@ manager: "jhubbard"
   
 4.  To create a login based on a Windows principal, select **Windows authentication**. This is the default selection.  
   
-5.  To create a login that is saved on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, select **SQL Server authentication**.  
+5.  To create a login that is saved on a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database, select **SQL Server authentication**.  
   
     1.  In the **Password** box, enter a password for the new user. Enter that password again into the **Confirm Password** box.  
   
@@ -105,7 +105,7 @@ manager: "jhubbard"
   
 10. From the **Default language** list, select a default language for the login.  
   
-11. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ### Additional Options  
  The **Login – New** dialog box also offers options on four additional pages: **Server Roles**, **User Mapping**, **Securables**, and **Status**.  
@@ -123,13 +123,13 @@ manager: "jhubbard"
  Members of the **diskadmin** fixed server role can manage disk files.  
   
  **processadmin** check box  
- Members of the **processadmin** fixed server role can terminate processes running in an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ Members of the **processadmin** fixed server role can terminate processes running in an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
  **public** check box  
  All SQL Server users, groups, and roles belong to the **public** fixed server role by default.  
   
  **securityadmin** check box  
- Members of the **securityadmin** fixed server role manage logins and their properties. They can GRANT, DENY, and REVOKE server-level permissions. They can also GRANT, DENY, and REVOKE database-level permissions. Additionally, they can reset passwords for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins.  
+ Members of the **securityadmin** fixed server role manage logins and their properties. They can GRANT, DENY, and REVOKE server-level permissions. They can also GRANT, DENY, and REVOKE database-level permissions. Additionally, they can reset passwords for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] logins.  
   
  **serveradmin** check box  
  Members of the **serveradmin** fixed server role can change server-wide configuration options and shut down the server.  
@@ -138,7 +138,7 @@ manager: "jhubbard"
  Members of the **setupadmin** fixed server role can add and remove linked servers, and they can execute some system stored procedures.  
   
  **sysadmin** check box  
- Members of the **sysadmin** fixed server role can perform any activity in the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ Members of the **sysadmin** fixed server role can perform any activity in the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 ### User Mapping  
  The **User Mapping** page lists all possible databases and the database role memberships on those databases that can be applied to the login. The databases selected determine the role memberships that are available for the login. The following options are available on this page:  
@@ -174,7 +174,7 @@ manager: "jhubbard"
   
 1.  Click **Search**.  
   
-2.  In the **Add Objects** dialog box, select one of the following options: **Specific objects…**, **All objects of the types…**, or **The server***server_name*. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+2.  In the **Add Objects** dialog box, select one of the following options: **Specific objects…**, **All objects of the types…**, or **The server***server_name*. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
     > [!NOTE]  
     >  Selecting **The server***server_name* automatically fills the upper grid with all of that servers' securable objects.  
@@ -183,7 +183,7 @@ manager: "jhubbard"
   
     1.  In the **Select Objects** dialog box, under **Select these object types**, click **Object Types…**.  
   
-    2.  In the **Select Object Types** dialog box, select any or all of the following object types: **Endpoints**, **Logins**, **Servers**, **Availability Groups**, and **Server roles**. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+    2.  In the **Select Object Types** dialog box, select any or all of the following object types: **Endpoints**, **Logins**, **Servers**, **Availability Groups**, and **Server roles**. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
     3.  Under **Enter the object names to select (examples)**, click **Browse…**.  
   
@@ -191,7 +191,7 @@ manager: "jhubbard"
   
     5.  In the **Select Objects** dialog box, click **OK**.  
   
-4.  If you select **All objects of the types…**, in the **Select Object Types** dialog box, select any or all of the following object types: **Endpoints**, **Logins**, **Servers**, **Availability Groups**, and **Server roles**. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  If you select **All objects of the types…**, in the **Select Object Types** dialog box, select any or all of the following object types: **Endpoints**, **Logins**, **Servers**, **Availability Groups**, and **Server roles**. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
  **Name**  
  The name of each principal or securable that is added to the grid.  
@@ -212,13 +212,13 @@ manager: "jhubbard"
  Select to grant this permission to the login. Clear to revoke this permission.  
   
  **With Grant**  
- Reflects the state of the WITH GRANT option for the listed permission. This box is read-only. To apply this permission, use the [GRANT](../Topic/GRANT%20\(Transact-SQL\).md) statement.  
+ Reflects the state of the WITH GRANT option for the listed permission. This box is read-only. To apply this permission, use the [GRANT](~/t-sql/statements/grant-transact-sql.md) statement.  
   
  **Deny**  
  Select to deny this permission to the login. Clear to revoke this permission.  
   
 ### Status  
- The **Status** page lists some of the authentication and authorization options that can be configured on the selected [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login.  
+ The **Status** page lists some of the authentication and authorization options that can be configured on the selected [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] login.  
   
  The following options are available on this page:  
   
@@ -230,18 +230,18 @@ manager: "jhubbard"
  **Login**  
  When you work with this setting, you should think of the selected login as a record in a table. Changes to the values listed here will be applied to the record.  
   
- A login that has been disabled continues to exist as a record. But if it tries to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the login will not be authenticated.  
+ A login that has been disabled continues to exist as a record. But if it tries to connect to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the login will not be authenticated.  
   
  Select this option to enable or disable this login. This option uses the ALTER LOGIN statement with the either ENABLE or DISABLE option.  
   
  **SQL Server Authentication**  
- The check box **Login is locked out** is only available if the selected login connects using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication and the login has been locked out. This setting is read-only. To unlock a login that is locked out, execute ALTER LOGIN with the UNLOCK option.  
+ The check box **Login is locked out** is only available if the selected login connects using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication and the login has been locked out. This setting is read-only. To unlock a login that is locked out, execute ALTER LOGIN with the UNLOCK option.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To create a login using Windows Authentication  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -257,7 +257,7 @@ manager: "jhubbard"
   
 #### To create a login using SQL Server Authentication  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -274,10 +274,10 @@ manager: "jhubbard"
   
     ```  
   
- For more information, see [CREATE LOGIN &#40;Transact-SQL&#41;](../Topic/CREATE%20LOGIN%20\(Transact-SQL\).md).  
+ For more information, see [CREATE LOGIN &#40;Transact-SQL&#41;](~/t-sql/statements/create-login-transact-sql.md).  
   
 ##  <a name="FollowUp"></a> Follow Up: Steps to take after you create a login  
- After creating a login, the login can connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], but does not necessarily have sufficient permission to perform any useful work. The following list provides links to common login actions.  
+ After creating a login, the login can connect to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], but does not necessarily have sufficient permission to perform any useful work. The following list provides links to common login actions.  
   
 -   To have the login join a role, see [Join a Role](../../2014/database-engine/join-a-role.md).  
   

@@ -23,20 +23,20 @@ manager: "jhubbard"
 # Set or Change the Protection Level of Packages
   To control access to the contents of packages and to the sensitive values that they contain, such as passwords, set the value of the `ProtectionLevel` property. The packages contained in a project need to have the same protection level as the project, to build the project. If you change the `ProtectionLevel` property setting on the project, you need to manually update the property setting for the packages.  
   
- For information about how to determine the `ProtectionLevel` settings that are appropriate for your packages at different stages in the package life cycle, see [Access Control for Sensitive Data in Packages](../../2014/integration-services/access-control-for-sensitive-data-in-packages.md). For an overview of security features in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], see [Security Overview &#40;Integration Services&#41;](../../2014/integration-services/security-overview-integration-services.md).  
+ For information about how to determine the `ProtectionLevel` settings that are appropriate for your packages at different stages in the package life cycle, see [Access Control for Sensitive Data in Packages](../../2014/integration-services/access-control-for-sensitive-data-in-packages.md). For an overview of security features in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], see [Security Overview &#40;Integration Services&#41;](../../2014/integration-services/security-overview-integration-services.md).  
   
- The procedures in this topic describe how to use either [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] or the dtutil command prompt utility to change the `ProtectionLevel` property.  
+ The procedures in this topic describe how to use either [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] or the dtutil command prompt utility to change the `ProtectionLevel` property.  
   
 > [!NOTE]  
->  In addition to the procedures in this topic, you can typically set or change the `ProtectionLevel` property of a package when you import or export the package. You can also change the `ProtectionLevel` property of a package when you use the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard to save a package.  
+>  In addition to the procedures in this topic, you can typically set or change the `ProtectionLevel` property of a package when you import or export the package. You can also change the `ProtectionLevel` property of a package when you use the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Import and Export Wizard to save a package.  
   
 ### To set or change the protection level of a package in SQL Server Data Tools  
   
 1.  Review the available values for the `ProtectionLevel` property in the topic, [Setting the Protection Level of Packages](../../2014/integration-services/access-control-for-sensitive-data-in-packages.md), and determine the appropriate value for your package.  
   
-2.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project that contains the package.  
+2.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project that contains the package.  
   
-3.  Open the package in the [!INCLUDE[ssIS](../../includes/ssis-md.md)] designer.  
+3.  Open the package in the [!INCLUDE[ssIS](../includes/ssis-md.md)] designer.  
   
 4.  If the Properties window does not show the properties of the package, click the design surface.  
   

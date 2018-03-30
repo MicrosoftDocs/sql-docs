@@ -29,7 +29,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Data Flow Performance Features
-  This topic provides suggestions about how to design [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages to avoid common performance issues. This topic also provides information about features and tools that you can use to troubleshoot the performance of packages.  
+  This topic provides suggestions about how to design [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages to avoid common performance issues. This topic also provides information about features and tools that you can use to troubleshoot the performance of packages.  
   
 ## Configuring the Data Flow  
  To configure the Data Flow task for better performance, you can configure the task's properties, adjust buffer size, and configure the package for parallel execution.  
@@ -50,7 +50,7 @@ manager: "jhubbard"
 -   Indicate whether the Data Flow task runs in optimized mode (RunInOptimizedMode property). Optimized mode improves performance by removing unused columns, outputs, and components from the data flow.  
   
     > [!NOTE]  
-    >  A property with the same name, RunInOptimizedMode, can be set at the project level in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to indicate that the Data Flow task runs in optimized mode during debugging. This project property overrides the RunInOptimizedMode property of Data Flow tasks at design time.  
+    >  A property with the same name, RunInOptimizedMode, can be set at the project level in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to indicate that the Data Flow task runs in optimized mode during debugging. This project property overrides the RunInOptimizedMode property of Data Flow tasks at design time.  
   
 ### Adjust the Sizing of Buffers  
  The data flow engine begins the task of sizing its buffers by calculating the estimated size of a single row of data. Then it multiplies the estimated size of a row by the value of DefaultBufferMaxRows to obtain a preliminary working value for the buffer size.  
@@ -67,10 +67,10 @@ manager: "jhubbard"
   
  To determine the optimum number of buffers and their size, experiment with the values of DefaultBufferSize and DefaultBufferMaxRows while monitoring performance and the information reported by the BufferSizeTuning event.  
   
- Do not increase buffer size to the point where paging to disk starts to occur. Paging to disk hinders performance more than a buffer size that has not been optimized. To determine whether paging is occurring, monitor the "Buffers spooled" performance counter in the Performance snap-in of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC).  
+ Do not increase buffer size to the point where paging to disk starts to occur. Paging to disk hinders performance more than a buffer size that has not been optimized. To determine whether paging is occurring, monitor the "Buffers spooled" performance counter in the Performance snap-in of the [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console (MMC).  
   
 ### Configure the Package for Parallel Execution  
- Parallel execution improves performance on computers that have multiple physical or logical processors. To support parallel execution of different tasks in the package, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] uses two properties: `MaxConcurrentExecutables` and `EngineThreads`.  
+ Parallel execution improves performance on computers that have multiple physical or logical processors. To support parallel execution of different tasks in the package, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] uses two properties: `MaxConcurrentExecutables` and `EngineThreads`.  
   
 #### The MaxConcurrentExcecutables Property  
  The `MaxConcurrentExecutables` property is a property of the package itself. This property defines how many tasks can run simultaneously. The default value is -1, which means the number of physical or logical processors plus 2.  
@@ -97,7 +97,7 @@ manager: "jhubbard"
  To construct a query, you can type the query or use Query Builder.  
   
 > [!NOTE]  
->  When you run a package in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], the Progress tab of [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer lists warnings. These warnings include identifying any data column that a source makes available to the data flow, but is not subsequently used by downstream data flow components. You can use the `RunInOptimizedMode` property to remove these columns automatically.  
+>  When you run a package in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], the Progress tab of [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer lists warnings. These warnings include identifying any data column that a source makes available to the data flow, but is not subsequently used by downstream data flow components. You can use the `RunInOptimizedMode` property to remove these columns automatically.  
   
 #### Avoid Unnecessary Sorting  
  Sorting is inherently a slow operation, and avoiding unnecessary sorting can enhance the performance of the package data flow.  
@@ -144,18 +144,18 @@ manager: "jhubbard"
  Advanced users can design a custom data flow for slowly changing dimension processing that is optimized for large dimensions. For a discussion and example of this approach, see the section, "Unique dimension scenario," in the white paper, [Project REAL: Business Intelligence ETL Design Practices](http://go.microsoft.com/fwlink/?LinkId=96602).  
   
 ### Destinations  
- To achieve better performance with destinations, consider using a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destination and testing the destination's performance.  
+ To achieve better performance with destinations, consider using a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] destination and testing the destination's performance.  
   
 #### SQL Server Destination  
- When a package loads data to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the same computer, use a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destination. This destination is optimized for high-speed bulk loads.  
+ When a package loads data to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on the same computer, use a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] destination. This destination is optimized for high-speed bulk loads.  
   
 #### Testing the Performance of Destinations  
  You may find that saving data to destinations takes more time than expected. To identify whether the slowness is caused by the inability of the destination to process data quickly enough, you can temporarily replace the destination with a Row Count transformation. If the throughput improves significantly, it is likely that the destination that is loading the data is causing the slowdown.  
   
 ### Review the Information on the Progress Tab  
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer provides information about both control flow and data flow when you run a package in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. The **Progress** tab lists tasks and containers in order of execution and includes start and finish times, warnings, and error messages for each task and container, including the package itself. It also lists data flow components in order of execution and includes information about progress, displayed as percentage complete, and the number of rows processed.  
+ [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer provides information about both control flow and data flow when you run a package in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. The **Progress** tab lists tasks and containers in order of execution and includes start and finish times, warnings, and error messages for each task and container, including the package itself. It also lists data flow components in order of execution and includes information about progress, displayed as percentage complete, and the number of rows processed.  
   
- To enable or disable the display of messages on the **Progress** tab, toggle the **Debug Progress Reporting** option on the **SSIS** menu. Disabling progress reporting can help improve performance while running a complex package in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
+ To enable or disable the display of messages on the **Progress** tab, toggle the **Debug Progress Reporting** option on the **SSIS** menu. Disabling progress reporting can help improve performance while running a complex package in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
   
 ## Related Tasks  
   

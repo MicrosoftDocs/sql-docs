@@ -25,7 +25,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # ClientNetworkProtocol Class
-  The [ClientNetworkProtocol Class](../../../2014/database-engine/dev-guide/clientnetworkprotocol-class.md) represents network protocols installed on a client instance that allows communication with an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] over a network.  
+  The [ClientNetworkProtocol Class](../../../2014/database-engine/dev-guide/clientnetworkprotocol-class.md) represents network protocols installed on a client instance that allows communication with an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] over a network.  
   
  With the [ClientNetworkProtocol Class](../../../2014/database-engine/dev-guide/clientnetworkprotocol-class.md), you can perform the following tasks:  
   

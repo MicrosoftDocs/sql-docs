@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: ca20e4f6-50ec-4456-900d-87d280fde2b3
 caps.latest.revision: 10
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # SQL Server, Workload Group Stats Object
@@ -28,7 +28,7 @@ manager: "jhubbard"
 |Queued requests|The current number of queued requests that is waiting to be picked up. This count can be non-zero if throttling occurs after the GROUP_MAX_REQUESTS limit is reached.|  
 |Active requests|The number of requests that are currently running in this workload group. This should be equivalent to the count of rows from sys.dm_exec_requests filtered by group ID.|  
 |Requests completed/sec|The number of requests that have completed in this workload group. This number is cumulative.|  
-|CPU usage %|The CPU bandwidth usage by all requests in this workload group measured relative to the computer and normalized to all the CPUs on the system. This value will change as the amount of CPU available to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process changes. It is not normalized to what the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process receives.|  
+|CPU usage %|The CPU bandwidth usage by all requests in this workload group measured relative to the computer and normalized to all the CPUs on the system. This value will change as the amount of CPU available to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process changes. It is not normalized to what the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process receives.|  
 |Max request CPU time (ms)|The maximum CPU time, in milliseconds, used by a request currently running in the workload group.|  
 |Blocked requests|The current number of blocked requests in the workload group. This can be used to determine workload characteristics.|  
 |Reduced memory grants/sec|The number of queries that are getting less than ideal amount of memory grants per second.|  

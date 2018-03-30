@@ -31,7 +31,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # About Log Shipping (SQL Server)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Log shipping allows you to automatically send transaction log backups from a *primary database* on a *primary server* instance to one or more *secondary databases* on separate *secondary server* instances. The transaction log backups are applied to each of the secondary databases individually. An optional third server instance, known as the *monitor server*, records the history and status of backup and restore operations and, optionally, raises alerts if these operations fail to occur as scheduled.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Log shipping allows you to automatically send transaction log backups from a *primary database* on a *primary server* instance to one or more *secondary databases* on separate *secondary server* instances. The transaction log backups are applied to each of the secondary databases individually. An optional third server instance, known as the *monitor server*, records the history and status of backup and restore operations and, optionally, raises alerts if these operations fail to occur as scheduled.  
   
  **In this Topic:**  
   
@@ -47,7 +47,7 @@ manager: "jhubbard"
   
 ##  <a name="Benefits"></a> Benefits  
   
--   Provides a disaster-recovery solution for a single primary database and one or more secondary databases, each on a separate instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Provides a disaster-recovery solution for a single primary database and one or more secondary databases, each on a separate instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 -   Supports limited read-only access to secondary databases (during the interval between restore jobs).  
   
@@ -55,19 +55,19 @@ manager: "jhubbard"
   
 ##  <a name="TermsAndDefinitions"></a> Terms and Definitions  
  primary server  
- The instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is your production server.  
+ The instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that is your production server.  
   
  primary database  
- The database on the primary server that you want to back up to another server. All administration of the log shipping configuration through [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] is performed from the primary database.  
+ The database on the primary server that you want to back up to another server. All administration of the log shipping configuration through [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] is performed from the primary database.  
   
  secondary server  
- The instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] where you want to keep a warm standby copy of your primary database.  
+ The instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] where you want to keep a warm standby copy of your primary database.  
   
  secondary database  
  The warm standby copy of the primary database. The secondary database may be in either the RECOVERING state or the STANDBY state, which leaves the database available for limited read-only access.  
   
  monitor server  
- An optional instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that tracks all of the details of log shipping, including:  
+ An optional instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that tracks all of the details of log shipping, including:  
   
 -   When the transaction log on the primary database was last backed up.  
   
@@ -79,16 +79,16 @@ manager: "jhubbard"
 >  Once the monitor server has been configured, it cannot be changed without removing log shipping first.  
   
  backup job  
- A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job that  performs the backup operation, logs history to the local server and the monitor server, and deletes old backup files and history information. When log shipping is enabled, the job category "Log Shipping Backup" is created on the primary server instance.  
+ A [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent job that  performs the backup operation, logs history to the local server and the monitor server, and deletes old backup files and history information. When log shipping is enabled, the job category "Log Shipping Backup" is created on the primary server instance.  
   
  copy job  
- A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job that copies the backup files from the primary server to a configurable destination on the secondary server and logs history on the secondary server and the monitor server. When log shipping is enabled on a database, the job category "Log Shipping Copy" is created on each secondary server in a log shipping configuration.  
+ A [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent job that copies the backup files from the primary server to a configurable destination on the secondary server and logs history on the secondary server and the monitor server. When log shipping is enabled on a database, the job category "Log Shipping Copy" is created on each secondary server in a log shipping configuration.  
   
  restore job  
- A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job that restores the copied backup files to the secondary databases. It logs history on the local server and the monitor server, and deletes old files and old history information. When log shipping is enabled on a database, the job category "Log Shipping Restore" is created on the secondary server instance.  
+ A [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent job that restores the copied backup files to the secondary databases. It logs history on the local server and the monitor server, and deletes old files and old history information. When log shipping is enabled on a database, the job category "Log Shipping Restore" is created on the secondary server instance.  
   
  alert job  
- A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job that raises alerts for primary and secondary databases when a backup or restore operation does not complete successfully within a specified threshold. When log shipping is enabled on a database, job category "Log Shipping Alert" is created on the monitor server instance.  
+ A [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent job that raises alerts for primary and secondary databases when a backup or restore operation does not complete successfully within a specified threshold. When log shipping is enabled on a database, job category "Log Shipping Alert" is created on the monitor server instance.  
   
 > [!TIP]  
 >  For each alert, you need to specify an alert number. Also, be sure to configure the alert to notify an operator when an alert is raised.  
@@ -124,7 +124,7 @@ manager: "jhubbard"
  ![Configuration showing backup, copy, & restore jobs](../../2014/database-engine/media/ls-typical-configuration.gif "Configuration showing backup, copy, & restore jobs")  
   
 ##  <a name="Interoperability"></a> Interoperability  
- Log shipping can be used with the following features or components of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+ Log shipping can be used with the following features or components of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
 -   [Prerequisites for Migrating from Log Shipping to AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
@@ -133,7 +133,7 @@ manager: "jhubbard"
 -   [Log Shipping and Replication &#40;SQL Server&#41;](../../2014/database-engine/log-shipping-and-replication-sql-server.md)  
   
 > [!NOTE]  
->  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] and database mirroring are mutually exclusive. A database that is configured for one of these features cannot be configured for the other.  
+>  [!INCLUDE[ssHADR](../includes/sshadr-md.md)] and database mirroring are mutually exclusive. A database that is configured for one of these features cannot be configured for the other.  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   

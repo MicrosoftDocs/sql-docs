@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Licensing Considerations for SQL Server
-  For more information about [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] licensing options, see [this Microsoft SQL Server Web site](http://www.microsoft.com/sqlserver/sql-server-2014.aspx).  
+  For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] licensing options, see [this Microsoft SQL Server Web site](http://www.microsoft.com/sqlserver/sql-server-2014.aspx).  
   
 ## See Also  
  [About the SQL Server License Terms](../../../2014/getting-started/about-the-sql-server-license-terms.md)   

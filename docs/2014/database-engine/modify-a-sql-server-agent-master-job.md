@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Modify a SQL Server Agent Master Job
-  The following topics describe how to modify a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent master job.  
+  The following topics describe how to modify a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent master job.  
   
  [Change the Scheduling Details for a SQL Server Agent Master Job](../../2014/database-engine/change-the-scheduling-details-for-a-sql-server-agent-master-job.md)  
   

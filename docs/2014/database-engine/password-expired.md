@@ -20,11 +20,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Password Expired
-  Appears when you connect to a server with [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, and the password you provided is correct but has expired. Also appears when you connect to a server with a new account that is created by using the **User must change password at next logon** option. Use the **Password Expired** dialog box to change the password for this [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication login.  
+  Appears when you connect to a server with [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication, and the password you provided is correct but has expired. Also appears when you connect to a server with a new account that is created by using the **User must change password at next logon** option. Use the **Password Expired** dialog box to change the password for this [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication login.  
   
 ## Options  
  **Login**  
- Displays the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login that you are using.  
+ Displays the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] login that you are using.  
   
  **New Password**  
  Type the new password for the login.  

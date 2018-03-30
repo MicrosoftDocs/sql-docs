@@ -16,7 +16,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQL Server Management Tools Backward Compatibility
-  Topics in the backward compatibility section describe changes in behavior between versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Topics in the backward compatibility section describe changes in behavior between versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 |**Topic**|**Description**|  
 |---------------|---------------------|  

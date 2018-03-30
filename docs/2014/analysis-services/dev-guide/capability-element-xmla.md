@@ -58,9 +58,9 @@ manager: "mblythe"
 |Child elements|None|  
   
 ## Remarks  
- The `Capability` element indicates that a particular capability, such as binary or compression, is supported by either the application that included the `ProtocolCapabilities` header element in the SOAP header of the SOAP request, or by the instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] that included the `ProtocolCapabilities` header element in the SOAP header of the SOAP response. The value of the `Capability` element is the name of the capability to be supported.  
+ The `Capability` element indicates that a particular capability, such as binary or compression, is supported by either the application that included the `ProtocolCapabilities` header element in the SOAP header of the SOAP request, or by the instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] that included the `ProtocolCapabilities` header element in the SOAP header of the SOAP response. The value of the `Capability` element is the name of the capability to be supported.  
   
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] supports the capabilities listed in the following table.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supports the capabilities listed in the following table.  
   
 |Capability name|Description|  
 |---------------------|-----------------|  

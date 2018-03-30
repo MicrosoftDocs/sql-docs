@@ -27,7 +27,7 @@ manager: "jhubbard"
 # Executing XPath Queries with Namespaces (SQLXML Managed Classes)
   XPath queries can include namespaces. If the schema elements are namespace-qualified (use a target namespace), the XPath queries against the schema must specify the namespace.  
   
- Because the wildcard character (*) is not supported in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0, you must specify the XPath query by using a namespace prefix. To resolve the prefix, use the namespaces property to specify the namespace binding.  
+ Because the wildcard character (*) is not supported in [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0, you must specify the XPath query by using a namespace prefix. To resolve the prefix, use the namespaces property to specify the namespace binding.  
   
  In the following example, the XPath query specifies namespaces by using the wildcard character (\*) and the local-name() and namespace-uri() XPath functions. This XPath query returns all the elements where the local name is `Employee` and the namespace URI is `urn:myschema:Contacts`:  
   
@@ -56,7 +56,7 @@ manager: "jhubbard"
  The following C# sample application executes an XPath query against the preceding XSD schema (MySchema.xml). To resolve the prefix, specify the namespace binding by using the Namespaces property of the SqlXmlCommand object.  
   
 > [!NOTE]  
->  In the code, you must provide the name of the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in the connection string.  
+>  In the code, you must provide the name of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in the connection string.  
   
 ```  
 using System;  
@@ -89,7 +89,7 @@ class Test
    }  
 ```  
   
- To test this example, you must have the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework installed on your computer.  
+ To test this example, you must have the [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework installed on your computer.  
   
 ### To test the application  
   

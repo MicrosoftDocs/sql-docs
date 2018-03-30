@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 4d2afca6-ab7a-4695-b9c9-bc2bdaa4060e
 caps.latest.revision: 3
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Image, Text Box, Rectangle, Line F1 Help

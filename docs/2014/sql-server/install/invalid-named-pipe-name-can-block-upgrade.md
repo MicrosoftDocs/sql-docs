@@ -22,16 +22,16 @@ manager: "jhubbard"
   Upgrade fails if the named pipes protocol is incorrectly configured.  
   
 ## Component  
- [!INCLUDE[ssDE](../../../includes/ssde-md.md)]  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## Description  
- During upgrade, the Setup program starts the [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssDE](../../../includes/ssde-md.md)] instance with shared memory support, a named pipe that only accepts local connections. If the pipe name specified on the server is not blank, it must begin with the string "\\\\.\pipe\\" to be valid. If the pipe name is not valid, the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] will not start, and setup will fail.  
+ During upgrade, the Setup program starts the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)] instance with shared memory support, a named pipe that only accepts local connections. If the pipe name specified on the server is not blank, it must begin with the string "\\\\.\pipe\\" to be valid. If the pipe name is not valid, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] will not start, and setup will fail.  
   
 ## Corrective Action  
- Use the **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Network Utility** to supply a valid pipe name, and then run Setup.  
+ Use the **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Network Utility** to supply a valid pipe name, and then run Setup.  
   
 ## See Also  
  [Database Engine Upgrade Issues](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;new&#93;](../Topic/SQL%20Server%202014%20Upgrade%20Advisor%20[new].md)  
+ [SQL Server 2014 Upgrade Advisor &#91;new&#93;](~/2014/sql-server/install/sql-server-2014-upgrade-advisor.md)  
   
   

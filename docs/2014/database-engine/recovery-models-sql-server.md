@@ -34,7 +34,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Recovery Models (SQL Server)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup and restore operations occur within the context of the recovery model of the database. Recovery models are designed to control transaction log maintenance. A *recovery model* is a database property that controls how transactions are logged, whether the transaction log requires (and allows) backing up, and what kinds of restore operations are available. Three recovery models exist: simple, full, and bulk-logged. Typically, a database uses the full recovery model or simple recovery model. A database can be switched to another recovery model at any time.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] backup and restore operations occur within the context of the recovery model of the database. Recovery models are designed to control transaction log maintenance. A *recovery model* is a database property that controls how transactions are logged, whether the transaction log requires (and allows) backing up, and what kinds of restore operations are available. Three recovery models exist: simple, full, and bulk-logged. Typically, a database uses the full recovery model or simple recovery model. A database can be switched to another recovery model at any time.  
   
  **In this Topic:**  
   
@@ -58,9 +58,9 @@ manager: "jhubbard"
 -   [Troubleshoot a Full Transaction Log &#40;SQL Server Error 9002&#41;](../../2014/database-engine/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
 ## See Also  
- [backupset &#40;Transact-SQL&#41;](../Topic/backupset%20\(Transact-SQL\).md)   
- [sys.databases &#40;Transact-SQL&#41;](../Topic/sys.databases%20\(Transact-SQL\).md)   
- [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)   
+ [backupset &#40;Transact-SQL&#41;](~/relational-databases/system-tables/backupset-transact-sql.md)   
+ [sys.databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
+ [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-set-options.md)   
  [Back Up and Restore of SQL Server Databases](../../2014/database-engine/back-up-and-restore-of-sql-server-databases.md)   
  [The Transaction Log &#40;SQL Server&#41;](../../2014/database-engine/the-transaction-log-sql-server.md)   
  [Automated Administration Tasks &#40;SQL Server Agent&#41;](../../2014/database-engine/automated-administration-tasks-sql-server-agent.md)   

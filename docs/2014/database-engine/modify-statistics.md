@@ -15,11 +15,11 @@ helpviewer_keywords:
 ms.assetid: b06299ca-ed52-411a-b245-45eac4628c99
 caps.latest.revision: 9
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Modify Statistics
-  You can modify existing statistics in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  You can modify existing statistics in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -67,6 +67,6 @@ manager: "jhubbard"
   
  This task cannot be performed using Transact-SQL statements. To modify statistics using Transact-SQL, you must first delete the existing statistic and then re-create it with new attributes.  
   
- For more information, see [DROP STATISTICS &#40;Transact-SQL&#41;](../Topic/DROP%20STATISTICS%20\(Transact-SQL\).md) and [CREATE STATISTICS &#40;Transact-SQL&#41;](../Topic/CREATE%20STATISTICS%20\(Transact-SQL\).md).  
+ For more information, see [DROP STATISTICS &#40;Transact-SQL&#41;](~/t-sql/statements/drop-statistics-transact-sql.md) and [CREATE STATISTICS &#40;Transact-SQL&#41;](~/t-sql/statements/create-statistics-transact-sql.md).  
   
   

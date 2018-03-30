@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
 caps.latest.revision: 37
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Transactional Replication
@@ -31,7 +31,7 @@ manager: "jhubbard"
   
 -   The Publisher has a very high volume of insert, update, and delete activity.  
   
--   The Publisher or Subscriber is a non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database, such as Oracle.  
+-   The Publisher or Subscriber is a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, such as Oracle.  
   
  By default, Subscribers to transactional publications should be treated as read-only, because changes are not propagated back to the Publisher. However, transactional replication does offer options that allow updates at the Subscriber.  
   
@@ -48,7 +48,7 @@ manager: "jhubbard"
  [Distribution Agent](#DistributionAgent)  
   
 ##  <a name="HowWorks"></a> How Transactional Replication Works  
- Transactional replication is implemented by the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Snapshot Agent, Log Reader Agent, and Distribution Agent. The Snapshot Agent prepares snapshot files containing schema and data of published tables and database objects, stores the files in the snapshot folder, and records synchronization jobs in the distribution database on the Distributor.  
+ Transactional replication is implemented by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Snapshot Agent, Log Reader Agent, and Distribution Agent. The Snapshot Agent prepares snapshot files containing schema and data of published tables and database objects, stores the files in the snapshot folder, and records synchronization jobs in the distribution database on the Distributor.  
   
  The Log Reader Agent monitors the transaction log of each database configured for transactional replication and copies the transactions marked for replication from the transaction log into the distribution database, which acts as a reliable store-and-forward queue. The Distribution Agent copies the initial snapshot files from the snapshot folder and the transactions held in the distribution database tables to Subscribers.  
   
@@ -59,7 +59,7 @@ manager: "jhubbard"
  ![Transactional replication components and data flow](../../../2014/relational-databases/replication/media/trnsact.gif "Transactional replication components and data flow")  
   
 ##  <a name="Dataset"></a> Initial Dataset  
- Before a new transactional replication Subscriber can receive incremental changes from a Publisher, the Subscriber must contain tables with the same schema and data as the tables at the Publisher. The initial dataset is typically a snapshot that is created by the Snapshot Agent and distributed and applied by the Distribution Agent. The initial dataset can also be supplied through a backup or other means, such as [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Integration Services.  
+ Before a new transactional replication Subscriber can receive incremental changes from a Publisher, the Subscriber must contain tables with the same schema and data as the tables at the Publisher. The initial dataset is typically a snapshot that is created by the Snapshot Agent and distributed and applied by the Distribution Agent. The initial dataset can also be supplied through a backup or other means, such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Integration Services.  
   
  When snapshots are distributed and applied to Subscribers, only those Subscribers waiting for initial snapshots are affected. Other Subscribers to that publication (those that have already been initialized) are unaffected.  
   
@@ -69,10 +69,10 @@ manager: "jhubbard"
 ##  <a name="SnapshotAgent"></a> Snapshot Agent  
  The procedures by which the Snapshot Agent implements the initial snapshot in transactional replication are the same procedures used in snapshot replication (except as outlined above with regard to concurrent snapshot processing).  
   
- After the snapshot files have been generated, you can view them in the snapshot folder using [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows Explorer.  
+ After the snapshot files have been generated, you can view them in the snapshot folder using [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Explorer.  
   
 ##  <a name="LogReaderAgent"></a> Modifying Data and the Log Reader Agent  
- The Log Reader Agent runs at the Distributor; it typically runs continuously, but can also run according to a schedule you establish. When executing, the Log Reader Agent first reads the publication transaction log (the same database log used for transaction tracking and recovery during regular [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Database Engine operations) and identifies any INSERT, UPDATE, and DELETE statements, or other modifications made to the data in transactions that have been marked for replication. Next, the agent copies those transactions in batches to the distribution database at the Distributor. The Log Reader Agent uses the internal stored procedure **sp_replcmds** to get the next set of commands marked for replication from the log. The distribution database then becomes the store-and-forward queue from which changes are sent to Subscribers. Only committed transactions are sent to the distribution database.  
+ The Log Reader Agent runs at the Distributor; it typically runs continuously, but can also run according to a schedule you establish. When executing, the Log Reader Agent first reads the publication transaction log (the same database log used for transaction tracking and recovery during regular [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine operations) and identifies any INSERT, UPDATE, and DELETE statements, or other modifications made to the data in transactions that have been marked for replication. Next, the agent copies those transactions in batches to the distribution database at the Distributor. The Log Reader Agent uses the internal stored procedure **sp_replcmds** to get the next set of commands marked for replication from the log. The distribution database then becomes the store-and-forward queue from which changes are sent to Subscribers. Only committed transactions are sent to the distribution database.  
   
  After the entire batch of transactions has been written successfully to the distribution database, it is committed. Following the commit of each batch of commands to the Distributor, the Log Reader Agent calls **sp_repldone** to mark where replication was last completed. Finally, the agent marks the rows in the transaction log that are ready to be purged. Rows still waiting to be replicated are not purged.  
   

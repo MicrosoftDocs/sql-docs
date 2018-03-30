@@ -36,7 +36,7 @@ manager: "jhubbard"
  A notification services event checks for compliance.  
   
  **On schedule**  
- A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job is created to check for compliance on a schedule.  
+ A [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent job is created to check for compliance on a schedule.  
   
  Policies that are run using **On demand** evaluation mode do not use this check box.  
   

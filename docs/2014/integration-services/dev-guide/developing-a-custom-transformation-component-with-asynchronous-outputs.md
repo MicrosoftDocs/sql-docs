@@ -36,7 +36,7 @@ manager: "jhubbard"
   
  The columns from upstream components that are available to a component with synchronous outputs are automatically available to components downstream from the component. Therefore, a component with synchronous outputs does not have to define any output columns to provide columns and rows to the next component. Components with asynchronous outputs, on the other hand, must define output columns and provide rows to downstream components. Therefore a component with asynchronous outputs has more tasks to perform during both design and execution time, and the component developer has more code to implement.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] contains several transformations with asynchronous outputs. For example, the Sort transformation requires all its rows before it can sort them, and achieves this by using asynchronous outputs. After it has received all its rows, it sorts them and adds them to its output.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contains several transformations with asynchronous outputs. For example, the Sort transformation requires all its rows before it can sort them, and achieves this by using asynchronous outputs. After it has received all its rows, it sorts them and adds them to its output.  
   
  This section explains in detail how to develop transformations with asynchronous outputs. For more information about source component development, see [Developing a Custom Source Component](../../../2014/integration-services/dev-guide/developing-a-custom-source-component.md).  
   
@@ -319,7 +319,7 @@ End Namespace
   
 ||  
 |-|  
-|![Integration Services icon (small)](../../../2014/integration-services/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
+|![Integration Services icon (small)](../../../2014/integration-services/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
   
 ## See Also  
  [Developing a Custom Transformation Component with Synchronous Outputs](../../../2014/integration-services/dev-guide/developing-a-custom-transformation-component-with-synchronous-outputs.md)   

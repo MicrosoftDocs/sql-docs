@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 7412ce68-aece-41c0-8c37-76a0e54b6b53
 caps.latest.revision: 7
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Specify Credentials in Report Builder
@@ -24,7 +24,7 @@ manager: "mblythe"
 >  The report server administrator must grant a user the appropriate permissions to browse the report server to select shared data sources or models or to open or save reports. For more information, see [Install, Uninstall, and Report Builder Support](../../2014/reporting-services/install-uninstall-and-report-builder-support.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## Understanding When Credentials are Used  
  In Report Builder, credentials are often used when you connect to a report server or for data-related tasks, such as creating an embedded data source, running a dataset query, or previewing a report. Credentials are not stored in the report. They are managed separately on the report server or on the local client. The following list describes the types of credentials that you might need to provide, where they are stored, and how they are used:  
@@ -46,7 +46,7 @@ manager: "mblythe"
  For more information, see [Data Source Properties Dialog Box, General &#40;Report Builder&#41;](../../2014/reporting-services/data-source-properties-dialog-box-general-report-builder.md) and [Previewing Reports in Report Builder](../../2014/reporting-services/previewing-reports-in-report-builder.md).  
   
 ## Types of Credentials  
- The type of credentials that a data source supports is specified by the owner of the data source. For example, to access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, you might need to provide a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login user name and password. To access a different data source, you might need to provide a Windows user name and password. Some data sources might not require credentials.  
+ The type of credentials that a data source supports is specified by the owner of the data source. For example, to access a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database, you might need to provide a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] login user name and password. To access a different data source, you might need to provide a Windows user name and password. Some data sources might not require credentials.  
   
 ### Options for Specifying Credentials  
  The following options are available to specify credentials for a data source:  
@@ -63,13 +63,13 @@ manager: "mblythe"
  When you select **Use Windows Authentication (integrated security)**, the security token of the current user is passed to the data source. In this case, the user is not prompted to type a user name or password. This option usually requires that delegation features are enabled. If these features are not enabled, you can only use this option to access a data source that is located on the same computer.  
   
 ### User Name and Password Login  
- When you select **Use this user name and password**, a user name and password must be supplied to access the data source. For a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, the credentials might be for a database login. The credentials are passed to the data source for authentication.  
+ When you select **Use this user name and password**, a user name and password must be supplied to access the data source. For a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database, the credentials might be for a database login. The credentials are passed to the data source for authentication.  
   
 ### Prompted Credentials  
  When you specify prompted credentials, each user who accesses the report must enter a user name and password to retrieve the data. This option is recommended for reports that contain confidential data. Prompted credentials can be for a Windows account or a database login. If the database server does not recognize the credentials that you provide, or if the specified user does not has not been granted permission to retrieve the data, the connection fails.  
   
 ### No Credentials  
- Credentials are not required for this data source. To run this report on the report server, the unattended execution account must be configured. For more information, see [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-the-unattended-execution-account-ssrs-configuration-manager.md) in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+ Credentials are not required for this data source. To run this report on the report server, the unattended execution account must be configured. For more information, see [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-the-unattended-execution-account-ssrs-configuration-manager.md) in the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
   
 ## See Also  
  [Install, Uninstall, and Report Builder Support](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)   

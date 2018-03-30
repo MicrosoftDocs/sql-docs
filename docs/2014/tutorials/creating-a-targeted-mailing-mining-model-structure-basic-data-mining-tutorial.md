@@ -16,9 +16,9 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Creating a Targeted Mailing Mining Model Structure (Basic Data Mining Tutorial)
-  The first step in creating a targeted mailing scenario is to use the Data Mining Wizard in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to create a new mining structure and decision tree mining model.  
+  The first step in creating a targeted mailing scenario is to use the Data Mining Wizard in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to create a new mining structure and decision tree mining model.  
   
- In this task you will set up a new mining structure, and add an initial mining model based on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm. To create the structure, you will first select tables and views and then identify which columns will be used for training and which for testing.  
+ In this task you will set up a new mining structure, and add an initial mining model based on the [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees algorithm. To create the structure, you will first select tables and views and then identify which columns will be used for training and which for testing.  
   
 ### To create a mining structure for the targeted mailing scenario  
   
@@ -31,7 +31,7 @@ manager: "jhubbard"
 4.  On the **Create the Data Mining Structure** page, under **Which data mining technique do you want to use?**, select **Microsoft Decision Trees**.  
   
     > [!NOTE]  
-    >  If you get a warning that no data mining algorithms can be found, the project properties might not be configured correctly. This warning occurs when the project attempts to retrieve a list of data mining algorithms from the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server and cannot find the server. By default, [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] will use **localhost** as the server. If you are using a different instance, or a named instance, you must change the project properties. For more information, see [Creating an Analysis Services Project &#40;Basic Data Mining Tutorial&#41;](../../2014/tutorials/creating-an-analysis-services-project-basic-data-mining-tutorial.md).  
+    >  If you get a warning that no data mining algorithms can be found, the project properties might not be configured correctly. This warning occurs when the project attempts to retrieve a list of data mining algorithms from the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] server and cannot find the server. By default, [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] will use **localhost** as the server. If you are using a different instance, or a named instance, you must change the project properties. For more information, see [Creating an Analysis Services Project &#40;Basic Data Mining Tutorial&#41;](../../2014/tutorials/creating-an-analysis-services-project-basic-data-mining-tutorial.md).  
   
 5.  Click **Next**.  
   

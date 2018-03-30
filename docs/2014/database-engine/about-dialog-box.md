@@ -19,17 +19,17 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # About Dialog Box
-  The **About** dialog box provides product information and allows you to access information about the machine the product is running on. For evaluation copies, the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] entry lists the number of days remaining until the installation expires. This dialog box is available on the **Help** menu.  
+  The **About** dialog box provides product information and allows you to access information about the machine the product is running on. For evaluation copies, the [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] entry lists the number of days remaining until the installation expires. This dialog box is available on the **Help** menu.  
   
 ## Options  
  **Component Name**  
- Lists the name of each [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] item installed.  
+ Lists the name of each [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] item installed.  
   
  **Version**  
  Lists the version of each installed component.  
   
  **Copy Info**  
- Copies the component names and versions to the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows clipboard.  
+ Copies the component names and versions to the [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows clipboard.  
   
 ## See Also  
  [General User Interface Elements](../../2014/database-engine/general-user-interface-elements.md)  

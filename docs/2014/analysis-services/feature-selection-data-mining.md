@@ -40,9 +40,9 @@ manager: "mblythe"
  If only 50 of the 500 columns in the data source have information that is useful in building a model, you could just leave them out of the model, or you could use feature selection techniques to automatically discover the best features and to exclude values that are statistically insignificant. Feature selection helps solve the twin problems of having too much data that is of little value, or having too little data that is of high value.  
   
 ## Feature Selection in Analysis Services Data Mining  
- Usually, feature selection is performed automatically in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], and each algorithm has a set of default techniques for intelligently applying feature reduction. Feature selection is always performed before the model is trained, to automatically choose the attributes in a dataset that are most likely to be used in the model. However, you can also manually set parameters to influence feature selection behavior.  
+ Usually, feature selection is performed automatically in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], and each algorithm has a set of default techniques for intelligently applying feature reduction. Feature selection is always performed before the model is trained, to automatically choose the attributes in a dataset that are most likely to be used in the model. However, you can also manually set parameters to influence feature selection behavior.  
   
- In general, feature selection works by calculating a score for each attribute, and then selecting only the attributes that have the best scores. You can also adjust the threshold for the top scores. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] provides multiple methods for calculating these scores, and the exact method that is applied in any model depends on these factors:  
+ In general, feature selection works by calculating a score for each attribute, and then selecting only the attributes that have the best scores. You can also adjust the threshold for the top scores. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] provides multiple methods for calculating these scores, and the exact method that is applied in any model depends on these factors:  
   
 -   The algorithm used in your model  
   

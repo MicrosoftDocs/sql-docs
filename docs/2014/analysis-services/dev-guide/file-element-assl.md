@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # File Element (ASSL)
-  Defines one of the files that compose a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] [ClrAssembly](../../../2014/analysis-services/dev-guide/clrassembly-data-type-assl.md) element.  
+  Defines one of the files that compose a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] [ClrAssembly](../../../2014/analysis-services/dev-guide/clrassembly-data-type-assl.md) element.  
   
 ## Syntax  
   

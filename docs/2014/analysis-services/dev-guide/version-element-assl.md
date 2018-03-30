@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Version Element (ASSL)
-  Contains the read-only version number of the instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] represented by the [Server](../../../2014/analysis-services/dev-guide/server-element-assl.md) element.  
+  Contains the read-only version number of the instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] represented by the [Server](../../../2014/analysis-services/dev-guide/server-element-assl.md) element.  
   
 ## Syntax  
   
@@ -56,7 +56,7 @@ manager: "mblythe"
 |Child elements|None|  
   
 ## Remarks  
- The `Version` element describes which version of [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] is installed.  
+ The `Version` element describes which version of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] is installed.  
   
  The element that corresponds to the parent of `Version` in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.Server>.  
   

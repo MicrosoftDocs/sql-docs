@@ -22,35 +22,35 @@ ms.author: "heidist"
 manager: "jhubbard"
 ---
 # Install Analysis Services in Multidimensional and Data Mining Mode
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] provides online analytical processing (OLAP) and data mining functionality for business intelligence applications. In this release, support for OLAP databases and data mining models is available when you install [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in *Multidimensional mode*. Multidimensional mode is one of three server modes that [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] runs in. It is the default mode. If you install [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] using default values, you will get an instance that runs multidimensional databases and data mining models.  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] provides online analytical processing (OLAP) and data mining functionality for business intelligence applications. In this release, support for OLAP databases and data mining models is available when you install [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in *Multidimensional mode*. Multidimensional mode is one of three server modes that [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] runs in. It is the default mode. If you install [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] using default values, you will get an instance that runs multidimensional databases and data mining models.  
   
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] is a multi-instance feature, which means that you can install more than one instance [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] on a single computer, or run a new instance of [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] side-by-side an earlier version. Server mode is specific to an instance. Using other modes requires that you install additional instances of the server.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] is a multi-instance feature, which means that you can install more than one instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] on a single computer, or run a new instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] side-by-side an earlier version. Server mode is specific to an instance. Using other modes requires that you install additional instances of the server.  
   
- You can install [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] by itself or with other components. If you install just [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], the following features are installed when you select **Analysis Services** on the Feature Selection page of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Installation Wizard:  
+ You can install [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] by itself or with other components. If you install just [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], the following features are installed when you select **Analysis Services** on the Feature Selection page of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard:  
   
--   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] server for running [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] databases and data mining models  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server for running [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] databases and data mining models  
   
--   Data providers used for [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] data access to source databases  
+-   Data providers used for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data access to source databases  
   
 -   SQL Server Configuration Manager  
   
 ## Choosing additional features  
- Analysis Services OLAP and data warehouse solutions will require the installation of additional [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] components to enable the development, deployment, and administration of [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] databases. The following additional features are options for many typical user scenarios:  
+ Analysis Services OLAP and data warehouse solutions will require the installation of additional [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components to enable the development, deployment, and administration of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] databases. The following additional features are options for many typical user scenarios:  
   
--   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], used to create and view Analysis Services data structures and data mining models.  
+-   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], used to create and view Analysis Services data structures and data mining models.  
   
 -   Client tools connectivity components, used for communication between clients and servers, including network libraries for DB-Library, ODBC, and OLE DB.  
   
--   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], a set of graphical and programmable objects for moving, copying, and transforming data.  
+-   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], a set of graphical and programmable objects for moving, copying, and transforming data.  
   
--   Management tools, including [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager, [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)], and Replication Monitor.  
+-   Management tools, including [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], and Replication Monitor.  
   
 ## Installation Tasks  
  Installation tasks include the following:  
   
 |Links|Tasks|  
 |-----------|-----------|  
-|[Hardware and Software Requirements for Installing SQL Server 2014](../../../2014/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2014.md) and [Configure Windows Service Accounts and Permissions](../../../2014/database-engine/configure-windows-service-accounts-and-permissions.md).|Before you run Setup, check prerequisites for installing [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] and determine which account you will use to provision the server.|  
+|[Hardware and Software Requirements for Installing SQL Server 2014](../../../2014/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2014.md) and [Configure Windows Service Accounts and Permissions](../../../2014/database-engine/configure-windows-service-accounts-and-permissions.md).|Before you run Setup, check prerequisites for installing [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and determine which account you will use to provision the server.|  
 |[Install SQL Server 2014 from the Installation Wizard &#40;Setup&#41;](../../../2014/sql-server/install/install-sql-server-2014-from-the-installation-wizard-setup.md).|Run SQL Server Setup to install the software.|  
 |[Configure the Windows Firewall to Allow Analysis Services Access](../../../2014/analysis-services/configure-the-windows-firewall-to-allow-analysis-services-access.md)|After Setup is finished, you must configure firewall settings to allow remote connections to the server.|  
 |[Authorizing access to objects and operations &#40;Analysis Services&#41;](../../../2014/analysis-services/authorizing-access-to-objects-and-operations-analysis-services.md)|Users who access Analysis Services databases must have Read permission on at least one database on the server.|  
@@ -66,7 +66,7 @@ manager: "jhubbard"
   
  [SQL Server Data Mining Add-ins](http://go.microsoft.com/fwlink/?LinkId=197091)  
   
- By default, sample databases, sample code, and client application add-ins are not installed as part of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup. To install sample databases and sample code, see the [CodePlex Web site](http://go.microsoft.com/fwlink/?LinkId=87843).  
+ By default, sample databases, sample code, and client application add-ins are not installed as part of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup. To install sample databases and sample code, see the [CodePlex Web site](http://go.microsoft.com/fwlink/?LinkId=87843).  
   
 ## See Also  
  [Features Supported by the Editions of SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473)   

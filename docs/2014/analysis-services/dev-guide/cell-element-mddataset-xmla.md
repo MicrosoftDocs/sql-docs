@@ -77,7 +77,7 @@ manager: "mblythe"
  The data type of a cell property value is specified only for the VALUE cell property. The data types of other cell properties are determined by the cell property definition included in the `CellInfo` element. A cell property value element can be excluded if a default value has been specified (by including a `Default` element for a cell property definition contained in the `CellInfo` element) for a cell property, or if no default value has been specified and the value of the cell property is null.  
   
 ## Cell Property Errors  
- If a cell property cannot be returned due to an error that occurs on the instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], such as a calculation error that prevents the value from being returned for a given cell, an `Error` element replaces the contents of the cell property in question. The following XML example describes a cell property error:  
+ If a cell property cannot be returned due to an error that occurs on the instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], such as a calculation error that prevents the value from being returned for a given cell, an `Error` element replaces the contents of the cell property in question. The following XML example describes a cell property error:  
   
 ```  
 <Cell CellOrdinal="0">  

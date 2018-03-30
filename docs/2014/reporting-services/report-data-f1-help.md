@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 61b91ccf-7b4c-4f3d-8992-2c8eb105ccf4
 caps.latest.revision: 3
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Report Data F1 Help

@@ -83,7 +83,7 @@ manager: "mblythe"
   
 11. Verify that the completed filter conditions are correct by viewing the text in the **Expression** pane.  
   
-12. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+12. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
      The filter condition is applied to the data source when you create the accuracy chart.  
   

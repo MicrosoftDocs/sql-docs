@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Connect to a DB2 Database (SSAS)
-  This page of the **Table Import Wizard** enables you to specify settings to connect to a DB2 database. To access the wizard from the [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], on the **Model** menu, click **Import from Data Source**.  
+  This page of the **Table Import Wizard** enables you to specify settings to connect to a DB2 database. To access the wizard from the [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], on the **Model** menu, click **Import from Data Source**.  
   
  To connect to a data source, you must have the appropriate provider installed on your computer.  
   

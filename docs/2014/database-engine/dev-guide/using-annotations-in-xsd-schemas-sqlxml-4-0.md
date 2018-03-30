@@ -24,7 +24,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Using Annotations in XSD Schemas (SQLXML 4.0)
-  In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0, the XSD schema language supports annotations in a manner similar to the annotations introduced in the XML-Data Reduced (XDR) schema language. There are additional annotations introduced in XSD that are not supported in XDR.  
+  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0, the XSD schema language supports annotations in a manner similar to the annotations introduced in the XML-Data Reduced (XDR) schema language. There are additional annotations introduced in XSD that are not supported in XDR.  
   
  These annotations can be used within the XSD schema to specify XML-to-relational mapping. This includes mapping between elements and attributes in the XSD schema to tables (views) and columns in the databases.  
   
@@ -75,7 +75,7 @@ manager: "jhubbard"
  Describes and provides examples of the `sql:datatype` annotation.  
   
  [Mapping XSD Data Types to XPath Data Types &#40;SQLXML 4.0&#41;](../../../2014/database-engine/dev-guide/mapping-xsd-data-types-to-xpath-data-types-sqlxml-4-0.md)  
- Provides a table that compares XSD, XDR, and XPath datatypes and lists the relevant [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] conversions.  
+ Provides a table that compares XSD, XDR, and XPath datatypes and lists the relevant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conversions.  
   
  [Creating CDATA Sections Using sql:use-cdata &#40;SQLXML 4.0&#41;](../../../2014/database-engine/dev-guide/creating-cdata-sections-using-sql-use-cdata-sqlxml-4-0.md)  
  Describes and provides examples of the `sql:use-data` annotation.  

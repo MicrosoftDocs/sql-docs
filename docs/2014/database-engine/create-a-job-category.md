@@ -20,9 +20,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Create a Job Category
-  This topic describes how to create a job category in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects.  
+  This topic describes how to create a job category in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../includes/tsql-md.md)] or [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent provides built-in job categories that you can assign jobs to, or you can create a job category and assign jobs to it. Job categories help you organize your jobs for easy filtering and grouping. For example, you can organize all your database backup jobs in the Database Maintenance category. You can also create your own job categories.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent provides built-in job categories that you can assign jobs to, or you can create a job category and assign jobs to it. Job categories help you organize your jobs for easy filtering and grouping. For example, you can organize all your database backup jobs in the Database Maintenance category. You can also create your own job categories.  
   
  
   
@@ -64,7 +64,7 @@ manager: "jhubbard"
   
 #### To create a job category  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -81,7 +81,7 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [sp_add_category &#40;Transact-SQL&#41;](../Topic/sp_add_category%20\(Transact-SQL\).md).  
+ For more information, see [sp_add_category &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-add-category-transact-sql.md).  
   
 
   

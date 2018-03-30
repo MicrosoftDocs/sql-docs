@@ -16,7 +16,7 @@ ms.author: "sstein"
 manager: "jhubbard"
 ---
 # Supported Constructs in Natively Compiled Stored Procedures
-  This topic contains a list of supported features for natively compiled stored procedures ([CREATE PROCEDURE &#40;Transact-SQL&#41;](../Topic/CREATE%20PROCEDURE%20\(Transact-SQL\).md)):  
+  This topic contains a list of supported features for natively compiled stored procedures ([CREATE PROCEDURE &#40;Transact-SQL&#41;](~/t-sql/statements/create-procedure-transact-sql.md)):  
   
 -   [Programmability in Natively Compiled Stored Procedures](../../2014/database-engine/supported-constructs-in-natively-compiled-stored-procedures.md#pncsp)  
   
@@ -64,7 +64,7 @@ manager: "jhubbard"
 ##  <a name="so"></a> Supported Operators  
  The following operators are supported.  
   
--   [Comparison Operators &#40;Transact-SQL&#41;](../Topic/Comparison%20Operators%20\(Transact-SQL\).md) (for example, >, \<, >=, and <=) are supported in conditionals (IF, WHILE).  
+-   [Comparison Operators &#40;Transact-SQL&#41;](~/t-sql/language-elements/comparison-operators-transact-sql.md) (for example, >, \<, >=, and <=) are supported in conditionals (IF, WHILE).  
   
 -   Unary operators (+, -).  
   
@@ -106,13 +106,13 @@ manager: "jhubbard"
   
 -   CROSS JOIN and INNER JOIN, supported only with SELECT queries.  
   
--   Expressions are supported in SELECT list and [WHERE &#40;Transact-SQL&#41;](../Topic/WHERE%20\(Transact-SQL\).md) clause if they use a supported operator. See [Supported Operators](#so) for the list of currently-supported operators.  
+-   Expressions are supported in SELECT list and [WHERE &#40;Transact-SQL&#41;](~/t-sql/queries/where-transact-sql.md) clause if they use a supported operator. See [Supported Operators](#so) for the list of currently-supported operators.  
   
 -   Filter predicate IS [NOT] NULL  
   
 -   FROM \<memory optimized table>  
   
--   [GROUP BY &#40;Transact-SQL&#41;](../Topic/GROUP%20BY%20\(Transact-SQL\).md) is supported, along with the aggregate functions AVG, COUNT, COUNT_BIG, MIN, MAX, and SUM. MIN and MAX are not supported for types nvarchar, char, varchar, varchar, varbinary, and binary. [ORDER BY Clause &#40;Transact-SQL&#41;](../Topic/ORDER%20BY%20Clause%20\(Transact-SQL\).md) is supported with [GROUP BY &#40;Transact-SQL&#41;](../Topic/GROUP%20BY%20\(Transact-SQL\).md) if an expression in the ORDER BY list appears verbatim in the GROUP BY list. For example, GROUP BY a + b ORDER BY a + b is supported, but GROUP BY a, b ORDER BY a + b is not.  
+-   [GROUP BY &#40;Transact-SQL&#41;](~/t-sql/queries/select-group-by-transact-sql.md) is supported, along with the aggregate functions AVG, COUNT, COUNT_BIG, MIN, MAX, and SUM. MIN and MAX are not supported for types nvarchar, char, varchar, varchar, varbinary, and binary. [ORDER BY Clause &#40;Transact-SQL&#41;](~/t-sql/queries/select-order-by-clause-transact-sql.md) is supported with [GROUP BY &#40;Transact-SQL&#41;](~/t-sql/queries/select-group-by-transact-sql.md) if an expression in the ORDER BY list appears verbatim in the GROUP BY list. For example, GROUP BY a + b ORDER BY a + b is supported, but GROUP BY a, b ORDER BY a + b is not.  
   
 -   HAVING, subject to the same expression limitations as the WHERE clause.  
   
@@ -147,7 +147,7 @@ manager: "jhubbard"
   
  However, a constant in the `TOP` clause results in better performance compared to using a variable.  
   
- These restrictions do not apply to interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)] access on memory-optimized tables.  
+ These restrictions do not apply to interpreted [!INCLUDE[tsql](../includes/tsql-md.md)] access on memory-optimized tables.  
   
 ##  <a name="auditing"></a> Auditing  
  Procedure level auditing is supported in natively compiled stored procedures. Statement level auditing is not supported.  
@@ -157,7 +157,7 @@ manager: "jhubbard"
 ##  <a name="tqh"></a> Table, Query, and Join Hints  
  The following are supported:  
   
--   INDEX, FORCESCAN, and FORCESEEK hints, either in table hints syntax or in [OPTION Clause &#40;Transact-SQL&#41;](../Topic/OPTION%20Clause%20\(Transact-SQL\).md) of the query.  
+-   INDEX, FORCESCAN, and FORCESEEK hints, either in table hints syntax or in [OPTION Clause &#40;Transact-SQL&#41;](~/t-sql/queries/option-clause-transact-sql.md) of the query.  
   
 -   FORCE ORDER  
   
@@ -165,12 +165,12 @@ manager: "jhubbard"
   
 -   OPTIMIZE FOR  
   
- For more information, see [Hints &#40;Transact-SQL&#41;](../Topic/Hints%20\(Transact-SQL\).md).  
+ For more information, see [Hints &#40;Transact-SQL&#41;](~/t-sql/queries/hints-transact-sql.md).  
   
 ##  <a name="los"></a> Limitations on Sorting  
- You can sort greater than 8,000 rows in a query that uses [TOP &#40;Transact-SQL&#41;](../Topic/TOP%20\(Transact-SQL\).md) and an [ORDER BY Clause &#40;Transact-SQL&#41;](../Topic/ORDER%20BY%20Clause%20\(Transact-SQL\).md). However, without [ORDER BY Clause &#40;Transact-SQL&#41;](../Topic/ORDER%20BY%20Clause%20\(Transact-SQL\).md), [TOP &#40;Transact-SQL&#41;](../Topic/TOP%20\(Transact-SQL\).md) can sort up to 8,000 rows (fewer rows if there are joins).  
+ You can sort greater than 8,000 rows in a query that uses [TOP &#40;Transact-SQL&#41;](~/t-sql/queries/top-transact-sql.md) and an [ORDER BY Clause &#40;Transact-SQL&#41;](~/t-sql/queries/select-order-by-clause-transact-sql.md). However, without [ORDER BY Clause &#40;Transact-SQL&#41;](~/t-sql/queries/select-order-by-clause-transact-sql.md), [TOP &#40;Transact-SQL&#41;](~/t-sql/queries/top-transact-sql.md) can sort up to 8,000 rows (fewer rows if there are joins).  
   
- If your query uses both the [TOP &#40;Transact-SQL&#41;](../Topic/TOP%20\(Transact-SQL\).md) operator and an [ORDER BY Clause &#40;Transact-SQL&#41;](../Topic/ORDER%20BY%20Clause%20\(Transact-SQL\).md), you can specify up to 8192 rows for the TOP operator. If you specify more than 8192 rows you get the error message: **Msg 41398, Level 16, State 1, Procedure *\<procedureName>*, Line *\<lineNumber>* The TOP operator can return a maximum of 8192 rows; *\<number>* was requested.**  
+ If your query uses both the [TOP &#40;Transact-SQL&#41;](~/t-sql/queries/top-transact-sql.md) operator and an [ORDER BY Clause &#40;Transact-SQL&#41;](~/t-sql/queries/select-order-by-clause-transact-sql.md), you can specify up to 8192 rows for the TOP operator. If you specify more than 8192 rows you get the error message: **Msg 41398, Level 16, State 1, Procedure *\<procedureName>*, Line *\<lineNumber>* The TOP operator can return a maximum of 8192 rows; *\<number>* was requested.**  
   
  If you do not have a TOP clause, you can sort any number of rows with ORDER BY.  
   

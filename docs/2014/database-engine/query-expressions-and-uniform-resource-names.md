@@ -20,7 +20,7 @@ ms.author: "mblythe"
 manager: "jhubbard"
 ---
 # Query Expressions and Uniform Resource Names
-  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Object (SMO) models and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell snap-ins use two types of expression strings that are similar to XPath expressions. Query expressions are strings that specify a set of criteria used to enumerate one or more objects in an object model hierarchy. A Uniform Resource Name (URN) is a specific type of query expression string that uniquely identifies a single object.  
+  The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object (SMO) models and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell snap-ins use two types of expression strings that are similar to XPath expressions. Query expressions are strings that specify a set of criteria used to enumerate one or more objects in an object model hierarchy. A Uniform Resource Name (URN) is a specific type of query expression string that uniquely identifies a single object.  
   
 ## Syntax  
   
@@ -89,7 +89,7 @@ manager: "jhubbard"
 |ss|Two digit seconds (01 through 59).|  
 |mmm|Number of milliseconds (001 through 999).|  
   
- The dates that are specified in this format can be evaluated against any date format that is stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ The dates that are specified in this format can be evaluated against any date format that is stored in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  is_null(@*PropertyName*)  
  Enumerates all objects where the specified property has a value of NULL.  
@@ -128,7 +128,7 @@ Server[@Name='MYCOMPUTER']/Database[@CaseSensitive=false() and contains(@Name, '
 ```  
   
 ### C. Enumerating objects using not  
- This query expression enumerates all of [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] tables that are not in the **Production** schema and contain the word History in the table name:  
+ This query expression enumerates all of [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] tables that are not in the **Production** schema and contain the word History in the table name:  
   
 ```  
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012']/Table[not(@Schema='Production') and contains(@Name, 'History')]  
@@ -142,14 +142,14 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[@Schema='S
 ```  
   
 ### E. Enumerating objects using datetime  
- This query expression enumerates all the tables that are created in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database at a specific time:  
+ This query expression enumerates all the tables that are created in the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database at a specific time:  
   
 ```  
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[@CreateDate=datetime('2008-03-21 19:49:32.647')]  
 ```  
   
 ### F. Enumerating objects using is_null  
- This query expression enumerates all the tables in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database that do not have NULL for their date last modified property:  
+ This query expression enumerates all the tables in the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database that do not have NULL for their date last modified property:  
   
 ```  
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[Not(is_null(@DateLastModified))]  

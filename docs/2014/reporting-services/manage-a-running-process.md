@@ -29,11 +29,11 @@ helpviewer_keywords:
 ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
 caps.latest.revision: 53
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Manage a Running Process
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] monitors the status of jobs that are running on the report server. At regular intervals, the report server does a scan of in-progress jobs and writes the status information to the report server database or the service application databases for SharePoint mode. A job is in progress if any of the following processes are underway: query execution on a remote or local database server, report processing, and report rendering.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] monitors the status of jobs that are running on the report server. At regular intervals, the report server does a scan of in-progress jobs and writes the status information to the report server database or the service application databases for SharePoint mode. A job is in progress if any of the following processes are underway: query execution on a remote or local database server, report processing, and report rendering.  
   
  You can manage both *user jobs* and *system jobs*.  
   
@@ -54,7 +54,7 @@ manager: "mblythe"
  Canceling a job only cancels the processes that are running on the report server. Because the report server does not manage data processing that occurs on other computers, you must manually cancel query processes that are subsequently orphaned on other systems. Consider specifying query time-out values to automatically shut down queries that are taking too long to execute. For more information, see [Setting Time-out Values for Report and Shared Dataset Processing &#40;SSRS&#41;](../../2014/reporting-services/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md). For more information about temporarily pausing a report, see [Pause Report and Subscription Processing](../../2014/reporting-services/pause-report-and-subscription-processing.md).  
   
 > [!NOTE]  
->  In rare circumstances, you may need to restart the server to cancel a process. For SharePoint mode, you may need to restart the application pool hosting the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application. For more information, see [Start and Stop the Report Server Service](../../2014/reporting-services/start-and-stop-the-report-server-service.md).  
+>  In rare circumstances, you may need to restart the server to cancel a process. For SharePoint mode, you may need to restart the application pool hosting the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service application. For more information, see [Start and Stop the Report Server Service](../../2014/reporting-services/start-and-stop-the-report-server-service.md).  
   
  In this Topic:  
   
@@ -65,15 +65,15 @@ manager: "mblythe"
 -   [Managing Jobs Programmatically](#bkmk_programmatically)  
   
 ##  <a name="bkmk_native"></a> View and Cancel Jobs (Native Mode)  
- You can use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to view or cancel a job that is running on the report server. You must refresh the page to retrieve a list of jobs that are currently running or to get up-to-date job status from the report server database. When you connect to a report server in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], you can open a Jobs folder to view a list of reports that are currently processing on the report server computer. Status information for each job is displayed in the Job Properties page. You can view status information for all jobs by opening the Cancel Report Server Jobs dialog box.  
+ You can use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] to view or cancel a job that is running on the report server. You must refresh the page to retrieve a list of jobs that are currently running or to get up-to-date job status from the report server database. When you connect to a report server in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], you can open a Jobs folder to view a list of reports that are currently processing on the report server computer. Status information for each job is displayed in the Job Properties page. You can view status information for all jobs by opening the Cancel Report Server Jobs dialog box.  
   
- You can use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to view or cancel a job that is running on the report server. You must refresh the page to retrieve a list of jobs that are currently running or to get up-to-date job status from the report server database. When you connect to a report server in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], you can open a Jobs folder to view a list of reports that are currently processing on the report server computer. Status information for each job is displayed in the Job Properties page. You can view status information for all jobs by opening the Cancel Report Server Jobs dialog box.  
+ You can use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] to view or cancel a job that is running on the report server. You must refresh the page to retrieve a list of jobs that are currently running or to get up-to-date job status from the report server database. When you connect to a report server in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], you can open a Jobs folder to view a list of reports that are currently processing on the report server computer. Status information for each job is displayed in the Job Properties page. You can view status information for all jobs by opening the Cancel Report Server Jobs dialog box.  
   
- You cannot use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to list or cancel model generation, model processing, or data-driven subscriptions. Reporting a Services does not provide a way to cancel model generation or processing. However, you can cancel data-driven subscriptions using the instructions provided in this topic.  
+ You cannot use [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] to list or cancel model generation, model processing, or data-driven subscriptions. Reporting a Services does not provide a way to cancel model generation or processing. However, you can cancel data-driven subscriptions using the instructions provided in this topic.  
   
 ### How to Cancel Report Processing or Subscription  
   
-1.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], connect to the report server. For instructions, see [Connect to a Report Server in Management Studio](../../2014/reporting-services/connect-to-a-report-server-in-management-studio.md).  
+1.  In [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], connect to the report server. For instructions, see [Connect to a Report Server in Management Studio](../../2014/reporting-services/connect-to-a-report-server-in-management-studio.md).  
   
 2.  Open the **Jobs** folder.  
   
@@ -99,13 +99,13 @@ manager: "mblythe"
  A running job is stored in the report server temporary database. You can modify configuration settings in the RSReportServer.config file to control how often the report server scans for in-progress jobs and the interval after which the status of a running job changes from new to running. The `RunningRequestsDbCycle` setting specifies how often the report server scans for running processes. By default, status information is recorded every 60 seconds. The `RunningRequestsAge` setting specifies the interval at which a job is transitioned from new to running.  
   
 ##  <a name="bkmk_sharepoint"></a> View and Cancel Jobs (SharePoint Mode)  
- Management of jobs in a SharePoint mode deployment is completed using SharePoint Central Administration, for each [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application.  
+ Management of jobs in a SharePoint mode deployment is completed using SharePoint Central Administration, for each [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service application.  
   
 #### To manage jobs in SharePoint mode  
   
 1.  In SharePoint Central Administration, click **Manage service applications**.  
   
-2.  Find and click the name of your [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application to open the manage application page.  
+2.  Find and click the name of your [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service application to open the manage application page.  
   
 3.  Click **Manage Jobs**  
   

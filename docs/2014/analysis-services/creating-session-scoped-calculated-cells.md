@@ -22,7 +22,7 @@ manager: "mblythe"
 > [!IMPORTANT]  
 >  This syntax has been deprecated. You should use MDX assignments should instead. For more information on assignments, see [The Basic MDX Script &#40;MDX&#41;](../../2014/analysis-services/the-basic-mdx-script-mdx.md).  
   
- To create calculated cells that are available to all queries in the same session, you can use either the [CREATE CELL CALCULATION](../Topic/CREATE%20CELL%20CALCULATION%20Statement%20\(MDX\).md) statement or the [ALTER CUBE](../Topic/ALTER%20CUBE%20Statement%20\(MDX\).md) statement. Both statements have the same result.  
+ To create calculated cells that are available to all queries in the same session, you can use either the [CREATE CELL CALCULATION](~/mdx/mdx-data-definition-create-cell-calculation.md) statement or the [ALTER CUBE](~/mdx/mdx-data-definition-alter-cube.md) statement. Both statements have the same result.  
   
 ## CREATE CELL CALCULATION Syntax  
   
@@ -77,8 +77,8 @@ FOR String_Expression AS 'MDX_Expression'
 |--------------|-----------------|  
 |Empty set|An MDX set expression that resolves into an empty set. In this case, the scope of the calculated cell is the whole cube.|  
 |Single member set|An MDX set expression that resolves into a single member.|  
-|Set of level members|An MDX set expression that resolves into the members of a single level. An example of this is the *Level_Expression*.`Members` MDX function. To include calculated members, use the *Level_Expression*.`AllMembers` MDX function.<br /><br /> For more information, see [AllMembers &#40;MDX&#41;](../Topic/AllMembers%20\(MDX\).md).|  
-|Set of descendants|An MDX set expression that resolves into the descendants of a specified member. An example of this is the `Descendants`(*Member_Expression*, *Level_Expression*, *Desc_Flag*) MDX function.<br /><br /> For more information, see [Descendants &#40;MDX&#41;](../Topic/Descendants%20\(MDX\).md).|  
+|Set of level members|An MDX set expression that resolves into the members of a single level. An example of this is the *Level_Expression*.`Members` MDX function. To include calculated members, use the *Level_Expression*.`AllMembers` MDX function.<br /><br /> For more information, see [AllMembers &#40;MDX&#41;](~/mdx/allmembers-mdx.md).|  
+|Set of descendants|An MDX set expression that resolves into the descendants of a specified member. An example of this is the `Descendants`(*Member_Expression*, *Level_Expression*, *Desc_Flag*) MDX function.<br /><br /> For more information, see [Descendants &#40;MDX&#41;](~/mdx/descendants-mdx.md).|  
   
 ## See Also  
  [Building Cell Calculations in MDX &#40;MDX&#41;](../../2014/analysis-services/building-cell-calculations-in-mdx-mdx.md)  

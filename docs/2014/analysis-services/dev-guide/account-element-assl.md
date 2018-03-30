@@ -61,7 +61,7 @@ manager: "mblythe"
 ## Remarks  
  Dimensions, whose [Type](../../../2014/analysis-services/dev-guide/type-element-dimension-assl.md) element is set to *Accounts,* can have an attribute that specifies the account type, such as Income, Expense, and so on, represented by members in the dimension. The account type is then used by [Measure](../../../2014/analysis-services/dev-guide/measure-element-assl.md) elements, whose [AggregationFunction](../../../2014/analysis-services/dev-guide/aggregatefunction-element-assl.md) element is set to *ByAccount*, to determine the aggregation function to use when aggregating the members of that dimension. The `Account` element represents a single account type and the aggregation function that should be used by such measures.  
   
- An account type must be listed if the aggregate function is different from the default used by [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] for each account type.  
+ An account type must be listed if the aggregate function is different from the default used by [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] for each account type.  
   
  The set of valid account types is fixed.  
   

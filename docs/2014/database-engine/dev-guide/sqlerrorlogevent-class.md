@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SqlErrorLogEvent Class
-  Provides properties for viewing events in a specified [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] log file.  
+  Provides properties for viewing events in a specified [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log file.  
   
 ## Syntax  
   
@@ -42,7 +42,7 @@ class SQLErrorLogEvent
 |||  
 |-|-|  
 |FileName|Data type: `string`<br /><br /> Access type: Read-only<br /><br /> <br /><br /> The name of the error log file.|  
-|InstanceName|Data type: `string`<br /><br /> Access type: Read-only<br /><br /> Qualifiers: Key<br /><br /> The name of the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] where the log file resides.|  
+|InstanceName|Data type: `string`<br /><br /> Access type: Read-only<br /><br /> Qualifiers: Key<br /><br /> The name of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] where the log file resides.|  
 |LogDate|Data type: `datetime`<br /><br /> Access type: Read-only<br /><br /> Qualifiers: Key<br /><br /> <br /><br /> The date and time that the event was recorded in the log file.|  
 |Message|Data type: `string`<br /><br /> Access type: Read-only<br /><br /> <br /><br /> The event message.|  
 |ProcessInfo|Data type: `string`<br /><br /> Access type: Read-only<br /><br /> <br /><br /> Information about the source server process ID (SPID) for the event.|  
@@ -56,7 +56,7 @@ class SQLErrorLogEvent
 |Namespace|\root\Microsoft\SqlServer\ComputerManagement10|  
   
 ## Example  
- The following example shows how to retrieve values for all logged events in a specified log file. To run the example, replace \<*Instance_Name*> with the name of the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], such as 'Instance1', and replace 'File_Name' with the name of the error log file, such as 'ERRORLOG.1'.  
+ The following example shows how to retrieve values for all logged events in a specified log file. To run the example, replace \<*Instance_Name*> with the name of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], such as 'Instance1', and replace 'File_Name' with the name of the error log file, such as 'ERRORLOG.1'.  
   
 ```  
 on error resume next  
@@ -77,18 +77,18 @@ Next
 ```  
   
 ## Comments  
- When *InstanceName* or *FileName* are not provided in the WQL statement, the query will return information for the default instance and the current [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] log file. For example, the following WQL statement will return all log events from the current log file (ERRORLOG) on the default instance (MSSQLSERVER).  
+ When *InstanceName* or *FileName* are not provided in the WQL statement, the query will return information for the default instance and the current [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log file. For example, the following WQL statement will return all log events from the current log file (ERRORLOG) on the default instance (MSSQLSERVER).  
   
 ```  
 "SELECT * FROM SqlErrorLogEvent"  
 ```  
   
 ## Security  
- To connect to a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] log file through WMI, you must have the following permissions on both the local and remote computers:  
+ To connect to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log file through WMI, you must have the following permissions on both the local and remote computers:  
   
 -   Read access to the **Root\Microsoft\SqlServer\ComputerManagement10** WMI namespace. By default, everyone has read access through the Enable Account permission.  
   
--   Read permission to the folder that contains the error logs. By default the error logs are located in the following path (where \<*Drive>* represents the drive where you installed [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and \<*InstanceName*> is the name of the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]):  
+-   Read permission to the folder that contains the error logs. By default the error logs are located in the following path (where \<*Drive>* represents the drive where you installed [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and \<*InstanceName*> is the name of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]):  
   
      **\<Drive>:\Program Files\Microsoft SQL Server\MSSQL12** **.\<InstanceName>\MSSQL\Log**  
   

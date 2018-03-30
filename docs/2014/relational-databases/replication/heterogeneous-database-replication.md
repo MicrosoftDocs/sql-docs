@@ -16,34 +16,34 @@ helpviewer_keywords:
 ms.assetid: 3fd983ad-e206-45db-9054-417c9b5bb815
 caps.latest.revision: 40
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Heterogeneous Database Replication
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports the following heterogeneous scenarios for transactional and snapshot replication:  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports the following heterogeneous scenarios for transactional and snapshot replication:  
   
--   Publishing data from Oracle to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   Publishing data from Oracle to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Publishing data from [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers.  
+-   Publishing data from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers.  
   
- Heterogeneous replication to non-SQL Server subscribers is deprecated. Oracle Publishing is deprecated. To move data, create solutions using change data capture and [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
+ Heterogeneous replication to non-SQL Server subscribers is deprecated. Oracle Publishing is deprecated. To move data, create solutions using change data capture and [!INCLUDE[ssIS](../../includes/ssis-md.md)].  
   
 > [!CAUTION]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
 ## Publishing Data from Oracle  
- You can use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to publish data from Oracle with most of the same features and ease-of-use as [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] snapshot and transactional replication. Publishing data from Oracle is ideal for the following scenarios:  
+ You can use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to publish data from Oracle with most of the same features and ease-of-use as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] snapshot and transactional replication. Publishing data from Oracle is ideal for the following scenarios:  
   
 |Scenario|Description|  
 |--------------|-----------------|  
-|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework application deployments|Develop with [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] while operating on data replicated from a non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database.|  
-|Data warehousing staging servers|Keep [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] staging databases synchronized with a non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database.|  
-|Migration to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Test your application in real time against [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] while replicating the source system's changes. Switch to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] when satisfied with the migration.|  
+|[!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework application deployments|Develop with [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] while operating on data replicated from a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.|  
+|Data warehousing staging servers|Keep [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] staging databases synchronized with a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.|  
+|Migration to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Test your application in real time against [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] while replicating the source system's changes. Switch to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] when satisfied with the migration.|  
   
  For more information, see [Oracle Publishing Overview](../../../2014/relational-databases/replication/oracle-publishing-overview.md).  
   
 ## Publishing Data to Non-SQL Server Subscribers  
- The following non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] databases are supported as Subscribers to snapshot and transactional publications:  
+ The following non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases are supported as Subscribers to snapshot and transactional publications:  
   
 -   Oracle for all platforms that Oracle supports.  
   

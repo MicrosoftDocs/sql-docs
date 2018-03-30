@@ -21,7 +21,7 @@ ms.author: "jroth"
 manager: "jhubbard"
 ---
 # Remove an Availability Group (SQL Server)
-  This topic describes how to delete (drop) an AlwaysOn availability group by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. If a server instance that hosts one of the availability replicas is offline when you delete an availability group, after coming online, the server instance will drop the local availability replica. Dropping an availability group deletes any associated availability group listener.  
+  This topic describes how to delete (drop) an AlwaysOn availability group by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. If a server instance that hosts one of the availability replicas is offline when you delete an availability group, after coming online, the server instance will drop the local availability replica. Dropping an availability group deletes any associated availability group listener.  
   
  Note that, if necessary, you can drop an availability group from any Windows Server Failover Clustering (WSFC) node that possesses the correct security credentials for the availability group. This enables you to delete an availability group when none of its availability replicas remain.  
   
@@ -83,7 +83,7 @@ manager: "jhubbard"
   
 1.  Connect to the server instance that hosts the primary replica, if possible, or connect to another server instance that is enabled for AlwaysOn Availability Groups on a WSFC node that possess the correct security credentials for the availability group.  
   
-2.  Use the [DROP AVAILABILITY GROUP](../Topic/DROP%20AVAILABILITY%20GROUP%20\(Transact-SQL\).md) statement, as follows  
+2.  Use the [DROP AVAILABILITY GROUP](~/t-sql/statements/drop-availability-group-transact-sql.md) statement, as follows  
   
      DROP AVAILABILITY GROUP *group_name*  
   
@@ -98,7 +98,7 @@ manager: "jhubbard"
 ##  <a name="PowerShellProcedure"></a> Using PowerShell  
  **To delete an availability group**  
   
- In the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell provider:  
+ In the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell provider:  
   
 1.  Change directory (`cd`) to the server instance that hosts the primary replica, if possible, or connect to another server instance that is enabled for AlwaysOn Availability Groups on a WSFC node that possess the correct security credentials for the availability group.  
   
@@ -112,7 +112,7 @@ manager: "jhubbard"
     ```  
   
     > [!NOTE]  
-    >  To view the syntax of a cmdlet, use the `Get-Help` cmdlet in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../2014/database-engine/get-help-sql-server-powershell.md).  
+    >  To view the syntax of a cmdlet, use the `Get-Help` cmdlet in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../2014/database-engine/get-help-sql-server-powershell.md).  
   
  **To set up and use the SQL Server PowerShell provider**  
   

@@ -16,7 +16,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Manage a Knowledge Base
-  This topic describes how to perform management functions on a knowledge base in [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS). You can delete a knowledge base, unlock it, discard your work on it, rename it, and display its properties.  
+  This topic describes how to perform management functions on a knowledge base in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). You can delete a knowledge base, unlock it, discard your work on it, rename it, and display its properties.  
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
@@ -30,9 +30,9 @@ manager: "jhubbard"
   
 ##  <a name="Manage"></a> Manage a Knowledge Base  
   
-1.  [!INCLUDE[ssDQSInitialStep](../../includes/ssdqsinitialstep-md.md)] [Run the Data Quality Client Application](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Run the Data Quality Client Application](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  In the [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] home screen, click **Open knowledge base**.  
+2.  In the [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] home screen, click **Open knowledge base**.  
   
 3.  Right-click a knowledge base in the knowledge base table.  
   
@@ -46,7 +46,7 @@ manager: "jhubbard"
   
     4.  **Rename**: Click to make the Knowledge Base field of the table editable for the knowledge base that you right-clicked on. Change the name, and then click on that knowledge base and another one in the field to accept the name change.  
   
-    5.  **Delete**: Click to remove the knowledge base from the DQS_MAIN database on [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)].  
+    5.  **Delete**: Click to remove the knowledge base from the DQS_MAIN database on [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)].  
   
     6.  **Properties**: Click to display properties for the database in a read-only display.  
   

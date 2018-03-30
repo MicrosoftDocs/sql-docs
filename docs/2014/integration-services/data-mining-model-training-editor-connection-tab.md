@@ -26,7 +26,7 @@ manager: "jhubbard"
   
 ## Options  
  **Connection manager**  
- Select from the list of existing [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] connections, or create a new [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] connection by using the **New** button described as follows.  
+ Select from the list of existing [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] connections, or create a new [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] connection by using the **New** button described as follows.  
   
  **New**  
  Create a new connection by using the **Add Analysis Services Connection Manager** dialog box.  

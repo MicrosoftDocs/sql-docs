@@ -16,15 +16,15 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Create the SSIS Catalog
-  After you design and test packages in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], you can deploy the projects that contain the packages to an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. Before you can deploy the projects to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, the server must contain the `SSISDB` catalog. The installation program for [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] does not automatically create the catalog; you need to manually create the catalog by using the following instructions.  
+  After you design and test packages in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], you can deploy the projects that contain the packages to an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server. Before you can deploy the projects to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server, the server must contain the `SSISDB` catalog. The installation program for [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] does not automatically create the catalog; you need to manually create the catalog by using the following instructions.  
   
- You can create the SSISDB catalog in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. You also create the catalog programmatically by using Windows PowerShell.  
+ You can create the SSISDB catalog in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. You also create the catalog programmatically by using Windows PowerShell.  
   
 ### To create the SSISDB catalog in SQL Server Management Studio  
   
-1.  Open [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+1.  Open [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
-2.  Connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine.  
+2.  Connect to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Database Engine.  
   
 3.  In Object Explorer, expand the server node, right-click the **Integration Services Catalogs** node, and then click **Create Catalog**.  
   
@@ -32,9 +32,9 @@ manager: "jhubbard"
   
      The catalog uses CLR stored procedures.  
   
-5.  Click **Enable automatic execution of Integration Services stored procedure at SQL Server startup** to enable the [catalog.startup](../Topic/catalog.startup.md) stored procedure to run each time the [!INCLUDE[ssIS](../../includes/ssis-md.md)] server instance is restarted.  
+5.  Click **Enable automatic execution of Integration Services stored procedure at SQL Server startup** to enable the [catalog.startup](~/integration-services/system-stored-procedures/catalog-startup.md) stored procedure to run each time the [!INCLUDE[ssIS](../includes/ssis-md.md)] server instance is restarted.  
   
-     The stored procedure performs maintenance of the state of operations for the SSISDB catalog. It fixes the status of any packages there were running if and when the [!INCLUDE[ssIS](../../includes/ssis-md.md)] server instance goes down.  
+     The stored procedure performs maintenance of the state of operations for the SSISDB catalog. It fixes the status of any packages there were running if and when the [!INCLUDE[ssIS](../includes/ssis-md.md)] server instance goes down.  
   
 6.  Enter a password, and then click **Ok**.  
   

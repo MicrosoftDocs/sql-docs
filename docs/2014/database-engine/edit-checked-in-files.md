@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Edit Checked-In Files
-  You typically must check out source-controlled files before you can edit them. However, you can configure [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] so that you can modify files you have not checked out. When doing so, your changes are held in memory until you save the files. You will then be prompted to check out the file from source control.  
+  You typically must check out source-controlled files before you can edit them. However, you can configure [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] so that you can modify files you have not checked out. When doing so, your changes are held in memory until you save the files. You will then be prompted to check out the file from source control.  
   
  If you work on a team, allowing checked-in files to be edited is not recommended unless your source control provider supports both local version and server version checkouts. Most providers do not support local version checkouts. If your provider does not support local version checkouts and you edit a checked-in file, you have to merge the in-memory and server versions manually before the file can be checked in. Automatic and provider-assisted merges are unsupported in this situation.  
   

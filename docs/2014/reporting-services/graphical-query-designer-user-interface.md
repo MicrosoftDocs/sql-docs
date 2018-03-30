@@ -21,11 +21,11 @@ helpviewer_keywords:
 ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
 caps.latest.revision: 53
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Graphical Query Designer User Interface
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides both a graphical query designer and a text-based query designer for creating queries to retrieve data from a relational database for a report dataset in Report Designer. Use the graphical query designer to interactively build a query and view the results for data source types [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, OLE DB, and ODBC. Use the text-based query designer to specify multiple [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, complex query or command syntax, and expression-based queries. For more information, see [Text-based Query Designer User Interface](../../2014/reporting-services/text-based-query-designer-user-interface.md). For more information about working with specific data source types, see [Add Data to a Report &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-data-to-a-report-report-builder-and-ssrs.md).  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] provides both a graphical query designer and a text-based query designer for creating queries to retrieve data from a relational database for a report dataset in Report Designer. Use the graphical query designer to interactively build a query and view the results for data source types [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Oracle, OLE DB, and ODBC. Use the text-based query designer to specify multiple [!INCLUDE[tsql](../includes/tsql-md.md)] statements, complex query or command syntax, and expression-based queries. For more information, see [Text-based Query Designer User Interface](../../2014/reporting-services/text-based-query-designer-user-interface.md). For more information about working with specific data source types, see [Add Data to a Report &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-data-to-a-report-report-builder-and-ssrs.md).  
   
  .  
   
@@ -34,9 +34,9 @@ manager: "mblythe"
   
  The following options are available for query type:  
   
--   **Text** Supports standard [!INCLUDE[tsql](../../includes/tsql-md.md)] query text for relational database data sources, including data processing extensions for [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Oracle.  
+-   **Text** Supports standard [!INCLUDE[tsql](../includes/tsql-md.md)] query text for relational database data sources, including data processing extensions for [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and Oracle.  
   
--   **TableDirect** Selects all the columns from the specified table. For example, for a table named Customers, this is the equivalent of the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement `SELECT * FROM Customers`.  
+-   **TableDirect** Selects all the columns from the specified table. For example, for a table named Customers, this is the equivalent of the [!INCLUDE[tsql](../includes/tsql-md.md)] statement `SELECT * FROM Customers`.  
   
 -   **StoredProcedure** Supports calls to stored procedures on the data source. To use this option, you must have been granted Execute permissions on the stored procedure by the database administrator on the data source.  
   
@@ -46,7 +46,7 @@ manager: "mblythe"
 >  Not all data processing extensions support all types. The underlying data provider must support a command type before the option is available.  
   
 ### Command Type Text  
- In **Text** type, the graphical query designer presents four areas, or panes. You can specify columns, aliases, sort values, and filter values for a [!INCLUDE[tsql](../../includes/tsql-md.md)] query. You can view the query text generated from your selections, run the query, and view the result set. The following figure shows the four panes.  
+ In **Text** type, the graphical query designer presents four areas, or panes. You can specify columns, aliases, sort values, and filter values for a [!INCLUDE[tsql](../includes/tsql-md.md)] query. You can view the query text generated from your selections, run the query, and view the result set. The following figure shows the four panes.  
   
  ![Graphical query designer for sql query](../../2014/reporting-services/media/rsqd-dsaw-sql.gif "Graphical query designer for sql query")  
   
@@ -56,15 +56,15 @@ manager: "mblythe"
 |----------|--------------|  
 |Diagram|Displays graphic representations of the tables in the query. Use this pane to select fields and define relationships between tables.|  
 |Grid|Displays a list of fields returned by the query. Use this pane to define aliases, sort order, filters, groups, and parameters.|  
-|SQL|Displays the [!INCLUDE[tsql](../../includes/tsql-md.md)] query represented by the diagram and Grid panes. Use this pane to write or update a query using [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
+|SQL|Displays the [!INCLUDE[tsql](../includes/tsql-md.md)] query represented by the diagram and Grid panes. Use this pane to write or update a query using [!INCLUDE[tsql](../includes/tsql-md.md)].|  
 |Result|Displays the results of the query. To run the query, right-click in any pane, and then click **Run**, or click the **Run** button on the toolbar.|  
   
- When you change information in any one of the first three panes, those changes will appear in the other panes. For example, if you add a table in the Diagram pane, it will automatically be added to the [!INCLUDE[tsql](../../includes/tsql-md.md)] query in the SQL pane. Adding a field to the query in the SQL pane will automatically add the field to the list in the Grid pane and update the table in the Diagram pane.  
+ When you change information in any one of the first three panes, those changes will appear in the other panes. For example, if you add a table in the Diagram pane, it will automatically be added to the [!INCLUDE[tsql](../includes/tsql-md.md)] query in the SQL pane. Adding a field to the query in the SQL pane will automatically add the field to the list in the Grid pane and update the table in the Diagram pane.  
   
  For more information, see [Query and View Designer Tools &#40;Visual Database Tools&#41;](../../2014/database-engine/query-and-view-designer-tools-visual-database-tools.md).  
   
 #### Toolbar for the Graphical Query Designer  
- The graphical query designer toolbar provides buttons to help you design [!INCLUDE[tsql](../../includes/tsql-md.md)] queries using the graphical interface.  
+ The graphical query designer toolbar provides buttons to help you design [!INCLUDE[tsql](../includes/tsql-md.md)] queries using the graphical interface.  
   
 |Button|Description|  
 |------------|-----------------|  
@@ -83,13 +83,13 @@ manager: "mblythe"
 |![Add a new table to the diagram pane](../../2014/reporting-services/media/rsqdicon-addtable.gif "Add a new table to the diagram pane")|Add a new table from the data source to the Diagram pane.<br /><br /> **Note** When you add a new table, the query designer tries to match up foreign key relationships from the data source. After you add a table, confirm that the foreign key relationships represented by linkages between the tables are correct.|  
   
 #### Example  
- The following query returns the list of last names from the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database **Person** table:  
+ The following query returns the list of last names from the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database **Person** table:  
   
 ```  
 SELECT LastName FROM Person.Person;  
 ```  
   
- You can also run stored procedures from the SQL pane. The following query runs the stored procedure **uspGetEmployeeManagers** in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database:  
+ You can also run stored procedures from the SQL pane. The following query runs the stored procedure **uspGetEmployeeManagers** in the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database:  
   
 ```  
 EXEC uspGetEmployeeManagers '1';  
@@ -137,7 +137,7 @@ EXEC uspGetEmployeeManagers '1';
 |Stored procedure drop-down list|Click the down arrow to display a list of available stored procedures from the data source. Click any stored procedure from the list to select it.|  
   
 #### Example  
- The following stored procedure calls a chain-of-command list of managers from the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. This stored procedure accepts *BusinessEntityID* as parameter. You can enter any small integer.  
+ The following stored procedure calls a chain-of-command list of managers from the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database. This stored procedure accepts *BusinessEntityID* as parameter. You can enter any small integer.  
   
  `uspGetEmployeeManagers '1';`  
   

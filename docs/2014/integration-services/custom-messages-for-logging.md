@@ -21,13 +21,13 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Custom Messages for Logging
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides a rich set of custom events for writing log entries for packages and many tasks. You can use these entries to save detailed information about execution progress, results, and problems by recording predefined events or user-defined messages for later analysis. For example, you can record when a bulk insert begins and ends to identify performance issues when the package runs.  
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides a rich set of custom events for writing log entries for packages and many tasks. You can use these entries to save detailed information about execution progress, results, and problems by recording predefined events or user-defined messages for later analysis. For example, you can record when a bulk insert begins and ends to identify performance issues when the package runs.  
   
  The custom log entries are a different set of entries than the set of standard logging events that are available for packages and all containers and tasks. The custom log entries are tailored to capture useful information about a specific task in a package. For example, one of the custom log entries for the Execute SQL task records the SQL statement that the task executes in the log.  
   
  All log entries include date and time information, including the log entries that are automatically written when a package begins and finishes. Many of the log events write multiple entries to the log. This typically occurs when the event has different phases. For example, the `ExecuteSQLExecutingQuery` log event writes three entries: one entry after the task acquires a connection to the database, another after the task starts to prepare the SQL statement, and one more after the execution of the SQL statement is completed.  
   
- The following [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] objects have custom log entries:  
+ The following [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] objects have custom log entries:  
   
  [Package](#Package)  
   
@@ -198,8 +198,8 @@ manager: "jhubbard"
   
 |Log entry|Description|  
 |---------------|-----------------|  
-|`TransferJobsTaskFinishedTransferringObjects`|Indicates that the task finished transferring [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs.|  
-|`TransferJobsTaskStartTransferringObjects`|Indicates that the task started to transfer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs.|  
+|`TransferJobsTaskFinishedTransferringObjects`|Indicates that the task finished transferring [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent jobs.|  
+|`TransferJobsTaskStartTransferringObjects`|Indicates that the task started to transfer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent jobs.|  
   
 ###  <a name="TransferLogins"></a> Transfer Logins Task  
  The following table lists the custom log entries for the Transfer Logins task.  
@@ -218,12 +218,12 @@ manager: "jhubbard"
 |`TransferStoredProceduresTaskStartTransferringObjects`|Indicates that the task started to transfer user-defined stored procedures that are stored in the **master** database.|  
   
 ###  <a name="TransferSQLServerObjects"></a> Transfer SQL Server Objects Task  
- The following table lists the custom log entries for the Transfer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Objects task.  
+ The following table lists the custom log entries for the Transfer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Objects task.  
   
 |Log entry|Description|  
 |---------------|-----------------|  
-|`TransferSqlServerObjectsTaskFinishedTransferringObjects`|Indicates that the task finished transferring [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database objects.|  
-|`TransferSqlServerObjectsTaskStartTransferringObjects`|Indicates that the task started to transfer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database objects.|  
+|`TransferSqlServerObjectsTaskFinishedTransferringObjects`|Indicates that the task finished transferring [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database objects.|  
+|`TransferSqlServerObjectsTaskStartTransferringObjects`|Indicates that the task started to transfer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database objects.|  
   
 ###  <a name="WebServices"></a> Web Services Task  
  The following table lists the custom log entries that you can enable for the Web Services task.  

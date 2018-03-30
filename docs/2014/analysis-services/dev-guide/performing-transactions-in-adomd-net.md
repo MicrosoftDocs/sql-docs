@@ -24,7 +24,7 @@ manager: "mblythe"
   In ADOMD.NET, you use the <xref:Microsoft.AnalysisServices.AdomdClient.AdomdTransaction> object to manage transaction context for a given <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> object. This functionality allows you to run several commands within the same context. Each command will read the same data without the read data changing between each command execution.  
   
 > [!NOTE]  
->  The <xref:Microsoft.AnalysisServices.AdomdClient.AdomdTransaction> class is the implementation of the `System.Data.IDbTransaction` interface, part of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework Class Library and implemented by all .NET Framework data providers that support transactions.  
+>  The <xref:Microsoft.AnalysisServices.AdomdClient.AdomdTransaction> class is the implementation of the `System.Data.IDbTransaction` interface, part of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework Class Library and implemented by all .NET Framework data providers that support transactions.  
   
  The <xref:Microsoft.AnalysisServices.AdomdClient.AdomdTransaction> object only supports read-committed transactions, in which shared locks are held while the data is being read to avoid dirty reads.  
   

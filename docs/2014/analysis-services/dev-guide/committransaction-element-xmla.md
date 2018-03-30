@@ -29,7 +29,7 @@ ms.author: "mblythe"
 manager: "mblythe"
 ---
 # CommitTransaction Element (XMLA)
-  Commits a transaction on the current session with a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance.  
+  Commits a transaction on the current session with a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance.  
   
 ## Syntax  
   
@@ -56,7 +56,7 @@ manager: "mblythe"
 |Child elements|None|  
   
 ## Remarks  
- The `CommitTransaction` command commits an active transaction, explicitly defined using the `BeginTransaction` element, on the current session. If an active transaction does not already exist, an error occurs. If an active transaction already exists, the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance decrements the reference count of transactions for the current session. If the reference count of explicitly defined active transactions reaches zero, the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance commits the transaction.  
+ The `CommitTransaction` command commits an active transaction, explicitly defined using the `BeginTransaction` element, on the current session. If an active transaction does not already exist, an error occurs. If an active transaction already exists, the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance decrements the reference count of transactions for the current session. If the reference count of explicitly defined active transactions reaches zero, the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance commits the transaction.  
   
 ## See Also  
  [BeginTransaction Element &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/begintransaction-element-xmla.md)   

@@ -26,19 +26,19 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Microsoft Clustering Algorithm
-  The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering algorithm is a segmentation algorithm provided by [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. The algorithm uses iterative techniques to group cases in a dataset into clusters that contain similar characteristics. These groupings are useful for exploring data, identifying anomalies in the data, and creating predictions.  
+  The [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering algorithm is a segmentation algorithm provided by [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. The algorithm uses iterative techniques to group cases in a dataset into clusters that contain similar characteristics. These groupings are useful for exploring data, identifying anomalies in the data, and creating predictions.  
   
  Clustering models identify relationships in a dataset that you might not logically derive through casual observation. For example, you can logically discern that people who commute to their jobs by bicycle do not typically live a long distance from where they work. The algorithm, however, can find other characteristics about bicycle commuters that are not as obvious. In the following diagram, cluster A represents data about people who tend to drive to work, while cluster B represents data about people who tend to ride bicycles to work.  
   
  ![Cluster pattern of commuter tendencies](../../2014/analysis-services/media/clustering-example.gif "Cluster pattern of commuter tendencies")  
   
- The clustering algorithm differs from other data mining algorithms, such as the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm, in that you do not have to designate a predictable column to be able to build a clustering model. The clustering algorithm trains the model strictly from the relationships that exist in the data and from the clusters that the algorithm identifies.  
+ The clustering algorithm differs from other data mining algorithms, such as the [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees algorithm, in that you do not have to designate a predictable column to be able to build a clustering model. The clustering algorithm trains the model strictly from the relationships that exist in the data and from the clusters that the algorithm identifies.  
   
 ## Example  
- Consider a group of people who share similar demographic information and who buy similar products from the [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] company. This group of people represents a cluster of data. Several such clusters may exist in a database. By observing the columns that make up a cluster, you can more clearly see how records in a dataset are related to one another.  
+ Consider a group of people who share similar demographic information and who buy similar products from the [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] company. This group of people represents a cluster of data. Several such clusters may exist in a database. By observing the columns that make up a cluster, you can more clearly see how records in a dataset are related to one another.  
   
 ## How the Algorithm Works  
- The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering algorithm first identifies relationships in a dataset and generates a series of clusters based on those relationships. A scatter plot is a useful way to visually represent how the algorithm groups data, as shown in the following diagram. The scatter plot represents all the cases in the dataset, and each case is a point on the graph. The clusters group points on the graph and illustrate the relationships that the algorithm identifies.  
+ The [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering algorithm first identifies relationships in a dataset and generates a series of clusters based on those relationships. A scatter plot is a useful way to visually represent how the algorithm groups data, as shown in the following diagram. The scatter plot represents all the cases in the dataset, and each case is a point on the graph. The clusters group points on the graph and illustrate the relationships that the algorithm identifies.  
   
  ![Scatter plot of cases in a dataset](../../2014/analysis-services/media/clustering-plot.gif "Scatter plot of cases in a dataset")  
   
@@ -60,7 +60,7 @@ manager: "mblythe"
  For more detailed information about the content types and data types supported for clustering models, see the Requirements section of [Microsoft Clustering Algorithm Technical Reference](../../2014/analysis-services/microsoft-clustering-algorithm-technical-reference.md).  
   
 ## Viewing a Clustering Model  
- To explore the model, you can use the **Microsoft Cluster Viewer**. When you view a clustering model, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] shows you the clusters in a diagram that depicts the relationships among clusters, and also provides a detailed profile of each cluster, a list of the attributes that distinguish each cluster from the others, and the characteristics of the entire training data set. For more information, see [Browse a Model Using the Microsoft Cluster Viewer](../../2014/analysis-services/browse-a-model-using-the-microsoft-cluster-viewer.md).  
+ To explore the model, you can use the **Microsoft Cluster Viewer**. When you view a clustering model, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] shows you the clusters in a diagram that depicts the relationships among clusters, and also provides a detailed profile of each cluster, a list of the attributes that distinguish each cluster from the others, and the characteristics of the entire training data set. For more information, see [Browse a Model Using the Microsoft Cluster Viewer](../../2014/analysis-services/browse-a-model-using-the-microsoft-cluster-viewer.md).  
   
  If you want to know more detail, you can browse the model in the [Microsoft Generic Content Tree Viewer](../../2014/analysis-services/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md). The content stored for the model includes the distribution for all values in each node, the probability of each cluster, and other information. For more information, see [Mining Model Content for Clustering Models &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/mining-model-content-for-clustering-models-analysis-services-data-mining.md).  
   

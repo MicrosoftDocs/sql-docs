@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: be9d8018-a46f-4625-9ae1-138ebe6b38ba
 caps.latest.revision: 28
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Server Properties (History Page)
@@ -24,7 +24,7 @@ manager: "mblythe"
   
  Report history snapshots are stored in the report server database. If you keep an unlimited number of snapshots, be sure to periodically check the database size to ensure it is not growing too fast or consuming too much disk space.  
   
- To open this page, start [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connect to a report server instance, right-click the report server name, and select **Properties**. Click **History** to open this page.  
+ To open this page, start [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], connect to a report server instance, right-click the report server name, and select **Properties**. Click **History** to open this page.  
   
 ## Options  
  **Keep an unlimited number of snapshots in report history**  

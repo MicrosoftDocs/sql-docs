@@ -34,9 +34,9 @@ manager: "mblythe"
   
 -   If you want to include multiple models and compare them in a single accuracy chart, all models must use the same predictable column.  
   
--   When you create a cross-validation report, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] will automatically analyze all models that have the same predictable attribute.  
+-   When you create a cross-validation report, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] will automatically analyze all models that have the same predictable attribute.  
   
--   When the option, **Synchronize Prediction columns and Values**, is selected, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] automatically chooses predictable columns that have the same names and matching data types. If your columns do not meet these criteria, you can turn off this option and manually choose a predictable column. You might need to do this if you are testing the model with an external data set that has different columns than the model. However, if you choose a column with the wrong the type of data you will either get an error or bad results.  
+-   When the option, **Synchronize Prediction columns and Values**, is selected, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] automatically chooses predictable columns that have the same names and matching data types. If your columns do not meet these criteria, you can turn off this option and manually choose a predictable column. You might need to do this if you are testing the model with an external data set that has different columns than the model. However, if you choose a column with the wrong the type of data you will either get an error or bad results.  
   
 ### Specify the outcome to predict  
   

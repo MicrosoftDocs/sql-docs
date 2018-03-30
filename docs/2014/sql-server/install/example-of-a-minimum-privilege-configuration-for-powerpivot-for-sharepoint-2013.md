@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: c1e09e6c-52d3-48ab-8c70-818d5d775087
 caps.latest.revision: 7
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "jhubbard"
 ---
 # Example of a Minimum-Privilege Configuration for PowerPivot for SharePoint 2013

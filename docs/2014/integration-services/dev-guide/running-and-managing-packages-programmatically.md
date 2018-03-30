@@ -17,7 +17,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Running and Managing Packages Programmatically
-  If you need manage and run [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] packages outside the development environment, you can manipulate packages programmatically. In this approach, you have a range of options:  
+  If you need manage and run [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages outside the development environment, you can manipulate packages programmatically. In this approach, you have a range of options:  
   
 -   Load and run an existing package without modification.  
   
@@ -27,14 +27,14 @@ manager: "jhubbard"
   
  You can load and run an existing package from a client application by writing only a few lines of code.  
   
- This section describes and demonstrates how to run an existing package programmatically and how to access the output of the data flow from other applications. As an advanced programming option, you can programmatically create an [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] package line by line as described in the topic, [Building Packages Programmatically](../../../2014/integration-services/dev-guide/building-packages-programmatically.md).  
+ This section describes and demonstrates how to run an existing package programmatically and how to access the output of the data flow from other applications. As an advanced programming option, you can programmatically create an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package line by line as described in the topic, [Building Packages Programmatically](../../../2014/integration-services/dev-guide/building-packages-programmatically.md).  
   
  This section also discusses other administrative tasks that you can perform programmatically to manage stored packages, running packages, and package roles.  
   
 ## Running Packages on the Integration Services Server  
- When you deploy packages to the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] server, you can run the packages programmatically by using the <xref:Microsoft.SqlServer.Management.IntegrationServices> namespace. The Microsoft.SqlServer.Management.IntegrationServices assembly is compiled with .NET Framework 3.5. If you are building a .NET Framework 4.0 application, you might need to add the assembly reference directly to your project file.  
+ When you deploy packages to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, you can run the packages programmatically by using the <xref:Microsoft.SqlServer.Management.IntegrationServices> namespace. The Microsoft.SqlServer.Management.IntegrationServices assembly is compiled with .NET Framework 3.5. If you are building a .NET Framework 4.0 application, you might need to add the assembly reference directly to your project file.  
   
- You can also use the namespace to deploy and manage [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] projects on the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] server. For an overview of the namespace and code snippets, see the blog entry, [A Glimpse of the SSIS Catalog Managed Object Model](http://go.microsoft.com/fwlink/?LinkId=253122), on blogs.msdn.com.  
+ You can also use the namespace to deploy and manage [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] projects on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. For an overview of the namespace and code snippets, see the blog entry, [A Glimpse of the SSIS Catalog Managed Object Model](http://go.microsoft.com/fwlink/?LinkId=253122), on blogs.msdn.com.  
   
 ## In This Section  
  [Understanding the Differences between Local and Remote Execution](../../../2014/integration-services/dev-guide/understanding-the-differences-between-local-and-remote-execution.md)  
@@ -50,7 +50,7 @@ manager: "jhubbard"
  Describes how to execute a package on the local computer and how to load the data flow output into a client application by using the DataReader destination and the DtsClient namespace.  
   
  [Enumerating Available Packages Programmatically](../../../2014/integration-services/dev-guide/enumerating-available-packages-programmatically.md)  
- Describes how to discover available packages that are managed by the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] service.  
+ Describes how to discover available packages that are managed by the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service.  
   
  [Managing Packages and Folders Programmatically](../../../2014/integration-services/dev-guide/managing-packages-and-folders-programmatically.md)  
  Describes how to create, rename, and delete both packages and folders.  
@@ -63,7 +63,7 @@ manager: "jhubbard"
   
 ## Reference  
  [Integration Services Error and Message Reference](../../../2014/integration-services/integration-services-error-and-message-reference.md)  
- Lists the predefined [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] error codes with their symbolic names and descriptions.  
+ Lists the predefined [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] error codes with their symbolic names and descriptions.  
   
 ## Related Sections  
  [Extending Packages with Scripting](../../../2014/integration-services/dev-guide/extending-packages-with-scripting.md)  
@@ -73,11 +73,11 @@ manager: "jhubbard"
  Discusses how to create program custom tasks, data flow components, and other package objects for use in multiple packages.  
   
  [Building Packages Programmatically](../../../2014/integration-services/dev-guide/building-packages-programmatically.md)  
- Discusses how to create, configure, and save [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] packages programmatically.  
+ Discusses how to create, configure, and save [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages programmatically.  
   
 ||  
 |-|  
-|![Integration Services icon (small)](../../../2014/integration-services/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from [!INCLUDE[msCoName](../../../includes/msconame-md.md)], as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
+|![Integration Services icon (small)](../../../2014/integration-services/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from [!INCLUDE[msCoName](../../includes/msconame-md.md)], as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
   
 ## See Also  
  [SQL Server Integration Services](../../../2014/integration-services/sql-server-integration-services.md)  

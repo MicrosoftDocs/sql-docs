@@ -32,17 +32,17 @@ manager: "jhubbard"
   
 3.  Issue the following statement on the principal server:  
   
-     [ALTER DATABASE](../Topic/ALTER%20DATABASE%20Database%20Mirroring%20\(Transact-SQL\).md) *database_name* SET PARTNER FAILOVER, where *database_name* is the mirrored database.  
+     [ALTER DATABASE](~/t-sql/statements/alter-database-transact-sql-database-mirroring.md) *database_name* SET PARTNER FAILOVER, where *database_name* is the mirrored database.  
   
      This initiates an immediate transition of the mirror server to the principal role.  
   
  On the former principal, clients are disconnected from the database and in-flight transactions are rolled back.  
   
 > [!NOTE]  
->  Transactions that have been prepared by using the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator but are still not committed when a failover occurs are considered aborted after the database has failed over.  
+>  Transactions that have been prepared by using the [!INCLUDE[msCoName](../includes/msconame-md.md)] Distributed Transaction Coordinator but are still not committed when a failover occurs are considered aborted after the database has failed over.  
   
 ## See Also  
- [ALTER DATABASE Database Mirroring &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Database%20Mirroring%20\(Transact-SQL\).md)   
+ [ALTER DATABASE Database Mirroring &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-database-mirroring.md)   
  [Manually Fail Over a Database Mirroring Session &#40;SQL Server Management Studio&#41;](../../2014/database-engine/manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)   
  [Role Switching During a Database Mirroring Session &#40;SQL Server&#41;](../../2014/database-engine/role-switching-during-a-database-mirroring-session-sql-server.md)  
   

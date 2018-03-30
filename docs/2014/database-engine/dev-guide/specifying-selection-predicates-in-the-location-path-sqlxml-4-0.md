@@ -113,7 +113,7 @@ Customer[@CustomerID]
 ```  
   
 ## Selection Predicate: Example 6  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 includes support for XPath queries that contain a cross-product in the predicate, as shown in the following example:  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 includes support for XPath queries that contain a cross-product in the predicate, as shown in the following example:  
   
 ```  
 Customer[Order/@OrderDate=Order/@ShipDate]  

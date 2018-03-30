@@ -61,7 +61,7 @@ manager: "jhubbard"
   
      ![Server network addresses of a default instance](../../2014/database-engine/media/dbm-2-instances-ports-1-system.gif "Server network addresses of a default instance")  
   
-     To identify the port currently associated with database mirroring endpoint of a server instance, use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement:  
+     To identify the port currently associated with database mirroring endpoint of a server instance, use the following [!INCLUDE[tsql](../includes/tsql-md.md)] statement:  
   
     ```  
     SELECT type_desc, port FROM sys.tcp_endpoints  

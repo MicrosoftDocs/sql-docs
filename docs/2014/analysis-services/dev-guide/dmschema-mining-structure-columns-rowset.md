@@ -23,7 +23,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # DMSCHEMA_MINING_STRUCTURE_COLUMNS Rowset
-  Describes the individual columns of all mining structures deployed on a server that is running [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+  Describes the individual columns of all mining structures deployed on a server that is running [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ## Rowset Columns  
  The `DMSCHEMA_MINING_STRUCTURE_COLUMNS` rowset contains the following columns.  
@@ -31,11 +31,11 @@ manager: "mblythe"
 |Column name|Type indicator|Length|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |`STRUCTURE_CATALOG`|`DBTYPE_WSTR`||The catalog name.|  
-|`STRUCTURE_SCHEMA`|`DBTYPE_WSTR`||The unqualified schema name. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] does not support schemas, so this column is always `NULL`.|  
+|`STRUCTURE_SCHEMA`|`DBTYPE_WSTR`||The unqualified schema name. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] does not support schemas, so this column is always `NULL`.|  
 |`STRUCTURE_NAME`|`DBTYPE_WSTR`||The structure name. This column cannot contain a `NULL`.|  
 |`COLUMN_NAME`|`DBTYPE_WSTR`||The name of the column. Uniqueness is only guaranteed among columns that share the same pattern. For example, two nested columns may have the same name if they belong to two different nested tables inside the same structure.|  
 |`COLUMN_GUID`|`DBTYPE_GUID`||The column GUID. Providers that do not use GUIDs to identify columns should return `NULL` in this column.|  
-|`COLUMN_PROPID`|`DBTYPE_UI4`||The column property ID. Providers that do not associate property IDs with columns should return `NULL` in this column. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] returns `NULL` for this column.|  
+|`COLUMN_PROPID`|`DBTYPE_UI4`||The column property ID. Providers that do not associate property IDs with columns should return `NULL` in this column. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] returns `NULL` for this column.|  
 |`ORDINAL_POSITION`|`DBTYPE_UI4`||The ordinal of the column. Columns are numbered starting from 1. `NULL` if there is no stable ordinal value for the column.|  
 |`COLUMN_HASDEFAULT`|`DBTYPE_BOOL`||A Boolean that indicates whether this column has a default value.<br /><br /> `TRUE` if the column has a default value.<br /><br /> `FALSE` if the column does not have a default value or if it is unknown whether the column has a default value.|  
 |`COLUMN_DEFAULT`|`DBTYPE_WSTR`||The default value of the column. A provider may expose `DBCOLUMN_DEFAULTVALUE` but not `DBCOLUMN_HASDEFAULT` (for ISO tables) in the rowset returned by `IColumnsRowset::GetColumnsRowset`.<br /><br /> If the default value is `NULL`, `COLUMN_HASDEFAULT` is `TRUE` and the `COLUMN_DEFAULT` column is a `NULL` value.|  

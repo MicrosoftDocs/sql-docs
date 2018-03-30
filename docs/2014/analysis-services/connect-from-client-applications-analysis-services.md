@@ -16,7 +16,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Connect from client applications (Analysis Services)
-  If you are new to Analysis Services, use the information in this topic to connect to an existing instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] using common tools and applications. This topic also explains how to connect under different user identities for testing purposes.  
+  If you are new to Analysis Services, use the information in this topic to connect to an existing instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] using common tools and applications. This topic also explains how to connect under different user identities for testing purposes.  
   
 -   [Connect using SQL Server Management Studio (SSMS)](#bkmk_SSMS)  
   
@@ -41,7 +41,7 @@ manager: "mblythe"
   
  Hold-down the Shift key and right-click the **SQL Server Management Studio** shortcut to access the **Run as different user** option.  
   
-1.  Start [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. In the **Connect to Server** dialog box, select the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server type.  
+1.  Start [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. In the **Connect to Server** dialog box, select the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] server type.  
   
 2.  In the Login tab, enter the server name by typing the name of the computer on which the server is running. You can specify the server using its network name or a fully-qualified domain name.  
   
@@ -66,11 +66,11 @@ manager: "mblythe"
     ```  
   
 ##  <a name="bkmk_excel"></a> Connect using Excel  
- Microsoft Excel is often used for analyzing business data. As part of an Excel installation, Office installs the Analysis Services OLE DB provider (MSOLAP DLL), ADOMD.NET, and other data providers so that you can more readily use the data on your network servers. If you are using a newer version of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] with an older version of Excel, you most likely need to install newer data providers on each workstation that connects to [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. See [Data providers used for Analysis Services connections](../../2014/analysis-services/data-providers-used-for-analysis-services-connections.md) for more information.  
+ Microsoft Excel is often used for analyzing business data. As part of an Excel installation, Office installs the Analysis Services OLE DB provider (MSOLAP DLL), ADOMD.NET, and other data providers so that you can more readily use the data on your network servers. If you are using a newer version of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] with an older version of Excel, you most likely need to install newer data providers on each workstation that connects to [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. See [Data providers used for Analysis Services connections](../../2014/analysis-services/data-providers-used-for-analysis-services-connections.md) for more information.  
   
  When you set up a connection to an Analysis Services cube or tabular model database, Excel saves the connection information in .odc file for future use. The connection is made in security context of the current Windows user. The user account must have read permissions on the database in order for the connection to succeed.  
   
- When using [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data in an Excel workbook, connections are held for the duration of a query request. This is why you are likely to see lots of connections for each session, held for very short periods of time, when monitoring a query workload from Excel.  
+ When using [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data in an Excel workbook, connections are held for the duration of a query request. This is why you are likely to see lots of connections for each session, held for very short periods of time, when monitoring a query workload from Excel.  
   
  You can test permissions by starting Excel under a specific user identity.  
   
@@ -96,7 +96,7 @@ manager: "mblythe"
 -   [Analysis Services Connection Manager](../../2014/integration-services/analysis-services-connection-manager.md)  
   
 > [!NOTE]  
->  When using SQL Server Data Tools to work on an existing Analysis Services project, remember that you can connect offline using a local or version controlled project, or connect in online mode to update Analysis Services objects while the database is running. For more information, see [Connect in Online Mode to an Analysis Services Database](../../2014/analysis-services/connect-in-online-mode-to-an-analysis-services-database.md). More commonly, connections from [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] are in project mode, where changes are deployed to the database only when you explicitly deploy the project.  
+>  When using SQL Server Data Tools to work on an existing Analysis Services project, remember that you can connect offline using a local or version controlled project, or connect in online mode to update Analysis Services objects while the database is running. For more information, see [Connect in Online Mode to an Analysis Services Database](../../2014/analysis-services/connect-in-online-mode-to-an-analysis-services-database.md). More commonly, connections from [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] are in project mode, where changes are deployed to the database only when you explicitly deploy the project.  
   
 ##  <a name="bkmk_tshoot"></a> Test connections  
  You can use SQL Server Profiler to monitor connections to Analysis Services. The Audit Login and Audit Logout events provide evidence of a connection. The identity column indicates the security context under which the connection is made.  

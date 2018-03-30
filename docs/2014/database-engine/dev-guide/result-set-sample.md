@@ -27,21 +27,21 @@ manager: "jhubbard"
 ## Prerequisites  
  To create and run this project the following the following software must be installed:  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] or [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express. You can obtain [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express free of charge from the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express Documentation and Samples [Web site](http://go.microsoft.com/fwlink/?LinkId=31046)  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. You can obtain [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express free of charge from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [Web site](http://go.microsoft.com/fwlink/?LinkId=31046)  
   
--   The AdventureWorks database that is available at the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Developer [Web site](http://go.microsoft.com/fwlink/?linkid=62796)  
+-   The AdventureWorks database that is available at the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Developer [Web site](http://go.microsoft.com/fwlink/?linkid=62796)  
   
 -   .NET Framework SDK 2.0 or later or Microsoft Visual Studio 2005 or later. You can obtain .NET Framework SDK free of charge.  
   
 -   In addition, the following conditions must be met:  
   
--   The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance you are using must have CLR integration enabled.  
+-   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance you are using must have CLR integration enabled.  
   
 -   In order to enable CLR integration, perform the following steps:  
   
     #### Enabling CLR Integration  
   
-    -   Execute the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] commands:  
+    -   Execute the following [!INCLUDE[tsql](../../includes/tsql-md.md)] commands:  
   
      `sp_configure 'clr enabled', 1`  
   
@@ -54,9 +54,9 @@ manager: "jhubbard"
     > [!NOTE]  
     >  To enable CLR, you must have `ALTER SETTINGS` server level permission, which is implicitly held by members of the `sysadmin` and `serveradmin` fixed server roles.  
   
--   The AdventureWorks database must be installed on the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance you are using.  
+-   The AdventureWorks database must be installed on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance you are using.  
   
--   If you are not an administrator for the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance you are using, you must have an administrator grant you **CreateAssembly**  permission to complete the installation.  
+-   If you are not an administrator for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance you are using, you must have an administrator grant you **CreateAssembly**  permission to complete the installation.  
   
 ## Building the Sample  
   
@@ -1299,7 +1299,7 @@ myConnection.Close();
   
 ```  
   
- This is the [!INCLUDE[tsql](../../../includes/tsql-md.md)] installation script (`Install.sql`), which deploys the assemblies and creates the stored procedures.  
+ This is the [!INCLUDE[tsql](../../includes/tsql-md.md)] installation script (`Install.sql`), which deploys the assemblies and creates the stored procedures.  
   
 ```  
 USE AdventureWorks  
@@ -1357,7 +1357,7 @@ WHERE ProductID = @ProductID;
 GO  
 ```  
   
- This is the [!INCLUDE[tsql](../../../includes/tsql-md.md)] test script (`test.sql`), which tests the sample.  
+ This is the [!INCLUDE[tsql](../../includes/tsql-md.md)] test script (`test.sql`), which tests the sample.  
   
 ```  
 USE AdventureWorks  
@@ -1385,7 +1385,7 @@ ORDER BY sum(SOD.OrderQty) desc;
 GO  
 ```  
   
- The following [!INCLUDE[tsql](../../../includes/tsql-md.md)] removes the assemblies and stored procedures from the database.  
+ The following [!INCLUDE[tsql](../../includes/tsql-md.md)] removes the assemblies and stored procedures from the database.  
   
 ```  
 USE AdventureWorks  

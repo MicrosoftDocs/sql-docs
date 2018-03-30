@@ -24,20 +24,20 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Solution Explorer Source Control
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Solution Explorer can be integrated into a separate source control system. Once a solution or project is integrated into a source control system, you can control file access and versioning for the scripts and queries in your projects.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Solution Explorer can be integrated into a separate source control system. Once a solution or project is integrated into a source control system, you can control file access and versioning for the scripts and queries in your projects.  
   
 ## Solution and Project Source Control  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)]  
   
- Source control refers to a system in which a central piece of server software stores and tracks file versions, and also controls access to files. A typical source control system includes a source control provider and two or more source control clients. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] can be integrated with a source control service. This means you can use the tool as a client for your source control provider. Without leaving the environment, you can manage your individual and team projects easily. The source control provider is not included with [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+ Source control refers to a system in which a central piece of server software stores and tracks file versions, and also controls access to files. A typical source control system includes a source control provider and two or more source control clients. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] can be integrated with a source control service. This means you can use the tool as a client for your source control provider. Without leaving the environment, you can manage your individual and team projects easily. The source control provider is not included with [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
 #### To select a source control provider  
   
 1.  Install the client portion of your source control provider.  
   
-2.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], on the **Tools** menu, click **Options**.  
+2.  In [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], on the **Tools** menu, click **Options**.  
   
 3.  In the **Options** dialog box, expand **Source Control**, and then click the **Plug-in Selection** page.  
   
@@ -48,8 +48,8 @@ manager: "jhubbard"
 |Topic|Description|  
 |-----------|-----------------|  
 |[Source Control Basics](../../2014/database-engine/source-control-basics.md)|Defines basic source control terminology, and explains how your project can benefit from using source control services.|  
-|[Add Solutions and Projects to Source Control](../../2014/database-engine/add-solutions-and-projects-to-source-control.md)|Explains how to use the [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] environment to add solutions and projects to source control.|  
-|[Open Solutions and Projects from Source Control](../../2014/database-engine/open-solutions-and-projects-from-source-control.md)|Explains how to use the [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] environment to open source-controlled solutions and projects.|  
+|[Add Solutions and Projects to Source Control](../../2014/database-engine/add-solutions-and-projects-to-source-control.md)|Explains how to use the [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] environment to add solutions and projects to source control.|  
+|[Open Solutions and Projects from Source Control](../../2014/database-engine/open-solutions-and-projects-from-source-control.md)|Explains how to use the [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] environment to open source-controlled solutions and projects.|  
 |[Manage Checkouts](../../2014/database-engine/manage-checkouts.md)|Explains how to check out solutions and files from source control.|  
 |[Manage Checkins](../../2014/database-engine/manage-checkins.md)|Explains how to check solutions and files into source control.|  
 |[Set and Retrieve Version Information](../../2014/database-engine/set-and-retrieve-version-information.md)|Explains how to retrieve the history of a project or item, retrieve a local copy of an item, or compare two item versions.|  

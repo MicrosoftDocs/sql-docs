@@ -23,16 +23,16 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Troubleshooting Tools Package Connectivity
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes features and tools that you can use to troubleshoot connectivity between packages and the data sources from which packages extract and load data.  
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes features and tools that you can use to troubleshoot connectivity between packages and the data sources from which packages extract and load data.  
   
 ## Troubleshooting Issues with External Data Providers  
- Many packages fail during interactions with external data providers. However, the messages that those providers return to [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] frequently do not provide enough information to start troubleshooting the interaction. To address this troubleshooting need, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes logging messages that you can use to troubleshoot a package's interaction with external data sources.  
+ Many packages fail during interactions with external data providers. However, the messages that those providers return to [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] frequently do not provide enough information to start troubleshooting the interaction. To address this troubleshooting need, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes logging messages that you can use to troubleshoot a package's interaction with external data sources.  
   
--   **Enable logging and select the package's Diagnostic event to see the troubleshooting messages**. The following [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] components are capable of writing a message to the log before and after every call to an external data provider:  
+-   **Enable logging and select the package's Diagnostic event to see the troubleshooting messages**. The following [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] components are capable of writing a message to the log before and after every call to an external data provider:  
   
     -   OLE DB connection manager, OLE DB source, and OLE DB destination  
   
-    -   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection manager and ADO NET source  
+    -   [!INCLUDE[vstecado](../includes/vstecado-md.md)] connection manager and ADO NET source  
   
     -   Execute SQL task  
   

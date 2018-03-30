@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 4c200f36-4012-4108-8095-370b426ccf8d
 caps.latest.revision: 23
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Using the WebForms ReportViewer Control
@@ -23,7 +23,7 @@ manager: "jhubbard"
   
 ###### To use the ReportViewer Control in a Web application  
   
-1.  Create a new [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ASP.NET Web Site using either [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] or [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)].  
+1.  Create a new [!INCLUDE[msCoName](../../includes/msconame-md.md)] ASP.NET Web Site using either [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] or [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
      \- Or -  
   
@@ -58,7 +58,7 @@ manager: "jhubbard"
 -   `ShowZoomControl`  
   
 ## Viewing Reports in Remote Processing Mode  
- The following example demonstrates how to render a report that has been deployed to a report server. This example uses the Sales Order Detail report that is included with the [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] sample reports project.  
+ The following example demonstrates how to render a report that has been deployed to a report server. This example uses the Sales Order Detail report that is included with the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample reports project.  
   
  The example uses integrated Windows Authentication so you first must enable impersonation. To do this insert the following line into the `web.config` file:  
   

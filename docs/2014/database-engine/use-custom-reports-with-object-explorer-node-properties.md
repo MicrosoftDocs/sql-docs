@@ -21,7 +21,7 @@ manager: "jhubbard"
   Custom reports can execute in the context of a selected Object Explorer node if the custom reports reference the report parameters of that node. This enables a custom report to use the current context, for example the current database, or a database or server object.  
   
 ## Report Samples  
- [Report Samples](http://go.microsoft.com/fwlink/?LinkId=81792), including the standard reports created by [!INCLUDE[msCoName](../../includes/msconame-md.md)], are available for download. These samples may be modified by using [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+ [Report Samples](http://go.microsoft.com/fwlink/?LinkId=81792), including the standard reports created by [!INCLUDE[msCoName](../includes/msconame-md.md)], are available for download. These samples may be modified by using [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 ## Object Explorer Node Report Parameters  
   
@@ -43,7 +43,7 @@ manager: "jhubbard"
   
 2.  Copy the report file to a folder that you have created on the database server for custom reports.  
   
-3.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], right-click a node in Object Explorer, point to **Reports**, click Custom Reports. In the **Open File** dialog box, locate the custom reports folder and select the report file, and then click **Open**.  
+3.  In [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], right-click a node in Object Explorer, point to **Reports**, click Custom Reports. In the **Open File** dialog box, locate the custom reports folder and select the report file, and then click **Open**.  
   
      When a new custom report is first opened from an Object Explorer node, the custom report is added to the most recently used list under **Custom Reports** on the shortcut menu of that node. When a standard report is opened for the first time, it will also appear on the most recently used list under **Custom Reports**. If a custom report file is deleted, the next time that the item is selected, a prompt will appear to delete the item from the most recently used list.  
   

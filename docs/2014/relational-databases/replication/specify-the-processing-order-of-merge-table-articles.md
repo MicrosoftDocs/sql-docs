@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 9fe576a2-f5fb-4fdf-bd7d-cb322021b669
 caps.latest.revision: 32
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Specify the Processing Order of Merge Table Articles (Replication Transact-SQL Programming)
@@ -25,16 +25,16 @@ manager: "jhubbard"
   
 ### To specify the processing order for a new merge article  
   
-1.  At the Publisher on the publication database, execute [sp_addmergearticle &#40;Transact-SQL&#41;](../Topic/sp_addmergearticle%20\(Transact-SQL\).md). Specify an integer value that represents the processing order for the article for **@processing_order**. For more information, see [Define an Article](../../../2014/relational-databases/replication/define-an-article.md).  
+1.  At the Publisher on the publication database, execute [sp_addmergearticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Specify an integer value that represents the processing order for the article for **@processing_order**. For more information, see [Define an Article](../../../2014/relational-databases/replication/define-an-article.md).  
   
     > [!NOTE]  
     >  When creating ordered articles, you should leave gaps between the article order values. This makes it easier to set new values in the future. For example, if you have three articles for which you need to specify a fixed processing order, set the value of **@processing_order** to 10, 20, and 30 rather than 1, 2, and 3, respectively.  
   
 ### To change the processing order of a merge article  
   
-1.  To determine processing order of an article, execute [sp_helpmergearticle &#40;Transact-SQL&#41;](../Topic/sp_helpmergearticle%20\(Transact-SQL\).md) and note the value of **processing_order** in the result set.  
+1.  To determine processing order of an article, execute [sp_helpmergearticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md) and note the value of **processing_order** in the result set.  
   
-2.  At the Publisher on the publication database, execute [sp_changemergearticle &#40;Transact-SQL&#41;](../Topic/sp_changemergearticle%20\(Transact-SQL\).md). Specify a value of **processing_order** for **@property** and an integer value that represents the processing order for **@value**.  
+2.  At the Publisher on the publication database, execute [sp_changemergearticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Specify a value of **processing_order** for **@property** and an integer value that represents the processing order for **@value**.  
   
 ## See Also  
  [Specify the Processing Order of Merge Articles](../../../2014/relational-databases/replication/specify-the-processing-order-of-merge-articles.md)  

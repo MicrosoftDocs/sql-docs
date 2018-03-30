@@ -37,7 +37,7 @@ manager: "jhubbard"
 |IN TRANSITION TO TOMBSTONE|File metadata only|  
 |TOMBSTONE|File metadata only|  
   
- The size of database backups with one or more memory-optimized tables is typically larger than its size in memory but smaller than the on-disk storage. The extra size will depend upon the number of deleted rows and the number of checkpoint file pairs in the states Merge source and REQUIRED FOR BACKUP/HA which indirectly depends upon the workload. For descriptions of the states for checkpoint file pairs, see [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](../Topic/sys.dm_db_xtp_checkpoint_files%20\(Transact-SQL\).md).  
+ The size of database backups with one or more memory-optimized tables is typically larger than its size in memory but smaller than the on-disk storage. The extra size will depend upon the number of deleted rows and the number of checkpoint file pairs in the states Merge source and REQUIRED FOR BACKUP/HA which indirectly depends upon the workload. For descriptions of the states for checkpoint file pairs, see [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md).  
   
 ### Estimating Size of Full Database Backup  
   

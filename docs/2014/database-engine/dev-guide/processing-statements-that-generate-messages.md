@@ -31,7 +31,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Processing Statements That Generate Messages
-  The [!INCLUDE[tsql](../../../includes/tsql-md.md)] SET statement options STATISTICS TIME and STATISTICS IO are used to get information that aids in diagnosing long-running queries. Earlier versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] also support the SHOWPLAN option for analyzing query plans. An ODBC application can set these options by executing the following statements:  
+  The [!INCLUDE[tsql](../../includes/tsql-md.md)] SET statement options STATISTICS TIME and STATISTICS IO are used to get information that aids in diagnosing long-running queries. Earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] also support the SHOWPLAN option for analyzing query plans. An ODBC application can set these options by executing the following statements:  
   
 ```  
 SQLExecDirect(hstmt, "SET SHOWPLAN ON", SQL_NTS);  
@@ -48,7 +48,7 @@ szErrorMsg="[Microsoft][SQL Server Native Client][SQL Server]
               Table Scan"  
 ```  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] version 7.0 replaced the SHOWPLAN option with SHOWPLAN_ALL and SHOWPLAN_TEXT, both of which return output as a result set, not a set of messages.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version 7.0 replaced the SHOWPLAN option with SHOWPLAN_ALL and SHOWPLAN_TEXT, both of which return output as a result set, not a set of messages.  
   
  Each line of STATISTICS TIME comes back in the format:  
   
@@ -95,7 +95,7 @@ szErrorMsg="[Microsoft][ SQL Server Native Client][SQL Server]
 ```  
   
 ## Using PRINT and RAISERROR Statements  
- [!INCLUDE[tsql](../../../includes/tsql-md.md)] PRINT and RAISERROR statements also return data by calling **SQLGetDiagRec**. PRINT statements cause the SQL statement execution to return SQL_SUCCESS_WITH_INFO, and a subsequent call to **SQLGetDiagRec** returns a *SQLState* of 01000. A RAISERROR with a severity of ten or lower behaves the same as PRINT. A RAISERROR with a severity of 11 or higher causes the execute to return SQL_ERROR, and a subsequent call to **SQLGetDiagRec** returns *SQLState* 42000. For example, the following statement returns SQL_SUCCESS_WITH_INFO:  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] PRINT and RAISERROR statements also return data by calling **SQLGetDiagRec**. PRINT statements cause the SQL statement execution to return SQL_SUCCESS_WITH_INFO, and a subsequent call to **SQLGetDiagRec** returns a *SQLState* of 01000. A RAISERROR with a severity of ten or lower behaves the same as PRINT. A RAISERROR with a severity of 11 or higher causes the execute to return SQL_ERROR, and a subsequent call to **SQLGetDiagRec** returns *SQLState* 42000. For example, the following statement returns SQL_SUCCESS_WITH_INFO:  
   
 ```  
 SQLExecDirect (hstmt, "PRINT  'Some message' ", SQL_NTS);  
@@ -138,9 +138,9 @@ szErrorMsg= "[Microsoft] [SQL Server Native Client][SQL Server]
    Sample error 2."  
 ```  
   
- The timing of calling **SQLGetDiagRec** is critical when output from PRINT or RAISERROR statements is included in a result set. The call to **SQLGetDiagRec** to retrieve the PRINT or RAISERROR output must be made immediately after the statement that receives SQL_ERROR or SQL_SUCCESS_WITH_INFO. This is straightforward when only a single SQL statement is executed, as in the examples above. In these cases, the call to **SQLExecDirect** or **SQLExecute** returns SQL_ERROR or SQL_SUCCESS_WITH_INFO and **SQLGetDiagRec** can then be called. It is less straightforward when coding loops to handle the output of a batch of SQL statements or when executing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stored procedures.  
+ The timing of calling **SQLGetDiagRec** is critical when output from PRINT or RAISERROR statements is included in a result set. The call to **SQLGetDiagRec** to retrieve the PRINT or RAISERROR output must be made immediately after the statement that receives SQL_ERROR or SQL_SUCCESS_WITH_INFO. This is straightforward when only a single SQL statement is executed, as in the examples above. In these cases, the call to **SQLExecDirect** or **SQLExecute** returns SQL_ERROR or SQL_SUCCESS_WITH_INFO and **SQLGetDiagRec** can then be called. It is less straightforward when coding loops to handle the output of a batch of SQL statements or when executing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stored procedures.  
   
- In this case, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] returns a result set for every SELECT statement executed in a batch or stored procedure. If the batch or procedure contains PRINT or RAISERROR statements, the output for these is interleaved with the SELECT statement result sets. If the first statement in the batch or procedure is a PRINT or RAISERROR, the **SQLExecute** or **SQLExecDirect** returns SQL_SUCCESS_WITH_INFO or SQL_ERROR, and the application needs to call **SQLGetDiagRec** until it returns SQL_NO_DATA to retrieve the PRINT or RAISERROR information.  
+ In this case, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns a result set for every SELECT statement executed in a batch or stored procedure. If the batch or procedure contains PRINT or RAISERROR statements, the output for these is interleaved with the SELECT statement result sets. If the first statement in the batch or procedure is a PRINT or RAISERROR, the **SQLExecute** or **SQLExecDirect** returns SQL_SUCCESS_WITH_INFO or SQL_ERROR, and the application needs to call **SQLGetDiagRec** until it returns SQL_NO_DATA to retrieve the PRINT or RAISERROR information.  
   
  If the PRINT or RAISERROR statement comes after an SQL statement (such as a SELECT statement), then the PRINT or RAISERROR information is returned when [SQLMoreResults](../../../2014/database-engine/dev-guide/sqlmoreresults.md)positions on the result set containing the error. **SQLMoreResults** returns SQL_SUCCESS_WITH_INFO or SQL_ERROR depending on the severity of the message. Messages are retrieved by calling **SQLGetDiagRec** until it returns SQL_NO_DATA.  
   

@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
 caps.latest.revision: 23
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Step 3: Adding Packages and Other Files
@@ -20,7 +20,7 @@ manager: "jhubbard"
   
  When you deploy packages to a test or production environment, you typically do not include the data files in the deployment, but instead use configurations to update the paths of the data sources to access test or production versions of the data files or databases. For instructional purposes, this tutorial includes data files in the package deployment.  
   
- The packages and the sample data that the packages use are installed when you install the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] samples. You will add the following packages to the Deployment Tutorial project:  
+ The packages and the sample data that the packages use are installed when you install the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] samples. You will add the following packages to the Deployment Tutorial project:  
   
 -   **DataTransfer.** Basic package that extracts data from a flat file, evaluates column values to conditionally keep rows in the dataset, and loads data into a table in the AdventureWorks database.  
   
@@ -35,13 +35,13 @@ manager: "jhubbard"
   
  You will also add a Readme, which is a text file that provides information about the Deployment Tutorial project.  
   
- The paths used in the following procedures assume that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] samples were installed in the default location, [!INCLUDE[ssSampPathIS](../../includes/sssamppathis-md.md)]. If you installed the samples to a different location, you should use that location instead in the procedures.  
+ The paths used in the following procedures assume that the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] samples were installed in the default location, [!INCLUDE[ssSampPathIS](../includes/sssamppathis-md.md)]. If you installed the samples to a different location, you should use that location instead in the procedures.  
   
  In the next task, you will add configurations to the DataTransfer and LoadXMLData packages. All configurations are stored in XML files, and you will use a system environment variable to specify the location of the files. After you create the configuration files, you will add them to the project.  
   
 ### To add packages to the Deployment Tutorial project  
   
-1.  If [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] is not already open, click **Start**, point to **All Programs**, point to **Microsoft SQL Server**, and then click **SQL Server Data Tools**.  
+1.  If [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] is not already open, click **Start**, point to **All Programs**, point to **Microsoft SQL Server**, and then click **SQL Server Data Tools**.  
   
 2.  On the **File** menu, click **Open**, click **Project/Solution**, click the **Deployment Tutorial** folder and click **Open**, and then double-click **Deployment Tutorial.sln**.  
   
@@ -70,6 +70,6 @@ manager: "jhubbard"
   
 ||  
 |-|  
-|![Integration Services icon (small)](../../2014/integration-services/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
+|![Integration Services icon (small)](../../2014/integration-services/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
   
   

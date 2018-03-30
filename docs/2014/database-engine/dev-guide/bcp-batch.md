@@ -25,7 +25,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # bcp_batch
-  Commits all rows previously bulk copied from program variables and sent to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] by [bcp_sendrow](../../../2014/database-engine/dev-guide/bcp-sendrow.md).  
+  Commits all rows previously bulk copied from program variables and sent to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by [bcp_sendrow](../../../2014/database-engine/dev-guide/bcp-sendrow.md).  
   
 ## Syntax  
   

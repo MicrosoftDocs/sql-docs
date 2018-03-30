@@ -16,6 +16,6 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Database mirroring deprecation announcement.
-  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
+  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
   

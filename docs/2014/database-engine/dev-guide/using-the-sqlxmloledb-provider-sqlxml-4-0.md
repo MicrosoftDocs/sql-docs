@@ -34,7 +34,7 @@ manager: "jhubbard"
   
     -   Microsoft ActiveX Data Objects 2.8 Library  
   
-2.  Deploy and install SQLXML 4.0 and the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
+2.  Deploy and install SQLXML 4.0 and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
      For more information, see on [SQLXML 4.0 Programming Concepts](../../../2014/database-engine/dev-guide/sqlxml-4-0-programming-concepts.md) and [Installing SQL Server Native Client](../../../2014/database-engine/dev-guide/installing-sql-server-native-client.md).  
   

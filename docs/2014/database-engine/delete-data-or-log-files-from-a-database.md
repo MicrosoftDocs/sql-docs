@@ -20,11 +20,11 @@ helpviewer_keywords:
 ms.assetid: 0db4018c-ce2c-4ba1-bb29-1e4f3791c925
 caps.latest.revision: 33
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Delete Data or Log Files from a Database
-  This topic describes how to delete data or log files in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  This topic describes how to delete data or log files in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
@@ -42,7 +42,7 @@ manager: "jhubbard"
   
 #### To delete data or log files from a database  
   
-1.  In **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and then expand that instance.  
+1.  In **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] and then expand that instance.  
   
 2.  Expand **Databases**, right-click the database from which to delete the file, and then click **Properties**.  
   
@@ -56,15 +56,15 @@ manager: "jhubbard"
   
 #### To delete data or log files from a database  
   
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example removes the file `test1dat4`.  
   
- [!code-sql[DatabaseDDL#AlterDatabase4](../../snippets/tsql/SQL14/tsql/databaseddl/transact-sql/alterdatabase.sql#alterdatabase4)]  
+ [!code-sql[DatabaseDDL#AlterDatabase4](../snippets/tsql/SQL14/tsql/databaseddl/transact-sql/alterdatabase.sql#alterdatabase4)]  
   
- For more examples, see [ALTER DATABASE File and Filegroup Options &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20File%20and%20Filegroup%20Options%20\(Transact-SQL\).md).  
+ For more examples, see [ALTER DATABASE File and Filegroup Options &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
   
 ## See Also  
  [Shrink a Database](../../2014/database-engine/shrink-a-database.md)   

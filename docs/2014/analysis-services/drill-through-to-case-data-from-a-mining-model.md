@@ -42,7 +42,7 @@ manager: "mblythe"
   
 ### To view drillthrough data from a mining model  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the mining structure that contains the mining model you want.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the mining structure that contains the mining model you want.  
   
 2.  In Data Mining Designer, click the **Mining Model Viewer** tab.  
   

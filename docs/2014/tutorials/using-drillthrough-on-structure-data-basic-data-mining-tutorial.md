@@ -16,11 +16,11 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Using Drillthrough on Structure Data (Basic Data Mining Tutorial)
-  As part of their advertising campaign, [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] is sending a mailer to potential customers in the 34-40 age demographic. The marketing department has decided that they would also like to send the mailer to the customers who purchased bikes from [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] more than five years ago. In this lesson you will identify customers with older bikes and retrieve their contact information. This information is not included in the model, but is included in the structure. To retrieve the contact information you will first ensure that drillthrough is enabled for the structure and then you will use drillthrough to reveal the names and addresses of the targeted customers.  
+  As part of their advertising campaign, [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] is sending a mailer to potential customers in the 34-40 age demographic. The marketing department has decided that they would also like to send the mailer to the customers who purchased bikes from [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] more than five years ago. In this lesson you will identify customers with older bikes and retrieve their contact information. This information is not included in the model, but is included in the structure. To retrieve the contact information you will first ensure that drillthrough is enabled for the structure and then you will use drillthrough to reveal the names and addresses of the targeted customers.  
   
 ### To enable drillthrough on a mining model  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], on the **Mining Models** tab of Data Mining Designer, right-click the **TM_Decision_Tree** model, and select **Properties**.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], on the **Mining Models** tab of Data Mining Designer, right-click the **TM_Decision_Tree** model, and select **Properties**.  
   
 2.  In the Properties windows, click **AllowDrillthrough**, and select **True**.  
   

@@ -16,7 +16,7 @@ ms.author: "jroth"
 manager: "jhubbard"
 ---
 # Configure HealthCheckTimeout Property Settings
-  The HealthCheckTimeout setting is used to specify the length of time, in milliseconds, that the SQL Server resource DLL should wait for information returned by the [sp_server_diagnostics](../Topic/sp_server_diagnostics%20\(Transact-SQL\).md) stored procedure before reporting the AlwaysOn Failover Cluster Instance (FCI) as unresponsive. Changes that are made to the timeout settings are effective immediately and do not require a restart of the SQL Server resource.  
+  The HealthCheckTimeout setting is used to specify the length of time, in milliseconds, that the SQL Server resource DLL should wait for information returned by the [sp_server_diagnostics](~/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) stored procedure before reporting the AlwaysOn Failover Cluster Instance (FCI) as unresponsive. Changes that are made to the timeout settings are effective immediately and do not require a restart of the SQL Server resource.  
   
 -   **Before you begin:**  [Limitations and Restrictions](#Limits), [Security](#Security)  
   
@@ -40,13 +40,13 @@ manager: "jhubbard"
   
 2.  Import the `FailoverClusters` module to enable cluster cmdlets.  
   
-3.  Use the `Get-ClusterResource` cmdlet to find the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resource, then use `Set-ClusterParameter` cmdlet to set the **HealthCheckTimeout** property for the failover cluster instance.  
+3.  Use the `Get-ClusterResource` cmdlet to find the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] resource, then use `Set-ClusterParameter` cmdlet to set the **HealthCheckTimeout** property for the failover cluster instance.  
   
 > [!TIP]  
 >  Every time you open a new PowerShell window, you need to import the `FailoverClusters` module.  
   
 ### Example (PowerShell)  
- The following example changes the HealthCheckTimeout setting on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resource "`SQL Server (INST1)`" to 60000 milliseconds.  
+ The following example changes the HealthCheckTimeout setting on the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] resource "`SQL Server (INST1)`" to 60000 milliseconds.  
   
 ```powershell  
 Import-Module FailoverClusters  
@@ -76,7 +76,7 @@ Get-ClusterResource $fci | Set-ClusterParameter HealthCheckTimeout 60000
 4.  Select the **Properties** tab, enter the desired value for the **HealthCheckTimeout** property, and then click **OK** to apply the change.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
- Using the [ALTER SERVER CONFIGURATION](../Topic/ALTER%20SERVER%20CONFIGURATION%20\(Transact-SQL\).md)[!INCLUDE[tsql](../../includes/tsql-md.md)] statement, you can specify the HealthCheckTimeOut property value.  
+ Using the [ALTER SERVER CONFIGURATION](~/t-sql/statements/alter-server-configuration-transact-sql.md)[!INCLUDE[tsql](../includes/tsql-md.md)] statement, you can specify the HealthCheckTimeOut property value.  
   
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
  The following example sets the HealthCheckTimeout option to 15,000 milliseconds (15 seconds).  

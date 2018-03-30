@@ -15,7 +15,7 @@ f1_keywords:
 ms.assetid: 03584db6-9bc0-4866-9f6d-18895322ea87
 caps.latest.revision: 9
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Cube Selection Dialog Box

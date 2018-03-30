@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 6ee3676e-ed5d-43ec-aeca-1eed78967111
 caps.latest.revision: 16
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Find Key Phrases in Documents with Semantic Search
@@ -23,14 +23,14 @@ manager: "jhubbard"
 ##  <a name="BasicsQueryKey"></a> Finding Key Phrases in Documents  
   
 ###  <a name="howtofind"></a> How to: Find the Key Phrases in Documents with SEMANTICKEYPHRASETABLE  
- To identify the key phrases in specific documents, or to identify documents that contain specific key phrases, query the function [semantickeyphrasetable &#40;Transact-SQL&#41;](../Topic/semantickeyphrasetable%20\(Transact-SQL\).md).  
+ To identify the key phrases in specific documents, or to identify documents that contain specific key phrases, query the function [semantickeyphrasetable &#40;Transact-SQL&#41;](~/relational-databases/system-functions/semantickeyphrasetable-transact-sql.md).  
   
  SEMANTICKEYPHRASETABLE returns a table with zero, one, or more rows for those key phrases associated with columns in the specified table. This rowset function can be referenced in the FROM clause of a SELECT statement as if it were a regular table name.  
   
 > [!NOTE]  
->  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], only single words are indexed for semantic search; multi-word phrases (ngrams) are not indexed. Also, various forms of the same word are indexed separately; for example, "computer" and "computers" are indexed separately.  
+>  In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], only single words are indexed for semantic search; multi-word phrases (ngrams) are not indexed. Also, various forms of the same word are indexed separately; for example, "computer" and "computers" are indexed separately.  
   
- For detailed information about the parameters required by the SEMANTICKEYPHRASETABLE function, and about the table of results that it returns, see [semantickeyphrasetable &#40;Transact-SQL&#41;](../Topic/semantickeyphrasetable%20\(Transact-SQL\).md).  
+ For detailed information about the parameters required by the SEMANTICKEYPHRASETABLE function, and about the table of results that it returns, see [semantickeyphrasetable &#40;Transact-SQL&#41;](~/relational-databases/system-functions/semantickeyphrasetable-transact-sql.md).  
   
 > [!IMPORTANT]  
 >  The columns that you target must have full-text and semantic indexing enabled.  

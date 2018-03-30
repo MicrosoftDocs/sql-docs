@@ -32,7 +32,7 @@ manager: "jhubbard"
   
 ### To pin a version  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], open the solution.  
+1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], open the solution.  
   
 2.  In Solution Explorer, select the file that you want to specify as the latest version.  
   
@@ -40,11 +40,11 @@ manager: "jhubbard"
   
 4.  In the **History of** \<file> dialog box, select the version that you want to specify as the latest, and click **Pin**.  
   
-     A pin symbol appears next to the version you have selected, indicating that it is the current file version. If you have a different version loaded in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], you are prompted to reload the file.  
+     A pin symbol appears next to the version you have selected, indicating that it is the current file version. If you have a different version loaded in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], you are prompted to reload the file.  
   
 ### To roll back to a version  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], open the solution.  
+1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], open the solution.  
   
 2.  In Solution Explorer, select the item that you want to specify as the latest version.  
   

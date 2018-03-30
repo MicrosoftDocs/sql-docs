@@ -14,11 +14,11 @@ f1_keywords:
 ms.assetid: c90d7cdf-3309-46f4-b900-220521bb9552
 caps.latest.revision: 23
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Query Options Execution (ANSI Page)
-  Use this page to specify that [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will run the queries using all or a portion of the settings specified in the ISO (ANSI) standard.  
+  Use this page to specify that [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] will run the queries using all or a portion of the settings specified in the ISO (ANSI) standard.  
   
 ## UIElement List  
  **SET ANSI_DEFAULTS**  
@@ -37,7 +37,7 @@ manager: "jhubbard"
  Close any open cursors automatically (in compliance with ISO) when a transaction is committed. When cleared (set to OFF), cursors remain open across transaction boundaries, closing only when the connection is closed or when they are explicitly closed. This option is not selected by default.  
   
  **SET ANSI_PADDING**  
- Controls the way the column stores values shorter than the defined size of the column, and the way the column stores values that have trailing blanks in **char**, **varchar**, **binary**, and **varbinary** data. This setting affects only the definition of new columns. After the column is created, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stores the values based on the setting when the column was created. Existing columns are not affected by a later change to this setting. This check box is selected by default.  
+ Controls the way the column stores values shorter than the defined size of the column, and the way the column stores values that have trailing blanks in **char**, **varchar**, **binary**, and **varbinary** data. This setting affects only the definition of new columns. After the column is created, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] stores the values based on the setting when the column was created. Existing columns are not affected by a later change to this setting. This check box is selected by default.  
   
  **SET ANSI_WARNINGS**  
  Specifies ISO standard behavior for several error conditions:  

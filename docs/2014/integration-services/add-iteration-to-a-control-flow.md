@@ -23,7 +23,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Add Iteration to a Control Flow
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes the For Loop container, a control flow element that makes it simple to include looping that conditionally repeats a control flow in a package. For more information, see [For Loop Container](../../2014/integration-services/for-loop-container.md).  
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes the For Loop container, a control flow element that makes it simple to include looping that conditionally repeats a control flow in a package. For more information, see [For Loop Container](../../2014/integration-services/for-loop-container.md).  
   
  The For Loop container evaluates a condition on each iteration of the loop, and stops when the condition evaluates to false. The For Loop container includes expressions for initializing the loop, specifying the evaluation condition that stops execution of the repeating control flow, and assigning a value to an expression that updates the value against which the evaluation condition is compared. You must provide an evaluation condition, but initialization and assignment expressions are optional.  
   
@@ -40,7 +40,7 @@ manager: "jhubbard"
   
  The variables that the For Loop container uses must be defined in the scope of the For Loop container or in the scope of any container that is higher in the package container hierarchy. For example, a For Loop container can use variables defined in its scope and also variables defined in package scope. For more information, see [Integration Services &#40;SSIS&#41; Variables](../../2014/integration-services/integration-services-ssis-variables.md) and [Use Variables in Packages](../../2014/integration-services/use-variables-in-packages.md).  
   
- The [!INCLUDE[ssIS](../../includes/ssis-md.md)] expression grammar provides a complete set of operators and functions for implementing complex expressions used for evaluation, initialization, or assignment. For more information, see [Integration Services &#40;SSIS&#41; Expressions](../../2014/integration-services/integration-services-ssis-expressions.md).  
+ The [!INCLUDE[ssIS](../includes/ssis-md.md)] expression grammar provides a complete set of operators and functions for implementing complex expressions used for evaluation, initialization, or assignment. For more information, see [Integration Services &#40;SSIS&#41; Expressions](../../2014/integration-services/integration-services-ssis-expressions.md).  
   
 ### To implement a For Loop container in a control flow  
   

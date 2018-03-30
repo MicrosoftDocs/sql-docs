@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: d476c124-596b-4b27-a883-812b6b50a735
 caps.latest.revision: 25
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Create DML Triggers to Handle Multiple Rows of Data
@@ -31,7 +31,7 @@ manager: "jhubbard"
 >  We do not recommend using cursors in triggers because they could potentially reduce performance. To design a trigger that affects multiple rows, use rowset-based logic instead of cursors.  
   
 ## Examples  
- The DML triggers in the following examples are designed to store a running total of a column in another table of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database.  
+ The DML triggers in the following examples are designed to store a running total of a column in another table of the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] sample database.  
   
 ### A. Storing a running total for a single-row insert  
  The first version of the DML trigger works well for a single-row insert when a row of data is loaded into the `PurchaseOrderDetail` table. An INSERT statement fires the DML trigger, and the new row is loaded into the **inserted** table for the duration of the trigger execution. The `UPDATE` statement reads the `LineTotal` column value for the row and adds that value to the existing value in the `SubTotal` column in the `PurchaseOrderHeader` table. The `WHERE` clause makes sure that the updated row in the `PurchaseOrderDetail` table matches the `PurchaseOrderID` of the row in the **inserted** table.  
@@ -71,7 +71,7 @@ AFTER INSERT AS
       (SELECT PurchaseOrderID FROM inserted);  
 ```  
   
- This trigger also works correctly in a single-row insert; the sum of the `LineTotal` value column is the sum of a single row. However, with this trigger the correlated subquery and the `IN` operator that is used in the `WHERE` clause require additional processing from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This is unnecessary for a single-row insert.  
+ This trigger also works correctly in a single-row insert; the sum of the `LineTotal` value column is the sum of a single row. However, with this trigger the correlated subquery and the `IN` operator that is used in the `WHERE` clause require additional processing from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. This is unnecessary for a single-row insert.  
   
 ### C. Storing a running total based on the type of insert  
  You can change the trigger to use the method optimal for the number of rows. For example, the `@@ROWCOUNT` function can be used in the logic of the trigger to distinguish between a single and a multirow insert.  

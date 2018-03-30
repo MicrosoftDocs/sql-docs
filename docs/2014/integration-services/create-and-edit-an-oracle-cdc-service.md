@@ -55,29 +55,29 @@ manager: "jhubbard"
   
      You can use a local or domain Windows account for the service account. In this case, you must enter the **Password** for that account. This account can be for the local host or a domain account. Be sure to update the password when it is changed using Local Services in the Windows Control Panel.  
   
- **Server name**: Select the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance to connect to (for example, **\\\\<computer_name>\\<instance_name>**). The server instance last connected to is displayed by default.  
+ **Server name**: Select the target [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance to connect to (for example, **\\\\<computer_name>\\<instance_name>**). The server instance last connected to is displayed by default.  
   
  **Authentication**  
  Select one of the following:  
   
--   **Windows Authentication**: If you select this option, the Oracle CDC service connects to the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance using the service account identity. If the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance is running on a different computer, Windows Authentication must be used with domain accounts.  
+-   **Windows Authentication**: If you select this option, the Oracle CDC service connects to the target [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance using the service account identity. If the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance is running on a different computer, Windows Authentication must be used with domain accounts.  
   
--   **SQL Server Authentication**: If you select this option, you must type the **User Name** and **Password** for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login you want to use. The Oracle CDC service uses these credentials when connecting to the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
+-   **SQL Server Authentication**: If you select this option, you must type the **User Name** and **Password** for the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] login you want to use. The Oracle CDC service uses these credentials when connecting to the target [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance.  
   
- The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login used by the Oracle CDC Service only needs to be a member of the public fixed-server role, no other privileges are needed. Once new Oracle CDC Instances are added, that login will gain **db_owner** access to the associated [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC databases.  
+ The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] login used by the Oracle CDC Service only needs to be a member of the public fixed-server role, no other privileges are needed. Once new Oracle CDC Instances are added, that login will gain **db_owner** access to the associated [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] CDC databases.  
   
- To create the Oracle CDC Windows Service definition, the program needs update access to the MSXDBCDC database in the associated [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. When you click **OK**, a dialog box prompts the user to enter a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login with an update access to the MSXDBCDC database.  
+ To create the Oracle CDC Windows Service definition, the program needs update access to the MSXDBCDC database in the associated [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance. When you click **OK**, a dialog box prompts the user to enter a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] login with an update access to the MSXDBCDC database.  
   
  For information about the data you must type into the Connect to SQL Server dialog box, see [Connection to SQL Server](../../2014/integration-services/connection-to-sql-server.md).  
   
  **Options**  
  Click the arrow to view available options to be configured. You can choose to leave these options with their default value. The available options are:  
   
--   **Connection Timeout**: Type the time (in seconds) that the CDC Service for Oracle waits for a connection to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] before timing out. The default value is **15**.  
+-   **Connection Timeout**: Type the time (in seconds) that the CDC Service for Oracle waits for a connection to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] before timing out. The default value is **15**.  
   
 -   **Execution Timeout**: Type the time (in seconds) that the Oracle CDC Windows Service waits for a command to execute before timing out. The default value is **30**.  
   
--   **Encrypt Connection**: Select **Encrypt Connection** for communication between the Oracle CDC Service and the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance using an encrypted connection.  
+-   **Encrypt Connection**: Select **Encrypt Connection** for communication between the Oracle CDC Service and the target [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance using an encrypted connection.  
   
 -   **Advanced**: Type any additional connection properties, if necessary.  
   

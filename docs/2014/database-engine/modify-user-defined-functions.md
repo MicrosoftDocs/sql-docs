@@ -16,7 +16,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Modify User-defined Functions
-  You can modify user-defined functions in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Modifying user-defined functions as described below will not change the functions’ permissions, nor will it affect any dependent functions, stored procedures, or triggers.  
+  You can modify user-defined functions in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)]. Modifying user-defined functions as described below will not change the functions’ permissions, nor will it affect any dependent functions, stored procedures, or triggers.  
   
  **In This Topic**  
   
@@ -74,7 +74,7 @@ manager: "jhubbard"
   
 #### To modify a user-defined function  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -155,6 +155,6 @@ manager: "jhubbard"
     END;  
     ```  
   
- For more information, see [ALTER FUNCTION &#40;Transact-SQL&#41;](../Topic/ALTER%20FUNCTION%20\(Transact-SQL\).md).  
+ For more information, see [ALTER FUNCTION &#40;Transact-SQL&#41;](~/t-sql/statements/alter-function-transact-sql.md).  
   
   

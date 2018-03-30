@@ -37,7 +37,7 @@ manager: "mblythe"
 |`KPI_NAME`|`DBTYPE_WSTR`||The name of the KPI.|  
 |`KPI_CAPTION`|`DBTYPE_WSTR`||A label or caption associated with the KPI. Used primarily for display purposes. If a caption does not exist, `KPI_NAME` is returned.|  
 |`KPI_DESCRIPTION`|`DBTYPE_WSTR`||A human-readable description of the KPI.|  
-|`KPI_DISPLAY_FOLDER`|`DBTYPE_WSTR`||A string that identifies the path of the display folder that the client application uses to show the member. The folder level separator is defined by the client application. For the tools and clients supplied by [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], the backslash (\\) is the level separator. To provide multiple display folders, use a semicolon (;) to separate the folders.|  
+|`KPI_DISPLAY_FOLDER`|`DBTYPE_WSTR`||A string that identifies the path of the display folder that the client application uses to show the member. The folder level separator is defined by the client application. For the tools and clients supplied by [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], the backslash (\\) is the level separator. To provide multiple display folders, use a semicolon (;) to separate the folders.|  
 |`KPI_VALUE`|`DBTYPE_WSTR`||The unique name of the member in the measures dimension for the KPI Value.|  
 |`KPI_GOAL`|`DBTYPE_WSTR`||The unique name of the member in the measures dimension for the KPI Goal.<br /><br /> Returns `NULL` if there is no Goal defined.|  
 |`KPI_STATUS`|`DBTYPE_WSTR`||The unique name of the member in the measures dimension for the KPI Status.<br /><br /> Returns `NULL` if there is no Status defined.|  

@@ -18,12 +18,12 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Cross-Validation Tab (Mining Accuracy Chart View)
-  Cross-validation lets you partition a mining structure into cross-sections and iteratively train and test models against each cross-section. You specify a number of folds to divide the data into, and each fold is used in turn as the test data, whereas the remaining data is used to train a new model. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] then generates a set of standard accuracy metrics for each model. By comparing the metrics for the models generated for each cross-section, you can get a good idea of how reliable the mining model is for the whole data set.  
+  Cross-validation lets you partition a mining structure into cross-sections and iteratively train and test models against each cross-section. You specify a number of folds to divide the data into, and each fold is used in turn as the test data, whereas the remaining data is used to train a new model. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] then generates a set of standard accuracy metrics for each model. By comparing the metrics for the models generated for each cross-section, you can get a good idea of how reliable the mining model is for the whole data set.  
   
  For more information, see [Cross-Validation &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/cross-validation-analysis-services-data-mining.md).  
   
 > [!NOTE]  
->  Cross-validation cannot be used with models that were built by using the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series algorithm or the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering algorithm. If you run the report on a mining structure that contains these types of models, the models will not be included in the report.  
+>  Cross-validation cannot be used with models that were built by using the [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series algorithm or the [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Clustering algorithm. If you run the report on a mining structure that contains these types of models, the models will not be included in the report.  
   
 ## Task List  
   
@@ -45,7 +45,7 @@ manager: "mblythe"
   
  The maximum value is 10 for session mining structures.  
   
- The maximum value is 256 if the mining structure is stored in an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+ The maximum value is 256 if the mining structure is stored in an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
 > [!NOTE]  
 >  As you increase the number of folds, the time that is required to perform cross-validation similarly increases by n. You might experience performance issues if the number of cases is large and the value of **Fold Count** is also large.  
@@ -100,6 +100,6 @@ manager: "mblythe"
  [Testing and Validation &#40;Data Mining&#41;](../../2014/analysis-services/testing-and-validation-data-mining.md)   
  [Cross-Validation &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/cross-validation-analysis-services-data-mining.md)   
  [Measures in the Cross-Validation Report](../../2014/analysis-services/measures-in-the-cross-validation-report.md)   
- [Data Mining Stored Procedures &#40;Analysis Services - Data Mining&#41;](../Topic/Data%20Mining%20Stored%20Procedures%20\(Analysis%20Services%20-%20Data%20Mining\).md)  
+ [Data Mining Stored Procedures &#40;Analysis Services - Data Mining&#41;](~/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md)  
   
   

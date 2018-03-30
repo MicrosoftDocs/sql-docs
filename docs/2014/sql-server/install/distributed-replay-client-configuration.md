@@ -16,7 +16,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Distributed Replay Client Configuration
-  Use the **Distributed Replay Client Configuration** page of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Installation Wizard to specify the users you want to grant administrative permissions to for the Distributed Replay client service.  
+  Use the **Distributed Replay Client Configuration** page of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard to specify the users you want to grant administrative permissions to for the Distributed Replay client service.  
   
  Users that have administrative permissions will have unlimited access to the Distributed Replay client service.  
   
@@ -35,11 +35,11 @@ manager: "jhubbard"
  **Working Directory**  
  Specify the working directory for the Distributed Replay client service.  
   
- The default working directory is \<*drive letter*>:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\DReplayClient\WorkingDir\\.  
+ The default working directory is \<*drive letter*>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\WorkingDir\\.  
   
  **Result Directory**  
  Specify the result directory for the Distributed Replay client service.  
   
- The default result directory is \<*drive letter*>:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\DReplayClient\ResultDir\\.  
+ The default result directory is \<*drive letter*>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\ResultDir\\.  
   
   

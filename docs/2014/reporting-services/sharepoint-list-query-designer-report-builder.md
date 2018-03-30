@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: b8a3122c-8008-4950-b515-937636d7967f
 caps.latest.revision: 5
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # SharePoint List Query Designer (Report Builder)
@@ -63,7 +63,7 @@ manager: "mblythe"
  To add or remove fields to this pane, select or clear check boxes for the table or view fields in the SharePoint Lists pane.  
   
 ###  <a name="AppliedFilters"></a> Applied Filters Pane  
- The Applied Filters pane displays the criteria that are used to limit the number of rows of data that are retrieved at run-time. Criteria specified in this pane are used to generate a [!INCLUDE[tsql](../../includes/tsql-md.md)] WHERE clause. When you select the parameter option, a report parameter is automatically created. Report parameters that are based on query parameters enable a user to specify values for the query to control the data in the report.  
+ The Applied Filters pane displays the criteria that are used to limit the number of rows of data that are retrieved at run-time. Criteria specified in this pane are used to generate a [!INCLUDE[tsql](../includes/tsql-md.md)] WHERE clause. When you select the parameter option, a report parameter is automatically created. Report parameters that are based on query parameters enable a user to specify values for the query to control the data in the report.  
   
  The following columns are displayed:  
   

@@ -30,7 +30,7 @@ manager: "mblythe"
   
  Mining model content includes metadata about the model, statistics about the data, and patterns discovered by the mining algorithm. Depending on the algorithm that was used, the model content may include regression formulas, the definitions of rules and itemsets, or weights and other statistics.  
   
- Regardless of the algorithm that was used, mining model content is presented in a standard structure. You can browse the structure in the Microsoft Generic Content Tree Viewer, provided in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], and then switch to one of the custom viewers to see how the information is interpreted and displayed graphically for each model type. You can also create queries against the mining model content by using any client that supports the MINING_MODEL_CONTENT schema rowset. For more information, see [Data Mining Query Tasks and How-tos](../../2014/analysis-services/data-mining-query-tasks-and-how-tos.md).  
+ Regardless of the algorithm that was used, mining model content is presented in a standard structure. You can browse the structure in the Microsoft Generic Content Tree Viewer, provided in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], and then switch to one of the custom viewers to see how the information is interpreted and displayed graphically for each model type. You can also create queries against the mining model content by using any client that supports the MINING_MODEL_CONTENT schema rowset. For more information, see [Data Mining Query Tasks and How-tos](../../2014/analysis-services/data-mining-query-tasks-and-how-tos.md).  
   
  This section describes the basic structure of the content provided for all kinds of mining models. It describes the node types that are common to all mining model content, and provides guidance on how to interpret the information.  
   
@@ -70,7 +70,7 @@ manager: "mblythe"
  The following table lists the different types of nodes that are output in data mining models. Because each algorithm processes information differently, each model generates only a few specific kinds of nodes. If you change the algorithm, the type of nodes may change. Also, if you reprocess the model, the content of each node may change.  
   
 > [!NOTE]  
->  If you use a different data mining service than the ones provided in [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)], or if you create your own plug-in algorithms, additional custom node types may be available.  
+>  If you use a different data mining service than the ones provided in [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)], or if you create your own plug-in algorithms, additional custom node types may be available.  
   
 |NODE_TYPE ID|Node Label|Node Contents|  
 |-------------------|----------------|-------------------|  
@@ -132,7 +132,7 @@ manager: "mblythe"
  *Cardinality* refers to the number of items in a set. In the context of a processed mining model, cardinality tells you the number of children in a particular node. For example, if a decision tree model has a node for [Yearly Income], and that node has two child nodes, one for the condition [Yearly Income] = High and one for the condition, [Yearly Income] = Low, the value of CHILDREN_CARDINALITY for the [Yearly Income] node would be 2.  
   
 > [!NOTE]  
->  In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], only the immediate child nodes are counted when calculating the cardinality of a node. However, if you create a custom plug-in algorithm, you can overload CHILDREN_CARDINALITY to count cardinality differently. This may be useful, for example, if you wanted to count the total number of descendants, not just the immediate children.  
+>  In [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], only the immediate child nodes are counted when calculating the cardinality of a node. However, if you create a custom plug-in algorithm, you can overload CHILDREN_CARDINALITY to count cardinality differently. This may be useful, for example, if you wanted to count the total number of descendants, not just the immediate children.  
   
  Although cardinality is counted in the same way for all models, how you interpret or use the cardinality value differs depending on the model type. For example, in a clustering model, the cardinality of the top node tells you the total number of clusters that were found. In other types of models, cardinality may always have a set value depending on the node type. For more information about how to interpret cardinality, see the topic about the individual model type.  
   
@@ -260,7 +260,7 @@ manager: "mblythe"
  Two kinds of XML rules are provided, similar to the two kinds of probability values. The XML fragment in MARGINAL_RULE defines the attribute and value for the current node, whereas the XML fragment in NODE_RULE describes the path to the current node from the model root.  
   
 ##  <a name="bkmk_AlgoType"></a> Mining Model Content by Algorithm Type  
- Each algorithm stores different types of information as part of its content schema. For example, the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering Algorithm generates many child nodes, each of which represents a possible cluster. Each cluster node contains rules that describe characteristics shared by items in the cluster. In contrast, the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression algorithm does not contain any child nodes; instead, the parent node for the model contains the equation that describes the linear relationship discovered by analysis.  
+ Each algorithm stores different types of information as part of its content schema. For example, the [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering Algorithm generates many child nodes, each of which represents a possible cluster. Each cluster node contains rules that describe characteristics shared by items in the cluster. In contrast, the [!INCLUDE[msCoName](../includes/msconame-md.md)] Linear Regression algorithm does not contain any child nodes; instead, the parent node for the model contains the equation that describes the linear relationship discovered by analysis.  
   
  The following table provides links to topics for each type of algorithm.  
   
@@ -281,14 +281,14 @@ manager: "mblythe"
 |Time series models|[Mining Model Content for Time Series Models &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[Time Series Model Query Examples](../../2014/analysis-services/time-series-model-query-examples.md)|  
   
 ##  <a name="bkmk_Viewing"></a> Tools for Viewing Mining Model Content  
- When you browse or explore a model in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], you can view the information in the **Microsoft Generic Content Tree Viewer**, which is available in both [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] and [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ When you browse or explore a model in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], you can view the information in the **Microsoft Generic Content Tree Viewer**, which is available in both [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] and [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
- The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Generic Content Viewer displays the columns, rules, properties, attributes, nodes, and other content from the model by using the same information that is available in the content schema rowset of the mining model. The content schema rowset is a generic framework for presenting detailed information about the content of a data mining model. You can view model content in any client that supports hierarchical rowsets. The viewer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] presents this information in an HTML table viewer that represents all models in a consistent format, making it easier to understand the structure of the models that you create. For more information, see [Browse a Model Using the Microsoft Generic Content Tree Viewer](../../2014/analysis-services/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md).  
+ The [!INCLUDE[msCoName](../includes/msconame-md.md)] Generic Content Viewer displays the columns, rules, properties, attributes, nodes, and other content from the model by using the same information that is available in the content schema rowset of the mining model. The content schema rowset is a generic framework for presenting detailed information about the content of a data mining model. You can view model content in any client that supports hierarchical rowsets. The viewer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] presents this information in an HTML table viewer that represents all models in a consistent format, making it easier to understand the structure of the models that you create. For more information, see [Browse a Model Using the Microsoft Generic Content Tree Viewer](../../2014/analysis-services/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md).  
   
 ##  <a name="bkmk_Querying"></a> Tools for Querying Mining Model Content  
  To retrieve mining model content, you must create a query against the data mining model.  
   
- The easiest way to create a content query is to execute the following DMX statement in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
+ The easiest way to create a content query is to execute the following DMX statement in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]:  
   
 ```  
 SELECT * FROM [<mining model name>].CONTENT  
@@ -298,7 +298,7 @@ SELECT * FROM [<mining model name>].CONTENT
   
  You can also query the mining model content by using the data mining schema rowsets. A schema rowset is a standard structure that clients use to discover, browse, and query information about mining structures and models. You can query the schema rowsets by using XMLA, Transact-SQL, or DMX statements.  
   
- In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], you can also access the information in the data mining schema rowsets by opening a connection to the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance and querying the system tables. For more information, see [Querying the Data Mining Schema Rowsets &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/querying-the-data-mining-schema-rowsets-analysis-services-data-mining.md).  
+ In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], you can also access the information in the data mining schema rowsets by opening a connection to the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance and querying the system tables. For more information, see [Querying the Data Mining Schema Rowsets &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/querying-the-data-mining-schema-rowsets-analysis-services-data-mining.md).  
   
 ## See Also  
  [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](../../2014/analysis-services/microsoft-generic-content-tree-viewer-data-mining.md)   

@@ -31,7 +31,7 @@ manager: "mblythe"
  Because of parent-child relationships between levels in a parent-child hierarchy, some nonleaf members can also have data derived from underlying data sources, in addition to data aggregated from child members.  
   
 ## Dimension Schema  
- The dimension schema of a parent-child hierarchy depends on a self-referencing relationship present on the dimension main table. For example, the following diagram illustrates the **DimOrganization** dimension main table in the [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)] sample database.  
+ The dimension schema of a parent-child hierarchy depends on a self-referencing relationship present on the dimension main table. For example, the following diagram illustrates the **DimOrganization** dimension main table in the [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] sample database.  
   
  ![Self-referencing join in DimOrganization table](../../2014/analysis-services/dev-guide/media/dimorganization.gif "Self-referencing join in DimOrganization table")  
   

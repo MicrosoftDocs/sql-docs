@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Connect to a Registered Server (SQL Server Management Studio)
-  This topic describes how to connect to a registered server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. If the server is not running or cannot be found on the network, Registered Servers displays an error.  
+  This topic describes how to connect to a registered server in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. If the server is not running or cannot be found on the network, Registered Servers displays an error.  
   
 ##  <a name="SSMSProcedure"></a>  
   

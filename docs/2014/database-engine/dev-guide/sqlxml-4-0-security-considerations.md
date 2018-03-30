@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQLXML 4.0 Security Considerations
-  This section provides information about security-related considerations for [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML.  
+  This section provides information about security-related considerations for [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML.  
   
 ## In This Section  
  [Core SQLXML Security Considerations](../../../2014/database-engine/dev-guide/core-sqlxml-security-considerations.md)  

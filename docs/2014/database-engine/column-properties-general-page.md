@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: a745890b-994e-4c23-8028-5c83751e60c4
 caps.latest.revision: 26
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Column Properties (General Page)
@@ -27,7 +27,7 @@ manager: "jhubbard"
  The name of the column.  
   
  **Data Type**  
- The type of data that the column can hold. If the data type is a user-defined data type, the user-defined data type is displayed. If the data type is not a user-defined data type, then the system data type is displayed. For more information, see [Data Types &#40;Transact-SQL&#41;](../Topic/Data%20Types%20\(Transact-SQL\).md).  
+ The type of data that the column can hold. If the data type is a user-defined data type, the user-defined data type is displayed. If the data type is not a user-defined data type, then the system data type is displayed. For more information, see [Data Types &#40;Transact-SQL&#41;](~/t-sql/data-types/data-types-transact-sql.md).  
   
  **System Type**  
  The type of data that the column can hold. If the data type is a system data type, then the system data type is displayed. If the data type is a user-defined data type, the system data type that makes up the user-defined data type is displayed.  
@@ -51,10 +51,10 @@ manager: "jhubbard"
  Indicates the initial row value for an identity column.  
   
  **Identity Increment**  
- The **Identity Increment** property specifies the value [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] adds to the greatest existing row identity value as it generates an identity value for a row being inserted.  
+ The **Identity Increment** property specifies the value [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] adds to the greatest existing row identity value as it generates an identity value for a row being inserted.  
   
  **Default Binding**  
- The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] default bound to the column. This option is blank if no default is bound.  
+ The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] default bound to the column. This option is blank if no default is bound.  
   
  **Default Schema**  
  Identifies the database schema owning the default bound to the referenced column. This option is blank if no default is bound.  
@@ -63,7 +63,7 @@ manager: "jhubbard"
  Identifies the data integrity constraint that is bound to the column. This option is blank if no rule is bound.  
   
  **Rule Schema**  
- Displays the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database schema that owns the rule bound to the referenced column. This option is blank if no rule is bound.  
+ Displays the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database schema that owns the rule bound to the referenced column. This option is blank if no rule is bound.  
   
  **Length**  
  Indicates the maximum number of characters or bytes accepted by the column.  
@@ -81,10 +81,10 @@ manager: "jhubbard"
  Defines the type of the XML column by way of XML Schema Definition (XSD) Language validation.  
   
  **XML Schema Namespace schema**  
- The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schema that owns the XML Schema Namespace.  
+ The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] schema that owns the XML Schema Namespace.  
   
 > [!NOTE]  
->  There are several common but different meanings of the word schema. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses schema to organize database objects. It is similar to ownership. XML uses the schema to define the organization of XML information into a series of namespaces. It is a way to group related XML code together.  
+>  There are several common but different meanings of the word schema. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses schema to organize database objects. It is similar to ownership. XML uses the schema to define the organization of XML information into a series of namespaces. It is a way to group related XML code together.  
   
  **Is Sparse**  
  Indicates whether the column is a sparse column. Possible values are **True** and **False**. For more information, see [Use Sparse Columns](../../2014/database-engine/use-sparse-columns.md).  
@@ -93,7 +93,7 @@ manager: "jhubbard"
  Indicates whether the column is a column set. Possible values are **True** and **False**. For more information, see [Use Column Sets](../../2014/database-engine/use-column-sets.md).  
   
  **ANSI Padding Status**  
- Indicates whether ANSI padding is on or off. For more information, see [SET ANSI_PADDING &#40;Transact-SQL&#41;](../Topic/SET%20ANSI_PADDING%20\(Transact-SQL\).md).  
+ Indicates whether ANSI padding is on or off. For more information, see [SET ANSI_PADDING &#40;Transact-SQL&#41;](~/t-sql/statements/set-ansi-padding-transact-sql.md).  
   
  **Full Text**  
  Displays whether the column participates in full-text queries.  

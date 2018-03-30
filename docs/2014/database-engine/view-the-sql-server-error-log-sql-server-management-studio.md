@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # View the SQL Server Error Log (SQL Server Management Studio)
-  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains user-defined events and certain system events. You can use this error log to troubleshoot problems related to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] error log contains user-defined events and certain system events. You can use this error log to troubleshoot problems related to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ### To view the SQL Server error log  
   

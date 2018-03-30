@@ -30,7 +30,7 @@ manager: "mblythe"
  Choose a mining model to view, from those in the current mining structure. The mining model will open in its associated viewer.  
   
  **Viewer**  
- Choose a viewer to use to explore the selected mining model. You can choose the custom viewer provided for each mining model, or the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Mining Content Viewer. You can also use plug-in viewers if they are available.  
+ Choose a viewer to use to explore the selected mining model. You can choose the custom viewer provided for each mining model, or the [!INCLUDE[msCoName](../includes/msconame-md.md)] Mining Content Viewer. You can also use plug-in viewers if they are available.  
   
  **Show Legend**  
  Select this option to display a key that matches each value in **States** to one of the colors used in the distribution chart.  

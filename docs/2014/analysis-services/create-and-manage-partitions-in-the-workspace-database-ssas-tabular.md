@@ -18,9 +18,9 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Create and Manage Partitions in the Workspace Database (SSAS Tabular)
-  Partitions divide a table into logical parts. Each partition can then be processed (Refreshed) independently or in parallel with other partitions. Partitions can improve scalability and manageability of large databases. By default, each table has one partition that includes all columns. Tasks in this topic describe how to create and manage partitions in the model workspace database by using the **Partition Manager** dialog box in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  
+  Partitions divide a table into logical parts. Each partition can then be processed (Refreshed) independently or in parallel with other partitions. Partitions can improve scalability and manageability of large databases. By default, each table has one partition that includes all columns. Tasks in this topic describe how to create and manage partitions in the model workspace database by using the **Partition Manager** dialog box in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]  
   
- After a model has been deployed to another Analysis Services instance, database administrators can create and manage partitions in the (deployed) model by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information, see [Create and Manage Tabular Model Partitions &#40;SSAS Tabular&#41;](../../2014/analysis-services/create-and-manage-tabular-model-partitions-ssas-tabular.md).  
+ After a model has been deployed to another Analysis Services instance, database administrators can create and manage partitions in the (deployed) model by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. For more information, see [Create and Manage Tabular Model Partitions &#40;SSAS Tabular&#41;](../../2014/analysis-services/create-and-manage-tabular-model-partitions-ssas-tabular.md).  
   
  This topic includes the following tasks:  
   
@@ -31,10 +31,10 @@ manager: "mblythe"
 -   [To delete a partition](#bkmk_delete)  
   
 > [!NOTE]  
->  You cannot merge partitions in the model workspace database by using the Partition Manager dialog box. Partitions can be merged in a deployed model only by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+>  You cannot merge partitions in the model workspace database by using the Partition Manager dialog box. Partitions can be merged in a deployed model only by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 ## Tasks  
- To create and manage partitions, you will use the **Partitions Manager** dialog box. To view the **Partitions Manager** dialog box, in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], click the **Table** menu, and then click **Partitions**.  
+ To create and manage partitions, you will use the **Partitions Manager** dialog box. To view the **Partitions Manager** dialog box, in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], click the **Table** menu, and then click **Partitions**.  
   
 ###  <a name="bkmk_create_new"></a> To create a new partition  
   

@@ -22,7 +22,7 @@ manager: "mblythe"
   
  The Cluster wizard helps you build a model that detects rows that share similar characteristics and groups them to maximize the distance between groups. This wizard is useful for finding patterns in all kinds of data.  
   
- The Cluster wizard uses the Microsoft Clustering algorithm and can be extensively customized. It works on existing data from an Excel table, an Excel range, or an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] query. Similar functionality is provided by the [Detect Categories](../../2014/analysis-services/detect-categories-table-analysis-tools-for-excel.md) tool, provided in the Table Analysis Tools for Excel. However, the Detect Categories tool cannot be customized and must use data in Excel tables.  
+ The Cluster wizard uses the Microsoft Clustering algorithm and can be extensively customized. It works on existing data from an Excel table, an Excel range, or an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] query. Similar functionality is provided by the [Detect Categories](../../2014/analysis-services/detect-categories-table-analysis-tools-for-excel.md) tool, provided in the Table Analysis Tools for Excel. However, the Detect Categories tool cannot be customized and must use data in Excel tables.  
   
 ## Using the Cluster Wizard  
   
@@ -30,7 +30,7 @@ manager: "mblythe"
   
 2.  In the **Select Source Data** page, select an Excel table or range. Or specify and external data source.  
   
-     If you use an external data source, you can create custom views or paste in custom query text, and save the data set as an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data source.  
+     If you use an external data source, you can create custom views or paste in custom query text, and save the data set as an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data source.  
   
 3.  On the **Clustering** page, you can customize the way the model is built.  
   
@@ -64,7 +64,7 @@ manager: "mblythe"
  You can also use the CLUSTER_SEED parameter to control the starting value and ensure that repeated models using the same data set have the same results.  
   
 ### Requirements  
- To use the Cluster wizard, you must be connected to a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database. For more information, see [Connect to Source Data &#40;Data Mining Client for Excel&#41;](../../2014/analysis-services/connect-to-source-data-data-mining-client-for-excel.md).  
+ To use the Cluster wizard, you must be connected to a [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database. For more information, see [Connect to Source Data &#40;Data Mining Client for Excel&#41;](../../2014/analysis-services/connect-to-source-data-data-mining-client-for-excel.md).  
   
 ## See Also  
  [Creating a Data Mining Model](../../2014/analysis-services/creating-a-data-mining-model.md)   

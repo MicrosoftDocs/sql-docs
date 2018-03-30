@@ -16,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: 86ed91a1-a07c-46f2-a913-67317ef2255e
 caps.latest.revision: 19
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Connect to Server (Oracle), Login
-  Use the **Login** tab of the **Connect to Server** dialog box to specify the account under which connections are made from the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributor to the Oracle Publisher. You must use the same account as the one specified for the replication administrative user schema during configuration of the Publisher. For more information, see [Configure an Oracle Publisher](../../../2014/relational-databases/replication/configure-an-oracle-publisher.md).  
+  Use the **Login** tab of the **Connect to Server** dialog box to specify the account under which connections are made from the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor to the Oracle Publisher. You must use the same account as the one specified for the replication administrative user schema during configuration of the Publisher. For more information, see [Configure an Oracle Publisher](../../../2014/relational-databases/replication/configure-an-oracle-publisher.md).  
   
 ## Options  
  **Server instance**  
@@ -31,7 +31,7 @@ manager: "jhubbard"
   
 -   The Oracle server must be configured to allow connections using Windows credentials. For more information, see the Oracle documentation.  
   
--   You must be currently logged in with the same [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows account you specified for the replication administrative user schema.  
+-   You must be currently logged in with the same [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows account you specified for the replication administrative user schema.  
   
  **Login** and **Password**  
  If you selected **Oracle Standard Authentication** for the **Authentication** option, specify the login and password to use, which must be the same as those specified for the replication administrative user schema.  

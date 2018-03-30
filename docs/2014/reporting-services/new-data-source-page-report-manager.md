@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 35563d4c-a3d5-4f95-bf46-605da9dfcbb8
 caps.latest.revision: 33
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # New Data Source Page (Report Manager)
@@ -41,14 +41,14 @@ manager: "mblythe"
  Select to enable or disable the shared data source. You can disable the shared data source to prevent processing for all reports and models that reference the item.  
   
  **Data source type**  
- Specify the data processing extension that is used to process data from the data source. Report server includes data processing extensions for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], Oracle, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], SAP, XML, ODBC, and OLE DB. Additional data processing extensions may be available from third-party vendors.  
+ Specify the data processing extension that is used to process data from the data source. Report server includes data processing extensions for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], Oracle, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], SAP, XML, ODBC, and OLE DB. Additional data processing extensions may be available from third-party vendors.  
   
  For more information about remote and non-SQL data source support, see [Features Supported by the Editions of SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) ( HYPERLINK "http://go.microsoft.com/fwlink/?linkid=232473" http://go.microsoft.com/fwlink/?linkid=232473) and [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../2014/reporting-services/data-sources-supported-by-reporting-services-ssrs.md).  
   
  **Connection string**  
  Specify the connection string that the report server uses to connect to the data source. The connection type determines the syntax you should use. For example, a connection string for the XML data processing extension is a URL to an XML document. In most cases, a typical connection string specifies the database server and a data file.  
   
- The following example illustrates a connection string used to connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database:  
+ The following example illustrates a connection string used to connect to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] database:  
   
 ```  
 data source=<a SQL Server instance>;initial catalog=AdventureWorks2012  
@@ -65,14 +65,14 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
  **Credentials supplied by the user running the report (Connect using)**  
  Each user is prompted to type in a user name and password to access the data source. You can define the prompt text that requests user credentials. The default text string is "Enter a user name and password to access the data source."  
   
- Select **Use as Windows credentials when connecting to the data source** if the credentials that the user provides are Windows Authentication credentials. Do not select this check box if you are using database authentication (for example, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication).  
+ Select **Use as Windows credentials when connecting to the data source** if the credentials that the user provides are Windows Authentication credentials. Do not select this check box if you are using database authentication (for example, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication).  
   
  **Credentials stored securely in the report server (Connect using)**  
  Store an encrypted user name and password in the report server database. Choose this option to run a report unattended (for example, reports that are initiated by schedules or events instead of user action). If you are using default security, the user name must be a Windows domain account. Specify the account in this format: \<domain>\\<username\>. The account you specify must have log on locally permissions on the computer that hosts the data source used by the report.  
   
- Select **Use as Windows credentials when connecting to the data source** if the credentials are Windows Authentication credentials. Do not select this check box if you are using database authentication (for example, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication).  
+ Select **Use as Windows credentials when connecting to the data source** if the credentials are Windows Authentication credentials. Do not select this check box if you are using database authentication (for example, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication).  
   
- If you are using database authentication, select **Impersonate the authenticated user after a connection has been made to the data source** to allow delegation of database credentials, but only if a database server supports impersonation. For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases, this option sets the SETUSER function.  
+ If you are using database authentication, select **Impersonate the authenticated user after a connection has been made to the data source** to allow delegation of database credentials, but only if a database server supports impersonation. For [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] databases, this option sets the SETUSER function.  
   
  **Windows integrated security (Connect using)**  
  Use the Windows credentials of the current user to access the data source. Choose this option when the credentials that are used to access a data source are the same as those used to log on to the network domain. This option works best when Kerberos authentication is enabled for your domain, or when the data source is on the same computer as the report server. If Kerberos authentication is not enabled, Windows credentials can be passed to one other computer. If additional computer connections are required, you will get an error instead of the data you expect.  

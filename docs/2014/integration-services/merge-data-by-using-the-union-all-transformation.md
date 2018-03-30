@@ -28,7 +28,7 @@ manager: "jhubbard"
   
 ### To combine inputs in a data flow  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], double-click the package in Solution Explorer to open the package in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, and then click the **Data Flow** tab.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], double-click the package in Solution Explorer to open the package in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, and then click the **Data Flow** tab.  
   
 2.  From the **Toolbox**, drag the Union All transformation to the design surface of the **Data Flow** tab.  
   

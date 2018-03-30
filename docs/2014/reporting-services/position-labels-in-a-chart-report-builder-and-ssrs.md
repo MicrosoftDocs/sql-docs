@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 5db74e0b-8be8-4b47-b386-faab56dffa9b
 caps.latest.revision: 6
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Position Labels in a Chart (Report Builder and SSRS)
@@ -29,7 +29,7 @@ manager: "mblythe"
 -   On polar charts, labels are placed outside of the circular area that represents data points.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ### To change the position of point labels in a Pie chart  
   

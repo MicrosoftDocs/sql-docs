@@ -22,7 +22,7 @@ manager: "jhubbard"
 # SQLXML 4.0 Programming Concepts
   SQLXML 3.0 was offered as a Web release to provide additional client-side XML functionality and enhancements to existing features, such as annotated XSD schemas, XML bulk load, Web services (SOAP) support, and updategrams.  
   
- [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduced SQLXML 4.0, which continues to deliver the same functionality as SQLXML 3.0 plus additional updates provided to accommodate new features introduced with [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introduced SQLXML 4.0, which continues to deliver the same functionality as SQLXML 3.0 plus additional updates provided to accommodate new features introduced with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
  This section provides information about SQLXML 4.0.  
   

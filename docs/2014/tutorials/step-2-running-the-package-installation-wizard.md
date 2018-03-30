@@ -16,9 +16,9 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Step 2: Running the Package Installation Wizard
-  In this task, you will run the Package Installation Wizard to deploy the packages from the Deployment Tutorial project to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Only packages can be installed in the sysssispackages table in the msdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, the supporting files that the deployment bundle includes will be deployed to the file system.  
+  In this task, you will run the Package Installation Wizard to deploy the packages from the Deployment Tutorial project to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Only packages can be installed in the sysssispackages table in the msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database, the supporting files that the deployment bundle includes will be deployed to the file system.  
   
- The Package Installation Wizard will guide you through the steps to install and configure the packages. You will install the packages to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the destination computer (the computer to which you copied the deployment bundle. You will also create a folder, C:\DeploymentTutorialInstall, in which the wizard will install the non-package files.  
+ The Package Installation Wizard will guide you through the steps to install and configure the packages. You will install the packages to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on the destination computer (the computer to which you copied the deployment bundle. You will also create a folder, C:\DeploymentTutorialInstall, in which the wizard will install the non-package files.  
   
  In an earlier lesson, you modified the packages in the tutorial to use configurations. Using the Package Installation Wizard, you will edit these configurations to enable packages to run successfully in the installed-to environment.  
   
@@ -101,7 +101,7 @@ manager: "jhubbard"
   
 ||  
 |-|  
-|![Integration Services icon (small)](../../2014/integration-services/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
+|![Integration Services icon (small)](../../2014/integration-services/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
   
 ## See Also  
  [Integration Services Service &#40;SSIS Service&#41;](../../2014/integration-services/integration-services-service-ssis-service.md)   

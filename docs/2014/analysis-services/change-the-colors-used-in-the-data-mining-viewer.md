@@ -18,11 +18,11 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Change the Colors Used in the Data Mining Viewer
-  You can change the colors that are used in the data mining viewers to display data series, nodes, or clusters. You do this by setting options in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] or [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. After you have changed the settings, the color selections apply to all models that you view by using [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]; however, you must close [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] and reopen the model in the viewer to see the new colors.  
+  You can change the colors that are used in the data mining viewers to display data series, nodes, or clusters. You do this by setting options in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] or [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. After you have changed the settings, the color selections apply to all models that you view by using [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]; however, you must close [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] and reopen the model in the viewer to see the new colors.  
   
 ### To change the colors used in the data mining viewers  
   
-1.  On the **Tools** menu of [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] or [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], select **Options**.  
+1.  On the **Tools** menu of [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] or [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], select **Options**.  
   
 2.  In the **Options** dialog box, expand **Designers**, and then expand **Data Mining Viewers**.  
   

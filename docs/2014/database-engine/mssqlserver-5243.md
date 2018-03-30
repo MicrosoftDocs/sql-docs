@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: e04a1934-e57d-420e-ac79-97071745824e
 caps.latest.revision: 14
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_5243
@@ -31,10 +31,10 @@ manager: "jhubbard"
 |Message Text|An inconsistency was detected during an internal operation. Please contact technical support. Reference number %ld.|  
   
 ## Explanation  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] detected a structural inconsistency in an in-memory storage engine structure.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] detected a structural inconsistency in an in-memory storage engine structure.  
   
 ## See Also  
- [DBCC CHECKDB &#40;Transact-SQL&#41;](../Topic/DBCC%20CHECKDB%20\(Transact-SQL\).md)   
+ [DBCC CHECKDB &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)   
  [Database Files and Filegroups](../../2014/database-engine/database-files-and-filegroups.md)  
   
   

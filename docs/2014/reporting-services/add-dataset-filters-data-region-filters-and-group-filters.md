@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
 caps.latest.revision: 8
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Add Dataset Filters, Data Region Filters, and Group Filters (Report Builder and SSRS)
@@ -23,7 +23,7 @@ manager: "mblythe"
  For more information, see [Add a Filter to a Dataset &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-a-filter-to-a-dataset-report-builder-and-ssrs.md) and [Filter Equation Examples &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/filter-equation-examples-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ##  <a name="When"></a> Choosing When to Set a Filter  
  Specify filters for report items when you cannot filter data at the source. For example, use report filters when the data source does not support query parameters, or you must run stored procedures and cannot modify the query, or a parameterized report snapshot displays customized data for different users.  
@@ -59,7 +59,7 @@ manager: "mblythe"
  The following sections describe each part of the filter equation.  
   
 ### Expression  
- When the filter equation is evaluated by the report processor at run time, the data types for the expression and the value must be the same. The data type of the field you select for **Expression** is determined by the data processing extension or data provider that is used to retrieve data from the data source. The data type of the expression that you enter for `Value` is determined by [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] defaults. The choices for data type are determined by the data types supported for a report definition. Values from the database might be converted by the data provider to a CLR type.  
+ When the filter equation is evaluated by the report processor at run time, the data types for the expression and the value must be the same. The data type of the field you select for **Expression** is determined by the data processing extension or data provider that is used to retrieve data from the data source. The data type of the expression that you enter for `Value` is determined by [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] defaults. The choices for data type are determined by the data types supported for a report definition. Values from the database might be converted by the data provider to a CLR type.  
   
 ### Data Type  
  For the report processor to compare two values, the data types must be the same. The following table lists the mapping between CLR data types and report definition data types. Data that you retrieve from a data source might be converted to a data type that is different by the time it is report data.  
@@ -88,7 +88,7 @@ manager: "mblythe"
 ### Value  
  The Value expression specifies the final part of the filter equation. The report processor converts the evaluated expression to the data type that you specified, and then evaluates the entire filter equation to determine if the data specified in Expression passes through the filter.  
   
- To convert to a data type that is not a standard CLR data type, you must modify the expression to explicitly convert to a data type. You can use the conversion functions listed in the **Expression** dialog box under **Common Functions**, **Conversion**. For example, for a field `ListPrice` that represents data that is stored as a **money** data type on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data source, the data processing extension returns the field value as a <xref:System.Decimal> data type. To set a filter to use only values greater than **$50000.00** in the report currency, convert the value to Decimal by using the expression `=CDec(50000.00)`.  
+ To convert to a data type that is not a standard CLR data type, you must modify the expression to explicitly convert to a data type. You can use the conversion functions listed in the **Expression** dialog box under **Common Functions**, **Conversion**. For example, for a field `ListPrice` that represents data that is stored as a **money** data type on a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] data source, the data processing extension returns the field value as a <xref:System.Decimal> data type. To set a filter to use only values greater than **$50000.00** in the report currency, convert the value to Decimal by using the expression `=CDec(50000.00)`.  
   
  This value can also include a parameter reference to allow a user to interactively select a value on which to filter.  
   

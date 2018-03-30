@@ -23,19 +23,19 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Copy Project Items
-  This topic describes how to copy objects within an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project or between [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] projects. You can also copy objects between the other types of [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] projects, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. To copy between projects, the project must be part of the same [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] solution. For more information, see [Integration Services &#40;SSIS&#41; Projects](../../2014/integration-services/integration-services-ssis-projects.md).  
+  This topic describes how to copy objects within an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project or between [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] projects. You can also copy objects between the other types of [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] projects, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] and [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. To copy between projects, the project must be part of the same [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] solution. For more information, see [Integration Services &#40;SSIS&#41; Projects](../../2014/integration-services/integration-services-ssis-projects.md).  
   
 ### To copy project level items  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project or solution that you want to work with.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project or solution that you want to work with.  
   
 2.  Expand the project and item folder to copy from.  
   
 3.  Right-click the item and click **Copy**.  
   
-4.  Right-click the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project to copy to and click **Paste**.  
+4.  Right-click the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project to copy to and click **Paste**.  
   
-     The items are automatically copied to the correct folder. If you copy items to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project that are not packages, the items are copied to the **Miscellaneous** folder.  
+     The items are automatically copied to the correct folder. If you copy items to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project that are not packages, the items are copied to the **Miscellaneous** folder.  
   
 ## See Also  
  [Integration Services &#40;SSIS&#41; Packages](../../2014/integration-services/integration-services-ssis-packages.md)   

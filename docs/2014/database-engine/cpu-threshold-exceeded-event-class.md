@@ -38,6 +38,6 @@ manager: "jhubbard"
 |StartTime|`datetime`|The time when this event fired.|14|Yes|  
   
 ## See Also  
- [sp_trace_setevent &#40;Transact-SQL&#41;](../Topic/sp_trace_setevent%20\(Transact-SQL\).md)  
+ [sp_trace_setevent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

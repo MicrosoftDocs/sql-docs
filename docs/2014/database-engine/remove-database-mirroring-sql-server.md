@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Remove Database Mirroring (SQL Server)
-  This topic describes how to remove database mirroring from a database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  At any time, the database owner can manually stop a database mirroring session by removing mirroring from the database.  
+  This topic describes how to remove database mirroring from a database in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)].  At any time, the database owner can manually stop a database mirroring session by removing mirroring from the database.  
   
  
   
@@ -49,11 +49,11 @@ manager: "jhubbard"
   
 #### To remove database mirroring  
   
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)] of either mirroring partner.  
+1.  Connect to the [!INCLUDE[ssDE](../includes/ssde-md.md)] of either mirroring partner.  
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Issue the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement:  
+3.  Issue the following [!INCLUDE[tsql](../includes/tsql-md.md)] statement:  
   
     ```  
     ALTER DATABASE database_name SET PARTNER OFF  
@@ -61,7 +61,7 @@ manager: "jhubbard"
   
      where *database_name* is the mirrored database whose session you want to remove.  
   
-     The following example removes database mirroring from the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database.  
+     The following example removes database mirroring from the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] sample database.  
   
     ```  
     ALTER DATABASE AdventureWorks2012 SET PARTNER OFF;  
@@ -78,7 +78,7 @@ manager: "jhubbard"
   
 -   **If you do not intent to restart mirroring**  
   
-     Optionally, you can recover the former mirror database. On the server instance that was the mirror server, you can use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement:  
+     Optionally, you can recover the former mirror database. On the server instance that was the mirror server, you can use the following [!INCLUDE[tsql](../includes/tsql-md.md)] statement:  
   
     ```  
     RESTORE DATABASE database_name WITH RECOVERY;  

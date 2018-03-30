@@ -78,7 +78,7 @@ manager: "jhubbard"
   
  The Term Lookup transformation adds two columns to the transformation output, named by default `Term` and `Frequency`. `Term` contains a term from the lookup table and `Frequency` contains the number of times the term in the reference table occurs in the input data set. These columns do not include the CustomLineageID property.  
   
- The lookup table must be a table in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or an Access database. If the output of the Term Extraction transformation is saved to a table, this table can be used as the reference table, but other tables can also be used. Text in flat files, Excel workbooks or other sources must be imported to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database or an Access database before you can use the Term Lookup transformation.  
+ The lookup table must be a table in a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] or an Access database. If the output of the Term Extraction transformation is saved to a table, this table can be used as the reference table, but other tables can also be used. Text in flat files, Excel workbooks or other sources must be imported to a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database or an Access database before you can use the Term Lookup transformation.  
   
  The Term Lookup transformation uses a separate OLE DB connection to connect to the reference table. For more information, see [OLE DB Connection Manager](../../2014/integration-services/ole-db-connection-manager.md).  
   
@@ -88,7 +88,7 @@ manager: "jhubbard"
   
  The transformation has one input and one output. It does not support error outputs.  
   
- You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer or programmatically.  
   
  For more information about the properties that you can set in the **Term Lookup Transformation Editor** dialog box, click one of the following topics:  
   

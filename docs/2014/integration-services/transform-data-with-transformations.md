@@ -20,13 +20,13 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Transform Data with Transformations
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes three types of data flow components: sources, transformations, and destinations.  
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes three types of data flow components: sources, transformations, and destinations.  
   
  The following diagram shows a simple data flow that has a source, two transformations, and a destination.  
   
  ![Data flow](../../2014/integration-services/media/mw-dts-08.gif "Data flow")  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] transformations provide the following functionality:  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] transformations provide the following functionality:  
   
 -   Splitting, copying, and merging rowsets and performing lookup operations.  
   

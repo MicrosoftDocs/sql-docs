@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
 caps.latest.revision: 10
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Finding, Viewing, and Managing Reports (Report Builder and SSRS )
@@ -30,7 +30,7 @@ manager: "mblythe"
  When you preview reports in Report Builder and Report Designer, or view reports in Report Manager or a SharePoint site, the data is refreshed and the reports display the current data from the data source that the report uses. If you want to view a report without refreshing its data, you can use report history and cached data with published reports. You cannot use these features when previewing reports in Report Builder and Report Designer.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ##  <a name="FindingAndViewingReportsRB30"></a> Finding and Viewing Reports in Report Builder  
  To find a report that you want to work with or to select a shared data source, image, or subreport to use in a report, browse your computer, folders on a report server, or SharePoint site integrated with Reporting Services.  
@@ -78,7 +78,7 @@ Report Manager window
  ![Report toolbar](../../2014/reporting-services/media/htmlviewer-toolbar.gif "Report toolbar")  
 Report toolbar  
   
- After you run a report, you can export it to another format, such as [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel or PDF. You can also export the report using a data rendering extension such as the Comma-Separated Value (CSV) rendering extension and then use the CSV data file as input to another application. For more information about exporting reports, see [Exporting Reports &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/exporting-reports-report-builder-and-ssrs.md) and [Export a Report as Another File Type &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/export-a-report-as-another-file-type-report-builder-and-ssrs.md).  
+ After you run a report, you can export it to another format, such as [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel or PDF. You can also export the report using a data rendering extension such as the Comma-Separated Value (CSV) rendering extension and then use the CSV data file as input to another application. For more information about exporting reports, see [Exporting Reports &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/exporting-reports-report-builder-and-ssrs.md) and [Export a Report as Another File Type &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/export-a-report-as-another-file-type-report-builder-and-ssrs.md).  
   
  The easiest way to select and run a report is to open Report Manager and then search for or browse to the report that you want to view. For step-by-step instruction on how to open reports, see [Open and Close a Report &#40;Report Manager&#41;](../../2014/reporting-services/open-and-close-a-report-report-manager.md).  
   
@@ -89,7 +89,7 @@ Report toolbar
   
 |Option|Result|  
 |------------|------------|  
-|**Refresh** button on the browser window|Displays the report stored in the session cache. A session cache is created when a user opens a report. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] uses browser sessions to maintain a consistent viewing experience while a report is open.|  
+|**Refresh** button on the browser window|Displays the report stored in the session cache. A session cache is created when a user opens a report. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] uses browser sessions to maintain a consistent viewing experience while a report is open.|  
 |![Browser refresh button on report toolbar](../../2014/reporting-services/media/htmlviewer-refresh.GIF "Browser refresh button on report toolbar")|When you click the **Refresh** button on the report toolbar, the report server re-runs the query and updates report data if the report runs on-demand. If the report is cached or is a snapshot, **Refresh** displays the report that is stored in the report server database.|  
 |CTRL+F5 keyboard combination|Produces the same result as clicking the **Refresh** button on the report toolbar.|  
   
@@ -98,11 +98,11 @@ Report toolbar
 ##  <a name="ViewingAndManagingSharePointSite"></a> Viewing and Managing Report Server Items from a SharePoint Site  
  When the system administrator configures a report server to run in SharePoint integrated mode, you can view and manage reports and other report server items from a SharePoint site.  
   
- The SharePoint site includes pages to set data source properties, report history, report processing options, schedules, subscriptions, report parameters, and create shared schedules. You can manage report server items on a SharePoint site the same way you create and manage them from other tools in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ The SharePoint site includes pages to set data source properties, report history, report processing options, schedules, subscriptions, report parameters, and create shared schedules. You can manage report server items on a SharePoint site the same way you create and manage them from other tools in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  To access the application pages, select item-specific actions from a drop-down menu on a report or other report server item that you previously added to a SharePoint library. Depending on the item and your permissions, you might also be able to create reports in Report Builder, generate models, and set model item security.  
   
- For more information about Reporting Services and SharePoint technology, see [Configuration and Administration of a Report Server &#40;Reporting Services SharePoint Mode&#41;](../../2014/reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?LinkId=154888) on msdn.microsoft.com.  
+ For more information about Reporting Services and SharePoint technology, see [Configuration and Administration of a Report Server &#40;Reporting Services SharePoint Mode&#41;](../../2014/reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md) in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?LinkId=154888) on msdn.microsoft.com.  
   
 ### Finding Report Server Items on a SharePoint Site  
  Before you can set properties, you must first be able to locate the item. Report server items are always stored in libraries or in a folder within a library.  
@@ -126,16 +126,16 @@ Report toolbar
 
   
 ##  <a name="DeskTop"></a> Viewing Reports in a Desktop Application  
- You can bypass browser viewing entirely and use a desktop application (such as [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel) as your report viewer instead. To do this, define a subscription that specifies a desktop application format and a shared folder destination. The report server generates your report as an application file, appends a file name extension, and saves the report as a file on your hard disk. You can then use [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel (or another application) instead of a browser to view your report.  
+ You can bypass browser viewing entirely and use a desktop application (such as [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel) as your report viewer instead. To do this, define a subscription that specifies a desktop application format and a shared folder destination. The report server generates your report as an application file, appends a file name extension, and saves the report as a file on your hard disk. You can then use [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel (or another application) instead of a browser to view your report.  
   
 
   
 ##  <a name="AboutUserSessions"></a> About User Sessions  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] uses browser sessions to maintain consistency while viewing reports. Sessions are based on browser connections, not authenticated users. A new session is created every time that a user opens a report in a new browser window. Once a browser session is established, you continue to work with the version of the report that was opened when the session began, even if the report is modified on the report server. For example, if you open a report at 11:00 P.M., and a report author republishes the same report at 11:01 P.M., your session will contain the version that you opened for the duration of the session.  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] uses browser sessions to maintain consistency while viewing reports. Sessions are based on browser connections, not authenticated users. A new session is created every time that a user opens a report in a new browser window. Once a browser session is established, you continue to work with the version of the report that was opened when the session began, even if the report is modified on the report server. For example, if you open a report at 11:00 P.M., and a report author republishes the same report at 11:01 P.M., your session will contain the version that you opened for the duration of the session.  
   
  If you refresh a report within the same session using the browser's **Refresh** button, the original session version of the report is displayed. If you refresh an on-demand report using the **Refresh** button on the report toolbar, the report is re-run and new data, if any, is displayed.  
   
- Session information is stored in the report server temporary database. The report server does not use [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] session management. If you restart the server or perform a database recovery operation, session state is not restored. For more information about session management, see [Identifying Execution State](../../2014/reporting-services/dev-guide/identifying-execution-state.md).  
+ Session information is stored in the report server temporary database. The report server does not use [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] session management. If you restart the server or perform a database recovery operation, session state is not restored. For more information about session management, see [Identifying Execution State](../../2014/reporting-services/dev-guide/identifying-execution-state.md).  
   
 
   

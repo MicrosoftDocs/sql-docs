@@ -12,13 +12,13 @@ ms.topic: "article"
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 caps.latest.revision: 5
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # URL Examples for Published Report Items on a Report Server in SharePoint Mode (SSRS)
-  To publish reports and related items to a SharePoint library, you can either publish the content using the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] authoring tools such as Report Designer or you can upload the content by using SharePoint site actions.  
+  To publish reports and related items to a SharePoint library, you can either publish the content using the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] authoring tools such as Report Designer or you can upload the content by using SharePoint site actions.  
   
- SharePoint sites use different Web addresses than a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server in native mode. A SharePoint site Web hierarchy includes the SharePoint Web application, a top-level site, optional subsites, and libraries. You must know how to create a URL address that specifies the SharePoint server as well as the location in the SharePoint site hierarchy where you want to publish a report or related items.  
+ SharePoint sites use different Web addresses than a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report server in native mode. A SharePoint site Web hierarchy includes the SharePoint Web application, a top-level site, optional subsites, and libraries. You must know how to create a URL address that specifies the SharePoint server as well as the location in the SharePoint site hierarchy where you want to publish a report or related items.  
   
  Items related to a report include shared data sources, subreports, drillthrough reports, and resources such as Web-based image files. A report that has been published to a SharePoint library must specify these related items by their location in the SharePoint library.  
   
@@ -40,23 +40,23 @@ manager: "mblythe"
  Each report server item in a library is identified by a fully qualified URL that includes a protocol prefix, server name, site, library, file name, and file name extension for the file type.  
   
 ### URL for a SharePoint Server  
- You must use a URL to the SharePoint server when you deploy a Report Server or Report Model project from [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to the report server.  
+ You must use a URL to the SharePoint server when you deploy a Report Server or Report Model project from [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to the report server.  
   
  To find the name of the server to use, open a browser and locate the SharePoint library where you want to publish a report. The server name appears immediately after the protocol prefix, for example, http:*//servername*.  
   
- Using the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL proxy endpoint is not supported. A proxy endpoint includes a port number, for example, http:*//servername:8080/reportserver*.  
+ Using the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] URL proxy endpoint is not supported. A proxy endpoint includes a port number, for example, http:*//servername:8080/reportserver*.  
   
 ### URL for a SharePoint Server Site or Subsite  
  When you deploy a report or report data source, you must use a URL to a SharePoint site and subsite, if there is one. In the URL, the site name appears immediately after the server name., for example, http://*servername/site* or http://*servername/site/subsite*.  
   
- On a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 or [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Web application, the site and subsite frequently correspond to the tabs on the main site. To find the site name or subsite name, click **Home**, and then **All Site Content**. Scroll to the bottom and look for **Sites and Workspaces**. The list of sites appears in this section.  
+ On a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[offSPServ](../includes/offspserv-md.md)] 2007 or [!INCLUDE[SPS2010](../includes/sps2010-md.md)] Web application, the site and subsite frequently correspond to the tabs on the main site. To find the site name or subsite name, click **Home**, and then **All Site Content**. Scroll to the bottom and look for **Sites and Workspaces**. The list of sites appears in this section.  
   
 ### URL for a SharePoint Library  
  When you deploy a report or related item to a SharePoint library, you must use a URL to the SharePoint library. The URL to use for a library differs depending on the version of SharePoint you are using.  
   
- On [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 or [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], the library appears after the server name, for example, http://*servername/*Shared Documents.  
+ On [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[winSPServ](../includes/winspserv-md.md)] 3.0 or [!INCLUDE[SPF2010](../includes/spf2010-md.md)], the library appears after the server name, for example, http://*servername/*Shared Documents.  
   
- On [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 or [!INCLUDE[SPS2010](../../includes/sps2010-md.md)], the library appears after the site and subsite. For example, http://*servername/site/*Documents.  
+ On [!INCLUDE[offSPServ](../includes/offspserv-md.md)] 2007 or [!INCLUDE[SPS2010](../includes/sps2010-md.md)], the library appears after the site and subsite. For example, http://*servername/site/*Documents.  
   
  To find the path information for a new SharePoint library or for an unfamiliar site, open a browser and locate the SharePoint library where you want to publish your reports. If the library is empty, upload any file. Right-click the file and select **Properties** to open the **Properties** window. The address of the file contains the URL values that you need for a publish operation.  
   
@@ -96,23 +96,23 @@ manager: "mblythe"
 |------------|-----------------|  
 |A SharePoint server.|http://TestServer|  
 |A SharePoint server site or subsite.|http://TestServer/toplevelsite/subsite|  
-|The Company Sales sample report in **Shared Documents** on a [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] or [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] deployment.|http://TestServer/TestSite/Shared%20Documents/Company%20Sales.rdl|  
-|The Company Sales sample report in **Documents/Doc** folder on a [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] or [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] instance.|http://TestServer/TestSite/Documents/Doc/Company%20Sales.rdl|  
-|The Company Sales sample report in **Report Center** on an [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] or [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] instance.|http://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl|  
+|The Company Sales sample report in **Shared Documents** on a [!INCLUDE[winSPServ](../includes/winspserv-md.md)] or [!INCLUDE[SPF2010](../includes/spf2010-md.md)] deployment.|http://TestServer/TestSite/Shared%20Documents/Company%20Sales.rdl|  
+|The Company Sales sample report in **Documents/Doc** folder on a [!INCLUDE[offSPServ](../includes/offspserv-md.md)] or [!INCLUDE[SPS2010](../includes/sps2010-md.md)] instance.|http://TestServer/TestSite/Documents/Doc/Company%20Sales.rdl|  
+|The Company Sales sample report in **Report Center** on an [!INCLUDE[offSPServ](../includes/offspserv-md.md)] or [!INCLUDE[SPS2010](../includes/sps2010-md.md)] instance.|http://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl|  
   
 ##  <a name="publishingToDocLib"></a> Publishing from an Authoring Tool to a SharePoint Library  
  When you use a report authoring tool to publish reports and related files to a library, the files are validated before they are added. If you upload reports and related files by using the **Upload** action on a SharePoint library, no validation check occurs. You will not know whether the file is valid until you access the report by managing, editing, or running it.  
   
 > [!NOTE]  
->  In order to publish reports to a SharePoint site from [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], you might need to add the SharePoint site to your list of trusted locations in the Internet Explorer browser.  
+>  In order to publish reports to a SharePoint site from [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], you might need to add the SharePoint site to your list of trusted locations in the Internet Explorer browser.  
   
 ### Shared Data Sources  
- When you publish a shared data source from a report authoring tool, you set the project property `TargetDataSourceFolder`. The target data source folder must be a URL to a SharePoint library. Unlike in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] native mode, you cannot specify a relative folder; relative paths are not valid. If a folder in the Document Library path does not exist, one will be created.  
+ When you publish a shared data source from a report authoring tool, you set the project property `TargetDataSourceFolder`. The target data source folder must be a URL to a SharePoint library. Unlike in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] native mode, you cannot specify a relative folder; relative paths are not valid. If a folder in the Document Library path does not exist, one will be created.  
   
- When you publish a shared data source (.rds) file to a SharePoint site, this changes the data source file to an .rsds file name extension. The .rsds file cannot be saved locally from a SharePoint site and imported into an existing [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] project. Shared data sources with file name extensions .rds and .rsds are not interchangeable.  
+ When you publish a shared data source (.rds) file to a SharePoint site, this changes the data source file to an .rsds file name extension. The .rsds file cannot be saved locally from a SharePoint site and imported into an existing [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] project. Shared data sources with file name extensions .rds and .rsds are not interchangeable.  
   
 #### Shared Data Sources from Report Designer  
- If you are publishing shared data sources from a Report Designer project, you can either use a URL that specifies the target library or you can leave the property blank. Unlike in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] native mode, you cannot specify a relative folder; relative paths are not valid. If a folder in the Document Library path does not exist, one will be created. If you leave the target data source folder blank, the data source will be published in the target report folder.  
+ If you are publishing shared data sources from a Report Designer project, you can either use a URL that specifies the target library or you can leave the property blank. Unlike in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] native mode, you cannot specify a relative folder; relative paths are not valid. If a folder in the Document Library path does not exist, one will be created. If you leave the target data source folder blank, the data source will be published in the target report folder.  
   
 ### File Names  
  File names in a URL for report items must include a file name extension. The file name extension determines the file type. When you publish report items from a report authoring tool, the file name extension is included automatically. If you upload a report item to a SharePoint library, you must include a file name extension.  

@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 caps.latest.revision: 9
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # XML Connection Type (SSRS)
@@ -44,7 +44,7 @@ manager: "mblythe"
   
 -   Current Windows user (also known as integrated security).  
   
--   No credentials are required. If you select no credentials, Anonymous access is used. Make sure that you have defined the unattended execution account for the report server to connect to an external data source. The XML data processing extension does not pass credentials to the target URL or the Web service; the connection will be unsuccessful unless you have defined the unattended execution account. For more information, see [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-the-unattended-execution-account-ssrs-configuration-manager.md) in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312) on msdn.microsoft.com.  
+-   No credentials are required. If you select no credentials, Anonymous access is used. Make sure that you have defined the unattended execution account for the report server to connect to an external data source. The XML data processing extension does not pass credentials to the target URL or the Web service; the connection will be unsuccessful unless you have defined the unattended execution account. For more information, see [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-the-unattended-execution-account-ssrs-configuration-manager.md) in the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312) on msdn.microsoft.com.  
   
  Stored and prompted credentials are not supported. Remember that if you disable Windows integrated security, you cannot use it to retrieve data. If you specify stored or prompted credentials, an error will occur at run time.  
   
@@ -105,7 +105,7 @@ manager: "mblythe"
   
          `<ElementPath IgnoreNamespaces="true">`  *element path*  `</ElementPath>`  
   
- For more information about query syntax, see [XML Query Syntax for XML Report Data &#40;SSRS&#41;](../../2014/reporting-services/xml-query-syntax-for-xml-report-data-ssrs.md) in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312) on msdn.microsoft.com.  
+ For more information about query syntax, see [XML Query Syntax for XML Report Data &#40;SSRS&#41;](../../2014/reporting-services/xml-query-syntax-for-xml-report-data-ssrs.md) in the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312) on msdn.microsoft.com.  
   
  For examples, see [Reporting Services: Using XML and Web Service Data Sources](http://go.microsoft.com/fwlink/?LinkId=81654).  
   
@@ -121,7 +121,7 @@ manager: "mblythe"
   
  You can provide an element path using XML syntax similar to XQuery.  
   
- For more information, see [Element Path Syntax for XML Report Data &#40;SSRS&#41;](../../2014/reporting-services/element-path-syntax-for-xml-report-data-ssrs.md) in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312) on msdn.microsoft.com.  
+ For more information, see [Element Path Syntax for XML Report Data &#40;SSRS&#41;](../../2014/reporting-services/element-path-syntax-for-xml-report-data-ssrs.md) in the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312) on msdn.microsoft.com.  
   
 ##  <a name="Parameters"></a> Parameters  
  The query is not analyzed to identify parameters.  
@@ -131,7 +131,7 @@ manager: "mblythe"
 ##  <a name="Remarks"></a> Remarks  
  The XML data extension supports reporting from XML data that is tabular and not hierarchical. For more information, see [Add Data from External Data Sources &#40;SSRS&#41;](../../2014/reporting-services/add-data-from-external-data-sources-ssrs.md).  
   
- There is no built-in support for retrieving XML documents from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
+ There is no built-in support for retrieving XML documents from a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database.  
   
 ##  <a name="HowTo"></a> How-To Topics  
  This section contains step-by-step instructions for working with data connections, data sources, and datasets.  
@@ -157,7 +157,7 @@ manager: "mblythe"
  [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/dataset-fields-collection-report-builder-and-ssrs.md)  
  Provides information about the dataset field collection generated by the query.  
   
- [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../2014/reporting-services/data-sources-supported-by-reporting-services-ssrs.md) in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+ [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../2014/reporting-services/data-sources-supported-by-reporting-services-ssrs.md) in the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
  Provides in-depth information about platform and version support for each data extension.  
   
 ## See Also  

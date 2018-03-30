@@ -25,13 +25,13 @@ manager: "mblythe"
   
 #### To create a relationship between two tables in Diagram View (Click and drag)  
   
-1.  In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], click the **Model** menu, then click **Model View**, and then click **Diagram View**.  
+1.  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], click the **Model** menu, then click **Model View**, and then click **Diagram View**.  
   
 2.  Click (and hold) on a column within a table, then drag the cursor to a related lookup column in a related lookup table, and then release. The relationship will be created in the correct order automatically.  
   
 #### To create a relationship between two tables in Diagram View (Right-click)  
   
-1.  In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], click the **Model** menu, then click **Model View**, and then click **Diagram View**.  
+1.  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], click the **Model** menu, then click **Model View**, and then click **Diagram View**.  
   
 2.  Right-click a table heading or column, and then click **Create Relationship**.  
   
@@ -51,7 +51,7 @@ manager: "mblythe"
   
 #### To create a relationship between two tables in Data View  
   
-1.  In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], click the **Table** menu, and then click **Create Relationships**.  
+1.  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], click the **Table** menu, and then click **Create Relationships**.  
   
 2.  In the **Create Relationship** dialog box, click the down arrow for **Table**, and select a table from the dropdown list.  
   

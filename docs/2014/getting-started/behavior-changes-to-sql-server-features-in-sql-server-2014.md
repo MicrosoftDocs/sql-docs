@@ -16,7 +16,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Behavior Changes to SQL Server Features in SQL Server 2014
-  This topic describes behavior changes you might see when you upgrade to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] from a previous version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Behavior changes affect how features work or interact in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] compared to earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  This topic describes behavior changes you might see when you upgrade to [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] from a previous version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Behavior changes affect how features work or interact in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] compared to earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  Currently, there are no documented behavior changes.  
   

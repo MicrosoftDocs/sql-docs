@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Neural Network (Mining Model Viewer)
-  Use the **Neural Net** viewer to explore mining models that are based on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network algorithm or the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Logistic Regression algorithm.  
+  Use the **Neural Net** viewer to explore mining models that are based on the [!INCLUDE[msCoName](../includes/msconame-md.md)] Neural Network algorithm or the [!INCLUDE[msCoName](../includes/msconame-md.md)] Logistic Regression algorithm.  
   
  **For More Information:** [Microsoft Neural Network Algorithm](../../2014/analysis-services/microsoft-neural-network-algorithm.md), [Microsoft Logistic Regression Algorithm](../../2014/analysis-services/microsoft-logistic-regression-algorithm.md),[Browse a Model Using the Microsoft Neural Network Viewer](../../2014/analysis-services/browse-a-model-using-the-microsoft-neural-network-viewer.md)  
   

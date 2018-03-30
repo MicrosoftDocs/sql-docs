@@ -16,7 +16,7 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Exploring the Forecasting Model (Intermediate Data Mining Tutorial)
-  Now that you have built the forecasting mining model, you can explore the results by using the **Mining Model Viewer** tab of Data Mining Designer. The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series Viewer contains two tabs: **Charts** and **Model**.  
+  Now that you have built the forecasting mining model, you can explore the results by using the **Mining Model Viewer** tab of Data Mining Designer. The [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series Viewer contains two tabs: **Charts** and **Model**.  
   
  Additionally, you can use the Microsoft Generic Tree Viewer with all models. Each view presents a slightly different picture of the information in the time series model.  
   
@@ -27,7 +27,7 @@ manager: "jhubbard"
 -   [Microsoft Generic Content Viewer](#bkmk_Content)  
   
 ##  <a name="bkmk_Charts"></a> Charts Tab  
- The **Charts** tab of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series Viewer graphically shows you each of the series, including historical data and predictions. Each line in the time series graph represents a unique combination of product, region, and predictable attribute.  
+ The **Charts** tab of the [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series Viewer graphically shows you each of the series, including historical data and predictions. Each line in the time series graph represents a unique combination of product, region, and predictable attribute.  
   
  The legend on the right side of the viewer lists the time series that available, based on the selections in the drop-down list. You can select and clear the check boxes in the legend to control which time series displays in the graph.  
   
@@ -37,7 +37,7 @@ manager: "jhubbard"
   
 1.  Click the **Charts** tab of the **Mining Model Viewer** tab, if it is not visible.  
   
-2.  Click the drop-down list to the right of the chart view, and select all the check boxes. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+2.  Click the drop-down list to the right of the chart view, and select all the check boxes. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
      The chart should now contain 24 different series lines.  
   
@@ -86,7 +86,7 @@ manager: "jhubbard"
  [Back to Top](#bkmk_Charts)  
   
 ##  <a name="bkmk_Model"></a> Model Tab  
- The **Model** tab of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series Viewer in Data Mining Designer lets you view the forecasting model in the form of a tree graph.  
+ The **Model** tab of the [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series Viewer in Data Mining Designer lets you view the forecasting model in the form of a tree graph.  
   
  First, notice that because your data describes two different measures (Amount and Quantity) for sales of multiple product lines (T1000, etc.) in three different regions (Europe, North America, and Pacific), the model that you built actually contains 24 different trees, each tree representing a model of the sales patterns for a different combination of region, product, and predictable attribute.  
   
@@ -129,7 +129,7 @@ manager: "jhubbard"
  [Back to Top](#bkmk_Charts)  
   
 ##  <a name="bkmk_Content"></a> (Optional) Generic Content Tree Viewer  
- In addition to the custom viewer for time series, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] provides the **MicrosoftGeneric Content Tree Viewer** for use with all data mining models. This viewer provides some advantages:  
+ In addition to the custom viewer for time series, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] provides the **MicrosoftGeneric Content Tree Viewer** for use with all data mining models. This viewer provides some advantages:  
   
 -   **Microsoft Time Series Viewer**: This view merges the results of the two algorithms. Although you can view each series separately, you cannot determine how the results of each algorithm were combined. Also, in this view, the Tooltips and Mining Legend show only the most important statistics.  
   

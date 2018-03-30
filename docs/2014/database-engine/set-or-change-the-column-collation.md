@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
 caps.latest.revision: 29
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Set or Change the Column Collation
   You can override the database collation for `char`, `varchar`, `text`, `nchar`, `nvarchar`, and `ntext` data by specifying a different collation for a specific column of a table and using one of the following:  
   
--   The COLLATE clause of [CREATE TABLE](../Topic/CREATE%20TABLE%20\(Transact-SQL\).md) and [ALTER TABLE](../Topic/ALTER%20TABLE%20\(Transact-SQL\).md). For example:  
+-   The COLLATE clause of [CREATE TABLE](~/t-sql/statements/create-table-transact-sql.md) and [ALTER TABLE](~/t-sql/statements/alter-table-transact-sql.md). For example:  
   
     ```  
     CREATE TABLE dbo.MyTable  
@@ -34,9 +34,9 @@ manager: "jhubbard"
     GO  
     ```  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information, [Collation and Unicode Support](../../2014/database-engine/collation-and-unicode-support.md).  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. For more information, [Collation and Unicode Support](../../2014/database-engine/collation-and-unicode-support.md).  
   
--   Using the `Column.Collation` property in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO).  
+-   Using the `Column.Collation` property in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects (SMO).  
   
  You cannot change the collation of a column that is currently referenced by any one of the following:  
   
@@ -50,15 +50,15 @@ manager: "jhubbard"
   
 -   A FOREIGN KEY constraint  
   
- When you work with **tempdb**, the [COLLATE](../Topic/COLLATE%20\(Transact-SQL\).md) clause includes a *database_default* option to specify that a column in a temporary table uses the collation default of the current user database for the connection instead of the collation of **tempdb**.  
+ When you work with **tempdb**, the [COLLATE](~/t-sql/statements/collations.md) clause includes a *database_default* option to specify that a column in a temporary table uses the collation default of the current user database for the connection instead of the collation of **tempdb**.  
   
 ## Collations and text Columns  
- You can insert or update values in a `text` column whose collation is different from the code page of the default collation of the database. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implicitly converts the values to the collation of the column.  
+ You can insert or update values in a `text` column whose collation is different from the code page of the default collation of the database. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] implicitly converts the values to the collation of the column.  
   
 ## Collations and tempdb  
- The **tempdb** database is built every time [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is started and has the same default collation as the **model** database. This is typically the same as the default collation of the instance. If you create a user database and specify a different default collation than **model**, the user database has a different default collation than **tempdb**. All temporary stored procedures or temporary tables are created and stored in **tempdb**. This means that all implicit columns in temporary tables and all coercible-default constants, variables, and parameters in temporary stored procedures have collations that are different from comparable objects created in permanent tables and stored procedures.  
+ The **tempdb** database is built every time [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is started and has the same default collation as the **model** database. This is typically the same as the default collation of the instance. If you create a user database and specify a different default collation than **model**, the user database has a different default collation than **tempdb**. All temporary stored procedures or temporary tables are created and stored in **tempdb**. This means that all implicit columns in temporary tables and all coercible-default constants, variables, and parameters in temporary stored procedures have collations that are different from comparable objects created in permanent tables and stored procedures.  
   
- This could lead to problems with a mismatch in collations between user-defined databases and system database objects. For example, an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses the Latin1_General_CS_AS collation and you execute the following statements:  
+ This could lead to problems with a mismatch in collations between user-defined databases and system database objects. For example, an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses the Latin1_General_CS_AS collation and you execute the following statements:  
   
 ```  
 CREATE DATABASE TestDB COLLATE Estonian_CS_AS;  

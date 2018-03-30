@@ -30,7 +30,7 @@ manager: "mblythe"
 |-----------------|--------------------|-----------------|-----------------|  
 |`DATABASE_NAME`|`DBTYPE_WSTR`|Yes|Specifies the database name that contains the object for which dependency analysis is requested. If omitted, the current database is used.<br /><br /> The `DISCOVER_DEPENDENCY_CALC` rowset can be restricted by using this column.|  
 |`OBJECT_TYPE`|`DBTYPE_WSTR`|Yes|Indicates the type of the object for which dependency analysis is requested. The object must be one of the following types:<br /><br /> -   `ACTIVE_RELATIONSHIP`: an active relationship<br />-   `CALC_COLUMN`: Calculated column<br />-   `HIERARCHY`: a hierarchy<br />-   `MEASURE`: a measure<br />-   `RELATIONSHIP`: a relationship<br />-   `KPI`: a KPI (Key Performance Indicator)<br /><br /> The `DISCOVER_DEPENDENCY_CALC` rowset can be restricted by using this column.|  
-|`QUERY`|`DBTYPE_WSTR`|Yes|For tabular models created in [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)], you can include a DAX query or expression to show the dependency graph for that query or expression. The QUERY restriction provides client applications with a way to determine which objects are used by a DAX query.<br /><br /> The `QUERY` restriction can be specified in XMLA or in the WHERE clause of a DMV query. See the examples section for more information.|  
+|`QUERY`|`DBTYPE_WSTR`|Yes|For tabular models created in [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)], you can include a DAX query or expression to show the dependency graph for that query or expression. The QUERY restriction provides client applications with a way to determine which objects are used by a DAX query.<br /><br /> The `QUERY` restriction can be specified in XMLA or in the WHERE clause of a DMV query. See the examples section for more information.|  
 |`TABLE`|`DBTYPE_WSTR`||The name of the table that contains the object for which dependency information is generated.|  
 |`OBJECT`|`DBTYPE_WSTR`||The name of the object for which dependency information is generated. If the object is a measure or calculated column, use the name of the measure. If the object is a relationship, the name of the table (or cube dimension) that contains the column participating in the relationship.|  
 |`EXPRESSION`|`DBTYPE_WSTR`||The formula that contains the object for which dependencies are sought.|  
@@ -42,7 +42,7 @@ manager: "mblythe"
 ## Example  
  **Basic syntax**  
   
- The following query is a simple DMV query that returns values for all of the columns in this rowset, using the default database on the current connection. You can run this query in an MDX query window and view its results in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]. You can also follow the techniques described in [Querying PowerPivot DMVs from Excel](http://go.microsoft.com/fwlink/?LinkID=235146) to view DMV query results in Excel.  
+ The following query is a simple DMV query that returns values for all of the columns in this rowset, using the default database on the current connection. You can run this query in an MDX query window and view its results in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. You can also follow the techniques described in [Querying PowerPivot DMVs from Excel](http://go.microsoft.com/fwlink/?LinkID=235146) to view DMV query results in Excel.  
   
 ```  
 SELECT * FROM $System.DISCOVER_CALC_DEPENDENCY  

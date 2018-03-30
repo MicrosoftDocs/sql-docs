@@ -40,7 +40,7 @@ manager: "mblythe"
   
  **Reporting Properties**  
   
- For detailed information on setting [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] table behavior properties, see [Configure Table Behavior Properties for Power View Reports &#40;SSAS Tabular&#41;](../../2014/analysis-services/configure-table-behavior-properties-for-power-view-reports-ssas-tabular.md).  
+ For detailed information on setting [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] table behavior properties, see [Configure Table Behavior Properties for Power View Reports &#40;SSAS Tabular&#41;](../../2014/analysis-services/configure-table-behavior-properties-for-power-view-reports-ssas-tabular.md).  
   
 |Property|Default Setting|Description|  
 |--------------|---------------------|-----------------|  

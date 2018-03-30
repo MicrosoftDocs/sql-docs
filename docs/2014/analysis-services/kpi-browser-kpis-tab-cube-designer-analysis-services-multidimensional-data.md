@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # KPI Browser (KPIs Tab, Cube Designer) (Analysis Services - Multidimensional Data)
-  Use the **KPI Browser** pane on the **KPIs** tab in Cube Designer to view and test the results of Key Performance Indicators (KPIs). KPIs must first be deployed to a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance before browsing.  
+  Use the **KPI Browser** pane on the **KPIs** tab in Cube Designer to view and test the results of Key Performance Indicators (KPIs). KPIs must first be deployed to a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance before browsing.  
   
 > [!NOTE]  
 >  This pane is displayed only in browser view.  
@@ -81,7 +81,7 @@ manager: "mblythe"
  Hover the mouse over the information icon to display a ToolTip containing the description for the KPI.  
   
 > [!NOTE]  
->  If an error occurs while calculating a KPI on the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance, this option displays information associated with the error.  
+>  If an error occurs while calculating a KPI on the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance, this option displays information associated with the error.  
   
 ## See Also  
  [KPIs &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/kpis-cube-designer-analysis-services-multidimensional-data.md)  

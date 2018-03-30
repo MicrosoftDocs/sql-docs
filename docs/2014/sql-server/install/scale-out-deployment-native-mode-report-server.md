@@ -14,13 +14,13 @@ f1_keywords:
 ms.assetid: 4df38294-6f9d-4b40-9f03-1f01c1f0700c
 caps.latest.revision: 8
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "jhubbard"
 ---
 # Scale-out Deployment (Native Mode Report Server)
-  Use the **Scale-out Deployment** page in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Configuration Manager to view the initialization status for a scale-out deployment or to join a report server to a scale-out deployment. A *scale-out deployment* refers to two or more report server instances that share a single report server database.  
+  Use the **Scale-out Deployment** page in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager to view the initialization status for a scale-out deployment or to join a report server to a scale-out deployment. A *scale-out deployment* refers to two or more report server instances that share a single report server database.  
   
- [!INCLUDE[applies](../../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Native mode.  
+ [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode.  
   
  An *initialized report server* describes a server that can encrypt and decrypt sensitive data that is stored in a report server database (stored credentials and connection strings are examples of encrypted data that is stored in the database). Report server initialization is a requirement for report server operations.  
   
@@ -32,11 +32,11 @@ manager: "jhubbard"
   
  To configure a scale-out deployment, start with two or more report server instances that are all connected to the same report server database. After all of the instances are installed, you connect to the first report server and then use the Scale-out Deployment page to join each additional instance. Only a report server that is already initialized to use a database can initialize additional nodes.  
   
- To open this page, start the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Configuration Manager and select **Scale-out Deployment** in the navigation pane. For more information, see [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ To open this page, start the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager and select **Scale-out Deployment** in the navigation pane. For more information, see [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## Options  
  **SQL Server Name**  
- Specify the name of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../../includes/ssde-md.md)] instance that hosts the report server database.  
+ Specify the name of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance that hosts the report server database.  
   
  **Database Name**  
  Specifies the name of the database to which the report server instance is currently connected.  
@@ -48,7 +48,7 @@ manager: "jhubbard"
  Shows the report server name. In most cases, this is the name of the computer on which the report server is installed.  
   
  **Instance**  
- Shows the report server instance name. Report server instances are based on [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instances.  
+ Shows the report server instance name. Report server instances are based on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances.  
   
  **Status**  
  Indicates whether the report server is initialized or waiting to join a scale-out deployment:  

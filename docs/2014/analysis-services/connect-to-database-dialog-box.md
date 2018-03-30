@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Connect To Database Dialog Box
-  Use the **Connect To Database** dialog box to connect to an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database.  
+  Use the **Connect To Database** dialog box to connect to an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database.  
   
 ## Options  
   

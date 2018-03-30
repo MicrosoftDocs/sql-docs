@@ -24,7 +24,7 @@ manager: "jhubbard"
   
 ### To make a copy of the sequence clustering model  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], in the Data Mining Designer, click the **Mining Models** tab.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], in the Data Mining Designer, click the **Mining Models** tab.  
   
 2.  Right-click the model you want to copy, and select **New Mining Model**.  
   

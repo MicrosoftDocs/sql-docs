@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 28ff17dc-172b-4ac4-853f-990b5dc02fd1
 caps.latest.revision: 8
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Manage Full-Text Indexes
@@ -37,19 +37,19 @@ manager: "jhubbard"
     |**Columns**|Displays the table columns that are available for full-text indexing. The selected column or columns are full-text indexed. You can select as many of the available columns as you want to include in the full-text index. For more information, see [Full-Text Index Properties &#40;Columns Page&#41;](../../2014/database-engine/full-text-index-properties-columns-page.md).|  
     |**Schedules**|Use this page to create or manage schedules for a SQL Server Agent job that starts an incremental table population for the full-text index populations. For more information, see [Populate Full-Text Indexes](../../2014/database-engine/populate-full-text-indexes.md).<br /><br /> **\*\* Important \*\*** After you exit the **Full-Text Index Properties** dialog box, any newly created schedule is associated with a SQL Server Agent job (Start Incremental Table Population on *database_name*.*table_name*).|  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] to save any changes and exit the **Full-text index Properties** dialog box.  
+6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] to save any changes and exit the **Full-text index Properties** dialog box.  
   
 ##  <a name="props"></a> Viewing the Properties of Indexed Tables and Columns  
- Several [!INCLUDE[tsql](../../includes/tsql-md.md)] functions such as OBJECTPROPERTYEX can be used to obtain the value of various full-text indexing properties. This information is useful for administering and troubleshooting full-text search.  
+ Several [!INCLUDE[tsql](../includes/tsql-md.md)] functions such as OBJECTPROPERTYEX can be used to obtain the value of various full-text indexing properties. This information is useful for administering and troubleshooting full-text search.  
   
- The following table lists the full-text properties related to indexed tables and columns and their related [!INCLUDE[tsql](../../includes/tsql-md.md)] functions.  
+ The following table lists the full-text properties related to indexed tables and columns and their related [!INCLUDE[tsql](../includes/tsql-md.md)] functions.  
   
 |Property|Description|Function|  
 |--------------|-----------------|--------------|  
-|`FullTextTypeColumn`|TYPE COLUMN in the table that holds the document type information of the column.|[COLUMNPROPERTY](../Topic/COLUMNPROPERTY%20\(Transact-SQL\).md)|  
+|`FullTextTypeColumn`|TYPE COLUMN in the table that holds the document type information of the column.|[COLUMNPROPERTY](~/t-sql/functions/columnproperty-transact-sql.md)|  
 |`IsFulltextIndexed`|Whether a column has been enabled for full-text indexing.|COLUMNPROPERTY|  
-|`IsFulltextKey`|Whether the index is the full-text key for a table.|[INDEXPROPERTY](../Topic/INDEXPROPERTY%20\(Transact-SQL\).md)|  
-|**TableFulltextBackgroundUpdateIndexOn**|Whether a table has full-text background update indexing.|[OBJECTPROPERTYEX](../Topic/OBJECTPROPERTYEX%20\(Transact-SQL\).md)|  
+|`IsFulltextKey`|Whether the index is the full-text key for a table.|[INDEXPROPERTY](~/t-sql/functions/indexproperty-transact-sql.md)|  
+|**TableFulltextBackgroundUpdateIndexOn**|Whether a table has full-text background update indexing.|[OBJECTPROPERTYEX](~/t-sql/functions/objectproperty-transact-sql.md)|  
 |`TableFulltextCatalogId`|Full-text catalog ID in which the full-text index data for the table resides.|OBJECTPROPERTYEX|  
 |`TableFulltextChangeTrackingOn`|Whether a table has full-text change-tracking enabled.|OBJECTPROPERTYEX|  
 |`TableFulltextDocsProcessed`|Number of rows processed since the start of full-text indexing.|OBJECTPROPERTYEX|  
@@ -66,7 +66,7 @@ manager: "jhubbard"
   
 #### To inquire whether a given unique index is used as the full-text key column  
   
-1.  Use a [SELECT](../Topic/SELECT%20\(Transact-SQL\).md) statement to call the [INDEXPROPERTY](../Topic/INDEXPROPERTY%20\(Transact-SQL\).md) function. In the function call use the OBJECT_ID function to convert the name of the table (*table_name*) into the table ID, specify the name of a unique index for the table, and specify the `IsFulltextKey` index property, as follows:  
+1.  Use a [SELECT](~/t-sql/queries/select-transact-sql.md) statement to call the [INDEXPROPERTY](~/t-sql/functions/indexproperty-transact-sql.md) function. In the function call use the OBJECT_ID function to convert the name of the table (*table_name*) into the table ID, specify the name of a unique index for the table, and specify the `IsFulltextKey` index property, as follows:  
   
     ```  
     SELECT INDEXPROPERTY( OBJECT_ID('table_name'), 'index_name',  'IsFulltextKey' );  
@@ -124,9 +124,9 @@ GO
  This example returns a result set column named `Unique Key Column`, which displays a single row containing the name of the unique key column of the Document table, DocumentID. Note that if this query contained an invalid index name, the index name did not correspond to the table, the table did not exist, and so forth, it would return NULL.  
   
 ##  <a name="disable"></a> Disabling or Re-enabling a Table for Full-Text Indexing  
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], all user-created databases are full-text enabled by default. Additionally, an individual table is automatically enabled for full-text indexing as soon as a full-text index is created on it and a column is added to the index. A table is automatically disabled for full-text indexing when the last column is dropped from its full-text index.  
+ In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], all user-created databases are full-text enabled by default. Additionally, an individual table is automatically enabled for full-text indexing as soon as a full-text index is created on it and a column is added to the index. A table is automatically disabled for full-text indexing when the last column is dropped from its full-text index.  
   
- On a table that has a full-text index, you can manually disable or re-enable a table for full-text indexing using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ On a table that has a full-text index, you can manually disable or re-enable a table for full-text indexing using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 #### To enable a table for full-text indexing  
   

@@ -17,7 +17,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Sparse Columns Support (ODBC)
-  This topic describes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC support for sparse columns. For a sample demonstrating ODBC support for sparse columns, see [Call SQLColumns on a Table with Sparse Columns](../../../2014/database-engine/dev-guide/call-sqlcolumns-on-a-table-with-sparse-columns.md). For more information about sparse columns, see [Sparse Columns Support in SQL Server Native Client](../../../2014/database-engine/dev-guide/sparse-columns-support-in-sql-server-native-client.md).  
+  This topic describes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC support for sparse columns. For a sample demonstrating ODBC support for sparse columns, see [Call SQLColumns on a Table with Sparse Columns](../../../2014/database-engine/dev-guide/call-sqlcolumns-on-a-table-with-sparse-columns.md). For more information about sparse columns, see [Sparse Columns Support in SQL Server Native Client](../../../2014/database-engine/dev-guide/sparse-columns-support-in-sql-server-native-client.md).  
   
 ## Statement Metadata  
  The application parameter descriptor (APD) descriptor field and SQL_SOPT_SS_NAME_SCOPE statement attribute accepts the additional values SQL_SS_NAME_SCOPE_EXTENDED and SQL_SS_NAME_SCOPE_SPARSE_COLUMN_SET. These values specify which columns are included in the result set returned by [SQLColumns](../../../2014/database-engine/dev-guide/sqlcolumns.md). For more information about SQL_SOPT_SS_NAME_SCOPE, see [SQLSetStmtAttr](../../../2014/database-engine/dev-guide/sqlsetstmtattr.md).  
@@ -25,10 +25,10 @@ manager: "jhubbard"
  A new implementation row descriptor (IRD), a read-only SQLSMALLINT field called SQL_CA_SS_IS_COLUMN_SET, can be used to determine if a column is an XML `column_set` value. SQL_CA_SS_IS_COLUMN_SET takes the values SQL_TRUE and SQL_FALSE.  
   
 ## Catalog Metadata  
- Two [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] specific columns (SS_IS_SPARSE and SS_IS_COLUMN_SET) have been added to the result set for [SQLColumns](../../../2014/database-engine/dev-guide/sqlcolumns.md).  
+ Two [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specific columns (SS_IS_SPARSE and SS_IS_COLUMN_SET) have been added to the result set for [SQLColumns](../../../2014/database-engine/dev-guide/sqlcolumns.md).  
   
 ## ODBC Function Support for Sparse Columns  
- The following ODBC functions have been updated to support sparse columns in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client:  
+ The following ODBC functions have been updated to support sparse columns in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client:  
   
 -   [SQLColAttribute](../../../2014/database-engine/dev-guide/sqlcolattribute.md)  
   

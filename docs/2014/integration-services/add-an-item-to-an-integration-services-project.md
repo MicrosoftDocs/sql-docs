@@ -23,11 +23,11 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Add an Item to an Integration Services Project
-  This procedure describes how to add new and existing items to an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project.  
+  This procedure describes how to add new and existing items to an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project.  
   
 ### To add an item to an Integration Services project  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the solution that contains the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project to which you want to add an item.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the solution that contains the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project to which you want to add an item.  
   
 2.  In Solution Explorer, right-click the project, point to **Add**, and do one of the following:  
   

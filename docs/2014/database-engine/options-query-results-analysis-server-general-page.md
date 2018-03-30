@@ -18,7 +18,7 @@ ms.author: "heidist"
 manager: "jhubbard"
 ---
 # Options (Query Results-Analysis Server-General Page)
-  Use this page to determine the default behavior of the query result window for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] queries. To display these settings, select **Options** from the **Tools** menu. Within the **Query Results** folder expand the **Analysis Server** subfolder, and then choose **General**.  
+  Use this page to determine the default behavior of the query result window for [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] queries. To display these settings, select **Options** from the **Tools** menu. Within the **Query Results** folder expand the **Analysis Server** subfolder, and then choose **General**.  
   
 ## UIElement List  
  **Show grids in separate tabs**  

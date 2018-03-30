@@ -18,13 +18,13 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # ADO NET Destination Editor (Connection Manager Page)
-  Use the **Connection Manager** page of the **ADO NET Destination Editor** dialog box to select the [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection for the destination. This page also lets you select a table or view from the database.  
+  Use the **Connection Manager** page of the **ADO NET Destination Editor** dialog box to select the [!INCLUDE[vstecado](../includes/vstecado-md.md)] connection for the destination. This page also lets you select a table or view from the database.  
   
  To learn more about the ADO NET destination, see [ADO NET Destination](../../2014/integration-services/ado-net-destination.md).  
   
  **To open the Connection Manager page**  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package that has the ADO NET destination.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package that has the ADO NET destination.  
   
 2.  On the **Data Flow** tab, double-click the ADO NET destination.  
   
@@ -44,7 +44,7 @@ manager: "jhubbard"
  Create a new table or view by using the **Create Table** dialog box.  
   
 > [!NOTE]  
->  When you click **New**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] generates a default CREATE TABLE statement based on the connected data source. This default CREATE TABLE statement will not include the FILESTREAM attribute even if the source table includes a column with the FILESTREAM attribute declared. To run an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] component with the FILESTREAM attribute, first implement FILESTREAM storage on the destination database. Then, add the FILESTREAM attribute to the CREATE TABLE statement in the **Create Table** dialog box. For more information, see [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;](../../2014/database-engine/binary-large-object-blob-data-sql-server.md).  
+>  When you click **New**, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] generates a default CREATE TABLE statement based on the connected data source. This default CREATE TABLE statement will not include the FILESTREAM attribute even if the source table includes a column with the FILESTREAM attribute declared. To run an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] component with the FILESTREAM attribute, first implement FILESTREAM storage on the destination database. Then, add the FILESTREAM attribute to the CREATE TABLE statement in the **Create Table** dialog box. For more information, see [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;](../../2014/database-engine/binary-large-object-blob-data-sql-server.md).  
   
  **Preview**  
  Preview results by using the **Preview Query Results** dialog box. Preview can display up to 200 rows.  
@@ -54,14 +54,14 @@ manager: "jhubbard"
   
  Only ADO.NET providers that return a <xref:System.Data.SqlClient.SqlConnection> object support the use of the <xref:System.Data.SqlClient.SqlBulkCopy> interface. The .NET Data Provider for SQL Server (SqlClient) returns a <xref:System.Data.SqlClient.SqlConnection> object, and a custom provider may return a <xref:System.Data.SqlClient.SqlConnection> object.  
   
- You can use the .NET Data Provider for SQL Server (SqlClient) to connect to [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ You can use the .NET Data Provider for SQL Server (SqlClient) to connect to [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)].  
   
  If you select **Use bulk insert when available**, and set the **Error** option to **Redirect the row**, the batch of data that the destination redirects to the error output may include good rows.For more information about handling errors in bulk operations, see [Error Handling in Data](../../2014/integration-services/error-handling-in-data.md). For more information about the **Error** option, see [ADO NET Destination Editor &#40;Error Output Page&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md).  
   
 > [!NOTE]  
->  If a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Sybase source table includes an identity column, you must use Execute SQL tasks to run a SET IDENTITY_INSERT statement before and after the ADO NET destination. The identity column property specifies an incremental value for the column. The SET IDENTITY_INSERT statement enables explicit values to be inserted into the identity column. To run the CREATE TABLE and SET IDENTITY statements on the same database connection, set the `RetainSameConnection` property of the [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection manager to `True`. Also, use the same [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection manager for the Execute SQL tasks and the ADO NET destination.  
+>  If a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] or Sybase source table includes an identity column, you must use Execute SQL tasks to run a SET IDENTITY_INSERT statement before and after the ADO NET destination. The identity column property specifies an incremental value for the column. The SET IDENTITY_INSERT statement enables explicit values to be inserted into the identity column. To run the CREATE TABLE and SET IDENTITY statements on the same database connection, set the `RetainSameConnection` property of the [!INCLUDE[vstecado](../includes/vstecado-md.md)] connection manager to `True`. Also, use the same [!INCLUDE[vstecado](../includes/vstecado-md.md)] connection manager for the Execute SQL tasks and the ADO NET destination.  
 >   
->  For more information, see [SET IDENTITY_INSERT &#40;Transact-SQL&#41;](../Topic/SET%20IDENTITY_INSERT%20\(Transact-SQL\).md) and [IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](../Topic/IDENTITY%20\(Property\)%20\(Transact-SQL\).md).  
+>  For more information, see [SET IDENTITY_INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/set-identity-insert-transact-sql.md) and [IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](~/t-sql/statements/create-table-transact-sql-identity-property.md).  
   
 ## External Resources  
  Technical article, [Loading data to Windows Azure SQL Database the fast way](http://go.microsoft.com/fwlink/?LinkId=244333), on sqlcat.com  

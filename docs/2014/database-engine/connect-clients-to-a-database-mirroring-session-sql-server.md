@@ -21,7 +21,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Connect Clients to a Database Mirroring Session (SQL Server)
-  To connect to a database mirroring session, a client can use either [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client or .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. When configured for a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] database, these data access providers both fully support database mirroring. For information about programming considerations for using a mirrored database, see [Using Database Mirroring](../../2014/database-engine/dev-guide/using-database-mirroring.md). In addition, the current principal server instance must be available and the login of the client must have been created on the server instance. For more information, see [Troubleshoot Orphaned Users &#40;SQL Server&#41;](../../2014/database-engine/troubleshoot-orphaned-users-sql-server.md). Client connections to a database mirroring session do not involve the witness server instance, if one exists.  
+  To connect to a database mirroring session, a client can use either [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client or .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. When configured for a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] database, these data access providers both fully support database mirroring. For information about programming considerations for using a mirrored database, see [Using Database Mirroring](../../2014/database-engine/dev-guide/using-database-mirroring.md). In addition, the current principal server instance must be available and the login of the client must have been created on the server instance. For more information, see [Troubleshoot Orphaned Users &#40;SQL Server&#41;](../../2014/database-engine/troubleshoot-orphaned-users-sql-server.md). Client connections to a database mirroring session do not involve the witness server instance, if one exists.  
   
  ##  <a name="InitialConnection"></a> Making the Initial Connection to a Database Mirroring Session  
  For the initial connection to a mirrored database, a client must supply a connection string that minimally supplies the name of a server instance. This required server name should identify the current principal server instance and is known as the *initial partner name*.  
@@ -39,7 +39,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  If the mirroring session is paused, the client typically connects to the principal server and the downloads the partner name. However, the database is unavailable to the client until mirroring resumes.  
   
- If that attempt does not work, the data access provider tries the failover partner name, if available. If either partner name correctly identifies the current principal server, the data access provider normally succeeds in opening the initial connection. On completing this connection, the data access provider downloads the server instance name of the current mirror server. This name is stored in the cache as the failover partner name, overwriting the client-supplied failover partner name, if any. Thereafter, the .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not update the failover partner name. In contrast, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client updates the cache whenever a subsequent connection or connection reset returns a different partner name.  
+ If that attempt does not work, the data access provider tries the failover partner name, if available. If either partner name correctly identifies the current principal server, the data access provider normally succeeds in opening the initial connection. On completing this connection, the data access provider downloads the server instance name of the current mirror server. This name is stored in the cache as the failover partner name, overwriting the client-supplied failover partner name, if any. Thereafter, the .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not update the failover partner name. In contrast, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client updates the cache whenever a subsequent connection or connection reset returns a different partner name.  
   
  The following figure illustrates a client connection to the initial partner, **Partner_A**, for a mirrored database named **Db_1**. This figure shows a case in which the initial partner name supplied by the client correctly identifies the current principal server, **Partner_A**. The initial connection attempt succeeds, and the data access provider stores the name of the mirror server (currently **Partner_B**) as the failover partner name in the local cache. Finally, the client connects to the principal copy of the **Db_1** database.  
   
@@ -59,7 +59,7 @@ manager: "jhubbard"
 
   
 ### Connection Strings for a Mirrored Database  
- The connection string supplied by the client contains information that the data access provider uses to connect to the database. This section discusses the keywords that are specifically relevant for connecting to a mirrored database using a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC Driver Connection.  
+ The connection string supplied by the client contains information that the data access provider uses to connect to the database. This section discusses the keywords that are specifically relevant for connecting to a mirrored database using a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client ODBC Driver Connection.  
   
 #### Network Attribute  
  The connection string should contain the **Network** attribute to specify the network protocol. This ensures that the specified network protocol persists between connections to different partners. The best protocol for connecting to a mirrored database is TCP/IP. To ensure that the client requests TCP/IP for every connection to the partners, a connection string supplies the following attribute:  
@@ -135,7 +135,7 @@ Server=123.34.45.56,4724;
 >  When only the initial partner name is provided, application developers do not need to take any action or write any code except about how to reconnect.  
   
 > [!NOTE]  
->  Managed code application developers supply the failover partner name in the `ConnectionString` of the `SqlConnection` object. For information on using this connection string, see "Database Mirroring Support in the .NET Framework Data Provider for SQL Server" in the ADO.NET documentation, which is part of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework SDK.  
+>  Managed code application developers supply the failover partner name in the `ConnectionString` of the `SqlConnection` object. For information on using this connection string, see "Database Mirroring Support in the .NET Framework Data Provider for SQL Server" in the ADO.NET documentation, which is part of the [!INCLUDE[msCoName](../includes/msconame-md.md)] .NET Framework SDK.  
   
 #### Example Connection String  
  For example, to explicitly connect using TCP/IP to the **AdventureWorks** database on either Partner_A or Partner_B, a client application that uses the ODBC Driver could supply the following connection string:  
@@ -205,7 +205,7 @@ Server=123.34.45.56,4724;
  Reconnecting resembles an initial connection for which the connection string supplied a failover partner name. If the first connection attempt fails, connection attempts alternate back and forth between the initial partner name and failover partner name until either the client connects to the  principal server or the data access provider times out.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client verifies that it connects to a principal server instance but not whether this instance is the partner of server instance specified in the initial partner name of the connection string.  
+>  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client verifies that it connects to a principal server instance but not whether this instance is the partner of server instance specified in the initial partner name of the connection string.  
   
  If the connections use TCP/IP, the connection retry algorithm determines the amount of time allotted to the connection attempts in each round.  
   
@@ -216,7 +216,7 @@ Server=123.34.45.56,4724;
 ### Impact of Redirection on a Client Application  
  After a failover, the data access provider redirects the connection to the current principal server instance. However, the redirection is transparent to clients. To a client, a redirected connection appears to be a connection to the server instance identified by the initial partner name. When the initial partner is currently the mirror server, the client can appear to be connected to the mirror server and updating the mirror database. Actually, however, the client has been redirected to the failover partner, which is the current principal database, and the client is updating the new principal database.  
   
- After being redirected to the failover partner, a client can experience unexpected results when using a [!INCLUDE[tsql](../../includes/tsql-md.md)] USE statement to use a different database. This can happen if the current principal server instance (the failover partner) has a different set of databases than the original principal server (the initial partner).  
+ After being redirected to the failover partner, a client can experience unexpected results when using a [!INCLUDE[tsql](../includes/tsql-md.md)] USE statement to use a different database. This can happen if the current principal server instance (the failover partner) has a different set of databases than the original principal server (the initial partner).  
   
 ##  <a name="StalePartnerName"></a> The Impact of a Stale Failover Partner Name  
  The database administrator can change the failover partner at any time. Therefore, a client-supplied failover partner name might be out of date, or *stale*. For example, consider a failover partner named Partner_B that is replaced by another server instance, Partner_C. Now, if a client supplies Partner_B as the failover partner name, that name is stale. When the client-supplied failover partner name is stale, the behavior of the data access provider equates to the case in which a failover partner name is not supplied by the client.  

@@ -18,10 +18,10 @@ manager: "mblythe"
 # Configure Dedicated Data Refresh or Query-Only Processing (PowerPivot for SharePoint)
   In SharePoint integrated mode, an Analysis Services server instance can be configured to support a specific type of processing request, such as data refresh or query-only processing. By default, both types of load requests are enabled. You can turn off either type to create a dedicated query engine or data refresh server.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2010  
+ **[!INCLUDE[applies](../includes/applies-md.md)]**  SharePoint 2010  
   
 > [!NOTE]  
->  In this release, there are no configuration settings for limiting memory or CPU usage for either data refresh jobs or on-demand queries. An [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] instance will use all of the resources that are available to run the queries and data refresh jobs it is managing.  
+>  In this release, there are no configuration settings for limiting memory or CPU usage for either data refresh jobs or on-demand queries. An [!INCLUDE[ssGeminiSrv](../includes/ssgeminisrv-md.md)] instance will use all of the resources that are available to run the queries and data refresh jobs it is managing.  
   
  This topic contains the following sections:  
   

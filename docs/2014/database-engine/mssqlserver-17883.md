@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: adaf1c04-e397-4a69-90b8-9353a37277ea
 caps.latest.revision: 15
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_17883
@@ -31,7 +31,7 @@ manager: "jhubbard"
 |Message Text|Process %ld:%ld:%ld (0x%lx) Worker 0x%p appears to be non-yielding on Scheduler %ld. Thread creation time: %I64d. Approx Thread CPU Used: kernel %I64d ms, user %I64d ms. Process Utilization %d%%. System Idle %d%%. Interval: %I64d ms.|  
   
 ## Explanation  
- Indicates that there is a possible problem with a thread not yielding on a scheduler.  This could be caused by a bug in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or if [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is not getting enough cycles to execute.  This error could go away if the thread eventually yields.  
+ Indicates that there is a possible problem with a thread not yielding on a scheduler.  This could be caused by a bug in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] or if [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is not getting enough cycles to execute.  This error could go away if the thread eventually yields.  
   
 ## User Action  
  If excessive load on system reduce load otherwise contact Microsoft Customer Support Services.  

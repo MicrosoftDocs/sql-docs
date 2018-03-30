@@ -29,7 +29,7 @@ ms.author: "mblythe"
 manager: "mblythe"
 ---
 # Create Element (XMLA)
-  Contains Analysis Services Scripting Language (ASSL) elements used by the `Execute` method to create objects on a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance.  
+  Contains Analysis Services Scripting Language (ASSL) elements used by the `Execute` method to create objects on a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance.  
   
 ## Syntax  
   
@@ -62,14 +62,14 @@ manager: "mblythe"
   
 |Attribute|Description|  
 |---------------|-----------------|  
-|AllowOverwrite|Optional `Boolean` attribute. If set to True, the objects defined in the `ObjectDefinition` element can overwrite existing objects on the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance. If this attribute is omitted or set to False, the presence of an existing object generates an error.|  
-|Scope|Optional `Enum` attribute. Defines the duration of objects defined in the `ObjectDefinition` element. If this attribute is omitted, the objects defined in the `ObjectDefinition` element are persisted on the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance. The following values are available:<br /><br /> -   *Session*<br />     The objects defined in the `ObjectDefinition` element exist only for the duration of the XML for Analysis (XMLA) session. **Note:**      When using the *Session* setting, the `ObjectDefinition` element can only contain [Dimension](../../../2014/analysis-services/dev-guide/dimension-element-assl.md), [Cube](../../../2014/analysis-services/dev-guide/cube-element-assl.md), or [MiningModel](../../../2014/analysis-services/dev-guide/miningmodel-element-assl.md) ASSL elements.|  
+|AllowOverwrite|Optional `Boolean` attribute. If set to True, the objects defined in the `ObjectDefinition` element can overwrite existing objects on the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance. If this attribute is omitted or set to False, the presence of an existing object generates an error.|  
+|Scope|Optional `Enum` attribute. Defines the duration of objects defined in the `ObjectDefinition` element. If this attribute is omitted, the objects defined in the `ObjectDefinition` element are persisted on the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance. The following values are available:<br /><br /> -   *Session*<br />     The objects defined in the `ObjectDefinition` element exist only for the duration of the XML for Analysis (XMLA) session. **Note:**      When using the *Session* setting, the `ObjectDefinition` element can only contain [Dimension](../../../2014/analysis-services/dev-guide/dimension-element-assl.md), [Cube](../../../2014/analysis-services/dev-guide/cube-element-assl.md), or [MiningModel](../../../2014/analysis-services/dev-guide/miningmodel-element-assl.md) ASSL elements.|  
   
 ## Remarks  
- Each `Create` operation creates one major object under a parent given by the `ParentObject` element. If the parent object is omitted, it is assumed to be the destination [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance. This generates an error if the parent of a major object is not the destination instance.  
+ Each `Create` operation creates one major object under a parent given by the `ParentObject` element. If the parent object is omitted, it is assumed to be the destination [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance. This generates an error if the parent of a major object is not the destination instance.  
   
 ## Example  
- The following example creates an empty database named `Test Database` on an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance.  
+ The following example creates an empty database named `Test Database` on an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance.  
   
 ```  
   

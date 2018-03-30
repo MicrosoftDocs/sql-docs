@@ -16,7 +16,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Modify the Trace Results View
-  This topic describes how to modify the trace results view of an Extended Events session in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by performing the following tasks.  
+  This topic describes how to modify the trace results view of an Extended Events session in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by performing the following tasks.  
   
 1.  [Add or Remove Columns](#AddRemoveColumns)  
   

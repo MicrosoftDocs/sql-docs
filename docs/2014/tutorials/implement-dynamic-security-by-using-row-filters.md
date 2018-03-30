@@ -20,7 +20,7 @@ manager: "jhubbard"
   
  To implement dynamic security, you must add a table to your model containing the Windows user names of those users that can create a connection to the model as a data source and browse model objects and data. The model you create using this tutorial is in the context of Adventure Works Corp.; however, in order to complete this lesson, you must add a table containing users from your own domain. You will not need the passwords for the user names that will be added. To create an Employee Security table, with a small sample of users from your own domain, you will use the Paste feature, pasting employee data from an Excel spreadsheet. In a real-world scenario, the table containing user names you add to a model would typically use a table from an actual database as a data source; for example, a real dimEmployee table.  
   
- In order to implement dynamic security, you will use two new DAX functions: [USERNAME Function &#40;DAX&#41;](../Topic/USERNAME%20Function%20\(DAX\).md) and [LOOKUPVALUE Function &#40;DAX&#41;](../Topic/LOOKUPVALUE%20Function%20\(DAX\).md). These functions, applied in a row filter formula, are defined in a new role. Using the LOOKUPVALUE function, the formula specifies a value from the Employee Security table and then passes that value to the USERNAME function, which specifies the user name of the user logged on belongs to this role. The user can then browse only data specified by the role’s row filters. In this scenario, you will specify that sales employees can only browse internet sales data for the sales territories in which they are a member.  
+ In order to implement dynamic security, you will use two new DAX functions: [USERNAME Function &#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx) and [LOOKUPVALUE Function &#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx). These functions, applied in a row filter formula, are defined in a new role. Using the LOOKUPVALUE function, the formula specifies a value from the Employee Security table and then passes that value to the USERNAME function, which specifies the user name of the user logged on belongs to this role. The user can then browse only data specified by the role’s row filters. In this scenario, you will specify that sales employees can only browse internet sales data for the sales territories in which they are a member.  
   
  In order to complete this supplemental lesson, you will complete a series of tasks. Those tasks that are unique to this Adventure Works tabular model scenario, but would not necessarily apply to a real-world scenario are identified as such. Each task includes additional information describing the purpose of the task.  
   
@@ -34,7 +34,7 @@ manager: "jhubbard"
   
 #### To add the dimSalesTerritory table  
   
-1.  In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], click on the **Model** menu, and then click **Existing Connections**.  
+1.  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], click on the **Model** menu, and then click **Existing Connections**.  
   
 2.  In the **Existing Connections** dialog box, verify the **Adventure Works DB from SQL** data source connection is selected, and then click **Open**.  
   
@@ -94,7 +94,7 @@ manager: "jhubbard"
   
 5.  In the worksheet, select all of the cells with employee data, including the headers, then right click the selected data, and then click **Copy**.  
   
-6.  In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], click the **Edit** menu, and then click **Paste**.  
+6.  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], click the **Edit** menu, and then click **Paste**.  
   
      If Paste is greyed out, click any column in any table in the model designer window, and then click the **Edit** menu, and then click **Paste**.  
   
@@ -132,7 +132,7 @@ manager: "jhubbard"
   
 #### To create a Sales Employees by Territory user role  
   
-1.  In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], click the **Model** menu, and then click **Roles**.  
+1.  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], click the **Model** menu, and then click **Roles**.  
   
 2.  In the **Role Manager** dialog box, click **New**.  
   
@@ -171,11 +171,11 @@ manager: "jhubbard"
 10. In the Role Manager dialog box, click **Ok**.  
   
 ## Test the Sales Employees by Territory User Role  
- In this task, you will use the Analyze in Excel feature in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] to test the efficacy of the Sales Employees by Territory user role. You will specify one of the user names you added to the Employee Security table and as a member of the role. This user name will then be used as the effective user name in the connection created between Excel and the model.  
+ In this task, you will use the Analyze in Excel feature in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] to test the efficacy of the Sales Employees by Territory user role. You will specify one of the user names you added to the Employee Security table and as a member of the role. This user name will then be used as the effective user name in the connection created between Excel and the model.  
   
 #### To test the Sales Employees by Territory user role  
   
-1.  In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], click the **Model** menu, and then click **Analyze in Excel**.  
+1.  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], click the **Model** menu, and then click **Analyze in Excel**.  
   
 2.  In the **Analyze in Excel** dialog box, in **Specify the user name or role to use to connect to the model**, select **Other Windows User**, and then click **Browse**.  
   
@@ -196,8 +196,8 @@ manager: "jhubbard"
      This user cannot browse or query any Internet sales data for territories other than the one they belong because the row filter defined for the Sales Territory table in the Sales Employees by Territory user role effectively secures data for all data related to other sales territories.  
   
 ## See Also  
- [USERNAME Function &#40;DAX&#41;](../Topic/USERNAME%20Function%20\(DAX\).md)   
- [LOOKUPVALUE Function &#40;DAX&#41;](../Topic/LOOKUPVALUE%20Function%20\(DAX\).md)   
- [CUSTOMDATA Function &#40;DAX&#41;](../Topic/CUSTOMDATA%20Function%20\(DAX\).md)  
+ [USERNAME Function &#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)   
+ [LOOKUPVALUE Function &#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx)   
+ [CUSTOMDATA Function &#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)  
   
   

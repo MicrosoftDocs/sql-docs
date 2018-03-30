@@ -22,7 +22,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Comparing String Data
-  String comparisons are an important part of many of the transformations performed by [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], and string comparisons are also used in the evaluation of expressions in variables and property expressions. For example, the Sort transformation compares values in a dataset to sort data in ascending or descending order.  
+  String comparisons are an important part of many of the transformations performed by [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], and string comparisons are also used in the evaluation of expressions in variables and property expressions. For example, the Sort transformation compares values in a dataset to sort data in ascending or descending order.  
   
 ## Configuring Transformations for String Comparisons  
  The Sort, Aggregate, Fuzzy Grouping, and Fuzzy Lookup transformations can be customized to change the way strings are compared at the column level. For example, you can specify that a comparison ignores case, which means that uppercase and lowercase characters are treated as the same character.  
@@ -47,21 +47,21 @@ manager: "jhubbard"
 ## Converting String Data to Unicode  
  Depending on the operations that the transformation performs and the configuration of the transformation, string data may be converted to the DT_WSTR data type, which is a Unicode representation of string characters.  
   
- String data that has the DT_STR data type is converted to Unicode using the code page of the column. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supports code pages at the column level, and each column can be converted by using a different code page.  
+ String data that has the DT_STR data type is converted to Unicode using the code page of the column. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] supports code pages at the column level, and each column can be converted by using a different code page.  
   
- In most cases, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] can identify the correct code page from the data source. For example, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] you can set a collation at the database and column levels. The code page is derived from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] collation, which can be either a Windows or an SQL collation.  
+ In most cases, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] can identify the correct code page from the data source. For example, in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] you can set a collation at the database and column levels. The code page is derived from a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] collation, which can be either a Windows or an SQL collation.  
   
- If [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides an unexpected code page, or if the package accesses a data source by using a provider that does not supply sufficient information to determine the correct code page, you can specify a default code page in the OLE DB source and the OLE DB destination. The default code pages are used instead of the code pages that [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides.  
+ If [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides an unexpected code page, or if the package accesses a data source by using a provider that does not supply sufficient information to determine the correct code page, you can specify a default code page in the OLE DB source and the OLE DB destination. The default code pages are used instead of the code pages that [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides.  
   
  Files do not have code pages. Instead, the Flat File and the Multiple Flat Files connection managers that a package uses to connect to file data include a property for specifying the code page of the file. The code page can be set at the file level only, not at the column level.  
   
 ## Setting Locale  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] does not use the code page to infer locale-specific rules for sorting data or interpreting date, time, and decimal data. Instead, the transformation reads the locale that is set by the LocaleId property on the data flow component, Data Flow task, container, or package. By default, the locale of a transformation is inherited from its Data Flow task, which in turn inherits from the package. If the Data Flow task is in a container such as the For Loop container, it inherits its locale from the container.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] does not use the code page to infer locale-specific rules for sorting data or interpreting date, time, and decimal data. Instead, the transformation reads the locale that is set by the LocaleId property on the data flow component, Data Flow task, container, or package. By default, the locale of a transformation is inherited from its Data Flow task, which in turn inherits from the package. If the Data Flow task is in a container such as the For Loop container, it inherits its locale from the container.  
   
  You can also specify a locale for a Flat File connection manager and a Multiple Flat Files connection manager.  
   
 ## Setting Comparison Options  
- The locale provides the basic rules for comparing string data. For example, the locale specifies the sort position of each letter in the alphabet. However, these rules may not be sufficient for the comparisons that some transformations perform, and [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supports a set of advanced comparison options that go beyond the comparison rules of a locale. These comparison options are set at the column level. For example, one of the comparison options lets you ignore nonspacing characters. The effect of this option is to ignore diacritics such as the accent, which makes "a" and "á" identical for comparison purposes.  
+ The locale provides the basic rules for comparing string data. For example, the locale specifies the sort position of each letter in the alphabet. However, these rules may not be sufficient for the comparisons that some transformations perform, and [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] supports a set of advanced comparison options that go beyond the comparison rules of a locale. These comparison options are set at the column level. For example, one of the comparison options lets you ignore nonspacing characters. The effect of this option is to ignore diacritics such as the accent, which makes "a" and "á" identical for comparison purposes.  
   
  The following table describes the comparison options and a sort style.  
   

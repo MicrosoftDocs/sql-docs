@@ -18,7 +18,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Import Project Wizard
-  Use the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Import Project Wizard create a new Integration Services project based on an existing one. Import projects that have already been deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog or import projects from a project deployment file (.ispac extension).  
+  Use the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Import Project Wizard create a new Integration Services project based on an existing one. Import projects that have already been deployed to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] catalog or import projects from a project deployment file (.ispac extension).  
   
 ### To create a project based on a project in .ispac file or in catalog  
   

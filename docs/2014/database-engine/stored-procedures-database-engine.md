@@ -15,11 +15,11 @@ helpviewer_keywords:
 ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
 caps.latest.revision: 33
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Stored Procedures (Database Engine)
-  A stored procedure in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is a group of one or more [!INCLUDE[tsql](../../includes/tsql-md.md)] statements or a reference to a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common runtime language (CLR) method. Procedures resemble constructs in other programming languages because they can:  
+  A stored procedure in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is a group of one or more [!INCLUDE[tsql](../includes/tsql-md.md)] statements or a reference to a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] common runtime language (CLR) method. Procedures resemble constructs in other programming languages because they can:  
   
 -   Accept input parameters and return multiple values in the form of output parameters to the calling program.  
   
@@ -36,11 +36,11 @@ manager: "jhubbard"
  Stronger security  
  Multiple users and client programs can perform operations on underlying database objects through a procedure, even if the users and programs do not have direct permissions on those underlying objects. The procedure controls what processes and activities are performed and protects the underlying database objects. This eliminates the requirement to grant permissions at the individual object level and simplifies the security layers.  
   
- The [EXECUTE AS](../Topic/EXECUTE%20AS%20Clause%20\(Transact-SQL\).md) clause can be specified in the CREATE PROCEDURE statement to enable impersonating another user, or enable users or applications to perform certain database activities without needing direct permissions on the underlying objects and commands. For example, some actions such as TRUNCATE TABLE, do not have grantable permissions. To execute TRUNCATE TABLE, the user must have ALTER permissions on the specified table. Granting a user ALTER permissions on a table may not be ideal because the user will effectively have permissions well beyond the ability to truncate a table. By incorporating the TRUNCATE TABLE statement in a module and specifying that module execute as a user who has permissions to modify the table, you can extend the permissions to truncate the table to the user that you grant EXECUTE permissions on the module.  
+ The [EXECUTE AS](~/t-sql/statements/execute-as-clause-transact-sql.md) clause can be specified in the CREATE PROCEDURE statement to enable impersonating another user, or enable users or applications to perform certain database activities without needing direct permissions on the underlying objects and commands. For example, some actions such as TRUNCATE TABLE, do not have grantable permissions. To execute TRUNCATE TABLE, the user must have ALTER permissions on the specified table. Granting a user ALTER permissions on a table may not be ideal because the user will effectively have permissions well beyond the ability to truncate a table. By incorporating the TRUNCATE TABLE statement in a module and specifying that module execute as a user who has permissions to modify the table, you can extend the permissions to truncate the table to the user that you grant EXECUTE permissions on the module.  
   
- When calling a procedure over the network, only the call to execute the procedure is visible. Therefore, malicious users cannot see table and database object names, embed [!INCLUDE[tsql](../../includes/tsql-md.md)] statements of their own, or search for critical data.  
+ When calling a procedure over the network, only the call to execute the procedure is visible. Therefore, malicious users cannot see table and database object names, embed [!INCLUDE[tsql](../includes/tsql-md.md)] statements of their own, or search for critical data.  
   
- Using procedure parameters helps guard against SQL injection attacks. Since parameter input is treated as a literal value and not as executable code, it is more difficult for an attacker to insert a command into the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement(s) inside the procedure and compromise security.  
+ Using procedure parameters helps guard against SQL injection attacks. Since parameter input is treated as a literal value and not as executable code, it is more difficult for an attacker to insert a command into the [!INCLUDE[tsql](../includes/tsql-md.md)] statement(s) inside the procedure and compromise security.  
   
  Procedures can be encrypted, helping to obfuscate the source code. For more information, see [SQL Server Encryption](../../2014/database-engine/sql-server-encryption.md).  
   
@@ -57,21 +57,21 @@ manager: "jhubbard"
   
 ## Types of Stored Procedures  
  User-defined  
- A user-defined procedure can be created in a user-defined database or in all system databases except the **Resource** database. The procedure can be developed in either [!INCLUDE[tsql](../../includes/tsql-md.md)] or as a reference to a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common runtime language (CLR) method.  
+ A user-defined procedure can be created in a user-defined database or in all system databases except the **Resource** database. The procedure can be developed in either [!INCLUDE[tsql](../includes/tsql-md.md)] or as a reference to a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] common runtime language (CLR) method.  
   
  Temporary  
  Temporary procedures are a form of user-defined procedures. The temporary procedures are like a permanent procedure, except temporary procedures are stored in **tempdb**. There are two types of temporary procedures: local and global. They differ from each other in their names, their visibility, and their availability. Local temporary procedures have a single number sign (#) as the first character of their names; they are visible only to the current user connection, and they are deleted when the connection is closed. Global temporary procedures have two number signs (##) as the first two characters of their names; they are visible to any user after they are created, and they are deleted at the end of the last session using the procedure.  
   
  System  
- System procedures are included with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. They are physically stored in the internal, hidden **Resource** database and logically appear in the **sys** schema of every system- and user-defined database. In addition, the **msdb** database also contains system stored procedures in the **dbo** schema that are used for scheduling alerts and jobs. Because system procedures start with the prefix **sp_**, we recommend that you do not use this prefix when naming user-defined procedures. For a complete list of system procedures, see [System Stored Procedures &#40;Transact-SQL&#41;](../Topic/System%20Stored%20Procedures%20\(Transact-SQL\).md)  
+ System procedures are included with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. They are physically stored in the internal, hidden **Resource** database and logically appear in the **sys** schema of every system- and user-defined database. In addition, the **msdb** database also contains system stored procedures in the **dbo** schema that are used for scheduling alerts and jobs. Because system procedures start with the prefix **sp_**, we recommend that you do not use this prefix when naming user-defined procedures. For a complete list of system procedures, see [System Stored Procedures &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports the system procedures that provide an interface from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to external programs for various maintenance activities. These extended procedures use the xp_ prefix. For a complete list of extended procedures, see [General Extended Stored Procedures &#40;Transact-SQL&#41;](../Topic/General%20Extended%20Stored%20Procedures%20\(Transact-SQL\).md).  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supports the system procedures that provide an interface from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to external programs for various maintenance activities. These extended procedures use the xp_ prefix. For a complete list of extended procedures, see [General Extended Stored Procedures &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md).  
   
  Extended User-Defined  
- Extended procedures enable creating external routines in a programming language such as C. These procedures are DLLs that an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can dynamically load and run.  
+ Extended procedures enable creating external routines in a programming language such as C. These procedures are DLLs that an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] can dynamically load and run.  
   
 > [!NOTE]  
->  Extended stored procedures will be removed in a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Do not use this feature in new development work, and modify applications that currently use this feature as soon as possible. Create CLR procedures instead. This method provides a more robust and secure alternative to writing extended procedures.  
+>  Extended stored procedures will be removed in a future version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Do not use this feature in new development work, and modify applications that currently use this feature as soon as possible. Create CLR procedures instead. This method provides a more robust and secure alternative to writing extended procedures.  
   
 ## Related Tasks  
   

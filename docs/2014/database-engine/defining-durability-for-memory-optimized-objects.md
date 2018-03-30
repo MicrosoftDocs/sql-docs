@@ -16,7 +16,7 @@ ms.author: "sstein"
 manager: "jhubbard"
 ---
 # Defining Durability for Memory-Optimized Objects
-  In-Memory OLTP guarantees full atomicity, consistency, isolation, and full durability (ACID) properties. Durability in the context of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and memory-optimized tables provides following guarantees:  
+  In-Memory OLTP guarantees full atomicity, consistency, isolation, and full durability (ACID) properties. Durability in the context of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and memory-optimized tables provides following guarantees:  
   
  Transactional Durability  
  When you commit a fully durable transaction that made (DDL or DML) changes to a memory-optimized table, the changes made to a durable memory-optimized table are permanent.  
@@ -24,15 +24,15 @@ manager: "jhubbard"
  When you commit a delayed durable transaction to a memory-optimized table, the transaction becomes durable only after the in-memory transaction log is saved to disk.  
   
  Restart Durability  
- When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restarts after a crash or planned shutdown, the memory-optimized durable tables are reinstantiated to restore them to the state before the shutdown or crash.  
+ When [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] restarts after a crash or planned shutdown, the memory-optimized durable tables are reinstantiated to restore them to the state before the shutdown or crash.  
   
  Media Failure Durability  
- If a failed or corrupt disk contains one or more persisted copies of durable memory-optimized objects, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup and restore feature restores memory-optimized tables on the new media.  
+ If a failed or corrupt disk contains one or more persisted copies of durable memory-optimized objects, the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] backup and restore feature restores memory-optimized tables on the new media.  
   
  There are two durability options for memory-optimized tables:  
   
  SCHEMA_ONLY (non-durable table)  
- This option ensures durability of the table schema, including indexes. When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is restarted, the non-durable table is recreated, but starts with no data. (This is unlike a table in tempdb, where both the table and its data are lost upon restart.) A typical scenario for creating a non-durable table is to store transient data, such as a staging table for an ETL process. A SCHEMA_ONLY durability avoids both transaction logging and checkpoint, which can significantly reduce I/O operations.  
+ This option ensures durability of the table schema, including indexes. When [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is restarted, the non-durable table is recreated, but starts with no data. (This is unlike a table in tempdb, where both the table and its data are lost upon restart.) A typical scenario for creating a non-durable table is to store transient data, such as a staging table for an ETL process. A SCHEMA_ONLY durability avoids both transaction logging and checkpoint, which can significantly reduce I/O operations.  
   
  SCHEMA_AND_DATA (durable table)  
  This option provides durability of both schema and data. The level of data durability depends on whether you commit a transaction as fully durable or with delayed durability. Fully durable transactions provide the same durability guarantee for data and schema, similar to a disk-based table. Delayed durability will improve performance but can potentially result in data loss in case of a server crash or fail over. (For more information about delayed durability, see [Control Transaction Durability](../../2014/database-engine/control-transaction-durability.md).)  

@@ -1,1 +1,1 @@
-SharePoint Server 2010
+ SharePoint Server 2010 

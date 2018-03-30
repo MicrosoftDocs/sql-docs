@@ -38,24 +38,24 @@ manager: "jhubbard"
   
 |Table|Description|  
 |-----------|-----------------|  
-|[log_shipping_monitor_alert](../Topic/log_shipping_monitor_alert%20\(Transact-SQL\).md)|Stores alert job ID.|  
-|[log_shipping_monitor_error_detail](../Topic/log_shipping_monitor_error_detail%20\(Transact-SQL\).md)|Stores error details for log shipping jobs. You can query this table see the errors for an agent session. Optionally, you can sort the errors by the date and time at which each was logged. Each error is logged as a sequence of exceptions, and multiple errors (sequences) can per agent session.|  
-|[log_shipping_monitor_history_detail](../Topic/log_shipping_monitor_history_detail%20\(Transact-SQL\).md)|Contains history details for log shipping agents. You can query this table to see the history detail for an agent session.|  
-|[log_shipping_monitor_primary](../Topic/log_shipping_monitor_primary%20\(Transact-SQL\).md)|Stores one monitor record for the primary database in each log shipping configuration, including information about the last backup file and last restored file that is useful for monitoring.|  
-|[log_shipping_monitor_secondary](../Topic/log_shipping_monitor_secondary%20\(Transact-SQL\).md)|Stores one monitor record for each secondary database, including information about the last backup file and last restored file that is useful for monitoring.|  
+|[log_shipping_monitor_alert](~/relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|Stores alert job ID.|  
+|[log_shipping_monitor_error_detail](~/relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|Stores error details for log shipping jobs. You can query this table see the errors for an agent session. Optionally, you can sort the errors by the date and time at which each was logged. Each error is logged as a sequence of exceptions, and multiple errors (sequences) can per agent session.|  
+|[log_shipping_monitor_history_detail](~/relational-databases/system-tables/log-shipping-monitor-history-detail-transact-sql.md)|Contains history details for log shipping agents. You can query this table to see the history detail for an agent session.|  
+|[log_shipping_monitor_primary](~/relational-databases/system-tables/log-shipping-monitor-primary-transact-sql.md)|Stores one monitor record for the primary database in each log shipping configuration, including information about the last backup file and last restored file that is useful for monitoring.|  
+|[log_shipping_monitor_secondary](~/relational-databases/system-tables/log-shipping-monitor-secondary-transact-sql.md)|Stores one monitor record for each secondary database, including information about the last backup file and last restored file that is useful for monitoring.|  
   
 ## Stored Procedures for Monitoring Log Shipping  
  Monitoring and history information is stored in tables in **msdb**, which can be accessed using log shipping stored procedures. Run these stored procedures on the servers indicated in the following table.  
   
 |Stored procedure|Description|Run this procedure on|  
 |----------------------|-----------------|---------------------------|  
-|[sp_help_log_shipping_monitor_primary](../Topic/sp_help_log_shipping_monitor_primary%20\(Transact-SQL\).md)|Returns monitor records for the specified primary database from the **log_shipping_monitor_primary** table.|Monitor server or primary server|  
-|[sp_help_log_shipping_monitor_secondary](../Topic/sp_help_log_shipping_monitor_secondary%20\(Transact-SQL\).md)|Returns monitor records for the specified secondary database from the **log_shipping_monitor_secondary** table.|Monitor server or secondary server|  
-|[sp_help_log_shipping_alert_job](../Topic/sp_help_log_shipping_alert_job%20\(Transact-SQL\).md)|Returns the job ID of the alert job.|Monitor server, or primary or secondary server if no monitor is defined|  
-|[sp_help_log_shipping_primary_database](../Topic/sp_help_log_shipping_primary_database%20\(Transact-SQL\).md)|Retrieves primary database settings and displays the values from the **log_shipping_primary_databases** and **log_shipping_monitor_primary** tables.|Primary server|  
-|[sp_help_log_shipping_primary_secondary](../Topic/sp_help_log_shipping_primary_secondary%20\(Transact-SQL\).md)|Retrieves secondary database names for a primary database.|Primary server|  
-|[sp_help_log_shipping_secondary_database](../Topic/sp_help_log_shipping_secondary_database%20\(Transact-SQL\).md)|Retrieves secondary-database settings from the **log_shipping_secondary**, **log_shipping_secondary_databases** and **log_shipping_monitor_secondary** tables.|Secondary server|  
-|[sp_help_log_shipping_secondary_primary &#40;Transact-SQL&#41;](../Topic/sp_help_log_shipping_secondary_primary%20\(Transact-SQL\).md)|This stored procedure retrieves the settings for a given primary database on the secondary server.|Secondary server|  
+|[sp_help_log_shipping_monitor_primary](~/relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-primary-transact-sql.md)|Returns monitor records for the specified primary database from the **log_shipping_monitor_primary** table.|Monitor server or primary server|  
+|[sp_help_log_shipping_monitor_secondary](~/relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-secondary-transact-sql.md)|Returns monitor records for the specified secondary database from the **log_shipping_monitor_secondary** table.|Monitor server or secondary server|  
+|[sp_help_log_shipping_alert_job](~/relational-databases/system-stored-procedures/sp-help-log-shipping-alert-job-transact-sql.md)|Returns the job ID of the alert job.|Monitor server, or primary or secondary server if no monitor is defined|  
+|[sp_help_log_shipping_primary_database](~/relational-databases/system-stored-procedures/sp-help-log-shipping-primary-database-transact-sql.md)|Retrieves primary database settings and displays the values from the **log_shipping_primary_databases** and **log_shipping_monitor_primary** tables.|Primary server|  
+|[sp_help_log_shipping_primary_secondary](~/relational-databases/system-stored-procedures/sp-help-log-shipping-primary-secondary-transact-sql.md)|Retrieves secondary database names for a primary database.|Primary server|  
+|[sp_help_log_shipping_secondary_database](~/relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md)|Retrieves secondary-database settings from the **log_shipping_secondary**, **log_shipping_secondary_databases** and **log_shipping_monitor_secondary** tables.|Secondary server|  
+|[sp_help_log_shipping_secondary_primary &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)|This stored procedure retrieves the settings for a given primary database on the secondary server.|Secondary server|  
   
 ## See Also  
  [View the Log Shipping Report &#40;SQL Server Management Studio&#41;](../../2014/database-engine/view-the-log-shipping-report-sql-server-management-studio.md)   

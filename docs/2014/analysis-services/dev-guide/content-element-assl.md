@@ -75,7 +75,7 @@ manager: "mblythe"
 |*Support*|The values for the column specify support information for the column contained in the `ClassifiedColumns` element of the parent `ScalarMiningStructureColumn`. **Note:**  This column is provided as part of the standard for third party mining algorithm providers. **Note:**  Microsoft provided algorithms do not have any use for this column. <br /><br /> .|  
 |*Key*|The column is a key column. **Note:**  This content type is applicable only to key columns, in which the `IsKey` element is set to `True`.|  
   
- In addition to these standard values, mining algorithm providers included with [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] support the values in the following table.  
+ In addition to these standard values, mining algorithm providers included with [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] support the values in the following table.  
   
 |Value|Description|  
 |-----------|-----------------|  

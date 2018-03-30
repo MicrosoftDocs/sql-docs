@@ -25,7 +25,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # ClientSettings Class
-  The [ClientSettings Class](../../../2014/database-engine/dev-guide/clientsettings-class.md) represents the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] settings on the client.  
+  The [ClientSettings Class](../../../2014/database-engine/dev-guide/clientsettings-class.md) represents the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] settings on the client.  
   
  This class enables programmatic management of the client.  
   

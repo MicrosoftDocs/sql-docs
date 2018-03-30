@@ -19,7 +19,7 @@ ms.author: "sstein"
 manager: "jhubbard"
 ---
 # Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP
-  The transaction performance collector in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] helps you evaluate if In-Memory OLTP will improve your database application’s performance. The transaction performance analysis report also indicates how much work you must do to enable In-Memory OLTP in your application. After you identify a disk-based table to port to In-Memory OLTP, you can use the [Memory Optimization Advisor](../../2014/database-engine/memory-optimization-advisor.md), to help you migrate the table. Similarly, the [Native Compilation Advisor](../../2014/database-engine/native-compilation-advisor.md) will help you port a stored procedure to a natively compiled stored procedure.  
+  The transaction performance collector in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] helps you evaluate if In-Memory OLTP will improve your database application’s performance. The transaction performance analysis report also indicates how much work you must do to enable In-Memory OLTP in your application. After you identify a disk-based table to port to In-Memory OLTP, you can use the [Memory Optimization Advisor](../../2014/database-engine/memory-optimization-advisor.md), to help you migrate the table. Similarly, the [Native Compilation Advisor](../../2014/database-engine/native-compilation-advisor.md) will help you port a stored procedure to a natively compiled stored procedure.  
   
  This topic will discuss how to:  
   
@@ -42,26 +42,26 @@ manager: "jhubbard"
     > [!IMPORTANT]  
     >  The performance of a database system is dependent on a variety of factors, not all of which the transaction performance collector can observe and measure. Therefore, the transaction performance analysis report does not guarantee actual performance gains will match its predictions, if any predictions are made.  
   
- The transaction performance collector and the ability to generate a transaction performance analysis report are installed when you select **Management Tools—Basic** or **Management Tools—Advanced** when you install [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ The transaction performance collector and the ability to generate a transaction performance analysis report are installed when you select **Management Tools—Basic** or **Management Tools—Advanced** when you install [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
 ## Best Practices  
  The recommended workflow is illustrated in the following flowchart. The yellow nodes represent optional procedures:  
   
  ![AMR workflow](../../2014/database-engine/media/amr-1.gif "AMR workflow")  
   
- You can use any method to establish a performance baseline, including but not limited to using performance counter logs or the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Activity Monitor. The information to use in your performance baseline and your comparisons are:  
+ You can use any method to establish a performance baseline, including but not limited to using performance counter logs or the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Activity Monitor. The information to use in your performance baseline and your comparisons are:  
   
--   CPU consumption of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   CPU consumption of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
--   Memory consumption of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Memory consumption of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
--   I/O activity of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   I/O activity of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 -   Transaction throughput of the instance while processing transactions.  
   
  The transaction performance collector captures data every 15 minutes. To obtain usable results, run the transaction performance collector for at least one hour. To obtain best results, run the transaction performance collector for as much time as needed to capture data for your primary scenarios. Generate a transaction performance analysis report only after you have finished gathering data.  
   
- Configure the transaction performance collector to run on your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance in production and collect the data on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance in your development (test) environment to ensure minimum overhead. For information on how to save data in a Management Data Warehouse database on a remote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, see [Configure Data Collection on a Remote SQL Server Instance](../../2014/database-engine/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md#xxx).  
+ Configure the transaction performance collector to run on your [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance in production and collect the data on a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance in your development (test) environment to ensure minimum overhead. For information on how to save data in a Management Data Warehouse database on a remote [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance, see [Configure Data Collection on a Remote SQL Server Instance](../../2014/database-engine/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md#xxx).  
   
 ## Performance Impacts  
  The transaction performance collector consists of two data collection sets:  
@@ -73,7 +73,7 @@ manager: "jhubbard"
  The collection sets collect data from three dynamic management views (DMV) every fifteen minutes, and upload the data to the database configured to act as the Management Data Warehouse. Uploading the collected data incurs minimal performance impact.  
   
 ## Use the Transaction Performance Collector  
- The following steps require [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ The following steps require [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
 > [!IMPORTANT]  
 >  Do not change the schema (for example, add or remove databases or create or drop tables) during profiling. If you change the schema of a database while collecting data, the database may not be accurately included in the report.  
@@ -81,7 +81,7 @@ manager: "jhubbard"
 ### Configure Management Data Warehouse  
  Management Data Warehouse must be configured to use the transaction performance collector.  
   
- The version of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance that you will collect data on (profile) should be the same version or older than the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] where Management Data Warehouse is configured.  
+ The version of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance that you will collect data on (profile) should be the same version or older than the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] where Management Data Warehouse is configured.  
   
 1.  In Object Explorer, expand **Management**.  
   
@@ -93,14 +93,14 @@ manager: "jhubbard"
   
 5.  The next step in the wizard lets you add users and logins. You may map logins to role memberships for the MDW instance. This is not required to collect data from the local instance. If you are not collecting data from the local instance, you can grant database role membership `mdw_admin` to the account that will run transactions that will be profiled. When done, click **Next**.  
   
-6.  Make sure that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is running.  
+6.  Make sure that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent is running.  
   
 7.  On the next screen, click **Finish** to exit the wizard.  
   
-### Configure Data Collection on a Local [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instance  
- Data collection requires [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to be started. You only need to configure one data collector on a server.  
+### Configure Data Collection on a Local [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Instance  
+ Data collection requires [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent to be started. You only need to configure one data collector on a server.  
   
- A data collector can be configured on a SQL Server 2012 or later version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ A data collector can be configured on a SQL Server 2012 or later version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  To configure data collection to upload to a Management Data Warehouse database on the same instance,  
   
@@ -110,18 +110,18 @@ manager: "jhubbard"
   
 3.  Click **Next** to select the database that will collect the profile data.  
   
-4.  Select the current [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance and a Management Data Warehouse database on that instance.  
+4.  Select the current [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance and a Management Data Warehouse database on that instance.  
   
 5.  In the box labeled **Select data collector sets you want to enable**, select **Transaction Performance Collection Sets**. Click **Next** when done.  
   
 6.  Verify the selections. Click **Back** to modify the settings. Click **Finish** when done.  
   
-###  <a name="xxx"></a> Configure Data Collection on a Remote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instance  
- Data collection requires [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to be started on the instance that will collect the data.  
+###  <a name="xxx"></a> Configure Data Collection on a Remote [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Instance  
+ Data collection requires [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent to be started on the instance that will collect the data.  
   
- A data collector can be configured on a SQL Server 2012 or later version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ A data collector can be configured on a SQL Server 2012 or later version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- You need a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy established with the correct credential for a data collector to upload data to a Management Data Warehouse database on an instance that is different from where transactions will be profiled. To enable a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy, you must first establish a credential with a domain-enabled login. The domain-enabled login must be a member of `mdw_admin` group for the Management Data Warehouse database. See [How to: Create a Credential (SQL Server Management Studio)](http://msdn.microsoft.com/library/ms190703\(v=sql.105\).aspx) for information on how to create a credential.  
+ You need a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent proxy established with the correct credential for a data collector to upload data to a Management Data Warehouse database on an instance that is different from where transactions will be profiled. To enable a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent proxy, you must first establish a credential with a domain-enabled login. The domain-enabled login must be a member of `mdw_admin` group for the Management Data Warehouse database. See [How to: Create a Credential (SQL Server Management Studio)](http://msdn.microsoft.com/library/ms190703\(v=sql.105\).aspx) for information on how to create a credential.  
   
  To configure data collection to upload to a Management Data Warehouse database on a different instance,  
   
@@ -131,21 +131,21 @@ manager: "jhubbard"
   
 3.  Click **Next** to select the database that will collect the profile data.  
   
-4.  Make sure that a Management Data Warehouse database exists on the other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
+4.  Make sure that a Management Data Warehouse database exists on the other [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance.  
   
-5.  Select another [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance and a Management Data Warehouse database on that instance.  
+5.  Select another [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance and a Management Data Warehouse database on that instance.  
   
-     The version of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance that you will collect data on (profile) should be the same version or older than the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] where Management Data Warehouse is configured.  
+     The version of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance that you will collect data on (profile) should be the same version or older than the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] where Management Data Warehouse is configured.  
   
 6.  In the box labeled **Select data collector sets you want to enable**, select **Transaction Performance Collection Sets**.  
   
-7.  Select **Use a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy for remote uploads**.  
+7.  Select **Use a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent proxy for remote uploads**.  
   
 8.  Click **Next** when done.  
   
 9. Select the proxy.  
   
-     If you want to create a new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy,  
+     If you want to create a new [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent proxy,  
   
     1.  Click **New** to display the **New Proxy Account** dialog box.  
   
@@ -196,7 +196,7 @@ manager: "jhubbard"
   
      This section includes a table that shows the difficulty of converting this database table to a memory-optimized table. A higher difficulty rating indicates more difficultly to convert the table. To see details to convert this database table, please use the [Memory Optimization Advisor](../../2014/database-engine/memory-optimization-advisor.md).  
   
- Scan and contention statistics on the table details report is gathered and aggregated from [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../Topic/sys.dm_db_index_operational_stats%20\(Transact-SQL\).md).  
+ Scan and contention statistics on the table details report is gathered and aggregated from [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md).  
   
  The details report for a stored procedure consists of two sections:  
   
@@ -218,7 +218,7 @@ manager: "jhubbard"
   
      This section includes a table that shows the tables to which this stored procedure refers. Before converting the stored procedure into a natively compiled stored procedure, all of these tables must be converted to memory-optimized tables, and they must stay on the same server and database.  
   
- Execution Statistics on the stored procedure details report is gathered and aggregated from [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../Topic/sys.dm_exec_procedure_stats%20\(Transact-SQL\).md). The references are obtained from [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../Topic/sys.sql_expression_dependencies%20\(Transact-SQL\).md).  
+ Execution Statistics on the stored procedure details report is gathered and aggregated from [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md). The references are obtained from [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md).  
   
  To see details about how to convert a stored procedure to a natively compiled stored procedure, please use the [Native Compilation Advisor](../../2014/database-engine/native-compilation-advisor.md).  
   

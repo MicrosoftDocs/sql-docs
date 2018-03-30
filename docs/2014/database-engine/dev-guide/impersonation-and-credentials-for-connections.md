@@ -26,7 +26,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Impersonation and Credentials for Connections
-  In the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] common language runtime (CLR) integration, using Windows Authentication is complex, but is more secure than using SQL Server Authentication. When using Windows Authentication, keep in mind the following considerations.  
+  In the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] common language runtime (CLR) integration, using Windows Authentication is complex, but is more secure than using SQL Server Authentication. When using Windows Authentication, keep in mind the following considerations.  
   
  By default, a SQL Server process that connects out to Windows acquires the security context of the SQL Server Windows service account. But it is possible to map a CLR function to a proxy identity, so that its outbound connections have a different security context than that of the Windows service account.  
   
@@ -72,7 +72,7 @@ catch
 > [!NOTE]  
 >  For information about behavior changes in impersonation, see [Breaking Changes to Database Engine Features in SQL Server 2014](../../../2014/database-engine/breaking-changes-to-database-engine-features-in-sql-server-2014.md).  
   
- Furthermore, if you obtained the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows identity instance, by default you cannot propagate that instance to another computer; Windows security infrastructure restricts that by default. There is, however, a mechanism called "delegation" that enables propagation of Windows identities across multiple trusted computers. You can learn more about delegation in the TechNet article, "[Kerberos Protocol Transition and Constrained Delegation](http://go.microsoft.com/fwlink/?LinkId=50419)".  
+ Furthermore, if you obtained the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows identity instance, by default you cannot propagate that instance to another computer; Windows security infrastructure restricts that by default. There is, however, a mechanism called "delegation" that enables propagation of Windows identities across multiple trusted computers. You can learn more about delegation in the TechNet article, "[Kerberos Protocol Transition and Constrained Delegation](http://go.microsoft.com/fwlink/?LinkId=50419)".  
   
 ## See Also  
  [SqlContext Object](../../../2014/database-engine/dev-guide/sqlcontext-object.md)  

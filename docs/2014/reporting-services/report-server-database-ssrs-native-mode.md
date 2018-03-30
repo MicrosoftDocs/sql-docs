@@ -19,27 +19,27 @@ helpviewer_keywords:
 ms.assetid: 0fc5c033-3fe1-4cea-86c7-66ea5e424d65
 caps.latest.revision: 47
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Report Server Database (SSRS Native Mode)
-  A report server is a stateless server that uses the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] to store metadata and object definitions. A native mode [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation uses two databases to separate persistent data storage from temporary storage requirements. The databases are created together and bound by name. By default, the database names are **reportserver** and **reportservertempdb**, respectively.  
+  A report server is a stateless server that uses the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] to store metadata and object definitions. A native mode [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] installation uses two databases to separate persistent data storage from temporary storage requirements. The databases are created together and bound by name. By default, the database names are **reportserver** and **reportservertempdb**, respectively.  
   
- A SharePoint mode [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation will also create a database for the data alerting feature. The three databases in SharePoint mode are associated with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service applications. For more information, see [Manage a Reporting Services SharePoint Service Application](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)  
+ A SharePoint mode [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] installation will also create a database for the data alerting feature. The three databases in SharePoint mode are associated with [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service applications. For more information, see [Manage a Reporting Services SharePoint Service Application](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)  
   
- The databases can run on a local or remote [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance. Choosing a local instance is useful if you have sufficient system resources or want to conserve software licenses, but running the databases on a remote computer can improve performance.  
+ The databases can run on a local or remote [!INCLUDE[ssDE](../includes/ssde-md.md)] instance. Choosing a local instance is useful if you have sufficient system resources or want to conserve software licenses, but running the databases on a remote computer can improve performance.  
   
  You can port or reuse an existing report server database from previous installation or a different instance with another report server instance. The schema of the report server database must be compatible with the report server instance. If the database is in an older format, you will be prompted to upgrade it to the current format. Newer versions cannot be down graded to an older version. If you have a newer report server database, you cannot use it with an earlier version of a report server instances. For more information about how report server databases are upgraded to newer formats, see [Upgrade a Report Server Database](../../2014/sql-server/install/upgrade-a-report-server-database.md).  
   
 > [!IMPORTANT]  
->  The table structure for the databases is optimized for server operations and should not be modified or tuned. [!INCLUDE[msCoName](../../includes/msconame-md.md)] might change the table structure from one release to the next. If you modify or extend the database, you might limit or prevent the capability to perform future upgrades or apply service packs. You might also introduce changes that impair report server operations. For example if you turn on READ_COMMITTED_SNAPSHOT on the ReportServer database, you will break the interactive sorting feature.  
+>  The table structure for the databases is optimized for server operations and should not be modified or tuned. [!INCLUDE[msCoName](../includes/msconame-md.md)] might change the table structure from one release to the next. If you modify or extend the database, you might limit or prevent the capability to perform future upgrades or apply service packs. You might also introduce changes that impair report server operations. For example if you turn on READ_COMMITTED_SNAPSHOT on the ReportServer database, you will break the interactive sorting feature.  
   
- All access to a report server database must be handled through the report server. To access content in a report server database, you can use report server management tools, (such as Report Manager and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]), or programmatic interfaces such as URL access, Report Server Web service, or the Windows Management Instrumentation (WMI) provider.  
+ All access to a report server database must be handled through the report server. To access content in a report server database, you can use report server management tools, (such as Report Manager and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]), or programmatic interfaces such as URL access, Report Server Web service, or the Windows Management Instrumentation (WMI) provider.  
   
- The connection to the report server database is usually defined through the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager. However, it can be defined during setup if you choose to install the default configuration. For more information about the report server connection to the database, see [Configure a Report Server Database Connection  &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+ The connection to the report server database is usually defined through the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Configuration Manager. However, it can be defined during setup if you choose to install the default configuration. For more information about the report server connection to the database, see [Configure a Report Server Database Connection  &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 ## Report Server Database  
- The report server database is a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database that stores the following content:  
+ The report server database is a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database that stores the following content:  
   
 -   Items managed by a report server (reports and linked reports, shared data sources, report models, folders, resources) and all of the properties and security settings that are associated with those items.  
   
@@ -58,7 +58,7 @@ manager: "mblythe"
 ## Report Server Temporary Database  
  Each report server database uses a related temporary database to store session and execution data, cached reports, and work tables that are generated by the report server. Background server processes will periodically remove older and unused items from the tables in the temporary database.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] does not re-create the temporary database if it is missing, nor does it repair missing or modified tables. Although the temporary database does not contain persistent data, you should back up a copy of the database anyway so that you can avoid having to re-create it as part of a failure recovery operation.  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] does not re-create the temporary database if it is missing, nor does it repair missing or modified tables. Although the temporary database does not contain persistent data, you should back up a copy of the database anyway so that you can avoid having to re-create it as part of a failure recovery operation.  
   
  If you back up the temporary database and subsequently restore it, you should delete the contents. Generally, it is safe to delete the contents of the temporary database at any time. However, you must restart the Report Server Windows service after you delete the contents.  
   

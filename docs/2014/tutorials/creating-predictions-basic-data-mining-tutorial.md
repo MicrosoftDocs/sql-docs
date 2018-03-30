@@ -33,7 +33,7 @@ manager: "jhubbard"
   
 3.  In the **Select Input Table(s)** box, click **Select Case Table**.  
   
-4.  In the **Select Table** dialog box, in the **Data Source** list, select the data source view [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)].  
+4.  In the **Select Table** dialog box, in the **Data Source** list, select the data source view [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)].  
   
 5.  In **Table/View Name**, select the **ProspectiveBuyer (dbo)** table, and then click **OK**.  
   
@@ -92,7 +92,7 @@ manager: "jhubbard"
   
      When you let go, [TM_Decision_Tree].[Bike Buyer] appears in the **Criteria/Argument** cell.  
   
-     This specifies the target column for the `PredictProbability` function. For more information about functions, see [Data Mining Extensions &#40;DMX&#41; Function Reference](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Function%20Reference.md).  
+     This specifies the target column for the `PredictProbability` function. For more information about functions, see [Data Mining Extensions &#40;DMX&#41; Function Reference](~/dmx/data-mining-extensions-dmx-function-reference.md).  
   
 5.  Click the next empty row in the **Source** column, and then select TM_Decision_Tree mining model**.**  
   

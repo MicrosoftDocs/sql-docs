@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Synchronize Analysis Services Databases
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] includes a database synchronization feature that makes two [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] databases equivalent by copying the data and metadata a database on a source server to a database on a destination server. Use the Synchronize Database feature to accomplish any of the following tasks:  
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] includes a database synchronization feature that makes two [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] databases equivalent by copying the data and metadata a database on a source server to a database on a destination server. Use the Synchronize Database feature to accomplish any of the following tasks:  
   
 -   Deploy a database from a staging server onto a production server.  
   
@@ -33,9 +33,9 @@ manager: "mblythe"
   
  Database synchronization is initiated on the destination server, pulling data and metadata into a database copy on the source server. If the database does not exist, it will be created. Synchronization is a one-way, one-time operation that concludes once the database is copied. It does not provide real-time parity between the databases.  
   
- You can re-sync databases that already exist on source and destination servers to pull the latest changes from a staging server into a production database. Files on the two servers will be compared for changes and those that are different will be updated. An existing database on a destination server remains available while synchronization occurs in the background. Users can continue to query the destination database while synchronization is in progress. After synchronization finishes, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] automatically switches the users to the newly copied data and metadata, and drops the old data from the destination database.  
+ You can re-sync databases that already exist on source and destination servers to pull the latest changes from a staging server into a production database. Files on the two servers will be compared for changes and those that are different will be updated. An existing database on a destination server remains available while synchronization occurs in the background. Users can continue to query the destination database while synchronization is in progress. After synchronization finishes, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] automatically switches the users to the newly copied data and metadata, and drops the old data from the destination database.  
   
- To synchronize databases, run the Synchronize Database Wizard to immediately synchronize the databases, or use it to generate a synchronization script that you can run later. Either approach can be used to increase the availability and scalability of your [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] databases and cube.  
+ To synchronize databases, run the Synchronize Database Wizard to immediately synchronize the databases, or use it to generate a synchronization script that you can run later. Either approach can be used to increase the availability and scalability of your [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] databases and cube.  
   
 > [!NOTE]  
 >  The following whitepapers, written for previous versions of Analysis Services, still apply to scalable multidimensional solutions built using SQL Server 2012. For more information, see [Scale-Out Querying with Analysis Services](http://go.microsoft.com/fwlink/?LinkId=253136) and [Scale-Out Querying for Analysis Services with Read-Only Databases](http://go.microsoft.com/fwlink/?LinkId=253137.)  
@@ -45,7 +45,7 @@ manager: "mblythe"
   
  TCP port 2383 must be open on both servers to allow remote connections between default instances. For more information about creating an exception in Windows Firewall, see [Configure the Windows Firewall to Allow Analysis Services Access](../../2014/analysis-services/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
- Both the source and destination servers must be the same version and service pack. Because model metadata is also synchronized, to ensure compatibility the build number for both servers should be the same. The edition of each installation must support database synchronization. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], database synchronization is supported in enterprise, developer, and business intelligence editions. For more information about features in each edition, see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ Both the source and destination servers must be the same version and service pack. Because model metadata is also synchronized, to ensure compatibility the build number for both servers should be the same. The edition of each installation must support database synchronization. In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], database synchronization is supported in enterprise, developer, and business intelligence editions. For more information about features in each edition, see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  The server deployment mode must be identical on each server. If the database you are synchronizing is multidimensional, both source and destination servers must be configured for multidimensional server mode. For more information about deployment modes, see [Determine the Server Mode of an Analysis Services Instance](../../2014/analysis-services/determine-the-server-mode-of-an-analysis-services-instance.md).  
   
@@ -73,13 +73,13 @@ manager: "mblythe"
   
 #### Run the wizard  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connect to the instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] that will run the destination database. For example, if you are deploying a database to a production server, you would run the wizard on the production server.  
+1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], connect to the instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] that will run the destination database. For example, if you are deploying a database to a production server, you would run the wizard on the production server.  
   
 2.  In Object Explorer, right-click the **Databases** folder, then click **Synchronize**.  
   
 3.  Specify the source server and source database. In the Select Database to Synchronize page, in **Source Server** and **Source Database**, type the name of the source server and source database. For example, if you are deploying from a test environment to a production server, the source is the database on the staging server.  
   
-     **Destination Server** displays the name of the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance with which the data and metadata from the database selected in **Source database** is synchronized.  
+     **Destination Server** displays the name of the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance with which the data and metadata from the database selected in **Source database** is synchronized.  
   
      Synchronization will occur for source and destination databases that have the same name. If the destination server already has a database that shares the same name as the source database, the destination database will be updated with the metadata and data of the source. If the database does not exist, it will be created on the destination server.  
   
@@ -93,10 +93,10 @@ manager: "mblythe"
      The **Locations** option displays a grid listing the source folder, destination folder, and estimated size of the local partitions to be stored on the destination instance. The grid contains the following columns:  
   
      **Source Folder**  
-     Displays the folder name on the source [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance that contains the local partition. If the column contains the value "(Default)", the default location for the source instance contains the local partition.  
+     Displays the folder name on the source [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance that contains the local partition. If the column contains the value "(Default)", the default location for the source instance contains the local partition.  
   
      **Destination Folder**  
-     Displays the folder name on the destination [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance into which the local partition is to be synchronized. If the column contains the value, "(Default)", the default location for the destination instance contains the local partition.  
+     Displays the folder name on the destination [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance into which the local partition is to be synchronized. If the column contains the value, "(Default)", the default location for the destination instance contains the local partition.  
   
      Click the ellipsis (**...**) button to display the **Browse for Remote Folder** dialog box and specify a folder on the destination instance into which the local partitions stored in the selected location should be synchronized.  
   
@@ -106,7 +106,7 @@ manager: "mblythe"
      **Size**  
      Displays the estimated size of the local partition.  
   
-     The **Partitions in selected location** option displays a grid that describes the local partitions stored in the location on the source [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance specified in the **Source Folder** column of the selected row in **Locations**.  
+     The **Partitions in selected location** option displays a grid that describes the local partitions stored in the location on the source [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance specified in the **Source Folder** column of the selected row in **Locations**.  
   
      **Cube**  
      Displays the name of the cube that contains the partition.  
@@ -120,10 +120,10 @@ manager: "mblythe"
      **Size(Mb)**  
      Displays the size in megabytes (MB) of the partition.  
   
-5.  Optionally, change location for remote partitions.Use the **Specify Locations for Remote Partitions** page to indicate if remote partitions managed by the specified database on the source server should be synchronized, and to specify a destination [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance and database into which the selected remote partitions should be stored.  
+5.  Optionally, change location for remote partitions.Use the **Specify Locations for Remote Partitions** page to indicate if remote partitions managed by the specified database on the source server should be synchronized, and to specify a destination [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance and database into which the selected remote partitions should be stored.  
   
     > [!NOTE]  
-    >  This page appears only if at least one remote partition is managed by the specified database on the source [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance.  
+    >  This page appears only if at least one remote partition is managed by the specified database on the source [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance.  
   
      The **Locations** option displays a grid that lists details about locations in which remote partitions for the source database are stored, including source and destination information and the storage size used by each location, available from the selected database. The grid contains the following columns:  
   
@@ -134,25 +134,25 @@ manager: "mblythe"
     >  If this option is not selected for a location, remote partitions that are contained in that location will not be synchronized.  
   
      **Source Server**  
-     Displays the name of the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance that contains remote partitions.  
+     Displays the name of the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance that contains remote partitions.  
   
      **Source Folder**  
-     Displays the folder name on the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance that contains remote partitions. If the column contains the value "(Default)", the default location for the instance displayed in **Source Server** contains remote partitions.  
+     Displays the folder name on the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance that contains remote partitions. If the column contains the value "(Default)", the default location for the instance displayed in **Source Server** contains remote partitions.  
   
      **Destination Server**  
-     Displays the name of the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance into which the remote partitions stored in the location specified in **Source Server** and **Source Folder** should be synchronized.  
+     Displays the name of the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance into which the remote partitions stored in the location specified in **Source Server** and **Source Folder** should be synchronized.  
   
-     Click the ellipsis (**...**) button to display the **Connection Manager** dialog box and specify an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance into which the remote partitions stored in the selected location should be synchronized.  
+     Click the ellipsis (**...**) button to display the **Connection Manager** dialog box and specify an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance into which the remote partitions stored in the selected location should be synchronized.  
   
      **Destination Folder**  
-     Displays the folder name on the destination [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance into which the remote partition is to be synchronized. If the column contains the value, "(Default)", the default location for the destination instance should contain the remote partition.  
+     Displays the folder name on the destination [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance into which the remote partition is to be synchronized. If the column contains the value, "(Default)", the default location for the destination instance should contain the remote partition.  
   
      Click the ellipsis (**...**) button to display the **Browse for Remote Folder** dialog box and specify a folder on the destination instance into which the remote partitions stored in the selected location should be synchronized.  
   
      **Size**  
      Displays the estimated size of remote partitions stored in the location.  
   
-     The **Partitions in selected location** displays a grid that describes the remote partitions stored in the location on the source [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance specified in the **Source Folder** column of the selected row in **Locations**. The grid contains the following columns:  
+     The **Partitions in selected location** displays a grid that describes the remote partitions stored in the location on the source [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance specified in the **Source Folder** column of the selected row in **Locations**. The grid contains the following columns:  
   
      **Cube**  
      Displays the name of the cube that contains the partition.  

@@ -15,7 +15,7 @@ f1_keywords:
 ms.assetid: 3c5eb1c5-d40a-424f-aa7c-43b112f42dec
 caps.latest.revision: 7
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Map Embedded Point Properties Dialog Box, Marker

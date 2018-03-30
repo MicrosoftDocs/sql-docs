@@ -18,14 +18,14 @@ manager: "jhubbard"
 # SAP BW Destination Editor (Advanced Page)
   Use the **Advanced** page of the **SAP BW Destination Editor** to set advanced settings such as package size and time-out information.  
   
- To learn more about the SAP BW destination of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW, see [SAP BW Destination](../../2014/integration-services/sap-bw-destination.md).  
+ To learn more about the SAP BW destination of the [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW, see [SAP BW Destination](../../2014/integration-services/sap-bw-destination.md).  
   
 > [!IMPORTANT]  
 >  The documentation for the Microsoft Connector 1.1 for SAP BW assumes familiarity with the SAP Netweaver BW environment. For more information about SAP Netweaver BW, or for information about how to configure SAP Netweaver BW objects and processes, see your SAP documentation.  
   
  **To open the Advanced page**  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package that contains the SAP BW destination.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package that contains the SAP BW destination.  
   
 2.  On the **Data Flow** tab, double-click the SAP BW destination.  
   

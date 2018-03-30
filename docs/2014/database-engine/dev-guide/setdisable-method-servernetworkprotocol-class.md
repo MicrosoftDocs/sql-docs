@@ -38,7 +38,7 @@ object
   
 ## Parts  
  *object*  
- A [ServerNetworkProtocol Class](../../../2014/database-engine/dev-guide/servernetworkprotocol-class.md) object that represents the network protocol used by the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ A [ServerNetworkProtocol Class](../../../2014/database-engine/dev-guide/servernetworkprotocol-class.md) object that represents the network protocol used by the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Property Value/Return Value  
  A uint32 value, which is 0 if the service was successfully modified, 1 if the request is not supported, and any other number to indicate an error.  

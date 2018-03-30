@@ -12,14 +12,14 @@ ms.topic: "article"
 ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
 caps.latest.revision: 7
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Controlling the Tablix Data Region Display on a Report Page (Report Builder and SSRS)
   This topic describes properties for a tablix data region that you can modify to change the way a tablix data region appears when you view it in a report.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## Controlling the Appearance of Data  
  The following features help control the appearance of a tablix data region:  
@@ -39,7 +39,7 @@ manager: "mblythe"
 ## Controlling Tablix Data Region Position and Expansion on a Page  
  The following features help control the way a tablix data region displays in a rendered report:  
   
--   **Controlling the position of a tablix data region in relation to other report items**. A tablix data region can be positioned above, next to, or below other report items on the report design surface. At run time, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] expands the tablix data region as needed for the data retrieved for the linked dataset, moving peer report items aside as needed. To anchor a tablix next to another report item, you must make the report items peers and adjust their relative positions. For more information, see [Rendering Behaviors &#40;Report Builder  and SSRS&#41;](../../2014/reporting-services/rendering-behaviors-report-builder-and-ssrs.md).  
+-   **Controlling the position of a tablix data region in relation to other report items**. A tablix data region can be positioned above, next to, or below other report items on the report design surface. At run time, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] expands the tablix data region as needed for the data retrieved for the linked dataset, moving peer report items aside as needed. To anchor a tablix next to another report item, you must make the report items peers and adjust their relative positions. For more information, see [Rendering Behaviors &#40;Report Builder  and SSRS&#41;](../../2014/reporting-services/rendering-behaviors-report-builder-and-ssrs.md).  
   
 -   **Changing the Expansion Direction**. To control whether a tablix data region expands across the page from left-to-right (LTR) or from right-to-left (RTL), use the Direction property, which can be accessed through the Properties window. For more information, see [Rendering Data Regions &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/rendering-data-regions-report-builder-and-ssrs.md).  
   

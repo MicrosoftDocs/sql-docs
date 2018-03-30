@@ -19,9 +19,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQL Server, Backup Device Object
-  The **Backup Device** object provides counters to monitor Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup devices used for backup and restore operations. Monitor backup devices when you want to determine the throughput or the progress and performance of your backup and restore operations on a per device basis. To monitor the throughput of the entire database backup or restore operation, use the **Backup/Restore Throughput/sec** counter of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Databases** object. For more information, see [SQL Server, Databases Object](../../2014/database-engine/sql-server-databases-object.md).  
+  The **Backup Device** object provides counters to monitor Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] backup devices used for backup and restore operations. Monitor backup devices when you want to determine the throughput or the progress and performance of your backup and restore operations on a per device basis. To monitor the throughput of the entire database backup or restore operation, use the **Backup/Restore Throughput/sec** counter of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **Databases** object. For more information, see [SQL Server, Databases Object](../../2014/database-engine/sql-server-databases-object.md).  
   
- This table describes the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Backup Device** counter.  
+ This table describes the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **Backup Device** counter.  
   
 |SQL Server Backup Device counters|Description|  
 |---------------------------------------|-----------------|  

@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # General (Partition Properties Dialog Box) (SSMS)
-  Use the **General** page of the **Partition Properties** dialog box in SQL Server Management Studio to set the general properties of a partition in a measure group for a cube in an [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database.  
+  Use the **General** page of the **Partition Properties** dialog box in SQL Server Management Studio to set the general properties of a partition in a measure group for a cube in an [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database.  
   
 ## Options  
   
@@ -35,12 +35,12 @@ manager: "mblythe"
 |**Last Processed**|Displays the date and time the partition was last processed.|  
 |**Last Schema Update**|Displays the date and time the metadata for the partition was last updated.|  
 |**Name**|Displays the name of the partition.|  
-|**Processing Mode**|Select the processing mode for the partition. For more information about processing modes for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects, see [Multidimensional Model Object Processing](../../2014/analysis-services/multidimensional-model-object-processing.md).|  
+|**Processing Mode**|Select the processing mode for the partition. For more information about processing modes for [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objects, see [Multidimensional Model Object Processing](../../2014/analysis-services/multidimensional-model-object-processing.md).|  
 |**Remote Data Source ID**|Displays the identifier of the remote data source from which the source data for the partition is retrieved.<br /><br /> Note: This property contains a value only for remote partitions.|  
 |**Slice**|Displays the expression that identifies the data slice represented by the partition.|  
 |**Source**|Displays the table or query that provides the source data for the partition.|  
 |**State**|Displays the current processing state of the partition.|  
-|**Storage Location**|Displays the folder in which the data for the partition is stored.<br /><br /> Note: This property contains a value only if a storage location other than the default storage location for the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance is specified.|  
+|**Storage Location**|Displays the folder in which the data for the partition is stored.<br /><br /> Note: This property contains a value only if a storage location other than the default storage location for the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance is specified.|  
 |**Type**|Displays the type of the partition.|  
   
 ## See Also  

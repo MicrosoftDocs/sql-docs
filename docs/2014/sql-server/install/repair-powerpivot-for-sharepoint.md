@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 9c346ae8-87fa-44e5-b88a-47e804fedf20
 caps.latest.revision: 6
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "jhubbard"
 ---
 # Repair PowerPivot for SharePoint

@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: fb13712b-e7ad-4f1f-b605-4554bad0cb60
 caps.latest.revision: 50
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Reinitialize Subscriptions
@@ -37,7 +37,7 @@ manager: "jhubbard"
   
  **To reinitialize a subscription**  
   
- To reinitialize all articles in a subscription, use [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], stored procedures or Replication Management Objects (RMO). To reinitialize individual articles in snapshot and transactional publications, you must use stored procedures. For more information, see [Reinitialize a Subscription](../../../2014/relational-databases/replication/reinitialize-a-subscription.md).  
+ To reinitialize all articles in a subscription, use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], stored procedures or Replication Management Objects (RMO). To reinitialize individual articles in snapshot and transactional publications, you must use stored procedures. For more information, see [Reinitialize a Subscription](../../../2014/relational-databases/replication/reinitialize-a-subscription.md).  
   
 ## See Also  
  [Initialize a Subscription](../../../2014/relational-databases/replication/initialize-a-subscription.md)   

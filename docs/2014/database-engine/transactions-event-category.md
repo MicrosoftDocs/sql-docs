@@ -28,8 +28,8 @@ manager: "jhubbard"
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[DTCTransaction Event Class](../../2014/database-engine/dtctransaction-event-class.md)|Tracks transactions coordinated by the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC). These are transactions distributed between two or more databases or instances of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].|  
-|[SQLTransaction Event Class](../../2014/database-engine/sqltransaction-event-class.md)|Tracks [!INCLUDE[tsql](../../includes/tsql-md.md)] BEGIN TRAN, COMMIT TRAN, SAVE TRAN, and ROLLBACK TRAN statements.|  
+|[DTCTransaction Event Class](../../2014/database-engine/dtctransaction-event-class.md)|Tracks transactions coordinated by the [!INCLUDE[msCoName](../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC). These are transactions distributed between two or more databases or instances of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)].|  
+|[SQLTransaction Event Class](../../2014/database-engine/sqltransaction-event-class.md)|Tracks [!INCLUDE[tsql](../includes/tsql-md.md)] BEGIN TRAN, COMMIT TRAN, SAVE TRAN, and ROLLBACK TRAN statements.|  
 |[TM: Begin Tran Completed Event Class](../../2014/database-engine/tm-begin-tran-completed-event-class.md)|Indicates that a BEGIN TRANSACTION request has completed.|  
 |[TM: Begin Tran Starting Event Class](../../2014/database-engine/tm-begin-tran-starting-event-class.md)|Indicates that a BEGIN TRANSACTION request is starting.|  
 |[TM: Commit Tran Completed Event Class](../../2014/database-engine/tm-commit-tran-completed-event-class.md)|Indicates that a COMMIT TRANSACTION request has completed.|  

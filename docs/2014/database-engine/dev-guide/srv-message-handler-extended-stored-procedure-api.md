@@ -29,9 +29,9 @@ manager: "jhubbard"
 # srv_message_handler (Extended Stored Procedure API)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
   
- Calls the installed Extended Stored Procedure API message handler. This function is usually used to call [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] from an extended stored procedure to log an error (defined by the extended stored procedure) in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] error log file or the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows application log.  
+ Calls the installed Extended Stored Procedure API message handler. This function is usually used to call [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from an extended stored procedure to log an error (defined by the extended stored procedure) in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log file or the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows application log.  
   
 ## Syntax  
   
@@ -76,10 +76,10 @@ oserrtextlen
  Is an error number defined by the extended stored procedure. This number must be from 50,001 through 2,147,483,647.  
   
  *severity*  
- Is a standard [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] severity value for the error. This number must be from 0 through 24.  
+ Is a standard [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] severity value for the error. This number must be from 0 through 24.  
   
  *state*  
- Is a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] state value for the error.  
+ Is a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] state value for the error.  
   
  *oserrnum*  
  Is the operating-system error number. This argument is ignored.  
@@ -100,7 +100,7 @@ oserrtextlen
  SUCCEED or FAIL.  
   
 ## Remarks  
- The **srv_message_handler** function enables an extended stored procedure to integrate with the centralized error logging and reporting features of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] alerts can be established for events from extended stored procedures, and SQL Server Agent will monitor for these alert conditions.  
+ The **srv_message_handler** function enables an extended stored procedure to integrate with the centralized error logging and reporting features of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerts can be established for events from extended stored procedures, and SQL Server Agent will monitor for these alert conditions.  
   
  If the error message is longer, it is truncated to 412 bytes.  
   

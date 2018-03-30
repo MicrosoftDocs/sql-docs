@@ -20,7 +20,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Select SMO Enumeration Dialog Box
-  Use the **Select SMO Enumeration** dialog box to specify the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) object on the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to enumerate, and to select the enumeration type.  
+  Use the **Select SMO Enumeration** dialog box to specify the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects (SMO) object on the specified instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to enumerate, and to select the enumeration type.  
   
 ## Options  
  **Enumerate**  

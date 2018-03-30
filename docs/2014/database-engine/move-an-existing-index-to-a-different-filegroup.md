@@ -18,11 +18,11 @@ helpviewer_keywords:
 ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 caps.latest.revision: 42
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Move an Existing Index to a Different Filegroup
-  This topic describes how to move an existing index from its current filegroup to a different filegroup in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  This topic describes how to move an existing index from its current filegroup to a different filegroup in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -44,7 +44,7 @@ manager: "jhubbard"
   
 -   If a table has a clustered index, moving the clustered index to a new filegroup moves the table to that filegroup.  
   
--   You cannot move indexes created using a UNIQUE or PRIMARY KEY constraint using [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. To move these indexes use the [CREATE INDEX](../Topic/CREATE%20INDEX%20\(Transact-SQL\).md) statement with the (DROP_EXISTING=ON) option in [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+-   You cannot move indexes created using a UNIQUE or PRIMARY KEY constraint using [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. To move these indexes use the [CREATE INDEX](~/t-sql/statements/create-index-transact-sql.md) statement with the (DROP_EXISTING=ON) option in [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
 ###  <a name="Security"></a> Security  
   
@@ -93,7 +93,7 @@ manager: "jhubbard"
   
      If you are moving a clustered index, you can use online processing. Online processing allows concurrent user access to the underlying data and to nonclustered indexes during the index operation. For more information, see [Perform Index Operations Online](../../2014/database-engine/perform-index-operations-online.md).  
   
-     On multiprocessor computers using [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], you can configure the number of processors used to execute the index statement by specifying a maximum degree of parallelism value. The Parallel indexed operations feature is not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md). For more information about Parallel indexed operations, see [Configure Parallel Index Operations](../../2014/database-engine/configure-parallel-index-operations.md).  
+     On multiprocessor computers using [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], you can configure the number of processors used to execute the index statement by specifying a maximum degree of parallelism value. The Parallel indexed operations feature is not available in every edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md). For more information about Parallel indexed operations, see [Configure Parallel Index Operations](../../2014/database-engine/configure-parallel-index-operations.md).  
   
 8.  Click **OK**.  
   
@@ -143,7 +143,7 @@ manager: "jhubbard"
   
 #### To move an existing index to a different filegroup  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -179,6 +179,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [CREATE INDEX &#40;Transact-SQL&#41;](../Topic/CREATE%20INDEX%20\(Transact-SQL\).md).  
+ For more information, see [CREATE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md).  
   
   

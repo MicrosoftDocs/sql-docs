@@ -21,7 +21,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Create a Schedule
-  You can create a schedule for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or SQL Server Management Objects.  
+  You can create a schedule for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent jobs in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../includes/tsql-md.md)], or SQL Server Management Objects.  
   
 -   **Before you begin:**  
   
@@ -44,7 +44,7 @@ manager: "jhubbard"
   
 #### To create a schedule  
   
-1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], and then expand that instance.  
+1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], and then expand that instance.  
   
 2.  Expand **SQL Server Agent**, right-click **Jobs**, and select **Manage Schedules**.  
   
@@ -66,7 +66,7 @@ manager: "jhubbard"
   
 #### To create a schedule  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -86,7 +86,7 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [sp_add_schedule &#40;Transact-SQL&#41;](../Topic/sp_add_schedule%20\(Transact-SQL\).md).  
+ For more information, see [sp_add_schedule &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).  
   
 ##  <a name="SMO"></a> Using SQL Server Management Objects  
  **To create a schedule**  

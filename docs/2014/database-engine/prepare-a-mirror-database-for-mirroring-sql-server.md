@@ -22,20 +22,20 @@ manager: "jhubbard"
 # Prepare a Mirror Database for Mirroring (SQL Server)
   Before a database mirroring session can start, the database owner or system administrator must make sure that the mirror database has been created and is ready for mirroring. Creating a new mirror database minimally requires taking a full backup of the principal database and a subsequent log backup and restoring them both onto the mirror server instance, using WITH NORECOVERY.  
   
- This topic describes how to prepare a mirror database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+ This topic describes how to prepare a mirror database in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
 ###  <a name="Requirements"></a> Requirements  
   
--   The principal and mirror server instances must be running on the same version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. While it is possible for the mirror server to have a higher version of SQL Server, this configuration is only recommended during a carefully planned upgrade process. In such a configuration, you run the risk of an automatic failover, in which data movement is automatically suspended because data cannot move to a lower version of SQL Server. For more information, see [Minimize Downtime for Mirrored Databases When Upgrading Server Instances](../../2014/database-engine/minimize-downtime-for-mirrored-databases-when-upgrading-server-instances.md).  
+-   The principal and mirror server instances must be running on the same version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. While it is possible for the mirror server to have a higher version of SQL Server, this configuration is only recommended during a carefully planned upgrade process. In such a configuration, you run the risk of an automatic failover, in which data movement is automatically suspended because data cannot move to a lower version of SQL Server. For more information, see [Minimize Downtime for Mirrored Databases When Upgrading Server Instances](../../2014/database-engine/minimize-downtime-for-mirrored-databases-when-upgrading-server-instances.md).  
   
--   The principal and mirror server instances must be running on the same edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For information about support for database mirroring in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+-   The principal and mirror server instances must be running on the same edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For information about support for database mirroring in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 -   The database must use the full recovery model.  
   
-     For more information, see [View or Change the Recovery Model of a Database &#40;SQL Server&#41;](../../2014/database-engine/view-or-change-the-recovery-model-of-a-database-sql-server.md) or [sys.databases &#40;Transact-SQL&#41;](../Topic/sys.databases%20\(Transact-SQL\).md) and [ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20\(Transact-SQL\).md).  
+     For more information, see [View or Change the Recovery Model of a Database &#40;SQL Server&#41;](../../2014/database-engine/view-or-change-the-recovery-model-of-a-database-sql-server.md) or [sys.databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md) and [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md).  
   
 -   The name of the mirror database must be the same as the name of the principal database.  
   
@@ -85,7 +85,7 @@ manager: "jhubbard"
  **To prepare a mirror database**  
   
 > [!NOTE]  
->  For a [!INCLUDE[tsql](../../includes/tsql-md.md)] example of this procedure, see [Example (Transact-SQL)](#TsqlExample), later in this section.  
+>  For a [!INCLUDE[tsql](../includes/tsql-md.md)] example of this procedure, see [Example (Transact-SQL)](#TsqlExample), later in this section.  
   
 1.  Connect to principal server instance.  
   
@@ -110,7 +110,7 @@ manager: "jhubbard"
   
     -   [Restore a Database Backup &#40;SQL Server Management Studio&#41;](../../2014/database-engine/restore-a-database-backup-sql-server-management-studio.md)  
   
-    -   [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md) and [RESTORE Arguments &#40;Transact-SQL&#41;](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md).  
+    -   [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md) and [RESTORE Arguments &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
 7.  Using RESTORE WITH NORECOVERY, apply any outstanding log backup or backups to the mirror database.  
   
@@ -119,9 +119,9 @@ manager: "jhubbard"
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
  Before you can start a database mirroring session, you must create the mirror database. You should do this just before starting the mirroring session.  
   
- This example uses the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database, which uses the simple recovery model by default.  
+ This example uses the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] sample database, which uses the simple recovery model by default.  
   
-1.  To use database mirroring with the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database, modify it to use the full recovery model:  
+1.  To use database mirroring with the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database, modify it to use the full recovery model:  
   
     ```  
     USE master;  
@@ -180,7 +180,7 @@ manager: "jhubbard"
         GO  
         ```  
   
-5.  After you create the full backup, you must create a log backup on the principal database. For example, the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement backs up the log to the same file used by the preceding full backup:  
+5.  After you create the full backup, you must create a log backup on the principal database. For example, the following [!INCLUDE[tsql](../includes/tsql-md.md)] statement backs up the log to the same file used by the preceding full backup:  
   
     ```  
     BACKUP LOG AdventureWorks   
@@ -190,7 +190,7 @@ manager: "jhubbard"
   
 6.  Before you can start mirroring, you must apply the required log backup (and any subsequent log backups).  
   
-     For example, the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement restores the first log from `C:\AdventureWorks.bak`:  
+     For example, the following [!INCLUDE[tsql](../includes/tsql-md.md)] statement restores the first log from `C:\AdventureWorks.bak`:  
   
     ```  
     RESTORE LOG AdventureWorks   
@@ -201,7 +201,7 @@ manager: "jhubbard"
   
 7.  If any additional log backups occur before you start mirroring, you must also restore all of those log backups, in sequence, to the mirror server using WITH NORECOVERY.  
   
-     For example, the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement restores two additional logs from `C:\AdventureWorks.bak`:  
+     For example, the following [!INCLUDE[tsql](../includes/tsql-md.md)] statement restores two additional logs from `C:\AdventureWorks.bak`:  
   
     ```  
     RESTORE LOG AdventureWorks   
@@ -247,8 +247,8 @@ manager: "jhubbard"
  [Back Up and Restore Full-Text Catalogs and Indexes](../../2014/database-engine/back-up-and-restore-full-text-catalogs-and-indexes.md)   
  [Database Mirroring and Full-Text Catalogs &#40;SQL Server&#41;](../../2014/database-engine/database-mirroring-and-full-text-catalogs-sql-server.md)   
  [Database Mirroring and Replication &#40;SQL Server&#41;](../../2014/database-engine/database-mirroring-and-replication-sql-server.md)   
- [BACKUP &#40;Transact-SQL&#41;](../Topic/BACKUP%20\(Transact-SQL\).md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
- [RESTORE Arguments &#40;Transact-SQL&#41;](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md)  
+ [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)   
+ [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)   
+ [RESTORE Arguments &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-arguments-transact-sql.md)  
   
   

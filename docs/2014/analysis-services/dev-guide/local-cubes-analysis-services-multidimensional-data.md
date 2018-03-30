@@ -27,20 +27,20 @@ manager: "mblythe"
   
  ADMOD.NET and Analysis Management Objects (AMO) also load the local cube engine when interacting with local cubes. Only a single process can access a local cube file, because the local cube engine exclusively locks a local cube file when it establishes a connection to the local cube. With a process, up to five simultaneous connections are permitted.  
   
- A .cub file may contain more than one cube or data mining model. Queries to the local cubes and data mining models are handled by the local cube engine and do not require a connection to an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance.  
+ A .cub file may contain more than one cube or data mining model. Queries to the local cubes and data mining models are handled by the local cube engine and do not require a connection to an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance.  
   
 > [!NOTE]  
->  The use of [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] and [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] to manage local cubes is not supported.  
+>  The use of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to manage local cubes is not supported.  
   
 ## Local Cubes  
- A local cube can be created and populated from either an existing cube in an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance or from a relational data source.  
+ A local cube can be created and populated from either an existing cube in an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance or from a relational data source.  
   
 |Source for data for local cube|Creation method|  
 |------------------------------------|---------------------|  
-|Server-based cube|You can use either the CREATE GLOBAL CUBE statement or an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Scripting Language (ASSL) script to create and populate a cube from a server-based cube. For more information, see [CREATE GLOBAL CUBE Statement  &#40;MDX&#41;](../Topic/CREATE%20GLOBAL%20CUBE%20Statement%20%20\(MDX\).md) or [Analysis Services Scripting Language &#40;ASSL&#41; Reference](../../../2014/analysis-services/dev-guide/analysis-services-scripting-language-assl-reference.md).|  
-|Relational data source|You use an ASSL script to create and populate a cube from an OLE DB relational database. To create a local cube using ASSL, you simply connect to a local cube file (*.cub) and execute the ASSL script in the same manner as executing an ASSL script against an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance to create a server cube. For more information, see [Analysis Services Scripting Language &#40;ASSL&#41; Reference](../../../2014/analysis-services/dev-guide/analysis-services-scripting-language-assl-reference.md).|  
+|Server-based cube|You can use either the CREATE GLOBAL CUBE statement or an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripting Language (ASSL) script to create and populate a cube from a server-based cube. For more information, see [CREATE GLOBAL CUBE Statement  &#40;MDX&#41;](~/mdx/mdx-data-definition-create-global-cube.md) or [Analysis Services Scripting Language &#40;ASSL&#41; Reference](../../../2014/analysis-services/dev-guide/analysis-services-scripting-language-assl-reference.md).|  
+|Relational data source|You use an ASSL script to create and populate a cube from an OLE DB relational database. To create a local cube using ASSL, you simply connect to a local cube file (*.cub) and execute the ASSL script in the same manner as executing an ASSL script against an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance to create a server cube. For more information, see [Analysis Services Scripting Language &#40;ASSL&#41; Reference](../../../2014/analysis-services/dev-guide/analysis-services-scripting-language-assl-reference.md).|  
   
- Use the REFRESH CUBE statement to rebuild a local cube and update its data. For more information, see [REFRESH CUBE Statement &#40;MDX&#41;](../Topic/REFRESH%20CUBE%20Statement%20\(MDX\).md).  
+ Use the REFRESH CUBE statement to rebuild a local cube and update its data. For more information, see [REFRESH CUBE Statement &#40;MDX&#41;](~/mdx/mdx-data-definition-refresh-cube.md).  
   
 ### Local Cubes Created from Server-based Cubes  
  When creating local cubes created from server-based cubes, the following considerations apply:  
@@ -73,8 +73,8 @@ manager: "mblythe"
  Local cubes are not secured using roles like server cubes. Anyone with file-level access to a local cube file can query cubes in it. You can use the `Encryption Password` connection property on a local cube file to set a password on the local cube file. Setting a password on a local cube file requires all future connections to the local cube file to use this password in order to query the file.  
   
 ## See Also  
- [CREATE GLOBAL CUBE Statement  &#40;MDX&#41;](../Topic/CREATE%20GLOBAL%20CUBE%20Statement%20%20\(MDX\).md)   
+ [CREATE GLOBAL CUBE Statement  &#40;MDX&#41;](~/mdx/mdx-data-definition-create-global-cube.md)   
  [Developing with Analysis Services Scripting Language &#40;ASSL&#41;](../../../2014/analysis-services/dev-guide/developing-with-analysis-services-scripting-language-assl.md)   
- [REFRESH CUBE Statement &#40;MDX&#41;](../Topic/REFRESH%20CUBE%20Statement%20\(MDX\).md)  
+ [REFRESH CUBE Statement &#40;MDX&#41;](~/mdx/mdx-data-definition-refresh-cube.md)  
   
   

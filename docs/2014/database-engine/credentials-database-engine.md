@@ -23,20 +23,20 @@ helpviewer_keywords:
 ms.assetid: c8df6022-e0b4-46b8-9670-3f86938d3177
 caps.latest.revision: 28
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Credentials (Database Engine)
-  A credential is a record that contains the authentication information (credentials) required to connect to a resource outside [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This information is used internally by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Most credentials contain a Windows user name and password.  
+  A credential is a record that contains the authentication information (credentials) required to connect to a resource outside [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. This information is used internally by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Most credentials contain a Windows user name and password.  
   
- The information stored in a credential enables a user who has connected to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by way of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication to access resources outside the server instance. When the external resource is Windows, the user is authenticated as the Windows user specified in the credential. A single credential can be mapped to multiple [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins. However, a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login can be mapped to only one credential.  
+ The information stored in a credential enables a user who has connected to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] by way of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication to access resources outside the server instance. When the external resource is Windows, the user is authenticated as the Windows user specified in the credential. A single credential can be mapped to multiple [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] logins. However, a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] login can be mapped to only one credential.  
   
  System credentials are created automatically and are associated with specific endpoints. Names for system credentials start with two hash signs (##).  
   
- For more information about credentials, see the [sys.credentials](../Topic/sys.credentials%20\(Transact-SQL\).md) catalog view.  
+ For more information about credentials, see the [sys.credentials](~/relational-databases/system-catalog-views/sys-credentials-transact-sql.md) catalog view.  
   
 ## Related Content  
- [Create a Credential](../../2014/database-engine/create-a-credential.md) [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../Topic/CREATE%20CREDENTIAL%20\(Transact-SQL\).md)  
+ [Create a Credential](../../2014/database-engine/create-a-credential.md) [CREATE CREDENTIAL &#40;Transact-SQL&#41;](~/t-sql/statements/create-credential-transact-sql.md)  
   
  [Securing SQL Server](../../2014/database-engine/securing-sql-server.md)  
   

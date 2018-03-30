@@ -12,11 +12,11 @@ ms.topic: "article"
 ms.assetid: 5ddc97a7-7ee5-475d-bc49-3b814dce7e19
 caps.latest.revision: 10
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Plan for Map Report Support
-  [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] supports map reports that use spatial data sources. Spatial data can come from SQL Server databases, from ESRI Shapefiles, or from the Map Gallery that is installed with either Reporting Services or Report Builder. A map can also display a background of Bing map tiles. A report author can create a report that specifies spatial data or Bing map tiles as dynamic and retrieved at run time or as static and embedded in the report definition.  
+  [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] supports map reports that use spatial data sources. Spatial data can come from SQL Server databases, from ESRI Shapefiles, or from the Map Gallery that is installed with either Reporting Services or Report Builder. A map can also display a background of Bing map tiles. A report author can create a report that specifies spatial data or Bing map tiles as dynamic and retrieved at run time or as static and embedded in the report definition.  
   
 ## Support for Bing Maps  
  Maps can include a background layer that displays Bing map tiles. To view a published report that has a map tile layer, the report server must be configured to retrieve tiles from Bing Maps Web Services. For more information, see [RSReportServer Configuration File](../../2014/reporting-services/rsreportserver-configuration-file.md).  
@@ -39,7 +39,7 @@ manager: "mblythe"
   
  To help reduce the size of report definitions that have maps, report authors can use one or more of the following options:  
   
--   From Report Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], add spatial data sources that are ESRI Shapefiles to the report server project. When you deploy the project, the ESRI Shapefiles are published to the report server in addition to the report. When the report author runs the Map wizard, they can specify a spatial data source from the Report Server project, and the map elements are not embedded in the report definitions by default.  
+-   From Report Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], add spatial data sources that are ESRI Shapefiles to the report server project. When you deploy the project, the ESRI Shapefiles are published to the report server in addition to the report. When the report author runs the Map wizard, they can specify a spatial data source from the Report Server project, and the map elements are not embedded in the report definitions by default.  
   
 -   From Report Builder, add spatial data sources that are ESRI Shapefiles by selecting Shapefiles from the report server. When the report author runs the Map wizard, they can browse to and select a spatial data source from the report server, and the map elements are not embedded in the report definitions by default.  
   

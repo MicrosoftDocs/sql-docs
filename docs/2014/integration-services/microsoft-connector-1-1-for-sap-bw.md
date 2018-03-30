@@ -16,7 +16,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Microsoft Connector 1.1 for SAP BW
-  The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW consists of a set of three components that let you extract data from, or load data into, an SAP Netweaver BW version 7 system.  
+  The [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW consists of a set of three components that let you extract data from, or load data into, an SAP Netweaver BW version 7 system.  
   
 > [!IMPORTANT]  
 >  The documentation for the Microsoft Connector 1.1 for SAP BW assumes familiarity with the SAP Netweaver BW environment. For more information about SAP Netweaver BW, or for information about how to configure SAP Netweaver BW objects and processes, see your SAP documentation.  
@@ -25,7 +25,7 @@ manager: "jhubbard"
 >  Extracting data from SAP Netweaver BW requires additional SAP licensing. Check with SAP to verify these requirements.  
   
 ## Components  
- The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW has the following components:  
+ The [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW has the following components:  
   
 -   **SAP BW Source**—The SAP BW source is a data flow source component that lets you extract data from an SAP Netweaver BW version 7 system.  
   
@@ -36,15 +36,15 @@ manager: "jhubbard"
  For a walkthrough that demonstrates how to configure and use the SAP BW connection manager, source, and destination, see the white paper, [Using SQL Server Integration Services with SAP BI 7.0](http://go.microsoft.com/fwlink/?LinkId=301897). This white paper also shows how to configure the required objects in SAP BW.  
   
 ## Documentation  
- This Help file for the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW contains the following topics and sections:  
+ This Help file for the [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW contains the following topics and sections:  
   
  [Installing the Microsoft Connector for 1.1 SAP BW](../../2014/integration-services/installing-the-microsoft-connector-for-1-1-sap-bw.md)  
- Describes the installation requirements for the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW.  
+ Describes the installation requirements for the [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW.  
   
  [Microsoft Connector 1.1 for SAP BW Components](../../2014/integration-services/microsoft-connector-1-1-for-sap-bw-components.md)  
- Describes each component of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW.  
+ Describes each component of the [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW.  
   
  [Microsoft Connector 1.1 for SAP BW F1 Help](../../2014/integration-services/microsoft-connector-1-1-for-sap-bw-f1-help.md)  
- Describes the user interface of each component of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW.  
+ Describes the user interface of each component of the [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW.  
   
   

@@ -16,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: 76e8a6ba-1381-4620-b356-4311e1331ca7
 caps.latest.revision: 37
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Create a Stored Procedure
-  This topic describes how to create a [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and by using the [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE PROCEDURE statement.  
+  This topic describes how to create a [!INCLUDE[tsql](../includes/tsql-md.md)] stored procedure by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] and by using the [!INCLUDE[tsql](../includes/tsql-md.md)] CREATE PROCEDURE statement.  
   
 ##  <a name="Top"></a>   
 -   **Before you begin:**  [Permissions](#Permissions)  
@@ -40,9 +40,9 @@ manager: "jhubbard"
 ###  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  **To create a procedure in Object Explorer**  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)] and then expand that instance.  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)] and then expand that instance.  
   
-2.  Expand **Databases**, expand the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database, and then expand **Programmability**.  
+2.  Expand **Databases**, expand the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database, and then expand **Programmability**.  
   
 3.  Right-click **Stored Procedures**, and then click **New Stored Procedure**.  
   
@@ -90,7 +90,7 @@ manager: "jhubbard"
 ###  <a name="TsqlProcedure"></a> Using Transact-SQL  
  **To create a procedure in Query Editor**  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  From the **File** menu, click **New Query**.  
   
@@ -128,6 +128,6 @@ manager: "jhubbard"
   
 ##  <a name="PowerShellProcedure"></a>   
 ## See Also  
- [CREATE PROCEDURE &#40;Transact-SQL&#41;](../Topic/CREATE%20PROCEDURE%20\(Transact-SQL\).md)  
+ [CREATE PROCEDURE &#40;Transact-SQL&#41;](~/t-sql/statements/create-procedure-transact-sql.md)  
   
   

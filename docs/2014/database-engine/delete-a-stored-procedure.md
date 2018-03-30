@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 232dbf4d-392a-406f-af3a-579518cd8e46
 caps.latest.revision: 25
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Delete a Stored Procedure
     
-##  <a name="Top"></a> This topic describes how to delete a stored procedure in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+##  <a name="Top"></a> This topic describes how to delete a stored procedure in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
 -   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Security](#Security)  
   
@@ -47,7 +47,7 @@ manager: "jhubbard"
 ###  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  **To delete a procedure in Object Explorer**  
   
-1.  In Object Explorer, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)] and then expand that instance.  
+1.  In Object Explorer, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)] and then expand that instance.  
   
 2.  Expand **Databases**, expand the database in which the procedure belongs, and then expand **Programmability**.  
   
@@ -62,7 +62,7 @@ manager: "jhubbard"
 ###  <a name="TsqlProcedure"></a> Using Transact-SQL  
  **To delete a procedure in Query Editor**  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)] and then expand that instance.  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)] and then expand that instance.  
   
 2.  Expand **Databases**, expand the database in which the procedure belongs, or, from the tool bar, select the database from the list of available databases.  
   
@@ -94,6 +94,6 @@ manager: "jhubbard"
  [Rename a Stored Procedure](../../2014/database-engine/rename-a-stored-procedure.md)   
  [View the Definition of a Stored Procedure](../../2014/database-engine/view-the-definition-of-a-stored-procedure.md)   
  [View the Dependencies of a Stored Procedure](../../2014/database-engine/view-the-dependencies-of-a-stored-procedure.md)   
- [DROP PROCEDURE &#40;Transact-SQL&#41;](../Topic/DROP%20PROCEDURE%20\(Transact-SQL\).md)  
+ [DROP PROCEDURE &#40;Transact-SQL&#41;](~/t-sql/statements/drop-procedure-transact-sql.md)  
   
   

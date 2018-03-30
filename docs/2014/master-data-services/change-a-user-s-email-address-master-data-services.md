@@ -18,7 +18,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Change a User&#39;s Email Address (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], you can change the email address that notifications are sent to, and the default format of notification emails.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], you can change the email address that notifications are sent to, and the default format of notification emails.  
   
 ## Prerequisites  
  To perform this procedure:  
@@ -27,7 +27,7 @@ manager: "jhubbard"
   
 ### To change a user's email address or default email format  
   
-1.  In [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], click **User and Group Permissions**.  
+1.  In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], click **User and Group Permissions**.  
   
 2.  On the **Users** page, select the row for the user that you want to edit.  
   

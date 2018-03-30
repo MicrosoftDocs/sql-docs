@@ -18,7 +18,7 @@ ms.author: "jroth"
 manager: "jhubbard"
 ---
 # Create an Availability Group (Transact-SQL)
-  This topic describes how to use [!INCLUDE[tsql](../../includes/tsql-md.md)] to create and configure an availability group on instances of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] on which the [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] feature is enabled. An *availability group* defines a set of user databases that will fail over as a single unit and a set of failover partners, known as *availability replicas*, that support failover.  
+  This topic describes how to use [!INCLUDE[tsql](../includes/tsql-md.md)] to create and configure an availability group on instances of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] on which the [!INCLUDE[ssHADR](../includes/sshadr-md.md)] feature is enabled. An *availability group* defines a set of user databases that will fail over as a single unit and a set of failover partners, known as *availability replicas*, that support failover.  
   
 > [!NOTE]  
 >  For an introduction to availability groups, see [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/overview-of-alwayson-availability-groups-sql-server.md).  
@@ -26,14 +26,14 @@ manager: "jhubbard"
 
   
 > [!NOTE]  
->  As an alternative to using [!INCLUDE[tsql](../../includes/tsql-md.md)], you can use the Create Availability Group wizard or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell cmdlets. For more information, see [Use the Availability Group Wizard &#40;SQL Server Management Studio&#41;](../../2014/database-engine/use-the-availability-group-wizard-sql-server-management-studio.md), [Use the New Availability Group Dialog Box &#40;SQL Server Management Studio&#41;](../../2014/database-engine/use-the-new-availability-group-dialog-box-sql-server-management-studio.md), or [Create an Availability Group &#40;SQL Server PowerShell&#41;](../../2014/database-engine/create-an-availability-group-sql-server-powershell.md).  
+>  As an alternative to using [!INCLUDE[tsql](../includes/tsql-md.md)], you can use the Create Availability Group wizard or [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell cmdlets. For more information, see [Use the Availability Group Wizard &#40;SQL Server Management Studio&#41;](../../2014/database-engine/use-the-availability-group-wizard-sql-server-management-studio.md), [Use the New Availability Group Dialog Box &#40;SQL Server Management Studio&#41;](../../2014/database-engine/use-the-new-availability-group-dialog-box-sql-server-management-studio.md), or [Create an Availability Group &#40;SQL Server PowerShell&#41;](../../2014/database-engine/create-an-availability-group-sql-server-powershell.md).  
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
  We strongly recommend that you read this section before attempting to create your first availability group.  
   
 ###  <a name="PrerequisitesRestrictions"></a> Prerequisites, Restrictions, and Recommendations  
   
--   Before creating an availability group, verify that the instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that host availability replicas reside on different Windows Server Failover Clustering (WSFC) node within the same WSFC failover cluster. Also, verify that each of the server instance meets all other [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] prerequisites. For more information, we strongly recommend that you read [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/prereqs-restrictions-recommendations-always-on-availability.md).  
+-   Before creating an availability group, verify that the instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that host availability replicas reside on different Windows Server Failover Clustering (WSFC) node within the same WSFC failover cluster. Also, verify that each of the server instance meets all other [!INCLUDE[ssHADR](../includes/sshadr-md.md)] prerequisites. For more information, we strongly recommend that you read [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ###  <a name="Security"></a> Security  
   
@@ -41,26 +41,26 @@ manager: "jhubbard"
  Requires membership in the **sysadmin** fixed server role and either CREATE AVAILABILITY GROUP server permission, ALTER ANY AVAILABILITY GROUP permission, or CONTROL SERVER permission.  
   
 ###  <a name="SummaryTsqlStatements"></a> Summary of Tasks and Corresponding Transact-SQL Statements  
- The following table lists the basic tasks involved in creating and configuring an availability group and indicates which [!INCLUDE[tsql](../../includes/tsql-md.md)] statements to use for these tasks. The [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] tasks must be performed in the sequence in which they are presented in the table.  
+ The following table lists the basic tasks involved in creating and configuring an availability group and indicates which [!INCLUDE[tsql](../includes/tsql-md.md)] statements to use for these tasks. The [!INCLUDE[ssHADR](../includes/sshadr-md.md)] tasks must be performed in the sequence in which they are presented in the table.  
   
 |Task|Transact-SQL Statement(s)|Where to Perform Task**<sup>*</sup>**|  
 |----------|----------------------------------|-------------------------------------------|  
-|Create database mirroring endpoint (once per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance)|[CREATE ENDPOINT](../Topic/CREATE%20ENDPOINT%20\(Transact-SQL\).md) *endpointName* … FOR DATABASE_MIRRORING|Execute on each server instance that lacks database mirroring endpoint.|  
-|Create availability group|[CREATE AVAILABILITY GROUP](../Topic/CREATE%20AVAILABILITY%20GROUP%20\(Transact-SQL\).md)|Execute on the server instance that is to host the initial primary replica.|  
+|Create database mirroring endpoint (once per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance)|[CREATE ENDPOINT](~/t-sql/statements/create-endpoint-transact-sql.md) *endpointName* … FOR DATABASE_MIRRORING|Execute on each server instance that lacks database mirroring endpoint.|  
+|Create availability group|[CREATE AVAILABILITY GROUP](~/t-sql/statements/create-availability-group-transact-sql.md)|Execute on the server instance that is to host the initial primary replica.|  
 |Join secondary replica to availability group|[ALTER AVAILABILITY GROUP](../../2014/database-engine/join-a-secondary-replica-to-an-availability-group-sql-server.md) *group_name* JOIN|Execute on each server instance that hosts a secondary replica.|  
-|Prepare the secondary database|[BACKUP](../Topic/BACKUP%20\(Transact-SQL\).md) and [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md).|Create backups on the server instance that hosts the primary replica.<br /><br /> Restore backups on each server instance that hosts a secondary replica, using RESTORE WITH NORECOVERY.|  
-|Start data synchronization by joining each secondary database to availability group|[ALTER DATABASE](../Topic/ALTER%20DATABASE%20SET%20HADR%20\(Transact-SQL\).md) *database_name* SET HADR AVAILABILITY GROUP = *group_name*|Execute on each server instance that hosts a secondary replica.|  
+|Prepare the secondary database|[BACKUP](~/t-sql/statements/backup-transact-sql.md) and [RESTORE](~/t-sql/statements/restore-statements-transact-sql.md).|Create backups on the server instance that hosts the primary replica.<br /><br /> Restore backups on each server instance that hosts a secondary replica, using RESTORE WITH NORECOVERY.|  
+|Start data synchronization by joining each secondary database to availability group|[ALTER DATABASE](~/t-sql/statements/alter-database-transact-sql-set-hadr.md) *database_name* SET HADR AVAILABILITY GROUP = *group_name*|Execute on each server instance that hosts a secondary replica.|  
   
  **<sup>*</sup>**  To perform a given task, connect to the indicated server instance or instances.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL to Create and Configure an Availability Group  
   
 > [!NOTE]  
->  For a sample configuration procedure containing code examples of each these [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, see [Example: Configuring an Availability Group that Uses Windows Authentication](#ExampleConfigAGWinAuth).  
+>  For a sample configuration procedure containing code examples of each these [!INCLUDE[tsql](../includes/tsql-md.md)] statements, see [Example: Configuring an Availability Group that Uses Windows Authentication](#ExampleConfigAGWinAuth).  
   
 1.  Connect to the server instance that is to host the primary replica.  
   
-2.  Create the availability group by using the [CREATE AVAILABILITY GROUP](../Topic/CREATE%20AVAILABILITY%20GROUP%20\(Transact-SQL\).md)[!INCLUDE[tsql](../../includes/tsql-md.md)] statement.  
+2.  Create the availability group by using the [CREATE AVAILABILITY GROUP](~/t-sql/statements/create-availability-group-transact-sql.md)[!INCLUDE[tsql](../includes/tsql-md.md)] statement.  
   
 3.  Join the new secondary replica to the availability group. For more information, see [Join a Secondary Replica to an Availability Group &#40;SQL Server&#41;](../../2014/database-engine/join-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
@@ -69,7 +69,7 @@ manager: "jhubbard"
 5.  Join every new secondary database to the availability group. For more information, see [Join a Secondary Replica to an Availability Group &#40;SQL Server&#41;](../../2014/database-engine/join-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
 ##  <a name="ExampleConfigAGWinAuth"></a> Example: Configuring an Availability Group that Uses Windows Authentication  
- This example creates a sample [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] configuration procedure that uses [!INCLUDE[tsql](../../includes/tsql-md.md)] to set up database mirroring endpoints that use Windows Authentication and to create and configure an availability group and its secondary databases.  
+ This example creates a sample [!INCLUDE[ssHADR](../includes/sshadr-md.md)] configuration procedure that uses [!INCLUDE[tsql](../includes/tsql-md.md)] to set up database mirroring endpoints that use Windows Authentication and to create and configure an availability group and its secondary databases.  
   
  This example contains the following sections:  
   
@@ -82,11 +82,11 @@ manager: "jhubbard"
 ###  <a name="PrerequisitesForExample"></a> Prerequisites for Using the Sample Configuration Procedure  
  This sample procedure has the following requirements:  
   
--   The server instances must support [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. For more information, see [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/prereqs-restrictions-recommendations-always-on-availability.md).  
+-   The server instances must support [!INCLUDE[ssHADR](../includes/sshadr-md.md)]. For more information, see [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 -   Two sample databases, *MyDb1* and *MyDb2*, must exist on the server instance that will host the primary replica. The following code examples create and configure these two databases and create a full backup of each. Execute these code examples on the server instance on which you intend to create the sample availability group. This server instance will host the initial primary replica of the sample availability group.  
   
-    1.  The following [!INCLUDE[tsql](../../includes/tsql-md.md)] example creates these databases and alters them to use the full recovery model:  
+    1.  The following [!INCLUDE[tsql](../includes/tsql-md.md)] example creates these databases and alters them to use the full recovery model:  
   
         ```  
         -- Create sample databases:  
@@ -122,7 +122,7 @@ manager: "jhubbard"
   
  The following table summarizes the values used in this sample configuration.  
   
-|Initial role|System|Host [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instance|  
+|Initial role|System|Host [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Instance|  
 |------------------|------------|---------------------------------------------|  
 |Primary|`COMPUTER01`|`AgHostInstance`|  
 |Secondary|`COMPUTER02`|Default instance.|  
@@ -156,7 +156,7 @@ manager: "jhubbard"
   
      If the service accounts of the server instances run under different domain users, on each server instance, create a login for the other server instance and grant this login permission to access the local database mirroring endpoint.  
   
-     The following code example shows the [!INCLUDE[tsql](../../includes/tsql-md.md)] statements for creating a login and granting it permission on an endpoint. The domain account of the remote server instance is represented here as *domain_name*\\*user_name*.  
+     The following code example shows the [!INCLUDE[tsql](../includes/tsql-md.md)] statements for creating a login and granting it permission on an endpoint. The domain account of the remote server instance is represented here as *domain_name*\\*user_name*.  
   
     ```  
     -- If necessary, create a login for the service account, domain_name\user_name  
@@ -197,7 +197,7 @@ manager: "jhubbard"
     GO  
     ```  
   
-     For additional [!INCLUDE[tsql](../../includes/tsql-md.md)] code examples of creating an availability group, see [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../Topic/CREATE%20AVAILABILITY%20GROUP%20\(Transact-SQL\).md).  
+     For additional [!INCLUDE[tsql](../includes/tsql-md.md)] code examples of creating an availability group, see [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](~/t-sql/statements/create-availability-group-transact-sql.md).  
   
 5.  On the server instance that hosts the secondary replica, join the secondary replica to the availability group.  
   
@@ -306,11 +306,11 @@ manager: "jhubbard"
 |*MyDb2*|Name of second sample database.|  
 |*DOMAIN1\user1*|Service account of the server instance that is to host the initial primary replica.|  
 |*DOMAIN2\user2*|Service account of the server instance that is to host the initial secondary replica.|  
-|TCP://*COMPUTER01.Adventure-Works.com*:*7022*|Endpoint URL of the AgHostInstance instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on COMPUTER01.|  
-|TCP://*COMPUTER02.Adventure-Works.com*:*5022*|Endpoint URL of the default instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on COMPUTER02.|  
+|TCP://*COMPUTER01.Adventure-Works.com*:*7022*|Endpoint URL of the AgHostInstance instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on COMPUTER01.|  
+|TCP://*COMPUTER02.Adventure-Works.com*:*5022*|Endpoint URL of the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on COMPUTER02.|  
   
 > [!NOTE]  
->  For additional [!INCLUDE[tsql](../../includes/tsql-md.md)] code examples of creating an availability group, see [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../Topic/CREATE%20AVAILABILITY%20GROUP%20\(Transact-SQL\).md).  
+>  For additional [!INCLUDE[tsql](../includes/tsql-md.md)] code examples of creating an availability group, see [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](~/t-sql/statements/create-availability-group-transact-sql.md).  
   
 ```  
 -- on the server instance that will host the primary replica,   

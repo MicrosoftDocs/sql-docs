@@ -29,14 +29,14 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Configure the Management Data Warehouse (SQL Server Management Studio)
-  This topic describes how to configure the management data warehouse to support data storage on a single instance or multiple instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that are using the data collector. These instances can be on the same server or on different servers. This topic also provides descriptions of the user interface for the [Configure Data Management Warehouse Wizard](#Wizard) dialog box. For information about configuring a data collector, see [Configure Properties of a Data Collector](../../2014/database-engine/configure-properties-of-a-data-collector.md).  
+  This topic describes how to configure the management data warehouse to support data storage on a single instance or multiple instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that are using the data collector. These instances can be on the same server or on different servers. This topic also provides descriptions of the user interface for the [Configure Data Management Warehouse Wizard](#Wizard) dialog box. For information about configuring a data collector, see [Configure Properties of a Data Collector](../../2014/database-engine/configure-properties-of-a-data-collector.md).  
   
 > [!NOTE]  
->  If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is configured to run using one of the System service accounts (Local System, Network Service, or Local Service), and the management data warehouse is created on a different instance from the data collector, you must configure collection sets to use a proxy for uploading data to the management data warehouse.  
+>  If [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent is configured to run using one of the System service accounts (Local System, Network Service, or Local Service), and the management data warehouse is created on a different instance from the data collector, you must configure collection sets to use a proxy for uploading data to the management data warehouse.  
   
-### Configure the management data warehouse on a single instance or multiple instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### Configure the management data warehouse on a single instance or multiple instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
   
-1.  Ensure that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is running.  
+1.  Ensure that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent is running.  
   
 2.  In Object Explorer, expand the **Management** node.  
   
@@ -47,9 +47,9 @@ manager: "jhubbard"
      To configure multiple instances, continue with step 5.  
   
     > [!NOTE]  
-    >  It is considered best practice to use proxies in deployments where the data collector is installed on multiple instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that are using the same management data warehouse.  
+    >  It is considered best practice to use proxies in deployments where the data collector is installed on multiple instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that are using the same management data warehouse.  
   
-5.  Open [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] on another instance and do either of the following:  
+5.  Open [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] on another instance and do either of the following:  
   
     -   Use the Configure Management Data Warehouse wizard to configure data collection for the existing management data warehouse.  
   
@@ -67,10 +67,10 @@ manager: "jhubbard"
   
  **Configure Management Data Warehouse Storage Page**  
   
- Use this page to select a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database server and management data warehouse. The management data warehouse is a relational database that will store collected data.  
+ Use this page to select a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database server and management data warehouse. The management data warehouse is a relational database that will store collected data.  
   
 > [!NOTE]  
->  You must have the appropriate level of permissions in order to create the management data warehouse on the server. For more information, see [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../Topic/CREATE%20DATABASE%20\(SQL%20Server%20Transact-SQL\).md). You also must have the appropriate level of permissions to create logins for management data warehouse roles.  
+>  You must have the appropriate level of permissions in order to create the management data warehouse on the server. For more information, see [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](~/t-sql/statements/create-database-sql-server-transact-sql.md). You also must have the appropriate level of permissions to create logins for management data warehouse roles.  
   
  **Server name**  
  Specifies the name of the server that will host the management data warehouse.  
@@ -132,8 +132,8 @@ manager: "jhubbard"
  Close the wizard.  
   
 ## See Also  
- [sp_syscollector_enable_collector &#40;Transact-SQL&#41;](../Topic/sp_syscollector_enable_collector%20\(Transact-SQL\).md)   
- [sp_syscollector_disable_collector &#40;Transact-SQL&#41;](../Topic/sp_syscollector_disable_collector%20\(Transact-SQL\).md)   
+ [sp_syscollector_enable_collector &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md)   
+ [sp_syscollector_disable_collector &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)   
  [Data Collection](../../2014/database-engine/data-collection.md)   
  [Manage Data Collection](../../2014/database-engine/manage-data-collection.md)  
   

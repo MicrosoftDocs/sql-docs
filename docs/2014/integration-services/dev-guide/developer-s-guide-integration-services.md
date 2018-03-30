@@ -25,21 +25,21 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Developer&#39;s Guide (Integration Services)
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] includes a completely rewritten object model, which has been enhanced with many features that make extending and programming packages easier, more flexible, and more powerful. Developers can extend and program almost every aspect of [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] packages.  
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes a completely rewritten object model, which has been enhanced with many features that make extending and programming packages easier, more flexible, and more powerful. Developers can extend and program almost every aspect of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages.  
   
- As an [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] developer, there are two fundamental approaches that you can take to [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] programming:  
+ As an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] developer, there are two fundamental approaches that you can take to [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] programming:  
   
--   You can extend packages by writing components that become available within [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer to provide custom functionality in a package.  
+-   You can extend packages by writing components that become available within [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer to provide custom functionality in a package.  
   
 -   You can create, configure, and run packages programmatically from your own applications.  
   
- If you find that the built-in components in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] do not meet your requirements, you can extend the power of [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] by coding your own extensions. In this approach, you have two discrete options:  
+ If you find that the built-in components in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] do not meet your requirements, you can extend the power of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] by coding your own extensions. In this approach, you have two discrete options:  
   
 -   For ad hoc use in a single package, you can create a custom task by writing code in the Script task, or a custom data flow component by writing code in the Script component, which you can configure as a source, transformation, or destination. These powerful wrappers write the infrastructure code for you and let you focus exclusively on developing your custom functionality; however, they are not easily reusable elsewhere.  
   
--   For use in multiple packages, you can create custom [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] extensions such as connection managers, tasks, enumerators, log providers, and data flow components. The managed [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] object model contains base classes that provide a starting point and make developing custom extensions easier than ever.  
+-   For use in multiple packages, you can create custom [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] extensions such as connection managers, tasks, enumerators, log providers, and data flow components. The managed [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] object model contains base classes that provide a starting point and make developing custom extensions easier than ever.  
   
- If you want to create packages dynamically, or to manage and run [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] packages outside the development environment, you can manipulate packages programmatically. You can load, modify, and run existing packages, or you can create and run entirely new packages programmatically. In this approach, you have a continuous range of options:  
+ If you want to create packages dynamically, or to manage and run [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages outside the development environment, you can manipulate packages programmatically. You can load, modify, and run existing packages, or you can create and run entirely new packages programmatically. In this approach, you have a continuous range of options:  
   
 -   Load and run an existing package without modification.  
   
@@ -47,11 +47,11 @@ manager: "jhubbard"
   
 -   Create a new package, add and configure components, making changes object by object and property by property, save it, and then run it.  
   
- These approaches to [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] programming are described in this section and demonstrated with examples.  
+ These approaches to [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] programming are described in this section and demonstrated with examples.  
   
 ## In This Section  
  [Integration Services Programming Overview](../../../2014/integration-services/dev-guide/integration-services-programming-overview.md)  
- Describes the roles of control flow and data flow in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] development.  
+ Describes the roles of control flow and data flow in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] development.  
   
  [Understanding Synchronous and Asynchronous Transformations](../../../2014/integration-services/dev-guide/understanding-synchronous-and-asynchronous-transformations.md)  
  Describes the important distinction between synchronous and asynchronous outputs and the components that use them in the data flow.  
@@ -66,18 +66,18 @@ manager: "jhubbard"
  Describes how to create and program custom tasks, data flow components, and other package objects for use in multiple packages.  
   
  [Building Packages Programmatically](../../../2014/integration-services/dev-guide/building-packages-programmatically.md)  
- Describes how to create, configure, and save [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] packages programmatically.  
+ Describes how to create, configure, and save [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages programmatically.  
   
  [Running and Managing Packages Programmatically](../../../2014/integration-services/dev-guide/running-and-managing-packages-programmatically.md)  
- Describes how to enumerate, run, and manage [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] packages programmatically.  
+ Describes how to enumerate, run, and manage [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages programmatically.  
   
 ## Reference  
  [Integration Services Error and Message Reference](../../../2014/integration-services/integration-services-error-and-message-reference.md)  
- Lists the predefined [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] error codes, together with their symbolic names and descriptions.  
+ Lists the predefined [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] error codes, together with their symbolic names and descriptions.  
   
 ## Related Sections  
  [Troubleshooting Tools for Package Development](../../../2014/integration-services/troubleshooting-tools-for-package-development.md)  
- Describes the features and tools that [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] provides for troubleshooting packages during development.  
+ Describes the features and tools that [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides for troubleshooting packages during development.  
   
 ## External Resources  
   

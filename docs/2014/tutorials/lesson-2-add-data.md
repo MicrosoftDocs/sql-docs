@@ -12,11 +12,11 @@ ms.topic: "article"
 ms.assetid: 13c3a8cc-b1db-4aba-ad9b-038b7971be8d
 caps.latest.revision: 24
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Lesson 2: Add Data
-  In this lesson, you will use the Table Import Wizard in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] to connect to the AdventureWorksDW SQL database, select data, preview, and filter the data, and then import the data into your model workspace.  
+  In this lesson, you will use the Table Import Wizard in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] to connect to the AdventureWorksDW SQL database, select data, preview, and filter the data, and then import the data into your model workspace.  
   
  By using the Table Import Wizard, you can import data from a variety of relational sources: Access, SQL, Oracle, Sybase, Informix, DB2, Teradata, and more. The steps for importing data from each of these relational sources are very similar to what is described below. Additionally, data can be selected using a stored procedure.  
   
@@ -31,7 +31,7 @@ manager: "jhubbard"
   
 #### To create a connection to a the AdventureWorksDW2012 database  
   
-1.  In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], click on the **Model** menu, and then click **Import from Data Source**.  
+1.  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], click on the **Model** menu, and then click **Import from Data Source**.  
   
      This launches the Table Import Wizard which guides you through setting up a connection to a data source. If **Import from Data Source** is greyed out, double click **Model.bim** in **Solution Explorer** to open the model in the designer.  
   
@@ -159,7 +159,7 @@ manager: "jhubbard"
   
 #### To save the model project  
   
--   In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], click on the **File** menu, and then click **Save All**.  
+-   In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], click on the **File** menu, and then click **Save All**.  
   
 ## Next Step  
  To continue this tutorial, go to the next lesson: [Lesson 3: Rename Columns](../../2014/tutorials/lesson-3-rename-columns.md).  

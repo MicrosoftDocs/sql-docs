@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 7bb3166f-9374-4449-b66a-ffb77298507d
 caps.latest.revision: 27
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Upload File Page (Report Manager)
@@ -20,7 +20,7 @@ manager: "mblythe"
   
 -   Uploaded .rdl files are published to a report server as reports.  
   
--   Uploaded .smdl files are published as report models if they contain data source view information. If they are missing a data source view reference, an error occurs during the upload. Data source view information might be missing if you upload an .smdl file from a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] report model project. In report model projects, data source view information is stored in a separate file rather than in the .smdl file itself.  
+-   Uploaded .smdl files are published as report models if they contain data source view information. If they are missing a data source view reference, an error occurs during the upload. Data source view information might be missing if you upload an .smdl file from a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] report model project. In report model projects, data source view information is stored in a separate file rather than in the .smdl file itself.  
   
      Model files that do contain data source view information (and can therefore be successfully uploaded) are those that have been previously published to a report server and then saved from the server to a file on the file system. If you open the General Properties page of a model and click **Edit** to open the model, you can save it to a file and then upload it as a new model on the report server. The .smdl file that you subsequently upload will have all of information that is necessary for model publication.  
   
@@ -29,7 +29,7 @@ manager: "mblythe"
  When you upload an item, it is placed in the current folder. After the upload is complete, you can move the item to a different location.  
   
 > [!NOTE]  
->  This feature is not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+>  This feature is not available in every edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ## Navigation  
  Use the following procedure to navigate to this location in the user interface (UI).  

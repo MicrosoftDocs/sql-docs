@@ -22,26 +22,26 @@ manager: "jhubbard"
   
 |Data type|For more information|  
 |---------------|--------------------------|  
-|int|[int, bigint, smallint, and tinyint &#40;Transact-SQL&#41;](../Topic/int,%20bigint,%20smallint,%20and%20tinyint%20\(Transact-SQL\).md)|  
-|bigint|[int, bigint, smallint, and tinyint &#40;Transact-SQL&#41;](../Topic/int,%20bigint,%20smallint,%20and%20tinyint%20\(Transact-SQL\).md)|  
-|smallint|[int, bigint, smallint, and tinyint &#40;Transact-SQL&#41;](../Topic/int,%20bigint,%20smallint,%20and%20tinyint%20\(Transact-SQL\).md)|  
-|tinyint|[int, bigint, smallint, and tinyint &#40;Transact-SQL&#41;](../Topic/int,%20bigint,%20smallint,%20and%20tinyint%20\(Transact-SQL\).md)|  
-|decimal|[decimal and numeric &#40;Transact-SQL&#41;](../Topic/decimal%20and%20numeric%20\(Transact-SQL\).md)|  
-|numeric|[decimal and numeric &#40;Transact-SQL&#41;](../Topic/decimal%20and%20numeric%20\(Transact-SQL\).md)|  
-|float|[float and real &#40;Transact-SQL&#41;](../Topic/float%20and%20real%20\(Transact-SQL\).md)|  
-|real|[float and real &#40;Transact-SQL&#41;](../Topic/float%20and%20real%20\(Transact-SQL\).md)|  
-|money|[money and smallmoney &#40;Transact-SQL&#41;](../Topic/money%20and%20smallmoney%20\(Transact-SQL\).md)|  
-|smallmoney|[money and smallmoney &#40;Transact-SQL&#41;](../Topic/money%20and%20smallmoney%20\(Transact-SQL\).md)|  
+|int|[int, bigint, smallint, and tinyint &#40;Transact-SQL&#41;](~/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|  
+|bigint|[int, bigint, smallint, and tinyint &#40;Transact-SQL&#41;](~/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|  
+|smallint|[int, bigint, smallint, and tinyint &#40;Transact-SQL&#41;](~/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|  
+|tinyint|[int, bigint, smallint, and tinyint &#40;Transact-SQL&#41;](~/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|  
+|decimal|[decimal and numeric &#40;Transact-SQL&#41;](~/t-sql/data-types/decimal-and-numeric-transact-sql.md)|  
+|numeric|[decimal and numeric &#40;Transact-SQL&#41;](~/t-sql/data-types/decimal-and-numeric-transact-sql.md)|  
+|float|[float and real &#40;Transact-SQL&#41;](~/t-sql/data-types/float-and-real-transact-sql.md)|  
+|real|[float and real &#40;Transact-SQL&#41;](~/t-sql/data-types/float-and-real-transact-sql.md)|  
+|money|[money and smallmoney &#40;Transact-SQL&#41;](~/t-sql/data-types/money-and-smallmoney-transact-sql.md)|  
+|smallmoney|[money and smallmoney &#40;Transact-SQL&#41;](~/t-sql/data-types/money-and-smallmoney-transact-sql.md)|  
   
  **String Data Types**  
   
 |Data type|For more information|  
 |---------------|--------------------------|  
-|char(n)|[char and varchar &#40;Transact-SQL&#41;](../Topic/char%20and%20varchar%20\(Transact-SQL\).md)|  
-|varchar(n) <sup>1</sup>|[char and varchar &#40;Transact-SQL&#41;](../Topic/char%20and%20varchar%20\(Transact-SQL\).md)|  
-|nchar(n)|[nchar and nvarchar &#40;Transact-SQL&#41;](../Topic/nchar%20and%20nvarchar%20\(Transact-SQL\).md)|  
-|nvarchar(n) <sup>1</sup>|[nchar and nvarchar &#40;Transact-SQL&#41;](../Topic/nchar%20and%20nvarchar%20\(Transact-SQL\).md)|  
-|sysname|[nchar and nvarchar &#40;Transact-SQL&#41;](../Topic/nchar%20and%20nvarchar%20\(Transact-SQL\).md)|  
+|char(n)|[char and varchar &#40;Transact-SQL&#41;](~/t-sql/data-types/char-and-varchar-transact-sql.md)|  
+|varchar(n) <sup>1</sup>|[char and varchar &#40;Transact-SQL&#41;](~/t-sql/data-types/char-and-varchar-transact-sql.md)|  
+|nchar(n)|[nchar and nvarchar &#40;Transact-SQL&#41;](~/t-sql/data-types/nchar-and-nvarchar-transact-sql.md)|  
+|nvarchar(n) <sup>1</sup>|[nchar and nvarchar &#40;Transact-SQL&#41;](~/t-sql/data-types/nchar-and-nvarchar-transact-sql.md)|  
+|sysname|[nchar and nvarchar &#40;Transact-SQL&#41;](~/t-sql/data-types/nchar-and-nvarchar-transact-sql.md)|  
   
  <sup>1</sup> Limitation is 8060 bytes per row total, counting (n) in variable-length types.  
   
@@ -51,19 +51,19 @@ manager: "jhubbard"
   
 |Data type|For more information|  
 |---------------|--------------------------|  
-|date|[date &#40;Transact-SQL&#41;](../Topic/date%20\(Transact-SQL\).md)|  
-|time|[time &#40;Transact-SQL&#41;](../Topic/time%20\(Transact-SQL\).md)|  
-|datetime|[datetime &#40;Transact-SQL&#41;](../Topic/datetime%20\(Transact-SQL\).md)|  
-|datetime2|[datetime2 &#40;Transact-SQL&#41;](../Topic/datetime2%20\(Transact-SQL\).md)|  
-|smalldatetime|[smalldatetime &#40;Transact-SQL&#41;](../Topic/smalldatetime%20\(Transact-SQL\).md)|  
+|date|[date &#40;Transact-SQL&#41;](~/t-sql/data-types/date-transact-sql.md)|  
+|time|[time &#40;Transact-SQL&#41;](~/t-sql/data-types/time-transact-sql.md)|  
+|datetime|[datetime &#40;Transact-SQL&#41;](~/t-sql/data-types/datetime-transact-sql.md)|  
+|datetime2|[datetime2 &#40;Transact-SQL&#41;](~/t-sql/data-types/datetime2-transact-sql.md)|  
+|smalldatetime|[smalldatetime &#40;Transact-SQL&#41;](~/t-sql/data-types/smalldatetime-transact-sql.md)|  
   
  **Binary Data Types**  
   
 |Data type|For more information|  
 |---------------|--------------------------|  
-|bit|[bit &#40;Transact-SQL&#41;](../Topic/bit%20\(Transact-SQL\).md)|  
-|binary(n)|[binary and varbinary &#40;Transact-SQL&#41;](../Topic/binary%20and%20varbinary%20\(Transact-SQL\).md)|  
-|varbinary(n) <sup>1</sup>|[binary and varbinary &#40;Transact-SQL&#41;](../Topic/binary%20and%20varbinary%20\(Transact-SQL\).md)|  
+|bit|[bit &#40;Transact-SQL&#41;](~/t-sql/data-types/bit-transact-sql.md)|  
+|binary(n)|[binary and varbinary &#40;Transact-SQL&#41;](~/t-sql/data-types/binary-and-varbinary-transact-sql.md)|  
+|varbinary(n) <sup>1</sup>|[binary and varbinary &#40;Transact-SQL&#41;](~/t-sql/data-types/binary-and-varbinary-transact-sql.md)|  
   
  <sup>1</sup> Limitation is 8060 bytes per row total, counting (n) in variable-length types.  
   
@@ -71,7 +71,7 @@ manager: "jhubbard"
   
 |Data type|For more information|  
 |---------------|--------------------------|  
-|uniqueidentifier|[uniqueidentifier &#40;Transact-SQL&#41;](../Topic/uniqueidentifier%20\(Transact-SQL\).md)|  
+|uniqueidentifier|[uniqueidentifier &#40;Transact-SQL&#41;](~/t-sql/data-types/uniqueidentifier-transact-sql.md)|  
   
  **Unsupported Data Types**  
   

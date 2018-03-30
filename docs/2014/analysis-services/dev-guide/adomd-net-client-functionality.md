@@ -20,7 +20,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # ADOMD.NET Client Functionality
-  ADOMD.NET, as with other [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework data providers, serves as a bridge between an application and a data source. However, ADOMD.NET is unlike other .NET Framework data providers in that ADOMD.NET works with analytical data. To work with analytical data, ADOMD.NET supports functionality that is very different than other .NET Framework data providers. ADOMD.NET not only allows you to retrieve data, but also to retrieve metadata and change the structure of the analytical data store:  
+  ADOMD.NET, as with other [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework data providers, serves as a bridge between an application and a data source. However, ADOMD.NET is unlike other .NET Framework data providers in that ADOMD.NET works with analytical data. To work with analytical data, ADOMD.NET supports functionality that is very different than other .NET Framework data providers. ADOMD.NET not only allows you to retrieve data, but also to retrieve metadata and change the structure of the analytical data store:  
   
  **Retrieving Metadata**  
  Applications can learn more about the data that can be retrieved from the data source through metadata retrieval, using either schema rowsets or the object model. Information such as the types of each key performance indicator (KPI) that are available, the dimensions in a cube, and the parameters needed by the mining models are all discoverable. Metadata is most important to *dynamic* applications that require user input to determine the type, depth, and scope of data to be retrieved. Examples include Query Analyzer, Microsoft Excel, and other querying tools. Metadata is less critical to *static* applications that perform a predefined set of actions.  
@@ -58,7 +58,7 @@ manager: "mblythe"
   
  To illustrate this traditional workflow, the following example contains a method that opens a connection to the database, executes a command against a known cube, and retrieves the results into a cellset. The cellset then returns a tab-delimited string containing column headers, row headers, and cell data.  
   
- [!code-csharp[Adomd.NetClient#ReturnCommandUsingCellSet](../../../snippets/csharp/SQL14/adomd.net/adomd.netclient/cs/adomdexample.cs#returncommandusingcellset)]  
+ [!code-csharp[Adomd.NetClient#ReturnCommandUsingCellSet](../../snippets/csharp/SQL14/adomd.net/adomd.netclient/cs/adomdexample.cs#returncommandusingcellset)]  
   
 ## See Also  
  [ADOMD.NET Client Programming](../../../2014/analysis-services/dev-guide/adomd-net-client-programming.md)  

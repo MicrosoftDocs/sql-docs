@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: b11fd9cc-3b84-4038-9611-a43feb2f6fdd
 caps.latest.revision: 5
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # RGDI Device Information Settings

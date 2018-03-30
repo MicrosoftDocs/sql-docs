@@ -33,7 +33,7 @@ manager: "jhubbard"
  If you update column lengths in the Flat File connection manager after you have added and configured the Flat File source that uses the connection manager, you do not have to manually resize the output columns in the Flat File source. When you open the **Flat File Source** dialog box, the Flat File source provides an option to synchronize the column metadata.  
   
 ## Configuration of the Flat File Connection Manager  
- When you add a Flat File connection manager to a package, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] creates a connection manager that will resolve to a Flat File connection at run time, sets the Flat File connection properties, and adds the Flat File connection manager to the `Connections` collection of the package.  
+ When you add a Flat File connection manager to a package, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] creates a connection manager that will resolve to a Flat File connection at run time, sets the Flat File connection properties, and adds the Flat File connection manager to the `Connections` collection of the package.  
   
  The `ConnectionManagerType` property of the connection manager is set to `FLATFILE`.  
   
@@ -57,7 +57,7 @@ manager: "jhubbard"
   
 -   Set properties such as the name, data type, and maximum width on individual columns.  
   
- You can set the ConnectionString property for the Flat File connection manager by specifying an expression in the Properties window of [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. To avoid a validation error, do the following.  
+ You can set the ConnectionString property for the Flat File connection manager by specifying an expression in the Properties window of [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. To avoid a validation error, do the following.  
   
 -   When you use an expression to specify the file, add a file path in the **File name** box in the **Flat File Connection Manager Editor**.  
   
@@ -65,9 +65,9 @@ manager: "jhubbard"
   
  You can use an expression to create a file name at runtime by using the Flat File connection manager with the Flat File destination.  
   
- You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer or programmatically.  
   
- For more information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click one of the following topics:  
+ For more information about the properties that you can set in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click one of the following topics:  
   
 -   [Flat File Connection Manager Editor &#40;General Page&#41;](../../2014/integration-services/flat-file-connection-manager-editor-general-page.md)  
   

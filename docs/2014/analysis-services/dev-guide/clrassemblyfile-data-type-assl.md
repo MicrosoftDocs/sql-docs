@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # ClrAssemblyFile Data Type (ASSL)
-  Defines a primitive data type that represents one of the files that compose a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] `Assembly` ([ClrAssembly](../../../2014/analysis-services/dev-guide/clrassembly-data-type-assl.md) element).  
+  Defines a primitive data type that represents one of the files that compose a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] `Assembly` ([ClrAssembly](../../../2014/analysis-services/dev-guide/clrassembly-data-type-assl.md) element).  
   
 ## Syntax  
   

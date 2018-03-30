@@ -25,9 +25,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Full File Backups (SQL Server)
-  This topic is relevant for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases that contain multiple files or filegroups.  
+  This topic is relevant for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] databases that contain multiple files or filegroups.  
   
- The files in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database can be backed up and restored individually. Also, you can specify a whole filegroup instead of specifying each constituent file individually. Note that if any file in a filegroup is offline (for example, because the file is being restored), the whole filegroup is offline and cannot be backed up.  
+ The files in a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database can be backed up and restored individually. Also, you can specify a whole filegroup instead of specifying each constituent file individually. Note that if any file in a filegroup is offline (for example, because the file is being restored), the whole filegroup is offline and cannot be backed up.  
   
  File backups of read-only filegroups can be combined with partial backups. Partial backups include all the read/write filegroups and, optionally, one or more read-only filegroups. For more information, see [Partial Backups &#40;SQL Server&#41;](../../2014/database-engine/partial-backups-sql-server.md).  
   
@@ -95,7 +95,7 @@ manager: "jhubbard"
 >  File backups are not supported by the Maintenance Plan Wizard.  
   
 ## See Also  
- [BACKUP &#40;Transact-SQL&#41;](../Topic/BACKUP%20\(Transact-SQL\).md)   
+ [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)   
  [Backup Overview &#40;SQL Server&#41;](../../2014/database-engine/backup-overview-sql-server.md)   
  [Backup and Restore: Interoperability and Coexistence &#40;SQL Server&#41;](../../2014/database-engine/backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [Differential Backups &#40;SQL Server&#41;](../../2014/database-engine/differential-backups-sql-server.md)   

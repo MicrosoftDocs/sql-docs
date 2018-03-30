@@ -16,9 +16,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Instance Selection (Uninstall)
-  On the Instance Selection — Uninstall page, use the drop-down box to specify the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to uninstall.  
+  On the Instance Selection — Uninstall page, use the drop-down box to specify the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to uninstall.  
   
 ## Options  
- You can specify an entire instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], or you can specify that only the shared features and Management Tools are uninstalled.  
+ You can specify an entire instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or you can specify that only the shared features and Management Tools are uninstalled.  
   
   

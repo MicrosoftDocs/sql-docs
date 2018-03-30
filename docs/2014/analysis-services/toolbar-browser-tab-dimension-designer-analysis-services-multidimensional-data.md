@@ -23,7 +23,7 @@ manager: "mblythe"
  Click to open the **Process** dialog box and process the selected dimension.  
   
  **Reconnect**  
- Click to reconnect the **Browser** tab to the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance and database that contains the dimension, if the session for the **Browser** tab is disconnected due to connection loss or timeout.  
+ Click to reconnect the **Browser** tab to the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance and database that contains the dimension, if the session for the **Browser** tab is disconnected due to connection loss or timeout.  
   
  **Refresh**  
  Click to reload the **Browser** tab with data and metadata for the dimension.  

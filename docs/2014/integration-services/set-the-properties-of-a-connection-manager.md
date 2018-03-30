@@ -21,11 +21,11 @@ manager: "jhubbard"
 # Set the Properties of a Connection Manager
   All connection managers can be configured using the **Properties** window.  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] also provides custom dialog boxes for modifying the different types of connection managers in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. The dialog box has a different set of options depending on the connection manager type.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] also provides custom dialog boxes for modifying the different types of connection managers in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. The dialog box has a different set of options depending on the connection manager type.  
   
 ### To modify a connection manager using the Properties window  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project that contains the package you want.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project that contains the package you want.  
   
 2.  In Solution Explorer, double-click the package to open it.  
   
@@ -41,11 +41,11 @@ manager: "jhubbard"
   
 ### To modify a connection manager using a connection manager dialog box  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project that contains the package you want.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project that contains the package you want.  
   
 2.  In Solution Explorer, double-click the package to open it.  
   
-3.  In [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the **Control Flow** tab, the **Data Flow** tab, or the **Event Handler** tab to make the **Connection Managers** area available.  
+3.  In [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click the **Control Flow** tab, the **Data Flow** tab, or the **Event Handler** tab to make the **Connection Managers** area available.  
   
 4.  In the **Connection Managers** area, double-click the connection manager to open the **Connection Manager** dialog box. For information about specific connection manager types, and the options available for each type, see the following table.  
   

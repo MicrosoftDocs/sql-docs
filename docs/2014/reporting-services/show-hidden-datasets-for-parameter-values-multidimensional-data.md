@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: eb01c4ca-4fd6-4629-b595-f0d2565915df
 caps.latest.revision: 6
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Show Hidden Datasets for Parameter Values for Multidimensional Data (Report Builder and SSRS)
@@ -27,7 +27,7 @@ manager: "mblythe"
  You can change the view in the Report Data pane to display all datasets in the report.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ### To display hidden datasets  
   

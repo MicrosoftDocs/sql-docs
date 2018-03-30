@@ -16,9 +16,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SMO and DMO XPs Server Configuration Option
-  Use the SMO and DMO XPs option to enable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Object (SMO) extended stored procedures on this server.  
+  Use the SMO and DMO XPs option to enable [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object (SMO) extended stored procedures on this server.  
   
- Note than beginning in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], DMO has been removed from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Note than beginning in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], DMO has been removed from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  The possible values are described in the following table:  
   

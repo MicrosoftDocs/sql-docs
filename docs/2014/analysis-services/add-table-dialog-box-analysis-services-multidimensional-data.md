@@ -20,7 +20,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Add Table Dialog Box (Analysis Services - Multidimensional Data)
-  Use the **Add Table** dialog box in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to add a table while creating a query in the **Create Named Query** dialog box, **Create Polling Query** dialog box, or **Create Processing Query** dialog box. You can display the **Add Table** dialog box in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] by clicking **Add Table** from the **Toolbar** pane of the **Create Named Query** dialog box, **Create Polling Query** dialog box, or **Create Processing Query** dialog box.  
+  Use the **Add Table** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to add a table while creating a query in the **Create Named Query** dialog box, **Create Polling Query** dialog box, or **Create Processing Query** dialog box. You can display the **Add Table** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] by clicking **Add Table** from the **Toolbar** pane of the **Create Named Query** dialog box, **Create Polling Query** dialog box, or **Create Processing Query** dialog box.  
   
 ## Options  
   

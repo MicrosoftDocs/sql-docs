@@ -19,7 +19,7 @@ manager: "jhubbard"
   Upgrade Advisor detected a user-defined type (UDT) that is named after a term reserved for the `ORDPATH` data type.  
   
 ## Component  
- [!INCLUDE[ssDE](../../../includes/ssde-md.md)]  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## Description  
  The terms used for built-in data types should not be used as names for either common language runtime (CLR) or alias UDTs.  

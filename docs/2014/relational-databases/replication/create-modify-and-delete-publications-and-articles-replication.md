@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: e66d06ec-a12b-444d-875b-77f958af2f21
 caps.latest.revision: 35
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Create, Modify, and Delete Publications and Articles (Replication)

@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 caps.latest.revision: 15
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Tutorial: Creating a Free Form Report (Report Builder)
@@ -133,10 +133,10 @@ manager: "mblythe"
   
      ![Query Designer](../../2014/tutorials/media/tutorial-querydesigner.png "Query Designer")  
   
-8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ##  <a name="List"></a> 2. Add and Configure a List  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides three data region templates: table, matrix, and list. These templates are all based on a tablix data region.  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] provides three data region templates: table, matrix, and list. These templates are all based on a tablix data region.  
   
  In this tutorial, you will use a list to display the sales information for sales territories in a report that resembles a newsletter. The information is grouped by territory. You will add a new row group that groups data by territory, and then delete the built-in Details row group. The list template is ideal for creating free form reports. For more information, see [Lists &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/lists-report-builder-and-ssrs.md).  
   
@@ -153,7 +153,7 @@ manager: "mblythe"
   
 3.  In the **Dataset name** drop-down list, select **ListDataset**.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 5.  Right-click inside the list, and then click **Rectangle Properties**.  
   
@@ -161,7 +161,7 @@ manager: "mblythe"
   
 6.  On the **General** tab, select the **Add a page break after** checkbox.  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 #### To add a new row group and to delete the Details group  
   
@@ -171,7 +171,7 @@ manager: "mblythe"
   
 2.  In the drop-down list, select `[Territory].`  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
      A column is added to the list. The column contains the cell `[Territory].`  
   
@@ -189,7 +189,7 @@ manager: "mblythe"
   
 7.  Click **Delete Group only**.  
   
-8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ##  <a name="Graphics"></a> 3. Add Graphics  
  One of the advantages of using a list data region is that you can add report items such as rectangles and text boxes anywhere, instead of being limited to a tabular layout. You will enhance the appearance of the report by adding a graphic (a rectangle filled with a color).  
@@ -206,7 +206,7 @@ manager: "mblythe"
   
      ![Select fill color](../../2014/tutorials/media/tutorial-selectfillcolorwithnumbers.png "Select fill color")  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 6.  Click **Run** to preview the report.  
   
@@ -240,7 +240,7 @@ manager: "mblythe"
   
      ![Text Properties](../../2014/tutorials/media/tutorial-textpropertieswithnumbers.png "Text Properties")  
   
-8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 9. Place the cursor below the text you typed in step 3 and type: **Hello** .  
   
@@ -257,7 +257,7 @@ manager: "mblythe"
   
 13. In the **Font** list, select **Times New Roman**; in **Size** select **16 pt**, in **Color** select **Black** color.  
   
-14. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+14. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 15. Place the cursor below the text you added in steps 9 through 13, and then copy and paste the following "greeked" text:  
   
@@ -272,7 +272,7 @@ manager: "mblythe"
   
 18. In the **Font** list, select **Arial**; in **Size** select **10 pt**, in **Color** select **Black**.  
   
-19. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+19. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
      ![Add newsletter text](../../2014/tutorials/media/tutorial-newslettertext.png "Add newsletter text")  
   
@@ -291,7 +291,7 @@ manager: "mblythe"
     =Sum(Fields!Sales.value)  
     ```  
   
-24. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+24. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
      ![Add an expression to sales field](../../2014/tutorials/media/tutorial-addexpressiontosalesfield.png "Add an expression to sales field")  
   
@@ -301,7 +301,7 @@ manager: "mblythe"
   
 27. In the **Font** list, select **Times New Roman**; in **Size** select **16 pt**, in **Color** select **Red**.  
   
-28. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+28. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 29. Select `[Sum(Sales)]` and on the **Home** tab, in the **Number** group, click the **Currency** button.  
   
@@ -467,7 +467,7 @@ manager: "mblythe"
   
 12. Click the **Font** tab, and in the **Size** list, click **10pt**.  
   
-13. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+13. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 #### To add a column chart  
   

@@ -39,7 +39,7 @@ manager: "mblythe"
  The default setting for the dimension type is `Regular`, which makes no assumptions about the contents of the dimension. This is the default setting for all dimensions when you initially define a dimension unless you specify `Time` when defining the dimension using the Dimension Wizard. You should also leave `Regular` as the dimension type if the Dimension Wizard does not list an appropriate type for Dimension type.  
   
 ## Available Dimension Types  
- The following table describes the dimension types available in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+ The following table describes the dimension types available in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 |Dimension type|Description|  
 |--------------------|-----------------|  

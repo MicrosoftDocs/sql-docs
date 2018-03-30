@@ -18,14 +18,14 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # CDC Source Editor (Connection Manager Page)
-  Use the **Connection Manager** page of the **CDC Source Editor** dialog box to select the ADO.NET connection manager for the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] database that the CDC source reads change rows from (the CDC database). Once the CDC database is selected you need to select a captured table in the database.  
+  Use the **Connection Manager** page of the **CDC Source Editor** dialog box to select the ADO.NET connection manager for the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] database that the CDC source reads change rows from (the CDC database). Once the CDC database is selected you need to select a captured table in the database.  
   
  For more information about the CDC source, see [CDC Source](../../2014/integration-services/cdc-source.md).  
   
 ## Task List  
  **To open the CDC Source Editor Connection Manager Page**  
   
-1.  In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], open the [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] package that has the CDC source.  
+1.  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], open the [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] package that has the CDC source.  
   
 2.  On the **Data Flow** tab, double-click the CDC source.  
   
@@ -33,7 +33,7 @@ manager: "jhubbard"
   
 ## Options  
  **ADO.NET connection manager**  
- Select an existing connection manager from the list, or click **New** to create a new connection. The connection must be to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database that is enabled for CDC and where the selected change table is located.  
+ Select an existing connection manager from the list, or click **New** to create a new connection. The connection must be to a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database that is enabled for CDC and where the selected change table is located.  
   
  **New**  
  Click **New**. The **Configure ADO.NET Connection Manager Editor** dialog box opens where you can create a new connection manager  

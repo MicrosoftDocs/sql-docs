@@ -21,7 +21,7 @@ f1_keywords:
 ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
 caps.latest.revision: 6
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Formatting Numbers and Dates (Report Builder and SSRS)
@@ -37,14 +37,14 @@ manager: "mblythe"
 >  If some formatting options you want to use are grayed out, it means that those formatting options are not compatible the field's data type, which is set in the data source. For example, if the field contains number values but the field's data type is String, you cannot apply numerical data formatting options such as currency or decimals.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## Considerations for Formatting Numbers and Dates  
  Before you format numbers and dates in your report, consider the following:  
   
 -   By default, numbers are formatted to reflect the cultural settings on the client computer. Use formatting strings to specify how numbers are displayed so that formatting is consistent regardless of where the person who is viewing the report is located.  
   
--   The formats provided on the **Number** page are a subset of the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] standard numeric format strings. To format a number or date using a custom format that is not shown in the dialog box, you can use any [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] format strings for numbers or dates. For more information about custom format strings, see the [Formatting Types](http://go.microsoft.com/fwlink/?LinkId=112024) topic on MSDN.  
+-   The formats provided on the **Number** page are a subset of the [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] standard numeric format strings. To format a number or date using a custom format that is not shown in the dialog box, you can use any [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] format strings for numbers or dates. For more information about custom format strings, see the [Formatting Types](http://go.microsoft.com/fwlink/?LinkId=112024) topic on MSDN.  
   
 -   If a custom format string has been specified, it has a higher priority over default settings that are culture-specific. For example, suppose you set a custom format string of "#,###" to show the number 1234 as 1,234. This may have different meaning to users in the United States than it does to users in Europe. Before you specify a custom format, consider how the format you choose will affect users of different cultures who may view the report.  
   

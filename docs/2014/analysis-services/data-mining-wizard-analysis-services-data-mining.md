@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Data Mining Wizard (Analysis Services - Data Mining)
-  The Data Mining Wizard in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] starts every time that you add a new mining structure to a data mining project. The wizard helps you choose a data source and set up a data source view that defines the data to be used for analysis, and then helps you create an initial model.  
+  The Data Mining Wizard in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] starts every time that you add a new mining structure to a data mining project. The wizard helps you choose a data source and set up a data source view that defines the data to be used for analysis, and then helps you create an initial model.  
   
  In the final phase of the wizard, you can optionally divide your data into training and testing sets, and enable features such as drillthrough.  
   
@@ -34,18 +34,18 @@ manager: "mblythe"
   
 -   Which columns or attributes do you want to use for prediction? Which columns or attributes are good to use as input for analysis?  
   
--   Which algorithm should you use? The algorithms provided in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] all have different characteristics and produce different results. Fortunately you are not limited to one model for each set of data, so feel free to experiment by adding different models.  
+-   Which algorithm should you use? The algorithms provided in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] all have different characteristics and produce different results. Fortunately you are not limited to one model for each set of data, so feel free to experiment by adding different models.  
   
 -   Do you need to be able to test your models on a unified data set? If so, consider using the option to set some data aside for testing. You can choose a percentage, and cap that by a specified number of rows if desired.  
   
 ##  <a name="BKMK_Using_DM_Wizard"></a> Starting the Data Mining Wizard  
- To use the Data Mining Wizard, you must have opened a solution in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] that contains at least one data mining or OLAP project.  
+ To use the Data Mining Wizard, you must have opened a solution in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] that contains at least one data mining or OLAP project.  
   
 -   If your solution is ready for data mining, you can simply right-click the **Mining Structures** node in Solution Explorer and select **New Mining Structure** to start the wizard.  
   
 -   If your solution does not contain any existing projects, you can add a new data mining project. From the **File** menu, select **New**, and then select **Project**. Be sure to choose the template, **Analysis Services Multidimensional and Data Mining Project**.  
   
--   You can also use the Analysis Services Import Wizard to obtain metadata from an existing data mining solution. However, you cannot select the individual objects to import; the entire database is imported, including any cubes, data source views, etc. Also note that the new solution that is created via import is automatically configured to use the local default database. You might need to change this to another instance before you can process or browse the objects, and if you are importing from a previous version of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], you might need to update references to providers.  
+-   You can also use the Analysis Services Import Wizard to obtain metadata from an existing data mining solution. However, you cannot select the individual objects to import; the entire database is imported, including any cubes, data source views, etc. Also note that the new solution that is created via import is automatically configured to use the local default database. You might need to change this to another instance before you can process or browse the objects, and if you are importing from a previous version of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], you might need to update references to providers.  
   
  Next, you will create the mining structure and one associated data mining model. You can also create just the mining structure and add models later, but it is generally easiest to create a test model first.  
   
@@ -66,7 +66,7 @@ manager: "mblythe"
 >  You do not need to have a cube or an OLAP database to do data mining. Unless your data is already stored in a cube, or you want to mine OLAP dimensions or the results of OLAP aggregations or calculations, we recommend that you use a relational table or data source for data mining.  
   
 ### Choosing an Algorithm  
- Next, you must decide on which algorithm to use in processing your data. This decision can be difficult to make. Each algorithm provided in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] has different features and produces different results, so you can experiment and try several different models before determining which is most appropriate for your data and your business problem. See the following topic for an explanation of the tasks to which each algorithm is best suited:  
+ Next, you must decide on which algorithm to use in processing your data. This decision can be difficult to make. Each algorithm provided in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] has different features and produces different results, so you can experiment and try several different models before determining which is most appropriate for your data and your business problem. See the following topic for an explanation of the tasks to which each algorithm is best suited:  
   
  [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-algorithms-analysis-services-data-mining.md)  
   

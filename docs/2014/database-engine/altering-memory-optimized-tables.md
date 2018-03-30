@@ -39,7 +39,7 @@ manager: "jhubbard"
     where r.is_caller_dependent = 0 and m.is_schema_bound=1;  
     ```  
   
-     The permissions of a stored procedure can be scripted using the following [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
+     The permissions of a stored procedure can be scripted using the following [!INCLUDE[tsql](../includes/tsql-md.md)]:  
   
     ```tsql  
     declare @sp nvarchar(255) = N'<procedure name>'  
@@ -61,7 +61,7 @@ manager: "jhubbard"
     select @permissions  
     ```  
   
-4.  Create a copy of the table and copy the data from the original table to the copy of the table. The copy can be created using the following [!INCLUDE[tsql](../../includes/tsql-md.md)]<sup>1</sup>.  
+4.  Create a copy of the table and copy the data from the original table to the copy of the table. The copy can be created using the following [!INCLUDE[tsql](../includes/tsql-md.md)]<sup>1</sup>.  
   
     ```tsql  
     select * into dbo.T_copy from dbo.T  

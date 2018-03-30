@@ -28,7 +28,7 @@ manager: "jhubbard"
   
 |Value|Description|  
 |-----------|-----------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Set the location to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Selecting this value displays the dynamic options, **Server**, **Use Windows Authentication**, **Use SQL Server Authentication**, **User name**, and **Password**.|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Set the location to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Selecting this value displays the dynamic options, **Server**, **Use Windows Authentication**, **Use SQL Server Authentication**, **User name**, and **Password**.|  
 |DTSX file|Set the location to a DTSX file. Selecting this value displays the dynamic option, **File name**.|  
   
 ## Location Dynamic Options  
@@ -44,13 +44,13 @@ manager: "jhubbard"
  Click to use Windows Authentication.  
   
  **Use SQL Server Authentication**  
- Click to use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.  
+ Click to use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication.  
   
  **User name**  
- If using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, provide a user name to use when logging on to the server.  
+ If using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication, provide a user name to use when logging on to the server.  
   
  **Password**  
- If using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, provide a password.  
+ If using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication, provide a password.  
   
 ### Location = DTSX file  
  **File name**  

@@ -30,7 +30,7 @@ manager: "jhubbard"
   
 2.  On the **Welcome to the Data Source View Wizard** page, click **Next**.  
   
-3.  On the **Select a Data Source** page, under **Relational data sources**, select the [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] data source. If you do not have this data source, see [Basic Data Mining Tutorial](../../2014/tutorials/basic-data-mining-tutorial.md). Click **Next**.  
+3.  On the **Select a Data Source** page, under **Relational data sources**, select the [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] data source. If you do not have this data source, see [Basic Data Mining Tutorial](../../2014/tutorials/basic-data-mining-tutorial.md). Click **Next**.  
   
 4.  On the **Select Tables and Views** page, select the following table and then click the right arrow to add it to the data source view:  
   
@@ -40,7 +40,7 @@ manager: "jhubbard"
   
 5.  Click **Next**.  
   
-6.  On the **Completing the Wizard** page, by default the data source view is named [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)]. Change the name to **CallCenter**, and then click **Finish**.  
+6.  On the **Completing the Wizard** page, by default the data source view is named [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]. Change the name to **CallCenter**, and then click **Finish**.  
   
      Data Source View Designer opens to display the **CallCenter** data source view.  
   

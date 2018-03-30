@@ -63,7 +63,7 @@ manager: "jhubbard"
   
 ### To implement a Lookup transformation in full cache mode in one package by using Cache connection manager and a data source in the data flow  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open a [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project, and then open a package.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open a [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project, and then open a package.  
   
 2.  On the **Control Flow** tab, add two Data Flow tasks, and then connect the tasks by using a green connector:  
   
@@ -128,7 +128,7 @@ manager: "jhubbard"
   
 ### To implement a Lookup transformation in full cache mode in two packages by using Cache connection manager and a data source in the data flow  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open a [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project, and then open two packages.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open a [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project, and then open two packages.  
   
 2.  On the Control Flow tab in each package, add a Data Flow task.  
   
@@ -166,7 +166,7 @@ manager: "jhubbard"
   
 9. In the child package, create a Cache connection manager by right-clicking in the **Connection Managers** area, clicking **New Connection**, selecting **CACHE** in the **Add SSIS Connection Manager** dialog box, and then clicking **Add**.  
   
-     The **Connection Managers** area appears on the bottom of the **Control Flow**, **Data Flow**, and **Event Handlers** tabs of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Designer.  
+     The **Connection Managers** area appears on the bottom of the **Control Flow**, **Data Flow**, and **Event Handlers** tabs of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Designer.  
   
 10. In the **Cache Connection Manager Editor**, on the **General** tab, configure the Cache connection manager to read the data from the cache file that you selected by setting the following options:  
   
@@ -216,11 +216,11 @@ manager: "jhubbard"
   
 ### To implement a Lookup transformation in full cache mode by using Cache connection manager and an existing cache file  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open a [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project, and then open a package.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open a [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project, and then open a package.  
   
 2.  Right-click in the **Connection Managers** area, and then click **New Connection**.  
   
-     The **Connection Managers** area appears on the bottom of the **Control Flow**, **Data Flow**, and **Event Handlers** tabs of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Designer.  
+     The **Connection Managers** area appears on the bottom of the **Control Flow**, **Data Flow**, and **Event Handlers** tabs of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Designer.  
   
 3.  In the **Add SSIS Connection Manager** dialog box, select **CACHE**, and then click **Add** to add a Cache connection manager.  
   

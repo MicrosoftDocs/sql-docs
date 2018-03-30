@@ -20,7 +20,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Data Sample Viewer Dialog Box (Analysis Services - Multidimensional Data)
-  Use the **Data Sample Viewer** dialog box in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to view the first 1000 records of a fact table that will be used to provide measures for a new cube.  
+  Use the **Data Sample Viewer** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to view the first 1000 records of a fact table that will be used to provide measures for a new cube.  
   
  To open the **Data Sample Viewer** dialog box, right-click a measure listed in the **Available measures** grid on the **Select Measures** page of the **Cube Wizard**, and then click **View sample data**.  
   

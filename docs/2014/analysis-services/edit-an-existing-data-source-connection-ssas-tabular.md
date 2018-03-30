@@ -33,7 +33,7 @@ manager: "mblythe"
   
 #### To change the external data source used by a current connection  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], click the **Model** menu, and then click **Existing Connections**.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], click the **Model** menu, and then click **Existing Connections**.  
   
 2.  Select the data source connection you want to modify, and then click **Edit**.  
   
@@ -43,7 +43,7 @@ manager: "mblythe"
   
 4.  Click **Save**, and then click **Close**.  
   
-5.  In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], click the **Model**, click **Process**, and then click **Process All**.  
+5.  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], click the **Model**, click **Process**, and then click **Process All**.  
   
      The tables are re-processed using the new data source, but with the original data selections.  
   

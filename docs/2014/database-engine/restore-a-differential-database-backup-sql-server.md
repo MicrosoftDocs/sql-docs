@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Restore a Differential Database Backup (SQL Server)
-  This topic describes how to restore a differential database backup in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  This topic describes how to restore a differential database backup in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -48,9 +48,9 @@ manager: "jhubbard"
   
 -   RESTORE is not allowed in an explicit or implicit transaction.  
   
--   Backups that are created by more recent version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot be restored in earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Backups that are created by more recent version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cannot be restored in earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
--   In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], you can restore a user database from a database backup that was created by using [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or a later version.  
+-   In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], you can restore a user database from a database backup that was created by using [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] or a later version.  
   
 ###  <a name="Prerequisites"></a> Prerequisites  
   
@@ -67,7 +67,7 @@ manager: "jhubbard"
   
 #### To restore a differential database backup  
   
-1.  After you connect to the appropriate instance of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in Object Explorer, click the server name to expand the server tree.  
+1.  After you connect to the appropriate instance of the [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], in Object Explorer, click the server name to expand the server tree.  
   
 2.  Expand **Databases**. Depending on the database, either select a user database or expand **System Databases**, and then select a system database.  
   
@@ -123,13 +123,13 @@ manager: "jhubbard"
   
      For descriptions of the options, see [Restore Database &#40;Options Page&#41;](../../2014/database-engine/restore-database-options-page.md).  
   
-9. Restore operations will fail if there are active connections to the database. Check the **Close existing connections option** to ensure that all active connections between [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] and the database are closed.  
+9. Restore operations will fail if there are active connections to the database. Check the **Close existing connections option** to ensure that all active connections between [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] and the database are closed.  
   
 10. Select **Prompt before restoring each backup** if you wish to be prompted between each restore operation. This is not usually necessary unless the database is large and you wish to monitor the status of the restore operation.  
   
 11. Optionally, use the **Files** page to restore the database to a new location. For help with moving a database, see [Restore a Database to a New Location &#40;SQL Server&#41;](../../2014/database-engine/restore-a-database-to-a-new-location-sql-server.md).  
   
-12. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+12. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
@@ -207,6 +207,6 @@ GO
   
 ## See Also  
  [Differential Backups &#40;SQL Server&#41;](../../2014/database-engine/differential-backups-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)  
   
   

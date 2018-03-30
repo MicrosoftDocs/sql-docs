@@ -18,16 +18,16 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Verify that no database files are on compressed drives during the upgrade process
-  Upgrade Advisor detected database files on a compressed drive. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cannot create or upgrade databases on compressed drives.  
+  Upgrade Advisor detected database files on a compressed drive. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot create or upgrade databases on compressed drives.  
   
 ## Component  
- [!INCLUDE[ssDE](../../../includes/ssde-md.md)]  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## Corrective Action  
- When you install [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], select an uncompressed drive for system databases and verify that databases to be upgraded are not on compressed drives. However, note that after the database has been upgraded, you can put read-only databases and read-only secondary filegroups on an NTFS compressed file system.  
+ When you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], select an uncompressed drive for system databases and verify that databases to be upgraded are not on compressed drives. However, note that after the database has been upgraded, you can put read-only databases and read-only secondary filegroups on an NTFS compressed file system.  
   
 ## See Also  
  [Database Engine Upgrade Issues](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;new&#93;](../Topic/SQL%20Server%202014%20Upgrade%20Advisor%20[new].md)  
+ [SQL Server 2014 Upgrade Advisor &#91;new&#93;](~/2014/sql-server/install/sql-server-2014-upgrade-advisor.md)  
   
   

@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: a6b595dc-f775-4a53-8554-74a0bf9335ec
 caps.latest.revision: 6
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Add a Chart to a Report (Report Builder and SSRS)
@@ -23,7 +23,7 @@ manager: "mblythe"
  After you add a Chart data region to the design surface, you can drag report dataset fields for numeric and non-numeric data to the Chart Data pane of the chart. Click the chart to display the Chart Data pane with its three areas: Series Groups, Category Groups, and Values.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ### To add a chart to a report by using the Chart Wizard  
   
@@ -48,7 +48,7 @@ manager: "mblythe"
   
      The **Select Chart Type** dialog box appears.  
   
-4.  Select the type of chart you want to add. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  Select the type of chart you want to add. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 5.  Click the chart to display the **Chart Data** pane.  
   
@@ -56,7 +56,7 @@ manager: "mblythe"
   
 7.  Add a grouping field to the **Category Groups** area. When you add this field to the **Category Groups** area, a grouping field is automatically created for you. Each group represents a data point in your series.  
   
-8.  To summarize the data by category, right-click the data field and click **Series Properties**. In the **Category** box, select the category field from the drop-down list. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  To summarize the data by category, right-click the data field and click **Series Properties**. In the **Category** box, select the category field from the drop-down list. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 9. On the **Home** tab, click **Run** to see the rendered report.  
   

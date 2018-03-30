@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: cc8799f1-5b90-4248-b209-e1d5087f9529
 caps.latest.revision: 9
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_10520
@@ -37,7 +37,7 @@ manager: "jhubbard"
  Specify NULL for the parameter, or change the type to one that allows a non-NULL value for the parameter.  
   
 ## See Also  
- [sp_create_plan_guide &#40;Transact-SQL&#41;](../Topic/sp_create_plan_guide%20\(Transact-SQL\).md)   
+ [sp_create_plan_guide &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [Plan Guides](../../2014/database-engine/plan-guides.md)  
   
   

@@ -22,14 +22,14 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Altering an Assembly
-  Assemblies that have been registered in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] can be updated from a more recent version using the ALTER ASSEMBLY statement. To update an assembly, use the ALTER ASSEMBLY statement with the following syntax:  
+  Assemblies that have been registered in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can be updated from a more recent version using the ALTER ASSEMBLY statement. To update an assembly, use the ALTER ASSEMBLY statement with the following syntax:  
   
 ```  
 ALTER ASSEMBLY SQLCLRTest  
 FROM 'C:\MyDBApp\SQLCLRTest.dll'  
 ```  
   
- ALTER ASSEMBLY does not disrupt currently running processes that are using the assembly; the processes continue executing with the unaltered assembly. ALTER ASSEMBLY cannot be used to change the signatures of common language runtime (CLR) functions, aggregate functions, stored procedures, and triggers. New public methods can be added to the assembly, private methods can be modified in any way, and public methods can be modified as long as signatures or attributes are not changed. Fields that are contained within a native-serialized user-defined type, including data members or base classes, cannot be changed by using ALTER ASSEMBLY. All other changes are unsupported. For more information, see [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../Topic/ALTER%20ASSEMBLY%20\(Transact-SQL\).md).  
+ ALTER ASSEMBLY does not disrupt currently running processes that are using the assembly; the processes continue executing with the unaltered assembly. ALTER ASSEMBLY cannot be used to change the signatures of common language runtime (CLR) functions, aggregate functions, stored procedures, and triggers. New public methods can be added to the assembly, private methods can be modified in any way, and public methods can be modified as long as signatures or attributes are not changed. Fields that are contained within a native-serialized user-defined type, including data members or base classes, cannot be changed by using ALTER ASSEMBLY. All other changes are unsupported. For more information, see [ALTER ASSEMBLY &#40;Transact-SQL&#41;](~/t-sql/statements/alter-assembly-transact-sql.md).  
   
 ## Changing the Permission Set of an Assembly  
  The permission set of an assembly can also be changed using the ALTER ASSEMBLY statement. The following statement changes the permission set of the SQLCLRTest assembly to `EXTERNAL_ACCESS`.  
@@ -54,6 +54,6 @@ WITH PERMISSION_SET = EXTERNAL_ACCESS
  [Managing CLR Integration Assemblies](../../../2014/database-engine/dev-guide/managing-clr-integration-assemblies.md)   
  [Creating an Assembly](../../../2014/database-engine/dev-guide/creating-an-assembly.md)   
  [Dropping an Assembly](../../../2014/database-engine/dev-guide/dropping-an-assembly.md)   
- [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../Topic/ALTER%20ASSEMBLY%20\(Transact-SQL\).md)  
+ [ALTER ASSEMBLY &#40;Transact-SQL&#41;](~/t-sql/statements/alter-assembly-transact-sql.md)  
   
   

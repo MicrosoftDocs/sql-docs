@@ -72,7 +72,7 @@ Call MyStoredProcedure(a,b,c)
   
  The only supported type returned from stored procedure in a `Call` statement is a rowset. The serialization for a rowset is defined by XML for Analysis. If a stored procedure in a `Call` statement returns any other type, it is ignored and not returned in XML to the calling application. For more information about XML for Analysis rowsets, see, XML for Analysis Schema Rowsets.  
   
- If a stored procedure returns a .NET rowset, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] converts the result on the server to an XML for Analysis rowset. The XML for Analysis rowset is always returned by a stored procedure in the `Call` function. If a dataset contains features that cannot be expressed in the XML for Analysis rowset, a failure results.  
+ If a stored procedure returns a .NET rowset, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] converts the result on the server to an XML for Analysis rowset. The XML for Analysis rowset is always returned by a stored procedure in the `Call` function. If a dataset contains features that cannot be expressed in the XML for Analysis rowset, a failure results.  
   
  Procedures that return void values (for example, subroutines in Visual Basic) can also be employed with the CALL keyword. If, for example, you wanted to use the function MyVoidFunction() in an MDX statement, the following syntax would be employed:  
   

@@ -26,7 +26,7 @@ manager: "jhubbard"
   
 |Data column name|Data type|Description|Column ID|Filterable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|ApplicationName|`nvarchar`|Name of the client application that created the connection to an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This column is populated with the values passed by the application rather than the displayed name of the program|10|Yes|  
+|ApplicationName|`nvarchar`|Name of the client application that created the connection to an instance of [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. This column is populated with the values passed by the application rather than the displayed name of the program|10|Yes|  
 |ClientProcessID|`int`|ID assigned by the host computer to the process where the client application is running. This data column is populated if the client provides the process ID.|9|Yes|  
 |DatabaseID|`int`|ID of the database in which the stored procedure is running. Determine the value for a database by using the DB_ID function.|3|Yes|  
 |DatabaseName|`nvarchar`|Name of the database in which the stored procedure is running.|35|Yes|  
@@ -47,8 +47,8 @@ manager: "jhubbard"
 |ObjectType|`int`|Value that represents the type of object involved in the event. For more information, see [ObjectType Trace Event Column](../../2014/database-engine/objecttype-trace-event-column.md).|28|Yes|  
 |Offset|`int`|Starting offset of the statement within the stored procedure or batch that caused recompilation.|61|Yes|  
 |RequestID|`int`|ID of the request containing the statement.|49|Yes|  
-|ServerName|`nvarchar`|Name of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] being traced.|26|No|  
-|SessionLoginName|`nvarchar`|Login name of the user who originated the session. For example, if you connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using Login1 and execute a statement as Login2, SessionLoginName shows Login1 and LoginName shows Login2. This column displays both [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Windows logins.|64|Yes|  
+|ServerName|`nvarchar`|Name of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] being traced.|26|No|  
+|SessionLoginName|`nvarchar`|Login name of the user who originated the session. For example, if you connect to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using Login1 and execute a statement as Login2, SessionLoginName shows Login1 and LoginName shows Login2. This column displays both [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and Windows logins.|64|Yes|  
 |SPID|`int`|Server process ID of the connection.|12|Yes|  
 |SqlHandle|`varbinary`|64-bit hash based on the text of an ad hoc query or the database and object ID of an SQL object. This value can be passed to sys.dm_exec_sql_text to retrieve the associated SQL text.|63|No|  
 |StartTime|`datetime`|Time at which the event started, if available.|14|Yes|  
@@ -58,6 +58,6 @@ manager: "jhubbard"
   
 ## See Also  
  [SP:Recompile Event Class](../../2014/database-engine/sp-recompile-event-class.md)   
- [sp_trace_setevent &#40;Transact-SQL&#41;](../Topic/sp_trace_setevent%20\(Transact-SQL\).md)  
+ [sp_trace_setevent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

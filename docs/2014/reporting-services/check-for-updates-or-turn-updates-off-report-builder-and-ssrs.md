@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 9c69792d-d7c4-453b-ae2f-6d2d071d8606
 caps.latest.revision: 6
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Check for Updates or Turn Updates Off (Report Builder and SSRS)

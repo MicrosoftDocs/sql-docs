@@ -25,16 +25,16 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # OLE DB Schema Rowsets
-  The following OLE DB schema rowsets are supported by the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) provider. Use the `DISCOVER_ENUMERATORS` rowset with the [Discover](../../../2014/analysis-services/dev-guide/discover-method-xmla.md) method to check whether a particular data source provider supports a rowset.  
+  The following OLE DB schema rowsets are supported by the [!INCLUDE[msCoName](../../includes/msconame-md.md)] XML for Analysis (XMLA) provider. Use the `DISCOVER_ENUMERATORS` rowset with the [Discover](../../../2014/analysis-services/dev-guide/discover-method-xmla.md) method to check whether a particular data source provider supports a rowset.  
   
- You can also find detailed information about these rowsets by searching for the topic "Schema Rowsets" in the OLE DB Programmer's Reference portion of the MSDN® Library at the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Web site.  
+ You can also find detailed information about these rowsets by searching for the topic "Schema Rowsets" in the OLE DB Programmer's Reference portion of the MSDN® Library at the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Web site.  
   
  The following table describes this schema rowset.  
   
 |Rowset|Description|  
 |------------|-----------------|  
 |`DBSCHEMA_ASSERTIONS`|Identifies the assertions that are defined in the catalog and owned by a given user.|  
-|[DBSCHEMA_CATALOGS Rowset](../../../2014/analysis-services/dev-guide/dbschema-catalogs-rowset.md) <sup>1</sup>|Identifies the physical attributes associated with catalogs that are accessible from the database management system (DBMS). For some systems, such as [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Access, there may be only one catalog. For [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], this rowset enumerates all catalogs (databases) defined in the system database.|  
+|[DBSCHEMA_CATALOGS Rowset](../../../2014/analysis-services/dev-guide/dbschema-catalogs-rowset.md) <sup>1</sup>|Identifies the physical attributes associated with catalogs that are accessible from the database management system (DBMS). For some systems, such as [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access, there may be only one catalog. For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this rowset enumerates all catalogs (databases) defined in the system database.|  
 |`DBSCHEMA_CHARACTER_SETS`|Identifies the character sets that are defined in the catalog and accessible to a given user.|  
 |`DBSCHEMA_CHECK_CONSTRAINTS`|Identifies the check constraints that are defined in the catalog and owned by a given user.|  
 |`DBSCHEMA_CHECK_CONSTRAINTS_BY_TABLE`|Identifies the check constraints for a given table, defined in a catalog owned by a given user.|  
@@ -59,7 +59,7 @@ manager: "mblythe"
 |`DBSCHEMA_TABLE_CONSTRAINTS`|Identifies the table constraints that are defined in the catalog and owned by a given user.|  
 |`DBSCHEMA_TABLE_PRIVILEGES`|Identifies the privileges on tables that are defined in the catalog and available to or granted by a given user.|  
 |`DBSCHEMA_TABLE_STATISTICS`|Describes the available set of statistics on tables in the provider.<br /><br /> This rowset is not related to the `STATISTICS` rowset.|  
-|[DBSCHEMA_TABLES Rowset](../../../2014/analysis-services/dev-guide/dbschema-tables-rowset.md) <sup>1</sup>|Identifies the measure groups and dimensions exposed as tables within [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
+|[DBSCHEMA_TABLES Rowset](../../../2014/analysis-services/dev-guide/dbschema-tables-rowset.md) <sup>1</sup>|Identifies the measure groups and dimensions exposed as tables within [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
 |`DBSCHEMA_TABLES_INFO` <sup>1</sup>|Identifies the tables (including views) that are defined in the catalog and accessible to a given user.|  
 |`DBSCHEMA_TRANSLATIONS`|Identifies the character translations that are defined in the catalog and accessible to a given user.|  
 |`DBSCHEMA_TRUSTEE`|Enumerates the trustees for a data source.|  
@@ -68,7 +68,7 @@ manager: "mblythe"
 |`DBSCHEMA_VIEW_TABLE_USAGE`|Identifies the tables on which viewed tables, defined in the catalog and owned by a given user, are dependent.|  
 |`DBSCHEMA_VIEWS`|Identifies the views that are defined in the catalog and accessible to a given user.|  
   
- <sup>1</sup> Indicates schema rowsets supported by the MSOLAP data source provider for the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XMLA provider.  
+ <sup>1</sup> Indicates schema rowsets supported by the MSOLAP data source provider for the [!INCLUDE[msCoName](../../includes/msconame-md.md)] XMLA provider.  
   
 ## See Also  
  [DISCOVER_ENUMERATORS Rowset](../../../2014/analysis-services/dev-guide/discover-enumerators-rowset.md)   

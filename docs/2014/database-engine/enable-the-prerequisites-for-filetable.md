@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 6286468c-9dc9-4eda-9961-071d2a36ebd6
 caps.latest.revision: 25
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Enable the Prerequisites for FileTable
@@ -36,7 +36,7 @@ manager: "jhubbard"
     -   [Specifying a Directory for FileTables at the Database Level](#BasicsDirectory)  
   
 ##  <a name="BasicsFilestream"></a> Enabling FILESTREAM at the Instance Level  
- FileTables extend the capabilities of the FILESTREAM feature of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Therefore you have to enable FILESTREAM for file I/O access at the Windows level and on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] before you can create and use FileTables.  
+ FileTables extend the capabilities of the FILESTREAM feature of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Therefore you have to enable FILESTREAM for file I/O access at the Windows level and on the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] before you can create and use FileTables.  
   
 ###  <a name="HowToFilestream"></a> How To: Enable FILESTREAM at the Instance Level  
  For information about how to enable FILESTREAM, see [Enable and Configure FILESTREAM](../../2014/database-engine/enable-and-configure-filestream.md).  
@@ -50,10 +50,10 @@ manager: "jhubbard"
  Before you can create FileTables in a database, the database must have a FILESTREAM filegroup. For more information about this prerequisite, see [Create a FILESTREAM-Enabled Database](../../2014/database-engine/create-a-filestream-enabled-database.md).  
   
 ##  <a name="BasicsNTAccess"></a> Enabling Non-Transactional Access at the Database Level  
- FileTables let Windows applications obtain a Windows file handle to FILESTREAM data without requiring a transaction. To allow this non-transactional access to files stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you have to specify the desired level of non-transactional access at the database level for each database that will contain FileTables.  
+ FileTables let Windows applications obtain a Windows file handle to FILESTREAM data without requiring a transaction. To allow this non-transactional access to files stored in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], you have to specify the desired level of non-transactional access at the database level for each database that will contain FileTables.  
   
 ###  <a name="HowToCheckAccess"></a> How To: Check Whether Non-Transactional Access Is Enabled on Databases  
- Query the catalog view [sys.database_filestream_options &#40;Transact-SQL&#41;](../Topic/sys.database_filestream_options%20\(Transact-SQL\).md) and check the **non_transacted_access** and **non_transacted_access_desc** columns.  
+ Query the catalog view [sys.database_filestream_options &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql.md) and check the **non_transacted_access** and **non_transacted_access_desc** columns.  
   
 ```tsql  
 SELECT DB_NAME(database_id), non_transacted_access, non_transacted_access_desc  
@@ -65,14 +65,14 @@ GO
  The available levels of non-transactional access are FULL, READ_ONLY, and OFF.  
   
  **Specify the level of non-transactional access by using Transact-SQL**  
- -   When you **create a new database**, call the [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../Topic/CREATE%20DATABASE%20\(SQL%20Server%20Transact-SQL\).md) statement with the **NON_TRANSACTED_ACCESS** FILESTREAM option.  
+ -   When you **create a new database**, call the [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](~/t-sql/statements/create-database-sql-server-transact-sql.md) statement with the **NON_TRANSACTED_ACCESS** FILESTREAM option.  
   
     ```tsql  
     CREATE DATABASE database_name  
         WITH FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' )  
     ```  
   
--   When you **alter an existing database**, call the [ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20\(Transact-SQL\).md) statement with the **NON_TRANSACTED_ACCESS** FILESTREAM option.  
+-   When you **alter an existing database**, call the [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md) statement with the **NON_TRANSACTED_ACCESS** FILESTREAM option.  
   
     ```tsql  
     ALTER DATABASE database_name  
@@ -91,7 +91,7 @@ GO
  The name that you specify must be unique across the instance for database-level directories.  
   
  **Specify a directory for FileTables by using Transact-SQL**  
- -   When you **create a new database**, call the [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../Topic/CREATE%20DATABASE%20\(SQL%20Server%20Transact-SQL\).md) statement with the **DIRECTORY_NAME** FILESTREAM option.  
+ -   When you **create a new database**, call the [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](~/t-sql/statements/create-database-sql-server-transact-sql.md) statement with the **DIRECTORY_NAME** FILESTREAM option.  
   
     ```tsql  
     CREATE DATABASE database_name  
@@ -99,7 +99,7 @@ GO
     GO  
     ```  
   
--   When you **alter an existing database**, call the [ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20\(Transact-SQL\).md) statement with the **DIRECTORY_NAME** FILESTREAM option. When you use these options to change the directory name, the database must be exclusively locked, with no open file handles.  
+-   When you **alter an existing database**, call the [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md) statement with the **DIRECTORY_NAME** FILESTREAM option. When you use these options to change the directory name, the database must be exclusively locked, with no open file handles.  
   
     ```tsql  
     ALTER DATABASE database_name  
@@ -107,7 +107,7 @@ GO
     GO  
     ```  
   
--   When you **attach a database**, call the [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../Topic/CREATE%20DATABASE%20\(SQL%20Server%20Transact-SQL\).md) statement with the **FOR ATTACH** option and with the **DIRECTORY_NAME** FILESTREAM option.  
+-   When you **attach a database**, call the [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](~/t-sql/statements/create-database-sql-server-transact-sql.md) statement with the **FOR ATTACH** option and with the **DIRECTORY_NAME** FILESTREAM option.  
   
     ```tsql  
     CREATE DATABASE database_name  
@@ -115,7 +115,7 @@ GO
     GO  
     ```  
   
--   When you **restore a database**, call the [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md) statement with the **DIRECTORY_NAME** FILESTREAM option.  
+-   When you **restore a database**, call the [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md) statement with the **DIRECTORY_NAME** FILESTREAM option.  
   
     ```tsql  
     RESTORE DATABASE database_name  
@@ -127,7 +127,7 @@ GO
  You can specify a directory name in the **FILESTREAM Directory Name** field of the **Options** page of the **Database Properties** dialog box. For more information about this dialog box, see [Database Properties &#40;Options Page&#41;](../../2014/database-engine/database-properties-options-page.md).  
   
 ###  <a name="viewnames"></a> How to: View Existing Directory Names for the Instance  
- To view the list of existing directory names for the instance, query the catalog view [sys.database_filestream_options &#40;Transact-SQL&#41;](../Topic/sys.database_filestream_options%20\(Transact-SQL\).md) and check the **filestream_database_directory_name** column.  
+ To view the list of existing directory names for the instance, query the catalog view [sys.database_filestream_options &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql.md) and check the **filestream_database_directory_name** column.  
   
 ```tsql  
 SELECT DB_NAME ( database_id ), directory_name  
@@ -145,7 +145,7 @@ GO
   
 -   When you attach or restore a database, the operation fails if the new database has a value for **DIRECTORY_NAME** that already exists in the target instance. Specify a unique value for **DIRECTORY_NAME** when you call **CREATE DATABASE FOR ATTACH** or **RESTORE DATABASE**.  
   
--   When you upgrade an existing database to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], the value of **DIRECTORY_NAME** is null.  
+-   When you upgrade an existing database to [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], the value of **DIRECTORY_NAME** is null.  
   
 -   When you enable or disable non-transactional access at the database level, the operation does not check whether the directory name has been specified or whether it is unique.  
   

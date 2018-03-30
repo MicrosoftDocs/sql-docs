@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # FILESTREAM Support (ODBC)
-  ODBC in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supports the enhanced FILESTREAM feature. For more information about this feature, see [FILESTREAM Support](../../../2014/database-engine/dev-guide/filestream-support.md). For a sample demonstrating ODB support for FILESTREAM, see [Send and Receive Data Incrementally with FILESTREAM &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/send-and-receive-data-incrementally-with-filestream-odbc.md).  
+  ODBC in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client supports the enhanced FILESTREAM feature. For more information about this feature, see [FILESTREAM Support](../../../2014/database-engine/dev-guide/filestream-support.md). For a sample demonstrating ODB support for FILESTREAM, see [Send and Receive Data Incrementally with FILESTREAM &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/send-and-receive-data-incrementally-with-filestream-odbc.md).  
   
  To send and receive `varbinary(max)` values greater than 2 GB, an application must bind parameters by using SQLBindParameter with *ColumnSize* set to `SQL_SS_LENGTH_UNLIMITED`, and set the contents of *StrLen_or_IndPtr* to `SQL_DATA_AT_EXEC` before SQLExecDirect or SQLExecute.  
   
@@ -33,7 +33,7 @@ manager: "jhubbard"
  If you call SQLFetch on a bound column, you will receive a "data truncated" warning if the buffer is not large enough to hold the entire value. Ignore this warning and update the data in this bound column with SQLParamData and SQLPutData calls. You can update FILESTREAM data by using SQLSetPos if it is bound with SQLBindCol.  
   
 ## Example  
- FILESTREAM columns behave exactly like `varbinary(max)` columns, but without a size limit. They are bound as SQL_VARBINARY. (SQL_LONGVARBINARY is used with image columns, and there are restrictions on this type. For example, SQL_LONGVARBINARY connot be used as an output parameter.) The following examples show direct NTFS access for FILESTREAM columns. These examples assume that the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] code has been executed in the database:  
+ FILESTREAM columns behave exactly like `varbinary(max)` columns, but without a size limit. They are bound as SQL_VARBINARY. (SQL_LONGVARBINARY is used with image columns, and there are restrictions on this type. For example, SQL_LONGVARBINARY connot be used as an output parameter.) The following examples show direct NTFS access for FILESTREAM columns. These examples assume that the following [!INCLUDE[tsql](../../includes/tsql-md.md)] code has been executed in the database:  
   
 ```  
 CREATE TABLE fileStreamDocs(  

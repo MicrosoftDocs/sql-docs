@@ -28,14 +28,14 @@ manager: "mblythe"
  For a short video introduction to writeback, see [Excel 2010 Writeback to Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=394951). A more detailed exploration of this feature is available through this blog post series, [Building a Writeback Application with Analysis Services (blog)](http://go.microsoft.com/fwlink/?LinkId=394977).  
   
 > [!NOTE]  
->  Writeback is supported for SQL Server relational databases and data marts only, and only for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] multidimensional models.  
+>  Writeback is supported for SQL Server relational databases and data marts only, and only for [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] multidimensional models.  
   
 ## How to write-enable a partition  
- You can write-enable a partition's measure groups by write-enabling the partition itself in Cube Designer in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] or [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ You can write-enable a partition's measure groups by write-enabling the partition itself in Cube Designer in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] or [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 -   In Cube Designer, in the Partitions tab, right-click a partition and choose **Writeback Settings**.  
   
--   In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], expand the database | cube | measure group, and then right-click **Writeback** and choose **Enable Writeback**.  
+-   In [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], expand the database | cube | measure group, and then right-click **Writeback** and choose **Enable Writeback**.  
   
  Writeback is only supported for measures that use the SUM aggregation. In the AdventureWorks sample database, you can use the Sales Targets measure group to test writeback behaviors.  
   
@@ -55,7 +55,7 @@ manager: "mblythe"
   
  Converting the writeback data table to a partition also write-disables the partition. All unrestricted read/write policies and read/write permissions for the partition's cells are disabled, and end users will not be able to change displayed cube data. (End users with disabled unrestricted read/write policies or disabled read/write permissions will still be able to browse the cube.) Read and read-contingent permissions are not affected.  
   
- To convert writeback data to a partition, use the **Convert to Partition** dialog box, which is accessed by right-clicking the writeback table for a write-enabled partition in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. You specify a name for the partition and whether to design the aggregation for the partition later or at the same time that you create it. To create the aggregation at the same time you choose the partition, you must choose to copy the aggregation design from an existing partition. This is normally, but not necessarily, the current writeback partition. You can also choose to process the partition at the same time that you create it.  
+ To convert writeback data to a partition, use the **Convert to Partition** dialog box, which is accessed by right-clicking the writeback table for a write-enabled partition in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. You specify a name for the partition and whether to design the aggregation for the partition later or at the same time that you create it. To create the aggregation at the same time you choose the partition, you must choose to copy the aggregation design from an existing partition. This is normally, but not necessarily, the current writeback partition. You can also choose to process the partition at the same time that you create it.  
   
 ## See Also  
  [Write-Enabled Partitions](../../2014/analysis-services/dev-guide/write-enabled-partitions.md)   

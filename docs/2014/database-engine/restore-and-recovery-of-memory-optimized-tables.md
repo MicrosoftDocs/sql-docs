@@ -18,7 +18,7 @@ manager: "jhubbard"
 # Restore and Recovery of Memory-Optimized Tables
   The basic mechanism to recover or restore a database with memory-optimized tables is similar to databases with only disk-based tables. But unlike disk-based tables, memory-optimized tables must be loaded into memory before database is available for user access. This adds a new step in the database recovery. The modified steps in database recovery are changed as follows:  
   
- When the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restarts, each database goes through a recovery phase that consists of the following three phases:  
+ When the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] restarts, each database goes through a recovery phase that consists of the following three phases:  
   
 1.  The analysis phase. During this phase, a pass is made on the active transaction logs to detect committed and uncommitted transactions. The In-Memory OLTP engine identifies the checkpoint to load and preloads its system table log entries. It will also process some file allocation log records.  
   

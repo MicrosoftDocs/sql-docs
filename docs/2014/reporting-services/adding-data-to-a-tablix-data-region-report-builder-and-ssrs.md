@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 8f1d0a76-afed-480f-98fb-89e2d4eb09b1
 caps.latest.revision: 6
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Adding Data to a Tablix Data Region (Report Builder and SSRS)
@@ -21,7 +21,7 @@ manager: "mblythe"
  All data in a data region belongs to at least one group. Detail data is a member of the details group. For more information about detail and grouped data, see [Understanding Groups &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/understanding-groups-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## Adding Detail Data  
  Detail data is all the data from a report dataset after filters are applied to the dataset, data region, and details group. All detail data displayed in a single tablix data region must come from the same report dataset.  
@@ -33,7 +33,7 @@ manager: "mblythe"
  A table template and a list template provide a details row. A matrix template has no details row. If your tablix data region has no details row, you can add one by defining a details group. For more information, see [Add a Details Group &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-a-details-group-report-builder-and-ssrs.md).  
   
 ## Adding Grouped Data  
- Grouped data is all the detail data specified by a group expression after filters are applied to the dataset, data region, and the group. To organize detail data in groups, drag fields from the Report Data pane to the Grouping pane. When you add a group, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] automatically adds related rows or columns to the tablix data region on which to display grouped data. Cells in these rows or columns are associated with grouped data. For more information, see [Add or Delete a Group in a Data Region &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
+ Grouped data is all the detail data specified by a group expression after filters are applied to the dataset, data region, and the group. To organize detail data in groups, drag fields from the Report Data pane to the Grouping pane. When you add a group, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] automatically adds related rows or columns to the tablix data region on which to display grouped data. Cells in these rows or columns are associated with grouped data. For more information, see [Add or Delete a Group in a Data Region &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
   
  By default, when you add a dataset field that represents numeric data to a cell in a group row or column, the value of the cell is the sum of the grouped data scoped to the innermost row and column group memberships for the cell. You can change the default aggregate function Sum to any other aggregate function, such as Avg or Count. You can also change the default scope for an aggregate calculation, for example, to calculate the percentage a value contributes to a row group. For more information, see [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   

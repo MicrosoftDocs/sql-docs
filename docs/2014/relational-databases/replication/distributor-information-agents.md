@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: 5d601a64-6af0-42f9-81b1-cf0087f1c50d
 caps.latest.revision: 13
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Distributor Information, Agents
@@ -42,7 +42,7 @@ manager: "jhubbard"
 -   Never started  
   
  **Publisher**  
- The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance of the Publisher.  
+ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance of the Publisher.  
   
  **Publication**  
  The name of the publication with which the agent is associated.  
@@ -92,7 +92,7 @@ manager: "jhubbard"
 -   Never started  
   
  **Publisher**  
- The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance of the Publisher.  
+ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance of the Publisher.  
   
  **Publication**  
  The name of the publication with which the agent is associated.  

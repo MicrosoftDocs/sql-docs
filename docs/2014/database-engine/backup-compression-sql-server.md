@@ -23,10 +23,10 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Backup Compression (SQL Server)
-  This topic describes the compression of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups, including restrictions, performance trade-off of compressing backups, the configuration of backup compression, and the compression ratio.  
+  This topic describes the compression of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] backups, including restrictions, performance trade-off of compressing backups, the configuration of backup compression, and the compression ratio.  
   
 > [!NOTE]  
->  For information which editions of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] support backup compression, see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Every edition of [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later can restore a compressed backup.  
+>  For information which editions of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] support backup compression, see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Every edition of [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] and later can restore a compressed backup.  
   
   
 ##  <a name="Benefits"></a> Benefits  
@@ -41,9 +41,9 @@ manager: "jhubbard"
   
 -   Compressed and uncompressed backups cannot co-exist in a media set.  
   
--   Previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot read compressed backups.  
+-   Previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cannot read compressed backups.  
   
--   NTbackups cannot share a tape with compressed [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups.  
+-   NTbackups cannot share a tape with compressed [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] backups.  
   
   
 ##  <a name="PerfImpact"></a> Performance Impact of Compressing Backups  
@@ -61,7 +61,7 @@ manager: "jhubbard"
   
   
 ##  <a name="CompressionRatio"></a> Calculate the Compression Ratio of a Compressed Backup  
- To calculate the compression ratio of a backup, use the values for the backup in the **backup_size** and **compressed_backup_size** columns of the [backupset](../Topic/backupset%20\(Transact-SQL\).md) history table, as follows:  
+ To calculate the compression ratio of a backup, use the values for the backup in the **backup_size** and **compressed_backup_size** columns of the [backupset](~/relational-databases/system-tables/backupset-transact-sql.md) history table, as follows:  
   
  **backup_size**:**compressed_backup_size**  
   
@@ -103,12 +103,12 @@ SELECT backup_size/compressed_backup_size FROM msdb..backupset;
   
 -   [Use Resource Governor to Limit CPU Usage by Backup Compression &#40;Transact-SQL&#41;](../../2014/database-engine/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
--   [DBCC TRACEON &#40;Transact-SQL&#41;](../Topic/DBCC%20TRACEON%20\(Transact-SQL\).md)  
+-   [DBCC TRACEON &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-traceon-transact-sql.md)  
   
--   [DBCC TRACEOFF &#40;Transact-SQL&#41;](../Topic/DBCC%20TRACEOFF%20\(Transact-SQL\).md)  
+-   [DBCC TRACEOFF &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)  
   
 ## See Also  
  [Backup Overview &#40;SQL Server&#41;](../../2014/database-engine/backup-overview-sql-server.md)   
- [Trace Flags &#40;Transact-SQL&#41;](../Topic/Trace%20Flags%20\(Transact-SQL\).md)  
+ [Trace Flags &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
   
   

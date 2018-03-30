@@ -29,7 +29,7 @@ manager: "jhubbard"
 # srv_paramdata (Extended Stored Procedure API)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
   
  Returns the value of a remote stored procedure call parameter. This function has been superseded by the **srv_paraminfo** function.  
   
@@ -57,7 +57,7 @@ n
 ## Returns  
  A pointer to the parameter value. If the *n*th parameter is NULL, there is no *n*th parameter, or there is no remote stored procedure, returns NULL. If the parameter value is a string, it might not be null-terminated. Use **srv_paramlen** to determine the length of the string.  
   
- This function returns the following values, if the parameter is one of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data types. Pointer data includes whether the pointer for the data type is valid (VP), NULL, or not applicable (N/A), and the contents of the data pointed to.  
+ This function returns the following values, if the parameter is one of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types. Pointer data includes whether the pointer for the data type is valid (VP), NULL, or not applicable (N/A), and the contents of the data pointed to.  
   
 |New data types|Input data length|  
 |--------------------|-----------------------|  

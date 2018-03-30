@@ -25,7 +25,7 @@ manager: "jhubbard"
   
 ### To implement Fuzzy Grouping transformation in a data flow  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project that contains the package you want.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project that contains the package you want.  
   
 2.  In Solution Explorer, double-click the package to open it.  
   
@@ -35,10 +35,10 @@ manager: "jhubbard"
   
 5.  Double-click the Fuzzy Grouping transformation.  
   
-6.  In the **Fuzzy Grouping Transformation Editor** dialog box, on the **Connection Manager** tab, select an OLE DB connection manager that connects to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
+6.  In the **Fuzzy Grouping Transformation Editor** dialog box, on the **Connection Manager** tab, select an OLE DB connection manager that connects to a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database.  
   
     > [!NOTE]  
-    >  The transformation requires a connection to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database to create temporary tables and indexes.  
+    >  The transformation requires a connection to a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database to create temporary tables and indexes.  
   
 7.  Click the **Columns** tab and, in the **Available Input Columns** list, select the check box of the input columns to use to identify similar rows in the dataset.  
   

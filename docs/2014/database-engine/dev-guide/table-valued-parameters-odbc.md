@@ -68,7 +68,7 @@ manager: "jhubbard"
  Describes how to process errors on table-valued parameter column values.  
   
  [Cross-Version Compatibility](../../../2014/database-engine/dev-guide/cross-version-compatibility.md)  
- Describes conflicts that can occur when table-valued parameters are used by a client or server of a version earlier than [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  
+ Describes conflicts that can occur when table-valued parameters are used by a client or server of a version earlier than [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
  [ODBC Table-Valued Parameter API Summary](../../../2014/database-engine/dev-guide/odbc-table-valued-parameter-api-summary.md)  
  Lists the ODBC functions that support table-valued parameters.  

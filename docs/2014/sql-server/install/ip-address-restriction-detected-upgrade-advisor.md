@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: 9a154455-c68f-4403-a3a7-b90f4d35eecb
 caps.latest.revision: 10
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "jhubbard"
 ---
 # IP address restriction detected (Upgrade Advisor)
-  Upgrade Advisor detected one or more IP address restrictions on the IIS Web site that hosts the report server or Report Manager virtual directories. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] does not provide native support for IP address restrictions.  
+  Upgrade Advisor detected one or more IP address restrictions on the IIS Web site that hosts the report server or Report Manager virtual directories. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] does not provide native support for IP address restrictions.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Native.|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native.|  
   
 ## Component  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## Description  
- Setup cannot define IP address restrictions on URLs created for an upgraded report server. Upgrade can continue, but IP address restrictions will not be defined on the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] URLs.  
+ Setup cannot define IP address restrictions on URLs created for an upgraded report server. Upgrade can continue, but IP address restrictions will not be defined on the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URLs.  
   
 ## Corrective Action  
  After upgrade, use ISA Server, your firewall software, or another solution to allow or exclude requests from specific IP addresses to the report server.  

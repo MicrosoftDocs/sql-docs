@@ -28,18 +28,18 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Modeling Flags (Data Mining)
-  You can use modeling flags in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] to provide additional information to a data mining algorithm about the data that is defined in a case table. The algorithm can use this information to build a more accurate data mining model.  
+  You can use modeling flags in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] to provide additional information to a data mining algorithm about the data that is defined in a case table. The algorithm can use this information to build a more accurate data mining model.  
   
  Some modeling flags are defined at the level of the mining structure, whereas others are defined at the level of the mining model column. For example, the `NOT NULL` modeling flag is used with mining structure columns. You can define additional modeling flags on the mining model columns, depending on the algorithm you use to create the model.  
   
 > [!NOTE]  
->  Third-party plug-ins might have other modeling flags, in addition to those pre-defined by [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+>  Third-party plug-ins might have other modeling flags, in addition to those pre-defined by [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
 ## List of Modeling Flags  
- The following list describes the modeling flags that are supported in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. For information about modeling flags that are supported by specific algorithms, see the technical reference topic for the algorithm that was used to create the model.  
+ The following list describes the modeling flags that are supported in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. For information about modeling flags that are supported by specific algorithms, see the technical reference topic for the algorithm that was used to create the model.  
   
  `NOT NULL`  
- Indicates that the values for the attribute column should never contain a null value. An error will result if [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] encounters a null value for this attribute column during the model training process.  
+ Indicates that the values for the attribute column should never contain a null value. An error will result if [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] encounters a null value for this attribute column during the model training process.  
   
  **MODEL_EXISTENCE_ONLY**  
  Indicates that the column will be treated as having two states: `Missing` and `Existing`. If the value is `NULL`, it is treated as Missing. The MODEL_EXISTENCE_ONLY flag is applied to the predictable attribute and is supported by most algorithms.  
@@ -85,9 +85,9 @@ WHERE MODEL_NAME = '<model name>'
  **Note** If you modify a mining model and change the content type of a column from continuous to discrete, you must manually change the flag on the mining column and then reprocess the model.  
   
 ### Regressors in Linear Regression Models  
- Linear regression models are based on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm. Even if you do not use the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression algorithm, any decision tree model can contain a tree or nodes that represents a regression on a continuous attribute.  
+ Linear regression models are based on the [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees algorithm. Even if you do not use the [!INCLUDE[msCoName](../includes/msconame-md.md)] Linear Regression algorithm, any decision tree model can contain a tree or nodes that represents a regression on a continuous attribute.  
   
- Therefore, in these models you do not need to specify that a continuous column represents a regressor. The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm will partition the dataset into regions with meaningful patterns even if you do not set the REGRESSOR flag on the column. The difference is that when you set the modeling flag, the algorithm will try to find regression equations of the following form to fit the patterns in the nodes of  the tree.  
+ Therefore, in these models you do not need to specify that a continuous column represents a regressor. The [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees algorithm will partition the dataset into regions with meaningful patterns even if you do not set the REGRESSOR flag on the column. The difference is that when you set the modeling flag, the algorithm will try to find regression equations of the following form to fit the patterns in the nodes of  the tree.  
   
  a*C1 + b\*C2 + ...  
   
@@ -107,7 +107,7 @@ WHERE MODEL_NAME = '<model name>'
 |See the modeling flags supported by specific algorithms (in the Modeling Flags section for each algorithm reference topic)|[Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-algorithms-analysis-services-data-mining.md)|  
 |Learn more about mining structure columns and the properties that you can set on them|[Mining Structure Columns](../../2014/analysis-services/mining-structure-columns.md)|  
 |Learn about mining model columns and modeling flags that can be applied at the model level|[Mining Model Columns](../../2014/analysis-services/mining-model-columns.md)|  
-|See syntax for  working with modeling  flags in DMX statements|[Modeling Flags &#40;DMX&#41;](../Topic/Modeling%20Flags%20\(DMX\).md)|  
+|See syntax for  working with modeling  flags in DMX statements|[Modeling Flags &#40;DMX&#41;](~/dmx/modeling-flags-dmx.md)|  
 |Understand missing values and how to work with  them|[Missing Values &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/missing-values-analysis-services-data-mining.md)|  
 |Learn about managing models and structures and setting usage properties|[Moving Data Mining Objects](../../2014/analysis-services/moving-data-mining-objects.md)|  
   

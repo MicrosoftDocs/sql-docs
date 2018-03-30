@@ -29,7 +29,7 @@ ms.author: "mblythe"
 manager: "mblythe"
 ---
 # NotifyTableChange Element (XMLA)
-  Notifies an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] that a change has occurred to tables in a specified data source.  
+  Notifies an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] that a change has occurred to tables in a specified data source.  
   
 ## Syntax  
   
@@ -59,11 +59,11 @@ manager: "mblythe"
 |Child elements|[Object](../../../2014/analysis-services/dev-guide/object-element-xmla.md), [TableNotifications](../../../2014/analysis-services/dev-guide/tablenotifications-element-xmla.md)|  
   
 ## Remarks  
- The `NotifyTableChange` command allows a client application to explicitly notify an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance that one or more tables contained in a data source have been changed. For proactive caching, this notification indicates that relational OLAP (ROLAP) objects based on those tables should be reviewed and updated.  
+ The `NotifyTableChange` command allows a client application to explicitly notify an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance that one or more tables contained in a data source have been changed. For proactive caching, this notification indicates that relational OLAP (ROLAP) objects based on those tables should be reviewed and updated.  
   
  This method of notification is best used for ROLAP objects based on views or named queries defined in a data source view for which changes can be hard to detect and track.  
   
- The `Object` element must refer to a data source in the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] database. If the `Object` element refers to an object other than a data source, an error occurs.  
+ The `Object` element must refer to a data source in the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database. If the `Object` element refers to an object other than a data source, an error occurs.  
   
  For more information about proactive caching, see [Proactive Caching &#40;Partitions&#41;](../../../2014/analysis-services/dev-guide/proactive-caching-partitions.md).  
   

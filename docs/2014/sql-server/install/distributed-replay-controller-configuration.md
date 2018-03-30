@@ -16,7 +16,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Distributed Replay Controller Configuration
-  Use the **Distributed Replay Controller Configuration** page of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Installation Wizard to specify the users you want to grant administrative permissions to for the Distributed Replay controller service.  
+  Use the **Distributed Replay Controller Configuration** page of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard to specify the users you want to grant administrative permissions to for the Distributed Replay controller service.  
   
  Users that have administrative permissions will have unlimited access to the Distributed Replay controller service.  
   

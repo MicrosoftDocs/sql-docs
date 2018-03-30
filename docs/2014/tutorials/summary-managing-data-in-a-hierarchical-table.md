@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: a0fd21fc-87fa-42c3-a3ae-1fed24cdd692
 caps.latest.revision: 14
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Summary: Managing Data in a Hierarchical Table
@@ -25,6 +25,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Hierarchical Data &#40;SQL Server&#41;](../../2014/database-engine/hierarchical-data-sql-server.md)   
- [hierarchyid Data Type Method Reference](../Topic/hierarchyid%20Data%20Type%20Method%20Reference.md)  
+ [hierarchyid Data Type Method Reference](~/t-sql/data-types/hierarchyid-data-type-method-reference.md)  
   
   

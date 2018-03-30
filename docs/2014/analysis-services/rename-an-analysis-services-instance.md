@@ -21,15 +21,15 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Rename an Analysis Services Instance
-  You can rename an existing instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] by using the **Rename Instance** dialog box.  
+  You can rename an existing instance of [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] by using the **Rename Instance** dialog box.  
   
 > [!IMPORTANT]  
->  While renaming the instance, the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Instance Rename tool runs under elevated privileges, updating the Windows service name, security accounts, and registry entries associated with that instance. To ensure that these actions are performed, be sure to run this tool as a local system administrator.  
+>  While renaming the instance, the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Instance Rename tool runs under elevated privileges, updating the Windows service name, security accounts, and registry entries associated with that instance. To ensure that these actions are performed, be sure to run this tool as a local system administrator.  
   
- The [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Instance Rename tool does not modify the program folder that was created for the original instance. Do not modify the program folder name to match the instance you are renaming. Changing a program folder name can prevent Setup from repairing or uninstalling the installation.  
+ The [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Instance Rename tool does not modify the program folder that was created for the original instance. Do not modify the program folder name to match the instance you are renaming. Changing a program folder name can prevent Setup from repairing or uninstalling the installation.  
   
 > [!NOTE]  
->  The [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Instance Rename tool is not supported for use in a cluster environment.  
+>  The [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Instance Rename tool is not supported for use in a cluster environment.  
   
 ### To rename an instance of Analysis Services  
   
@@ -49,7 +49,7 @@ manager: "mblythe"
   
 2.  Update PowerShell scripts or AMO scripts that you routinely use to backup, synchronize, or process databases.  
   
-3.  Update project properties for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] projects that you work with in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. For tabular mode server instances, be sure to update the Workspace Server property on the model.bim file, as well as the Server property on the project.  
+3.  Update project properties for [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] projects that you work with in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. For tabular mode server instances, be sure to update the Workspace Server property on the model.bim file, as well as the Server property on the project.  
   
 4.  Depending on how you specified the service account, you might need to update database logins or file permissions that grant data access rights to the service (for example, if you use the service account to process data or access linked objects on another server).  
   

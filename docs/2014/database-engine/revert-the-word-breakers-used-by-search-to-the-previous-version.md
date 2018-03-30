@@ -12,19 +12,19 @@ ms.topic: "article"
 ms.assetid: 29b4488e-4c6a-4bf0-a64d-19e2fdafa7ae
 caps.latest.revision: 10
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Revert the Word Breakers Used by Search to the Previous Version
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installs and enables a version of the word breakers and stemmers for all languages supported by Full-Text Search with the exception of Korean. This topic describes how to switch from this version of these components to the previous version, or to switch back from the previous version to the new version.  
+  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] installs and enables a version of the word breakers and stemmers for all languages supported by Full-Text Search with the exception of Korean. This topic describes how to switch from this version of these components to the previous version, or to switch back from the previous version to the new version.  
   
  This topic does not discuss the following languages:  
   
 -   **English**. To revert or restore the English components, see [Change the Word Breaker Used for US English and UK English](../../2014/database-engine/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
   
--   **Danish, Polish, and Turkish**. The third-party word breakers for Danish, Polish, and Turkish that were included with previous releases of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] have been replaced with [!INCLUDE[msCoName](../../includes/msconame-md.md)] components.  
+-   **Danish, Polish, and Turkish**. The third-party word breakers for Danish, Polish, and Turkish that were included with previous releases of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] have been replaced with [!INCLUDE[msCoName](../includes/msconame-md.md)] components.  
   
--   **Czech and Greek**. There are new word breakers for Czech and Greek. Previous releases of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Full-Text Search did not include support for these two languages.  
+-   **Czech and Greek**. There are new word breakers for Czech and Greek. Previous releases of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Full-Text Search did not include support for these two languages.  
   
 -   **Korean**. The word breaker and stemmer for the Korean language are not upgraded in this release.  
   
@@ -37,12 +37,12 @@ manager: "jhubbard"
 |------------------|-------------------|----------------------------------|----------------------|---------------------------------|  
 |NaturalLanguage6.dll|NaturalLanguage6.dll|34|Obtain and install a previous version of NaturalLanguage6.dll, overwriting the current version of the file.|No action required.<br /><br /> The registry keys and values have not changed for this release.|  
 |(Other file name)|NaturalLanguage6.dll|5|Obtain and install a previous version of NaturalLanguage6.dll, overwriting the current version of the file.|Change a set of registry entries to specify the previous version of the components.|  
-|(Other file name)|(Other file name)|6|No action required.<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] setup copies both the current and the previous versions of the components to the Binn folder.|Change a set of registry entries to specify the previous version of the components.|  
+|(Other file name)|(Other file name)|6|No action required.<br /><br /> [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] setup copies both the current and the previous versions of the components to the Binn folder.|Change a set of registry entries to specify the previous version of the components.|  
   
 > [!WARNING]  
 >  If you replace the current version of the file NaturalLanguage6.dll with a different version, then the behavior of all the languages that use this file is affected.  
   
- The files described in this topic are DLL files that are installed in the `MSSQL\Binn` folder for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. The full path is typically the following path:  
+ The files described in this topic are DLL files that are installed in the `MSSQL\Binn` folder for the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance. The full path is typically the following path:  
   
  `C:\Program Files\Microsoft SQL Server\<instance>\MSSQL\Binn`  
   
@@ -97,25 +97,25 @@ manager: "jhubbard"
   
 1.  Navigate to the Binn folder described above.  
   
-2.  Back up the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version of NaturalLanguage6.dll to another location.  
+2.  Back up the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] version of NaturalLanguage6.dll to another location.  
   
-3.  Copy the previous version of NaturalLanguage6.dll from the Binn folder of an instance of [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] or [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] into the Binn folder of the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instance.  
+3.  Copy the previous version of NaturalLanguage6.dll from the Binn folder of an instance of [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] or [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] into the Binn folder of the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] instance.  
   
     > [!WARNING]  
     >  This change affects all the languages that use NaturalLanguage6.dll in both the current and previous version.  
   
-4.  Restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+4.  Restart [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ###  <a name="nl6nl6restore"></a> To restore the current components  
   
-1.  Navigate to the location where you backed up the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version of NaturalLanguage6.dll.  
+1.  Navigate to the location where you backed up the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] version of NaturalLanguage6.dll.  
   
-2.  Copy the current version of NaturalLanguage6.dll from the backup location into the Binn folder of the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instance.  
+2.  Copy the current version of NaturalLanguage6.dll from the backup location into the Binn folder of the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] instance.  
   
     > [!WARNING]  
     >  This change affects all the languages that use NaturalLanguage6.dll in both the current and previous version.  
   
-3.  Restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+3.  Restart [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ##  <a name="newnl6"></a> Languages for which the file name of the previous word breaker only is NaturalLanguage6.dll  
  For the languages in the following table, the file name of the previous word breaker is different from the file name of the new version. The previous file name is NaturalLanguage6.dll. To revert to the previous version, you have to overwrite the current version of NaturalLanguage6.dll with an earlier version of the same file. You also have to change a set of registry entries to specify the previous or current version of the components.  
@@ -143,9 +143,9 @@ manager: "jhubbard"
   
 2.  Do not remove the files for the current version of the components from the Binn folder.  
   
-3.  Back up the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version of NaturalLanguage6.dll to another location.  
+3.  Back up the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] version of NaturalLanguage6.dll to another location.  
   
-4.  Copy the previous version of NaturalLanguage6.dll from the Binn folder of an instance of [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] or [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] into the Binn folder of the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instance.  
+4.  Copy the previous version of NaturalLanguage6.dll from the Binn folder of an instance of [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] or [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] into the Binn folder of the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] instance.  
   
     > [!WARNING]  
     >  This change affects all the languages that use NaturalLanguage6.dll in both the current and previous version.  
@@ -168,13 +168,13 @@ manager: "jhubbard"
   
 9. If the selected language uses a stemmer, then update the **StemmerClass** key value to the value from the table for the current stemmer.  
   
-10. Restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+10. Restart [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ###  <a name="newnl6restore"></a> To restore the current components  
   
-1.  Navigate to the location where you backed up the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version of NaturalLanguage6.dll.  
+1.  Navigate to the location where you backed up the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] version of NaturalLanguage6.dll.  
   
-2.  Copy the current version of NaturalLanguage6.dll from the backup location into the Binn folder of the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instance.  
+2.  Copy the current version of NaturalLanguage6.dll from the backup location into the Binn folder of the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] instance.  
   
     > [!WARNING]  
     >  This change affects all the languages that use NaturalLanguage6.dll in both the current and previous version.  
@@ -197,7 +197,7 @@ manager: "jhubbard"
   
 7.  If the selected language uses a stemmer, then update the **StemmerClass** key value to the value from the table for the previous stemmer.  
   
-8.  Restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+8.  Restart [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ###  <a name="newnl6values"></a> File names and registry values for reverting and restoring word breakers and stemmers  
  Use the following list of file names and registry entries together with the instructions in the preceding section. Use the previous values to revert to the previous version, or use the current values to restore the current version of the components.  
@@ -250,7 +250,7 @@ manager: "jhubbard"
 |Current file name|MsWb7.dll|MsWb7.dll|  
   
 ##  <a name="newnew"></a> Languages for which neither the previous nor the current file name is NaturalLanguage6.dll  
- For the languages in the following table, the file names of the previous word breakers and stemmers are different from the file names of the new versions. Neither the previous nor the current file name is NaturalLanguage6.dll. You do not have to replace any files, because [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] setup copies both the current and the previous versions of the components to the Binn folder. However you have to change a set of registry entries to specify the previous or current version of the components.  
+ For the languages in the following table, the file names of the previous word breakers and stemmers are different from the file names of the new versions. Neither the previous nor the current file name is NaturalLanguage6.dll. You do not have to replace any files, because [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] setup copies both the current and the previous versions of the components to the Binn folder. However you have to change a set of registry entries to specify the previous or current version of the components.  
   
  **List of affected languages**  
   
@@ -289,7 +289,7 @@ manager: "jhubbard"
   
 6.  If the selected language uses a stemmer, then update the **StemmerClass** key value to the value from the table for the current stemmer.  
   
-7.  Restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+7.  Restart [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ###  <a name="newnewrestore"></a> To restore the previous components  
   
@@ -313,7 +313,7 @@ manager: "jhubbard"
   
 6.  If the selected language uses a stemmer, then update the **StemmerClass** key value to the value from the table for the previous stemmer.  
   
-7.  Restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+7.  Restart [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ###  <a name="newnewvalues"></a> File names and registry values for reverting and restoring word breakers and stemmers  
  Use the following list of file names and registry entries together with the instructions in the preceding section. Use the previous values to revert to the previous version, or use the current values to restore the current version of the components.  

@@ -28,7 +28,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # What&#39;s New in SQL Server 2014
-  This topic summarizes detailed links to new features in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and summarizes services packs for [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
+  This topic summarizes detailed links to new features in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] and summarizes services packs for [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  
 **Try it out:** ![Azure Virtual Machine small](../../2014/getting-started/media/azure-virtual-machine-small.png)     Have an Azure account?  Then go **[Here](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2014sp1EnterpriseWindowsServer2012R2)** to spin up a Virtual Machine with SQL Server 2014 Service Pack 1 (SP1) already installed. 
   
@@ -38,7 +38,7 @@ manager: "jhubbard"
   
 -   [What's New in SQL Server Installation](../../2014/sql-server/install/what-s-new-in-sql-server-installation.md)  
   
- **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] has not introduced significant new features to the following:**  
+ **[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] has not introduced significant new features to the following:**  
   
 -   [What's New &#40;Integration Services&#41;](../../2014/integration-services/what-s-new-integration-services.md)  
   
@@ -46,26 +46,26 @@ manager: "jhubbard"
   
 -   [What's New &#40;Reporting Services&#41;](../../2014/reporting-services/what-s-new-reporting-services.md)  
   
-## [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 1 (SP1)
-[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (SP1) did not introduce significant new features.
+## [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Service Pack 1 (SP1)
+[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] (SP1) did not introduce significant new features.
 -  [SQL Server 2014 Service Pack 1 release information ](https://support.microsoft.com/en-us/kb/3058865).
 -  [![Download Service Pack 1 for Microsoft® SQL Server® 2014](../../2014/getting-started/media/download.png)](https://www.microsoft.com/en-us/download/details.aspx?id=46694) [Download Service Pack 1 for Microsoft® SQL Server® 2014](https://www.microsoft.com/en-us/download/details.aspx?id=46694).
 
 
-## [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2 (SP2)
+## [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Service Pack 2 (SP2)
 - [SQL Server 2014 Service Pack 2 release information](https://support.microsoft.com/en-us/kb/3171021).
 -  [![Download Service Pack 2 for Microsoft® SQL Server® 2014](../../2014/getting-started/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=821558) [Download Service Pack 2 for Microsoft® SQL Server® 2014](http://go.microsoft.com/fwlink/?LinkID=821558).
 -  [![Download SQL Server 2014 SP2 Feature Pack](../../2014/getting-started/media/download.png)](https://www.microsoft.com/en-us/download/details.aspx?id=53164) [Download the SQL Server 2014 SP2 Feature Pack](https://www.microsoft.com/en-us/download/details.aspx?id=53164).
 
-[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (SP2) Includes the following improvements:
+[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] (SP2) Includes the following improvements:
 
 ### Performance and Scalability Improvements 
--   **Automatic Soft NUMA partitioning:** With [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2, Automatic Soft NUMA is enabled when Trace Flag 8079 is turned on during instance startup. When Trace Flag 8079 is enabled during startup, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 will interrogate the hardware layout and automatically configure Soft NUMA on systems reporting 8 or more CPUs per NUMA node. The automatic, soft NUMA behavior is Hyperthread (HT/logical processor) aware. The partitioning and creation of additional nodes scales background processing by increasing the number of listeners, scaling, and network and encryption capabilities. It is recommended to first test the performance workload with Auto-Soft NUMA before turning it in production. [See the Blog for more information](https://blogs.msdn.microsoft.com/psssql/2016/03/30/sql-2016-it-just-runs-faster-automatic-soft-numa/). 
--  **Dynamic Memory Object Scaling:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 dynamically partitions memory objects based on number of nodes and cores to scale on modern hardware. The goal of dynamic promotion is to automatically partition a thread safe memory object (CMEMTHREAD) if it becomes a bottleneck. Un-partitioned memory objects can be dynamically promoted to be partitioned by node (number of partitions equals number of NUMA nodes), and memory objects partitioned by node can by further promoted to be partitioned by CPU (number of partitions equals number of CPUs). [See the blog for more information](https://blogs.msdn.microsoft.com/psssql/2016/04/06/sql-2016-it-just-runs-faster-dynamic-memory-object-cmemthread-partitioning/).
+-   **Automatic Soft NUMA partitioning:** With [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2, Automatic Soft NUMA is enabled when Trace Flag 8079 is turned on during instance startup. When Trace Flag 8079 is enabled during startup, [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 will interrogate the hardware layout and automatically configure Soft NUMA on systems reporting 8 or more CPUs per NUMA node. The automatic, soft NUMA behavior is Hyperthread (HT/logical processor) aware. The partitioning and creation of additional nodes scales background processing by increasing the number of listeners, scaling, and network and encryption capabilities. It is recommended to first test the performance workload with Auto-Soft NUMA before turning it in production. [See the Blog for more information](https://blogs.msdn.microsoft.com/psssql/2016/03/30/sql-2016-it-just-runs-faster-automatic-soft-numa/). 
+-  **Dynamic Memory Object Scaling:** [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 dynamically partitions memory objects based on number of nodes and cores to scale on modern hardware. The goal of dynamic promotion is to automatically partition a thread safe memory object (CMEMTHREAD) if it becomes a bottleneck. Un-partitioned memory objects can be dynamically promoted to be partitioned by node (number of partitions equals number of NUMA nodes), and memory objects partitioned by node can by further promoted to be partitioned by CPU (number of partitions equals number of CPUs). [See the blog for more information](https://blogs.msdn.microsoft.com/psssql/2016/04/06/sql-2016-it-just-runs-faster-dynamic-memory-object-cmemthread-partitioning/).
 -  **MAXDOP hint for DBCC CHECK\* commands:** This improvement addresses [connect feedback (468694)](https://connect.microsoft.com/SQLServer/feedback/details/468694/maxdop-option-in-dbcc-checkdb). You can now run DBCC CHECKDB with the a MAXDOP setting other than the sp_configure value. If MAXDOP exceeds the value configured with Resource Governor, the Database Engine uses the Resource Governor MAXDOP value, described in ALTER WORKLOAD GROUP (Transact-SQL). All semantic rules used with the max degree of parallelism configuration option are applicable when you use the MAXDOP query hint. For more information, see [DBCC CHECKDB (Transact-SQL)](https://msdn.microsoft.com/library/ms176064.aspx).
--   **Enable >8TB for Buffer Pool:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 enables 128TB of virtual address space for buffer pool usage. This improvement enables SQL Server Buffer Pool to scale beyond 8TB on modern hardware.
+-   **Enable >8TB for Buffer Pool:** [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 enables 128TB of virtual address space for buffer pool usage. This improvement enables SQL Server Buffer Pool to scale beyond 8TB on modern hardware.
 -   **SOS_RWLock spinlock Improvement:** The SOS_RWLock is a synchronization primitive used in various places throughout the SQL Server code base.  As the name implies, the code can have multiple shared (readers) or single (writer) ownership. This improvement removes the need for spinlock for SOS_RWLock and instead uses lock-free techniques similar to in-memory OLTP. With this change, many threads can read a data structure protected by SOS_RWLock in parallel without blocking each other and thereby providing increased scalability. Prior to this change, the spinlock implementation allowed only one thread to acquire the SOS_RWLock at a time, even to read a data structure.  [See the blog for more information](https://blogs.msdn.microsoft.com/psssql/2016/04/07/sql-2016-it-just-runs-faster-sos_rwlock-redesign/).
--    **Spatial Native Implementation:** Significant improvement in spatial query performance is introduced in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 through native implementation. For more information, see the [knowledge base article KB3107399](https://support.microsoft.com/en-us/kb/3107399).
+-    **Spatial Native Implementation:** Significant improvement in spatial query performance is introduced in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 through native implementation. For more information, see the [knowledge base article KB3107399](https://support.microsoft.com/en-us/kb/3107399).
 
 ### Supportability and Diagnostics Improvements
 -   **Database Cloning:** Clone database is a new DBCC command that enhances troubleshooting existing production databases by cloning the schema and metadata without the data. The clone is created with the command `DBCC clonedatabase(‘source_database_name’, ‘clone_database_name’)`.  **Note:** Cloned databases should not be used in production environments. Use the following command determine if a database has been generated from a cloned database: `select DATABASEPROPERTYEX('clonedb', 'isClone')`. The return value of **1** indicates the database is created from clonedatabase while **0** indicates it is not a clone.
@@ -87,7 +87,7 @@ manager: "jhubbard"
 
 
 ## Additional Information  
- [SQL Server 2014 Resources](../Topic/SQL%20Server%202014%20Resources.md)  
+ [SQL Server 2014 Resources](~/2014/books-online-for-sql-server-2014.md)  
   
  [SQL Server 2014 Release Notes](http://go.microsoft.com/fwlink/p/?linkID=296445)  
   

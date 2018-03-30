@@ -18,12 +18,12 @@ manager: "jhubbard"
 # Cross-Container Transactions
   Cross-container transactions are either implicit or explicit user transactions that include calls to natively-compiled stored procedures or operations on memory-optimized tables.  
   
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], calls to stored procedures do not initiate a transaction. Executions of natively compiled procedures in autocommit mode (not in the context of a user transaction) are not considered cross-container transactions.  
+ In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], calls to stored procedures do not initiate a transaction. Executions of natively compiled procedures in autocommit mode (not in the context of a user transaction) are not considered cross-container transactions.  
   
  Any interpreted query that references memory-optimized tables is considered a part of a cross-container transaction, whether executed from an explicit or implicit transaction or in auto-commit mode.  
   
 ##  <a name="isolation"></a> Isolation of Individual Operations  
- Each [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transaction has an isolation level. The default isolation level is Read Committed. To use a different isolation level, you can set the isolation level using [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../Topic/SET%20TRANSACTION%20ISOLATION%20LEVEL%20\(Transact-SQL\).md).  
+ Each [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] transaction has an isolation level. The default isolation level is Read Committed. To use a different isolation level, you can set the isolation level using [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](~/t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
  It is often necessary to perform operations on memory-optimized tables at a different isolation level than operations on disk-based tables. In a transaction, it is possible to set a different isolation level for a collection of statements or for an individual read operation.  
   
@@ -45,7 +45,7 @@ begin transaction
 commit  
 ```  
   
- To set an isolation level for individual read operations that is different from the transaction default, you can use a table hint (for example, serializable). Every select corresponds to a read operation and every update and every delete corresponds to a read, because the row always needs to be read before it can be updated or deleted. Insert operations do not have an isolation level, because writes are always isolated in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In the following example, the default isolation level for the transaction is read committed, but table t1 is accessed under serializable and t2 under snapshot isolation.  
+ To set an isolation level for individual read operations that is different from the transaction default, you can use a table hint (for example, serializable). Every select corresponds to a read operation and every update and every delete corresponds to a read, because the row always needs to be read before it can be updated or deleted. Insert operations do not have an isolation level, because writes are always isolated in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. In the following example, the default isolation level for the transaction is read committed, but table t1 is accessed under serializable and t2 under snapshot isolation.  
   
 ```tsql  
 set transaction isolation level read committed  
@@ -63,7 +63,7 @@ commit
 ### Isolation Semantics for Individual Operations  
  A serializable transaction T is executed in complete isolation. It is as if every other transaction has either committed before T started, or is started after T committed. It becomes more complex when different operations in a transaction have different isolation levels.  
   
- The general semantics of the transaction isolation levels in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], along with the implications on locking, is explained in [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../Topic/SET%20TRANSACTION%20ISOLATION%20LEVEL%20\(Transact-SQL\).md).  
+ The general semantics of the transaction isolation levels in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], along with the implications on locking, is explained in [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](~/t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
  For cross-container transactions where different operations may have different isolation levels, you need to understand the semantics of isolation of individual read operations. Write operations are always isolated. Writes in different transactions cannot impact each other.  
   
@@ -133,7 +133,7 @@ commit
   
  The disk-based side of a given transaction T reaches a certain isolation level X if one of the following conditions is met:  
   
--   It starts in X. That is, the session default was X, either because you executed `SET TRANSACTION ISOLATION LEVEL`, or it is the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] default.  
+-   It starts in X. That is, the session default was X, either because you executed `SET TRANSACTION ISOLATION LEVEL`, or it is the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] default.  
   
 -   During the transaction, the default isolation level is changed to X using `SET TRANSACTION ISOLATION LEVEL`.  
   
@@ -177,7 +177,7 @@ commit
 -   REPEATABLE READ and SERIALIZABLE transactions can access memory-optimized tables under SNAPSHOT isolation.  
   
 ## Read-only Cross-Container Transactions  
- Most read-only transactions in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are rolled back at commit time. Because there are no changes to commit to the database, the system simply frees the resources used by the transaction. For read-only disk-based transactions, all locks taken by the transaction are released at this time. For read-only memory-optimized transactions that span a single natively compiled procedure execution, no validation is performed.  
+ Most read-only transactions in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] are rolled back at commit time. Because there are no changes to commit to the database, the system simply frees the resources used by the transaction. For read-only disk-based transactions, all locks taken by the transaction are released at this time. For read-only memory-optimized transactions that span a single natively compiled procedure execution, no validation is performed.  
   
  Cross-container, read-only transactions in autocommit mode are simply rolled back at the end of the transaction. No validation is performed.  
   

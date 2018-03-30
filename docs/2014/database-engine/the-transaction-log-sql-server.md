@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # The Transaction Log (SQL Server)
-  Every [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database has a transaction log that records all transactions and the database modifications made by each transaction. The transaction log must be truncated on a regular basis to keep it from filling up. However, some factors can delay log truncation, so monitoring log size is important. Some operations can be minimally logged to reduce their impact on transaction log size.  
+  Every [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database has a transaction log that records all transactions and the database modifications made by each transaction. The transaction log must be truncated on a regular basis to keep it from filling up. However, some factors can delay log truncation, so monitoring log size is important. Some operations can be minimally logged to reduce their impact on transaction log size.  
   
  The transaction log is a critical component of the database and, if there is a system failure, the transaction log might be required to bring your database back to a consistent state. The transaction log should never be deleted or moved unless you fully understand the ramifications of doing this.  
   
@@ -44,16 +44,16 @@ manager: "jhubbard"
   
 -   Recovery of individual transactions.  
   
--   Recovery of all incomplete transactions when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is started.  
+-   Recovery of all incomplete transactions when [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is started.  
   
 -   Rolling a restored database, file, filegroup, or page forward to the point of failure.  
   
 -   Supporting transactional replication.  
   
--   Supporting high availability and disaster recovery solutions: [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], database mirroring, and log shipping.  
+-   Supporting high availability and disaster recovery solutions: [!INCLUDE[ssHADR](../includes/sshadr-md.md)], database mirroring, and log shipping.  
   
 ##  <a name="Truncation"></a> Transaction Log Truncation  
- Log truncation frees space in the log file for reuse by the transaction log. Log truncation is essential to keep the log from filling. Log truncation deletes inactive virtual log files from the logical transaction log of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, freeing space in the logical log for reuse by the Physical transaction log. If a transaction log were never truncated, it would eventually fill all the disk space that is allocated to its physical log files.  
+ Log truncation frees space in the log file for reuse by the transaction log. Log truncation is essential to keep the log from filling. Log truncation deletes inactive virtual log files from the logical transaction log of a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database, freeing space in the logical log for reuse by the Physical transaction log. If a transaction log were never truncated, it would eventually fill all the disk space that is allocated to its physical log files.  
   
  To avoid this problem, unless log truncation is being delayed for some reason, truncation occurs automatically after the following events:  
   
@@ -72,7 +72,7 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  For information about how to respond to a full transaction log, see [Troubleshoot a Full Transaction Log &#40;SQL Server Error 9002&#41;](../../2014/database-engine/troubleshoot-a-full-transaction-log-sql-server-error-9002.md).  
   
- Log truncation can be delayed by a variety of factors. You can discover what, if anything, is preventing log truncation by querying the **log_reuse_wait** and **log_reuse_wait_desc** columns of the [sys.databases](../Topic/sys.databases%20\(Transact-SQL\).md) catalog view. The following table describes the values of these columns.  
+ Log truncation can be delayed by a variety of factors. You can discover what, if anything, is preventing log truncation by querying the **log_reuse_wait** and **log_reuse_wait_desc** columns of the [sys.databases](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view. The following table describes the values of these columns.  
   
 |log_reuse_wait value|log_reuse_wait_desc value|Description|  
 |----------------------------|----------------------------------|-----------------|  
@@ -91,7 +91,7 @@ manager: "jhubbard"
 |12|—|For internal use only|  
 |13|OLDEST_PAGE|If a database is configured to use indirect checkpoints, the oldest page on the database might be older than the checkpoint LSN. In this case, the oldest page can delay log truncation. (All recovery models)<br /><br /> For information about indirect checkpoints, see [Database Checkpoints &#40;SQL Server&#41;](../../2014/database-engine/database-checkpoints-sql-server.md).|  
 |14|OTHER_TRANSIENT|This value is currently not used.|  
-|16|XTP_CHECKPOINT|When a database has a memory-optimized filegroup, the transaction log may not truncate until automatic [!INCLUDE[hek_2](../../includes/hek-2-md.md)] checkpoint is triggered (which happens at every 512 MB of log growth).<br /><br /> Note: To truncate transaction log before 512 MB size, fire the Checkpoint command manually against the database in question.|  
+|16|XTP_CHECKPOINT|When a database has a memory-optimized filegroup, the transaction log may not truncate until automatic [!INCLUDE[hek_2](../includes/hek-2-md.md)] checkpoint is triggered (which happens at every 512 MB of log growth).<br /><br /> Note: To truncate transaction log before 512 MB size, fire the Checkpoint command manually against the database in question.|  
   
 ##  <a name="MinimallyLogged"></a> Operations That Can Be Minimally Logged  
  *Minimal logging* involves logging only the information that is required to recover the transaction without supporting point-in-time recovery. This topic identifies the operations that are minimally logged under the bulk-logged recovery model (as well as under the simple recovery model, except when a backup is running).  
@@ -104,28 +104,28 @@ manager: "jhubbard"
   
  The following operations, which are fully logged under the full recovery model, are minimally logged under the simple and bulk-logged recovery model:  
   
--   Bulk import operations ([bcp](../../2014/database-engine/bcp-utility.md), [BULK INSERT](../Topic/BULK%20INSERT%20\(Transact-SQL\).md), and [INSERT... SELECT](../Topic/INSERT%20\(Transact-SQL\).md)). For more information about when bulk import into a table is minimally logged, see [Prerequisites for Minimal Logging in Bulk Import](../../2014/database-engine/prerequisites-for-minimal-logging-in-bulk-import.md).  
+-   Bulk import operations ([bcp](../../2014/database-engine/bcp-utility.md), [BULK INSERT](~/t-sql/statements/bulk-insert-transact-sql.md), and [INSERT... SELECT](~/t-sql/statements/insert-transact-sql.md)). For more information about when bulk import into a table is minimally logged, see [Prerequisites for Minimal Logging in Bulk Import](../../2014/database-engine/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
     > [!NOTE]  
     >  When transactional replication is enabled, BULK INSERT operations are fully logged even under the Bulk Logged recovery model.  
   
--   SELECT [INTO](../Topic/INTO%20Clause%20\(Transact-SQL\).md) operations.  
+-   SELECT [INTO](~/t-sql/queries/select-into-clause-transact-sql.md) operations.  
   
     > [!NOTE]  
     >  When transactional replication is enabled, SELECT INTO operations are fully logged even under the Bulk Logged recovery model.  
   
--   Partial updates to large value data types, using the .WRITE clause in the [UPDATE](../Topic/UPDATE%20\(Transact-SQL\).md) statement when inserting or appending new data. Note that minimal logging is not used when existing values are updated. For more information about large value data types, see [Data Types &#40;Transact-SQL&#41;](../Topic/Data%20Types%20\(Transact-SQL\).md).  
+-   Partial updates to large value data types, using the .WRITE clause in the [UPDATE](~/t-sql/queries/update-transact-sql.md) statement when inserting or appending new data. Note that minimal logging is not used when existing values are updated. For more information about large value data types, see [Data Types &#40;Transact-SQL&#41;](~/t-sql/data-types/data-types-transact-sql.md).  
   
--   [WRITETEXT](../Topic/WRITETEXT%20\(Transact-SQL\).md) and [UPDATETEXT](../Topic/UPDATETEXT%20\(Transact-SQL\).md) statements when inserting or appending new data into the `text`, `ntext`, and `image` data type columns. Note that minimal logging is not used when existing values are updated.  
+-   [WRITETEXT](~/t-sql/queries/writetext-transact-sql.md) and [UPDATETEXT](~/t-sql/queries/updatetext-transact-sql.md) statements when inserting or appending new data into the `text`, `ntext`, and `image` data type columns. Note that minimal logging is not used when existing values are updated.  
   
     > [!NOTE]  
     >  The WRITETEXT and UPDATETEXT statements are deprecated, so you should avoid using them in new applications.  
   
 -   If the database is set to the simple or bulk-logged recovery model, some index DDL operations are minimally logged whether the operation is executed offline or online. The minimally logged index operations are as follows:  
   
-    -   [CREATE INDEX](../Topic/CREATE%20INDEX%20\(Transact-SQL\).md) operations (including indexed views).  
+    -   [CREATE INDEX](~/t-sql/statements/create-index-transact-sql.md) operations (including indexed views).  
   
-    -   [ALTER INDEX](../Topic/ALTER%20INDEX%20\(Transact-SQL\).md) REBUILD or DBCC DBREINDEX operations.  
+    -   [ALTER INDEX](~/t-sql/statements/alter-index-transact-sql.md) REBUILD or DBCC DBREINDEX operations.  
   
         > [!NOTE]  
         >  The DBCC DBREINDEX statement is deprecated so you should avoid using it in new applications.  
@@ -133,7 +133,7 @@ manager: "jhubbard"
     -   DROP INDEX new heap rebuild (if applicable).  
   
         > [!NOTE]  
-        >  Index page deallocation during a [DROP INDEX](../Topic/DROP%20INDEX%20\(Transact-SQL\).md) operation is always fully logged.  
+        >  Index page deallocation during a [DROP INDEX](~/t-sql/statements/drop-index-transact-sql.md) operation is always fully logged.  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
  `Managing the transaction log`  

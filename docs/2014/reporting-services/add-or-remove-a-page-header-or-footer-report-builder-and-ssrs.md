@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 72988623-fee8-4a05-9f72-8fcb8e668576
 caps.latest.revision: 5
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Add or Remove a Page Header or Footer (Report Builder and SSRS)
@@ -22,7 +22,7 @@ manager: "mblythe"
 >  Each rendering extension processes page headers and footers differently. For more information, see [Page Headers and Footers &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/page-headers-and-footers-report-builder-and-ssrs.md) and [Pagination in Reporting Services &#40;Report Builder  and SSRS&#41;](../../2014/reporting-services/pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ### To add a page header or footer  
   

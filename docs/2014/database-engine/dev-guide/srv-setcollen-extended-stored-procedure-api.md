@@ -29,7 +29,7 @@ manager: "jhubbard"
 # srv_setcollen (Extended Stored Procedure API)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
   
  Specifies the current data length in bytes of a variable-length column or a column that allows NULL values.  
   

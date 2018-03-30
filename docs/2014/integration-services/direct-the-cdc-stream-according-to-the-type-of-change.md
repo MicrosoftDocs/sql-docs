@@ -22,7 +22,7 @@ manager: "jhubbard"
   
 ### To direct the CDC stream according to the type of change  
   
-1.  In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], open the [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] project that contains the package you want.  
+1.  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], open the [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] project that contains the package you want.  
   
 2.  In the Solution Explorer, double-click the package to open it.  
   
@@ -46,7 +46,7 @@ manager: "jhubbard"
   
      To open the **Advanced Editor** dialog box:  
   
-    -   In the **Data Flow** screen of your [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] project, right click the CDC splitter and select **Show Advanced Editor**.  
+    -   In the **Data Flow** screen of your [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] project, right click the CDC splitter and select **Show Advanced Editor**.  
   
      For more information about using the CDC splitter see CDC Components for Microsoft SQL Server Integration Services.  
   

@@ -18,15 +18,15 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Data Source Wizard F1 Help (Analysis Services)
-  Use the Data Source Wizard to create a data source for use in the following business intelligence projects in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]:  
+  Use the Data Source Wizard to create a data source for use in the following business intelligence projects in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]:  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Project  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Project  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Project  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Project  
   
 -   Report Model Project  
   
- After you create a data source, you can use Data Source Designer to edit its properties in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
+ After you create a data source, you can use Data Source Designer to edit its properties in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
   
 ## In This Section  
   

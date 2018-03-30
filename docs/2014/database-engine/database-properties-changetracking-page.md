@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: 9b929640-bc62-449b-9b06-b5a77b8cf372
 caps.latest.revision: 12
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Database Properties (ChangeTracking Page)
@@ -28,7 +28,7 @@ manager: "jhubbard"
   
  Setting the value to **True** sets a database option that allows change tracking to be enabled on individual tables.  
   
- You can also configure change tracking by using [ALTER DATABASE](../Topic/ALTER%20DATABASE%20\(Transact-SQL\).md).  
+ You can also configure change tracking by using [ALTER DATABASE](~/t-sql/statements/alter-database-transact-sql.md).  
   
  **Retention Period**  
  Specifies the minimum period for keeping change track information in the database. Data is removed only if the **Auto Clean-Up**value is **True**.  
@@ -46,7 +46,7 @@ manager: "jhubbard"
  Enabling **Auto Clean-Up** resets any previous custom retention period to the default retention period of 2 days.  
   
 ## See Also  
- [ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20\(Transact-SQL\).md)   
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../Topic/CREATE%20DATABASE%20\(SQL%20Server%20Transact-SQL\).md)  
+ [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](~/t-sql/statements/create-database-sql-server-transact-sql.md)  
   
   

@@ -27,7 +27,7 @@ helpviewer_keywords:
 ms.assetid: 44cb1e6f-a6b8-498a-8e8b-ca28e7ab1007
 caps.latest.revision: 34
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # View or Delete Report History (Report Manager)

@@ -16,20 +16,20 @@ helpviewer_keywords:
 ms.assetid: d66c96f4-2e84-4d79-9bfd-3635fdd98425
 caps.latest.revision: 6
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Insert Transact-SQL Snippets
-  A [!INCLUDE[tsql](../../includes/tsql-md.md)] code snippet is a template you can use as a starting point when writing new [!INCLUDE[tsql](../../includes/tsql-md.md)] statements in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor.  
+  A [!INCLUDE[tsql](../includes/tsql-md.md)] code snippet is a template you can use as a starting point when writing new [!INCLUDE[tsql](../includes/tsql-md.md)] statements in the [!INCLUDE[ssDE](../includes/ssde-md.md)] Query Editor.  
   
 ## Inserting Snippets  
  You can use the **Insert Snippet** menu to open a categorized list of snippets to choose from.  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] snippets contain replacement points: text that suggests the syntax relevant to that point. For example, the CREATE TABLE snippet has replacement points for elements such as the table name, column names, and column data types. After inserting the snippet, you must change the replacement text to form a valid [!INCLUDE[tsql](../../includes/tsql-md.md)] statement. For more information, see [Complete Transact-SQL Snippets](../../2014/database-engine/complete-transact-sql-snippets.md).  
+ [!INCLUDE[tsql](../includes/tsql-md.md)] snippets contain replacement points: text that suggests the syntax relevant to that point. For example, the CREATE TABLE snippet has replacement points for elements such as the table name, column names, and column data types. After inserting the snippet, you must change the replacement text to form a valid [!INCLUDE[tsql](../includes/tsql-md.md)] statement. For more information, see [Complete Transact-SQL Snippets](../../2014/database-engine/complete-transact-sql-snippets.md).  
   
 #### Inserting a Snippet by Using the Insert Snippet Menu  
   
-1.  In the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor window, put the cursor where you want to insert the [!INCLUDE[tsql](../../includes/tsql-md.md)] snippet.  
+1.  In the [!INCLUDE[ssDE](../includes/ssde-md.md)] Query Editor window, put the cursor where you want to insert the [!INCLUDE[tsql](../includes/tsql-md.md)] snippet.  
   
 2.  Launch the snippet picker tooltip in one of three ways:  
   

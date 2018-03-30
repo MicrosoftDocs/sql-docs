@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 23f3baa4-14c2-4262-92f7-3f43fcfa0436
 caps.latest.revision: 15
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Watch Window
@@ -33,7 +33,7 @@ manager: "jhubbard"
   
 ## Columns  
  **Name**  
- Are the expressions that are listed by the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger. The following expressions are supported:  
+ Are the expressions that are listed by the [!INCLUDE[tsql](../includes/tsql-md.md)] debugger. The following expressions are supported:  
   
 -   Variables.  
   
@@ -46,11 +46,11 @@ manager: "jhubbard"
 -   Transact-SQL statements that return a single value, such as: SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1.  
   
  **Value**  
- Displays the value that is returned after the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger evaluates the expression specified in **Name**.  
+ Displays the value that is returned after the [!INCLUDE[tsql](../includes/tsql-md.md)] debugger evaluates the expression specified in **Name**.  
   
  If the length of an expression is larger than the width of the **Value** column, a tooltip displays the full value when you move the pointer over the **Value** cell for that expression.  
   
- A magnifying glass icon in a **Value** cell indicates that the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger visualizer is available. In the list, you can specify **Text Visualizer**, **XML Visualizer**, or **HTML Visualizer**. To start a debugger visualizer, click the magnifying glass icon. The [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger opens a dialog that displays the data in a format appropriate to the data type.  
+ A magnifying glass icon in a **Value** cell indicates that the [!INCLUDE[tsql](../includes/tsql-md.md)] debugger visualizer is available. In the list, you can specify **Text Visualizer**, **XML Visualizer**, or **HTML Visualizer**. To start a debugger visualizer, click the magnifying glass icon. The [!INCLUDE[tsql](../includes/tsql-md.md)] debugger opens a dialog that displays the data in a format appropriate to the data type.  
   
  **Type**  
  Displays the data type of the expression.  
@@ -61,6 +61,6 @@ manager: "jhubbard"
  [Locals Window](../../2014/database-engine/locals-window.md)   
  [Call Stack Window](../../2014/database-engine/call-stack-window.md)   
  [QuickWatch Dialog Box](../../2014/database-engine/quickwatch-dialog-box.md)   
- [Expressions &#40;Transact-SQL&#41;](../Topic/Expressions%20\(Transact-SQL\).md)  
+ [Expressions &#40;Transact-SQL&#41;](~/t-sql/language-elements/expressions-transact-sql.md)  
   
   

@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: 9e1ee42d-b388-4929-89c7-8741b956c3be
 caps.latest.revision: 17
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # SetServiceState Method (WMI MSReportServer_ConfigurationSetting)
@@ -44,7 +44,7 @@ public void SetSecureConnectionLevel(Boolean EnableWindowsService,
  A `Boolean` value indicating the state of the Windows service. A value of `true` starts the Report Server Windows service; a value of `false` stops the Windows service.  
   
  *EnableWebService*  
- A `Boolean` value indicating the state of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web service. A value of `true` starts the Report Server Web service; a value of `false` stops the Web service  
+ A `Boolean` value indicating the state of the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Web service. A value of `true` starts the Report Server Web service; a value of `false` stops the Web service  
   
  *EnableReportManager*  
  A `Boolean` value indicating the desired state of the Report manager.  
@@ -58,7 +58,7 @@ public void SetSecureConnectionLevel(Boolean EnableWindowsService,
 ## Remarks  
   
 ## Requirements  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../includes/ssrswminmspca-md.md)]  
   
 ## See Also  
  [MSReportServer_ConfigurationSetting Members](../../2014/reporting-services/msreportserver-configurationsetting-members.md)  

@@ -39,7 +39,7 @@ manager: "mblythe"
  For an explanation of data slice benefits, see [Set the Slice on your SSAS Cube Partition](http://go.microsoft.com/fwlink/?LinkId=317783).  
   
 > [!NOTE]  
->  Note that dynamic MDX functions (such as [Generate &#40;MDX&#41;](../Topic/Generate%20\(MDX\).md) or [Except &#40;MDX&#41;](../Topic/Except%20\(MDX\).md)) are not supported in the Slice property for partitions. You must define the slice by using explicit tuples or member references.  
+>  Note that dynamic MDX functions (such as [Generate &#40;MDX&#41;](~/mdx/generate-mdx.md) or [Except &#40;MDX&#41;](~/mdx/except-mdx-function.md)) are not supported in the Slice property for partitions. You must define the slice by using explicit tuples or member references.  
 >   
 >  For example, rather than using the [: &#40;Range&#41; &#40;MDX&#41;](../Topic/:%20\(Range\)%20\(MDX\).md) function to define a range, you would need to enumerate each member by the specific years.  
 >   

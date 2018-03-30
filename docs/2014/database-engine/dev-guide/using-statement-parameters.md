@@ -31,7 +31,7 @@ manager: "jhubbard"
   
 -   Enhance user interaction in constructing query criteria.  
   
--   Manage **text**, **ntext**, and **image** data and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-specific C data types.  
+-   Manage **text**, **ntext**, and **image** data and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-specific C data types.  
   
  For example, a **Parts** table has columns named **PartID**, **Description**, and **Price**. To add a part without parameters requires constructing an SQL statement such as:  
   

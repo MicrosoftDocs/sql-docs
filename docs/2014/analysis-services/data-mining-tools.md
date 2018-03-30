@@ -21,21 +21,21 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Data Mining Tools
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] provides the following tools that you can use to create data mining solutions:  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] provides the following tools that you can use to create data mining solutions:  
   
--   The **Data Mining Wizard** in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] makes it easy to create mining structures and mining models, using either relational data sources or multidimensional data in cubes.  
+-   The **Data Mining Wizard** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] makes it easy to create mining structures and mining models, using either relational data sources or multidimensional data in cubes.  
   
      In the wizard, you choose data to use, and then apply specific data mining techniques, such as clustering, neural networks, or time series modeling.  
   
--   **Model viewers** are provided in both [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], for exploring your mining models after they are created.  You can browse models using viewers tailored to each algorithm, or go deeper into analysis by using the model content viewer.  
+-   **Model viewers** are provided in both [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] and [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], for exploring your mining models after they are created.  You can browse models using viewers tailored to each algorithm, or go deeper into analysis by using the model content viewer.  
   
--   The **Prediction Query Builder** is provided in both [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to help you create prediction queries. You can also test the accuracy of models against a holdout data set or external data, or use cross-validation to assess the quality of your data set.  
+-   The **Prediction Query Builder** is provided in both [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] and [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to help you create prediction queries. You can also test the accuracy of models against a holdout data set or external data, or use cross-validation to assess the quality of your data set.  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] is the interface where you manage existing data mining solutions that have been deployed to an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. You can reprocess structures and models to update the data in them.  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] is the interface where you manage existing data mining solutions that have been deployed to an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. You can reprocess structures and models to update the data in them.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contains tools that you can use to clean data, to automate tasks such as creating predictions and updating models, and to create text mining solutions.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] contains tools that you can use to clean data, to automate tasks such as creating predictions and updating models, and to create text mining solutions.  
   
- The following sections provide more information about the data mining tools in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ The following sections provide more information about the data mining tools in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## Data Mining Wizard  
  Use the Data Mining Wizard to get started creating data mining solutions. The wizard is quick and easy, and guides you through the process of creating a data mining structure and an initial related mining model, and includes the tasks of selecting an algorithm type and a data source, and defining the case data used for analysis.  
@@ -43,7 +43,7 @@ manager: "mblythe"
  **For More Information:** [Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-wizard-analysis-services-data-mining.md)  
   
 ## Data Mining Designer  
- After you have created a mining structure and mining model by using the Data Mining Wizard, you can use the Data Mining Designer from either [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] or [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to work with existing models and structures.  
+ After you have created a mining structure and mining model by using the Data Mining Wizard, you can use the Data Mining Designer from either [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] or [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to work with existing models and structures.  
   
  The designer includes tools for these tasks:  
   
@@ -62,16 +62,16 @@ manager: "mblythe"
  **For More Information:** [Data Mining Designer](../../2014/analysis-services/data-mining-designer.md)  
   
 ## SQL Server Management Studio  
- After you create and deploy mining models to a server, you can use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to manage the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database that hosts the data mining objects. You can also continue to perform tasks that use the model, such as exploring the models, processing new data, and creating predictions.  
+ After you create and deploy mining models to a server, you can use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to manage the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database that hosts the data mining objects. You can also continue to perform tasks that use the model, such as exploring the models, processing new data, and creating predictions.  
   
- [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] also contains query editors that you can use to design and execute Data Mining Extensions (DMX) queries, or ot work with data mining objects by using XMLA.  
+ [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] also contains query editors that you can use to design and execute Data Mining Extensions (DMX) queries, or ot work with data mining objects by using XMLA.  
   
 ## Integration Services Data Mining Tasks and Transformations  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides many components that support data mining.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides many components that support data mining.  
   
- Some tools in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] are designed to help automate common data mining tasks, including prediction, model building, and processing. For example:  
+ Some tools in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] are designed to help automate common data mining tasks, including prediction, model building, and processing. For example:  
   
--   Create an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package that automatically updates the model every time the dataset is updated with new customers  
+-   Create an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package that automatically updates the model every time the dataset is updated with new customers  
   
 -   Perform custom segmentation or custom sampling of case records.  
   
@@ -88,7 +88,7 @@ manager: "mblythe"
  **For More Information:** [Related Projects for Data Mining Solutions](../../2014/analysis-services/related-projects-for-data-mining-solutions.md)  
   
 ## See Also  
- [Data Mining Extensions &#40;DMX&#41; Reference](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Reference.md)   
+ [Data Mining Extensions &#40;DMX&#41; Reference](~/dmx/data-mining-extensions-dmx-reference.md)   
  [Mining Model Tasks and How-tos](../../2014/analysis-services/mining-model-tasks-and-how-tos.md)   
  [Mining Model Viewer Tasks and How-tos](../../2014/analysis-services/mining-model-viewer-tasks-and-how-tos.md)   
  [Data Mining Solutions](../../2014/analysis-services/data-mining-solutions.md)  

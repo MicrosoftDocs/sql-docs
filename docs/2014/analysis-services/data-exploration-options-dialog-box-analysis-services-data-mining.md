@@ -20,7 +20,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Data Exploration Options Dialog Box (Analysis Services - Data Mining)
-  Use the **Data Exploration Options** dialog box in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to set the sampling and charting options for the **Explore Data** dialog box. You can display the **Data Exploration Options** dialog box by clicking **Sampling options** in the **Explore Data** dialog box.  
+  Use the **Data Exploration Options** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to set the sampling and charting options for the **Explore Data** dialog box. You can display the **Data Exploration Options** dialog box by clicking **Sampling options** in the **Explore Data** dialog box.  
   
 ## Options  
   

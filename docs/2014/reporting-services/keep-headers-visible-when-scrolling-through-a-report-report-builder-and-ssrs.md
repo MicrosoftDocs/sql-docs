@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 6d9192a4-fd5c-41ad-b9ef-f88f9496afed
 caps.latest.revision: 10
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Keep Headers Visible When Scrolling Through a Report (Report Builder and SSRS)
@@ -34,7 +34,7 @@ manager: "mblythe"
  ![Matrix](../../2014/reporting-services/media/matrix.png "Matrix")  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ### To keep matrix group headers visible while scrolling  
   
@@ -42,7 +42,7 @@ manager: "mblythe"
   
 2.  On the **General** tab, under **Row Headers** or **Column Headers**, select **Header should remain visible while scrolling**.  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ### To keep a static tablix member (row or column) visible while scrolling  
   

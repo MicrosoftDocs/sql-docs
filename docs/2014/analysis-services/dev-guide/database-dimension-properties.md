@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Database Dimension Properties
-  In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], the characteristics of a dimension are defined by the metadata for the dimension, based on the settings of various dimension properties, and on the attributes or hierarchies that are contained by the dimension. The following table describes the dimension properties in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], the characteristics of a dimension are defined by the metadata for the dimension, based on the settings of various dimension properties, and on the attributes or hierarchies that are contained by the dimension. The following table describes the dimension properties in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 |Property|Description|  
 |--------------|-----------------|  
@@ -38,7 +38,7 @@ manager: "mblythe"
 |`Name`|Specifies the name of the dimension.|  
 |`ProactiveCaching`|Defines the proactive cache settings for the dimension.|  
 |`ProcessingGroup`|Specifies the processing group. Values are ByAttribute or ByTable. Default is `ByAttribute`.|  
-|`ProcessingMode`|Indicates whether [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] should index and aggregate during or after processing.|  
+|`ProcessingMode`|Indicates whether [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] should index and aggregate during or after processing.|  
 |`ProcessingPriority`|Determines the processing priority of the dimension during background operations such as lazy aggregation, indexing, or clustering.|  
 |`Source`|Identifies the data source view to which the dimension is bound.|  
 |`StorageMode`|Determines the storage mode for the dimension.|  

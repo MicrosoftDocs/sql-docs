@@ -19,7 +19,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Result Sets in the Execute SQL Task
-  In an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package, whether a result set is returned to the Execute SQL task depends on the type of SQL command that the task uses. For example, a SELECT statement typically returns a result set, but an INSERT statement does not.  
+  In an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package, whether a result set is returned to the Execute SQL task depends on the type of SQL command that the task uses. For example, a SELECT statement typically returns a result set, but an INSERT statement does not.  
   
  What the result set contains also varies by SQL command. For example, the result set from a SELECT statement can contain zero rows, one row, or many rows. However, the result set from a SELECT statement that returns a count or a sum contains only a single row.  
   
@@ -64,9 +64,9 @@ manager: "jhubbard"
 |Result set type|Data type of variable|Type of object|  
 |---------------------|---------------------------|--------------------|  
 |Single row|Any type that is compatible with the type column in the result set.|Not applicable|  
-|Full result set|`Object`|If the task uses a native connection manager, including the ADO, OLE DB, Excel, and ODBC connection managers, the returned object is an ADO `Recordset`.<br /><br /> If the task uses a managed connection manager, such as the [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection manager, then the returned object is a `System.Data.DataSet`.<br /><br /> You can use a Script task to access the `System.Data.DataSet` object, as shown in the following example.<br /><br /> `Dim dt As Data.DataTable` <br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet)` <br /> `dt = ds.Tables(0)`|  
+|Full result set|`Object`|If the task uses a native connection manager, including the ADO, OLE DB, Excel, and ODBC connection managers, the returned object is an ADO `Recordset`.<br /><br /> If the task uses a managed connection manager, such as the [!INCLUDE[vstecado](../includes/vstecado-md.md)] connection manager, then the returned object is a `System.Data.DataSet`.<br /><br /> You can use a Script task to access the `System.Data.DataSet` object, as shown in the following example.<br /><br /> `Dim dt As Data.DataTable` <br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet)` <br /> `dt = ds.Tables(0)`|  
 |XML|`String`|`String`|  
-|XML|`Object`|If the task uses a native connection manager, including the ADO, OLE DB, Excel, and ODBC connection managers, the returned object is an `MSXML6.IXMLDOMDocument`.<br /><br /> If the task uses a managed connection manager, such as the [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection manager, the returned object is a `System.Xml.XmlDocument`.|  
+|XML|`Object`|If the task uses a native connection manager, including the ADO, OLE DB, Excel, and ODBC connection managers, the returned object is an `MSXML6.IXMLDOMDocument`.<br /><br /> If the task uses a managed connection manager, such as the [!INCLUDE[vstecado](../includes/vstecado-md.md)] connection manager, the returned object is a `System.Xml.XmlDocument`.|  
   
  The variable can be defined in the scope of the Execute SQL task or the package. If the variable has package scope, the result set is available to other tasks and containers within the package, and is available to any packages run by the Execute Package or Execute DTS 2000 Package tasks.  
   
@@ -79,11 +79,11 @@ manager: "jhubbard"
  For information about loading a result set into a variable, see [Map Result Sets to Variables in an Execute SQL Task](../../2014/integration-services/map-result-sets-to-variables-in-an-execute-sql-task.md).  
   
 ##  <a name="Configure_result_sets"></a> Configuring Result Sets in the Execute SQL Task  
- For more information about the properties of result sets that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
+ For more information about the properties of result sets that you can set in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click the following topic:  
   
 -   [Execute SQL Task Editor &#40;Result Set Page&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)  
   
- For more information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
+ For more information about how to set these properties in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click the following topic:  
   
 -   [Set the Properties of a Task or Container](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)  
   

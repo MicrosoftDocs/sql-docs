@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Analysis Services Query Results (General Page)
-  Use this page to specify the options for running [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] queries.  
+  Use this page to specify the options for running [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] queries.  
   
  **Execution time-out**  
  Indicates the number of seconds to wait before canceling the query.  

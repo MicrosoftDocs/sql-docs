@@ -25,7 +25,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Restore a Transaction Log Backup (SQL Server)
-  This topic describes how to restore a transaction log backup in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  This topic describes how to restore a transaction log backup in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -67,7 +67,7 @@ manager: "jhubbard"
   
 #### To restore a transaction log backup  
   
-1.  After connecting to the appropriate instance of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in Object Explorer, click the server name to expand the server tree.  
+1.  After connecting to the appropriate instance of the [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], in Object Explorer, click the server name to expand the server tree.  
   
 2.  Expand **Databases**, and, depending on the database, either select a user database or expand **System Databases** and select a system database.  
   
@@ -146,7 +146,7 @@ manager: "jhubbard"
   
          This option is available only with the **Leave the database ready for use by rolling back the uncommitted transactions...** option (described later), which is equivalent to restoring a backup with the `RECOVERY` option.  
   
-         Checking this option is equivalent to using the `KEEP_REPLICATION` option in a [!INCLUDE[tsql](../../includes/tsql-md.md)]`RESTORE` statement.  
+         Checking this option is equivalent to using the `KEEP_REPLICATION` option in a [!INCLUDE[tsql](../includes/tsql-md.md)]`RESTORE` statement.  
   
     -   **Prompt before restoring each backup**  
   
@@ -160,19 +160,19 @@ manager: "jhubbard"
   
          Makes the restored database available only to the members of **db_owner**, **dbcreator**, or **sysadmin**.  
   
-         Checking this option is synonymous to using the `RESTRICTED_USER` option in a [!INCLUDE[tsql](../../includes/tsql-md.md)]`RESTORE` statement.  
+         Checking this option is synonymous to using the `RESTRICTED_USER` option in a [!INCLUDE[tsql](../includes/tsql-md.md)]`RESTORE` statement.  
   
 10. For the **Recovery state** options, specify the state of the database after the restore operation.  
   
     -   **Leave the database ready for use by rolling back uncommitted transactions. Additional transaction logs cannot be restored. (RESTORE WITH RECOVERY)**  
   
-         Recovers the database. This option is equivalent to the `RECOVERY` option in a [!INCLUDE[tsql](../../includes/tsql-md.md)]`RESTORE` statement.  
+         Recovers the database. This option is equivalent to the `RECOVERY` option in a [!INCLUDE[tsql](../includes/tsql-md.md)]`RESTORE` statement.  
   
          Choose this option only if you have no log files you want to restore.  
   
     -   **Leave the database non-operational, and do not roll back uncommitted transactions. Additional transaction logs can be restored. (RESTORE WITH NORECOVERY)**  
   
-         Leaves the database unrecovered, in the `RESTORING` state. This option is equivalent to using the `NORECOVERY` option in a [!INCLUDE[tsql](../../includes/tsql-md.md)]`RESTORE` statement.  
+         Leaves the database unrecovered, in the `RESTORING` state. This option is equivalent to using the `NORECOVERY` option in a [!INCLUDE[tsql](../includes/tsql-md.md)]`RESTORE` statement.  
   
          When you choose this option, the **Preserve replication settings** option is unavailable.  
   
@@ -181,7 +181,7 @@ manager: "jhubbard"
   
     -   **Leave the database in read-only mode. Undo uncommitted transactions, but save the undo actions in a file so that recovery effects can be reversed. (RESTORE WITH STANDBY)**  
   
-         Leaves the database in a standby state. This option is equivalent to using the `STANDBY` option in a [!INCLUDE[tsql](../../includes/tsql-md.md)]`RESTORE` statement.  
+         Leaves the database in a standby state. This option is equivalent to using the `STANDBY` option in a [!INCLUDE[tsql](../includes/tsql-md.md)]`RESTORE` statement.  
   
          Choosing this option requires that you specify a standby file.  
   
@@ -233,14 +233,14 @@ manager: "jhubbard"
     >  If you are creating a mirror database, omit the recovery step. A mirror database must remain in the RESTORING state.  
   
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
- By default, the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database uses the simple recovery model. The following examples require modifying the database to use the full recovery model, as follows:  
+ By default, the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database uses the simple recovery model. The following examples require modifying the database to use the full recovery model, as follows:  
   
 ```tsql  
 ALTER DATABASE AdventureWorks2012 SET RECOVERY FULL;  
 ```  
   
 #### A. Applying a single transaction log backup  
- The following example starts by restoring the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database by using a full database backup that resides on a backup device named `AdventureWorks2012_1`. The example then applies the first transaction log backup that resides on a backup device named `AdventureWorks2012_log`. Finally, the example recovers the database.  
+ The following example starts by restoring the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database by using a full database backup that resides on a backup device named `AdventureWorks2012_1`. The example then applies the first transaction log backup that resides on a backup device named `AdventureWorks2012_log`. Finally, the example recovers the database.  
   
 ```tsql  
 RESTORE DATABASE AdventureWorks2012  
@@ -258,7 +258,7 @@ GO
 ```  
   
 #### B. Applying multiple transaction log backups  
- The following example starts by restoring the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database by using a full database backup that resides on a backup device named `AdventureWorks2012_1`. The example then applies, one by one, the first three transaction log backups that reside on a backup device named `AdventureWorks2012_log`. Finally, the example recovers the database.  
+ The following example starts by restoring the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database by using a full database backup that resides on a backup device named `AdventureWorks2012_1`. The example then applies, one by one, the first three transaction log backups that reside on a backup device named `AdventureWorks2012_log`. Finally, the example recovers the database.  
   
 ```tsql  
 RESTORE DATABASE AdventureWorks2012  
@@ -298,7 +298,7 @@ GO
 -   [Restore a Database to a Marked Transaction &#40;SQL Server Management Studio&#41;](../../2014/database-engine/restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
   
 ## See Also  
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)   
  [Apply Transaction Log Backups &#40;SQL Server&#41;](../../2014/database-engine/apply-transaction-log-backups-sql-server.md)  
   
   

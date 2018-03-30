@@ -16,7 +16,7 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Creating a Sequence Clustering Mining Model Structure (Intermediate Data Mining Tutorial)
-  The first step in creating a sequence clustering mining model is to use the Data Mining Wizard to create a new mining structure and a mining model based on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering algorithm.  
+  The first step in creating a sequence clustering mining model is to use the Data Mining Wizard to create a new mining structure and a mining model based on the [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Clustering algorithm.  
   
  You will use the same data source view that you used for the market basket analysis, but you will add a column that contains the `sequence` identifier. In this scenario, the sequence means the order in which the customer added items to the shopping basket.  
   
@@ -24,7 +24,7 @@ manager: "jhubbard"
   
 ### To create a sequence clustering structure and model  
   
-1.  In Solution Explorer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], right-click **Mining Structures** and select **New Mining Structure**.  
+1.  In Solution Explorer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], right-click **Mining Structures** and select **New Mining Structure**.  
   
 2.  On the **Welcome to the Data Mining Wizard** page, click **Next**.  
   

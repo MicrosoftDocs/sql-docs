@@ -19,18 +19,18 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQL Server Extended Events Packages
-  A package is a container for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events objects. There are three kinds of Extended Events packages, which include the following:  
+  A package is a container for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Extended Events objects. There are three kinds of Extended Events packages, which include the following:  
   
 -   package0 - Extended Events system objects. This is the default package.  
   
--   sqlserver - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] related objects.  
+-   sqlserver - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] related objects.  
   
--   sqlos - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Operating System (SQLOS) related objects.  
+-   sqlos - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Operating System (SQLOS) related objects.  
   
 > [!NOTE]  
->  The SecAudit package is used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit. None of the objects in the package are available through the Extended Events data definition language (DDL).  
+>  The SecAudit package is used by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Audit. None of the objects in the package are available through the Extended Events data definition language (DDL).  
   
- Packages are identified by a name, a GUID, and the binary module that contains the package. For more information, see [sys.dm_xe_packages &#40;Transact-SQL&#41;](../Topic/sys.dm_xe_packages%20\(Transact-SQL\).md).  
+ Packages are identified by a name, a GUID, and the binary module that contains the package. For more information, see [sys.dm_xe_packages &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-xe-packages-transact-sql.md).  
   
  A package can contain any or all of the following objects, which are discussed in greater detail later in this topic:  
   
@@ -54,7 +54,7 @@ manager: "jhubbard"
  ![The relationship of a module, packages, and object](../../2014/database-engine/media/xepackagesobjects.gif "The relationship of a module, packages, and object")  
   
 ### Events  
- Events are monitoring points of interest in the execution path of a program, such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. An event firing carries with it the fact that the point of interest was reached, and state information from the time the event was fired.  
+ Events are monitoring points of interest in the execution path of a program, such as [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. An event firing carries with it the fact that the point of interest was reached, and state information from the time the event was fired.  
   
  Events can be used solely for tracing purposes or for triggering actions. These actions can either be synchronous or asynchronous.  
   
@@ -114,9 +114,9 @@ where name = 'keyword_map'
   
 -   Stack dumper  
   
--   Execution plan detection ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] only)  
+-   Execution plan detection ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] only)  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] stack collection ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] only)  
+-   [!INCLUDE[tsql](../includes/tsql-md.md)] stack collection ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] only)  
   
 -   Run time statistics calculation  
   
@@ -147,7 +147,7 @@ where name = 'keyword_map'
   
 -   type  
   
- For more information, see [sys.dm_xe_objects &#40;Transact-SQL&#41;](../Topic/sys.dm_xe_objects%20\(Transact-SQL\).md).  
+ For more information, see [sys.dm_xe_objects &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md).  
   
 ### Maps  
  A map table maps an internal value to a string, which enables a user to know what the value represents. Instead of only being able to obtain a numeric value, a user can get a meaningful description of the internal value. The following query shows how to obtain map values.  

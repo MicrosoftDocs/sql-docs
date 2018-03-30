@@ -14,33 +14,33 @@ helpviewer_keywords:
 ms.assetid: 2c9a5814-17bf-4947-8fb3-6269e7caa416
 caps.latest.revision: 29
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Install, Uninstall, and Report Builder Support
-  Report Builder is a report authoring tool that you use to create, update, and share reports, report parts and shared datasets. Report Builder is available in two versions: stand-alone and [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)]. The stand-alone version is installed on your computer by you or an administrator. The [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] version is installed automatically with [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] and downloaded to your computer from Report Manager or a SharePoint site integrated with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+  Report Builder is a report authoring tool that you use to create, update, and share reports, report parts and shared datasets. Report Builder is available in two versions: stand-alone and [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]. The stand-alone version is installed on your computer by you or an administrator. The [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] version is installed automatically with [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] and downloaded to your computer from Report Manager or a SharePoint site integrated with [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
- The stand-alone version of Report Builder is not installed with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. You must download and install it separately from the [Microsoft® SQL Server® 2012 Report Builder](http://go.microsoft.com/fwlink/?LinkId=401502).  
+ The stand-alone version of Report Builder is not installed with [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. You must download and install it separately from the [Microsoft® SQL Server® 2012 Report Builder](http://go.microsoft.com/fwlink/?LinkId=401502).  
   
 > [!NOTE]  
->  Report Builder cannot be installed on Itanium-based computers. This applies to the [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] and stand-alone versions of Report Builder.  
+>  Report Builder cannot be installed on Itanium-based computers. This applies to the [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] and stand-alone versions of Report Builder.  
   
- An administrator typically installs and configures [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], grants permission to use the [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] version of Report Builder, and manages folders and permissions to reports, report parts, and shared datasets saved to the report server. For more information about [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] administration, see [Reporting Services Report Server &#40;Native Mode&#41;](../../2014/reporting-services/reporting-services-report-server-native-mode.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?LinkId=154888) on msdn.microsoft.com.  
+ An administrator typically installs and configures [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], grants permission to use the [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] version of Report Builder, and manages folders and permissions to reports, report parts, and shared datasets saved to the report server. For more information about [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] administration, see [Reporting Services Report Server &#40;Native Mode&#41;](../../2014/reporting-services/reporting-services-report-server-native-mode.md) in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?LinkId=154888) on msdn.microsoft.com.  
   
 ##  <a name="Installing"></a> Installing Report Builder  
- Report Builder is available as a stand-alone and [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] versions. You or your administrator download and install the stand-alone version on your computer, whereas the [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] version is installed with [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]. You can download Report Builder from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=186083).  
+ Report Builder is available as a stand-alone and [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] versions. You or your administrator download and install the stand-alone version on your computer, whereas the [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] version is installed with [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. You can download Report Builder from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=186083).  
   
 > [!NOTE]  
->  Report Builder cannot be installed on Itanium 64-based computers. This applies to the [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] and stand-alone versions of Report Builder.  
+>  Report Builder cannot be installed on Itanium 64-based computers. This applies to the [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] and stand-alone versions of Report Builder.  
   
  Before you install either version of Report Builder, verify system requirements and install any prerequisites.  
   
 ### System Requirements  
- Report Builder requires that the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] version 3.5 is installed on the local computer. If the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] is not installed on the local computer when you install Report Builder, you will be prompted to install it before you can continue and complete the installation.  
+ Report Builder requires that the [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] version 3.5 is installed on the local computer. If the [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] is not installed on the local computer when you install Report Builder, you will be prompted to install it before you can continue and complete the installation.  
   
  The .NET Framework 3.5 is free. You can download the .NET Framework 3.5 from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=110520).  
   
- You can install Report Builder on any [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows operating system that supports the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 3.5. For example, you can install Report Builder on Windows Vista or Windows 7.  
+ You can install Report Builder on any [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows operating system that supports the [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 3.5. For example, you can install Report Builder on Windows Vista or Windows 7.  
   
  It is recommended that the computers that will run Report Builder have 512 MB of RAM. However, depending on the complexity of reports you run, you might want less or more RAM.  
   
@@ -54,11 +54,11 @@ manager: "mblythe"
  An administrator can also use software such as Microsoft Systems Manager Server (SMS) to push the program to your computer. To learn how to use specific software to install Report Builder, consult the documentation for the software.   
   
 ### Installing the ClickOnce Version of Report Builder on Your Computer  
- The [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] version of Report Builder is installed with [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]. It is installed by both native and SharePoint integrated installations of [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].  
+ The [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] version of Report Builder is installed with [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. It is installed by both native and SharePoint integrated installations of [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)].  
   
- [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] is a Microsoft technology for deploying Windows applications. [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] enables users to install and run a Windows application such as Report Builder by clicking a link on a web page. For more information about deploying [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] applications, applying [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] application security, or running [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] applications in the Internet zone, see the "ClickOnce Deployment for Windows Forms Applications", "Security in Windows Forms Overview", or "Trusted Application Deployment Overview" articles on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Developer Network Web site at [www.microsoft.com/msdn](http://www.microsoft.com/msdn).  
+ [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] is a Microsoft technology for deploying Windows applications. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] enables users to install and run a Windows application such as Report Builder by clicking a link on a web page. For more information about deploying [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] applications, applying [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] application security, or running [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] applications in the Internet zone, see the "ClickOnce Deployment for Windows Forms Applications", "Security in Windows Forms Overview", or "Trusted Application Deployment Overview" articles on the [!INCLUDE[msCoName](../includes/msconame-md.md)] Developer Network Web site at [www.microsoft.com/msdn](http://www.microsoft.com/msdn).  
   
- The [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] version of Report Builder is located on the report server, and installs on your computer when you click the **Report Builder** button in Report Manager or click the **Report Builder Report** option on the **New Document** menu in a SharePoint library.  
+ The [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] version of Report Builder is located on the report server, and installs on your computer when you click the **Report Builder** button in Report Manager or click the **Report Builder Report** option on the **New Document** menu in a SharePoint library.  
   
 > [!NOTE]  
 >  If the **New Document** menu does not list the **Report Builder Report**, **Report Builder Model**, and **Report Data Source** options, their content types need to be added to the SharePoint library.   
@@ -68,7 +68,7 @@ manager: "mblythe"
 ### Report Builder Languages  
  Report Builder is available in 21 languages in addition to English. When you download the stand-alone version of Report Builder, you select the language version that you want to install. You must repeat the download for each language version that you want to use.  
   
- For the [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] version, all language versions are installed on the report server when you install [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]. The culture of the user's computer determines which language version is installed on the computer. If the culture does not match an available Report Builder language, the English version is installed.  
+ For the [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] version, all language versions are installed on the report server when you install [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. The culture of the user's computer determines which language version is installed on the computer. If the culture does not match an available Report Builder language, the English version is installed.  
   
  The following table has information about the available language versions.  
   
@@ -99,7 +99,7 @@ manager: "mblythe"
   
   
 ##  <a name="Uninstalling"></a> Uninstalling Report Builder  
- You can uninstall the stand-alone version of Report Builder from the control panel or the command line. This applies only to the stand-alone version of Report Builder. The [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] of Report Builder cannot be uninstalled separately. It is always installed and uninstalled with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+ You can uninstall the stand-alone version of Report Builder from the control panel or the command line. This applies only to the stand-alone version of Report Builder. The [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] of Report Builder cannot be uninstalled separately. It is always installed and uninstalled with [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
  For more information, see [Uninstall the Stand-Alone Version of Report Builder &#40;Report Builder&#41;](../../2014/reporting-services/uninstall-the-stand-alone-version-of-report-builder-report-builder.md).  
   
@@ -124,12 +124,12 @@ manager: "mblythe"
   
 -   Images such as background images and logos that might be used in multiple reports and are stored externally from reports for easy maintenance.  
   
- For more information, see [Report Server Content Management &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-server-content-management-ssrs-native-mode.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?LinkId=154888) on msdn.microsoft.com.  
+ For more information, see [Report Server Content Management &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-server-content-management-ssrs-native-mode.md) in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?LinkId=154888) on msdn.microsoft.com.  
   
 ### Permissions  
  The administrator grants permission to the report server. As a Report Builder user, you need permissions to the report server before you can access the content and functionality of the report server. For example, you might want to use report parts stored on the report server, update reports and resave them to the report server, and run reports in Report Manager. Depending on your needs and the tasks you perform, lower or higher permissions might be granted. For example, permissions with lower privileges are granted to users who need only to open shared reports in comparison to users who need to modify a shared report.  
   
- When [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] is installed in native mode, an administrator can:  
+ When [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] is installed in native mode, an administrator can:  
   
 -   Enable the My Reports feature to provide you a private folder to create and save your own reports.  
   
@@ -137,20 +137,20 @@ manager: "mblythe"
   
 -   Use the Publisher role to allow you to manage reports and shared data sources in public folders. This role is granted to more experienced users.  
   
- When [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] is installed in SharePoint integrated mode, an administrator can:  
+ When [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] is installed in SharePoint integrated mode, an administrator can:  
   
 -   Use the Read permission level, granted to the Visitors group by default, to allow you to open a copy of a report in a public folder, and then save the modified version of the report to a private folder or to your computer.  
   
 -   Use the Contribute permission level, granted to the Members groups by default, to allow you to manage reports and shared data sources in public folders. This level of permission is granted to more experienced users.  
   
- For general information about permissions and creating and using roles, see the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?LinkId=154888) on msdn.microsoft.com.  
+ For general information about permissions and creating and using roles, see the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?LinkId=154888) on msdn.microsoft.com.  
   
 ### Configuration of Report Server  
- When you author reports in Report Builder and connect to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is installed on Windows Vista, Windows Server 2008, or Windows 7, you might encounter an access denied error when you attempt to access the report server to open or save a report. This occurs because the security feature, User Account Control (UAC), in Windows Vista, Windows Server 2008, and Windows 7 limit the overuse of elevated permissions by removing administrator permissions when accessing applications.  
+ When you author reports in Report Builder and connect to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that is installed on Windows Vista, Windows Server 2008, or Windows 7, you might encounter an access denied error when you attempt to access the report server to open or save a report. This occurs because the security feature, User Account Control (UAC), in Windows Vista, Windows Server 2008, and Windows 7 limit the overuse of elevated permissions by removing administrator permissions when accessing applications.  
   
- However, with additional configuration the report server is available to Report Builder users. You can add [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URLs to trusted sites. By default, Internet Explorer 7.0 or later runs in Protected Mode on Windows Vista, Windows Server 2008, and Windows 7. Protected Mode is a feature that blocks browser requests from reaching high-level processes that run on the same computer. You can disable protected mode for the report server applications by adding them as Trusted Sites. You must have administrator permission to make this change.  
+ However, with additional configuration the report server is available to Report Builder users. You can add [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] URLs to trusted sites. By default, Internet Explorer 7.0 or later runs in Protected Mode on Windows Vista, Windows Server 2008, and Windows 7. Protected Mode is a feature that blocks browser requests from reaching high-level processes that run on the same computer. You can disable protected mode for the report server applications by adding them as Trusted Sites. You must have administrator permission to make this change.  
   
- For more information about configuring [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], see [Reporting Services Configuration Manager &#40;del&#41;](../Topic/Reporting%20Services%20Configuration%20Manager%20\(del\).md) in the [Reporting Services documentation](http://go.microsoft.com/fwlink/?linkid=121312) on msdn.microsoft.com.  
+ For more information about configuring [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], see [Reporting Services Configuration Manager &#40;del&#41;](~/2014/sql-server/install/reporting-services-configuration-manager-native-mode.md) in the [Reporting Services documentation](http://go.microsoft.com/fwlink/?linkid=121312) on msdn.microsoft.com.  
   
   
 ##  <a name="SampleDatabases"></a> SQL Server Sample Databases  
@@ -160,13 +160,13 @@ manager: "mblythe"
   
 -   Adventure Works OLTP database supports standard online transaction processing scenarios for a fictitious bicycle manufacturer (Adventure Works Cycles). Scenarios include Manufacturing, Sales, Purchasing, Product Management, Contact Management, and Human Resources.  
   
--   The [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)] database demonstrates how to build a data warehouse.  
+-   The [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] database demonstrates how to build a data warehouse.  
   
--   The [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] project can be used to build an AS database for business intelligence scenarios.  
+-   The [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] project can be used to build an AS database for business intelligence scenarios.  
   
- The sample databases are not included with [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and not installed when you install [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] or the stand-alone version of Report Builder. Instead, you download sample databases from [CodePlex](http://go.microsoft.com/fwlink/?LinkId=87843). All versions of the sample databases are downloaded together. You can also download earlier database versions that were released with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], and [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].  
+ The sample databases are not included with [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] and not installed when you install [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] or the stand-alone version of Report Builder. Instead, you download sample databases from [CodePlex](http://go.microsoft.com/fwlink/?LinkId=87843). All versions of the sample databases are downloaded together. You can also download earlier database versions that were released with [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], and [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)].  
   
- For prerequisites and instructions about downloading and installing the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sample databases, see [Installation Prerequisites for the SQL Server 2008 Sample Databases](http://go.microsoft.com/fwlink/?LinkId=166648) and [Installing Sample Databases](http://go.microsoft.com/fwlink/?LinkId=166649) on CodePlex.  
+ For prerequisites and instructions about downloading and installing the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] sample databases, see [Installation Prerequisites for the SQL Server 2008 Sample Databases](http://go.microsoft.com/fwlink/?LinkId=166648) and [Installing Sample Databases](http://go.microsoft.com/fwlink/?LinkId=166649) on CodePlex.  
   
   
 ##  <a name="HowTo"></a> How-to Topics  

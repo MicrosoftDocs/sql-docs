@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: 73a914ba-8b2d-4f4d-ac1b-db9bac676a30
 caps.latest.revision: 30
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Enable Coordinated Backups for Transactional Replication (Replication Transact-SQL Programming)
@@ -28,21 +28,21 @@ manager: "jhubbard"
   
 ### To enable coordinated backups for a database published with transactional replication  
   
-1.  At the Publisher, use the [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../Topic/DATABASEPROPERTYEX%20\(Transact-SQL\).md) function to return the **IsSyncWithBackup** property of the publication database. If the function returns **1**, coordinated backups are already enabled for the published database.  
+1.  At the Publisher, use the [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](~/t-sql/functions/databasepropertyex-transact-sql.md) function to return the **IsSyncWithBackup** property of the publication database. If the function returns **1**, coordinated backups are already enabled for the published database.  
   
-2.  If the function in step 1 returns **0**, execute [sp_replicationdboption &#40;Transact-SQL&#41;](../Topic/sp_replicationdboption%20\(Transact-SQL\).md) at the Publisher on the publication database. Specify a value of **sync with backup** for **@optname**, and **true** for **@value**.  
+2.  If the function in step 1 returns **0**, execute [sp_replicationdboption &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) at the Publisher on the publication database. Specify a value of **sync with backup** for **@optname**, and **true** for **@value**.  
   
     > [!NOTE]  
     >  If you change the **sync with backup** option to **false**, the truncation point of the publication database will be updated after the Log Reader Agent runs, or after an interval if the Log Reader Agent is running continuously. The maximum interval is controlled by the **–MessageInterval** agent parameter (which has a default of 30 seconds).  
   
 ### To enable coordinated backups for a distribution database  
   
-1.  At the Distributor, use the [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../Topic/DATABASEPROPERTYEX%20\(Transact-SQL\).md) function to return the **IsSyncWithBackup** property of the distribution database. If the function returns **1**, coordinated backups are already enabled for the distribution database.  
+1.  At the Distributor, use the [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](~/t-sql/functions/databasepropertyex-transact-sql.md) function to return the **IsSyncWithBackup** property of the distribution database. If the function returns **1**, coordinated backups are already enabled for the distribution database.  
   
-2.  If the function in step 1 returns **0**, execute [sp_replicationdboption &#40;Transact-SQL&#41;](../Topic/sp_replicationdboption%20\(Transact-SQL\).md) at the Distributor on the distribution database. Specify a value of **sync with backup** for **@optname** and **true** for **@value**.  
+2.  If the function in step 1 returns **0**, execute [sp_replicationdboption &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) at the Distributor on the distribution database. Specify a value of **sync with backup** for **@optname** and **true** for **@value**.  
   
 ### To disable coordinated backups  
   
-1.  At either the Publisher on the publication database or at the Distributor on the distribution database, execute [sp_replicationdboption &#40;Transact-SQL&#41;](../Topic/sp_replicationdboption%20\(Transact-SQL\).md). Specify a value of **sync with backup** for **@optname** and **false** for **@value**.  
+1.  At either the Publisher on the publication database or at the Distributor on the distribution database, execute [sp_replicationdboption &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md). Specify a value of **sync with backup** for **@optname** and **false** for **@value**.  
   
   

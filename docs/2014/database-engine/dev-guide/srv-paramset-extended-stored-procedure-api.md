@@ -29,7 +29,7 @@ manager: "jhubbard"
 # srv_paramset (Extended Stored Procedure API)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
   
  Sets the value of a remote stored procedure call return parameter. This function has been superseded by the **srv_paramsetoutput** function.  
   
@@ -71,7 +71,7 @@ len
   
  If *len*is 0, it returns NULL. Setting *len* to 0 is the only way to return NULL to the client.  
   
- This function returns the following values, if the parameter is one of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] data types.  
+ This function returns the following values, if the parameter is one of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] data types.  
   
 |New data types|Return data length|  
 |--------------------|------------------------|  

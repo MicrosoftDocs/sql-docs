@@ -18,9 +18,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Select Features (Upgrade)
-  Use the **Select Features** page of the [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Installation Wizard to view the features to be upgraded to [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+  Use the **Select Features** page of the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Installation Wizard to view the features to be upgraded to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- It is not possible to change the features to be upgraded in this release. To add features to this instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], complete the upgrade process, restart Setup and, click **New Installation or Add Features to an Existing Installation** on the installation center.  
+ It is not possible to change the features to be upgraded in this release. To add features to this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], complete the upgrade process, restart Setup and, click **New Installation or Add Features to an Existing Installation** on the installation center.  
   
 ## See Also  
  [Supported Version and Edition Upgrades](../../../2014/sql-server/install/supported-version-and-edition-upgrades.md)   

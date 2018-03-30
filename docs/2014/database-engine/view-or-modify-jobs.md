@@ -49,7 +49,7 @@ manager: "jhubbard"
 EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'  
 ```  
   
- For more information, see [sp_purge_jobhistory &#40;Transact-SQL&#41;](../Topic/sp_purge_jobhistory%20\(Transact-SQL\).md).  
+ For more information, see [sp_purge_jobhistory &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md).  
   
  Members of the **sysadmin** fixed server role can view the definition or history of any job, and can modify any job.  
   
@@ -58,13 +58,13 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
 |||  
 |-|-|  
 |**Description**|**Topic**|  
-|Describes how to view [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs.|[View a Job](../../2014/database-engine/view-a-job.md)|  
-|Describes how to view the [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job history log.|[View the Job History](../../2014/database-engine/view-the-job-history.md)|  
-|Describes how to delete the contents of the [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job history log.|[Clear the Job History Log](../../2014/database-engine/clear-the-job-history-log.md)|  
-|Describes how to set size limits for [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job history logs.|[Resize the Job History Log](../../2014/database-engine/resize-the-job-history-log.md)|  
-|Describes how to change the properties of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs.|[Modify a Job](../../2014/database-engine/modify-a-job.md)|  
+|Describes how to view [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent jobs.|[View a Job](../../2014/database-engine/view-a-job.md)|  
+|Describes how to view the [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent job history log.|[View the Job History](../../2014/database-engine/view-the-job-history.md)|  
+|Describes how to delete the contents of the [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent job history log.|[Clear the Job History Log](../../2014/database-engine/clear-the-job-history-log.md)|  
+|Describes how to set size limits for [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent job history logs.|[Resize the Job History Log](../../2014/database-engine/resize-the-job-history-log.md)|  
+|Describes how to change the properties of [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent jobs.|[Modify a Job](../../2014/database-engine/modify-a-job.md)|  
   
 ## See Also  
- [dbo.sysjobhistory &#40;Transact-SQL&#41;](../Topic/dbo.sysjobhistory%20\(Transact-SQL\).md)  
+ [dbo.sysjobhistory &#40;Transact-SQL&#41;](~/relational-databases/system-tables/dbo-sysjobhistory-transact-sql.md)  
   
   

@@ -30,7 +30,7 @@ manager: "jhubbard"
   
 |Data Column Name|Data Type|Description|Column ID|Filterable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|**DatabaseID**|**int**|ID of the database specified by the USE *database* statement or the default database if no USE *database* statement has been issued for a given instance. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] displays the name of the database if the **ServerName** data column is captured in the trace and the server is available. Determine the value for a database by using the DB_ID function.|3|Yes|  
+|**DatabaseID**|**int**|ID of the database specified by the USE *database* statement or the default database if no USE *database* statement has been issued for a given instance. [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] displays the name of the database if the **ServerName** data column is captured in the trace and the server is available. Determine the value for a database by using the DB_ID function.|3|Yes|  
 |**DatabaseName**|**nvarchar**|Name of the mirrored database.|35|Yes|  
 |**EventClass**|**int**|Type of event = 167.|27|No|  
 |**EventSequence**|**int**|Sequence of event class in batch.|51|No|  
@@ -38,8 +38,8 @@ manager: "jhubbard"
 |**IsSystem**|**int**|Indicates whether the event occurred on a system process or a user process. 1 = system, 0 = user.|60|Yes|  
 |**LoginSid**|**image**|Security identification number (SID) of the logged-in user. You can find this information in the **sys.server_principals** catalog view. Each SID is unique for each login in the server.|41|Yes|  
 |**RequestID**|**int**|ID of the request containing the statement.|49|Yes|  
-|**ServerName**|**nvarchar**|Name of the instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] being traced.|26|No|  
-|**SessionLoginName**|**nvarchar**|Login name of the user who originated the session. For example, if you connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using Login1 and execute a statement as Login2, **SessionLoginName** shows Login1 and **LoginName** shows Login2. This column displays both [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Windows logins.|64|Yes|  
+|**ServerName**|**nvarchar**|Name of the instance of [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] being traced.|26|No|  
+|**SessionLoginName**|**nvarchar**|Login name of the user who originated the session. For example, if you connect to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using Login1 and execute a statement as Login2, **SessionLoginName** shows Login1 and **LoginName** shows Login2. This column displays both [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and Windows logins.|64|Yes|  
 |**SPID**|**int**|ID of the session on which the event occurred.|12|Yes|  
 |**StartTime**|**datetime**|Time at which the event started, if available.|14|Yes|  
 |**State**|**int**|New mirroring state ID:<br /><br /> 0 = Null Notification<br /><br /> 1 = Synchronized Principal with Witness<br /><br /> 2 = Synchronized Principal without Witness<br /><br /> 3 = Synchronized Mirror with Witness<br /><br /> 4 = Synchronized Mirror without Witness<br /><br /> 5 = Connection with Principal Lost<br /><br /> 6 = Connection with Mirror Lost<br /><br /> 7 = Manual Failover<br /><br /> 8 = Automatic Failover<br /><br /> 9 = Mirroring Suspended<br /><br /> 10 = No Quorum<br /><br /> 11 = Synchronizing Mirror<br /><br /> 12 = Principal Running Exposed|30|Yes|  
@@ -48,6 +48,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Extended Events](../../2014/database-engine/extended-events.md)   
- [sp_trace_setevent &#40;Transact-SQL&#41;](../Topic/sp_trace_setevent%20\(Transact-SQL\).md)  
+ [sp_trace_setevent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

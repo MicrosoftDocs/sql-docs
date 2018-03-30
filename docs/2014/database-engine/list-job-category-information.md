@@ -16,7 +16,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # List Job Category Information
-  How to list job category information in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../../includes/tsql-md.md)] or SQL Server Management Objects.  
+  How to list job category information in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../includes/tsql-md.md)] or SQL Server Management Objects.  
 
   
 ##  <a name="Security"></a> Security  
@@ -27,7 +27,7 @@ manager: "jhubbard"
   
 #### To list job category information  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -43,7 +43,7 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [sp_help_category &#40;Transact-SQL&#41;](../Topic/sp_help_category%20\(Transact-SQL\).md).  
+ For more information, see [sp_help_category &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-help-category-transact-sql.md).  
   
   
 ##  <a name="SMO"></a> Using SQL Server Management Objects  

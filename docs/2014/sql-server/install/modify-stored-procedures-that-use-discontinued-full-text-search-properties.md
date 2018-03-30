@@ -39,7 +39,7 @@ manager: "jhubbard"
   
 -   'Path' of the Full-Text Catalog. The Full-Text Catalog will be a logic object without a specific file path in the system.  
   
--   Enable/disable in SP_FULLTEXT_DATABASE has no effect anymore as databases are enabled for Full-Text Search at all times and by default in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  
+-   Enable/disable in SP_FULLTEXT_DATABASE has no effect anymore as databases are enabled for Full-Text Search at all times and by default in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
 ## Corrective Action  
  Modify your stored procedures to remove these properties.  

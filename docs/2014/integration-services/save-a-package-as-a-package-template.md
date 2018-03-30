@@ -19,7 +19,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Save a Package as a Package Template
-  This topic describes how to designate and use custom packages as templates when you create new Integration Services packages in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. By default, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] uses a package template that creates an empty package when you add a new package to an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project. You cannot replace this default template, but you can add new templates.  
+  This topic describes how to designate and use custom packages as templates when you create new Integration Services packages in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. By default, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] uses a package template that creates an empty package when you add a new package to an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project. You cannot replace this default template, but you can add new templates.  
   
  You can designate multiple packages to use as templates. Before you can implement custom packages as templates, you must create the packages.  
   
@@ -35,7 +35,7 @@ manager: "jhubbard"
   
 ### To use a custom package as a package template  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project in which you want to create a package.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project in which you want to create a package.  
   
 2.  In Solution Explorer, right-click the project, point to **Add**, and then click **New Item**.  
   

@@ -22,15 +22,15 @@ manager: "jhubbard"
   
  For more information about variable scope, see [Integration Services &#40;SSIS&#41; Variables](../../2014/integration-services/integration-services-ssis-variables.md).  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] also provides system variables that make system information available at run time and can be used in containers such as packages and event handlers. You cannot delete system variables.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] also provides system variables that make system information available at run time and can be used in containers such as packages and event handlers. You cannot delete system variables.  
   
 ### To add a variable  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package you want to work with.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package you want to work with.  
   
 2.  In Solution Explorer, double-click the package to open it.  
   
-3.  In [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, to define the scope of the variable, do one of the following:  
+3.  In [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, to define the scope of the variable, do one of the following:  
   
     -   To set the scope to the package, click anywhere on the design surface of the **Control Flow** tab.  
   
@@ -50,7 +50,7 @@ manager: "jhubbard"
   
 ### To delete a variable  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project that contains the package you want.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project that contains the package you want.  
   
 2.  In Solution Explorer, right-click the package to open it.  
   
@@ -66,7 +66,7 @@ manager: "jhubbard"
   
 ### To change the scope of a variable  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project that contains the package you want.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project that contains the package you want.  
   
 2.  In Solution Explorer, right-click the package to open it.  
   

@@ -21,9 +21,9 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Programming AMO Security Objects
-  In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], programming security objects or running applications that use AMO security objects requires being a member of the Server Administrator group or the Database Administrator group. Server Administrator and Database Administrator are an access levels supplied by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], programming security objects or running applications that use AMO security objects requires being a member of the Server Administrator group or the Database Administrator group. Server Administrator and Database Administrator are an access levels supplied by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
- In [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] the user access to any object is obtained through the combination of Roles and Permissions assigned to that object. For more information, see [AMO Security Classes](../../../2014/analysis-services/dev-guide/amo-security-classes.md).  
+ In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] the user access to any object is obtained through the combination of Roles and Permissions assigned to that object. For more information, see [AMO Security Classes](../../../2014/analysis-services/dev-guide/amo-security-classes.md).  
   
 ## Role and Permission Objects  
  Server roles contain one and only one role in the collection, the Administrators role. New roles cannot be added to the server roles collection. Membership in the Administrators role permits complete access to every object in the server  
@@ -141,7 +141,7 @@ static public void CreateRolesAndPermissions(Database db, Cube cube)
  <xref:Microsoft.AnalysisServices>   
  [Introducing AMO Classes](../../../2014/analysis-services/dev-guide/introducing-amo-classes.md)   
  [Programming AMO Security objects](../../../2014/analysis-services/dev-guide/programming-amo-security-objects.md)   
- [Permissions and Access Rights &#40;Analysis Services - Multidimensional Data&#41;](../Topic/Permissions%20and%20Access%20Rights%20\(Analysis%20Services%20-%20Multidimensional%20Data\).md)   
+ [Permissions and Access Rights &#40;Analysis Services - Multidimensional Data&#41;](https://msdn.microsoft.com/library/ms174786(v=sql.120).aspx)   
  [Securing the Analysis Services Instance](https://technet.microsoft.com/library/ms175663\(v=sql.110\).aspx)   
  [Logical Architecture &#40;Analysis Services - Multidimensional Data&#41;](../../../2014/analysis-services/dev-guide/logical-architecture-analysis-services-multidimensional-data.md)   
  [Database Objects &#40;Analysis Services - Multidimensional Data&#41;](../../../2014/analysis-services/dev-guide/database-objects-analysis-services-multidimensional-data.md)  

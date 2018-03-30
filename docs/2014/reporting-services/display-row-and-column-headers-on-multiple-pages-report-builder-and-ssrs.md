@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 2422b1e2-822f-4379-9d7f-9afebb350e3f
 caps.latest.revision: 6
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Display Row and Column Headers on Multiple Pages (Report Builder and SSRS)
@@ -27,7 +27,7 @@ manager: "mblythe"
  For static members, you can display the top adjacent rows or the side adjacent columns on multiple pages.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ### To display row headers on multiple pages  
   
@@ -35,7 +35,7 @@ manager: "mblythe"
   
 2.  In **Row Headers**, select **Repeat header rows on each page**.  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ### To display column headers on multiple pages  
   
@@ -43,7 +43,7 @@ manager: "mblythe"
   
 2.  In **Column Headers**, select **Repeat header columns on each page**.  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ### To display a static tablix member (row or column) on multiple pages  
   

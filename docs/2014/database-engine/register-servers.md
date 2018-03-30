@@ -24,13 +24,13 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Register Servers
-  Registering a server in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] allows you to store the server connection information for future connections.There are three ways to register a server in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  Registering a server in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] allows you to store the server connection information for future connections.There are three ways to register a server in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
-1.  Local instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are automatically registered during the first launch of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] after its installation.  
+1.  Local instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] are automatically registered during the first launch of [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] after its installation.  
   
 2.  You can also initiate the automatic registration process at any time, to restore the registration of local server instances.  
   
-3.  Lastly, you can register a server using the Registered Servers tool in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+3.  Lastly, you can register a server using the Registered Servers tool in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 ## Benefits of Registered Servers  
  With Registered Servers you can:  
@@ -55,7 +55,7 @@ manager: "jhubbard"
   
 -   Import registered server groups.  
   
--   View the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log files for online or offline instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   View the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] log files for online or offline instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## Related Tasks  
  Use the following topics to get started with registered servers:  

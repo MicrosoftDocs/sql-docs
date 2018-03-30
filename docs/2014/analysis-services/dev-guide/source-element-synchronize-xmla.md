@@ -59,7 +59,7 @@ manager: "mblythe"
 |Child elements|[ConnectionString](../../../2014/analysis-services/dev-guide/connectionstring-element-xmla.md), [Object](../../../2014/analysis-services/dev-guide/object-element-xmla.md)|  
   
 ## Remarks  
- The `Synchronize` command uses the `Source` element to establish a connection to and identify a database on an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] with which to synchronize the target database.  
+ The `Synchronize` command uses the `Source` element to establish a connection to and identify a database on an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] with which to synchronize the target database.  
   
 ## See Also  
  [Properties &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/properties-xmla.md)  

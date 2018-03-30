@@ -40,7 +40,7 @@ manager: "jhubbard"
     > [!NOTE]  
     >  The Flat File connection manager that the Flat File source uses must be configured to use a delimited format to interpret zero-length strings as nulls. If the connection manager uses the fixed width or ragged right formats, data that consists of spaces cannot be interpreted as null values.  
   
- The output columns in the output of the Flat File source include the FastParse property. FastParse indicates whether the column uses the quicker, but locale-insensitive, fast parsing routines that [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides or the locale-sensitive standard parsing routines. For more information, see [Fast Parse](../../2014/integration-services/fast-parse.md) and [Standard Parse](../../2014/integration-services/standard-parse.md).  
+ The output columns in the output of the Flat File source include the FastParse property. FastParse indicates whether the column uses the quicker, but locale-insensitive, fast parsing routines that [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides or the locale-sensitive standard parsing routines. For more information, see [Fast Parse](../../2014/integration-services/fast-parse.md) and [Standard Parse](../../2014/integration-services/standard-parse.md).  
   
  Output columns also include the UseBinaryFormat property. You use this property to implement support for binary data, such as data with the packed decimal format, in files. By default UseBinaryFormat is set to `false`. If you want to use a binary format, set UseBinaryFormat to `true` and the data type on the output column to `DT_BYTES`. When you do this, the Flat File source skips the data conversion and passes the data to the output column as is. You can then use a transformation such as the Derived Column or Data Conversion to cast the `DT_BYTES` data to a different data type, or you can write custom script in a Script transformation to interpret the data. You can also write a custom data flow component to interpret the data. For more information about which data types you can cast `DT_BYTES` to, see [Cast &#40;SSIS Expression&#41;](../../2014/integration-services/cast-ssis-expression.md).  
   
@@ -49,7 +49,7 @@ manager: "jhubbard"
  This source has one output and one error output.  
   
 ## Configuration of the Flat File Source  
- You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer or programmatically.  
   
  For more information about the properties that you can set in the **Flat File Source Editor** dialog box, click one of the following topics:  
   

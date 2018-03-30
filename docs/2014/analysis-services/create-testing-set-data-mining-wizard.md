@@ -22,11 +22,11 @@ manager: "mblythe"
   
  You can specify the amount of testing data as a percentage, or you can specify a number to limit the number of cases used for testing. If you specify both a percentage and a maximum number of cases to use for testing, both settings are used, and the testing data set contains the smaller number of cases. By default, 30 percent of data is used for testing, 70 percent for training, and there is no maximum number of test cases.  
   
- By default, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] generates a numeric seed that is used to start partitioning. This seed is based on the name of the mining structure. If you want to ensure that the partition stays the same even if the name of the mining structure is changed, you can specify a value for the seed, by setting the HoldoutSeed property of the mining structure. If you change the holdout seed, you must reprocess the structure.  
+ By default, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] generates a numeric seed that is used to start partitioning. This seed is based on the name of the mining structure. If you want to ensure that the partition stays the same even if the name of the mining structure is changed, you can specify a value for the seed, by setting the HoldoutSeed property of the mining structure. If you change the holdout seed, you must reprocess the structure.  
   
  If you later want to change the amount of testing or training data, you can modify the `HoldoutMaxCases` and `HoldoutMaxPercent` properties on the data mining structure by using the **Properties** window. However, after you make the change you must reprocess the mining structure and all associated mining models. The following limitations also apply:  
   
--   Partitioning of a data mining structure is supported only when the data mining structure is stored in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] do not support caching of partition information for mining structures.  
+-   Partitioning of a data mining structure is supported only when the data mining structure is stored in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] do not support caching of partition information for mining structures.  
   
 -   You cannot partition a mining structure if the mining structure contains a Key Time column, which is required for time series mining models.  
   

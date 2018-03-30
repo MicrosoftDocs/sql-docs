@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Choose How to Import the Data (SSAS)
-  This page of the **Table Import Wizard** enables you to choose how to import data from the selected data source. To access the wizard from the [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], on the **Model** menu, click **Import from Data Source**.  
+  This page of the **Table Import Wizard** enables you to choose how to import data from the selected data source. To access the wizard from the [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], on the **Model** menu, click **Import from Data Source**.  
   
 ## UIElement List  
  **Select from a list of tables and views to choose the data to import**  

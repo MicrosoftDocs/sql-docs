@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 35930826-c870-44c1-a966-a6a4638f62ef
 caps.latest.revision: 38
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Disk Space Requirements for Index DDL Operations
@@ -89,11 +89,11 @@ manager: "jhubbard"
  [Estimate the Size of a Heap](../../2014/database-engine/estimate-the-size-of-a-heap.md)  
   
 ## Related Content  
- [CREATE INDEX &#40;Transact-SQL&#41;](../Topic/CREATE%20INDEX%20\(Transact-SQL\).md)  
+ [CREATE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md)  
   
- [ALTER INDEX &#40;Transact-SQL&#41;](../Topic/ALTER%20INDEX%20\(Transact-SQL\).md)  
+ [ALTER INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-index-transact-sql.md)  
   
- [DROP INDEX &#40;Transact-SQL&#41;](../Topic/DROP%20INDEX%20\(Transact-SQL\).md)  
+ [DROP INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/drop-index-transact-sql.md)  
   
  [Specify Fill Factor for an Index](../../2014/database-engine/specify-fill-factor-for-an-index.md)  
   

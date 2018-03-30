@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 1e43537c-bf67-4db3-9908-3cb45c6fdaa1
 caps.latest.revision: 30
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Perform Index Operations Online
-  This topic describes how to create, rebuild, or drop indexes online in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The ONLINE option allows concurrent user access to the underlying table or clustered index data and any associated nonclustered indexes during these index operations. For example, while a clustered index is being rebuilt by one user, that user and others can continue to update and query the underlying data. When you perform data definition language (DDL) operations offline, such as building or rebuilding a clustered index; these operations hold exclusive locks on the underlying data and associated indexes. This prevents modifications and queries to the underlying data until the index operation is complete.  
+  This topic describes how to create, rebuild, or drop indexes online in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)]. The ONLINE option allows concurrent user access to the underlying table or clustered index data and any associated nonclustered indexes during these index operations. For example, while a clustered index is being rebuilt by one user, that user and others can continue to update and query the underlying data. When you perform data definition language (DDL) operations offline, such as building or rebuilding a clustered index; these operations hold exclusive locks on the underlying data and associated indexes. This prevents modifications and queries to the underlying data until the index operation is complete.  
   
 > [!NOTE]  
->  Online index operations are not available in every [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edition. For more information, see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+>  Online index operations are not available in every [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edition. For more information, see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  **In This Topic**  
   
@@ -45,15 +45,15 @@ manager: "jhubbard"
   
 -   We recommend performing online index operations for business environments that operate 24 hours a day, seven days a week, in which the need for concurrent user activity during index operations is vital.  
   
--   The ONLINE option is available in the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.  
+-   The ONLINE option is available in the following [!INCLUDE[tsql](../includes/tsql-md.md)] statements.  
   
-    -   [CREATE INDEX](../Topic/CREATE%20INDEX%20\(Transact-SQL\).md)  
+    -   [CREATE INDEX](~/t-sql/statements/create-index-transact-sql.md)  
   
-    -   [ALTER INDEX](../Topic/ALTER%20INDEX%20\(Transact-SQL\).md)  
+    -   [ALTER INDEX](~/t-sql/statements/alter-index-transact-sql.md)  
   
-    -   [DROP INDEX](../Topic/DROP%20INDEX%20\(Transact-SQL\).md)  
+    -   [DROP INDEX](~/t-sql/statements/drop-index-transact-sql.md)  
   
-    -   [ALTER TABLE](../Topic/ALTER%20TABLE%20\(Transact-SQL\).md) (To add or drop UNIQUE or PRIMARY KEY constraints with CLUSTERED index option)  
+    -   [ALTER TABLE](~/t-sql/statements/alter-table-transact-sql.md) (To add or drop UNIQUE or PRIMARY KEY constraints with CLUSTERED index option)  
   
 -   For more limitations and restrictions concerning creating, rebuilding, or dropping indexes online, see [Guidelines for Online Index Operations](../../2014/database-engine/guidelines-for-online-index-operations.md).  
   
@@ -90,7 +90,7 @@ manager: "jhubbard"
   
 #### To create, rebuild, or drop an index online  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -106,8 +106,8 @@ manager: "jhubbard"
   
      The following example deletes a clustered index online and moves the resulting table (heap) to the filegroup `NewGroup` by using the `MOVE TO` clause. The `sys.indexes`, `sys.tables`, and `sys.filegroups` catalog views are queried to verify the index and table placement in the filegroups before and after the move.  
   
-     [!code-sql[IndexDDL#DropIndex4](../../snippets/tsql/SQL14/tsql/indexddl/transact-sql/dropindex.sql#dropindex4)]  
+     [!code-sql[IndexDDL#DropIndex4](../snippets/tsql/SQL14/tsql/indexddl/transact-sql/dropindex.sql#dropindex4)]  
   
- For more information, see [ALTER INDEX &#40;Transact-SQL&#41;](../Topic/ALTER%20INDEX%20\(Transact-SQL\).md).  
+ For more information, see [ALTER INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-index-transact-sql.md).  
   
   

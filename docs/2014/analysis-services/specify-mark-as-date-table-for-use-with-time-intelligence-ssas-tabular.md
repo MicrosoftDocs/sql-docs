@@ -50,6 +50,6 @@ manager: "mblythe"
   
 ## See Also  
  [Calculations &#40;SSAS Tabular&#41;](../../2014/analysis-services/calculations-ssas-tabular.md)   
- [Time Intelligence Functions &#40;DAX&#41;](../Topic/Time%20Intelligence%20Functions%20\(DAX\).md)  
+ [Time Intelligence Functions &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634763.aspx)  
   
   

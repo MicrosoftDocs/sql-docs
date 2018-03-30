@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 93318587-a0c5-4788-946f-3b5dc8372ea9
 caps.latest.revision: 29
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # View the Definition of a Stored Procedure
     
-##  <a name="Top"></a> You can view the definition of a stored procedure in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] using Object Explorer menu options or in the Query Editor using [!INCLUDE[tsql](../../includes/tsql-md.md)]. This topic describes how to view the definition of procedure in Object Explorer and by using a system stored procedure, system function, and object catalog view in the Query Editor.  
+##  <a name="Top"></a> You can view the definition of a stored procedure in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] using Object Explorer menu options or in the Query Editor using [!INCLUDE[tsql](../includes/tsql-md.md)]. This topic describes how to view the definition of procedure in Object Explorer and by using a system stored procedure, system function, and object catalog view in the Query Editor.  
   
 -   **Before you begin:**  [Security](#Security)  
   
@@ -52,7 +52,7 @@ manager: "jhubbard"
 ###  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  **To view the definition a procedure in Object Explorer**  
   
-1.  In Object Explorer, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)] and then expand that instance.  
+1.  In Object Explorer, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)] and then expand that instance.  
   
 2.  Expand **Databases**, expand the database in which the procedure belongs, and then expand **Programmability**.  
   
@@ -64,7 +64,7 @@ manager: "jhubbard"
  **To view the definition of a procedure in Query Editor**  
   
  System Stored Procedure: `sp_helptext`  
- 1.  In Object Explorer, connect to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ 1.  In Object Explorer, connect to an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the toolbar, click **New Query**.  
   
@@ -77,7 +77,7 @@ manager: "jhubbard"
     ```  
   
  System Function: `OBJECT_DEFINITION`  
- 1.  In Object Explorer, connect to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ 1.  In Object Explorer, connect to an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the toolbar, click **New Query**.  
   
@@ -90,7 +90,7 @@ manager: "jhubbard"
     ```  
   
  Object Catalog View: `sys.sql_modules`  
- 1.  In Object Explorer, connect to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ 1.  In Object Explorer, connect to an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the toolbar, click **New Query**.  
   
@@ -109,9 +109,9 @@ manager: "jhubbard"
  [Modify a Stored Procedure](../../2014/database-engine/modify-a-stored-procedure.md)   
  [Delete a Stored Procedure](../../2014/database-engine/delete-a-stored-procedure.md)   
  [Rename a Stored Procedure](../../2014/database-engine/rename-a-stored-procedure.md)   
- [OBJECT_DEFINITION &#40;Transact-SQL&#41;](../Topic/OBJECT_DEFINITION%20\(Transact-SQL\).md)   
- [sys.sql_modules &#40;Transact-SQL&#41;](../Topic/sys.sql_modules%20\(Transact-SQL\).md)   
- [sp_helptext &#40;Transact-SQL&#41;](../Topic/sp_helptext%20\(Transact-SQL\).md)   
- [OBJECT_ID &#40;Transact-SQL&#41;](../Topic/OBJECT_ID%20\(Transact-SQL\).md)  
+ [OBJECT_DEFINITION &#40;Transact-SQL&#41;](~/t-sql/functions/object-definition-transact-sql.md)   
+ [sys.sql_modules &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
+ [sp_helptext &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
+ [OBJECT_ID &#40;Transact-SQL&#41;](~/t-sql/functions/object-id-transact-sql.md)  
   
   

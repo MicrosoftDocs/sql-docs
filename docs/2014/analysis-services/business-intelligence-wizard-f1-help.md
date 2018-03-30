@@ -40,7 +40,7 @@ manager: "mblythe"
   
 -   Define currency conversion for cubes.  
   
- After you enhance a cube or dimension by using the Business Intelligence Wizard, you can use Cube Designer, Dimension Designer, or Business Intelligence Wizard to edit its properties in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+ After you enhance a cube or dimension by using the Business Intelligence Wizard, you can use Cube Designer, Dimension Designer, or Business Intelligence Wizard to edit its properties in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 ## In This Section  
   

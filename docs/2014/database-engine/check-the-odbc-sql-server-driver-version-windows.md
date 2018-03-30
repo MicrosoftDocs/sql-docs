@@ -15,11 +15,11 @@ helpviewer_keywords:
 ms.assetid: 43451080-a562-4231-b1d4-1ba35ca0ea79
 caps.latest.revision: 21
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Check the ODBC SQL Server Driver Version (Windows)
-  Your computer may contain a variety of ODBC drivers, from [!INCLUDE[msCoName](../../includes/msconame-md.md)] and from other companies. This topic describes how to use the Windows **ODBC Data Source Administrator** to check the version of the installed ODBC drivers.  
+  Your computer may contain a variety of ODBC drivers, from [!INCLUDE[msCoName](../includes/msconame-md.md)] and from other companies. This topic describes how to use the Windows **ODBC Data Source Administrator** to check the version of the installed ODBC drivers.  
   
 ##  <a name="SSMSProcedure"></a>  
   
@@ -27,7 +27,7 @@ manager: "jhubbard"
   
 -   In the **ODBC Data Source Administrator**, click the **Drivers** tab.  
   
-     Information for the Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entry is displayed in the **Version** column.  
+     Information for the Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] entry is displayed in the **Version** column.  
   
 ## See Also  
  [Open the ODBC Data Source Administrator](../../2014/database-engine/open-the-odbc-data-source-administrator.md)  

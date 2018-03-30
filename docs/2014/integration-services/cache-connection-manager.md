@@ -45,9 +45,9 @@ manager: "jhubbard"
   
 -   Update the cache file name at runtime by using an expression to set the ConnectionString property. For more information, see [Use Property Expressions in Packages](../../2014/integration-services/use-property-expressions-in-packages.md).  
   
- You can set properties through [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Designer or programmatically.  
   
- For more information about the properties that you can set in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Designer, see [Cache Connection Manager Editor](../../2014/integration-services/cache-connection-manager-editor.md).  
+ For more information about the properties that you can set in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Designer, see [Cache Connection Manager Editor](../../2014/integration-services/cache-connection-manager-editor.md).  
   
  For information about how to configure a connection manager programmatically, see <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> and [Adding Connections Programmatically](../../2014/integration-services/dev-guide/adding-connections-programmatically.md).  
   

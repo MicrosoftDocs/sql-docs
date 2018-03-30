@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 623354b8-fa56-4167-862a-98c468dd8a22
 caps.latest.revision: 22
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Drag and Drop Text
@@ -27,7 +27,7 @@ manager: "jhubbard"
   
 -   Between editors.  
   
--   To the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Recycle Bin.  
+-   To the [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows Recycle Bin.  
   
 ### To drag and drop text  
   

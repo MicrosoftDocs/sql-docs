@@ -16,7 +16,7 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Lesson 4: Executing Market Basket Predictions
-  In this lesson, you will use the DMX `SELECT` statement to create predictions based on the association models you created in [Lesson 2: Adding Mining Models to the Market Basket Mining Structure](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). A prediction query is created by using the DMX `SELECT` statement and adding a `PREDICTION JOIN` clause. For more information about the syntax of a prediction join, see [SELECT FROM &#60;model&#62; PREDICTION JOIN &#40;DMX&#41;](../Topic/SELECT%20FROM%20%3Cmodel%3E%20PREDICTION%20JOIN%20\(DMX\).md).  
+  In this lesson, you will use the DMX `SELECT` statement to create predictions based on the association models you created in [Lesson 2: Adding Mining Models to the Market Basket Mining Structure](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). A prediction query is created by using the DMX `SELECT` statement and adding a `PREDICTION JOIN` clause. For more information about the syntax of a prediction join, see [SELECT FROM &#60;model&#62; PREDICTION JOIN &#40;DMX&#41;](~/dmx/select-from-model-cases-dmx.md).  
   
  The **SELECT FROM \<model> PREDICTION JOIN** form of the `SELECT` statement contains three parts:  
   
@@ -26,9 +26,9 @@ manager: "jhubbard"
   
 -   A mapping between the mining model columns and the source data. If the columns names match, you can use the `NATURAL PREDICTION JOIN` syntax and omit the column mappings.  
   
- You can enhance the query by using prediction functions. Prediction functions provide additional information, such as the probability of a prediction occurring, or the support for a prediction in the training dataset. For more information about prediction functions, see [Functions &#40;DMX&#41;](../Topic/Functions%20\(DMX\).md).  
+ You can enhance the query by using prediction functions. Prediction functions provide additional information, such as the probability of a prediction occurring, or the support for a prediction in the training dataset. For more information about prediction functions, see [Functions &#40;DMX&#41;](~/dmx/functions-dmx.md).  
   
- You can also use the prediction query builder in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to create prediction queries.  
+ You can also use the prediction query builder in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to create prediction queries.  
   
 ## Singleton PREDICTION JOIN Statement  
  The first step is to create a singleton query, by using the **SELECT FROM \<model> PREDICTION JOIN** syntax and supplying a single set of values as input. The following is a generic example of the singleton statement:  
@@ -76,7 +76,7 @@ SELECT <select list> FROM [<mining model>]
   
 #### To create an association query  
   
-1.  In **Object Explorer**, right-click the instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], point to **New Query**, and then click **DMX** to open the Query Editor.  
+1.  In **Object Explorer**, right-click the instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], point to **New Query**, and then click **DMX** to open the Query Editor.  
   
 2.  Copy the generic example of the `PREDICTION JOIN` statement into the blank query.  
   
@@ -92,7 +92,7 @@ SELECT <select list> FROM [<mining model>]
     PREDICT([Default Association].[Products],INCLUDE_STATISTICS,3)  
     ```  
   
-     You could just include the column name [Products], but by using the [Predict &#40;DMX&#41;](../Topic/Predict%20\(DMX\).md) function, you can limit the number of products that are returned by the algorithm to three. You can also use `INCLUDE_STATISTICS`, which returns the support, probability, and adjusted probability for each product. These statistics help you rate the accuracy of the prediction.  
+     You could just include the column name [Products], but by using the [Predict &#40;DMX&#41;](~/dmx/predict-dmx.md) function, you can limit the number of products that are returned by the algorithm to three. You can also use `INCLUDE_STATISTICS`, which returns the support, probability, and adjusted probability for each product. These statistics help you rate the accuracy of the prediction.  
   
 4.  Replace the following:  
   
@@ -150,7 +150,7 @@ SELECT <select list> FROM [<mining model>]
   
 #### To create an association query  
   
-1.  In **Object Explorer**, right-click the instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], point to **New Query**, and then click **DMX** to open the Query Editor.  
+1.  In **Object Explorer**, right-click the instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], point to **New Query**, and then click **DMX** to open the Query Editor.  
   
 2.  Copy the generic example of the `PREDICTION JOIN` statement into the blank query.  
   

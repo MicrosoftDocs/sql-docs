@@ -30,7 +30,7 @@ manager: "jhubbard"
   
     -   Read/Write/Delete access is granted to the Bulk Load process.  
   
-    -   Read permission is granted to all users, because the account under which Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] will access these files is unknown. You can restrict the access to these temporary files by setting the appropriate permissions on the folder that contains them.  
+    -   Read permission is granted to all users, because the account under which Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will access these files is unknown. You can restrict the access to these temporary files by setting the appropriate permissions on the folder that contains them.  
   
 -   XML Bulk Load does not itself have any permissions settings. It is assumed that the database is set up correctly and that the user context (that is, the login that Bulk Load is set use) has appropriate permissions set.  
   
@@ -42,7 +42,7 @@ manager: "jhubbard"
   
 -   Bulk Load does not make an attempt to use the data it is given as code. The data input is never executed in any fashion. Any code or commands in the input data are treated as normal data and will not be executed.  
   
--   Bulk Load may make formatting changes to the given data based on differences between the XML and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data models. For example, the format for specifying a time is different. Bulk Load will attempt to resolve these differences. As a result, some precision information may be lost.  
+-   Bulk Load may make formatting changes to the given data based on differences between the XML and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data models. For example, the format for specifying a time is different. Bulk Load will attempt to resolve these differences. As a result, some precision information may be lost.  
   
 -   Bulk Load sets no limit on the amount of time it takes to process the data. Processing will continue until processing is complete or an error occurs.  
   

@@ -26,7 +26,7 @@ manager: "jhubbard"
 # Mirrored Backup Media Sets (SQL Server)
     
 > [!NOTE]  
->  Mirrored backup media sets are supported only in the Enterprise edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  Mirrored backup media sets are supported only in the Enterprise edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  Mirroring a media set increases backup reliability by reducing the impact of backup-device malfunctions. These malfunctions are very serious because backups are the last line of defense against data loss. As databases grow, the probability increases that a failure of a backup device or media will make a backup nonrestorable. Mirroring backup media increases the reliability of backups by providing redundancy.  
   
@@ -52,7 +52,7 @@ manager: "jhubbard"
   
  Corresponding volumes on the mirrors have identical contents. This makes them interchangeable at restore time. For example, in the previous illustration, the third volume of tape2 is interchangeable with the third volume of tape0.  
   
- The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] guarantees that the mirrored media have identical contents by synchronizing writes to the devices. When any one of the mirrors fills, all the mirrors are spanned at one time.  
+ The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] guarantees that the mirrored media have identical contents by synchronizing writes to the devices. When any one of the mirrors fills, all the mirrors are spanned at one time.  
   
 > [!IMPORTANT]  
 >  A mirrored media set cannot be implicitly broken (split) by removing a mirror. If any tape or disk in a mirror is damaged or reformatted, the mirror is no longer usable for additional backups. If at least one full mirror remains intact, the media set can be read. If every mirror loses a given media family, the media set is useless.  
@@ -71,7 +71,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Possible Media Errors During Backup and Restore &#40;SQL Server&#41;](../../2014/database-engine/possible-media-errors-during-backup-and-restore-sql-server.md)   
- [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md)   
+ [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-verifyonly-transact-sql.md)   
  [Backup Devices &#40;SQL Server&#41;](../../2014/database-engine/backup-devices-sql-server.md)   
  [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](../../2014/database-engine/media-sets-media-families-and-backup-sets-sql-server.md)  
   

@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 8092faa3-9cff-4f81-926c-6a0070d1ce2c
 caps.latest.revision: 31
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Enable a Database for Replication (SQL Server Management Studio)
@@ -24,6 +24,6 @@ manager: "jhubbard"
   
 1.  On the **Publication Databases** page of the **Publisher Properties - \<Publisher>** dialog box, select the **Transactional** and/or **Merge** check box for each database you want to replicate. Select **Transactional** to enable the database for snapshot replication.  
   
-2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
   

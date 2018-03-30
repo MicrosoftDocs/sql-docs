@@ -18,11 +18,11 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Connect to a Data Source (SSAS)
-  This page of the **Table Import Wizard** enables you to create a new data source connection to a variety of data sources, such as relational databases, data feeds, and files. To access the wizard from the [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], on the **Model** menu, click **Import from Data Source**.  
+  This page of the **Table Import Wizard** enables you to create a new data source connection to a variety of data sources, such as relational databases, data feeds, and files. To access the wizard from the [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], on the **Model** menu, click **Import from Data Source**.  
   
  To connect to a data source, you must have the appropriate provider installed on your machine. You must also have the appropriate provider installed on the workspace database server. For 32-bit (x86) servers, 32-bit providers must be installed. For 64-bit (x64) servers, 64-bit providers must be installed.  
   
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] always runs in a 32-bit process, regardless of architecture. When running [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] on a 64-bit machine, you should be aware of the following when installing data providers:  
+ [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] always runs in a 32-bit process, regardless of architecture. When running [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] on a 64-bit machine, you should be aware of the following when installing data providers:  
   
 -   For providers that support side-by-side installation of 32-bit and 64-bit providers, you should install both providers.  
   

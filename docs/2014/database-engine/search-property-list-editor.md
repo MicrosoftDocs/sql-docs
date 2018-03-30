@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: 0f3ced6e-0dfd-49fc-b175-82378c3d668e
 caps.latest.revision: 26
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Search Property List Editor
@@ -27,7 +27,7 @@ manager: "jhubbard"
  **Property Name**  
  Specify the name to be used to identify the property in full-text queries. A property name can contain internal spaces. The maximum length of **Property Name** is 256 characters. This name can be a user-friendly name, such as "Author" or "Home Address", or it can be the Windows canonical name of the property, such as `System.Author` or `System.Contact.HomeAddress`. **Property Name** must uniquely identify the property within the property set.  
   
- Developers use the property name to identify the property in the [CONTAINS](../Topic/CONTAINS%20\(Transact-SQL\).md) predicate. Therefore, when adding a property it is important to specify a value that meaningfully represents the property.  
+ Developers use the property name to identify the property in the [CONTAINS](~/t-sql/queries/contains-transact-sql.md) predicate. Therefore, when adding a property it is important to specify a value that meaningfully represents the property.  
   
  **Property Set GUID**  
  Specify the identifier of the property set to which the property belongs. This is a globally unique identifier (GUID). A property set is a group of logically related properties. For information about obtaining this value, see "Remarks," later in this topic.  
@@ -51,11 +51,11 @@ manager: "jhubbard"
 -   [Search Document Properties with Search Property Lists](../../2014/database-engine/search-document-properties-with-search-property-lists.md)  
   
 ## Permissions  
- See [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../Topic/ALTER%20SEARCH%20PROPERTY%20LIST%20\(Transact-SQL\).md).  
+ See [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](~/t-sql/statements/alter-search-property-list-transact-sql.md).  
   
 ## See Also  
- [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../Topic/ALTER%20SEARCH%20PROPERTY%20LIST%20\(Transact-SQL\).md)   
+ [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](~/t-sql/statements/alter-search-property-list-transact-sql.md)   
  [Search Document Properties with Search Property Lists](../../2014/database-engine/search-document-properties-with-search-property-lists.md)   
- [sys.registered_search_property_lists &#40;Transact-SQL&#41;](../Topic/sys.registered_search_property_lists%20\(Transact-SQL\).md)  
+ [sys.registered_search_property_lists &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)  
   
   

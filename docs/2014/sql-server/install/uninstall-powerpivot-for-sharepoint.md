@@ -12,13 +12,13 @@ ms.topic: "article"
 ms.assetid: 3941a2f0-0d0c-4d1a-8618-7a6a7751beac
 caps.latest.revision: 20
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "jhubbard"
 ---
 # Uninstall PowerPivot for SharePoint
-  Uninstalling a [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] installation is a multi-step operation that includes preparing for uninstall, removing features and solutions from the farm, and removing program files and registry settings.  
+  Uninstalling a [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installation is a multi-step operation that includes preparing for uninstall, removing features and solutions from the farm, and removing program files and registry settings.  
   
- **[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2013 | SharePoint 2010  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 | SharePoint 2010  
   
  **In this topic:**  
   
@@ -42,7 +42,7 @@ manager: "jhubbard"
   
 -   You must be a SQL Server System Administrator and a member of the local Administrators group if you are also uninstalling the Database Engine.  
   
--   You must be an Analysis Services System Administrator and a member of the local Administrators group to uninstall Analysis Services and [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)].  
+-   You must be an Analysis Services System Administrator and a member of the local Administrators group to uninstall Analysis Services and [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
   
 ##  <a name="bkmk_before"></a> Step 1: Pre-Uninstall Checklist  
  PowerPivot data access will be disabled once the software that supports query and data processing is removed from the farm. As a first step, you should preemptively delete files and libraries that will no longer be operational. This lets you address any questions or concerns about ‘missing data’ before you uninstall the software.  
@@ -66,11 +66,11 @@ manager: "jhubbard"
   
 -   You must be a farm administrator, a server administrator on the Analysis Services instance, and **db_owner** on the farm’s configuration database.  
   
--   Use the appropriate version of the configuration tool for the version of SharePoint. Do not use either tool with [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] installations.  
+-   Use the appropriate version of the configuration tool for the version of SharePoint. Do not use either tool with [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] installations.  
   
 -   Verify that the SharePoint Administration service is running.  
   
-1.  **Run the Configuration tool:** Note the configuration tools are only listed only when [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] is installed on the local server.On the **Start** menu, point to **All Programs**, click [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], click **Configuration Tools**, and then click one of the following:  
+1.  **Run the Configuration tool:** Note the configuration tools are only listed only when [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] is installed on the local server.On the **Start** menu, point to **All Programs**, click [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], click **Configuration Tools**, and then click one of the following:  
   
     -   **PowerPivot for SharePoint 2013 Configuration**  
   
@@ -128,12 +128,12 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
 5.  Retry the task in the configuration tool by clicking **Validate** followed by **Run**.  
   
- Alternatively, you can use PowerShell to remove features and solutions from the farm. For more information, see [PowerShell Reference for PowerPivot for SharePoint](../Topic/PowerShell%20Reference%20for%20PowerPivot%20for%20SharePoint.md).  
+ Alternatively, you can use PowerShell to remove features and solutions from the farm. For more information, see [PowerShell Reference for PowerPivot for SharePoint](~/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md).  
   
 ##  <a name="bkmk_uninstall"></a> Step 3: Run SQL Server Setup to Remove Programs from the Local Computer  
- Deleting program files requires that you run SQL Server Setup to uninstall the software. Uninstall removes both files and the registry entries that were created by Setup. You can use the Programs and Features page to uninstall the software. An installation of [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] is part of a SQL Server installation.  
+ Deleting program files requires that you run SQL Server Setup to uninstall the software. Uninstall removes both files and the registry entries that were created by Setup. You can use the Programs and Features page to uninstall the software. An installation of [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] is part of a SQL Server installation.  
   
- You can uninstall part of an installation without impacting other SQL Server instances (or features in the same instance) that are already installed. For example, you can uninstall PowerPivot for SharePoint while leaving other components, such as [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] or the Database Engine, installed.  
+ You can uninstall part of an installation without impacting other SQL Server instances (or features in the same instance) that are already installed. For example, you can uninstall PowerPivot for SharePoint while leaving other components, such as [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] or the Database Engine, installed.  
   
 1.  Select **Microsoft SQL Server 2014 (64-bit)** from the program list.  
   
@@ -144,15 +144,15 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
      From Setup, you can select the **PowerPivot** instance, and then select **Analysis Services** and **Analysis Services SharePoint Integration** to remove just that feature, leaving everything else in place.  
   
 ##  <a name="bkmk_addin"></a> Step 4: Uninstall the PowerPivot for SharePoint add-in  
- If your [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] deployment has two or more servers and you installed the [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] Add-in, then uninstall the [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] add-in from each server where it was installed to completely uninstall all [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] files. For more information, see [Install or Uninstall the PowerPivot for SharePoint Add-in &#40;SharePoint 2013&#41;](../../../2014/sql-server/install/install-or-uninstall-the-powerpivot-for-sharepoint-add-in-sharepoint-2013.md).  
+ If your [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] deployment has two or more servers and you installed the [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] Add-in, then uninstall the [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] add-in from each server where it was installed to completely uninstall all [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] files. For more information, see [Install or Uninstall the PowerPivot for SharePoint Add-in &#40;SharePoint 2013&#41;](../../../2014/sql-server/install/install-or-uninstall-the-powerpivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
 ##  <a name="verify"></a> Step 5: Verify Uninstall  
   
 1.  In Central Administration, in **Manage services on server**, connect to the server from which you uninstalled PowerPivot for SharePoint.  
   
-2.  -   If you uninstalled [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 2013, verify that **SQL Server PowerPivot System Service** no longer appear in the list.  
+2.  -   If you uninstalled [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013, verify that **SQL Server PowerPivot System Service** no longer appear in the list.  
   
-    -   If you uninstalled [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 2010, verify that **SQL Server Analysis Services** and **SQL Server PowerPivot System Service** no longer appear in the list.  
+    -   If you uninstalled [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010, verify that **SQL Server Analysis Services** and **SQL Server PowerPivot System Service** no longer appear in the list.  
   
 3.  After you uninstall the last PowerPivot for SharePoint server in the farm, do the following:  
   
@@ -183,7 +183,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
      Do not uninstall the SQL Server Reporting Services SharePoint 2010 Add-in unless you are following troubleshooting or installation instructions that specifically direct you to uninstall it. The Reporting Services Add-in is used by Access Services. It is installed by the SharePoint Products Preparation tool and should remain on the system to support functionality required by SharePoint.  
   
-     Do not uninstall the Analysis Services OLE DB provider. SharePoint installs the OLE DB provider as a prerequisite for Excel workbooks that connect to Analysis Services databases. [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] installs a newer version, but this version is backwards compatible so you should leave it on the system to avoid data connection problems later.  
+     Do not uninstall the Analysis Services OLE DB provider. SharePoint installs the OLE DB provider as a prerequisite for Excel workbooks that connect to Analysis Services databases. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installs a newer version, but this version is backwards compatible so you should leave it on the system to avoid data connection problems later.  
   
 ## See Also  
  [Install or Uninstall the PowerPivot for SharePoint Add-in &#40;SharePoint 2013&#41;](../../../2014/sql-server/install/install-or-uninstall-the-powerpivot-for-sharepoint-add-in-sharepoint-2013.md)   

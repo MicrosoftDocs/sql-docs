@@ -31,14 +31,14 @@ manager: "jhubbard"
 |Message Text|Database backed up. Database: %s, creation date(time): %s(%s), pages dumped: %d, first LSN: %s, last LSN: %s, number of dump devices: %d, device information: (%s). This is an informational message only. No user action is required.|  
   
 ## Explanation  
- By default, every successful backup adds this informational message to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log and the system event log. If you very frequently back up the transaction log, these messages can accumulate quickly, creating very large error logs that can make finding other messages difficult.  
+ By default, every successful backup adds this informational message to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] error log and the system event log. If you very frequently back up the transaction log, these messages can accumulate quickly, creating very large error logs that can make finding other messages difficult.  
   
 ## User Action  
- You can suppress these log entries by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trace flag **3226**. Enabling this trace flag is useful if you are running frequent log backups and if none of your scripts depend on those entries.  
+ You can suppress these log entries by using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] trace flag **3226**. Enabling this trace flag is useful if you are running frequent log backups and if none of your scripts depend on those entries.  
   
  For information about using trace flags, see SQL Server Books Online.  
   
 ## See Also  
- [Trace Flags &#40;Transact-SQL&#41;](../Topic/Trace%20Flags%20\(Transact-SQL\).md)  
+ [Trace Flags &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
   
   

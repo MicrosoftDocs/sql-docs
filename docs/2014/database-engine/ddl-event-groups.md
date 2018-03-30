@@ -16,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: 12b45cc3-2f91-4609-bb8a-3e82e28bf642
 caps.latest.revision: 16
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # DDL Event Groups
-  The following tables list the DDL event groups that can be used to run a DDL trigger or an event notification, and also the [!INCLUDE[tsql](../../includes/tsql-md.md)] statements they cover. Note the inclusive nature of the event groups. For example, a DDL trigger or event notification that specifies FOR DDL_TABLE_EVENTS (10018) covers the CREATE TABLE, ALTER TABLE and DROP TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. A DDL trigger or event notification that specifies FOR DDL_TABLE_VIEW_EVENTS (10017) covers all [!INCLUDE[tsql](../../includes/tsql-md.md)] statements under the types DDL_TABLE_EVENTS, DDL_VIEW_EVENTS, DDL_INDEX_EVENTS, and DDL_STATISTICS_EVENTS.  
+  The following tables list the DDL event groups that can be used to run a DDL trigger or an event notification, and also the [!INCLUDE[tsql](../includes/tsql-md.md)] statements they cover. Note the inclusive nature of the event groups. For example, a DDL trigger or event notification that specifies FOR DDL_TABLE_EVENTS (10018) covers the CREATE TABLE, ALTER TABLE and DROP TABLE [!INCLUDE[tsql](../includes/tsql-md.md)] statements. A DDL trigger or event notification that specifies FOR DDL_TABLE_VIEW_EVENTS (10017) covers all [!INCLUDE[tsql](../includes/tsql-md.md)] statements under the types DDL_TABLE_EVENTS, DDL_VIEW_EVENTS, DDL_INDEX_EVENTS, and DDL_STATISTICS_EVENTS.  
   
 > [!NOTE]  
 >  Certain system stored procedures that perform DDL-like operations can also fire DDL triggers or event notifications. Test your DDL triggers and event notifications to determine their responses to system stored procedures that are run. For example, the CREATE TYPE statement and **sp_addtype** stored procedure will both fire a DDL trigger or event notification that is created on a CREATE_TYPE event.  

@@ -55,7 +55,7 @@ SELECT * FROM $System.<schemaRowset>
  `Select * from $System.discover_locks` /** This query returns a snapshot of the locks used at a specific point in time.  
   
 ##  <a name="bkmk_syn"></a> Query Syntax  
- The query engine for DMVs is the Data Mining parser. The DMV query syntax is based on the [SELECT &#40;DMX&#41;](../Topic/SELECT%20\(DMX\).md) statement.  
+ The query engine for DMVs is the Data Mining parser. The DMV query syntax is based on the [SELECT &#40;DMX&#41;](~/dmx/select-dmx.md) statement.  
   
  Although DMV query syntax is based on a SQL SELECT statement, it does not support the full syntax of a SELECT statement. Notably, JOIN, GROUP BY, LIKE, CAST, and CONVERT are not supported.  
   

@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
 caps.latest.revision: 60
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Lesson 4: Adding a Table to the Report (Reporting Services)

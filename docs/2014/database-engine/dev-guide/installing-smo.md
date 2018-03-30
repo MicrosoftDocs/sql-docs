@@ -21,9 +21,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Installing SMO
-  If you want to develop an application that uses [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO), you should select the Client Tools SDK when you install [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. To install the Client Tooks SDK without installing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], install Shared Management Objects from the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] feature pack. If you want to ensure that [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects is installed on a computer that will run your application, you can use the Shared Management Objects .msi in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] feature pack.  
+  If you want to develop an application that uses [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO), you should select the Client Tools SDK when you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. To install the Client Tooks SDK without installing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], install Shared Management Objects from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] feature pack. If you want to ensure that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects is installed on a computer that will run your application, you can use the Shared Management Objects .msi in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] feature pack.  
   
- By default, the SMO assemblies are installed in the [!INCLUDE[ssSampPathSDK](../../../includes/sssamppathsdk-md.md)] directory.  
+ By default, the SMO assemblies are installed in the [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)] directory.  
   
 ## See Also  
  [Quick-Start Installation of SQL Server 2014](../../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)  

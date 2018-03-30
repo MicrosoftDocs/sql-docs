@@ -27,11 +27,11 @@ manager: "jhubbard"
   
 -   Database mirroring  
   
--   SOAP (support for SOAP endpoints is present in [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] and earlier [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] versions)  
+-   SOAP (support for SOAP endpoints is present in [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] and earlier [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions)  
   
 -   Service Broker  
   
--   [!INCLUDE[tsql](../../../includes/tsql-md.md)]  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
  Also, the <xref:Microsoft.SqlServer.Management.Smo.Endpoint.ProtocolType%2A> property can be used to specify the following two supported protocols:  
   

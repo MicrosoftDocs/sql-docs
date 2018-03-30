@@ -28,7 +28,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Backup Overview (SQL Server)
-  This topic introduces the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup component. Backing up your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database is essential for protecting your data. This discussion covers backup types, and backup restrictions. The topic also introduces [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup devices and backup media.  
+  This topic introduces the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] backup component. Backing up your [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database is essential for protecting your data. This discussion covers backup types, and backup restrictions. The topic also introduces [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] backup devices and backup media.  
   
  **In this Topic:**  
   
@@ -42,21 +42,21 @@ manager: "jhubbard"
   
 ##  <a name="TermsAndDefinitions"></a> Components and Concepts  
  back up [verb]  
- Copies the data or log records from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database or its transaction log to a backup device, such as a disk, to create a data backup or log backup.  
+ Copies the data or log records from a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database or its transaction log to a backup device, such as a disk, to create a data backup or log backup.  
   
  backup [noun]  
- A copy of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data that can be used to restore and recover the data after a failure. A backup of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data is created at the level of a database or one or more of its files or filegroups. Table-level backups cannot be created. In addition to data backups, the full recovery model requires creating backups of the transaction log.  
+ A copy of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] data that can be used to restore and recover the data after a failure. A backup of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] data is created at the level of a database or one or more of its files or filegroups. Table-level backups cannot be created. In addition to data backups, the full recovery model requires creating backups of the transaction log.  
   
  [recovery model](../../2014/database-engine/recovery-models-sql-server.md)  
  A database property that controls transaction log maintenance on a database. Three recovery models exist: simple, full, and bulk-logged. The recovery model of database determines its backup and restore requirements.  
   
  [restore](../../2014/database-engine/restore-and-recovery-overview-sql-server.md)  
- A multi-phase process that copies all the data and log pages from a specified [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup to a specified database, and then rolls forward all the transactions that are logged in the backup by applying logged changes to bring the data forward in time.  
+ A multi-phase process that copies all the data and log pages from a specified [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] backup to a specified database, and then rolls forward all the transactions that are logged in the backup by applying logged changes to bring the data forward in time.  
   
  **Types of Backups**  
   
  [copy-only backup](../../2014/database-engine/copy-only-backups-sql-server.md)  
- A special-use backup that is independent of the regular sequence of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups.  
+ A special-use backup that is independent of the regular sequence of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] backups.  
   
  data backup  
  A backup of data in a complete database (a database backup), a partial database (a partial backup), or a set of data files or filegroups (a file backup).  
@@ -84,7 +84,7 @@ manager: "jhubbard"
  **Backup Media Terms and Definitions**  
   
  [backup device](../../2014/database-engine/backup-devices-sql-server.md)  
- A disk or tape device to which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups are written and from which they can be restored. SQL Server backups can also be written to a Windows Azure Blob storage service, and **URL** format is used to specify the destination and the name of the backup file.. For more information, see [SQL Server Backup and Restore with Windows Azure Blob Storage Service](../../2014/database-engine/sql-server-backup-and-restore-with-windows-azure-blob-storage-service.md).  
+ A disk or tape device to which [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] backups are written and from which they can be restored. SQL Server backups can also be written to a Windows Azure Blob storage service, and **URL** format is used to specify the destination and the name of the backup file.. For more information, see [SQL Server Backup and Restore with Windows Azure Blob Storage Service](../../2014/database-engine/sql-server-backup-and-restore-with-windows-azure-blob-storage-service.md).  
   
  [backup media](../../2014/database-engine/media-sets-media-families-and-backup-sets-sql-server.md)  
  One or more tapes or disk files to which one or more backup have been written.  
@@ -102,7 +102,7 @@ manager: "jhubbard"
  Multiple copies (mirrors) of a media set.  
   
 ##  <a name="BackupCompression"></a> Backup Compression  
- [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] and later versions support compressing backups, and [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions can restore a compressed backup. For more information, see [Backup Compression &#40;SQL Server&#41;](../../2014/database-engine/backup-compression-sql-server.md).  
+ [!INCLUDE[ssEnterpriseEd10](../includes/ssenterpriseed10-md.md)] and later versions support compressing backups, and [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] and later versions can restore a compressed backup. For more information, see [Backup Compression &#40;SQL Server&#41;](../../2014/database-engine/backup-compression-sql-server.md).  
   
 ##  <a name="Restrictions"></a> Restrictions on Backup Operations in SQL Server  
  Backup can occur while the database is online and being used. However, the following restrictions exist.  
@@ -121,7 +121,7 @@ manager: "jhubbard"
  Typically, a log backup succeeds even if one or more data files are unavailable. However, if any file contains bulk-logged changes made under the bulk-logged recovery model, all the files must be online for the backup to succeed.  
   
 ### Concurrency Restrictions During Backup  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses an online backup process to allow for a database backup while the database is still being used. During a backup, most operations are possible; for example, INSERT, UPDATE, or DELETE statements are allowed during a backup operation. However, if you try to start a backup operation while a database file is being created or deleted, the backup operation waits until the create or delete operation is finished or the backup times out.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses an online backup process to allow for a database backup while the database is still being used. During a backup, most operations are possible; for example, INSERT, UPDATE, or DELETE statements are allowed during a backup operation. However, if you try to start a backup operation while a database file is being created or deleted, the backup operation waits until the create or delete operation is finished or the backup times out.  
   
  Operations that cannot run during a database backup or transaction log backup include the following:  
   
@@ -159,7 +159,7 @@ manager: "jhubbard"
  **To create a backup**  
   
 > [!NOTE]  
->  For partial or copy-only backups, you must use the [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](../Topic/BACKUP%20\(Transact-SQL\).md) statement with the PARTIAL or COPY_ONLY option, respectively.  
+>  For partial or copy-only backups, you must use the [!INCLUDE[tsql](../includes/tsql-md.md)][BACKUP](~/t-sql/statements/backup-transact-sql.md) statement with the PARTIAL or COPY_ONLY option, respectively.  
   
 -   [Create a Full Database Backup &#40;SQL Server&#41;](../../2014/database-engine/create-a-full-database-backup-sql-server.md)  
   

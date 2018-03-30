@@ -1,1 +1,2 @@
-\<*drive*\>:\\Program Files\\Microsoft SQL Server\\120\\
+  \<*drive*>:\Program Files\Microsoft SQL Server\\*nnn*\\
+   

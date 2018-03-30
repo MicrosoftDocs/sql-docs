@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 92e28a07-d6a7-461b-a0b3-bd9bc6afcbe5
 caps.latest.revision: 38
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # View Information and Perform Tasks for a Publication (Replication Monitor)
@@ -36,11 +36,11 @@ manager: "jhubbard"
   
     -   The Queue Reader Agent, which is used by transactional publications that have queued updating subscriptions.  
   
--   **Warnings** (for Distributors running [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and later)  
+-   **Warnings** (for Distributors running [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later)  
   
     -   This tab allows you to specify warnings and alerts for agents.  
   
--   **Tracer Tokens** (transactional replication only, for Distributors running [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and later)  
+-   **Tracer Tokens** (transactional replication only, for Distributors running [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later)  
   
      This tab allows you to measure latency, the amount of time that elapses between a transaction being committed at the Publisher and the corresponding transaction being committed at the Subscriber.  
   

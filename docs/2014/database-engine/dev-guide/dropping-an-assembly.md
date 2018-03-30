@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Dropping an Assembly
-  Assemblies that have been registered in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] using the CREATE ASSEMBLY statement can be deleted, or dropped, when the functionality they provide is no longer needed. Dropping an assembly removes the assembly and all of its associated files, such as debug files, from the database. To drop an assembly, use the DROP ASSEMBLY statement with the following syntax:  
+  Assemblies that have been registered in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using the CREATE ASSEMBLY statement can be deleted, or dropped, when the functionality they provide is no longer needed. Dropping an assembly removes the assembly and all of its associated files, such as debug files, from the database. To drop an assembly, use the DROP ASSEMBLY statement with the following syntax:  
   
 ```  
 DROP ASSEMBLY MyDotNETAssembly  
@@ -42,7 +42,7 @@ DROP ASSEMBLY MyDotNETAssembly
 -   Functions, stored procedures, or triggers that use variables or parameters of the UDT, created in the database with the WITH SCHEMABINDING clause.  
   
 ### Finding UDT Dependencies  
- You must first drop all dependent objects, and then execute the DROP TYPE statement. The following [!INCLUDE[tsql](../../../includes/tsql-md.md)] query locates all of the columns and parameters that use a UDT in the **AdventureWorks** database.  
+ You must first drop all dependent objects, and then execute the DROP TYPE statement. The following [!INCLUDE[tsql](../../includes/tsql-md.md)] query locates all of the columns and parameters that use a UDT in the **AdventureWorks** database.  
   
 ```  
 USE Adventureworks;  
@@ -66,10 +66,10 @@ SELECT o.name AS major_name, o.type_desc AS major_type_desc
  [Managing CLR Integration Assemblies](../../../2014/database-engine/dev-guide/managing-clr-integration-assemblies.md)   
  [Altering an Assembly](../../../2014/database-engine/dev-guide/altering-an-assembly.md)   
  [Creating an Assembly](../../../2014/database-engine/dev-guide/creating-an-assembly.md)   
- [DROP AGGREGATE &#40;Transact-SQL&#41;](../Topic/DROP%20AGGREGATE%20\(Transact-SQL\).md)   
- [DROP FUNCTION &#40;Transact-SQL&#41;](../Topic/DROP%20FUNCTION%20\(Transact-SQL\).md)   
- [DROP PROCEDURE &#40;Transact-SQL&#41;](../Topic/DROP%20PROCEDURE%20\(Transact-SQL\).md)   
- [DROP TRIGGER &#40;Transact-SQL&#41;](../Topic/DROP%20TRIGGER%20\(Transact-SQL\).md)   
- [DROP TYPE &#40;Transact-SQL&#41;](../Topic/DROP%20TYPE%20\(Transact-SQL\).md)  
+ [DROP AGGREGATE &#40;Transact-SQL&#41;](~/t-sql/statements/drop-aggregate-transact-sql.md)   
+ [DROP FUNCTION &#40;Transact-SQL&#41;](~/t-sql/statements/drop-function-transact-sql.md)   
+ [DROP PROCEDURE &#40;Transact-SQL&#41;](~/t-sql/statements/drop-procedure-transact-sql.md)   
+ [DROP TRIGGER &#40;Transact-SQL&#41;](~/t-sql/statements/drop-trigger-transact-sql.md)   
+ [DROP TYPE &#40;Transact-SQL&#41;](~/t-sql/statements/drop-type-transact-sql.md)  
   
   

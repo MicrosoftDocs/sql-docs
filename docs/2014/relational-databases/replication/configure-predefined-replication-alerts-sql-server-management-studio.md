@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: c0414147-7ffe-4f9a-908c-71c1b5201584
 caps.latest.revision: 22
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Configure Predefined Replication Alerts (SQL Server Management Studio)
@@ -37,13 +37,13 @@ manager: "jhubbard"
   
 -   **Replication: agent custom shutdown**  
   
- Configure these alerts from the **Alerts** folder in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or the **Warnings** tab in Replication Monitor. For more information about accessing this tab, see [View Information and Perform Tasks for a Subscription &#40;Replication Monitor&#41;](../../../2014/relational-databases/replication/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md).  
+ Configure these alerts from the **Alerts** folder in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or the **Warnings** tab in Replication Monitor. For more information about accessing this tab, see [View Information and Perform Tasks for a Subscription &#40;Replication Monitor&#41;](../../../2014/relational-databases/replication/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md).  
   
- In addition to these alerts, Replication Monitor provides a set of warnings and alerts related to status and performance. For more information, see [Set Thresholds and Warnings in Replication Monitor](../../../2014/relational-databases/replication/set-thresholds-and-warnings-in-replication-monitor.md). You can also define alerts for other replication events using the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] alerts infrastructure. For more information, see [Create a User-Defined Event](../../../2014/database-engine/create-a-user-defined-event.md).  
+ In addition to these alerts, Replication Monitor provides a set of warnings and alerts related to status and performance. For more information, see [Set Thresholds and Warnings in Replication Monitor](../../../2014/relational-databases/replication/set-thresholds-and-warnings-in-replication-monitor.md). You can also define alerts for other replication events using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerts infrastructure. For more information, see [Create a User-Defined Event](../../../2014/database-engine/create-a-user-defined-event.md).  
   
 ### To configure a predefined replication alert in Management Studio  
   
-1.  Connect to the Distributor in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], and then expand the server node.  
+1.  Connect to the Distributor in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], and then expand the server node.  
   
 2.  Expand the **SQL Server Agent** folder, and then expand the **Alerts** folder.  
   
@@ -59,7 +59,7 @@ manager: "jhubbard"
   
     -   On the **Options** page, customize the text of the response.  
   
-5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ### To configure an alert for a threshold in Replication Monitor  
   
@@ -77,7 +77,7 @@ manager: "jhubbard"
   
     -   On the **Options** page, customize the text of the response.  
   
-4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 5.  Click **Close**.  
   

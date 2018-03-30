@@ -35,7 +35,7 @@ manager: "mblythe"
   
  The following example uses the <xref:Microsoft.AnalysisServices.AdomdClient.CubeDef> object to retrieve the visible cubes and their dimensions from the local server:  
   
- [!code-csharp[Adomd.NetClient#RetrieveCubesAndDimensions](../../../snippets/csharp/SQL14/adomd.net/adomd.netclient/cs/adomdexample.cs#retrievecubesanddimensions)]  
+ [!code-csharp[Adomd.NetClient#RetrieveCubesAndDimensions](../../snippets/csharp/SQL14/adomd.net/adomd.netclient/cs/adomdexample.cs#retrievecubesanddimensions)]  
   
 ## Retrieving Data Mining Metadata  
  Each <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> object has several collections that provide information about the data mining capabilities of the data source:  

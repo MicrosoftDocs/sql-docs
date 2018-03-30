@@ -23,9 +23,9 @@ manager: "jhubbard"
   Use the **Connection Manager** page of the **OLE DB Source Editor** dialog box to select the OLE DB connection manager for the source. This page also lets you select a table or view from the database.  
   
 > [!NOTE]  
->  To load data from a data source that uses [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007, use an OLE DB source. You cannot use an Excel source to load data from an Excel 2007 data source. For more information, see [Configure OLE DB Connection Manager](../../2014/integration-services/configure-ole-db-connection-manager.md).  
+>  To load data from a data source that uses [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel 2007, use an OLE DB source. You cannot use an Excel source to load data from an Excel 2007 data source. For more information, see [Configure OLE DB Connection Manager](../../2014/integration-services/configure-ole-db-connection-manager.md).  
 >   
->  To load data from a data source that uses [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2003 or earlier, use an Excel source. For more information, see [Excel Source Editor &#40;Connection Manager Page&#41;](../../2014/integration-services/excel-source-editor-connection-manager-page.md).  
+>  To load data from a data source that uses [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel 2003 or earlier, use an Excel source. For more information, see [Excel Source Editor &#40;Connection Manager Page&#41;](../../2014/integration-services/excel-source-editor-connection-manager-page.md).  
   
 > [!NOTE]  
 >  The `CommandTimeout` property of the OLE DB source is not available in the **OLE DB Source Editor**, but can be set by using the **Advanced Editor**. For more information on this property, see the Excel Source section of [OLE DB Custom Properties](../../2014/integration-services/ole-db-custom-properties.md).  
@@ -34,7 +34,7 @@ manager: "jhubbard"
   
 ## Open the OLE DB Source Editor (Connection Manager Page  
   
-1.  Add the OLE DB source to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package, in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+1.  Add the OLE DB source to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package, in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 2.  Right-click the source component and when click **Edit**.  
   
@@ -61,7 +61,7 @@ manager: "jhubbard"
  Preview results by using the **Data View** dialog box. **Preview** can display up to 200 rows.  
   
 > [!NOTE]  
->  When you preview data, columns with a CLR user-defined type do not contain data. Instead the values \<value too big to display> or System.Byte[] display. The former displays when the data source is accessed using the SQL OLE DB provider, the latter when using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client provider.  
+>  When you preview data, columns with a CLR user-defined type do not contain data. Instead the values \<value too big to display> or System.Byte[] display. The former displays when the data source is accessed using the SQL OLE DB provider, the latter when using the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client provider.  
   
 ## Data Access Mode Dynamic Options  
   

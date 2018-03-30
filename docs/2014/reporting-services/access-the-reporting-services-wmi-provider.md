@@ -21,14 +21,14 @@ helpviewer_keywords:
 ms.assetid: 22cfbeb8-4ea3-4182-8f54-3341c771e87b
 caps.latest.revision: 55
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Access the Reporting Services WMI Provider
   The Reporting Services WMI provider exposes two WMI classes for administration of Native mode report server instances through scripting:  
   
 > [!IMPORTANT]  
->  Starting with the [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] release, the WMI provider is supported for only native mode report servers. SharePoint mode report servers can be managed with SharePoint Central Administration pages and PowerShell scripts.  
+>  Starting with the [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] release, the WMI provider is supported for only native mode report servers. SharePoint mode report servers can be managed with SharePoint Central Administration pages and PowerShell scripts.  
   
 |Class|Namespace|Description|  
 |-----------|---------------|-----------------|  

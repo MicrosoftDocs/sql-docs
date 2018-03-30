@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: bd2809e5-7848-45b3-a502-b04fc698b646
 caps.latest.revision: 19
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # SetDatabaseQueryTimeout Method (WMI MSReportServer_ConfigurationSetting)
@@ -49,7 +49,7 @@ public void SetDatabaseQueryTimeout (Int32 LogonTimeout,
  Returns an *HRESULT* indicating success or failure of the method call. A value of 0 indicates that the method call was successful. A non-zero value indicates that an error has occurred.  
   
 ## Requirements  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../includes/ssrswminmspca-md.md)]  
   
 ## See Also  
  [MSReportServer_ConfigurationSetting Members](../../2014/reporting-services/msreportserver-configurationsetting-members.md)  

@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 539d5bb0-b808-4d8c-baf4-cb6d32d2c595
 caps.latest.revision: 40
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Enable Updating Subscriptions for Transactional Publications
-  This topic describes how to enable updating subscriptions for transactional publications in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+  This topic describes how to enable updating subscriptions for transactional publications in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
 
   
@@ -55,13 +55,13 @@ manager: "jhubbard"
   
     -   If a Log Reader Agent job already exists for the publication database, proceed to step 2.  
   
-    -   If you are unsure whether a Log Reader Agent job exists for a published database, execute [sp_helplogreader_agent &#40;Transact-SQL&#41;](../Topic/sp_helplogreader_agent%20\(Transact-SQL\).md) at the Publisher on the publication database. If the result set is empty, a Log Reader Agent job must be created.  
+    -   If you are unsure whether a Log Reader Agent job exists for a published database, execute [sp_helplogreader_agent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md) at the Publisher on the publication database. If the result set is empty, a Log Reader Agent job must be created.  
   
-    -   At the publisher, execute [sp_addlogreader_agent &#40;Transact-SQL&#41;](../Topic/sp_addlogreader_agent%20\(Transact-SQL\).md). Specify the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows credentials under which the agent runs for **@job_name** and **@password**. If the agent will use SQL Server Authentication when connecting to the Publisher, you must also specify a value of **0** for **@publisher_security_mode** and the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login information for **@publisher_login** and **@publisher_password**.  
+    -   At the publisher, execute [sp_addlogreader_agent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md). Specify the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows credentials under which the agent runs for **@job_name** and **@password**. If the agent will use SQL Server Authentication when connecting to the Publisher, you must also specify a value of **0** for **@publisher_security_mode** and the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login information for **@publisher_login** and **@publisher_password**.  
   
-2.  Execute [sp_addpublication &#40;Transact-SQL&#41;](../Topic/sp_addpublication%20\(Transact-SQL\).md), specifying a value of **true** for the parameter **@allow_sync_tran**.  
+2.  Execute [sp_addpublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md), specifying a value of **true** for the parameter **@allow_sync_tran**.  
   
-3.  At the Publisher, execute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../Topic/sp_addpublication_snapshot%20\(Transact-SQL\).md). Specify the publication name used in step 2 for **@publication** and the Windows credentials under which the Snapshot Agent runs for **@job_name** and **@password**. If the agent will use SQL Server Authentication when connecting to the Publisher, you must also specify a value of **0** for **@publisher_security_mode** and the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login information for **@publisher_login** and **@publisher_password**. This creates a Snapshot Agent job for the publication.  
+3.  At the Publisher, execute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Specify the publication name used in step 2 for **@publication** and the Windows credentials under which the Snapshot Agent runs for **@job_name** and **@password**. If the agent will use SQL Server Authentication when connecting to the Publisher, you must also specify a value of **0** for **@publisher_security_mode** and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login information for **@publisher_login** and **@publisher_password**. This creates a Snapshot Agent job for the publication.  
   
 4.  Add articles to the publication. For more information, see [Define an Article](../../../2014/relational-databases/replication/define-an-article.md).  
   
@@ -73,21 +73,21 @@ manager: "jhubbard"
   
     -   If a Log Reader Agent job already exists for the publication database, proceed to step 2.  
   
-    -   If you are unsure whether a Log Reader Agent job exists for a published database, execute [sp_helplogreader_agent &#40;Transact-SQL&#41;](../Topic/sp_helplogreader_agent%20\(Transact-SQL\).md) at the Publisher on the publication database. If the result set is empty, then a Log Reader Agent job must be created.  
+    -   If you are unsure whether a Log Reader Agent job exists for a published database, execute [sp_helplogreader_agent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md) at the Publisher on the publication database. If the result set is empty, then a Log Reader Agent job must be created.  
   
-    -   At the publisher, execute [sp_addlogreader_agent &#40;Transact-SQL&#41;](../Topic/sp_addlogreader_agent%20\(Transact-SQL\).md). Specify the Windows credentials under which the agent runs for **@job_name** and **@password**. If the agent will use SQL Server Authentication when connecting to the Publisher, you must also specify a value of **0** for **@publisher_security_mode** and the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login information for **@publisher_login** and **@publisher_password**.  
+    -   At the publisher, execute [sp_addlogreader_agent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md). Specify the Windows credentials under which the agent runs for **@job_name** and **@password**. If the agent will use SQL Server Authentication when connecting to the Publisher, you must also specify a value of **0** for **@publisher_security_mode** and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login information for **@publisher_login** and **@publisher_password**.  
   
 2.  If necessary, create a Queue Reader Agent job for the Distributor.  
   
     -   If a Queue Reader Agent job already exists for the distribution database, proceed to step 3.  
   
-    -   If you are unsure whether a Queue Reader Agent job exists for the distribution database, execute [sp_helpqreader_agent &#40;Transact-SQL&#41;](../Topic/sp_helpqreader_agent%20\(Transact-SQL\).md) at the Distributor on the distribution database. If the result set is empty, then a Queue Reader Agent job must be created.  
+    -   If you are unsure whether a Queue Reader Agent job exists for the distribution database, execute [sp_helpqreader_agent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-helpqreader-agent-transact-sql.md) at the Distributor on the distribution database. If the result set is empty, then a Queue Reader Agent job must be created.  
   
-    -   At the Distributor, execute [sp_addqreader_agent &#40;Transact-SQL&#41;](../Topic/sp_addqreader_agent%20\(Transact-SQL\).md). Specify the Windows credentials under which the agent runs for **@job_name** and **@password**. These credentials are used when the Queue Reader Agent connects to the Publisher and Subscriber. For more information, see [Replication Agent Security Model](../../../2014/relational-databases/replication/replication-agent-security-model.md).  
+    -   At the Distributor, execute [sp_addqreader_agent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md). Specify the Windows credentials under which the agent runs for **@job_name** and **@password**. These credentials are used when the Queue Reader Agent connects to the Publisher and Subscriber. For more information, see [Replication Agent Security Model](../../../2014/relational-databases/replication/replication-agent-security-model.md).  
   
-3.  Execute [sp_addpublication &#40;Transact-SQL&#41;](../Topic/sp_addpublication%20\(Transact-SQL\).md), specifying a value of **true** for the parameter **@allow_queued_tran** and a value of **pub wins**, **sub reinit**, or **sub wins** for **@conflict_policy**.  
+3.  Execute [sp_addpublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md), specifying a value of **true** for the parameter **@allow_queued_tran** and a value of **pub wins**, **sub reinit**, or **sub wins** for **@conflict_policy**.  
   
-4.  At the Publisher, execute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../Topic/sp_addpublication_snapshot%20\(Transact-SQL\).md). Specify the publication name used in step 3 for **@publication** and the Windows credentials under which the Snapshot Agent runs for **@snapshot_job_name** and **@password**. If the agent will use SQL Server Authentication when connecting to the Publisher, you must also specify a value of **0** for **@publisher_security_mode** and the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login information for **@publisher_login** and **@publisher_password**. This creates a Snapshot Agent job for the publication.  
+4.  At the Publisher, execute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Specify the publication name used in step 3 for **@publication** and the Windows credentials under which the Snapshot Agent runs for **@snapshot_job_name** and **@password**. If the agent will use SQL Server Authentication when connecting to the Publisher, you must also specify a value of **0** for **@publisher_security_mode** and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login information for **@publisher_login** and **@publisher_password**. This creates a Snapshot Agent job for the publication.  
   
 5.  Add articles to the publication. For more information, see [Define an Article](../../../2014/relational-databases/replication/define-an-article.md).  
   
@@ -95,12 +95,12 @@ manager: "jhubbard"
   
 #### To change the conflict policy for a publication that allows queued updating subscriptions  
   
-1.  At the Publisher on the publication database, execute [sp_changepublication &#40;Transact-SQL&#41;](../Topic/sp_changepublication%20\(Transact-SQL\).md). Specify a value of **conflict_policy** for **@property** and the desired conflict policy mode of **pub wins**, **sub reinit**, or **sub wins** for **@value**.  
+1.  At the Publisher on the publication database, execute [sp_changepublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md). Specify a value of **conflict_policy** for **@property** and the desired conflict policy mode of **pub wins**, **sub reinit**, or **sub wins** for **@value**.  
   
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
  This example creates a publication that supported both immediate and queued updating pull subscriptions.  
   
- [!code-sql[HowTo#sp_createtranupdatingpub](../../../snippets/tsql/SQL15/replication/howto/tsql/createtranpubupdate.sql#sp_createtranupdatingpub)]  
+ [!code-sql[HowTo#sp_createtranupdatingpub](../../snippets/tsql/SQL15/replication/howto/tsql/createtranpubupdate.sql#sp_createtranupdatingpub)]  
   
 ## See Also  
  [Set Queued Updating Conflict Resolution Options &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)   

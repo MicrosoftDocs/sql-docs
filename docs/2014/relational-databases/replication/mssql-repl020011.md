@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: f72072d7-bbb6-48ad-ac88-afa74aeb4d58
 caps.latest.revision: 14
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQL_REPL020011
@@ -26,7 +26,7 @@ manager: "jhubbard"
 |Product Name|SQL Server|  
 |Event ID|20011|  
 |Event Source|MSSQLSERVER|  
-|Component|[!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]|  
+|Component|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Symbolic Name||  
 |Message Text|The process could not execute '%1' on '%2'.|  
   
@@ -40,7 +40,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Errors and Events Reference &#40;Replication&#41;](../../../2014/relational-databases/replication/errors-and-events-reference-replication.md)   
- [sp_replcmds &#40;Transact-SQL&#41;](../Topic/sp_replcmds%20\(Transact-SQL\).md)   
- [sp_repldone &#40;Transact-SQL&#41;](../Topic/sp_repldone%20\(Transact-SQL\).md)  
+ [sp_replcmds &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
+ [sp_repldone &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)  
   
   

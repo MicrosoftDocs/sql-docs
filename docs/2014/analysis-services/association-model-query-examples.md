@@ -24,7 +24,7 @@ manager: "mblythe"
 # Association Model Query Examples
   When you create a query against a data mining model, you can create either a content query, which provides details about the rules and itemsets discovered during analysis, or you can create a prediction query, which uses the associations discovered in the data to make predictions. For an association model, predictions typically are based on rules, and can be used to make recommendations, whereas queries on content typically explore the relationship among itemsets. You can also retrieve metadata about the model.  
   
- This section explains how to create these kinds of queries for models that are based on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules algorithm.  
+ This section explains how to create these kinds of queries for models that are based on the [!INCLUDE[msCoName](../includes/msconame-md.md)] Association Rules algorithm.  
   
  **Content Queries**  
   
@@ -45,7 +45,7 @@ manager: "mblythe"
  [Determining confidence for related itemsets](#bkmk_Query7)  
   
 ##  <a name="bkmk_top2"></a> Finding Information about the Model  
- All mining models expose the content learned by the algorithm according to a standardized schema, which is named the mining model schema rowset. You can create queries against the mining model schema rowset either by using Data Mining Extensions (DMX) statements, or by using [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stored procedures. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], you can also query the schema rowsets directly as system tables, by using a SQL-like syntax.  
+ All mining models expose the content learned by the algorithm according to a standardized schema, which is named the mining model schema rowset. You can create queries against the mining model schema rowset either by using Data Mining Extensions (DMX) statements, or by using [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] stored procedures. In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], you can also query the schema rowsets directly as system tables, by using a SQL-like syntax.  
   
 ###  <a name="bkmk_Query1"></a> Sample Query 1: Getting Model Metadata by Using DMX  
  The following query returns basic metadata about the association model, `Association`, such as the name of the model, the database where the model is stored, and the number of child nodes in the model. This query uses a DMX content query to retrieve the metadata from the parent node of the model:  
@@ -159,7 +159,7 @@ WHERE NODE_TYPE = 7
  [Return to Top](#bkmk_top2)  
   
 ## Making Predictions using the Model  
- An association rules model is often used to generate recommendations, which are based on correlations discovered in the itemsets. Therefore, when you create a prediction query based on an association rules model, you are typically using the rules in the model to make guesses based on new data.  [PredictAssociation &#40;DMX&#41;](../Topic/PredictAssociation%20\(DMX\).md) is the function that returns recommendations, and has several arguments that you can use to customize the query results.  
+ An association rules model is often used to generate recommendations, which are based on correlations discovered in the itemsets. Therefore, when you create a prediction query based on an association rules model, you are typically using the rules in the model to make guesses based on new data.  [PredictAssociation &#40;DMX&#41;](~/dmx/predictassociation-dmx.md) is the function that returns recommendations, and has several arguments that you can use to customize the query results.  
   
  Another example of where queries on an association model might be useful is to return the confidence for various rules and itemsets so that you can compare the effectiveness of different cross-sell strategies. The following examples illustrate how to create such queries.  
   
@@ -187,7 +187,7 @@ AS t
  [Return to Top](#bkmk_top2)  
   
 ###  <a name="bkmk_Query7"></a> Sample Query 7: Determining Confidence for Related Itemsets  
- Whereas rules are useful for generating recommendations, itemsets are more interesting for deeper analysis of the patterns in the data set. For example, if you were not satisfied with the recommendation that are returned by the previous sample query, you could examine other itemsets that contain Product A, to can get a better idea of whether Product A is an accessory that people tend to buy with all kinds of products, or whether A is strongly correlated with purchases of particular products. The easiest way to explore these relationships is by filtering the itemsets in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Viewer; however, you can retrieve the same information with a query.  
+ Whereas rules are useful for generating recommendations, itemsets are more interesting for deeper analysis of the patterns in the data set. For example, if you were not satisfied with the recommendation that are returned by the previous sample query, you could examine other itemsets that contain Product A, to can get a better idea of whether Product A is an accessory that people tend to buy with all kinds of products, or whether A is strongly correlated with purchases of particular products. The easiest way to explore these relationships is by filtering the itemsets in the [!INCLUDE[msCoName](../includes/msconame-md.md)] Association Viewer; however, you can retrieve the same information with a query.  
   
  The following sample query returns all itemsets that include the Water Bottle item, including the single item Water bottle.  
   
@@ -218,20 +218,20 @@ ORDER BY NODE_SUPPORT DESC
  [Return to Top](#bkmk_top2)  
   
 ## Function List  
- All [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithms support a common set of functions. However, the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association algorithm supports the additional functions listed in the following table.  
+ All [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithms support a common set of functions. However, the [!INCLUDE[msCoName](../includes/msconame-md.md)] Association algorithm supports the additional functions listed in the following table.  
   
 |||  
 |-|-|  
 |Prediction Function|Usage|  
-|[IsDescendant &#40;DMX&#41;](../Topic/IsDescendant%20\(DMX\).md)|Determines whether one node is a child of another node in the neural network graph.|  
-|[IsInNode &#40;DMX&#41;](../Topic/IsInNode%20\(DMX\).md)|Indicates whether the specified node contains the current case.|  
-|[PredictAdjustedProbability &#40;DMX&#41;](../Topic/PredictAdjustedProbability%20\(DMX\).md)|Returns the weighted probability.|  
-|[PredictAssociation &#40;DMX&#41;](../Topic/PredictAssociation%20\(DMX\).md)|Predicts membership in an associative dataset.|  
-|[PredictHistogram &#40;DMX&#41;](../Topic/PredictHistogram%20\(DMX\).md)|Returns a table of values related to the current predicted value.|  
-|[PredictNodeId &#40;DMX&#41;](../Topic/PredictNodeId%20\(DMX\).md)|Returns the Node_ID for each case.|  
-|[PredictProbability &#40;DMX&#41;](../Topic/PredictProbability%20\(DMX\).md)|Returns probability for the predicted value.|  
-|[PredictSupport &#40;DMX&#41;](../Topic/PredictSupport%20\(DMX\).md)|Returns the support value for a specified state.|  
-|[PredictVariance &#40;DMX&#41;](../Topic/PredictVariance%20\(DMX\).md)|Returns variance for the predicted value.|  
+|[IsDescendant &#40;DMX&#41;](~/dmx/isdescendant-dmx.md)|Determines whether one node is a child of another node in the neural network graph.|  
+|[IsInNode &#40;DMX&#41;](~/dmx/isinnode-dmx.md)|Indicates whether the specified node contains the current case.|  
+|[PredictAdjustedProbability &#40;DMX&#41;](~/dmx/predictadjustedprobability-dmx.md)|Returns the weighted probability.|  
+|[PredictAssociation &#40;DMX&#41;](~/dmx/predictassociation-dmx.md)|Predicts membership in an associative dataset.|  
+|[PredictHistogram &#40;DMX&#41;](~/dmx/predicthistogram-dmx.md)|Returns a table of values related to the current predicted value.|  
+|[PredictNodeId &#40;DMX&#41;](~/dmx/predictnodeid-dmx.md)|Returns the Node_ID for each case.|  
+|[PredictProbability &#40;DMX&#41;](~/dmx/predictprobability-dmx.md)|Returns probability for the predicted value.|  
+|[PredictSupport &#40;DMX&#41;](~/dmx/predictsupport-dmx.md)|Returns the support value for a specified state.|  
+|[PredictVariance &#40;DMX&#41;](~/dmx/predictvariance-dmx.md)|Returns variance for the predicted value.|  
   
 ## See Also  
  [Microsoft Association Algorithm](../../2014/analysis-services/microsoft-association-algorithm.md)   

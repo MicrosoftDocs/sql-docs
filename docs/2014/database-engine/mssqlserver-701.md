@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 3b975000-63a1-43c2-a40f-89d0a8a36bef
 caps.latest.revision: 18
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_701
@@ -31,7 +31,7 @@ manager: "jhubbard"
 |Message Text|There is insufficient system memory to run this query.|  
   
 ## Explanation  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has failed to allocate sufficient memory to run the query. This can be caused by a variety of reasons including operating system settings, physical memory availability, or memory limits on the current workload. In most cases, the transaction that failed is not the cause of this error.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has failed to allocate sufficient memory to run the query. This can be caused by a variety of reasons including operating system settings, physical memory availability, or memory limits on the current workload. In most cases, the transaction that failed is not the cause of this error.  
   
  Diagnostic queries, such as DBCC statements, may fail because server the does not have sufficient memory.  
   
@@ -44,7 +44,7 @@ manager: "jhubbard"
   
 1.  Verify whether other applications or services are consuming memory on this server. Reconfigure less critical applications or services to consume less memory.  
   
-2.  Start collecting performance monitor counters for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: Buffer Manager**, **SQL Server: Memory Manager**.  
+2.  Start collecting performance monitor counters for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]**: Buffer Manager**, **SQL Server: Memory Manager**.  
   
 3.  Check the following SQL Server memory configuration parameters:  
   
@@ -60,13 +60,13 @@ manager: "jhubbard"
   
 5.  Check the workload (for example, number of concurrent sessions, currently executing queries).  
   
- The following actions may make more memory available to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+ The following actions may make more memory available to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
--   If applications besides [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are consuming resources, try stopping running these applications or consider running them on a separate server. This will remove external memory pressure.  
+-   If applications besides [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] are consuming resources, try stopping running these applications or consider running them on a separate server. This will remove external memory pressure.  
   
 -   If you have configured **max server memory,** increase its setting.  
   
- Run the following DBCC commands to free several [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memory caches.  
+ Run the following DBCC commands to free several [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] memory caches.  
   
 -   DBCC FREESYSTEMCACHE  
   

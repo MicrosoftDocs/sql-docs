@@ -25,10 +25,10 @@ manager: "jhubbard"
   
  By default, full Secure Sockets Layer (SSL) encryption and certificate validation are enabled for connections between master servers and target servers. For more information, see [Set Encryption Options on Target Servers](../../2014/database-engine/set-encryption-options-on-target-servers.md).  
   
- If you have a large number of target servers, avoid defining your master server on a production server that has significant performance requirements from other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] functionality, because target server traffic can slow performance on your production server. If you also forward events to a dedicated master server, you can centralize administration on one server. For more information, see [Manage Events](../../2014/database-engine/manage-events.md).  
+ If you have a large number of target servers, avoid defining your master server on a production server that has significant performance requirements from other [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] functionality, because target server traffic can slow performance on your production server. If you also forward events to a dedicated master server, you can centralize administration on one server. For more information, see [Manage Events](../../2014/database-engine/manage-events.md).  
   
 > [!NOTE]  
->  To use multiserver job processing, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account must be a member of the **msdb** database role **TargetServersRole** on the master server. The Master Server Wizard automatically adds the service account to this role as part of the enlistment process  
+>  To use multiserver job processing, the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent service account must be a member of the **msdb** database role **TargetServersRole** on the master server. The Master Server Wizard automatically adds the service account to this role as part of the enlistment process  
   
 ## Considerations for Multiserver Environments  
  See the table below for supported MSX/TSX configurations.  
@@ -63,7 +63,7 @@ manager: "jhubbard"
 |Describes how to enlist a target server into a master server.|[Enlist a Target Server to a Master Server](../../2014/database-engine/enlist-a-target-server-to-a-master-server.md)|  
 |Describes how to defect a target server from a master server.|[Defect a Target Server from a Master Server](../../2014/database-engine/defect-a-target-server-from-a-master-server.md)|  
 |Describes how to defect multiple target servers from a master server.|[Defect Multiple Target Servers from a Master Server](../../2014/database-engine/defect-multiple-target-servers-from-a-master-server.md)|  
-|Describes how to check the status of a target server.|[sp_help_targetserver &#40;Transact-SQL&#41;](../Topic/sp_help_targetserver%20\(Transact-SQL\).md)<br /><br /> [sp_help_targetservergroup &#40;Transact-SQL&#41;](../Topic/sp_help_targetservergroup%20\(Transact-SQL\).md)|  
+|Describes how to check the status of a target server.|[sp_help_targetserver &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql.md)<br /><br /> [sp_help_targetservergroup &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql.md)|  
   
 ## See Also  
  [Troubleshoot Multiserver Jobs That Use Proxies](../../2014/database-engine/troubleshoot-multiserver-jobs-that-use-proxies.md)  

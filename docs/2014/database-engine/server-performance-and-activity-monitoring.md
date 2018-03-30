@@ -26,9 +26,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Server Performance and Activity Monitoring
-  The goal of monitoring databases is to assess how a server is performing. Effective monitoring involves taking periodic snapshots of current performance to isolate processes that are causing problems, and gathering data continuously over time to track performance trends. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows operating system provide utilities that let you view the current condition of the database and to track performance as conditions change.  
+  The goal of monitoring databases is to assess how a server is performing. Effective monitoring involves taking periodic snapshots of current performance to isolate processes that are causing problems, and gathering data continuously over time to track performance trends. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and the [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows operating system provide utilities that let you view the current condition of the database and to track performance as conditions change.  
   
- The following section contains topics that describe how to use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Windows performance and activity monitoring tools. It contains the following topics:  
+ The following section contains topics that describe how to use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and Windows performance and activity monitoring tools. It contains the following topics:  
   
 ## In This Section  
  **To perform monitoring tasks with Windows tools**  

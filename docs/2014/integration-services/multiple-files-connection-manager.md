@@ -26,7 +26,7 @@ manager: "jhubbard"
   A Multiple Files connection manager enables a package to reference existing files and folders, or to create files and folders at run time.  
   
 > [!NOTE]  
->  The built-in tasks and data flow components in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] do not use the Multiple Files connection manager. However, you can use this connection manager in the Script task or Script component. For information about how to use connection managers in the Script task, see [Connecting to Data Sources in the Script Task](../../2014/integration-services/dev-guide/connecting-to-data-sources-in-the-script-task.md). For information about how to use connection managers in the Script component, see [Connecting to Data Sources in the Script Component](../../2014/integration-services/dev-guide/connecting-to-data-sources-in-the-script-component.md).  
+>  The built-in tasks and data flow components in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] do not use the Multiple Files connection manager. However, you can use this connection manager in the Script task or Script component. For information about how to use connection managers in the Script task, see [Connecting to Data Sources in the Script Task](../../2014/integration-services/dev-guide/connecting-to-data-sources-in-the-script-task.md). For information about how to use connection managers in the Script component, see [Connecting to Data Sources in the Script Component](../../2014/integration-services/dev-guide/connecting-to-data-sources-in-the-script-component.md).  
   
 ## Usage Types of the Multiple Files Connection Manager  
  The `FileUsageType` property of the Multiple Files connection manager specifies how the connection is used. The Multiple Files connection manager can create files, create folders, use existing files, and use existing folders.  
@@ -41,7 +41,7 @@ manager: "jhubbard"
 |**3**|Multiple Files connection manager creates a folder.|  
   
 ## Configuration of the Multiple Files Connection Manager  
- When you add a Multiple Files connection manager to a package, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] creates a connection manager that will resolve to a Multiple Files connection at run time, sets the Multiple Files connection properties, and adds the Multiple Files connection to the `Connections` collection of the package.  
+ When you add a Multiple Files connection manager to a package, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] creates a connection manager that will resolve to a Multiple Files connection at run time, sets the Multiple Files connection properties, and adds the Multiple Files connection to the `Connections` collection of the package.  
   
  The `ConnectionManagerType` property of the connection manager is set to `MULTIFILE`.  
   
@@ -59,9 +59,9 @@ manager: "jhubbard"
   
  You can also specify multiple files or folders using wildcard characters. For example, to reference all the text files on the C drive, the value of the `ConnectionString` property can be set to C:\\*.txt.  
   
- You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer or programmatically.  
   
- For more information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, see [Add File Connection Manager Dialog Box UI Reference](../../2014/integration-services/add-file-connection-manager-dialog-box-ui-reference.md).  
+ For more information about the properties that you can set in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, see [Add File Connection Manager Dialog Box UI Reference](../../2014/integration-services/add-file-connection-manager-dialog-box-ui-reference.md).  
   
  For information about configuring a connection manager programmatically, see <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> and [Adding Connections Programmatically](../../2014/integration-services/dev-guide/adding-connections-programmatically.md).  
   

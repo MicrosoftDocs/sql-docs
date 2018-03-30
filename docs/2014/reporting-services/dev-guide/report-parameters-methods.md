@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: cedf68af-646a-47e4-9fbb-39b5dc3de235
 caps.latest.revision: 37
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Report Parameters Methods

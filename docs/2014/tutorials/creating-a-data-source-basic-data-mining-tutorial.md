@@ -16,10 +16,10 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Creating a Data Source (Basic Data Mining Tutorial)
-  A *data source* is a data connection that is saved and managed in your project and deployed to your [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database. The data source contains the names of the server and database where your source data resides, in addition to any other required connection properties.  
+  A *data source* is a data connection that is saved and managed in your project and deployed to your [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database. The data source contains the names of the server and database where your source data resides, in addition to any other required connection properties.  
   
 > [!IMPORTANT]  
->  The name of the database is [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)]. If you have not already installed this database, see the [Microsoft SQL Sample Databases](http://go.microsoft.com/fwlink/?LinkId=88417) page.  
+>  The name of the database is [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]. If you have not already installed this database, see the [Microsoft SQL Sample Databases](http://go.microsoft.com/fwlink/?LinkId=88417) page.  
   
 ### To create a data source  
   
@@ -27,11 +27,11 @@ manager: "jhubbard"
   
 2.  On the **Welcome to the Data Source Wizard** page, click **Next**.  
   
-3.  On the **Select how to define the connection** page, click **New** to add a connection to the [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)] database.  
+3.  On the **Select how to define the connection** page, click **New** to add a connection to the [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] database.  
   
 4.  In the **Provider** list in **Connection Manager**, select **Native OLE DB\SQL Server Native Client 11.0**.  
   
-5.  In the **Server name** box, type or select the name of the server on which you installed [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)].  
+5.  In the **Server name** box, type or select the name of the server on which you installed [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)].  
   
      For example, type **localhost** if the database is hosted on the local server.  
   
@@ -40,7 +40,7 @@ manager: "jhubbard"
     > [!IMPORTANT]  
     >  Whenever possible, implementers should use Windows Authentication, as it provides a more secure authentication method than SQL Server Authentication. However, SQL Server Authentication is provided for backward compatibility. For more information about authentication methods, see [Database Engine Configuration - Account Provisioning](../../2014/sql-server/install/database-engine-configuration-account-provisioning.md).  
   
-7.  In the **Select or enter a database name** list, select [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)] and then click **OK**.  
+7.  In the **Select or enter a database name** list, select [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] and then click **OK**.  
   
 8.  Click **Next**.  
   

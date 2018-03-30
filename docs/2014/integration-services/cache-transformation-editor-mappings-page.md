@@ -21,7 +21,7 @@ manager: "jhubbard"
   Use the **Mappings** page of the **Cache Transformation Editor** to map the input columns in the Cache Transform transformation to destination columns in the Cache connection manager.  
   
 > [!NOTE]  
->  Each input column must be mapped to a destination column, and the column data types must match. Otherwise, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Designer displays an error message.  
+>  Each input column must be mapped to a destination column, and the column data types must match. Otherwise, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Designer displays an error message.  
   
  To learn more about the Cache Transform, see [Cache Transform](../../2014/integration-services/cache-transform.md).  
   

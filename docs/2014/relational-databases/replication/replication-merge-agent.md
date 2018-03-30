@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 caps.latest.revision: 63
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Replication Merge Agent
@@ -108,7 +108,7 @@ manager: "jhubbard"
  Prints all available parameters.  
   
  **-Publisher** *server_name*[**\\***instance_name*]  
- Is the name of the Publisher. Specify *server_name* for the default instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server. Specify *server_name***\\***instance_name* for a named instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server.  
+ Is the name of the Publisher. Specify *server_name* for the default instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on that server. Specify *server_name***\\***instance_name* for a named instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on that server.  
   
  **-PublisherDB** *publisher_database*  
  Is the name of the Publisher database.  
@@ -117,7 +117,7 @@ manager: "jhubbard"
  Is the name of the publication. This parameter is only valid if the publication is set to always have a snapshot available for new or reinitialized subscriptions.  
   
  **-Subscriber** *server_name*[**\\***instance_name*]  
- Is the name of the Subscriber. Specify *server_name* for the default instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server. Specify *server_name***\\***instance_name* for a named instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server.  
+ Is the name of the Subscriber. Specify *server_name* for the default instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on that server. Specify *server_name***\\***instance_name* for a named instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on that server.  
   
  **-SubscriberDB** *subscriber_database*  
  Is the name of the Subscriber database.  
@@ -135,7 +135,7 @@ manager: "jhubbard"
  Is the path of the agent definition file. An agent definition file contains command prompt arguments for the agent. The content of the file is parsed as an executable file. Use double quotation marks (") to specify argument values containing arbitrary characters.  
   
  **-Distributor** *server_name*[**\\***instance_name*]  
- Is the Distributor name. Specify *server_name* for the default instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server. Specify *server_name***\\***instance_name* for a named instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server. For Distributor (push) distribution, the name defaults to the name of the default instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on the local computer.  
+ Is the Distributor name. Specify *server_name* for the default instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on that server. Specify *server_name***\\***instance_name* for a named instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on that server. For Distributor (push) distribution, the name defaults to the name of the default instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the local computer.  
   
  **-DistributorLogin** *distributor_login*  
  Is the Distributor login name.  
@@ -144,7 +144,7 @@ manager: "jhubbard"
  Is the Distributor password.  
   
  **-DistributorSecurityMode** [ **0**| **1**]  
- Specifies the security mode of the Distributor. A value of **0** indicates [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication Mode (default), and a value of **1** indicates Windows Authentication Mode.  
+ Specifies the security mode of the Distributor. A value of **0** indicates [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication Mode (default), and a value of **1** indicates Windows Authentication Mode.  
   
  **-DownloadGenerationsPerBatch** *download_generations_per_batch*  
  Is the number of generations to be processed in a single batch while downloading changes from the Publisher to the Subscriber. A generation is defined as a logical group of changes per article. The default for a reliable communication link is 100. The default for an unreliable communication link is 10.  
@@ -171,7 +171,7 @@ manager: "jhubbard"
   
  **-ExchangeType** [ **1**| **2**| **3**]  
  > [!WARNING]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] To restrict uploading, use the `@subscriber_upload_options` of `sp_addmergearticle` instead.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] To restrict uploading, use the `@subscriber_upload_options` of `sp_addmergearticle` instead.  
   
  Specifies the type of data exchange during synchronization, which can be one of the following:  
   
@@ -229,10 +229,10 @@ manager: "jhubbard"
  Specifies whether interactive conflict resolution is used when a conflict occurs during synchronization. The default is **0**, indicating that interactive conflict resolution is not used.  
   
  **-InternetLogin** *internet_login*  
- Specifies the login name used when connecting to a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] replication listener ISAPI DLL that requires authentication.  
+ Specifies the login name used when connecting to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] replication listener ISAPI DLL that requires authentication.  
   
  **-InternetPassword** *internet_password*  
- Specifies the password used when connecting to a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] replication listener ISAPI DLL that requires authentication.  
+ Specifies the password used when connecting to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] replication listener ISAPI DLL that requires authentication.  
   
  **-InternetProxyLogin**  *internet_proxy_login*  
  Specifies the login name used when connecting to a proxy server, defined in *internet_proxy_server*, that requires authentication.  
@@ -247,10 +247,10 @@ manager: "jhubbard"
  Specifies the IIS security mode used when connecting to the Web server during Web synchronization. A value of **0** indicates Basic Authentication, and a value of **1** indicates Windows Integrated Authentication (default).  
   
  **-InternetTimeout** *internet_timeout*  
- Is the number of seconds before a connection to the to the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] replication listener ISAPI DLL times out.  
+ Is the number of seconds before a connection to the to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] replication listener ISAPI DLL times out.  
   
  **-InternetURL** *internet_url*  
- Specifies the URL used to connect to the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] replication listener ISAPI DLL. This property must be specified.  
+ Specifies the URL used to connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] replication listener ISAPI DLL. This property must be specified.  
   
  **-KeepAliveMessageInterval** *keep_alive_message_interval_seconds*  
  Is the number of seconds before the history thread checks if any of the existing connections is waiting for a response from the server. This value can be decreased to avoid having the checkup agent mark the Merge Agent as suspect when executing a long-running batch. The default is **300** seconds.  
@@ -273,7 +273,7 @@ manager: "jhubbard"
  Specifies the maximum number of changed rows that should be uploaded from the Subscriber to the Publisher. The number of rows uploaded may be higher than the specified maximum because: complete generations are processed; and parallel destination threads may run, each of which processes at least 100 changes in its first pass. By default all changes that are ready to be uploaded are sent.  
   
  **-MetadataRetentionCleanup** [**0**|**1**]  
- Specifies if metadata is removed from [MSmerge_genhistory](../Topic/MSmerge_genhistory%20\(Transact-SQL\).md), [MSmerge_contents](../Topic/MSmerge_contents%20\(Transact-SQL\).md), [MSmerge_tombstone](../Topic/MSmerge_tombstone%20\(Transact-SQL\).md), [MSmerge_past_partition_mappings](../Topic/MSmerge_past_partition_mappings%20\(Transact-SQL\).md), and [MSmerge_current_partition_mappings](../Topic/MSmerge_current_partition_mappings.md) based on the publication retention period. The default is **1**, indicating that cleanup should occur. A value of **0** indicates that cleanup should not occur automatically.  
+ Specifies if metadata is removed from [MSmerge_genhistory](~/relational-databases/system-tables/msmerge-genhistory-transact-sql.md), [MSmerge_contents](~/relational-databases/system-tables/msmerge-contents-transact-sql.md), [MSmerge_tombstone](~/relational-databases/system-tables/msmerge-tombstone-transact-sql.md), [MSmerge_past_partition_mappings](~/relational-databases/system-tables/msmerge-past-partition-mappings-transact-sql.md), and [MSmerge_current_partition_mappings](~/relational-databases/system-tables/msmerge-current-partition-mappings.md) based on the publication retention period. The default is **1**, indicating that cleanup should occur. A value of **0** indicates that cleanup should not occur automatically.  
   
  **-Output** *output_path_and_file_name*  
  Is the path of the agent output file. If the file name is not provided, the output is sent to the console. If the specified file name exists, the output is appended to the file.  
@@ -294,16 +294,16 @@ manager: "jhubbard"
  Specifies an agent profile to use for agent parameters. If **ProfileName** is NULL, the agent profile is disabled. If **ProfileName** is not specified, the default profile for the agent type is used. For information, see [Replication Agent Profiles](../../../2014/relational-databases/replication/replication-agent-profiles.md).  
   
  **-PublisherFailoverPartner** *server_name*[**\\***instance_name*]  
- Specifies the failover partner instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] participating in a database mirroring session with the publication database. For more information, see [Database Mirroring and Replication &#40;SQL Server&#41;](../../../2014/database-engine/database-mirroring-and-replication-sql-server.md).  
+ Specifies the failover partner instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] participating in a database mirroring session with the publication database. For more information, see [Database Mirroring and Replication &#40;SQL Server&#41;](../../../2014/database-engine/database-mirroring-and-replication-sql-server.md).  
   
  **-PublisherLogin** *publisher_login*  
- Is the Publisher login name. If **PublisherSecurityMode** is **0** (for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication), this parameter must be specified.  
+ Is the Publisher login name. If **PublisherSecurityMode** is **0** (for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication), this parameter must be specified.  
   
  **-PublisherPassword** *publisher_password*  
- Is the Publisher password. If **PublisherSecurityMode** is **0** (for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication), this parameter must be specified.  
+ Is the Publisher password. If **PublisherSecurityMode** is **0** (for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication), this parameter must be specified.  
   
  **-PublisherSecurityMode** [**0**|**1**]  
- Specifies the security mode of the Publisher. A value of **0** indicates [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication (default), and a value of **1** indicates Windows Authentication Mode.  
+ Specifies the security mode of the Publisher. A value of **0** indicates [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication (default), and a value of **1** indicates Windows Authentication Mode.  
   
  **-QueryTimeOut** *query_time_out_seconds*  
  Is the number of seconds before the query times out. The default is 300 seconds. The Merge Agent also uses the value of `QueryTimeout` to determine how long to wait for generation of a partitioned snapshot when this value is greater than 1800.  
@@ -331,13 +331,13 @@ manager: "jhubbard"
 >  When you use values **2** and **3**, the database path for the Subscriber must be specified in the **SubscriberDatabasePath** option.  
   
  **-SubscriberLogin** *subscriber_login*  
- Is the Subscriber login name. If **SubscriberSecurityMode** is **0** (for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication), this parameter must be specified.  
+ Is the Subscriber login name. If **SubscriberSecurityMode** is **0** (for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication), this parameter must be specified.  
   
  **-SubscriberPassword** *subscriber_password*  
- Is the Subscriber password. If **SubscriberSecurityMode** is **0** (for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication), this parameter must be specified.  
+ Is the Subscriber password. If **SubscriberSecurityMode** is **0** (for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication), this parameter must be specified.  
   
  **-SubscriberSecurityMode** [ **0**| **1**]  
- Specifies the security mode of the Subscriber. A value of **0** indicates [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication (default), and a value of **1** indicates Windows Authentication Mode.  
+ Specifies the security mode of the Subscriber. A value of **0** indicates [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication (default), and a value of **1** indicates Windows Authentication Mode.  
   
  **-SubscriberConflictClean** [ **0**| **1**]  
  Is if conflict tables are cleaned-up at the Subscriber during the synchronization process, where a value of **1** indicates that conflict tables at the Subscriber are cleaned-up. This parameter is used only for subscriptions to publications with decentralized conflict logging.  
@@ -361,7 +361,7 @@ manager: "jhubbard"
  Is the number of changes to be applied in a single batch while uploading changes from the Subscriber to the Publisher. The default is **100**.  
   
  **-UseInprocLoader**  
- Improves the performance of the initial snapshot by causing the Merge Agent to use the BULK INSERT command when applying snapshot files to the Subscriber. This parameter is deprecated because it is not compatible with the XML data type. If you are not replicating XML data, this parameter can be used. This parameter cannot be used with character mode snapshots. If you use this parameter, the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service account at the Subscriber must have read permissions on the directory where the snapshot .bcp data files are located. When this parameter is not used, the ODBC driver loaded by the agent reads from the files, so the security context of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service account is not used.  
+ Improves the performance of the initial snapshot by causing the Merge Agent to use the BULK INSERT command when applying snapshot files to the Subscriber. This parameter is deprecated because it is not compatible with the XML data type. If you are not replicating XML data, this parameter can be used. This parameter cannot be used with character mode snapshots. If you use this parameter, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account at the Subscriber must have read permissions on the directory where the snapshot .bcp data files are located. When this parameter is not used, the ODBC driver loaded by the agent reads from the files, so the security context of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account is not used.  
   
  **-Validate** [**0**|**1**|**2**|**3**]  
  Specifies whether validation should be done at the end of the merge session, and, if so, what type of validation. The value of **3** is the recommended value.  
@@ -382,7 +382,7 @@ manager: "jhubbard"
 ## Remarks  
   
 > [!IMPORTANT]  
->  If you have installed [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent to run under a local system account rather than under a domain user account (the default), the service can access only the local computer. If the Merge Agent that runs under [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent is configured to use Windows Authentication Mode when it logs in to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], the Merge Agent fails. The default setting is [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication.  
+>  If you have installed [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to run under a local system account rather than under a domain user account (the default), the service can access only the local computer. If the Merge Agent that runs under [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is configured to use Windows Authentication Mode when it logs in to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the Merge Agent fails. The default setting is [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.  
   
  To start the Merge Agent, execute **replmerg.exe** from the command prompt. For information, see [Replication Agent Executables](../../../2014/relational-databases/replication/dev-guide/replication-agent-executables-concepts.md).  
   

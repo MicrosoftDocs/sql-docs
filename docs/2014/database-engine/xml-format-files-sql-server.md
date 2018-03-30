@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # XML Format Files (SQL Server)
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] provides an XML schema that defines syntax for writing *XML format files* to use for bulk importing data into a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table. XML format files must adhere to this schema, which is defined in the XML Schema Definition Language (XSDL). XML format files are only supported when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tools are installed together with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
+  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] provides an XML schema that defines syntax for writing *XML format files* to use for bulk importing data into a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] table. XML format files must adhere to this schema, which is defined in the XML Schema Definition Language (XSDL). XML format files are only supported when [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tools are installed together with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client.  
   
  You can use an XML format file with a **bcp** command, BULK INSERT statement, or INSERT ... SELECT \* FROM OPENROWSET(BULK...) statement. The **bcp** command allows you to automatically generate an XML format file for a table; for more information, see [bcp Utility](../../2014/database-engine/bcp-utility.md).  
   
@@ -69,7 +69,7 @@ manager: "jhubbard"
   
      A field in a data file can be either of fixed/variable length or character terminated. A *field value* can be represented as: a character (using single-byte representation), a wide character (using Unicode two-byte representation), native database format, or a file name. If a field value is represented as a file name, the file name points to the file that contains the value of a BLOB column in the target table.  
   
--   \<ROW> describes how to construct data rows from a data file when the data from the file is imported into a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table.  
+-   \<ROW> describes how to construct data rows from a data file when the data from the file is imported into a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] table.  
   
      A \<ROW> element contains a set of \<COLUMN> elements. These elements correspond to table columns. The basic syntax is as follows:  
   
@@ -176,7 +176,7 @@ manager: "jhubbard"
 |LENGTH **="*`n`*"**|This attribute defines the length for an instance of a fixed-length data type.<br /><br /> The value of *n* must be a positive integer.|Optional unless required by the xsi:type value|  
 |PREFIX_LENGTH **="*`p`*"**|This attribute defines the prefix length for a binary data representation. The PREFIX_LENGTH value, *p*, must be one of the following: 1, 2, 4, or 8.|Optional unless required by the xsi:type value|  
 |MAX_LENGTH **="*`m`*"**|This attribute is the maximum number of bytes that can be stored in a given field. Without a target table, the column max-length is not known. The MAX_LENGTH attribute restricts the maximum length of an output character column, limiting the storage allocated for the column value. This is especially convenient when using the OPENROWSET function's BULK option in a SELECT FROM clause.<br /><br /> The value of *m* must be a positive integer. By default, the maximum length is 8000 characters for a **char** column and 4000 characters for an **nchar** column.|Optional|  
-|COLLATION **="*`collationName`*"**|COLLATION is only allowed for character fields. For a list of the SQL collation names, see [SQL Server Collation Name &#40;Transact-SQL&#41;](../Topic/SQL%20Server%20Collation%20Name%20\(Transact-SQL\).md).|Optional|  
+|COLLATION **="*`collationName`*"**|COLLATION is only allowed for character fields. For a list of the SQL collation names, see [SQL Server Collation Name &#40;Transact-SQL&#41;](~/t-sql/statements/sql-server-collation-name-transact-sql.md).|Optional|  
 |TERMINATOR **= "*`terminator`*"**|This attribute specifies the terminator of a data field. The terminator can be any character. The terminator must be a unique character that is not part of the data.<br /><br /> By default, the field terminator is the tab character (represented as \t). To represent a paragraph mark, use \r\n.|Used only with an xsi:type of character data, which requires this attribute|  
   
 #####  <a name="XsiTypeValuesOfFIELD"></a> Xsi:type values of the \<FIELD> Element  
@@ -195,7 +195,7 @@ manager: "jhubbard"
 |**CharTerm**|`TERMINATOR`|MAX_LENGTH, COLLATION|  
 |**NCharTerm**|`TERMINATOR`|MAX_LENGTH, COLLATION|  
   
- For more information about [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types, see [Data Types &#40;Transact-SQL&#41;](../Topic/Data%20Types%20\(Transact-SQL\).md).  
+ For more information about [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] data types, see [Data Types &#40;Transact-SQL&#41;](~/t-sql/data-types/data-types-transact-sql.md).  
   
 ####  <a name="AttrOfColumnElement"></a> Attributes of the \<COLUMN> Element  
  This section describes the attributes of the \<COLUMN> element, which are summarized in the following schema syntax:  
@@ -249,7 +249,7 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  To bulk export or import SQLXML data, use one of the following data types in your format file: SQLCHAR or SQLVARYCHAR (the data is sent in the client code page or in the code page implied by the collation), SQLNCHAR or SQLNVARCHAR (the data is sent as Unicode), or SQLBINARY or SQLVARYBIN (the data is sent without any conversion).  
   
- For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types, see [Data Types &#40;Transact-SQL&#41;](../Topic/Data%20Types%20\(Transact-SQL\).md).  
+ For more information about [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] data types, see [Data Types &#40;Transact-SQL&#41;](~/t-sql/data-types/data-types-transact-sql.md).  
   
 ###  <a name="HowUsesROW"></a> How Bulk Import Uses the \<ROW> Element  
  The \<ROW> element is ignored in some contexts. Whether the \<ROW> element affects a bulk-import operation depends on how the operation is performed:  
@@ -258,9 +258,9 @@ manager: "jhubbard"
   
      When data is loaded into a target table, **bcp** ignores the \<ROW> component. Instead, **bcp** loads the data based on the column types of the target table.  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] statements (BULK INSERT and OPENROWSET's Bulk rowset provider)  
+-   [!INCLUDE[tsql](../includes/tsql-md.md)] statements (BULK INSERT and OPENROWSET's Bulk rowset provider)  
   
-     When bulk importing data into a table, [!INCLUDE[tsql](../../includes/tsql-md.md)] statements use the \<ROW> component to generate the input rowset. Also, [!INCLUDE[tsql](../../includes/tsql-md.md)] statements perform appropriate type conversions based on the column types specified under \<ROW> and the corresponding column in the target table. If a mismatch exists between column types as specified in the format file and in the target table, an extra type conversion occurs. This extra type conversion may lead to some discrepancy (that is, a loss of precision) in behavior in BULK INSERT or OPENROWSET's Bulk rowset provider as compared to **bcp**.  
+     When bulk importing data into a table, [!INCLUDE[tsql](../includes/tsql-md.md)] statements use the \<ROW> component to generate the input rowset. Also, [!INCLUDE[tsql](../includes/tsql-md.md)] statements perform appropriate type conversions based on the column types specified under \<ROW> and the corresponding column in the target table. If a mismatch exists between column types as specified in the format file and in the target table, an extra type conversion occurs. This extra type conversion may lead to some discrepancy (that is, a loss of precision) in behavior in BULK INSERT or OPENROWSET's Bulk rowset provider as compared to **bcp**.  
   
      The information in the \<ROW> element allows a row to be constructed without requiring any additional information. For this reason, you can generate a rowset using a SELECT statement (SELECT \* FROM OPENROWSET(BULK *datafile* FORMATFILE=*xmlformatfile*).  
   
@@ -293,7 +293,7 @@ for(int i=0;i<ColumnList.Count;i++)
 ```  
   
 ##  <a name="SampleXmlFFs"></a> Sample XML Format Files  
- This section contains information on using XML format files in a variety of cases, including an [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] example.  
+ This section contains information on using XML format files in a variety of cases, including an [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] example.  
   
 > [!NOTE]  
 >  In the data files shown in the following examples, `<tab>` indicates a tab character in a data file, and `<return>` indicates a carriage return.  
@@ -339,7 +339,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```  
   
 > [!NOTE]  
->  For an equivalent [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] example, see [Create a Format File &#40;SQL Server&#41;](../../2014/database-engine/create-a-format-file-sql-server.md).  
+>  For an equivalent [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] example, see [Create a Format File &#40;SQL Server&#41;](../../2014/database-engine/create-a-format-file-sql-server.md).  
   
 ###  <a name="OrderFieldsAndColsDifferently"></a> B. Ordering data fields and table columns differently  
  The following example shows an XML format file that describes a data file containing three fields of character data. The format file maps the data file to a table that contains three columns that are ordered differently from the fields of the data file.  
@@ -374,7 +374,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```  
   
 > [!NOTE]  
->  For an equivalent [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] example, see [Use a Format File to Map Table Columns to Data-File Fields &#40;SQL Server&#41;](../../2014/database-engine/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md).  
+>  For an equivalent [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] example, see [Use a Format File to Map Table Columns to Data-File Fields &#40;SQL Server&#41;](../../2014/database-engine/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md).  
   
 ### C. Omitting a data field  
  The following example shows an XML format file that describes a data file containing four fields of character data. The format file maps the data file to a table that contains three columns. The second data field does not correspond to any table column.  
@@ -413,7 +413,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```  
   
 > [!NOTE]  
->  For an equivalent [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] example, see [Use a Format File to Skip a Data Field &#40;SQL Server&#41;](../../2014/database-engine/use-a-format-file-to-skip-a-data-field-sql-server.md).  
+>  For an equivalent [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] example, see [Use a Format File to Skip a Data Field &#40;SQL Server&#41;](../../2014/database-engine/use-a-format-file-to-skip-a-data-field-sql-server.md).  
   
 ###  <a name="MapXSItype"></a> D. Mapping \<FIELD> xsi:type to \<COLUMN> xsi:type  
  The following example shows different types of fields and their mappings to columns.  
@@ -522,7 +522,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
 ## See Also  
  [Bulk Import and Export of Data &#40;SQL Server&#41;](../../2014/database-engine/bulk-import-and-export-of-data-sql-server.md)   
- [Data Types &#40;Transact-SQL&#41;](../Topic/Data%20Types%20\(Transact-SQL\).md)   
+ [Data Types &#40;Transact-SQL&#41;](~/t-sql/data-types/data-types-transact-sql.md)   
  [Non-XML Format Files &#40;SQL Server&#41;](../../2014/database-engine/non-xml-format-files-sql-server.md)   
  [Format Files for Importing or Exporting Data &#40;SQL Server&#41;](../../2014/database-engine/format-files-for-importing-or-exporting-data-sql-server.md)  
   

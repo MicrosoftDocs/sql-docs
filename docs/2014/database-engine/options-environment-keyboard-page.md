@@ -19,12 +19,12 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Options (Environment-Keyboard Page)
-  The **Options** dialog box lets you customize the keyboard scheme for [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Use this option to choose a keyboard scheme. To access this page, click **Options** on the **Tools** menu, select the **Environment** folder, and then click **Keyboard**.  
+  The **Options** dialog box lets you customize the keyboard scheme for [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Use this option to choose a keyboard scheme. To access this page, click **Options** on the **Tools** menu, select the **Environment** folder, and then click **Keyboard**.  
   
- The **Keyboard scheme** drop-down list provides the available collections of shortcut keys. To load a specific scheme, select it from the list. When you are ready to leave the **Options** dialog box, click **OK**. Your selected scheme will be loaded into [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ The **Keyboard scheme** drop-down list provides the available collections of shortcut keys. To load a specific scheme, select it from the list. When you are ready to leave the **Options** dialog box, click **OK**. Your selected scheme will be loaded into [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
  **Standard**  
- The Standard scheme is the default in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and closely resembles the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio shortcut keys.  
+ The Standard scheme is the default in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and closely resembles the [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Studio shortcut keys.  
   
  Use the **Query shortcuts** grid to associate a stored procedure with a keyboard shortcut.  
   

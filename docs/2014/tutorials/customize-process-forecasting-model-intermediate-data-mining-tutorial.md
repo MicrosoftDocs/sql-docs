@@ -16,7 +16,7 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Customizing and Processing the Forecasting Model (Intermediate Data Mining Tutorial)
-  The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series algorithm provides parameters that affect how a model is created, and how time data is analyzed. Changing these properties can significantly affect how the mining model makes predictions.  
+  The [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series algorithm provides parameters that affect how a model is created, and how time data is analyzed. Changing these properties can significantly affect how the mining model makes predictions.  
   
  For this task in the tutorial, you will perform the following tasks to modify the model:  
   
@@ -33,7 +33,7 @@ manager: "jhubbard"
   
  The *PERIODICITY_HINT* parameter provides the algorithm with information about additional time periods that you expect to see in the data. By default, time series models will try to automatically detect a pattern in the data. However, if you already know the expected time cycle, providing a periodicity hint can potentially improve the accuracy of the model. However, if you provide the wrong periodicity hint, it can decrease accuracy; therefore, if you are not sure what value should be used, it is best to use the default.  
   
- For example, the view used for this model aggregates sales data from [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] on a monthly basis. Therefore each time slice used by the model represents one month, and all predictions will also be in terms of months. Since there are 12 months in a year and you expect that sales patterns more or less repeat on a yearly basis, you will set the *PERIODICITY_HINT* parameter to `12`, to indicate that 12 time slices (months) constitute one complete sales cycle.  
+ For example, the view used for this model aggregates sales data from [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] on a monthly basis. Therefore each time slice used by the model represents one month, and all predictions will also be in terms of months. Since there are 12 months in a year and you expect that sales patterns more or less repeat on a yearly basis, you will set the *PERIODICITY_HINT* parameter to `12`, to indicate that 12 time slices (months) constitute one complete sales cycle.  
   
  **Forecasting Method**  
   
@@ -58,16 +58,16 @@ manager: "jhubbard"
 4.  In the **PREDICTION_SMOOTHING** row, verify that the **Value** text box is either blank or set to 0.5. If a different value has been entered, click **Value** and type `0.5` to change the parameter back to the default value.  
   
     > [!NOTE]  
-    >  The PREDICTION_SMOOTHING parameter is available only in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise. Therefore, you cannot view or change the value of the PREDICTION_SMOOTHING parameter in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard. However, the default behavior is to use both algorithms and weight them equally.  
+    >  The PREDICTION_SMOOTHING parameter is available only in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise. Therefore, you cannot view or change the value of the PREDICTION_SMOOTHING parameter in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard. However, the default behavior is to use both algorithms and weight them equally.  
   
 5.  Click **OK**.  
   
 ## Handling Missing Data (Optional)  
- In many cases, your sales data might have gaps that are filled with nulls, or a store might have failed to meet the reporting deadline, leaving an empty cell at the end of the series. In such scenarios, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] raises the following error and will not process the model.  
+ In many cases, your sales data might have gaps that are filled with nulls, or a store might have failed to meet the reporting deadline, leaving an empty cell at the end of the series. In such scenarios, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] raises the following error and will not process the model.  
   
  "Error (Data mining): Time stamps not synchronized starting with series \<series name>, of the mining model, \<model name>. All time series must end at the same time mark and cannot have arbitrarily missing data points. Setting the MISSING_VALUE_SUBSTITUTION parameter to Previous or to a numeric constant will automatically patch missing data points where possible."  
   
- To avoid this error, you can specify that [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] automatically provide new values to fill in the gaps by using any one of the following methods:  
+ To avoid this error, you can specify that [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] automatically provide new values to fill in the gaps by using any one of the following methods:  
   
 -   Using an average value. The mean is calculated by using all valid values in the same data series.  
   
@@ -86,7 +86,7 @@ manager: "jhubbard"
   
 #### To process the forecasting model  
   
-1.  On the **Mining Model** menu of [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], select **Process Mining Structure and All Models**.  
+1.  On the **Mining Model** menu of [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], select **Process Mining Structure and All Models**.  
   
 2.  At the warning asking whether you want to build and deploy the project, click **Yes**.  
   

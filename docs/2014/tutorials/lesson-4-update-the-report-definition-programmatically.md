@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 1f0a1d46-6d6d-4f67-b51e-06dbbbffacf9
 caps.latest.revision: 20
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Lesson 4: Update the Report Definition Programmatically
@@ -20,7 +20,7 @@ manager: "mblythe"
   
 ### To update the report definition  
   
-1.  Replace the code for the UpdateReportDefinition() method in the Program.cs file (Module1.vb for [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) with the following code:  
+1.  Replace the code for the UpdateReportDefinition() method in the Program.cs file (Module1.vb for [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) with the following code:  
   
     ```csharp  
     private void UpdateReportDefinition()  

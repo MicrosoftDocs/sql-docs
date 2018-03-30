@@ -21,7 +21,7 @@ manager: "jhubbard"
 # Memory Optimization Advisor
   Transaction performance reports tool (see [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](../../2014/database-engine/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) informs you about which tables in your database will benefit if ported to use In-Memory OLTP. After you identify a table that you would like to port to use In-Memory OLTP, you can use the memory optimization advisor to help you migrate the disk-based database table to In-Memory OLTP.  
   
- To begin, connect to the instance that contains the disk-based database table. You can connect to a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] instance. However, if you wish to perform a migration operation with the advisor, you must connect to a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] instance on which In-Memory OLTP functionality is enabled. For more information about In-Memory OLTP requirements, see [Requirements for Using Memory-Optimized Tables](../../2014/database-engine/requirements-for-using-memory-optimized-tables.md).  
+ To begin, connect to the instance that contains the disk-based database table. You can connect to a [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] or [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] instance. However, if you wish to perform a migration operation with the advisor, you must connect to a [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] instance on which In-Memory OLTP functionality is enabled. For more information about In-Memory OLTP requirements, see [Requirements for Using Memory-Optimized Tables](../../2014/database-engine/requirements-for-using-memory-optimized-tables.md).  
   
  For information about migration methodologies, see [In-Memory OLTP – Common Workload Patterns and Migration Considerations](http://msdn.microsoft.com/library/dn673538.aspx).  
   
@@ -33,7 +33,7 @@ manager: "jhubbard"
   
  If you wish to keep a list of these incompatibilities, to plan your migration, click the **Generate Report** to generate a HTML list.  
   
- If your table has no incompatibilities and you are connected to a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] instance with In-Memory OLTP, click **Next**.  
+ If your table has no incompatibilities and you are connected to a [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] instance with In-Memory OLTP, click **Next**.  
   
 ### Memory Optimization Warnings  
  The next page, memory optimization warnings, contains a list of issues that do not prevent the table from being migrated to use In-Memory OLTP, but that may cause the behavior of other objects (such as stored procedures or CLR functions) to fail or result in unexpected behavior.  
@@ -115,7 +115,7 @@ manager: "jhubbard"
  After you make a decision for every index in your table, click **Next**.  
   
 ### Verify Migration Actions  
- The next page is **Verify Migration Actions**. To script the migration operation, click **Script** to generate a [!INCLUDE[tsql](../../includes/tsql-md.md)] script. You may then modify and execute the script. Click **Migrate** to begin the table migration.  
+ The next page is **Verify Migration Actions**. To script the migration operation, click **Script** to generate a [!INCLUDE[tsql](../includes/tsql-md.md)] script. You may then modify and execute the script. Click **Migrate** to begin the table migration.  
   
  After the process is finished, refresh **Object Explorer** to see the new memory-optimized table and the old disk-based table. You can keep the old table or delete it at your convenience.  
   

@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 2246a886-686b-44ca-9771-b155cedad8be
 caps.latest.revision: 17
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Issue Element (ssbdiagnose)
@@ -40,9 +40,9 @@ manager: "jhubbard"
   
 |Attribute|Description|  
 |---------------|-----------------|  
-|`type`|Identifies which category of problem the Issue element is reporting:<br /><br /> **"Diagnosis"** Reports a configuration issue found when you analyze a [!INCLUDE[ssSB](../../includes/sssb-md.md)] configuration.<br /><br /> **"Problem"** Reports an issue that has prevented **ssbdiagnose** from completing its analysis. Correct the problem and rerun **ssbdiagnose**.<br /><br /> **"Event"** Reports a [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] event found when you run a **-RUNTIME** check. Events are only reported if **-SHOWEVENTS** is specified.|  
+|`type`|Identifies which category of problem the Issue element is reporting:<br /><br /> **"Diagnosis"** Reports a configuration issue found when you analyze a [!INCLUDE[ssSB](../includes/sssb-md.md)] configuration.<br /><br /> **"Problem"** Reports an issue that has prevented **ssbdiagnose** from completing its analysis. Correct the problem and rerun **ssbdiagnose**.<br /><br /> **"Event"** Reports a [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] event found when you run a **-RUNTIME** check. Events are only reported if **-SHOWEVENTS** is specified.|  
 |`code`|Identifies the error number for the message.|  
-|`server`|Identifies the instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] in which the problem was found. If the problem was in a default instance, the server attribute only has the computer name. If the problem was in a named instance, the server attribute is in the form ComputerName\InstanceName.|  
+|`server`|Identifies the instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)] in which the problem was found. If the problem was in a default instance, the server attribute only has the computer name. If the problem was in a named instance, the server attribute is in the form ComputerName\InstanceName.|  
 |`database`|Identifies the name of the database in which the problem was found.|  
 |`object`|Identifies the name of the object in which the problem was found. If the problem was an instance or database level issue, the object attribute repeats the instance or database name.|  
   
@@ -62,7 +62,7 @@ manager: "jhubbard"
 |**Child elements**|None|  
   
 ## Example  
- This element reports an 1102 error for a database that does not have a master key, where the error was found when you analyzed a [!INCLUDE[ssSB](../../includes/sssb-md.md)] configuration.  
+ This element reports an 1102 error for a database that does not have a master key, where the error was found when you analyzed a [!INCLUDE[ssSB](../includes/sssb-md.md)] configuration.  
   
 ```  
 <Issue type="Diagnosis" code="1102" server="TestComputer" database="TargetDB" object="TargetDB">The master key was not found</diagnostic>  

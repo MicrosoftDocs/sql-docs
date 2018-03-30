@@ -18,14 +18,14 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQL Server Login Password Strength
-  This rule checks whether "Enforce password policy" of each [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login is enabled. If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication is enabled and if the operating system version is earlier than [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)], an attacker could repeatedly exploit a known [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login password.  
+  This rule checks whether "Enforce password policy" of each [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] login is enabled. If [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication is enabled and if the operating system version is earlier than [!INCLUDE[winxpsvr](../includes/winxpsvr-md.md)], an attacker could repeatedly exploit a known [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] login password.  
   
 ## Best Practices Recommendations  
- We recommend that you upgrade the operating system to [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)].  
+ We recommend that you upgrade the operating system to [!INCLUDE[winxpsvr](../includes/winxpsvr-md.md)].  
   
- If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication is not required in your environment, use Windows Authentication.  
+ If [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication is not required in your environment, use Windows Authentication.  
   
- Enable "Enforce password policy" for all the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins. Use [ALTER LOGIN](../Topic/ALTER%20LOGIN%20\(Transact-SQL\).md) to configure the password policy for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login.  
+ Enable "Enforce password policy" for all the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] logins. Use [ALTER LOGIN](~/t-sql/statements/alter-login-transact-sql.md) to configure the password policy for the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] login.  
   
 ## For More Information  
  [Password Policy](../../2014/database-engine/password-policy.md)  

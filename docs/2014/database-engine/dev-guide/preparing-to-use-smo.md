@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Preparing to Use SMO
-  This section contains information about getting started using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO). The following list will help you to locate information about syntax styles in the documentation, system requirements for programming in SMO, files and version numbers, a description of what's new in SMO, and an installation guide.  
+  This section contains information about getting started using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO). The following list will help you to locate information about syntax styles in the documentation, system requirements for programming in SMO, files and version numbers, a description of what's new in SMO, and an installation guide.  
   
 |||  
 |-|-|  

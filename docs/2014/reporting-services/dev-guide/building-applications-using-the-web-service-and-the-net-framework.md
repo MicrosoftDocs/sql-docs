@@ -23,11 +23,11 @@ helpviewer_keywords:
 ms.assetid: 92a9678c-bc4f-4d7a-ba44-85989bfe27ca
 caps.latest.revision: 37
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Building Applications Using the Web Service and the .NET Framework
-  With the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], you can use familiar programming constructs, such as methods, primitive types, and user-defined complex types to work with Web services. The [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] contains an infrastructure and tools you can use to create Web service clients that can call any World Wide Web Consortium (W3C) standards-compliant Web service.  
+  With the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], you can use familiar programming constructs, such as methods, primitive types, and user-defined complex types to work with Web services. The [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] contains an infrastructure and tools you can use to create Web service clients that can call any World Wide Web Consortium (W3C) standards-compliant Web service.  
   
  A Report Server Web service client is any component or application that communicates with a report server using Simple Object Access Protocol (SOAP) messages.  
   
@@ -49,17 +49,17 @@ manager: "jhubbard"
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Creating the Web Service Proxy](../../../2014/reporting-services/dev-guide/creating-the-web-service-proxy.md)|Describes the ways to add a proxy class to your project using [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].|  
+|[Creating the Web Service Proxy](../../../2014/reporting-services/dev-guide/creating-the-web-service-proxy.md)|Describes the ways to add a proxy class to your project using [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].|  
 |[Web Service Authentication](../../../2014/reporting-services/dev-guide/web-service-authentication.md)|Describes how calls to the Report Server Web service are authenticated.|  
-|[Calling Web Service Methods](../../../2014/reporting-services/dev-guide/calling-web-service-methods.md)|Describes how to use the SOAP API to call Web service methods in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].|  
+|[Calling Web Service Methods](../../../2014/reporting-services/dev-guide/calling-web-service-methods.md)|Describes how to use the SOAP API to call Web service methods in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].|  
 |[Setting the Url Property of the Web Service](../../../2014/reporting-services/dev-guide/setting-the-url-property-of-the-web-service.md)|Explains how to programmatically direct your Web service proxy to a new server URL after you have created your Web reference.|  
 |[Supplying Web Service Method Arguments](../../../2014/reporting-services/dev-guide/supplying-web-service-method-arguments.md)|Describes how to invoke a Web service method and supply method arguments.|  
 |[Omitting Values for Optional Web Service Objects](../../../2014/reporting-services/dev-guide/omitting-values-for-optional-web-service-objects.md)|Describes how to omit values for optional Web service objects.|  
 |[Using Secure Web Service Methods](../../../2014/reporting-services/dev-guide/using-secure-web-service-methods.md)|Describes the **SecureConnectionLevel** setting and the way in which it affects the use of the Reporting Services SOAP API.|  
 |[Passing Device Information Settings to Rendering Extensions](../../../2014/reporting-services/dev-guide/passing-device-information-settings-to-rendering-extensions.md)|Describes the device information settings that are used to render reports to different formats.|  
 |[Reporting Services Delivery Extension Settings](../../../2014/reporting-services/dev-guide/reporting-services-delivery-extension-settings.md)|Describes the settings that are used to deliver reports using report server e-mail.|  
-|[Using Reporting Services SOAP Headers](../../../2014/reporting-services/dev-guide/using-reporting-services-soap-headers.md)|Explains the use of SOAP headers in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
-|[Introducing Exception Handling in Reporting Services](../../../2014/reporting-services/dev-guide/introducing-exception-handling-in-reporting-services.md)|Provides information about the way in which [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] handles errors.|  
+|[Using Reporting Services SOAP Headers](../../../2014/reporting-services/dev-guide/using-reporting-services-soap-headers.md)|Explains the use of SOAP headers in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
+|[Introducing Exception Handling in Reporting Services](../../../2014/reporting-services/dev-guide/introducing-exception-handling-in-reporting-services.md)|Provides information about the way in which [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] handles errors.|  
   
 ## See Also  
  [Report Server Web Service](../../../2014/reporting-services/dev-guide/report-server-web-service.md)   

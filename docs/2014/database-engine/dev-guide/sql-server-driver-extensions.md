@@ -21,7 +21,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQL Server Driver Extensions
-  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver implements driver-specific functions that allow ODBC applications to access [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] features.  
+  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver implements driver-specific functions that allow ODBC applications to access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features.  
   
 ## In This Section  
   

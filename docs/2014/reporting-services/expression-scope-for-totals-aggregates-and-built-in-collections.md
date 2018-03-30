@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
 caps.latest.revision: 9
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Expression Scope for Totals, Aggregates, and Built-in Collections (Report Builder and SSRS)
@@ -39,7 +39,7 @@ manager: "mblythe"
  Understanding scopes helps you to successfully write expressions that give you the results that you want.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ##  <a name="DataScope"></a> Understanding Data Scope and Data Hierarchy  
  Data scope specifies a set of report data. Data scope has a natural hierarchy with an inherent containment relationship. Scopes higher on the hierarchy contain scopes that are lower on the hierarchy. The following list of data scopes describes the hierarchy in order from most data to least data:  

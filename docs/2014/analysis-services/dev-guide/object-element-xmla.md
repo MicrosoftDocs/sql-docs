@@ -62,7 +62,7 @@ manager: "mblythe"
 ## Remarks  
  The order in which identifiers appear is not important.  
   
- For `Alter` elements, the instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] is used as the default object if the `Object` element is not specified.  
+ For `Alter` elements, the instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] is used as the default object if the `Object` element is not specified.  
   
 ## See Also  
  [Properties &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/properties-xmla.md)  

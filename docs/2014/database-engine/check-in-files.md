@@ -57,7 +57,7 @@ manager: "jhubbard"
      **Tree View**  
      Display the folder and file hierarchy for the items you are checking in.  
   
- If the file you have checked in is not part of a shared checkout, the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] environment checks in the file immediately. Otherwise, it may prompt you to merge your version with versions created by other users.  
+ If the file you have checked in is not part of a shared checkout, the [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] environment checks in the file immediately. Otherwise, it may prompt you to merge your version with versions created by other users.  
   
 ## See Also  
  [View a List of Modified Files](../../2014/database-engine/view-a-list-of-modified-files.md)   

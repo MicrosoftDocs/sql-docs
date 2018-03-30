@@ -34,7 +34,7 @@ manager: "jhubbard"
   
 ## Arguments  
  *type_spec*  
- Is a valid [!INCLUDE[ssIS](../../includes/ssis-md.md)] data type.  
+ Is a valid [!INCLUDE[ssIS](../includes/ssis-md.md)] data type.  
   
  *expression*  
  Is a valid expression.  

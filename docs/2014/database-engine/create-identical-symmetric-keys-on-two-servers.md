@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: a13d0b21-a43b-43c0-9c22-7ba8f3d15e80
 caps.latest.revision: 22
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Create Identical Symmetric Keys on Two Servers
-  This topic describes how to create identical symmetric keys on two different servers in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../../includes/tsql-md.md)]. In order to decrypt ciphertext, you need the key that was used to encrypt it. When both encryption and decryption occur in a single database, the key is stored in the database and it is available, depending on permissions, for both encryption and decryption. But when encryption and decryption occur in separate databases or on separate servers, the key stored in one database is not available for use on the second database  
+  This topic describes how to create identical symmetric keys on two different servers in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../includes/tsql-md.md)]. In order to decrypt ciphertext, you need the key that was used to encrypt it. When both encryption and decryption occur in a single database, the key is stored in the database and it is available, depending on permissions, for both encryption and decryption. But when encryption and decryption occur in separate databases or on separate servers, the key stored in one database is not available for use on the second database  
   
  **In This Topic**  
   
@@ -41,13 +41,13 @@ manager: "jhubbard"
 ###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> Permissions  
- Requires ALTER ANY SYMMETRIC KEY permission on the database. If AUTHORIZATION is specified, requires IMPERSONATE permission on the database user or ALTER permission on the application role. If encryption is by certificate or asymmetric key, requires VIEW DEFINITION permission on the certificate or asymmetric key. Only Windows logins, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins, and application roles can own symmetric keys. Groups and roles cannot own symmetric keys.  
+ Requires ALTER ANY SYMMETRIC KEY permission on the database. If AUTHORIZATION is specified, requires IMPERSONATE permission on the database user or ALTER permission on the application role. If encryption is by certificate or asymmetric key, requires VIEW DEFINITION permission on the certificate or asymmetric key. Only Windows logins, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] logins, and application roles can own symmetric keys. Groups and roles cannot own symmetric keys.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To create identical symmetric keys on two different servers  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -99,16 +99,16 @@ manager: "jhubbard"
   
  For more information, see the following:  
   
--   [CREATE MASTER KEY &#40;Transact-SQL&#41;](../Topic/CREATE%20MASTER%20KEY%20\(Transact-SQL\).md)  
+-   [CREATE MASTER KEY &#40;Transact-SQL&#41;](~/t-sql/statements/create-master-key-transact-sql.md)  
   
--   [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../Topic/CREATE%20CERTIFICATE%20\(Transact-SQL\).md)  
+-   [CREATE CERTIFICATE &#40;Transact-SQL&#41;](~/t-sql/statements/create-certificate-transact-sql.md)  
   
--   [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../Topic/CREATE%20SYMMETRIC%20KEY%20\(Transact-SQL\).md)  
+-   [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](~/t-sql/statements/create-symmetric-key-transact-sql.md)  
   
--   [ENCRYPTBYKEY &#40;Transact-SQL&#41;](../Topic/ENCRYPTBYKEY%20\(Transact-SQL\).md)  
+-   [ENCRYPTBYKEY &#40;Transact-SQL&#41;](~/t-sql/functions/encryptbykey-transact-sql.md)  
   
--   [DECRYPTBYKEY &#40;Transact-SQL&#41;](../Topic/DECRYPTBYKEY%20\(Transact-SQL\).md)  
+-   [DECRYPTBYKEY &#40;Transact-SQL&#41;](~/t-sql/functions/decryptbykey-transact-sql.md)  
   
--   [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../Topic/OPEN%20SYMMETRIC%20KEY%20\(Transact-SQL\).md)  
+-   [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](~/t-sql/statements/open-symmetric-key-transact-sql.md)  
   
   

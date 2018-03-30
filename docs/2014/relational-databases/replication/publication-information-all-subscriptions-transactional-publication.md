@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: 7073350c-f667-4f70-88e9-152c9a1b08dd
 caps.latest.revision: 29
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Publication Information, All Subscriptions (Transactional Publication)
@@ -34,7 +34,7 @@ manager: "jhubbard"
  Filter settings are specific to each grid. Column selection and sorting are applied to all grids of the same type, such as the publications grid for each Publisher.  
   
  **Show**  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and later versions only. Select the subscription states to display for the selected subscription type. For example, you can select to display only those subscriptions that have an error.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only. Select the subscription states to display for the selected subscription type. For example, you can select to display only those subscriptions that have an error.  
   
  **Status**  
  The status of each subscription, which is determined by the status of the Distribution Agent or the Log Reader Agent (the higher priority status is displayed; the status can also be determined by the Queue Reader Agent if queued updating subscriptions are used).  
@@ -43,11 +43,11 @@ manager: "jhubbard"
   
 -   Error  
   
--   Performance critical ([!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and later versions only)  
+-   Performance critical ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only)  
   
--   Expiring soon/Expired ([!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and later versions only)  
+-   Expiring soon/Expired ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only)  
   
--   Uninitialized subscription ([!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and later versions only)  
+-   Uninitialized subscription ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only)  
   
 -   Retrying failed command  
   
@@ -65,7 +65,7 @@ manager: "jhubbard"
  The name of each subscription, in the form: *SubscriberName: SubscriptionDatabaseName*.  
   
  **Performance**  
- [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and later versions only. The performance rating for each subscription is based on the most recent measurements taken by Replication Monitor and does not reflect historical performance. Performance is measured for subscriptions to publications that have performance thresholds defined; if performance thresholds are not defined for a publication, this column displays **Not enabled**. The performance rating is one of the following values:  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only. The performance rating for each subscription is based on the most recent measurements taken by Replication Monitor and does not reflect historical performance. Performance is measured for subscriptions to publications that have performance thresholds defined; if performance thresholds are not defined for a publication, this column displays **Not enabled**. The performance rating is one of the following values:  
   
 -   Excellent  
   
@@ -80,7 +80,7 @@ manager: "jhubbard"
  If performance is critical, **Performance Critical** is displayed in the **Status** column. For more information on how performance ratings are defined and how performance thresholds are set, see [Monitor Performance with Replication Monitor](../../../2014/relational-databases/replication/monitor-performance-with-replication-monitor.md).  
   
  **Latency**  
- [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and later versions only. The average amount of time that elapses between a transaction being committed at the Publisher and the corresponding transaction being committed at the Subscriber. The latency displayed is based on the most recent measurements taken by Replication Monitor. For more information about measuring latency, see [Measure Latency and Validate Connections for Transactional Replication](../../../2014/relational-databases/replication/measure-latency-and-validate-connections-for-transactional-replication.md).  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only. The average amount of time that elapses between a transaction being committed at the Publisher and the corresponding transaction being committed at the Subscriber. The latency displayed is based on the most recent measurements taken by Replication Monitor. For more information about measuring latency, see [Measure Latency and Validate Connections for Transactional Replication](../../../2014/relational-databases/replication/measure-latency-and-validate-connections-for-transactional-replication.md).  
   
 ## See Also  
  [Start the Replication Monitor](../../../2014/relational-databases/replication/start-the-replication-monitor.md)   

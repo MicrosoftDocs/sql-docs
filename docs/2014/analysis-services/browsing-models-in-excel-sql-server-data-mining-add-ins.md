@@ -22,7 +22,7 @@ manager: "mblythe"
 # Browsing Models in Excel (SQL Server Data Mining Add-ins)
   ![Browse Model button in Data Mining ribbon](../../2014/analysis-services/media/dmc-browse.gif "Browse Model button in Data Mining ribbon")  
   
- Visually exploring the model is usually the fastest and easiest way to get an understanding of the rules and relationships discovered by analysis. By using the Data Mining Client for Excel, you can browse both temporary models created during the current Excel session, and models stored in an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+ Visually exploring the model is usually the fastest and easiest way to get an understanding of the rules and relationships discovered by analysis. By using the Data Mining Client for Excel, you can browse both temporary models created during the current Excel session, and models stored in an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
  To browse a model, you select a model and its associated structure from a list of available models, and the add-in automatically picks the viewer that is appropriate for that data mining algorithm. You can drill into the most interesting trends, filter the completed data mining model, and copy graphs and data to Excel or to Visio.  
   

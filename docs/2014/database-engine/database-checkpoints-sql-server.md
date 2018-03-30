@@ -32,23 +32,23 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Database Checkpoints (SQL Server)
-  This topic provides an overview of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database checkpoints. A *checkpoint* creates a known good point from which the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] can start applying changes contained in the log during recovery after an unexpected shutdown or crash.  
+  This topic provides an overview of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database checkpoints. A *checkpoint* creates a known good point from which the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] can start applying changes contained in the log during recovery after an unexpected shutdown or crash.  
   
   
 ##  <a name="Overview"></a> Overview of Checkpoints  
- For performance reasons, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] performs modifications to database pages in memory—in the buffer cache—and does not write these pages to disk after every change. Rather, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] periodically issues a checkpoint on each database. A *checkpoint* writes the current in-memory modified pages (known as *dirty pages*) and transaction log information from memory to disk and, also, records information about the transaction log.  
+ For performance reasons, the [!INCLUDE[ssDE](../includes/ssde-md.md)] performs modifications to database pages in memory—in the buffer cache—and does not write these pages to disk after every change. Rather, the [!INCLUDE[ssDE](../includes/ssde-md.md)] periodically issues a checkpoint on each database. A *checkpoint* writes the current in-memory modified pages (known as *dirty pages*) and transaction log information from memory to disk and, also, records information about the transaction log.  
   
- The [!INCLUDE[ssDE](../../includes/ssde-md.md)] supports several types of checkpoints: automatic, indirect, manual, and internal. The following table summarizes the types of checkpoints.  
+ The [!INCLUDE[ssDE](../includes/ssde-md.md)] supports several types of checkpoints: automatic, indirect, manual, and internal. The following table summarizes the types of checkpoints.  
   
-|Name|[!INCLUDE[tsql](../../includes/tsql-md.md)] Interface|Description|  
+|Name|[!INCLUDE[tsql](../includes/tsql-md.md)] Interface|Description|  
 |----------|----------------------------------|-----------------|  
-|Automatic|EXEC sp_configure **'`recovery interval`','*`seconds`*'**|Issued automatically in the background to meet the upper time limit suggested by the `recovery interval` server configuration option. Automatic checkpoints run to completion.  Automatic checkpoints are throttled based on the number of outstanding writes and whether the [!INCLUDE[ssDE](../../includes/ssde-md.md)] detects an increase in write latency above 20 milliseconds.<br /><br /> For more information, see [Configure the recovery interval Server Configuration Option](../../2014/database-engine/configure-the-recovery-interval-server-configuration-option.md).|  
+|Automatic|EXEC sp_configure **'`recovery interval`','*`seconds`*'**|Issued automatically in the background to meet the upper time limit suggested by the `recovery interval` server configuration option. Automatic checkpoints run to completion.  Automatic checkpoints are throttled based on the number of outstanding writes and whether the [!INCLUDE[ssDE](../includes/ssde-md.md)] detects an increase in write latency above 20 milliseconds.<br /><br /> For more information, see [Configure the recovery interval Server Configuration Option](../../2014/database-engine/configure-the-recovery-interval-server-configuration-option.md).|  
 |Indirect|ALTER DATABASE … SET TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDS &#124; MINUTES }|Issued in the background to meet a user-specified target recovery time for a given database. The default target recovery time is 0, which causes automatic checkpoint heuristics to be used on the database. If you have used ALTER DATABASE to set TARGET_RECOVERY_TIME to >0, this value is used, rather than the recovery interval specified for the server instance.<br /><br /> For more information, see [Change the Target Recovery Time of a Database &#40;SQL Server&#41;](../../2014/database-engine/change-the-target-recovery-time-of-a-database-sql-server.md).|  
-|Manual|CHECKPOINT [ *checkpoint_duration* ]|Issued when you execute a [!INCLUDE[tsql](../../includes/tsql-md.md)] CHECKPOINT command. The manual checkpoint occurs in the current database for your connection. By default, manual checkpoints run to completion. Throttling works the same way as for automatic checkpoints.  Optionally, the *checkpoint_duration* parameter specifies a requested amount of time, in seconds, for the checkpoint to complete.<br /><br /> For more information, see [CHECKPOINT &#40;Transact-SQL&#41;](../Topic/CHECKPOINT%20\(Transact-SQL\).md).|  
+|Manual|CHECKPOINT [ *checkpoint_duration* ]|Issued when you execute a [!INCLUDE[tsql](../includes/tsql-md.md)] CHECKPOINT command. The manual checkpoint occurs in the current database for your connection. By default, manual checkpoints run to completion. Throttling works the same way as for automatic checkpoints.  Optionally, the *checkpoint_duration* parameter specifies a requested amount of time, in seconds, for the checkpoint to complete.<br /><br /> For more information, see [CHECKPOINT &#40;Transact-SQL&#41;](~/t-sql/language-elements/checkpoint-transact-sql.md).|  
 |Internal|None.|Issued by various server operations such as backup and database-snapshot creation to guarantee that disk images match the current state of the log.|  
   
 > [!NOTE]  
->  The `-k`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] advanced setup option enables a database administrator to throttle checkpoint I/O behavior based on the throughput of the I/O subsystem for some types of checkpoints. The `-k` setup option applies to automatic checkpoints and any otherwise unthrottled manual and internal checkpoints.  
+>  The `-k`[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] advanced setup option enables a database administrator to throttle checkpoint I/O behavior based on the throughput of the I/O subsystem for some types of checkpoints. The `-k` setup option applies to automatic checkpoints and any otherwise unthrottled manual and internal checkpoints.  
   
  For automatic, manual, and internal checkpoints, only modifications made after the latest checkpoint need to be rolled forward during database recovery. This reduces the time required to recover a database.  
   
@@ -67,7 +67,7 @@ manager: "jhubbard"
 |>0|Not applicable.|Indirect checkpoints whose target recovery time is determined by the TARGET_RECOVERY_TIME setting, expressed in seconds.|  
   
 ###  <a name="AutomaticChkpt"></a> Automatic Checkpoints  
- An automatic checkpoint occurs each time that  the number of log records reaches the number the [!INCLUDE[ssDE](../../includes/ssde-md.md)] estimates it can process during the time specified in the `recovery interval` server configuration option. In every database without a user-defined target recovery time, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] generates automatic checkpoints. The frequency of automatic checkpoints depends on the `recovery interval` advanced server configuration option, which specifies the maximum time that a given server instance should use to recover a database during a system restart. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] estimates the maximum number of log records it can process within the recovery interval. When a database that is using automatic checkpoints reaches this maximum number of log records, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] issues an checkpoint on the database. The time interval between automatic checkpoints can be highly variable. A database with a substantial transaction workload will have more frequent checkpoints than a database that is used primarily for read-only operations.  
+ An automatic checkpoint occurs each time that  the number of log records reaches the number the [!INCLUDE[ssDE](../includes/ssde-md.md)] estimates it can process during the time specified in the `recovery interval` server configuration option. In every database without a user-defined target recovery time, the [!INCLUDE[ssDE](../includes/ssde-md.md)] generates automatic checkpoints. The frequency of automatic checkpoints depends on the `recovery interval` advanced server configuration option, which specifies the maximum time that a given server instance should use to recover a database during a system restart. The [!INCLUDE[ssDE](../includes/ssde-md.md)] estimates the maximum number of log records it can process within the recovery interval. When a database that is using automatic checkpoints reaches this maximum number of log records, the [!INCLUDE[ssDE](../includes/ssde-md.md)] issues an checkpoint on the database. The time interval between automatic checkpoints can be highly variable. A database with a substantial transaction workload will have more frequent checkpoints than a database that is used primarily for read-only operations.  
   
  Also, under the simple recovery model, an automatic checkpoint is also queued if the log becomes 70 percent full.  
   
@@ -89,7 +89,7 @@ manager: "jhubbard"
   
   
 ###  <a name="IndirectChkpt"></a> Indirect Checkpoints  
- Indirect checkpoints, new in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], provide a configurable database-level alternative to automatic checkpoints. In the event of a system crash, indirect checkpoints provide potentially faster, more predictable recovery time than automatic checkpoints. Indirect checkpoints offer the following advantages:  
+ Indirect checkpoints, new in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], provide a configurable database-level alternative to automatic checkpoints. In the event of a system crash, indirect checkpoints provide potentially faster, more predictable recovery time than automatic checkpoints. Indirect checkpoints offer the following advantages:  
   
 -   An online transactional workload on a database that is configured for indirect checkpoints could experience performance degradation. Indirect checkpoints make sure that the number of dirty pages are below a certain threshold so that the database recovery completes within the target recovery time. The recovery interval configuration option uses the number of transactions to determine the recovery time as opposed to indirect checkpoints which makes use of number of dirty pages. When indirect checkpoints are enabled on a database receiving a large number of DML operations, the background writer can start aggressively flushing dirty buffers to disk to ensure that the time required to perform recovery is within the target recovery time set of the database. This can cause additional I/O activity on certain systems which can contribute to a performance bottleneck if the disk subsystem is operating above or nearing the I/O threshold.  
   
@@ -111,9 +111,9 @@ manager: "jhubbard"
   
 -   An activity requiring a database shutdown is performed. For example, AUTO_CLOSE is ON and the last user connection to the database is closed, or a database option change is made that requires a restart of the database.  
   
--   An instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is stopped by stopping the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER) service . Either action  causes a checkpoint in each database in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   An instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is stopped by stopping the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (MSSQLSERVER) service . Either action  causes a checkpoint in each database in the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
--   Bringing a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instance (FCI) offline.  
+-   Bringing a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] failover cluster instance (FCI) offline.  
   
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
@@ -127,12 +127,12 @@ manager: "jhubbard"
   
  **To issue a manual checkpoint on a database**  
   
--   [CHECKPOINT &#40;Transact-SQL&#41;](../Topic/CHECKPOINT%20\(Transact-SQL\).md)  
+-   [CHECKPOINT &#40;Transact-SQL&#41;](~/t-sql/language-elements/checkpoint-transact-sql.md)  
   
   
 ##  <a name="RelatedContent"></a> Related Content  
   
--   [Transaction Log Physical Architecture](http://technet.microsoft.com/library/ms179355.aspx) (in [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Books Oline)  
+-   [Transaction Log Physical Architecture](http://technet.microsoft.com/library/ms179355.aspx) (in [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] Books Oline)  
   
   
 ## See Also  

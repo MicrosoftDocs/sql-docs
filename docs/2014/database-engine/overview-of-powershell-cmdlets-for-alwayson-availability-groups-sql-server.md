@@ -20,7 +20,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Overview of PowerShell Cmdlets for AlwaysOn Availability Groups (SQL Server)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] PowerShell is a task-based command-line shell and scripting language designed especially for system administration. [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] provides a set of PowerShell cmdlets in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] that enable you to deploy, manage, and monitor availability groups, availability replicas, and availability databases.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] PowerShell is a task-based command-line shell and scripting language designed especially for system administration. [!INCLUDE[ssHADR](../includes/sshadr-md.md)] provides a set of PowerShell cmdlets in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] that enable you to deploy, manage, and monitor availability groups, availability replicas, and availability databases.  
   
 > [!NOTE]  
 >  A PowerShell cmdlet can complete by successfully initiating an action. This does not indicate that the intended work, such as the fail over of an availability group, has completed. When scripting a sequence of actions, you might have to check the status of actions, and wait for them to complete.  
@@ -42,23 +42,23 @@ manager: "jhubbard"
 -   [Monitoring availability group health](#MonitorTblshtAGs)  
   
 > [!NOTE]  
->  For a list of topics in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Books Online that describe how to use cmdlets to perform [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] tasks, see the "Related Tasks" section of [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/overview-of-alwayson-availability-groups-sql-server.md).  
+>  For a list of topics in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Books Online that describe how to use cmdlets to perform [!INCLUDE[ssHADR](../includes/sshadr-md.md)] tasks, see the "Related Tasks" section of [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/overview-of-alwayson-availability-groups-sql-server.md).  
   
 ##  <a name="ConfiguringServerInstance"></a> Configuring a Server Instance for AlwaysOn Availability Groups  
   
 |Cmdlets|Description|Supported on|  
 |-------------|-----------------|------------------|  
-|`Disable-SqlAlwaysOn`|Disables the [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] feature on a server instance.|The server instance that is specified by the `Path`, `InputObject`, or `Name` parameter. (Must be an edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that supports [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].)|  
-|`Enable-SqlAlwaysOn`|Enables [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] on an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] that supports the [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] feature. For information about support for [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], see [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/prereqs-restrictions-recommendations-always-on-availability.md).|Any edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that supports [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].|  
-|`New-SqlHadrEndPoint`|Creates a new database mirroring endpoint on a server instance. This endpoint is required for data movement between primary and secondary databases.|Any instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|`Set-SqlHadrEndpoint`|Changes the properties of an existing database mirroring endpoint, such as the name, state, or authentication properties.|A server instance that supports [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] and lacks a database mirroring endpoint|  
+|`Disable-SqlAlwaysOn`|Disables the [!INCLUDE[ssHADR](../includes/sshadr-md.md)] feature on a server instance.|The server instance that is specified by the `Path`, `InputObject`, or `Name` parameter. (Must be an edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that supports [!INCLUDE[ssHADR](../includes/sshadr-md.md)].)|  
+|`Enable-SqlAlwaysOn`|Enables [!INCLUDE[ssHADR](../includes/sshadr-md.md)] on an instance of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] that supports the [!INCLUDE[ssHADR](../includes/sshadr-md.md)] feature. For information about support for [!INCLUDE[ssHADR](../includes/sshadr-md.md)], see [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/prereqs-restrictions-recommendations-always-on-availability.md).|Any edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that supports [!INCLUDE[ssHADR](../includes/sshadr-md.md)].|  
+|`New-SqlHadrEndPoint`|Creates a new database mirroring endpoint on a server instance. This endpoint is required for data movement between primary and secondary databases.|Any instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|  
+|`Set-SqlHadrEndpoint`|Changes the properties of an existing database mirroring endpoint, such as the name, state, or authentication properties.|A server instance that supports [!INCLUDE[ssHADR](../includes/sshadr-md.md)] and lacks a database mirroring endpoint|  
   
 ##  <a name="BnRcmdlets"></a> Backing Up and Restoring Databases and Transaction Logs  
   
 |Cmdlets|Description|Supported on|  
 |-------------|-----------------|------------------|  
-|`Backup-SqlDatabase`|Creates a data or log backup.|Any online database (for [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], a database on the server instance that hosts the primary replica)|  
-|`Restore-SqlDatabase`|Restores a backup.|Any instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (for [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], a server instance that hosts a secondary replica)<br /><br /> **\*\* Important \*\*** When preparing a secondary database, you must use the `-NoRecovery` parameter in every `Restore-SqlDatabase` command.|  
+|`Backup-SqlDatabase`|Creates a data or log backup.|Any online database (for [!INCLUDE[ssHADR](../includes/sshadr-md.md)], a database on the server instance that hosts the primary replica)|  
+|`Restore-SqlDatabase`|Restores a backup.|Any instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (for [!INCLUDE[ssHADR](../includes/sshadr-md.md)], a server instance that hosts a secondary replica)<br /><br /> **\*\* Important \*\*** When preparing a secondary database, you must use the `-NoRecovery` parameter in every `Restore-SqlDatabase` command.|  
   
  For information about using these cmdlets to prepare a secondary database, see [Manually Prepare a Secondary Database for an Availability Group &#40;SQL Server&#41;](../../2014/database-engine/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
@@ -98,7 +98,7 @@ manager: "jhubbard"
 |`Suspend-SqlAvailabilityDatabase`|Suspends the data movement for an availability database.|Any server instance that hosts an availability replica.|  
   
 ##  <a name="MonitorTblshtAGs"></a> Monitoring Availability Group Health  
- The following [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cmdlets enable you to monitor the health of an availability group and its replicas and databases.  
+ The following [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cmdlets enable you to monitor the health of an availability group and its replicas and databases.  
   
 > [!IMPORTANT]  
 >  You must have CONNECT, VIEW SERVER STATE, and VIEW ANY DEFINITION permissions to execute these cmdlets.  

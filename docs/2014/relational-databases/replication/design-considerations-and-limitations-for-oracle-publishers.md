@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 caps.latest.revision: 47
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Design Considerations and Limitations for Oracle Publishers
-  Publishing from an Oracle database is designed to work nearly identically to publishing from a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database. However, you should be aware of the following limitations and issues:  
+  Publishing from an Oracle database is designed to work nearly identically to publishing from a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. However, you should be aware of the following limitations and issues:  
   
 -   The Oracle Gateway option provides improved performance over the Oracle Complete option; however, this option cannot be used to publish the same table in multiple transactional publications. A table can appear in at most one transactional publication and any number of snapshot publications. If you need to publish the same table in multiple transactional publications, choose the Oracle Complete option.  
   
 -   Replication supports publishing tables, indexes, and materialized views. Other objects are not replicated.  
   
--   There are some small differences between the storage and processing of data in Oracle and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] databases that affect replication.  
+-   There are some small differences between the storage and processing of data in Oracle and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases that affect replication.  
   
 -   There are a number of differences in how transactional replication features are supported when using an Oracle Publisher.  
   
@@ -71,11 +71,11 @@ manager: "jhubbard"
   
 ## Differences between Oracle and SQL Server  
   
--   Oracle has different maximum size limits for some objects. Any objects created in the Oracle publication database should adhere to the maximum size limits for the corresponding objects in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. For information about limits in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], see [Maximum Capacity Specifications for SQL Server](../../../2014/getting-started/maximum-capacity-specifications-for-sql-server.md).  
+-   Oracle has different maximum size limits for some objects. Any objects created in the Oracle publication database should adhere to the maximum size limits for the corresponding objects in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For information about limits in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Maximum Capacity Specifications for SQL Server](../../../2014/getting-started/maximum-capacity-specifications-for-sql-server.md).  
   
--   By default Oracle object names are created in upper case. Ensure that you supply the names of Oracle objects in upper case when publishing them through a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributor if they are upper case on the Oracle database. Failure to specify the objects in the correct case may result in an error message indicating that the object cannot be found.  
+-   By default Oracle object names are created in upper case. Ensure that you supply the names of Oracle objects in upper case when publishing them through a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor if they are upper case on the Oracle database. Failure to specify the objects in the correct case may result in an error message indicating that the object cannot be found.  
   
--   Oracle has a slightly different SQL dialect from [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]; row filters should be written in Oracle-compliant syntax.  
+-   Oracle has a slightly different SQL dialect from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; row filters should be written in Oracle-compliant syntax.  
   
 ### Considerations for Large Objects  
  Large object (LOB) data is not stored in the article log table; updates to LOB data are always retrieved directly from the published table. Updates are replicated in transactional publications only if the operation affecting the LOB fires the replication trigger on the replicated table. Oracle triggers fire when rows containing LOBs are inserted or deleted; however updates to LOB columns do not fire triggers. An update to a LOB column will be replicated immediately only if a non-LOB column of the same row is also updated in the same Oracle transaction. If not, the LOB column will be refreshed at the Subscriber when the next update to a non-LOB column in the same row occurs. Ensure that this behavior is acceptable for your application.  
@@ -91,7 +91,7 @@ manager: "jhubbard"
 ### Unique Indexes and Constraints  
  For both snapshot and transactional replication, columns contained in unique indexes and constraints (including primary key constraints) must adhere to certain restrictions. If they do not adhere to these restrictions, the constraint or index is not replicated.  
   
--   The maximum number of columns allowed in an index on [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is 16.  
+-   The maximum number of columns allowed in an index on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is 16.  
   
 -   All columns included in unique constraints must have supported data types. For more information about data types, see [Data Type Mapping for Oracle Publishers](../../../2014/relational-databases/replication/data-type-mapping-for-oracle-publishers.md).  
   
@@ -101,15 +101,15 @@ manager: "jhubbard"
   
  Also consider the following issues:  
   
--   Oracle and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] treat NULL differently: Oracle permits multiple rows with NULL values for columns that allow NULL and are included in unique constraints or indexes. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] enforces uniqueness by only permitting a single row with a NULL value for the same column. You cannot publish a unique constraint or index that allows NULL because a constraint violation would occur on the Subscriber if the published table contains multiple rows with NULL values for any of the columns included in the index or constraint.  
+-   Oracle and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] treat NULL differently: Oracle permits multiple rows with NULL values for columns that allow NULL and are included in unique constraints or indexes. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enforces uniqueness by only permitting a single row with a NULL value for the same column. You cannot publish a unique constraint or index that allows NULL because a constraint violation would occur on the Subscriber if the published table contains multiple rows with NULL values for any of the columns included in the index or constraint.  
   
--   When testing for uniqueness, trailing blanks in a field are ignored by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] but not by Oracle.  
+-   When testing for uniqueness, trailing blanks in a field are ignored by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] but not by Oracle.  
   
- As in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] transactional replication, tables in Oracle transactional publications require a primary key; the primary key must be unique based on the rules specified above. If the primary key does not adhere to the rules outlined in the previous bullets, the table cannot be published for transactional replication.  
+ As in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transactional replication, tables in Oracle transactional publications require a primary key; the primary key must be unique based on the rules specified above. If the primary key does not adhere to the rules outlined in the previous bullets, the table cannot be published for transactional replication.  
   
 ## Differences between Oracle Publishing and Standard Transactional Replication  
   
--   An Oracle Publisher cannot have the same name as: its [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributor; any of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Publishers that use the Distributor; or any Subscribers that receive the publication. Publications serviced by the same Distributor must each have a unique name.  
+-   An Oracle Publisher cannot have the same name as: its [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor; any of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers that use the Distributor; or any Subscribers that receive the publication. Publications serviced by the same Distributor must each have a unique name.  
   
 -   A table published in an Oracle publication cannot receive replicated data. Therefore, Oracle publishing does not support: publications with immediate updating or queued updating subscriptions; or topologies in which publication tables also act as subscription tables, such as peer-to-peer and bidirectional replication.  
   
@@ -117,25 +117,25 @@ manager: "jhubbard"
   
 -   Standard transactional publications support tables of up to 1000 columns. Oracle transactional publications support 995 columns (replication adds five columns to each published table).  
   
--   Collate clauses are added to the CREATE TABLE statements to enable case sensitive comparisons, which is important for primary keys and unique constraints. This behavior is controlled with the schema option 0x1000, which is specified with the **@schema_option** parameter of [sp_addarticle &#40;Transact-SQL&#41;](../Topic/sp_addarticle%20\(Transact-SQL\).md).  
+-   Collate clauses are added to the CREATE TABLE statements to enable case sensitive comparisons, which is important for primary keys and unique constraints. This behavior is controlled with the schema option 0x1000, which is specified with the **@schema_option** parameter of [sp_addarticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
   
 -   If you use stored procedures to configure or maintain an Oracle Publisher, do not put the procedures inside an explicit transaction. This is not supported over the linked server used to connect to the Oracle Publisher.  
   
--   If you create a pull subscription to an Oracle publication with a wizard, you must use the New Subscription Wizard supplied with [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and later versions. For previous versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], you can, however, use the stored procedure and SQL-DMO interfaces to setup pull subscriptions to Oracle publications.  
+-   If you create a pull subscription to an Oracle publication with a wizard, you must use the New Subscription Wizard supplied with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions. For previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can, however, use the stored procedure and SQL-DMO interfaces to setup pull subscriptions to Oracle publications.  
   
 -   If you use stored procedures to propagate changes to Subscribers (the default), be aware that the MCALL syntax is supported, but it has different behavior when the publication is from an Oracle Publisher. Typically MCALL provides a bitmap that shows which columns were updated at the Publisher. With an Oracle publication, the bitmap always shows that all columns were updated. For more information about using stored procedures, see [Specify How Changes Are Propagated for Transactional Articles](../../../2014/relational-databases/replication/specify-how-changes-are-propagated-for-transactional-articles.md).  
   
 ### Transactional Replication Feature Support  
   
--   Oracle publications do not support all of the schema options that SQL Server publications support. For more information on schema options, see [sp_addarticle &#40;Transact-SQL&#41;](../Topic/sp_addarticle%20\(Transact-SQL\).md).  
+-   Oracle publications do not support all of the schema options that SQL Server publications support. For more information on schema options, see [sp_addarticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
   
 -   Subscribers to Oracle publications cannot use immediate updating or queued updating subscriptions, or be nodes in a peer-to-peer or bidirectional topology.  
   
 -   Subscribers to Oracle publications cannot be automatically initialized from a backup.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports two types of validation: binary and rowcount. Oracle Publishers support rowcount validation. For more information, see [Validate Replicated Data](../../../2014/relational-databases/replication/validate-replicated-data.md).  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports two types of validation: binary and rowcount. Oracle Publishers support rowcount validation. For more information, see [Validate Replicated Data](../../../2014/relational-databases/replication/validate-replicated-data.md).  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] offers two snapshot formats: native bcp-mode and character-mode. Oracle Publishers support character mode snapshots.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offers two snapshot formats: native bcp-mode and character-mode. Oracle Publishers support character mode snapshots.  
   
 -   Schema changes to published Oracle tables are not supported. To make schema changes, first drop the publication, make the changes, and then re-create the publication and any subscriptions.  
   
@@ -147,19 +147,19 @@ manager: "jhubbard"
   
 -   The account under which the Snapshot Agent and Log Reader Agent make connections from the Distributor to the Publisher is specified through one of the following methods:  
   
-    -   The **@security_mode** parameter of [sp_adddistpublisher &#40;Transact-SQL&#41;](../Topic/sp_adddistpublisher%20\(Transact-SQL\).md) (you also specify values for **@login** and **@password** if Oracle Authentication is used)  
+    -   The **@security_mode** parameter of [sp_adddistpublisher &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) (you also specify values for **@login** and **@password** if Oracle Authentication is used)  
   
-    -   In the **Connect to Server** dialog box in SQL Server Management Studio, which you use when you configure the Oracle Publisher at the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributor.  
+    -   In the **Connect to Server** dialog box in SQL Server Management Studio, which you use when you configure the Oracle Publisher at the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor.  
   
-     In standard transactional replication, the account is specified with [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../Topic/sp_addpublication_snapshot%20\(Transact-SQL\).md) and [sp_addlogreader_agent &#40;Transact-SQL&#41;](../Topic/sp_addlogreader_agent%20\(Transact-SQL\).md).  
+     In standard transactional replication, the account is specified with [sp_addpublication_snapshot &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) and [sp_addlogreader_agent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md).  
   
--   The account under which the Snapshot Agent and Log Reader Agent make connections cannot be changed with [sp_changedistpublisher &#40;Transact-SQL&#41;](../Topic/sp_changedistpublisher%20\(Transact-SQL\).md) or through a property sheet, but the password can be changed.  
+-   The account under which the Snapshot Agent and Log Reader Agent make connections cannot be changed with [sp_changedistpublisher &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md) or through a property sheet, but the password can be changed.  
   
--   If you specify a value of 1 (Windows Integrated Authentication) for the **@security_mode** parameter of [sp_adddistpublisher &#40;Transact-SQL&#41;](../Topic/sp_adddistpublisher%20\(Transact-SQL\).md):  
+-   If you specify a value of 1 (Windows Integrated Authentication) for the **@security_mode** parameter of [sp_adddistpublisher &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md):  
   
-    -   The process account and password used for both the Snapshot Agent and Log Reader Agent (the **@job_login** and **@job_password** parameters of [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../Topic/sp_addpublication_snapshot%20\(Transact-SQL\).md) and [sp_addlogreader_agent &#40;Transact-SQL&#41;](../Topic/sp_addlogreader_agent%20\(Transact-SQL\).md)) must be the same as the account and password used to connect to the Oracle Publisher.  
+    -   The process account and password used for both the Snapshot Agent and Log Reader Agent (the **@job_login** and **@job_password** parameters of [sp_addpublication_snapshot &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) and [sp_addlogreader_agent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)) must be the same as the account and password used to connect to the Oracle Publisher.  
   
-    -   You cannot change the **@job_login** parameter through [sp_changepublication_snapshot &#40;Transact-SQL&#41;](../Topic/sp_changepublication_snapshot%20\(Transact-SQL\).md) or [sp_changelogreader_agent &#40;Transact-SQL&#41;](../Topic/sp_changelogreader_agent%20\(Transact-SQL\).md), but the password can be changed.  
+    -   You cannot change the **@job_login** parameter through [sp_changepublication_snapshot &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md) or [sp_changelogreader_agent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md), but the password can be changed.  
   
  For more information about replication security, see [Security and Protection &#40;Replication&#41;](../../../2014/relational-databases/replication/security-and-protection-replication.md).  
   

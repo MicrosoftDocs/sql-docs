@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 78d5e3b8-9320-4e4b-a025-e2de3cf7afa7
 caps.latest.revision: 8
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Built-in Collections in Expressions (Report Builder and SSRS)
@@ -21,7 +21,7 @@ manager: "mblythe"
  For more information, see [Expressions &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/expressions-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ##  <a name="Collections"></a> Understanding Built-in Collections  
  The following table lists the built-in collections available when you write an expression. Each row includes the case-sensitive programmatic name for the collection, whether you can use the Expression dialog box to interactively add a reference to the collection, an example, and a description that includes when the collection values are initialized and available for use.  
@@ -38,7 +38,7 @@ manager: "mblythe"
 |`ReportItems`|Not Displayed|`=ReportItems("Textbox1").Value`|Represents the collection of text boxes for a report item. This collection can be used to summarize items on the page for including in a page header or page footer. For more information, see [ReportItems Collection References &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/reportitems-collection-references-report-builder-and-ssrs.md).|  
   
 ##  <a name="Syntax"></a> Using Collection Syntax in an Expression  
- To refer to a collection from an expression, use standard [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] syntax for an item in a collection. The following table shows examples of collection syntax.  
+ To refer to a collection from an expression, use standard [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] syntax for an item in a collection. The following table shows examples of collection syntax.  
   
 |Syntax|Example|  
 |------------|-------------|  

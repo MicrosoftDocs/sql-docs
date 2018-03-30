@@ -12,14 +12,14 @@ ms.topic: "article"
 ms.assetid: 7b2018ce-c5f9-4f8b-bd44-4201379a584b
 caps.latest.revision: 7
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Var Function (Report Builder and SSRS)
   Returns the variance of all non-null numeric values specified by the expression, evaluated in the given scope.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## Syntax  
   

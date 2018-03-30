@@ -14,23 +14,23 @@ helpviewer_keywords:
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 caps.latest.revision: 24
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Work with Directories and Paths in FileTables
   Describes the directory structure in which the files are stored in FileTables.  
   
 ##  <a name="HowToDirectories"></a> How To: Work with Directories and Paths in FileTables  
- You can use the following 3 functions to work with FileTable directories in [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
+ You can use the following 3 functions to work with FileTable directories in [!INCLUDE[tsql](../includes/tsql-md.md)]:  
   
 |To get this result|Use this function|  
 |------------------------|-----------------------|  
-|Get the root-level UNC path for a specific FileTable or for the current database.|[FileTableRootPath &#40;Transact-SQL&#41;](../Topic/FileTableRootPath%20\(Transact-SQL\).md)|  
-|Get an absolute or relative UNC path for a file or directory in a FileTable.|[GetFileNamespacePath &#40;Transact-SQL&#41;](../Topic/GetFileNamespacePath%20\(Transact-SQL\).md)|  
-|Get the path locator ID value for the specified file or directory in a FileTable, by providing the path.|[GetPathLocator &#40;Transact-SQL&#41;](../Topic/GetPathLocator%20\(Transact-SQL\).md)|  
+|Get the root-level UNC path for a specific FileTable or for the current database.|[FileTableRootPath &#40;Transact-SQL&#41;](~/relational-databases/system-functions/filetablerootpath-transact-sql.md)|  
+|Get an absolute or relative UNC path for a file or directory in a FileTable.|[GetFileNamespacePath &#40;Transact-SQL&#41;](~/relational-databases/system-functions/getfilenamespacepath-transact-sql.md)|  
+|Get the path locator ID value for the specified file or directory in a FileTable, by providing the path.|[GetPathLocator &#40;Transact-SQL&#41;](~/relational-databases/system-functions/getpathlocator-transact-sql.md)|  
   
 ##  <a name="BestPracticeRelativePaths"></a> How to: Use Relative Paths for Portable Code  
- To keep code and applications independent of the current computer and database, avoid writing code that relies on absolute file paths. Instead, get the complete path for a file at run time by using the [FileTableRootPath &#40;Transact-SQL&#41;](../Topic/FileTableRootPath%20\(Transact-SQL\).md) and [GetFileNamespacePath &#40;Transact-SQL&#41;](../Topic/GetFileNamespacePath%20\(Transact-SQL\).md)) functions together, as shown in the following example. By default, the `GetFileNamespacePath` function returns the relative path of the file under the root path for the database.  
+ To keep code and applications independent of the current computer and database, avoid writing code that relies on absolute file paths. Instead, get the complete path for a file at run time by using the [FileTableRootPath &#40;Transact-SQL&#41;](~/relational-databases/system-functions/filetablerootpath-transact-sql.md) and [GetFileNamespacePath &#40;Transact-SQL&#41;](~/relational-databases/system-functions/getfilenamespacepath-transact-sql.md)) functions together, as shown in the following example. By default, the `GetFileNamespacePath` function returns the relative path of the file under the root path for the database.  
   
 ```tsql  
 USE database_name;  
@@ -61,7 +61,7 @@ GO
 ##  <a name="fullpath"></a> The full path to an item stored in a FileTable  
  The full path to a file or directory stored in a FileTable begins with the following elements:  
   
-1.  The share enabled for FILESTREAM file I/O access at the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance level.  
+1.  The share enabled for FILESTREAM file I/O access at the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance level.  
   
 2.  The **DIRECTORY_NAME** specified at the database level.  
   
@@ -73,12 +73,12 @@ GO
   
  This directory hierarchy forms the root of the FileTable’s file namespace. Under this directory hierarchy, the FILESTREAM data for the FileTable is stored as files, and as subdirectories which can also contain files and subdirectories.  
   
- It is important to keep in mind that the directory hierarchy created under the instance-level FILESTREAM share is a virtual directory hierarchy. This hierarchy is stored in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database and is not represented physically in the NTFS file system. All operations that access files and directories under the FILESTREAM share and in the FileTables that it contains are intercepted and handled by a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] component embedded in the file system.  
+ It is important to keep in mind that the directory hierarchy created under the instance-level FILESTREAM share is a virtual directory hierarchy. This hierarchy is stored in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database and is not represented physically in the NTFS file system. All operations that access files and directories under the FILESTREAM share and in the FileTables that it contains are intercepted and handled by a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] component embedded in the file system.  
   
 ##  <a name="roots"></a> The semantics of the root directories at the instance, database, and FileTable levels  
  This directory hierarchy observes the following semantics:  
   
--   The instance-level FILESTREAM share is configured by an administrator and stored as a property of the server. You can rename this share by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. A renaming operation does not take effect until the server is restarted.  
+-   The instance-level FILESTREAM share is configured by an administrator and stored as a property of the server. You can rename this share by using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager. A renaming operation does not take effect until the server is restarted.  
   
 -   The database-level **DIRECTORY_NAME** is null by default when you create a new database. An administrator can set or change this name by using the **ALTER DATABASE** statement. The name must be unique (in a case-insensitive comparison) in that instance.  
   
@@ -102,7 +102,7 @@ GO
 ##  <a name="alwayson"></a> Using Virtual Network Names (VNNs) with AlwaysOn Availability Groups  
  When the database that contains FILESTREAM or FileTable data belongs to an AlwaysOn availability group:  
   
--   The FILESTREAM and FileTable functions accept or return virtual network names (VNNs) instead of computer names. For more information about these functions, see [Filestream and FileTable Functions &#40;Transact-SQL&#41;](../Topic/Filestream%20and%20FileTable%20Functions%20\(Transact-SQL\).md).  
+-   The FILESTREAM and FileTable functions accept or return virtual network names (VNNs) instead of computer names. For more information about these functions, see [Filestream and FileTable Functions &#40;Transact-SQL&#41;](~/relational-databases/system-functions/filestream-and-filetable-functions-transact-sql.md).  
   
 -   All access to FILESTREAM or FileTable data through the file system APIs should use VNNs instead of computer names. For more information, see [FILESTREAM and FileTable with AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/filestream-and-filetable-with-alwayson-availability-groups-sql-server.md).  
   

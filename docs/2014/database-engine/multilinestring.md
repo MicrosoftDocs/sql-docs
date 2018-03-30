@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 95deeefe-d6c5-4a11-b347-379e4486e7b7
 caps.latest.revision: 19
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MultiLineString
@@ -92,8 +92,8 @@ SET @g.STSrid = 13;
 ```  
   
 ## See Also  
- [STLength &#40;geometry Data Type&#41;](../Topic/STLength%20\(geometry%20Data%20Type\).md)   
- [STIsClosed &#40;geometry Data Type&#41;](../Topic/STIsClosed%20\(geometry%20Data%20Type\).md)   
+ [STLength &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stlength-geometry-data-type.md)   
+ [STIsClosed &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stisclosed-geometry-data-type.md)   
  [LineString](../../2014/database-engine/linestring.md)   
  [Spatial Data &#40;SQL Server&#41;](../../2014/database-engine/spatial-data-sql-server.md)  
   

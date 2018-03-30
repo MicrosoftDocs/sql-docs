@@ -162,7 +162,7 @@ manager: "mblythe"
  Therefore, to learn the number of clusters in the model, you can take the value of NODE_CARDINALITY for the (All) node and subtract one. For example, if the model created 9 clusters, the cardinality of the model root is 10. This is because the model contains 9 cluster nodes, each with its own sequence node, plus one additional sequence node labeled cluster 10, which represents the sequences for the model.  
   
 ## Walkthrough of Structure  
- An example might help clarify how the information is stored, and how you can interpret it. For example, you can find the largest order, meaning the longest observed chain in the underlying [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)] data, by using the following query:  
+ An example might help clarify how the information is stored, and how you can interpret it. For example, you can find the largest order, meaning the longest observed chain in the underlying [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] data, by using the following query:  
   
 ```  
 USE AdventureWorksDW2012  
@@ -185,7 +185,7 @@ ORDER BY Count(*) DESC
 |SO58845|7|Sport-100|  
 |SO58845|8|Long-Sleeve Logo Jersey|  
   
- However, some customers who purchase the Mountain-500 might purchase different products. You can view all the products that follow the Mountain-500 by viewing the list of sequences in the model. The following procedures walk you through viewing these sequences by using the two viewers provided in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:  
+ However, some customers who purchase the Mountain-500 might purchase different products. You can view all the products that follow the Mountain-500 by viewing the list of sequences in the model. The following procedures walk you through viewing these sequences by using the two viewers provided in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]:  
   
 #### To view related sequences by using the Sequence Clustering viewer  
   

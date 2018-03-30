@@ -45,7 +45,7 @@ manager: "mblythe"
 |NTCanonicalUserName|40|8|Contains the Windows user name associated with the discover event. The user name is in canonical form. For example, engineering.microsoft.com/software/user.|  
 |SPID|41|1|Contains the server process ID (SPID) that uniquely identifies the user session associated with the discover event. The SPID directly corresponds to the session GUID used by XMLA.|  
 |TextData|42|9|Contains the text data associated with the event.|  
-|ServerName|43|8|Contains the name of the instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] on which the discover event occurred.|  
+|ServerName|43|8|Contains the name of the instance of [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] on which the discover event occurred.|  
 |RequestProperties|45|9|Contains the XML for Analysis (XMLA) request properties associated with the discover event.|  
   
 ## Discover End Class—Data Columns  
@@ -73,7 +73,7 @@ manager: "mblythe"
 |NTCanonicalUserName|40|8|Contains the Windows user name associated with the object permission event. The user name is in canonical form. For example, engineering.microsoft.com/software/user.|  
 |SPID|41|1|Contains the server process ID (SPID) that uniquely identifies the user session associated with the discover end event. The SPID directly corresponds to the session GUID used by XMLA.|  
 |TextData|42|9|Contains the text data associated with the event.|  
-|ServerName|43|8|Contains the name of the instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] on which the discover event occurred.|  
+|ServerName|43|8|Contains the name of the instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] on which the discover event occurred.|  
 |RequestProperties|45|9|Contains the properties in the XMLA request.|  
   
 ## See Also  

@@ -26,7 +26,7 @@ manager: "jhubbard"
 -   **Before you begin:**  [Security](#Security)  
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
- Before you begin, review the following [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online topic: [Before Installing Failover Clustering](../../2014/sql-server/install/before-installing-failover-clustering.md).  
+ Before you begin, review the following [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online topic: [Before Installing Failover Clustering](../../2014/sql-server/install/before-installing-failover-clustering.md).  
   
 ###  <a name="Security"></a> Security  
   
@@ -46,9 +46,9 @@ manager: "jhubbard"
   
 5.  Click **OK** to close the dialog box.  
   
-6.  In the right-hand pane, right-click the SQL IP Address1(failover cluster instance name) and select **Take Offline**. You will see the SQL IP Address1(failover cluster instance name), SQL Network Name(failover cluster instance name), and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] status change from Online to Offline Pending, and then to Offline.  
+6.  In the right-hand pane, right-click the SQL IP Address1(failover cluster instance name) and select **Take Offline**. You will see the SQL IP Address1(failover cluster instance name), SQL Network Name(failover cluster instance name), and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] status change from Online to Offline Pending, and then to Offline.  
   
-7.  In the right-hand pane, right-click [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and then select **Bring Online**. You will see the SQL IP Address1(failover cluster instance name), SQL Network Name(failover cluster instance name), and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] status change from Offline to Online Pending, and then to Online.  
+7.  In the right-hand pane, right-click [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], and then select **Bring Online**. You will see the SQL IP Address1(failover cluster instance name), SQL Network Name(failover cluster instance name), and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] status change from Offline to Online Pending, and then to Online.  
   
 8.  Close the Failover Cluster Manager snap-in.  
   

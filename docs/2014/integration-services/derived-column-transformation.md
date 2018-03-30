@@ -54,7 +54,7 @@ manager: "jhubbard"
   
  This transformation has one input, one regular output, and one error output.  
   
- You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer or programmatically.  
   
  For more information about the properties that you can set in the **Derived Column Transformation Editor** dialog box, see [Derived Column Transformation Editor](../../2014/integration-services/derived-column-transformation-editor.md).  
   

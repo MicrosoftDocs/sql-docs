@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Understanding the WMI Provider for Configuration Management
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provides the WMI Provider for Configuration Management. This lets you use Windows Management Instrumentation (WMI) to manage [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] services, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] client and server network settings, and server aliases. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] services, network settings, and aliases are represented by WMI objects in the root\Microsoft\SqlServer\ComputerManagement*nn* namespace of the computer. After a connection is established with the WMI provider on the specified computer, the services, network settings, and aliases can be queried using WQL or a scripting language.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the WMI Provider for Configuration Management. This lets you use Windows Management Instrumentation (WMI) to manage [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client and server network settings, and server aliases. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services, network settings, and aliases are represented by WMI objects in the root\Microsoft\SqlServer\ComputerManagement*nn* namespace of the computer. After a connection is established with the WMI provider on the specified computer, the services, network settings, and aliases can be queried using WQL or a scripting language.  
   
  The WMI Provider is an instance provider. It supplies instances of the [WMI Classes](../../../2014/database-engine/dev-guide/wmi-provider-for-configuration-management-classes.md) and supports the following asynchronous operations.  
   
@@ -42,7 +42,7 @@ manager: "jhubbard"
   
  For examples of management application using the WMI Provider for Configuration Management, see [Using WQL and Scripting Languages with the WMI Provider for Configuration Management](../../../2014/database-engine/dev-guide/using-wql-and-scripting-languages-with-the-wmi-provider.md).  
   
- For more information about programming management applications using the WMI Provider, see the WMI documentation in the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework SDK.  
+ For more information about programming management applications using the WMI Provider, see the WMI documentation in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework SDK.  
   
 ## See Also  
  [Working with the WMI Provider for Configuration Management](../../../2014/database-engine/dev-guide/working-with-the-wmi-provider-for-configuration-management.md)   

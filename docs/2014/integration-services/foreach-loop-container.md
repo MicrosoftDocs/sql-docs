@@ -25,23 +25,23 @@ manager: "jhubbard"
 # Foreach Loop Container
   The Foreach Loop container defines a repeating control flow in a package. The loop implementation is similar to **Foreach** looping structure in programming languages. In a package, looping is enabled by using a Foreach enumerator.  The Foreach Loop container repeats the control flow for each member of a specified enumerator.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides the following enumerator types:  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides the following enumerator types:  
   
 -   Foreach ADO enumerator to enumerate rows in tables. For example, you can get the rows in an ADO recordset.  
   
      The Recordset destination saves data in memory in a recordset that is stored in a package variable of `Object` data type. You typically use a Foreach Loop container with the Foreach ADO enumerator to process one row of the recordset at a time. The variable specified for the Foreach ADO enumerator must be of Object data type. For more information about the Recordeset destination, see [Use a Recordset Destination](../../2014/integration-services/use-a-recordset-destination.md).  
   
--   Foreach ADO.NET Schema Rowset enumerator to enumerate the schema information about a data source. For example, you can enumerate and get a list of the tables in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
+-   Foreach ADO.NET Schema Rowset enumerator to enumerate the schema information about a data source. For example, you can enumerate and get a list of the tables in the [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database.  
   
 -   Foreach File enumerator to enumerate files in a folder. The enumerator can traverse subfolders. For example, you can read all the files that have the *.log file name extension in the Windows folder and its subfolders.  
   
--   Foreach From Variable enumerator to enumerate the enumerable object that a specified variable contains. The enumerable object can be an array, an ADO.NET `DataTable`, an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enumerator, and so on. For example, you can enumerate the values of an array that contains the name of servers.  
+-   Foreach From Variable enumerator to enumerate the enumerable object that a specified variable contains. The enumerable object can be an array, an ADO.NET `DataTable`, an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] enumerator, and so on. For example, you can enumerate the values of an array that contains the name of servers.  
   
 -   Foreach Item enumerator to enumerate items that are collections. For example, you can enumerate the names of executables and working directories that an Execute Process task uses.  
   
 -   Foreach Nodelist enumerator to enumerate the result set of an XML Path Language (XPath) expression. For example, this expression enumerates and gets a list of all the authors in the classical period: `/authors/author[@period='classical']`.  
   
--   Foreach SMO enumerator to enumerate [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) objects. For example, you can enumerate and get a list of the views in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
+-   Foreach SMO enumerator to enumerate [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects (SMO) objects. For example, you can enumerate and get a list of the views in a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database.  
   
 -   Foreach Azure Blob enumerator to enumerate blobs in a blob container in an Azure Storage.  
   
@@ -84,9 +84,9 @@ manager: "jhubbard"
  To avoid negative consequences of nondeterminative timing of parallel execution of tasks in the loop, the package should be configured to run only one executable at a time. For example, if a package can run multiple tasks concurrently, a Foreach Loop container that enumerates files in the folder, retrieves the file names, and then uses an Execute SQL task to insert the file names into a table may incur write conflicts when two instances of the Execute SQL task attempt to write at the same time. For more information, see [Use Property Expressions in Packages](../../2014/integration-services/use-property-expressions-in-packages.md).  
   
 ## Related Tasks  
- You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer or programmatically.  
   
- For details about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click one of the following topics:  
+ For details about how to set these properties in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click one of the following topics:  
   
 -   [Configure a Foreach Loop Container](../../2014/integration-services/configure-a-foreach-loop-container.md)  
   

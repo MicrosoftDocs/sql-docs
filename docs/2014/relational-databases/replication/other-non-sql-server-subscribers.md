@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 96b8beb9-38e8-4ce4-97ca-c0f8656b73b4
 caps.latest.revision: 30
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Other Non-SQL Server Subscribers
-  For a list of non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers supported by [!INCLUDE[msCoName](../../../includes/msconame-md.md)], see [Non-SQL Server Subscribers](../../../2014/relational-databases/replication/non-sql-server-subscribers.md). This topic includes information about requirements for ODBC drivers and OLE DB providers.  
+  For a list of non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers supported by [!INCLUDE[msCoName](../../includes/msconame-md.md)], see [Non-SQL Server Subscribers](../../../2014/relational-databases/replication/non-sql-server-subscribers.md). This topic includes information about requirements for ODBC drivers and OLE DB providers.  
   
 ## ODBC Driver Requirements  
  The ODBC driver:  
   
 -   Must be ODBC level-1 compliant.  
   
--   Must be thread-safe, and for the processor architecture (Intel or Alpha) and platform (32 bit or 64 bit) on which the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributor runs.  
+-   Must be thread-safe, and for the processor architecture (Intel or Alpha) and platform (32 bit or 64 bit) on which the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor runs.  
   
 -   Must be transaction capable.  
   
@@ -57,7 +57,7 @@ manager: "jhubbard"
   
 -   `IDBProperties`  
   
- If the provider supports the **IDBInfo** interface, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] uses the interface to retrieve information such as the quoted identifier character, maximum SQL statement length, and maximum number of characters in table and column names.  
+ If the provider supports the **IDBInfo** interface, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses the interface to retrieve information such as the quoted identifier character, maximum SQL statement length, and maximum number of characters in table and column names.  
   
 ### Session Object Interfaces  
  The following interfaces are required:  
@@ -87,7 +87,7 @@ manager: "jhubbard"
   
 -   **ICommandWithParameters**  
   
- **IAccessor** is necessary to create parameter accessors. If the provider supports **IColumnRowset**, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] uses that interface to determine whether a column is an identity column.  
+ **IAccessor** is necessary to create parameter accessors. If the provider supports **IColumnRowset**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses that interface to determine whether a column is an identity column.  
   
 ### Rowset Object Interfaces  
  The following interfaces are required:  

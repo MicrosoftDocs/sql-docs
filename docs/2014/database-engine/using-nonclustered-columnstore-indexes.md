@@ -16,7 +16,7 @@ ms.author: "barbkess"
 manager: "jhubbard"
 ---
 # Using Nonclustered Columnstore Indexes
-  Describes key tasks for using a nonclustered columnstore index on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table.  
+  Describes key tasks for using a nonclustered columnstore index on a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] table.  
   
  For an overview of columnstore indexes, see [Columnstore Indexes Described](../../2014/database-engine/columnstore-indexes-described.md).  
   
@@ -29,7 +29,7 @@ manager: "jhubbard"
 -   [Change the Data in a Nonclustered Columnstore Index](../../2014/database-engine/using-nonclustered-columnstore-indexes.md#change)  
   
 ##  <a name="load"></a> Create a Nonclustered Columnstore Index  
- To load data into a nonclustered columnstore index, first load data into a traditional rowstore table stored as a heap or clustered index, and then use [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../Topic/CREATE%20COLUMNSTORE%20INDEX%20\(Transact-SQL\).md) to create a columnstore index.  
+ To load data into a nonclustered columnstore index, first load data into a traditional rowstore table stored as a heap or clustered index, and then use [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-columnstore-index-transact-sql.md) to create a columnstore index.  
   
  ![Loading data into a columnstore index](../../2014/database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "Loading data into a columnstore index")  
   

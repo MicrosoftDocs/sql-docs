@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 5892ed24-4dcb-4bf9-a8a4-a7ca898832d5
 caps.latest.revision: 20
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_802
@@ -38,9 +38,9 @@ manager: "jhubbard"
   
 1.  Verify whether other applications or services are consuming memory on this server. Reconfigure less critical applications or services to consume less memory.  
   
-2.  Start collecting performance monitor counters for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: Buffer Manager**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: Memory Manager**.  
+2.  Start collecting performance monitor counters for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]**: Buffer Manager**, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]**: Memory Manager**.  
   
-3.  Check the following [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memory configuration parameters:  
+3.  Check the following [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] memory configuration parameters:  
   
     -   **max server memory**  
   
@@ -48,19 +48,19 @@ manager: "jhubbard"
   
     -   **min memory per query**  
   
-     Notice any unusual settings and correct them as necessary. Account for increased memory requirements for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Default settings are listed in "Setting Server Configuration Options" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+     Notice any unusual settings and correct them as necessary. Account for increased memory requirements for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Default settings are listed in "Setting Server Configuration Options" in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online.  
   
 4.  Observe DBCC MEMORYSTATUS output and the way it changes when you see these error messages.  
   
 5.  Check the workload (number of concurrent sessions, currently executing queries).  
   
- The following actions may make more memory available to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+ The following actions may make more memory available to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
--   If applications besides [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are consuming resources, try stopping these applications or running them on a separate server.  
+-   If applications besides [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] are consuming resources, try stopping these applications or running them on a separate server.  
   
 -   If you have configured **max server memory,** increase the setting.  
   
- Run the following DBCC commands to free several [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memory caches.  
+ Run the following DBCC commands to free several [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] memory caches.  
   
 -   DBCC FREESYSTEMCACHE  
   

@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # View the Extended Events Targets for Registered Packages
-  Before you create a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events session, it is useful to determine what Extended Events targets are available. This task involves using Query Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to perform the following procedure.  
+  Before you create a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Extended Events session, it is useful to determine what Extended Events targets are available. This task involves using Query Editor in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to perform the following procedure.  
   
  After the statements in this procedure finish, the **Results** tab of Query Editor displays the following two columns:  
   
@@ -43,7 +43,7 @@ manager: "jhubbard"
   
 ## See Also  
  [SQL Server Extended Events Targets](../../2014/database-engine/sql-server-extended-events-targets.md)   
- [sys.dm_xe_objects &#40;Transact-SQL&#41;](../Topic/sys.dm_xe_objects%20\(Transact-SQL\).md)   
- [sys.dm_xe_packages &#40;Transact-SQL&#41;](../Topic/sys.dm_xe_packages%20\(Transact-SQL\).md)  
+ [sys.dm_xe_objects &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md)   
+ [sys.dm_xe_packages &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-xe-packages-transact-sql.md)  
   
   

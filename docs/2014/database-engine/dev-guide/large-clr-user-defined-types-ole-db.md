@@ -19,12 +19,12 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Large CLR User-Defined Types (OLE DB)
-  This topic discusses the changes to OLE DB in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client to support large common language runtime (CLR) user-defined types (UDTs).  
+  This topic discusses the changes to OLE DB in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client to support large common language runtime (CLR) user-defined types (UDTs).  
   
- For more information about support for large CLR UDTs in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, see [Large CLR User-Defined Types](../../../2014/database-engine/dev-guide/large-clr-user-defined-types.md). For a sample, see [Use Large CLR UDTs &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/use-large-clr-udts-ole-db.md).  
+ For more information about support for large CLR UDTs in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, see [Large CLR User-Defined Types](../../../2014/database-engine/dev-guide/large-clr-user-defined-types.md). For a sample, see [Use Large CLR UDTs &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/use-large-clr-udts-ole-db.md).  
   
 ## Data Format  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client uses ~0 to represent the length of values that are of unlimited size for large object (LOB) types. ~0 also represents the size of CLR UDTs that are larger than 8,000 bytes.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client uses ~0 to represent the length of values that are of unlimited size for large object (LOB) types. ~0 also represents the size of CLR UDTs that are larger than 8,000 bytes.  
   
  The following table shows data type mapping in parameters and rowsets:  
   
@@ -35,10 +35,10 @@ manager: "jhubbard"
  UDT values are represented as byte arrays. Conversions to and from hex strings are supported. Literal values are represented as hex strings with a prefix of "0x". A hex string is the textual representation of binary data in base 16. A example is a conversion from server type `varbinary(10)` to DBTYPE_STR, which results in hexadecimal representation of 20 characters where every pair of characters represents a single byte.  
   
 ## Parameter Properties  
- The DBPROPSET_SQLSERVERPARAMETER property set supports UDTs through OLE DB. For more information, see [Using User-Defined Types](../Topic/Using%20User-Defined%20Types.md).  
+ The DBPROPSET_SQLSERVERPARAMETER property set supports UDTs through OLE DB. For more information, see [Using User-Defined Types](using-user-defined-types.md).  
   
 ## Column Properties  
- The DBPROPSET_SQLSERVERCOLUMN property set supports the creation of tables through OLE DB. For more information, see [Using User-Defined Types](../Topic/Using%20User-Defined%20Types.md).  
+ The DBPROPSET_SQLSERVERCOLUMN property set supports the creation of tables through OLE DB. For more information, see [Using User-Defined Types](using-user-defined-types.md).  
   
 ## Data Type Mapping in ITableDefinition::CreateTable  
  The following information is used in `DBCOLUMNDESC` structures used by ITableDefinition::CreateTable when UDT columns are required:  
@@ -169,6 +169,6 @@ manager: "jhubbard"
  When `DataTypeCompatibility` (SSPROP_INIT_DATATYPECOMPATIBILITY) is set to "80", large UDT types appear to clients in the same way that they appear for down-level clients.  
   
 ## See Also  
- [Large CLR User-Defined Types](../Topic/Large%20CLR%20User-Defined%20Types.md)  
+ [Large CLR User-Defined Types](large-clr-user-defined-types.md)  
   
   

@@ -16,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: b0e57cb7-9b26-4b96-b76a-1f59f5f498c5
 caps.latest.revision: 15
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # View Foreign Key Properties
-  You can view the foreign key attributes of a relationship in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  You can view the foreign key attributes of a relationship in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -39,7 +39,7 @@ manager: "jhubbard"
 ###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> Permissions  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../2014/database-engine/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../2014/database-engine/metadata-visibility-configuration.md).  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   
@@ -55,7 +55,7 @@ manager: "jhubbard"
   
 #### To view the foreign key attributes of a relationship in a specific table  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -79,6 +79,6 @@ manager: "jhubbard"
     WHERE f.parent_object_id = OBJECT_ID('HumanResources.Employee');  
     ```  
   
- For more information, see [sys.foreign_keys &#40;Transact-SQL&#41;](../Topic/sys.foreign_keys%20\(Transact-SQL\).md) and [sys.foreign_key_columns &#40;Transact-SQL&#41;](../Topic/sys.foreign_key_columns%20\(Transact-SQL\).md).  
+ For more information, see [sys.foreign_keys &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-foreign-keys-transact-sql.md) and [sys.foreign_key_columns &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-foreign-key-columns-transact-sql.md).  
   
 ###  <a name="TsqlExample"></a>  

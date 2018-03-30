@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: d546a820-105a-417d-ac35-44a6d1d70ac6
 caps.latest.revision: 14
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Examining the Current Structure of the Employee Table
-  The sample [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database contains an **Employee** table in the **HumanResources** schema. To avoid changing the original table, this step makes a copy of the **Employee** table named **EmployeeDemo**. To simplify the example, you only copy five columns from the original table. Then, you query the **HumanResources.EmployeeDemo** table to review how the data is structured in a table without using the `hierarchyid` data type.  
+  The sample [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database contains an **Employee** table in the **HumanResources** schema. To avoid changing the original table, this step makes a copy of the **Employee** table named **EmployeeDemo**. To simplify the example, you only copy five columns from the original table. Then, you query the **HumanResources.EmployeeDemo** table to review how the data is structured in a table without using the `hierarchyid` data type.  
   
 ### To copy the Employee table  
   
@@ -48,7 +48,7 @@ manager: "jhubbard"
     ORDER BY MgrID, E_ID  
     ```  
   
-     [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+     [!INCLUDE[ssResult](../includes/ssresult-md.md)]  
   
     ```  
     MgrID Manager                 E_ID LoginID                  Title  

@@ -16,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: 67954419-1b61-4481-a3b9-23b4ba7a5624
 caps.latest.revision: 14
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Find the Report Definition Schema Version (SSRS)
-  A report definition file specifies the RDL namespace for the version of the report definition schema that is used to validate the rdl file. When you open an .rdl file in a report authoring environment such as Report Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] or Report Builder, if the report was created for a previous namespace, a backup file is automatically created, and the report is upgraded to the current namespace. If you save the upgraded report definition, you have saved the converted .rdl file. This is the only way to upgrade a report definition. The report definition itself is not upgraded on a report server. The compiled report is upgraded on a report server. For more information, see [Upgrade Reports](../../2014/sql-server/install/upgrade-reports.md).  
+  A report definition file specifies the RDL namespace for the version of the report definition schema that is used to validate the rdl file. When you open an .rdl file in a report authoring environment such as Report Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] or Report Builder, if the report was created for a previous namespace, a backup file is automatically created, and the report is upgraded to the current namespace. If you save the upgraded report definition, you have saved the converted .rdl file. This is the only way to upgrade a report definition. The report definition itself is not upgraded on a report server. The compiled report is upgraded on a report server. For more information, see [Upgrade Reports](../../2014/sql-server/install/upgrade-reports.md).  
   
 ### How to: Identify the RDL Schema Version of a Report  
   
@@ -37,7 +37,7 @@ manager: "mblythe"
   
 ### How to: Identify the RDL Schema Version of Report Designer  
   
-1.  Open a new project. The version of the project that you choose determines the version of the RDL schema. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], more than one schema version is supported. For more information, see [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41;](../../2014/reporting-services/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
+1.  Open a new project. The version of the project that you choose determines the version of the RDL schema. In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], more than one schema version is supported. For more information, see [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41;](../../2014/reporting-services/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
 2.  On the **Project** menu, click **Add New Item**. The **Add New Item** dialog box opens.  
   
@@ -66,7 +66,7 @@ manager: "mblythe"
   
      The .xsd file opens in the browser.  
   
-     The XML schema element specifies the schema namespace. For example, the following schema element specifies three namespaces: the targetNamespace reference that is used internally by [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], the xsd reference for the schema itself (xsd), and the report definition reference.  
+     The XML schema element specifies the schema namespace. For example, the following schema element specifies three namespaces: the targetNamespace reference that is used internally by [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], the xsd reference for the schema itself (xsd), and the report definition reference.  
   
     ```  
     <xsd:schema   

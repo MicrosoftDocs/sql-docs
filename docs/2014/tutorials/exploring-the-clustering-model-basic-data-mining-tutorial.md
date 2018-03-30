@@ -16,9 +16,9 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Exploring the Clustering Model (Basic Data Mining Tutorial)
-  The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering algorithm groups cases into clusters that contain similar characteristics. These groupings are useful for exploring data, identifying anomalies in the data, and creating predictions.  
+  The [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering algorithm groups cases into clusters that contain similar characteristics. These groupings are useful for exploring data, identifying anomalies in the data, and creating predictions.  
   
- The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Cluster Viewer provides the following tabs for use in exploring clustering mining models:  
+ The [!INCLUDE[msCoName](../includes/msconame-md.md)] Cluster Viewer provides the following tabs for use in exploring clustering mining models:  
   
 
   
@@ -43,15 +43,15 @@ manager: "jhubbard"
   
      A tooltip displays the percentage of cases that have the attribute, `Bike Buyer = 1`.  
   
-6.  Select the cluster that has the highest density, right-click the cluster, select **Rename Cluster** and type **Bike Buyers High** for later identification. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  Select the cluster that has the highest density, right-click the cluster, select **Rename Cluster** and type **Bike Buyers High** for later identification. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  Find the cluster that has the lightest shading (and the lowest density). Right-click the cluster, select **Rename Cluster** and type **Bike Buyers Low**. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+7.  Find the cluster that has the lightest shading (and the lowest density). Right-click the cluster, select **Rename Cluster** and type **Bike Buyers Low**. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 8.  Click the **Bike Buyers High** cluster and drag it to an area of the pane that will give you a clear view of its connections to the other clusters.  
   
      When you select a cluster, the lines that connect this cluster to other clusters are highlighted, so that you can easily see all the relationships for this cluster. When the cluster is not selected, you can tell by the darkness of the lines how strong the relationships are amongst all the clusters in the diagram. If the shading is light or nonexistent, the clusters are not very similar.  
   
-9. Use the slider to the left of the network, to filter out the weaker links and find the clusters with the closest relationships. The [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] marketing department might want to combine similar clusters together when determining the best method for delivering the targeted mailing.  
+9. Use the slider to the left of the network, to filter out the weaker links and find the clusters with the closest relationships. The [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] marketing department might want to combine similar clusters together when determining the best method for delivering the targeted mailing.  
   
 
   

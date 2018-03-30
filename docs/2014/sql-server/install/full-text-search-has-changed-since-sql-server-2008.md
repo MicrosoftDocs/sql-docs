@@ -16,16 +16,16 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Full-Text Search has changed since SQL Server 2008
-  Upgrade Advisor detected that full-text search is going to be upgraded. Many full-text search options and settings have changed. Therefore, when you upgrade to [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Full-Text Search, some of your settings might need modification.  
+  Upgrade Advisor detected that full-text search is going to be upgraded. Many full-text search options and settings have changed. Therefore, when you upgrade to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Full-Text Search, some of your settings might need modification.  
   
 ## Component  
- [!INCLUDE[ssDE](../../../includes/ssde-md.md)]  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## Description  
- Several full-text search features, settings and objects have been modified since [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] and many of your existing settings will not be maintained when you upgrade.  
+ Several full-text search features, settings and objects have been modified since [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and many of your existing settings will not be maintained when you upgrade.  
   
 ## Corrective Action  
- We also recommend reviewing full-text search documentation in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online for breaking changes and best practices when you upgrade to [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+ We also recommend reviewing full-text search documentation in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online for breaking changes and best practices when you upgrade to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ## External Resources  
  [Full-Text Search Backward Compatibility](../../../2014/database-engine/full-text-search-backward-compatibility.md)  

@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
 caps.latest.revision: 18
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # SQL Server and Database Encryption Keys (Database Engine)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses encryption keys to help secure data, credentials, and connection information that is stored in a server database. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has two kinds of keys: *symmetric* and *asymmetric*. Symmetric keys use the same password to encrypt and decrypt data. Asymmetric keys use one password to encrypt data (called the *public* key) and another to decrypt data (called the *private* key).  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses encryption keys to help secure data, credentials, and connection information that is stored in a server database. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has two kinds of keys: *symmetric* and *asymmetric*. Symmetric keys use the same password to encrypt and decrypt data. Asymmetric keys use one password to encrypt data (called the *public* key) and another to decrypt data (called the *private* key).  
   
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], encryption keys include a combination of public, private, and symmetric keys that are used to protect sensitive data. The symmetric key is created during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] initialization when you first start the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. The key is used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to encrypt sensitive data that is stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Public and private keys are created by the operating system and they are used to protect the symmetric key. A public and private key pair is created for each [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance that stores sensitive data in a database.  
+ In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], encryption keys include a combination of public, private, and symmetric keys that are used to protect sensitive data. The symmetric key is created during [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] initialization when you first start the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance. The key is used by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to encrypt sensitive data that is stored in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Public and private keys are created by the operating system and they are used to protect the symmetric key. A public and private key pair is created for each [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance that stores sensitive data in a database.  
   
 ## Applications for SQL Server and Database Keys  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has two primary applications for keys: a *service master key* (SMK) generated on and for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, and a *database master key* (DMK) used for a database.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has two primary applications for keys: a *service master key* (SMK) generated on and for a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance, and a *database master key* (DMK) used for a database.  
   
- The SMK is automatically generated the first time the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance is started and is used to encrypt a linked server password, credentials, and the database master key. The SMK is encrypted by using the local computer key using the Windows Data Protection API (DPAPI). The DPAPI uses a key that is derived from the Windows credentials of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account and the computer's credentials. The service master key can only be decrypted by the service account under which it was created or by a principal that has access to the machine's credentials.  
+ The SMK is automatically generated the first time the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance is started and is used to encrypt a linked server password, credentials, and the database master key. The SMK is encrypted by using the local computer key using the Windows Data Protection API (DPAPI). The DPAPI uses a key that is derived from the Windows credentials of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] service account and the computer's credentials. The service master key can only be decrypted by the service account under which it was created or by a principal that has access to the machine's credentials.  
   
  The database master key is a symmetric key that is used to protect the private keys of certificates and asymmetric keys that are present in the database. It can also be used to encrypt data, but it has length limitations that make it less practical for data than using a symmetric key.  
   
@@ -36,7 +36,7 @@ manager: "jhubbard"
 ## Managing SQL Server and Database Keys  
  Managing encryption keys consists of creating new database keys, creating a backup of the server and database keys, and knowing when and how to restore, delete, or change the keys.  
   
- To manage symmetric keys, you can use the tools included in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to do the following:  
+ To manage symmetric keys, you can use the tools included in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to do the following:  
   
 -   Back up a copy of the server and database keys so that you can use them to recover a server installation, or as part of a planned migration.  
   
@@ -49,7 +49,7 @@ manager: "jhubbard"
 -   Add or remove a server instance from a server scale-out deployment where multiple servers share both a single database and the key that provides reversible encryption for that database.  
   
 ## Important Security Information  
- Accessing objects secured by the service master key requires either the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service account that was used to create the key or the computer (machine) account. That is, the computer is tied to the system where the key was created. You can change the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service account *or* the computer account without losing access to the key. However, if you change both, you will lose access to the service master key. If you lose access to the service master key without one of these two elements, you be unable to decrypt data and objects encrypted by using the original key.  
+ Accessing objects secured by the service master key requires either the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Service account that was used to create the key or the computer (machine) account. That is, the computer is tied to the system where the key was created. You can change the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Service account *or* the computer account without losing access to the key. However, if you change both, you will lose access to the service master key. If you lose access to the service master key without one of these two elements, you be unable to decrypt data and objects encrypted by using the original key.  
   
  Connections secured with the service master key cannot be restored without the service master key.  
   
@@ -63,7 +63,7 @@ manager: "jhubbard"
  Provides a brief explanation for the service master key and its best practices.  
   
  [Extensible Key Management &#40;EKM&#41;](../../2014/database-engine/extensible-key-management-ekm.md)  
- Explains how to use third-party key management systems with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Explains how to use third-party key management systems with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## Related Tasks  
  [Back Up the Service Master Key](../../2014/database-engine/back-up-the-service-master-key.md)  
@@ -83,9 +83,9 @@ manager: "jhubbard"
  [Enable TDE Using EKM](../../2014/database-engine/enable-tde-using-ekm.md)  
   
 ## Related Content  
- [CREATE MASTER KEY &#40;Transact-SQL&#41;](../Topic/CREATE%20MASTER%20KEY%20\(Transact-SQL\).md)  
+ [CREATE MASTER KEY &#40;Transact-SQL&#41;](~/t-sql/statements/create-master-key-transact-sql.md)  
   
- [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../Topic/ALTER%20SERVICE%20MASTER%20KEY%20\(Transact-SQL\).md)  
+ [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](~/t-sql/statements/alter-service-master-key-transact-sql.md)  
   
  [Restore a Database Master Key](../../2014/database-engine/restore-a-database-master-key.md)  
   

@@ -65,7 +65,7 @@ manager: "mblythe"
   
  Attributes in the [CubeDimension](../../../2014/analysis-services/dev-guide/cubedimension-data-type-assl.md) element that are not explicitly included in the [Attributes](../../../2014/analysis-services/dev-guide/attributes-element-assl.md) collection become part of the collection with default values assigned to them. After attributes are added to the collection, the attributes can be returned by the [Discover](../../../2014/analysis-services/dev-guide/discover-method-xmla.md) method.  
   
- The [AggregationUsage](../../../2014/analysis-services/dev-guide/aggregationusage-element-assl.md) element controls how [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] automatically designs aggregations for the attribute. The `AggregationUsage` element does not constrain any aggregations that are manually created for the cube.  
+ The [AggregationUsage](../../../2014/analysis-services/dev-guide/aggregationusage-element-assl.md) element controls how [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] automatically designs aggregations for the attribute. The `AggregationUsage` element does not constrain any aggregations that are manually created for the cube.  
   
  The corresponding element in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.CubeAttribute>.  
   

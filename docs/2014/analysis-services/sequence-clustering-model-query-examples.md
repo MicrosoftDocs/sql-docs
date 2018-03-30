@@ -179,7 +179,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetNodeGraph
 SELECT * FROM [Sequence Clustering].SAMPLE_CASES WHERE IsInNode('12')  
 ```  
   
- For more information, see [SELECT FROM &#60;model&#62;.SAMPLE_CASES &#40;DMX&#41;](../Topic/SELECT%20FROM%20%3Cmodel%3E.SAMPLE_CASES%20\(DMX\).md).  
+ For more information, see [SELECT FROM &#60;model&#62;.SAMPLE_CASES &#40;DMX&#41;](~/dmx/select-from-model-dmx.md).  
   
 #### Cluster Characteristics and Cluster Discrimination  
  The **Cluster Characteristics** tab summarizes the main attributes of each cluster, ranked by probability. You can find out how many cases belong to a cluster, and what the distribution of cases is like in the cluster: Each characteristic has certain support. To see the characteristics of a particular cluster, you must know the ID of the cluster.  
@@ -210,10 +210,10 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterDi
  However, you can use the DMX queries described in Example 2 of the section, [Content Queries](#bkmk_ContentQueries), to retrieve probabilities and states for sequences or for individual transitions.  
   
 ## Using the Model to Make Predictions  
- Prediction queries on a sequence clustering model can use many of the prediction functions that are used with other clustering models. In addition, you can use the special prediction function, [PredictSequence &#40;DMX&#41;](../Topic/PredictSequence%20\(DMX\).md), to make recommendations or to predict next states.  
+ Prediction queries on a sequence clustering model can use many of the prediction functions that are used with other clustering models. In addition, you can use the special prediction function, [PredictSequence &#40;DMX&#41;](~/dmx/predictsequence-dmx.md), to make recommendations or to predict next states.  
   
 ###  <a name="bkmk_Query4"></a> Sample Query 4: Predict Next State or States  
- You can use the [PredictSequence &#40;DMX&#41;](../Topic/PredictSequence%20\(DMX\).md) function to predict the next most likely state, given a value. You can also predict multiple next states: for example, you can return a list of the top three products that a customer is likely to purchase, to present a list of recommendations.  
+ You can use the [PredictSequence &#40;DMX&#41;](~/dmx/predictsequence-dmx.md) function to predict the next most likely state, given a value. You can also predict multiple next states: for example, you can return a list of the top three products that a customer is likely to purchase, to present a list of recommendations.  
   
  The following sample query is a singleton prediction query that returns the top five predictions, together with their probability. Because the model includes a nested table, you must use the nested table, `[v Assoc Seq Line Items]`, as the column reference when making predictions. Also, when you supply values as input, you must join both the case table and the nested table columns, as shown by the nested SELECT statements.  
   
@@ -247,27 +247,27 @@ AS t
  The values in rows 6 and 7 are placeholders. When you reach the end of the chain of possible transitions, rather than terminating the prediction results, the value that was passed as an input is added to the results. For example, if you increased the number of predictions to 20, the values for rows 6-20 would all be the same, All-Purpose Bike Stand.  
   
 ## Function List  
- All [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithms support a common set of functions. However, the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering algorithm supports the additional functions that are listed in the following table.  
+ All [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithms support a common set of functions. However, the [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Clustering algorithm supports the additional functions that are listed in the following table.  
   
 |||  
 |-|-|  
 |Prediction Function|Usage|  
-|[Cluster &#40;DMX&#41;](../Topic/Cluster%20\(DMX\).md)|Returns the cluster that is most likely to contain the input case|  
-|[ClusterDistance &#40;DMX&#41;](../Topic/ClusterDistance%20\(DMX\).md)|Returns the distance of the input case from the specified cluster, or if no cluster is specified, the distance of the input case from the most likely cluster.<br /><br /> This function can be used with any kind of clustering model (EM, K-Means, etc.), but the results differ depending on the algorithm.|  
-|[ClusterProbability &#40;DMX&#41;](../Topic/ClusterProbability%20\(DMX\).md)|Returns the probability that the input case belongs to the specified cluster.|  
-|[IsInNode &#40;DMX&#41;](../Topic/IsInNode%20\(DMX\).md)|Indicates whether the specified node contains the current case.|  
-|[PredictAdjustedProbability &#40;DMX&#41;](../Topic/PredictAdjustedProbability%20\(DMX\).md)|Returns the adjusted probability of a specified state.|  
-|[PredictAssociation &#40;DMX&#41;](../Topic/PredictAssociation%20\(DMX\).md)|Predicts associative membership.|  
-|[PredictCaseLikelihood &#40;DMX&#41;](../Topic/PredictCaseLikelihood%20\(DMX\).md)|Returns the likelihood that an input case will fit in the existing model.|  
-|[PredictHistogram &#40;DMX&#41;](../Topic/PredictHistogram%20\(DMX\).md)|Returns a table that represents a histogram for the prediction of a given column.|  
-|[PredictNodeId &#40;DMX&#41;](../Topic/PredictNodeId%20\(DMX\).md)|Returns the Node_ID of the node to which the case is classified.|  
-|[PredictProbability &#40;DMX&#41;](../Topic/PredictProbability%20\(DMX\).md)|Returns the probability for a specified state.|  
-|[PredictSequence &#40;DMX&#41;](../Topic/PredictSequence%20\(DMX\).md)|Predicts future sequence values for a specified set of sequence data.|  
-|[PredictStdev &#40;DMX&#41;](../Topic/PredictStdev%20\(DMX\).md)|Returns the predicted standard deviation for the specified column.|  
-|[PredictSupport &#40;DMX&#41;](../Topic/PredictSupport%20\(DMX\).md)|Returns the support value for a specified state.|  
-|[PredictVariance &#40;DMX&#41;](../Topic/PredictVariance%20\(DMX\).md)|Returns the variance of a specified column.|  
+|[Cluster &#40;DMX&#41;](~/dmx/cluster-dmx.md)|Returns the cluster that is most likely to contain the input case|  
+|[ClusterDistance &#40;DMX&#41;](~/dmx/clusterdistance-dmx.md)|Returns the distance of the input case from the specified cluster, or if no cluster is specified, the distance of the input case from the most likely cluster.<br /><br /> This function can be used with any kind of clustering model (EM, K-Means, etc.), but the results differ depending on the algorithm.|  
+|[ClusterProbability &#40;DMX&#41;](~/dmx/clusterprobability-dmx.md)|Returns the probability that the input case belongs to the specified cluster.|  
+|[IsInNode &#40;DMX&#41;](~/dmx/isinnode-dmx.md)|Indicates whether the specified node contains the current case.|  
+|[PredictAdjustedProbability &#40;DMX&#41;](~/dmx/predictadjustedprobability-dmx.md)|Returns the adjusted probability of a specified state.|  
+|[PredictAssociation &#40;DMX&#41;](~/dmx/predictassociation-dmx.md)|Predicts associative membership.|  
+|[PredictCaseLikelihood &#40;DMX&#41;](~/dmx/predictcaselikelihood-dmx.md)|Returns the likelihood that an input case will fit in the existing model.|  
+|[PredictHistogram &#40;DMX&#41;](~/dmx/predicthistogram-dmx.md)|Returns a table that represents a histogram for the prediction of a given column.|  
+|[PredictNodeId &#40;DMX&#41;](~/dmx/predictnodeid-dmx.md)|Returns the Node_ID of the node to which the case is classified.|  
+|[PredictProbability &#40;DMX&#41;](~/dmx/predictprobability-dmx.md)|Returns the probability for a specified state.|  
+|[PredictSequence &#40;DMX&#41;](~/dmx/predictsequence-dmx.md)|Predicts future sequence values for a specified set of sequence data.|  
+|[PredictStdev &#40;DMX&#41;](~/dmx/predictstdev-dmx.md)|Returns the predicted standard deviation for the specified column.|  
+|[PredictSupport &#40;DMX&#41;](~/dmx/predictsupport-dmx.md)|Returns the support value for a specified state.|  
+|[PredictVariance &#40;DMX&#41;](~/dmx/predictvariance-dmx.md)|Returns the variance of a specified column.|  
   
- For a list of the functions that are common to all [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithms, see [General Prediction Functions &#40;DMX&#41;](../Topic/General%20Prediction%20Functions%20\(DMX\).md). For the syntax of specific functions, see [Data Mining Extensions &#40;DMX&#41; Function Reference](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Function%20Reference.md).  
+ For a list of the functions that are common to all [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithms, see [General Prediction Functions &#40;DMX&#41;](~/dmx/general-prediction-functions-dmx.md). For the syntax of specific functions, see [Data Mining Extensions &#40;DMX&#41; Function Reference](~/dmx/data-mining-extensions-dmx-function-reference.md).  
   
 ## See Also  
  [Data Mining Queries](../../2014/analysis-services/data-mining-queries.md)   

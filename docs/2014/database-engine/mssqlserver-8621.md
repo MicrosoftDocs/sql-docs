@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 67f59865-becd-4999-8bb0-90aedd7effbf
 caps.latest.revision: 15
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_8621
@@ -31,11 +31,11 @@ manager: "jhubbard"
 |Message Text|The query processor ran out of stack space during query optimization. Please simplify the query.|  
   
 ## Explanation  
- The size of the expanded query is the most likely cause of the error. The expanded query substitutes into the original query the definitions of each of the views, computed columns, [!INCLUDE[tsql](../../includes/tsql-md.md)] functions, and common table expressions it references, as well as cascading actions like updating secondary indexes, views, and triggers.  
+ The size of the expanded query is the most likely cause of the error. The expanded query substitutes into the original query the definitions of each of the views, computed columns, [!INCLUDE[tsql](../includes/tsql-md.md)] functions, and common table expressions it references, as well as cascading actions like updating secondary indexes, views, and triggers.  
   
  Most likely the query is large in some dimension; for example, the number of tables referenced by view definitions, or a very large scalar expression.  
   
 ## User Action  
- Simplify the query by breaking the query into multiple queries along the largest dimension. First remove any query elements that are not really necessary, then try adding a temp table and splitting the query in two.  Merely moving a part of the query to a subquery, function, or common table expression is insufficient because they get recombined by the [!INCLUDE[tsql](../../includes/tsql-md.md)] compiler.  
+ Simplify the query by breaking the query into multiple queries along the largest dimension. First remove any query elements that are not really necessary, then try adding a temp table and splitting the query in two.  Merely moving a part of the query to a subquery, function, or common table expression is insufficient because they get recombined by the [!INCLUDE[tsql](../includes/tsql-md.md)] compiler.  
   
   

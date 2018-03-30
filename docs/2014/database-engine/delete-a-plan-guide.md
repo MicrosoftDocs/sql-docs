@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Delete a Plan Guide
-  You can delete (drop) a plan guide in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Using [!INCLUDE[tsql](../../includes/tsql-md.md)], you can also delete all of the plan guides in a database.  
+  You can delete (drop) a plan guide in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)]. Using [!INCLUDE[tsql](../includes/tsql-md.md)], you can also delete all of the plan guides in a database.  
   
  **In This Topic**  
   
@@ -55,7 +55,7 @@ manager: "jhubbard"
   
 #### To delete a single plan guide  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -96,7 +96,7 @@ manager: "jhubbard"
   
 #### To delete all plan guides in a database  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -109,6 +109,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [sp_control_plan_guide &#40;Transact-SQL&#41;](../Topic/sp_control_plan_guide%20\(Transact-SQL\).md).  
+ For more information, see [sp_control_plan_guide &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md).  
   
   

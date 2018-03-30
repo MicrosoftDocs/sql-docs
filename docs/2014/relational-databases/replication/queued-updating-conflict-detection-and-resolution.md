@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 084ac587-25e7-4bd0-a385-556bbe07d02f
 caps.latest.revision: 38
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Queued Updating Conflict Detection and Resolution
@@ -52,13 +52,13 @@ manager: "jhubbard"
   
  **To set the queued updating conflict resolution policy**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Set Queued Updating Conflict Resolution Options &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Set Queued Updating Conflict Resolution Options &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)  
   
 -   Replication Transact-SQL programming: [Enable Updating Subscriptions for Transactional Publications](../../../2014/relational-databases/replication/enable-updating-subscriptions-for-transactional-publications.md)  
   
  **To view data conflicts**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [View Data Conflicts for Transactional Publications &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [View Data Conflicts for Transactional Publications &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
   
 ### Publisher Wins  
  When the conflict resolution is set to the Publisher wins, transactional consistency is maintained based on the data at the Publisher. The conflicting transaction is rolled back at the Subscriber that initiated it.  

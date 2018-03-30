@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
 caps.latest.revision: 22
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Specify Metaproperties in OPENXML
   Metaproperty attributes in an XML document are attributes that describe the properties of an XML item, such as element, attribute, or any other DOM node. These attributes do not physically exist in the XML document text. However, OPENXML provides these metaproperties for all the XML items. These metaproperties allow you to extract information, such as local positioning and namespace information, of XML nodes. This information provides you with more details than are apparent in the textual representation.  
   
- You can map these metaproperties to the rowset columns in an OPENXML statement by using the *ColPattern* parameter. The columns will contain the values of the metaproperties to which they are mapped. For more information about the syntax of OPENXML, see [OPENXML &#40;Transact-SQL&#41;](../Topic/OPENXML%20\(Transact-SQL\).md).  
+ You can map these metaproperties to the rowset columns in an OPENXML statement by using the *ColPattern* parameter. The columns will contain the values of the metaproperties to which they are mapped. For more information about the syntax of OPENXML, see [OPENXML &#40;Transact-SQL&#41;](~/t-sql/functions/openxml-transact-sql.md).  
   
  To access the metaproperty attributes, a namespace that is specific to SQL Server is provided. This namespace, **urn:schemas-microsoft-com:xml-metaprop** allows the user to access the metaproperty attributes. If the result of an OPENXML query is returned in an edge table format, the edge table contains one column for each metaproperty attribute, except the **xmltext** metaproperty.  
   
@@ -210,7 +210,7 @@ O4    1996-01-20 00:00:00.000     <Order amount="10000"/>
 ```  
   
 ## See Also  
- [OPENXML &#40;Transact-SQL&#41;](../Topic/OPENXML%20\(Transact-SQL\).md)   
+ [OPENXML &#40;Transact-SQL&#41;](~/t-sql/functions/openxml-transact-sql.md)   
  [OPENXML &#40;SQL Server&#41;](../../2014/database-engine/openxml-sql-server.md)  
   
   

@@ -22,14 +22,14 @@ manager: "jhubbard"
   
  To learn more about this wizard, see [SQL Server Import and Export Wizard](../../2014/integration-services/sql-server-import-and-export-wizard.md). To learn about the options for starting the wizard, and about the permissions required to run the wizard successfully, see [Run the SQL Server Import and Export Wizard](../../2014/integration-services/run-the-sql-server-import-and-export-wizard.md).  
   
- The purpose of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard is to copy data from a source to a destination. The wizard can also create a destination database and destination tables for you. However, if you have to copy multiple databases or tables, or other kinds of database objects, you should use the Copy Database Wizard instead. For more information, see [Use the Copy Database Wizard](../../2014/database-engine/use-the-copy-database-wizard.md).  
+ The purpose of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Import and Export Wizard is to copy data from a source to a destination. The wizard can also create a destination database and destination tables for you. However, if you have to copy multiple databases or tables, or other kinds of database objects, you should use the Copy Database Wizard instead. For more information, see [Use the Copy Database Wizard](../../2014/database-engine/use-the-copy-database-wizard.md).  
   
 ## Options  
  **Data Source**  
- Choose the data provider that matches the data storage format of the source. There may be more than one provider available for your data source. For example, with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] you can use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, the .NET Framework Data Provider for SQL Server, or the Microsoft OLE DB Provider for SQL Server.  
+ Choose the data provider that matches the data storage format of the source. There may be more than one provider available for your data source. For example, with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] you can use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client, the .NET Framework Data Provider for SQL Server, or the Microsoft OLE DB Provider for SQL Server.  
   
 > [!NOTE]  
->  If the data source is [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007 or [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 2007, the data source requires a different data source provider than earlier versions of Excel or Access. For more information, see [Connect to an Excel Workbook](../../2014/integration-services/connect-to-an-excel-workbook.md) and [Connect to an Access Database](../../2014/integration-services/connect-to-an-access-database.md).  
+>  If the data source is [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel 2007 or [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Access 2007, the data source requires a different data source provider than earlier versions of Excel or Access. For more information, see [Connect to an Excel Workbook](../../2014/integration-services/connect-to-an-excel-workbook.md) and [Connect to an Access Database](../../2014/integration-services/connect-to-an-access-database.md).  
   
  The **Data Source** property has a variable number of options, which depend on the providers installed on the computer. The following tables list the options for some frequently used destinations. For other providers, see the provider-specific documentation.  
   
@@ -41,25 +41,25 @@ manager: "jhubbard"
  Type the name of the server that contains the data, or choose a server from the list.  
   
  **Use Windows Authentication**  
- Specify whether the package should use [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Authentication to log in to the database. Windows Authentication is recommended for better security.  
+ Specify whether the package should use [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows Authentication to log in to the database. Windows Authentication is recommended for better security.  
   
  **Use SQL Server Authentication**  
- Specify whether the package should use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication to log in to the database. If you use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, you must provide a user name and password.  
+ Specify whether the package should use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication to log in to the database. If you use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication, you must provide a user name and password.  
   
  **User name**  
- Specify a user name for the database connection when you are using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.  
+ Specify a user name for the database connection when you are using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication.  
   
  **Password**  
- Provide the password for the database connection when you are using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.  
+ Provide the password for the database connection when you are using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication.  
   
  **Database**  
- Select from the list of databases on the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Select from the list of databases on the specified instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **Refresh**  
  Restore the list of available databases by clicking **Refresh**.  
   
 ### Data Source = .NET Framework Data Provider for SQL Server  
- This page presents an alphabetical list of options for the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The most important options are listed in the following table.  
+ This page presents an alphabetical list of options for the [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. The most important options are listed in the following table.  
   
  **Data Source**  
  Type the name of the server that contains the data, or choose a server from the list.  
@@ -68,15 +68,15 @@ manager: "jhubbard"
  Type the name of the source database.  
   
  **Integrated Security**  
- Specify `True` to connect by using Windows integrated authentication, which is recommended, or `False` to connect by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. If you specify `False`, you must enter a user ID and password. The default value is `False`.  
+ Specify `True` to connect by using Windows integrated authentication, which is recommended, or `False` to connect by using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication. If you specify `False`, you must enter a user ID and password. The default value is `False`.  
   
  **User ID**  
- Specify a user name for the database connection when you are using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.  
+ Specify a user name for the database connection when you are using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication.  
   
  **Password**  
- Provide the password for the database connection when you are using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.  
+ Provide the password for the database connection when you are using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication.  
   
- The additional options that are listed when you select this provider are not required to connect successfully to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] source database. For a description of these additional options, see the documentation for the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Software Development Kit.  
+ The additional options that are listed when you select this provider are not required to connect successfully to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] source database. For a description of these additional options, see the documentation for the [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in the [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] Software Development Kit.  
   
 ### Data Source = Microsoft Excel  
   
@@ -93,7 +93,7 @@ manager: "jhubbard"
  Select the version of Excel that the source data is stored in.  
   
 > [!NOTE]  
->  When you import data from a [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] source, the wizard uses the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Excel Source component. For information about usage considerations and known issues, see [Excel Source](../../2014/integration-services/excel-source.md).  
+>  When you import data from a [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] source, the wizard uses the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Excel Source component. For information about usage considerations and known issues, see [Excel Source](../../2014/integration-services/excel-source.md).  
   
 ### Data Source = Microsoft Access  
   

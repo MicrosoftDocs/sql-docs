@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 194e6679-890d-4a3e-a756-130d32ef7e29
 caps.latest.revision: 6
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Line Charts (Report Builder and SSRS)
@@ -23,7 +23,7 @@ manager: "mblythe"
  ![Line chart](../../2014/reporting-services/media/rs-linechart.gif "Line chart")  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## Variations  
   

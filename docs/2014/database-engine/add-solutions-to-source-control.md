@@ -19,9 +19,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Add Solutions to Source Control
-  When you add a solution to source control, you usually want to add the entire solution and all the projects it contains. You can use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to add a solution to source control.  
+  When you add a solution to source control, you usually want to add the entire solution and all the projects it contains. You can use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to add a solution to source control.  
   
- A [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] project resides completely on your local disk. You edit, save, and build projects locally. After adding the project to source control, you can use the **Check Out** command to check the project's files out of source control.  
+ A [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] project resides completely on your local disk. You edit, save, and build projects locally. After adding the project to source control, you can use the **Check Out** command to check the project's files out of source control.  
   
 ### To add a solution to source control  
   

@@ -20,13 +20,13 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # TransactionLog Event Class
-  Use the TransactionLog event class to monitor activity in the transaction logs in an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
+  Use the TransactionLog event class to monitor activity in the transaction logs in an instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)].  
   
 ## TransactionLog Event Class Data Columns  
   
 |Data column name|Data type|Description|Column ID|Filterable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|ApplicationName|`nvarchar`|Name of the client application that created the connection to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This column is populated with the values passed by the application rather than the displayed name of the program.|10|Yes|  
+|ApplicationName|`nvarchar`|Name of the client application that created the connection to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. This column is populated with the values passed by the application rather than the displayed name of the program.|10|Yes|  
 |BinaryData|`image`|Binary value dependent on the event class captured in the trace.|2|Yes|  
 |ClientProcessID|`int`|ID assigned by the host computer to the process where the client application is running. This data column is populated if the client provides the client process.|9|Yes|  
 |DatabaseID|`int`|ID of the database where the data is being logged.|3|Yes|  
@@ -39,20 +39,20 @@ manager: "jhubbard"
 |IndexID|`int`|ID for the index on the object affected by the event. To determine the index ID for an object, use the index_id column of the sys.indexes catalog view.|24|Yes|  
 |IntegerData|`int`|Integer value dependent on the event class captured in the trace.|25|Yes|  
 |IsSystem|`int`|Indicates whether the event occurred on a system process or a user process. 1 = system, 0 = user.|60|Yes|  
-|LoginName|`nvarchar`|Name of the login of the user (either [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security login or the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows login credentials in the form of DOMAIN\username).|11|Yes|  
+|LoginName|`nvarchar`|Name of the login of the user (either [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] security login or the [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows login credentials in the form of DOMAIN\username).|11|Yes|  
 |LoginSid|`image`|Security identifier (SID) of the logged-in user. You can find this information in the sys.server_principals catalog view. Each SID is unique for each login in the server.|41|Yes|  
 |NTDomainName|`nvarchar`|Windows domain to which the user belongs.|7|Yes|  
 |NTUserName|`nvarchar`|Windows user name.|6|Yes|  
 |ObjectID|`int`|System-assigned ID of the object.|22|Yes|  
 |RequestID|`int`|ID of the request containing the statement.|49|Yes|  
-|ServerName|`nvarchar`|Name of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] being traced.|26|No|  
-|SessionLoginName|`nvarchar`|Login name of the user who originated the session. For example, if you connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using Login1 and execute a statement as Login2, SessionLoginName shows Login1 and LoginName shows Login2. This column displays both [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Windows logins.|64|Yes|  
+|ServerName|`nvarchar`|Name of the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] being traced.|26|No|  
+|SessionLoginName|`nvarchar`|Login name of the user who originated the session. For example, if you connect to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using Login1 and execute a statement as Login2, SessionLoginName shows Login1 and LoginName shows Login2. This column displays both [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and Windows logins.|64|Yes|  
 |SPID|`int`|ID of the session on which the event occurred.|12|Yes|  
 |StartTime|`datetime`|Time at which the event started, if available.|14|Yes|  
 |TransactionID|`bigint`|System-assigned ID of the transaction.|4|Yes|  
   
 ## See Also  
- [sp_trace_setevent &#40;Transact-SQL&#41;](../Topic/sp_trace_setevent%20\(Transact-SQL\).md)   
+ [sp_trace_setevent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [The Transaction Log &#40;SQL Server&#41;](../../2014/database-engine/the-transaction-log-sql-server.md)  
   
   

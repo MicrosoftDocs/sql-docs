@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: e0137273-85b8-45f0-83e5-38a50481768f
 caps.latest.revision: 38
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Report Manager F1 Help
-  The following topics provide page-level help for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Report Manager. There is one topic for each page in the application. Not all pages may be available. Security settings determine the pages that you can access. To access these topics from within Report Manager, click **Help** on the main toolbar.  
+  The following topics provide page-level help for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Report Manager. There is one topic for each page in the application. Not all pages may be available. Security settings determine the pages that you can access. To access these topics from within Report Manager, click **Help** on the main toolbar.  
   
 ## In This Section  
   
@@ -98,7 +98,7 @@ manager: "mblythe"
   
 -   [View Page (Resources)](../../2014/reporting-services/view-page-resources-report-manager.md)  
   
- For more information about Report Manager and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], see [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online on MSDN.  
+ For more information about Report Manager and [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], see [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online on MSDN.  
   
 ## See Also  
  [Report Server Content Management &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-server-content-management-ssrs-native-mode.md)   

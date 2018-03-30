@@ -16,7 +16,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # XTP Transactions
-  The XTP Transactions performance object contains counters related to XTP engine transactions in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  The XTP Transactions performance object contains counters related to XTP engine transactions in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  This table describes the **XTP Transactions** counters.  
   

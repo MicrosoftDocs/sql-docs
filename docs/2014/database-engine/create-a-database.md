@@ -16,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: 4c4beea2-6cbc-4352-9db6-49ea8130bb64
 caps.latest.revision: 35
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Create a Database
-  This topic describes how to create a database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  This topic describes how to create a database in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -44,7 +44,7 @@ manager: "jhubbard"
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
--   A maximum of 32,767 databases can be specified on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   A maximum of 32,767 databases can be specified on an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ###  <a name="Prerequisites"></a> Prerequisites  
   
@@ -61,13 +61,13 @@ manager: "jhubbard"
 ####  <a name="Permissions"></a> Permissions  
  Requires CREATE DATABASE permission in the master database, or requires CREATE ANY DATABASE, or ALTER ANY DATABASE permission.  
   
- To maintain control over disk use on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], permission to create databases is typically limited to a few login accounts.  
+ To maintain control over disk use on an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], permission to create databases is typically limited to a few login accounts.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   
 #### To create a database  
   
-1.  In **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and then expand that instance.  
+1.  In **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] and then expand that instance.  
   
 2.  Right-click **Databases**, and then click **New Database**.  
   
@@ -78,7 +78,7 @@ manager: "jhubbard"
 5.  To change the owner name, click (**…**) to select another owner.  
   
     > [!NOTE]  
-    >  The **Use full-text indexing** option is always checked and dimmed because, beginning in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], all user databases are full-text enabled.  
+    >  The **Use full-text indexing** option is always checked and dimmed because, beginning in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], all user databases are full-text enabled.  
   
 6.  To change the default values of the primary data and transaction log files, in the **Database files** grid, click the appropriate cell and enter the new value. For more information, see [Add Data or Log Files to a Database](../../2014/database-engine/add-data-or-log-files-to-a-database.md).  
   
@@ -86,7 +86,7 @@ manager: "jhubbard"
   
 8.  To change the recovery model, select the **Options** page and select a recovery model from the list.  
   
-9. To change database options, select the **Options** page, and then modify the database options. For a description of each option, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md).  
+9. To change database options, select the **Options** page, and then modify the database options. For a description of each option, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-set-options.md).  
   
 10. To add a new filegroup, click the **Filegroups** page. Click **Add** and then enter the values for the filegroup.  
   
@@ -102,7 +102,7 @@ manager: "jhubbard"
   
 #### To create a database  
   
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
@@ -127,12 +127,12 @@ LOG ON
 GO  
 ```  
   
- For more examples, see [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../Topic/CREATE%20DATABASE%20\(SQL%20Server%20Transact-SQL\).md).  
+ For more examples, see [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](~/t-sql/statements/create-database-sql-server-transact-sql.md).  
   
 ## See Also  
  [Database Files and Filegroups](../../2014/database-engine/database-files-and-filegroups.md)   
  [Database Detach and Attach &#40;SQL Server&#41;](../../2014/database-engine/database-detach-and-attach-sql-server.md)   
- [ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20\(Transact-SQL\).md)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)   
  [Add Data or Log Files to a Database](../../2014/database-engine/add-data-or-log-files-to-a-database.md)  
   
   

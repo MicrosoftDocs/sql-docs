@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: c738e549-d7e7-4211-9ec3-064ac140af7c
 caps.latest.revision: 24
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # SQL Server, General Statistics Object
-  The **SQLServer:General Statistics** object in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides counters to monitor general server-wide activity, such as the number of current connections and the number of users connecting and disconnecting per second from computers running an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This can be useful when you are working on large online transaction processing (OLTP) type systems where there are many clients connecting and disconnecting from an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  The **SQLServer:General Statistics** object in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provides counters to monitor general server-wide activity, such as the number of current connections and the number of users connecting and disconnecting per second from computers running an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. This can be useful when you are working on large online transaction processing (OLTP) type systems where there are many clients connecting and disconnecting from an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- This table describes the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **General Statistics** counters.  
+ This table describes the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **General Statistics** counters.  
   
 |SQL Server General Statistics counters|Description|  
 |--------------------------------------------|-----------------|  
@@ -29,7 +29,7 @@ manager: "jhubbard"
 |**Connection resets/sec**|Total number of logins started from the connection pool.|  
 |**Event Notifications Delayed Drop**|Number of event notifications waiting to be dropped by a system thread.|  
 |**HTTP Authenticated Requests**|Number of authenticated HTTP requests started per second.|  
-|**Logical Connections**|Number of logical connections to the system.<br /><br /> The main purpose of logical connections is to service multiple active result sets (MARS) requests. For MARS requests, every time that an application makes a connection to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], there may be more than one logical connection that corresponds to a physical connection.<br /><br /> When MARS is not used, the ratio between physical and logical connections is 1:1. Therefore, every time that an application makes a connection to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], logical connections will increase by 1.|  
+|**Logical Connections**|Number of logical connections to the system.<br /><br /> The main purpose of logical connections is to service multiple active result sets (MARS) requests. For MARS requests, every time that an application makes a connection to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], there may be more than one logical connection that corresponds to a physical connection.<br /><br /> When MARS is not used, the ratio between physical and logical connections is 1:1. Therefore, every time that an application makes a connection to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], logical connections will increase by 1.|  
 |**Logins/sec**|Total number of logins started per second. This does not include pooled connections.|  
 |**Logouts/sec**|Total number of logout operations started per second.|  
 |**Mars Deadlocks**|Number of MARS deadlocks detected.|  

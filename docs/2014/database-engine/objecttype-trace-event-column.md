@@ -56,7 +56,7 @@ manager: "jhubbard"
 |18002|Replication Filter Procedure|  
 |18004|Table-valued SQL Function|  
 |18259|Server Role|  
-|18263|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Group|  
+|18263|[!INCLUDE[msCoName](../includes/msconame-md.md)] Windows Group|  
 |19265|Asymmetric Key|  
 |19277|Master Key|  
 |19280|Primary Key|  
@@ -102,6 +102,6 @@ manager: "jhubbard"
 |22868|Type|  
   
 ## See Also  
- [sp_trace_setevent &#40;Transact-SQL&#41;](../Topic/sp_trace_setevent%20\(Transact-SQL\).md)  
+ [sp_trace_setevent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

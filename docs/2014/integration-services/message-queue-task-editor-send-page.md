@@ -20,7 +20,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Message Queue Task Editor (Send Page)
-  Use the **Send** page of the **Message Queue Task Editor** dialog box to configure a Message Queue task to send messages from a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package.  
+  Use the **Send** page of the **Message Queue Task Editor** dialog box to configure a Message Queue task to send messages from a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package.  
   
  To learn about this task, see [Message Queue Task](../../2014/integration-services/message-queue-task.md).  
   
@@ -32,7 +32,7 @@ manager: "jhubbard"
  If you choose to use encryption, specify the name of the encryption algorithm to use. The Message Queue task can use the RC2 and RC4 algorithms. The default is **RC2**.  
   
 > [!NOTE]  
->  The RC4 algorithm is only supported for backward compatibility. New material can only be encrypted using RC4 or RC4_128 when the database is in compatibility level 90 or 100. (Not recommended.) Use a newer algorithm such as one of the AES algorithms instead. In the current release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], material encrypted using RC4 or RC4_128 can be decrypted in any compatibility level.  
+>  The RC4 algorithm is only supported for backward compatibility. New material can only be encrypted using RC4 or RC4_128 when the database is in compatibility level 90 or 100. (Not recommended.) Use a newer algorithm such as one of the AES algorithms instead. In the current release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], material encrypted using RC4 or RC4_128 can be decrypted in any compatibility level.  
   
 > [!IMPORTANT]  
 >  These are the encryption algorithms that the Message Queuing (also known as MSMQ) technology supports. Both of these encryption algorithms are now considered cryptographically weak compared to newer algorithms, which Message Queuing does not yet support. Therefore, you should consider your cryptography needs carefully when sending messages using the Message Queue task.  

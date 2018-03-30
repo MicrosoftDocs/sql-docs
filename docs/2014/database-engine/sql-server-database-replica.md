@@ -21,7 +21,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQL Server, Database Replica
-  The **SQLServer:Database Replica** performance object contains performance counters that report information about the secondary databases of an AlwaysOn availability group in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. This object is valid only on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that hosts a secondary replica.  
+  The **SQLServer:Database Replica** performance object contains performance counters that report information about the secondary databases of an AlwaysOn availability group in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. This object is valid only on an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that hosts a secondary replica.  
   
 |Counter Name|Description|View on…|  
 |------------------|-----------------|--------------|  

@@ -20,7 +20,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Mining Model Content for Time Series Models (Analysis Services - Data Mining)
-  All mining models use the same structure to store their content. This structure is defined according to the data mining content schema rowset. However, within that standard structure, the nodes that contain information are arranged in different ways to represent various kinds of trees. This topic describes how the nodes are organized, and what each node means, for mining models that are based on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series algorithm.  
+  All mining models use the same structure to store their content. This structure is defined according to the data mining content schema rowset. However, within that standard structure, the nodes that contain information are arranged in different ways to represent various kinds of trees. This topic describes how the nodes are organized, and what each node means, for mining models that are based on the [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series algorithm.  
   
  For an explanation of general mining model content that applies to all model types, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/mining-model-content-analysis-services-data-mining.md).  
   
@@ -349,7 +349,7 @@ FROM Forecasting.CONTENT
 WHERE [PARENT_UNIQUE_NAME] = ' TA00000001'  
 ```  
   
- Because this is an ARIMA tree, not an ARTXP tree, you cannot use the [IsDescendant &#40;DMX&#41;](../Topic/IsDescendant%20\(DMX\).md) function to return the child nodes of this periodic structure. Instead, you can use the attribute and node types to filter the results and return the child nodes that provide more detail about how the equation was built, including the moving averages and difference order.  
+ Because this is an ARIMA tree, not an ARTXP tree, you cannot use the [IsDescendant &#40;DMX&#41;](~/dmx/isdescendant-dmx.md) function to return the child nodes of this periodic structure. Instead, you can use the attribute and node types to filter the results and return the child nodes that provide more detail about how the equation was built, including the moving averages and difference order.  
   
 ```  
 SELECT MODEL_NAME, ATTRIBUTE_NAME, NODE_UNIQUE_NAME,  

@@ -24,7 +24,7 @@ manager: "jhubbard"
   Upgrade Advisor detected the use of outer join operators *= and =\*. These operators are not supported in 90 or later compatibility modes. When you upgrade, user databases maintain their compatibility mode. Statements that use these operators will fail.  
   
 ## Component  
- [!INCLUDE[ssDE](../../../includes/ssde-md.md)]  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## Corrective Action  
  Before you change the database compatibility mode to 90 or later, modify statements that use the outer join operators *= and =\* to use equivalent OUTER JOIN keywords. The following example shows a query that uses the `*=` operator and an equivalent query that uses the `LEFT OUTER JOIN` keywords.  
@@ -51,6 +51,6 @@ ORDER BY employee.job_id
   
 ## See Also  
  [Database Engine Upgrade Issues](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;new&#93;](../Topic/SQL%20Server%202014%20Upgrade%20Advisor%20[new].md)  
+ [SQL Server 2014 Upgrade Advisor &#91;new&#93;](~/2014/sql-server/install/sql-server-2014-upgrade-advisor.md)  
   
   

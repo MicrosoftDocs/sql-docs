@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: cac75345-2380-467d-a394-0a2140908a5a
 caps.latest.revision: 12
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Add the Report Viewer Web Part to a Web Page (Reporting Services in SharePoint Integrated Mode)
@@ -26,7 +26,7 @@ manager: "mblythe"
  You can add the Report Viewer Web Part to a Web page if you want to embed a report on that page.  
   
 > [!NOTE]  
->  Although they have identical names, the Report Viewer Web Part that is installed through the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Add-in is different from the Report Viewer Web Part that is included in the RSWebParts.cab file. The instructions in this topic are specifically for the Report Viewer Web Part that is installed through the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Add-in.  
+>  Although they have identical names, the Report Viewer Web Part that is installed through the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Add-in is different from the Report Viewer Web Part that is included in the RSWebParts.cab file. The instructions in this topic are specifically for the Report Viewer Web Part that is installed through the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Add-in.  
   
  To add a Web Part to a Web page, you must have the Add and Customize Pages permission at the site level. If you are using default security settings, this permission is granted to members of the **Owners** group who have the Full Control level of permission.  
   

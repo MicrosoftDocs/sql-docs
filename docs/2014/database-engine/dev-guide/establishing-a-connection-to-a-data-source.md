@@ -23,11 +23,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Establishing a Connection to a Data Source
-  To access the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider, the consumer must first create an instance of a data source object by calling the **CoCreateInstance** method. A unique class identifier (CLSID) identifies each OLE DB provider. For the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider, the class identifier is CLSID_SQLNCLI10. You can also use the symbol SQLNCLI_CLSID that will resolve to the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider that is used in the sqlncli.h that you reference.  
+  To access the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider, the consumer must first create an instance of a data source object by calling the **CoCreateInstance** method. A unique class identifier (CLSID) identifies each OLE DB provider. For the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider, the class identifier is CLSID_SQLNCLI10. You can also use the symbol SQLNCLI_CLSID that will resolve to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider that is used in the sqlncli.h that you reference.  
   
  The data source object exposes the **IDBProperties** interface, which the consumer uses to provide basic authentication information such as server name, database name, user ID, and password. The **IDBProperties::SetProperties** method is called to set these properties.  
   
- If there are multiple instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] running on the computer, the server name is specified as ServerName\InstanceName.  
+ If there are multiple instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] running on the computer, the server name is specified as ServerName\InstanceName.  
   
  The data source object also exposes the **IDBInitialize** interface. After the properties are set, connection to the data source is established by calling the **IDBInitialize::Initialize** method. For example:  
   

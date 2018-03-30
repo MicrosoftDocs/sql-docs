@@ -12,13 +12,13 @@ ms.topic: "article"
 ms.assetid: de4e9430-7290-4ce5-be9e-f247539460e1
 caps.latest.revision: 24
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Summary: Basic Navigation
-  The [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] design surface can be customized to your personal preference and work requirements.  
+  The [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] design surface can be customized to your personal preference and work requirements.  
   
- The following are best practices for using the [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] workspace efficiently:  
+ The following are best practices for using the [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] workspace efficiently:  
   
 -   Close windows you do not expect to use right away.  
   

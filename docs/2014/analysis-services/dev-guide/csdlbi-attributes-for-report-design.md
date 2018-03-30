@@ -17,7 +17,7 @@ ms.author: "mblythe"
 manager: "mblythe"
 ---
 # CSDLBI Attributes for Report Design
-  This section describes the attributes in the extensions to CSDL for tabular modeling that affect [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] query design.  
+  This section describes the attributes in the extensions to CSDL for tabular modeling that affect [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] query design.  
   
 ## Model Attributes  
  These attributes are defined on a sub-element of a CSDL [EntityContainer](http://msdn.microsoft.com/library/bb399169.aspx) element.  

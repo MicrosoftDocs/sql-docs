@@ -20,11 +20,11 @@ helpviewer_keywords:
 ms.assetid: 6b592582-4c35-4029-ab86-982fff47d8d6
 caps.latest.revision: 24
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # DatabaseLogonType Property (WMI MSReportServer_ConfigurationSetting)
-  Specifies whether the report server uses a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows service account, a Windows user account, or a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login to access the report server database. Read-only.  
+  Specifies whether the report server uses a [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows service account, a Windows user account, or a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] login to access the report server database. Read-only.  
   
 ## Syntax  
   
@@ -47,18 +47,18 @@ public int DatabaseLogonType;
   
 -   0 for Windows login  
   
--   1 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login  
+-   1 for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] login  
   
 -   2 to log in as a service  
   
  If you specify 0 (Windows), you must set the value in the [DatabaseLogonAccount](../../2014/reporting-services/databaselogonaccount-property-wmi-msreportserver-configurationsetting.md) property to a corresponding a valid Windows user account.  
   
- If you specify 1 (SQL Server), make sure the value of the [DatabaseLogonAccount](../../2014/reporting-services/databaselogonaccount-property-wmi-msreportserver-configurationsetting.md) corresponds to a valid [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login.  
+ If you specify 1 (SQL Server), make sure the value of the [DatabaseLogonAccount](../../2014/reporting-services/databaselogonaccount-property-wmi-msreportserver-configurationsetting.md) corresponds to a valid [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] login.  
   
- If you specify 2 (Windows service), the report server uses an [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] account and the Windows service account to access the report server database. The DatabaseLogonAccount property is ignored.  
+ If you specify 2 (Windows service), the report server uses an [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] account and the Windows service account to access the report server database. The DatabaseLogonAccount property is ignored.  
   
 ## Requirements  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../includes/ssrswminmspca-md.md)]  
   
 ## See Also  
  [MSReportServer_ConfigurationSetting Members](../../2014/reporting-services/msreportserver-configurationsetting-members.md)  

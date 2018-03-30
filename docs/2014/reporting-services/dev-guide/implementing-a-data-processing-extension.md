@@ -18,21 +18,21 @@ helpviewer_keywords:
 ms.assetid: 8dc2b44e-5ad9-411d-a29f-7213e29321a9
 caps.latest.revision: 34
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Implementing a Data Processing Extension
-  Data processing extensions in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] enable you to connect to a data source and retrieve data. They also serve as a bridge between a data source and a dataset. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data processing extensions are modeled after a subset of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] data provider interfaces.  
+  Data processing extensions in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enable you to connect to a data source and retrieve data. They also serve as a bridge between a data source and a dataset. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extensions are modeled after a subset of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] data provider interfaces.  
   
 ## In This Section  
  [Data Processing Extensions Overview](../../../2014/reporting-services/dev-guide/data-processing-extensions-overview.md)  
- Introduces how to write a custom data processing extension for [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
+ Introduces how to write a custom data processing extension for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
  [Preparing to Implement a Data Processing Extension](../../../2014/reporting-services/dev-guide/preparing-to-implement-a-data-processing-extension.md)  
- Describes the interfaces available when implementing an [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data processing extension, as well as when you are required to implement a particular interface.  
+ Describes the interfaces available when implementing an [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension, as well as when you are required to implement a particular interface.  
   
  [Creating a Data Processing Extension Library](../../../2014/reporting-services/dev-guide/creating-a-data-processing-extension-library.md)  
- Describes assigning a namespace for your [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data processing extension and compiling your data processing extension into a library DLL.  
+ Describes assigning a namespace for your [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension and compiling your data processing extension into a library DLL.  
   
  [Implementing a Connection Class for a Data Processing Extension](../../../2014/reporting-services/dev-guide/implementing-a-connection-class-for-a-data-processing-extension.md)  
  Describes the attributes of a connection and how to implement your own **Connection** class for your data processing extension.  

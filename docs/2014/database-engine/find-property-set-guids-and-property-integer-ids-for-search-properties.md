@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 7db79165-8bcc-4be6-8d40-12d44deda79f
 caps.latest.revision: 32
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Find Property Set GUIDs and Property Integer IDs for Search Properties
@@ -47,14 +47,14 @@ manager: "jhubbard"
   
  A specific file format might implement properties of three types:  
   
--   Generic properties defined by [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+-   Generic properties defined by [!INCLUDE[msCoName](../includes/msconame-md.md)].  
   
--   Category-specific properties defined by [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+-   Category-specific properties defined by [!INCLUDE[msCoName](../includes/msconame-md.md)].  
   
 -   Custom, application-specific properties defined by the software vendor.  
   
 ##  <a name="filtdump"></a> Finding Information about Available Properties by using FILTDUMP.EXE  
- To learn what properties are discovered and extracted by an installed IFilter, you can install and run the **filtdump.exe** utility, which is part of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows SDK.  
+ To learn what properties are discovered and extracted by an installed IFilter, you can install and run the **filtdump.exe** utility, which is part of the [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows SDK.  
   
  You run **filtdump.exe** from the command prompt and provide a single argument. This argument is the name of an individual file that has a file type for which an IFilter is installed. The utility displays a list of all the properties discovered by the IFilter in the document, with their property set GUIDs, integer IDs, and additional information.  
   
@@ -84,7 +84,7 @@ propID = 4
  For a complete list of Windows properties, see [Windows Properties](http://go.microsoft.com/fwlink/?LinkId=215013), also in the Windows Search documentation.  
   
 ##  <a name="examples"></a> Adding a Property to a Search Property List  
- The following example shows how to add a property to a search property list. The example uses an [ALTER SEARCH PROPERTY LIST](../Topic/ALTER%20SEARCH%20PROPERTY%20LIST%20\(Transact-SQL\).md) statement to add the `System.Author` property to a search property list named `PropertyList1`, and provides a user friendly name for the property, `Author`.  
+ The following example shows how to add a property to a search property list. The example uses an [ALTER SEARCH PROPERTY LIST](~/t-sql/statements/alter-search-property-list-transact-sql.md) statement to add the `System.Author` property to a search property list named `PropertyList1`, and provides a user friendly name for the property, `Author`.  
   
 ```  
 ALTER SEARCH PROPERTY LIST PropertyList1   

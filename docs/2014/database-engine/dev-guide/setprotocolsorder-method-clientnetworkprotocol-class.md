@@ -40,7 +40,7 @@ ProtocolOrderList
   
 ## Parts  
  *object*  
- A [ClientNetworkProtocol Class](../../../2014/database-engine/dev-guide/clientnetworkprotocol-class.md) object that represents the network protocol used by the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] client.  
+ A [ClientNetworkProtocol Class](../../../2014/database-engine/dev-guide/clientnetworkprotocol-class.md) object that represents the network protocol used by the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client.  
   
 #### Parameters  
   

@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Create a Maintenance Plan
-  This topic describes how to create a single server or multiserver maintenance plan in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Using [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], you can create these maintenance plans in one of two ways: by either using the Maintenance Plan Wizard or the design surface. The Wizard is best for creating basic maintenance plans, while creating a plan using the design surface allows you to utilize enhanced workflow.  
+  This topic describes how to create a single server or multiserver maintenance plan in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)]. Using [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], you can create these maintenance plans in one of two ways: by either using the Maintenance Plan Wizard or the design surface. The Wizard is best for creating basic maintenance plans, while creating a plan using the design surface allows you to utilize enhanced workflow.  
   
  **In This Topic**  
   
@@ -70,7 +70,7 @@ manager: "jhubbard"
   
 #### To create a maintenance plan  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -135,12 +135,12 @@ manager: "jhubbard"
   
  For more information, see:  
   
--   [sp_add_job &#40;Transact-SQL&#41;](../Topic/sp_add_job%20\(Transact-SQL\).md)  
+-   [sp_add_job &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)  
   
--   [sp_add_jobstep &#40;Transact-SQL&#41;](../Topic/sp_add_jobstep%20\(Transact-SQL\).md)  
+-   [sp_add_jobstep &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)  
   
--   [sp_add_schedule &#40;Transact-SQL&#41;](../Topic/sp_add_schedule%20\(Transact-SQL\).md)  
+-   [sp_add_schedule &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)  
   
--   [sp_attach_schedule &#40;Transact-SQL&#41;](../Topic/sp_attach_schedule%20\(Transact-SQL\).md)  
+-   [sp_attach_schedule &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
   
   

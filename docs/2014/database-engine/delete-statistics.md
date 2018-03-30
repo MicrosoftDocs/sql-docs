@@ -15,11 +15,11 @@ helpviewer_keywords:
 ms.assetid: eccce0aa-591e-4a1d-bd10-373b022f8749
 caps.latest.revision: 7
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Delete Statistics
-  You can delete (drop) statistics from tables and views in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+  You can delete (drop) statistics from tables and views in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)]  
   
  **In This Topic**  
   
@@ -68,7 +68,7 @@ manager: "jhubbard"
   
 #### To drop statistics from a table or view  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -92,6 +92,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [DROP STATISTICS &#40;Transact-SQL&#41;](../Topic/DROP%20STATISTICS%20\(Transact-SQL\).md).  
+ For more information, see [DROP STATISTICS &#40;Transact-SQL&#41;](~/t-sql/statements/drop-statistics-transact-sql.md).  
   
   

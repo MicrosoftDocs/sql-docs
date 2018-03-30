@@ -26,13 +26,13 @@ manager: "jhubbard"
   
 ## Options  
  **Update connection strings to use new provider names**  
- Update the connection strings to use the names for the following providers for the current release of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]:  
+ Update the connection strings to use the names for the following providers for the current release of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]:  
   
--   OLE DB Provider for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]  
+-   OLE DB Provider for [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client  
   
- The [!INCLUDE[ssIS](../../includes/ssis-md.md)] Package Upgrade Wizard updates only connection strings that are stored in connection managers. The wizard does not update connection strings that are constructed dynamically by using the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] expression language, or by using code in a Script task.  
+ The [!INCLUDE[ssIS](../includes/ssis-md.md)] Package Upgrade Wizard updates only connection strings that are stored in connection managers. The wizard does not update connection strings that are constructed dynamically by using the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] expression language, or by using code in a Script task.  
   
  **Validate upgrade packages**  
  Validate the upgrade packages and save only those upgrade packages that pass validation.  
@@ -45,7 +45,7 @@ manager: "jhubbard"
  Create new package IDs for the upgrade packages.  
   
  **Continue upgrade process when a package upgrade fails**  
- Specify that when a package cannot be upgraded, the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Package Upgrade Wizard continues to upgrade the remaining packages.  
+ Specify that when a package cannot be upgraded, the [!INCLUDE[ssIS](../includes/ssis-md.md)] Package Upgrade Wizard continues to upgrade the remaining packages.  
   
  **Package name conflicts**  
  Specify how the wizard should handle packages that have the same name. This option has the values listed in the following table.  

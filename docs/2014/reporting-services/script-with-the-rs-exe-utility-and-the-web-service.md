@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 0ec5ac6e-b3cf-49cd-96f6-6b4b7dc29982
 caps.latest.revision: 42
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Script with the rs.exe Utility and the Web Service
-  Developers and report server administrators can perform operations on a report server through the use of the **rs** utility (RS.exe). Using this utility, you can programmatically administer a report server using scripts written with [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
+  Developers and report server administrators can perform operations on a report server through the use of the **rs** utility (RS.exe). Using this utility, you can programmatically administer a report server using scripts written with [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)].  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] scripts can be used to run any of the Report Server Web service operations. Scripting can be used to copy security to multiple reports on a server, to add and delete items, to copy report server items from one server to another and more. For more information about the scripting environment, see [Run a Reporting Services Script File](../../2014/reporting-services/run-a-reporting-services-script-file.md). Script files take a certain format and are written in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET. For more information, see [Format a Reporting Services Script File](../../2014/reporting-services/format-a-reporting-services-script-file.md).  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] scripts can be used to run any of the Report Server Web service operations. Scripting can be used to copy security to multiple reports on a server, to add and delete items, to copy report server items from one server to another and more. For more information about the scripting environment, see [Run a Reporting Services Script File](../../2014/reporting-services/run-a-reporting-services-script-file.md). Script files take a certain format and are written in [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET. For more information, see [Format a Reporting Services Script File](../../2014/reporting-services/format-a-reporting-services-script-file.md).  
   
  For script samples, see the following:  
   

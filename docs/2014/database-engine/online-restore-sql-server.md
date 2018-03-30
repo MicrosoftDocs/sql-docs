@@ -19,12 +19,12 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Online Restore (SQL Server)
-  Online restore is supported only on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition. In this edition, a file, page, or piecemeal restore is online by default. This topic is relevant for databases that contain multiple files or filegroups (and, under the simple recovery model, only for read-only filegroups).  
+  Online restore is supported only on [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise edition. In this edition, a file, page, or piecemeal restore is online by default. This topic is relevant for databases that contain multiple files or filegroups (and, under the simple recovery model, only for read-only filegroups).  
   
  Restoring data while the database is online is called an *online restore*. A database is considered to be online whenever the primary filegroup is online, even if one or more of its secondary filegroups are offline. Under any recovery model, you can restore a file that is offline while the database is online. Under the full recovery model, you can also restore pages while the database is online.  
   
 > [!NOTE]  
->  Online restore occurs automatically on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise and requires no user action. If you do not want to use online restore, you can take a database offline before you start a restore. For more information, see [Taking a Database or File Offline](#taking_db_or_file_offline), later in this topic.  
+>  Online restore occurs automatically on [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise and requires no user action. If you do not want to use online restore, you can take a database offline before you start a restore. For more information, see [Taking a Database or File Offline](#taking_db_or_file_offline), later in this topic.  
   
  During an online file restore, any file being restored and its filegroup are offline. If any of these files is online when an online restore starts, the first restore statement takes the filegroup of the file offline. In contrast, during an online page restore, only the page is offline.  
   
@@ -52,7 +52,7 @@ manager: "jhubbard"
     > [!NOTE]  
     >  The preceding information also applies to every offline file.  
   
--   A special case exists for a read/write file that was online when the first restore statement was issued and that was then automatically taken offline by that restore statement. In this case, you must take a log backup during the first *restore sequence* (the sequence of one or more RESTORE statements that restore, roll forward, and recover data). Generally, this log backup must occur after you restore all the full backups and before you recover the data. However, if there are multiple file backups for a specific filegroup, the minimal point of log backup is the time after the filegroup is offline. This post-data-restore log backup captures the point at which the file was taken offline. The post-data-restore log backup is necessary because the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] cannot use online log for an online restore.  
+-   A special case exists for a read/write file that was online when the first restore statement was issued and that was then automatically taken offline by that restore statement. In this case, you must take a log backup during the first *restore sequence* (the sequence of one or more RESTORE statements that restore, roll forward, and recover data). Generally, this log backup must occur after you restore all the full backups and before you recover the data. However, if there are multiple file backups for a specific filegroup, the minimal point of log backup is the time after the filegroup is offline. This post-data-restore log backup captures the point at which the file was taken offline. The post-data-restore log backup is necessary because the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] cannot use online log for an online restore.  
   
     > [!NOTE]  
     >  Alternatively, you can manually take the file offline before the restore sequence. For more information, see "Taking a Database or File Offline" later in this topic.  
@@ -60,11 +60,11 @@ manager: "jhubbard"
 ##  <a name="taking_db_or_file_offline"></a> Taking a Database or File Offline  
  If you do not want to use online restore, you can take the database offline before you start the restore sequence by using one of the following methods:  
   
--   Under any recovery model, you can take the database offline by using the following [ALTER DATABASE](../Topic/ALTER%20DATABASE%20\(Transact-SQL\).md) statement:  
+-   Under any recovery model, you can take the database offline by using the following [ALTER DATABASE](~/t-sql/statements/alter-database-transact-sql.md) statement:  
   
      ALTER DATABASE *database_name* SET OFFLINE  
   
--   Alternatively, under the full recovery model, you can force a file or page restore to be offline, by using the following [BACKUP LOG](../Topic/BACKUP%20\(Transact-SQL\).md) statement put the database in to the restoring state:  
+-   Alternatively, under the full recovery model, you can force a file or page restore to be offline, by using the following [BACKUP LOG](~/t-sql/statements/backup-transact-sql.md) statement put the database in to the restoring state:  
   
      BACKUP LOG *database_name* WITH NORECOVERY.  
   

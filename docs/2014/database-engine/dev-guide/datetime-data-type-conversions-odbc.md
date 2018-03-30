@@ -51,10 +51,10 @@ manager: "jhubbard"
   
 ## In This Section  
  [Conversions from C to SQL](../../../2014/database-engine/dev-guide/conversions-from-c-to-sql.md)  
- Lists issues to consider when you convert from C types to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data/time types.  
+ Lists issues to consider when you convert from C types to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data/time types.  
   
  [Conversions from SQL to C](../../../2014/database-engine/dev-guide/conversions-from-sql-to-c.md)  
- Lists issues to consider when you convert from [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data/time types to C types.  
+ Lists issues to consider when you convert from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data/time types to C types.  
   
 ## See Also  
  [Date and Time Improvements &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/date-and-time-improvements-odbc.md)  

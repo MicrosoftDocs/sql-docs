@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQL Server Profiler - Performance Counters Limit
-  Use the Performance Counters Limit dialog box to limit the information from a System Monitor performance log file when correlating it with a [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] trace. You can use this dialog box to select counters that should be displayed and used for correlation.  
+  Use the Performance Counters Limit dialog box to limit the information from a System Monitor performance log file when correlating it with a [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] trace. You can use this dialog box to select counters that should be displayed and used for correlation.  
   
  The **Performance Counters Limit** dialog box is populated with the performance objects and counters that the performance log file contains.  
   
@@ -28,7 +28,7 @@ manager: "jhubbard"
   
 1.  Expand a performance object to see which counters are included in the performance log file.  
   
-2.  Check the counters that you want to correlate with the [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] trace file.  
+2.  Check the counters that you want to correlate with the [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] trace file.  
   
      If you want to select all counters for a performance object, check the box that is adjacent to the performance object. Checking the topmost node, which indicates the computer, selects all performance objects and counters contained in the performance log file.  
   

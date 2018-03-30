@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # User-Defined Functions
-  Like functions in programming languages, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user-defined functions are routines that accept parameters, perform an action, such as a complex calculation, and return the result of that action as a value. The return value can either be a single scalar value or a result set.  
+  Like functions in programming languages, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] user-defined functions are routines that accept parameters, perform an action, such as a complex calculation, and return the result of that action as a value. The return value can either be a single scalar value or a result set.  
   
  **In This Topic**  
   
@@ -38,7 +38,7 @@ manager: "jhubbard"
  [Related Tasks](#Tasks)  
   
 ##  <a name="Benefits"></a> User-defined Function Benefits  
- The benefits of using user-defined functions in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are:  
+ The benefits of using user-defined functions in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] are:  
   
 -   They allow modular programming.  
   
@@ -46,34 +46,34 @@ manager: "jhubbard"
   
 -   They allow faster execution.  
   
-     Similar to stored procedures, [!INCLUDE[tsql](../../includes/tsql-md.md)] user-defined functions reduce the compilation cost of [!INCLUDE[tsql](../../includes/tsql-md.md)] code by caching the plans and reusing them for repeated executions. This means the user-defined function does not need to be reparsed and reoptimized with each use resulting in much faster execution times.  
+     Similar to stored procedures, [!INCLUDE[tsql](../includes/tsql-md.md)] user-defined functions reduce the compilation cost of [!INCLUDE[tsql](../includes/tsql-md.md)] code by caching the plans and reusing them for repeated executions. This means the user-defined function does not need to be reparsed and reoptimized with each use resulting in much faster execution times.  
   
-     CLR functions offer significant performance advantage over [!INCLUDE[tsql](../../includes/tsql-md.md)] functions for computational tasks, string manipulation, and business logic. [!INCLUDE[tsql](../../includes/tsql-md.md)] functions are better suited for data-access intensive logic.  
+     CLR functions offer significant performance advantage over [!INCLUDE[tsql](../includes/tsql-md.md)] functions for computational tasks, string manipulation, and business logic. [!INCLUDE[tsql](../includes/tsql-md.md)] functions are better suited for data-access intensive logic.  
   
 -   They can reduce network traffic.  
   
      An operation that filters data based on some complex constraint that cannot be expressed in a single scalar expression can be expressed as a function. The function can then invoked in the WHERE clause to reduce the number or rows sent to the client.  
   
 > [!NOTE]  
->  [!INCLUDE[tsql](../../includes/tsql-md.md)] user-defined functions in queries can only be executed on a single thread (serial execution plan).  
+>  [!INCLUDE[tsql](../includes/tsql-md.md)] user-defined functions in queries can only be executed on a single thread (serial execution plan).  
   
 ##  <a name="FunctionTypes"></a> Types of Functions  
  Scalar Function  
- User-defined scalar functions return a single data value of the type defined in the RETURNS clause. For an inline scalar function, there is no function body; the scalar value is the result of a single statement. For a multistatement scalar function, the function body, defined in a BEGIN...END block, contains a series of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that return the single value. The return type can be any data type except `text`, `ntext`, `image`, `cursor`, and `timestamp`.  
+ User-defined scalar functions return a single data value of the type defined in the RETURNS clause. For an inline scalar function, there is no function body; the scalar value is the result of a single statement. For a multistatement scalar function, the function body, defined in a BEGIN...END block, contains a series of [!INCLUDE[tsql](../includes/tsql-md.md)] statements that return the single value. The return type can be any data type except `text`, `ntext`, `image`, `cursor`, and `timestamp`.  
   
  Table-Valued Functions  
  User-defined table-valued functions return a `table` data type. For an inline table-valued function, there is no function body; the table is the result set of a single SELECT statement.  
   
  System Functions  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides many system functions that you can use to perform a variety of operations. They cannot be modified. For more information, see [Built-in Functions &#40;Transact-SQL&#41;](../Topic/Built-in%20Functions%20\(Transact-SQL\).md), [System Stored Functions &#40;Transact-SQL&#41;](../Topic/System%20Stored%20Functions%20\(Transact-SQL\).md), and [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../Topic/Dynamic%20Management%20Views%20and%20Functions%20\(Transact-SQL\).md).  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provides many system functions that you can use to perform a variety of operations. They cannot be modified. For more information, see [Built-in Functions &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md), [System Stored Functions &#40;Transact-SQL&#41;](~/relational-databases/system-functions/system-functions-for-transact-sql.md), and [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ##  <a name="Guidelines"></a> Guidelines  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] errors that cause a statement to be canceled and continue with the next statement in the module (such as triggers or stored procedures) are treated differently inside a function. In functions, such errors cause the execution of the function to stop. This in turn causes the statement that invoked the function to be canceled.  
+ [!INCLUDE[tsql](../includes/tsql-md.md)] errors that cause a statement to be canceled and continue with the next statement in the module (such as triggers or stored procedures) are treated differently inside a function. In functions, such errors cause the execution of the function to stop. This in turn causes the statement that invoked the function to be canceled.  
   
  The statements in a BEGIN...END block cannot have any side effects. Function side effects are any permanent changes to the state of a resource that has a scope outside the function such as a modification to a database table. The only changes that can be made by the statements in the function are changes to objects local to the function, such as local cursors or variables. Modifications to database tables, operations on cursors that are not local to the function, sending e-mail, attempting a catalog modification, and generating a result set that is returned to the user are examples of actions that cannot be performed in a function.  
   
 > [!NOTE]  
->  If a CREATE FUNCTION statement produces side effects against resources that do not exist when the CREATE FUNCTION statement is issued, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executes the statement. However, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not execute the function when it is invoked.  
+>  If a CREATE FUNCTION statement produces side effects against resources that do not exist when the CREATE FUNCTION statement is issued, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] executes the statement. However, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not execute the function when it is invoked.  
   
  The number of times that a function specified in a query is actually executed can vary between execution plans built by the optimizer. An example is a function invoked by a subquery in a WHERE clause. The number of times the subquery and its function is executed can vary with different access paths chosen by the optimizer.  
   

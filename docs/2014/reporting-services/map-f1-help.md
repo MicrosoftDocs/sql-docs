@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: c481a170-dc94-424f-a37c-d16003171d29
 caps.latest.revision: 3
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Map F1 Help

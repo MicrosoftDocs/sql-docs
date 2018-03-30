@@ -31,7 +31,7 @@ ms.author: "mblythe"
 manager: "mblythe"
 ---
 # Execute Method (XMLA)
-  Sends XML for Analysis (XMLA) commands to an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. This includes requests involving data transfer, such as retrieving or updating data on the server.  
+  Sends XML for Analysis (XMLA) commands to an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. This includes requests involving data transfer, such as retrieving or updating data on the server.  
   
  **Namespace** urn:schemas-microsoft-com:xml-analysis  
   

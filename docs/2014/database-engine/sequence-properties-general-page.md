@@ -14,17 +14,17 @@ f1_keywords:
 ms.assetid: 0187f413-cdf0-48a2-b2e6-9b3578cd5811
 caps.latest.revision: 10
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Sequence Properties (General Page)
   Creates a sequence object and specifies its properties. A sequence is a user-defined schema bound object that generates a sequence of numeric values according to the specification with which the sequence was created. The sequence of numeric values is generated in an ascending or descending order at a defined interval and can be configured to restart (cycle) when exhausted. Sequences, unlike identity columns, are not associated with specific tables. Applications refer to a sequence object to retrieve its next value. The relationship between sequences and tables is controlled by the application. User applications can reference a sequence object and coordinate the values across multiple rows and tables.  
   
- Unlike identity columns values which are generated at the time of insert, an application can obtain the next sequence number without inserting the row by calling the [NEXT VALUE FOR function](../Topic/NEXT%20VALUE%20FOR%20\(Transact-SQL\).md). Use [sp_sequence_get_range](../Topic/sp_sequence_get_range%20\(Transact-SQL\).md) to get multiple sequence numbers at once.  
+ Unlike identity columns values which are generated at the time of insert, an application can obtain the next sequence number without inserting the row by calling the [NEXT VALUE FOR function](~/t-sql/functions/next-value-for-transact-sql.md). Use [sp_sequence_get_range](~/relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) to get multiple sequence numbers at once.  
   
  For information and scenarios that use both **CREATE SEQUENCE** and the **NEXT VALUE FOR** function, see [Sequence Numbers](../../2014/database-engine/sequence-numbers.md).  
   
- This page is accessed in two ways: either by right-clicking **Sequences** in Object Explorer and clicking **New Sequence**, or by right-clicking an existing sequence and clicking **Properties**. When you right-click an existing sequence and click **Properties**, the options are not editable. To change the sequence options use the [ALTER SEQUENCE &#40;Transact-SQL&#41;](../Topic/ALTER%20SEQUENCE%20\(Transact-SQL\).md) statement or drop and recreate the sequence object.  
+ This page is accessed in two ways: either by right-clicking **Sequences** in Object Explorer and clicking **New Sequence**, or by right-clicking an existing sequence and clicking **Properties**. When you right-click an existing sequence and click **Properties**, the options are not editable. To change the sequence options use the [ALTER SEQUENCE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-sequence-transact-sql.md) statement or drop and recreate the sequence object.  
   
 ## Options  
  **Sequence name**  
@@ -71,20 +71,20 @@ manager: "jhubbard"
  **Cache options**  
  Creating a cache of sequence values can increase performance for applications that use sequence objects by minimizing the number of disk IOs that are required to create sequence numbers.  
   
--   Default cache size - The [!INCLUDE[ssDE](../../includes/ssde-md.md)] will select a size, however users should not rely upon the selection being consistent. [!INCLUDE[msCoName](../../includes/msconame-md.md)] might change the method of calculating the cache size without notice.  
+-   Default cache size - The [!INCLUDE[ssDE](../includes/ssde-md.md)] will select a size, however users should not rely upon the selection being consistent. [!INCLUDE[msCoName](../includes/msconame-md.md)] might change the method of calculating the cache size without notice.  
   
--   No cache - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will not cache sequence numbers.  
+-   No cache - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] will not cache sequence numbers.  
   
--   Cache with size - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will cache sequence values. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] keeps track of the current value and the number of values left in the cache. Therefore, the amount of memory that is required to store the cache is always two instances of the data type of the sequence object  
+-   Cache with size - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] will cache sequence values. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] keeps track of the current value and the number of values left in the cache. Therefore, the amount of memory that is required to store the cache is always two instances of the data type of the sequence object  
   
  When created with the CACHE option, an unexpected shutdown, such as a power failure, can lose the sequence numbers in the cache.  
   
- For additional information about the create sequence options, see [CREATE SEQUENCE &#40;Transact-SQL&#41;](../Topic/CREATE%20SEQUENCE%20\(Transact-SQL\).md).  
+ For additional information about the create sequence options, see [CREATE SEQUENCE &#40;Transact-SQL&#41;](~/t-sql/statements/create-sequence-transact-sql.md).  
   
 ## Permissions  
  Requires **CREATE SEQUENCE**, **ALTER**, or **CONTROL** permission on the SCHEMA.  
   
 ## See Also  
- [sys.sequences &#40;Transact-SQL&#41;](../Topic/sys.sequences%20\(Transact-SQL\).md)  
+ [sys.sequences &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-sequences-transact-sql.md)  
   
   

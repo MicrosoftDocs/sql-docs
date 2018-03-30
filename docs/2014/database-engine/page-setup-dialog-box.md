@@ -25,7 +25,7 @@ manager: "jhubbard"
  Select a size from the list.  
   
  **Source**  
- Specifies the paper to use. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] lists the sources available for the selected printer.  
+ Specifies the paper to use. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] lists the sources available for the selected printer.  
   
 ## Orientation  
  **Portrait**  

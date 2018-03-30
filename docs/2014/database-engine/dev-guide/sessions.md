@@ -20,15 +20,15 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Sessions
-  A [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider session represents a single connection to an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider session represents a single connection to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider requires that sessions delimit transaction space for a data source. All command objects created from a specific session object participate in the local or distributed transaction of the session object.  
+ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider requires that sessions delimit transaction space for a data source. All command objects created from a specific session object participate in the local or distributed transaction of the session object.  
   
- The first session object created on the initialized data source receives the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] connection established at initialization. When all references on the interfaces of the session object are released, the connection to the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] becomes available to another session object created on the data source.  
+ The first session object created on the initialized data source receives the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connection established at initialization. When all references on the interfaces of the session object are released, the connection to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] becomes available to another session object created on the data source.  
   
- An additional session object created on the data source establishes its own connection to the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] as specified by the data source. The connection to the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is dropped when the application releases all references to objects created that session.  
+ An additional session object created on the data source establishes its own connection to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as specified by the data source. The connection to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is dropped when the application releases all references to objects created that session.  
   
- The following example demonstrates how to use the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider to connect to a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database:  
+ The following example demonstrates how to use the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider to connect to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database:  
   
 ```  
 int main()  
@@ -177,7 +177,7 @@ EXIT:
 }  
 ```  
   
- Connecting [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider session objects to an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] can generate significant overhead for applications that continually create and release session objects. The overhead can be minimized by managing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider session objects efficiently. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider applications can keep the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] connection of a session object active by maintaining a reference on at least one interface of the object.  
+ Connecting [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider session objects to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can generate significant overhead for applications that continually create and release session objects. The overhead can be minimized by managing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider session objects efficiently. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider applications can keep the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connection of a session object active by maintaining a reference on at least one interface of the object.  
   
  For example, maintaining a pool of command creation object references keeps active connections for those session objects in the pool. As session objects are required, the pool maintenance code passes a valid **IDBCreateCommand** interface pointer to the application method requiring the session. When the application method no longer requires the session, the method returns the interface pointer back to the pool maintenance code rather than releasing the application's reference to the command creation object.  
   

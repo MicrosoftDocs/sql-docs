@@ -22,13 +22,13 @@ manager: "jhubbard"
   The Upgrade Advisor detected nonstandard column-level permissions on system objects. These permission changes will not be maintained when you upgrade. Additionally, column-level permissions on system objects are no longer supported. Remove statements from your applications that set column-level permissions on system objects.  
   
 ## Component  
- [!INCLUDE[ssDE](../../../includes/ssde-md.md)]  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## Corrective Action  
  Remove statements from your application that grant, deny, or revoke column-level permissions on system objects.  
   
 ## See Also  
  [Database Engine Upgrade Issues](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;new&#93;](../Topic/SQL%20Server%202014%20Upgrade%20Advisor%20[new].md)  
+ [SQL Server 2014 Upgrade Advisor &#91;new&#93;](~/2014/sql-server/install/sql-server-2014-upgrade-advisor.md)  
   
   

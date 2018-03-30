@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
 caps.latest.revision: 20
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Step 3: Modifying the Flat File Connection Manager

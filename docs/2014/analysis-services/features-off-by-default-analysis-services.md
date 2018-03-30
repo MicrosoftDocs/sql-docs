@@ -16,10 +16,10 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Features off by default (Analysis Services)
-  An instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] is designed to be secure by default. Therefore, features that might compromise security are disabled by default. The following features are installed in a disabled state and must specifically be enabled if you want to use them.  
+  An instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] is designed to be secure by default. Therefore, features that might compromise security are disabled by default. The following features are installed in a disabled state and must specifically be enabled if you want to use them.  
   
 ## Feature List  
- To enable the following features, connect to [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Right-click the instance name and choose **Facets**. Alternatively, you can enable these features through server properties, as described in the next section.  
+ To enable the following features, connect to [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Right-click the instance name and choose **Facets**. Alternatively, you can enable these features through server properties, as described in the next section.  
   
 -   Ad Hoc Data Mining (OpenRowset) Queries  
   
@@ -32,7 +32,7 @@ manager: "mblythe"
 -   User Defined Functions  
   
 ## Server properties  
- Additional features that are off by default can be enabled through server properties. Connect to [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Right-click the instance name and choose **Properties**. Click **General**, and then click **Show Advanced** to display a larger property list.  
+ Additional features that are off by default can be enabled through server properties. Connect to [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Right-click the instance name and choose **Properties**. Click **General**, and then click **Show Advanced** to display a larger property list.  
   
 -   Ad Hoc Data Mining (OpenRowset) Queries  
   

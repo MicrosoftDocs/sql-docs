@@ -18,11 +18,11 @@ f1_keywords:
 ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 caps.latest.revision: 43
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Table Properties
-  This topic describes the table properties that are displayed in the Table Properties dialog box in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information about how to display these properties, see [View the Table Definition](../../2014/database-engine/view-the-table-definition.md).  
+  This topic describes the table properties that are displayed in the Table Properties dialog box in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. For more information about how to display these properties, see [View the Table Definition](../../2014/database-engine/view-the-table-definition.md).  
   
  **In This Topic**  
   
@@ -54,19 +54,19 @@ manager: "jhubbard"
  The schema that owns the table.  
   
  **System object**  
- Indicates this table is a system table, used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to contain internal information. Users should not directly change or reference system tables.  
+ Indicates this table is a system table, used by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to contain internal information. Users should not directly change or reference system tables.  
   
  **ANSI NULLs**  
- Indicates if the object was created with the ANSI NULLs option set to ON. For more information, see [SET ANSI_NULLS &#40;Transact-SQL&#41;](../Topic/SET%20ANSI_NULLS%20\(Transact-SQL\).md)  
+ Indicates if the object was created with the ANSI NULLs option set to ON. For more information, see [SET ANSI_NULLS &#40;Transact-SQL&#41;](~/t-sql/statements/set-ansi-nulls-transact-sql.md)  
   
  **Quoted identifier**  
- Indicates if the object was created with the quoted identifier option set to ON. For more information, see [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../Topic/SET%20QUOTED_IDENTIFIER%20\(Transact-SQL\).md)  
+ Indicates if the object was created with the quoted identifier option set to ON. For more information, see [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](~/t-sql/statements/set-quoted-identifier-transact-sql.md)  
   
  **Lock Escalation**  
  Indicates the lock escalation granularity of the table. For more information about locking in the Database Engine, see [SQL Server Transaction Locking and Row Versioning Guide](http://msdn.microsoft.com/library/jj856598.aspx). Possible values are:  
   
  AUTO  
- This option allows the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] to select the lock escalation granularity that is appropriate for the table schema.  
+ This option allows the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] to select the lock escalation granularity that is appropriate for the table schema.  
   
 -   If the table is partitioned, lock escalation will be allowed to the heap or B-tree (HoBT) granularity. After the lock is escalated to the HoBT level, the lock will not be escalated later to TABLE granularity.  
   
@@ -76,10 +76,10 @@ manager: "jhubbard"
  Lock escalation will be done at table-level granularity regardless of whether the table is partitioned or not partitioned. TABLE is the default value.  
   
  DISABLE  
- Prevents lock escalation in most cases. Table-level locks are not completely disallowed. For example, when you are scanning a table that has no clustered index under the serializable isolation level, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] must take a table lock to protect data integrity.  
+ Prevents lock escalation in most cases. Table-level locks are not completely disallowed. For example, when you are scanning a table that has no clustered index under the serializable isolation level, the [!INCLUDE[ssDE](../includes/ssde-md.md)] must take a table lock to protect data integrity.  
   
  **Table is replicated**  
- Indicates when the table is replicated to another database using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] replication. Possible values are `True` or `False`.  
+ Indicates when the table is replicated to another database using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] replication. Possible values are `True` or `False`.  
   
 ##  <a name="ChangeTracking"></a> Change Tracking Page  
  **Change Tracking**  
@@ -87,10 +87,10 @@ manager: "jhubbard"
   
  This option is available only when change tracking is enabled for the database.  
   
- To enable change tracking, the table must have a primary key, and you must have permission to modify the table. You can configure change tracking by using [ALTER TABLE](../Topic/ALTER%20TABLE%20\(Transact-SQL\).md).  
+ To enable change tracking, the table must have a primary key, and you must have permission to modify the table. You can configure change tracking by using [ALTER TABLE](~/t-sql/statements/alter-table-transact-sql.md).  
   
  **Track Columns Updated**  
- Indicates whether the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] tracks which columns were updated.  
+ Indicates whether the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] tracks which columns were updated.  
   
  For more information about Change Tracking, see [About Change Tracking &#40;SQL Server&#41;](../../2014/database-engine/about-change-tracking-sql-server.md).  
   
@@ -139,10 +139,10 @@ manager: "jhubbard"
   
 ### General  
  **Vardecimal storage format is enabled**  
- When `True`, this read-only value indicates that `decimal` and `numeric` data types are stored by using the vardecimal storage format. To change this option, use the `vardecimal storage format` option of [sp_tableoption](../Topic/sp_tableoption%20\(Transact-SQL\).md). Vardecimal storage format is deprecated. Use ROW compression instead.  
+ When `True`, this read-only value indicates that `decimal` and `numeric` data types are stored by using the vardecimal storage format. To change this option, use the `vardecimal storage format` option of [sp_tableoption](~/relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Vardecimal storage format is deprecated. Use ROW compression instead.  
   
  **Index space**  
- The amount of space in megabytes that the indexes occupy in the table. This value does not include XML index space usage for the table. If XML indexes belong to the table, use [sp_spaceused](../Topic/sp_spaceused%20\(Transact-SQL\).md) instead.  
+ The amount of space in megabytes that the indexes occupy in the table. This value does not include XML index space usage for the table. If XML indexes belong to the table, use [sp_spaceused](~/relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) instead.  
   
  **Row count**  
  The number of rows in the table.  

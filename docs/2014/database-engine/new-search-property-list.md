@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: ffca78e9-8608-4b15-bd38-b2d78da4247a
 caps.latest.revision: 21
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # New Search Property List
@@ -43,14 +43,14 @@ manager: "jhubbard"
  Select the name of an existing search property list from those belonging to the selected database.  
   
 ## Permissions  
- See [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../Topic/CREATE%20SEARCH%20PROPERTY%20LIST%20\(Transact-SQL\).md).  
+ See [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](~/t-sql/statements/create-search-property-list-transact-sql.md).  
   
 ## To Use SQL Server Management Studio to Manage Search Property Lists  
  For information about how to create, view, change, or delete a search property list, and about how to configure a full-text index for property searching, see [Search Document Properties with Search Property Lists](../../2014/database-engine/search-document-properties-with-search-property-lists.md).  
   
 ## See Also  
- [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../Topic/CREATE%20SEARCH%20PROPERTY%20LIST%20\(Transact-SQL\).md)   
+ [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](~/t-sql/statements/create-search-property-list-transact-sql.md)   
  [Search Document Properties with Search Property Lists](../../2014/database-engine/search-document-properties-with-search-property-lists.md)   
- [sys.registered_search_property_lists &#40;Transact-SQL&#41;](../Topic/sys.registered_search_property_lists%20\(Transact-SQL\).md)  
+ [sys.registered_search_property_lists &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)  
   
   

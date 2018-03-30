@@ -21,11 +21,11 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Analysis Services Execute DDL Task
-  The [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Execute DDL task runs data definition language (DDL) statements that can create, drop, or alter mining models and multidimensional objects such as cubes and dimensions. For example, a DDL statement can create a partition in the **Adventure Works** cube, or delete a dimension in [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)], the sample [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database included in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  The [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Execute DDL task runs data definition language (DDL) statements that can create, drop, or alter mining models and multidimensional objects such as cubes and dimensions. For example, a DDL statement can create a partition in the **Adventure Works** cube, or delete a dimension in [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)], the sample [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database included in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- The [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Execute DDL task uses an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] connection manager to connect to an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] or an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project. For more information, see [Analysis Services Connection Manager](../../2014/integration-services/analysis-services-connection-manager.md).  
+ The [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Execute DDL task uses an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] connection manager to connect to an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] or an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project. For more information, see [Analysis Services Connection Manager](../../2014/integration-services/analysis-services-connection-manager.md).  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes a number of tasks that perform business intelligence operations, such as processing analytic objects and running data mining prediction queries.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes a number of tasks that perform business intelligence operations, such as processing analytic objects and running data mining prediction queries.  
   
  For more information about related business intelligence tasks, click one of the following topics:  
   
@@ -34,18 +34,18 @@ manager: "jhubbard"
 -   [Data Mining Query Task](../../2014/integration-services/data-mining-query-task.md)  
   
 ## DDL Statements  
- The DDL statements are represented as statements in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripting Language (ASSL), and framed in an XML for Analysis (XMLA) command.  
+ The DDL statements are represented as statements in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Scripting Language (ASSL), and framed in an XML for Analysis (XMLA) command.  
   
--   ASSL is used to define and describe an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and the databases and database objects it contains. For more information, see [Analysis Services Scripting Language &#40;ASSL&#41; Reference](../../2014/analysis-services/dev-guide/analysis-services-scripting-language-assl-reference.md).  
+-   ASSL is used to define and describe an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] and the databases and database objects it contains. For more information, see [Analysis Services Scripting Language &#40;ASSL&#41; Reference](../../2014/analysis-services/dev-guide/analysis-services-scripting-language-assl-reference.md).  
   
--   XMLA is a command language that is used to send action commands, such as Create, Alter, or Process, to an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. For more information, see [XML for Analysis  &#40;XMLA&#41; Reference](../../2014/analysis-services/dev-guide/xml-for-analysis-xmla-reference.md).  
+-   XMLA is a command language that is used to send action commands, such as Create, Alter, or Process, to an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. For more information, see [XML for Analysis  &#40;XMLA&#41; Reference](../../2014/analysis-services/dev-guide/xml-for-analysis-xmla-reference.md).  
   
- If the DDL code is stored in a separate file, the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Execute DDL task uses a File connection manager to specify the path of the file. For more information, see [File Connection Manager](../../2014/integration-services/file-connection-manager.md).  
+ If the DDL code is stored in a separate file, the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Execute DDL task uses a File connection manager to specify the path of the file. For more information, see [File Connection Manager](../../2014/integration-services/file-connection-manager.md).  
   
- Because DDL statements can contain passwords and other sensitive information, a package that contains one or more [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Execute DDL tasks should use the package protection level `EncryptAllWithUserKey` or `EncryptAllWithPassword`. For more information, see [Integration Services &#40;SSIS&#41; Packages](../../2014/integration-services/integration-services-ssis-packages.md).  
+ Because DDL statements can contain passwords and other sensitive information, a package that contains one or more [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Execute DDL tasks should use the package protection level `EncryptAllWithUserKey` or `EncryptAllWithPassword`. For more information, see [Integration Services &#40;SSIS&#41; Packages](../../2014/integration-services/integration-services-ssis-packages.md).  
   
 ### DDL Examples  
- The following three DDL statements were generated by scripting objects in the [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)], the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database included in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ The following three DDL statements were generated by scripting objects in the [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)], the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database included in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  The following DDL statement deletes the **Promotion** dimension.  
   
@@ -59,7 +59,7 @@ manager: "jhubbard"
   
 ```  
   
- The following DDL statement processes the [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] cube.  
+ The following DDL statement processes the [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] cube.  
   
 ```  
 <Batch xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -128,7 +128,7 @@ manager: "jhubbard"
   
 ```  
   
- The following three DDL statements were generated by scripting objects in the [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)], the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database included in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ The following three DDL statements were generated by scripting objects in the [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)], the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database included in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  The following DDL statement deletes the **Promotion** dimension.  
   
@@ -142,7 +142,7 @@ manager: "jhubbard"
   
 ```  
   
- The following DDL statement processes the [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] cube.  
+ The following DDL statement processes the [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] cube.  
   
 ```  
 <Batch xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -212,9 +212,9 @@ manager: "jhubbard"
 ```  
   
 ## Configuration of the Analysis Services Execute DDL Task  
- You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer or programmatically.  
   
- For more information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click one of the following topics:  
+ For more information about the properties that you can set in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click one of the following topics:  
   
 -   [Analysis Services Execute DDL Task Editor &#40;General Page&#41;](../../2014/integration-services/analysis-services-execute-ddl-task-editor-general-page.md)  
   
@@ -222,7 +222,7 @@ manager: "jhubbard"
   
 -   [Expressions Page](../../2014/integration-services/expressions-page.md)  
   
- For more information about setting these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
+ For more information about setting these properties in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click the following topic:  
   
 -   [Set the Properties of a Task or Container](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)  
   

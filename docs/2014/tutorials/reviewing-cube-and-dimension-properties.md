@@ -16,7 +16,7 @@ ms.author: "owend"
 manager: "jhubbard"
 ---
 # Reviewing Cube and Dimension Properties
-  After you have defined a cube, you can review the results by using Cube Designer. In the following task, you review the structure of the cube in the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Tutorial project.  
+  After you have defined a cube, you can review the results by using Cube Designer. In the following task, you review the structure of the cube in the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial project.  
   
 ### To review cube and dimension properties in Cube Designer  
   
@@ -26,9 +26,9 @@ manager: "jhubbard"
   
      You can change the order by dragging the measures into the order that you want. The order you create affects how certain client applications order these measures. The measure group and each measure that it contains have properties that you can edit in the Properties window.  
   
-3.  In the **Dimensions** pane of the **Cube Structure** tab in Cube Designer, review the cube dimensions that are in the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Tutorial cube.  
+3.  In the **Dimensions** pane of the **Cube Structure** tab in Cube Designer, review the cube dimensions that are in the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial cube.  
   
-     Notice that although only three dimensions were created at the database level, as displayed in Solution Explorer, there are five cube dimensions in the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Tutorial cube. The cube contains more dimensions than the database because the Date database dimension is used as the basis for three separate date-related cube dimensions, based on different date-related facts in the fact table. These date-related dimensions are also called *role playing dimensions*. The three date-related cube dimensions let users dimension the cube by three separate facts that are related to each product sale: the product order date, the due date for fulfillment of the order, and the ship date for the order. By reusing a single database dimension for multiple cube dimensions, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] simplifies dimension management, uses less disk space, and reduces overall processing time.  
+     Notice that although only three dimensions were created at the database level, as displayed in Solution Explorer, there are five cube dimensions in the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial cube. The cube contains more dimensions than the database because the Date database dimension is used as the basis for three separate date-related cube dimensions, based on different date-related facts in the fact table. These date-related dimensions are also called *role playing dimensions*. The three date-related cube dimensions let users dimension the cube by three separate facts that are related to each product sale: the product order date, the due date for fulfillment of the order, and the ship date for the order. By reusing a single database dimension for multiple cube dimensions, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] simplifies dimension management, uses less disk space, and reduces overall processing time.  
   
 4.  In the **Dimensions** pane of the **Cube Structure** tab, expand **Customer**, and then click **Edit Customer** to open the dimension in Dimension Designer.  
   
@@ -38,7 +38,7 @@ manager: "jhubbard"
   
 6.  In Cube Designer, click the **Dimension Usage** tab.  
   
-     In this view of the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Tutorial cube, you can see the cube dimensions that are used by the Internet Sales measure group. Also, you can define the type of relationship between each dimension and each measure group in which it is used.  
+     In this view of the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial cube, you can see the cube dimensions that are used by the Internet Sales measure group. Also, you can define the type of relationship between each dimension and each measure group in which it is used.  
   
 7.  Click the **Partitions** tab.  
   
@@ -46,11 +46,11 @@ manager: "jhubbard"
   
 8.  Click the **Browser** tab.  
   
-     Notice that the cube cannot be browsed because it has not yet been deployed to an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. At this point, the cube in the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Tutorial project is just a definition of a cube, which you can deploy to any instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. When you deploy and process a cube, you create the defined objects in an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and populate the objects with data from the underlying data sources.  
+     Notice that the cube cannot be browsed because it has not yet been deployed to an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. At this point, the cube in the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial project is just a definition of a cube, which you can deploy to any instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. When you deploy and process a cube, you create the defined objects in an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] and populate the objects with data from the underlying data sources.  
   
 9. In Solution Explorer, right-click **Analysis Services Tutorial** in the **Cubes** node, and then click **View Code**. You might need to wait.  
   
-     The XML code for the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Tutorial cube is displayed on the **[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Tutorial.cube [XML]** tab. This is the actual code that is used to create the cube in an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] during deployment. For more information, see [View the XML for an Analysis Services Project &#40;SSDT&#41;](../../2014/analysis-services/view-the-xml-for-an-analysis-services-project-ssdt.md).  
+     The XML code for the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial cube is displayed on the **[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial.cube [XML]** tab. This is the actual code that is used to create the cube in an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] during deployment. For more information, see [View the XML for an Analysis Services Project &#40;SSDT&#41;](../../2014/analysis-services/view-the-xml-for-an-analysis-services-project-ssdt.md).  
   
 10. Close the XML code tab.  
   

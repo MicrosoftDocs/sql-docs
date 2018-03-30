@@ -30,7 +30,7 @@ manager: "jhubbard"
  When SQLPutData is called for a table-value, *DataPtr* is used for the number of rows available (in this example, always 1). *StrLen_or_IndPtr* must always be 0. When all rows of the table-value have been passed, SQLPutData is called with a *DataPtr* value of 0.  
   
 ## Prerequisite  
- This procedure assumes that the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] has been executed on the server:  
+ This procedure assumes that the following [!INCLUDE[tsql](../../includes/tsql-md.md)] has been executed on the server:  
   
 ```  
 create type TVParam as table(ProdCode integer, Qty integer)  

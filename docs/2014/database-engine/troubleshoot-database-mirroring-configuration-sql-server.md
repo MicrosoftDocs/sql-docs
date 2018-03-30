@@ -28,8 +28,8 @@ manager: "jhubbard"
   
 |Issue|Summary|  
 |-----------|-------------|  
-|Error Message 1418|This [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] message indicates that the server network address cannot be reached or does not exist, and it suggests that you verify the network address name and reissue the command. For more information, see the [MSSQLSERVER_1418](../../2014/database-engine/mssqlserver-1418.md) topic.|  
-|[Accounts](#Accounts)|Discusses requirements for correctly configuring the accounts under which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running.|  
+|Error Message 1418|This [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] message indicates that the server network address cannot be reached or does not exist, and it suggests that you verify the network address name and reissue the command. For more information, see the [MSSQLSERVER_1418](../../2014/database-engine/mssqlserver-1418.md) topic.|  
+|[Accounts](#Accounts)|Discusses requirements for correctly configuring the accounts under which [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is running.|  
 |[Endpoints](#Endpoints)|Discusses requirements for correctly configuring the database mirroring endpoint of each server instance.|  
 |[SystemAddress](#SystemAddress)|Summarizes the alternatives for specifying the system name of a server instance in a database mirroring configuration.|  
 |[Network access](#NetworkAccess)|Documents the requirement that each the server instance be able to access the ports of the other server instance or instances over TCP.|  
@@ -39,7 +39,7 @@ manager: "jhubbard"
 |[Cross-Database Transactions](#CrossDbTxns)|An automatic failover could lead to automatic and possibly incorrect resolution of in-doubt transactions. For this reason database mirroring does not support cross-database transactions.|  
   
 ##  <a name="Accounts"></a> Accounts  
- The accounts under which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running must be correctly configured.  
+ The accounts under which [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is running must be correctly configured.  
   
 1.  Do the accounts have the correct permissions?  
   
@@ -47,28 +47,28 @@ manager: "jhubbard"
   
     2.  If the accounts are running in different domains or are not domain accounts, the login of one account must be created in **master** on the other computer, and that login must be granted CONNECT permissions on the endpoint. For more information, see [Manage Metadata When Making a Database Available on Another Server Instance &#40;SQL Server&#41;](../../2014/database-engine/manage-metadata-when-making-a-database-available-on-another-server.md). This includes the Network Service account.  
   
-2.  If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running as a service that is using the local system account, you must use certificates for authentication. For more information, see [Use Certificates for a Database Mirroring Endpoint &#40;Transact-SQL&#41;](../../2014/database-engine/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
+2.  If [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is running as a service that is using the local system account, you must use certificates for authentication. For more information, see [Use Certificates for a Database Mirroring Endpoint &#40;Transact-SQL&#41;](../../2014/database-engine/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
   
 ##  <a name="Endpoints"></a> Endpoints  
  Endpoints must be correctly configured.  
   
-1.  Make sure that each server instance (the principal server, mirror server, and witness, if any) has a database mirroring endpoint. For more information, see [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](../Topic/sys.database_mirroring_endpoints%20\(Transact-SQL\).md) and, depending on the form of authentication, either [Create a Database Mirroring Endpoint for Windows Authentication &#40;Transact-SQL&#41;](../../2014/database-engine/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md) or [Use Certificates for a Database Mirroring Endpoint &#40;Transact-SQL&#41;](../../2014/database-engine/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
+1.  Make sure that each server instance (the principal server, mirror server, and witness, if any) has a database mirroring endpoint. For more information, see [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md) and, depending on the form of authentication, either [Create a Database Mirroring Endpoint for Windows Authentication &#40;Transact-SQL&#41;](../../2014/database-engine/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md) or [Use Certificates for a Database Mirroring Endpoint &#40;Transact-SQL&#41;](../../2014/database-engine/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
   
 2.  Check that the port numbers are correct.  
   
-     To identify the port currently associated with database mirroring endpoint of a server instance, use the [sys.database_mirroring_endpoints](../Topic/sys.database_mirroring_endpoints%20\(Transact-SQL\).md) and [sys.tcp_endpoints](../Topic/sys.tcp_endpoints%20\(Transact-SQL\).md) catalog views.  
+     To identify the port currently associated with database mirroring endpoint of a server instance, use the [sys.database_mirroring_endpoints](~/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md) and [sys.tcp_endpoints](~/relational-databases/system-catalog-views/sys-tcp-endpoints-transact-sql.md) catalog views.  
   
 3.  For database mirroring setup issues that are difficult to explain, we recommend that you inspect each server instance to determine whether it is listening on the correct ports. For information about verifying port availability, see [MSSQLSERVER_1418](../../2014/database-engine/mssqlserver-1418.md).  
   
-4.  Make sure that the endpoints are started (STATE=STARTED). On each server instance, use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement.  
+4.  Make sure that the endpoints are started (STATE=STARTED). On each server instance, use the following [!INCLUDE[tsql](../includes/tsql-md.md)] statement.  
   
     ```  
     SELECT state_desc FROM sys.database_mirroring_endpoints  
     ```  
   
-     For more information about the **state_desc** column, see [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](../Topic/sys.database_mirroring_endpoints%20\(Transact-SQL\).md).  
+     For more information about the **state_desc** column, see [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md).  
   
-     To start an endpoint, use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement.  
+     To start an endpoint, use the following [!INCLUDE[tsql](../includes/tsql-md.md)] statement.  
   
     ```  
     ALTER ENDPOINT Endpoint_Mirroring   
@@ -78,18 +78,18 @@ manager: "jhubbard"
     GO  
     ```  
   
-     For more information, see [ALTER ENDPOINT &#40;Transact-SQL&#41;](../Topic/ALTER%20ENDPOINT%20\(Transact-SQL\).md).  
+     For more information, see [ALTER ENDPOINT &#40;Transact-SQL&#41;](~/t-sql/statements/alter-endpoint-transact-sql.md).  
   
-5.  Check that the ROLE is correct. On each server instance use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement.  
+5.  Check that the ROLE is correct. On each server instance use the following [!INCLUDE[tsql](../includes/tsql-md.md)] statement.  
   
     ```  
     SELECT role FROM sys.database_mirroring_endpoints;  
     GO  
     ```  
   
-     For more information, see [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](../Topic/sys.database_mirroring_endpoints%20\(Transact-SQL\).md).  
+     For more information, see [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md).  
   
-6.  The login for the service account from the other server instance requires CONNECT permission. Make sure that the login from the other server has CONNECT permission. To determine who has CONNECT permission for an endpoint, on each server instance use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement.  
+6.  The login for the service account from the other server instance requires CONNECT permission. Make sure that the login from the other server has CONNECT permission. To determine who has CONNECT permission for an endpoint, on each server instance use the following [!INCLUDE[tsql](../includes/tsql-md.md)] statement.  
   
     ```  
     SELECT 'Metadata Check';  
@@ -146,19 +146,19 @@ manager: "jhubbard"
   
 2.  The second ALTER DATABASE statement must be run on the principal server. This statement causes the principal server to try to connect to the mirror server. After that connection is created, the mirror then tries to connect to the principal server on another connection.  
   
- For more information, see [ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20\(Transact-SQL\).md).  
+ For more information, see [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md).  
   
 > [!NOTE]  
->  For information about using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to start mirroring, see [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](../../2014/database-engine/establish-database-mirroring-session-windows-authentication.md).  
+>  For information about using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to start mirroring, see [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](../../2014/database-engine/establish-database-mirroring-session-windows-authentication.md).  
   
 ##  <a name="CrossDbTxns"></a> Cross-Database Transactions  
  When a database is being mirrored in high-safety mode with automatic failover, an automatic failover could lead to automatic and possibly incorrect resolution of in-doubt transactions. If an automatic failover occurs on either database while a cross-database transaction is being committed, logical inconsistencies can occur between the databases.  
   
  The types of cross-database transactions that can be affected by an automatic failover include the following:  
   
--   A transaction that is updating multiple databases in the same instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   A transaction that is updating multiple databases in the same instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
--   Transactions that use a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC).  
+-   Transactions that use a [!INCLUDE[msCoName](../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC).  
   
  For more information, see [Cross-Database Transactions Not Supported For Database Mirroring or AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/transactions-always-on-availability-and-database-mirroring.md).  
   

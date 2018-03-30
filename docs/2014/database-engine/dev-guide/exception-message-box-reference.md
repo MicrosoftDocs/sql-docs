@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Exception Message Box Reference
-  The exception message box is implemented by the <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> class in the Microsoft.ExceptionMessageBox.dll assembly. The default installation folder for this assembly is [!INCLUDE[ssSampPathSDK](../../../includes/sssamppathsdk-md.md)]. The exception message box is documented in the <xref:Microsoft.SqlServer.MessageBox> namespace reference documentation. The following samples use the <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> object during exception handling.  
+  The exception message box is implemented by the <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> class in the Microsoft.ExceptionMessageBox.dll assembly. The default installation folder for this assembly is [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)]. The exception message box is documented in the <xref:Microsoft.SqlServer.MessageBox> namespace reference documentation. The following samples use the <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> object during exception handling.  
   
 ## See Also  
  [Program Exception Message Box](../../../2014/database-engine/dev-guide/program-exception-message-box.md)  

@@ -18,11 +18,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Configure SQL Server Agent Error Logs (General Page)
-  Use this screen to view and update settings for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent error logging.  
+  Use this screen to view and update settings for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent error logging.  
   
 ## Options  
  **Error log file**  
- Specifies the file to which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent writes error logs.  
+ Specifies the file to which [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent writes error logs.  
   
  **...**  
  Browse to the error log file.  

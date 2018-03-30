@@ -18,11 +18,11 @@ helpviewer_keywords:
 ms.assetid: 600e112c-1897-48a6-93c0-6e9f3f12dc01
 caps.latest.revision: 36
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Role Assignments
-  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], *role assignments* determine access to stored items and to the report server itself. A role assignment has the following parts:  
+  In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], *role assignments* determine access to stored items and to the report server itself. A role assignment has the following parts:  
   
 -   A securable item for which you want to control access. Examples of securable items include folders, reports, and resources.  
   
@@ -38,7 +38,7 @@ manager: "mblythe"
 Role assignments diagram  
   
 ## System-Level and Item-Level Role Assignments  
- Role-based security in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] is organized into the following levels:  
+ Role-based security in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] is organized into the following levels:  
   
 -   Item-level role assignments control access to reports, folders, report models, shared data sources, and resources in the report server folder hierarchy. Item-level role assignments are defined when create a role assignment on a specific item or on the Home folder.  
   
@@ -47,7 +47,7 @@ Role assignments diagram
  A system role assignment does not authorize access to items in the folder hierarchy. System and item security are mutually exclusive. For any given user or group, you might need to create both a system-level and item-level role assignment to provide sufficient access to a report server.  
   
 ## Users and Groups in Role Assignments  
- The users or group accounts that you specify in role assignments are domain accounts. The report server references, but does not create or manage, users and groups from a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows domain (or another security model if you are using a custom security extension).  
+ The users or group accounts that you specify in role assignments are domain accounts. The report server references, but does not create or manage, users and groups from a [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows domain (or another security model if you are using a custom security extension).  
   
  Of all the role assignments that apply to any given item, no two can specify the same user or group. If a user account is also a member of a group account, and you have role assignments for both, the combined set of tasks for both role assignments are available to the user.  
   

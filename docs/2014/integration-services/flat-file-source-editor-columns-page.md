@@ -35,7 +35,7 @@ manager: "jhubbard"
  View external (source) columns in the order in which the task will read them. You can change this order by first clearing the selected columns in the table, and then selecting external columns from the list in a different order.  
   
  **Output Column**  
- Provide a unique name for each output column. The default is the name of the selected external (source) column; however, you can choose any unique, descriptive name. The name provided will be displayed within [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer.  
+ Provide a unique name for each output column. The default is the name of the selected external (source) column; however, you can choose any unique, descriptive name. The name provided will be displayed within [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer.  
   
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   

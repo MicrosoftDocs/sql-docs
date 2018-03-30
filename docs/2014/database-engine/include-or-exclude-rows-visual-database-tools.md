@@ -32,7 +32,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  You can also use search conditions to indicate which rows are affected by an Update, Insert Results, Insert Values, Delete, or Make Table query.  
   
- When the query runs, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] examines and applies the search condition to each row in the tables you are searching. If the row meets the condition, it is included in the query. For example, a search condition that would find all the employees in a particular region might be:  
+ When the query runs, the [!INCLUDE[ssDE](../includes/ssde-md.md)] examines and applies the search condition to each row in the tables you are searching. If the row meets the condition, it is included in the query. For example, a search condition that would find all the employees in a particular region might be:  
   
 ```  
 region = 'UK'  

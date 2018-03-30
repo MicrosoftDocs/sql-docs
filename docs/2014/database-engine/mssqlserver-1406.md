@@ -31,7 +31,7 @@ manager: "jhubbard"
 |Message Text|Unable to force service safely. Remove database mirroring and recover database "%.*ls" to gain access.|  
   
 ## Explanation  
- The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] cannot force service because the mirroring state cannot guarantee that the force service process would work correctly.  
+ The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] cannot force service because the mirroring state cannot guarantee that the force service process would work correctly.  
   
 ## User Action  
  Remove database mirroring. You can then recover the mirror database to gain access to it.  

@@ -16,7 +16,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # SAP BW Destination
-  The SAP BW destination is the destination component of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. Thus, the SAP BW destination loads data from the data flow in an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package into an SAP Netweaver BW version 7 system.  
+  The SAP BW destination is the destination component of the [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW. Thus, the SAP BW destination loads data from the data flow in an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package into an SAP Netweaver BW version 7 system.  
   
  This destination has one input and one error output.  
   
@@ -54,7 +54,7 @@ manager: "jhubbard"
  You can also create additional InfoObjects, InfoCubes, InfoSources, and InfoPackages that are required to support loading data into the SAP Netweaver BW system.  
   
 ##  <a name="bkmk_Connect_Database"></a> Connecting to the SAP Netweaver BW System  
- To connect to the SAP Netweaver BW version 7 system, the SAP BW destination uses the SAP BW connection manager that is part of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW package. The SAP BW connection manager is the only [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] connection manager that the SAP BW destination can use.  
+ To connect to the SAP Netweaver BW version 7 system, the SAP BW destination uses the SAP BW connection manager that is part of the [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW package. The SAP BW connection manager is the only [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] connection manager that the SAP BW destination can use.  
   
  For more information about the SAP BW connection manager, see [SAP BW Connection Manager](../../2014/integration-services/sap-bw-connection-manager.md).  
   
@@ -77,14 +77,14 @@ manager: "jhubbard"
   
 -   Test the loading of data with the options that you have selected.  
   
- You can also enable logging of RFC function calls by the destination. (This logging is separate from the optional logging that you can enable on [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages.) You enable logging of RFC function calls when you configure the SAP BW connection manager that the destination will use. For more information about how to configure the SAP BW connection manager, see [SAP BW Connection Manager](../../2014/integration-services/sap-bw-connection-manager.md).  
+ You can also enable logging of RFC function calls by the destination. (This logging is separate from the optional logging that you can enable on [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages.) You enable logging of RFC function calls when you configure the SAP BW connection manager that the destination will use. For more information about how to configure the SAP BW connection manager, see [SAP BW Connection Manager](../../2014/integration-services/sap-bw-connection-manager.md).  
   
  If you do not know all the values that are required to configure the destination, you might have to ask your SAP administrator.  
   
  For a walkthrough that demonstrates how to configure and use the SAP BW connection manager, source, and destination, see the white paper, [Using SQL Server 2008 Integration Services with SAP BI 7.0](http://go.microsoft.com/fwlink/?LinkID=137090). This white paper also shows how to configure the required objects in SAP BW.  
   
 ### Using the SSIS Designer to Configure the Destination  
- For more information about the properties of the SAP BW destination that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click one of the following topics:  
+ For more information about the properties of the SAP BW destination that you can set in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click one of the following topics:  
   
 -   [SAP BW Destination Editor &#40;Connection Manager Page&#41;](../../2014/integration-services/sap-bw-destination-editor-connection-manager-page.md)  
   

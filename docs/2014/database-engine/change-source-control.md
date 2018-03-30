@@ -23,7 +23,7 @@ manager: "jhubbard"
   Creates and manages the connections and bindings that link a locally saved solution or project to a source control database folder.  
   
 ## Dialog Box Access  
- In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], select an item in Solution Explorer. On the **File** menu, click **Source Control**, and then **Change Source Control**.  
+ In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], select an item in Solution Explorer. On the **File** menu, click **Source Control**, and then **Change Source Control**.  
   
 > [!NOTE]  
 >  This dialog box is also available by right-clicking the item in Solution Explorer.  

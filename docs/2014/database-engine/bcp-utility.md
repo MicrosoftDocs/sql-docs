@@ -33,9 +33,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # bcp Utility
-  The **bcp** utility bulk copies data between an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and a data file in a user-specified format. The **bcp** utility can be used to import large numbers of new rows into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables or to export data out of tables into data files. Except when used with the **queryout** option, the utility requires no knowledge of [!INCLUDE[tsql](../../includes/tsql-md.md)]. To import data into a table, you must either use a format file created for that table or understand the structure of the table and the types of data that are valid for its columns.  
+  The **bcp** utility bulk copies data between an instance of [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and a data file in a user-specified format. The **bcp** utility can be used to import large numbers of new rows into [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tables or to export data out of tables into data files. Except when used with the **queryout** option, the utility requires no knowledge of [!INCLUDE[tsql](../includes/tsql-md.md)]. To import data into a table, you must either use a format file created for that table or understand the structure of the table and the types of data that are valid for its columns.  
   
- ![Topic link icon](../../2014/database-engine/media/topic-link.gif "Topic link icon") For the syntax conventions that are used for the **bcp** syntax, see [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md).  
+ ![Topic link icon](../../2014/database-engine/media/topic-link.gif "Topic link icon") For the syntax conventions that are used for the **bcp** syntax, see [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](~/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 > [!NOTE]  
 >  If you use **bcp** to back up your data, create a format file to record the data format. **bcp** data files do not include any schema or format information, so if a table or view is dropped and you do not have a format file, you may be unable to import the data.  
@@ -81,7 +81,7 @@ manager: "jhubbard"
   
 ## Arguments  
  *data_file*  
- Is the full path of the data file. When data is bulk imported into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the data file contains the data to be copied into the specified table or view. When data is bulk exported from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the data file contains the data copied from the table or view. The path can have from 1 through 255 characters. The data file can contain a maximum of 2<sup>63</sup> - 1 rows.  
+ Is the full path of the data file. When data is bulk imported into [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the data file contains the data to be copied into the specified table or view. When data is bulk exported from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the data file contains the data copied from the table or view. The path can have from 1 through 255 characters. The data file can contain a maximum of 2<sup>63</sup> - 1 rows.  
   
  *database_name*  
  Is the name of the database in which the specified table or view resides. If not specified, this is the default database for the user.  
@@ -100,21 +100,21 @@ manager: "jhubbard"
 -   **format** creates a format file based on the option specified (**-n**, `-c`, `-w`, or **-N**) and the table or view delimiters. When bulk copying data, the **bcp** command can refer to a format file, which saves you from re-entering format information interactively. The **format** option requires the **-f** option; creating an XML format file, also requires the **-x** option. For more information, see [Create a Format File &#40;SQL Server&#41;](../../2014/database-engine/create-a-format-file-sql-server.md). You must specify **nul** as the value (**format nul**).  
   
  *owner*  
- Is the name of the owner of the table or view. *owner* is optional if the user performing the operation owns the specified table or view. If *owner* is not specified and the user performing the operation does not own the specified table or view, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns an error message, and the operation is canceled.  
+ Is the name of the owner of the table or view. *owner* is optional if the user performing the operation owns the specified table or view. If *owner* is not specified and the user performing the operation does not own the specified table or view, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] returns an error message, and the operation is canceled.  
   
  **"** *query* **"**  
- Is a [!INCLUDE[tsql](../../includes/tsql-md.md)] query that returns a result set. If the query returns multiple result sets, only the first result set is copied to the data file; subsequent result sets are ignored. Use double quotation marks around the query and single quotation marks around anything embedded in the query. **queryout** must also be specified when bulk copying data from a query.  
+ Is a [!INCLUDE[tsql](../includes/tsql-md.md)] query that returns a result set. If the query returns multiple result sets, only the first result set is copied to the data file; subsequent result sets are ignored. Use double quotation marks around the query and single quotation marks around anything embedded in the query. **queryout** must also be specified when bulk copying data from a query.  
   
  The query can reference a stored procedure as long as all tables referenced inside the stored procedure exist prior to executing the bcp statement. For example, if the stored procedure generates a temp table, the **bcp** statement fails because the temp table is available only at run time and not at statement execution time. In this case, consider inserting the results of the stored procedure into a table and then use **bcp** to copy the data from the table into a data file.  
   
  *table_name*  
- Is the name of the destination table when importing data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (**in**), and the source table when exporting data from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (**out**).  
+ Is the name of the destination table when importing data into [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (**in**), and the source table when exporting data from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (**out**).  
   
  *view_name*  
- Is the name of the destination view when copying data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (**in**), and the source view when copying data from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (**out**). Only views in which all columns refer to the same table can be used as destination views. For more information on the restrictions for copying data into views, see [INSERT &#40;Transact-SQL&#41;](../Topic/INSERT%20\(Transact-SQL\).md).  
+ Is the name of the destination view when copying data into [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (**in**), and the source view when copying data from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (**out**). Only views in which all columns refer to the same table can be used as destination views. For more information on the restrictions for copying data into views, see [INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/insert-transact-sql.md).  
   
  **-a** *packet_size*  
- Specifies the number of bytes, per network packet, sent to and from the server. A server configuration option can be set by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (or the **sp_configure** system stored procedure). However, the server configuration option can be overridden on an individual basis by using this option. *packet_size* can be from 4096 to 65535 bytes; the default is 4096.  
+ Specifies the number of bytes, per network packet, sent to and from the server. A server configuration option can be set by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (or the **sp_configure** system stored procedure). However, the server configuration option can be overridden on an individual basis by using this option. *packet_size* can be from 4096 to 65535 bytes; the default is 4096.  
   
  Increased packet size can enhance performance of bulk-copy operations. If a larger packet is requested but cannot be granted, the default is used. The performance statistics generated by the **bcp** utility show the packet size used.  
   
@@ -136,10 +136,10 @@ manager: "jhubbard"
   
 |Code page value|Description|  
 |---------------------|-----------------|  
-|ACP|[!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/Microsoft Windows (ISO 1252).|  
+|ACP|[!INCLUDE[vcpransi](../includes/vcpransi-md.md)]/Microsoft Windows (ISO 1252).|  
 |OEM|Default code page used by the client. This is the default code page used if **-C** is not specified.|  
 |RAW|No conversion from one code page to another occurs. This is the fastest option because no conversion occurs.|  
-|*code_page*|Specific code page number; for example, 850.<br /><br /> **\*\* Important \*\*** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not support code page 65001 (UTF-8 encoding).|  
+|*code_page*|Specific code page number; for example, 850.<br /><br /> **\*\* Important \*\*** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not support code page 65001 (UTF-8 encoding).|  
   
  `-d` *database_name*  
  Specifies the database to connect to. By default, bcp.exe connects to the user’s default database. If `-d`*database_name* and a three part name (*database_name.schema.table*, passed as the first parameter to bcp.exe) is specified, an error will occur because you cannot specify the database name twice.If *database_name* begins with a hyphen (-) or a forward slash (/), do not add a space between `-d` and the database name.  
@@ -150,9 +150,9 @@ manager: "jhubbard"
  If *err_file* begins with a hyphen (-) or a forward slash (/), do not include a space between **-e** and the *err_file* value.  
   
  **-E**  
- Specifies that identity value or values in the imported data file are to be used for the identity column. If **-E** is not given, the identity values for this column in the data file being imported are ignored, and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatically assigns unique values based on the seed and increment values specified during table creation.  
+ Specifies that identity value or values in the imported data file are to be used for the identity column. If **-E** is not given, the identity values for this column in the data file being imported are ignored, and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] automatically assigns unique values based on the seed and increment values specified during table creation.  
   
- If the data file does not contain values for the identity column in the table or view, use a format file to specify that the identity column in the table or view should be skipped when importing data; [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatically assigns unique values for the column. For more information, see [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../Topic/DBCC%20CHECKIDENT%20\(Transact-SQL\).md).  
+ If the data file does not contain values for the identity column in the table or view, use a format file to specify that the identity column in the table or view should be skipped when importing data; [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] automatically assigns unique values for the column. For more information, see [DBCC CHECKIDENT &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checkident-transact-sql.md).  
   
  The **-E** option has a special permissions requirement. For more information, see "Remarks" later in this topic.  
   
@@ -177,7 +177,7 @@ manager: "jhubbard"
  Specifies the hint or hints to be used during a bulk import of data into a table or view.  
   
  ORDER**(***column*[ASC | DESC] [**,**...*n*]**)**  
- The sort order of the data in the data file. Bulk import performance is improved if the data being imported is sorted according to the clustered index on the table, if any. If the data file is sorted in a different order, that is other than the order of a clustered index key, or if there is no clustered index on the table, the ORDER clause is ignored. The column names supplied must be valid column names in the destination table. By default, **bcp** assumes the data file is unordered. For optimized bulk import, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] also validates that the imported data is sorted.  
+ The sort order of the data in the data file. Bulk import performance is improved if the data being imported is sorted according to the clustered index on the table, if any. If the data file is sorted in a different order, that is other than the order of a clustered index key, or if there is no clustered index on the table, the ORDER clause is ignored. The column names supplied must be valid column names in the destination table. By default, **bcp** assumes the data file is unordered. For optimized bulk import, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] also validates that the imported data is sorted.  
   
  ROWS_PER_BATCH **=***bb*  
  Number of rows of data per batch (as *bb*). Used when **-b** is not specified, resulting in the entire data file being sent to the server as a single transaction. The server optimizes the bulk load according to the value *bb*. By default, ROWS_PER_BATCH is unknown.  
@@ -196,7 +196,7 @@ manager: "jhubbard"
   
  At some point, you will need to check the constraints on the entire table. If the table was nonempty before the bulk import operation, the cost of revalidating the constraint may exceed the cost of applying CHECK constraints to the incremental data. Therefore, we recommend that normally you enable constraint checking during an incremental bulk import.  
   
- A situation in which you might want constraints disabled (the default behavior) is if the input data contains rows that violate constraints. With CHECK constraints disabled, you can import the data and then use [!INCLUDE[tsql](../../includes/tsql-md.md)] statements to remove data that is not valid.  
+ A situation in which you might want constraints disabled (the default behavior) is if the input data contains rows that violate constraints. With CHECK constraints disabled, you can import the data and then use [!INCLUDE[tsql](../includes/tsql-md.md)] statements to remove data that is not valid.  
   
 > [!NOTE]  
 >  **bcp** now enforces data validation and data checks that might cause scripts to fail if they are executed on invalid data in a data file.  
@@ -237,7 +237,7 @@ manager: "jhubbard"
  For more information, see [Use Native Format to Import or Export Data &#40;SQL Server&#41;](../../2014/database-engine/use-native-format-to-import-or-export-data-sql-server.md).  
   
  **-N**  
- Performs the bulk-copy operation using the native (database) data types of the data for noncharacter data, and Unicode characters for character data. This option offers a higher performance alternative to the `-w` option, and is intended for transferring data from one instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to another using a data file. It does not prompt for each field. Use this option when you are transferring data that contains ANSI extended characters and you want to take advantage of the performance of native mode.  
+ Performs the bulk-copy operation using the native (database) data types of the data for noncharacter data, and Unicode characters for character data. This option offers a higher performance alternative to the `-w` option, and is intended for transferring data from one instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to another using a data file. It does not prompt for each field. Use this option when you are transferring data that contains ANSI extended characters and you want to take advantage of the performance of native mode.  
   
  For more information, see [Use Unicode Native Format to Import or Export Data &#40;SQL Server&#41;](../../2014/database-engine/use-unicode-native-format-to-import-or-export-data-sql-server.md).  
   
@@ -254,14 +254,14 @@ manager: "jhubbard"
  Specifies the password for the login ID. If this option is not used, the **bcp** command prompts for a password. If this option is used at the end of the command prompt without a password, **bcp** uses the default password (NULL).  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
+>  [!INCLUDE[ssNoteStrongPass](../includes/ssnotestrongpass-md.md)]  
   
  To mask your password, do not specify the **-P** option along with the **-U** option. Instead, after specifying **bcp** along with the **-U** option and other switches (do not specify **-P**), press ENTER, and the command will prompt you for a password. This method ensures that your password will be masked when it is entered.  
   
  If *password* begins with a hyphen (-) or a forward slash (/), do not add a space between **-P** and the *password* value.  
   
  `-q`  
- Executes the SET QUOTED_IDENTIFIERS ON statement in the connection between the **bcp** utility and an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use this option to specify a database, owner, table, or view name that contains a space or a single quotation mark. Enclose the entire three-part table or view name in quotation marks ("").  
+ Executes the SET QUOTED_IDENTIFIERS ON statement in the connection between the **bcp** utility and an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Use this option to specify a database, owner, table, or view name that contains a space or a single quotation mark. Enclose the entire three-part table or view name in quotation marks ("").  
   
  To specify a database name that contains a space or single quotation mark, you must use the **–q** option.  
   
@@ -277,10 +277,10 @@ manager: "jhubbard"
  If *row_term* begins with a hyphen (-) or a forward slash (/), do not include a space between **-r** and the *row_term* value.  
   
  **-R**  
- Specifies that currency, date, and time data is bulk copied into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using the regional format defined for the locale setting of the client computer. By default, regional settings are ignored.  
+ Specifies that currency, date, and time data is bulk copied into [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using the regional format defined for the locale setting of the client computer. By default, regional settings are ignored.  
   
  **-S** *server_name*[ **\\***instance_name*]  
- Specifies the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to which to connect. If no server is specified, the **bcp** utility connects to the default instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the local computer. This option is required when a **bcp** command is run from a remote computer on the network or a local named instance. To connect to the default instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a server, specify only *server_name*. To connect to a named instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], specify *server_name***\\***instance_name*.  
+ Specifies the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to which to connect. If no server is specified, the **bcp** utility connects to the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on the local computer. This option is required when a **bcp** command is run from a remote computer on the network or a local named instance. To connect to the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on a server, specify only *server_name*. To connect to a named instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], specify *server_name***\\***instance_name*.  
   
  `-t` *field_term*  
  Specifies the field terminator. The default is **\t** (tab character). Use this parameter to override the default field terminator. For more information, see [Specify Field and Row Terminators &#40;SQL Server&#41;](../../2014/database-engine/specify-field-and-row-terminators-sql-server.md).  
@@ -290,29 +290,29 @@ manager: "jhubbard"
  If *field_term* begins with a hyphen (-) or a forward slash (/), do not include a space between `-t` and the *field_term* value.  
   
  **-T**  
- Specifies that the **bcp** utility connects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with a trusted connection using integrated security. The security credentials of the network user, *login_id*, and *password* are not required. If **–T** is not specified, you need to specify **–U** and **–P** to successfully log in.  
+ Specifies that the **bcp** utility connects to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] with a trusted connection using integrated security. The security credentials of the network user, *login_id*, and *password* are not required. If **–T** is not specified, you need to specify **–U** and **–P** to successfully log in.  
   
  **-U** *login_id*  
- Specifies the login ID used to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Specifies the login ID used to connect to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  When the **bcp** utility is connecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with a trusted connection using integrated security, use the **-T** option (trusted connection) instead of the *user name* and *password* combination.  
+>  When the **bcp** utility is connecting to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] with a trusted connection using integrated security, use the **-T** option (trusted connection) instead of the *user name* and *password* combination.  
   
  **-v**  
  Reports the **bcp** utility version number and copyright.  
   
  **-V** (**80** | **90** | **100**| **110**)  
- Performs the bulk-copy operation using data types from an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This option does not prompt for each field; it uses the default values.  
+ Performs the bulk-copy operation using data types from an earlier version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. This option does not prompt for each field; it uses the default values.  
   
- **80** = [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]  
+ **80** = [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]  
   
- **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
+ **90** = [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]  
   
- **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
+ **100** = [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]  
   
- **110 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**  
+ **110 = [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]**  
   
- For example, to generate data for types not supported by [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], but were introduced in later versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use the -V80 option.  
+ For example, to generate data for types not supported by [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)], but were introduced in later versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], use the -V80 option.  
   
  For more information, see [Import Native and Character Format Data from Earlier Versions of SQL Server](../../2014/database-engine/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
   
@@ -325,9 +325,9 @@ manager: "jhubbard"
  Used with the **format** and **-f***format_file* options, generates an XML-based format file instead of the default non-XML format file. The **-x** does not work when importing or exporting data. It generates an error if used without both **format** and **-f***format_file*.  
   
 ## Remarks  
- The **bcp** 12.0 client is installed when you install [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tools. If tools are installed for both [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], depending on the value of the PATH environment variable, you might be using the earlier **bcp** client instead of the **bcp** 12.0 client. This environment variable defines the set of directories used by Windows to search for executable files. To discover which version you are using, run the **bcp /v** command at the Windows Command Prompt. For information about how to set the command path in the PATH environment variable, see Windows Help.  
+ The **bcp** 12.0 client is installed when you install [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] tools. If tools are installed for both [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] and an earlier version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], depending on the value of the PATH environment variable, you might be using the earlier **bcp** client instead of the **bcp** 12.0 client. This environment variable defines the set of directories used by Windows to search for executable files. To discover which version you are using, run the **bcp /v** command at the Windows Command Prompt. For information about how to set the command path in the PATH environment variable, see Windows Help.  
   
- XML format files are only supported when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tools are installed together with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
+ XML format files are only supported when [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tools are installed together with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client.  
   
  For information about where to find or how to run the **bcp** utility and about the command prompt utilities syntax conventions, see [Command Prompt Utility Reference &#40;Database Engine&#41;](../../2014/database-engine/command-prompt-utility-reference-database-engine.md).  
   
@@ -336,15 +336,15 @@ manager: "jhubbard"
  For information about when row-insert operations that are performed by bulk import are logged in the transaction log, see [Prerequisites for Minimal Logging in Bulk Import](../../2014/database-engine/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
 ## Native Data File Support  
- In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], the **bcp** utility supports native data files compatible with [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], and [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+ In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], the **bcp** utility supports native data files compatible with [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)], and [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
   
 ## Computed Columns and timestamp Columns  
- Values in the data file being imported for computed or `timestamp` columns are ignored, and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatically assigns values. If the data file does not contain values for the computed or `timestamp` columns in the table, use a format file to specify that the computed or `timestamp` columns in the table should be skipped when importing data; [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatically assigns values for the column.  
+ Values in the data file being imported for computed or `timestamp` columns are ignored, and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] automatically assigns values. If the data file does not contain values for the computed or `timestamp` columns in the table, use a format file to specify that the computed or `timestamp` columns in the table should be skipped when importing data; [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] automatically assigns values for the column.  
   
- Computed and `timestamp` columns are bulk copied from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to a data file as usual.  
+ Computed and `timestamp` columns are bulk copied from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to a data file as usual.  
   
 ## Specifying Identifiers That Contain Spaces or Quotation Marks  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifiers can include characters such as embedded spaces and quotation marks. Such identifiers must be treated as follows:  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] identifiers can include characters such as embedded spaces and quotation marks. Such identifiers must be treated as follows:  
   
 -   When you specify an identifier or file name that includes a space or quotation mark at the command prompt, enclose the identifier in quotation marks ("").  
   
@@ -369,7 +369,7 @@ manager: "jhubbard"
   
 -   Unicode data has an even-byte length.  
   
- Forms of invalid data that could be bulk imported in earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might fail to load now; whereas, in earlier versions, the failure did not occur until a client tried to access the invalid data. The added validation minimizes surprises when querying the data after bulk load.  
+ Forms of invalid data that could be bulk imported in earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] might fail to load now; whereas, in earlier versions, the failure did not occur until a client tried to access the invalid data. The added validation minimizes surprises when querying the data after bulk load.  
   
 ## Bulk Exporting or Importing SQLXML Documents  
  To bulk export or import SQLXML data, use one of the following data types in your format file.  
@@ -398,12 +398,12 @@ manager: "jhubbard"
 -   You use the **-E** option to import identity values from a data file.  
   
 > [!NOTE]  
->  Requiring ALTER TABLE permission on the target table was new in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. This new requirement might cause **bcp** scripts that do not enforce triggers and constraint checks to fail if the user account lacks ALTER table permissions for the target table.  
+>  Requiring ALTER TABLE permission on the target table was new in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]. This new requirement might cause **bcp** scripts that do not enforce triggers and constraint checks to fail if the user account lacks ALTER table permissions for the target table.  
   
 ## Character Mode (-c) and Native Mode (-n) Best Practices  
  This section has recommendations for to character mode (-c) and native mode (-n).  
   
--   (Administrator/User) When possible, use native format (-n) to avoid the separator issue. Use the native format to export and import using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Export data from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using the -c or -w option if the data will be imported to a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
+-   (Administrator/User) When possible, use native format (-n) to avoid the separator issue. Use the native format to export and import using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Export data from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using the -c or -w option if the data will be imported to a non-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database.  
   
 -   (Administrator) Verify data when using BCP OUT. For example, when you use BCP OUT, BCP IN, and then BCP OUT verify that the data is properly exported and the terminator values are not used as part of some data value. Please consider overriding the default terminators (using -t and -r options) with random hexadecimal values to avoid conflicts between terminator values and data values.  
   
@@ -442,7 +442,7 @@ bcp AdventureWorks2012.Sales.Currency out Currency.dat -T -c
 ### B. Copying table rows into a data file (with mixed-mode authentication)  
  The following example illustrates the **out** option on the `AdventureWorks2012.Sales.Currency` table. This example creates a data file named `Currency.dat` and copies the table data into it using character format.  
   
- The example assumes that you are using mixed-mode authentication, you must use the **-U** switch to specify your login ID. Also, unless you are connecting to the default instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the local computer, use the **-S** switch to specify the system name and, optionally, an instance name.  
+ The example assumes that you are using mixed-mode authentication, you must use the **-U** switch to specify your login ID. Also, unless you are connecting to the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on the local computer, use the **-S** switch to specify the system name and, optionally, an instance name.  
   
 ```  
 bcp AdventureWorks2012.Sales.Currency out Currency.dat -c -U<login_id> -S<server_name\instance_name>  
@@ -495,7 +495,7 @@ bcp "SELECT * FROM AdventureWorks2012.Person.Person WHERE FirstName='Jarrod' AND
 ```  
   
 ### F. Copying data from a query to a data file  
- To copy the result set from a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement to a data file, use the **queryout** option. The following example copies the names from the `AdventureWorks2012.Person.Person` table, ordered by last name then first name, into the `Contacts.txt` data file. The example assumes that you are using Windows Authentication and have a trusted connection to the server instance on which you are running the **bcp** command.  
+ To copy the result set from a [!INCLUDE[tsql](../includes/tsql-md.md)] statement to a data file, use the **queryout** option. The following example copies the names from the `AdventureWorks2012.Person.Person` table, ordered by last name then first name, into the `Contacts.txt` data file. The example assumes that you are using Windows Authentication and have a trusted connection to the server instance on which you are running the **bcp** command.  
   
  At the Windows command prompt, enter:  
   
@@ -504,7 +504,7 @@ bcp "SELECT FirstName, LastName FROM AdventureWorks2012.Person.Person ORDER BY L
 ```  
   
 ### G. Creating a non-XML format file  
- The following example creates a non-XML format file, `Currency.fmt`, for the `Sales.Currency` table in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. The example assumes that you are using Windows Authentication and have a trusted connection to the server instance on which you are running the **bcp** command.  
+ The following example creates a non-XML format file, `Currency.fmt`, for the `Sales.Currency` table in the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database. The example assumes that you are using Windows Authentication and have a trusted connection to the server instance on which you are running the **bcp** command.  
   
  At the Windows command prompt, enter:  
   
@@ -515,7 +515,7 @@ bcp AdventureWorks2012.Sales.Currency format nul -T -c  -f Currency.fmt
  For more information, see [Non-XML Format Files &#40;SQL Server&#41;](../../2014/database-engine/non-xml-format-files-sql-server.md).  
   
 ### H. Creating an XML format file  
- The following example creates an XML format file named `Currency.xml` for the `Sales.Currency` table in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. The example assumes that you are using Windows Authentication and have a trusted connection to the server instance on which you are running the **bcp** command.  
+ The following example creates an XML format file named `Currency.xml` for the `Sales.Currency` table in the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database. The example assumes that you are using Windows Authentication and have a trusted connection to the server instance on which you are running the **bcp** command.  
   
  At the Windows command prompt, enter:  
   
@@ -529,7 +529,7 @@ bcp AdventureWorks2012.Sales.Currency format nul -T -c -x -f Currency.xml
  For more information, see [XML Format Files &#40;SQL Server&#41;](../../2014/database-engine/xml-format-files-sql-server.md).  
   
 ### I. Using a format file to bulk import with bcp  
- To use a previously created format file when importing data into an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use the **-f** switch with the **in** option. For example, the following command bulk copies the contents of a data file, `Currency.dat`, into a copy of the `Sales.Currency` table (`Sales.Currency2`) by using the previously created format file (`Currency.xml`). The example assumes that you are using Windows Authentication and have a trusted connection to the server instance on which you are running the **bcp** command.  
+ To use a previously created format file when importing data into an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], use the **-f** switch with the **in** option. For example, the following command bulk copies the contents of a data file, `Currency.dat`, into a copy of the `Sales.Currency` table (`Sales.Currency2`) by using the previously created format file (`Currency.xml`). The example assumes that you are using Windows Authentication and have a trusted connection to the server instance on which you are running the **bcp** command.  
   
  At the Windows command prompt, enter:  
   
@@ -565,11 +565,11 @@ bcp AdventureWorks2012.Sales.Currency2 in Currency.dat -T -f Currency.xml
   
 ## See Also  
  [Prepare Data for Bulk Export or Import &#40;SQL Server&#41;](../../2014/database-engine/prepare-data-for-bulk-export-or-import-sql-server.md)   
- [BULK INSERT &#40;Transact-SQL&#41;](../Topic/BULK%20INSERT%20\(Transact-SQL\).md)   
- [OPENROWSET &#40;Transact-SQL&#41;](../Topic/OPENROWSET%20\(Transact-SQL\).md)   
- [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../Topic/SET%20QUOTED_IDENTIFIER%20\(Transact-SQL\).md)   
- [sp_configure &#40;Transact-SQL&#41;](../Topic/sp_configure%20\(Transact-SQL\).md)   
- [sp_tableoption &#40;Transact-SQL&#41;](../Topic/sp_tableoption%20\(Transact-SQL\).md)   
+ [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md)   
+ [OPENROWSET &#40;Transact-SQL&#41;](~/t-sql/functions/openrowset-transact-sql.md)   
+ [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](~/t-sql/statements/set-quoted-identifier-transact-sql.md)   
+ [sp_configure &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
+ [sp_tableoption &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)   
  [Format Files for Importing or Exporting Data &#40;SQL Server&#41;](../../2014/database-engine/format-files-for-importing-or-exporting-data-sql-server.md)  
   
   

@@ -22,14 +22,14 @@ helpviewer_keywords:
 ms.assetid: 25c58a14-9f94-4296-9770-7d84c6bc3969
 caps.latest.revision: 20
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Manage the Editor and View Mode
   The Editor gives you a number of ways to control the view of your code.  
   
 ## Changing the View Mode  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] features a view mode called **Tabbed Documents**, which allows you to open multiple editors and documents simultaneously and access them through tabs at the top of the Editor. You can alternatively open the [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] environment in Multiple Document Interface (MDI) mode, which joins windows without the tabs, and allows each window to be tiled, minimized, and so on.  
+ [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] features a view mode called **Tabbed Documents**, which allows you to open multiple editors and documents simultaneously and access them through tabs at the top of the Editor. You can alternatively open the [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] environment in Multiple Document Interface (MDI) mode, which joins windows without the tabs, and allows each window to be tiled, minimized, and so on.  
   
 #### To switch between view modes  
   
@@ -40,7 +40,7 @@ manager: "jhubbard"
 3.  Click **Tabbed documents** or **MDI environment**.  
   
     > [!NOTE]  
-    >  The changes will not take effect until [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] is restarted.  
+    >  The changes will not take effect until [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] is restarted.  
   
 ## Splitting the View  
  An Editor window can be split into two separate parts for easier editing.  

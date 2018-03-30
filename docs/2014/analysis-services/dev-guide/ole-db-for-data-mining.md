@@ -20,14 +20,14 @@ ms.author: "jeannt"
 manager: "mblythe"
 ---
 # OLE DB for Data Mining
-  The data mining features in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] comply with the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] OLE DB for Data Mining 1.0 specification released in June 2000.  
+  The data mining features in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] comply with the [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB for Data Mining 1.0 specification released in June 2000.  
   
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] has extended the specification by adding new schema rowsets, adding columns to existing schema rowsets, and adding syntax to the Data Mining Extensions (DMX) language for creating and managing mining structures.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] has extended the specification by adding new schema rowsets, adding columns to existing schema rowsets, and adding syntax to the Data Mining Extensions (DMX) language for creating and managing mining structures.  
   
- **For More Information:** [Data Mining Schema Rowsets](../../../2014/analysis-services/dev-guide/data-mining-schema-rowsets.md), [CREATE MINING STRUCTURE &#40;DMX&#41;](../Topic/CREATE%20MINING%20STRUCTURE%20\(DMX\).md), [ALTER MINING STRUCTURE &#40;DMX&#41;](../Topic/ALTER%20MINING%20STRUCTURE%20\(DMX\).md), [DROP MINING STRUCTURE &#40;DMX&#41;](../Topic/DROP%20MINING%20STRUCTURE%20\(DMX\).md)  
+ **For More Information:** [Data Mining Schema Rowsets](../../../2014/analysis-services/dev-guide/data-mining-schema-rowsets.md), [CREATE MINING STRUCTURE &#40;DMX&#41;](~/dmx/create-mining-structure-dmx.md), [ALTER MINING STRUCTURE &#40;DMX&#41;]((~/dmx/alter-mining-structure-dmx.md), [DROP MINING STRUCTURE &#40;DMX&#41;](~/dmx/drop-mining-structure-dmx.md)  
   
 ## See Also  
  [Analysis Services Schema Rowsets](../../../2014/analysis-services/dev-guide/analysis-services-schema-rowsets.md)   
- [Data Mining Extensions &#40;DMX&#41; Reference](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Reference.md)  
+ [Data Mining Extensions &#40;DMX&#41; Reference](~/dmx/data-mining-extensions-dmx-reference.md)  
   
   

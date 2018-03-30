@@ -19,16 +19,16 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Specify the WITH keyword when using table hints in 90 compatibility mode
-  With some exceptions, table hints are supported in the FROM clause of a query only when the hints are specified by using the WITH keyword. For more information, see the topics "FROM ([!INCLUDE[tsql](../../../includes/tsql-md.md)])" and "Table Hint ([!INCLUDE[tsql](../../../includes/tsql-md.md)])" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online.  
+  With some exceptions, table hints are supported in the FROM clause of a query only when the hints are specified by using the WITH keyword. For more information, see the topics "FROM ([!INCLUDE[tsql](../../includes/tsql-md.md)])" and "Table Hint ([!INCLUDE[tsql](../../includes/tsql-md.md)])" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
 ## Component  
- [!INCLUDE[ssDE](../../../includes/ssde-md.md)]  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## Corrective Action  
  Modify queries that include table hints in the FROM clause by including the WITH keyword before the table hints.  
   
 ## See Also  
  [Database Engine Upgrade Issues](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;new&#93;](../Topic/SQL%20Server%202014%20Upgrade%20Advisor%20[new].md)  
+ [SQL Server 2014 Upgrade Advisor &#91;new&#93;](~/2014/sql-server/install/sql-server-2014-upgrade-advisor.md)  
   
   

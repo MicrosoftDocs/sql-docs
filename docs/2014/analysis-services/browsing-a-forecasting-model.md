@@ -22,7 +22,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Browsing a Forecasting Model
-  When you open a forecasting model using **Browse**, the model is displayed in an interactive viewer, similar to the time series model viewer in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. The viewer helps you explore trends, compare series, create predictions, and get information about the model and the underlying data.  
+  When you open a forecasting model using **Browse**, the model is displayed in an interactive viewer, similar to the time series model viewer in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. The viewer helps you explore trends, compare series, create predictions, and get information about the model and the underlying data.  
   
 ##  <a name="bkmk_Top"></a> Explore the Model  
  The **Browse** viewer for forecasting models provides a chart view, which shows the trends over time and lets you create predictions, and a model view, which represents the time series as a decision tree or a regression tree.  

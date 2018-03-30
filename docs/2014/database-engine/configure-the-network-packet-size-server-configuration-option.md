@@ -17,11 +17,11 @@ helpviewer_keywords:
 ms.assetid: 236985bf-fc4a-4a57-98f7-a71ef977fd7b
 caps.latest.revision: 26
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Configure the network packet size Server Configuration Option
-  This topic describes how to configure the `network packet size` server configuration option in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The `network packet size` option sets the packet size (in bytes) that is used across the whole network. Packets are the fixed-size chunks of data that transfer requests and results between clients and servers. The default packet size is 4,096 bytes.  
+  This topic describes how to configure the `network packet size` server configuration option in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)]. The `network packet size` option sets the packet size (in bytes) that is used across the whole network. Packets are the fixed-size chunks of data that transfer requests and results between clients and servers. The default packet size is 4,096 bytes.  
   
 > [!NOTE]  
 >  Do not change the packet size unless you are certain that it will improve performance. For most applications, the default packet size is best.  
@@ -52,13 +52,13 @@ manager: "jhubbard"
   
 ###  <a name="Recommendations"></a> Recommendations  
   
--   This option is an advanced option and should be changed only by an experienced database administrator or certified [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] technician.  
+-   This option is an advanced option and should be changed only by an experienced database administrator or certified [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] technician.  
   
 -   If an application does bulk copy operations or sends or receives large amounts of text or image data, a packet size larger than the default might improve efficiency because it results in fewer network read-and-write operations. If an application sends and receives small amounts of information, the packet size can be set to 512 bytes, which is sufficient for most data transfers.  
   
 -   On systems that are using different network protocols, set network packet size to the size for the most common protocol used. The network packet size option improves network performance when network protocols support larger packets. Client applications can override this value.  
   
--   You can also call OLE DB, Open Database Connectivity (ODBC), and DB-Library functions request a change the packet size. If the server cannot support the requested packet size, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] will send a warning message to the client. In some circumstances, changing the packet size might lead to a communication link failure, such as the following:  
+-   You can also call OLE DB, Open Database Connectivity (ODBC), and DB-Library functions request a change the packet size. If the server cannot support the requested packet size, the [!INCLUDE[ssDE](../includes/ssde-md.md)] will send a warning message to the client. In some circumstances, changing the packet size might lead to a communication link failure, such as the following:  
   
      `Native Error: 233, no process is on the other end of the pipe.`  
   
@@ -81,11 +81,11 @@ manager: "jhubbard"
   
 #### To configure the network packet size option  
   
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_configure](../Topic/sp_configure%20\(Transact-SQL\).md) to set the value of the `network packet size` option to `6500` bytes.  
+3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_configure](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md) to set the value of the `network packet size` option to `6500` bytes.  
   
 ```tsql  
 USE AdventureWorks2012 ;  
@@ -107,8 +107,8 @@ GO
  The setting takes effect immediately without restarting the server.  
   
 ## See Also  
- [RECONFIGURE &#40;Transact-SQL&#41;](../Topic/RECONFIGURE%20\(Transact-SQL\).md)   
+ [RECONFIGURE &#40;Transact-SQL&#41;](~/t-sql/language-elements/reconfigure-transact-sql.md)   
  [Server Configuration Options &#40;SQL Server&#41;](../../2014/database-engine/server-configuration-options-sql-server.md)   
- [sp_configure &#40;Transact-SQL&#41;](../Topic/sp_configure%20\(Transact-SQL\).md)  
+ [sp_configure &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   

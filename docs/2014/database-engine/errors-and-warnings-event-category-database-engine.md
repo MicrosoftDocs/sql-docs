@@ -33,11 +33,11 @@ manager: "jhubbard"
 |[Bitmap Warning Event Class](../../2014/database-engine/bitmap-warning-event-class.md)|Indicates that bitmap filtering has been disabled in a query.|  
 |[Blocked Process Report Event Class](../../2014/database-engine/blocked-process-report-event-class.md)|Indicates that a task has been blocked for more than a specified amount of time.|  
 |[CPU Threshold Exceeded Event Class](../../2014/database-engine/cpu-threshold-exceeded-event-class.md)|Indicates that the Resource Governor detects a query that exceeds the specified CPU threshold.|  
-|[ErrorLog Event Class](../../2014/database-engine/errorlog-event-class.md)|Indicates that error events have been logged in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log.|  
+|[ErrorLog Event Class](../../2014/database-engine/errorlog-event-class.md)|Indicates that error events have been logged in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] error log.|  
 |[EventLog Event Class](../../2014/database-engine/eventlog-event-class.md)|Indicates that events have been logged in the Windows event log.|  
-|[Exception Event Class](../../2014/database-engine/exception-event-class.md)|Indicates that an exception has occurred in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|[Exception Event Class](../../2014/database-engine/exception-event-class.md)|Indicates that an exception has occurred in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
 |[Exchange Spill Event Class](../../2014/database-engine/exchange-spill-event-class.md)|Indicates that communication buffers in a parallel query plan have been written to the tempdb database.|  
-|[Execution Warnings Event Class](../../2014/database-engine/execution-warnings-event-class.md)|Indicates that memory grant warnings occurred during the execution of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] statement or stored procedure.|  
+|[Execution Warnings Event Class](../../2014/database-engine/execution-warnings-event-class.md)|Indicates that memory grant warnings occurred during the execution of a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] statement or stored procedure.|  
 |[Hash Warning Event Class](../../2014/database-engine/hash-warning-event-class.md)|Indicates that a hash recursion or hash bailout has occurred during a hashing operation.|  
 |[Missing Column Statistics Event Class](../../2014/database-engine/missing-column-statistics-event-class.md)|Indicates that column statistics that could have been useful for the optimizer are not available.|  
 |[Missing Join Predicate Event Class](../../2014/database-engine/missing-join-predicate-event-class.md)|Indicates that a query is being executed that has no join predicate.|  
@@ -45,6 +45,6 @@ manager: "jhubbard"
 |[User Error Message Event Class](../../2014/database-engine/user-error-message-event-class.md)|Displays error messages that are seen by the user.|  
   
 ## See Also  
- [sp_trace_setevent &#40;Transact-SQL&#41;](../Topic/sp_trace_setevent%20\(Transact-SQL\).md)  
+ [sp_trace_setevent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

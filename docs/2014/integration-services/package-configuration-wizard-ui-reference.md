@@ -21,10 +21,10 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Package Configuration Wizard UI Reference
-  Use the **Package Configuration Wizard** to create configurations that update the properties of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package and its objects at run time. This wizard runs when you add a new configuration or modify an existing one in the **Package Configurations Organizer** dialog box. To open the **Package Configurations Organizer** dialog box, select **Package Configurations** on the **SSIS** menu in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. For more information, see [Create Package Configurations](../../2014/integration-services/create-package-configurations.md).  
+  Use the **Package Configuration Wizard** to create configurations that update the properties of an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package and its objects at run time. This wizard runs when you add a new configuration or modify an existing one in the **Package Configurations Organizer** dialog box. To open the **Package Configurations Organizer** dialog box, select **Package Configurations** on the **SSIS** menu in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. For more information, see [Create Package Configurations](../../2014/integration-services/create-package-configurations.md).  
   
 > [!NOTE]  
->  Configurations are available for the package deployment model. Parameters are used in place of configurations for the project deployment model. The project deployment model enables you to deploy [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] projects to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. For more information about the deployment models, see [Deployment of Projects and Packages](../../2014/integration-services/deployment-of-projects-and-packages.md).  
+>  Configurations are available for the package deployment model. Parameters are used in place of configurations for the project deployment model. The project deployment model enables you to deploy [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] projects to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server. For more information about the deployment models, see [Deployment of Projects and Packages](../../2014/integration-services/deployment-of-projects-and-packages.md).  
   
  The following sections describe pages of the Wizard.  
   
@@ -53,7 +53,7 @@ manager: "jhubbard"
 |**Environment variable**|Store the configuration in one of the environment variables. Selecting this value displays the dynamic options in the section, **Configuration Type**.|  
 |**Registry entry**|Store the configuration in the Registry. Selecting this value displays the dynamic options in the section, **Configuration Type**.|  
 |**Parent package variable**|Store the configuration as a variable in the package that contains the task.  Selecting this value displays the dynamic options in the section, **Configuration Type**.|  
-|**SQL Server**|Store the configuration in a table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Selecting this value displays the dynamic options in the section, **Configuration Type**.|  
+|**SQL Server**|Store the configuration in a table in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Selecting this value displays the dynamic options in the section, **Configuration Type**.|  
   
  **Next**  
  View the next page in the wizard sequence.  

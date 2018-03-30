@@ -21,7 +21,7 @@ manager: "jhubbard"
  This lesson assumes that you are familiar with forecasting models and with the requirements of the Microsoft Time Series algorithm. For more information, see [Microsoft Time Series Algorithm](../../2014/analysis-services/microsoft-time-series-algorithm.md).  
   
 ## CREATE MINING MODEL Statement  
- In order to create a mining model directly and automatically generate the underlying mining structure, you use the [CREATE MINING MODEL &#40;DMX&#41;](../Topic/CREATE%20MINING%20MODEL%20\(DMX\).md) statement. The code in the statement can be broken into the following parts:  
+ In order to create a mining model directly and automatically generate the underlying mining structure, you use the [CREATE MINING MODEL &#40;DMX&#41;](~/dmx/create-mining-model-dmx.md) statement. The code in the statement can be broken into the following parts:  
   
 -   Naming the model  
   
@@ -49,7 +49,7 @@ WITH DRILLTHROUGH
 CREATE MINING MODEL [Mining Model Name]  
 ```  
   
- Analysis Services automatically generates a name for the underlying structure, by appending "_structure" to the model name, which ensures that the structure name is unique from the model name. For information about naming an object in DMX, see [Identifiers &#40;DMX&#41;](../Topic/Identifiers%20\(DMX\).md).  
+ Analysis Services automatically generates a name for the underlying structure, by appending "_structure" to the model name, which ensures that the structure name is unique from the model name. For information about naming an object in DMX, see [Identifiers &#40;DMX&#41;](~/dmx/identifiers-dmx.md).  
   
  The next line of the code defines the key column for the mining model, which in the case of a time series model uniquely identifies a time step in the source data. The time step is identified with the `KEY TIME` keywords after the column name and data types. If the time series model has a separate series key, it is identified by using the `KEY` keyword.  
   
@@ -73,15 +73,15 @@ CREATE MINING MODEL [Mining Model Name]
 -   Execute the query  
   
 ## Creating the Query  
- The first step is to connect to an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and create a new DMX query in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ The first step is to connect to an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] and create a new DMX query in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 #### To create a new DMX query in SQL Server Management Studio  
   
-1.  Open [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+1.  Open [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
-2.  In the **Connect to Server** dialog box, for **Server type**, select **Analysis Services**. In **Server name**, type `LocalHost`, or the name of the instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] that you want to connect to for this lesson. Click **Connect**.  
+2.  In the **Connect to Server** dialog box, for **Server type**, select **Analysis Services**. In **Server name**, type `LocalHost`, or the name of the instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] that you want to connect to for this lesson. Click **Connect**.  
   
-3.  In **Object Explorer**, right-click the instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], point to **New Query**, and then click **DMX**.  
+3.  In **Object Explorer**, right-click the instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], point to **New Query**, and then click **DMX**.  
   
      Query Editor opens and contains a new, blank query.  
   

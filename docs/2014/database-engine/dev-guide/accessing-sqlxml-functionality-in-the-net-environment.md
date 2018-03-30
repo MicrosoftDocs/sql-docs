@@ -24,14 +24,14 @@ manager: "jhubbard"
 # Accessing SQLXML Functionality in the .NET Environment
   This example shows:  
   
--   How to use [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML Managed Classes (Microsoft.Data.SqlXml) to access Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework environment.  
+-   How to use [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML Managed Classes (Microsoft.Data.SqlXml) to access Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework environment.  
   
--   How DiffGrams that are generated in the .NET Framework environment can apply data updates to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tables.  
+-   How DiffGrams that are generated in the .NET Framework environment can apply data updates to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables.  
   
  In this application, an XPath query is executed against an XSD schema. The execution of the XPath query returns an XML document that consists of contact data (**FirstName**, **LastName**). The application loads the XML document in the dataset in the .NET Framework environment. The data in the dataset is modified: the contact's first name is changed to "Susan" for the first contact in the dataset. The DiffGram is generated from the dataset, and the update that is specified in the DiffGram (the change in the employee's first name) is then applied to the Person.Contact table.  
   
 > [!NOTE]  
->  In the code, you must provide the name of the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in the connection string.  
+>  In the code, you must provide the name of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in the connection string.  
   
 ```  
 using System;  
@@ -71,7 +71,7 @@ class Test
   
  **To test the example:**  
   
- To test this example, you must have the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework installed on your computer.  
+ To test this example, you must have the [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework installed on your computer.  
   
 1.  Save this XSD schema (MySchema.xml) in a folder:  
   

@@ -24,7 +24,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQLXML 4.0 Data Access Components
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 includes three data providers that can insert XML data into and retrieve XML data from a database in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 includes three data providers that can insert XML data into and retrieve XML data from a database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 -   SQLXMLOLEDB Provider  
   
@@ -32,11 +32,11 @@ manager: "jhubbard"
   
 -   SQLXML Managed Classes  
   
-     Expose SQLXML functionality inside the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. For more information, see [SQLXML Managed Classes](../../../2014/database-engine/dev-guide/sqlxml-managed-classes.md).  
+     Expose SQLXML functionality inside the [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. For more information, see [SQLXML Managed Classes](../../../2014/database-engine/dev-guide/sqlxml-managed-classes.md).  
   
 -   SQL Server Native Client (SQLNCLI11)  
   
-     Exposes SQLXML 4.0 functionality through a new data access technology that extends and compliments current versions of Microsoft Data Access Components (MDAC). SQLNCLI11 provides full support for features introduced in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. For more information, see [SQL Server Native Client Programming](../../../2014/database-engine/dev-guide/sql-server-native-client-programming.md).  
+     Exposes SQLXML 4.0 functionality through a new data access technology that extends and compliments current versions of Microsoft Data Access Components (MDAC). SQLNCLI11 provides full support for features introduced in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. For more information, see [SQL Server Native Client Programming](../../../2014/database-engine/dev-guide/sql-server-native-client-programming.md).  
   
 ## In This Section  
  [SQLXMLOLEDB Provider &#40;SQLXML 4.0&#41;](../../../2014/database-engine/dev-guide/sqlxmloledb-provider-sqlxml-4-0.md)  

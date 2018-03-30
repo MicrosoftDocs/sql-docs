@@ -29,7 +29,7 @@ ms.author: "mblythe"
 manager: "mblythe"
 ---
 # Messages Element (XMLA)
-  Contains a collection of [Message](../../../2014/analysis-services/dev-guide/message-element-xmla.md) elements returned from an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] by a [Discover](../../../2014/analysis-services/dev-guide/discover-method-xmla.md) or [Execute](../../../2014/analysis-services/dev-guide/execute-method-xmla.md) method call.  
+  Contains a collection of [Message](../../../2014/analysis-services/dev-guide/message-element-xmla.md) elements returned from an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] by a [Discover](../../../2014/analysis-services/dev-guide/discover-method-xmla.md) or [Execute](../../../2014/analysis-services/dev-guide/execute-method-xmla.md) method call.  
   
 ## Syntax  
   
@@ -58,7 +58,7 @@ manager: "mblythe"
 |Child elements|[Message](../../../2014/analysis-services/dev-guide/message-element-xmla.md)|  
   
 ## Remarks  
- This element is used in cases where a `Discover` method call or a single XMLA command within an `Execute` method call completes successfully, but with errors or warnings. In such cases, a `Messages` element is added to the [root](../../../2014/analysis-services/dev-guide/root-element-xmla.md) element after all other elements, which in turn contains one or more `Message` elements. Each `Message` element represents a single message, either an error or a warning, returned by the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance.  
+ This element is used in cases where a `Discover` method call or a single XMLA command within an `Execute` method call completes successfully, but with errors or warnings. In such cases, a `Messages` element is added to the [root](../../../2014/analysis-services/dev-guide/root-element-xmla.md) element after all other elements, which in turn contains one or more `Message` elements. Each `Message` element represents a single message, either an error or a warning, returned by the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance.  
   
 ## See Also  
  [Properties &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/properties-xmla.md)  

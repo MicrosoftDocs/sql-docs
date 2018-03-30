@@ -16,7 +16,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Create Drillthrough Queries using DMX
-  For all models that support drillthrough, you can retrieve case data and structure data by creating a DMX query in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or any other client that supports DMX.  
+  For all models that support drillthrough, you can retrieve case data and structure data by creating a DMX query in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or any other client that supports DMX.  
   
 > [!WARNING]  
 >  To view the data, drillthrough must have been enabled, and you must have the necessary permissions.  
@@ -28,7 +28,7 @@ manager: "mblythe"
 SELECT <model column list>, StructureColumn('<structure column name') FROM <modelname>.CASES  
 ```  
   
- For additional information about using DMX queries to return case data, see [SELECT FROM &#60;model&#62;.CASES &#40;DMX&#41;](../Topic/SELECT%20FROM%20%3Cmodel%3E.CASES%20\(DMX\).md) and [SELECT FROM &#60;structure&#62;.CASES](../Topic/SELECT%20FROM%20%3Cstructure%3E.CASES.md).  
+ For additional information about using DMX queries to return case data, see [SELECT FROM &#60;model&#62;.CASES &#40;DMX&#41;](~/dmx/select-from-model-content-dmx.md) and [SELECT FROM &#60;structure&#62;.CASES](~/dmx/select-from-structure-cases.md).  
   
 ## Examples  
  The following DMX query returns the case data for a specific product series, from a time series model. The query also returns the column `Amount`, which was not used in the model but is available in the mining structure.  

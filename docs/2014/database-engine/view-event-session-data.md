@@ -23,7 +23,7 @@ manager: "jhubbard"
 -   Working With Data  
   
 ## View Target Data  
- You can display the data collected into the specified target within [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ You can display the data collected into the specified target within [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 ### View Target Data  
  To view target data:  
@@ -42,15 +42,15 @@ manager: "jhubbard"
   
 -   For an event_file target, view the file target data (.XEL file) using one of the following methods:  
   
-    -   Use File -> Open in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+    -   Use File -> Open in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
-    -   Drag and Drop the file into [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+    -   Drag and Drop the file into [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
     -   Double click the .XEL file.  
   
-    -   In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], right click on a running Extended Events session and select View Target Data.  
+    -   In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], right click on a running Extended Events session and select View Target Data.  
   
-    -   [fn_xe_file_target_read_file](../Topic/sys.fn_xe_file_target_read_file%20\(Transact-SQL\).md)  
+    -   [fn_xe_file_target_read_file](~/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md)  
   
     -   You can view more than one .XEL file by selecting **Merge Extended Event Files** from the File -> Open menu.  
   
@@ -83,7 +83,7 @@ manager: "jhubbard"
  The **Details** pane shows all the columns for the selected event, including fields and actions. You can add a column to the target data table by right-clicking a row in the **Details** pane and selecting **Show Column in Table**.  
   
 ### Create, Modify, or Delete Merged Columns  
- A merged column allows you to combine a set of fields to be displayed in a single column. The merged column will show the data from the first non-NULL field based on the order they are added to the field list. This is similar to what you see in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler, where a specific column may show different data depending on the event (the most common example of this is the TextData field in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler). For an example, you could merge the statement and batch_text fields from the sql_statement_completed and sql_batch_completed events, respectively, into a field named myStatement. When you display the myStatement column in the table it will show the appropriate data for the associated event.  
+ A merged column allows you to combine a set of fields to be displayed in a single column. The merged column will show the data from the first non-NULL field based on the order they are added to the field list. This is similar to what you see in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler, where a specific column may show different data depending on the event (the most common example of this is the TextData field in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler). For an example, you could merge the statement and batch_text fields from the sql_statement_completed and sql_batch_completed events, respectively, into a field named myStatement. When you display the myStatement column in the table it will show the appropriate data for the associated event.  
   
  You can create, modify, or delete merged columns:  
   
@@ -122,7 +122,7 @@ manager: "jhubbard"
  If you have grouped columns, sorting the column will only sort data within the group.  
   
 ### Group Results  
- Grouped results are equivalent to the functionality of the `GROUP BY` clause in [!INCLUDE[tsql](../../includes/tsql-md.md)]. The target data table will show the data grouped together, allowing you to expand and collapse the data.  
+ Grouped results are equivalent to the functionality of the `GROUP BY` clause in [!INCLUDE[tsql](../includes/tsql-md.md)]. The target data table will show the data grouped together, allowing you to expand and collapse the data.  
   
  You must group data before you can aggregate it. For example, you can group on the query_hash value, sort descending by duration, get the average duration for each group, and then sort descending on the aggregation.  This will produce a list that shows the list of unique statements from longest to shortest average duration. When you expand the top group you will see the individual executions of that specific query sorted from longest to shortest.  
   
@@ -217,7 +217,7 @@ manager: "jhubbard"
   
  To copy trace results, select a cell, row, or rows, right click, select **Copy** and then **Cell**, **Row**, or **Details**. Extended Events supports copying up to a maximum of 1000 rows.  
   
- You can export trace results to a .XEL file, table, or .CSV file by selecting **Export to** from the **Extended Events** menu option in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ You can export trace results to a .XEL file, table, or .CSV file by selecting **Export to** from the **Extended Events** menu option in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 ### View a Deadlock Graph and Query Plans  
  You can view the deadlock graph for **xml_deadlock_report** in the Details pane to help you troubleshoot deadlocks. You can also view query plan graphs for the following events:  

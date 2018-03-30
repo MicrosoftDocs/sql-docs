@@ -23,7 +23,7 @@ helpviewer_keywords:
 ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 caps.latest.revision: 45
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Enhance General Replication Performance
@@ -31,9 +31,9 @@ manager: "jhubbard"
   
 ## Server and Network  
   
--   Set the minimum and maximum amount of memory allocated to [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)].  
+-   Set the minimum and maximum amount of memory allocated to [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
-     By default, the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] changes its memory requirements dynamically based on available system resources. To avoid low memory availability during replication activities, use the **min server memory** option to set the minimum available memory. To avoid having the operating system page to disc for memory, you can also set a maximum amount of memory with the **max server memory** option. For more information, see [Server Memory Server Configuration Options](../../../2014/database-engine/server-memory-server-configuration-options.md).  
+     By default, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] changes its memory requirements dynamically based on available system resources. To avoid low memory availability during replication activities, use the **min server memory** option to set the minimum available memory. To avoid having the operating system page to disc for memory, you can also set a maximum amount of memory with the **max server memory** option. For more information, see [Server Memory Server Configuration Options](../../../2014/database-engine/server-memory-server-configuration-options.md).  
   
 -   Ensure proper allocation of database data files and log files. Use a separate disk drive for the transaction log for all databases involved in replication.  
   
@@ -64,7 +64,7 @@ manager: "jhubbard"
     SET READ_COMMITTED_SNAPSHOT ON  
     ```  
   
-     For more information, see [ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20\(Transact-SQL\).md).  
+     For more information, see [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md).  
   
 -   Be cautious with application logic in triggers.  
   
@@ -124,7 +124,7 @@ manager: "jhubbard"
   
 -   Use a native mode snapshot unless a character mode snapshot is required.  
   
-     Use the default native mode snapshot for all Subscribers except non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers and Subscribers running [!INCLUDE[ssEW](../../../includes/ssew-md.md)], which require a character mode snapshot.  
+     Use the default native mode snapshot for all Subscribers except non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers and Subscribers running [!INCLUDE[ssEW](../../includes/ssew-md.md)], which require a character mode snapshot.  
   
 -   Use a single snapshot folder for a publication.  
   

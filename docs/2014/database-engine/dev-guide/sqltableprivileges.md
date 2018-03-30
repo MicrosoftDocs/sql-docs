@@ -23,10 +23,10 @@ manager: "jhubbard"
 # SQLTablePrivileges
   **SQLTablePrivileges** can be executed on a static cursor. An attempt to execute **SQLTablePrivileges** on an updatable (keyset-driven or dynamic) returns SQL_SUCCESS_WITH_INFO indicating the cursor type has been changed.  
   
- The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver supports reporting information for tables on linked servers by accepting a two-part name for the *CatalogName* parameter: *Linked_Server_Name.Catalog_Name*.  
+ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver supports reporting information for tables on linked servers by accepting a two-part name for the *CatalogName* parameter: *Linked_Server_Name.Catalog_Name*.  
   
 ## See Also  
  [SQLTablePrivileges Function](http://go.microsoft.com/fwlink/?LinkId=59373\)   
- [ODBC API Implementation Details](../Topic/ODBC%20API%20Implementation%20Details.md)  
+ [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

@@ -21,24 +21,24 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Replication, Change Tracking, Change Data Capture, and AlwaysOn Availability Groups (SQL Server)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication, change data capture (CDC), and change tracking (CT) are supported on [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] helps provide high availability and additional database recovery capabilities.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Replication, change data capture (CDC), and change tracking (CT) are supported on [!INCLUDE[ssHADR](../includes/sshadr-md.md)]. [!INCLUDE[ssHADR](../includes/sshadr-md.md)] helps provide high availability and additional database recovery capabilities.  
   
  
   
 ##  <a name="Overview"></a> Overview of Replication on AlwaysOn Availability Groups  
   
 ###  <a name="PublisherRedirect"></a> Publisher Redirection  
- When a published database is aware of [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], the distributor that provides agent access to the publishing database is configured with redirected_publishers entries. These entries redirect the originally configured publisher/database pair, making use of an availability group listener name to connect to the publisher and publishing database. Established connections through the availability group listener name will fail on failover. When the replication agent restarts after failover, the connection will automatically be redirected to the new primary.  
+ When a published database is aware of [!INCLUDE[ssHADR](../includes/sshadr-md.md)], the distributor that provides agent access to the publishing database is configured with redirected_publishers entries. These entries redirect the originally configured publisher/database pair, making use of an availability group listener name to connect to the publisher and publishing database. Established connections through the availability group listener name will fail on failover. When the replication agent restarts after failover, the connection will automatically be redirected to the new primary.  
   
- In an AlwaysOn availability group a secondary database cannot be a publisher. Republishing is not supported when replication is combined with [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
+ In an AlwaysOn availability group a secondary database cannot be a publisher. Republishing is not supported when replication is combined with [!INCLUDE[ssHADR](../includes/sshadr-md.md)].  
   
  If a published database is a member of an availability group and the publisher is redirected, it must be redirected to an availability group listener name associated with the availability group. It may not be redirected to an explicit node.  
   
 > [!NOTE]  
->  After failover to a secondary replica, Replication Monitor is unable to adjust the name of the publishing instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and will continue to display replication information under the name of the original primary instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. After failover, a tracer token cannot be entered by using the Replication Monitor, however a tracer token entered on the new publisher by using [!INCLUDE[tsql](../../includes/tsql-md.md)], is visible in Replication Monitor.  
+>  After failover to a secondary replica, Replication Monitor is unable to adjust the name of the publishing instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and will continue to display replication information under the name of the original primary instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. After failover, a tracer token cannot be entered by using the Replication Monitor, however a tracer token entered on the new publisher by using [!INCLUDE[tsql](../includes/tsql-md.md)], is visible in Replication Monitor.  
   
 ###  <a name="Changes"></a> General Changes to Replication Agents to Support AlwaysOn Availability Groups  
- Three replication agents were modified to support [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. The Log Reader, Snapshot, and Merge agents were modified to query the distribution database for the redirected publisher and to use the returned availability group listener name, if a redirected publisher was declared, to connect to the database publisher.  
+ Three replication agents were modified to support [!INCLUDE[ssHADR](../includes/sshadr-md.md)]. The Log Reader, Snapshot, and Merge agents were modified to query the distribution database for the redirected publisher and to use the returned availability group listener name, if a redirected publisher was declared, to connect to the database publisher.  
   
  By default, when the agents query the distributor to determine whether the original publisher has been redirected, the suitability of the current target or redirection will be verified prior to returning the redirected host to the agent. This is recommended behavior. However, if agent start up occurs very frequently the overhead associated with the validation stored procedure may be deemed too costly. A new command line switch, *BypassPublisherValidation*, has been added to the Logreader, Snapshot, and Merge agents. When the switch is used, the redirected publisher is returned immediately to the agent and execution of the validation stored procedure is bypassed.  
   
@@ -55,7 +55,7 @@ manager: "jhubbard"
   
 -   **Trace flag 1448**  
   
-     Trace flag 1448 enables the replication log reader to move forward even if the asynchronous secondary replicas have not acknowledged the reception of a change. Even with this trace flag enabled,, the log reader always waits for the synchronous secondary replicas. The log reader will not go beyond the min ack of the synchronous secondary replicas. This trace flag applies to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], not just to an availability group, an availability database, or a log reader instance. This trace flag takes effect immediately without a restart. It can be activated ahead of time or when an asynchronous secondary replica fails.  
+     Trace flag 1448 enables the replication log reader to move forward even if the asynchronous secondary replicas have not acknowledged the reception of a change. Even with this trace flag enabled,, the log reader always waits for the synchronous secondary replicas. The log reader will not go beyond the min ack of the synchronous secondary replicas. This trace flag applies to the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], not just to an availability group, an availability database, or a log reader instance. This trace flag takes effect immediately without a restart. It can be activated ahead of time or when an asynchronous secondary replica fails.  
   
 ###  <a name="StoredProcs"></a> Stored Procedures Supporting AlwaysOn  
   
@@ -80,7 +80,7 @@ manager: "jhubbard"
      This stored procedure is always run manually. The caller must either be **sysadmin** at the distributor, **dbowner** of the distribution database, or a member of the **Publication Access List** of a publication of the publisher database. In addition, the login of the caller must be a valid login for all of the availability replica hosts, and have select privileges on the availability database associated with the publisher database.  
   
 ###  <a name="CDC"></a> Change Data Capture  
- Databases enabled for change data capture (CDC) are able to leverage [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] in order to insure not only that the database remains available in the event of failure, but that changes to the database tables continue to be monitored and deposited in the CDC change tables. The order in which CDC and [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] are configured is not important. CDC enabled databases can be added to [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], and databases that are members of an AlwaysOn availability group can be enabled for CDC. In both cases, however, CDC configuration is always performed on the current or intended primary replica. CDC uses the log reader agent and has the same limitations as described in the **Log Reader Agent Modifications** section earlier in this topic.  
+ Databases enabled for change data capture (CDC) are able to leverage [!INCLUDE[ssHADR](../includes/sshadr-md.md)] in order to insure not only that the database remains available in the event of failure, but that changes to the database tables continue to be monitored and deposited in the CDC change tables. The order in which CDC and [!INCLUDE[ssHADR](../includes/sshadr-md.md)] are configured is not important. CDC enabled databases can be added to [!INCLUDE[ssHADR](../includes/sshadr-md.md)], and databases that are members of an AlwaysOn availability group can be enabled for CDC. In both cases, however, CDC configuration is always performed on the current or intended primary replica. CDC uses the log reader agent and has the same limitations as described in the **Log Reader Agent Modifications** section earlier in this topic.  
   
 -   **Harvesting Changes for Change Data Capture Without Replication**  
   
@@ -96,7 +96,7 @@ manager: "jhubbard"
   
 -   **Harvesting Changes for Change Data Capture With Replication**  
   
-     If both CDC and replication are enabled for a database, the log reader handles the population of the CDC change tables. In this case, the techniques used by replication to leverage [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] will insure that changes continue to be harvested from the log and deposited in CDC change tables after failover. Nothing additional needs to be done for CDC in this configuration to insure that the change tables are populated.  
+     If both CDC and replication are enabled for a database, the log reader handles the population of the CDC change tables. In this case, the techniques used by replication to leverage [!INCLUDE[ssHADR](../includes/sshadr-md.md)] will insure that changes continue to be harvested from the log and deposited in CDC change tables after failover. Nothing additional needs to be done for CDC in this configuration to insure that the change tables are populated.  
   
 -   **Change Data Capture Cleanup**  
   
@@ -107,7 +107,7 @@ manager: "jhubbard"
     ```  
   
     > [!NOTE]  
-    >  You should create the jobs at all of the possible failover targets before failover, and mark them as disabled until the availability replica at a host becomes the new primary replica. The CDC jobs running at the old primary database should be also disabled when the local database becomes a secondary database. To disable and enable jobs, use the *@enabled* option of [sp_update_job &#40;Transact-SQL&#41;](../Topic/sp_update_job%20\(Transact-SQL\).md). For more information about creating CDC jobs, see [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../Topic/sys.sp_cdc_add_job%20\(Transact-SQL\).md).  
+    >  You should create the jobs at all of the possible failover targets before failover, and mark them as disabled until the availability replica at a host becomes the new primary replica. The CDC jobs running at the old primary database should be also disabled when the local database becomes a secondary database. To disable and enable jobs, use the *@enabled* option of [sp_update_job &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-update-job-transact-sql.md). For more information about creating CDC jobs, see [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md).  
   
 -   **Adding CDC Roles to an AlwaysOn Primary Database Replica**  
   
@@ -115,7 +115,7 @@ manager: "jhubbard"
   
 -   **Client Applications Accessing CDC Change Data and Always On**  
   
-     Client applications that use the table-valued functions (TVFs) or linked servers to access change table data also need the ability to locate an appropriate CDC host after failover. The availability group listener name is the mechanism provided by [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] to transparently allow a connection to be retargeted to a different host. Once an availability group listener name is associated with an availability group, it is available to be used in TCP connection strings. Two different connection scenarios are supported through the availability group listener name.  
+     Client applications that use the table-valued functions (TVFs) or linked servers to access change table data also need the ability to locate an appropriate CDC host after failover. The availability group listener name is the mechanism provided by [!INCLUDE[ssHADR](../includes/sshadr-md.md)] to transparently allow a connection to be retargeted to a different host. Once an availability group listener name is associated with an availability group, it is available to be used in TCP connection strings. Two different connection scenarios are supported through the availability group listener name.  
   
     -   One insures that connection requests are always directed to the current primary replica.  
   
@@ -138,7 +138,7 @@ manager: "jhubbard"
   
 -   **Redirecting the Query Load to a Readable Secondary Replica**  
   
-     While in many cases a client application will always want to connect to the current primary replica that is not the only way to leverage [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. If an availability group is configured to support readable secondary replicas, change data can also be gathered from secondary nodes.  
+     While in many cases a client application will always want to connect to the current primary replica that is not the only way to leverage [!INCLUDE[ssHADR](../includes/sshadr-md.md)]. If an availability group is configured to support readable secondary replicas, change data can also be gathered from secondary nodes.  
   
      When an availability group is configured, the ALLOW_CONNECTIONS attribute associated with the SECONDARY_ROLE is used to specify the type of secondary access supported. If configured as ALL, all connections to the secondary will be allowed, but only those requiring read only access will succeed. If configured as READ_ONLY, it is necessary to specify read only intent when making the connection to the secondary database in order for the connection to succeed. For more information, see [Configure Read-Only Access on an Availability Replica &#40;SQL Server&#41;](../../2014/database-engine/configure-read-only-access-on-an-availability-replica-sql-server.md).  
   
@@ -168,7 +168,7 @@ manager: "jhubbard"
   
 -   **Client Access to CDC Change Data and Domain Logins**  
   
-     In general, you should use domain logins for client access to change data residing in databases that are members of AlwaysOn availability groups. To insure continued access to change data after failover, the domain user will need access privileges on all of the hosts supporting availability group replicas. If a database user is added to a database in a primary replica, and the user is associated with a domain login, the database user is propagated to secondary databases and continues to be associated with the specified domain login. If the new database user is associated with a SQL Server authentication login, the user at the secondary databases will be propagated without a login. While the associated [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication login could be used to access change data at the primary where the database user was originally defined, that node is the only one where access would be possible. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication login would not be able to access data from any secondary database, nor from any new primary databases other than the original database where the database user was defined.  
+     In general, you should use domain logins for client access to change data residing in databases that are members of AlwaysOn availability groups. To insure continued access to change data after failover, the domain user will need access privileges on all of the hosts supporting availability group replicas. If a database user is added to a database in a primary replica, and the user is associated with a domain login, the database user is propagated to secondary databases and continues to be associated with the specified domain login. If the new database user is associated with a SQL Server authentication login, the user at the secondary databases will be propagated without a login. While the associated [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] authentication login could be used to access change data at the primary where the database user was originally defined, that node is the only one where access would be possible. The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] authentication login would not be able to access data from any secondary database, nor from any new primary databases other than the original database where the database user was defined.  
   
 ###  <a name="CT"></a> Change Tracking  
  A database enabled for change tracking (CT) can be part of an AlwaysOn availability group. No additional configuration is needed. Change tracking client applications that use the CDC table-valued functions (TVFs) to access change data will need the ability to locate the primary replica after failover. If the client application connects through the availability group listener name, connection requests will always be appropriately directed to the current primary replica.  
@@ -181,24 +181,24 @@ manager: "jhubbard"
 >  For databases that are members of a secondary replica (that is, for secondary databases), change tracking is not supported. Run change tracking queries on the databases in the primary replica.  
   
 ##  <a name="Prereqs"></a> Prerequisites, Restrictions, and Considerations for Using Replication  
- This section describes considerations for deploying replication with [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], including prerequisites, restrictions, and recommendations.  
+ This section describes considerations for deploying replication with [!INCLUDE[ssHADR](../includes/sshadr-md.md)], including prerequisites, restrictions, and recommendations.  
   
 ### Prerequisites  
   
--   When using transactional replication and the publishing database is in an availability group both the publisher and the distributor must run at least [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. The subscriber can be using a lower level of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   When using transactional replication and the publishing database is in an availability group both the publisher and the distributor must run at least [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. The subscriber can be using a lower level of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 -   When using merge replication and the publishing database is in an availability group:  
   
-    -   Push subscription: Both the publisher and the distributor must run at least [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+    -   Push subscription: Both the publisher and the distributor must run at least [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
   
-    -   Pull subscription: The publisher, distributor, and subscriber databases must be on at least [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. This is because the merge agent on the subscriber must understand how an availability group can fail over to its secondary.  
+    -   Pull subscription: The publisher, distributor, and subscriber databases must be on at least [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. This is because the merge agent on the subscriber must understand how an availability group can fail over to its secondary.  
   
 -   Placing the distribution database on an availability group is not supported.  
   
 -   The Publisher instances satisfy all the prerequisites required to participate in an AlwaysOn availability group. For more information see [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ### Restrictions  
- Supported combinations of replication on [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]:  
+ Supported combinations of replication on [!INCLUDE[ssHADR](../includes/sshadr-md.md)]:  
   
 |||||  
 |-|-|-|-|  
@@ -212,13 +212,13 @@ manager: "jhubbard"
   
  <sup>2</sup> Failover to the replica database is a manual procedure. Automatic failover is not provided.  
   
- <sup>3</sup> The Distributor database is not supported for use with [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] or database mirroring.  
+ <sup>3</sup> The Distributor database is not supported for use with [!INCLUDE[ssHADR](../includes/sshadr-md.md)] or database mirroring.  
   
 ### Considerations  
   
--   The distribution database is not supported for use with [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] or database mirroring. Replication configuration is coupled to the SQL Server instance where the Distributor is configured; therefore the distribution database cannot be mirrored or replicated. To provide high availability for the Distributor, use a SQL Server failover cluster. For more information, see [ AlwaysOn Failover Cluster Instances (SQL Server)](../../2014/database-engine/always-on-failover-cluster-instances-sql-server.md).  
+-   The distribution database is not supported for use with [!INCLUDE[ssHADR](../includes/sshadr-md.md)] or database mirroring. Replication configuration is coupled to the SQL Server instance where the Distributor is configured; therefore the distribution database cannot be mirrored or replicated. To provide high availability for the Distributor, use a SQL Server failover cluster. For more information, see [ AlwaysOn Failover Cluster Instances (SQL Server)](../../2014/database-engine/always-on-failover-cluster-instances-sql-server.md).  
   
--   Subscriber failover to a secondary database, while supported, is a relatively complex manual procedure. The procedure is essentially identical to the method used to fail over a mirrored subscriber database. Subscribers must be running [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] or later to participate in an availability group.  
+-   Subscriber failover to a secondary database, while supported, is a relatively complex manual procedure. The procedure is essentially identical to the method used to fail over a mirrored subscriber database. Subscribers must be running [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] or later to participate in an availability group.  
   
 -   Metadata and objects that exist outside the database are not propagated to the secondary replicas, including logins, jobs, linked servers. If you require the metadata and objects at the new primary database after failover, you must copy them manually. For more information, see [Management of Logins and Jobs for the Databases of an Availability Group &#40;SQL Server&#41;](../../2014/database-engine/logins-and-jobs-for-availability-group-databases.md).  
   
@@ -257,6 +257,6 @@ manager: "jhubbard"
  [About Change Tracking &#40;SQL Server&#41;](../../2014/database-engine/about-change-tracking-sql-server.md)   
  [SQL Server Replication](../../2014/relational-databases/replication/sql-server-replication.md)   
  [Track Data Changes &#40;SQL Server&#41;](../../2014/database-engine/track-data-changes-sql-server.md)   
- [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../Topic/sys.sp_cdc_add_job%20\(Transact-SQL\).md)  
+ [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  
   
   

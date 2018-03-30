@@ -21,11 +21,11 @@ helpviewer_keywords:
 ms.assetid: ce5c8798-c039-4ab2-81e7-90a8d688b893
 caps.latest.revision: 25
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Shrink a File
-  This topic describes how to shrink a data or log file in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  This topic describes how to shrink a data or log file in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
  Shrinking data files recovers space by moving pages of data from the end of the file to unoccupied space closer to the front of the file. When enough free space is created at the end of the file, data pages at end of the file can deallocated and returned to the file system.  
   
@@ -64,7 +64,7 @@ manager: "jhubbard"
   
 #### To shrink a data or log file  
   
-1.  In Object Explorer, connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and then expand that instance.  
+1.  In Object Explorer, connect to an instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] and then expand that instance.  
   
 2.  Expand **Databases** and then right-click the database that you want to shrink.  
   
@@ -125,19 +125,19 @@ manager: "jhubbard"
   
 #### To shrink a data or log file  
   
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example uses [DBCC SHRINKFILE](../Topic/DBCC%20SHRINKFILE%20\(Transact-SQL\).md) to shrink the size of a data file named `DataFile1` in the `UserDB` database to 7 MB.  
+3.  Copy and paste the following example into the query window and click **Execute**. This example uses [DBCC SHRINKFILE](~/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) to shrink the size of a data file named `DataFile1` in the `UserDB` database to 7 MB.  
   
- [!code-sql[DBCC#DBCC_SHRINKFILE1](../../snippets/tsql/SQL14/tsql/dbcc/transact-sql/dbcc_other.sql#dbcc_shrinkfile1)]  
+ [!code-sql[DBCC#DBCC_SHRINKFILE1](../snippets/tsql/SQL14/tsql/dbcc/transact-sql/dbcc_other.sql#dbcc_shrinkfile1)]  
   
 ## See Also  
- [DBCC SHRINKDATABASE &#40;Transact-SQL&#41;](../Topic/DBCC%20SHRINKDATABASE%20\(Transact-SQL\).md)   
+ [DBCC SHRINKDATABASE &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)   
  [Shrink a Database](../../2014/database-engine/shrink-a-database.md)   
  [Delete Data or Log Files from a Database](../../2014/database-engine/delete-data-or-log-files-from-a-database.md)   
- [sys.databases &#40;Transact-SQL&#41;](../Topic/sys.databases%20\(Transact-SQL\).md)   
- [sys.database_files &#40;Transact-SQL&#41;](../Topic/sys.database_files%20\(Transact-SQL\).md)  
+ [sys.databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
+ [sys.database_files &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-files-transact-sql.md)  
   
   

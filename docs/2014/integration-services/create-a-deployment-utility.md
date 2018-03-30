@@ -19,11 +19,11 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Create a Deployment Utility
-  The first step in deploying packages is to create a deployment utility for an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project. The deployment utility is a folder that contains the files you need to deploy the packages in an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project on a different server. The deployment utility is created on the computer on which the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project is stored.  
+  The first step in deploying packages is to create a deployment utility for an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project. The deployment utility is a folder that contains the files you need to deploy the packages in an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project on a different server. The deployment utility is created on the computer on which the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project is stored.  
   
- You create a package deployment utility for an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project by first configuring the build process to create a deployment utility, and then building the project. When you build the project, all packages and package configurations in the project are automatically included. To deploy additional files such as a Readme file with the project, place the files in the **Miscellaneous** folder of the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project. When the project is built, these files are also automatically included.  
+ You create a package deployment utility for an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project by first configuring the build process to create a deployment utility, and then building the project. When you build the project, all packages and package configurations in the project are automatically included. To deploy additional files such as a Readme file with the project, place the files in the **Miscellaneous** folder of the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project. When the project is built, these files are also automatically included.  
   
- You can configure each project deployment differently. Before you build the project and create the package deployment utility, you can set the properties on the deployment utility to customize the way the packages in the project will be deployed. For example, you can specify whether package configurations can be updated when the project is deployed. To access the properties of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project, right-click the project and click **Properties**.  
+ You can configure each project deployment differently. Before you build the project and create the package deployment utility, you can set the properties on the deployment utility to customize the way the packages in the project will be deployed. For example, you can specify whether package configurations can be updated when the project is deployed. To access the properties of an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project, right-click the project and click **Properties**.  
   
  The following table lists the deployment utility properties.  
   
@@ -31,15 +31,15 @@ manager: "jhubbard"
 |--------------|-----------------|  
 |AllowConfigurationChange|A value that specifies whether configurations can be updated during deployment.|  
 |CreateDeploymentUtility|A value that specifies whether a package deployment utility is created when the project is built. This property must be `True` to create a deployment utility.|  
-|DeploymentOutputPath|The location, relative to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project, of the deployment utility.|  
+|DeploymentOutputPath|The location, relative to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project, of the deployment utility.|  
   
- When you build an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project, a manifest file, \<project name>.SSISDeploymentManifest.xml, is created and added, together with copies of the project packages and package dependencies, to the bin\Deployment folder in the project, or to the location specified in the DeploymentOutputPath property. The manifest file lists the packages, the package configurations, and any miscellaneous files in the project.  
+ When you build an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project, a manifest file, \<project name>.SSISDeploymentManifest.xml, is created and added, together with copies of the project packages and package dependencies, to the bin\Deployment folder in the project, or to the location specified in the DeploymentOutputPath property. The manifest file lists the packages, the package configurations, and any miscellaneous files in the project.  
   
  The content of the deployment folder is refreshed every time that you build the project. This means that any file saved to this folder that is not copied to the folder again by the build process will be deleted. For example, package configuration files saved to the deployment folders will be deleted.  
   
 ### To create a package deployment utility  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the solution that contains the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project for which you want to create a package deployment utility.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the solution that contains the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project for which you want to create a package deployment utility.  
   
 2.  Right-click the project and click **Properties**.  
   

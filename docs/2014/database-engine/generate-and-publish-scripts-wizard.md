@@ -44,18 +44,18 @@ helpviewer_keywords:
 ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
 caps.latest.revision: 44
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Generate and Publish Scripts Wizard
-  You can use the **Generate and Publish Scripts Wizard** to create scripts for transferring a database between instances of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] or [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. You can generate scripts for a database on an instance of the Database Engine in your local network, or from [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. The generated scripts can be run on another instance of the Database Engine or [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. You can also use the wizard to publish the contents of a database directly to a Web service created by using the Database Publishing Services. You can create scripts for an entire database, or limit it to specific objects.  
+  You can use the **Generate and Publish Scripts Wizard** to create scripts for transferring a database between instances of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] or [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]. You can generate scripts for a database on an instance of the Database Engine in your local network, or from [!INCLUDE[ssSDS](../includes/sssds-md.md)]. The generated scripts can be run on another instance of the Database Engine or [!INCLUDE[ssSDS](../includes/sssds-md.md)]. You can also use the wizard to publish the contents of a database directly to a Web service created by using the Database Publishing Services. You can create scripts for an entire database, or limit it to specific objects.  
   
 1.  **Before you begin:**  [Publishing to a Hosted Service](#PubHostSvc), [Permissions](#Permissions)  
   
 2.  **To generate or publish a script, using:**  [The Generate and Publish Scripts Wizard](#GenPubScriptWiz)  
   
 ## Before You Begin  
- The source and target database can be on [!INCLUDE[ssSDS](../../includes/sssds-md.md)], or an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] running [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or later.  
+ The source and target database can be on [!INCLUDE[ssSDS](../includes/sssds-md.md)], or an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)] running [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] or later.  
   
 ###  <a name="PubHostSvc"></a> Publishing to a Hosted Service  
  In addition to creating scripts, the **Generate and Publish Scripts Wizard** can be used to publish a database to a specific type of hosted SQL Server Web service. The SQL Server Hosting Toolkit provides Database Publishing Services as a shared source project on CodePlex. The Database Publishing Services project can be used by Web hosting providers to build a set of Web services that make it easy for their customers to deploy databases to the Web service. For more information about downloading the SQL Server Hosting Toolkit, see [SQL Server Database Publishing Services](http://go.microsoft.com/fwlink/?LinkId=142025).  
@@ -63,7 +63,7 @@ manager: "jhubbard"
  To publish a database to a Web hosting service, select the **Publish to Web Service** option on the **Set Scripting Options** page of the wizard.  
   
 ###  <a name="Permissions"></a> Permissions  
- The minimum permission to publish a database is membership in the db_ddladmin fixed database role on the origin database. The minimum permission to publish a database script to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] at the hosting provider is membership in the db_ddladmin fixed database role on the target database.  
+ The minimum permission to publish a database is membership in the db_ddladmin fixed database role on the origin database. The minimum permission to publish a database script to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] at the hosting provider is membership in the db_ddladmin fixed database role on the target database.  
   
  The user also has to supply a user name and password to access their hosting provider account to publish with the wizard. The target database must be created at the hosting provider before the source database is published. Publishing overwrites objects in that existing database.  
   
@@ -119,7 +119,7 @@ manager: "jhubbard"
 ###  <a name="SetScriptOpt"></a> Set Scripting Options Page  
  Use this page to specify if you want the wizard to save scripts to the location of your choice or to use them to publish database objects to a remote Web hosting provider. To publish, you must have access to a Web service installed by using the Database Publishing Services Web service.  
   
- **Options** - If you want the wizard to save scripts to a location of your choice, select **Save scripts to a specific location**. You can later run the scripts against either an instance of the Database Engine, or against [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. If you want the wizard to publish your database objects to a remote Web hosting provider, select **Publish to Web service**.  
+ **Options** - If you want the wizard to save scripts to a location of your choice, select **Save scripts to a specific location**. You can later run the scripts against either an instance of the Database Engine, or against [!INCLUDE[ssSDS](../includes/sssds-md.md)]. If you want the wizard to publish your database objects to a remote Web hosting provider, select **Publish to Web service**.  
   
  **Save Scripts to a Specific Location** – save one or more .Transact-SQL script files to a location you specify.  
   
@@ -142,7 +142,7 @@ manager: "jhubbard"
 -   **Target database** - Select the target database where you want to publish the objects that you selected. You must select a provider before selecting a target database.  
   
 ###  <a name="AdvScriptOpt"></a> Advanced Scripting Options Page  
- Use this page to specify how you want this wizard to generate scripts. Many different options are available. Options are greyed out if they are not supported by the version of SQL Server or [!INCLUDE[ssSDS](../../includes/sssds-md.md)] specified in **Database engine type**.  
+ Use this page to specify how you want this wizard to generate scripts. Many different options are available. Options are greyed out if they are not supported by the version of SQL Server or [!INCLUDE[ssSDS](../includes/sssds-md.md)] specified in **Database engine type**.  
   
  **Options** - Specify advanced options by selecting a value from the list of available settings to the right of each option.  
   
@@ -168,27 +168,27 @@ manager: "jhubbard"
   
 -   **Schema qualify object names** - Includes the schema name in the name of objects that are created. The default is **True**.  
   
--   **Script binding** - Generates a script for binding default and rule objects. The default is **False**. For more information, see [CREATE DEFAULT &#40;Transact-SQL&#41;](../Topic/CREATE%20DEFAULT%20\(Transact-SQL\).md) and [CREATE RULE &#40;Transact-SQL&#41;](../Topic/CREATE%20RULE%20\(Transact-SQL\).md).  
+-   **Script binding** - Generates a script for binding default and rule objects. The default is **False**. For more information, see [CREATE DEFAULT &#40;Transact-SQL&#41;](~/t-sql/statements/create-default-transact-sql.md) and [CREATE RULE &#40;Transact-SQL&#41;](~/t-sql/statements/create-rule-transact-sql.md).  
   
 -   **Script collation** - Includes collation information in the script. The default is **False**. For more information, see [Collation and Unicode Support](../../2014/database-engine/collation-and-unicode-support.md).  
   
--   **Script defaults** - Includes default objects used to set default values in table columns. The default is **True**. For more information, see [CREATE DEFAULT &#40;Transact-SQL&#41;](../Topic/CREATE%20DEFAULT%20\(Transact-SQL\).md).  
+-   **Script defaults** - Includes default objects used to set default values in table columns. The default is **True**. For more information, see [CREATE DEFAULT &#40;Transact-SQL&#41;](~/t-sql/statements/create-default-transact-sql.md).  
   
--   **Script drop and create** - When **Script CREATE**, [!INCLUDE[tsql](../../includes/tsql-md.md)] statements are included to create objects. When **Script DROP**, [!INCLUDE[tsql](../../includes/tsql-md.md)] statements are included to drop objects. When **Script DROP and CREATE**, the [!INCLUDE[tsql](../../includes/tsql-md.md)] drop statement is included in the script, followed by the create statement, for each scripted object. The default is **Script CREATE**.  
+-   **Script drop and create** - When **Script CREATE**, [!INCLUDE[tsql](../includes/tsql-md.md)] statements are included to create objects. When **Script DROP**, [!INCLUDE[tsql](../includes/tsql-md.md)] statements are included to drop objects. When **Script DROP and CREATE**, the [!INCLUDE[tsql](../includes/tsql-md.md)] drop statement is included in the script, followed by the create statement, for each scripted object. The default is **Script CREATE**.  
   
 -   **Script extended properties** - Includes extended properties in the script if the object has extended properties. The default is **True**.  
   
--   **Script for engine type** - Creates a script that can be run on the selected type of either [!INCLUDE[ssSDS](../../includes/sssds-md.md)] or an instance of the SQL Server Database Engine. Objects not supported on the specified type are not included in the script. The default is the type of the origin server.  
+-   **Script for engine type** - Creates a script that can be run on the selected type of either [!INCLUDE[ssSDS](../includes/sssds-md.md)] or an instance of the SQL Server Database Engine. Objects not supported on the specified type are not included in the script. The default is the type of the origin server.  
   
--   **Script for server version** - Creates a script that can be run on the selected version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Features new to a version cannot be scripted for earlier versions. The default is the version of the origin server.  
+-   **Script for server version** - Creates a script that can be run on the selected version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Features new to a version cannot be scripted for earlier versions. The default is the version of the origin server.  
   
 -   **Script logins** - When the object to be scripted is a database user, this option creates the logins on which the user depends. The default is **False**.  
   
 -   **Script object-Level permissions** - Includes scripts to set permission on the objects in the database. The default is **False**.  
   
--   **Script statistics** - When set to **Script Statistics**, this option includes the `CREATE STATISTICS` statement to re-create statistics on the object. The **Script statistics and histograms** option also creates histogram information. The default is **Do not script statistics**. For more information, see [CREATE STATISTICS &#40;Transact-SQL&#41;](../Topic/CREATE%20STATISTICS%20\(Transact-SQL\).md).  
+-   **Script statistics** - When set to **Script Statistics**, this option includes the `CREATE STATISTICS` statement to re-create statistics on the object. The **Script statistics and histograms** option also creates histogram information. The default is **Do not script statistics**. For more information, see [CREATE STATISTICS &#40;Transact-SQL&#41;](~/t-sql/statements/create-statistics-transact-sql.md).  
   
--   **Script USE DATABASE** - Adds the `USE DATABASE` statement to the script. To make sure that database objects are created in the correct database, include the `USE DATABASE` statement. When the script is expected to be used in a different database, select **False** to omit the `USE DATABASE` statement. The default is **True**. For more information, see [USE &#40;Transact-SQL&#41;](../Topic/USE%20\(Transact-SQL\).md).  
+-   **Script USE DATABASE** - Adds the `USE DATABASE` statement to the script. To make sure that database objects are created in the correct database, include the `USE DATABASE` statement. When the script is expected to be used in a different database, select **False** to omit the `USE DATABASE` statement. The default is **True**. For more information, see [USE &#40;Transact-SQL&#41;](~/t-sql/language-elements/use-transact-sql.md).  
   
 -   **Types of data to script** - Selects what should be scripted: **Data only**, **Schema only**, or both. The default is **Schema only**.  
   
@@ -230,7 +230,7 @@ manager: "jhubbard"
  **Cancel** - Undoes all changes that you have made on the **Hosting Provider** dialog box.  
   
 ###  <a name="AdvPubOpts"></a> Advanced Publishing Options Page  
- Use this page to specify how you want this wizard to publish a database. Many different options are available. Options are greyed out if they are not supported by the version of SQL Server or [!INCLUDE[ssSDS](../../includes/sssds-md.md)] specified in **Database engine type**.  
+ Use this page to specify how you want this wizard to publish a database. Many different options are available. Options are greyed out if they are not supported by the version of SQL Server or [!INCLUDE[ssSDS](../includes/sssds-md.md)] specified in **Database engine type**.  
   
  **Options** - Specify advanced options by selecting a value from the list of available settings to the right of each option.  
   
@@ -240,23 +240,23 @@ manager: "jhubbard"
   
 2.  **Publish collation** - Includes collation information for table columns. The default is **False**. For more information, see [Collation and Unicode Support](../../2014/database-engine/collation-and-unicode-support.md).  
   
-3.  **Publish defaults** - Includes default objects used to set default values in table columns. The default is **True**. For more information, see [CREATE DEFAULT &#40;Transact-SQL&#41;](../Topic/CREATE%20DEFAULT%20\(Transact-SQL\).md).  
+3.  **Publish defaults** - Includes default objects used to set default values in table columns. The default is **True**. For more information, see [CREATE DEFAULT &#40;Transact-SQL&#41;](~/t-sql/statements/create-default-transact-sql.md).  
   
 4.  **Publish dependent objects** - Publishes any object that is required to be present when the script for the selected object is executed. The default is **True**.  
   
 5.  **Publish extended properties** - Includes extended properties in the script that is sent to the provider for publishing, if the object has extended properties. The default is **True**.  
   
-6.  **Publish for server version** - Creates a script that is sent to the remote provider for publishing in a way that can be run on the selected version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Features new to a version cannot be scripted for earlier versions. The default is the version of the origin server.  
+6.  **Publish for server version** - Creates a script that is sent to the remote provider for publishing in a way that can be run on the selected version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Features new to a version cannot be scripted for earlier versions. The default is the version of the origin server.  
   
 7.  **Publish object-Level permissions** - Includes the permissions on the selected objects in the database. The default is **False**.  
   
-8.  **Publish statistics** - When set to **Publish Statistics**, includes the `CREATE STATISTICS` statement to re-create statistics on the object. The **Publish statistics and histograms** option also creates histogram information. The default is **Do not publish statistics**. For more information, see [CREATE STATISTICS &#40;Transact-SQL&#41;](../Topic/CREATE%20STATISTICS%20\(Transact-SQL\).md).  
+8.  **Publish statistics** - When set to **Publish Statistics**, includes the `CREATE STATISTICS` statement to re-create statistics on the object. The **Publish statistics and histograms** option also creates histogram information. The default is **Do not publish statistics**. For more information, see [CREATE STATISTICS &#40;Transact-SQL&#41;](~/t-sql/statements/create-statistics-transact-sql.md).  
   
 9. **Publish vardecimal options** - Enables the `vardecimal` table format on the target database table when it is enabled on the origin database table. The default is **True**.  
   
 10. **Schema qualify object names** - Includes the schema name in the name of objects that are created. The default is **True**.  
   
-11. **Script binding** - Includes binding for default and rule objects in the script sent to the provider for publishing. The default is **True**. For more information, see [CREATE DEFAULT &#40;Transact-SQL&#41;](../Topic/CREATE%20DEFAULT%20\(Transact-SQL\).md) and [CREATE RULE &#40;Transact-SQL&#41;](../Topic/CREATE%20RULE%20\(Transact-SQL\).md).  
+11. **Script binding** - Includes binding for default and rule objects in the script sent to the provider for publishing. The default is **True**. For more information, see [CREATE DEFAULT &#40;Transact-SQL&#41;](~/t-sql/statements/create-default-transact-sql.md) and [CREATE RULE &#40;Transact-SQL&#41;](~/t-sql/statements/create-rule-transact-sql.md).  
   
 12. **Types of data to publish** - Selects what should be scripted: **Data only**, **Schema Only**, or both. The default is **Schema and Data**.  
   

@@ -18,11 +18,11 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Source database (Import Analysis Services Database Wizard)
-  Use the **Source database** page to select the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance and database from which to create an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project.  
+  Use the **Source database** page to select the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance and database from which to create an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project.  
   
 ## Options  
  **Server**  
- Type the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance that contains the database from which to create the project.  
+ Type the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance that contains the database from which to create the project.  
   
  **Database**  
  Type or select the database from which to create the project.  

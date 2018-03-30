@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: 154b78e6-59cc-44eb-a7d9-34908d1b6b1a
 caps.latest.revision: 22
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # MSReportServer_Instance Members
@@ -32,7 +32,7 @@ manager: "mblythe"
 |-|-|  
 |[EditionID](../../2014/reporting-services/editionid-property-wmi-msreportserver-instance.md)|Returns the edition of the report server.|  
 |[EditionName](../../2014/reporting-services/editionname-property-wmi-msreportserver-instance.md)|Returns the human readable name of the report server edition.|  
-|[InstanceID](../../2014/reporting-services/instanceid-property-wmi-msreportserver-instance.md)|This object supports the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] infrastructure and is not intended to be used directly from your code.|  
+|[InstanceID](../../2014/reporting-services/instanceid-property-wmi-msreportserver-instance.md)|This object supports the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] infrastructure and is not intended to be used directly from your code.|  
 |[InstanceName](../../2014/reporting-services/instancename-property-wmi-msreportserver-instance.md)|Returns the name of a report server instance on a specific computer. Read-only.|  
 |[IsSharePointIntegrated](../../2014/reporting-services/issharepointintegrated-property-wmi-msreportserver-instance.md)|Indicates whether the report server is configured for SharePoint integrate mode.|  
 |[Version](../../2014/reporting-services/version-property-wmi-msreportserver-instance.md)|Returns the version of the report server.|  

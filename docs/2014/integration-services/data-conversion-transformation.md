@@ -31,7 +31,7 @@ manager: "jhubbard"
     > [!NOTE]  
     >  If you are converting data to a date or a datetime data type, the date in the output column is in the ISO format, although the locale preference may specify a different format.  
   
--   Set the column length of string data and the precision and scale on numeric data. For more information, see [Precision, Scale, and Length &#40;Transact-SQL&#41;](../Topic/Precision,%20Scale,%20and%20Length%20\(Transact-SQL\).md).  
+-   Set the column length of string data and the precision and scale on numeric data. For more information, see [Precision, Scale, and Length &#40;Transact-SQL&#41;](~/t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
 -   Specify a code page. For more information, see [Comparing String Data](../../2014/integration-services/comparing-string-data.md).  
   
@@ -43,7 +43,7 @@ manager: "jhubbard"
  This transformation has one input, one output, and one error output.  
   
 ## Related Tasks  
- You can set properties through the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically. For information about using the Data Conversion Transformation in the SSIS Designer, see [Convert Data to a Different Data Type by Using the Data Conversion Transformation](../../2014/integration-services/convert-data-type-by-using-data-conversion-transformation.md) and [Data Conversion Transformation Editor](../../2014/integration-services/data-conversion-transformation-editor.md). For information about setting properties of this transformation programmatically, see [Common Properties](../../2014/integration-services/common-properties.md) and [Transformation Custom Properties](../../2014/integration-services/transformation-custom-properties.md).  
+ You can set properties through the [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer or programmatically. For information about using the Data Conversion Transformation in the SSIS Designer, see [Convert Data to a Different Data Type by Using the Data Conversion Transformation](../../2014/integration-services/convert-data-type-by-using-data-conversion-transformation.md) and [Data Conversion Transformation Editor](../../2014/integration-services/data-conversion-transformation-editor.md). For information about setting properties of this transformation programmatically, see [Common Properties](../../2014/integration-services/common-properties.md) and [Transformation Custom Properties](../../2014/integration-services/transformation-custom-properties.md).  
   
 ## Related Content  
  Blog entry, [Performance Comparison between Data Type Conversion Techniques in SSIS 2008](http://go.microsoft.com/fwlink/?LinkId=220823), on blogs.msdn.com.  

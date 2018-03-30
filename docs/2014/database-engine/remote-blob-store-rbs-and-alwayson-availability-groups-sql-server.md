@@ -16,15 +16,15 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Remote Blob Store (RBS) and AlwaysOn Availability Groups (SQL Server)
-  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] can provide a high-availability and disaster recovery solution for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][Remote Blob Store (RBS)](../../2014/database-engine/remote-blob-store-rbs-sql-server.md) BLOB objects (blobs). [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] protects any RBS metadata and schemas stored in an availability database by replicating them to the secondary replicas. This is the SharePoint Content Database. Generally speaking, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stores this RBS metadata independently from the blob.  
+  [!INCLUDE[ssHADR](../includes/sshadr-md.md)] can provide a high-availability and disaster recovery solution for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][Remote Blob Store (RBS)](../../2014/database-engine/remote-blob-store-rbs-sql-server.md) BLOB objects (blobs). [!INCLUDE[ssHADR](../includes/sshadr-md.md)] protects any RBS metadata and schemas stored in an availability database by replicating them to the secondary replicas. This is the SharePoint Content Database. Generally speaking, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] stores this RBS metadata independently from the blob.  
   
  The protection for RBD BLOB data depends on the BLOB Store Location, as follows:  
   
 |BLOB Store Location|Can Availability Groups Protect This BLOB Data?|  
 |-------------------------|-----------------------------------------------------|  
 |The same database that contains the RBS metadata  (stored using a RBS remote FILESTREAM provider)|Yes|  
-|Another database in the same instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (stored using a RBS remote FILESTREAM provider)|Yes<br /><br /> We recommend that you put this database in the same availability group as the database that contains the RBS metadata.|  
-|Another database in a different instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (stored using a RBS remote FILESTREAM provider)|Yes<br /><br /> This database must be in a separate availability group.|  
+|Another database in the same instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (stored using a RBS remote FILESTREAM provider)|Yes<br /><br /> We recommend that you put this database in the same availability group as the database that contains the RBS metadata.|  
+|Another database in a different instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (stored using a RBS remote FILESTREAM provider)|Yes<br /><br /> This database must be in a separate availability group.|  
 |A third-party BLOB store|No<br /><br /> To protect this BLOB data, use the high-availability mechanisms of the BLOB store provider.|  
   
 ##  <a name="Limitations"></a> Limitations  
@@ -37,7 +37,7 @@ manager: "jhubbard"
   
 ##  <a name="RelatedContent"></a> Related Content  
   
--   [Maintaining Remote BLOB Store](http://msdn.microsoft.com/library/gg316773\(SQL.105\).aspx) (in [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Books Online)  
+-   [Maintaining Remote BLOB Store](http://msdn.microsoft.com/library/gg316773\(SQL.105\).aspx) (in [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] Books Online)  
   
 -   [Running RBS Maintainer](http://blogs.msdn.com/b/sqlrbs/archive/2010/03/19/running-rbs-maintainer.aspx) (blog)  
   

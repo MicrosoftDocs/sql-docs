@@ -16,12 +16,12 @@ ms.author: "mblythe"
 manager: "jhubbard"
 ---
 # Navigate SQL Server PowerShell Paths
-  The [!INCLUDE[ssDE](../../includes/ssde-md.md)] PowerShell provider exposes the set of objects in an instance of SQL Server in a structure similar to a file path. You can use Windows PowerShell cmdlets to navigate the provider path, and create custom drives to shorten the path you have to type.  
+  The [!INCLUDE[ssDE](../includes/ssde-md.md)] PowerShell provider exposes the set of objects in an instance of SQL Server in a structure similar to a file path. You can use Windows PowerShell cmdlets to navigate the provider path, and create custom drives to shorten the path you have to type.  
   
 ## Before You Begin  
  Windows PowerShell implements cmdlets to navigate the path structure that represent the hierarchy of objects supported by a PowerShell provider. When you have navigated to a node in the path, you can use other cmdlets to perform basic operations on the current object. Because the cmdlets are used frequently, they have short, canonical aliases. There is also one set of aliases that maps the cmdlets to similar command prompt commands, and another set for UNIX shell commands.  
   
- The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider implements a subset of the provider cmdlets, shown in the following table.  
+ The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provider implements a subset of the provider cmdlets, shown in the following table.  
   
 |cmdlet|Canonical alias|cmd alias|UNIX shell alias|Description|  
 |------------|---------------------|---------------|----------------------|-----------------|  
@@ -33,15 +33,15 @@ manager: "jhubbard"
 |**Remove-Item**|**ri**|**del, rd**|**rm, rmdir**|Removes an object.|  
   
 > [!IMPORTANT]  
->  Some [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifiers (object names) contain characters that Windows PowerShell does not support in path names. For more information about how to use names that contain these characters, see [SQL Server Identifiers in PowerShell](../../2014/database-engine/sql-server-identifiers-in-powershell.md).  
+>  Some [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] identifiers (object names) contain characters that Windows PowerShell does not support in path names. For more information about how to use names that contain these characters, see [SQL Server Identifiers in PowerShell](../../2014/database-engine/sql-server-identifiers-in-powershell.md).  
   
 ### SQL Server Information Returned by Get-ChildItem  
  The information returned by **Get-ChildItem** (or its **dir** and **ls** aliases) depends on your location in a SQLSERVER: path.  
   
 |Path location|Get-ChildItem results|  
 |-------------------|----------------------------|  
-|SQLSERVER:\SQL|Returns the name of the local computer. If you have used the SMO or WMI to connect to instances of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] on other computers, those computers are also listed.|  
-|SQLSERVER:\SQL\\*ComputerName*|The list of instances of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] on the computer.|  
+|SQLSERVER:\SQL|Returns the name of the local computer. If you have used the SMO or WMI to connect to instances of the [!INCLUDE[ssDE](../includes/ssde-md.md)] on other computers, those computers are also listed.|  
+|SQLSERVER:\SQL\\*ComputerName*|The list of instances of the [!INCLUDE[ssDE](../includes/ssde-md.md)] on the computer.|  
 |SQLSERVER:\SQL\\*ComputerName*\\*InstanceName*|The list of top-level object types in the instance, such as Endpoints, Certificates, and Databases.|  
 |Object class node, such as Databases|The list of objects of that type, such as the list of databases: master, model, AdventureWorks20008R2.|  
 |Object name node, such as AdventureWorks2012|The list of object types contained within the object. For example, a database would list object types such as tables and views.|  
@@ -57,7 +57,7 @@ manager: "jhubbard"
 -   Instead of typing a full cmdlet name, type a shorter alias, or one that maps to a familiar commend prompt command.  
   
 ### Alias Example (PowerShell)  
- For example, you can use one of the following sets of cmdlets or aliases to retrieve a listing of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances available to you by navigating to the SQLSERVER:\SQL folder and requesting the list of child items for the folder:  
+ For example, you can use one of the following sets of cmdlets or aliases to retrieve a listing of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instances available to you by navigating to the SQLSERVER:\SQL folder and requesting the list of child items for the folder:  
   
 ```  
 ## Shows using the full cmdet name.  

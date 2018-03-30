@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # AllMemberAggregationUsage Element (ASSL)
-  Controls how the Aggregation Designer in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] designs aggregations.  
+  Controls how the Aggregation Designer in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] designs aggregations.  
   
 ## Syntax  
   

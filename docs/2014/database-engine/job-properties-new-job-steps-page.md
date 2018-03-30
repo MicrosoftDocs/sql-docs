@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Job Properties:New Job (Steps Page)
-  Use this page to view and organize job steps for a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job.  
+  Use this page to view and organize job steps for a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent job.  
   
 ## Options  
  **Job step list**  
@@ -28,7 +28,7 @@ manager: "jhubbard"
  Moves the job a step up or down in the list.  
   
  **Start step**  
- Select the step that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent starts with when the job begins.  
+ Select the step that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent starts with when the job begins.  
   
  **New**  
  Create a new job step below the selected job step.  

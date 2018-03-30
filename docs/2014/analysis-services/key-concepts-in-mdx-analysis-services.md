@@ -150,7 +150,7 @@ manager: "mblythe"
  [Visual Totals and Non Visual Totals](../../2014/analysis-services/visual-totals-and-non-visual-totals.md)   
  [MDX Query Fundamentals &#40;Analysis Services&#41;](../../2014/analysis-services/mdx-query-fundamentals-analysis-services.md)   
  [MDX Scripting Fundamentals &#40;Analysis Services&#41;](../../2014/analysis-services/mdx-scripting-fundamentals-analysis-services.md)   
- [MDX Language Reference &#40;MDX&#41;](../Topic/MDX%20Language%20Reference%20\(MDX\).md)   
- [Multidimensional Expressions &#40;MDX&#41; Reference](../Topic/Multidimensional%20Expressions%20\(MDX\)%20Reference.md)  
+ [MDX Language Reference &#40;MDX&#41;](~/mdx/mdx-language-reference-mdx.md)   
+ [Multidimensional Expressions &#40;MDX&#41; Reference](~/mdx/multidimensional-expressions-mdx-reference.md)  
   
   

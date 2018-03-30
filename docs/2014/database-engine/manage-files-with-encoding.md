@@ -49,7 +49,7 @@ manager: "jhubbard"
 4.  From the **Line Endings**list, select the type of line ending you want.  
   
     > [!NOTE]  
-    >  If you save your file your file with Unicode encoding, the file should be checked into [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual SourceSafe as a binary file because Visual SourceSafe does not support merging, comparing, and showing differences between files that are saved as Unicode.  
+    >  If you save your file your file with Unicode encoding, the file should be checked into [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe as a binary file because Visual SourceSafe does not support merging, comparing, and showing differences between files that are saved as Unicode.  
   
  If you are using Visual SourceSafe to store files with ANSI, UTF8, or Unicode, be aware of the following limitations for each:  
   

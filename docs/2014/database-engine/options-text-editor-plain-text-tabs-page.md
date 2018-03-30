@@ -14,14 +14,14 @@ f1_keywords:
 ms.assetid: 07d82d10-bca9-4b37-abbb-58ef9bfb264b
 caps.latest.revision: 21
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Options (Text Editor - Plain Text - Tabs Page)
   Use this dialog to change the tabbing behavior of the Text Editor, which is used to edit a document not associated with a particular development language. To display these settings, click **Options** on the **Tools** menu, expand **Text Editor**, expand **Plain Text**, and then click **Tabs**.  
   
 ## Setting Options in Multiple Locations  
- Options for the Plain Text Editor can also be set in the **All Languages General** dialog. If you use the **All Languages** dialogs to set different options for the other [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] editors, such as the DMX or MDX editors, you must reset the Plain Text Editor options using this dialog.  
+ Options for the Plain Text Editor can also be set in the **All Languages General** dialog. If you use the **All Languages** dialogs to set different options for the other [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] editors, such as the DMX or MDX editors, you must reset the Plain Text Editor options using this dialog.  
   
 ## Indenting  
  **None**  

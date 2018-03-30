@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 0f58338d-2ea0-48b8-8a20-c438b0940433
 caps.latest.revision: 10
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_125
@@ -33,12 +33,12 @@ manager: "jhubbard"
 |Message Text|Case expressions may only be nested to level %d.|  
   
 ## Explanation  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] allows for only 10 levels of nesting in CASE expressions.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] allows for only 10 levels of nesting in CASE expressions.  
   
 ## User Action  
  Reduce the level of CASE statements to 10 or less.  
   
 ## See Also  
- [CASE &#40;Transact-SQL&#41;](../Topic/CASE%20\(Transact-SQL\).md)  
+ [CASE &#40;Transact-SQL&#41;](~/t-sql/language-elements/case-transact-sql.md)  
   
   

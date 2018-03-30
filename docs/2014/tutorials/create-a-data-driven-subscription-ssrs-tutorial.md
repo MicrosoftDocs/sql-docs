@@ -16,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 caps.latest.revision: 46
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Create a Data-Driven Subscription (SSRS Tutorial)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides data-driven subscriptions so that you can customize the distribution of a report based on dynamic subscriber data. Data-driven subscriptions are intended for the following kinds of scenarios:  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] provides data-driven subscriptions so that you can customize the distribution of a report based on dynamic subscriber data. Data-driven subscriptions are intended for the following kinds of scenarios:  
   
 -   Distributing reports to a large recipient pool whose membership may change from one distribution to the next. For example, distribute a monthly report to all current customers.  
   
@@ -32,7 +32,7 @@ manager: "mblythe"
  This tutorial is divided into three lessons:  
   
  [Lesson 1: Creating a Sample Subscriber Database](../../2014/tutorials/lesson-1-creating-a-sample-subscriber-database.md)  
- In this lesson you will learn how to create a local [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database that contains subscriber information.  
+ In this lesson you will learn how to create a local [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database that contains subscriber information.  
   
  [Lesson 2: Modifying the Report Data Source Properties](../../2014/tutorials/lesson-2-modifying-the-report-data-source-properties.md)  
  In this lesson, you will learn how to modify report data source properties so that the report can run unattended. Unattended processing requires stored credentials. You will also modify the report dataset to include a parameter that is supplied by the subscriber data.  
@@ -43,11 +43,11 @@ manager: "mblythe"
 ## Requirements  
  Data-driven subscriptions are typically created and maintained by report server administrators. The ability to create data-driven subscriptions requires expertise in building queries, knowledge of data sources that contain subscriber data, and elevated permissions on a report server.  
   
- The tutorial will use the report created in the tutorial [Create a Basic Table Report &#40;SSRS Tutorial&#41;](../../2014/tutorials/create-a-basic-table-report-ssrs-tutorial.md) and data from [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]  
+ The tutorial will use the report created in the tutorial [Create a Basic Table Report &#40;SSRS Tutorial&#41;](../../2014/tutorials/create-a-basic-table-report-ssrs-tutorial.md) and data from [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]  
   
  Your system must have the following installed to use this tutorial:  
   
--   An edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that supports data-driven subscriptions. For more information, see [Editions and Components of SQL Server 2014](../../2014/getting-started/editions-and-components-of-sql-server-2014.md).  
+-   An edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that supports data-driven subscriptions. For more information, see [Editions and Components of SQL Server 2014](../../2014/getting-started/editions-and-components-of-sql-server-2014.md).  
   
 -   The report server must be running in native mode. The user interface described in this tutorial is based on a native mode report server. Subscriptions are supported on SharePoint mode report servers but the user interface will be different than what is described in this tutorial.  
   
@@ -55,7 +55,7 @@ manager: "mblythe"
   
 -   A report that includes parameters. This tutorial assumes the sample report, `Sales Orders` you create using the tutorial [Create a Basic Table Report &#40;SSRS Tutorial&#41;](../../2014/tutorials/create-a-basic-table-report-ssrs-tutorial.md).  
   
--   The [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database, which provides data to the sample report.  
+-   The [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] sample database, which provides data to the sample report.  
   
 -   A role assignment that includes the Manage all subscriptions task on the sample report. This task is required for defining a data-driven subscription. If you are an administrator on the computer, the default role assignment for local administrators provides the permissions necessary for creating data-driven subscriptions. For more information, see [Granting Permissions on a Native Mode Report Server](../../2014/reporting-services/granting-permissions-on-a-native-mode-report-server.md).  
   

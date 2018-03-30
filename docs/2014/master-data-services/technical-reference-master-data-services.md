@@ -16,7 +16,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Technical Reference (Master Data Services)
-  Find technical reference information on [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] components.  
+  Find technical reference information on [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] components.  
   
 -   [Set up the Database and Website for Master Data Services](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)  
   

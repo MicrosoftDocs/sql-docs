@@ -37,7 +37,7 @@ manager: "jhubbard"
  The most likely cause is that an add-file operation completed on the principal database but then failed on the mirror database because file names or directory structures differ on the principal server and mirror server.  
   
 ## User Action  
- Look in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log for the cause of this error. Try to resolve the cause and resume mirroring on the database.  
+ Look in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] error log for the cause of this error. Try to resolve the cause and resume mirroring on the database.  
   
 ## See Also  
  [Troubleshoot Database Mirroring Configuration &#40;SQL Server&#41;](../../2014/database-engine/troubleshoot-database-mirroring-configuration-sql-server.md)  

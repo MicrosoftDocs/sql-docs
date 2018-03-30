@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 94a8d361-e897-4d6d-9a8f-1bb652e7a850
 caps.latest.revision: 8
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Manage Change Tracking (SQL Server)
@@ -29,14 +29,14 @@ manager: "jhubbard"
 ### Catalog Views  
  To determine which tables and databases have change tracking enabled, you can use the following catalog views:  
   
--   [sys.change_tracking_databases &#40;Transact-SQL&#41;](../Topic/sys.change_tracking_databases%20\(Transact-SQL\).md)  
+-   [sys.change_tracking_databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-databases.md)  
   
--   [sys.change_tracking_tables &#40;Transact-SQL&#41;](../Topic/sys.change_tracking_tables%20\(Transact-SQL\).md)  
+-   [sys.change_tracking_tables &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md)  
   
- Also, the [sys.internal_tables](../Topic/sys.internal_tables%20\(Transact-SQL\).md) catalog view lists the internal tables that are created when change tracking is enabled for a user table.  
+ Also, the [sys.internal_tables](~/relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md) catalog view lists the internal tables that are created when change tracking is enabled for a user table.  
   
 ### Security  
- To access change tracking information by using the [change tracking functions](../Topic/Change%20Tracking%20Functions%20\(Transact-SQL\).md), the principal must have the following permissions:  
+ To access change tracking information by using the [change tracking functions](~/relational-databases/system-functions/change-tracking-functions-transact-sql.md), the principal must have the following permissions:  
   
 -   SELECT permission on at least the primary key columns on the change-tracked table to the table that is being queried.  
   
@@ -92,7 +92,7 @@ manager: "jhubbard"
   
 -   For each committed transaction, a row is added to an internal transaction table.  
   
- As with other internal tables, you can determine the space used for the change tracking tables by using the [sp_spaceused](../Topic/sp_spaceused%20\(Transact-SQL\).md) stored procedure. The names of the internal tables can be obtained by using the [sys.internal_tables](../Topic/sys.internal_tables%20\(Transact-SQL\).md) catalog view, as shown in the following example.  
+ As with other internal tables, you can determine the space used for the change tracking tables by using the [sp_spaceused](~/relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) stored procedure. The names of the internal tables can be obtained by using the [sys.internal_tables](~/relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md) catalog view, as shown in the following example.  
   
 ```tsql  
 sp_spaceused 'sys.change_tracking_309576141'  
@@ -101,11 +101,11 @@ sp_spaceused 'sys.syscommittab'
   
 ## See Also  
  [Track Data Changes &#40;SQL Server&#41;](../../2014/database-engine/track-data-changes-sql-server.md)   
- [ALTER TABLE &#40;Transact-SQL&#41;](../Topic/ALTER%20TABLE%20\(Transact-SQL\).md)   
+ [ALTER TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-table-transact-sql.md)   
  [Database Properties &#40;ChangeTracking Page&#41;](../../2014/database-engine/database-properties-changetracking-page.md)   
- [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)   
- [sys.change_tracking_databases &#40;Transact-SQL&#41;](../Topic/sys.change_tracking_databases%20\(Transact-SQL\).md)   
- [sys.change_tracking_tables &#40;Transact-SQL&#41;](../Topic/sys.change_tracking_tables%20\(Transact-SQL\).md)   
+ [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [sys.change_tracking_databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-databases.md)   
+ [sys.change_tracking_tables &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md)   
  [Track Data Changes &#40;SQL Server&#41;](../../2014/database-engine/track-data-changes-sql-server.md)   
  [About Change Tracking &#40;SQL Server&#41;](../../2014/database-engine/about-change-tracking-sql-server.md)   
  [Work with Change Data &#40;SQL Server&#41;](../../2014/database-engine/work-with-change-data-sql-server.md)  

@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: 7624ba76-594b-4be5-ac10-c3ac4a3529bd
 caps.latest.revision: 79
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Query with Full-Text Search
-  To define full-text searches, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] full-text queries use the full-text predicates (CONTAINS and FREETEXT) and functions (CONTAINSTABLE and FREETEXTTABLE. These support rich [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax that supports a variety of forms of query terms. To write full-text queries, you must learn when and how to use these predicates and functions.  
+  To define full-text searches, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] full-text queries use the full-text predicates (CONTAINS and FREETEXT) and functions (CONTAINSTABLE and FREETEXTTABLE. These support rich [!INCLUDE[tsql](../includes/tsql-md.md)] syntax that supports a variety of forms of query terms. To write full-text queries, you must learn when and how to use these predicates and functions.  
   
 ##  <a name="OV_ft_predicates"></a> Overview of the Full-Text Predicates (CONTAINS and FREETEXT)  
- The CONTAINS and FREETEXT predicates return a TRUE or FALSE value. They can be used only to specify selection criteria for determining whether a given row matches the full-text query. Matching rows are returned in the result set. CONTAINS and FREETEXT are specified in the WHERE or HAVING clause of a SELECT statement. They can be combined with any of the other [!INCLUDE[tsql](../../includes/tsql-md.md)] predicates, such as LIKE and BETWEEN.  
+ The CONTAINS and FREETEXT predicates return a TRUE or FALSE value. They can be used only to specify selection criteria for determining whether a given row matches the full-text query. Matching rows are returned in the result set. CONTAINS and FREETEXT are specified in the WHERE or HAVING clause of a SELECT statement. They can be combined with any of the other [!INCLUDE[tsql](../includes/tsql-md.md)] predicates, such as LIKE and BETWEEN.  
   
 > [!NOTE]  
->  For information about the syntax and arguments of these predicates, see [CONTAINS &#40;Transact-SQL&#41;](../Topic/CONTAINS%20\(Transact-SQL\).md) and [FREETEXT &#40;Transact-SQL&#41;](../Topic/FREETEXT%20\(Transact-SQL\).md).  
+>  For information about the syntax and arguments of these predicates, see [CONTAINS &#40;Transact-SQL&#41;](~/t-sql/queries/contains-transact-sql.md) and [FREETEXT &#40;Transact-SQL&#41;](~/t-sql/queries/freetext-transact-sql.md).  
   
  When using CONTAINS or FREETEXT, you can specify either a single column, a list of columns, or all columns in the table to be searched. Optionally, you can specify the language whose resources will be used by given full-text query for word breaking and stemming, thesaurus lookups, and noise-word removal.  
   
@@ -44,7 +44,7 @@ manager: "jhubbard"
  You can use a four-part name in the CONTAINS or FREETEXT predicate to query full-text indexed columns of the target tables on a linked server. To prepare a remote server to receive full-text queries, create a full-text index on the target tables and columns on the remote server and then add the remote server as a linked server.  
   
 > [!NOTE]  
->  Full-text predicates are not allowed in the [OUTPUT Clause](../Topic/OUTPUT%20Clause%20\(Transact-SQL\).md) when the database compatibility level is set to 100.  
+>  Full-text predicates are not allowed in the [OUTPUT Clause](~/t-sql/queries/output-clause-transact-sql.md) when the database compatibility level is set to 100.  
   
  
   
@@ -83,7 +83,7 @@ GO
  The CONTAINSTABLE and FREETEXTTABLE functions are referenced like a regular table name in the FROM clause of a SELECT statement. They return a table of zero, one, or more rows that match the full-text query. The returned table contains only rows of the base table that match the selection criteria specified in the full-text search condition of the function.  
   
 > [!NOTE]  
->  For information about the syntax and arguments of these functions, see [CONTAINSTABLE &#40;Transact-SQL&#41;](../Topic/CONTAINSTABLE%20\(Transact-SQL\).md) and [FREETEXTTABLE &#40;Transact-SQL&#41;](../Topic/FREETEXTTABLE%20\(Transact-SQL\).md).  
+>  For information about the syntax and arguments of these functions, see [CONTAINSTABLE &#40;Transact-SQL&#41;](~/relational-databases/system-functions/containstable-transact-sql.md) and [FREETEXTTABLE &#40;Transact-SQL&#41;](~/relational-databases/system-functions/freetexttable-transact-sql.md).  
   
  Queries using one of these functions return a relevance ranking value (RANK) and full-text key (KEY) for each row, as follows:  
   
@@ -97,7 +97,7 @@ GO
   
  When using either of these functions, you must specify the base table that is to be full-text searched. As with the predicates, you can specify a single column, a list of columns, or all columns in the table to be searched, and optionally, the language whose resources will be used by given full-text query.  
   
- CONTAINSTABLE is useful for the same kinds of matches as CONTAINS, and FREETEXTTABLE is useful for the same kinds of matches as FREETEXT. For more information, see [Overview of the Full-Text Predicates (CONTAINS and FREETEXT)](#OV_ft_predicates), earlier in this topic. When running queries that use the CONTAINSTABLE and FREETEXTTABLE functions you must explicitly join rows that are returned with the rows in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base table.  
+ CONTAINSTABLE is useful for the same kinds of matches as CONTAINS, and FREETEXTTABLE is useful for the same kinds of matches as FREETEXT. For more information, see [Overview of the Full-Text Predicates (CONTAINS and FREETEXT)](#OV_ft_predicates), earlier in this topic. When running queries that use the CONTAINSTABLE and FREETEXTTABLE functions you must explicitly join rows that are returned with the rows in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] base table.  
   
  Typically, the result of CONTAINSTABLE or FREETEXTTABLE needs to be joined with the base table. In such cases, you need to know the unique key column name. This column, which occurs in every full-text enabled table, is used to enforce unique rows for the table (the *unique**key column*). For more information, see [Manage Full-Text Indexes](../../2014/database-engine/manage-full-text-indexes.md).  
   
@@ -169,10 +169,10 @@ GO
 > [!NOTE]  
 >  In contrast, FREETEXT and FREETEXTTABLE treat the Boolean terms as words to be searched.  
   
- For information about combining CONTAINS with other predicates that use the logical operators AND, OR, and NOT, see [Search Condition &#40;Transact-SQL&#41;](../Topic/Search%20Condition%20\(Transact-SQL\).md).  
+ For information about combining CONTAINS with other predicates that use the logical operators AND, OR, and NOT, see [Search Condition &#40;Transact-SQL&#41;](~/t-sql/queries/search-condition-transact-sql.md).  
   
 ### Example  
- The following example uses the ProductDescription table of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. The query uses the CONTAINS predicate to search for descriptions in which the description ID is not equal to 5 and the description contains both the word "Aluminum" and the word "spindle." The search condition uses the AND Boolean operator.  
+ The following example uses the ProductDescription table of the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database. The query uses the CONTAINS predicate to search for descriptions in which the description ID is not equal to 5 and the description contains both the word "Aluminum" and the word "spindle." The search condition uses the AND Boolean operator.  
   
 ```  
 USE AdventureWorks2012  
@@ -212,10 +212,10 @@ GO
  If a `varbinary(max)`, `varbinary`, or `xml` column is full-text indexed, it can be queried using the full-text predicates (CONTAINS and FREETEXT) and functions (CONTAINSTABLE and FREETEXTTABLE), like any other full-text indexed column.  
   
 > [!IMPORTANT]  
->  Full-text search also works with image columns. However, the `image` data type will be removed in a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using this data type in new development work, and plan to modify applications that currently use it. Use the `varbinary(max)` data type instead.  
+>  Full-text search also works with image columns. However, the `image` data type will be removed in a future version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Avoid using this data type in new development work, and plan to modify applications that currently use it. Use the `varbinary(max)` data type instead.  
   
 ### varbinary(max) or varbinary data  
- A single `varbinary(max)` or `varbinary` column can store many types of documents. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports any document type for which a filter is installed and available in the operative system. The document type of each document is identified by the file extension of the document. For example, for a .doc file extension, full-text search uses the filter that supports Microsoft Word documents. For a list of available document types, query the [sys.fulltext_document_types](../Topic/sys.fulltext_document_types%20\(Transact-SQL\).md) catalog view.  
+ A single `varbinary(max)` or `varbinary` column can store many types of documents. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supports any document type for which a filter is installed and available in the operative system. The document type of each document is identified by the file extension of the document. For example, for a .doc file extension, full-text search uses the filter that supports Microsoft Word documents. For a list of available document types, query the [sys.fulltext_document_types](~/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md) catalog view.  
   
  Note that the Full-Text Engine can leverage existing filters that are installed in the operating system. Before you can use operating-system filters, word breakers, and stemmers, you must load them in the server instance, as follows:  
   
@@ -242,17 +242,17 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
   
 |Query-term form|Description|Supported by|  
 |----------------------|-----------------|------------------|  
-|One or more specific words or phrases (*simple term*)|In full-text search, a word (or *token*) is a string whose boundaries are identified by appropriate word breakers, following the linguistic rules of the specified language. A valid phrase consists of multiple words, with or without any punctuation marks between them.<br /><br /> For example, "croissant" is a word, and "café au lait" is a phrase. Words and phrases such as these are called simple terms.<br /><br /> For more information, see [Searching for Specific word or Phrase (Simple Term)](#Simple_Term), later in this topic.|[CONTAINS](../Topic/CONTAINS%20\(Transact-SQL\).md) and [CONTAINSTABLE](../Topic/CONTAINSTABLE%20\(Transact-SQL\).md) look for an exact match for the phrase.<br /><br /> [FREETEXT](../Topic/FREETEXT%20\(Transact-SQL\).md) and [FREETEXTTABLE](../Topic/FREETEXTTABLE%20\(Transact-SQL\).md) break up the phrase into separate words.|  
-|A word or a phrase where the words begin with specified text (*prefix term*)|A prefix term refers to a string that is affixed to the front of a word to produce a derivative word or an inflected form.<br /><br /> For a single prefix term, any word starting with the specified term will be part of the result set. For example, the term "auto*" matches "automatic", "automobile", and so forth.<br /><br /> For a phrase, each word within the phrase is considered to be a prefix term. For example, the term "auto tran\*" matches "automatic transmission" and "automobile transducer", but it does not match "automatic motor transmission".<br /><br /> For more information, see [Performing Prefix Searches (Prefix Term)](#Prefix_Term), later in this topic.|[CONTAINS](../Topic/CONTAINS%20\(Transact-SQL\).md) and [CONTAINSTABLE](../Topic/CONTAINSTABLE%20\(Transact-SQL\).md)|  
-|Inflectional forms of a specific word (*generation term—inflectional*)|The inflectional forms are the different tenses and conjugations of a verb or the singular and plural forms of a noun. For example, search for the inflectional form of the word "drive". If various rows in the table include the words "drive", "drives", "drove", "driving", and "driven", all would be in the result set because each of these can be inflectionally generated from the word drive.<br /><br /> For more information, see [Searching for the Inflectional Form of a Specific Word (Generation Term)](#Inflectional_Generation_Term), later in this topic.|[FREETEXT](../Topic/FREETEXT%20\(Transact-SQL\).md) and [FREETEXTTABLE](../Topic/FREETEXTTABLE%20\(Transact-SQL\).md) look for inflectional terms of all specified words by default.<br /><br /> [CONTAINS](../Topic/CONTAINS%20\(Transact-SQL\).md) and [CONTAINSTABLE](../Topic/CONTAINSTABLE%20\(Transact-SQL\).md) support an optional INFLECTIONAL argument.|  
-|Synonymous forms of a specific word (*generation term—thesaurus*)|A thesaurus defines user-specified synonyms for terms. For example, if an entry, "{car, automobile, truck, van}", is added to a thesaurus, you can search for the thesaurus form of the word "car". All rows in the table queried that include the words "automobile", "truck", "van", or "car", appear in the result set because each of these words belong to the synonym expansion set containing the word "car".<br /><br /> For information about the structure of thesaurus files, see [Configure and Manage Thesaurus Files for Full-Text Search](../../2014/database-engine/configure-and-manage-thesaurus-files-for-full-text-search.md).|[FREETEXT](../Topic/FREETEXT%20\(Transact-SQL\).md) and [FREETEXTTABLE](../Topic/FREETEXTTABLE%20\(Transact-SQL\).md) use the thesaurus by default.<br /><br /> [CONTAINS](../Topic/CONTAINS%20\(Transact-SQL\).md) and [CONTAINSTABLE](../Topic/CONTAINSTABLE%20\(Transact-SQL\).md) support an optional THESAURUS argument.|  
-|A word or phrase close to another word or phrase (*proximity term*)|A proximity term indicates words or phrases that are near to each other., You can also specify the maximum number of non-search terms that separate the first and last search terms. In addition, you can search for words or phrases in any order, or in the order in which you specify them.<br /><br /> For example, you want to find the rows in which the word "ice" is near the word "hockey" or in which the phrase "ice skating" is near the phrase "ice hockey".<br /><br /> For more information, see [Search for Words Close to Another Word with NEAR](../../2014/database-engine/search-for-words-close-to-another-word-with-near.md).|[CONTAINS](../Topic/CONTAINS%20\(Transact-SQL\).md) and [CONTAINSTABLE](../Topic/CONTAINSTABLE%20\(Transact-SQL\).md)|  
-|Words or phrases using weighted values (*weighted term*)|A weighting value that indicates the degree of importance for each word and phrase within a set of words and phrases. A weight value of 0.0 is the lowest, and a weight value of 1.0 is the highest.<br /><br /> For example, in a query searching for multiple terms, you can assign each search word a weight value indicating its importance relative to the other words in the search condition. The results for this type of query return the most relevant rows first, according to the relative weight you have assigned to search words. The result sets contain documents or rows containing any of the specified terms (or content between them); however, some results will be considered more relevant than others because of the variation in the weighted values associated with different searched terms.<br /><br /> For more information, see [Searching for Words or Phrases Using Weighted Values (Weighted Term)](#Weighted_Term), later in this topic.|[CONTAINSTABLE](../Topic/CONTAINSTABLE%20\(Transact-SQL\).md)|  
+|One or more specific words or phrases (*simple term*)|In full-text search, a word (or *token*) is a string whose boundaries are identified by appropriate word breakers, following the linguistic rules of the specified language. A valid phrase consists of multiple words, with or without any punctuation marks between them.<br /><br /> For example, "croissant" is a word, and "café au lait" is a phrase. Words and phrases such as these are called simple terms.<br /><br /> For more information, see [Searching for Specific word or Phrase (Simple Term)](#Simple_Term), later in this topic.|[CONTAINS](~/t-sql/queries/contains-transact-sql.md) and [CONTAINSTABLE](~/relational-databases/system-functions/containstable-transact-sql.md) look for an exact match for the phrase.<br /><br /> [FREETEXT](~/t-sql/queries/freetext-transact-sql.md) and [FREETEXTTABLE](~/relational-databases/system-functions/freetexttable-transact-sql.md) break up the phrase into separate words.|  
+|A word or a phrase where the words begin with specified text (*prefix term*)|A prefix term refers to a string that is affixed to the front of a word to produce a derivative word or an inflected form.<br /><br /> For a single prefix term, any word starting with the specified term will be part of the result set. For example, the term "auto*" matches "automatic", "automobile", and so forth.<br /><br /> For a phrase, each word within the phrase is considered to be a prefix term. For example, the term "auto tran\*" matches "automatic transmission" and "automobile transducer", but it does not match "automatic motor transmission".<br /><br /> For more information, see [Performing Prefix Searches (Prefix Term)](#Prefix_Term), later in this topic.|[CONTAINS](~/t-sql/queries/contains-transact-sql.md) and [CONTAINSTABLE](~/relational-databases/system-functions/containstable-transact-sql.md)|  
+|Inflectional forms of a specific word (*generation term—inflectional*)|The inflectional forms are the different tenses and conjugations of a verb or the singular and plural forms of a noun. For example, search for the inflectional form of the word "drive". If various rows in the table include the words "drive", "drives", "drove", "driving", and "driven", all would be in the result set because each of these can be inflectionally generated from the word drive.<br /><br /> For more information, see [Searching for the Inflectional Form of a Specific Word (Generation Term)](#Inflectional_Generation_Term), later in this topic.|[FREETEXT](~/t-sql/queries/freetext-transact-sql.md) and [FREETEXTTABLE](~/relational-databases/system-functions/freetexttable-transact-sql.md) look for inflectional terms of all specified words by default.<br /><br /> [CONTAINS](~/t-sql/queries/contains-transact-sql.md) and [CONTAINSTABLE](~/relational-databases/system-functions/containstable-transact-sql.md) support an optional INFLECTIONAL argument.|  
+|Synonymous forms of a specific word (*generation term—thesaurus*)|A thesaurus defines user-specified synonyms for terms. For example, if an entry, "{car, automobile, truck, van}", is added to a thesaurus, you can search for the thesaurus form of the word "car". All rows in the table queried that include the words "automobile", "truck", "van", or "car", appear in the result set because each of these words belong to the synonym expansion set containing the word "car".<br /><br /> For information about the structure of thesaurus files, see [Configure and Manage Thesaurus Files for Full-Text Search](../../2014/database-engine/configure-and-manage-thesaurus-files-for-full-text-search.md).|[FREETEXT](~/t-sql/queries/freetext-transact-sql.md) and [FREETEXTTABLE](~/relational-databases/system-functions/freetexttable-transact-sql.md) use the thesaurus by default.<br /><br /> [CONTAINS](~/t-sql/queries/contains-transact-sql.md) and [CONTAINSTABLE](~/relational-databases/system-functions/containstable-transact-sql.md) support an optional THESAURUS argument.|  
+|A word or phrase close to another word or phrase (*proximity term*)|A proximity term indicates words or phrases that are near to each other., You can also specify the maximum number of non-search terms that separate the first and last search terms. In addition, you can search for words or phrases in any order, or in the order in which you specify them.<br /><br /> For example, you want to find the rows in which the word "ice" is near the word "hockey" or in which the phrase "ice skating" is near the phrase "ice hockey".<br /><br /> For more information, see [Search for Words Close to Another Word with NEAR](../../2014/database-engine/search-for-words-close-to-another-word-with-near.md).|[CONTAINS](~/t-sql/queries/contains-transact-sql.md) and [CONTAINSTABLE](~/relational-databases/system-functions/containstable-transact-sql.md)|  
+|Words or phrases using weighted values (*weighted term*)|A weighting value that indicates the degree of importance for each word and phrase within a set of words and phrases. A weight value of 0.0 is the lowest, and a weight value of 1.0 is the highest.<br /><br /> For example, in a query searching for multiple terms, you can assign each search word a weight value indicating its importance relative to the other words in the search condition. The results for this type of query return the most relevant rows first, according to the relative weight you have assigned to search words. The result sets contain documents or rows containing any of the specified terms (or content between them); however, some results will be considered more relevant than others because of the variation in the weighted values associated with different searched terms.<br /><br /> For more information, see [Searching for Words or Phrases Using Weighted Values (Weighted Term)](#Weighted_Term), later in this topic.|[CONTAINSTABLE](~/relational-databases/system-functions/containstable-transact-sql.md)|  
   
 
   
 ###  <a name="Simple_Term"></a> Searching for Specific Word or Phrase (Simple Term)  
- You can use [CONTAINS](../Topic/CONTAINS%20\(Transact-SQL\).md), [CONTAINSTABLE](../Topic/CONTAINSTABLE%20\(Transact-SQL\).md), [FREETEXT](../Topic/FREETEXT%20\(Transact-SQL\).md), or [FREETEXTTABLE](../Topic/FREETEXTTABLE%20\(Transact-SQL\).md) to search a table for a specific phrase. For example, if you want to search the `ProductReview` table in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to find all comments about a product with the phrase "learning curve", you could use the CONTAINS predicate as follows:  
+ You can use [CONTAINS](~/t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](~/relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](~/t-sql/queries/freetext-transact-sql.md), or [FREETEXTTABLE](~/relational-databases/system-functions/freetexttable-transact-sql.md) to search a table for a specific phrase. For example, if you want to search the `ProductReview` table in the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database to find all comments about a product with the phrase "learning curve", you could use the CONTAINS predicate as follows:  
   
 ```  
 USE AdventureWorks2012  
@@ -269,7 +269,7 @@ GO
  
   
 ###  <a name="Prefix_Term"></a> Performing Prefix Searches (Prefix Term)  
- You can use [CONTAINS](../Topic/CONTAINS%20\(Transact-SQL\).md) or [CONTAINSTABLE](../Topic/CONTAINSTABLE%20\(Transact-SQL\).md) to search for words or phrases with a specified prefix. All entries in the column that contain text beginning with the specified prefix are returned. For example, to search for all rows that contain the prefix `top`-, as in `top``ple`, `top``ping`, and `top`. The query looks like this:  
+ You can use [CONTAINS](~/t-sql/queries/contains-transact-sql.md) or [CONTAINSTABLE](~/relational-databases/system-functions/containstable-transact-sql.md) to search for words or phrases with a specified prefix. All entries in the column that contain text beginning with the specified prefix are returned. For example, to search for all rows that contain the prefix `top`-, as in `top``ple`, `top``ping`, and `top`. The query looks like this:  
   
 ```  
 USE AdventureWorks2012  
@@ -288,7 +288,7 @@ GO
  
   
 ###  <a name="Inflectional_Generation_Term"></a> Searching for Inflectional Forms of a Specific Word (Generation Term)  
- You can use [CONTAINS](../Topic/CONTAINS%20\(Transact-SQL\).md), [CONTAINSTABLE](../Topic/CONTAINSTABLE%20\(Transact-SQL\).md), [FREETEXT](../Topic/FREETEXT%20\(Transact-SQL\).md), or [FREETEXTTABLE](../Topic/FREETEXTTABLE%20\(Transact-SQL\).md) to search for all the different tenses and conjugations of a verb or both the singular and plural forms of a noun (an inflectional search) or for synonymous forms of a specific word (a thesaurus search).  
+ You can use [CONTAINS](~/t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](~/relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](~/t-sql/queries/freetext-transact-sql.md), or [FREETEXTTABLE](~/relational-databases/system-functions/freetexttable-transact-sql.md) to search for all the different tenses and conjugations of a verb or both the singular and plural forms of a noun (an inflectional search) or for synonymous forms of a specific word (a thesaurus search).  
   
  The following example searches for any form of "foot" ("foot", "feet", and so on) in the `Comments` column of the `ProductReview` table in the `AdventureWorks` database.  
   
@@ -308,7 +308,7 @@ GO
 
   
 ###  <a name="Weighted_Term"></a> Searching for Words or Phrases Using Weighted Values (Weighted Term)  
- You can use [CONTAINSTABLE](../Topic/CONTAINSTABLE%20\(Transact-SQL\).md) to search for words or phrases and specify a weighting value. Weight, measured as a number from 0.0 through 1.0, indicates the importance of each word and phrase within a set of words and phrases. A weight of 0.0 is the lowest, and a weight of 1.0 is the highest.  
+ You can use [CONTAINSTABLE](~/relational-databases/system-functions/containstable-transact-sql.md) to search for words or phrases and specify a weighting value. Weight, measured as a number from 0.0 through 1.0, indicates the importance of each word and phrase within a set of words and phrases. A weight of 0.0 is the lowest, and a weight of 1.0 is the highest.  
   
  The following example shows a query that searches for all customer addresses, using weights, in which any text beginning with the string "Bay" has either "Street" or "View". The results give a higher rank to those rows that contain more of the words specified.  
   
@@ -332,15 +332,15 @@ GO
 
   
 ##  <a name="tokens"></a> Viewing the Tokenization Result of a Word Breaker, Thesaurus, and Stoplist Combination  
- After applying a given word breaker, thesaurus, and stoplist combination to a query string input, you can view the tokenization result by using the **sys.dm_fts_parser** dynamic management view. For more information, see [sys.dm_fts_parser &#40;Transact-SQL&#41;](../Topic/sys.dm_fts_parser%20\(Transact-SQL\).md).  
+ After applying a given word breaker, thesaurus, and stoplist combination to a query string input, you can view the tokenization result by using the **sys.dm_fts_parser** dynamic management view. For more information, see [sys.dm_fts_parser &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql.md).  
   
  
   
 ## See Also  
- [CONTAINS &#40;Transact-SQL&#41;](../Topic/CONTAINS%20\(Transact-SQL\).md)   
- [CONTAINSTABLE &#40;Transact-SQL&#41;](../Topic/CONTAINSTABLE%20\(Transact-SQL\).md)   
- [FREETEXT &#40;Transact-SQL&#41;](../Topic/FREETEXT%20\(Transact-SQL\).md)   
- [FREETEXTTABLE &#40;Transact-SQL&#41;](../Topic/FREETEXTTABLE%20\(Transact-SQL\).md)   
+ [CONTAINS &#40;Transact-SQL&#41;](~/t-sql/queries/contains-transact-sql.md)   
+ [CONTAINSTABLE &#40;Transact-SQL&#41;](~/relational-databases/system-functions/containstable-transact-sql.md)   
+ [FREETEXT &#40;Transact-SQL&#41;](~/t-sql/queries/freetext-transact-sql.md)   
+ [FREETEXTTABLE &#40;Transact-SQL&#41;](~/relational-databases/system-functions/freetexttable-transact-sql.md)   
  [Create Full-Text Search Queries &#40;Visual Database Tools&#41;](../../2014/database-engine/create-full-text-search-queries-visual-database-tools.md)   
  [Improve the Performance of Full-Text Queries](../../2014/database-engine/improve-the-performance-of-full-text-queries.md)  
   

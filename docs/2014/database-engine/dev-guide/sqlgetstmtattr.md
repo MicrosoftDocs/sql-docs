@@ -21,7 +21,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQLGetStmtAttr
-  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver extends SQLGetStmtAttr to expose driver-specific statement attributes.  
+  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver extends SQLGetStmtAttr to expose driver-specific statement attributes.  
   
  [SQLSetStmtAttr](../../../2014/database-engine/dev-guide/sqlsetstmtattr.md) lists statement attributes that are both read and write. This topic lists the read only statement attributes.  
   
@@ -29,14 +29,14 @@ manager: "jhubbard"
  The SQL_SOPT_SS_CURRENT_COMMAND attribute exposes the current command of a command batch. The return is an integer that specifies the location of the command in the batch. The *ValuePtr* value is of type SQLLEN.  
   
 ## SQL_SOPT_SS_NOCOUNT_STATUS  
- The SQL_SOPT_SS_NOCOUNT_STATUS attribute indicates the current setting of the NOCOUNT option, which controls whether [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] reports the numbers of rows affected by a statement when [SQLRowCount](../../../2014/database-engine/dev-guide/sqlrowcount.md) is called. The *ValuePtr* value is of type SQLLEN.  
+ The SQL_SOPT_SS_NOCOUNT_STATUS attribute indicates the current setting of the NOCOUNT option, which controls whether [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reports the numbers of rows affected by a statement when [SQLRowCount](../../../2014/database-engine/dev-guide/sqlrowcount.md) is called. The *ValuePtr* value is of type SQLLEN.  
   
 |Value|Description|  
 |-----------|-----------------|  
 |SQL_NC_OFF|NOCOUNT is OFF. SQLRowCount returns number of rows affected.|  
 |SQL_NC_ON|NOCOUNT is ON. The number of rows affected is not returned by SQLRowCount and the returned value is 0.|  
   
- If SQLRowCount returns 0, the application should test SQL_SOPT_SS_NOCOUNT_STATUS. If SQL_NC_ON is returned, the value of 0 from SQLRowCount only indicates that [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] has not returned a row count. If SQL_NC_OFF is returned, it means that NOCOUNT is off and the value of 0 from SQLRowCount indicates that the statement did not affect any rows.  
+ If SQLRowCount returns 0, the application should test SQL_SOPT_SS_NOCOUNT_STATUS. If SQL_NC_ON is returned, the value of 0 from SQLRowCount only indicates that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has not returned a row count. If SQL_NC_OFF is returned, it means that NOCOUNT is off and the value of 0 from SQLRowCount indicates that the statement did not affect any rows.  
   
  Applications should not display the value of SQLRowCount when SQL_SOPT_SS_NOCOUNT_STATUS is SQL_NC_OFF. Large batches or stored procedures can contain multiple SET NOCOUNT statements, so it cannot be assumed that SQL_SOPT_SS_NOCOUNT_STATUS remains constant. This option should be tested each time SQLRowCount returns 0.  
   

@@ -18,7 +18,7 @@ ms.author: "jroth"
 manager: "jhubbard"
 ---
 # Availability Group Properties and New Availability Group (General Page)
-  This topic applies to the **General** tab of both the **New Availability Group** dialog box and the **Availability Group Properties** dialog box.  The **New Availability Group** dialog box enables you to create a new availability group without using the [!INCLUDE[ssAoNewAgWiz](../../includes/ssaonewagwiz-md.md)]. The **Availability Group Properties** dialog box enables you to view and alter the configuration of an existing availability group.  
+  This topic applies to the **General** tab of both the **New Availability Group** dialog box and the **Availability Group Properties** dialog box.  The **New Availability Group** dialog box enables you to create a new availability group without using the [!INCLUDE[ssAoNewAgWiz](../includes/ssaonewagwiz-md.md)]. The **Availability Group Properties** dialog box enables you to view and alter the configuration of an existing availability group.  
   
  **To view availability group properties**  
   
@@ -42,7 +42,7 @@ manager: "jhubbard"
   
 ## Availability Replicas  
  **Server instance**  
- Server name of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is hosting this replica and, for a non-default instance, its instance name.  
+ Server name of the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that is hosting this replica and, for a non-default instance, its instance name.  
   
  **Role**  
  **Primary**  

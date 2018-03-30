@@ -23,7 +23,7 @@ manager: "jhubbard"
   Use the **Connection Manager** tab of the **Fuzzy Grouping Transformation Editor** dialog box to select an existing connection or create a new one.  
   
 > [!NOTE]  
->  The server specified by the connection must be running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The Fuzzy Grouping transformation creates temporary data objects in tempdb that may be as large as the full input to the transformation. While the transformation executes, it issues server queries against these temporary objects. This can affect overall server performance.  
+>  The server specified by the connection must be running [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. The Fuzzy Grouping transformation creates temporary data objects in tempdb that may be as large as the full input to the transformation. While the transformation executes, it issues server queries against these temporary objects. This can affect overall server performance.  
   
  To learn more about the Fuzzy Grouping transformation, see [Fuzzy Grouping Transformation](../../2014/integration-services/fuzzy-grouping-transformation.md).  
   

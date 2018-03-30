@@ -18,19 +18,19 @@ manager: "jhubbard"
 # Drop a SQL Server 2014 Installation
   Repair operation can be used in the following scenarios:  
   
--   Repair an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that is corrupted after it was successfully installed.  
+-   Repair an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is corrupted after it was successfully installed.  
   
--   Repair an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] if the upgrade operation is cancelled or fails after the instance name is mapped to the newly-upgraded instance.  
+-   Repair an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] if the upgrade operation is cancelled or fails after the instance name is mapped to the newly-upgraded instance.  
   
     -   If you see the following message in the summary log, you can repair the failed upgrade instance:  
   
-         "[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] upgrade failed. To continue, investigate the reason for the failure, correct the problem, and then repair your installation."  
+         "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] upgrade failed. To continue, investigate the reason for the failure, correct the problem, and then repair your installation."  
   
-    -   If you see the following message in the summary log, you need to uninstall and reinstall [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. You cannot repair the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance.  
+    -   If you see the following message in the summary log, you need to uninstall and reinstall [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You cannot repair the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
   
-         "[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] upgrade failed. To continue, investigate the reason for the failure, correct the problem."  
+         "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] upgrade failed. To continue, investigate the reason for the failure, correct the problem."  
   
- When you repair an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
+ When you repair an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 -   All missing or corrupt files are replaced.  
   
@@ -38,17 +38,17 @@ manager: "jhubbard"
   
 -   All missing or invalid configuration values are set to default values.  
   
- Before you continue, for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover clusters, review the following important information:  
+ Before you continue, for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover clusters, review the following important information:  
   
 -   Repair must be run on individual cluster nodes.  
   
 -   To repair a failover cluster node after a failed Prepare operation, use **Remove node** and then perform the Prepare step again. For more information, see [Add or Remove Nodes in a SQL Server Failover Cluster &#40;Setup&#41;](../../../2014/sql-server/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
-### To repair a failed installation of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] from the Installation Center  
+### To repair a failed installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from the Installation Center  
   
-1.  Launch the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup program (setup.exe) from [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installation media.  
+1.  Launch the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup program (setup.exe) from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation media.  
   
-2.  After prerequisites and system verification, the Setup program will display the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Installation Center page.  
+2.  After prerequisites and system verification, the Setup program will display the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Center page.  
   
 3.  Click **Maintenance** in the left-hand navigation area, and then click **Repair** to start the repair operation.  
   
@@ -65,7 +65,7 @@ manager: "jhubbard"
   
 8.  The Repair Progress page shows the status of the repair operation. The Complete page indicates that the operation is finished.  
   
-### To repair a failed installation of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] using Command Prompt  
+### To repair a failed installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using Command Prompt  
   
 1.  Run the following command at a command prompt:  
   

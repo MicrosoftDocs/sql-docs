@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # LINKEDSERVERS Rowset (OLE DB)
-  The **LINKEDSERVERS** rowset enumerates organization data sources that can participate in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] distributed queries.  
+  The **LINKEDSERVERS** rowset enumerates organization data sources that can participate in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] distributed queries.  
   
  The **LINKEDSERVERS** rowset contains the following columns.  
   

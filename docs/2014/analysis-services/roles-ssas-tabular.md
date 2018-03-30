@@ -21,7 +21,7 @@ manager: "mblythe"
 > [!IMPORTANT]  
 >  In-order for users to connect to a deployed model by using a reporting or data analysis client application, you must create at least one role with at least Read permission to which those users are members.  
   
- Information in this topic is meant for tabular model authors who define roles by using the Role Manager dialog box in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Roles defined during model authoring apply to the model workspace database. After a model database has been deployed, model database administrators can manage (add, edit, delete) role members using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. To learn about managing members of roles in a deployed database, see [Tabular Model Roles &#40;SSAS Tabular&#41;](../../2014/analysis-services/tabular-model-roles-ssas-tabular.md).  
+ Information in this topic is meant for tabular model authors who define roles by using the Role Manager dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Roles defined during model authoring apply to the model workspace database. After a model database has been deployed, model database administrators can manage (add, edit, delete) role members using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. To learn about managing members of roles in a deployed database, see [Tabular Model Roles &#40;SSAS Tabular&#41;](../../2014/analysis-services/tabular-model-roles-ssas-tabular.md).  
   
  The [Tabular Modeling &#40;Adventure Works Tutorial&#41;](../../2014/tutorials/tabular-modeling-adventure-works-tutorial.md) includes additional information and lessons on how to use this feature.  
   
@@ -38,9 +38,9 @@ manager: "mblythe"
 -   [Related Tasks](#bkmk_rt)  
   
 ##  <a name="bkmk_underst"></a> Understanding Roles  
- Roles are used in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] to manage security for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and data. There are two types of roles in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:  
+ Roles are used in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] to manage security for [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] and data. There are two types of roles in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]:  
   
--   The server role, a fixed role that provides administrator access to an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+-   The server role, a fixed role that provides administrator access to an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
 -   Database roles, roles defined by model authors and administrators to control access to a model database and data for non-administrator users.  
   
@@ -48,7 +48,7 @@ manager: "mblythe"
   
  Roles in tabular models can be further defined with row filters. Row filters use DAX expressions to define the rows in a table, and any related rows in the many direction, that a user can query. Row filters using DAX expressions can only be defined for the Read and Read and Process permissions. For more information, see [Row Filters](#bkmk_rowfliters) later in this topic.  
   
- By default, when you create a new tabular model project, the model project does not have any roles. Roles can be defined by using the Role Manager dialog box in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. When roles are defined during model authoring, they are applied to the model workspace database. When the model is deployed, the same roles are applied to the deployed model. After a model has been deployed, members of the server role ([!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Administrator) and database administrators can manage the roles associated with the model and the members associated with each role by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ By default, when you create a new tabular model project, the model project does not have any roles. Roles can be defined by using the Role Manager dialog box in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. When roles are defined during model authoring, they are applied to the model workspace database. When the model is deployed, the same roles are applied to the deployed model. After a model has been deployed, members of the server role ([!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Administrator) and database administrators can manage the roles associated with the model and the members associated with each role by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 > [!NOTE]  
 >  Roles defined for a model configured for DirectQuery mode cannot use row filters, however, permissions defined for each role will apply.  
@@ -64,9 +64,9 @@ manager: "mblythe"
 |-----------------|-----------------|----------------------------|  
 |None|Members cannot make any modifications to the model database schema and cannot query data.|Row filters do not apply. No data is visible to users in this role|  
 |Read|Members are allowed to query data (based on row filters) but cannot see the model database in SSMS, cannot make any changes to the model database schema, and the user cannot process the model.|Row filters can be applied. Only data specified in the row filter DAX formula is visible to users.|  
-|Read and Process|Members are allowed to query data (based on row-level filters) and run process operations by running a script or package that contains a process command, but cannot make any changes to the database. Cannot view the model database in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|Row filters can be applied. Only data specified in the row filter DAX formula can be queried.|  
-|Process|Members can run process operations by running a script or package that contains a process command. Cannot modify the model database schema. Cannot query data. Cannot query the model database in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|Row filters do not apply. No data can be queried in this role|  
-|Administrator|Members can make modifications to the model schema and can query all data in the model designer, reporting client, and [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|Row filters do not apply. All data can be queried in this role.|  
+|Read and Process|Members are allowed to query data (based on row-level filters) and run process operations by running a script or package that contains a process command, but cannot make any changes to the database. Cannot view the model database in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|Row filters can be applied. Only data specified in the row filter DAX formula can be queried.|  
+|Process|Members can run process operations by running a script or package that contains a process command. Cannot modify the model database schema. Cannot query data. Cannot query the model database in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|Row filters do not apply. No data can be queried in this role|  
+|Administrator|Members can make modifications to the model schema and can query all data in the model designer, reporting client, and [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|Row filters do not apply. All data can be queried in this role.|  
   
 ##  <a name="bkmk_rowfliters"></a> Row Filters  
  Row filters define which rows in a table can be queried by members of a particular role. Row filters are defined for each table in a model by using DAX formulas.  
@@ -94,8 +94,8 @@ manager: "mblythe"
   
 |Function|Description|  
 |--------------|-----------------|  
-|[USERNAME Function &#40;DAX&#41;](../Topic/USERNAME%20Function%20\(DAX\).md)|Returns the domain\ username of the user currently logged on.|  
-|[CUSTOMDATA Function &#40;DAX&#41;](../Topic/CUSTOMDATA%20Function%20\(DAX\).md)|Returns the CustomData property in a connection string.|  
+|[USERNAME Function &#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)|Returns the domain\ username of the user currently logged on.|  
+|[CUSTOMDATA Function &#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)|Returns the CustomData property in a connection string.|  
   
  You can use the LOOKUPVALUE function to return values for a column in which the Windows user name is the same as the user name returned by the USERNAME function or a string returned by the CustomData function. Queries can then be restricted where the values returned by LOOKUPVALUE match values in the same or related table.  
   
@@ -138,8 +138,8 @@ manager: "mblythe"
 ## See Also  
  [Perspectives &#40;SSAS Tabular&#41;](../../2014/analysis-services/perspectives-ssas-tabular.md)   
  [Analyze in Excel &#40;SSAS Tabular&#41;](../../2014/analysis-services/analyze-in-excel-ssas-tabular.md)   
- [USERNAME Function &#40;DAX&#41;](../Topic/USERNAME%20Function%20\(DAX\).md)   
- [LOOKUPVALUE Function &#40;DAX&#41;](../Topic/LOOKUPVALUE%20Function%20\(DAX\).md)   
- [CUSTOMDATA Function &#40;DAX&#41;](../Topic/CUSTOMDATA%20Function%20\(DAX\).md)  
+ [USERNAME Function &#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)   
+ [LOOKUPVALUE Function &#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx)   
+ [CUSTOMDATA Function &#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)  
   
   

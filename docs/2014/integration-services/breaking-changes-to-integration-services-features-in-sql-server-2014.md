@@ -19,7 +19,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Breaking Changes to Integration Services Features in SQL Server 2014
-  This topic describes breaking changes in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. These changes might break applications, scripts, or functionalities that are based on earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You might encounter these issues when you upgrade. For more information, see [Use Upgrade Advisor to Prepare for Upgrades](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
+  This topic describes breaking changes in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. These changes might break applications, scripts, or functionalities that are based on earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. You might encounter these issues when you upgrade. For more information, see [Use Upgrade Advisor to Prepare for Upgrades](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
   
  There are no breaking changes to Integration Services features in SQL Server 2014.  
   

@@ -23,7 +23,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Restore Files and Filegroups (SQL Server)
-  This topic describes how to restore files and filegroups in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  This topic describes how to restore files and filegroups in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -64,7 +64,7 @@ manager: "jhubbard"
   
 #### To restore files and filegroups  
   
-1.  After you connect to the appropriate instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in Object Explorer, click the server name to expand the server tree.  
+1.  After you connect to the appropriate instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], in Object Explorer, click the server name to expand the server tree.  
   
 2.  Expand **Databases**. Depending on the database, either select a user database or expand **System Databases**, and then select a system database.  
   
@@ -112,7 +112,7 @@ manager: "jhubbard"
      **Overwrite the existing database**  
      Specifies that the restore operation should overwrite any existing databases and their related files, even if another database or file already exists with the same name.  
   
-     Selecting this option is equivalent to using the REPLACE option in a [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE statement.  
+     Selecting this option is equivalent to using the REPLACE option in a [!INCLUDE[tsql](../includes/tsql-md.md)] RESTORE statement.  
   
      **Prompt before restoring each backup**  
      Asks you for confirmation before restoring each backup set.  
@@ -122,7 +122,7 @@ manager: "jhubbard"
      **Restrict access to the restored database**  
      Makes the restored database available only to the members of **db_owner**, **dbcreator**, or **sysadmin**.  
   
-     Selecting this option is synonymous to using the RESTRICTED_USER option in a [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE statement.  
+     Selecting this option is synonymous to using the RESTRICTED_USER option in a [!INCLUDE[tsql](../includes/tsql-md.md)] RESTORE statement.  
   
 10. Optionally, you can restore the database to a new location by specifying a new restore destination for each file in the **Restore database files as** grid.  
   
@@ -130,20 +130,20 @@ manager: "jhubbard"
     |-----------------|------------|  
     |**Original File Name**|The full path of a source backup file.|  
     |**File Type**|Specifies the type of data in the backup: **Data**, **Log**, or **Filestream Data**. Data that is contained in tables is in **Data** files. Transaction log data is in **Log** files. Binary large object (BLOB) data that is stored on the file system is in **Filestream Data** files.|  
-    |**Restore As**|The full path of the database file to be restored. To specify a new restore file, click the text box and edit the suggested path and file name. Changing the path or file name in the **Restore As** column is equivalent to using the MOVE option in a [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE statement.|  
+    |**Restore As**|The full path of the database file to be restored. To specify a new restore file, click the text box and edit the suggested path and file name. Changing the path or file name in the **Restore As** column is equivalent to using the MOVE option in a [!INCLUDE[tsql](../includes/tsql-md.md)] RESTORE statement.|  
   
 11. The **Recovery state** panel determines the state of the database after the restore operation.  
   
      **Leave the database ready for use by rolling back the uncommitted transactions. Additional transaction logs cannot be restored. (RESTORE WITH RECOVERY)**  
-     Recovers the database. This is the default behavior. Choose this option only if you are restoring all of the necessary backups now. This option is equivalent to specifying WITH RECOVERY in a [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE statement.  
+     Recovers the database. This is the default behavior. Choose this option only if you are restoring all of the necessary backups now. This option is equivalent to specifying WITH RECOVERY in a [!INCLUDE[tsql](../includes/tsql-md.md)] RESTORE statement.  
   
      **Leave the database non-operational, and don't roll back the uncommitted transactions. Additional transaction logs can be restored. (RESTORE WITH NORECOVERY)**  
-     Leaves the database in the restoring state. To recover the database, you will need to perform another restore using the preceding RESTORE WITH RECOVERY option (see above). This option is equivalent to specifying WITH NORECOVERY in a [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE statement.  
+     Leaves the database in the restoring state. To recover the database, you will need to perform another restore using the preceding RESTORE WITH RECOVERY option (see above). This option is equivalent to specifying WITH NORECOVERY in a [!INCLUDE[tsql](../includes/tsql-md.md)] RESTORE statement.  
   
      If you select this option, the **Preserve replication settings** option is unavailable.  
   
      **Leave the database in read-only mode. Roll back the uncommitted transactions, but save the rollback operation in a file so the recovery effects can be undone. (RESTORE WITH STANDBY)**  
-     Leaves the database in a standby state. This option is equivalent to specifying WITH STANDBY in a [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE statement.  
+     Leaves the database in a standby state. This option is equivalent to specifying WITH STANDBY in a [!INCLUDE[tsql](../includes/tsql-md.md)] RESTORE statement.  
   
      Choosing this option requires that you specify a standby file.  
   
@@ -209,6 +209,6 @@ GO
  [Create a Full Database Backup &#40;SQL Server&#41;](../../2014/database-engine/create-a-full-database-backup-sql-server.md)   
  [Back Up a Transaction Log &#40;SQL Server&#41;](../../2014/database-engine/back-up-a-transaction-log-sql-server.md)   
  [Restore a Transaction Log Backup &#40;SQL Server&#41;](../../2014/database-engine/restore-a-transaction-log-backup-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)  
   
   

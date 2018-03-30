@@ -16,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
 caps.latest.revision: 82
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Configure and Manage Thesaurus Files for Full-Text Search
-  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], full-text queries can search for synonyms of user-specified terms through the use of a thesaurus. A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *thesaurus* defines a set of synonyms for a specific language. System administrators can define two forms of synonyms: expansion sets and replacement sets. By developing a thesaurus tailored to your full-text data, you can effectively broaden the scope of full-text queries on that data. Thesaurus matching occurs for all [FREETEXT](../Topic/FREETEXT%20\(Transact-SQL\).md) and [FREETEXTABLE](../Topic/FREETEXTTABLE%20\(Transact-SQL\).md) queries and for any [CONTAINS](../Topic/CONTAINS%20\(Transact-SQL\).md) and [CONTAINSTABLE](../Topic/CONTAINSTABLE%20\(Transact-SQL\).md) queries that specify the FORMSOF THESAURUS clause.  
+  In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], full-text queries can search for synonyms of user-specified terms through the use of a thesaurus. A [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *thesaurus* defines a set of synonyms for a specific language. System administrators can define two forms of synonyms: expansion sets and replacement sets. By developing a thesaurus tailored to your full-text data, you can effectively broaden the scope of full-text queries on that data. Thesaurus matching occurs for all [FREETEXT](~/t-sql/queries/freetext-transact-sql.md) and [FREETEXTABLE](~/relational-databases/system-functions/freetexttable-transact-sql.md) queries and for any [CONTAINS](~/t-sql/queries/contains-transact-sql.md) and [CONTAINSTABLE](~/relational-databases/system-functions/containstable-transact-sql.md) queries that specify the FORMSOF THESAURUS clause.  
   
 ##  <a name="tasks"></a> Basic Tasks for Setting Up a Thesaurus File  
  Before full-text search queries on your server instance can look for synonyms in a given language, you must define thesaurus mappings (synonyms) for that language. Each thesaurus must be manually configured to define the following:  
@@ -41,9 +41,9 @@ manager: "jhubbard"
   
   
 ##  <a name="initial_thesaurus_files"></a> Initial Content of the Thesaurus Files  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a set of XML thesaurus files, one for each supported language. These files are essentially empty. They contain only the top-level XML structure that is common to all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] thesauruses and a commented-out sample thesaurus.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provides a set of XML thesaurus files, one for each supported language. These files are essentially empty. They contain only the top-level XML structure that is common to all [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] thesauruses and a commented-out sample thesaurus.  
   
- The thesaurus files that are released with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] all contain the following XML code:  
+ The thesaurus files that are released with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] all contain the following XML code:  
   
 ```  
 <XML ID="Microsoft Search Thesaurus">  
@@ -178,11 +178,11 @@ manager: "jhubbard"
   
  **To load an updated thesaurus file**  
   
--   [sp_fulltext_load_thesaurus_file &#40;Transact-SQL&#41;](../Topic/sp_fulltext_load_thesaurus_file%20\(Transact-SQL\).md)  
+-   [sp_fulltext_load_thesaurus_file &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)  
   
  **To view the tokenization result of a word breaker, thesaurus, and stoplist combination**  
   
--   [sys.dm_fts_parser &#40;Transact-SQL&#41;](../Topic/sys.dm_fts_parser%20\(Transact-SQL\).md)  
+-   [sys.dm_fts_parser &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql.md)  
   
   
 ##  <a name="editing"></a> Editing a Thesaurus File  
@@ -223,7 +223,7 @@ manager: "jhubbard"
   
 4.  Save the file and close Notepad.  
   
-5.  Use [sp_fulltext_load_thesaurus_file](../Topic/sp_fulltext_load_thesaurus_file%20\(Transact-SQL\).md) to load the content of the thesaurus file into tempdb, specifying the local identifier (LCID) that corresponds to the language of the thesaurus file. For example, for the English thesaurus file, tsenu.xml, the corresponding LCID is 1033.  
+5.  Use [sp_fulltext_load_thesaurus_file](~/relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md) to load the content of the thesaurus file into tempdb, specifying the local identifier (LCID) that corresponds to the language of the thesaurus file. For example, for the English thesaurus file, tsenu.xml, the corresponding LCID is 1033.  
   
     ```  
     USE AdventureWorks2012 ;  
@@ -233,10 +233,10 @@ manager: "jhubbard"
   
   
 ## See Also  
- [CONTAINS &#40;Transact-SQL&#41;](../Topic/CONTAINS%20\(Transact-SQL\).md)   
- [CONTAINSTABLE &#40;Transact-SQL&#41;](../Topic/CONTAINSTABLE%20\(Transact-SQL\).md)   
- [FREETEXT &#40;Transact-SQL&#41;](../Topic/FREETEXT%20\(Transact-SQL\).md)   
- [FREETEXTTABLE &#40;Transact-SQL&#41;](../Topic/FREETEXTTABLE%20\(Transact-SQL\).md)   
+ [CONTAINS &#40;Transact-SQL&#41;](~/t-sql/queries/contains-transact-sql.md)   
+ [CONTAINSTABLE &#40;Transact-SQL&#41;](~/relational-databases/system-functions/containstable-transact-sql.md)   
+ [FREETEXT &#40;Transact-SQL&#41;](~/t-sql/queries/freetext-transact-sql.md)   
+ [FREETEXTTABLE &#40;Transact-SQL&#41;](~/relational-databases/system-functions/freetexttable-transact-sql.md)   
  [Full-Text Search](../../2014/database-engine/full-text-search.md)  
   
   

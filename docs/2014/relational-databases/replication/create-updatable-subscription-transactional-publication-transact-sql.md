@@ -16,31 +16,31 @@ helpviewer_keywords:
 ms.assetid: 670e1ea0-ffda-4d84-b4cd-f15a331035b9
 caps.latest.revision: 3
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Create an Updatable Subscription to a Transactional Publication Using Transact-SQL
 
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
  
 Transactional replication enables changes made at a Subscriber to be propagated back to the Publisher using either immediate or queued updating subscriptions. You can create an updating subscription programmatically using replication stored procedures. (Also, see [Create an Updatable Subscription to a Transactional Publication (Management Studio)](../../../2014/relational-databases/replication/create-an-updatable-subscription-to-a-transactional-publication.md).) 
 
 ## To create an immediate updating pull subscription ##
 
-1. At the Publisher, verify that the publication supports immediate updating subscriptions by executing [sp_helppublication](sp_helppublication%20\(Transact-SQL\).md). 
+1. At the Publisher, verify that the publication supports immediate updating subscriptions by executing [sp_helppublication](~/relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md). 
 
     * If the value of `allow_sync_tran` in the result set is `1`, the publication supports immediate updating subscriptions.
 
     * If the value of `allow_sync_tran` in the result set is `0`, the publication must be recreated with immediate updating subscriptions enabled.
 
-2. At the Publisher, verify that the publication supports pull subscriptions by executing [sp_helppublication](sp_helppublication%20\(Transact-SQL\).md). 
+2. At the Publisher, verify that the publication supports pull subscriptions by executing [sp_helppublication](~/relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md). 
 
     * If the value of `allow_pull` in the result set is `1`, the publication supports pull subscriptions.
 
-    * If the value of `allow_pull` is `0`, execute [sp_changepublication](sp_changepublication%20\(Transact-SQL\).md), specifying `allow_pull` for `@property` and `true` for `@value`. 
+    * If the value of `allow_pull` is `0`, execute [sp_changepublication](~/relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), specifying `allow_pull` for `@property` and `true` for `@value`. 
 
-3. At the Subscriber, execute [sp_addpullsubscription](sp_addpullsubscription%20\(Transact-SQL\).md). Specify `@publisher` and `@publication`, and one of the following values for `@update_mode`:
+3. At the Subscriber, execute [sp_addpullsubscription](~/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Specify `@publisher` and `@publication`, and one of the following values for `@update_mode`:
 
     * `sync tran` - enables the subscription for immediate updating.
 
@@ -49,7 +49,7 @@ Transactional replication enables changes made at a Subscriber to be propagated 
     > [!NOTE]  
 >  `failover` requires that the publication also be enabled for queued updating subscriptions. 
  
-4. At the Subscriber, execute [sp_addpullsubscription_agent](sp_addpullsubscription_agent%20\(Transact-SQL\).md). Specify the following:
+4. At the Subscriber, execute [sp_addpullsubscription_agent](~/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Specify the following:
 
     * The `@publisher`, `@publisher_db`, and `@publication` parameters. 
 
@@ -62,34 +62,34 @@ Transactional replication enables changes made at a Subscriber to be propagated 
 
     * A schedule for the Distribution Agent job for this subscription. 
 
-5. At the Subscriber on the subscription database, execute [sp_link_publication](sp_link_publication%20\(Transact-SQL\).md). Specify `@publisher`, `@publication`, the name of the publication database for `@publisher_db`, and one of the following values for `@security_mode`: 
+5. At the Subscriber on the subscription database, execute [sp_link_publication](~/relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md). Specify `@publisher`, `@publication`, the name of the publication database for `@publisher_db`, and one of the following values for `@security_mode`: 
 
     * `0` - Use SQL Server Authentication when making updates at the Publisher. This option requires you to specify a valid login at the Publisher for `@login` and `@password`.
 
-    * `1` - Use the security context of the user making changes at the Subscriber when connecting to the Publisher. See [sp_link_publication](sp_link_publication%20\(Transact-SQL\).md) for restrictions related to this security mode.
+    * `1` - Use the security context of the user making changes at the Subscriber when connecting to the Publisher. See [sp_link_publication](~/relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) for restrictions related to this security mode.
 
-    * `2` - Use an existing, user-defined linked server login created using [sp_addlinkedserver](sp_addlinkedserver%20\(Transact-SQL\).md).
+    * `2` - Use an existing, user-defined linked server login created using [sp_addlinkedserver](~/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).
 
-6. At the publisher, execute [sp_addsubscription](sp_addsubscription%20\(Transact-SQL\).md) specifying `@publication`, `@subscriber`, `@destination_db`, a value of pull for `@subscription_type`, and the same value specified in step 3 for `@update_mode`.
+6. At the publisher, execute [sp_addsubscription](~/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) specifying `@publication`, `@subscriber`, `@destination_db`, a value of pull for `@subscription_type`, and the same value specified in step 3 for `@update_mode`.
 
 This registers the pull subscription at the Publisher. 
 
 
 ## To create an immediate updating push subscription ##
 
-1. At the Publisher, verify that the publication supports immediate updating subscriptions by executing [sp_helppublication](sp_helppublication%20\(Transact-SQL\).md). 
+1. At the Publisher, verify that the publication supports immediate updating subscriptions by executing [sp_helppublication](~/relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md). 
 
     * If the value of `allow_sync_tran` in the result set is `1`, the publication supports immediate updating subscriptions.
 
     * If the value of `allow_sync_tran` in the result set is `0`, the publication must be recreated with immediate updating subscriptions enabled.
 
-2. At the Publisher, verify that the publication supports push subscriptions by executing [sp_helppublication](sp_helppublication%20\(Transact-SQL\).md). 
+2. At the Publisher, verify that the publication supports push subscriptions by executing [sp_helppublication](~/relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md). 
 
     * If the value of `allow_push` in the result set is `1`, the publication supports push subscriptions.
 
-    * If the value of `allow_push` is `0`, execute [sp_changepublication](sp_changepublication%20\(Transact-SQL\).md), specifying `allow_push` for `@property` and `true` for `@value`. 
+    * If the value of `allow_push` is `0`, execute [sp_changepublication](~/relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), specifying `allow_push` for `@property` and `true` for `@value`. 
 
-3. At the Publisher, execute [sp_addsubscription](sp_addsubscription%20\(Transact-SQL\).md). Specify `@publication`, `@subscriber`, `@destination_db`, and one of the following values for `@update_mode`:
+3. At the Publisher, execute [sp_addsubscription](~/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Specify `@publication`, `@subscriber`, `@destination_db`, and one of the following values for `@update_mode`:
 
     * `sync tran` - enables support for immediate updating.
 
@@ -98,7 +98,7 @@ This registers the pull subscription at the Publisher.
     > [!NOTE]  
 >  `failover` requires that the publication also be enabled for queued updating subscriptions. 
  
-4. At the Publisher, execute [sp_addpushsubscription_agent](sp_addpushsubscription_agent%20\(Transact-SQL\).md). Specify the following parameters:
+4. At the Publisher, execute [sp_addpushsubscription_agent](~/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md). Specify the following parameters:
 
     * `@subscriber`, `@subscriber_db`, and `@publication`. 
 
@@ -111,39 +111,39 @@ This registers the pull subscription at the Publisher.
 
     * A schedule for the Distribution Agent job for this subscription.
 
-5. At the Subscriber on the subscription database, execute [sp_link_publication](sp_link_publication%20\(Transact-SQL\).md). Specify `@publisher`, `@publication`, the name of the publication database for `@publisher_db`, and one of the following values for `@security_mode`: 
+5. At the Subscriber on the subscription database, execute [sp_link_publication](~/relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md). Specify `@publisher`, `@publication`, the name of the publication database for `@publisher_db`, and one of the following values for `@security_mode`: 
 
      * `0` - Use SQL Server Authentication when making updates at the Publisher. This option requires you to specify a valid login at the Publisher for `@login` and `@password`.
 
-     * `1` - Use the security context of the user making changes at the Subscriber when connecting to the Publisher. See [sp_link_publication](sp_link_publication%20\(Transact-SQL\).md) for restrictions related to this security mode.
+     * `1` - Use the security context of the user making changes at the Subscriber when connecting to the Publisher. See [sp_link_publication](~/relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) for restrictions related to this security mode.
 
-     * `2` - Use an existing, user-defined linked server login created using [sp_addlinkedserver](sp_addlinkedserver%20\(Transact-SQL\).md).
+     * `2` - Use an existing, user-defined linked server login created using [sp_addlinkedserver](~/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).
 
 
 ## To create a queued updating pull subscription ##
 
-1. At the Publisher, verify that the publication supports queued updating subscriptions by executing [sp_helppublication](sp_helppublication%20\(Transact-SQL\).md). 
+1. At the Publisher, verify that the publication supports queued updating subscriptions by executing [sp_helppublication](~/relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md). 
 
     * If the value of `allow_queued_tran` in the result set is `1`, the publication supports immediate updating subscriptions.
 
     * If the value of `allow_queued_tran` in the result set is `0`, the publication must be recreated with queued updating subscriptions enabled.
 
-2. At the Publisher, verify that the publication supports pull subscriptions by executing [sp_helppublication](sp_helppublication%20\(Transact-SQL\).md). 
+2. At the Publisher, verify that the publication supports pull subscriptions by executing [sp_helppublication](~/relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md). 
 
     * If the value of `allow_pull` in the result set is `1`, the publication supports pull subscriptions.
 
-    * If the value of `allow_pull` is `0`, execute [sp_changepublication](sp_changepublication%20\(Transact-SQL\).md), specifying `allow_pull` for `@property` and `true` for `@value`. 
+    * If the value of `allow_pull` is `0`, execute [sp_changepublication](~/relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), specifying `allow_pull` for `@property` and `true` for `@value`. 
 
-3. At the Subscriber, execute [sp_addpullsubscription](sp_addpullsubscription%20\(Transact-SQL\).md). Specify `@publisher` and `@publication`, and one of the following values for `@update_mode`:
+3. At the Subscriber, execute [sp_addpullsubscription](~/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Specify `@publisher` and `@publication`, and one of the following values for `@update_mode`:
 
     * `queued tran` - enables the subscription for queued updating.
 
     * `queued failover` - enables support for queued updating with immediate updating as a failover option.
 
     > [!NOTE]  
->  `queued failover` requires that the publication also be enabled for immediate updating subscriptions. To fail over to immediate updating, you must use [sp_link_publication](sp_link_publication%20\(Transact-SQL\).md) to define the credentials under which changes at the Subscriber are replicated to the Publisher.
+>  `queued failover` requires that the publication also be enabled for immediate updating subscriptions. To fail over to immediate updating, you must use [sp_link_publication](~/relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) to define the credentials under which changes at the Subscriber are replicated to the Publisher.
  
-4. At the Subscriber, execute [sp_addpullsubscription_agent](sp_addpullsubscription_agent%20\(Transact-SQL\).md). Specify the following parameters:
+4. At the Subscriber, execute [sp_addpullsubscription_agent](~/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Specify the following parameters:
 
     * @publisher, `@publisher_db`, and `@publication`. 
 
@@ -156,35 +156,35 @@ This registers the pull subscription at the Publisher.
 
     * A schedule for the Distribution Agent job for this subscription.
 
-5. At the publisher, execute [sp_addsubscriber](sp_addsubscriber%20\(Transact-SQL\).md) to register the Subscriber at the Publisher, specifying `@publication`, `@subscriber`, `@destination_db`, a value of pull for `@subscription_type`, and the same value specified in step 3 for `@update_mode`.
+5. At the publisher, execute [sp_addsubscriber](~/relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md) to register the Subscriber at the Publisher, specifying `@publication`, `@subscriber`, `@destination_db`, a value of pull for `@subscription_type`, and the same value specified in step 3 for `@update_mode`.
 
 This registers the pull subscription at the Publisher. 
 
 
 ## To create a queued updating push subscription ##
 
-1. At the Publisher, verify that the publication supports queued updating subscriptions by executing [sp_helppublication](sp_helppublication%20\(Transact-SQL\).md). 
+1. At the Publisher, verify that the publication supports queued updating subscriptions by executing [sp_helppublication](~/relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md). 
 
     * If the value of allow_queued_tran in the result set is 1, the publication supports immediate updating subscriptions.
 
     * If the value of allow_queued_tran in the result set is 0, the publication must be recreated with queued updating subscriptions enabled. For more information, see How to: Enable Updating Subscriptions for Transactional Publications (Replication Transact-SQL Programming).
 
-2. At the Publisher, verify that the publication supports push subscriptions by executing [sp_helppublication](sp_helppublication%20\(Transact-SQL\).md). 
+2. At the Publisher, verify that the publication supports push subscriptions by executing [sp_helppublication](~/relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md). 
 
     * If the value of `allow_push` in the result set is `1`, the publication supports push subscriptions.
 
-    * If the value of `allow_push` is `0`, execute [sp_changepublication](sp_changepublication%20\(Transact-SQL\).md), specifying allow_push for `@property` and `true` for `@value`. 
+    * If the value of `allow_push` is `0`, execute [sp_changepublication](~/relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), specifying allow_push for `@property` and `true` for `@value`. 
 
-3. At the Publisher, execute [sp_addsubscription](sp_addsubscription%20\(Transact-SQL\).md). Specify `@publication`, `@subscriber`, `@destination_db`, and one of the following values for `@update_mode`:
+3. At the Publisher, execute [sp_addsubscription](~/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Specify `@publication`, `@subscriber`, `@destination_db`, and one of the following values for `@update_mode`:
 
     * `queued tran` - enables the subscription for queued updating.
 
     * `queued failover` - enables support for queued updating with immediate updating as a failover option.
 
     > [!NOTE]  
->  The queued failover option requires that the publication also be enabled for immediate updating subscriptions. To fail over to immediate updating, you must use [sp_link_publication](sp_link_publication%20\(Transact-SQL\).md) to define the credentials under which changes at the Subscriber are replicated to the Publisher.
+>  The queued failover option requires that the publication also be enabled for immediate updating subscriptions. To fail over to immediate updating, you must use [sp_link_publication](~/relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) to define the credentials under which changes at the Subscriber are replicated to the Publisher.
 
-4. At the Publisher, execute [sp_addpushsubscription_agent](sp_addpushsubscription_agent%20\(Transact-SQL\).md). Specify the following parameters:
+4. At the Publisher, execute [sp_addpushsubscription_agent](~/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md). Specify the following parameters:
 
     * `@subscriber`, `@subscriber_db`, and `@publication`. 
 

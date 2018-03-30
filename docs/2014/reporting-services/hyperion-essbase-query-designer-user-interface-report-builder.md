@@ -17,11 +17,11 @@ helpviewer_keywords:
 ms.assetid: d89a6773-dbe5-48e5-bda9-db0e67100696
 caps.latest.revision: 13
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Hyperion Essbase Query Designer User Interface (Report Builder)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides a graphical query designer for building Multidimensional Expression (MDX) queries for a [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] data source. The MDX graphical query designer has two modes: Design mode and Query mode. Each mode provides a Metadata pane from which you can drag members from a cube defined on the data source to build an MDX query that retrieves data when the report is processed.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] provides a graphical query designer for building Multidimensional Expression (MDX) queries for a [!INCLUDE[extEssbase](../includes/extessbase-md.md)] data source. The MDX graphical query designer has two modes: Design mode and Query mode. Each mode provides a Metadata pane from which you can drag members from a cube defined on the data source to build an MDX query that retrieves data when the report is processed.  
   
 > [!IMPORTANT]  
 >  Users access data sources when they create and run queries. You should grant minimal permissions on the data sources, such as read-only permissions.  
@@ -29,7 +29,7 @@ manager: "mblythe"
  This section describes the toolbar buttons and query designer panes for each mode of the graphical query designer.  
   
 ## Graphical Query Designer in Design Mode  
- When you edit an MDX query for a dataset that uses a [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] data source, the graphical query designer opens in Design mode. The following figure labels the panes for Design mode.  
+ When you edit an MDX query for a dataset that uses a [!INCLUDE[extEssbase](../includes/extessbase-md.md)] data source, the graphical query designer opens in Design mode. The following figure labels the panes for Design mode.  
   
  ![Query Designer for Hyperion Essbase data source](../../2014/reporting-services/media/rsqd-dshyperionessbase-mdx-designmode.gif "Query Designer for Hyperion Essbase data source")  
   

@@ -56,7 +56,7 @@ manager: "mblythe"
 |Child elements|None|  
   
 ## Remarks  
- Aggregation prefixes generate aggregation names in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], and also generate table names in the relational database for aggregations stored in a relational OLAP (ROLAP) partition.  
+ Aggregation prefixes generate aggregation names in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], and also generate table names in the relational database for aggregations stored in a relational OLAP (ROLAP) partition.  
   
  A fully expanded aggregation name has the following parts:  
   

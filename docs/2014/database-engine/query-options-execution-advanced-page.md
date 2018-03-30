@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: 661595ce-99b9-4316-ad80-ed04002d04d5
 caps.latest.revision: 21
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Query Options Execution (Advanced Page)
@@ -45,7 +45,7 @@ manager: "jhubbard"
  When this check box is selected, statistics regarding input/output (I/O) are returned with each query. This option is cleared by default.  
   
  **SET TRANSACTION ISOLATION LEVEL**  
- The READ COMMITTED transaction isolation level is set by default. For more information, see [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../Topic/SET%20TRANSACTION%20ISOLATION%20LEVEL%20\(Transact-SQL\).md). SNAPSHOT transaction isolation level is not available. To use SNAPSHOT isolation, add the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement:  
+ The READ COMMITTED transaction isolation level is set by default. For more information, see [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](~/t-sql/statements/set-transaction-isolation-level-transact-sql.md). SNAPSHOT transaction isolation level is not available. To use SNAPSHOT isolation, add the following [!INCLUDE[tsql](../includes/tsql-md.md)] statement:  
   
 ```  
 SET TRANSACTION ISOLATION LEVEL SNAPSHOT;  

@@ -24,14 +24,14 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Commands Generating Multiple-Rowset Results
-  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider can return multiple rowsets from [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] statements. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] statements return multiple-rowset results under the following conditions:  
+  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider can return multiple rowsets from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] statements. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] statements return multiple-rowset results under the following conditions:  
   
 -   Batched SQL statements are submitted as a single command.  
   
 -   Stored procedures implement a batch of SQL statements.  
   
 ## Batches  
- The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider recognizes the semicolon character as a batch delimiter for SQL statements:  
+ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider recognizes the semicolon character as a batch delimiter for SQL statements:  
   
 ```  
 WCHAR*       wSQLString = L"SELECT * FROM Categories; "  
@@ -41,7 +41,7 @@ WCHAR*       wSQLString = L"SELECT * FROM Categories; "
  Sending multiple SQL statements in one batch is more efficient than executing each SQL statement separately. Sending one batch reduces the network round trips from the client to the server.  
   
 ## Stored Procedures  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] returns a result set for each statement in a stored procedure, so most [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stored procedures return multiple result sets.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns a result set for each statement in a stored procedure, so most [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stored procedures return multiple result sets.  
   
 ## In This Section  
   

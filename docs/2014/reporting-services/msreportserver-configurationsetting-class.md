@@ -21,7 +21,7 @@ helpviewer_keywords:
 ms.assetid: 874be718-54b9-49e8-a3d6-b83a0ba13dc3
 caps.latest.revision: 36
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # MSReportServer_ConfigurationSetting Class
@@ -40,7 +40,7 @@ public class MSReportServer_ConfigurationSetting
 ```  
   
 ## Thread Safety  
- Any public static (**Shared** in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) members of this type are safe for multithreaded operations. Any instance members are not guaranteed to be thread-safe.  
+ Any public static (**Shared** in [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) members of this type are safe for multithreaded operations. Any instance members are not guaranteed to be thread-safe.  
   
 ## Example  
  To run the following code, add your server name in place of each \<*servername*>. Update the path to point to your installation location, if it is not the default. The following code example iterates through each property in the [MSReportServer_ConfigurationSetting](../../2014/reporting-services/msreportserver-configurationsetting-class.md) class, printing the name of each property and its value to the console.  
@@ -168,9 +168,9 @@ class Class1
 ```  
   
 ## Requirements  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../includes/ssrswminmspca-md.md)]  
   
- **Platform:** [!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
+ **Platform:** [!INCLUDE[ssRSWMIPlatform](../includes/ssrswmiplatform-md.md)]  
   
 ## See Also  
  [MSReportServer_ConfigurationSetting Members](../../2014/reporting-services/msreportserver-configurationsetting-members.md)  

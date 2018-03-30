@@ -16,10 +16,10 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # dtexec Utility
-  The `dtexec` command prompt utility is used to configure and execute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages. The `dtexec` utility provides access to all the package configuration and execution features, such as parameters, connections, properties, variables, logging, and progress indicators. The `dtexec` utility lets you load packages from these sources: the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, an .ispac project file, a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Package Store, and the file system.  
+  The `dtexec` command prompt utility is used to configure and execute [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages. The `dtexec` utility provides access to all the package configuration and execution features, such as parameters, connections, properties, variables, logging, and progress indicators. The `dtexec` utility lets you load packages from these sources: the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server, an .ispac project file, a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database, the [!INCLUDE[ssIS](../includes/ssis-md.md)] Package Store, and the file system.  
   
 > [!NOTE]  
->  When you use the version of the `dtexec` utility that comes with [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)] to run a [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] or a [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] package, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] temporarily upgrades the package to [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. However, you cannot use the `dtexec` utility to save these upgraded changes. For more information about how to permanently upgrade a package to [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)], see [Upgrade Integration Services Packages](../../2014/sql-server/install/upgrade-integration-services-packages.md).  
+>  When you use the version of the `dtexec` utility that comes with [!INCLUDE[ssISversion11](../includes/ssisversion11-md.md)] to run a [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] or a [!INCLUDE[ssISversion10](../includes/ssisversion10-md.md)] package, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] temporarily upgrades the package to [!INCLUDE[ssISversion11](../includes/ssisversion11-md.md)]. However, you cannot use the `dtexec` utility to save these upgraded changes. For more information about how to permanently upgrade a package to [!INCLUDE[ssISversion11](../includes/ssisversion11-md.md)], see [Upgrade Integration Services Packages](../../2014/sql-server/install/upgrade-integration-services-packages.md).  
   
  This topic includes the following sections:  
   
@@ -46,22 +46,22 @@ manager: "jhubbard"
 -   [Examples](#example)  
   
 ##  <a name="server"></a> Integration Services Server and Project File  
- When you use `dtexec` to run packages on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, `dtexec` calls the [catalog.create_execution &#40;SSISDB Database&#41;](../Topic/catalog.create_execution%20\(SSISDB%20Database\).md), [catalog.set_execution_parameter_value &#40;SSISDB Database&#41;](../Topic/catalog.set_execution_parameter_value%20\(SSISDB%20Database\).md) and [catalog.start_execution &#40;SSISDB Database&#41;](../Topic/catalog.start_execution%20\(SSISDB%20Database\).md) stored procedures to create an execution, set parameter values and start the execution. All execution logs can be seen from the server in the related views or by using standard reports available in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information about the reports, see [Reports for the Integration Services Server](../../2014/integration-services/reports-for-the-integration-services-server.md).  
+ When you use `dtexec` to run packages on the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server, `dtexec` calls the [catalog.create_execution &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md), [catalog.set_execution_parameter_value &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md) and [catalog.start_execution &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md) stored procedures to create an execution, set parameter values and start the execution. All execution logs can be seen from the server in the related views or by using standard reports available in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. For more information about the reports, see [Reports for the Integration Services Server](../../2014/integration-services/reports-for-the-integration-services-server.md).  
   
- The following is an example of executing a package on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.  
+ The following is an example of executing a package on the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server.  
   
 ```  
 DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /SERVER "." /Envreference 2 /Par "$Project::ProjectParameter(Int32)";1 /Par "Parameter(Int32)";21 /Par "CM.sqlcldb2.SSIS_repro.InitialCatalog";ssisdb /Par "$ServerOption::SYNCHRONIZED(Boolean)";True  
 ```  
   
- When you use `dtexec` to run a package from the .ispac project file, the related options are: /Proj[ect] and /Pack[age] that are used to specify the project path and package stream name. When you convert a project to the project deployment model by running the **Integration Services Project Conversion Wizard** from [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], the wizard generates an .ispac projec file. For more information, see [Deploy Projects to Integration Services Server](../../2014/integration-services/deploy-projects-to-integration-services-server.md).  
+ When you use `dtexec` to run a package from the .ispac project file, the related options are: /Proj[ect] and /Pack[age] that are used to specify the project path and package stream name. When you convert a project to the project deployment model by running the **Integration Services Project Conversion Wizard** from [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], the wizard generates an .ispac projec file. For more information, see [Deploy Projects to Integration Services Server](../../2014/integration-services/deploy-projects-to-integration-services-server.md).  
   
- You can use `dtexec` with third-party scheduling tools to schedule packages that are deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.  
+ You can use `dtexec` with third-party scheduling tools to schedule packages that are deployed to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server.  
   
 ##  <a name="bit"></a> Installation Considerations on 64-bit Computers  
- On a 64-bit computer, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installs a 64-bit version of the `dtexec` utility (dtexec.exe). If you have to run certain packages in 32-bit mode, you will have to install the 32-bit version of the `dtexec` utility. To install the 32-bit version of the `dtexec` utility, you must select either Client Tools or [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] during setup.  
+ On a 64-bit computer, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] installs a 64-bit version of the `dtexec` utility (dtexec.exe). If you have to run certain packages in 32-bit mode, you will have to install the 32-bit version of the `dtexec` utility. To install the 32-bit version of the `dtexec` utility, you must select either Client Tools or [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] during setup.  
   
- By default, a 64-bit computer that has both the 64-bit and 32-bit versions of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] command prompt utility installed will run the 32-bit version at the command prompt. The 32-bit version runs because the directory path for the 32-bit version appears in the PATH environment variable before the directory path for the 64-bit version. (Typically, the 32-bit directory path is *\<drive>*:\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn, while the 64-bit directory path is *\<drive>*:\Program Files\Microsoft SQL Server\110\DTS\Binn.)  
+ By default, a 64-bit computer that has both the 64-bit and 32-bit versions of an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] command prompt utility installed will run the 32-bit version at the command prompt. The 32-bit version runs because the directory path for the 32-bit version appears in the PATH environment variable before the directory path for the 64-bit version. (Typically, the 32-bit directory path is *\<drive>*:\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn, while the 64-bit directory path is *\<drive>*:\Program Files\Microsoft SQL Server\110\DTS\Binn.)  
   
 > [!NOTE]  
 >  If you use SQL Server Agent to run the utility, SQL Server Agent automatically uses the 64-bit version of the utility. SQL Server Agent uses the registry, not the PATH environment variable, to locate the correct executable for the utility.  
@@ -75,7 +75,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
 -   Permanently change the order of the paths in the PATH environment variable by placing the 64-bit path (*\<drive>*:\Program Files\Microsoft SQL Server\110\DTS\Binn) before the 32-bit path (*\<drive>*:\ Program Files(x86)\Microsoft SQL Server\110\DTS\Binn) in the variable.  
   
 ##  <a name="side"></a> Considerations on Computers with Side-by-Side Installations  
- When [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] is installed on a machine that has [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] or [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] installed, multiple versions of the `dtexec` utility are installed.  
+ When [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] is installed on a machine that has [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] or [!INCLUDE[ssISversion10](../includes/ssisversion10-md.md)] installed, multiple versions of the `dtexec` utility are installed.  
   
  To ensure that you run the correct version of the utility, at the command prompt run the utility by entering the full path (*\<drive>*:\Program Files\Microsoft SQL Server\\<version\>\DTS\Binn).  
   
@@ -138,7 +138,7 @@ EXEC @returncode = xp_cmdshell 'dtexec /f "C:\UpsertData.dtsx"'
 ```  
   
 > [!IMPORTANT]  
->  In [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the **xp_cmdshell** option is disabled by default on new installations. The option can be enabled by running the **sp_configure** system stored procedure. For more information, see [xp_cmdshell Server Configuration Option](../../2014/database-engine/xp-cmdshell-server-configuration-option.md).  
+>  In [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the **xp_cmdshell** option is disabled by default on new installations. The option can be enabled by running the **sp_configure** system stored procedure. For more information, see [xp_cmdshell Server Configuration Option](../../2014/database-engine/xp-cmdshell-server-configuration-option.md).  
   
 ##  <a name="syntax"></a> Syntax  
   
@@ -150,7 +150,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/?** [*option_name*]: Optional. Displays the command prompt options, or displays help for the specified *option_name* and then closes the utility.  
   
-     If you specify an *option_name* argument, `dtexec` starts [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online and displays the dtexec Utility topic.  
+     If you specify an *option_name* argument, `dtexec` starts [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online and displays the dtexec Utility topic.  
   
 -   **/Ca[llerInfo]**:   
                   Optional. Specifies additional information for a package execution. When you run a package using SQL Server Agent, agent sets this argument to indicate that the package execution is invoked by SQL Server Agent. This parameter is ignored when the `dtexec` utility is run from the command line.  
@@ -177,12 +177,12 @@ dtexec /option [value] [/option [value]]...
   
      This option requires that both parameters be specified: the connection manager name or GUID must be provided in the *id_or_name* argument, and a valid connection string must be specified in the *connection_string* argument. For more information, see [Integration Services &#40;SSIS&#41; Connections](../../2014/integration-services/integration-services-ssis-connections.md).  
   
-     At run time, you can use the **/Connection** option to load package configurations from a location other than the location that you specified at design time. The values of these configurations then replace the values that were originally specified. However you can use the **/Connection** option only for configurations, such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurations, that use a connection manager. To understand how package configurations are applied, see [Package Configurations](../../2014/integration-services/package-configurations.md) and [Behavior Changes to Integration Services Features in SQL Server 2014](../../2014/integration-services/behavior-changes-to-integration-services-features-in-sql-server-2014.md).  
+     At run time, you can use the **/Connection** option to load package configurations from a location other than the location that you specified at design time. The values of these configurations then replace the values that were originally specified. However you can use the **/Connection** option only for configurations, such as [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] configurations, that use a connection manager. To understand how package configurations are applied, see [Package Configurations](../../2014/integration-services/package-configurations.md) and [Behavior Changes to Integration Services Features in SQL Server 2014](../../2014/integration-services/behavior-changes-to-integration-services-features-in-sql-server-2014.md).  
   
 -   **/Cons[oleLog]** [[*displayoptions*];[*list_options*;*src_name_or_guid*]...]: Optional. Displays specified log entries to the console during package execution. If this option is omitted, no log entries are shown in the console. If the option is specified without parameters that limit the display, every log entry will display. To limit the entries that are displayed to the console, you can specify the columns to show by using the *displayoptions* parameter, and limit the log entry types by using the *list_options* parameter.  
   
     > [!NOTE]  
-    >  When you run a package on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server by using the `/ISSERVER` parameter, console output is limited and most of the **/Cons[oleLog]** options are not applicable. All execution logs can be seen from the server in the related views or by using standard reports available in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information about the reports, see [Reports for the Integration Services Server](../../2014/integration-services/reports-for-the-integration-services-server.md).  
+    >  When you run a package on the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server by using the `/ISSERVER` parameter, console output is limited and most of the **/Cons[oleLog]** options are not applicable. All execution logs can be seen from the server in the related views or by using standard reports available in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. For more information about the reports, see [Reports for the Integration Services Server](../../2014/integration-services/reports-for-the-integration-services-server.md).  
   
      The *displayoptions* values are as follows:  
   
@@ -221,9 +221,9 @@ dtexec /option [value] [/option [value]]...
      For examples of the **/ConsoleLog** option, see the **Remarks** section.  
   
 -   **/D[ts]** *package_path*:   
-                  Optional. Loads a package from the SSIS Package Store. Packages that are stored in the SSIS Package Store, are deployed using the legacy package deployment model. To run packages that are deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server using the project deployment model, use the `/ISServer` option. For more information about the package and project deployment models, see [Deployment of Projects and Packages](../../2014/integration-services/deployment-of-projects-and-packages.md).  
+                  Optional. Loads a package from the SSIS Package Store. Packages that are stored in the SSIS Package Store, are deployed using the legacy package deployment model. To run packages that are deployed to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server using the project deployment model, use the `/ISServer` option. For more information about the package and project deployment models, see [Deployment of Projects and Packages](../../2014/integration-services/deployment-of-projects-and-packages.md).  
   
-     The *package_path* argument specifies the relative path of the [!INCLUDE[ssIS](../../includes/ssis-md.md)] package, starting at the root of the SSIS Package Store, and includes the name of the [!INCLUDE[ssIS](../../includes/ssis-md.md)] package. If the path or file name specified in the *package_path* argument contains a space, you must put quotation marks around the *package_path* argument.  
+     The *package_path* argument specifies the relative path of the [!INCLUDE[ssIS](../includes/ssis-md.md)] package, starting at the root of the SSIS Package Store, and includes the name of the [!INCLUDE[ssIS](../includes/ssis-md.md)] package. If the path or file name specified in the *package_path* argument contains a space, you must put quotation marks around the *package_path* argument.  
   
      The `/DTS` option cannot be used together with the `/File` or `/SQL` option. If multiple options are specified, `dtexec` fails.  
   
@@ -238,7 +238,7 @@ dtexec /option [value] [/option [value]]...
     /Dump 0xC020801C  
     ```  
   
-     By default, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stores the debug dump files in the folder, *\<drive>*:\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.  
+     By default, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] stores the debug dump files in the folder, *\<drive>*:\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.  
   
     > [!NOTE]  
     >  Debug dump files may contain sensitive information. Use an access control list (ACL) to restrict access to the files, or copy the files to a folder with restricted access. For example, before you send your debug files to Microsoft support services, we recommended that you remove any sensitive or confidential information.  
@@ -252,7 +252,7 @@ dtexec /option [value] [/option [value]]...
 -   **/DumpOnError**:   
                   Optional. Creates the debug dump files, .mdmp and .tmp, when any error occurs while the package is running.  
   
-     By default, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stores the debug dump files in the folder, *\<drive>*:\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps folder.  
+     By default, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] stores the debug dump files in the folder, *\<drive>*:\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps folder.  
   
     > [!NOTE]  
     >  Debug dump files may contain sensitive information. Use an access control list (ACL) to restrict access to the files, or copy the files to a folder with restricted access. For example, before you send your debug files to Microsoft support services, we recommended that you remove any sensitive or confidential information.  
@@ -266,14 +266,14 @@ dtexec /option [value] [/option [value]]...
      For more information about debug dump files, see [Generating Dump Files for Package Execution](../../2014/integration-services/generating-dump-files-for-package-execution.md)  
   
 -   `/Env[Reference]` *environment reference ID*:   
-                  Optional. Specifies the environment reference (ID) that is used by the package execution, for a package that is deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. The parameters configured to bind to variables will use the values of the variables that are contained in the environment.  
+                  Optional. Specifies the environment reference (ID) that is used by the package execution, for a package that is deployed to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server. The parameters configured to bind to variables will use the values of the variables that are contained in the environment.  
   
      You use `/Env[Reference]` option together with the `/ISServer` and the `/Server` options.  
   
      This parameter is used by SQL Server Agent.  
   
 -   **/F[ile]** *filespec*:   
-                  Optional. Loads a package that is saved in the file system. Packages that are saved in the file system, are deployed using the legacy package deployment model. To run packages that are deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server using the project deployment model, use the `/ISServer` option. For more information about the package and project deployment models, see [Deployment of Projects and Packages](../../2014/integration-services/deployment-of-projects-and-packages.md)  
+                  Optional. Loads a package that is saved in the file system. Packages that are saved in the file system, are deployed using the legacy package deployment model. To run packages that are deployed to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server using the project deployment model, use the `/ISServer` option. For more information about the package and project deployment models, see [Deployment of Projects and Packages](../../2014/integration-services/deployment-of-projects-and-packages.md)  
   
      The *filespec* argument specifies the path and file name of the package. You can specify the path as either a Universal Naming Convention (UNC) path or a local path. If the path or file name specified in the *filespec* argument contains a space, you must put quotation marks around the *filespec* argument.  
   
@@ -281,10 +281,10 @@ dtexec /option [value] [/option [value]]...
   
 -   **/H[elp]** [*option_name*]: Optional. Displays help for the options, or displays help for the specified *option_name* and closes the utility.  
   
-     If you specify an *option_name* argument, `dtexec` starts [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online and displays the dtexec Utility topic.  
+     If you specify an *option_name* argument, `dtexec` starts [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online and displays the dtexec Utility topic.  
   
 -   `/ISServer` *packagepath*:  
-                  Optional. Runs a package that is deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. The *PackagePath* argument specifies the full path and file name of the package deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. If the path or file name specified in the *PackagePath* argument contains a space, you must put quotation marks around the *PackagePath* argument.  
+                  Optional. Runs a package that is deployed to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server. The *PackagePath* argument specifies the full path and file name of the package deployed to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server. If the path or file name specified in the *PackagePath* argument contains a space, you must put quotation marks around the *PackagePath* argument.  
   
      The package format is as follows:  
   
@@ -292,14 +292,14 @@ dtexec /option [value] [/option [value]]...
     \<catalog name>\<folder name>\<project name>\package file name  
     ```  
   
-     You use `/Server` option together with the `/ISSERVER` option. Only Windows Authentication can execute a package on the SSIS Server. The current Windows user is used to access the package. If the /Server option is omitted, the default local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is assumed.  
+     You use `/Server` option together with the `/ISSERVER` option. Only Windows Authentication can execute a package on the SSIS Server. The current Windows user is used to access the package. If the /Server option is omitted, the default local instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is assumed.  
   
      The `/ISSERVER` option cannot be used together with the `/DTS`, `/SQL` or `/File` option. If multiple options are specified, dtexec fails.  
   
      This parameter is used by SQL Server Agent.  
   
 -   **/L[ogger]** *classid_orprogid;configstring*:  
-                  Optional. Associates one or more log providers with the execution of an [!INCLUDE[ssIS](../../includes/ssis-md.md)] package. The *classid_orprogid* parameter specifies the log provider, and can be specified as a class GUID. The *configstring* is the string that is used to configure the log provider.  
+                  Optional. Associates one or more log providers with the execution of an [!INCLUDE[ssIS](../includes/ssis-md.md)] package. The *classid_orprogid* parameter specifies the log provider, and can be specified as a class GUID. The *configstring* is the string that is used to configure the log provider.  
   
      The following list shows the available log providers:  
   
@@ -309,13 +309,13 @@ dtexec /option [value] [/option [value]]...
   
         -   ClassID: {59B2C6A5-663F-4C20-8863-C83F9B72E2EB}  
   
-    -   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]:  
+    -   [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]:  
   
         -   ProgID: DTS.LogProviderSQLProfiler.1  
   
         -   ClassID: {5C0B8D21-E9AA-462E-BA34-30FF5F7A42A1}  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+    -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
         -   ProgID: DTS.LogProviderSQLServer.1  
   
@@ -334,16 +334,16 @@ dtexec /option [value] [/option [value]]...
         -   ClassID: {AFED6884-619C-484F-9A09-F42D56E1A7EA}  
   
 -   **/M[axConcurrent]** *concurrent_executables*:  
-                  Optional. Specifies the number of executable files that the package can run concurrently. The value specified must be either a non-negative integer, or -1. A value of -1 means that [!INCLUDE[ssIS](../../includes/ssis-md.md)] will allow a maximum number of concurrently running executables that is equal to the total number of processors on the computer executing the package, plus two.  
+                  Optional. Specifies the number of executable files that the package can run concurrently. The value specified must be either a non-negative integer, or -1. A value of -1 means that [!INCLUDE[ssIS](../includes/ssis-md.md)] will allow a maximum number of concurrently running executables that is equal to the total number of processors on the computer executing the package, plus two.  
   
 -   **/Pack[age]** *PackageName*:  
-                  Optional. Specifies the package that is executed. This parameter is used primarily when you execute the package from [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
+                  Optional. Specifies the package that is executed. This parameter is used primarily when you execute the package from [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
   
 -   **/P[assword]** *password*:  
-                  Optional. Allows the retrieval of a package that is protected by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. This option is used together with the **/User** option. If the **/Password** option is omitted and the **/User** option is used, a blank password is used. The *password* value may be quoted.  
+                  Optional. Allows the retrieval of a package that is protected by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication. This option is used together with the **/User** option. If the **/Password** option is omitted and the **/User** option is used, a blank password is used. The *password* value may be quoted.  
   
     > [!IMPORTANT]  
-    >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+    >  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]  
   
 -   **/Par[ameter]** [$Package:: | $Project:: | $ServerOption::] *parameter_name* [(data_type)]; *literal_value*: Optional. Specifies parameter values. Multiple **/Parameter** options can be specified. The data types are CLR TypeCodes as strings. For a non-string parameter, the data type is specified in parenthesis, following the parameter name.  
   
@@ -370,7 +370,7 @@ dtexec /option [value] [/option [value]]...
     ```  
   
 -   **/Proj[ect]** *ProjectFile*:  
-                  Optional. Specifies the project from which to retrieve the package that is executed. The *ProjectFile* argument specifies the .ispac file name. This parameter is used primarily when you execute the package from [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
+                  Optional. Specifies the project from which to retrieve the package that is executed. The *ProjectFile* argument specifies the .ispac file name. This parameter is used primarily when you execute the package from [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
   
 -   **/Rem** *comment*:  
                   Optional. Includes comments on the command prompt or in command files. The argument is optional. The value of *comment* is a string that must be enclosed in quotation marks, or contain no white space. If no argument is specified, a blank line is inserted. *comment* values are discarded during the command sourcing phase.  
@@ -413,7 +413,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/Set** [$Sensitive::]*propertyPath;value*: Optional. Overrides the configuration of a parameter, variable, property, container, log provider, Foreach enumerator, or connection within a package. When this option is used, **/Set** changes the *propertyPath* argument to the value specified. Multiple **/Set** options can be specified.  
   
-     In addition to using the **/Set** option with the **/F[ile]** option, you can also use the **/Set** option with the `/ISServer` option or the `/Project` option. When you use **/Set** with `/Project`, **/Set** sets parameter values. When you use **/Set** with `/ISServer`, **/Set** sets property overrides. In addition, when you use **/Set** with `/ISServer`, you can use the optional $Sensitive prefix to indicate that the property should be treated as sensitive on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.  
+     In addition to using the **/Set** option with the **/F[ile]** option, you can also use the **/Set** option with the `/ISServer` option or the `/Project` option. When you use **/Set** with `/Project`, **/Set** sets parameter values. When you use **/Set** with `/ISServer`, **/Set** sets property overrides. In addition, when you use **/Set** with `/ISServer`, you can use the optional $Sensitive prefix to indicate that the property should be treated as sensitive on the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server.  
   
      You can determine the value of *propertyPath* by running the Package Configuration Wizard. The paths for items that you select are displayed on the final **Completing the Wizard** page, and can be copied and pasted. If you have used the wizard only for this purpose, you can cancel the wizard after you copy the paths.  
   
@@ -433,30 +433,30 @@ dtexec /option [value] [/option [value]]...
      The `/Ser[ver]` option is required when the `/ISServer` option is specified.  
   
 -   **/SQ[L]** *package_path*:  
-                  Loads a package that is stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], in `msdb` database. Packages that are stored in the `msdb` database, are deployed using the package deployment model. To run packages that are deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server using the project deployment model, use the `/ISServer` option. For more information about the package and project deployment models, see [Deployment of Projects and Packages](../../2014/integration-services/deployment-of-projects-and-packages.md).  
+                  Loads a package that is stored in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], in `msdb` database. Packages that are stored in the `msdb` database, are deployed using the package deployment model. To run packages that are deployed to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server using the project deployment model, use the `/ISServer` option. For more information about the package and project deployment models, see [Deployment of Projects and Packages](../../2014/integration-services/deployment-of-projects-and-packages.md).  
   
      The *package_path* argument specifies the name of the package to retrieve. If folders are included in the path, they are terminated with backslashes ("\\"). The *package_path* value can be quoted. If the path or file name specified in the *package_path* argument contains a space, you must put quotation marks around the *package_path* argument.  
   
      You can use the **/User**, **/Password**, and `/Server` options together with the `/SQL` option.  
   
-     If you omit the **/User** option, Windows Authentication is used to access the package. If you use the **/User** option, the **/User** login name specified is associated with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.  
+     If you omit the **/User** option, Windows Authentication is used to access the package. If you use the **/User** option, the **/User** login name specified is associated with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication.  
   
      The **/Password** option is used only together with the **/User** option. If you use the **/Password** option, the package is accessed with the user name and password information provided. If you omit the **/Password** option, a blank password is used.  
   
     > [!IMPORTANT]  
-    >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+    >  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]  
   
-     If the `/Server` option is omitted, the default local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is assumed.  
+     If the `/Server` option is omitted, the default local instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is assumed.  
   
      The `/SQL` option cannot be used together with the `/DTS` or `/File` option. If multiple options are specified, `dtexec` fails.  
   
 -   **/Su[m]**: Optional. Shows an incremental counter that contains the number of rows that will be received by the next component.  
   
 -   **/U[ser]** *user_name*:  
-                  Optional. Allows the retrieval of a package that is protected by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. This option is used only when the `/SQL` option is specified. The *user_name* value can be quoted.  
+                  Optional. Allows the retrieval of a package that is protected by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication. This option is used only when the `/SQL` option is specified. The *user_name* value can be quoted.  
   
     > [!IMPORTANT]  
-    >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+    >  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]  
   
 -   **/Va[lidate]**:  
                   Optional. Stops the execution of the package after the validatation phase, without actually running the package. During validation, use of the **/WarnAsError** option causes `dtexec` to treat a warning as an error; therefore the package fails if a warning occurs during validation.  
@@ -475,13 +475,13 @@ dtexec /option [value] [/option [value]]...
                   Optional. Verifies the GUID of the package to be executed by comparing it to the value specified in the *package_id* argument.  
   
 -   **/VerifyS[igned]**:  
-                  Optional. Causes [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] to check the digital signature of the package. If the package is not signed or the signature is not valid, the package fails. For more information, see [Identify the Source of Packages with Digital Signatures](../../2014/integration-services/identify-the-source-of-packages-with-digital-signatures.md).  
+                  Optional. Causes [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] to check the digital signature of the package. If the package is not signed or the signature is not valid, the package fails. For more information, see [Identify the Source of Packages with Digital Signatures](../../2014/integration-services/identify-the-source-of-packages-with-digital-signatures.md).  
   
     > [!IMPORTANT]  
-    >  When configured to check the signature of the package, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] only checks whether the digital signature is present, is valid, and is from a trusted source. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] does not check whether the package has been changed.  
+    >  When configured to check the signature of the package, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] only checks whether the digital signature is present, is valid, and is from a trusted source. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] does not check whether the package has been changed.  
   
     > [!NOTE]  
-    >  The optional **BlockedSignatureStates** registry value can specify a setting that is more restrictive than the digital signature option set in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] or at the `dtexec` command line. In this situation, the more restrictive registry setting overrides the other settings.  
+    >  The optional **BlockedSignatureStates** registry value can specify a setting that is more restrictive than the digital signature option set in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] or at the `dtexec` command line. In this situation, the more restrictive registry setting overrides the other settings.  
   
 -   **/VerifyV[ersionID]** *versionID*: Optional. Verifies the version GUID of a package to be executed by comparing it to the value specified in the *version_id* argument during package Validation Phase.  
   
@@ -492,15 +492,15 @@ dtexec /option [value] [/option [value]]...
 -   **/W[arnAsError]**:  
                   Optional. Causes the package to consider a warning as an error; therefore, the package will fail if a warning occurs during validation. If no warnings occur during validation and the **/Validate** option is not specified, the package is executed.  
   
--   **/X86**: Optional. Causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to run the package in 32-bit mode on a 64-bit computer. This option is set by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent when the following conditions are true:  
+-   **/X86**: Optional. Causes [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent to run the package in 32-bit mode on a 64-bit computer. This option is set by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent when the following conditions are true:  
   
     -   The job step type is **SQL Server Integration Services package**.  
   
     -   The **Use 32 bit runtime** option on the **Execution options** tab of the **New Job Step** dialog box is selected.  
   
-     You can also set this option for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job step by using stored procedures or SQL Server Management Objects (SMO) to programmatically create the job.  
+     You can also set this option for a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent job step by using stored procedures or SQL Server Management Objects (SMO) to programmatically create the job.  
   
-     This option is only used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. This option is ignored if you run the `dtexec` utility at the command prompt.  
+     This option is only used by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent. This option is ignored if you run the `dtexec` utility at the command prompt.  
   
 ##  <a name="remark"></a> Remarks  
  The order in which you specify command options can influence the way in which the package executes:  
@@ -512,47 +512,47 @@ dtexec /option [value] [/option [value]]...
 -   **/Set** and **/ConfigFile** options are processed in the order they are encountered.  
   
 ##  <a name="example"></a> Examples  
- The following examples demonstrate how to use the `dtexec` command prompt utility to configure and execute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages.  
+ The following examples demonstrate how to use the `dtexec` command prompt utility to configure and execute [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages.  
   
  **Running Packages**  
   
- To execute an [!INCLUDE[ssIS](../../includes/ssis-md.md)] package saved to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using Windows Authentication, use the following code:  
+ To execute an [!INCLUDE[ssIS](../includes/ssis-md.md)] package saved to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using Windows Authentication, use the following code:  
   
 ```  
 dtexec /sq pkgOne /ser productionServer  
 ```  
   
- To execute an [!INCLUDE[ssIS](../../includes/ssis-md.md)] package saved to the File System folder in the SSIS Package Store, use the following code:  
+ To execute an [!INCLUDE[ssIS](../includes/ssis-md.md)] package saved to the File System folder in the SSIS Package Store, use the following code:  
   
 ```  
 dtexec /dts "\File System\MyPackage"  
 ```  
   
- To validate a package that uses Windows Authentication and is saved in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] without executing the package, use the following code:  
+ To validate a package that uses Windows Authentication and is saved in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] without executing the package, use the following code:  
   
 ```  
 dtexec /sq pkgOne /ser productionServer /va  
 ```  
   
- To execute an [!INCLUDE[ssIS](../../includes/ssis-md.md)] package that is saved in the file system, use the following code:  
+ To execute an [!INCLUDE[ssIS](../includes/ssis-md.md)] package that is saved in the file system, use the following code:  
   
 ```  
 dtexec /f "c:\pkgOne.dtsx"   
 ```  
   
- To execute an [!INCLUDE[ssIS](../../includes/ssis-md.md)] package that is saved in the file system, and specify logging options, use the following code:  
+ To execute an [!INCLUDE[ssIS](../includes/ssis-md.md)] package that is saved in the file system, and specify logging options, use the following code:  
   
 ```  
 dtexec /f "c:\pkgOne.dtsx" /l "DTS.LogProviderTextFile;c:\log.txt"  
 ```  
   
- To execute a package that uses Windows Authentication and is saved to the default local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and verify the version before it is executed, use the following code:  
+ To execute a package that uses Windows Authentication and is saved to the default local instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], and verify the version before it is executed, use the following code:  
   
 ```  
 dtexec /sq pkgOne /verifyv {c200e360-38c5-11c5-11ce-ae62-08002b2b79ef}  
 ```  
   
- To execute an [!INCLUDE[ssIS](../../includes/ssis-md.md)] package that is saved in the file system and configured externally, use the following code:  
+ To execute an [!INCLUDE[ssIS](../includes/ssis-md.md)] package that is saved in the file system and configured externally, use the following code:  
   
 ```  
 dtexec /f "c:\pkgOne.dtsx" /conf "c:\pkgOneConfig.cfg"  

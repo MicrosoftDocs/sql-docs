@@ -28,7 +28,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Changing Passwords Programmatically
-  Before [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], when a user's password expired, only an administrator could reset it. Beginning with [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supports handling password expiration programmatically through both the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider and the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver, and through changes to the **SQL Server Login** dialog boxes.  
+  Before [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], when a user's password expired, only an administrator could reset it. Beginning with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client supports handling password expiration programmatically through both the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver, and through changes to the **SQL Server Login** dialog boxes.  
   
 > [!NOTE]  
 >  When possible, prompt users to enter their credentials at run time and avoid storing their credentials in a persisted format. If you must persist their credentials, you should encrypt them using the [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532). For more information about the use of passwords, see [Strong Passwords](../../../2014/database-engine/strong-passwords.md).  
@@ -49,14 +49,14 @@ manager: "jhubbard"
 |18488|Login failed for user '%.*ls'. Reason: The password of the account must be changed.|  
   
 ## SQL Server Native Client OLE DB Provider  
- The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider supports password expiration though a user interface and programmatically.  
+ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider supports password expiration though a user interface and programmatically.  
   
 ### OLE DB User Interface Password Expiration  
- The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider supports password expiration through changes made to the **SQL Server Login** dialog boxes. If the value of DBPROP_INIT_PROMPT is set to DBPROMPT_NOPROMPT, the initial connection attempt will fail if the password has expired.  
+ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider supports password expiration through changes made to the **SQL Server Login** dialog boxes. If the value of DBPROP_INIT_PROMPT is set to DBPROMPT_NOPROMPT, the initial connection attempt will fail if the password has expired.  
   
  If DBPROP_INIT_PROMPT has been set to any other value, the user sees the **SQL Server Login** dialog, regardless of whether or not the password has expired. The user can click on the **Options** button and check **Change Password** to change the password.  
   
- If the user clicks OK and the password has expired, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prompts the user to enter and confirm a new password using the **Change SQL Server Password** dialog.  
+ If the user clicks OK and the password has expired, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prompts the user to enter and confirm a new password using the **Change SQL Server Password** dialog.  
   
 #### OLE DB Prompt Behavior and Locked Accounts  
  Connection attempts may fail due to the account being locked. If this occurs following the display of the **SQL Server Login** dialog, the server error message is displayed to the user and the connection attempt is aborted. It may also occur following the display of the **Change SQL Server Password** dialog if the user enters a bad value for the old password. In this case the same error message is displayed, and the connection attempt is aborted.  
@@ -67,7 +67,7 @@ manager: "jhubbard"
  When the reset attempt fails, the connection is removed from the pool and an error is returned.  
   
 ### OLE DB Programmatic Password Expiration  
- The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider supports password expiration through the addition of the SSPROP_AUTH_OLD_PASSWORD (type VT_BSTR) property that has been added to the DBPROPSET_SQLSERVERDBINIT property set.  
+ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider supports password expiration through the addition of the SSPROP_AUTH_OLD_PASSWORD (type VT_BSTR) property that has been added to the DBPROPSET_SQLSERVERDBINIT property set.  
   
  The existing "Password" property refers to DBPROP_AUTH_PASSWORD and is used to store the new password.  
   
@@ -88,16 +88,16 @@ manager: "jhubbard"
  For more information about the DBPROPSET_SQLSERVERDBINIT property set, see [Initialization and Authorization Properties](../../../2014/database-engine/dev-guide/initialization-and-authorization-properties.md).  
   
 ## SQL Server Native Client ODBC Driver  
- The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider supports password expiration though a user interface and programmatically.  
+ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider supports password expiration though a user interface and programmatically.  
   
 ### ODBC User Interface Password Expiration  
- The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver supports password expiration through changes made to the **SQL Server Login** dialog boxes.  
+ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver supports password expiration through changes made to the **SQL Server Login** dialog boxes.  
   
  If [SQLDriverConnect](../../../2014/database-engine/dev-guide/sqldriverconnect.md) is called and the value of **DriverCompletion** is set to SQL_DRIVER_NOPROMPT, the initial connection attempt fails if the password has expired. The SQLSTATE value 28000 and the native error code value 18487 are returned by subsequent calls to **SQLError** or **SQLGetDiagRec**.  
   
  If **DriverCompletion** has been set to any other value, the user sees the **SQL Server Login** dialog, regardless of whether or not the password has expired. The user can click on the **Options** button and check **Change Password** to change the password.  
   
- If the user clicks OK and the password has expired, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prompts to enter and confirm a new password using the **Change SQL Server Password** dialog.  
+ If the user clicks OK and the password has expired, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prompts to enter and confirm a new password using the **Change SQL Server Password** dialog.  
   
 #### ODBC Prompt Behavior and Locked Accounts  
  Connection attempts may fail due to the account being locked. If this occurs following the display of the **SQL Server Login** dialog, the server error message is displayed to the user and the connection attempt is aborted. It may also occur following the display of the **Change SQL Server Password** dialog if the user enters a bad value for the old password. In this case the same error message is displayed, and the connection attempt is aborted.  
@@ -108,11 +108,11 @@ manager: "jhubbard"
  When the reset attempt fails, the connection is removed from the pool and an error is returned.  
   
 ### ODBC Programmatic Password Expiration  
- The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver supports password expiration through the addition of the SQL_COPT_SS_OLDPWD attribute which is set before connecting to the server using the [SQLSetConnectAttr](../../../2014/database-engine/dev-guide/sqlsetconnectattr.md) function.  
+ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver supports password expiration through the addition of the SQL_COPT_SS_OLDPWD attribute which is set before connecting to the server using the [SQLSetConnectAttr](../../../2014/database-engine/dev-guide/sqlsetconnectattr.md) function.  
   
  The SQL_COPT_SS_OLDPWD attribute of the connection handle refers to the expired password. There is no connection string attribute for this attribute, as this would interfere with connection pooling. If the login succeeds, the driver clears this attribute.  
   
- The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver returns SQL_ERROR in four cases for this feature: password expiration, password policy conflict, account lockout, and when the old password property is set while using Windows Authentication. The driver returns the appropriate error messages to the user when [SQLGetDiagField](../../../2014/database-engine/dev-guide/sqlgetdiagfield.md) is invoked.  
+ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver returns SQL_ERROR in four cases for this feature: password expiration, password policy conflict, account lockout, and when the old password property is set while using Windows Authentication. The driver returns the appropriate error messages to the user when [SQLGetDiagField](../../../2014/database-engine/dev-guide/sqlgetdiagfield.md) is invoked.  
   
 ## See Also  
  [SQL Server Native Client Features](../../../2014/database-engine/dev-guide/sql-server-native-client-features.md)  

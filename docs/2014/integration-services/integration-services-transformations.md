@@ -27,7 +27,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Integration Services Transformations
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] transformations are the components in the data flow of a package that aggregate, merge, distribute, and modify data. Transformations can also perform lookup operations and generate sample datasets. This section describes the transformations that [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes and explains how they work.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] transformations are the components in the data flow of a package that aggregate, merge, distribute, and modify data. Transformations can also perform lookup operations and generate sample datasets. This section describes the transformations that [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes and explains how they work.  
   
 ## Business Intelligence Transformations  
  The following transformations perform business intelligence operations such as cleaning data, mining text, and running data mining prediction queries.  
@@ -83,7 +83,7 @@ manager: "jhubbard"
 |[Balanced Data Distributor Transformation](../../2014/integration-services/balanced-data-distributor-transformation.md)|The transformation distributes buffers of incoming rows uniformly across outputs on separate threads to improve performance of SSIS packages running on multi-core and multi-processor servers.|  
   
 ## Auditing Transformations  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes the following transformations to add audit information and count rows.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes the following transformations to add audit information and count rows.  
   
 |Transformation|Description|  
 |--------------------|-----------------|  

@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Remove the Witness from a Database Mirroring Session (SQL Server)
-  This topic describes how to remove a witness from a database mirroring session in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. At any time during a database mirroring session, the database owner can turn off the witness for a database mirroring session.  
+  This topic describes how to remove a witness from a database mirroring session in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)]. At any time during a database mirroring session, the database owner can turn off the witness for a database mirroring session.  
   
  **In This Topic**  
   
@@ -62,17 +62,17 @@ manager: "jhubbard"
   
 #### To remove the witness  
   
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)] on either partner server instance.  
+1.  Connect to the [!INCLUDE[ssDE](../includes/ssde-md.md)] on either partner server instance.  
   
 2.  From the Standard bar, click **New Query**.  
   
 3.  Issue the following statement:  
   
-     [ALTER DATABASE](../Topic/ALTER%20DATABASE%20Database%20Mirroring%20\(Transact-SQL\).md) *database_name* SET WITNESS OFF  
+     [ALTER DATABASE](~/t-sql/statements/alter-database-transact-sql-database-mirroring.md) *database_name* SET WITNESS OFF  
   
      where *database_name* is the name of the mirrored database.  
   
-     The following example removes the witness from the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
+     The following example removes the witness from the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database.  
   
     ```  
     ALTER DATABASE AdventureWorks2012 SET WITNESS OFF ;  
@@ -86,7 +86,7 @@ manager: "jhubbard"
 -   If transaction safety is set to OFF, the session operates asynchronously (in high-performance mode) without requiring quorum. Whenever transaction safety is turned off, we strongly recommend also turning the witness off.  
   
 > [!TIP]  
->  The transaction safety setting of the database is recorded on each partner in the [sys.database_mirroring](../Topic/sys.database_mirroring%20\(Transact-SQL\).md) catalog view in the **mirroring_safety_level** and **mirroring_safety_level_desc** columns.  
+>  The transaction safety setting of the database is recorded on each partner in the [sys.database_mirroring](~/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md) catalog view in the **mirroring_safety_level** and **mirroring_safety_level_desc** columns.  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
@@ -95,7 +95,7 @@ manager: "jhubbard"
 -   [Add or Replace a Database Mirroring Witness &#40;SQL Server Management Studio&#41;](../../2014/database-engine/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
 ## See Also  
- [ALTER DATABASE Database Mirroring &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Database%20Mirroring%20\(Transact-SQL\).md)   
+ [ALTER DATABASE Database Mirroring &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-database-mirroring.md)   
  [Change Transaction Safety in a Database Mirroring Session &#40;Transact-SQL&#41;](../../2014/database-engine/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)   
  [Add a Database Mirroring Witness Using Windows Authentication &#40;Transact-SQL&#41;](../../2014/database-engine/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)   
  [Database Mirroring Witness](../../2014/database-engine/database-mirroring-witness.md)  

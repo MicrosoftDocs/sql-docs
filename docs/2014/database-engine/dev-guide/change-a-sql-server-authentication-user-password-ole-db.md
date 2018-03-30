@@ -17,7 +17,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Change a SQL Server Authentication User Password (OLE DB)
-  This sample shows how to use OLE DB to change the password of a user account under [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication.  
+  This sample shows how to use OLE DB to change the password of a user account under [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.  
   
 > [!IMPORTANT]  
 >  When possible, use Windows Authentication. If Windows Authentication is not available, prompt users to enter their credentials at run time. Avoid storing credentials in a file. If you must persist credentials, you should encrypt them with the [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532).  
@@ -25,13 +25,13 @@ manager: "jhubbard"
 ## Example  
  Before building, update the .C++ code to specify the user ID, old password, and new password.  
   
- This application connects to your computer's default [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. On some Windows operating systems, you will need to change (localhost) or (local) to the name of your [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. To connect to a named instance, change the connection string from L"(local)" to L"(local)\\\name" , where name is the named instance. By default, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express installs to a named instance. Make sure your INCLUDE environment variable includes the directory that contains sqlncli.h.  
+ This application connects to your computer's default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. On some Windows operating systems, you will need to change (localhost) or (local) to the name of your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. To connect to a named instance, change the connection string from L"(local)" to L"(local)\\\name" , where name is the named instance. By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express installs to a named instance. Make sure your INCLUDE environment variable includes the directory that contains sqlncli.h.  
   
  Compile with ole32.lib oleaut32.lib.  
   
- To build this sample, you will need a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication user account for which you know the password. To allow logins under [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication, open [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio, right click on the Server node in Object Explorer, and select Properties. Select Security and enable [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and Windows Authentication mode. To add a user account under [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication, right click the Security node in Object Explorer and select Add.  
+ To build this sample, you will need a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication user account for which you know the password. To allow logins under [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, open [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio, right click on the Server node in Object Explorer, and select Properties. Select Security and enable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Windows Authentication mode. To add a user account under [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, right click the Security node in Object Explorer and select Add.  
   
- The server on which you will run this sample must have at least one login enabled for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication. The server must also be enabled to allow [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication logins.  
+ The server on which you will run this sample must have at least one login enabled for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. The server must also be enabled to allow [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication logins.  
   
 ```  
 // compile with: ole32.lib oleaut32.lib  

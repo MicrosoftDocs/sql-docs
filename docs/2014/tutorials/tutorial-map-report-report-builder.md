@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 caps.latest.revision: 9
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Tutorial: Map Report (Report Builder)
@@ -72,7 +72,7 @@ manager: "mblythe"
   
 #### To add a map with the map wizard in a new report  
   
-1.  Click **Start**, point to **Programs**, point to [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]**Report Builder**, and then click **Report Builder**.  
+1.  Click **Start**, point to **Programs**, point to [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]**Report Builder**, and then click **Report Builder**.  
   
      The Getting Started dialog box appears.  
   
@@ -128,7 +128,7 @@ manager: "mblythe"
   
 17. Replace the title text with **Sales by Store**.  
   
-18. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+18. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 19. Preview the report.  
   
@@ -223,13 +223,13 @@ manager: "mblythe"
   
 20. Delete the title, and type **Display Area (Square Feet)**.  
   
-21. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+21. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 22. View the default values that were set by the wizard. In the **Map Layers Pane**, right-click the point layer, and then click **Marker Type Rule**.  
   
      On the **General** tab, the markers are listed in the order in which they appear in the legend. On the **Distribution** tab, the number of subranges is 5. On the **Legend** tab, the legend text is set to display the start and end value in each range.  
   
-23. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+23. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 24. Preview the report.  
   
@@ -301,7 +301,7 @@ manager: "mblythe"
   
 5.  In **Type**, select **Aerial**. The aerial view does not contain text.  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ##  <a name="Transparent"></a> 5. Make a Layer Transparent  
  To let the items on one layer show through another layer, you can adjust the order of layers and the transparency of each layer to get the effect that you want.  
@@ -318,7 +318,7 @@ manager: "mblythe"
   
 5.  In **Transparency (%)**, type **30**.  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
  The design surface displays the counties as semi-transparent.  
   
@@ -348,7 +348,7 @@ manager: "mblythe"
   
 8.  In **From analytical dataset**, from the drop-down list, click [County].  
   
-9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 10. Preview the report.  
   
@@ -389,7 +389,7 @@ manager: "mblythe"
   
 13. In **Show in this legend**, from the drop-down list, select the blank line. For now, you will show the color ranges only in the color scale.  
   
-14. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+14. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
  The color scale displays five colors: red, orange, yellow, yellow green, and green. Each color represents a sales range that is automatically calculated based on the sales by county.  
   
@@ -406,7 +406,7 @@ manager: "mblythe"
   
 4.  In **Decimal places**, type **0**. This format specifies no decimal places for currency.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 6.  Preview the report.  
   
@@ -427,7 +427,7 @@ manager: "mblythe"
   
 4.  In **Position options**, click the location that specifies where you want the legend to appear relative to the viewport. The map on the design surface changes to show the effect of your selections.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 6.  Click **Title** on the legend to select the legend title.  
   
@@ -448,11 +448,11 @@ manager: "mblythe"
   
 4.  In **Color scale options**, clear **Show in color scale**.  
   
-5.  In **Legend options**, from the drop-down list, select Legend2. The legend text option appears. By default, legend text is formatted with a general [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] format string. The 0 in N0 specifies no decimal digits.  
+5.  In **Legend options**, from the drop-down list, select Legend2. The legend text option appears. By default, legend text is formatted with a general [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] format string. The 0 in N0 specifies no decimal digits.  
   
 6.  In **Legend text**, use the following format to specify currency with no decimal digits: `#FROMVALUE {C0} - #TOVALUE {C0}`  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
      On the design surface, the legend displays the color ranges with sample data formatted as currency.  
   
@@ -477,7 +477,7 @@ manager: "mblythe"
   
 6.  In **Color**, click the down arrow, and then click **Light Steel Blue**.  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 8.  Preview the report.  
   
@@ -508,7 +508,7 @@ manager: "mblythe"
   
 9. For **Marker type**, select **Star**.  
   
-10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 11. Preview the report.  
   
@@ -526,7 +526,7 @@ manager: "mblythe"
   
 5.  In **Placement**, click **Top**.  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 7.  Preview the report.  
   
@@ -543,7 +543,7 @@ manager: "mblythe"
   
 3.  Verify that the option **Set a view center and zoom level** is selected.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 5.  Left-click the map viewport, and drag the center of the viewport to the location that you want.  
   

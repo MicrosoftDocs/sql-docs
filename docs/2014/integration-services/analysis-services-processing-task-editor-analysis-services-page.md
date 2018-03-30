@@ -52,7 +52,7 @@ manager: "jhubbard"
 |**Settings**|Lists processing settings for the specified objects.|  
   
  **Add**  
- Add an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] object to the list.  
+ Add an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] object to the list.  
   
  **Remove**  
  Select an object, and then click **Delete**.  

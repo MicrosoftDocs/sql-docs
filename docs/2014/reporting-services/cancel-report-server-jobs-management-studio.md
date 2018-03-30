@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: 1c5b4975-49e9-4d0b-b298-2638e81edbfd
 caps.latest.revision: 13
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Cancel Report Server Jobs (Management Studio)
@@ -26,12 +26,12 @@ manager: "mblythe"
   
 -   A system job is one that is initiated by the report server. System jobs include scheduled report processing.  
   
- To open this page, start [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connect to a report server, right-click **Jobs**, and then click **Cancel All Jobs**. You can also open **Jobs**, right-click a job that is running on the report server, and select **Cancel Job(s)**.  
+ To open this page, start [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], connect to a report server, right-click **Jobs**, and then click **Cancel All Jobs**. You can also open **Jobs**, right-click a job that is running on the report server, and select **Cancel Job(s)**.  
   
  Before cancelling a job, you can view its properties to determine when the job started. For more information, see [Job Properties &#40;Management Studio&#41;](../../2014/reporting-services/job-properties-management-studio.md).  
   
 > [!NOTE]  
->  This feature is not supported in [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services. The page does not appear when you are running [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
+>  This feature is not supported in [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services. The page does not appear when you are running [!INCLUDE[ssExpress](../includes/ssexpress-md.md)].  
   
 ## Options  
  **Name**  

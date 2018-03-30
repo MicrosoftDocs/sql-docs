@@ -14,11 +14,11 @@ f1_keywords:
 ms.assetid: f88a0f5c-e800-473b-ae23-c3943de5ed63
 caps.latest.revision: 25
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Options (Query Results-SQL Server-Results to Grid Page)
-  Use this page to specify the options for displaying a query result set in grid format. Changes to these options are applied only to new [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] queries. To change the options for the current queries, click **Query Options** on the **Query** menu, or right-click in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Query window and select **Query Options**. In the left pane of the **Query Options** dialog box, under **Results**, click **Grid**.  
+  Use this page to specify the options for displaying a query result set in grid format. Changes to these options are applied only to new [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] queries. To change the options for the current queries, click **Query Options** on the **Query** menu, or right-click in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query window and select **Query Options**. In the left pane of the **Query Options** dialog box, under **Results**, click **Grid**.  
   
 ## UIElement List  
  **Include the query in the result set**  
@@ -42,7 +42,7 @@ manager: "jhubbard"
  Enter a number from 1 through 65535 to specify the maximum number of characters that will be displayed in each cell.  
   
 > [!NOTE]  
->  Specifying a large number of characters may cause data in the result set to appear truncated. The maximum number of characters displayed in each cell is dependent on the font size. When large result sets are returned, a high value in this box can cause [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to run low on memory and hinder system performance.  
+>  Specifying a large number of characters may cause data in the result set to appear truncated. The maximum number of characters displayed in each cell is dependent on the font size. When large result sets are returned, a high value in this box can cause [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to run low on memory and hinder system performance.  
   
  **XML data**:  
   

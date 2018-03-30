@@ -60,7 +60,7 @@ manager: "mblythe"
   
 |Value|Description|  
 |-----------|-----------------|  
-|*BigInt*|A 64-bit signed integer. This data type maps to the `Int64` data type in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework and the DBTYPE_I8 data type in OLE DB.|  
+|*BigInt*|A 64-bit signed integer. This data type maps to the `Int64` data type in [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework and the DBTYPE_I8 data type in OLE DB.|  
 |*Bool*|A Boolean value. This data type maps to the `Boolean` data type in the .NET Framework and the DBTYPE_BOOL data type in OLE DB.|  
 |*Currency*|A currency value ranging from -2<sup>63</sup> (or -922,337,203,685,477.5808) to 2<sup>63</sup>-1 (or +922,337,203,685,477.5807) with an accuracy to a ten-thousandth of a currency unit. This data type maps to the `Decimal` data type in the .NET Framework and the DBTYPE_CY data type in OLE DB.|  
 |*Date*|Date data, stored as a double-precision floating point number. The whole portion is the number of days since December 30, 1899, while the fractional portion is a fraction of a day. This data type maps to the `DateTime` data type in the .NET Framework and the DBTYPE_DATE data type in OLE DB.|  

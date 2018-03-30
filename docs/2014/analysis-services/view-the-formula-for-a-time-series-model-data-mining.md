@@ -23,7 +23,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # View the Formula for a Time Series Model (Data Mining)
-  The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series viewer inData Mining Designer provides the easiest way to view the details of the regression equation used in a time series model.  
+  The [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series viewer inData Mining Designer provides the easiest way to view the details of the regression equation used in a time series model.  
   
  You can extract the regression formula for a time series model by querying the model content. However, to view the complete ARTXP or ARIMA formula, we recommend that you use the **Mining Legend** of the [Microsoft Time Series Viewer](../../2014/analysis-services/browse-a-model-using-the-microsoft-time-series-viewer.md), which presents all the constants in a readable format.  
   
@@ -33,11 +33,11 @@ manager: "mblythe"
   
 ### To view the ARTXP regression formula for a time series model  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], select the time series model that you want to view, and click **Browse**.  
+1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], select the time series model that you want to view, and click **Browse**.  
   
      -- or --  
   
-     In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], select the time series model, and then click the **Mining Model Viewer** tab.  
+     In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], select the time series model, and then click the **Mining Model Viewer** tab.  
   
 2.  Click the **Model** tab.  
   
@@ -56,11 +56,11 @@ manager: "mblythe"
   
 ### To view the ARIMA formula for a time series model  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], select the time series model that you want to view, and click **Browse**.  
+1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], select the time series model that you want to view, and click **Browse**.  
   
      -- or --  
   
-     In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], select the time series model, and then click the **Mining Model Viewer** tab.  
+     In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], select the time series model, and then click the **Mining Model Viewer** tab.  
   
 2.  Click the **Model** tab.  
   

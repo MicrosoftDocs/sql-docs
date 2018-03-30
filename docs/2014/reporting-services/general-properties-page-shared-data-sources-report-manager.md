@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 1b344449-6f7c-47d2-a737-972d88c0faf8
 caps.latest.revision: 29
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # General Properties Page, Shared Data Sources (Report Manager)
@@ -43,12 +43,12 @@ manager: "mblythe"
  Select to enable or disable the shared data source. You can disable the shared data source to prevent processing for all reports, report models, and data-driven subscriptions that reference the item.  
   
  **Data source type**  
- Specifies the data processing extension that is used to process data from the data source. The report server includes data processing extensions for [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], Oracle, XML, SAP, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], ODBC, and OLE DB. Additional data processing extensions may be available from third-party vendors.  
+ Specifies the data processing extension that is used to process data from the data source. The report server includes data processing extensions for [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], Oracle, XML, SAP, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], ODBC, and OLE DB. Additional data processing extensions may be available from third-party vendors.  
   
- Note that if you are using [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] Edition with Advanced Services, you can only choose [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data sources.  
+ Note that if you are using [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] Edition with Advanced Services, you can only choose [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] data sources.  
   
  **Connection string**  
- Specify the connection string that the report server uses to connect to the data source. The connection type determines the syntax you should use. For example, a connection string for the XML data processing extension is a URL to an XML document. In most cases, a typical connection string specifies the database server and a data file. The following example illustrates a connection string used to connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database:  
+ Specify the connection string that the report server uses to connect to the data source. The connection type determines the syntax you should use. For example, a connection string for the XML data processing extension is a URL to an XML document. In most cases, a typical connection string specifies the database server and a data file. The following example illustrates a connection string used to connect to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] database:  
   
 ```  
 data source=<a SQL Server instance>;initial catalog=AdventureWorks2012  
@@ -68,9 +68,9 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
  **Credentials stored securely in the report server**  
  Store an encrypted user name and password in the report server database. Select this option to run a report unattended (for example, reports that are initiated by schedules or events instead of user action). If you are using default security, the user name must be a Windows domain account. Specify the account in this format: \<domain>\\<username\>. The account you specify must have log on locally permissions on the computer that hosts the data source used by the report.  
   
- Select **Use as Windows credentials when connecting to the data source** if the credentials are Windows Authentication credentials. Do not select this check box if you are using database authentication (for example, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication).  
+ Select **Use as Windows credentials when connecting to the data source** if the credentials are Windows Authentication credentials. Do not select this check box if you are using database authentication (for example, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication).  
   
- If you are using database authentication, select **Impersonate the authenticated user after a connection has been made to the data source (Connect using)** to allow delegation of database credentials, but only if a database server supports impersonation. For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases, this option sets the SETUSER function.  
+ If you are using database authentication, select **Impersonate the authenticated user after a connection has been made to the data source (Connect using)** to allow delegation of database credentials, but only if a database server supports impersonation. For [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] databases, this option sets the SETUSER function.  
   
  **Windows Integrated Security**  
  Use the Windows credentials of the current user to access the data source. Select this option when the credentials that are used to access a data source are the same as those used to log on to the network domain. This option works best when Kerberos is enabled for your domain, or when the data source is on the same computer as the report server. If Kerberos is not enabled, Windows credentials can be passed to one other computer. If additional computer connections are required, you will get an error instead of the data you expect.  

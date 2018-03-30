@@ -22,42 +22,42 @@ manager: "jhubbard"
   
 |System View|Description|In-Memory OLTP feature|  
 |-----------------|-----------------|-----------------------------|  
-|[sys.data_spaces &#40;Transact-SQL&#41;](../Topic/sys.data_spaces%20\(Transact-SQL\).md)|Check if a filegroup contains memory-optimized data.|The following columns display additional values: **type** and **type_desc**.|  
-|[sys.indexes &#40;Transact-SQL&#41;](../Topic/sys.indexes%20\(Transact-SQL\).md)|Check if an index is on a memory-optimized table.|The following columns display additional values: **type** and **type_desc**.|  
-|[sys.parameters &#40;Transact-SQL&#41;](../Topic/sys.parameters%20\(Transact-SQL\).md)|Check a parameter is not-nullable (for more efficient execution of a natively-compiled stored procedure).|**is_nullable** column.|  
-|[sys.all_sql_modules &#40;Transact-SQL&#41;](../Topic/sys.all_sql_modules%20\(Transact-SQL\).md)|Check if a stored procedure is natively compiled.|**uses_native_compilation** column.|  
-|[sys.sql_modules &#40;Transact-SQL&#41;](../Topic/sys.sql_modules%20\(Transact-SQL\).md)|Check if a stored procedure is natively compiled.|**uses_native_compilation** column.|  
-|[sys.table_types &#40;Transact-SQL&#41;](../Topic/sys.table_types%20\(Transact-SQL\).md)|Check if a table is memory-optimized.|**is_memory_optimized** column.|  
-|[sys.tables &#40;Transact-SQL&#41;](../Topic/sys.tables%20\(Transact-SQL\).md)|Check if a table is memory-optimized, and check a table’s durability setting.|**durability**, **durability_desc**, and **is_memory_optimized** columns.|  
-|[sys.hash_indexes &#40;Transact-SQL&#41;](../Topic/sys.hash_indexes%20\(Transact-SQL\).md)|Show the hash indexes of a memory-optimized table.|In-memory OLTP specific.|  
+|[sys.data_spaces &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)|Check if a filegroup contains memory-optimized data.|The following columns display additional values: **type** and **type_desc**.|  
+|[sys.indexes &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-indexes-transact-sql.md)|Check if an index is on a memory-optimized table.|The following columns display additional values: **type** and **type_desc**.|  
+|[sys.parameters &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-parameters-transact-sql.md)|Check a parameter is not-nullable (for more efficient execution of a natively-compiled stored procedure).|**is_nullable** column.|  
+|[sys.all_sql_modules &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-all-sql-modules-transact-sql.md)|Check if a stored procedure is natively compiled.|**uses_native_compilation** column.|  
+|[sys.sql_modules &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|Check if a stored procedure is natively compiled.|**uses_native_compilation** column.|  
+|[sys.table_types &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-table-types-transact-sql.md)|Check if a table is memory-optimized.|**is_memory_optimized** column.|  
+|[sys.tables &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-tables-transact-sql.md)|Check if a table is memory-optimized, and check a table’s durability setting.|**durability**, **durability_desc**, and **is_memory_optimized** columns.|  
+|[sys.hash_indexes &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md)|Show the hash indexes of a memory-optimized table.|In-memory OLTP specific.|  
   
 ### Metadata Functions  
   
 |Metadata Function|Description|In-Memory OLTP feature|  
 |-----------------------|-----------------|-----------------------------|  
-|[OBJECTPROPERTYEX &#40;Transact-SQL&#41;](../Topic/OBJECTPROPERTYEX%20\(Transact-SQL\).md)|Check if database objects are memory-optimized.|**ExecIsWithNativeCompilation** and **TableIsMemoryOptimized** properties.<br /><br /> The **IsSchemaBound** property supports the Procedure object type (returns 0 for procedures instead of NULL).|  
-|[SERVERPROPERTY &#40;Transact-SQL&#41;](../Topic/SERVERPROPERTY%20\(Transact-SQL\).md)|Check if a server supports In-Memory OLTP.|**IsXTPSupported** property.|  
+|[OBJECTPROPERTYEX &#40;Transact-SQL&#41;](~/t-sql/functions/objectproperty-transact-sql.md)|Check if database objects are memory-optimized.|**ExecIsWithNativeCompilation** and **TableIsMemoryOptimized** properties.<br /><br /> The **IsSchemaBound** property supports the Procedure object type (returns 0 for procedures instead of NULL).|  
+|[SERVERPROPERTY &#40;Transact-SQL&#41;](~/t-sql/functions/serverproperty-transact-sql.md)|Check if a server supports In-Memory OLTP.|**IsXTPSupported** property.|  
   
 ### System Stored Procedures  
   
 |Stored Procedure|Description|  
 |----------------------|-----------------|  
-|[sys.sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](../Topic/sys.sp_xtp_bind_db_resource_pool%20\(Transact-SQL\).md)|Bind an In-Memory OLTP database to a resource pool.|  
-|[sys.sp_xtp_checkpoint_force_garbage_collection &#40;Transact-SQL&#41;](../Topic/sys.sp_xtp_checkpoint_force_garbage_collection%20\(Transact-SQL\).md)|Initiate garbage collection on an In-Memory OLTP database.|  
-|[sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../Topic/sys.sp_xtp_control_proc_exec_stats%20\(Transact-SQL\).md)|Enable statistics collection for natively compiled stored procedures.|  
-|[sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../Topic/sys.sp_xtp_control_query_exec_stats%20\(Transact-SQL\).md)|Enable per query statistics collection for natively compiled stored procedures.|  
-|[sys.sp_xtp_merge_checkpoint_files &#40;Transact-SQL&#41;](../Topic/sys.sp_xtp_merge_checkpoint_files%20\(Transact-SQL\).md)|Merge data and delta files.|  
-|[sys.sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](../Topic/sys.sp_xtp_unbind_db_resource_pool%20\(Transact-SQL\).md)|Remove the binding between a database and a resource pool.|  
+|[sys.sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)|Bind an In-Memory OLTP database to a resource pool.|  
+|[sys.sp_xtp_checkpoint_force_garbage_collection &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sys-sp-xtp-checkpoint-force-garbage-collection-transact-sql.md)|Initiate garbage collection on an In-Memory OLTP database.|  
+|[sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md)|Enable statistics collection for natively compiled stored procedures.|  
+|[sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md)|Enable per query statistics collection for natively compiled stored procedures.|  
+|[sys.sp_xtp_merge_checkpoint_files &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql.md)|Merge data and delta files.|  
+|[sys.sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)|Remove the binding between a database and a resource pool.|  
   
 ## Dynamic Management Views (DMVs)  
  There are several DMVs for memory-optimized tables.  
   
- For details, see [Memory-Optimized Table Dynamic Management Views &#40;Transact-SQL&#41;](../Topic/Memory-Optimized%20Table%20Dynamic%20Management%20Views%20\(Transact-SQL\).md).  
+ For details, see [Memory-Optimized Table Dynamic Management Views &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md).  
   
 ## Wait Types  
  There are several wait types that support In-Memory OLTP.  
   
- For details, see wait types that are prefixed with **WAIT_XTP**, and **XTPPROC** in the [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../Topic/sys.dm_os_wait_stats%20\(Transact-SQL\).md) topic.  
+ For details, see wait types that are prefixed with **WAIT_XTP**, and **XTPPROC** in the [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) topic.  
   
 ## See Also  
  [In-Memory OLTP &#40;In-Memory Optimization&#41;](../../2014/database-engine/in-memory-oltp-in-memory-optimization.md)   

@@ -23,7 +23,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # DISCOVER_ENUMERATORS Rowset
-  Returns a list of names, data types, and enumeration values of enumerators supported by the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) provider for a specific data source. The XMLA Provider publishes all the enumeration constants that it recognizes.  
+  Returns a list of names, data types, and enumeration values of enumerators supported by the [!INCLUDE[msCoName](../../includes/msconame-md.md)] XML for Analysis (XMLA) provider for a specific data source. The XMLA Provider publishes all the enumeration constants that it recognizes.  
   
  If you call the [Discover](../../../2014/analysis-services/dev-guide/discover-method-xmla.md) method with the `DISCOVER_ENUMERATORS` enumeration value in the [RequestType](../../../2014/analysis-services/dev-guide/requesttype-element-xmla.md) element, the `Discover` method returns the `DISCOVER_ENUMERATORS` schema rowset.  
   

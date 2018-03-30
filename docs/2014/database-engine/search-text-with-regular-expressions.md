@@ -20,11 +20,11 @@ helpviewer_keywords:
 ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
 caps.latest.revision: 24
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Search Text with Regular Expressions
-  Regular expressions are a concise and flexible notation for finding and replacing patterns of text. A specific set of regular expressions can be used in the **Find what** field of the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Find and Replace** dialog box.  
+  Regular expressions are a concise and flexible notation for finding and replacing patterns of text. A specific set of regular expressions can be used in the **Find what** field of the [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] **Find and Replace** dialog box.  
   
 #### To find using regular expressions  
   
@@ -33,7 +33,7 @@ manager: "jhubbard"
 2.  The triangular **Reference List** button next to the **Find what** field then becomes available. Click this button to display a list of the most commonly used regular expressions. When you choose any item from the Expression Builder, it is inserted into the **Find what** string.  
   
 > [!NOTE]  
->  There are syntax differences between the regular expressions that can be used in **Find what** strings and those that are valid in [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework programming. For example, in **Find and Replace**, the braces notation {} is used for tagged expressions. So the expression "zo{1}" matches all occurrences of "zo" followed by the tag 1, as in "Alonzo1" and "Gonzo1". But within the .NET Framework, the notation {} is used for quantifiers. So the expression "zo{1}" matches all occurrences of "z" followed by exactly one "o", as in "zone" but not "zoo".  
+>  There are syntax differences between the regular expressions that can be used in **Find what** strings and those that are valid in [!INCLUDE[msCoName](../includes/msconame-md.md)] .NET Framework programming. For example, in **Find and Replace**, the braces notation {} is used for tagged expressions. So the expression "zo{1}" matches all occurrences of "zo" followed by the tag 1, as in "Alonzo1" and "Gonzo1". But within the .NET Framework, the notation {} is used for quantifiers. So the expression "zo{1}" matches all occurrences of "z" followed by exactly one "o", as in "zone" but not "zoo".  
   
  The following table describes the regular expressions available in the **Reference List**.  
   

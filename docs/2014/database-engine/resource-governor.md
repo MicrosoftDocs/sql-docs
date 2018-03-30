@@ -19,10 +19,10 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Resource Governor
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resource Governor is a feature than you can use to manage [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] workload and system resource consumption. Resource Governor enables you to specify limits on the amount of CPU, physical IO, and memory that incoming application requests can use.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Resource Governor is a feature than you can use to manage [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] workload and system resource consumption. Resource Governor enables you to specify limits on the amount of CPU, physical IO, and memory that incoming application requests can use.  
   
 ## Benefits of Resource Governor  
- Resource Governor enables you to manage [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] workloads and resources by specifying limits on resource consumption by incoming requests. In the Resource Governor context, workload is a set of similarly sized queries or requests that can, and should be, treated as a single entity. This is not a requirement, but the more uniform the resource usage pattern of a workload is, the more benefit you are likely to derive from Resource Governor. Resource limits can be reconfigured in real time with minimal impact on workloads that are executing.  
+ Resource Governor enables you to manage [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] workloads and resources by specifying limits on resource consumption by incoming requests. In the Resource Governor context, workload is a set of similarly sized queries or requests that can, and should be, treated as a single entity. This is not a requirement, but the more uniform the resource usage pattern of a workload is, the more benefit you are likely to derive from Resource Governor. Resource limits can be reconfigured in real time with minimal impact on workloads that are executing.  
   
  In an environment where multiple distinct workloads are present on the same server, Resource Governor enables you to differentiate these workloads and allocate shared resources as they are requested, based on the limits that you specify. These resources are CPU, physical IO, and memory.  
   
@@ -39,7 +39,7 @@ manager: "jhubbard"
 ## Resource Governor Constraints  
  This release of Resource Governor has the following constraints:  
   
--   Resource management is limited to the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Resource Governor can not be used for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+-   Resource management is limited to the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. Resource Governor can not be used for [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], and [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
 -   There is no workload monitoring or workload management between SQL Server instances.  
   
@@ -52,9 +52,9 @@ manager: "jhubbard"
 ## Resource Concepts  
  The following three concepts are fundamental to understanding and using Resource Governor:  
   
--   **Resource pools.** A resource pool, represents the physical resources of the server. You can think of a pool as a virtual [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance inside of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. Two resource pools (internal and default) are created when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed. Resource Governor also supports user-defined resource pools. For more information, see [Resource Governor Resource Pool](../../2014/database-engine/resource-governor-resource-pool.md).  
+-   **Resource pools.** A resource pool, represents the physical resources of the server. You can think of a pool as a virtual [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance inside of a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance. Two resource pools (internal and default) are created when [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is installed. Resource Governor also supports user-defined resource pools. For more information, see [Resource Governor Resource Pool](../../2014/database-engine/resource-governor-resource-pool.md).  
   
--   **Workload groups.** A workload group serves as a container for session requests that have similar classification criteria. A workload allows for aggregate monitoring of the sessions, and defines policies for the sessions. Each workload group is in a resource pool. Two workload groups (internal and default) are created and mapped to their corresponding resource pools when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed. Resource Governor also supports user-defined workload groups. For more information see, [Resource Governor Workload Group](../../2014/database-engine/resource-governor-workload-group.md).  
+-   **Workload groups.** A workload group serves as a container for session requests that have similar classification criteria. A workload allows for aggregate monitoring of the sessions, and defines policies for the sessions. Each workload group is in a resource pool. Two workload groups (internal and default) are created and mapped to their corresponding resource pools when [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is installed. Resource Governor also supports user-defined workload groups. For more information see, [Resource Governor Workload Group](../../2014/database-engine/resource-governor-workload-group.md).  
   
 -   **Classification.** The Classification process assigns incoming sessions to a workload group based on the characteristics of the session. You can tailor the classification logic by writing a user-defined function, called a classifier function. Resource Governor also supports a classifier user-defined function for implementing classification rules. For more information, see [Resource Governor Classifier Function](../../2014/database-engine/resource-governor-classifier-function.md).  
   

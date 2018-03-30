@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
 caps.latest.revision: 40
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Create Instances of XML Data
   This topic describes how to generate XML instances.  
   
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can generate XML instances in the following ways:  
+ In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], you can generate XML instances in the following ways:  
   
 -   Type casting string instances.  
   
@@ -38,7 +38,7 @@ manager: "jhubbard"
 -   Using bulk load.  
   
 ## Type Casting String and Binary Instances  
- You can parse any of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] string data types, such as [**n**][**var**]**char**, **[n]text**, **varbinary**,and **image**, into the `xml` data type by casting (CAST) or converting (CONVERT) the string to the `xml` data type. Untyped XML is checked to confirm that it is well formed. If there is a schema associated with the `xml` type, validation is also performed. For more information, see [Compare Typed XML to Untyped XML](../../2014/database-engine/compare-typed-xml-to-untyped-xml.md).  
+ You can parse any of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] string data types, such as [**n**][**var**]**char**, **[n]text**, **varbinary**,and **image**, into the `xml` data type by casting (CAST) or converting (CONVERT) the string to the `xml` data type. Untyped XML is checked to confirm that it is well formed. If there is a schema associated with the `xml` type, validation is also performed. For more information, see [Compare Typed XML to Untyped XML](../../2014/database-engine/compare-typed-xml-to-untyped-xml.md).  
   
  XML documents can be encoded with different encodings (for example, UTF-8, UTF-16, windows-1252). The following outlines the rules on how the string and binary source types interact with the XML document encoding and how the parser behaves.  
   
@@ -55,13 +55,13 @@ select CAST(x as XML)
 from OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x)  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] internally represents XML in an efficient binary representation that uses UTF-16 encoding. User-provided encoding is not preserved, but is considered during the parse process.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] internally represents XML in an efficient binary representation that uses UTF-16 encoding. User-provided encoding is not preserved, but is considered during the parse process.  
   
 ### Type Casting CLR user-defined types  
  If a CLR user-defined type has an XML Serialization, instances of that type can be explicitly cast to an XML datatype. For more details about the XML serialization of a CLR user-defined typed, see [XML Serialization from CLR Database Objects](../../2014/database-engine/dev-guide/xml-serialization-from-clr-database-objects.md).  
   
 ### White Space Handling in Typed XML  
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], white space inside element content is considered insignificant if it occurs inside a sequence of white-space-only character data delimited by markup, such as begin or end tags, and is not entitized. (CDATA sections are ignored.) This handling of white space handling is different from how white space is described in the XML 1.0 specification published by the World Wide Web Consortium (W3C). This is because the XML parser in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recognizes only a limited number of DTD subsets, as defined in XML 1.0. For more information about the limited DTD subsets supported in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [CAST and CONVERT &#40;Transact-SQL&#41;](../Topic/CAST%20and%20CONVERT%20\(Transact-SQL\).md).  
+ In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], white space inside element content is considered insignificant if it occurs inside a sequence of white-space-only character data delimited by markup, such as begin or end tags, and is not entitized. (CDATA sections are ignored.) This handling of white space handling is different from how white space is described in the XML 1.0 specification published by the World Wide Web Consortium (W3C). This is because the XML parser in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] recognizes only a limited number of DTD subsets, as defined in XML 1.0. For more information about the limited DTD subsets supported in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see [CAST and CONVERT &#40;Transact-SQL&#41;](~/t-sql/functions/cast-and-convert-transact-sql.md).  
   
  By default, the XML parser discards insignificant white space when it converts string data to XML if either of the following is true:  
   
@@ -89,7 +89,7 @@ select @x
 SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)  
 ```  
   
- If the *style* parameter is either not used or its value is set to 0, insignificant white space is not preserved for the conversion of the xml DT instance. For more information about how to use the CONVERT operator and its *style* parameter when converting string data to xml DT instances, see [CAST and CONVERT &#40;Transact-SQL&#41;](../Topic/CAST%20and%20CONVERT%20\(Transact-SQL\).md).  
+ If the *style* parameter is either not used or its value is set to 0, insignificant white space is not preserved for the conversion of the xml DT instance. For more information about how to use the CONVERT operator and its *style* parameter when converting string data to xml DT instances, see [CAST and CONVERT &#40;Transact-SQL&#41;](~/t-sql/functions/cast-and-convert-transact-sql.md).  
   
 ### Example: Cast a string value to typed xml and assign it to a column  
  The following example casts a string variable that contains an XML fragment to the `xml` data type and then stores it in the `xml` type column:  
@@ -178,7 +178,7 @@ go
  For more information about FOR XML, see [FOR XML &#40;SQL Server&#41;](../../2014/database-engine/for-xml-sql-server.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns `xml` data type instances to the client as a result of different server constructs such as FOR XML queries that use the TYPE directive, or where the `xml` data type is used to return XML from SQL columns, variables, and output parameters. In client application code, the ADO.NET provider requests that this `xml` data type information be sent in a binary encoding from the server. However, if you are using FOR XML without the TYPE directive, the XML data returns as a string type. In any case, the client provider will always be able to handle either form of XML.  
+>  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] returns `xml` data type instances to the client as a result of different server constructs such as FOR XML queries that use the TYPE directive, or where the `xml` data type is used to return XML from SQL columns, variables, and output parameters. In client application code, the ADO.NET provider requests that this `xml` data type information be sent in a binary encoding from the server. However, if you are using FOR XML without the TYPE directive, the XML data returns as a string type. In any case, the client provider will always be able to handle either form of XML.  
   
 ## Using Constant Assignments  
  A string constant can be used where an instance of the `xml` data type is expected. This is the same as an implied CAST of string to XML. For example:  
@@ -203,7 +203,7 @@ INSERT INTO T VALUES (3, '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust
 >  For typed XML, the XML is validated against the specified schema. For more information, see [Compare Typed XML to Untyped XML](../../2014/database-engine/compare-typed-xml-to-untyped-xml.md).  
   
 ## Using Bulk Load  
- The enhanced [OPENROWSET (Transact-SQL)](../Topic/OPENROWSET%20\(Transact-SQL\).md) functionality allows you to bulk load XML documents in the database. You can bulk load XML instances from files into the `xml` type columns in the database. For working samples, see [Examples of Bulk Import and Export of XML Documents &#40;SQL Server&#41;](../../2014/database-engine/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md). For more information about loading XML documents, see [Load XML Data](../../2014/database-engine/load-xml-data.md).  
+ The enhanced [OPENROWSET (Transact-SQL)](~/t-sql/functions/openrowset-transact-sql.md) functionality allows you to bulk load XML documents in the database. You can bulk load XML instances from files into the `xml` type columns in the database. For working samples, see [Examples of Bulk Import and Export of XML Documents &#40;SQL Server&#41;](../../2014/database-engine/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md). For more information about loading XML documents, see [Load XML Data](../../2014/database-engine/load-xml-data.md).  
   
 ## In This Section  
   
@@ -213,8 +213,8 @@ INSERT INTO T VALUES (3, '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust
   
 ## See Also  
  [Compare Typed XML to Untyped XML](../../2014/database-engine/compare-typed-xml-to-untyped-xml.md)   
- [xml Data Type Methods](../Topic/xml%20Data%20Type%20Methods.md)   
- [XML Data Modification Language &#40;XML DML&#41;](../Topic/XML%20Data%20Modification%20Language%20\(XML%20DML\).md)   
+ [xml Data Type Methods](~/t-sql/xml/xml-data-type-methods.md)   
+ [XML Data Modification Language &#40;XML DML&#41;](~/t-sql/xml/xml-data-modification-language-xml-dml.md)   
  [XML Data &#40;SQL Server&#41;](../../2014/database-engine/xml-data-sql-server.md)  
   
   

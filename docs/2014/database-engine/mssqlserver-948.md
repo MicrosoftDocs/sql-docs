@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 95c4ad45-a518-4165-a5c4-6e6b932b0570
 caps.latest.revision: 11
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_948
@@ -33,11 +33,11 @@ manager: "jhubbard"
 |Message Text|The database '%.*ls' cannot be opened because it is version %d. This server supports version %d and earlier. A downgrade path is not supported.|  
   
 ## Explanation  
- Certain features in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affect the structure of the database files. When you attach a database to another instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the file format might not be compatible with a different version of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ Certain features in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] affect the structure of the database files. When you attach a database to another instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the file format might not be compatible with a different version of the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
- For example, this error can be caused by using the vardecimal storage format in a later version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and then trying to attach the database files in a version earlier than [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2.  
+ For example, this error can be caused by using the vardecimal storage format in a later version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and then trying to attach the database files in a version earlier than [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] Service Pack 2.  
   
 ## User Action  
- Determine the version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is running on the originating server. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], either right-click the server and then click **Properties** or type `SELECT @@VERSION` in a query window. Open the database by using the original version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Investigate the features that are enabled on the original database in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Modify these settings to work with the version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in which the database will be attached.  
+ Determine the version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that is running on the originating server. In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], either right-click the server and then click **Properties** or type `SELECT @@VERSION` in a query window. Open the database by using the original version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Investigate the features that are enabled on the original database in the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Modify these settings to work with the version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in which the database will be attached.  
   
   

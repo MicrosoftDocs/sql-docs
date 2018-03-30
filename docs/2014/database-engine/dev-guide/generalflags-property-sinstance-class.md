@@ -25,7 +25,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # GeneralFlags Property (SInstance Class)
-  Gets the general flags associated with the an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Gets the general flags associated with the an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Syntax  
   
@@ -40,7 +40,7 @@ object
  An [SInstance Class](../../../2014/database-engine/dev-guide/sinstance-class.md) object that represents a server instance.  
   
 ## Property Value/Return Value  
- An array of objects that represent the general flags supported by the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ An array of objects that represent the general flags supported by the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Remarks  
   

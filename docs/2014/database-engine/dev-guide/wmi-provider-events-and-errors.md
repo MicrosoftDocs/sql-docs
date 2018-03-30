@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # WMI Provider Events and Errors
-  This topic contains cause and resolution information for a number of WMI errors related to the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  This topic contains cause and resolution information for a number of WMI errors related to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## In This Section  
  The error message topics in this section provide an explanation of the error message, possible causes, and any actions you can take to correct the problem.  

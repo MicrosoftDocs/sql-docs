@@ -12,13 +12,13 @@ ms.topic: "article"
 ms.assetid: cf1b96c3-7f0f-4c94-ad08-5239c77ccfe4
 caps.latest.revision: 7
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Add a Total to a Group or Tablix Data Region (Report Builder and SSRS)
   You can add totals in a tablix data region for a group or for the entire data region. By default, a total is the sum of the numeric, non-null data in a group or in the data region, after filters are applied. To add totals for a group, click **Add Total** on the shortcut menu for the group in the Grouping pane. To add totals for an individual cell in the tablix body area, click **Add Total** on the shortcut menu for the cell. The **Add Total** command is context-sensitive and enabled only for numeric fields. Depending on the tablix cell that you select, you can add a total for a single cell by selecting a cell in the tablix body area or for the entire group by selecting a cell in the tablix row group area or the tablix column group area. For more information about tablix areas, see [Tablix Data Region &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/tablix-data-region-report-builder-and-ssrs.md).  
   
- After you add a total, you can change the default function Sum to a different aggregate function from the list of built-in report functions. For more information, see [Aggregate Functions Reference &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/aggregate-functions-reference-report-builder-and-ssrs.md).[!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+ After you add a total, you can change the default function Sum to a different aggregate function from the list of built-in report functions. For more information, see [Aggregate Functions Reference &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/aggregate-functions-reference-report-builder-and-ssrs.md).[!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ### To add a total for an individual value in the tablix body area  
   

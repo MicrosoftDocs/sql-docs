@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: ace04f0d-3993-4444-8317-ca39d7087e49
 caps.latest.revision: 22
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # SQL Server, Locks Object
-  The **SQLServer:Locks** object in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] locks on individual resource types. Locks are held on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resources, such as rows read or modified during a transaction, to prevent concurrent use of resources by different transactions. For example, if an exclusive (X) lock is held on a row within a table by a transaction, no other transaction can modify that row until the lock is released. Minimizing locks increases concurrency, which can improve performance. Multiple instances of the **Locks** object can be monitored at the same time, with each instance representing a lock on a resource type.  
+  The **SQLServer:Locks** object in Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provides information about [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] locks on individual resource types. Locks are held on [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] resources, such as rows read or modified during a transaction, to prevent concurrent use of resources by different transactions. For example, if an exclusive (X) lock is held on a row within a table by a transaction, no other transaction can modify that row until the lock is released. Minimizing locks increases concurrency, which can improve performance. Multiple instances of the **Locks** object can be monitored at the same time, with each instance representing a lock on a resource type.  
   
- This table describes the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Locks** counters.  
+ This table describes the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **Locks** counters.  
   
 |SQL Server Locks counters|Description|  
 |-------------------------------|-----------------|  
@@ -33,7 +33,7 @@ manager: "jhubbard"
 |**Lock Waits/sec**|Number of lock requests per second that required the caller to wait.|  
 |**Number of Deadlocks/sec**|Number of lock requests per second that resulted in a deadlock.|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can lock these resources.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] can lock these resources.  
   
 |Item|Description|  
 |----------|-----------------|  

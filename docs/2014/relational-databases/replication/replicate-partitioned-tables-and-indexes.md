@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
 caps.latest.revision: 20
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Replicate Partitioned Tables and Indexes
@@ -39,9 +39,9 @@ manager: "jhubbard"
   
 -   By using the *schema_option* parameter of one of the following stored procedures:  
   
-    -   [sp_addarticle](../Topic/sp_addarticle%20\(Transact-SQL\).md) or [sp_changearticle](../Topic/sp_changearticle%20\(Transact-SQL\).md) for transactional replication  
+    -   [sp_addarticle](~/relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) or [sp_changearticle](~/relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) for transactional replication  
   
-    -   [sp_addmergearticle](../Topic/sp_addmergearticle%20\(Transact-SQL\).md) or [sp_changemergearticle](../Topic/sp_changemergearticle%20\(Transact-SQL\).md) for merge replication  
+    -   [sp_addmergearticle](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) or [sp_changemergearticle](~/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) for merge replication  
   
      To copy the objects listed in the previous table, specify the appropriate schema option values. For information about how to specify schema options, see [Specify Schema Options](../../../2014/relational-databases/replication/specify-schema-options.md).  
   
@@ -72,7 +72,7 @@ manager: "jhubbard"
   
 -   **@replicate_partition_switch** determines whether the SWITCH PARTITION DDL statement should be replicated to Subscribers. This option is valid only when **@allow_partition_switch** is set to `true`.  
   
- You can set these properties by using [sp_addpublication](../Topic/sp_addpublication%20\(Transact-SQL\).md) when the publication is created, or by using [sp_changepublication](../Topic/sp_changepublication%20\(Transact-SQL\).md) after the publication is created. As noted earlier, merge replication does not support partition switching. To execute SWITCH PARTITION on a table that is enabled for merge replication, remove the table from the publication.  
+ You can set these properties by using [sp_addpublication](~/relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) when the publication is created, or by using [sp_changepublication](~/relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) after the publication is created. As noted earlier, merge replication does not support partition switching. To execute SWITCH PARTITION on a table that is enabled for merge replication, remove the table from the publication.  
   
 ## See Also  
  [Publish Data and Database Objects](../../../2014/relational-databases/replication/publish-data-and-database-objects.md)  

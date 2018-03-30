@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
 caps.latest.revision: 47
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Strategies for Backing Up and Restoring Merge Replication
@@ -57,7 +57,7 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  Synchronizing a publication database with a subscription database can result in published tables being restored to a point in time that is more recent than the point in time of other non-published tables restored from the backup.  
   
- If you synchronize with a Subscriber that is running a version of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prior to [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], the subscription cannot be anonymous; it must be a client subscription or server subscription (referred to as local subscriptions and global subscriptions in previous releases).  
+ If you synchronize with a Subscriber that is running a version of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prior to [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], the subscription cannot be anonymous; it must be a client subscription or server subscription (referred to as local subscriptions and global subscriptions in previous releases).  
   
  To synchronize a subscription, see [Synchronize a Push Subscription](../../../2014/relational-databases/replication/synchronize-a-push-subscription.md) and [Synchronize a Pull Subscription](../../../2014/relational-databases/replication/synchronize-a-pull-subscription.md).  
   

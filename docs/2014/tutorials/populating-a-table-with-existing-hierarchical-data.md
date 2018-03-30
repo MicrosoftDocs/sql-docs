@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: fd943d84-dbe6-4a05-912b-c88164998d80
 caps.latest.revision: 23
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Populating a Table with Existing Hierarchical Data
@@ -66,7 +66,7 @@ manager: "jhubbard"
   
 ### To populate the NewOrg table  
   
-1.  Recursive queries forbid subqueries with aggregates. Instead, populate the **#Children** table with the following code, which uses the [ROW_NUMBER()](../Topic/ROW_NUMBER%20\(Transact-SQL\).md) method to populate the **Num** column:  
+1.  Recursive queries forbid subqueries with aggregates. Instead, populate the **#Children** table with the following code, which uses the [ROW_NUMBER()](~/t-sql/functions/row-number-transact-sql.md) method to populate the **Num** column:  
   
     ```  
     INSERT #Children (EmployeeID, ManagerID, Num)  
@@ -85,7 +85,7 @@ manager: "jhubbard"
   
     ```  
   
-     [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+     [!INCLUDE[ssResult](../includes/ssresult-md.md)]  
   
      `EmployeeID ManagerID Num`  
   

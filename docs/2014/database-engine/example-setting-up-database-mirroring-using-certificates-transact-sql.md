@@ -21,7 +21,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Example: Setting Up Database Mirroring Using Certificates (Transact-SQL)
-  This example shows all the stages required to create a database mirroring session using certificate-based authentication. The examples in this topic use [!INCLUDE[tsql](../../includes/tsql-md.md)]. Unless you can guarantee that your network is secure, we recommend that you use encryption for database mirroring connections.  
+  This example shows all the stages required to create a database mirroring session using certificate-based authentication. The examples in this topic use [!INCLUDE[tsql](../includes/tsql-md.md)]. Unless you can guarantee that your network is secure, we recommend that you use encryption for database mirroring connections.  
   
  When copying a certificate to another system, use a secure copy method. Be extremely careful to keep all of your certificates secure.  
   
@@ -276,7 +276,7 @@ manager: "jhubbard"
  [Specify a Server Network Address &#40;Database Mirroring&#41;](../../2014/database-engine/specify-a-server-network-address-database-mirroring.md)   
  [The Database Mirroring Endpoint &#40;SQL Server&#41;](../../2014/database-engine/the-database-mirroring-endpoint-sql-server.md)   
  [Use Certificates for a Database Mirroring Endpoint &#40;Transact-SQL&#41;](../../2014/database-engine/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)   
- [ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20\(Transact-SQL\).md)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)   
  [Security Center for SQL Server Database Engine and Azure SQL Database](../../2014/database-engine/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

@@ -80,7 +80,7 @@ manager: "mblythe"
 >  This option is displayed only if a dimension is selected.  
   
  **Properties**  
- Click to display the **Properties** window of [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] for the selected cube dimension, cube hierarchy, or cube attribute.  
+ Click to display the **Properties** window of [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] for the selected cube dimension, cube hierarchy, or cube attribute.  
   
 ## See Also  
  [Toolbar &#40;Cube Structure Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   

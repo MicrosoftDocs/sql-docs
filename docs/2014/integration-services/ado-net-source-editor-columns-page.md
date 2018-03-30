@@ -24,7 +24,7 @@ manager: "jhubbard"
   
  **To open the Columns page**  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package that has the ADO NET source.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package that has the ADO NET source.  
   
 2.  On the **Data Flow** tab, double-click the ADO NET source.  
   
@@ -38,7 +38,7 @@ manager: "jhubbard"
  View external (source) columns in the order in which you will see them when configuring components that consume data from this source.  
   
  **Output Column**  
- Provide a unique name for each output column. The default is the name of the selected external (source) column; however, you can choose any unique, descriptive name. The name provided will be displayed within the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer.  
+ Provide a unique name for each output column. The default is the name of the selected external (source) column; however, you can choose any unique, descriptive name. The name provided will be displayed within the [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer.  
   
 ## See Also  
  [ADO NET Source Editor &#40;Connection Manager Page&#41;](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   

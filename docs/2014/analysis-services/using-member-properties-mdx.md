@@ -24,7 +24,7 @@ manager: "mblythe"
   Member properties cover the basic information about each member in each tuple. This basic information includes the member name, parent level, the number of children, and so on. Member properties are available for all members at a given level. In terms of organization, member properties are treated as dimensionally organized data, stored on a single dimension.  
   
 > [!NOTE]  
->  In [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], member properties are know as attribute relationships. For more information, see [Attribute Relationships](../../2014/analysis-services/dev-guide/attribute-relationships.md).  
+>  In [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], member properties are know as attribute relationships. For more information, see [Attribute Relationships](../../2014/analysis-services/dev-guide/attribute-relationships.md).  
   
  Member properties are either *intrinsic* or *custom*:  
   
@@ -38,10 +38,10 @@ manager: "mblythe"
   
  For more information, see [User-Defined Member Properties &#40;MDX&#41;](../../2014/analysis-services/user-defined-member-properties-mdx.md).  
   
- Both intrinsic and user-defined member properties can be retrieved through the use of the `PROPERTIES` keyword or the [Properties](../Topic/Properties%20\(MDX\).md) function.  
+ Both intrinsic and user-defined member properties can be retrieved through the use of the `PROPERTIES` keyword or the [Properties](~/mdx/properties-mdx.md) function.  
   
 ## Using the PROPERTIES Keyword  
- The `PROPERTIES` keyword specifies the member properties that are to be used for a given axis dimension. The `PROPERTIES` keyword is buried within the `<axis specification>` clause of the MDX [SELECT](../Topic/SELECT%20Statement%20\(MDX\).md) statement:  
+ The `PROPERTIES` keyword specifies the member properties that are to be used for a given axis dimension. The `PROPERTIES` keyword is buried within the `<axis specification>` clause of the MDX [SELECT](~/mdx/mdx-data-manipulation-select.md) statement:  
   
 ```  
 SELECT [<axis_specification>  

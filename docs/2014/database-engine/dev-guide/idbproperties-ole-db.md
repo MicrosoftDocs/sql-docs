@@ -17,7 +17,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # IDBProperties (OLE DB)
-  The OLE DB standard specification allows providers to specify VT_EMPTY for `DBPROPINFO::vValues`. However, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB always returns VT_EMPTY when you call `IDBProperties::GetPropertyInfo` with `DBPROPSET_ROWSETALL` to retrieve rowset properties.  
+  The OLE DB standard specification allows providers to specify VT_EMPTY for `DBPROPINFO::vValues`. However, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB always returns VT_EMPTY when you call `IDBProperties::GetPropertyInfo` with `DBPROPSET_ROWSETALL` to retrieve rowset properties.  
   
 ## See Also  
  [Interfaces &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/interfaces-ole-db.md)  

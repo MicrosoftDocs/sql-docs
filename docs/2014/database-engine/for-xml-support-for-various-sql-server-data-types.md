@@ -15,11 +15,11 @@ helpviewer_keywords:
 ms.assetid: b8aeb87f-9cce-40e2-a47c-2dc1460548af
 caps.latest.revision: 25
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # FOR XML Support for Various SQL Server Data Types
-  The topics in this section describe FOR XML support for data types in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  The topics in this section describe FOR XML support for data types in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## In This Section  
   

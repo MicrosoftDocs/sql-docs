@@ -17,7 +17,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Filestream and OLE DB
-  This section contains four samples that show how to use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB with the filestream feature:  
+  This section contains four samples that show how to use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB with the filestream feature:  
   
 -   [Read a FILESTREAM Column to File Using IBCPSession &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/read-a-filestream-column-to-file-using-ibcpsession-ole-db.md)  
   

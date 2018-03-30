@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 caps.latest.revision: 8
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Tutorial: Introducing Expressions
@@ -67,7 +67,7 @@ manager: "mblythe"
   
 #### To create a new table report  
   
-1.  Click **Start**, point to **Programs**, click [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]**Report Builder**, and then click **Report Builder**.  
+1.  Click **Start**, point to **Programs**, click [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]**Report Builder**, and then click **Report Builder**.  
   
      The **Getting Started** dialog box appears.  
   
@@ -164,7 +164,7 @@ manager: "mblythe"
   
 3.  In the **Name** box, type **ExpressionsDataSource**  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 #### To update the default name of the dataset  
   
@@ -174,7 +174,7 @@ manager: "mblythe"
   
 3.  In the **Name** box, type **Expressions**  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ##  <a name="Concatenate"></a> 3. Display First Name, Initial, and Last Name  
  Use the **Left** function and the **Concatenate** (**&**) operator in an expression that evaluates to a name that includes an initial and a last name. You can build the expression step by step or skip ahead in the procedure and copy/paste the expression from the tutorial into the **Expression** dialog box.  
@@ -209,7 +209,7 @@ manager: "mblythe"
   
      The completed expression: `=Left(Fields!FirstName.Value, 1) &" "& Fields!LastName.Value`  
   
-11. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 12. Click **Run** to preview the report.  
   
@@ -234,7 +234,7 @@ manager: "mblythe"
   
      In the **Image Properties** dialog box, click **Visibility** and then click the **Hide** option.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 6.  Repeat steps 2 through 5, but choose Koala.JPG.  
   
@@ -260,7 +260,7 @@ manager: "mblythe"
   
 2.  In the **Image Properties** dialog box, click the down arrow beside **Use this image**, and select one of the images you added, for example, Penguins.JPG.  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 #### To use images to show gender  
   
@@ -288,7 +288,7 @@ manager: "mblythe"
   
      The completed expression: `=Switch(Fields!Gender.Value ="Male", "Koala",Fields!Gender.Value ="Female","Penguins",Fields!Gender.Value ="Unknown","Tulips")`  
   
-12. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+12. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 13. Click **OK** again to close the **Image Properties** dialog box.  
   
@@ -334,7 +334,7 @@ manager: "mblythe"
   
      The query results are the country/region identifiers and names.  
   
-10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 11. Click **OK** again to close the **Dataset Properties** dialog box.  
   
@@ -364,7 +364,7 @@ manager: "mblythe"
   
      The syntax of the **Lookup** function specifies a lookup between CountryRegionID and ID in the CountryRegion dataset that returns the CountryRegion value, which is also in the CountryRegion dataset.  
   
-10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 11. Click **Run** to preview the report.  
   
@@ -404,7 +404,7 @@ manager: "mblythe"
 14. In the **Item** list, double-click **Now**.  
   
     > [!WARNING]  
-    >  In production reports you should not use the **Now** function in expressions that are evaluated multiple times as the report renders (for example, in the detail rows of a report). The value of **Now** changes from row to row and the different values affect the evaluation results of expressions, which leads to results that are subtly inconsistent. Instead, you should use the `ExecutionTime` global variable that [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides.  
+    >  In production reports you should not use the **Now** function in expressions that are evaluated multiple times as the report renders (for example, in the detail rows of a report). The value of **Now** changes from row to row and the different values affect the evaluation results of expressions, which leads to results that are subtly inconsistent. Instead, you should use the `ExecutionTime` global variable that [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] provides.  
   
 15. If the cursor is not already immediately after `Now(`, place it there.  
   
@@ -412,7 +412,7 @@ manager: "mblythe"
   
      The completed expression: `=DateDiff("d", Fields!LastPurchase.Value, Now)`  
   
-17. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+17. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ##  <a name="Indicator"></a> 7. Use an Indicator to Show Sales Comparison  
  Add a new column and use an indicator to show whether a person’s year-to-date (YTD) purchases are above or below the average YTD purchases. The **Round** function removes decimals from values.  
@@ -435,7 +435,7 @@ manager: "mblythe"
   
 2.  In the **Directional** group of icon sets, click the set of three gray arrows.  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 #### To configure the indicator  
   
@@ -469,7 +469,7 @@ manager: "mblythe"
   
      The completed expression: `=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions"))`  
   
-15. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+15. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 16. In the **States Measurement Unit** box, select **Numeric**.  
   
@@ -501,7 +501,7 @@ manager: "mblythe"
   
      The completed expression: `=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions")) < 0`  
   
-30. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+30. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 31. In the text box for the **End** value, type **0**  
   
@@ -513,7 +513,7 @@ manager: "mblythe"
   
 35. In the **Expression** dialog box, create the expression: `=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions")) >0`  
   
-36. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+36. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 37. Click **OK** again to close the **Indicator properties** dialog box.  
   
@@ -562,7 +562,7 @@ manager: "mblythe"
   
 18. In the **Value** box, type **Pink**  
   
-19. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+19. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 #### To apply alternating colors to detail rows  
   
@@ -622,7 +622,7 @@ manager: "mblythe"
   
      The completed expression: `=IIf(RunningValue(Fields!FirstName.Value,Count, "Expressions") Mod 2 =0, Parameters!RowColor.Value, "White")`  
   
-24. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+24. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 #### Run the Report  
   
@@ -647,7 +647,7 @@ manager: "mblythe"
   
 3.  In the **Text Box Properties** dialog box, click **Number**, click **Date**, and then click the type **\*1/31/2000**.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ##  <a name="Title"></a> (optional) Add a Report Title  
  Add a title to the report.  
@@ -668,7 +668,7 @@ manager: "mblythe"
   
 7.  Select  **Bold** and  **Italic**.  
   
-8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ##  <a name="Save"></a> (optional) Save the Report  
  You can save reports to a report server, SharePoint library, or your computer. For more information, see [Saving Reports &#40;Report Builder&#41;](../../2014/reporting-services/saving-reports-report-builder.md).  

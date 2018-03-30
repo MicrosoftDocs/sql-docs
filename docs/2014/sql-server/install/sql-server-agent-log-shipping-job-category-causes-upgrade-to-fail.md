@@ -19,10 +19,10 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQL Server Agent log shipping job category causes upgrade to fail
-  The upgrade process will fail if a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent job category named Log Shipping exists.  
+  The upgrade process will fail if a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job category named Log Shipping exists.  
   
 ## Component  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
   
 ## Description  
  There is a system job category named Log Shipping. If an installation that is being upgraded already contains a user-created job category named Log Shipping, you must rename the job category before you upgrade; otherwise, the upgrade process will fail.  

@@ -17,11 +17,11 @@ helpviewer_keywords:
 ms.assetid: 1865fb7c-f480-4100-9007-df5364cd002a
 caps.latest.revision: 17
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # View the Table Definition
-  You can display properties for a table in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  You can display properties for a table in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -54,7 +54,7 @@ manager: "jhubbard"
   
 #### To show table properties  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -66,6 +66,6 @@ manager: "jhubbard"
   
     ```  
   
- For more information, see [sys.tables &#40;Transact-SQL&#41;](../Topic/sys.tables%20\(Transact-SQL\).md).  
+ For more information, see [sys.tables &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-tables-transact-sql.md).  
   
 ###  <a name="TsqlExample"></a>  

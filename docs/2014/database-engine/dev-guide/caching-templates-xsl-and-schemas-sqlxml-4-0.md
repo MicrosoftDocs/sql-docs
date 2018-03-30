@@ -21,7 +21,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Caching Templates, XSL, and Schemas (SQLXML 4.0)
-  To improve performance, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 supports caching templates, XSL, and schemas.  
+  To improve performance, [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 supports caching templates, XSL, and schemas.  
   
  All schemas, templates, and XSL files (except the files from an http:// or ftp:// location) are cached. The cached files remain in memory while the process is running. As the process exits, all the cache is lost. Therefore, if you run one process per query, the caching benefit may not be noticeable.  
   

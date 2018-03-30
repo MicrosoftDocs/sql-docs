@@ -16,15 +16,15 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # SQL Server Connection Required Permissions for the CDC Designer
-  The CDC Designer Console requires connection information to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to perform its tasks. This topic describes the information that can be provided in the **Connect to SQL Server** dialog box for setting up the connection to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  The CDC Designer Console requires connection information to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to perform its tasks. This topic describes the information that can be provided in the **Connect to SQL Server** dialog box for setting up the connection to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- The **Connect to SQL Server** dialog box opens when necessary, such as when the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connection information is not available or when the information exists but the connection does not have the required permissions.  
+ The **Connect to SQL Server** dialog box opens when necessary, such as when the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] connection information is not available or when the information exists but the connection does not have the required permissions.  
   
- The following table describes the various tasks where a connection to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is required and the required permissions from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login/user.  
+ The following table describes the various tasks where a connection to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is required and the required permissions from the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] login/user.  
   
 |Task|Minimum Permissions|  
 |----------|-------------------------|  
-|View the list of CDC Services and Instances using the associated [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.|`db_datareader` role on MSXDBCDC|  
+|View the list of CDC Services and Instances using the associated [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance.|`db_datareader` role on MSXDBCDC|  
 |Start/Stop CDC Instance(s)|`db_datareader` and `db_datawriter` roles on MSXDBCDC|  
 |View the CDC Instance status.|`db_owner` role on the CDC Instance database|  
 |Create a new Oracle CDC Instance database.|`dbcreator` fixed-server role|  

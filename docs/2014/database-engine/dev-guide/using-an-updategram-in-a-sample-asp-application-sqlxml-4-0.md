@@ -21,7 +21,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Using an Updategram in a Sample ASP Application (SQLXML 4.0)
-  This Active Server Pages (ASP) application allows you to update customer information in the Person.Contact table in the AdventureWorks sample database in Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. The application does the following:  
+  This Active Server Pages (ASP) application allows you to update customer information in the Person.Contact table in the AdventureWorks sample database in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The application does the following:  
   
 -   Asks the user to enter a contact ID.  
   
@@ -75,7 +75,7 @@ manager: "jhubbard"
 </ROOT>  
 ```  
   
- The following code is the ASP application (SampleASP.asp). Save it in the directory that is associated with a virtual root that you create by using the Internet Services Manager utility. (This virtual root is not created by using the IIS Virtual Directory Management for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utility because IIS Virtual Directory Management for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cannot access or identify ASP applications.).  
+ The following code is the ASP application (SampleASP.asp). Save it in the directory that is associated with a virtual root that you create by using the Internet Services Manager utility. (This virtual root is not created by using the IIS Virtual Directory Management for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utility because IIS Virtual Directory Management for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot access or identify ASP applications.).  
   
 > [!NOTE]  
 >  In the code, you must replace "ServerName" with the name of the server running Microsoft Internet Information Services (IIS).  

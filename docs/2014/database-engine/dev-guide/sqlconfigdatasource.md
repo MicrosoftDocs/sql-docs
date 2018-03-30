@@ -21,9 +21,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQLConfigDataSource
-  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver supports various [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-specific keyword/value pairs for data source configuration attribute strings.  
+  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver supports various [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-specific keyword/value pairs for data source configuration attribute strings.  
   
- For a list of the keywords available in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver, see [Using Connection String Keywords with SQL Server Native Client](../../../2014/database-engine/dev-guide/using-connection-string-keywords-with-sql-server-native-client.md).  
+ For a list of the keywords available in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver, see [Using Connection String Keywords with SQL Server Native Client](../../../2014/database-engine/dev-guide/using-connection-string-keywords-with-sql-server-native-client.md).  
   
 ## See Also  
  [SQLConfigDataSource Function](http://go.microsoft.com/fwlink/?LinkId=59337)   

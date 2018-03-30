@@ -21,18 +21,18 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Run Jobs
-  To manage [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs, you can use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures, or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects.  
+  To manage [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent jobs, you can use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../includes/tsql-md.md)] stored procedures, or [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects.  
   
 ## Related Tasks  
   
 |||  
 |-|-|  
 |**Description**|**Topic**|  
-|Describes how to start running a [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job.|[Start a Job](../../2014/database-engine/start-a-job.md)|  
-|Describes how to stop a [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job.|[Stop a Job](../../2014/database-engine/stop-a-job.md)|  
-|Describes how to disable or enable a [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job.|[Disable or Enable a Job](../../2014/database-engine/disable-or-enable-a-job.md)|  
+|Describes how to start running a [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent job.|[Start a Job](../../2014/database-engine/start-a-job.md)|  
+|Describes how to stop a [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent job.|[Stop a Job](../../2014/database-engine/stop-a-job.md)|  
+|Describes how to disable or enable a [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent job.|[Disable or Enable a Job](../../2014/database-engine/disable-or-enable-a-job.md)|  
   
 ## See Also  
- [dbo.sysdownloadlist &#40;Transact-SQL&#41;](../Topic/dbo.sysdownloadlist%20\(Transact-SQL\).md)  
+ [dbo.sysdownloadlist &#40;Transact-SQL&#41;](~/relational-databases/system-tables/dbo-sysdownloadlist-transact-sql.md)  
   
   

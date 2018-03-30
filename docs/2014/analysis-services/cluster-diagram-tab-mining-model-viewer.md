@@ -30,7 +30,7 @@ manager: "mblythe"
  Choose a mining model, from those in the current mining structure. The mining model will open in its associated viewer.  
   
  **Viewer**  
- Choose a viewer to explore the selected mining model. You can use one of the custom clustering viewers, or use the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Mining Content Viewer. You can also use a plug-in viewer if available.  
+ Choose a viewer to explore the selected mining model. You can use one of the custom clustering viewers, or use the [!INCLUDE[msCoName](../includes/msconame-md.md)] Mining Content Viewer. You can also use a plug-in viewer if available.  
   
  **Zoom In**  
  Zoom in to the diagram, to get a detailed view of the clusters.  

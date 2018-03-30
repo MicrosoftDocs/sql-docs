@@ -19,7 +19,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Lock a Version (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], lock a version of a model to prevent changes to the model's members and their attributes.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], lock a version of a model to prevent changes to the model's members and their attributes.  
   
 > [!NOTE]  
 >  When a version is locked, model administrators can continue to add, edit, and remove members. Other users with permission to the model can view members only.  
@@ -35,7 +35,7 @@ manager: "jhubbard"
   
 ### To lock a version  
   
-1.  In [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], click **Version Management**.  
+1.  In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], click **Version Management**.  
   
 2.  On the **Manage Versions** page, select the row for the version that you want to lock.  
   

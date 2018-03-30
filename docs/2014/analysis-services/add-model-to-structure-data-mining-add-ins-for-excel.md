@@ -38,7 +38,7 @@ manager: "mblythe"
   
 3.  In the **Select Mining Algorithm** dialog box, choose a mining algorithm to use in the new mining model.  
   
-     Notice that the dialog box provides a lot more options than you’ll see in the wizards. You can create a model using any algorithm supported on your [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server, provided your data is compatible.  
+     Notice that the dialog box provides a lot more options than you’ll see in the wizards. You can create a model using any algorithm supported on your [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] server, provided your data is compatible.  
   
 4.  We recommend that you also click the **Parameters** button to open the **Algorithm Parameters** dialog box and customize parameters on the algorithm. This option is the easiest way to create custom mining models.  
   
@@ -87,7 +87,7 @@ manager: "mblythe"
 |Option|Comments|  
 |------------|--------------|  
 |**Select Structure or Model** dialog box|Choose en existing mining structure to use as the basis for building a new model.  The structure you pick must be located on the current connection. If not, change connections using the [Connect to Source Data &#40;Data Mining Client for Excel&#41;](../../2014/analysis-services/connect-to-source-data-data-mining-client-for-excel.md) tool.|  
-|**Select Mining Algorithm** dialog Box|The list of data mining algorithms depends on which server you are connected to. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] provides different algorithms in the Standard and Enterprise editions. Your administrator also might have added custom algorithms.<br /><br /> If you can’t see any algorithms, verify that you are connected to an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
+|**Select Mining Algorithm** dialog Box|The list of data mining algorithms depends on which server you are connected to. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] provides different algorithms in the Standard and Enterprise editions. Your administrator also might have added custom algorithms.<br /><br /> If you can’t see any algorithms, verify that you are connected to an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
 |**Algorithm Parameters** Dialog Box|In these settings, you can customize each algorithm using parameters specific to the analytical method. You can also set a seed to ensure that the results of the model can be reproduced across multiple training passes.<br /><br /> For more information, see [Algorithm Parameters &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/algorithm-parameters-sql-server-data-mining-add-ins.md).|  
 |**Set Column Model Flags** Dialog Box|Modeling flags can improve your model by specifying how missing data is to be handled. For more information, see [Modeling Flags &#40;Data Mining&#41;](../../2014/analysis-services/modeling-flags-data-mining.md).|  
   
@@ -111,9 +111,9 @@ manager: "mblythe"
      Some types of analysis require data that is carefully structured according to unique rules. Examples are forecasting models and association models. You can easily add new models of the same type, perhaps with customizations, but the data might not work with other algorithms.  
   
 ### Requirements  
- To create data mining models, you must have a connection to an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. For more information about how to create or change a connection, see [Connect to Source Data &#40;Data Mining Client for Excel&#41;](../../2014/analysis-services/connect-to-source-data-data-mining-client-for-excel.md).  
+ To create data mining models, you must have a connection to an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. For more information about how to create or change a connection, see [Connect to Source Data &#40;Data Mining Client for Excel&#41;](../../2014/analysis-services/connect-to-source-data-data-mining-client-for-excel.md).  
   
- If you cannot see the data mining structure that you want, it could be that the structure was saved to a different instance or different [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database. For information about how to change to a different data mining connection, see [Connect to a Data Mining Server](../../2014/analysis-services/connect-to-a-data-mining-server.md).  
+ If you cannot see the data mining structure that you want, it could be that the structure was saved to a different instance or different [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database. For information about how to change to a different data mining connection, see [Connect to a Data Mining Server](../../2014/analysis-services/connect-to-a-data-mining-server.md).  
   
 ## See Also  
  [Creating a Data Mining Model](../../2014/analysis-services/creating-a-data-mining-model.md)   

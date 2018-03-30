@@ -29,7 +29,7 @@ manager: "jhubbard"
 |Topic|Description|  
 |-----------|-----------------|  
 |[Auto Stats Event Class](../../2014/database-engine/auto-stats-event-class.md)|Indicates that an automatic updating of index and column statistics has occurred.|  
-|[Degree of Parallelism &#40;7.0 Insert&#41; Event Class](../../2014/database-engine/degree-of-parallelism-7-0-insert-event-class.md)|Indicates that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has executed a SELECT, INSERT, UPDATE, or DELETE statement using either a serial or parallel plan. The number of CPUs used to perform the operation is also reported.|  
+|[Degree of Parallelism &#40;7.0 Insert&#41; Event Class](../../2014/database-engine/degree-of-parallelism-7-0-insert-event-class.md)|Indicates that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has executed a SELECT, INSERT, UPDATE, or DELETE statement using either a serial or parallel plan. The number of CPUs used to perform the operation is also reported.|  
 |[Performance Statistics Event Class](../../2014/database-engine/performance-statistics-event-class.md)|Monitors performance of the queries that are being executed.|  
 |[Showplan All Event Class](../../2014/database-engine/showplan-all-event-class.md)|Identifies **Showplan** operators within a SQL statement.|  
 |[Showplan All for Query Compile Event Class](../../2014/database-engine/showplan-all-for-query-compile-event-class.md)|Displays compile time data for **Showplan** operators.|  
@@ -37,9 +37,9 @@ manager: "jhubbard"
 |[Showplan XML Event Class](../../2014/database-engine/showplan-xml-event-class.md)|Identifies the **Showplan** operators in a SQL statement. The event class stores each event as a well defined XML document.|  
 |[Showplan XML for Query Compile Event Class](../../2014/database-engine/showplan-xml-for-query-compile-event-class.md)|Displays compile time data for **Showplan** operators in XML format.|  
 |[Showplan XML Statistics Profile Event Class](../../2014/database-engine/showplan-xml-statistics-profile-event-class.md)|Identifies the **Showplan** operators associated with a SQL statement. The output is an XML document.|  
-|[SQL:FullTextQuery Event Class](../../2014/database-engine/sql-fulltextquery-event-class.md)|Indicates that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has executed a full-text query.|  
-|[Plan Guide Successful Event Class](../../2014/database-engine/plan-guide-successful-event-class.md)|Indicates that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] successfully produced an execution plan for a query or batch that contained a plan guide.|  
-|[Plan Guide Unsuccessful Event Class](../../2014/database-engine/plan-guide-unsuccessful-event-class.md)|Indicates that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] could not produce an execution plan for a query or batch that contained a plan guide.|  
+|[SQL:FullTextQuery Event Class](../../2014/database-engine/sql-fulltextquery-event-class.md)|Indicates that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has executed a full-text query.|  
+|[Plan Guide Successful Event Class](../../2014/database-engine/plan-guide-successful-event-class.md)|Indicates that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] successfully produced an execution plan for a query or batch that contained a plan guide.|  
+|[Plan Guide Unsuccessful Event Class](../../2014/database-engine/plan-guide-unsuccessful-event-class.md)|Indicates that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] could not produce an execution plan for a query or batch that contained a plan guide.|  
   
 ## See Also  
  [Extended Events](../../2014/database-engine/extended-events.md)  

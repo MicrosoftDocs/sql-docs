@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Find a Value or Data Column While Tracing (SQL Server Profiler)
-  This topic describes how to search for a specific value or data column in the trace output while the trace is running by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+  This topic describes how to search for a specific value or data column in the trace output while the trace is running by using [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)].  
   
 ### To find a value or data column while running a trace  
   

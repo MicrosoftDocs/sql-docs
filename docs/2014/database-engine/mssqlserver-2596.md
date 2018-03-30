@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 49ab892f-8ba3-4ba1-b562-ddf205019802
 caps.latest.revision: 18
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_2596
@@ -37,6 +37,6 @@ manager: "jhubbard"
  Set the database to read-write by using ALTER DATABASE, and then re-run the DBCC command.  
   
 ## See Also  
- [ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20\(Transact-SQL\).md)  
+ [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)  
   
   

@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 caps.latest.revision: 44
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # URL Access Parameter Reference
   You can use the following parameters as part of a URL to configure the look and feel of your reports. The most common parameters are listed in this section. Parameters are case-insensitive and begin with the parameter prefix *rs:* if directed to the report server and *rc:* if directed to an HTML Viewer. You can also specify parameters that are specific to devices or rendering extensions. For more information about device-specific parameters, see [Specify Device Information Settings in a URL](../../2014/reporting-services/specify-device-information-settings-in-a-url.md).  
   
 > [!IMPORTANT]  
->  It is important the URL include the `_vti_bin` proxy syntax to route the request through SharePoint and the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] HTTP proxy. The proxy adds some context to the HTTP request, context that is required to ensure proper execution of the report for SharePoint mode report servers. For examples, see [Access Report Server Items Using URL Access](../../2014/reporting-services/access-report-server-items-using-url-access.md).  
+>  It is important the URL include the `_vti_bin` proxy syntax to route the request through SharePoint and the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] HTTP proxy. The proxy adds some context to the HTTP request, context that is required to ensure proper execution of the report for SharePoint mode report servers. For examples, see [Access Report Server Items Using URL Access](../../2014/reporting-services/access-report-server-items-using-url-access.md).  
 >   
 >  For information about including report parameters in a URL, and examples, see [Pass a Report Parameter Within a URL](../../2014/reporting-services/pass-a-report-parameter-within-a-url.md).  
   
@@ -33,7 +33,7 @@ manager: "mblythe"
 |---------------|-----------------|------------|  
 |*Toolbar*|Shows or hides the toolbar.<br /><br /> **\*\* Important \*\*** *rc:Toolbar*=`false` does not work for URL access strings that use an IP address, instead of a domain name, to target a report hosted on a SharePoint site.|If the value of this parameter is `false`, all remaining options are ignored. If you omit this parameter, the toolbar is automatically displayed for rendering formats that support it. The default of this parameter is `true`.<br /><br /> `true` <br /> `false`|  
 |*Parameters*|Shows or hides the parameters area of the toolbar.<br /><br /> `Native` mode example:<br /><br /> `http://myrshost/reportserver?/Sales&rc:Parameters=Collapsed`<br /><br /> `SharePoint` mode example:<br /><br /> `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rc:Parameters=Collapsed`|If you set this parameter to `true`, the parameters area of the toolbar is displayed. If you set this parameter to `false`, the parameters area is not displayed and cannot be displayed by the user. If you set this parameter to a value of `Collapsed`, the parameters area will not be displayed, but can be toggled by the end user. The default value of this parameter is `true`. Valid values are:<br /><br /> `true` <br /> `false` <br /> `Collapsed`|  
-|*Zoom*|Sets the report zoom value as an integer percentage or a string constant.<br /><br /> `Native` mode example:<br /><br /> `http://myrshost/reportserver?/Sales&rc:Zoom=Page Width`<br /><br /> `SharePoint` mode example:<br /><br /> `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rc:Zoom=Page Width`|Standard string values include `Page Width` and `Whole Page`. This parameter is ignored by versions of Internet Explorer earlier than Internet Explorer 5.0 and all non-[!INCLUDE[msCoName](../../includes/msconame-md.md)] browsers. The default value of this parameter is `100`.|  
+|*Zoom*|Sets the report zoom value as an integer percentage or a string constant.<br /><br /> `Native` mode example:<br /><br /> `http://myrshost/reportserver?/Sales&rc:Zoom=Page Width`<br /><br /> `SharePoint` mode example:<br /><br /> `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rc:Zoom=Page Width`|Standard string values include `Page Width` and `Whole Page`. This parameter is ignored by versions of Internet Explorer earlier than Internet Explorer 5.0 and all non-[!INCLUDE[msCoName](../includes/msconame-md.md)] browsers. The default value of this parameter is `100`.|  
 |*Section*|Sets which page in the report to display.<br /><br /> `Native` mode example to display page 2 of the report:<br /><br /> `http://myrshost/reportserver?/Sales&rc:Section=2`<br /><br /> `SharePoint` mode example to display page 2 of the report:<br /><br /> `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rc:Section=2`|Any value that is greater than the number of pages in the report displays the last page. Any value that is less than `0` displays page 1 of the report. The default value of this parameter is `1`.|  
 |*FindString*|Search a report for a specific set of text.<br /><br /> `Native` mode example:<br /><br /> `http://myrshost/reportserver?/Sales&rc:FindString=Mountain-400`<br /><br /> `SharePoint` mode example:<br /><br /> `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rc:FindString=Mountain-400`||  
 |*StartFind*|Specifies the last section to search.<br /><br /> `Native` mode example that searches for the first occurrence of the text "Mountain-400" in the Product Catalog sample report starting with page one and ending with page five:<br /><br /> `http://server/Reportserver?/SampleReports/Product Catalog&rs:Command=Render&rc:StartFind=1&rc:EndFind=5&rc:FindString=Mountain-400`|The default value of this parameter is the last page of the report.|  
@@ -66,7 +66,7 @@ manager: "mblythe"
 |*ShowHideToggle*|Toggles the show and hide state of a section of the report. Specify a positive integer to represent the section to toggle.|  
   
 ## Report Viewer Web Part Commands (rv:)  
- The following table describes the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reserved report parameter names that are used to target the Report Viewer Web Part that is integrated with SharePoint. These parameter names are prefixed with *rv:*. The Report Viewer Web Part also accepts the *rs:ParameterLanguage* parameter.  
+ The following table describes the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reserved report parameter names that are used to target the Report Viewer Web Part that is integrated with SharePoint. These parameter names are prefixed with *rv:*. The Report Viewer Web Part also accepts the *rs:ParameterLanguage* parameter.  
   
 |Parameter|Action|  
 |---------------|------------|  

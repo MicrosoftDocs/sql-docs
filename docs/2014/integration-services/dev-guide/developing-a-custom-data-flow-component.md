@@ -25,7 +25,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Developing a Custom Data Flow Component
-  The data flow task consists of components that connect to a variety of data sources and then transform and route that data at high speed. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] provides an extensible object model that lets developers create custom sources, transformations, and destinations that you can use in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] and in deployed packages. This section contains topics that will guide you in developing custom data flow components.  
+  The data flow task consists of components that connect to a variety of data sources and then transform and route that data at high speed. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides an extensible object model that lets developers create custom sources, transformations, and destinations that you can use in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] and in deployed packages. This section contains topics that will guide you in developing custom data flow components.  
   
 ## In This Section  
  [Creating a Custom Data Flow Component](../../../2014/integration-services/dev-guide/creating-a-custom-data-flow-component.md)  
@@ -41,7 +41,7 @@ manager: "jhubbard"
  Describes the data flow execution plan and the allocation of data buffers.  
   
  [Working with Data Types in the Data Flow](../../../2014/integration-services/dev-guide/working-with-data-types-in-the-data-flow.md)  
- Explains how the data flow maps [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] data types to .NET Framework managed data types.  
+ Explains how the data flow maps [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data types to .NET Framework managed data types.  
   
  [Validating a Data Flow Component](../../../2014/integration-services/dev-guide/validating-a-data-flow-component.md)  
  Explains the methods used to validate component configuration and to reconfigure component metadata.  
@@ -78,15 +78,15 @@ manager: "jhubbard"
  Contains the classes and interfaces used to create the user interface for data flow components.  
   
  [Integration Services Error and Message Reference](../../../2014/integration-services/integration-services-error-and-message-reference.md)  
- Lists the predefined [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] error codes with their symbolic names and descriptions.  
+ Lists the predefined [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] error codes with their symbolic names and descriptions.  
   
 ## Related Sections  
   
 ### Information Common to All Custom Objects  
- For information that is common to all the type of custom objects that you can create in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], see the following topics:  
+ For information that is common to all the type of custom objects that you can create in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], see the following topics:  
   
  [Developing Custom Objects for Integration Services](../../../2014/integration-services/dev-guide/developing-custom-objects-for-integration-services.md)  
- Describes the basic steps in implementing all types of custom objects for [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)].  
+ Describes the basic steps in implementing all types of custom objects for [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
  [Persisting Custom Objects](../../../2014/integration-services/dev-guide/persisting-custom-objects.md)  
  Describes custom persistence and explains when it is necessary.  
@@ -95,7 +95,7 @@ manager: "jhubbard"
  Describes the techniques for building, signing, deploying, and debugging custom objects.  
   
 ### Information about Other Custom Objects  
- For information on the other types of custom objects that you can create in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], see the following topics:  
+ For information on the other types of custom objects that you can create in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], see the following topics:  
   
  [Developing a Custom Task](../../../2014/integration-services/dev-guide/developing-a-custom-task.md)  
  Discusses how to program custom tasks.  
@@ -111,7 +111,7 @@ manager: "jhubbard"
   
 ||  
 |-|  
-|![Integration Services icon (small)](../../../2014/integration-services/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
+|![Integration Services icon (small)](../../../2014/integration-services/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
   
 ## See Also  
  [Extending the Data Flow with the Script Component](../../../2014/integration-services/dev-guide/extending-the-data-flow-with-the-script-component.md)   

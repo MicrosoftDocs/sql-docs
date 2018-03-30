@@ -19,7 +19,7 @@ ms.author: "jroth"
 manager: "jhubbard"
 ---
 # Connect to Existing Secondary Replicas Page (Add Replica Wizard and Add Databases Wizard)
-  This help topic describes the options of the **Connect to Existing Secondary Replicas** page. This topic is used by the [!INCLUDE[ssAoAddRepWiz](../../includes/ssaoaddrepwiz-md.md)] and [!INCLUDE[ssAoAddDbWiz](../../includes/ssaoadddbwiz-md.md)] of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  This help topic describes the options of the **Connect to Existing Secondary Replicas** page. This topic is used by the [!INCLUDE[ssAoAddRepWiz](../includes/ssaoaddrepwiz-md.md)] and [!INCLUDE[ssAoAddDbWiz](../includes/ssaoadddbwiz-md.md)] of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
  **Grid columns:**  
  **Server Instance**  
@@ -32,7 +32,7 @@ manager: "jhubbard"
  Click if this server instance is running under a different account than other server instances to which you need to connect.  
   
  **Connect All**  
- Click only if every instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to which you need to connect is running as a service in the same user account.  
+ Click only if every instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to which you need to connect is running as a service in the same user account.  
   
  **Cancel**  
  Click to cancel the wizard. On the **Connect to Existing Secondary Replica** page, cancelling the wizard cause it to exit without performing any actions.  

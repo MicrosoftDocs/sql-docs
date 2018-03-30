@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: cf688163-4ac0-475b-b6dd-6f2f05b553c6
 caps.latest.revision: 45
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Accessing the Report Server Web Service Using Visual Basic or Visual C# (SSRS Tutorial)
-  The following tutorial shows you how to access the Report Server Web service from an application created with [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] or [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)].  
+  The following tutorial shows you how to access the Report Server Web service from an application created with [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] or [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[csprcs](../includes/csprcs-md.md)].  
   
 ## What You Will Learn  
  During the course of this tutorial, you will complete the following:  
   
--   Create a client application using the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)] Console Application project template.  
+-   Create a client application using the [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] Console Application project template.  
   
 -   Add a Web reference for the Report Server Web service.  
   
@@ -38,11 +38,11 @@ manager: "mblythe"
 ## Requirements  
  To complete the tutorial, you must have the following:  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)] or a similar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-compatible development tool.  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] or a similar [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]-compatible development tool.  
   
--   Sufficient permissions to be able to access the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Report Server Web service on the computer where your report server is located.  
+-   Sufficient permissions to be able to access the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Report Server Web service on the computer where your report server is located.  
   
 -   A report installed on your report server. This tutorial uses the sample report, Company Sales. For more information about sample reports, see [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
   

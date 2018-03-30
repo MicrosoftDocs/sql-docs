@@ -35,7 +35,7 @@ manager: "mblythe"
  The **Cross-Validation** wizard then creates a new model on each of the folds, tests the model on the other folds, and then reports the accuracy of the model. Upon completion, the **Cross-Validation** wizard creates a report that shows you the metrics for each fold, and provides a summary of the model in aggregate. This information can be used to determine how good the underlying data is for a model, or to compare different models that are built on the same data.  
   
 ## Using the Cross-Validation Wizard  
- You can use cross-validation against both temporary models and models that are stored on an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+ You can use cross-validation against both temporary models and models that are stored on an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
 #### To create a cross-validation report  
   

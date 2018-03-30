@@ -22,11 +22,11 @@ manager: "jhubbard"
 # Execute SQL Task Editor (General Page)
   Use the **General** page of the **Execute SQL Task Editor** dialog box to configure the Execute SQL task and provide the SQL statement that the task runs.  
   
- To learn about this task, see [Execute SQL Task](../../2014/integration-services/execute-sql-task.md), [Parameters and Return Codes in the Execute SQL Task](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md), and [Result Sets in the Execute SQL Task](../../2014/integration-services/result-sets-in-the-execute-sql-task.md). To learn more about the Transact-SQL query language, see [Transact-SQL Reference &#40;Database Engine&#41;](../Topic/Transact-SQL%20Reference%20\(Database%20Engine\).md).  
+ To learn about this task, see [Execute SQL Task](../../2014/integration-services/execute-sql-task.md), [Parameters and Return Codes in the Execute SQL Task](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md), and [Result Sets in the Execute SQL Task](../../2014/integration-services/result-sets-in-the-execute-sql-task.md). To learn more about the Transact-SQL query language, see [Transact-SQL Reference &#40;Database Engine&#41;](~/t-sql/language-reference.md).  
   
 ## Static Options  
  **Name**  
- Provide a unique name for the Execute SQL task in the workflow. The name that is provided will be displayed within [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer.  
+ Provide a unique name for the Execute SQL task in the workflow. The name that is provided will be displayed within [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer.  
   
  **Description**  
  Describe the Execute SQL task. As a best practice, to make packages self-documenting and easier to maintain, describe the task in terms of its purpose.  

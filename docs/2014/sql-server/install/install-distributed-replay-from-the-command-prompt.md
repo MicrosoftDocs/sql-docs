@@ -16,13 +16,13 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Install Distributed Replay from the Command Prompt
-  Installing a new instance of Distributed Replay at the command prompt enables you to specify the features to install and how they should be configured. The command prompt installation supports installing, repairing, upgrading, and uninstalling of the Distributed Replay components. When installing through the command prompt, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports full quiet mode by using the /Q parameter.  
+  Installing a new instance of Distributed Replay at the command prompt enables you to specify the features to install and how they should be configured. The command prompt installation supports installing, repairing, upgrading, and uninstalling of the Distributed Replay components. When installing through the command prompt, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports full quiet mode by using the /Q parameter.  
   
 > [!NOTE]  
->  For local installations, you must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share.  
+>  For local installations, you must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share.  
   
 ## Installation Parameters  
- The list of top-level features include [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], and Tools. The Tools feature will install [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Tools, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online, [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], and other shared components. To install the Distributed Replay components, specify the following parameters:  
+ The list of top-level features include [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], and Tools. The Tools feature will install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Tools, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], and other shared components. To install the Distributed Replay components, specify the following parameters:  
   
 |Component|Parameter|  
 |---------------|---------------|  

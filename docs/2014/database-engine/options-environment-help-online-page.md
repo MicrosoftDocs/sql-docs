@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Options (Environment-Help-Online Page)
-  The **Options** dialog box lets you specify the Help sources to use for [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] searches, including F1 Help. On the **Tools** menu, click **Options**, expand the **Environment** folder, select **Help**, and then click **Online**. If the **Online** page does not appear in the list, select the **Show all settings** check box in the **Options** dialog box.  
+  The **Options** dialog box lets you specify the Help sources to use for [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] searches, including F1 Help. On the **Tools** menu, click **Options**, expand the **Environment** folder, select **Help**, and then click **Online**. If the **Online** page does not appear in the list, select the **Show all settings** check box in the **Options** dialog box.  
   
  **When loading Help content**  
  Sets the order in which Help sources are used for F1 Help, and specifies which Help sources are used.  
@@ -45,6 +45,6 @@ manager: "jhubbard"
  Displays a brief description for each provider selected in the **Codezone Community** list if available.  
   
  **Read the privacy statement**  
- Displays the [!INCLUDE[msCoName](../../includes/msconame-md.md)] privacy policy for online use.  
+ Displays the [!INCLUDE[msCoName](../includes/msconame-md.md)] privacy policy for online use.  
   
   

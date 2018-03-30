@@ -37,14 +37,14 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Using XML Data Types
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduced an **xml** data type that enables you to store XML documents and fragments in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database. The **xml** data type is a built-in data type in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], and is in some ways similar to other built-in types, such as **int** and **varchar**. As with other built-in types, you can use the **xml** data type as a column type when creating a table; as a variable type, a parameter type, or a function-return type; or in CAST and CONVERT functions.  
+  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introduced an **xml** data type that enables you to store XML documents and fragments in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. The **xml** data type is a built-in data type in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and is in some ways similar to other built-in types, such as **int** and **varchar**. As with other built-in types, you can use the **xml** data type as a column type when creating a table; as a variable type, a parameter type, or a function-return type; or in CAST and CONVERT functions.  
   
 ## Programming Considerations  
  XML can be self-describing in that it can optionally include an XML header that specifies the encoding of the document, for example:  
   
  `<?xml version="1.0" encoding="windows-1252"?><doc/>`  
   
- The XML standard describes how an XML processor can detect the encoding used for a document by examining the first few bytes of the document. There are opportunities for the encoding specified by the application to conflict with the encoding specified by the document. For documents passed as bound parameters, XML is treated as binary data by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], so no conversions are made and the XML parser can use the encoding specified within the document without problems. However, for XML data that is bound as WSTR, then the application must ensure that the document is encoded as Unicode. This may entail loading the document into a DOM, changing the encoding to Unicode and serializing the document. If this is not done, data conversions may occur, resulting in invalid or corrupt XML.  
+ The XML standard describes how an XML processor can detect the encoding used for a document by examining the first few bytes of the document. There are opportunities for the encoding specified by the application to conflict with the encoding specified by the document. For documents passed as bound parameters, XML is treated as binary data by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], so no conversions are made and the XML parser can use the encoding specified within the document without problems. However, for XML data that is bound as WSTR, then the application must ensure that the document is encoded as Unicode. This may entail loading the document into a DOM, changing the encoding to Unicode and serializing the document. If this is not done, data conversions may occur, resulting in invalid or corrupt XML.  
   
  There is also potential for conflict when XML is specified in literals. For example the following are invalid:  
   
@@ -53,30 +53,30 @@ manager: "jhubbard"
  `INSERT INTO xmltable(xmlcol) VALUES(N'<?xml version="1.0" encoding="UTF-8"?><doc/>')`  
   
 ## SQL Server Native Client OLE DB Provider  
- DBTYPE_XML is a new data type specific to XML in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider. In addition, XML data can be accessed through the existing OLE DB types of DBTYPE_BYTES, DBTYPE_WSTR, DBTYPE_BSTR, DBTYPE_XML, DBTYPE_STR, DBTYPE_VARIANT, and DBTYPE_IUNKNOWN. Data stored in columns of type XML can be retrieved from a column in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider rowset in the following formats:  
+ DBTYPE_XML is a new data type specific to XML in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider. In addition, XML data can be accessed through the existing OLE DB types of DBTYPE_BYTES, DBTYPE_WSTR, DBTYPE_BSTR, DBTYPE_XML, DBTYPE_STR, DBTYPE_VARIANT, and DBTYPE_IUNKNOWN. Data stored in columns of type XML can be retrieved from a column in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider rowset in the following formats:  
   
 -   A text string  
   
 -   An **ISequentialStream**  
   
 > [!NOTE]  
->  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider does not include a SAX reader, but the **ISequentialStream** can be easily passed to SAX and DOM objects in MSXML.  
+>  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider does not include a SAX reader, but the **ISequentialStream** can be easily passed to SAX and DOM objects in MSXML.  
   
  **ISequentialStream** should be use used for retrieval of large XML documents. The same techniques used for other large value types also apply to XML. For more information, see [Using Large Value Types](../../../2014/database-engine/dev-guide/using-large-value-types.md).  
   
- Data stored in columns of type XML in a rowset can also be retrieved, inserted, or updated by an application via the usual interfaces such as **IRow::GetColumns**, **IRowChange::SetColumns**, and **ICommand::Execute**. Similarly to the retrieval case, an application program can pass either a text string or an **ISequentialStream** to the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider.  
+ Data stored in columns of type XML in a rowset can also be retrieved, inserted, or updated by an application via the usual interfaces such as **IRow::GetColumns**, **IRowChange::SetColumns**, and **ICommand::Execute**. Similarly to the retrieval case, an application program can pass either a text string or an **ISequentialStream** to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider.  
   
 > [!NOTE]  
 >  To send XML data in string format through the **ISequentialStream** interface, you must obtain **ISequentialStream** by specifying DBTYPE_IUNKNOWN and set its *pObject* argument to null in the binding.  
   
  When retrieved XML data is truncated due to the consumer buffer being too small, the length may be returned as 0xffffffff, which means that the length is unknown. This is consistent with its implementation as a data type that is streamed to the client without sending length information ahead of the actual data. In some cases the actual length may be returned when the provider has buffered the whole value, such as **IRowset::GetData** and where data conversion is performed.  
   
- XML data sent to SQL Server is treated as binary data by the server. This prevents any conversions occurring and allows the XML parser to auto-detect the XML encoding. This allows a wider range of XML documents (for example those encoded in UTF-8) to be accepted as input to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ XML data sent to SQL Server is treated as binary data by the server. This prevents any conversions occurring and allows the XML parser to auto-detect the XML encoding. This allows a wider range of XML documents (for example those encoded in UTF-8) to be accepted as input to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  If input XML is bound as DBTYPE_WSTR, the application must ensure it is already Unicode encoded to avoid any possibility of corruption by unwanted data conversions.  
   
 ### Data Bindings and Coercions  
- The following table describes the binding and coercion that occurs when using the listed data types with the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **xml** data type.  
+ The following table describes the binding and coercion that occurs when using the listed data types with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **xml** data type.  
   
 |Data type|To Server<br /><br /> **XML**|To Server<br /><br /> **Non-XML**|From Server<br /><br /> **XML**|From Server<br /><br /> **Non-XML**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
@@ -116,7 +116,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  No data is returned for NULL XML values.  
   
- The XML standard requires UTF-16 encoded XML to start with a byte-order mark (BOM), UTF-16 character code 0xFEFF. When working with WSTR and BSTR bindings, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client does not require or add a BOM as the encoding is implied by the binding. When working with BYTES, XML, or IUNKNOWN bindings, the intent is to provide simplicity in dealing with other XML processors and storage systems. In this case a BOM should be present with UTF-16 encoded XML, and the application need not be concerned with the actual encoding, since the majority of XML processors (including SQL Server) deduces the encoding by inspecting the first few bytes of the value. XML data received from [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client using BYTES, XML, or IUNKNOWN bindings is always encoded in UTF-16 with a BOM and without an embedded encoding declaration.  
+ The XML standard requires UTF-16 encoded XML to start with a byte-order mark (BOM), UTF-16 character code 0xFEFF. When working with WSTR and BSTR bindings, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client does not require or add a BOM as the encoding is implied by the binding. When working with BYTES, XML, or IUNKNOWN bindings, the intent is to provide simplicity in dealing with other XML processors and storage systems. In this case a BOM should be present with UTF-16 encoded XML, and the application need not be concerned with the actual encoding, since the majority of XML processors (including SQL Server) deduces the encoding by inspecting the first few bytes of the value. XML data received from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client using BYTES, XML, or IUNKNOWN bindings is always encoded in UTF-16 with a BOM and without an embedded encoding declaration.  
   
  Data conversions supplied by OLE DB core services (**IDataConvert**) are not applicable to DBTYPE_XML.  
   
@@ -129,7 +129,7 @@ manager: "jhubbard"
  DBTYPE_IUNKNOWN is a supported binding (as shown in the above table), but there are no conversions between DBTYPE_XML and DBTYPE_IUNKNOWN. DBTYPE_IUNKNOWN may not be used with DBTYPE_BYREF.  
   
 ### OLE DB Rowset Additions and Changes  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client adds new values or changes to many of the core OLE DB schema rowsets.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client adds new values or changes to many of the core OLE DB schema rowsets.  
   
 #### The COLUMNS and PROCEDURE_PARAMETERS Schema Rowsets  
  Additions to the COLUMNS and PROCEDURE_PARAMETERS schema rowsets include the following columns.  
@@ -161,10 +161,10 @@ manager: "jhubbard"
 |DBSCHEMA_XML_COLLECTIONS|4|SCHEMACOLLECTION_CATALOGNAME<br /><br /> SCHEMACOLLECTION_SCHEMANAME<br /><br /> SCHEMACOLLECTIONNAME<br /><br /> TARGETNAMESPACEURI|  
   
 ### OLE DB Property Set Additions and Changes  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client adds new values or changes to many of the core OLE DB property sets.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client adds new values or changes to many of the core OLE DB property sets.  
   
 #### The DBPROPSET_SQLSERVERPARAMETER Property Set  
- In order to support the **xml** data type through OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client implements the new DBPROPSET_SQLSERVERPARAMETER property set, which contains the following values.  
+ In order to support the **xml** data type through OLE DB, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client implements the new DBPROPSET_SQLSERVERPARAMETER property set, which contains the following values.  
   
 |Name|Type|Description|  
 |----------|----------|-----------------|  
@@ -173,7 +173,7 @@ manager: "jhubbard"
 |SSPROP_PARAM_XML_SCHEMACOLLECTIONNAME|DBTYPE_WSTR|The name of the XML schema collection within the catalog A part of the SQL three -part name identifier.|  
   
 #### The DBPROPSET_SQLSERVERCOLUMN Property Set  
- To support the creation of tables in the **ITableDefinition** interface, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client adds three new columns to the DBPROPSET_SQLSERVERCOLUMN property set.  
+ To support the creation of tables in the **ITableDefinition** interface, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client adds three new columns to the DBPROPSET_SQLSERVERCOLUMN property set.  
   
 |Name|Type|Description|  
 |----------|----------|-----------------|  
@@ -184,16 +184,16 @@ manager: "jhubbard"
  Like the SSPROP_PARAM values, all of these properties are optional and default to empty. SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME and SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME may only be specified if SSPROP_COL_XML_SCHEMACOLLECTIONNAME is specified. When passing XML to the server, if these values are included they are checked for existence (validity) against the current database and the instance data is checked against the schema. In all cases, to be valid they are either all empty or all filled in.  
   
 ### OLE DB Interface Additions and Changes  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client adds new values or changes to many of the core OLE DB interfaces.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client adds new values or changes to many of the core OLE DB interfaces.  
   
 #### The ISSCommandWithParameters Interface  
- In order to support the **xml** data type through OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client implements a number of changes including the addition of the [ISSCommandWithParameters](../../../2014/database-engine/dev-guide/isscommandwithparameters-ole-db.md) interface. This new interface inherits from the core OLE DB interface **ICommandWithParameters**. In addition to the three methods inherited from **ICommandWithParameters**; **GetParameterInfo**, **MapParameterNames**, and **SetParameterInfo**; **ISSCommandWithParameters** provides the [GetParameterProperties](../../../2014/database-engine/dev-guide/isscommandwithparameters-getparameterproperties-ole-db.md) and [SetParameterProperties](../../../2014/database-engine/dev-guide/isscommandwithparameters-setparameterproperties-ole-db.md) methods that are used to handle server specific data types.  
+ In order to support the **xml** data type through OLE DB, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client implements a number of changes including the addition of the [ISSCommandWithParameters](../../../2014/database-engine/dev-guide/isscommandwithparameters-ole-db.md) interface. This new interface inherits from the core OLE DB interface **ICommandWithParameters**. In addition to the three methods inherited from **ICommandWithParameters**; **GetParameterInfo**, **MapParameterNames**, and **SetParameterInfo**; **ISSCommandWithParameters** provides the [GetParameterProperties](../../../2014/database-engine/dev-guide/isscommandwithparameters-getparameterproperties-ole-db.md) and [SetParameterProperties](../../../2014/database-engine/dev-guide/isscommandwithparameters-setparameterproperties-ole-db.md) methods that are used to handle server specific data types.  
   
 > [!NOTE]  
 >  The **ISSCommandWithParameters** interface also makes use of the new SSPARAMPROPS structure.  
   
 #### The IColumnsRowset Interface  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client adds the following [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-specific columns to the rowset returned by the **IColumnRowset::GetColumnsRowset** method. These columns contain the three-part name of an XML schema collection. For non-XML columns or untyped XML columns, all three columns take the default value of NULL.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client adds the following [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-specific columns to the rowset returned by the **IColumnRowset::GetColumnsRowset** method. These columns contain the three-part name of an XML schema collection. For non-XML columns or untyped XML columns, all three columns take the default value of NULL.  
   
 |Column name|Type|Description|  
 |-----------------|----------|-----------------|  
@@ -224,28 +224,28 @@ manager: "jhubbard"
  The **IRowsetFind::FindNextRow** method does not work with the **xml** data type. When **IRowsetFind::FindNextRow** is called and the *hAccessor* argument specifies a column of DBTYPE_XML, DB_E_BADBINDINFO is returned. This occurs regardless of the type of column that is being searched. For any other binding type, the **FindNextRow** fails with DB_E_BADCOMPAREOP if the column to be searched is of the **xml** data type.  
   
 ## SQL Server Native Client ODBC Driver  
- In the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver, a number of changes have been made to various functions to support the **xml** data type.  
+ In the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver, a number of changes have been made to various functions to support the **xml** data type.  
   
 ### SQLColAttribute  
  The [SQLColAttribute](../../../2014/database-engine/dev-guide/sqlcolattribute.md) function has three new field identifiers, including SQL_CA_SS_XML_SCHEMACOLLECTION_CATALOG_NAME, SQL_CA_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME, and SQL_CA_SS _XML_SCHEMACOLLECTION_NAME.  
   
- The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver reports SQL_SS_LENGTH_UNLIMITED for the SQL_DESC_DISPLAY_SIZE and SQL_DESC_LENGTH columns.  
+ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver reports SQL_SS_LENGTH_UNLIMITED for the SQL_DESC_DISPLAY_SIZE and SQL_DESC_LENGTH columns.  
   
 ### SQLColumns  
  The [SQLColumns](../../../2014/database-engine/dev-guide/sqlcolumns.md) function has three new columns including SS_XML_SCHEMACOLLECTION_CATALOG_NAME, SS_XML_SCHEMACOLLECTION_SCHEMA_NAME, and SS_XML_SCHEMACOLLECTION_NAME. The existing TYPE_NAME column is used to indicate the name of the XML type, and the DATA_TYPE for a XML type column or parameter is SQL_SS_XML.  
   
- The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver reports SQL_SS_LENGTH_UNLIMITED for the COLUMN_SIZE and CHAR_OCTET_LENGTH values.  
+ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver reports SQL_SS_LENGTH_UNLIMITED for the COLUMN_SIZE and CHAR_OCTET_LENGTH values.  
   
 ### SQLDescribeCol  
- The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver reports SQL_SS_LENGTH_UNLIMITED when the column size cannot be determined in the [SQLDescribeCol](../../../2014/database-engine/dev-guide/sqldescribecol.md) function.  
+ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver reports SQL_SS_LENGTH_UNLIMITED when the column size cannot be determined in the [SQLDescribeCol](../../../2014/database-engine/dev-guide/sqldescribecol.md) function.  
   
 ### SQLGetTypeInfo  
- The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver reports SQL_SS_LENGTH_UNLIMITED as the maximum COLUMN_SIZE for the **xml** data type in the [SQLGetTypeInfo](../../../2014/database-engine/dev-guide/sqlgettypeinfo.md) function.  
+ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver reports SQL_SS_LENGTH_UNLIMITED as the maximum COLUMN_SIZE for the **xml** data type in the [SQLGetTypeInfo](../../../2014/database-engine/dev-guide/sqlgettypeinfo.md) function.  
   
 ### SQLProcedureColumns  
  The [SQLProcedureColumns](../../../2014/database-engine/dev-guide/sqlprocedurecolumns.md) function has the same column additions as the **SQLColumns** function.  
   
- The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver reports SQL_SS_LENGTH_UNLIMITED as the maximum COLUMN_SIZE for the **xml** data type.  
+ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver reports SQL_SS_LENGTH_UNLIMITED as the maximum COLUMN_SIZE for the **xml** data type.  
   
 ### Supported Conversions  
  When converting from SQL to C data types, SQL_C_WCHAR, SQL_C_BINARY, and SQL_C_CHAR can all be converted to SQL_SS_XML, with the following stipulations:  
@@ -264,7 +264,7 @@ manager: "jhubbard"
   
 -   SQL_C_CHAR: The data is converted to UTF-16 on the client and sent to the server just as SQL_C_WCHAR (including the addition of a BOM). If the XML is not encoded in the client code page this can cause data corruption.  
   
- The XML standard requires UTF-16 encoded XML to start with a byte-order mark (BOM), UTF-16 character code 0xFEFF. When working with a SQL_C_BINARY binding, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client does not require or add a BOM, as the encoding is implied by the binding. The intent is to provide simplicity in dealing with other XML processors and storage systems. In this case a BOM should be present with UTF-16 encoded XML, and the application need not be concerned with the actual encoding, because the majority of XML processors (including [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) deduce the encoding by inspecting the first few bytes of the value. XML data received from [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client using SQL_C_BINARY bindings are always encoded in UTF-16 with a BOM and without an embedded encoding declaration.  
+ The XML standard requires UTF-16 encoded XML to start with a byte-order mark (BOM), UTF-16 character code 0xFEFF. When working with a SQL_C_BINARY binding, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client does not require or add a BOM, as the encoding is implied by the binding. The intent is to provide simplicity in dealing with other XML processors and storage systems. In this case a BOM should be present with UTF-16 encoded XML, and the application need not be concerned with the actual encoding, because the majority of XML processors (including [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) deduce the encoding by inspecting the first few bytes of the value. XML data received from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client using SQL_C_BINARY bindings are always encoded in UTF-16 with a BOM and without an embedded encoding declaration.  
   
 ## See Also  
  [SQL Server Native Client Features](../../../2014/database-engine/dev-guide/sql-server-native-client-features.md)   

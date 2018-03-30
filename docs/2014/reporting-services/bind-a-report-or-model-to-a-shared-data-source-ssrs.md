@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 23cc15f2-2883-48e2-bc6c-fa0ab61a2e21
 caps.latest.revision: 10
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Bind a Report or Model to a Shared Data Source (SSRS)
@@ -58,7 +58,7 @@ manager: "mblythe"
   
 8.  Select the data source and **click OK**.  
   
-9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 10. Click **Close**.  
   

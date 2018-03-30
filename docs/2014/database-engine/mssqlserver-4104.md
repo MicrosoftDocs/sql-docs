@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 52dc32d8-97ad-4ef0-834d-2e68f215d007
 caps.latest.revision: 16
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_4104
@@ -31,7 +31,7 @@ manager: "jhubbard"
 |Message Text|The multi-part identifier "%.*ls" could not be bound.|  
   
 ## Explanation  
- The name of an entity in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is referred to as its *identifier*. You use identifiers whenever you reference entities, for example, by specifying column and table names in a query. A multi-part identifier contains one or more qualifiers as a prefix for the identifier. For example, a table identifier may be prefixed with qualifiers such as the database name and schema name in which the table is contained, or a column identifier may be prefixed with qualifiers such as a table name or table alias.  
+ The name of an entity in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is referred to as its *identifier*. You use identifiers whenever you reference entities, for example, by specifying column and table names in a query. A multi-part identifier contains one or more qualifiers as a prefix for the identifier. For example, a table identifier may be prefixed with qualifiers such as the database name and schema name in which the table is contained, or a column identifier may be prefixed with qualifiers such as a table name or table alias.  
   
  Error 4104 indicates that the specified multi-part identifier could not be mapped to an existing entity. This error can be returned under the following conditions:  
   
@@ -61,7 +61,7 @@ manager: "jhubbard"
   
      When an alias is used, the table name cannot be used elsewhere in the statement.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is unable to determine if the multi-part identifier refers to a column prefixed by a table or to a property of a CLR user-defined data type (UDT) prefixed by a column. This happens because properties of UDT columns are referenced by using the period separator (.) between the column name and the property name in the same way that a column name is prefixed with a table name. The following example creates two tables, `a` and `b`. Table `b` contains column `a`, which uses a CLR UDT `dbo.myudt2` as its data type. The SELECT statement contains a multi-part identifier `a.c2`.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is unable to determine if the multi-part identifier refers to a column prefixed by a table or to a property of a CLR user-defined data type (UDT) prefixed by a column. This happens because properties of UDT columns are referenced by using the period separator (.) between the column name and the property name in the same way that a column name is prefixed with a table name. The following example creates two tables, `a` and `b`. Table `b` contains column `a`, which uses a CLR UDT `dbo.myudt2` as its data type. The SELECT statement contains a multi-part identifier `a.c2`.  
   
     ```  
     CREATE TABLE a (c2 int);   
@@ -77,7 +77,7 @@ manager: "jhubbard"
     SELECT a.c2 FROM a, b;   
     ```  
   
-     Assuming that the UDT `myudt2` does not have a property named `c2`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot determine whether identifier `a.c2`refers to column `c2` in table `a` or to the column `a`, property `c2` in table `b`.  
+     Assuming that the UDT `myudt2` does not have a property named `c2`, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cannot determine whether identifier `a.c2`refers to column `c2` in table `a` or to the column `a`, property `c2` in table `b`.  
   
 ## User Action  
   

@@ -58,7 +58,7 @@ manager: "mblythe"
 |Child elements|None|  
   
 ## Remarks  
- The `Security` element determines whether the security definitions, such as roles and permissions, defined on a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] database are backed up or restored during, respectively, a `Backup` or `Restore` command. This element also determines if the Windows user accounts and groups defined as members of the security definitions are included as part of the `Backup` or `Restore` command.  
+ The `Security` element determines whether the security definitions, such as roles and permissions, defined on a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database are backed up or restored during, respectively, a `Backup` or `Restore` command. This element also determines if the Windows user accounts and groups defined as members of the security definitions are included as part of the `Backup` or `Restore` command.  
   
  The value of this element is limited to one of the strings listed in the following table.  
   

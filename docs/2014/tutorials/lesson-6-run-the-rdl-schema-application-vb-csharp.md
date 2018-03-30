@@ -12,11 +12,11 @@ ms.topic: "article"
 ms.assetid: a2cd2386-2df8-4b69-ab81-9ad1a31f6d27
 caps.latest.revision: 15
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Lesson 6: Run the RDL Schema Application (VB-C#)
-  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] offers two methods to build and run a console application from the integrated development environment (IDE):  
+  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] offers two methods to build and run a console application from the integrated development environment (IDE):  
   
 -   Start (with Debugging)  
   

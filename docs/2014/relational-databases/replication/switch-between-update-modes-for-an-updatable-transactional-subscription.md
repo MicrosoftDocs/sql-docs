@@ -16,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: ab5ebab1-7ee4-41f4-999b-b4f0c420c921
 caps.latest.revision: 37
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Switch Between Update Modes for an Updatable Transactional Subscription
-  This topic describes how to switch between update modes for an updatable transaction subscription in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Specify the mode for updatable subscriptions using the New Subscription Wizard. For information about setting the mode when using this wizard, see [View and Modify Pull Subscription Properties](../../../2014/relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
+  This topic describes how to switch between update modes for an updatable transaction subscription in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Specify the mode for updatable subscriptions using the New Subscription Wizard. For information about setting the mode when using this wizard, see [View and Modify Pull Subscription Properties](../../../2014/relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
   
   
   
@@ -41,7 +41,7 @@ manager: "jhubbard"
   
 #### To set the updating mode for a push subscription  
   
-1.  Connect to the Subscriber in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], and then expand the server node.  
+1.  Connect to the Subscriber in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], and then expand the server node.  
   
 2.  Expand the **Replication** folder, and then expand the **Local Subscriptions** folder.  
   
@@ -49,13 +49,13 @@ manager: "jhubbard"
   
 4.  In the **Set Update Method - \<Subscriber>: \<SubscriptionDatabase>** dialog box, select **Immediate updating** or **Queued updating**.  
   
-5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 #### To set the updating mode for a pull subscription  
   
 1.  In the **Subscription Properties - \<Publisher>: \<PublicationDatabase>** dialog box, select a value of **Immediately replicate changes** or **Queue changes** for the **Subscriber update method** option.  
   
-2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
  For more information about accessing the **Subscription Properties - \<Publisher>: \<PublicationDatabase>** dialog box, see [View and Modify Pull Subscription Properties](../../../2014/relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
   
@@ -63,9 +63,9 @@ manager: "jhubbard"
   
 #### To switch between update modes  
   
-1.  Verify that the subscription supports failover by executing [sp_helppullsubscription](../Topic/sp_helppullsubscription%20\(Transact-SQL\).md) for a pull subscription or [sp_helpsubscription](../Topic/sp_helpsubscription%20\(Transact-SQL\).md) for a push subscription. If the value of **update mode** in the result set is **3** or **4**, failover is supported.  
+1.  Verify that the subscription supports failover by executing [sp_helppullsubscription](~/relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md) for a pull subscription or [sp_helpsubscription](~/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md) for a push subscription. If the value of **update mode** in the result set is **3** or **4**, failover is supported.  
   
-2.  At the Subscriber on the subscription database, execute [sp_setreplfailovermode](../Topic/sp_setreplfailovermode%20\(Transact-SQL\).md). Specify **@publisher**, **@publisher_db**, **@publication**, and one of the following values for **@failover_mode**:  
+2.  At the Subscriber on the subscription database, execute [sp_setreplfailovermode](~/relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md). Specify **@publisher**, **@publisher_db**, **@publication**, and one of the following values for **@failover_mode**:  
   
     -   **queued** - fail over to queued updating when connectivity has been temporarily lost.  
   

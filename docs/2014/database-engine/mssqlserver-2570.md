@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 29800aa9-81aa-4371-992c-487dbb617f46
 caps.latest.revision: 20
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_2570
@@ -37,7 +37,7 @@ manager: "jhubbard"
  The error is not repairable. Update the column to a value within the range for the data type of the column and run the command again.  For more information, see this KB article [923247](http://support.microsoft.com/kb/923247).  
   
 ## See Also  
- [UPDATE &#40;Transact-SQL&#41;](../Topic/UPDATE%20\(Transact-SQL\).md)   
- [Data Types &#40;Transact-SQL&#41;](../Topic/Data%20Types%20\(Transact-SQL\).md)  
+ [UPDATE &#40;Transact-SQL&#41;](~/t-sql/queries/update-transact-sql.md)   
+ [Data Types &#40;Transact-SQL&#41;](~/t-sql/data-types/data-types-transact-sql.md)  
   
   

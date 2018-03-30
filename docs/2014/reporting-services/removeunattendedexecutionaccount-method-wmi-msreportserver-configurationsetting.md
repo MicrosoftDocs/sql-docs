@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: 77e371c1-7c26-44f9-9119-7c8dc838db32
 caps.latest.revision: 18
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # RemoveUnattendedExecutionAccount Method (WMI MSReportServer_ConfigurationSetting)
@@ -44,7 +44,7 @@ public void RemoveUnattendedExecutionAccount (out Int32 HRESULT);
  Returns an *HRESULT* indicating success or failure of the method call. A value of 0 indicates that the method call was successful. A non-zero value indicates that an error has occurred.  
   
 ## Requirements  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../includes/ssrswminmspca-md.md)]  
   
 ## See Also  
  [MSReportServer_ConfigurationSetting Members](../../2014/reporting-services/msreportserver-configurationsetting-members.md)  

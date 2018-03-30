@@ -22,7 +22,7 @@ manager: "jhubbard"
   
 ## Defining the Drillthrough Action Properties  
   
-1.  In Cube Designer for the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Tutorial cube, click the **Actions** tab.  
+1.  In Cube Designer for the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial cube, click the **Actions** tab.  
   
      The **Actions** tab includes several panes. On the left side of the tab are the **Action Organizer** pane and the **Calculation Tools** pane. The pane to the right of these two panes is the **Display** pane, which contains the details of the action that is selected in the **Action Organizer** pane.  
   
@@ -62,7 +62,7 @@ manager: "jhubbard"
   
 1.  On the **Build** menu, click **Deploy Analysis Services Tutorial**.  
   
-2.  When deployment has successfully completed, click the **Browser** tab in Cube Designer for the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Tutorial cube, and then click the **Reconnect** button.  
+2.  When deployment has successfully completed, click the **Browser** tab in Cube Designer for the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial cube, and then click the **Reconnect** button.  
   
 3.  Start Excel.  
   
@@ -72,7 +72,7 @@ manager: "jhubbard"
   
 6.  On the PivotTable, in **Customer Geography**, add a filter that selects a single customer. Expand **All Customers**, expand **Australia**, expand **Queensland**, expand **Brisbane**, expand **4000**, select the check box for **Adam Powell**, and then click **OK**.  
   
-     The total sales of products by [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] to Adam Powell are displayed in the data area.  
+     The total sales of products by [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] to Adam Powell are displayed in the data area.  
   
 7.  Right-click on the sales amount, point to **Additional Actions**, and then click **Drillthrough to Order Details**.  
   
@@ -102,13 +102,13 @@ manager: "jhubbard"
   
     -   ShipDateKey  
   
-6.  Change the **Name** property for the **Order Date Key** attribute to `Order Date` Then, click the browse button for the **Name Column** property, and in the **Name Column** dialog box, select **Date** as the source table and select SimpleDate as the source column. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  Change the **Name** property for the **Order Date Key** attribute to `Order Date` Then, click the browse button for the **Name Column** property, and in the **Name Column** dialog box, select **Date** as the source table and select SimpleDate as the source column. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 7.  Change the **Name** property for the **Due Date Key** attribute to `Due Date`, and then, by using the same method as the **Order Date Key** attribute, change the **Name Column** property for this attribute to **Date.SimpleDate (WChar)**.  
   
 8.  Change the **Name** property for the **Ship Date Key** attribute to `Ship Date`, and then change the **Name Column** property for this attribute to **Date.SimpleDate (WChar)**.  
   
-9. Switch to the **Actions** tab of Cube Designer for the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Tutorial cube.  
+9. Switch to the **Actions** tab of Cube Designer for the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial cube.  
   
 10. In the **Drillthrough Columns** box, select the check boxes to add the following columns to the **Return Columns** list, and then click **OK**:  
   
@@ -126,7 +126,7 @@ manager: "jhubbard"
   
 1.  On the **Build** menu, click **Deploy Analysis Services Tutorial**.  
   
-2.  When deployment has successfully completed, switch to the **Browser** tab in Cube Designer for the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Tutorial cube, and then click the **Reconnect** button.  
+2.  When deployment has successfully completed, switch to the **Browser** tab in Cube Designer for the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial cube, and then click the **Reconnect** button.  
   
 3.  Start Excel.  
   

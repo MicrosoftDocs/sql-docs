@@ -28,10 +28,10 @@ manager: "jhubbard"
   
 1.  From the **Start** menu, click **Control Panel**, and then double-click **Add or Remove Programs**.  
   
-     Select [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] in the **Uninstall or change a program** window, and then in the [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] dialog box, click **Remove**.  
+     Select [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] in the **Uninstall or change a program** window, and then in the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dialog box, click **Remove**.  
   
-2.  Follow the steps in the [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] wizard, and on the **Select Features** page, select the Distributed Replay components you want to remove, and then click **Next.**.  
+2.  Follow the steps in the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] wizard, and on the **Select Features** page, select the Distributed Replay components you want to remove, and then click **Next.**.  
   
-3.  Complete the [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Installation Wizard to uninstall the selected Distributed Replay features.  
+3.  Complete the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Installation Wizard to uninstall the selected Distributed Replay features.  
   
   

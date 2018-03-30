@@ -29,7 +29,7 @@ manager: "jhubbard"
 # srv_rpcoptions (Extended Stored Procedure API)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
   
  Returns run-time options for the current remote stored procedure.  
   
@@ -55,7 +55,7 @@ srvproc
   
 |Run-time flag|Description|  
 |--------------------|-----------------|  
-|SRV_NOMETADATA|The client has requested results without metadata information. This flag is only used when the client is communicating with an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. An Extended Stored Procedure API application cannot omit metadata information.|  
+|SRV_NOMETADATA|The client has requested results without metadata information. This flag is only used when the client is communicating with an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. An Extended Stored Procedure API application cannot omit metadata information.|  
 |SRV_RECOMPILE|The client has requested to recompile the remote stored procedure before executing it. This flag may not apply to an Extended Stored Procedure API application.|  
   
 > [!IMPORTANT]  

@@ -35,7 +35,7 @@ helpviewer_keywords:
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
 caps.latest.revision: 58
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # XML Indexes (SQL Server)
@@ -73,9 +73,9 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
  If querying XML binary large objects (BLOBs) is common in your application environment, it helps to index the `xml` type columns. However, there is a cost associated with maintaining the index during data modification.  
   
 ## Primary XML Index  
- The primary XML index indexes all tags, values, and paths within the XML instances in an XML column. To create a primary XML index, the table in which the XML column occurs must have a clustered index on the primary key of the table. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses this primary key to correlate rows in the primary XML index with rows in the table that contains the XML column.  
+ The primary XML index indexes all tags, values, and paths within the XML instances in an XML column. To create a primary XML index, the table in which the XML column occurs must have a clustered index on the primary key of the table. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses this primary key to correlate rows in the primary XML index with rows in the table that contains the XML column.  
   
- The primary XML index is a shredded and persisted representation of the XML BLOBs in the `xml` data type column. For each XML binary large object (BLOB) in the column, the index creates several rows of data. The number of rows in the index is approximately equal to the number of nodes in the XML binary large object. When a query retrieves the full XML instance, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the instance from the XML column. Queries within XML instances use the primary XML index, and can return scalar values or XML subtrees by using the index itself.  
+ The primary XML index is a shredded and persisted representation of the XML BLOBs in the `xml` data type column. For each XML binary large object (BLOB) in the column, the index creates several rows of data. The number of rows in the index is approximately equal to the number of nodes in the XML binary large object. When a query retrieves the full XML instance, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provides the instance from the XML column. Queries within XML instances use the primary XML index, and can return scalar values or XML subtrees by using the index itself.  
   
  Each row stores the following node information:  
   
@@ -99,7 +99,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   `/Book/*/Title` where the wildcard character (`*`) is specified in the middle of the expression.  
   
- The query processor uses the primary XML index for queries that involve [xml Data Type Methods](../Topic/xml%20Data%20Type%20Methods.md) and returns either scalar values or the XML subtrees from the primary index itself. (This index stores all the necessary information to reconstruct the XML instance.)  
+ The query processor uses the primary XML index for queries that involve [xml Data Type Methods](~/t-sql/xml/xml-data-type-methods.md) and returns either scalar values or the XML subtrees from the primary index itself. (This index stores all the necessary information to reconstruct the XML instance.)  
   
  For example, the following query returns summary information stored in the `CatalogDescription``xml` type column in the `ProductModel` table. The query returns <`Summary`> information only for product models whose catalog description also stores the <`Features`> description.  
   
@@ -196,23 +196,23 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- Except for the differences described later in this topic, creating an XML index on an`xml` type column is similar to creating an index on a non-`xml` type column. The following [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL statements can be used to create and manage XML indexes:  
+ Except for the differences described later in this topic, creating an XML index on an`xml` type column is similar to creating an index on a non-`xml` type column. The following [!INCLUDE[tsql](../includes/tsql-md.md)] DDL statements can be used to create and manage XML indexes:  
   
--   [CREATE INDEX &#40;Transact-SQL&#41;](../Topic/CREATE%20INDEX%20\(Transact-SQL\).md)  
+-   [CREATE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md)  
   
--   [ALTER INDEX &#40;Transact-SQL&#41;](../Topic/ALTER%20INDEX%20\(Transact-SQL\).md)  
+-   [ALTER INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-index-transact-sql.md)  
   
--   [DROP INDEX &#40;Transact-SQL&#41;](../Topic/DROP%20INDEX%20\(Transact-SQL\).md)  
+-   [DROP INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/drop-index-transact-sql.md)  
   
 ## Getting Information about XML Indexes  
  XML index entries appear in the catalog view, sys.indexes, with the index "type" 3. The name column contains the name of the XML index.  
   
  XML indexes are also recorded in the catalog view, sys.xml_indexes. This contains all the columns of sys.indexes and some specific ones that are useful for XML indexes. The value NULL in the column, secondary_type, indicates a primary XML index; the values 'P', 'R' and 'V' stand for PATH, PROPERTY, and VALUE secondary XML indexes, respectively.  
   
- The space use of XML indexes can be found in the table-valued function [sys.dm_db_index_physical_stats](../Topic/sys.dm_db_index_physical_stats%20\(Transact-SQL\).md). It provides information, such as the number of disk pages occupied, average row size in bytes, and number of records, for all index types.. This also includes XML indexes. This information is available for each database partition. XML indexes use the same partitioning scheme and partitioning function of the base table.  
+ The space use of XML indexes can be found in the table-valued function [sys.dm_db_index_physical_stats](~/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md). It provides information, such as the number of disk pages occupied, average row size in bytes, and number of records, for all index types.. This also includes XML indexes. This information is available for each database partition. XML indexes use the same partitioning scheme and partitioning function of the base table.  
   
 ## See Also  
- [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../Topic/sys.dm_db_index_physical_stats%20\(Transact-SQL\).md)   
+ [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   
  [XML Data &#40;SQL Server&#41;](../../2014/database-engine/xml-data-sql-server.md)  
   
   

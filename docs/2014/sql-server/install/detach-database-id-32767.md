@@ -18,13 +18,13 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Detach database ID 32767
-  Upgrade Advisor detected a database with the database ID 32767. In [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and later, this database ID is reserved. Detach the database before upgrading. You can attach the database after upgrading.  
+  Upgrade Advisor detected a database with the database ID 32767. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later, this database ID is reserved. Detach the database before upgrading. You can attach the database after upgrading.  
   
 ## Component  
- [!INCLUDE[ssDE](../../../includes/ssde-md.md)]  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## See Also  
  [Database Engine Upgrade Issues](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;new&#93;](../Topic/SQL%20Server%202014%20Upgrade%20Advisor%20[new].md)  
+ [SQL Server 2014 Upgrade Advisor &#91;new&#93;](~/2014/sql-server/install/sql-server-2014-upgrade-advisor.md)  
   
   

@@ -25,7 +25,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Restore Pages (SQL Server)
-  This topic describes how to restore pages in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The goal of a page restore is to restore one or more damaged pages without restoring the whole database. Typically, pages that are candidates for restore have been marked as "suspect" because of an error that is encountered when accessing the page. Suspect pages are identified in the [suspect_pages](../Topic/suspect_pages%20\(Transact-SQL\).md) table in the **msdb** database.  
+  This topic describes how to restore pages in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)]. The goal of a page restore is to restore one or more damaged pages without restoring the whole database. Typically, pages that are candidates for restore have been marked as "suspect" because of an error that is encountered when accessing the page. Suspect pages are identified in the [suspect_pages](~/relational-databases/system-tables/suspect-pages-transact-sql.md) table in the **msdb** database.  
   
  **In This Topic**  
   
@@ -50,11 +50,11 @@ manager: "jhubbard"
 ###  <a name="WhenUseful"></a> When is a Page Restore Useful?  
  A page restore is intended for repairing isolated damaged pages. Restoring and recovering a few individual pages might be faster than a file restore, reducing the amount of data that is offline during a restore operation. However, if you have to restore more than a few pages in a file, it is generally more efficient to restore the whole file. For example, if lots of pages on a device indicate a pending device failure, consider restoring the file, possibly to another location, and repairing the device.  
   
- Furthermore, not all page errors require a restore. A problem can occur in cached data, such as a secondary index, that can be resolved by recalculating the data. For example, if the database administrator drops a secondary index and rebuilds it, the corrupted data, although fixed, is not indicated as such in the [suspect_pages](../Topic/suspect_pages%20\(Transact-SQL\).md) table.  
+ Furthermore, not all page errors require a restore. A problem can occur in cached data, such as a secondary index, that can be resolved by recalculating the data. For example, if the database administrator drops a secondary index and rebuilds it, the corrupted data, although fixed, is not indicated as such in the [suspect_pages](~/relational-databases/system-tables/suspect-pages-transact-sql.md) table.  
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
--   Page restore applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases that are using the full or bulk-logged recovery models. Page restore is supported only for read/write filegroups.  
+-   Page restore applies to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] databases that are using the full or bulk-logged recovery models. Page restore is supported only for read/write filegroups.  
   
 -   Only database pages can be restored. Page restore cannot be used to restore the following:  
   
@@ -83,10 +83,10 @@ manager: "jhubbard"
 -   Page restore scenarios:  
   
      Offline page restore  
-     All editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] support restoring pages when the database is offline. In an offline page restore, the database is offline while damaged pages are restored. At the end of the restore sequence, the database comes online.  
+     All editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] support restoring pages when the database is offline. In an offline page restore, the database is offline while damaged pages are restored. At the end of the restore sequence, the database comes online.  
   
      Online page restore  
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition supports online page restores, though they use offline restore if the database is currently offline. In most cases, a damaged page can be restored while the database remains online, including the filegroup to which a page is being restored. When the primary filegroup is online, even if one or more of its secondary filegroups are offline, page restores are usually performed online. Occasionally, however, a damaged page can require an offline restore. For example, damage to certain critical pages might prevent the database from starting.  
+     [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise edition supports online page restores, though they use offline restore if the database is currently offline. In most cases, a damaged page can be restored while the database remains online, including the filegroup to which a page is being restored. When the primary filegroup is online, even if one or more of its secondary filegroups are offline, page restores are usually performed online. Occasionally, however, a damaged page can require an offline restore. For example, damage to certain critical pages might prevent the database from starting.  
   
     > [!WARNING]  
     >  If damaged pages are storing critical database metadata, required updates to metadata might fail during an online page restore attempt. In this case, you can perform an offline page restore, but first you must create a [tail log backup](../../2014/database-engine/tail-log-backups-sql-server.md) (by backing up the transaction log using RESTORE WITH NORECOVERY).  
@@ -103,11 +103,11 @@ manager: "jhubbard"
  RESTORE permissions are given to roles in which membership information is always readily available to the server. Because fixed database role membership can be checked only when the database is accessible and undamaged, which is not always the case when RESTORE is executed, members of the **db_owner** fixed database role do not have RESTORE permissions.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
- Starting in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] supports page restores.  
+ Starting in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] supports page restores.  
   
 #### To restore pages  
   
-1.  Connect to the appropriate instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in Object Explorer, click the server name to expand the server tree.  
+1.  Connect to the appropriate instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], in Object Explorer, click the server name to expand the server tree.  
   
 2.  Expand **Databases**. Depending on the database, either select a user database or expand **System Databases**, and then select a system database.  
   
@@ -120,7 +120,7 @@ manager: "jhubbard"
      Specifies the database to restore. You can enter a new database or select an existing database from the drop-down list. The list includes all databases on the server, except the system databases **master** and **tempdb**.  
   
     > [!WARNING]  
-    >  To restore a password-protected backup, you must use the [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) statement.  
+    >  To restore a password-protected backup, you must use the [RESTORE](~/t-sql/statements/restore-statements-transact-sql.md) statement.  
   
      **Tail-Log backup**  
      Enter or select a file name in **Backup device** where there tail-log backup will be stored for the database.  
@@ -133,7 +133,7 @@ manager: "jhubbard"
     |**Name**|The name of the backup set.|  
     |**Component**|The backed-up component: **Database**, **File**, or **\<blank>** (for transaction logs).|  
     |**Type**|The type of backup performed: **Full**, **Differential**, or **Transaction Log**.|  
-    |**Server**|The name of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance that performed the backup operation.|  
+    |**Server**|The name of the [!INCLUDE[ssDE](../includes/ssde-md.md)] instance that performed the backup operation.|  
     |**Database**|The name of the database involved in the backup operation.|  
     |**Position**|The position of the backup set in the volume.|  
     |**First LSN**|The log sequence number (LSN) of the first transaction in the backup set. Blank for file backups.|  
@@ -153,9 +153,9 @@ manager: "jhubbard"
     > [!WARNING]  
     >  To restore specific pages that are not corrupted, click **Add** and enter the **File ID** and **Page ID** of the pages to be restored.  
   
-5.  The pages grid is used to identify the pages to be restored. Initially, this grid is populated from the [suspect_pages](../Topic/suspect_pages%20\(Transact-SQL\).md) system table. To add or remove pages from the grid, click **Add** or **Remove**. For more information, see [Manage the suspect_pages Table &#40;SQL Server&#41;](../../2014/database-engine/manage-the-suspect-pages-table-sql-server.md).  
+5.  The pages grid is used to identify the pages to be restored. Initially, this grid is populated from the [suspect_pages](~/relational-databases/system-tables/suspect-pages-transact-sql.md) system table. To add or remove pages from the grid, click **Add** or **Remove**. For more information, see [Manage the suspect_pages Table &#40;SQL Server&#41;](../../2014/database-engine/manage-the-suspect-pages-table-sql-server.md).  
   
-6.  The **Backup sets** grid lists the backup sets in the default restore plan. Optionally, click **Verify** to verify that the backups are readable and that the backup sets are complete, without restoring them. For more information, see [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md).  
+6.  The **Backup sets** grid lists the backup sets in the default restore plan. Optionally, click **Verify** to verify that the backups are readable and that the backup sets are complete, without restoring them. For more information, see [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
      **Pages**  
   
@@ -172,7 +172,7 @@ manager: "jhubbard"
   
  `WITH NORECOVERY`  
   
- For more information about the parameters of the PAGE option, see [RESTORE Arguments &#40;Transact-SQL&#41;](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md). For more information about the RESTORE DATABASE syntax, see [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md).  
+ For more information about the parameters of the PAGE option, see [RESTORE Arguments &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-arguments-transact-sql.md). For more information about the RESTORE DATABASE syntax, see [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md).  
   
 #### To restore pages  
   
@@ -183,7 +183,7 @@ manager: "jhubbard"
     |**msdb..suspect_pages**|[Manage the suspect_pages Table &#40;SQL Server&#41;](../../2014/database-engine/manage-the-suspect-pages-table-sql-server.md)|  
     |Error log|[View the SQL Server Error Log &#40;SQL Server Management Studio&#41;](../../2014/database-engine/view-the-sql-server-error-log-sql-server-management-studio.md)|  
     |Event traces|[Monitor and Respond to Events](../../2014/database-engine/monitor-and-respond-to-events.md)|  
-    |DBCC|[DBCC &#40;Transact-SQL&#41;](../Topic/DBCC%20\(Transact-SQL\).md)|  
+    |DBCC|[DBCC &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-transact-sql.md)|  
     |WMI provider|[WMI Provider for Server Events Concepts](../../2014/database-engine/dev-guide/wmi-provider-for-server-events-concepts.md)|  
   
 2.  Start a page restore with a full database, file, or filegroup backup that contains the page. In the RESTORE DATABASE statement, use the PAGE clause to list the page IDs of all of the pages to be restored.  
@@ -192,7 +192,7 @@ manager: "jhubbard"
   
 4.  Apply the subsequent log backups.  
   
-5.  Create a new log backup of the database that includes the final LSN of the restored pages, that is, the point at which the last restored page is taken offline. The final LSN, which is set as part of the first restore in the sequence, is the redo target LSN. Online roll forward of the file containing the page is able to stop at the redo target LSN. To learn the current redo target LSN of a file, see the **redo_target_lsn** column of **sys.master_files**. For more information, see [sys.master_files &#40;Transact-SQL&#41;](../Topic/sys.master_files%20\(Transact-SQL\).md).  
+5.  Create a new log backup of the database that includes the final LSN of the restored pages, that is, the point at which the last restored page is taken offline. The final LSN, which is set as part of the first restore in the sequence, is the redo target LSN. Online roll forward of the file containing the page is able to stop at the redo target LSN. To learn the current redo target LSN of a file, see the **redo_target_lsn** column of **sys.master_files**. For more information, see [sys.master_files &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-master-files-transact-sql.md).  
   
 6.  Restore the new log backup. After this new log backup is applied, the page restore is completed and the pages are now usable.  
   
@@ -216,7 +216,7 @@ GO
 ```  
   
 ## See Also  
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)   
  [Apply Transaction Log Backups &#40;SQL Server&#41;](../../2014/database-engine/apply-transaction-log-backups-sql-server.md)   
  [Manage the suspect_pages Table &#40;SQL Server&#41;](../../2014/database-engine/manage-the-suspect-pages-table-sql-server.md)   
  [Back Up and Restore of SQL Server Databases](../../2014/database-engine/back-up-and-restore-of-sql-server-databases.md)  

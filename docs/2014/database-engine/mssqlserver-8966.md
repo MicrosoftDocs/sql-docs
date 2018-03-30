@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 6b1150fd-9dfd-4df9-8f08-8eca237667db
 caps.latest.revision: 17
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_8966
@@ -31,7 +31,7 @@ manager: "jhubbard"
 |Message Text|Unable to read and latch page P_ID with latch type TYPE. OPERATION failed.|  
   
 ## Explanation  
- The page read failed or a latch could not be taken on a PFS or GAM page. There may be latch time-out or other accompanying messages in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log.  
+ The page read failed or a latch could not be taken on a PFS or GAM page. There may be latch time-out or other accompanying messages in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] error log.  
   
 ## User Action  
  Review the SQL error log for accompanying messages and resolve these errors.  

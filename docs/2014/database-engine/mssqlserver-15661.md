@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 88b01bfb-74ce-4aa0-aec0-7885261c7ef3
 caps.latest.revision: 12
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_15661

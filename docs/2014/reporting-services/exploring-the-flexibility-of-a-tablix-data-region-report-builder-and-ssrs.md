@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: fef19359-a618-4d21-a7e4-e391cdefd4eb
 caps.latest.revision: 4
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Exploring the Flexibility of a Tablix Data Region (Report Builder and SSRS)
@@ -23,7 +23,7 @@ manager: "mblythe"
  After you change the structure of the tablix data region, you can set properties to help control the way the report renders the data region; for example, you can repeat column headers at the top of every page, or keep a group header with the group. For more information, see [Controlling the Tablix Data Region Display on a Report Page &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/controlling-the-tablix-data-region-display-on-a-report-page.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## Changing a Table to a Matrix  
  By default, a table has detail rows that display the values from the report dataset. Typically, a table includes row groups that organize the detail data by group, and then includes aggregated values based on each group. To change the table to a matrix, add column groups. Typically, you would remove the details group when the data region has both row and column groups so that you can display only the summary values for the groups. For more information, see [Add or Delete a Group in a Data Region &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  

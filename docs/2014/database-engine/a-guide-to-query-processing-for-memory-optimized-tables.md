@@ -16,15 +16,15 @@ ms.author: "sstein"
 manager: "jhubbard"
 ---
 # A Guide to Query Processing for Memory-Optimized Tables
-  In-Memory OLTP introduces memory-optimized tables and natively compiled stored procedures in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This article gives an overview of query processing for both memory-optimized tables and natively compiled stored procedures.  
+  In-Memory OLTP introduces memory-optimized tables and natively compiled stored procedures in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. This article gives an overview of query processing for both memory-optimized tables and natively compiled stored procedures.  
   
  The document explains how queries on memory-optimized tables are compiled and executed, including:  
   
--   The query processing pipeline in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for disk-based tables.  
+-   The query processing pipeline in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] for disk-based tables.  
   
 -   Query optimization; the role of statistics on memory-optimized tables as well as guidelines for troubleshooting bad query plans.  
   
--   The use of interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)] to access memory-optimized tables.  
+-   The use of interpreted [!INCLUDE[tsql](../includes/tsql-md.md)] to access memory-optimized tables.  
   
 -   Considerations about query optimization for memory-optimized table access.  
   
@@ -37,7 +37,7 @@ manager: "jhubbard"
 ## Example Query  
  The following example will be used to illustrate the query processing concepts discussed in this article.  
   
- We consider two tables, Customer and Order. The following [!INCLUDE[tsql](../../includes/tsql-md.md)] script contains the definitions for these two tables and associated indexes, in their (traditional) disk-based form:  
+ We consider two tables, Customer and Order. The following [!INCLUDE[tsql](../includes/tsql-md.md)] script contains the definitions for these two tables and associated indexes, in their (traditional) disk-based form:  
   
 ```tsql  
 CREATE TABLE dbo.[Customer] (  
@@ -66,7 +66,7 @@ GO
 SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
- The estimated execution plan as displayed by [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] is as follows  
+ The estimated execution plan as displayed by [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] is as follows  
   
  ![Query plan for join of disk-based tables.](../../2014/database-engine/media/hekaton-query-plan-1.gif "Query plan for join of disk-based tables.")  
 Query plan for join of disk-based tables.  
@@ -92,8 +92,8 @@ Query plan for a hash join of disk-based tables.
   
  In this query, rows from the Order table are retrieved using the clustered index. The `Hash Match` physical operator is now used for the `Inner Join`. The clustered index on Order is not sorted on CustomerID, and so a `Merge Join` would require a sort operator, which would affect performance. Note the relative cost of the `Hash Match` operator (75%) compared with the cost of the `Merge Join` operator in the previous example (46%). The optimizer would have considered the `Hash Match` operator also in the previous example, but concluded that the `Merge Join` operator gave better performance.  
   
-## [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Query Processing for Disk-Based Tables  
- The following diagram outlines the query processing flow in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for ad hoc queries:  
+## [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Processing for Disk-Based Tables  
+ The following diagram outlines the query processing flow in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] for ad hoc queries:  
   
  ![SQL Server query processing pipeline.](../../2014/database-engine/media/hekaton-query-plan-3.gif "SQL Server query processing pipeline.")  
 SQL Server query processing pipeline.  
@@ -102,7 +102,7 @@ SQL Server query processing pipeline.
   
 1.  The user issues a query.  
   
-2.  The parser and algebrizer construct a query tree with logical operators based on the [!INCLUDE[tsql](../../includes/tsql-md.md)] text submitted by the user.  
+2.  The parser and algebrizer construct a query tree with logical operators based on the [!INCLUDE[tsql](../includes/tsql-md.md)] text submitted by the user.  
   
 3.  The optimizer creates an optimized query plan containing physical operators (for example, nested-loops join). After optimization, the plan may be stored in the plan cache. This step is bypassed if the plan cache already contains a plan for this query.  
   
@@ -114,10 +114,10 @@ SQL Server query processing pipeline.
   
  For the first example query, the execution engine requests rows in the clustered index on Customer and the non-clustered index on Order from Access Methods. Access Methods traverses the B-tree index structures to retrieve the requested rows. In this case all rows are retrieved as the plan calls for full index scans.  
   
-## Interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)] Access to Memory-Optimized Tables  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc batches and stored procedures are also referred to as interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)]. Interpreted refers to the fact that the query plan is interpreted by the query execution engine for each operator in the query plan. The execution engine reads the operator and its parameters and performs the operation.  
+## Interpreted [!INCLUDE[tsql](../includes/tsql-md.md)] Access to Memory-Optimized Tables  
+ [!INCLUDE[tsql](../includes/tsql-md.md)] ad hoc batches and stored procedures are also referred to as interpreted [!INCLUDE[tsql](../includes/tsql-md.md)]. Interpreted refers to the fact that the query plan is interpreted by the query execution engine for each operator in the query plan. The execution engine reads the operator and its parameters and performs the operation.  
   
- Interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)] can be used to access both memory-optimized and disk-based tables. The following figure illustrates query processing for interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)] access to memory-optimized tables:  
+ Interpreted [!INCLUDE[tsql](../includes/tsql-md.md)] can be used to access both memory-optimized and disk-based tables. The following figure illustrates query processing for interpreted [!INCLUDE[tsql](../includes/tsql-md.md)] access to memory-optimized tables:  
   
  ![Query processing pipeline for interpreted tsql.](../../2014/database-engine/media/hekaton-query-plan-4.gif "Query processing pipeline for interpreted tsql.")  
 Query processing pipeline for interpreted Transact-SQL access to memory-optimized tables.  
@@ -132,7 +132,7 @@ Query processing pipeline for interpreted Transact-SQL access to memory-optimize
   
  The main difference with the traditional query processing pipeline (figure 2) is that rows for memory-optimized tables are not retrieved from the buffer pool using Access Methods. Instead, rows are retrieved from the in-memory data structures through the In-Memory OLTP engine. Differences in data structures cause the optimizer to pick different plans in some cases, as illustrated by the following example.  
   
- The following [!INCLUDE[tsql](../../includes/tsql-md.md)] script contains memory-optimized versions of the Order and Customer tables, using hash indexes:  
+ The following [!INCLUDE[tsql](../includes/tsql-md.md)] script contains memory-optimized versions of the Order and Customer tables, using hash indexes:  
   
 ```tsql  
 CREATE TABLE dbo.[Customer] (  
@@ -171,7 +171,7 @@ Query plan for join of memory-optimized tables.
 -   This plan contains a `Hash Match` rather than a `Merge Join`. The indexes on both the Order and the Customer table are hash indexes, and are thus not ordered. A `Merge Join` would require sort operators that would decrease performance.  
   
 ## Natively Compiled Stored Procedures  
- Natively compiled stored procedures are [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures compiled to machine code, rather than interpreted by the query execution engine. The following script creates a natively compiled stored procedure that runs the example query (from the Example Query section).  
+ Natively compiled stored procedures are [!INCLUDE[tsql](../includes/tsql-md.md)] stored procedures compiled to machine code, rather than interpreted by the query execution engine. The following script creates a natively compiled stored procedure that runs the example query (from the Example Query section).  
   
 ```tsql  
 CREATE PROCEDURE usp_SampleJoin  
@@ -203,9 +203,9 @@ Native compilation of stored procedures.
   
  The process is described as,  
   
-1.  The user issues a `CREATE PROCEDURE` statement to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+1.  The user issues a `CREATE PROCEDURE` statement to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-2.  The parser and algebrizer create the processing flow for the procedure, as well as query trees for the [!INCLUDE[tsql](../../includes/tsql-md.md)] queries in the stored procedure.  
+2.  The parser and algebrizer create the processing flow for the procedure, as well as query trees for the [!INCLUDE[tsql](../includes/tsql-md.md)] queries in the stored procedure.  
   
 3.  The optimizer creates optimized query execution plans for all the queries in the stored procedure.  
   
@@ -232,12 +232,12 @@ Execution of natively compiled stored procedures.
   
  **Parameter sniffing**  
   
- Interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures are compiled at first execution, in contrast to natively compiled stored procedures, which are compiled at create time. When interpreted stored procedures are compiled at invocation, the values of the parameters supplied for this invocation are used by the optimizer when generating the execution plan. This use of parameters during compilation is called parameter sniffing.  
+ Interpreted [!INCLUDE[tsql](../includes/tsql-md.md)] stored procedures are compiled at first execution, in contrast to natively compiled stored procedures, which are compiled at create time. When interpreted stored procedures are compiled at invocation, the values of the parameters supplied for this invocation are used by the optimizer when generating the execution plan. This use of parameters during compilation is called parameter sniffing.  
   
- Parameter sniffing is not used for compiling natively compiled stored procedures. All parameters to the stored procedure are considered to have UNKNOWN values. Like interpreted stored procedures, natively compiled stored procedures also support the `OPTIMIZE FOR` hint. For more information, see [Query Hints &#40;Transact-SQL&#41;](../Topic/Query%20Hints%20\(Transact-SQL\).md).  
+ Parameter sniffing is not used for compiling natively compiled stored procedures. All parameters to the stored procedure are considered to have UNKNOWN values. Like interpreted stored procedures, natively compiled stored procedures also support the `OPTIMIZE FOR` hint. For more information, see [Query Hints &#40;Transact-SQL&#41;](~/t-sql/queries/hints-transact-sql-query.md).  
   
 ### Retrieving a Query Execution Plan for Natively Compiled Stored Procedures  
- The query execution plan for a natively compiled stored procedure can be retrieved using **Estimated Execution Plan** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], or using the SHOWPLAN_XML option in [!INCLUDE[tsql](../../includes/tsql-md.md)]. For example:  
+ The query execution plan for a natively compiled stored procedure can be retrieved using **Estimated Execution Plan** in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], or using the SHOWPLAN_XML option in [!INCLUDE[tsql](../includes/tsql-md.md)]. For example:  
   
 ```tsql  
 SET SHOWPLAN_XML ON  
@@ -248,7 +248,7 @@ SET SHOWPLAN_XML OFF
 GO  
 ```  
   
- The execution plan generated by the query optimizer consists of a tree with query operators on the nodes and leaves of the tree. The structure of the tree determines the interaction (the flow of rows from one operator to another) between the operators. In the graphical view of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], the flow is from right to left. For example, the query plan in figure 1 contains two index scan operators, which supplies rows to a merge join operator. The merge join operator supplies rows to a select operator. The select operator, finally, returns the rows to the client.  
+ The execution plan generated by the query optimizer consists of a tree with query operators on the nodes and leaves of the tree. The structure of the tree determines the interaction (the flow of rows from one operator to another) between the operators. In the graphical view of [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], the flow is from right to left. For example, the query plan in figure 1 contains two index scan operators, which supplies rows to a merge join operator. The merge join operator supplies rows to a select operator. The select operator, finally, returns the rows to the client.  
   
 ### Query Operators in Natively Compiled Stored Procedures  
  The following table summarizes the query operators supported inside natively compiled stored procedures:  
@@ -260,14 +260,14 @@ GO
 |UPDATE|`UPDATE dbo.Customer SET ContactName='ghi' WHERE CustomerID='abc'`|  
 |DELETE|`DELETE dbo.Customer WHERE CustomerID='abc'`|  
 |Compute Scalar|This operator is used both for intrinsic functions and type conversions. Not all functions and type conversions are supported inside natively compiled stored procedures.<br /><br /> `SELECT OrderID+1 FROM dbo.[Order]`|  
-|Nested Loops Join|Nested Loops is the only join operator supported in natively compiled stored procedures. All plans that contain joins will use the Nested Loops operator, even if the plan for same query executed as interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)] contains a hash or merge join.<br /><br /> `SELECT o.OrderID, c.CustomerID`  <br /> `FROM dbo.[Order] o INNER JOIN dbo.[Customer] c`|  
+|Nested Loops Join|Nested Loops is the only join operator supported in natively compiled stored procedures. All plans that contain joins will use the Nested Loops operator, even if the plan for same query executed as interpreted [!INCLUDE[tsql](../includes/tsql-md.md)] contains a hash or merge join.<br /><br /> `SELECT o.OrderID, c.CustomerID`  <br /> `FROM dbo.[Order] o INNER JOIN dbo.[Customer] c`|  
 |Sort|`SELECT ContactName FROM dbo.Customer`  <br /> `ORDER BY ContactName`|  
 |Top|`SELECT TOP 10 ContactName FROM dbo.Customer`|  
 |Top-sort|The `TOP` expression (the number of rows to be returned) cannot exceed 8,000 rows. Fewer if there are also join and aggregation operators in the query. Joins and aggregation do typically reduce the number of rows to be sorted, compared with the row count of the base tables.<br /><br /> `SELECT TOP 10 ContactName FROM dbo.Customer`  <br /> `ORDER BY ContactName`|  
-|Stream Aggregate|Note that the Hash Match operator is not supported for aggregation. Therefore, all aggregation in natively compiled stored procedures uses the Stream Aggregate operator, even if the plan for the same query in interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)] uses the Hash Match operator.<br /><br /> `SELECT count(CustomerID) FROM dbo.Customer`|  
+|Stream Aggregate|Note that the Hash Match operator is not supported for aggregation. Therefore, all aggregation in natively compiled stored procedures uses the Stream Aggregate operator, even if the plan for the same query in interpreted [!INCLUDE[tsql](../includes/tsql-md.md)] uses the Hash Match operator.<br /><br /> `SELECT count(CustomerID) FROM dbo.Customer`|  
   
 ## Column Statistics and Joins  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] maintains statistics on values in index key columns to help estimate the cost of certain operations, such as index scan and index seeks. ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] also creates statistics on non-index key columns if you explicitly create them or if the query optimizer creates them in response to a query with a predicate.) The main metric in cost estimation is the number of rows processed by a single operator. Note that for disk-based tables, the number of pages accessed by a particular operator is significant in cost estimation. However, as page count is not important for memory-optimized tables (it is always zero), this discussion focuses on row count. The estimation starts with the index seek and scan operators in the plan, and is then extended to include the other operators, like the join operator. The estimated number of rows to be processed by a join operator is based on the estimation for the underlying index, seek, and scan operators. For interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)] access to memory-optimized tables, you can observe the actual execution plan to see the difference between the estimated and actual row counts for the operators in the plan.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] maintains statistics on values in index key columns to help estimate the cost of certain operations, such as index scan and index seeks. ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] also creates statistics on non-index key columns if you explicitly create them or if the query optimizer creates them in response to a query with a predicate.) The main metric in cost estimation is the number of rows processed by a single operator. Note that for disk-based tables, the number of pages accessed by a particular operator is significant in cost estimation. However, as page count is not important for memory-optimized tables (it is always zero), this discussion focuses on row count. The estimation starts with the index seek and scan operators in the plan, and is then extended to include the other operators, like the join operator. The estimated number of rows to be processed by a join operator is based on the estimation for the underlying index, seek, and scan operators. For interpreted [!INCLUDE[tsql](../includes/tsql-md.md)] access to memory-optimized tables, you can observe the actual execution plan to see the difference between the estimated and actual row counts for the operators in the plan.  
   
  For the example in figure 1,  
   
@@ -277,7 +277,7 @@ GO
   
 -   The Merge Join operator has estimated 815; actual 830.  
   
- The estimates for the index scans are accurate. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] maintains the row count for disk-based tables. Estimates for full table and index scans are always accurate. The estimate for the join is fairly accurate, too.  
+ The estimates for the index scans are accurate. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] maintains the row count for disk-based tables. Estimates for full table and index scans are always accurate. The estimate for the join is fairly accurate, too.  
   
  If these estimates change, the cost considerations for different plan alternatives change as well. For example, if one of the sides of the join has an estimated row count of 1 or just a few rows, using a nested loops joins is less expensive.  
   
@@ -298,7 +298,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
 -   The full index scan on IX_CustomerID has been replaced with an index seek. This resulted in scanning 5 rows, instead of the 830 rows required for the full index scan.  
   
 ### Statistics and Cardinality for Memory-Optimized Tables  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] maintains column-level statistics for memory-optimized tables. In addition, it maintains the actual row count of the table. However, in contrast to disk-based tables, the statistics for memory-optimized tables are not automatically updated. Therefore, statistics need to be manually updated after significant changes in the tables. For more information, see [Statistics for Memory-Optimized Tables](../../2014/database-engine/statistics-for-memory-optimized-tables.md).  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] maintains column-level statistics for memory-optimized tables. In addition, it maintains the actual row count of the table. However, in contrast to disk-based tables, the statistics for memory-optimized tables are not automatically updated. Therefore, statistics need to be manually updated after significant changes in the tables. For more information, see [Statistics for Memory-Optimized Tables](../../2014/database-engine/statistics-for-memory-optimized-tables.md).  
   
 ## See Also  
  [Memory-Optimized Tables](../../2014/database-engine/memory-optimized-tables.md)  

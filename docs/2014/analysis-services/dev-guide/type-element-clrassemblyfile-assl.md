@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Type Element (ClrAssemblyFile) (ASSL)
-  Specifies the file type of one of the files that belong to a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework assembly.  
+  Specifies the file type of one of the files that belong to a [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework assembly.  
   
 ## Syntax  
   

@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 7f46cbdb-5102-4941-bca2-5e0ff9012c6b
 caps.latest.revision: 37
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Create and Manage Subscriptions for Native Mode Report Servers
@@ -32,7 +32,7 @@ manager: "mblythe"
 ## Disabling Subscriptions  
  To prevent users from creating subscriptions, clear the "Manage individual subscriptions" task from the role. When you remove this task, the Subscription pages are not available. In Report Manager, the My Subscriptions page appears to be empty (it cannot be deleted), even if it previously contained subscriptions. Removing subscription-related tasks prevents users from creating and modifying subscriptions, but does not delete existing subscriptions. Existing subscriptions will continue to execute until you delete them. For more information about deleting subscriptions, see [Create, Modify, and Delete Standard Subscriptions &#40;Reporting Services in Native Mode&#41;](../../2014/reporting-services/create-and-manage-subscriptions-for-native-mode-report-servers.md).  
   
- To disable subscription processing on a report server, you can set the `ScheduleEventsAndReportDeliveryEnabled` property to `False` in the **Surface Area Configuration for Reporting Services** facet of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Policy-Based Management. Doing so will prevent all scheduled operations from running. You cannot turn off just subscription processing on the report server.  
+ To disable subscription processing on a report server, you can set the `ScheduleEventsAndReportDeliveryEnabled` property to `False` in the **Surface Area Configuration for Reporting Services** facet of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Policy-Based Management. Doing so will prevent all scheduled operations from running. You cannot turn off just subscription processing on the report server.  
   
  For instructions on how to cancel subscription that is processing on the report server, see [Manage a Running Process](../../2014/reporting-services/manage-a-running-process.md).  
   

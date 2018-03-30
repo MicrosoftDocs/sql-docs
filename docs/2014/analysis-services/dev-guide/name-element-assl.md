@@ -56,17 +56,17 @@ manager: "mblythe"
 |Child elements|None|  
   
 ## Remarks  
- Every element that is used to define an object (an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], a hierarchy, an attribute, and so on) has a `Name` element as a property. The value of a `Name` element has the following restrictions:  
+ Every element that is used to define an object (an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], a hierarchy, an attribute, and so on) has a `Name` element as a property. The value of a `Name` element has the following restrictions:  
   
--   The value cannot contain leading or trailing spaces. If leading or trailing spaces are included in the value of a `Name` element, those spaces will be implicitly removed by [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+-   The value cannot contain leading or trailing spaces. If leading or trailing spaces are included in the value of a `Name` element, those spaces will be implicitly removed by [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 -   The value should not contain control characters. The presence of control characters in a name is strongly discouraged and can sometimes result in XML validation errors.  
   
-     For objects created using the `GetNewName` method in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], AMO checks for and subsequently removes any control characters, leading spaces, or trailing spaces in the name. For this reason, using `GetNewName` is the recommended approach for setting object names.  
+     For objects created using the `GetNewName` method in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], AMO checks for and subsequently removes any control characters, leading spaces, or trailing spaces in the name. For this reason, using `GetNewName` is the recommended approach for setting object names.  
   
      However, if you set the `Name` property directly, the same validation checks are not performed, possibly resulting in XML validation errors. Whether an error actually occurs depends on which control character appears in the name.  
   
-     Although control characters should never be used in an object name, Analysis Services does not expressly prevent them. Previous releases of Analysis Services sometimes accepted control characters in an object name. For this reason, [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] will ignore control characters in an object name to avoid breaking older solutions.  
+     Although control characters should never be used in an object name, Analysis Services does not expressly prevent them. Previous releases of Analysis Services sometimes accepted control characters in an object name. For this reason, [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] will ignore control characters in an object name to avoid breaking older solutions.  
   
 -   The following reserved values cannot be used:  
   
@@ -88,7 +88,7 @@ manager: "mblythe"
   
 |Parent element|Invalid Characters|  
 |--------------------|------------------------|  
-|[Server](../../../2014/analysis-services/dev-guide/server-element-assl.md)|The name must follow the rules for [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows computer names. IP addresses are not valid.|  
+|[Server](../../../2014/analysis-services/dev-guide/server-element-assl.md)|The name must follow the rules for [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows computer names. IP addresses are not valid.|  
 |[DataSource](../../../2014/analysis-services/dev-guide/datasource-element-assl.md)|:/\\*&#124;?"()[]{}<>|  
 |[Level](../../../2014/analysis-services/dev-guide/level-element-assl.md), [Attribute Element](../../../2014/analysis-services/dev-guide/attribute-element-assl.md)|.,;'`:/\\*&#124;?"&%$!+=[]{}<>|  
 |All other parent elements|.,;'`:/\\*&#124;?"&%$!+=()[]{}<>|  

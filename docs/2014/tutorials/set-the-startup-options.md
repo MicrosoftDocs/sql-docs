@@ -12,11 +12,11 @@ ms.topic: "article"
 ms.assetid: 47dc2b5b-7803-4202-ad53-a431a821ad69
 caps.latest.revision: 26
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Set the Startup Options
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] can be configured to open the design surface to the configuration you prefer when [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] is started. Configuring [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to open in your preferred configuration can save you time.  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] can be configured to open the design surface to the configuration you prefer when [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] is started. Configuring [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] to open in your preferred configuration can save you time.  
   
 ## Configuring Startup Options  
   

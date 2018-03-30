@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # View Collection Set Logs (SQL Server Management Studio)
-  You can view all the collection set logs or individual collection set logs from [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  You can view all the collection set logs or individual collection set logs from [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 ### To view collection set logs  
   

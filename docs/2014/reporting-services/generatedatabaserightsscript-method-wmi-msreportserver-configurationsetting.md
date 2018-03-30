@@ -20,11 +20,11 @@ helpviewer_keywords:
 ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
 caps.latest.revision: 25
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # GenerateDatabaseRightsScript Method (WMI MSReportServer_ConfigurationSetting)
-  Generates a SQL Script that can be used to grant a user rights to the report server database and other databases required for a report server to run. The caller is expected to connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database server and execute the script.  
+  Generates a SQL Script that can be used to grant a user rights to the report server database and other databases required for a report server to run. The caller is expected to connect to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database server and execute the script.  
   
 ## Syntax  
   
@@ -51,10 +51,10 @@ out Int32 HRESULT);
  A Boolean value to indicating whether the database is remote from the report server.  
   
  *IsWindowsUser*  
- A Boolean value indicating whether the specified user name is a Windows user or a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user.  
+ A Boolean value indicating whether the specified user name is a Windows user or a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] user.  
   
  *Script*  
- [out] A string containing the generated [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] script.  
+ [out] A string containing the generated [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] script.  
   
  *HRESULT*  
  [out] Value indicating whether the call succeeded or failed.  
@@ -67,7 +67,7 @@ out Int32 HRESULT);
   
  If *IsWindowsUser* is set to `true`, *UserName* should be in the format \<domain>\\<username\>.  
   
- When *IsWindowsUser* is set to `true`, the generated script grants login rights to the user for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], setting the report server database as the default database, and grants the **RSExec** role on the report server database, the report server temporary database, the master database and the MSDB system database.  
+ When *IsWindowsUser* is set to `true`, the generated script grants login rights to the user for the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], setting the report server database as the default database, and grants the **RSExec** role on the report server database, the report server temporary database, the master database and the MSDB system database.  
   
  When *IsWindowsUser* is set to `true`, the method accepts standard Windows SIDs as input. When a standard Windows SID or service account name is supplied, it is translated to a user name string. If the database is local, the account is translated to the correct localized representation of the account. If the database is remote, the account is represented as the computer’s account.  
   
@@ -84,7 +84,7 @@ out Int32 HRESULT);
 |(S-1-5-19)|Local Service|Error – see below.|  
 |NT AUTHORITY\LocalService|Local Service|Error – see below.|  
   
- On [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)], if you are using a built-in account and the report server database is remote, an error is returned.  
+ On [!INCLUDE[win2kfamily](../includes/win2kfamily-md.md)], if you are using a built-in account and the report server database is remote, an error is returned.  
   
  If the `LocalService` built-in account is specified and the report server database is remote, an error is returned.  
   
@@ -100,18 +100,18 @@ out Int32 HRESULT);
 |\<MachineFQDN>|example.redmond.microsoft.com|  
 |\<IPAddress>|180.012.345,678|  
   
- When *IsWindowsUser* is set to `true`, the WMI provider calls LookupAccountName to get the SID for the account and then calls LookupAccountSID to get the name to put in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] script. This ensures that the account name used will pass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] validation.  
+ When *IsWindowsUser* is set to `true`, the WMI provider calls LookupAccountName to get the SID for the account and then calls LookupAccountSID to get the name to put in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] script. This ensures that the account name used will pass [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] validation.  
   
  When *IsWindowsUser* is set to `false`, the generated script grants the **RSExec** role on the report server database, the report server temporary database, and the MSDB database.  
   
- When *IsWindowsUser* is set to `false`, the SQL Server user must already exist on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for the script to run successfully.  
+ When *IsWindowsUser* is set to `false`, the SQL Server user must already exist on the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] for the script to run successfully.  
   
  If the report server does not have a report server database specified, calling GrantRightsToDatabaseUser returns an error.  
   
- The generated script supports [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005, and [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
+ The generated script supports [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2005, and [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)].  
   
 ## Requirements  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../includes/ssrswminmspca-md.md)]  
   
 ## See Also  
  [MSReportServer_ConfigurationSetting Members](../../2014/reporting-services/msreportserver-configurationsetting-members.md)  

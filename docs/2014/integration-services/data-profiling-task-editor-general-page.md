@@ -30,7 +30,7 @@ manager: "jhubbard"
   
  **To open the General page of the Data Profiling Task Editor**  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package that has the Data Profiling task.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package that has the Data Profiling task.  
   
 2.  On the **Control Flow** tab, double-click the Data Profiling task.  
   
@@ -71,7 +71,7 @@ manager: "jhubbard"
  Display the **Single Table Quick Profile Form**. This form simplifies the task of profiling a single table or view by using default settings. For more information, see [Single Table Quick Profile Form &#40;Data Profiling Task&#41;](../../2014/integration-services/single-table-quick-profile-form-data-profiling-task.md).  
   
  **Open Profile Viewer**  
- Opens the Data Profile Viewer. The stand-alone Data Profile Viewer displays data profile output from the Data Profiling task. You can view the data profile output after you have run the Data Profiling task inside the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package and computed the data profiles.  
+ Opens the Data Profile Viewer. The stand-alone Data Profile Viewer displays data profile output from the Data Profiling task. You can view the data profile output after you have run the Data Profiling task inside the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package and computed the data profiles.  
   
 > [!NOTE]  
 >  You can also open the Data Profile Viewer by running the DataProfileViewer.exe in the folder, *\<drive>*:\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn.  

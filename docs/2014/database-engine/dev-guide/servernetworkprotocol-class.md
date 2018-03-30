@@ -25,7 +25,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # ServerNetworkProtocol Class
-  The [ServerNetworkProtocol Class](../../../2014/database-engine/dev-guide/servernetworkprotocol-class.md) represents network protocols installed on an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that enables communication with clients over a network.  
+  The [ServerNetworkProtocol Class](../../../2014/database-engine/dev-guide/servernetworkprotocol-class.md) represents network protocols installed on an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that enables communication with clients over a network.  
   
  With the [ServerNetworkProtocol Class](../../../2014/database-engine/dev-guide/servernetworkprotocol-class.md), you can:  
   

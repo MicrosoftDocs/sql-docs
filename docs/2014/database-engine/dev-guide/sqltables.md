@@ -27,7 +27,7 @@ manager: "jhubbard"
   
  To report available catalogs, schemas, and table types, SQLTables makes special use of empty strings (zero-length byte pointers). Empty strings are not default values (NULL pointers).  
   
- The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver supports reporting information for tables on linked servers by accepting a two-part name for the *CatalogName* parameter: *Linked_Server_Name.Catalog_Name*.  
+ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver supports reporting information for tables on linked servers by accepting a two-part name for the *CatalogName* parameter: *Linked_Server_Name.Catalog_Name*.  
   
  SQLTables returns information about any tables whose names match *TableName* and are owned by the current user.  
   

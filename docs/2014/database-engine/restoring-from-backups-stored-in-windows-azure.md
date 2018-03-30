@@ -16,7 +16,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Restoring From Backups Stored in Windows Azure
-  This topic outlines the considerations when restoring a database using a backup stored in the Windows Azure Blob storage service. This applies to backups created either by using SQL Server Backup to URL backup or by [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
+  This topic outlines the considerations when restoring a database using a backup stored in the Windows Azure Blob storage service. This applies to backups created either by using SQL Server Backup to URL backup or by [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)].  
   
  We recommend reviewing this topic if you have backups stored in the Windows Azure Blob storage service that you plan to restore, and then review the topics that describe the steps on how to restore a database which is the same for both on-premises and azure backups.  
   
@@ -27,7 +27,7 @@ manager: "jhubbard"
   
 -   Since SQL Server must connect to an external source to retrieve the backup files, SQL Credential is used to authenticate to the storage account. Consequently, the RESTORE statement requires WITH CREDENTIAL option. For more information, see [SQL Server Backup and Restore with Windows Azure Blob Storage Service](../../2014/database-engine/sql-server-backup-and-restore-with-windows-azure-blob-storage-service.md).  
   
--   If you are using the [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] to manage your backups to the cloud, you can review all the available backups in the storage, by using the **smart_admin.fn_available_backups** system function. This system function returns all the available backups for a database in a table. As the results are returned in a table, you can filter or sort the results. For more information, see [smart_admin.fn_available_backups &#40;Transact-SQL&#41;](../Topic/smart_admin.fn_available_backups%20\(Transact-SQL\).md).  
+-   If you are using the [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] to manage your backups to the cloud, you can review all the available backups in the storage, by using the **smart_admin.fn_available_backups** system function. This system function returns all the available backups for a database in a table. As the results are returned in a table, you can filter or sort the results. For more information, see [smart_admin.fn_available_backups &#40;Transact-SQL&#41;](~/relational-databases/system-functions/managed-backup-fn-available-backups-transact-sql.md).  
   
 ### Using SQL Server Management Studio  
   
@@ -44,7 +44,7 @@ manager: "jhubbard"
   
 -   [Complete Database Restores &#40;Simple Recovery Model&#41;](../../2014/database-engine/complete-database-restores-simple-recovery-model.md)  
   
--   [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+-   [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)  
   
 -   [Complete Database Restores &#40;Full Recovery Model&#41;](../../2014/database-engine/complete-database-restores-full-recovery-model.md)  
   

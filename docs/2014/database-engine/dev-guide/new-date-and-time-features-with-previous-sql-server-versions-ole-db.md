@@ -19,14 +19,14 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # New Date and Time Features with Previous SQL Server Versions (OLE DB)
-  This topic describes the expected behavior when a client application that uses enhanced date and time features communicates with a version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] earlier than [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], and when a client compiled with a version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client earlier than [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] sends commands to a server that supports enhanced date and time features.  
+  This topic describes the expected behavior when a client application that uses enhanced date and time features communicates with a version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] earlier than [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], and when a client compiled with a version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client earlier than [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] sends commands to a server that supports enhanced date and time features.  
   
 ## Down-Level Client Behavior  
- Client applications that use a version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client earlier than [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] see the new date/time types as `nvarchar` columns. The column contents are literal representations. For more information, see the "Data Formats: Strings and Literals" section of [Data Type Support for OLE DB Date and Time Improvements](../../../2014/database-engine/dev-guide/data-type-support-for-ole-db-date-and-time-improvements.md). The column size is the maximum literal length for the precision specified for the column.  
+ Client applications that use a version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client earlier than [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] see the new date/time types as `nvarchar` columns. The column contents are literal representations. For more information, see the "Data Formats: Strings and Literals" section of [Data Type Support for OLE DB Date and Time Improvements](../../../2014/database-engine/dev-guide/data-type-support-for-ole-db-date-and-time-improvements.md). The column size is the maximum literal length for the precision specified for the column.  
   
- Catalog APIs will return metadata consistent with the down-level data type code returned to the client (for example, `nvarchar`) and the associated down-level representation (for example, the appropriate literal format). However, the data type name returned will be the real [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] type name.  
+ Catalog APIs will return metadata consistent with the down-level data type code returned to the client (for example, `nvarchar`) and the associated down-level representation (for example, the appropriate literal format). However, the data type name returned will be the real [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] type name.  
   
- When a down-level client application runs against a [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (or later) server on which schema changes to date/time types have been made, the expected behavior is as follows:  
+ When a down-level client application runs against a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (or later) server on which schema changes to date/time types have been made, the expected behavior is as follows:  
   
 |OLE DB client type|SQL Server 2005 type|SQL Server 2008 (or later) type|Result conversion (server to client)|Parameter conversion (client to server)|  
 |------------------------|--------------------------|---------------------------------------|--------------------------------------------|-----------------------------------------------|  
@@ -44,7 +44,7 @@ manager: "jhubbard"
 |DBTYPE_DBTIMESTAMP|||Date fields set to current date.|IRowsetChange will fail due to string truncation if fractional seconds are non-zero.<br /><br /> Date is ignored.|  
 |DBTYPE_DBTIMESTAMP||Datetime2(0)|OK|OK|  
   
- OK means that if it worked with [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], it should continue to work with [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (or later).  
+ OK means that if it worked with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], it should continue to work with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (or later).  
   
  Only the following common schema changes have been considered:  
   
@@ -54,10 +54,10 @@ manager: "jhubbard"
   
 -   Switching to `datetime2` because this is the preferred data type for date and time.  
   
- Applications that use server metadata obtained through ICommandWithParameters::GetParameterInfo or schema rowsets to set parameter type information through ICommandWithParameters::SetParameterInfo will fail during client conversions where the string representation of a source type is larger than the string representation of the destination type. For example, if a client binding uses DBTYPE_DBTIMESTAMP and the server column is date, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client will convert the value to "yyyy-dd-mm hh:mm:ss.fff", but server metadata will be returned as `nvarchar(10)`. The resulting overflow causes DBSTATUS_E_CATCONVERTVALUE. Similar problems arise with data conversions by IRowsetChange, because the rowset metadata is set from the resultset metadata.  
+ Applications that use server metadata obtained through ICommandWithParameters::GetParameterInfo or schema rowsets to set parameter type information through ICommandWithParameters::SetParameterInfo will fail during client conversions where the string representation of a source type is larger than the string representation of the destination type. For example, if a client binding uses DBTYPE_DBTIMESTAMP and the server column is date, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client will convert the value to "yyyy-dd-mm hh:mm:ss.fff", but server metadata will be returned as `nvarchar(10)`. The resulting overflow causes DBSTATUS_E_CATCONVERTVALUE. Similar problems arise with data conversions by IRowsetChange, because the rowset metadata is set from the resultset metadata.  
   
 ### Parameter and Rowset Metadata  
- This section describes metadata for parameters, result columns, and schema rowsets for clients that are compiled with a version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client earlier than [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  
+ This section describes metadata for parameters, result columns, and schema rowsets for clients that are compiled with a version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client earlier than [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
 #### ICommandWithParameters::GetParameterInfo  
  The DBPARAMINFO structure returns the following information through the *prgParamInfo* parameter:  
@@ -98,7 +98,7 @@ manager: "jhubbard"
 |datetimeoffset|DBTYPE_WSTR|26,28..34|~0|~0|  
   
 ### Schema Rowsets  
- This section discusses metadata for parameters, result columns, and schema rowsets for new data types. This information is useful is you have a client provider developed using tools earlier than [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
+ This section discusses metadata for parameters, result columns, and schema rowsets for new data types. This information is useful is you have a client provider developed using tools earlier than [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
 #### COLUMNS Rowset  
  The following column values are returned for date/time types:  
@@ -152,7 +152,7 @@ manager: "jhubbard"
 |IS_FIXEDLENGTH|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
   
 ## Down-Level Server Behavior  
- When connected to a server of an earlier version than [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], any attempt to use the new server type names (for example, with ICommandWithParameters::SetParameterInfo or ITableDefinition::CreateTable) will result in DB_E_BADTYPENAME.  
+ When connected to a server of an earlier version than [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], any attempt to use the new server type names (for example, with ICommandWithParameters::SetParameterInfo or ITableDefinition::CreateTable) will result in DB_E_BADTYPENAME.  
   
  If new types are bound for parameters or results without the use of a type name, and either the new type is used to specify the server type implicitly or there is no valid conversion from the server type to the client type, DB_E_ERRORSOCCURRED is returned, and DBBINDSTATUS_UNSUPPORTED_CONVERSION is set as the binding status for the accessor used at Execute.  
   

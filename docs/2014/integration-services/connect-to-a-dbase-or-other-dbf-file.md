@@ -20,10 +20,10 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Connect to a dBASE or Other DBF File
-  You can connect to a dBASE or other .DBF database file in an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package by using an OLE DB connection manager and selecting the Microsoft OLE DB Provider for Jet 4.0.  
+  You can connect to a dBASE or other .DBF database file in an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package by using an OLE DB connection manager and selecting the Microsoft OLE DB Provider for Jet 4.0.  
   
 > [!NOTE]  
->  The SQL Server Import and Export Wizard in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not support importing from, or exporting to, dBASE or other DBF files. You can use Microsoft Access or Microsoft Excel to import the data from DBF files into an Access database or Excel spreadsheets, and then use the SQL Server Import and Export Wizard.  
+>  The SQL Server Import and Export Wizard in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not support importing from, or exporting to, dBASE or other DBF files. You can use Microsoft Access or Microsoft Excel to import the data from DBF files into an Access database or Excel spreadsheets, and then use the SQL Server Import and Export Wizard.  
   
 ### To configure a connection manager to connect to a dBASE or other DBF file  
   

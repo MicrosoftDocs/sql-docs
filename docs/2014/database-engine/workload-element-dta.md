@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 68ffd473-6546-4015-98d0-3763165de65c
 caps.latest.revision: 16
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Workload Element (DTA)
@@ -48,7 +48,7 @@ manager: "jhubbard"
 |**Child elements**|[File Element &#40;DTA&#41;](../../2014/database-engine/file-element-dta.md)<br /><br /> [Database Element for Workload &#40;DTA&#41;](../../2014/database-engine/database-element-for-workload-dta.md)<br /><br /> [EventString Element &#40;DTA&#41;](../../2014/database-engine/eventstring-element-dta.md)|  
   
 ## Remarks  
- A workload is a set of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that execute against a database or databases that you want to tune. The Database Engine Tuning Advisor can use [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts, trace files, and trace tables as workloads.  
+ A workload is a set of [!INCLUDE[tsql](../includes/tsql-md.md)] statements that execute against a database or databases that you want to tune. The Database Engine Tuning Advisor can use [!INCLUDE[tsql](../includes/tsql-md.md)] scripts, trace files, and trace tables as workloads.  
   
  If you specify a workload in an XML input file and a workload on the command line with the **dta** tool, the workload specified on the command line will be used for tuning. All tuning options specified on the command line override those that are specified in an XML input file. The only exception is if a user-specified configuration is entered in the evaluate mode in the XML input file. For example, if a configuration is entered in the `Configuration` element of the XML input file and the `EvaluateConfiguration` element is also specified as one of the tuning options, the tuning options specified in the XML input file will override any tuning options entered at the command line.  
   

@@ -23,7 +23,7 @@ manager: "mblythe"
 |||  
 |-|-|  
 |Applies to|PowerPivot for SharePoint|  
-|Product Version|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|Product Version|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]|  
 |Cause|Connection failed when attempting to use a PowerPivot data provider.|  
 |Message Text|The data connection uses Windows Authentication and user credentials could not be delegated. The following connections failed to refresh: PowerPivot Data|  
   

@@ -18,16 +18,16 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Analyze a Tabular Model in Excel (SSAS Tabular)
-  The Analyze in Excel feature in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] opens Microsoft Excel, creates a data source connection to the model workspace database, and adds a PivotTable to the worksheet. Model objects (tables, columns, measures, hierarchies, and KPIs) are included as fields in the PivotTable field list.  
+  The Analyze in Excel feature in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] opens Microsoft Excel, creates a data source connection to the model workspace database, and adds a PivotTable to the worksheet. Model objects (tables, columns, measures, hierarchies, and KPIs) are included as fields in the PivotTable field list.  
   
 > [!NOTE]  
->  To use the Analyze in Excel feature, you must have Microsoft Office 2003 or later installed on the same computer as [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. If Office is not installed on the same computer, you can use Excel on another computer and connect to the model workspace database as a data source. You can then manually add a PivotTable to the worksheet. Model objects (tables, columns, measures, and KPIs) are included as fields in the PivotTable field list.  
+>  To use the Analyze in Excel feature, you must have Microsoft Office 2003 or later installed on the same computer as [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. If Office is not installed on the same computer, you can use Excel on another computer and connect to the model workspace database as a data source. You can then manually add a PivotTable to the worksheet. Model objects (tables, columns, measures, and KPIs) are included as fields in the PivotTable field list.  
   
 ## Tasks  
   
 #### To analyze a tabular model project by using the Analyze in Excel feature  
   
-1.  In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], click the **Model** menu, and then click **Analyze in Excel**.  
+1.  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], click the **Model** menu, and then click **Analyze in Excel**.  
   
 2.  In the **Choose Credential and Perspective** dialog box, select one of the following credential options to connect to the model workspace data source:  
   

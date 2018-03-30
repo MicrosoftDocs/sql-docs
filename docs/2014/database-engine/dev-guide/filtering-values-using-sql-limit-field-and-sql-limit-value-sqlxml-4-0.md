@@ -37,7 +37,7 @@ manager: "jhubbard"
 ## Examples  
  To create working samples using these examples, you need to have the following installed:  
   
--   Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client  
+-   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client  
   
 -   MDAC 2.6 or later  
   
@@ -304,8 +304,8 @@ manager: "jhubbard"
     ```  
   
 ## See Also  
- [float and real &#40;Transact-SQL&#41;](../Topic/float%20and%20real%20\(Transact-SQL\).md)   
- [nchar and nvarchar &#40;Transact-SQL&#41;](../Topic/nchar%20and%20nvarchar%20\(Transact-SQL\).md)   
+ [float and real &#40;Transact-SQL&#41;](~/t-sql/data-types/float-and-real-transact-sql.md)   
+ [nchar and nvarchar &#40;Transact-SQL&#41;](~/t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
  [Installing SQL Server Native Client](../../../2014/database-engine/dev-guide/installing-sql-server-native-client.md)   
  [Using Annotated XSD Schemas in Queries &#40;SQLXML 4.0&#41;](../../../2014/database-engine/dev-guide/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
   

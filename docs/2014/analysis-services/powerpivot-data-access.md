@@ -20,7 +20,7 @@ manager: "mblythe"
   
  PowerPivot data is stored inside an Excel workbook. The connection string is a URL to a workbook on a SharePoint site.  
   
- PowerPivot data is most often used by the workbook that contains it, as the data behind PivotTables and PivotCharts. Alternatively, PowerPivot data can also be used as an external data source, where a workbook, dashboard, or report connects to a separate Excel (.xlsx) file in SharePoint and retrieves the data for subsequent use. Client tools that typically use PowerPivot data are Excel, [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], other Reporting Services reports, and PerformancePoint.  
+ PowerPivot data is most often used by the workbook that contains it, as the data behind PivotTables and PivotCharts. Alternatively, PowerPivot data can also be used as an external data source, where a workbook, dashboard, or report connects to a separate Excel (.xlsx) file in SharePoint and retrieves the data for subsequent use. Client tools that typically use PowerPivot data are Excel, [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], other Reporting Services reports, and PerformancePoint.  
   
  On the desktop, the PowerPivot add-in uses AMO and ADOMD.NET to create, process, and query the PowerPivot data in the client workspace.  
   
@@ -33,7 +33,7 @@ manager: "mblythe"
   
  ![GMNI_DataProcReq](../../2014/analysis-services/media/gmni-dataprocreq.gif "GMNI_DataProcReq")  
   
- Excel Services and PowerPivot for SharePoint components process different parts of the same workbook (.xlsx) file. Excel Services detects PowerPivot data and requests processing from a PowerPivot server in the farm. The PowerPivot server allocates the request to an [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] instance, which extracts the data from the workbook in the content library and loads the data. Data that is stored in memory is merged back into the rendered workbook, and passed back to Excel Web Access for presentation in a browser window.  
+ Excel Services and PowerPivot for SharePoint components process different parts of the same workbook (.xlsx) file. Excel Services detects PowerPivot data and requests processing from a PowerPivot server in the farm. The PowerPivot server allocates the request to an [!INCLUDE[ssGeminiSrv](../includes/ssgeminisrv-md.md)] instance, which extracts the data from the workbook in the content library and loads the data. Data that is stored in memory is merged back into the rendered workbook, and passed back to Excel Web Access for presentation in a browser window.  
   
  Not all data in a PowerPivot workbook is handled by PowerPivot for SharePoint. Excel Services processes tables and cell data in a worksheet. Only PivotTables, PivotCharts, and Slicers that go against PowerPivot data are handled by the PowerPivot for SharePoint.  
   

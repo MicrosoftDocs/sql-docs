@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: caa4f4a1-fd54-466e-975d-3e7e1cc5de54
 caps.latest.revision: 23
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Database Object (Extended Properties Page)
@@ -37,6 +37,6 @@ manager: "jhubbard"
  Removes the selected extended property.  
   
 ## See Also  
- [Extended Properties Catalog Views &#40;Transact-SQL&#41;](../Topic/Extended%20Properties%20Catalog%20Views%20\(Transact-SQL\).md)  
+ [Extended Properties Catalog Views &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
   
   

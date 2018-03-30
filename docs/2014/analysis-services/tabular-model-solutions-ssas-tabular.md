@@ -16,7 +16,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Tabular Model Solutions (SSAS Tabular)
-  Topics in this section provide information about how to author tabular models by using the tabular model designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+  Topics in this section provide information about how to author tabular models by using the tabular model designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 ## In This Section  
  [Tabular Model Designer &#40;SSAS Tabular&#41;](../../2014/analysis-services/tabular-model-designer-ssas-tabular.md)  

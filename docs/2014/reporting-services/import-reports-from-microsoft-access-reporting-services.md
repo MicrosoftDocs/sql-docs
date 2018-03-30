@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 4f29d5b8-b77d-4714-a84a-05523df55646
 caps.latest.revision: 39
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Import Reports from Microsoft Access (Reporting Services)
-  In Report Designer, you can import reports from a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access database or project. Access 2002 or a later version must be installed on the same computer on which Report Designer is installed.  
+  In Report Designer, you can import reports from a [!INCLUDE[msCoName](../includes/msconame-md.md)] Access database or project. Access 2002 or a later version must be installed on the same computer on which Report Designer is installed.  
   
  When you use the import feature, all reports in the database or project file are imported. If your Access file contains many reports, you may want to create a separate report project into which to import the reports, and then open the individual RDL files in your main report project. You can edit the reports after they are imported into Report Designer.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] does not support all Access report objects. Items that are not converted are displayed in the **Task List** window. For more information, see [Supported Access Report Features &#40;SSRS&#41;](../../2014/reporting-services/supported-access-report-features-ssrs.md).  
+>  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] does not support all Access report objects. Items that are not converted are displayed in the **Task List** window. For more information, see [Supported Access Report Features &#40;SSRS&#41;](../../2014/reporting-services/supported-access-report-features-ssrs.md).  
   
 ### To import reports from Microsoft Access  
   

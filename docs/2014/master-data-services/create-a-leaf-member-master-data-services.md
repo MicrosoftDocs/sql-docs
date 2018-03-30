@@ -20,7 +20,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Create a Leaf Member (Master Data Services)
-  In [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], create a leaf member when you want to add master data to your system and are not using staging tables or the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] to import data.  
+  In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], create a leaf member when you want to add master data to your system and are not using staging tables or the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] to import data.  
   
 ## Prerequisites  
  To perform this procedure:  
@@ -31,7 +31,7 @@ manager: "jhubbard"
   
 ### To create a leaf member  
   
-1.  On the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] home page, from the **Model** list, select a model.  
+1.  On the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] home page, from the **Model** list, select a model.  
   
 2.  If you are a user, select an open version from the **Version** list. If you are an administrator, select a version with open or locked status from the **Version** list.  
   
@@ -48,7 +48,7 @@ manager: "jhubbard"
 8.  Click **OK**.  
   
 ## See Also  
- [Load or Update Members in Master Data Services by Using the Staging Process](../Topic/Load%20or%20Update%20Members%20in%20Master%20Data%20Services%20by%20Using%20the%20Staging%20Process.md)   
+ [Load or Update Members in Master Data Services by Using the Staging Process](~/2014/master-data-services/add-update-and-delete-data-master-data-services.md)   
  [Create a Consolidated Member &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)   
  [Members &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
   

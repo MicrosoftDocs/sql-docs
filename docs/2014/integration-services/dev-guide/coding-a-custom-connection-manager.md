@@ -24,7 +24,7 @@ manager: "jhubbard"
  For samples of custom connection managers, see [Developing a User Interface for a Custom Connection Manager](../../../2014/integration-services/dev-guide/developing-a-user-interface-for-a-custom-connection-manager.md). The code examples shown in this topic are drawn from the SQL Server Custom Connection Manager sample.  
   
 > [!NOTE]  
->  Most of the tasks, sources, and destinations that have been built into [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] work only with specific types of built-in connection managers. Therefore, these samples cannot be tested with the built-in tasks and components.  
+>  Most of the tasks, sources, and destinations that have been built into [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] work only with specific types of built-in connection managers. Therefore, these samples cannot be tested with the built-in tasks and components.  
   
 ## Configuring the Connection Manager  
   
@@ -259,7 +259,7 @@ public override void ReleaseConnection(object connection)
   
 ||  
 |-|  
-|![Integration Services icon (small)](../../../2014/integration-services/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
+|![Integration Services icon (small)](../../../2014/integration-services/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
   
 ## See Also  
  [Creating a Custom Connection Manager](../../../2014/integration-services/dev-guide/creating-a-custom-connection-manager.md)   

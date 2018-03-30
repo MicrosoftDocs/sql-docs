@@ -15,11 +15,11 @@ helpviewer_keywords:
 ms.assetid: 44e69e60-9b35-43fe-b9c7-8cf34eaea62a
 caps.latest.revision: 7
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Unicode Compression Implementation
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses an implementation of the Standard Compression Scheme for Unicode (SCSU) algorithm to compress Unicode values that are stored in row or page compressed objects. For these compressed objects, Unicode compression is automatic for `nchar(n)` and `nvarchar(n)` columns. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] stores Unicode data as 2 bytes, regardless of locale. This is known as UCS-2 encoding. For some locales, the implementation of SCSU compression in SQL Server can save up to 50 percent in storage space.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses an implementation of the Standard Compression Scheme for Unicode (SCSU) algorithm to compress Unicode values that are stored in row or page compressed objects. For these compressed objects, Unicode compression is automatic for `nchar(n)` and `nvarchar(n)` columns. The [!INCLUDE[ssDE](../includes/ssde-md.md)] stores Unicode data as 2 bytes, regardless of locale. This is known as UCS-2 encoding. For some locales, the implementation of SCSU compression in SQL Server can save up to 50 percent in storage space.  
   
 ## Supported Data Types  
  Unicode compression supports the fixed-length `nchar(n)` and `nvarchar(n)` data types. Data values that are stored off row or in `nvarchar(max)` columns are not compressed.  
@@ -28,7 +28,7 @@ manager: "jhubbard"
 >  Unicode compression is not supported for `nvarchar(max)` data even if it is stored in row. However, this data type can still benefit from page compression.  
   
 ## Upgrading from Earlier Versions of SQL Server  
- When a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database is upgraded to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], Unicode compression–related changes are not made to any database object, compressed or uncompressed. After the database is upgraded, objects are affected as follows:  
+ When a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database is upgraded to [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], Unicode compression–related changes are not made to any database object, compressed or uncompressed. After the database is upgraded, objects are affected as follows:  
   
 -   If the object is not compressed, no changes are made and the object continues to function as it did previously.  
   
@@ -55,8 +55,8 @@ manager: "jhubbard"
   
 ## See Also  
  [Data Compression](../../2014/database-engine/data-compression.md)   
- [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../Topic/sp_estimate_data_compression_savings%20\(Transact-SQL\).md)   
+ [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md)   
  [Page Compression Implementation](../../2014/database-engine/page-compression-implementation.md)   
- [sys.dm_db_persisted_sku_features &#40;Transact-SQL&#41;](../Topic/sys.dm_db_persisted_sku_features%20\(Transact-SQL\).md)  
+ [sys.dm_db_persisted_sku_features &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-db-persisted-sku-features-transact-sql.md)  
   
   

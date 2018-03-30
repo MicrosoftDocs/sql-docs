@@ -16,14 +16,14 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Import the Policies to a Single Instance
-  In this task, you will import the best practices policies that you want to schedule into Policy-Based Management on a single instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  In this task, you will import the best practices policies that you want to schedule into Policy-Based Management on a single instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## Prerequisites  
- You must perform this procedure on a server that is running [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or a later version.  
+ You must perform this procedure on a server that is running [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] or a later version.  
   
 ### Import the best practices policies for the Database Engine  
   
-1.  Start [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], and then connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Start [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], and then connect to the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  In Object Explorer, expand **Management**, and then expand **Policy Management**.  
   
@@ -36,7 +36,7 @@ manager: "jhubbard"
      **C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Policies\DatabaseEngine\1033**  
   
     > [!NOTE]  
-    >  The file path may vary, depending on where you installed the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] program files, whether you are running a 32-bit or 64-bit operating system, and the language identifier.  
+    >  The file path may vary, depending on where you installed the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] program files, whether you are running a 32-bit or 64-bit operating system, and the language identifier.  
   
 6.  In the **Select Policy** dialog box, select one or more policy files.  
   

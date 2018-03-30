@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Defect a Target Server from a Master Server
-  This topic describes how to defect a target server from a master server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or SQL Server Management Objects (SMO). Run this procedure from the target server.  
+  This topic describes how to defect a target server from a master server in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../includes/tsql-md.md)], or SQL Server Management Objects (SMO). Run this procedure from the target server.  
   
  **In This Topic**  
   
@@ -59,7 +59,7 @@ manager: "jhubbard"
   
 #### To defect a target server from a master server  
   
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
@@ -69,7 +69,7 @@ manager: "jhubbard"
 sp_msx_defect ;  
 ```  
   
- For more information, see [sp_msx_defect &#40;Transact-SQL&#41;](../Topic/sp_msx_defect%20\(Transact-SQL\).md).  
+ For more information, see [sp_msx_defect &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md).  
   
 ##  <a name="PowerShellProcedure"></a> Using SQL Server Management Objects (SMO)  
  Use the `MsxDefect Method`.  

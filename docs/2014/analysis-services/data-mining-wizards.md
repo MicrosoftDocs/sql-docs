@@ -19,7 +19,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Data Mining Wizards
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] provides wizards for use in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] provides wizards for use in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] and [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
  The following table describes the wizards that you can use to create data mining sources, views, and objects.  
   
@@ -29,7 +29,7 @@ manager: "mblythe"
 |[Data Source View Wizard F1 Help &#40;Analysis Services&#41;](../../2014/analysis-services/data-source-view-wizard-f1-help-analysis-services.md)|Use the Data Source View Wizard to define a new data source view.|  
 |[Data Mining Wizard F1 Help &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-wizard-f1-help-analysis-services-data-mining.md)|Use the Data Mining Wizard to define a new mining structure and associated mining models.|  
   
- In addition to the wizards, you can build, modify, and process data mining objects in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] and [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] by using the graphical design tools that are provided.  
+ In addition to the wizards, you can build, modify, and process data mining objects in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] and [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] by using the graphical design tools that are provided.  
   
  For more information about editors that help you build data mining projects, see [Data Mining Designers and Dialog Boxes](../../2014/analysis-services/data-mining-designers-and-dialog-boxes.md).  
   

@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Delete a Workload Group
-  You can delete a workload group or resource pool by using either [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or Transact-SQL.  
+  You can delete a workload group or resource pool by using either [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or Transact-SQL.  
   
 -   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
@@ -43,7 +43,7 @@ manager: "jhubbard"
 ##  <a name="DelWGObjEx"></a> Delete a Workload Group Using Object Explorer  
  **To delete a workload group by using Object Explorer**  
   
-1.  In[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], open Object Explorer and recursively expand the **Management** node down to and including **Resource Pools**.  
+1.  In[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], open Object Explorer and recursively expand the **Management** node down to and including **Resource Pools**.  
   
 2.  Recursively expand **Resource Pools** down to and including the **Workload Groups** node in the resource pool that contains the workload group to be deleted.  
   
@@ -94,8 +94,8 @@ GO
  [Create a Resource Pool](../../2014/database-engine/create-a-resource-pool.md)   
  [Create a Workload Group](../../2014/database-engine/create-a-workload-group.md)   
  [Delete a Resource Pool](../../2014/database-engine/delete-a-resource-pool.md)   
- [DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](../Topic/DROP%20WORKLOAD%20GROUP%20\(Transact-SQL\).md)   
- [DROP RESOURCE POOL &#40;Transact-SQL&#41;](../Topic/DROP%20RESOURCE%20POOL%20\(Transact-SQL\).md)   
- [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../Topic/ALTER%20RESOURCE%20GOVERNOR%20\(Transact-SQL\).md)  
+ [DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](~/t-sql/statements/drop-workload-group-transact-sql.md)   
+ [DROP RESOURCE POOL &#40;Transact-SQL&#41;](~/t-sql/statements/drop-resource-pool-transact-sql.md)   
+ [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](~/t-sql/statements/alter-resource-governor-transact-sql.md)  
   
   

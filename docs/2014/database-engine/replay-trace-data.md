@@ -16,7 +16,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Replay Trace Data
-  You can start a distributed replay with the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay feature after you have prepared the input trace data. For more information, see [Prepare the Input Trace Data](../../2014/database-engine/prepare-the-input-trace-data.md).  
+  You can start a distributed replay with the [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Distributed Replay feature after you have prepared the input trace data. For more information, see [Prepare the Input Trace Data](../../2014/database-engine/prepare-the-input-trace-data.md).  
   
  Use the administration tool **replay** option to initiate the event replay stage of the distributed replay. This stage consists of two parts: the trace data dispatch and the starting and synchronizing of the distributed replay.  
   
@@ -25,7 +25,7 @@ manager: "jhubbard"
  You can replay trace data in one of two sequencing modes: stress mode or synchronization mode. The default behavior is to replay trace data in stress mode. For more information about the event replay stage and sequencing modes, see [SQL Server Distributed Replay](../../2014/database-engine/sql-server-distributed-replay.md)  
   
 > [!NOTE]  
->  The input trace data must be captured in a version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is compatible with Distributed Replay. The input trace data must also be compatible with the target server that you want to replay the trace data against. For more information about version requirements, see [Distributed Replay Requirements](../../2014/sql-server/install/distributed-replay-requirements.md).  
+>  The input trace data must be captured in a version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that is compatible with Distributed Replay. The input trace data must also be compatible with the target server that you want to replay the trace data against. For more information about version requirements, see [Distributed Replay Requirements](../../2014/sql-server/install/distributed-replay-requirements.md).  
   
 ### To replay the trace  
   
@@ -49,7 +49,7 @@ manager: "jhubbard"
   
     4.  (Optional) Use the **-o** parameter to capture the replay activity in a result trace file on each client.  
   
-    5.  (Optional) Use the *target_server* parameter, **-s**, to specify the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] where the distributed replay clients should replay the trace workload. This parameter is not required if you used the `<Server>` element to specify the target server in the `<ReplayOptions>` element of the replay configuration file.  
+    5.  (Optional) Use the *target_server* parameter, **-s**, to specify the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] where the distributed replay clients should replay the trace workload. This parameter is not required if you used the `<Server>` element to specify the target server in the `<ReplayOptions>` element of the replay configuration file.  
   
     6.  Use the *clients* parameter, **-w**, to specify the distributed replay clients that should participate in the replay. List the client computer names, separated by commas. Note: IP addresses are not allowed.  
   

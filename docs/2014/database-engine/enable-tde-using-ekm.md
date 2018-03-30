@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: b892e7a7-95bd-4903-bf54-55ce08e225af
 caps.latest.revision: 23
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Enable TDE Using EKM
-  This topic describes how to enable transparent data encryption (TDE) in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] to protect a database encryption key by using an asymmetric key stored in an extensible key management (EKM) module with [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  This topic describes how to enable transparent data encryption (TDE) in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] to protect a database encryption key by using an asymmetric key stored in an extensible key management (EKM) module with [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
- TDE encrypts the storage of an entire database by using a symmetric key called the database encryption key. The database encryption key can also be protected using a certificate which is protected by the database master key of the master database. For more information about protecting the database encryption key by using the database master key, see [Transparent Data Encryption &#40;TDE&#41;](../../2014/database-engine/transparent-data-encryption-tde.md). For information about configuring TDE when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running on an Azure VM, see [Extensible Key Management Using Azure Key Vault &#40;SQL Server&#41;](../../2014/database-engine/extensible-key-management-using-azure-key-vault-sql-server.md).  
+ TDE encrypts the storage of an entire database by using a symmetric key called the database encryption key. The database encryption key can also be protected using a certificate which is protected by the database master key of the master database. For more information about protecting the database encryption key by using the database master key, see [Transparent Data Encryption &#40;TDE&#41;](../../2014/database-engine/transparent-data-encryption-tde.md). For information about configuring TDE when [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is running on an Azure VM, see [Extensible Key Management Using Azure Key Vault &#40;SQL Server&#41;](../../2014/database-engine/extensible-key-management-using-azure-key-vault-sql-server.md).  
   
  **In This Topic**  
   
@@ -41,9 +41,9 @@ manager: "jhubbard"
   
 -   You must be a high privileged user (such as a system administrator) to create a database encryption key and encrypt a database. That user must be able to be authenticated by the EKM module.  
   
--   Upon start up the [!INCLUDE[ssDE](../../includes/ssde-md.md)] must open the database. To do this, you should create a credential that will be authenticated by the EKM, and add it to a login that is based on an asymmetric key. Users cannot login using that login, but the [!INCLUDE[ssDE](../../includes/ssde-md.md)] will be able to authenticate itself with the EKM device.  
+-   Upon start up the [!INCLUDE[ssDE](../includes/ssde-md.md)] must open the database. To do this, you should create a credential that will be authenticated by the EKM, and add it to a login that is based on an asymmetric key. Users cannot login using that login, but the [!INCLUDE[ssDE](../includes/ssde-md.md)] will be able to authenticate itself with the EKM device.  
   
--   If the asymmetric key stored in the EKM module is lost, the database will not be able to be opened by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If the EKM provider lets you back up the asymmetric key, you should create a back up and store it in a secure location.  
+-   If the asymmetric key stored in the EKM module is lost, the database will not be able to be opened by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. If the EKM provider lets you back up the asymmetric key, you should create a back up and store it in a secure location.  
   
 -   The options and parameters required by your EKM provider can differ from what is provided in the code example below. For more information, see your EKM provider.  
   
@@ -66,14 +66,14 @@ manager: "jhubbard"
   
 #### To enable TDE using EKM  
   
-1.  Copy the files supplied by the EKM provider to an appropriate location on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer. In this example, we use the **C:\EKM** folder.  
+1.  Copy the files supplied by the EKM provider to an appropriate location on the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] computer. In this example, we use the **C:\EKM** folder.  
   
 2.  Install certificates to the computer as required by your EKM provider.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not supply an EKM provider. Each EKM provider can have different procedures for installing, configuring and authorizing users.  Consult your EKM provider documentation to complete this step.  
+    >  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not supply an EKM provider. Each EKM provider can have different procedures for installing, configuring and authorizing users.  Consult your EKM provider documentation to complete this step.  
   
-3.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+3.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 4.  On the Standard bar, click **New Query**.  
   
@@ -147,21 +147,21 @@ manager: "jhubbard"
   
  For more information, see the following:  
   
--   [sp_configure &#40;Transact-SQL&#41;](../Topic/sp_configure%20\(Transact-SQL\).md)  
+-   [sp_configure &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
--   [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../Topic/CREATE%20CRYPTOGRAPHIC%20PROVIDER%20\(Transact-SQL\).md)  
+-   [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](~/t-sql/statements/create-cryptographic-provider-transact-sql.md)  
   
--   [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../Topic/CREATE%20CREDENTIAL%20\(Transact-SQL\).md)  
+-   [CREATE CREDENTIAL &#40;Transact-SQL&#41;](~/t-sql/statements/create-credential-transact-sql.md)  
   
--   [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../Topic/CREATE%20ASYMMETRIC%20KEY%20\(Transact-SQL\).md)  
+-   [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](~/t-sql/statements/create-asymmetric-key-transact-sql.md)  
   
--   [CREATE LOGIN &#40;Transact-SQL&#41;](../Topic/CREATE%20LOGIN%20\(Transact-SQL\).md)  
+-   [CREATE LOGIN &#40;Transact-SQL&#41;](~/t-sql/statements/create-login-transact-sql.md)  
   
--   [CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../Topic/CREATE%20DATABASE%20ENCRYPTION%20KEY%20\(Transact-SQL\).md)  
+-   [CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](~/t-sql/statements/create-database-encryption-key-transact-sql.md)  
   
--   [ALTER LOGIN &#40;Transact-SQL&#41;](../Topic/ALTER%20LOGIN%20\(Transact-SQL\).md)  
+-   [ALTER LOGIN &#40;Transact-SQL&#41;](~/t-sql/statements/alter-login-transact-sql.md)  
   
--   [ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20\(Transact-SQL\).md)  
+-   [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)  
   
 -   [Extensible Key Management Using Azure Key Vault &#40;SQL Server&#41;](../../2014/database-engine/extensible-key-management-using-azure-key-vault-sql-server.md)  
   

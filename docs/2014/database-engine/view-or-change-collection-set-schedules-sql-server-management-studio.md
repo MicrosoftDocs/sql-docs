@@ -25,7 +25,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # View or Change Collection Set Schedules (SQL Server Management Studio)
-  You can view or change collection set schedules by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  You can view or change collection set schedules by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
  The collection mode, cached or non-cached, determines how you can make changes to a schedule. Cached mode uses separate schedules for collection and upload. Non-cached mode uses the same schedule for collection and upload. The type of collection mode for each of the System Datacollection sets is as follows:  
   
@@ -126,7 +126,7 @@ manager: "jhubbard"
  Displays the input parameters used for the collection set.  
   
  **Run as**  
- Specifies the account used to run the collection set. By default this is the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Service Account. If proxy accounts are defined, this list includes the names of the available proxy accounts.  
+ Specifies the account used to run the collection set. By default this is the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent Service Account. If proxy accounts are defined, this list includes the names of the available proxy accounts.  
   
  **Set how long collected data will be retained in the management data warehouse.**  
  Specifies how long collected data is retained. Pick one of the following options.  

@@ -20,11 +20,11 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Switch an Analysis Services database between ReadOnly and ReadWrite modes
-  There are often situations when a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database administrator (dba) wants to change the read/write mode of a tabular or multidimensional database. These situations are often driven by business needs, such as sharing the database among a pool of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] servers for a better user experience.  
+  There are often situations when a [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database administrator (dba) wants to change the read/write mode of a tabular or multidimensional database. These situations are often driven by business needs, such as sharing the database among a pool of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] servers for a better user experience.  
   
  A database mode can be switched in many ways. This document explains the following common scenarios:  
   
--   Interactively using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+-   Interactively using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]  
   
 -   Programmatically using AMO  
   
@@ -34,18 +34,18 @@ manager: "mblythe"
   
 #### To switch the read/write mode of a database interactively using Management Studio  
   
-1.  Locate the database to be switched in the left or right pane of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+1.  Locate the database to be switched in the left or right pane of [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
 2.  Right-click the database and select **Properties**. Find the database folder and note the location. An empty database storage location indicates that the database folder is located in the server data folder.  
   
     > [!IMPORTANT]  
-    >  As soon as the database is detached, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] can no longer help you obtain the database location.  
+    >  As soon as the database is detached, [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] can no longer help you obtain the database location.  
   
 3.  Right-click the database and select **Detach…**  
   
 4.  Assign a password to the database to be detached, and then click **OK** to execute the detach command.  
   
-5.  Locate the **Databases** folder in the left or right pane of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+5.  Locate the **Databases** folder in the left or right pane of [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
 6.  Right-click the **Databases** folder and select **Attach…**  
   
@@ -123,14 +123,14 @@ manager: "mblythe"
   
 #### To switch the read/write mode to a database by script using XMLA  
   
-1.  Locate the database to be switched in the left or right pane of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+1.  Locate the database to be switched in the left or right pane of [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
 2.  Right-click the database and select **Properties**. Find the database folder and note the location. An empty database storage location indicates that the database folder is located in the server data folder.  
   
     > [!IMPORTANT]  
-    >  As soon as the database is detached, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] can no longer help you obtain the database location.  
+    >  As soon as the database is detached, [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] can no longer help you obtain the database location.  
   
-3.  Open a new XMLA tab in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+3.  Open a new XMLA tab in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
 4.  Copy the following script template for XMLA:  
   

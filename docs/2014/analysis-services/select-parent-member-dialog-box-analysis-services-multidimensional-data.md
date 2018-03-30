@@ -20,7 +20,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Select Parent Member Dialog Box (Analysis Services - Multidimensional Data)
-  Use the **Select Parent Member** dialog box in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to select a parent member for a calculated member. You can display the **Select Parent Member** dialog box by clicking **Change** in the **Calculated Member Form Editor** pane on the **Calculations** tab in Cube Designer.  
+  Use the **Select Parent Member** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to select a parent member for a calculated member. You can display the **Select Parent Member** dialog box by clicking **Change** in the **Calculated Member Form Editor** pane on the **Calculations** tab in Cube Designer.  
   
 > [!NOTE]  
 >  In certain cases, such as when the hierarchy selected in **Tree** is defined for an attribute in which no (All) level is specified, there may be no parent member to select.  

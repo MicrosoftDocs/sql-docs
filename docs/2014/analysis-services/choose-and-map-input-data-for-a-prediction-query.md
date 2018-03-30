@@ -38,7 +38,7 @@ manager: "mblythe"
   
 ### Select an input table  
   
-1.  On the **Select Input Table(s)** table of the **Mining Accuracy Chart** tab in Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], click **Select Case Table**.  
+1.  On the **Select Input Table(s)** table of the **Mining Accuracy Chart** tab in Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], click **Select Case Table**.  
   
      The **Select Table** dialog box opens, in which you can select the table that contains the data on which to base your queries.  
   
@@ -52,7 +52,7 @@ manager: "mblythe"
   
 ### Change the way that input data is mapped to the model  
   
-1.  In Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], select the **Mining Model Prediction** tab.  
+1.  In Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], select the **Mining Model Prediction** tab.  
   
 2.  On the **Mining Model** menu, select **Modify Connections**.  
   
@@ -68,7 +68,7 @@ manager: "mblythe"
   
 ### Remove a relationship between input tables  
   
-1.  On the **Select Input Table(s)** table of the **Mining Model Prediction** tab in Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], click **Modify Join**.  
+1.  On the **Select Input Table(s)** table of the **Mining Model Prediction** tab in Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], click **Modify Join**.  
   
      The **Specify Nested Join** dialog box opens.  
   
@@ -107,11 +107,11 @@ manager: "mblythe"
     > [!NOTE]  
     >  You cannot add a nested table to the inputs unless you have specified a case table. Use of a nested table requires that the mining model you are using for prediction also uses a nested table.  
   
-2.  In the **Select Table** dialog box, select a data source from the **Data Source** list, and select the table in the data source view that contains the case data. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+2.  In the **Select Table** dialog box, select a data source from the **Data Source** list, and select the table in the data source view that contains the case data. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 3.  Click **Select Nested Table** to open the **Select Table** dialog box.  
   
-4.  In the **Select Table** dialog box, select a data source from the **Data Source** list, and select the table in the data source view that contains the nested data. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  In the **Select Table** dialog box, select a data source from the **Data Source** list, and select the table in the data source view that contains the nested data. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
      If a relationship already exists, the columns in the mining model are automatically mapped to the columns that have the same name in the input table. You can modify the relationship between the nested table and the case table by clicking **Modify Join**, which opens the **Create Relationship** dialog box.  
   

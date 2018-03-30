@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Connect to a Microsoft SQL Server Database (SSAS)
-  This page of the **Table Import Wizard** enables you to specify settings to connect to a Microsoft SQL Server database. To access the wizard from the [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], on the **Model** menu, click **Import from Data Source**.  
+  This page of the **Table Import Wizard** enables you to specify settings to connect to a Microsoft SQL Server database. To access the wizard from the [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], on the **Model** menu, click **Import from Data Source**.  
   
  To connect to a data source, you must have the appropriate provider installed on your computer.  
   
@@ -30,19 +30,19 @@ manager: "mblythe"
  Type a unique name for this data source connection. This is a required field.  
   
  **Server name**  
- Select the name, or type the name or IP address, of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance to connect to.  
+ Select the name, or type the name or IP address, of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance to connect to.  
   
  You can use a period (.), (local), or localhost to indicate the local server.  
   
  **Use Windows Authentication**  
- Specify whether Windows Authentication is used to connect to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Specify whether Windows Authentication is used to connect to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  Windows Authentication mode enables a user to connect by using a Windows user account. Whenever possible, use Windows Authentication.  
   
  When Windows Authentication is used, the credentials of the current user are used when previewing and filtering data in the Table Properties window and in the Import Wizard. These credentials are not used to import or refresh data; the Windows credentials specified on the Impersonation information page are used instead.  
   
  **Use SQL Server Authentication**  
- Specify whether SQL Server Authentication is used to connect to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Specify whether SQL Server Authentication is used to connect to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  With SQL Server Authentication, SQL Server performs the authentication itself by checking to see if a SQL Server login account has been set up and if the specified password matches the one previously recorded.  
   

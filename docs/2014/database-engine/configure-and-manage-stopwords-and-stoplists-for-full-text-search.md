@@ -19,11 +19,11 @@ helpviewer_keywords:
 ms.assetid: 43b5ce7b-9f09-4443-8a5b-c3da6eb28bcc
 caps.latest.revision: 79
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Configure and Manage Stopwords and Stoplists for Full-Text Search
-  To prevent a full-text index from becoming bloated, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has a mechanism that discards commonly occurring strings that do not help the search. These discarded strings are called *stopwords*. During index creation, the Full-Text Engine omits stopwords from the full-text index. This means that full-text queries will not search on stopwords.  
+  To prevent a full-text index from becoming bloated, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has a mechanism that discards commonly occurring strings that do not help the search. These discarded strings are called *stopwords*. During index creation, the Full-Text Engine omits stopwords from the full-text index. This means that full-text queries will not search on stopwords.  
   
 ##  <a name="understand"></a> Understanding Stopwords and Stoplists  
  A stopword can be a word with meaning in a specific language, or it can be a *token* that does not have linguistic meaning. For example, in the English language, words such as "a," "and," "is," and "the" are left out of the full-text index since they are known to be useless to a search.  
@@ -50,7 +50,7 @@ manager: "jhubbard"
 ##  <a name="creating"></a> Creating a Stoplist  
  You can create a stoplist in any of the following ways:  
   
--   Using the system-supplied stoplist in the database. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ships with a system stoplist that contains the most commonly used stopwords for each supported language, that is for every language that is associated with given word breakers by default. The system stoplist contains common stopwords for all supported languages.  You can copy the system stoplist, and customize your copy by adding and removing stopwords.  
+-   Using the system-supplied stoplist in the database. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ships with a system stoplist that contains the most commonly used stopwords for each supported language, that is for every language that is associated with given word breakers by default. The system stoplist contains common stopwords for all supported languages.  You can copy the system stoplist, and customize your copy by adding and removing stopwords.  
   
      The system stoplist is installed in the [Resource](../../2014/database-engine/resource-database.md) database.  
   
@@ -60,7 +60,7 @@ manager: "jhubbard"
   
  **To create a stoplist**  
   
--   [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../Topic/CREATE%20FULLTEXT%20STOPLIST%20\(Transact-SQL\).md)  
+-   [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](~/t-sql/statements/create-fulltext-stoplist-transact-sql.md)  
   
 #### To create a full-text stoplist in Management Studio  
   
@@ -86,11 +86,11 @@ manager: "jhubbard"
   
      For more information, see [New Full-Text Stoplist &#40;General Page&#41;](../../2014/database-engine/new-full-text-stoplist-general-page.md).  
   
-8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
  **To drop a stoplist**  
   
--   [DROP FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../Topic/DROP%20FULLTEXT%20STOPLIST%20\(Transact-SQL\).md)  
+-   [DROP FULLTEXT STOPLIST &#40;Transact-SQL&#41;](~/t-sql/statements/drop-fulltext-stoplist-transact-sql.md)  
   
   
 ##  <a name="queries"></a> Using a Stoplist in Full-Text Queries  
@@ -98,11 +98,11 @@ manager: "jhubbard"
   
  **To create a full-text index and associate a stoplist with it**  
   
--   [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../Topic/CREATE%20FULLTEXT%20INDEX%20\(Transact-SQL\).md)  
+-   [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-fulltext-index-transact-sql.md)  
   
  **To associate or disassociate a stoplist with an existing full-text index**  
   
--   [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../Topic/ALTER%20FULLTEXT%20INDEX%20\(Transact-SQL\).md)  
+-   [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-fulltext-index-transact-sql.md)  
   
  **To suppress an error message if stopwords cause a Boolean operation on a full-text query to fail**  
   
@@ -112,23 +112,23 @@ manager: "jhubbard"
 ##  <a name="viewing"></a> Viewing Stoplists and Stoplist Metadata  
  **To view all the stopwords of a stoplist**  
   
--   [sys.fulltext_stopwords &#40;Transact-SQL&#41;](../Topic/sys.fulltext_stopwords%20\(Transact-SQL\).md)  
+-   [sys.fulltext_stopwords &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql.md)  
   
  **To get information about all the stoplists in the current database**  
   
--   [sys.fulltext_stoplists &#40;Transact-SQL&#41;](../Topic/sys.fulltext_stoplists%20\(Transact-SQL\).md)  
+-   [sys.fulltext_stoplists &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)  
   
--   [sys.fulltext_stopwords &#40;Transact-SQL&#41;](../Topic/sys.fulltext_stopwords%20\(Transact-SQL\).md)  
+-   [sys.fulltext_stopwords &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql.md)  
   
  **To view the tokenization result of a word breaker, thesaurus, and stoplist combination**  
   
--   [sys.dm_fts_parser &#40;Transact-SQL&#41;](../Topic/sys.dm_fts_parser%20\(Transact-SQL\).md)  
+-   [sys.dm_fts_parser &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql.md)  
   
   
 ##  <a name="change"></a> Changing the Stopwords in a Stoplist  
  **To add or drop stopwords from a stoplist**  
   
--   [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../Topic/ALTER%20FULLTEXT%20STOPLIST%20\(Transact-SQL\).md)  
+-   [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](~/t-sql/statements/alter-fulltext-stoplist-transact-sql.md)  
   
 #### To change the stopwords in a stoplist in Management Studio  
   
@@ -148,11 +148,11 @@ manager: "jhubbard"
   
     3.  If the **Full-text language** list box is enabled for the selected action, select a language.  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
   
 ##  <a name="upgrade"></a> Upgrading Noise Words from SQL Server 2005  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] noise words have been replaced by stopwords. When a database is upgraded from [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], the noise-word files are no longer used. However, the noise-word files are stored in the FTDATA\ FTNoiseThesaurusBak folder, and you can use them later when updating or building the corresponding stoplists. For information about upgrading noise-word files to stoplists, see [Upgrade Full-Text Search](../../2014/database-engine/upgrade-full-text-search.md).  
+ [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] noise words have been replaced by stopwords. When a database is upgraded from [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], the noise-word files are no longer used. However, the noise-word files are stored in the FTDATA\ FTNoiseThesaurusBak folder, and you can use them later when updating or building the corresponding stoplists. For information about upgrading noise-word files to stoplists, see [Upgrade Full-Text Search](../../2014/database-engine/upgrade-full-text-search.md).  
   
   
   

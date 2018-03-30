@@ -18,11 +18,11 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Process Progress Dialog Box (Analysis Services - Multidimensional Data)
-  Use the **Process Progress** dialog box in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] and [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to monitor processing in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. The **Process Progress** dialog box appears when processing begins on an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] object.  
+  Use the **Process Progress** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] and [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to monitor processing in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. The **Process Progress** dialog box appears when processing begins on an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] object.  
   
 ## Options  
  **Status tree view**  
- Displays status messages from the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance regarding the objects being processed, including start time, stop time, and progress information. Right-click an item and select **Copy** to copy the details of a status message to the clipboard, or double-click an item to display the **View Details** dialog box. For more information about the **View Details** dialog box, see [View Details Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/view-details-dialog-box-analysis-services-multidimensional-data.md).  
+ Displays status messages from the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance regarding the objects being processed, including start time, stop time, and progress information. Right-click an item and select **Copy** to copy the details of a status message to the clipboard, or double-click an item to display the **View Details** dialog box. For more information about the **View Details** dialog box, see [View Details Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/view-details-dialog-box-analysis-services-multidimensional-data.md).  
   
  **Status description**  
  Displays the current status of the processing operation.  

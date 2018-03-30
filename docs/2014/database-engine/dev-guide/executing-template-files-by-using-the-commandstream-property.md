@@ -41,7 +41,7 @@ manager: "jhubbard"
  This is the sample C# application. To test the application, save the template (TemplateFile.xml) and then execute the application. The application executes the query that is specified in the XML template and displays the XML document that is generated on the screen.  
   
 > [!NOTE]  
->  In the code, you must provide the name of the instance of Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in the connection string.  
+>  In the code, you must provide the name of the instance of Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in the connection string.  
   
 ```  
 using System;  

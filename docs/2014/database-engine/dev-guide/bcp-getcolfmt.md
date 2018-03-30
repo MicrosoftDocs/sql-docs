@@ -77,7 +77,7 @@ pcbLen
 ## Remarks  
  Column format property values are listed in the [bcp_setcolfmt](../../../2014/database-engine/dev-guide/bcp-setcolfmt.md) topic. The column format property values are set by calling the **bcp_setcolfmt** function, and the **bcp_getcolfmt** function is used to find the column format property value.  
   
- Behavior changes may be observed when connecting to a [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] (or later) server computer, compared to earlier [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] versions. For more information, see [Metadata Discovery](../../../2014/database-engine/dev-guide/metadata-discovery.md).  
+ Behavior changes may be observed when connecting to a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (or later) server computer, compared to earlier [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions. For more information, see [Metadata Discovery](../../../2014/database-engine/dev-guide/metadata-discovery.md).  
   
 ## bcp_getcolfmt Support for Enhanced Date and Time Features  
  The types used with the `BCP_FMT_TYPE` property for date/time types are as specified in [Bulk Copy Changes for Enhanced Date and Time Types &#40;OLE DB and ODBC&#41;](../../../2014/database-engine/dev-guide/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  

@@ -17,11 +17,11 @@ helpviewer_keywords:
 ms.assetid: 8e227793-11f6-47c6-99dc-ffc282f5d4bf
 caps.latest.revision: 35
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Replication Queue Reader Agent
-  The Replication Queue Reader Agent is an executable that reads messages stored in a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] queue or a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Message Queue and then applies those messages to the Publisher. Queue Reader Agent is used with snapshot and transactional publications that allow queued updating.  
+  The Replication Queue Reader Agent is an executable that reads messages stored in a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] queue or a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queue and then applies those messages to the Publisher. Queue Reader Agent is used with snapshot and transactional publications that allow queued updating.  
   
 > [!NOTE]  
 >  Parameters can be specified in any order. When optional parameters are not specified, predefined values based on the default agent profile are used.  
@@ -61,7 +61,7 @@ manager: "jhubbard"
  Is the path of the agent definition file. An agent definition file contains command-line arguments for the agent. The content of the file is parsed as an executable file. Use double quotation marks (") to specify argument values containing arbitrary characters.  
   
  **-Distributor** *server_name*[**\\***instance_name*]  
- Is the Distributor name. Specify *server_name* for the default instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server. Specify *server_name*\\*instance_name* for a named instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server. If not specified, the name defaults to the name of the default instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on the local computer.  
+ Is the Distributor name. Specify *server_name* for the default instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on that server. Specify *server_name*\\*instance_name* for a named instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on that server. If not specified, the name defaults to the name of the default instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the local computer.  
   
  **-DistributionDB** *distribution_database*  
  Is the distribution database.  
@@ -73,7 +73,7 @@ manager: "jhubbard"
  Is the Distributor password.  
   
  **-DistributorSecurityMode** [ **0**| **1**]  
- Specifies the security mode of the Distributor. A value of **0** indicates [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication Mode (default), and a value of **1** indicates Windows Authentication Mode.  
+ Specifies the security mode of the Distributor. A value of **0** indicates [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication Mode (default), and a value of **1** indicates Windows Authentication Mode.  
   
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  Is the level of Secure Sockets Layer (SSL) encryption used by the Queue Reader Agent when making connections.  
@@ -106,10 +106,10 @@ manager: "jhubbard"
  Specifies whether the output should be verbose. If the verbose level is **0**, only error messages are printed. If the verbose level is **1**, all the progress report messages are printed. If the verbose level is **2** (default), all error messages and progress report messages are printed, which is useful for debugging.  
   
  **-PollingInterval** *polling_interval*  
- Is relevant only for updating subscriptions that use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] based queues. Specifies how often, in seconds, the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] queue is polled for pending queued transactions. The value can be between 0 and 240 seconds. The default is 5 seconds.  
+ Is relevant only for updating subscriptions that use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] based queues. Specifies how often, in seconds, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] queue is polled for pending queued transactions. The value can be between 0 and 240 seconds. The default is 5 seconds.  
   
  **-PublisherFailoverPartner** *server_name*[**\\***instance_name*]  
- Specifies the failover partner instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] participating in a database mirroring session with the publication database. For more information, see [Database Mirroring and Replication &#40;SQL Server&#41;](../../../2014/database-engine/database-mirroring-and-replication-sql-server.md).  
+ Specifies the failover partner instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] participating in a database mirroring session with the publication database. For more information, see [Database Mirroring and Replication &#40;SQL Server&#41;](../../../2014/database-engine/database-mirroring-and-replication-sql-server.md).  
   
  **-ProfileName** *agent_profile_name*  
  Is the name of an agent profile used to supply a set of default values to the agent. For information, see [Replication Agent Profiles](../../../2014/relational-databases/replication/replication-agent-profiles.md).  

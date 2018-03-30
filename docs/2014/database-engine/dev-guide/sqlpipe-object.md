@@ -21,11 +21,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SqlPipe Object
-  In previous versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], it is very common to write a stored procedure (or an extended stored procedure) that sends results or output parameters to the calling client.  
+  In previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], it is very common to write a stored procedure (or an extended stored procedure) that sends results or output parameters to the calling client.  
   
- In a [!INCLUDE[tsql](../../../includes/tsql-md.md)] stored procedure, any `SELECT` statement that returns zero or more rows sends the results to the connected caller's "pipe."  
+ In a [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure, any `SELECT` statement that returns zero or more rows sends the results to the connected caller's "pipe."  
   
- For common language runtime (CLR) database objects running in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], you can send results to the connected pipe using the `Send` methods of the `SqlPipe` object. Access the `Pipe` property of the `SqlContext` object to obtain the `SqlPipe` object. The `SqlPipe` class is conceptually similar to the `Response` class found in ASP.NET. For more information, see the SqlPipe Class reference documentation in the .NET Framework software development kit.  
+ For common language runtime (CLR) database objects running in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can send results to the connected pipe using the `Send` methods of the `SqlPipe` object. Access the `Pipe` property of the `SqlContext` object to obtain the `SqlPipe` object. The `SqlPipe` class is conceptually similar to the `Response` class found in ASP.NET. For more information, see the SqlPipe Class reference documentation in the .NET Framework software development kit.  
   
 ## Returning Tabular Results and Messages  
  The `SqlPipe` has a `Send` method, which has three overloads. They are:  
@@ -38,9 +38,9 @@ manager: "jhubbard"
   
  The `Send` method sends data straight to the client or caller. It is usually the client that consumes the output from the `SqlPipe`, but in the case of nested CLR stored procedures the output consumer can also be a stored procedure. For example, Procedure1 calls SqlCommand.ExecuteReader() with the command text "EXEC Procedure2". Procedure2 is also a managed stored procedure. If Procedure2 now calls SqlPipe.Send( SqlDataRecord ), the row is sent to Procedure1's reader, not the client.  
   
- The `Send` method sends a string message that appears on the client as an information message, equivalent to PRINT in [!INCLUDE[tsql](../../../includes/tsql-md.md)]. It can also send a single-row result-set using `SqlDataRecord`, or a multi-row result-set using a `SqlDataReader`.  
+ The `Send` method sends a string message that appears on the client as an information message, equivalent to PRINT in [!INCLUDE[tsql](../../includes/tsql-md.md)]. It can also send a single-row result-set using `SqlDataRecord`, or a multi-row result-set using a `SqlDataReader`.  
   
- The `SqlPipe` object also has an `ExecuteAndSend` method. This method can be used to execute a command (passed as a `SqlCommand` object) and send results directly back to the caller. If there are errors in the command that was submitted, exceptions are sent to the pipe, but a copy is also sent to calling managed code. If the calling code does not catch the exception, it propagates up the stack to the [!INCLUDE[tsql](../../../includes/tsql-md.md)] code and appears in the output twice. If the calling code does catch the exception, the pipe consumer still sees the error, but there is not a duplicate error.  
+ The `SqlPipe` object also has an `ExecuteAndSend` method. This method can be used to execute a command (passed as a `SqlCommand` object) and send results directly back to the caller. If there are errors in the command that was submitted, exceptions are sent to the pipe, but a copy is also sent to calling managed code. If the calling code does not catch the exception, it propagates up the stack to the [!INCLUDE[tsql](../../includes/tsql-md.md)] code and appears in the output twice. If the calling code does catch the exception, the pipe consumer still sees the error, but there is not a duplicate error.  
   
  It can only take a `SqlCommand` that is associated with the context connection; it cannot take a command that is associated with the non-context connection.  
   
@@ -131,7 +131,7 @@ End Sub
 End Class  
 ```  
   
- The following [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement executes the `uspGetProduct` procedure, which returns a list of touring bike products.  
+ The following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement executes the `uspGetProduct` procedure, which returns a list of touring bike products.  
   
 ```  
 EXEC uspGetProductLineVB 'T';  

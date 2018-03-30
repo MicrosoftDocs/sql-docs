@@ -18,15 +18,15 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Preview Data Dialog Box (SQL Server Import and Export Wizard)
-  Use the **Preview Data** dialog box to see the query that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard will send to the data source. You can also use this dialog box to preview up to 200 rows of sample data.  
+  Use the **Preview Data** dialog box to see the query that the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Import and Export Wizard will send to the data source. You can also use this dialog box to preview up to 200 rows of sample data.  
   
- To learn more about the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export wizard, see [SQL Server Import and Export Wizard](../../2014/integration-services/sql-server-import-and-export-wizard.md). To learn about the options for starting the wizard, and about the permissions required to run the wizard successfully, see [Run the SQL Server Import and Export Wizard](../../2014/integration-services/run-the-sql-server-import-and-export-wizard.md).  
+ To learn more about the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Import and Export wizard, see [SQL Server Import and Export Wizard](../../2014/integration-services/sql-server-import-and-export-wizard.md). To learn about the options for starting the wizard, and about the permissions required to run the wizard successfully, see [Run the SQL Server Import and Export Wizard](../../2014/integration-services/run-the-sql-server-import-and-export-wizard.md).  
   
- The purpose of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard is to copy data from a source to a destination. The wizard can also create a destination database and destination tables for you. However, if you have to copy multiple databases or tables, or other kinds of database objects, you should use the Copy Database Wizard instead. For more information, see [Use the Copy Database Wizard](../../2014/database-engine/use-the-copy-database-wizard.md).  
+ The purpose of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Import and Export Wizard is to copy data from a source to a destination. The wizard can also create a destination database and destination tables for you. However, if you have to copy multiple databases or tables, or other kinds of database objects, you should use the Copy Database Wizard instead. For more information, see [Use the Copy Database Wizard](../../2014/database-engine/use-the-copy-database-wizard.md).  
   
  **To open the Preview Data dialog box**  
   
--   On the **Select Source Tables and Views** page of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard, click **Preview**.  
+-   On the **Select Source Tables and Views** page of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Import and Export Wizard, click **Preview**.  
   
 ## Options  
  **Source**  

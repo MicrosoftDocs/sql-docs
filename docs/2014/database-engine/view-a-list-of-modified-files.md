@@ -28,7 +28,7 @@ manager: "jhubbard"
   
 1.  On the **View** menu, click **Pending Checkins**.  
   
-2.  To check in the selected files, click **Check In**. Alternatively, you can dock the **Pending Checkins** window on the right side of the [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] environment so that you can check in the files when you are finished working.  
+2.  To check in the selected files, click **Check In**. Alternatively, you can dock the **Pending Checkins** window on the right side of the [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] environment so that you can check in the files when you are finished working.  
   
      **Check In**  
      Checks in the solution.  

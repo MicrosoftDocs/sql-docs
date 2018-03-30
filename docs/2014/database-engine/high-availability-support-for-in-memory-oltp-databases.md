@@ -16,10 +16,10 @@ ms.author: "sstein"
 manager: "jhubbard"
 ---
 # High Availability Support for In-Memory OLTP databases
-  Databases containing memory-optimized tables, with or without native compiled stored procedures, are fully supported with AlwaysOn Availability Groups.  There is no difference in the configuration and support for databases which contain [!INCLUDE[hek_2](../../includes/hek-2-md.md)] objects as compared to those without,  
+  Databases containing memory-optimized tables, with or without native compiled stored procedures, are fully supported with AlwaysOn Availability Groups.  There is no difference in the configuration and support for databases which contain [!INCLUDE[hek_2](../includes/hek-2-md.md)] objects as compared to those without,  
   
 ## AlwaysOn Availability Groups and In-Memory OLTP Databases  
- Configuring databases with [!INCLUDE[hek_2](../../includes/hek-2-md.md)] components provides the following:  
+ Configuring databases with [!INCLUDE[hek_2](../includes/hek-2-md.md)] components provides the following:  
   
 -   **A fully integrated experience**   
     You can configure your databases containing memory-optimized tables using the same wizard with the same level of support for both synchronous and asynchronous secondary replicas. Additionally, health monitoring is provided using the familiar AlwaysOn dashboard in SQL Server Management Studio.  
@@ -37,7 +37,7 @@ manager: "jhubbard"
     Failover time will likely to be higher as the memory-optimized tables must be loaded into memory before the database is made available.  
   
 -   **SCHEMA_ONLY tables**   
-    Be aware that SCHEMA_ONLY tables will be empty with no rows after the failover. This is as designed and defined by the application. This is exactly the same behavior when you restart an [!INCLUDE[hek_2](../../includes/hek-2-md.md)] database with one or more SCHEMA_ONLY tables.  
+    Be aware that SCHEMA_ONLY tables will be empty with no rows after the failover. This is as designed and defined by the application. This is exactly the same behavior when you restart an [!INCLUDE[hek_2](../includes/hek-2-md.md)] database with one or more SCHEMA_ONLY tables.  
   
 ## Support for transaction replication in In-Memory OLTP  
  Tables acting as transactional replication subscribers, excluding Peer-to-peer transactional replication, can be configured as memory-optimized tables. Other replication configurations are not compatible with memory-optimized tables.  For more information see [Replication to Memory-Optimized Table Subscribers](../../2014/relational-databases/replication/replication-to-memory-optimized-table-subscribers.md).  

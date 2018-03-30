@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 90faac38-f79e-496d-b589-e8b2fe01c562
 caps.latest.revision: 16
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Migrate to a Partially Contained Database
@@ -41,15 +41,15 @@ manager: "jhubbard"
   
 -   Review the list of database features that are modified for partially contained databases. For more information, see [Modified Features &#40;Contained Database&#41;](../../2014/database-engine/modified-features-contained-database.md).  
   
--   Query [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](../Topic/sys.dm_db_uncontained_entities%20\(Transact-SQL\).md) to find uncontained objects or features in the database. For more information, see.  
+-   Query [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md) to find uncontained objects or features in the database. For more information, see.  
   
 -   Monitor the **database_uncontained_usage** XEvent to see when uncontained features are used.  
   
 ##  <a name="enable"></a> Enable Contained Databases  
- Contained databases must be enabled on the instance of [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], before contained databases can be created.  
+ Contained databases must be enabled on the instance of [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], before contained databases can be created.  
   
 ### Enabling Contained Databases Using Transact-SQL  
- The following example enables contained databases on the instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
+ The following example enables contained databases on the instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)].  
   
 ```tsql  
 sp_configure 'contained database authentication', 1;  
@@ -59,13 +59,13 @@ GO
 ```  
   
 #### Enabling Contained Databases Using Management Studio  
- The following example enables contained databases on the instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
+ The following example enables contained databases on the instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)].  
   
 1.  In Object Explorer, right-click the server name, and then click **Properties**.  
   
 2.  On the **Advanced** page, in the **Containment** section, set the **Enable Contained Databases** option to **True**.  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ##  <a name="convert"></a> Converting a Database to Partially Contained  
  A database is converted to a contained database by changing the **CONTAINMENT** option.  
@@ -87,10 +87,10 @@ GO
   
 2.  On the **Options** page, change the **Containment type** option to **Partial**.  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ##  <a name="users"></a> Migrating Users to Contained Database Users  
- The following example migrates all users that are based on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins to contained database users with passwords. The example excludes logins that are not enabled. The example must be executed in the contained database.  
+ The following example migrates all users that are based on [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] logins to contained database users with passwords. The example excludes logins that are not enabled. The example must be executed in the contained database.  
   
 ```tsql  
 DECLARE @username sysname ;  
@@ -117,7 +117,7 @@ DEALLOCATE user_cursor ;
   
 ## See Also  
  [Contained Databases](../../2014/database-engine/contained-databases.md)   
- [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../Topic/sp_migrate_user_to_contained%20\(Transact-SQL\).md)   
- [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](../Topic/sys.dm_db_uncontained_entities%20\(Transact-SQL\).md)  
+ [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)   
+ [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)  
   
   

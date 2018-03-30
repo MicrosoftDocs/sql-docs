@@ -16,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: 1ed28805-a9ae-43ca-92da-101ba0c0c43a
 caps.latest.revision: 13
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # XML Input File Samples (DTA)
-  This section contains sample XML input files that you can use with the **dta** command line tool. This tool is one of the user interfaces to the Database Engine Tuning Advisor, a tool you can use to tune databases for improved query performance. Database Engine Tuning Advisor analyzes the effects of a workload against a database or multiple databases. A workload is a set of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that execute against databases that you want to tune. After Database Engine Tuning Advisor finishes analyzing the effects of the workload, it creates a recommendation for adding indexes, indexed views, or partitioning strategies that will improve query performance on your databases.  
+  This section contains sample XML input files that you can use with the **dta** command line tool. This tool is one of the user interfaces to the Database Engine Tuning Advisor, a tool you can use to tune databases for improved query performance. Database Engine Tuning Advisor analyzes the effects of a workload against a database or multiple databases. A workload is a set of [!INCLUDE[tsql](../includes/tsql-md.md)] statements that execute against databases that you want to tune. After Database Engine Tuning Advisor finishes analyzing the effects of the workload, it creates a recommendation for adding indexes, indexed views, or partitioning strategies that will improve query performance on your databases.  
   
 ## In This Section  
   

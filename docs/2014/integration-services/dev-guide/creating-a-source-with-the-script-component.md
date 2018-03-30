@@ -23,14 +23,14 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Creating a Source with the Script Component
-  You use a source component in the data flow of an [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] package to load data from a data source to pass on to downstream transformations and destinations. Ordinarily you connect to the data source through an existing connection manager.  
+  You use a source component in the data flow of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package to load data from a data source to pass on to downstream transformations and destinations. Ordinarily you connect to the data source through an existing connection manager.  
   
  For an overview of the Script component, see [Extending the Data Flow with the Script Component](../../../2014/integration-services/dev-guide/extending-the-data-flow-with-the-script-component.md).  
   
  The Script component and the infrastructure code that it generates for you simplify significantly the process of developing a custom data flow component. However, to understand how the Script component works, you may find it useful to read through the steps that are involved in developing a custom data flow component. See the section [Developing a Custom Data Flow Component](../../../2014/integration-services/dev-guide/developing-a-custom-data-flow-component.md), especially the topic [Developing a Custom Source Component](../../../2014/integration-services/dev-guide/developing-a-custom-source-component.md).  
   
 ## Getting Started with a Source Component  
- When you add a Script component to the Data Flow pane of [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, the **Select Script Component Type** dialog box opens and prompts you to select a Source, Destination, or Transformation script. In this dialog box, select **Source**.  
+ When you add a Script component to the Data Flow pane of [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, the **Select Script Component Type** dialog box opens and prompts you to select a Source, Destination, or Transformation script. In this dialog box, select **Source**.  
   
 ## Configuring a Source Component in Metadata-Design Mode  
  After selecting to create a source component, you configure the component by using the **Script Transformation Editor**. For more information, see [Configuring the Script Component in the Script Component Editor](../../../2014/integration-services/dev-guide/configuring-the-script-component-in-the-script-component-editor.md).  
@@ -77,7 +77,7 @@ manager: "jhubbard"
  For more information about the **Script** page of the **Script Transformation Editor**, see [Script Transformation Editor &#40;Script Page&#41;](../../../2014/integration-services/script-transformation-editor-script-page.md).  
   
 ## Scripting a Source Component in Code-Design Mode  
- After you have configured the metadata for your component, open the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE to code your custom script. To open VSTA, click **Edit Script** on the **Script** page of the **Script Transformation Editor**. You can write your script by using either [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic or [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#, depending on the script language selected for the **ScriptLanguage** property.  
+ After you have configured the metadata for your component, open the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE to code your custom script. To open VSTA, click **Edit Script** on the **Script** page of the **Script Transformation Editor**. You can write your script by using either [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic or [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#, depending on the script language selected for the **ScriptLanguage** property.  
   
  For important information that applies to all kinds of components created by using the Script component, see [Coding and Debugging the Script Component](../../../2014/integration-services/dev-guide/coding-and-debugging-the-script-component.md).  
   
@@ -101,7 +101,7 @@ manager: "jhubbard"
   
 1.  Override the `AcquireConnections` method to connect to the external data source. Extract the connection object, or the required connection information, from the connection manager.  
   
-2.  Override the `PreExecute` method to load data, if you can load all the source data at the same time. For example, you can execute a `SqlCommand` against an [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] connection to a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database and load all the source data at the same time into a `SqlDataReader`. If you must load the source data one row at a time (for example, when reading a text file), you can load the data as you loop through rows in `CreateNewOutputRows`.  
+2.  Override the `PreExecute` method to load data, if you can load all the source data at the same time. For example, you can execute a `SqlCommand` against an [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database and load all the source data at the same time into a `SqlDataReader`. If you must load the source data one row at a time (for example, when reading a text file), you can load the data as you loop through rows in `CreateNewOutputRows`.  
   
 3.  Use the overridden `CreateNewOutputRows` method to add new rows to the empty output buffers and to fill in the values of each column in the new output rows. Use the `AddRow` method of each output buffer to add an empty new row, and then set the values of each column. Typically you copy values from the columns loaded from the external source.  
   
@@ -116,11 +116,11 @@ manager: "jhubbard"
 >  These examples use the **Person.Address** table in the `AdventureWorks` sample database and pass its first and fourth columns, the **intAddressID** and **nvarchar(30)City** columns, through the data flow. The same data is used in the source, transformation, and destination samples in this section. Additional prerequisites and assumptions are documented for each example.  
   
 ### ADO.NET Source Example  
- This example demonstrates a source component that uses an existing [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] connection manager to load data from a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] table into the data flow.  
+ This example demonstrates a source component that uses an existing [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection manager to load data from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table into the data flow.  
   
  If you want to run this sample code, you must configure the package and the component as follows:  
   
-1.  Create an [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] connection manager that uses the `SqlClient` provider to connect to the `AdventureWorks` database.  
+1.  Create an [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection manager that uses the `SqlClient` provider to connect to the `AdventureWorks` database.  
   
 2.  Add a new Script component to the Data Flow designer surface and configure it as a source.  
   
@@ -129,11 +129,11 @@ manager: "jhubbard"
     > [!NOTE]  
     >  Be sure to change the data type of the **City** output column to DT_WSTR.  
   
-4.  On the **Connection Managers** page, add or create the [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] connection manager and give it a name such as **MyADONETConnection**.  
+4.  On the **Connection Managers** page, add or create the [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection manager and give it a name such as **MyADONETConnection**.  
   
 5.  On the **Script** page, click **Edit Script** and enter the script that follows. Then close the script development environment and the **Script Transformation Editor**.  
   
-6.  Create and configure a destination component, such as a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] destination, or the sample destination component demonstrated in [Creating a Destination with the Script Component](../../../2014/integration-services/dev-guide/creating-a-destination-with-the-script-component.md), that expects the **AddressID** and **City** columns. Then connect the source component to the destination. (You can connect a source directly to a destination without any transformations.) You can create a destination table by running the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] command in the `AdventureWorks` database:  
+6.  Create and configure a destination component, such as a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destination, or the sample destination component demonstrated in [Creating a Destination with the Script Component](../../../2014/integration-services/dev-guide/creating-a-destination-with-the-script-component.md), that expects the **AddressID** and **City** columns. Then connect the source component to the destination. (You can connect a source directly to a destination without any transformations.) You can create a destination table by running the following [!INCLUDE[tsql](../../includes/tsql-md.md)] command in the `AdventureWorks` database:  
   
     ```  
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
@@ -250,11 +250,11 @@ manager: "jhubbard"
     ```  
   
 ### Flat File Source Example  
- This example demonstrates a source component that uses an existing Flat File connection manager to load data from a flat file into the data flow. The flat file source data is created by exporting it from [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ This example demonstrates a source component that uses an existing Flat File connection manager to load data from a flat file into the data flow. The flat file source data is created by exporting it from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  If you want to run this sample code, you must configure the package and the component as follows:  
   
-1.  Use the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Import and Export Wizard to export the **Person.Address** table from the `AdventureWorks` sample database to a comma-delimited flat file. This sample uses the file name ExportedAddresses.txt.  
+1.  Use the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard to export the **Person.Address** table from the `AdventureWorks` sample database to a comma-delimited flat file. This sample uses the file name ExportedAddresses.txt.  
   
 2.  Create a Flat File connection manager that connects to the exported data file.  
   
@@ -266,7 +266,7 @@ manager: "jhubbard"
   
 6.  On the **Script** page, click **Edit Script** and enter the script that follows. Then close the script development environment and the **Script Transformation Editor**.  
   
-7.  Create and configure a destination component, such as a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] destination, or the sample destination component demonstrated in [Creating a Destination with the Script Component](../../../2014/integration-services/dev-guide/creating-a-destination-with-the-script-component.md). Then connect the source component to the destination. (You can connect a source directly to a destination without any transformations.) You can create a destination table by running the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] command in the `AdventureWorks` database:  
+7.  Create and configure a destination component, such as a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destination, or the sample destination component demonstrated in [Creating a Destination with the Script Component](../../../2014/integration-services/dev-guide/creating-a-destination-with-the-script-component.md). Then connect the source component to the destination. (You can connect a source directly to a destination without any transformations.) You can create a destination table by running the following [!INCLUDE[tsql](../../includes/tsql-md.md)] command in the `AdventureWorks` database:  
   
     ```  
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
@@ -387,7 +387,7 @@ manager: "jhubbard"
   
 ||  
 |-|  
-|![Integration Services icon (small)](../../../2014/integration-services/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
+|![Integration Services icon (small)](../../../2014/integration-services/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
   
 ## See Also  
  [Creating a Destination with the Script Component](../../../2014/integration-services/dev-guide/creating-a-destination-with-the-script-component.md)   

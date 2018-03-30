@@ -20,11 +20,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Keep Identity Values When Bulk Importing Data (SQL Server)
-  Data files that contain identity values can be bulk imported into an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. By default, the values for the identity column in the data file that is imported are ignored and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assigns unique values automatically. The unique values are based on the seed and increment values that are specified during table creation.  
+  Data files that contain identity values can be bulk imported into an instance of [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. By default, the values for the identity column in the data file that is imported are ignored and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] assigns unique values automatically. The unique values are based on the seed and increment values that are specified during table creation.  
   
- If the data file does not contain values for the identifier column in the table, use a format file to specify that the identifier column in the table should be skipped when importing data. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assigns unique values for the column automatically.  
+ If the data file does not contain values for the identifier column in the table, use a format file to specify that the identifier column in the table should be skipped when importing data. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] assigns unique values for the column automatically.  
   
- To prevent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from assigning identity values while bulk importing data rows into a table, use the appropriate keep-identity command qualifier. When you specify a keep-identity qualifier, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses the identity values in the data file. These qualifiers are as follows:  
+ To prevent [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] from assigning identity values while bulk importing data rows into a table, use the appropriate keep-identity command qualifier. When you specify a keep-identity qualifier, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses the identity values in the data file. These qualifiers are as follows:  
   
 |Command|Keep-identity qualifier|Qualifier type|  
 |-------------|------------------------------|--------------------|  
@@ -32,7 +32,7 @@ manager: "jhubbard"
 |BULK INSERT|KEEPIDENTITY|Argument|  
 |INSERT ... SELECT * FROM OPENROWSET(BULK...)|KEEPIDENTITY|Table hint|  
   
- For more information, see [bcp Utility](../../2014/database-engine/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](../Topic/BULK%20INSERT%20\(Transact-SQL\).md), [OPENROWSET &#40;Transact-SQL&#41;](../Topic/OPENROWSET%20\(Transact-SQL\).md), [INSERT &#40;Transact-SQL&#41;](../Topic/INSERT%20\(Transact-SQL\).md), [SELECT &#40;Transact-SQL&#41;](../Topic/SELECT%20\(Transact-SQL\).md), and [Table Hints &#40;Transact-SQL&#41;](../Topic/Table%20Hints%20\(Transact-SQL\).md).  
+ For more information, see [bcp Utility](../../2014/database-engine/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md), [OPENROWSET &#40;Transact-SQL&#41;](~/t-sql/functions/openrowset-transact-sql.md), [INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/insert-transact-sql.md), [SELECT &#40;Transact-SQL&#41;](~/t-sql/queries/select-transact-sql.md), and [Table Hints &#40;Transact-SQL&#41;](~/t-sql/queries/hints-transact-sql-table.md).  
   
 > [!NOTE]  
 >  To create an automatically incrementing number that can be used in multiple tables or that can be called from applications without referencing any table, see [Sequence Numbers](../../2014/database-engine/sequence-numbers.md).  
@@ -41,7 +41,7 @@ manager: "jhubbard"
  The examples in this topic bulk import data using INSERT ... SELECT * FROM OPENROWSET(BULK...) and keeping default values.  
   
 ### Sample Table  
- The bulk-import examples require that a table named **myTestKeepNulls** table be created in the **AdventureWorks** sample database under the **dbo** schema. To create this table. in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor, execute:  
+ The bulk-import examples require that a table named **myTestKeepNulls** table be created in the **AdventureWorks** sample database under the **dbo** schema. To create this table. in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Query Editor, execute:  
   
 ```  
 USE AdventureWorks;  
@@ -56,7 +56,7 @@ SELECT * FROM HumanResources.myDepartment;
  The **Department** table on which `myDepartment` is based has IDENTITY_INSERT is set to OFF. Therefore, to import data into an identity column you must specify KEEPIDENTITY or **-E**.  
   
 ### Sample Data File  
- The data file used in the bulk-import examples contains data bulk exported from the `HumanResources.Department` table in native format. To create the data file, at the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows command prompt, enter:  
+ The data file used in the bulk-import examples contains data bulk exported from the `HumanResources.Department` table in native format. To create the data file, at the [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows command prompt, enter:  
   
 ```  
 bcp AdventureWorks.HumanResources.Department out myDepartment-n.Dat -n -T  
@@ -77,7 +77,7 @@ bcp AdventureWorks.HumanResources.Department format nul -n -x -f myDepartment-f-
 |Qualifiers|Description|  
 |----------------|-----------------|  
 |**-E**|Specifies that identity value or values in the data file are to be used for the identity column.|  
-|**-T**|Specifies that the `bcp` utility connects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with a trusted connection.|  
+|**-T**|Specifies that the `bcp` utility connects to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] with a trusted connection.|  
   
  At the Windows command prompt, enter.  
   
@@ -89,7 +89,7 @@ bcp AdventureWorks.HumanResources.myDepartment in C:\myDepartment-n.Dat -f C:\my
 ### B. Using BULK INSERT and Keeping Identity Values  
  The following example uses BULK INSERT to bulk import data from the `myDepartment-c.Dat` file into the `AdventureWorks.HumanResources.myDepartment` table. The statement uses the `myDepartment-f-n-x.Xml` format file and includes the KEEPIDENTITY option to ensure that any identity values in the data file are retained.  
   
- In the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor, execute:  
+ In the [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Query Editor, execute:  
   
 ```  
 USE AdventureWorks;  
@@ -110,7 +110,7 @@ SELECT * FROM HumanResources.myDepartment;
 ### C. Using OPENROWSET and Keeping Identity Values  
  The following example uses the OPENROWSET bulk rowset provider to bulk import data from the `myDepartment-c.Dat` file into the `AdventureWorks.HumanResources.myDepartment` table. The statement uses the `myDepartment-f-n-x.Xml` format file and includes the KEEPIDENTITY hint to ensure that any identity values in the data file are retained.  
   
- In the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor, execute:  
+ In the [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Query Editor, execute:  
   
 ```  
 USE AdventureWorks;  
@@ -167,10 +167,10 @@ GO
 3.  [Specify File Storage Type by Using bcp &#40;SQL Server&#41;](../../2014/database-engine/specify-file-storage-type-by-using-bcp-sql-server.md)  
   
 ## See Also  
- [BACKUP &#40;Transact-SQL&#41;](../Topic/BACKUP%20\(Transact-SQL\).md)   
+ [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)   
  [bcp Utility](../../2014/database-engine/bcp-utility.md)   
- [BULK INSERT &#40;Transact-SQL&#41;](../Topic/BULK%20INSERT%20\(Transact-SQL\).md)   
- [OPENROWSET &#40;Transact-SQL&#41;](../Topic/OPENROWSET%20\(Transact-SQL\).md)   
- [Table Hints &#40;Transact-SQL&#41;](../Topic/Table%20Hints%20\(Transact-SQL\).md)  
+ [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md)   
+ [OPENROWSET &#40;Transact-SQL&#41;](~/t-sql/functions/openrowset-transact-sql.md)   
+ [Table Hints &#40;Transact-SQL&#41;](~/t-sql/queries/hints-transact-sql-table.md)  
   
   

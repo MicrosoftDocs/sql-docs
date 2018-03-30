@@ -65,7 +65,7 @@ manager: "mblythe"
 ## Remarks  
  The `DataItem` data type is used for any data item that can be bound; for example, a measure, attribute key, and attribute name. The details that are relevant, and the defaults that apply, depend on the usage; for example, attribute names must be strings.  
   
- An instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] accepts only a certain set of data types. Use of other data types results in an error, rather than an implicit conversion to one of the valid types.  
+ An instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] accepts only a certain set of data types. Use of other data types results in an error, rather than an implicit conversion to one of the valid types.  
   
  The following table lists elements of type `DataItem`.  
   

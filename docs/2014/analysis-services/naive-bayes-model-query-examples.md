@@ -160,7 +160,7 @@ CALL GetPredictableAttributes ('TM_NaiveBayes')
 > [!NOTE]  
 >  These system stored procedures are for internal communication between the Analysis Services server and the client and should only be used for convenience when developing and testing mining models. When you create queries for a production system, you should always write your own queries by using DMX.  
   
- For more information about Analysis Services system stored procedures, see [Data Mining Stored Procedures &#40;Analysis Services - Data Mining&#41;](../Topic/Data%20Mining%20Stored%20Procedures%20\(Analysis%20Services%20-%20Data%20Mining\).md).  
+ For more information about Analysis Services system stored procedures, see [Data Mining Stored Procedures &#40;Analysis Services - Data Mining&#41;](~/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md).  
   
 ## Using a Naive Bayes Model to Make Predictions  
  The Microsoft Naive Bayes algorithm is typically used less for prediction than it is for exploration of relationships among the input and predictable attributes. However, the model supports the use of prediction functions for both prediction and association.  
@@ -187,7 +187,7 @@ NATURAL PREDICTION JOIN
  The prediction function returns the most likely value, in this case, 0, which means this type of customer is unlikely to purchase a bike.  
   
 ###  <a name="bkmk_Query6"></a> Sample Query 6: Getting Predictions with Probability and Support Values  
- In addition to predicting an outcome, you often want to know how strong the prediction is. The following query uses the same singleton query as the previous example, but adds the prediction function, [PredictHistogram &#40;DMX&#41;](../Topic/PredictHistogram%20\(DMX\).md), to return a nested table that contains statistics in support of the prediction.  
+ In addition to predicting an outcome, you often want to know how strong the prediction is. The following query uses the same singleton query as the previous example, but adds the prediction function, [PredictHistogram &#40;DMX&#41;](~/dmx/predicthistogram-dmx.md), to return a nested table that contains statistics in support of the prediction.  
   
 ```  
 SELECT  
@@ -237,20 +237,20 @@ AS t
 |Touring-1000|  
   
 ## Function List  
- All [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithms support a common set of functions. However, the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes algorithm supports the additional functions that are listed in the following table.  
+ All [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithms support a common set of functions. However, the [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes algorithm supports the additional functions that are listed in the following table.  
   
 |||  
 |-|-|  
 |Prediction Function|Usage|  
-|[IsDescendant &#40;DMX&#41;](../Topic/IsDescendant%20\(DMX\).md)|Determines whether one node is a child of another node in the model.|  
-|[Predict &#40;DMX&#41;](../Topic/Predict%20\(DMX\).md)|Returns a predicted value, or set of values, for a specified column.|  
-|[PredictAdjustedProbability &#40;DMX&#41;](../Topic/PredictAdjustedProbability%20\(DMX\).md)|Returns the weighted probability.|  
-|[PredictAssociation &#40;DMX&#41;](../Topic/PredictAssociation%20\(DMX\).md)|Predicts membership in an associative dataset.|  
-|[PredictNodeId &#40;DMX&#41;](../Topic/PredictNodeId%20\(DMX\).md)|Returns the Node_ID for each case.|  
-|[PredictProbability &#40;DMX&#41;](../Topic/PredictProbability%20\(DMX\).md)|Returns probability for the predicted value.|  
-|[PredictSupport &#40;DMX&#41;](../Topic/PredictSupport%20\(DMX\).md)|Returns the support value for a specified state.|  
+|[IsDescendant &#40;DMX&#41;](~/dmx/isdescendant-dmx.md)|Determines whether one node is a child of another node in the model.|  
+|[Predict &#40;DMX&#41;](~/dmx/predict-dmx.md)|Returns a predicted value, or set of values, for a specified column.|  
+|[PredictAdjustedProbability &#40;DMX&#41;](~/dmx/predictadjustedprobability-dmx.md)|Returns the weighted probability.|  
+|[PredictAssociation &#40;DMX&#41;](~/dmx/predictassociation-dmx.md)|Predicts membership in an associative dataset.|  
+|[PredictNodeId &#40;DMX&#41;](~/dmx/predictnodeid-dmx.md)|Returns the Node_ID for each case.|  
+|[PredictProbability &#40;DMX&#41;](~/dmx/predictprobability-dmx.md)|Returns probability for the predicted value.|  
+|[PredictSupport &#40;DMX&#41;](~/dmx/predictsupport-dmx.md)|Returns the support value for a specified state.|  
   
- To see  the syntax of specific functions, see [Data Mining Extensions &#40;DMX&#41; Function Reference](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Function%20Reference.md).  
+ To see  the syntax of specific functions, see [Data Mining Extensions &#40;DMX&#41; Function Reference](~/dmx/data-mining-extensions-dmx-function-reference.md).  
   
 ## See Also  
  [Microsoft Naive Bayes Algorithm Technical Reference](../../2014/analysis-services/microsoft-naive-bayes-algorithm-technical-reference.md)   

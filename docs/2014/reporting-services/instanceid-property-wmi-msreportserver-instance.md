@@ -20,11 +20,11 @@ helpviewer_keywords:
 ms.assetid: 55c6c8b6-dfad-499f-befa-042c1caba17f
 caps.latest.revision: 14
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # InstanceID Property (WMI MSReportServer_Instance)
-  This object supports the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] infrastructure and is not intended to be used directly from your code.  
+  This object supports the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] infrastructure and is not intended to be used directly from your code.  
   
 ## Syntax  
   
@@ -37,7 +37,7 @@ public string InstanceID;
 ```  
   
 ## Requirements  
- **Namespace:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspc](../includes/ssrswminmspc-md.md)]  
   
 ## See Also  
  [MSReportServer_Instance Members](../../2014/reporting-services/msreportserver-instance-members.md)  

@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: 86d72275-45c7-459f-98cf-f5a366ed279c
 caps.latest.revision: 18
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Web Server Information
@@ -22,7 +22,7 @@ manager: "jhubbard"
   
 ## Options  
  **Web server address**  
- If you specified a Web server address in the **FTP Snapshot andInternet** page of the **Publication Properties** dialog box, it appears in this text box as a default. Either accept the default or enter a fully qualified Web server address for the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Internet Information Services (IIS) server that synchronizes this subscription.  
+ If you specified a Web server address in the **FTP Snapshot andInternet** page of the **Publication Properties** dialog box, it appears in this text box as a default. Either accept the default or enter a fully qualified Web server address for the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) server that synchronizes this subscription.  
   
  **How will each Subscriber connect to the Web server?**  
  Specify the type of authentication used to connect to the Web server. It is recommended to use Basic Authentication for connections to the IIS server in conjunction with Secure Sockets Layer (SSL). If you select Basic Authentication, enter the login and password that will be used to connect from the Subscriber to the IIS server.  

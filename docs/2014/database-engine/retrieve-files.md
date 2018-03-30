@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Retrieve Files
-  After you have opened a source-controlled project, you can use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to retrieve local copies of project files from the source control store to the local directory in which the project resides.  
+  After you have opened a source-controlled project, you can use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to retrieve local copies of project files from the source control store to the local directory in which the project resides.  
   
  You can use integrated source control to retrieve files in the following ways:  
   

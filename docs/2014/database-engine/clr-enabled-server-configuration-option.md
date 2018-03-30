@@ -19,12 +19,12 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # clr enabled Server Configuration Option
-  Use the clr enabled option to specify whether user assemblies can be run by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The clr enabled option provides the following values.  
+  Use the clr enabled option to specify whether user assemblies can be run by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. The clr enabled option provides the following values.  
   
 |Value|Description|  
 |-----------|-----------------|  
-|0|Assembly execution not allowed on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|1|Assembly execution allowed on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|0|Assembly execution not allowed on [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
+|1|Assembly execution allowed on [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
   
  WOW64 servers must be restarted before the changes to this setting will take effect. Restart is not required for other server types.  
   
@@ -47,7 +47,7 @@ RECONFIGURE;
 ## See Also  
  [lightweight pooling Server Configuration Option](../../2014/database-engine/lightweight-pooling-server-configuration-option.md)   
  [Server Configuration Options &#40;SQL Server&#41;](../../2014/database-engine/server-configuration-options-sql-server.md)   
- [sp_configure &#40;Transact-SQL&#41;](../Topic/sp_configure%20\(Transact-SQL\).md)   
+ [sp_configure &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [lightweight pooling Server Configuration Option](../../2014/database-engine/lightweight-pooling-server-configuration-option.md)  
   
   

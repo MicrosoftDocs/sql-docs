@@ -21,9 +21,9 @@ manager: "jhubbard"
 ## Import Data  
  [Data Import &#40;Master Data Services&#41;](../../2014/master-data-services/data-import-master-data-services.md)  
   
- [Load or Update Members in Master Data Services by Using the Staging Process](../Topic/Load%20or%20Update%20Members%20in%20Master%20Data%20Services%20by%20Using%20the%20Staging%20Process.md)  
+ [Load or Update Members in Master Data Services by Using the Staging Process](~/2014/master-data-services/add-update-and-delete-data-master-data-services.md)  
   
- [Move Explicit Hierarchy Members by Using the Staging Process &#40;Master Data Services&#41;](../Topic/Move%20Explicit%20Hierarchy%20Members%20by%20Using%20the%20Staging%20Process%20\(Master%20Data%20Services\).md)  
+ [Move Explicit Hierarchy Members by Using the Staging Process &#40;Master Data Services&#41;](~/2014/master-data-services/add-update-and-delete-data-master-data-services.md)  
   
  [View Errors that Occur During the Staging Process &#40;Master Data Services&#41;](../../2014/master-data-services/view-errors-that-occur-during-the-staging-process-master-data-services.md)  
   

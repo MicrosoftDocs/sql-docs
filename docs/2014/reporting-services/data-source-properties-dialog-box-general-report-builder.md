@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: b956f43a-8426-4679-acc1-00f405d5ff5b
 caps.latest.revision: 14
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Data Source Properties Dialog Box, General (Report Builder)

@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 9577e88d-c22b-4934-936f-e0f1400cedf5
 caps.latest.revision: 13
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Use Built-in Security in Windows SharePoint Services for Report Server Items
@@ -40,7 +40,7 @@ manager: "mblythe"
 ## Using built-in groups and permission levels to access report server items  
  When you use permission inheritance and standard SharePoint groups, you can access most report server operations immediately after you configure integration settings on the report server and SharePoint instances.  
   
- SharePoint provides standard groups that map to predefined permission levels that determine how you access documents and pages on a SharePoint site. If you are using standard groups and default permission levels, and your sites are configured to inherit permissions, you can expect to work with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] features in the following ways:  
+ SharePoint provides standard groups that map to predefined permission levels that determine how you access documents and pages on a SharePoint site. If you are using standard groups and default permission levels, and your sites are configured to inherit permissions, you can expect to work with [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features in the following ways:  
   
 |**SharePoint Groups**|**Permission level**|**Summary**|**Report Server Access**|  
 |---------------------------|--------------------------|-----------------|------------------------------|  
@@ -48,7 +48,7 @@ manager: "mblythe"
 |**Members**|Contribute|Members can create new items and publish items reports and models from design tools to a SharePoint library.|Add reports and other items to libraries. Edit item properties for reports and other documents. Delete reports and other items. View reports, including reports that use report models for data exploration. View past versions of a document, including report history snapshots (requires that a user also has permission to open the report for which report history was created). Set parameters on reports. Set processing options on a report. Generate report models. Create reports in Report Builder. Create and manage shared data sources. Create, change, and delete subscriptions that are owned by the user. Use shared schedules with a subscription. Create and manage versions of a document, including report history. Download the source file for a report definition or a report model. Replace a report definition, report model, shared data source, or resource (preserving item properties and permissions).|  
 |**Visitors** and **Viewers**|Read|Visitors can view reports|View reports, including reports that use report models for data exploration.|  
   
- If you are not using the built-in groups and permission levels, you must include specific permissions in order to access [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] features. For more information, see [Set Permissions for Report Server Operations in a SharePoint Web Application](../../2014/reporting-services/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md).  
+ If you are not using the built-in groups and permission levels, you must include specific permissions in order to access [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features. For more information, see [Set Permissions for Report Server Operations in a SharePoint Web Application](../../2014/reporting-services/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md).  
   
 ## See Also  
  [Granting Permissions on Report Server Items on a SharePoint Site](../../2014/reporting-services/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   

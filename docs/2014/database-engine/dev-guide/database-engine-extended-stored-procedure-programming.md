@@ -25,9 +25,9 @@ manager: "jhubbard"
 # Database Engine Extended Stored Procedure Programming
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Use CLR Integration instead. For more information, see [Common Language Runtime &#40;CLR&#41; Integration Programming Concepts](../../../2014/database-engine/dev-guide/common-language-runtime-clr-integration-programming-concepts.md).  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR Integration instead. For more information, see [Common Language Runtime &#40;CLR&#41; Integration Programming Concepts](../../../2014/database-engine/dev-guide/common-language-runtime-clr-integration-programming-concepts.md).  
   
- The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Extended Stored Procedure API provides a server-based application programming interface (API) for extending [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] functionality. The API consists of C and C++ functions and macros used to build applications in the following categories: extended stored procedures and gateway applications.  
+ The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Extended Stored Procedure API provides a server-based application programming interface (API) for extending [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] functionality. The API consists of C and C++ functions and macros used to build applications in the following categories: extended stored procedures and gateway applications.  
   
  Extended stored procedures allow you to create your own external routines in a programming language such as C. The extended stored procedures appear to users as typical stored procedures and are executed in the same way. Parameters can be passed to extended stored procedures, and they can return results and return status.  
   

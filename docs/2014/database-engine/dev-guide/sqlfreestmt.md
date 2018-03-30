@@ -21,7 +21,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQLFreeStmt
-  **SQLFreeStmt** is not recommended in ODBC 3.0 and later. The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver supports all defined *Option* values for **SQLFreeStmt**. However, [SQLCloseCursor](../../../2014/database-engine/dev-guide/sqlclosecursor.md), [SQLBindParameter](../../../2014/database-engine/dev-guide/sqlbindparameter.md), [SQLBindCol](../../../2014/database-engine/dev-guide/sqlbindcol.md), **SQLSetDescField**, and [SQLFreeHandle](../../../2014/database-engine/dev-guide/sqlfreehandle.md) replace or duplicate the function of **SQLFreeStmt** and should be used instead.  
+  **SQLFreeStmt** is not recommended in ODBC 3.0 and later. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver supports all defined *Option* values for **SQLFreeStmt**. However, [SQLCloseCursor](../../../2014/database-engine/dev-guide/sqlclosecursor.md), [SQLBindParameter](../../../2014/database-engine/dev-guide/sqlbindparameter.md), [SQLBindCol](../../../2014/database-engine/dev-guide/sqlbindcol.md), **SQLSetDescField**, and [SQLFreeHandle](../../../2014/database-engine/dev-guide/sqlfreehandle.md) replace or duplicate the function of **SQLFreeStmt** and should be used instead.  
   
 ## See Also  
  [SQLFreeStmt Function](http://go.microsoft.com/fwlink/?LinkId=59346)   

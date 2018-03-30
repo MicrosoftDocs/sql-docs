@@ -27,21 +27,21 @@ manager: "jhubbard"
 # CLR Table-Valued Functions
   A table-valued function is a user-defined function that returns a table.  
   
- Beginning with [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] extends the functionality of table-valued functions by allowing you to define a table-valued function in any managed language. Data is returned from a table-valued function through an `IEnumerable` or `IEnumerator` object.  
+ Beginning with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] extends the functionality of table-valued functions by allowing you to define a table-valued function in any managed language. Data is returned from a table-valued function through an `IEnumerable` or `IEnumerator` object.  
   
 > [!NOTE]  
 >  For table-valued functions, the columns of the return table type cannot include timestamp columns or non-Unicode string data type columns (such as `char`, `varchar`, and `text`). The NOT NULL constraint is not supported.  
   
 ## Differences Between Transact-SQL and CLR Table-Valued Functions  
- [!INCLUDE[tsql](../../../includes/tsql-md.md)] table-valued functions materialize the results of calling the function into an intermediate table. Since they use an intermediate table, they can support constraints and unique indexes over the results. These features can be extremely useful when large results are returned.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] table-valued functions materialize the results of calling the function into an intermediate table. Since they use an intermediate table, they can support constraints and unique indexes over the results. These features can be extremely useful when large results are returned.  
   
  In contrast, CLR table-valued functions represent a streaming alternative. There is no requirement that the entire set of results be materialized in a single table. The `IEnumerable` object returned by the managed function is directly called by the execution plan of the query that calls the table-valued function, and the results are consumed in an incremental manner. This streaming model ensures that results can be consumed immediately after the first row is available, instead of waiting for the entire table to be populated. It is also a better alternative if you have very large numbers of rows returned, because they do not have to be materialized in memory as a whole. For example, a managed table-valued function could be used to parse a text file and return each line as a row.  
   
 ## Implementing Table-Valued Functions  
- Implement table-valued functions as methods on a class in a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework assembly. Your table-valued function code must implement the `IEnumerable` interface. The `IEnumerable` interface is defined in the .NET Framework. Types representing arrays and collections in the .NET Framework already implement the `IEnumerable` interface. This makes it easy for writing table-valued functions that convert a collection or an array into a result set.  
+ Implement table-valued functions as methods on a class in a [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework assembly. Your table-valued function code must implement the `IEnumerable` interface. The `IEnumerable` interface is defined in the .NET Framework. Types representing arrays and collections in the .NET Framework already implement the `IEnumerable` interface. This makes it easy for writing table-valued functions that convert a collection or an array into a result set.  
   
 ## Table-Valued Parameters  
- Table-valued parameters are user-defined table types that are passed into a procedure or function and provide an efficient way to pass multiple rows of data to the server. Table-valued parameters provide similar functionality to parameter arrays, but offer greater flexibility and closer integration with [!INCLUDE[tsql](../../../includes/tsql-md.md)]. They also provide the potential for better performance. Table-valued parameters also help reduce the number of round trips to the server. Instead of sending multiple requests to the server, such as with a list of scalar parameters, data can be sent to the server as a table-valued parameter. A user-defined table type cannot be passed as a table-valued parameter to, or be returned from, a managed stored procedure or function executing in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] process. For more information about table-valued parameters, see [Use Table-Valued Parameters &#40;Database Engine&#41;](../../../2014/database-engine/use-table-valued-parameters-database-engine.md).  
+ Table-valued parameters are user-defined table types that are passed into a procedure or function and provide an efficient way to pass multiple rows of data to the server. Table-valued parameters provide similar functionality to parameter arrays, but offer greater flexibility and closer integration with [!INCLUDE[tsql](../../includes/tsql-md.md)]. They also provide the potential for better performance. Table-valued parameters also help reduce the number of round trips to the server. Instead of sending multiple requests to the server, such as with a list of scalar parameters, data can be sent to the server as a table-valued parameter. A user-defined table type cannot be passed as a table-valued parameter to, or be returned from, a managed stored procedure or function executing in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process. For more information about table-valued parameters, see [Use Table-Valued Parameters &#40;Database Engine&#41;](../../../2014/database-engine/use-table-valued-parameters-database-engine.md).  
   
 ## Output Parameters and Table-Valued Functions  
  Information may be returned from table-valued functions using output parameters. The corresponding parameter in the implementation code table-valued function should use a pass-by-reference parameter as the argument. Note that Visual Basic does not support output parameters in the same way that Visual C# does. You must specifiy the parameter by reference and apply the \<Out()> attribute to represent an output parameter, as in the following:  
@@ -53,7 +53,7 @@ Public Shared Sub FillRow ( <Out()> ByRef value As SqlInt32)
 ```  
   
 ### Defining a Table-Valued Function in Transact-SQL  
- The syntax for defining a CLR table-valued function is similar to that of a [!INCLUDE[tsql](../../../includes/tsql-md.md)] table-valued function, with the addition of the `EXTERNAL NAME` clause. For example:  
+ The syntax for defining a CLR table-valued function is similar to that of a [!INCLUDE[tsql](../../includes/tsql-md.md)] table-valued function, with the addition of the `EXTERNAL NAME` clause. For example:  
   
 ```  
 CREATE FUNCTION GetEmpFirstLastNames()  
@@ -75,7 +75,7 @@ select * from table t cross apply function(t.column);
   
 -   Generated from external data. For example, a table-valued function that reads the event log and exposes it as a table.  
   
- **Note** A table-valued function can only perform data access through a [!INCLUDE[tsql](../../../includes/tsql-md.md)] query in the `InitMethod` method, and not in the `FillRow` method. The `InitMethod` should be marked with the `SqlFunction.DataAccess.Read` attribute property if a [!INCLUDE[tsql](../../../includes/tsql-md.md)] query is performed.  
+ **Note** A table-valued function can only perform data access through a [!INCLUDE[tsql](../../includes/tsql-md.md)] query in the `InitMethod` method, and not in the `FillRow` method. The `InitMethod` should be marked with the `SqlFunction.DataAccess.Read` attribute property if a [!INCLUDE[tsql](../../includes/tsql-md.md)] query is performed.  
   
 ## A Sample Table-Valued Function  
  The following table-valued function returns information from the system event log. The function takes a single string argument containing the name of the event log to read.  
@@ -134,7 +134,7 @@ End Class
 ```  
   
 ###### Declaring and Using the Sample Table-Valued Function  
- After the sample table-valued function has been compiled, it can be declared in [!INCLUDE[tsql](../../../includes/tsql-md.md)] like this:  
+ After the sample table-valued function has been compiled, it can be declared in [!INCLUDE[tsql](../../includes/tsql-md.md)] like this:  
   
 ```  
 use master;  
@@ -156,9 +156,9 @@ EXTERNAL NAME tvfEventLog.TabularEventLog.InitMethod;
 GO  
 ```  
   
- Visual C++ database objects compiled with /clr:pure are not supported for execution on [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. For example, such database objects include table-valued functions.  
+ Visual C++ database objects compiled with /clr:pure are not supported for execution on [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. For example, such database objects include table-valued functions.  
   
- To test the sample, try the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] code:  
+ To test the sample, try the following [!INCLUDE[tsql](../../includes/tsql-md.md)] code:  
   
 ```  
 -- Select the top 100 events,  
@@ -174,7 +174,7 @@ go
 ```  
   
 ## Sample: Returning the Results of a SQL Server Query  
- The following sample shows a table-valued function that queries a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database. This sample uses the AdventureWorks Light database from [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]. See [http://www.codeplex.com/sqlserversamples](http://go.microsoft.com/fwlink/?LinkId=87843) for more information on downloading AdventureWorks.  
+ The following sample shows a table-valued function that queries a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. This sample uses the AdventureWorks Light database from [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. See [http://www.codeplex.com/sqlserversamples](http://go.microsoft.com/fwlink/?LinkId=87843) for more information on downloading AdventureWorks.  
   
  Name your source code file FindInvalidEmails.cs or FindInvalidEmails.vb.  
   
@@ -384,7 +384,7 @@ Public Partial Class UserDefinedFunctions
 End Class  
 ```  
   
- Compile the source code to a DLL and copy the DLL to the root directory of your C drive.  Then, execute the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] query.  
+ Compile the source code to a DLL and copy the DLL to the root directory of your C drive.  Then, execute the following [!INCLUDE[tsql](../../includes/tsql-md.md)] query.  
   
 ```  
 use AdventureWorksLT2008;  

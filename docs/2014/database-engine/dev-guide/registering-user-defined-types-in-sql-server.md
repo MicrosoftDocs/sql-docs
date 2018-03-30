@@ -40,35 +40,35 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Registering User-Defined Types in SQL Server
-  In order to use a user-defined type (UDT) in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], you must register it. Registering a UDT involves registering the assembly and creating the type in the database in which you wish to use it. UDTs are scoped to a single database, and cannot be used in multiple databases unless the identical assembly and UDT are registered with each database. Once the UDT assembly is registered and the type created, you can use the UDT in [!INCLUDE[tsql](../../../includes/tsql-md.md)] and in client code. For more information, see [CLR User-Defined Types](../../../2014/database-engine/dev-guide/clr-user-defined-types.md).  
+  In order to use a user-defined type (UDT) in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you must register it. Registering a UDT involves registering the assembly and creating the type in the database in which you wish to use it. UDTs are scoped to a single database, and cannot be used in multiple databases unless the identical assembly and UDT are registered with each database. Once the UDT assembly is registered and the type created, you can use the UDT in [!INCLUDE[tsql](../../includes/tsql-md.md)] and in client code. For more information, see [CLR User-Defined Types](../../../2014/database-engine/dev-guide/clr-user-defined-types.md).  
   
 ## Using Visual Studio to Deploy UDTs  
- The easiest way to deploy your UDT is by using [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio. For more complex deployment scenarios and the greatest flexibility, however, use [!INCLUDE[tsql](../../../includes/tsql-md.md)] as discussed later in this topic.  
+ The easiest way to deploy your UDT is by using [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio. For more complex deployment scenarios and the greatest flexibility, however, use [!INCLUDE[tsql](../../includes/tsql-md.md)] as discussed later in this topic.  
   
  Follow these steps to create and deploy a UDT using Visual Studio:  
   
 1.  Create a new **Database** project in the **Visual Basic** or **Visual C#** language nodes.  
   
-2.  Add a reference to the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database that will contain the UDT.  
+2.  Add a reference to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database that will contain the UDT.  
   
 3.  Add a **User-Defined Type** class.  
   
 4.  Write code to implement the UDT.  
   
-5.  From the **Build** menu, select **Deploy**. This registers the assembly and creates the type in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database.  
+5.  From the **Build** menu, select **Deploy**. This registers the assembly and creates the type in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
   
 ## Using Transact-SQL to Deploy UDTs  
- The [!INCLUDE[tsql](../../../includes/tsql-md.md)] CREATE ASSEMBLY syntax is used to register the assembly in the database in which you wish to use the UDT. It is stored internally in database system tables, not externally in the file system. If the UDT is dependent on external assemblies, they too must be loaded into the database. The CREATE TYPE statement is used to create the UDT in the database in which it is to be used. For more information, see [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../Topic/CREATE%20ASSEMBLY%20\(Transact-SQL\).md) and [CREATE TYPE &#40;Transact-SQL&#41;](../Topic/CREATE%20TYPE%20\(Transact-SQL\).md).  
+ The [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY syntax is used to register the assembly in the database in which you wish to use the UDT. It is stored internally in database system tables, not externally in the file system. If the UDT is dependent on external assemblies, they too must be loaded into the database. The CREATE TYPE statement is used to create the UDT in the database in which it is to be used. For more information, see [CREATE ASSEMBLY &#40;Transact-SQL&#41;](~/t-sql/statements/create-assembly-transact-sql.md) and [CREATE TYPE &#40;Transact-SQL&#41;](~/t-sql/statements/create-type-transact-sql.md).  
   
 ### Using CREATE ASSEMBLY  
  The CREATE ASSEMBLY syntax registers the assembly in the database in which you wish to use the UDT. Once the assembly is registered, it has no dependencies.  
   
- Creating multiple versions of the same assembly in a given database is not allowed. However, it is possible to create multiple versions of the same assembly based on culture in a given database. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] distinguishes multiple culture versions of an assembly by different names as registered in the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. For more information, see "Creating and Using Strong-Named Assemblies" in the .NET Framework SDK.  
+ Creating multiple versions of the same assembly in a given database is not allowed. However, it is possible to create multiple versions of the same assembly based on culture in a given database. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] distinguishes multiple culture versions of an assembly by different names as registered in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see "Creating and Using Strong-Named Assemblies" in the .NET Framework SDK.  
   
  When CREATE ASSEMBLY is executed with the SAFE or EXTERNAL_ACCESS permission sets, the assembly is checked to make sure that it is verifiable and type safe. If you omit specifying a permission set, SAFE is assumed. Code with the UNSAFE permission set is not checked. For more information about assembly permission sets, see [Designing Assemblies](../../../2014/database-engine/dev-guide/designing-assemblies.md).  
   
 #### Example  
- The following [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement registers the Point assembly in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in the **AdventureWorks** database, with the SAFE permission set. If the WITH PERMISSION_SET clause is omitted, the assembly is registered with the SAFE permission set.  
+ The following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement registers the Point assembly in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in the **AdventureWorks** database, with the SAFE permission set. If the WITH PERMISSION_SET clause is omitted, the assembly is registered with the SAFE permission set.  
   
 ```  
 USE AdventureWorks;  
@@ -77,7 +77,7 @@ FROM '\\ShareName\Projects\Point\bin\Point.dll'
 WITH PERMISSION_SET = SAFE;  
 ```  
   
- The following [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement registers the assembly using *<assembly_bits>* argument in the FROM clause. This `varbinary` value represents the file as a stream of bytes.  
+ The following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement registers the assembly using *<assembly_bits>* argument in the FROM clause. This `varbinary` value represents the file as a stream of bytes.  
   
 ```  
 USE AdventureWorks;  
@@ -86,15 +86,15 @@ FROM 0xfeac4 … 21ac78
 ```  
   
 ### Using CREATE TYPE  
- Once the assembly is loaded into the database, you can then create the type using the [!INCLUDE[tsql](../../../includes/tsql-md.md)] CREATE TYPE statement. This adds the type to the list of available types for that database. The type has database scope and the type can only be used in the database in which it was created. If the UDT already exists in the database, the CREATE TYPE statement fails with an error.  
+ Once the assembly is loaded into the database, you can then create the type using the [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TYPE statement. This adds the type to the list of available types for that database. The type has database scope and the type can only be used in the database in which it was created. If the UDT already exists in the database, the CREATE TYPE statement fails with an error.  
   
 > [!NOTE]  
->  The CREATE TYPE syntax is also used for creating native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] alias data types, and is intended to replace `sp_addtype` as a means of creating alias data types. Some of the optional arguments in the CREATE TYPE syntax refer to creating UDTs, and are not applicable to creating alias data types (such as base type).  
+>  The CREATE TYPE syntax is also used for creating native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alias data types, and is intended to replace `sp_addtype` as a means of creating alias data types. Some of the optional arguments in the CREATE TYPE syntax refer to creating UDTs, and are not applicable to creating alias data types (such as base type).  
   
- For more information, see [CREATE TYPE &#40;Transact-SQL&#41;](../Topic/CREATE%20TYPE%20\(Transact-SQL\).md).  
+ For more information, see [CREATE TYPE &#40;Transact-SQL&#41;](~/t-sql/statements/create-type-transact-sql.md).  
   
 #### Example  
- The following [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement creates the `Point` type. The EXTERNAL NAME is specified using the two-part naming syntax of *AssemblyName*.*UDTName*.  
+ The following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement creates the `Point` type. The EXTERNAL NAME is specified using the two-part naming syntax of *AssemblyName*.*UDTName*.  
   
 ```  
 CREATE TYPE dbo.Point   
@@ -111,7 +111,7 @@ EXTERNAL NAME Point.[Point];
 -   Functions, stored procedures, or triggers that use variables or parameters of the UDT, created in the database with the WITH SCHEMABINDING clause.  
   
 ### Example  
- The following [!INCLUDE[tsql](../../../includes/tsql-md.md)] must execute in the following order. First the table which references the `Point` UDT must be dropped, then the type, and finally the assembly.  
+ The following [!INCLUDE[tsql](../../includes/tsql-md.md)] must execute in the following order. First the table which references the `Point` UDT must be dropped, then the type, and finally the assembly.  
   
 ```  
 DROP TABLE dbo.Points;  
@@ -122,7 +122,7 @@ DROP ASSEMBLY Point;
 ### Finding UDT Dependencies  
  If there are dependent objects, such as tables with UDT column definitions, the DROP TYPE statement fails. It also fails if there are functions, stored procedures, or triggers created in the database using the WITH SCHEMABINDING clause, if these routines use variables or parameters of the user-defined type. You must first drop all dependent objects, and then execute the DROP TYPE statement.  
   
- The following [!INCLUDE[tsql](../../../includes/tsql-md.md)] query locates all of the columns and parameters that use a UDT in the **AdventureWorks** database.  
+ The following [!INCLUDE[tsql](../../includes/tsql-md.md)] query locates all of the columns and parameters that use a UDT in the **AdventureWorks** database.  
   
 ```  
 USE Adventureworks;  
@@ -143,12 +143,12 @@ SELECT o.name AS major_name, o.type_desc AS major_type_desc
 ```  
   
 ## Maintaining UDTs  
- You cannot modify a UDT once it is created in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database, although you can alter the assembly on which the type is based. In most cases, you must remove the UDT from the database with the [!INCLUDE[tsql](../../../includes/tsql-md.md)] DROP TYPE statement, make changes to the underlying assembly, and reload it using the ALTER ASSEMBLY statement. You then need to re-create the UDT and any dependent objects.  
+ You cannot modify a UDT once it is created in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, although you can alter the assembly on which the type is based. In most cases, you must remove the UDT from the database with the [!INCLUDE[tsql](../../includes/tsql-md.md)] DROP TYPE statement, make changes to the underlying assembly, and reload it using the ALTER ASSEMBLY statement. You then need to re-create the UDT and any dependent objects.  
   
 ### Example  
- The ALTER ASSEMBLY statement is used after you have made changes to the source code in your UDT assembly and recompiled it. It copies the .dll file to the server and rebinds to the new assembly. For the complete syntax, see [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../Topic/ALTER%20ASSEMBLY%20\(Transact-SQL\).md).  
+ The ALTER ASSEMBLY statement is used after you have made changes to the source code in your UDT assembly and recompiled it. It copies the .dll file to the server and rebinds to the new assembly. For the complete syntax, see [ALTER ASSEMBLY &#40;Transact-SQL&#41;](~/t-sql/statements/alter-assembly-transact-sql.md).  
   
- The following [!INCLUDE[tsql](../../../includes/tsql-md.md)] ALTER ASSEMBLY statement reloads the Point.dll assembly from the specified location on disk.  
+ The following [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER ASSEMBLY statement reloads the Point.dll assembly from the specified location on disk.  
   
 ```  
 ALTER ASSEMBLY Point  
@@ -158,7 +158,7 @@ FROM '\\Projects\Point\bin\Point.dll'
 ### Using ALTER ASSEMBLY to Add Source Code  
  The ADD FILE clause in the ALTER ASSEMBLY syntax is not present in CREATE ASSEMBLY. You can use it to add source code or any other files associated with an assembly. The files are copied from their original locations and stored in system tables in the database. This ensures that you always have source code or other files on hand should you ever need to re-create or document the current version of the UDT.  
   
- The following [!INCLUDE[tsql](../../../includes/tsql-md.md)] ALTER ASSEMBLY statement adds the Point.cs class source code for the `Point` UDT. This copies the text contained in the Point.cs file and stores it in the database under the name "PointSource".  
+ The following [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER ASSEMBLY statement adds the Point.cs class source code for the `Point` UDT. This copies the text contained in the Point.cs file and stores it in the database under the name "PointSource".  
   
 ```  
 ALTER ASSEMBLY Point  
@@ -210,9 +210,9 @@ SELECT CAST(content AS varchar(8000))
   
 -   Selecting UDT data from one database table UDT column and inserting it into a second database with an identical UDT column.  
   
- In these situations, any conversion required by the server occurs automatically. You are not able to perform the conversions explicitly using the [!INCLUDE[tsql](../../../includes/tsql-md.md)] CAST or CONVERT functions.  
+ In these situations, any conversion required by the server occurs automatically. You are not able to perform the conversions explicitly using the [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST or CONVERT functions.  
   
- Note that you do not need to take any action for using UDTs when [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] creates work tables in the **tempdb** system database. This includes the handling of cursors, table variables, and user-defined table-valued functions that include UDTs and that transparently make use of **tempdb**. However, if you explicitly create a temporary table in **tempdb** that defines a UDT column, then the UDT must be registered in **tempdb** the same way as for a user database.  
+ Note that you do not need to take any action for using UDTs when [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] creates work tables in the **tempdb** system database. This includes the handling of cursors, table variables, and user-defined table-valued functions that include UDTs and that transparently make use of **tempdb**. However, if you explicitly create a temporary table in **tempdb** that defines a UDT column, then the UDT must be registered in **tempdb** the same way as for a user database.  
   
 ## See Also  
  [CLR User-Defined Types](../../../2014/database-engine/dev-guide/clr-user-defined-types.md)  

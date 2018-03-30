@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Share Data Feeds Using a Data Feed Library (PowerPivot for SharePoint)
-  A data feed is an XML data stream that is generated from a service or application that exposes data in the Atom wire format. Increasingly, it is used to transport data between applications and to client-side viewers. In a PowerPivot for SharePoint deployment, data feeds are used to populate a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data source with data from an Atom-aware application or service.  
+  A data feed is an XML data stream that is generated from a service or application that exposes data in the Atom wire format. Increasingly, it is used to transport data between applications and to client-side viewers. In a PowerPivot for SharePoint deployment, data feeds are used to populate a [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] data source with data from an Atom-aware application or service.  
   
  If you already use a combination of Atom-aware applications, you might never need to know how feeds are generated and consumed because the data transfer is seamless between the applications. However, organizations that use custom solutions to publish Atom feeds often need a way to make feeds available to information workers. One way to do that is to create and share data service document (.atomsvc) files that provide connections to the online sources that produce the feeds. A special-purpose library, called a data feed library, supports creating and sharing data service documents in a SharePoint web application.  
   
@@ -35,10 +35,10 @@ manager: "mblythe"
  [Next Step: Use a Data Service Document](#usedsdoc)  
   
 > [!NOTE]  
->  Although data feeds are used to add Web data to a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data source that you create in a [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)], any client application that can read an Atom feed can process a data service document.  
+>  Although data feeds are used to add Web data to a [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] data source that you create in a [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)], any client application that can read an Atom feed can process a data service document.  
   
 ##  <a name="prereq"></a> Prerequisites  
- You must have a deployment of [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] PowerPivot for SharePoint that adds [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] query processing to a SharePoint farm. Data Feed support is deployed through the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] solution package.  
+ You must have a deployment of [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] PowerPivot for SharePoint that adds [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] query processing to a SharePoint farm. Data Feed support is deployed through the [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] solution package.  
   
  You must have a SharePoint library that supports the data service document content type. A default Data Feed library is recommended for this purpose, but you can manually add the content type to any library. For more information, see [Create or Customize a Data Feed Library &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/create-or-customize-a-data-feed-library-powerpivot-for-sharepoint.md).  
   
@@ -69,7 +69,7 @@ manager: "mblythe"
   
          A data feed URL can include parameters. Different types of data service technologies support advanced URL addressing schemes that allow you to precisely select the data you want to use. For example, an ADO.NET data service provides URL parameters for specifying entities, associations, and navigation paths in the underlying data. By specifying a complex URL as a source of a data feed, you can precisely specify the dataset you want to use.  
   
-    3.  For the same data feed, enter a table name that subsequently identifies the dataset in a client application. In the [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)], each data feed that you import is placed in its own table control in an [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data source. You must specify the name of the table that receives the imported data when you set up the data feed.  
+    3.  For the same data feed, enter a table name that subsequently identifies the dataset in a client application. In the [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)], each data feed that you import is placed in its own table control in an [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] data source. You must specify the name of the table that receives the imported data when you set up the data feed.  
   
 5.  Click "Add another data feed" to repeat the previous steps for specifying additional feeds from the same service or a different service.  
   
@@ -79,7 +79,7 @@ manager: "mblythe"
   
 6.  Save the document. The data service document is stored as a physical file (.atomsvc) in a content library that is configured for this content type.  
   
- To use the data service document, you can open an [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook in the [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] and choose the **From Data Feed** option in the Import Data wizard. When prompted, a user will specify the SharePoint URL of the data service document to start a data import operation. For more information, see [Use Data Feeds &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/use-data-feeds-powerpivot-for-sharepoint.md).  
+ To use the data service document, you can open an [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] workbook in the [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] and choose the **From Data Feed** option in the Import Data wizard. When prompted, a user will specify the SharePoint URL of the data service document to start a data import operation. For more information, see [Use Data Feeds &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/use-data-feeds-powerpivot-for-sharepoint.md).  
   
 ##  <a name="securedsdoc"></a> Secure a Data Service Document  
  A data service document inherits the permissions of the library that contains it. Permissions that you set on the item will determine whether a user can open, modify or delete the data service document.  
@@ -100,9 +100,9 @@ manager: "mblythe"
 ##  <a name="modifydsdoc"></a> Modify a Data Service Document  
  You can add, edit, or remove individual URL-table entries in a data service document. After you save your changes, users who select the service document in a new import operation will get the data feeds you specified.  
   
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks that used a previous version of the document are unaffected by any changes you make. This is because a data service document is read only once during the initial import operation. During the import, service URL and table names are copied and stored internally in the workbook. These internal values are then used in subsequent refresh operations to get updated data.  
+ [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] workbooks that used a previous version of the document are unaffected by any changes you make. This is because a data service document is read only once during the initial import operation. During the import, service URL and table names are copied and stored internally in the workbook. These internal values are then used in subsequent refresh operations to get updated data.  
   
- Because there is no persistent link between a data service document on a SharePoint site and the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook that contains the imported feed, modifying any part of a data service document has no effect on existing [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks.  
+ Because there is no persistent link between a data service document on a SharePoint site and the [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] workbook that contains the imported feed, modifying any part of a data service document has no effect on existing [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] workbooks.  
   
 > [!IMPORTANT]  
 >  Although the data service document is read only once, data services that provide the actual data can be accessed at regular intervals to get newer feeds. For more information about how to refresh data, see [PowerPivot Data Refresh](../../2014/analysis-services/powerpivot-data-refresh.md).  

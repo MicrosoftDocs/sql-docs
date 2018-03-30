@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: d0ecf297-27af-43a4-918c-31c354b3a96e
 caps.latest.revision: 12
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Summary: Configuring Permissions on Database Objects
-  Logins give users permissions to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Users are logins that can access a specific database. Use the GRANT statement to give users permission to read and to access and change the data.  
+  Logins give users permissions to connect to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Users are logins that can access a specific database. Use the GRANT statement to give users permission to read and to access and change the data.  
   
- A view is a single SELECT statement and looks like a table to the user. A stored procedure is one or more [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that execute as a batch.  
+ A view is a single SELECT statement and looks like a table to the user. A stored procedure is one or more [!INCLUDE[tsql](../includes/tsql-md.md)] statements that execute as a batch.  
   
 ## Next Lesson in Tutorial  
  [Lesson 3: Deleting Database Objects](../../2014/tutorials/lesson-3-deleting-database-objects.md)  

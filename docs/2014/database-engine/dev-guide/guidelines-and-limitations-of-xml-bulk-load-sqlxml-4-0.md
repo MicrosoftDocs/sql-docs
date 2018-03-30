@@ -158,13 +158,13 @@ manager: "jhubbard"
   
 -   If you specify the SchemaGen property (for example, SchemaGen = true), the tables that are identified in the mapping schema are created. But SchemaGen does not create any constraints (such as the PRIMARY KEY/FOREIGN KEY constraints) on these tables with one exception: If the XML nodes that constitute the primary key in a relationship are defined as having an XML type of ID (that is, `type="xsd:ID"` for XSD) AND the SGUseID property is set to True for SchemaGen, then not only are primary keys created from the ID typed nodes, but primary key/foreign key relationships are created from mapping schema relationships.  
   
--   SchemaGen does not use XSD schema facets and extensions to generate the relational [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] schema.  
+-   SchemaGen does not use XSD schema facets and extensions to generate the relational [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schema.  
   
 -   If you specify the SchemaGen property (for example, SchemaGen = true) on Bulk Load, only tables (and not views of shared name) that are specified are updated.  
   
 -   SchemaGen only provides basic functionality for generating the relational schema from annotated XSD. The user should modify the generated tables manually, if needed.  
   
--   Where more than relationship exists between tables,SchemaGen tries to create a single relationship that includes all the keys involved between the two tables. This limitation might be the cause of a [!INCLUDE[tsql](../../../includes/tsql-md.md)] error.  
+-   Where more than relationship exists between tables,SchemaGen tries to create a single relationship that includes all the keys involved between the two tables. This limitation might be the cause of a [!INCLUDE[tsql](../../includes/tsql-md.md)] error.  
   
 -   When you are bulk loading XML data into a database, there must be at least one attribute or child element in the mapping schema that is mapped to a database column.  
   

@@ -27,7 +27,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Make a Master Server
-  This topic describes how to make a master server [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  This topic describes how to make a master server [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -67,11 +67,11 @@ manager: "jhubbard"
   
 #### To make a master server  
   
-1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], and then expand that instance.  
+1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], and then expand that instance.  
   
 2.  Right-click **SQL Server Agent**, point to **Multi Server Administration**, and then click **Make this a Master**. The **Master Server Wizard** guides you through the process of making a master server and adding target servers.  
   
-3.  From the **Master Server Operator** page, configure an operator for the master server To send notifications to operators by using e-mail or pagers, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent must be configured to send e-mail. To send notifications to operators by using **net send**, the Messenger service must be running on the server where [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent resides.  
+3.  From the **Master Server Operator** page, configure an operator for the master server To send notifications to operators by using e-mail or pagers, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent must be configured to send e-mail. To send notifications to operators by using **net send**, the Messenger service must be running on the server where [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent resides.  
   
      **E-mail address**  
      Sets the e-mail address for the operator.  
@@ -85,7 +85,7 @@ manager: "jhubbard"
 4.  From the **Target Server** page, select target servers for the master server.  
   
      **Registered Servers**  
-     Lists the servers registered in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] that are not already target servers.  
+     Lists the servers registered in Microsoft [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] that are not already target servers.  
   
      **Target Servers**  
      Lists the servers that are target servers.  
@@ -117,7 +117,7 @@ manager: "jhubbard"
   
 #### To make a master server  
   
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
@@ -132,7 +132,7 @@ EXEC dbo.sp_msx_enlist N'AdventureWorks1',
 GO;  
 ```  
   
- For more information, see [sp_msx_enlist &#40;Transact-SQL&#41;](../Topic/sp_msx_enlist%20\(Transact-SQL\).md).  
+ For more information, see [sp_msx_enlist &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql.md).  
   
 ## See Also  
  [Create a Multiserver Environment](../../2014/database-engine/create-a-multiserver-environment.md)   

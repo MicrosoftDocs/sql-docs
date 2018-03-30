@@ -58,7 +58,7 @@ manager: "jhubbard"
 |**Name**|The name of the backup set.|  
 |**Type**|The backed-up object: Database, File, or *\<blank>* (for transaction logs).|  
 |**Component**|The type of backup performed: Full, Differential or Transaction Log.|  
-|**Server**|The name of the instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] that performed the backup operation.|  
+|**Server**|The name of the instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)] that performed the backup operation.|  
 |**Database**|The name of the database that was backed up.|  
 |**Position**|The position of the backup set in the volume.|  
 |**Date**|The date and time when the backup operation finished, presented in the regional setting of the client.|  

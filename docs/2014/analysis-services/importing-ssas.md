@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Importing (SSAS)
-  This page of the **Table Import Wizard** enables you to view the progress of the import operation. To access the wizard from the [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], on the **Model** menu, click **Import from Data Source**.  
+  This page of the **Table Import Wizard** enables you to view the progress of the import operation. To access the wizard from the [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], on the **Model** menu, click **Import from Data Source**.  
   
 ## UIElement List  
  **Details**  
@@ -31,6 +31,6 @@ manager: "mblythe"
 |**Message**|If the table or view import failed, displays a link to more information. This information is displayed in the Details window.<br /><br /> To try again to import the table or view, exit the wizard and run it again.|  
   
  **Stop Import**  
- Click to stop the import operation before it is finished. Tables and views that have already been imported will be displayed in the [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] designer. Tables and views that have not been imported yet will not be imported.  
+ Click to stop the import operation before it is finished. Tables and views that have already been imported will be displayed in the [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] designer. Tables and views that have not been imported yet will not be imported.  
   
   

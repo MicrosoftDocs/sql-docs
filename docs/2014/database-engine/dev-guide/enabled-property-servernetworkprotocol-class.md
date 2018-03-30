@@ -37,7 +37,7 @@ object
   
 ## Parts  
  *object*  
- A [ServerNetworkProtocol Class](../../../2014/database-engine/dev-guide/servernetworkprotocol-class.md) object that represents the network protocol used by the instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ A [ServerNetworkProtocol Class](../../../2014/database-engine/dev-guide/servernetworkprotocol-class.md) object that represents the network protocol used by the instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Property Value/Return Value  
  A Boolean value that specifies whether the server network protocol is enabled: `true` if the server network protocol is enabled, or `false` if the server network protocol is disabled.  

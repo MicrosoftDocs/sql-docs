@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
 caps.latest.revision: 42
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # E-Mail Delivery in Reporting Services
-  SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] includes an e-mail delivery extension that provides a way to e-mail a report to individual users or groups. The e-mail delivery extension is configured through the Reporting Services Configuration Manager and by editing the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configuration files.  
+  SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] includes an e-mail delivery extension that provides a way to e-mail a report to individual users or groups. The e-mail delivery extension is configured through the Reporting Services Configuration Manager and by editing the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] configuration files.  
   
  To distribute or receive a report by e-mail, you define either a standard subscription or a data-driven subscription. You can subscribe to or distribute only one report at a time. You cannot create a subscription that delivers multiple reports in a single e-mail message. For more information about subscriptions, see [Create, Modify, and Delete Standard Subscriptions &#40;Reporting Services in Native Mode&#41;](../../2014/reporting-services/create-and-manage-subscriptions-for-native-mode-report-servers.md).  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode &#124; SharePoint 2010 and SharePoint 2013<br /><br /> **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode|  
+|**[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint mode &#124; SharePoint 2010 and SharePoint 2013<br /><br /> **[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Native mode|  
   
 ## E-Mail Delivery Options  
  Report server e-mail delivery can deliver reports in the following ways:  
@@ -45,7 +45,7 @@ manager: "mblythe"
   
      If your browser supports HTML 4.0 and MHTML, and you choose the Web archive rendering format, the report is embedded as part of the message. All other rendering formats (CSV, PDF, and so on) deliver reports as attachments. You can disable this functionality in the RSReportServer configuration file.  
   
-     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] does not check the size of the attachment or message before sending the report. If the attachment or message exceeds the maximum limit allowed by your mail server, the report is not delivered. Choose one of the other delivery options (such as URL or notification) if for large reports.  
+     [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] does not check the size of the attachment or message before sending the report. If the attachment or message exceeds the maximum limit allowed by your mail server, the report is not delivered. Choose one of the other delivery options (such as URL or notification) if for large reports.  
   
  You set delivery options that determine how a report is delivered when you create the subscription. For example, if you select **Include Link** in the subscription, the e-mail message includes a hyperlink to the report.  
   
@@ -58,7 +58,7 @@ manager: "mblythe"
 |Manage all subscriptions|Shows fields that support wider distribution, including To:, Cc:, Bcc:, and Reply-To: fields, providing more ways to route a report to more subscribers. The availability of e-mail alias fields is defined through the RSReportServer configuration file settings.|  
   
 ## Specifying E-Mail Addresses in a Subscription  
- If you are distributing reports within an intranet and you are using an SMTP gateway to a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Exchange server, type the e-mail alias (as if you were sending e-mail to a coworker). If delivery is to an external e-mail account, type the full e-mail address. If you specify more e-mail addresses to add others to your subscription, subscribers get an exact copy of the report that is produced from this subscription.  
+ If you are distributing reports within an intranet and you are using an SMTP gateway to a [!INCLUDE[msCoName](../includes/msconame-md.md)] Exchange server, type the e-mail alias (as if you were sending e-mail to a coworker). If delivery is to an external e-mail account, type the full e-mail address. If you specify more e-mail addresses to add others to your subscription, subscribers get an exact copy of the report that is produced from this subscription.  
   
  The report server does not validate e-mail addresses or obtain e-mail addresses from an e-mail server. You must know in advance which e-mail addresses you want to use. By default, you can e-mail reports to any valid e-mail account within or outside of your organization. Configuration settings can be used, however, to restrict e-mail delivery to mail server hosts that you identify by name. You can specify additional hosts if you want to support e-mail delivery to people that are not members of your organization.  
   

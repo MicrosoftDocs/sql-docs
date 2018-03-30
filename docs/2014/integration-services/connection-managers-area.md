@@ -20,7 +20,7 @@ manager: "jhubbard"
 # Connection Managers Area
   Packages use connection managers to connect to data sources such as files, relational databases, and servers.  
   
- Use the **Connections Managers** area of [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer to add, delete, modify, rename, and copy and paste the connection managers.  
+ Use the **Connections Managers** area of [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer to add, delete, modify, rename, and copy and paste the connection managers.  
   
  Right-click in this area, and then on the menu, click the option for the task you want to perform.  
   

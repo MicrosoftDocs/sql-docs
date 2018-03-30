@@ -16,20 +16,20 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # PowerPivot for SharePoint (SSAS)
-  PowerPivot for SharePoint is a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server running in SharePoint mode. PowerPivot for SharePoint provides server hosting of PowerPivot data in a SharePoint farm. PowerPivot data is an analytical data model that you build using one of the following:  
+  PowerPivot for SharePoint is a [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] server running in SharePoint mode. PowerPivot for SharePoint provides server hosting of PowerPivot data in a SharePoint farm. PowerPivot data is an analytical data model that you build using one of the following:  
   
 -   The PowerPivot for Excel 2010 add-in  
   
 -   Excel 2013  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 | [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010  
+ **[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] 2013 | [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] 2010  
   
  Server hosting of that data requires SharePoint, Excel Services, and an installation of PowerPivot for SharePoint. Data is loaded on PowerPivot for SharePoint instances where it can be refreshed at scheduled intervals using the PowerPivot data refresh capability that the server provides for Excel 2010 workbooks or that SharePoint 2013 Excel Services provides for Excel 2013 workbooks.  
   
 ## PowerPivot for SharePoint 2013  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] supports [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint 2013 Excel Services usage of Excel workbooks containing data models and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Power View reports.  
+ [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] supports [!INCLUDE[msCoName](../includes/msconame-md.md)] SharePoint 2013 Excel Services usage of Excel workbooks containing data models and [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Power View reports.  
   
- Excel Services in SharePoint 2013 includes data model functionality to enable interaction with a PowerPivot workbook in the browser. You do not need to deploy the PowerPivot for SharePoint 2013 add-in into the farm. You only need to install an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server in SharePoint mode and register the server within the Excel Services **Data Model** settings.  
+ Excel Services in SharePoint 2013 includes data model functionality to enable interaction with a PowerPivot workbook in the browser. You do not need to deploy the PowerPivot for SharePoint 2013 add-in into the farm. You only need to install an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] server in SharePoint mode and register the server within the Excel Services **Data Model** settings.  
   
  Deploying the PowerPivot for SharePoint 2013 add-in enables additional functionality and features in your SharePoint farm. The additional features include PowerPivot Gallery, Schedule Data Refresh, and the PowerPivot Management Dashboard.  
   
@@ -64,7 +64,7 @@ manager: "mblythe"
   
  [PowerPivot Management Dashboard and Usage Data](../../2014/analysis-services/powerpivot-management-dashboard-and-usage-data.md)  
   
- [PowerPivot Gallery](../Topic/PowerPivot%20Gallery.md)  
+ [PowerPivot Gallery](~/2014/books-online-for-sql-server-2014.md)  
   
  [PowerPivot Data Access](../../2014/analysis-services/powerpivot-data-access.md)  
   
@@ -81,7 +81,7 @@ manager: "mblythe"
   
  [PowerPivot for SharePoint 2013 Installation](../../2014/sql-server/install/powerpivot-for-sharepoint-2013-installation.md)  
   
- [PowerShell Reference for PowerPivot for SharePoint](../Topic/PowerShell%20Reference%20for%20PowerPivot%20for%20SharePoint.md)  
+ [PowerShell Reference for PowerPivot for SharePoint](~/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)  
   
  [Example License Topologies and Costs  for SQL Server 2014 Self-Service Business Intelligence](../../2014/sql-server/install/example-license-topologies-costs-self-service-business-intelligence.md)  
   

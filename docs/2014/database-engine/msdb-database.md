@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: 5032cb2d-65a0-40dd-b569-4dcecdd58ceb
 caps.latest.revision: 43
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # msdb Database
-  The **msdb** database is used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent for scheduling alerts and jobs and by other features such as [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[ssSB](../../includes/sssb-md.md)] and Database Mail.  
+  The **msdb** database is used by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent for scheduling alerts and jobs and by other features such as [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], [!INCLUDE[ssSB](../includes/sssb-md.md)] and Database Mail.  
   
- For example, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatically maintains a complete online backup-and-restore history within tables in **msdb**. This information includes the name of the party that performed the backup, the time of the backup, and the devices or files where the backup is stored. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] uses this information to propose a plan for restoring a database and applying any transaction log backups. Backup events for all databases are recorded even if they were created with custom applications or third-party tools. For example, if you use a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] application that calls SQL Server Management Objects (SMO) objects to perform backup operations, the event is logged in the **msdb** system tables, the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows application log, and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log. To help your protect the information that is stored in **msdb**, we recommend that you consider placing the **msdb** transaction log on fault tolerant storage.  
+ For example, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] automatically maintains a complete online backup-and-restore history within tables in **msdb**. This information includes the name of the party that performed the backup, the time of the backup, and the devices or files where the backup is stored. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] uses this information to propose a plan for restoring a database and applying any transaction log backups. Backup events for all databases are recorded even if they were created with custom applications or third-party tools. For example, if you use a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] application that calls SQL Server Management Objects (SMO) objects to perform backup operations, the event is logged in the **msdb** system tables, the [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows application log, and the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] error log. To help your protect the information that is stored in **msdb**, we recommend that you consider placing the **msdb** transaction log on fault tolerant storage.  
   
- By default, **msdb** uses the simple recovery model. If you use the [backup and restore history](../../2014/database-engine/backup-history-and-header-information-sql-server.md) tables, we recommend that you use the full recovery model for **msdb**. For more information, see [Recovery Models &#40;SQL Server&#41;](../../2014/database-engine/recovery-models-sql-server.md). Notice that when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed or upgraded and whenever Setup.exe is used to rebuild the system databases, the recovery model of **msdb** is automatically set to simple.  
+ By default, **msdb** uses the simple recovery model. If you use the [backup and restore history](../../2014/database-engine/backup-history-and-header-information-sql-server.md) tables, we recommend that you use the full recovery model for **msdb**. For more information, see [Recovery Models &#40;SQL Server&#41;](../../2014/database-engine/recovery-models-sql-server.md). Notice that when [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is installed or upgraded and whenever Setup.exe is used to rebuild the system databases, the recovery model of **msdb** is automatically set to simple.  
   
 > [!IMPORTANT]  
 >  After any operation that updates **msdb**, such as backing up or restoring any database, we recommend that you back up **msdb**. For more information, see [Back Up and Restore of System Databases &#40;SQL Server&#41;](../../2014/database-engine/back-up-and-restore-of-system-databases-sql-server.md).  
   
 ## Physical Properties of msdb  
- The following table lists the initial configuration values of the **msdb** data and log files. The sizes of these files may vary slightly for different editions of [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
+ The following table lists the initial configuration values of the **msdb** data and log files. The sizes of these files may vary slightly for different editions of [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)].  
   
 |File|Logical name|Physical name|File growth|  
 |----------|------------------|-------------------|-----------------|  
@@ -41,7 +41,7 @@ manager: "jhubbard"
  To move the **msdb** database or log files, see [Move System Databases](../../2014/database-engine/move-system-databases.md).  
   
 ### Database Options  
- The following table lists the default value for each database option in the **msdb** database and whether the option can be modified. To view the current settings for these options, use the [sys.databases](../Topic/sys.databases%20\(Transact-SQL\).md) catalog view.  
+ The following table lists the default value for each database option in the **msdb** database and whether the option can be modified. To view the current settings for these options, use the [sys.databases](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view.  
   
 |Database option|Default value|Can be modified|  
 |---------------------|-------------------|---------------------|  
@@ -74,7 +74,7 @@ manager: "jhubbard"
 |Service Broker Options|ENABLE_BROKER|Yes|  
 |TRUSTWORTHY|ON|Yes|  
   
- For a description of these database options, see [ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20\(Transact-SQL\).md).  
+ For a description of these database options, see [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md).  
   
 ## Restrictions  
  The following operations cannot be performed on the **msdb** database:  
@@ -100,9 +100,9 @@ manager: "jhubbard"
 ## Related Content  
  [System Databases](../../2014/database-engine/system-databases.md)  
   
- [sys.databases &#40;Transact-SQL&#41;](../Topic/sys.databases%20\(Transact-SQL\).md)  
+ [sys.databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
   
- [sys.master_files &#40;Transact-SQL&#41;](../Topic/sys.master_files%20\(Transact-SQL\).md)  
+ [sys.master_files &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   
  [Move Database Files](../../2014/database-engine/move-database-files.md)  
   

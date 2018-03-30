@@ -15,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: dd30560d-9e16-47c7-ba68-a9743a657e4e
 caps.latest.revision: 12
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "jhubbard"
 ---
 # ISAPI filters detected on the report server site (Upgrade Advisor)
-  Upgrade Advisor detected one or more ISAPI filters on the Web site that hosts the report server and Report Manager virtual directories. ISAPI filters are not supported in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
+  Upgrade Advisor detected one or more ISAPI filters on the Web site that hosts the report server and Report Manager virtual directories. ISAPI filters are not supported in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Native .|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native .|  
   
 ## Component  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## Description  
- Before upgrading, verify whether the ISAPI filters on the Web site are used by [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] applications. If you do not require the ISAPI filter, you can upgrade the report server. Setup will create the default URLs, without support for the ISAPI filter that runs in IIS. If you require the ISAPI filter, do not upgrade until you find an alternative way of hosting the ISAPI filter (for example, using ISA Server or continuing to host the ISAPI filter in IIS). The report server supports ASP.NET HTTPModules as a replacement for ISAPI filters in certain scenarios. For more information, see the ASP.NET documentation on MSDN.  
+ Before upgrading, verify whether the ISAPI filters on the Web site are used by [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] applications. If you do not require the ISAPI filter, you can upgrade the report server. Setup will create the default URLs, without support for the ISAPI filter that runs in IIS. If you require the ISAPI filter, do not upgrade until you find an alternative way of hosting the ISAPI filter (for example, using ISA Server or continuing to host the ISAPI filter in IIS). The report server supports ASP.NET HTTPModules as a replacement for ISAPI filters in certain scenarios. For more information, see the ASP.NET documentation on MSDN.  
   
 ## Corrective Action  
  Evaluate and use a separate solution for hosting ISAPI filters required by your deployment.  

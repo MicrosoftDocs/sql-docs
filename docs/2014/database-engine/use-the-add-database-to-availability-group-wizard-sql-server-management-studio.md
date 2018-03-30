@@ -24,7 +24,7 @@ manager: "jhubbard"
   Use the Add Database to Availability Group Wizard to help you add one or more databases to an existing AlwaysOn availability group.  
   
 > [!NOTE]  
->  For information about using [!INCLUDE[tsql](../../includes/tsql-md.md)] or PowerShell to add a database, see [Add a Database to an Availability Group &#40;SQL Server&#41;](../../2014/database-engine/add-a-database-to-an-availability-group-sql-server.md).  
+>  For information about using [!INCLUDE[tsql](../includes/tsql-md.md)] or PowerShell to add a database, see [Add a Database to an Availability Group &#40;SQL Server&#41;](../../2014/database-engine/add-a-database-to-an-availability-group-sql-server.md).  
   
  **In This Topic:**  
   
@@ -43,7 +43,7 @@ manager: "jhubbard"
   
 -   You must be connected to the server instance that hosts the current primary replica.  
   
--   If a database is encrypted or even contains a Database Encryption Key (DEK), you cannot use the [!INCLUDE[ssAoNewAgWiz](../../includes/ssaonewagwiz-md.md)] or [!INCLUDE[ssAoAddDbWiz](../../includes/ssaoadddbwiz-md.md)] to add the database to an availability group. Even if an encrypted database has been decrypted, its log backups might contain encrypted data. In this case, full initial data synchronization could fail on the database. This is because the restore log operation might require the certificate that was used by the database encryption keys (DEKs), and that certificate might be unavailable.  
+-   If a database is encrypted or even contains a Database Encryption Key (DEK), you cannot use the [!INCLUDE[ssAoNewAgWiz](../includes/ssaonewagwiz-md.md)] or [!INCLUDE[ssAoAddDbWiz](../includes/ssaoadddbwiz-md.md)] to add the database to an availability group. Even if an encrypted database has been decrypted, its log backups might contain encrypted data. In this case, full initial data synchronization could fail on the database. This is because the restore log operation might require the certificate that was used by the database encryption keys (DEKs), and that certificate might be unavailable.  
   
      **To make a decrypted database eligible to add to an availability group using the wizard:**  
   
@@ -63,7 +63,7 @@ manager: "jhubbard"
   
     -   No primary database name can exist on any server instance that hosts a secondary replica. This means that none of the new secondary databases can exist yet.  
   
-    -   You will need to specify a network share in order for the wizard to create and access backups. For the primary replica, the account used to start the [!INCLUDE[ssDE](../../includes/ssde-md.md)] must have read and write file-system permissions on a network share. For secondary replicas, the account must have read permission on the network share.  
+    -   You will need to specify a network share in order for the wizard to create and access backups. For the primary replica, the account used to start the [!INCLUDE[ssDE](../includes/ssde-md.md)] must have read and write file-system permissions on a network share. For secondary replicas, the account must have read permission on the network share.  
   
      If you are unable to use the wizard to perform full initial data synchronization, you need to prepare your secondary databases manually. You can do this before or after running the wizard. For more information, see [Manually Prepare a Secondary Database for an Availability Group &#40;SQL Server&#41;](../../2014/database-engine/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
@@ -106,7 +106,7 @@ manager: "jhubbard"
   
      For more information, see [Select Initial Data Synchronization Page &#40;AlwaysOn Availability Group Wizards&#41;](../../2014/database-engine/select-initial-data-synchronization-page-alwayson-availability-group-wizards.md).  
   
-6.  On the **Connect to Existing Secondary Replicas** page, if the instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that host the availability replicas for this availability group are all running as a service in the same user account, click **Connect all**. If any of the server instances are running as a service under different accounts, click the individual **Connect** button to the right of each server instance name.  
+6.  On the **Connect to Existing Secondary Replicas** page, if the instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that host the availability replicas for this availability group are all running as a service in the same user account, click **Connect all**. If any of the server instances are running as a service under different accounts, click the individual **Connect** button to the right of each server instance name.  
   
      For more information, see [Connect to Existing Secondary Replicas Page &#40;Add Replica Wizard and Add Databases Wizard&#41;](../../2014/database-engine/connect-to-existing-secondary-replicas-page.md).  
   

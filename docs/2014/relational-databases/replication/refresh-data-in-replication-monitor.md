@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: e9582244-7d00-45f4-be16-020a65c76a5e
 caps.latest.revision: 15
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Refresh Data in Replication Monitor
@@ -28,7 +28,7 @@ manager: "jhubbard"
   
 2.  In the **Publisher Settings** dialog box, set the **Auto refresh** and **Refresh rate** options. The **Auto refresh** setting affects the main window in Replication Monitor. The **Refresh rate** setting also affects any detail windows that are set to refresh automatically (changes to the setting only affect the detail windows opened after the change).  
   
-3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ### To specify that a detail window should automatically refresh  
   

@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 caps.latest.revision: 42
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Element Path Syntax for XML Report Data (SSRS)
@@ -30,7 +30,7 @@ manager: "mblythe"
 |----------------|--------------|  
 |**bold**|Text that must be typed exactly as shown.|  
 |&#124; (vertical bar)|Separates syntax items. You can choose only one of the items.|  
-|[ ] (brackets)|Optional syntax items. Do not type the brackets.|  
+|`[ ] (brackets)`|Optional syntax items. Do not type the brackets.|  
 |**{ }** (braces)|Delimits parameters of syntax items.|  
 |[**,**...*n*]|Indicates the preceding item can be repeated *n* number of times. The occurrences are separated by commas.|  
   
@@ -198,7 +198,7 @@ XMLLocalName :: =
   
      The result set displays 4 lines of data with the following columns: `xmlns`, `Customer.ID`, `FirstName`, `LastName`, `ID`, `Qty`, `Order`.  
   
-9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## See Also  
  [XML Connection Type &#40;SSRS&#41;](../../2014/reporting-services/xml-connection-type-ssrs.md)   

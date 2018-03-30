@@ -23,7 +23,7 @@ manager: "jhubbard"
   
 |||  
 |-|-|  
-|Product Name|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|Product Name|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|  
 |Event ID|3156|  
 |Event Source|MSSQLSERVER|  
 |Component|SQLEngine|  
@@ -50,6 +50,6 @@ manager: "jhubbard"
 ## See Also  
  [Restore a Database to a New Location &#40;SQL Server&#41;](../../2014/database-engine/restore-a-database-to-a-new-location-sql-server.md)   
  [Restore Files to a New Location &#40;SQL Server&#41;](../../2014/database-engine/restore-files-to-a-new-location-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)  
   
   

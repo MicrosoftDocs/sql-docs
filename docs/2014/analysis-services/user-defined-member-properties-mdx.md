@@ -23,12 +23,12 @@ manager: "mblythe"
 ## Creating User-Defined Member Properties  
  User-defined member properties can be added to server-based dimensions or cubes either through the user interface or programmatically:  
   
--   To add user-defined member properties through the user interface, you use Dimension Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. For more information, see [Define Attribute Relationships](../../2014/analysis-services/define-attribute-relationships.md).  
+-   To add user-defined member properties through the user interface, you use Dimension Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. For more information, see [Define Attribute Relationships](../../2014/analysis-services/define-attribute-relationships.md).  
   
 -   To add user-defined member properties programmatically, your application can use either Analysis Manager Objects (AMO) or a combination of XML for Analysis (XMLA) and Analysis Services Scripting Language (ASSL). For more information, see [Attribute Relationships](../../2014/analysis-services/dev-guide/attribute-relationships.md).  
   
 ## Retrieving User-Defined Member Properties  
- You can retrieve user-defined member properties using either the `PROPERTIES` keyword or the [Properties](../Topic/Properties%20\(MDX\).md) function.  
+ You can retrieve user-defined member properties using either the `PROPERTIES` keyword or the [Properties](~/mdx/properties-mdx.md) function.  
   
 ### Using the PROPERTIES Keyword to Retrieve User-Defined Member Properties  
  The syntax that retrieves user-defined member properties is similar to that used to retrieve intrinsic level member properties, as shown in the following syntax:  
@@ -66,6 +66,6 @@ FROM [Adventure Works]
   
 ## See Also  
  [Using Member Properties &#40;MDX&#41;](../../2014/analysis-services/using-member-properties-mdx.md)   
- [Properties &#40;MDX&#41;](../Topic/Properties%20\(MDX\).md)  
+ [Properties &#40;MDX&#41;](~/mdx/properties-mdx.md)  
   
   

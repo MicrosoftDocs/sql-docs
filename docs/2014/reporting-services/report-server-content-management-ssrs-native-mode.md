@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 caps.latest.revision: 48
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Report Server Content Management (SSRS Native Mode)
-  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], content management refers to the management of report server items. All items can be managed independently of each other through properties and security settings. Any item can be moved to a different location in the report server folder namespace. To manage items effectively, you need to know which tasks a content manager performs.  
+  In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], content management refers to the management of report server items. All items can be managed independently of each other through properties and security settings. Any item can be moved to a different location in the report server folder namespace. To manage items effectively, you need to know which tasks a content manager performs.  
   
 > [!NOTE]  
 >  Content management is different from report server administration. For more information about how to manage the environment in which a report server runs, see [Reporting Services Report Server &#40;Native Mode&#41;](../../2014/reporting-services/reporting-services-report-server-native-mode.md).  
   
  Content management includes the following tasks:  
   
--   Secure report server site and items by applying the role-based security provided with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+-   Secure report server site and items by applying the role-based security provided with [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
 -   Create a report server folder hierarchy by adding, modifying, and deleting folders.  
   
@@ -44,7 +44,7 @@ manager: "mblythe"
   
 -   Provide permission to perform management tasks by using predefined roles: **System Administrator** and **Content Manager**. Effective management of report server content requires that you are assigned to both roles.  
   
- Tools for managing report server content include [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or Report Manager. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] allows you to set defaults and enable features. Report Manager is used to grant user access to report server items and operations, view and use reports and other content types, and view and use all shared items and report distribution features. For more information, see [Reporting Services Tools](../../2014/reporting-services/reporting-services-tools.md).  
+ Tools for managing report server content include [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] or Report Manager. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] allows you to set defaults and enable features. Report Manager is used to grant user access to report server items and operations, view and use reports and other content types, and view and use all shared items and report distribution features. For more information, see [Reporting Services Tools](../../2014/reporting-services/reporting-services-tools.md).  
   
 ##  <a name="bkmk_ReportServerItems"></a> Report Server Items  
  Report server items include reports, shared data sources, shared datasets, report parts, resources (items that are stored on but not processed by a report server), and folders. Items can depend on other items, for example, a report can depend on the shared data sources it references. If you move a dependent item, the report server updates the reference information automatically.  

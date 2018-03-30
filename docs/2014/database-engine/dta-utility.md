@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 caps.latest.revision: 52
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # dta Utility
   The **dta** utility is the command prompt version of Database Engine Tuning Advisor. The **dta** utility is designed to allow you to use Database Engine Tuning Advisor functionality in applications and scripts.  
   
- Like Database Engine Tuning Advisor, the **dta** utility analyzes a workload and recommends physical design structures to improve server performance for that workload. The workload can be a plan cache, a [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] trace file or table, or a [!INCLUDE[tsql](../../includes/tsql-md.md)] script. Physical design structures include indexes, indexed views, and partitioning. After analyzing a workload, the **dta** utility produces a recommendation for the physical design of databases and can generate the necessary script to implement the recommendation. Workloads can be specified from the command prompt with the **-if** or the **-it** argument. You can also specify an XML input file from the command prompt with the **-ix** argument. In that case, the workload is specified in the XML input file.  
+ Like Database Engine Tuning Advisor, the **dta** utility analyzes a workload and recommends physical design structures to improve server performance for that workload. The workload can be a plan cache, a [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] trace file or table, or a [!INCLUDE[tsql](../includes/tsql-md.md)] script. Physical design structures include indexes, indexed views, and partitioning. After analyzing a workload, the **dta** utility produces a recommendation for the physical design of databases and can generate the necessary script to implement the recommendation. Workloads can be specified from the command prompt with the **-if** or the **-it** argument. You can also specify an XML input file from the command prompt with the **-ix** argument. In that case, the workload is specified in the XML input file.  
   
 ## Syntax  
   
@@ -206,7 +206,7 @@ dta -d AdventureWorks2012 ...
  Specifies that the plan cache be used as the workload. The top 1,000 plan cache events for all databases are analyzed. This value can be changed using the **–n** option.  
   
  **-if** *workload_file*  
- Specifies the path and name of the workload file to use as input for tuning. The file must be in one of these formats: .trc (SQL Server Profiler trace file), .sql (SQL file), or .log ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trace file). Either one workload file or one workload table must be specified.  
+ Specifies the path and name of the workload file to use as input for tuning. The file must be in one of these formats: .trc (SQL Server Profiler trace file), .sql (SQL file), or .log ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] trace file). Either one workload file or one workload table must be specified.  
   
  **-it** *workload_trace_table_name*  
  Specifies the name of a table containing the workload trace for tuning. The name is specified in the format: [*database_name*]**.**[*owner_name*]**.***table_name*.  
@@ -249,7 +249,7 @@ dta -n number_of_events -A 0
  In this case, it is important to specify an unlimited tuning time (`-A 0`). Otherwise, Database Engine Tuning Advisor assumes an 8 hour tuning time by default.  
   
  **-of** *output_script_file_name*  
- Specifies that **dta** writes the recommendation as a [!INCLUDE[tsql](../../includes/tsql-md.md)] script to the file name and destination specified.  
+ Specifies that **dta** writes the recommendation as a [!INCLUDE[tsql](../includes/tsql-md.md)] script to the file name and destination specified.  
   
  You can use **-F** with this option. Make sure that the file name is unique, especially if you are also using **-or** and **-ox**.  
   
@@ -298,7 +298,7 @@ dta -n number_of_events -A 0
 ```  
   
  **-S** *server_name*[ *\instance*]  
- Specifies the name of the computer and instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to connect to. If no *server_name* is specified, **dta** connects to the default instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the local computer. This option is required when connecting to a named instance or when executing **dta** from a remote computer on the network.  
+ Specifies the name of the computer and instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to connect to. If no *server_name* is specified, **dta** connects to the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on the local computer. This option is required when connecting to a named instance or when executing **dta** from a remote computer on the network.  
   
  **-s** *session_name*  
  Specifies the name of the tuning session. This is required if **-ID** is not specified.  
@@ -324,7 +324,7 @@ dta -n number_of_events -A 0
  This argument is an alternative to using a table list file (**-Tf**). If both **-Tl** and **-Tf** are used, **dta** fails and returns an error.  
   
  **-U** *login_id*  
- Specifies the login ID used to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Specifies the login ID used to connect to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-u**  
  Launches the Database Engine Tuning Advisor GUI. All parameters are treated as the initial settings for the user interface.  

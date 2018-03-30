@@ -19,7 +19,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Understanding Microsoft OLAP Architecture
-  Use these topics to better understand [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] multidimensional databases and plan how to implement multidimensional databases in your business intelligence solution.  
+  Use these topics to better understand [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] multidimensional databases and plan how to implement multidimensional databases in your business intelligence solution.  
   
  ![Small File Folder Icon](../../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") **Logical Architecture**  
  [Server Objects &#40;Analysis Services - Multidimensional Data&#41;](../../../2014/analysis-services/dev-guide/server-objects-analysis-services-multidimensional-data.md)  

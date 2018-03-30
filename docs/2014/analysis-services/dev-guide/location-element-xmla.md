@@ -79,9 +79,9 @@ manager: "mblythe"
 |[Synchronize](../../../2014/analysis-services/dev-guide/synchronize-element-xmla.md)|[ConnectionString](../../../2014/analysis-services/dev-guide/connectionstring-element-xmla.md), [DataSourceID](../../../2014/analysis-services/dev-guide/datasourceid-element-xmla.md), [DataSourceType](../../../2014/analysis-services/dev-guide/datasourcetype-element-xmla.md), [Folders](../../../2014/analysis-services/dev-guide/folders-element-xmla.md)|  
   
 ## Remarks  
- For `Backup` commands, the `Location` element provides information about creating a remote backup file for a remote instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+ For `Backup` commands, the `Location` element provides information about creating a remote backup file for a remote instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
- For `Restore` commands, the `Location` element provides information about identifying and connecting to a remote [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance, as well as the remote backup file used to restore remote partitions on that remote instance.  
+ For `Restore` commands, the `Location` element provides information about identifying and connecting to a remote [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance, as well as the remote backup file used to restore remote partitions on that remote instance.  
   
  For `Synchronize` commands, the `Location` element describes either a data source to be used by the target instance or a remote instance defined on the source instance that must be synchronized with the target instance, depending on the value of the `DataSourceType` element for the parent `Synchronize` command.  
   

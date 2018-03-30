@@ -25,14 +25,14 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Calling a Stored Procedure (OLE DB)
-  A stored procedure can have zero or more parameters. It can also return a value. When using the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider, parameters to a stored procedure can be passed by:  
+  A stored procedure can have zero or more parameters. It can also return a value. When using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider, parameters to a stored procedure can be passed by:  
   
 -   Hard-coding the data value.  
   
 -   Using a parameter marker (?) to specify parameters, bind a program variable to the parameter marker, and then place the data value in the program variable.  
   
 > [!NOTE]  
->  When calling [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stored procedures using named parameters with OLE DB, the parameter names must start with the '@' character. This is a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] specific restriction. The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider enforces this restriction more strictly than MDAC.  
+>  When calling [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stored procedures using named parameters with OLE DB, the parameter names must start with the '@' character. This is a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specific restriction. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider enforces this restriction more strictly than MDAC.  
   
  To support parameters, the **ICommandWithParameters** interface is exposed on the command object. To use parameters, the consumer first describes the parameters to the provider by calling the **ICommandWithParameters::SetParameterInfo** method (or optionally prepares a calling statement that calls the **GetParameterInfo** method). The consumer then creates an accessor that specifies the structure of a buffer and places parameter values in this buffer. Finally, it passes the handle of the accessor and a pointer to the buffer to **Execute**. On later calls to **Execute**, the consumer places new parameter values in the buffer and calls **Execute** with the accessor handle and buffer pointer.  
   
@@ -75,13 +75,13 @@ manager: "jhubbard"
 5.  Execute the command by using **ICommand::Execute**.  
   
 ## Methods of Calling a Stored Procedure  
- When executing a stored procedure in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider supports the:  
+ When executing a stored procedure in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider supports the:  
   
 -   ODBC CALL escape sequence.  
   
 -   Remote procedure call (RPC) escape sequence.  
   
--   [!INCLUDE[tsql](../../../includes/tsql-md.md)] EXECUTE statement.  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] EXECUTE statement.  
   
 ### ODBC CALL Escape Sequence  
  If you know parameter information, call **ICommandWithParameters::SetParameterInfo** method to describe the parameters to the provider. Otherwise, when the ODBC CALL syntax is used in calling a stored procedure, the provider calls a helper function to find the stored procedure parameter information.  
@@ -103,7 +103,7 @@ manager: "jhubbard"
   
  When the RPC escape sequence is used to execute a stored procedure, the provider does not call any helper function to determine the parameter information (as it does in the case of ODBC CALL syntax). The RPC syntax is simpler than the ODBC CALL syntax, so the command is parsed faster, improving performance. In this case, you need to provide the parameter information by executing **ICommandWithParameters::SetParameterInfo**.  
   
- The RPC escape sequence requires you to have a return value. If the stored procedure does not return a value, the server returns a 0 by default. In addition, you cannot open a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cursor on the stored procedure. The stored procedure is prepared implicitly and the call to **ICommandPrepare::Prepare** will fail. Because of the inability to prepare an RPC call, you can not query column metadata; IColumnsInfo::GetColumnInfo and IColumnsRowset::GetColumnsRowset will return DB_E_NOTPREPARED.  
+ The RPC escape sequence requires you to have a return value. If the stored procedure does not return a value, the server returns a 0 by default. In addition, you cannot open a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cursor on the stored procedure. The stored procedure is prepared implicitly and the call to **ICommandPrepare::Prepare** will fail. Because of the inability to prepare an RPC call, you can not query column metadata; IColumnsInfo::GetColumnInfo and IColumnsRowset::GetColumnsRowset will return DB_E_NOTPREPARED.  
   
  If you know all the parameter metadata, RPC escape sequence is the recommended way to execute stored procedures.  
   
@@ -116,9 +116,9 @@ manager: "jhubbard"
  For a sample application that demonstrates an RPC escape sequence, see [Execute a Stored Procedure &#40;Using RPC Syntax&#41; and Process Return Codes and Output Parameters &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/execute-stored-procedure-with-rpc-and-process-output.md).  
   
 ### Transact-SQL EXECUTE Statement  
- The ODBC CALL escape sequence and the RPC escape sequence are the preferred methods for calling a stored procedure rather than the [EXECUTE](../Topic/EXECUTE%20\(Transact-SQL\).md) statement. The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider uses the RPC mechanism of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to optimize command processing. This RPC protocol increases performance by eliminating much of the parameter processing and statement parsing done on the server.  
+ The ODBC CALL escape sequence and the RPC escape sequence are the preferred methods for calling a stored procedure rather than the [EXECUTE](~/t-sql/language-elements/execute-transact-sql.md) statement. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider uses the RPC mechanism of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to optimize command processing. This RPC protocol increases performance by eliminating much of the parameter processing and statement parsing done on the server.  
   
- This is an example of the [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE** statement:  
+ This is an example of the [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXECUTE** statement:  
   
 ```  
 EXECUTE SalesByCategory 'Produce', '1995'  

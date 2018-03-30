@@ -19,7 +19,7 @@ ms.author: "mblythe"
 manager: "mblythe"
 ---
 # DbStorageLocation Element
-  Specifies the folder where [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] creates and manages all the database data and metadata files.  
+  Specifies the folder where [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] creates and manages all the database data and metadata files.  
   
 ## Syntax  
   

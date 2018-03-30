@@ -31,10 +31,10 @@ manager: "jhubbard"
  The value of this property can be specified by using a property expression.  
   
  **Sample output name**  
- Provide a unique name for the output that will include the sampled rows. The name provided will be displayed within the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer.  
+ Provide a unique name for the output that will include the sampled rows. The name provided will be displayed within the [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer.  
   
  **Unselected output name**  
- Provide a unique name for the output that will contain the rows excluded from the sampling. The name provided will be displayed within the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer.  
+ Provide a unique name for the output that will contain the rows excluded from the sampling. The name provided will be displayed within the [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer.  
   
  **Use the following random seed**  
  Specify the sampling seed for the random number generator that the transformation uses to create a sample. This is only recommended for development and testing. The transformation uses the Microsoft Windows tick count if a random seed is not specified.  

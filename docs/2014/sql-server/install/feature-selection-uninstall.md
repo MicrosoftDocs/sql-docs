@@ -16,7 +16,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Feature Selection (Uninstall)
-  Use the Feature Selection — Uninstall page to select features to remove from the specified instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Use the Feature Selection — Uninstall page to select features to remove from the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Options  
  You can select any combination of features.  

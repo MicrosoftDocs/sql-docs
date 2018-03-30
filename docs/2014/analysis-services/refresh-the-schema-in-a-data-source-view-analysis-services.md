@@ -20,7 +20,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Refresh the Schema in a Data Source View (Analysis Services)
-  After defining a data source view (DSV) in an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project or database, the schema in an underlying data source may change. These changes are not automatically detected or updated in a development project. Moreover, if you deployed the project to a server, you will now encounter processing errors if Analysis Services can no longer connect to the external data source.  
+  After defining a data source view (DSV) in an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project or database, the schema in an underlying data source may change. These changes are not automatically detected or updated in a development project. Moreover, if you deployed the project to a server, you will now encounter processing errors if Analysis Services can no longer connect to the external data source.  
   
  To update the DSV so that it matches the external data source, you can refresh the DSV in Business Intelligence Development Studio (BIDS). Refreshing the DSV detects changes to the external data sources upon which the DSV is based, and builds a change list that enumerates the additions or deletions in the external data source. You can then apply the set of changes to the DSV that will realign it to the underlying data source. Note that additional work is often required to further update the cubes and dimensions in the project that use the DSV.  
   
@@ -42,9 +42,9 @@ manager: "mblythe"
  Refresh never adds new tables to a DSV. If you want to add a new table, you must add it manually. For more information, see [Adding or Removing Tables or Views in a Data Source View &#40;Analysis Services&#41;](../../2014/analysis-services/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md).  
   
 ##  <a name="bkmk_DSVrefresh"></a> Refresh a DSV in SQL Server Data Tools  
- To refresh a DSV, double-click the DSV from Solution Explorer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], and then click the Refresh Data Source View button or choose **Refresh** from the Data Source View menu.  
+ To refresh a DSV, double-click the DSV from Solution Explorer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], and then click the Refresh Data Source View button or choose **Refresh** from the Data Source View menu.  
   
- During refresh, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] queries all underlying relational data sources to determine whether there have been changes in tables/views which are included in the DSV. If connections can be established to all underlying data sources and there have been any changes, you will see them in the **Refresh Data Source View** dialog box.  
+ During refresh, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] queries all underlying relational data sources to determine whether there have been changes in tables/views which are included in the DSV. If connections can be established to all underlying data sources and there have been any changes, you will see them in the **Refresh Data Source View** dialog box.  
   
  ![Refresh Data Source View dialog box](../../2014/analysis-services/media/ssas-olapdsv-refresh.gif "Refresh Data Source View dialog box")  
   

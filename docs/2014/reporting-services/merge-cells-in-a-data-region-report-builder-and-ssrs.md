@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 43551300-89b2-4f4e-af09-69084324afaf
 caps.latest.revision: 6
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Merge Cells in a Data Region (Report Builder and SSRS)
@@ -22,7 +22,7 @@ manager: "mblythe"
 >  Cells can only be merged within each area of a data region: corner, column headers, group definition (or row headers), and body. You cannot merge cells that cross area boundaries. For example, you cannot merge a cell in the data region corner area with a cell in the row group area. For more information about tablix areas, see [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ### To merge cells in a data region  
   

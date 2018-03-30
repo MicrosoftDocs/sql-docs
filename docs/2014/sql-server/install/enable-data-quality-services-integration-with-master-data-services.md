@@ -16,17 +16,17 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Enable Data Quality Services Integration with Master Data Services
-  In the [!INCLUDE[ssMDSshort](../../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../../includes/ssmdsxls-md.md)], matching functionality is provided by Data Quality Services (DQS). This functionality must be enabled to be used.  
+  In the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], matching functionality is provided by Data Quality Services (DQS). This functionality must be enabled to be used.  
   
 ## Prerequisites  
   
--   A [!INCLUDE[ssMDSshort](../../../includes/ssmdsshort-md.md)] web application and database must exist.  
+-   A [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] web application and database must exist.  
   
--   The Data Quality Services feature and the Data Quality Client must be installed on the same [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance that hosts the MDS database. For more information, see [Install Data Quality Services](../../../2014/sql-server/install/install-data-quality-services.md).  
+-   The Data Quality Services feature and the Data Quality Client must be installed on the same [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance that hosts the MDS database. For more information, see [Install Data Quality Services](../../../2014/sql-server/install/install-data-quality-services.md).  
   
 ### To enable Data Quality Services integration  
   
-1.  Open [!INCLUDE[ssMDScfgmgr](../../../includes/ssmdscfgmgr-md.md)].  
+1.  Open [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
   
 2.  In the left pane, click **Web Configuration**.  
   

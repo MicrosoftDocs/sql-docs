@@ -21,15 +21,15 @@ manager: "jhubbard"
 ## Override the Backup Compression Default  
  You can change the backup compression behavior for an individual backup, backup job, or log shipping configuration.  
   
--   **[!INCLUDE[tsql](../../includes/tsql-md.md)]**  
+-   **[!INCLUDE[tsql](../includes/tsql-md.md)]**  
   
-     To override the server backup-compression default when creating a backup, use either WITH NO_COMPRESSION or WITH COMPRESSION in you [BACKUP](../Topic/BACKUP%20\(Transact-SQL\).md) statement.  
+     To override the server backup-compression default when creating a backup, use either WITH NO_COMPRESSION or WITH COMPRESSION in you [BACKUP](~/t-sql/statements/backup-transact-sql.md) statement.  
   
-     For a log shipping configuration, you can control the backup compression behavior of log backups by using [sp_add_log_shipping_primary_database](../Topic/sp_add_log_shipping_primary_database%20\(Transact-SQL\).md)[sp_change_log_shipping_primary_database &#40;Transact-SQL&#41;](../Topic/sp_change_log_shipping_primary_database%20\(Transact-SQL\).md).  
+     For a log shipping configuration, you can control the backup compression behavior of log backups by using [sp_add_log_shipping_primary_database](~/relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md)[sp_change_log_shipping_primary_database &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-change-log-shipping-primary-database-transact-sql.md).  
   
--   **[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
+-   **[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]**  
   
-     For information about how to view or configure the backup compression default option for an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [View or Configure the backup compression default Server Configuration Option](../../2014/database-engine/view-or-configure-the-backup-compression-default-server-configuration-option.md).  
+     For information about how to view or configure the backup compression default option for an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see [View or Configure the backup compression default Server Configuration Option](../../2014/database-engine/view-or-configure-the-backup-compression-default-server-configuration-option.md).  
   
      You can override the server backup-compression default when creating a backup by specifying **Compress backup** or **Do not compress backup** in any of the following dialog boxes:  
   

@@ -29,7 +29,7 @@ ms.author: "mblythe"
 manager: "mblythe"
 ---
 # ClearCache Element (XMLA)
-  Clears the memory cache for the specified object on a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance.  
+  Clears the memory cache for the specified object on a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance.  
   
 ## Syntax  
   
@@ -58,7 +58,7 @@ manager: "mblythe"
 |Child elements|[Object](../../../2014/analysis-services/dev-guide/object-element-xmla.md)|  
   
 ## Remarks  
- The `ClearCache` command flushes the cache for a specified database, dimension, cube, measure group, or partition on an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance. If an object other than a database, dimension, cube, measure group, or partition is specified in the `Object` element, an error occurs.  
+ The `ClearCache` command flushes the cache for a specified database, dimension, cube, measure group, or partition on an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance. If an object other than a database, dimension, cube, measure group, or partition is specified in the `Object` element, an error occurs.  
   
 ## See Also  
  [Commands &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/commands-xmla.md)  

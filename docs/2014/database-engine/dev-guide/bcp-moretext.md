@@ -25,7 +25,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # bcp_moretext
-  Sends part of a long, variable-length data type value to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Sends part of a long, variable-length data type value to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Syntax  
   
@@ -52,7 +52,7 @@ pData
  Is the number of bytes of data being copied to SQL Server from the data referenced by *pData*. A value of SQL_NULL_DATA indicates NULL.  
   
  *pData*  
- Is a pointer to the supported, long, variable-length data chunk to be sent to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Is a pointer to the supported, long, variable-length data chunk to be sent to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Returns  
  SUCCEED or FAIL.  

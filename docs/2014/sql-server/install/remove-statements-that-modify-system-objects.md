@@ -22,7 +22,7 @@ manager: "jhubbard"
   Upgrade Advisor detected statements that update the system catalog. Direct system catalog updates are not allowed. Modify your SQL scripts to use official and documented APIs.  
   
 ## Component  
- [!INCLUDE[ssDE](../../../includes/ssde-md.md)]  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## Description  
  Direct system catalog updates are not allowed. Any attempt to do so will generate the following error:  
@@ -36,6 +36,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Database Engine Upgrade Issues](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;new&#93;](../Topic/SQL%20Server%202014%20Upgrade%20Advisor%20[new].md)  
+ [SQL Server 2014 Upgrade Advisor &#91;new&#93;](~/2014/sql-server/install/sql-server-2014-upgrade-advisor.md)  
   
   

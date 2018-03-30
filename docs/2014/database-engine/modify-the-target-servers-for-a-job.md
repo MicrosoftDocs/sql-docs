@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Modify the Target Servers for a Job
-  This topic describes how to change the target servers for [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  This topic describes how to change the target servers for [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent jobs in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -51,7 +51,7 @@ manager: "jhubbard"
   
 #### To modify the target servers for a job  
   
-1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], and then expand that instance.  
+1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], and then expand that instance.  
   
 2.  Expand **SQL Server Agent**, expand **Jobs**, right-click a job, and then click **Properties**.  
   
@@ -63,7 +63,7 @@ manager: "jhubbard"
   
 #### To modify the target servers for a job  
   
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
@@ -80,7 +80,7 @@ GO
   
 ```  
   
- For more information, see [sp_add_jobserver &#40;Transact-SQL&#41;](../Topic/sp_add_jobserver%20\(Transact-SQL\).md).  
+ For more information, see [sp_add_jobserver &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md).  
   
 ## See Also  
  [Automated Administration Across an Enterprise](../../2014/database-engine/automated-administration-across-an-enterprise.md)  

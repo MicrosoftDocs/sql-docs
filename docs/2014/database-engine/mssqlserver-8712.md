@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 292fb3bc-062e-41e4-a566-b5d3d0b21977
 caps.latest.revision: 12
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_8712
@@ -37,7 +37,7 @@ manager: "jhubbard"
  Ensure all indexes that are specified in the USE PLAN hint exist.  
   
 ## See Also  
- [Query Hints &#40;Transact-SQL&#41;](../Topic/Query%20Hints%20\(Transact-SQL\).md)   
+ [Query Hints &#40;Transact-SQL&#41;](~/t-sql/queries/hints-transact-sql-query.md)   
  [Plan Guides](../../2014/database-engine/plan-guides.md)  
   
   

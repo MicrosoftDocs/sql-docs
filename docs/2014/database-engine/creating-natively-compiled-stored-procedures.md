@@ -16,17 +16,17 @@ ms.author: "sstein"
 manager: "jhubbard"
 ---
 # Creating Natively Compiled Stored Procedures
-  Natively compiled stored procedures do not implement the full [!INCLUDE[tsql](../../includes/tsql-md.md)] programmability and query surface area. There are certain [!INCLUDE[tsql](../../includes/tsql-md.md)] constructs that cannot be used inside natively compiled stored procedures. For more information, see [Supported Constructs in Natively Compiled Stored Procedures](../../2014/database-engine/supported-constructs-in-natively-compiled-stored-procedures.md).  
+  Natively compiled stored procedures do not implement the full [!INCLUDE[tsql](../includes/tsql-md.md)] programmability and query surface area. There are certain [!INCLUDE[tsql](../includes/tsql-md.md)] constructs that cannot be used inside natively compiled stored procedures. For more information, see [Supported Constructs in Natively Compiled Stored Procedures](../../2014/database-engine/supported-constructs-in-natively-compiled-stored-procedures.md).  
   
- There are, however, several [!INCLUDE[tsql](../../includes/tsql-md.md)] features that are only supported for natively compiled stored procedures:  
+ There are, however, several [!INCLUDE[tsql](../includes/tsql-md.md)] features that are only supported for natively compiled stored procedures:  
   
 -   Atomic blocks. For more information, see [Atomic Blocks](../../2014/database-engine/atomic-blocks.md).  
   
--   `NOT NULL` constraints on parameters of and variables in natively compiled stored procedures. You cannot assign `NULL` values to parameters or variables declared as `NOT NULL`. For more information, see [DECLARE @local_variable &#40;Transact-SQL&#41;](../Topic/DECLARE%20@local_variable%20\(Transact-SQL\).md).  
+-   `NOT NULL` constraints on parameters of and variables in natively compiled stored procedures. You cannot assign `NULL` values to parameters or variables declared as `NOT NULL`. For more information, see [DECLARE @local_variable &#40;Transact-SQL&#41;](~/t-sql/language-elements/declare-local-variable-transact-sql.md).  
   
 -   Schema binding of natively compiled stored procedures.  
   
- Natively compiled stored procedures are created using [CREATE PROCEDURE &#40;Transact-SQL&#41;](../Topic/CREATE%20PROCEDURE%20\(Transact-SQL\).md). The following example shows a memory-optimized table and a natively compiled stored procedure used for inserting rows into the table.  
+ Natively compiled stored procedures are created using [CREATE PROCEDURE &#40;Transact-SQL&#41;](~/t-sql/statements/create-procedure-transact-sql.md). The following example shows a memory-optimized table and a natively compiled stored procedure used for inserting rows into the table.  
   
 ```tsql  
 create table dbo.Ord  
@@ -49,23 +49,23 @@ end
 go  
 ```  
   
- In the code sample, `NATIVE_COMPILATION` indicates that this [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure is a natively compiled stored procedure. The following options are required:  
+ In the code sample, `NATIVE_COMPILATION` indicates that this [!INCLUDE[tsql](../includes/tsql-md.md)] stored procedure is a natively compiled stored procedure. The following options are required:  
   
 |Option|Description|  
 |------------|-----------------|  
-|`SCHEMABINDING`|Natively compiled stored procedures must be bound to the schema of the objects it references. This means that table references by the procedure cannot be dropped. Tables referenced in the procedure must include their schema name, and wildcards (\*) are not allowed in queries. `SCHEMABINDING` is only supported for natively compiled stored procedures in this version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|`SCHEMABINDING`|Natively compiled stored procedures must be bound to the schema of the objects it references. This means that table references by the procedure cannot be dropped. Tables referenced in the procedure must include their schema name, and wildcards (\*) are not allowed in queries. `SCHEMABINDING` is only supported for natively compiled stored procedures in this version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
 |`EXECUTE AS`|Natively compiled stored procedures do not support `EXECUTE AS CALLER`, which is the default execution context. Therefore, specifying the execution context is required. The options `EXECUTE AS OWNER`, `EXECUTE AS`*user*, and `EXECUTE AS SELF` are supported.|  
 |`BEGIN ATOMIC`|The natively compiled stored procedure body must consist of exactly one atomic block. Atomic blocks guarantee atomic execution of the stored procedure. If the procedure is invoked outside the context of an active transaction, it will start a new transaction, which commits at the end of the atomic block. Atomic blocks in natively compiled stored procedures have two required options:<br /><br /> `TRANSACTION ISOLATION LEVEL`. See [Transaction Isolation Levels](../../2014/database-engine/transaction-isolation-levels.md) for supported isolation levels.<br /><br /> `LANGUAGE`. The language for the stored procedure must be set to one of the available languages or language aliases.|  
   
- Regarding `EXECUTE AS` and Windows logins, an error can occur because of the impersonation done through `EXECUTE AS`. If a user account uses Windows Authentication, there must be full trust between the service account used for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance and the domain of the Windows login. If there is not full trust, the following error message is returned when creating a natively compiled stored procedure: Msg 15404, Could not obtain information about Windows NT group/user ‘username’, error code 0x5.  
+ Regarding `EXECUTE AS` and Windows logins, an error can occur because of the impersonation done through `EXECUTE AS`. If a user account uses Windows Authentication, there must be full trust between the service account used for the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance and the domain of the Windows login. If there is not full trust, the following error message is returned when creating a natively compiled stored procedure: Msg 15404, Could not obtain information about Windows NT group/user ‘username’, error code 0x5.  
   
  To resolve this error, use one of the following:  
   
--   Use an account from the same domain as the Windows user for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service.  
+-   Use an account from the same domain as the Windows user for the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] service.  
   
--   If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is using a machine account such as Network Service or Local System, the machine must be trusted by the domain containing the Windows user.  
+-   If [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is using a machine account such as Network Service or Local System, the machine must be trusted by the domain containing the Windows user.  
   
--   Use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.  
+-   Use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication.  
   
  You may also see error 15517 when creating a natively compiled stored procedure. For more information, see [MSSQLSERVER_15517](../../2014/database-engine/mssqlserver-15517.md).  
   

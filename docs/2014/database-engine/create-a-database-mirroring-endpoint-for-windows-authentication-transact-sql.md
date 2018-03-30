@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Create a Database Mirroring Endpoint for Windows Authentication (Transact-SQL)
-  This topic describes how to create a database mirroring endpoint that uses Windows Authentication in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../../includes/tsql-md.md)]. To support database mirroring or [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] each instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requires a database mirroring endpoint. A server instance can have only one database mirroring endpoint, which has a single port. A database mirroring endpoint can use any port that is available on the local system when the endpoint is created. All database mirroring sessions on a server instance listen on that port, and all incoming connections for database mirroring use that port.  
+  This topic describes how to create a database mirroring endpoint that uses Windows Authentication in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../includes/tsql-md.md)]. To support database mirroring or [!INCLUDE[ssHADR](../includes/sshadr-md.md)] each instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] requires a database mirroring endpoint. A server instance can have only one database mirroring endpoint, which has a single port. A database mirroring endpoint can use any port that is available on the local system when the endpoint is created. All database mirroring sessions on a server instance listen on that port, and all incoming connections for database mirroring use that port.  
   
 > [!IMPORTANT]  
 >  If a database mirroring endpoint exists and is already in use, we recommend that you use that endpoint. Dropping an in-use endpoint disrupts existing sessions.  
@@ -39,16 +39,16 @@ manager: "jhubbard"
  The authentication and encryption methods of the server instance are established by the system administrator.  
   
 > [!IMPORTANT]  
->  The RC4 algorithm is deprecated. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] We recommend that you use AES.  
+>  The RC4 algorithm is deprecated. [!INCLUDE[ssNoteDepFutureDontUse](../includes/ssnotedepfuturedontuse-md.md)] We recommend that you use AES.  
   
 ####  <a name="Permissions"></a> Permissions  
- Requires CREATE ENDPOINT permission, or membership in the sysadmin fixed server role. For more information, see [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](../Topic/GRANT%20Endpoint%20Permissions%20\(Transact-SQL\).md).  
+ Requires CREATE ENDPOINT permission, or membership in the sysadmin fixed server role. For more information, see [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](~/t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To Create a Database Mirroring Endpoint That Uses Windows Authentication  
   
-1.  Connect to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on which you want to create a database mirroring endpoint.  
+1.  Connect to the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on which you want to create a database mirroring endpoint.  
   
 2.  From the Standard bar, click **New Query**.  
   
@@ -121,19 +121,19 @@ manager: "jhubbard"
          AES RC4 specifies that this endpoint will negotiate for the encryption algorithm, giving preference to the AES algorithm. RC4 AES specifies that this endpoint will negotiate for the encryption algorithm, giving preference to the RC4 algorithm. If both endpoints specify both algorithms but in different orders, the endpoint accepting the connection wins.  
   
         > [!NOTE]  
-        >  The RC4 algorithm is deprecated. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] We recommend that you use AES.  
+        >  The RC4 algorithm is deprecated. [!INCLUDE[ssNoteDepFutureDontUse](../includes/ssnotedepfuturedontuse-md.md)] We recommend that you use AES.  
   
-    -   *\<role>* defines the role or roles that the server can perform. Specifying ROLE is required. However, the role of the endpoint is relevant only for database mirroring. For [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], the role of the endpoint is ignored.  
+    -   *\<role>* defines the role or roles that the server can perform. Specifying ROLE is required. However, the role of the endpoint is relevant only for database mirroring. For [!INCLUDE[ssHADR](../includes/sshadr-md.md)], the role of the endpoint is ignored.  
   
          To allow a server instance to serve as one role for one database mirroring session and different role for another session, specify ROLE=ALL. To restrict a server instance to being either a partner or a witness, specify ROLE=PARTNER or ROLE=WITNESS, respectively.  
   
         > [!NOTE]  
-        >  For more information about Database Mirroring options for different editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+        >  For more information about Database Mirroring options for different editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
-     For a complete description of the CREATE ENDPOINT syntax, see [CREATE ENDPOINT &#40;Transact-SQL&#41;](../Topic/CREATE%20ENDPOINT%20\(Transact-SQL\).md).  
+     For a complete description of the CREATE ENDPOINT syntax, see [CREATE ENDPOINT &#40;Transact-SQL&#41;](~/t-sql/statements/create-endpoint-transact-sql.md).  
   
     > [!NOTE]  
-    >  To change an existing endpoint, use [ALTER ENDPOINT &#40;Transact-SQL&#41;](../Topic/ALTER%20ENDPOINT%20\(Transact-SQL\).md).  
+    >  To change an existing endpoint, use [ALTER ENDPOINT &#40;Transact-SQL&#41;](~/t-sql/statements/alter-endpoint-transact-sql.md).  
   
 ###  <a name="TsqlExample"></a> Example: Creating Endpoints to Support for Database Mirroring (Transact-SQL)  
  The following example creates database mirroring endpoints for the default server instances on three separate computer systems:  
@@ -192,12 +192,12 @@ GO
   
  **To View Information About the Database Mirroring Endpoint**  
   
--   [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](../Topic/sys.database_mirroring_endpoints%20\(Transact-SQL\).md)  
+-   [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)  
   
 ## See Also  
- [ALTER ENDPOINT &#40;Transact-SQL&#41;](../Topic/ALTER%20ENDPOINT%20\(Transact-SQL\).md)   
+ [ALTER ENDPOINT &#40;Transact-SQL&#41;](~/t-sql/statements/alter-endpoint-transact-sql.md)   
  [Choose an Encryption Algorithm](../../2014/database-engine/choose-an-encryption-algorithm.md)   
- [CREATE ENDPOINT &#40;Transact-SQL&#41;](../Topic/CREATE%20ENDPOINT%20\(Transact-SQL\).md)   
+ [CREATE ENDPOINT &#40;Transact-SQL&#41;](~/t-sql/statements/create-endpoint-transact-sql.md)   
  [Specify a Server Network Address &#40;Database Mirroring&#41;](../../2014/database-engine/specify-a-server-network-address-database-mirroring.md)   
  [Example: Setting Up Database Mirroring Using Windows Authentication &#40;Transact-SQL&#41;](../../2014/database-engine/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)   
  [The Database Mirroring Endpoint &#40;SQL Server&#41;](../../2014/database-engine/the-database-mirroring-endpoint-sql-server.md)  

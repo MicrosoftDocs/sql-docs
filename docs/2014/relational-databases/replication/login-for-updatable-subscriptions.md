@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: 301ea227-0455-40ba-9009-d38f8676b325
 caps.latest.revision: 17
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Login for Updatable Subscriptions
@@ -31,14 +31,14 @@ manager: "jhubbard"
   
 -   A linked server that replication creates; the connection is made with the credentials of the user making the change at the Subscriber.  
   
- The first two options can be specified in this wizard. The last option can only be specified using [sp_link_publication &#40;Transact-SQL&#41;](../Topic/sp_link_publication%20\(Transact-SQL\).md); specify a value of **1** for the parameter **@security_mode**.  
+ The first two options can be specified in this wizard. The last option can only be specified using [sp_link_publication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md); specify a value of **1** for the parameter **@security_mode**.  
   
 ## Options  
  **Create a linked server that connects using the following SQL Server Authentication login:**  
  Replication creates a linked server using the credentials specified in the **Login** and **Password** fields.  
   
  **Login**  
- Enter a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login that has only the permissions described in this topic.  
+ Enter a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login that has only the permissions described in this topic.  
   
  **Password**  
  Enter a strong password for the login specified in **Login**.  

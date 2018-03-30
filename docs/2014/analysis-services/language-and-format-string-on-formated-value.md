@@ -72,7 +72,7 @@ manager: "mblythe"
   
  `cell properties VALUE, FORMAT_STRING, LANGUAGE, FORMATTED_VALUE`  
   
- The results, transposed, when the above MDX query was run using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] over a server and client with locale 1033 are as follows:  
+ The results, transposed, when the above MDX query was run using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] over a server and client with locale 1033 are as follows:  
   
 |Member|FORMATTED_VALUE|Explanation|  
 |------------|----------------------|-----------------|  
@@ -122,7 +122,7 @@ manager: "mblythe"
   
  `cell properties VALUE, FORMAT_STRING, LANGUAGE, FORMATTED_VALUE`  
   
- The results, transposed, when the above MDX query was run using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] over a server and client with locale 1033 are as follows:  
+ The results, transposed, when the above MDX query was run using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] over a server and client with locale 1033 are as follows:  
   
 |Member|FORMATTED_VALUE|Explanation|  
 |------------|----------------------|-----------------|  

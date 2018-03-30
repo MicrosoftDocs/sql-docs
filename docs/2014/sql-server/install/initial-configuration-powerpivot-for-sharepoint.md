@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146
 caps.latest.revision: 26
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "jhubbard"
 ---
 # Initial Configuration (PowerPivot for SharePoint)
@@ -26,7 +26,7 @@ manager: "jhubbard"
  The SharePoint server must have been installed using the Server Farm installation option in SharePoint setup. A standalone SharePoint server that uses a built-in database is not supported. For more information, see [Guidance for Using SQL Server BI Features in a SharePoint 2010 Farm](../../../2014/sql-server/install/guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md).  
   
 > [!IMPORTANT]  
->  SharePoint 2010 SP1 must be installed before you can configure either PowerPivot for SharePoint, or a SharePoint farm that uses a [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] database server. If you have not yet installed the service pack, do so now before you begin configuring the server.  
+>  SharePoint 2010 SP1 must be installed before you can configure either PowerPivot for SharePoint, or a SharePoint farm that uses a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] database server. If you have not yet installed the service pack, do so now before you begin configuring the server.  
   
  PowerPivot for SharePoint must be installed. At a minimum, the farm solution must be deployed. Use either the PowerPivot Configuration tool or PowerShell script to deploy the farm solution. Instructions for this step are provided in this topic.  
   
@@ -221,9 +221,9 @@ manager: "jhubbard"
  For more information, see [Activate PowerPivot Feature Integration for Site Collections in Central Administration](../../../2014/analysis-services/activate-power-pivot-integration-for-site-collections-in-ca.md).  
   
 ##  <a name="bkmk_redist"></a> Step 9: Install the SQL Server 2008 R2 Version of the OLE DB provider on a SQL Server 2012 PowerPivot for SharePoint instance  
- If you want to run older and newer versions of PowerPivot workbooks side-by-side on the same server, you must install the Analysis Services OLE DB provider that ships in SQL Server 2008 R2 on a [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] PowerPivot for SharePoint server.  
+ If you want to run older and newer versions of PowerPivot workbooks side-by-side on the same server, you must install the Analysis Services OLE DB provider that ships in SQL Server 2008 R2 on a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot for SharePoint server.  
   
- Installing the provider will allow workbooks that reference MSOLAP.4 in the data connection string to work as expected on a [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] PowerPivot server. Installing the SQL Server 2008 R2 OLE DB provider is an alternative approach to upgrading workbooks that were created in an earlier version of PowerPivot for Excel.  
+ Installing the provider will allow workbooks that reference MSOLAP.4 in the data connection string to work as expected on a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot server. Installing the SQL Server 2008 R2 OLE DB provider is an alternative approach to upgrading workbooks that were created in an earlier version of PowerPivot for Excel.  
   
  You can download the provider from [SQL Server 2008 R2 Feature Pack page](http://go.microsoft.com/fwlink/?LinkId=159570). Look for **Microsoft® Analysis Services OLE DB Provider for Microsoft® SQL Server® 2008 R2**, and then download the x64 Package of the `SQLServer2008_ASOLEDB10.msi` installation program.  
   
@@ -263,7 +263,7 @@ manager: "jhubbard"
 9. On the computer file system, check the following folder to determine whether files are cached to disk. The presence of cached files is further verification that your deployment is operational. To view the file cache, go to the \Program Files\Microsoft SQL Server\MSAS10_50.POWERPIVOT\OLAP\Backup folder.  
   
 ##  <a name="nextsteps"></a> Post-Installation Steps  
- After you verify the installation, finish service configuration by creating a PowerPivot Gallery or tuning individual configuration settings. To make full use of the server components you just installed, you can download [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] to create and then publish your first PowerPivot workbook.  
+ After you verify the installation, finish service configuration by creating a PowerPivot Gallery or tuning individual configuration settings. To make full use of the server components you just installed, you can download [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] to create and then publish your first PowerPivot workbook.  
   
 ### Install Data Providers Used for Data Refresh  
  If you enabled data refresh, the server will need the same data providers for external data access that were used by the PowerPivot client application to import the original data (for example, if the data was originally imported using a 32-bit provider, server-side data refresh will also require the 32-bit provider when it accesses the same external data source). For more information, see [PowerPivot Data Refresh with SharePoint 2010](../../../2014/analysis-services/powerpivot-data-refresh-with-sharepoint-2010.md).  

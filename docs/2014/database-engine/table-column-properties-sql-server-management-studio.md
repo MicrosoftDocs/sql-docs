@@ -23,7 +23,7 @@ manager: "jhubbard"
   These properties appear in the bottom pane of Table Designer. Unless otherwise noted, you can edit these properties in the Properties window when the column is selected. The **Column Properties** can be displayed in categories or alphabetically. Many properties only appear or can only be changed for certain data types.  
   
 > [!NOTE]  
->  If the table is published for replication, you must make schema changes using the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement [ALTER TABLE](../Topic/ALTER%20TABLE%20\(Transact-SQL\).md) or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO). When schema changes are made using the Table Designer or the Database Diagram Designer, it attempts to drop and recreate the table. You cannot drop published objects, therefore the schema change will fail.  
+>  If the table is published for replication, you must make schema changes using the [!INCLUDE[tsql](../includes/tsql-md.md)] statement [ALTER TABLE](~/t-sql/statements/alter-table-transact-sql.md) or [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects (SMO). When schema changes are made using the Table Designer or the Database Diagram Designer, it attempts to drop and recreate the table. You cannot drop published objects, therefore the schema change will fail.  
   
  **General**  
  Expands to show **Name**, **Allow Nulls**, **Data Type**, **Default Value or Binding**, **Length**, **Precision**, and **Scale**.  
@@ -38,7 +38,7 @@ manager: "jhubbard"
  Displays the data type for the selected column. To edit this property, click its value, expand the drop-down list, and choose another value.  
   
  **Default Value or Binding**  
- Displays the default for this column whenever no value is specified for this column. The value of this field can be either the value of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] default constraint or the name of a global constraint to which the column is bound. The drop-down list contains all global defaults defined in the database. To bind the column to a global default, select from the drop-down list. Alternatively, to create a default constraint for the column, type the default value directly as text.  
+ Displays the default for this column whenever no value is specified for this column. The value of this field can be either the value of a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] default constraint or the name of a global constraint to which the column is bound. The drop-down list contains all global defaults defined in the database. To bind the column to a global default, select from the drop-down list. Alternatively, to create a default constraint for the column, type the default value directly as text.  
   
  **Length**  
  Shows the number of characters allowed for character-based data types. This property is only available for character-based data types  
@@ -53,7 +53,7 @@ manager: "jhubbard"
  Expands the **Table Designer** section.  
   
  **Collation**  
- Displays the collating sequence that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applies by default to the column whenever the column values are used to sort rows of a query result. To edit the collation, select the property, click the ellipsis (   ) that appears to the right of the property value to bring up the **Collation** dialog box.  
+ Displays the collating sequence that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] applies by default to the column whenever the column values are used to sort rows of a query result. To edit the collation, select the property, click the ellipsis (   ) that appears to the right of the property value to bring up the **Collation** dialog box.  
   
  **Computed Column Specification**  
  Displays information about a computed column. The value shown for property is the same as the value of the **Formula** child property and displays the formula for the computed column.  
@@ -97,7 +97,7 @@ manager: "jhubbard"
  If you select a **Language** prior to selecting **Statistical Semantics**, and the selected language does not have an associated Semantic Language Model, then the **Statistical Semantics** option is set to **No** and cannot be modified. If you select **Yes** for the **Statistical Semantics** option prior to selecting a **Language**, then the languages available in the **Language** column will be restricted to those for which there is Semantic Language Model support.  
   
  **Has Non-SQL Server Subscriber**  
- Indicates if the column is being replicated to a subscriber that is not a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Indicates if the column is being replicated to a subscriber that is not a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **Identity Specification**  
  Displays information about whether and how this column enforces uniqueness on its values. The value of this property indicates whether or not this column is an identity column and is the same as the value of the child property **Is Identity**.  
@@ -130,6 +130,6 @@ manager: "jhubbard"
  Shows the size in bytes allowed by column's data type. For example, a nchar data type may have a length of 10 (the number of characters) but it would have a size of 20 to account for Unicode character sets.  
   
 > [!NOTE]  
->  The length of a **(max)** data types vary for each row. **sp_help** returns (-1) as the length of **(max)** columns. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] displays -1 as the column size.  
+>  The length of a **(max)** data types vary for each row. **sp_help** returns (-1) as the length of **(max)** columns. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] displays -1 as the column size.  
   
   

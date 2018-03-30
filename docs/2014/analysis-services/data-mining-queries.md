@@ -49,7 +49,7 @@ manager: "mblythe"
  [Requirements](#bkmk_Reqs)  
   
 ##  <a name="bkmk_Understand"></a> Understanding Data Mining Queries  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Data Mining supports the following types of queries:  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Data Mining supports the following types of queries:  
   
 -   [Prediction Queries &#40;Data Mining&#41;](../../2014/analysis-services/prediction-queries-data-mining.md)  
   
@@ -74,17 +74,17 @@ manager: "mblythe"
 -   Review the model content for each model type, by using the **Microsoft Generic Content Tree Viewer**. To interpret this information, refer to [Mining Model Content &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/mining-model-content-analysis-services-data-mining.md).  
   
 ##  <a name="bkmk_Interfaces"></a> Query Tools and Interfaces  
- You can build data mining queries interactively by using one of the query tools provided by SQL Server. The graphical Prediction Query Builder is provided in both [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] and [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. If you have not used the Prediction Query Builder before, we recommend that you follow the steps in the [Basic Data Mining Tutorial](../../2014/tutorials/basic-data-mining-tutorial.md) to familiarize yourself with the interface. For q quick overview of the steps, see Create a Query using the [Create a Prediction Query Using the Prediction Query Builder](../../2014/analysis-services/create-a-prediction-query-using-the-prediction-query-builder.md).  
+ You can build data mining queries interactively by using one of the query tools provided by SQL Server. The graphical Prediction Query Builder is provided in both [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] and [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. If you have not used the Prediction Query Builder before, we recommend that you follow the steps in the [Basic Data Mining Tutorial](../../2014/tutorials/basic-data-mining-tutorial.md) to familiarize yourself with the interface. For q quick overview of the steps, see Create a Query using the [Create a Prediction Query Using the Prediction Query Builder](../../2014/analysis-services/create-a-prediction-query-using-the-prediction-query-builder.md).  
   
  The Prediction Query Builder is helpful for starting queries that you will customize later. You can easily add data sources and map them to columns, and then switch to DMX view and customize the query by adding a WHERE clause or other functions.  
   
  Once you are familiar with data mining models and how to build queries, you can also write queries directly by using Data Mining Extensions (DMX). DMX is a query language that is similar to Transact-SQL, and that you can use from many different clients. DMX is the tool of choice for creating both custom predictions and complex queries. For an introduction to DMX, see [Creating and Querying Data Mining Models with DMX: Tutorials &#40;Analysis Services - Data Mining&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md).  
   
- DMX editors are provided in both [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] and [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. You can also use the Prediction Query Builder to start your queries, then change the view to the text editor and copy the DMX statement to another client. For more information, see [Data Mining Query Interfaces](../../2014/analysis-services/data-mining-query-interfaces.md).  
+ DMX editors are provided in both [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] and [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. You can also use the Prediction Query Builder to start your queries, then change the view to the text editor and copy the DMX statement to another client. For more information, see [Data Mining Query Interfaces](../../2014/analysis-services/data-mining-query-interfaces.md).  
   
- You can compose DMX statements programmatically and send them from your client to the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server by using AMO or XMLA. However, DMX is the language that you must use to create queries against a mining model.  
+ You can compose DMX statements programmatically and send them from your client to the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] server by using AMO or XMLA. However, DMX is the language that you must use to create queries against a mining model.  
   
- You can also query the metadata, statistics, and some content of the model by using Dynamic Management Views (DMVs) that are based on the data mining schema rowsets. These DMVs make it easy to retrieve information about the model by typing SELECT statements; however, you cannot create predictions. For more information about DMVs supported by [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], see [Use Dynamic Management Views &#40;DMVs&#41; to Monitor Analysis Services](../../2014/analysis-services/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md).  
+ You can also query the metadata, statistics, and some content of the model by using Dynamic Management Views (DMVs) that are based on the data mining schema rowsets. These DMVs make it easy to retrieve information about the model by typing SELECT statements; however, you cannot create predictions. For more information about DMVs supported by [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], see [Use Dynamic Management Views &#40;DMVs&#41; to Monitor Analysis Services](../../2014/analysis-services/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md).  
   
  Finally, you can create data mining queries for use in Integration Services packages, by using the [Data Mining Query Task](../../2014/integration-services/data-mining-query-task.md), or the [Data Mining Query Transformation](../../2014/integration-services/data-mining-query-transformation.md). The control flow task supports multiple types of DMX queries, whereas the data flow transformation supports only queries that work with data in the data flow, meaning queries that use the PREDICTION JOIN syntax.  
   
@@ -93,7 +93,7 @@ manager: "mblythe"
   
  The following list provides a summary of the functions that you can use in queries:  
   
--   **General prediction functions:** The `Predict` function is polymorphic, meaning it works with all model types. This function will automatically detect the type of model you are working with and prompt you for additional parameters. For more information, see [Predict &#40;DMX&#41;](../Topic/Predict%20\(DMX\).md).  
+-   **General prediction functions:** The `Predict` function is polymorphic, meaning it works with all model types. This function will automatically detect the type of model you are working with and prompt you for additional parameters. For more information, see [Predict &#40;DMX&#41;](~/dmx/predict-dmx.md).  
   
     > [!WARNING]  
     >  Not all models are used to make predictions. For example, you can create a clustering model that does not have a predictable attribute. However, even if a model does not have a predictable attribute, you can create prediction queries that return other types of useful information from the model.  
@@ -112,13 +112,13 @@ manager: "mblythe"
     |[Linear Regression Model Query Examples](../../2014/analysis-services/linear-regression-model-query-examples.md)|[Time Series Model Query Examples](../../2014/analysis-services/time-series-model-query-examples.md)|  
     |[Logistic Regression Model Query Examples](../../2014/analysis-services/logistic-regression-model-query-examples.md)||  
   
-     You can also call VBA functions, or create your own functions. For more information, see [Functions &#40;DMX&#41;](../Topic/Functions%20\(DMX\).md).  
+     You can also call VBA functions, or create your own functions. For more information, see [Functions &#40;DMX&#41;](~/dmx/functions-dmx.md).  
   
 -   **General statistics:** There are a number of functions that can be used with almost any model type, which return a standard set of descriptive statistics, such as standard deviation.  
   
      For example, the `PredictHistogram` function returns a table that lists all the states of the specified column.  
   
-     For more information, see [General Prediction Functions &#40;DMX&#41;](../Topic/General%20Prediction%20Functions%20\(DMX\).md).  
+     For more information, see [General Prediction Functions &#40;DMX&#41;](~/dmx/general-prediction-functions-dmx.md).  
   
 -   **Custom statistics:** Additional supporting functions are provided for each model type, to generate statistics that are relevant to the specific analytical task.  
   
@@ -129,7 +129,7 @@ manager: "mblythe"
      In the model content, the meaning of each row or node of the table that is returned differs depending on the type of algorithm that was used to build the model, as well as the data type of the column. For more information, see [Content Queries &#40;Data Mining&#41;](../../2014/analysis-services/content-queries-data-mining.md).  
   
 ##  <a name="bkmk_Reqs"></a> Requirements  
- Before you can create a query against a model, the data mining model must have been processed. Processing of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects requires special permissions. For more information on processing mining models, see [Processing Requirements and Considerations &#40;Data Mining&#41;](../../2014/analysis-services/processing-requirements-and-considerations-data-mining.md).  
+ Before you can create a query against a model, the data mining model must have been processed. Processing of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objects requires special permissions. For more information on processing mining models, see [Processing Requirements and Considerations &#40;Data Mining&#41;](../../2014/analysis-services/processing-requirements-and-considerations-data-mining.md).  
   
  To execute queries against a data mining model requires different levels of permissions, depending on the type of query that you run. For example, drillthrough to case or structure data typically requires additional permissions which can be set on the mining structure object or mining model object.  
   
@@ -156,7 +156,7 @@ manager: "mblythe"
 |Tasks|Links|  
 |-----------|-----------|  
 |View tutorials and walkthroughs on data mining queries|[Lesson 6: Creating and Working with Predictions &#40;Basic Data Mining Tutorial&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)<br /><br /> [Time Series Prediction DMX Tutorial](../../2014/tutorials/time-series-prediction-dmx-tutorial.md)|  
-|Use data mining query tools in SQL Server Management Studio and [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|[Create a DMX Query in SQL Server Management Studio](../../2014/analysis-services/create-a-dmx-query-in-sql-server-management-studio.md)<br /><br /> [Create a Prediction Query Using the Prediction Query Builder](../../2014/analysis-services/create-a-prediction-query-using-the-prediction-query-builder.md)<br /><br /> [Apply Prediction Functions to a Model](../../2014/analysis-services/apply-prediction-functions-to-a-model.md)<br /><br /> [Manually Edit a Prediction Query](../../2014/analysis-services/manually-edit-a-prediction-query.md)|  
+|Use data mining query tools in SQL Server Management Studio and [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]|[Create a DMX Query in SQL Server Management Studio](../../2014/analysis-services/create-a-dmx-query-in-sql-server-management-studio.md)<br /><br /> [Create a Prediction Query Using the Prediction Query Builder](../../2014/analysis-services/create-a-prediction-query-using-the-prediction-query-builder.md)<br /><br /> [Apply Prediction Functions to a Model](../../2014/analysis-services/apply-prediction-functions-to-a-model.md)<br /><br /> [Manually Edit a Prediction Query](../../2014/analysis-services/manually-edit-a-prediction-query.md)|  
 |Work with external data used in prediction queries|[Choose and Map Input Data for a Prediction Query](../../2014/analysis-services/choose-and-map-input-data-for-a-prediction-query.md)<br /><br /> [Choose and Map Input Data for a Prediction Query](../../2014/analysis-services/choose-and-map-input-data-for-a-prediction-query.md)|  
 |Work with the results of queries|[View and Save the Results of a Prediction Query](../../2014/analysis-services/view-and-save-the-results-of-a-prediction-query.md)|  
 |Use DMX and XMLA query templates provided in Management Studio|[Create a Singleton Prediction Query from a Template](../../2014/analysis-services/create-a-singleton-prediction-query-from-a-template.md)<br /><br /> [Create a Data Mining Query by Using XMLA](../../2014/analysis-services/create-a-data-mining-query-by-using-xmla.md)<br /><br /> [Use Analysis Services Templates in SQL Server Management Studio](../../2014/analysis-services/use-analysis-services-templates-in-sql-server-management-studio.md)|  

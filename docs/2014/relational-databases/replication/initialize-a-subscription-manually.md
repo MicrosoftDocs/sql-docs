@@ -16,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: 27a1bc38-e498-4fff-8082-04b52aa4b22c
 caps.latest.revision: 36
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Initialize a Subscription Manually
-  This topic describes how to initialize a subscription manually in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)]. While the initial snapshot is normally used to initialize a subscription, subscriptions to publications can be initialized without using a snapshot, provided that the schema and initial data are already present at the subscriber.  
+  This topic describes how to initialize a subscription manually in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. While the initial snapshot is normally used to initialize a subscription, subscriptions to publications can be initialized without using a snapshot, provided that the schema and initial data are already present at the subscriber.  
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
@@ -46,11 +46,11 @@ manager: "jhubbard"
   
 1.  Ensure that the schema and data exist on the subscription database. For more information, see [Initialize a Transactional Subscription Without a Snapshot](../../../2014/relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
-2.  At the Publisher on the publication database, execute [sp_addsubscription](../Topic/sp_addsubscription%20\(Transact-SQL\).md). Specify **@publication**, **@subscriber**, the name of the database at the Subscriber containing the published data for **@destination_db**, a value of **pull** for **@subscription_type**, and a value of **replication support only** for **@sync_type**. For more information, see [Create a Pull Subscription](../../../2014/relational-databases/replication/create-a-pull-subscription.md).  
+2.  At the Publisher on the publication database, execute [sp_addsubscription](~/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Specify **@publication**, **@subscriber**, the name of the database at the Subscriber containing the published data for **@destination_db**, a value of **pull** for **@subscription_type**, and a value of **replication support only** for **@sync_type**. For more information, see [Create a Pull Subscription](../../../2014/relational-databases/replication/create-a-pull-subscription.md).  
   
-3.  At the Subscriber, execute [sp_addpullsubscription](../Topic/sp_addpullsubscription%20\(Transact-SQL\).md). For updating subscriptions, see [Create an Updatable Subscription to a Transactional Publication](../../../2014/relational-databases/replication/create-an-updatable-subscription-to-a-transactional-publication.md).  
+3.  At the Subscriber, execute [sp_addpullsubscription](~/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). For updating subscriptions, see [Create an Updatable Subscription to a Transactional Publication](../../../2014/relational-databases/replication/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
-4.  At the Subscriber, execute [sp_addpullsubscription_agent](../Topic/sp_addpullsubscription_agent%20\(Transact-SQL\).md). For more information, see [Create a Pull Subscription](../../../2014/relational-databases/replication/create-a-pull-subscription.md).  
+4.  At the Subscriber, execute [sp_addpullsubscription_agent](~/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). For more information, see [Create a Pull Subscription](../../../2014/relational-databases/replication/create-a-pull-subscription.md).  
   
 5.  Start the Distribution Agent to transfer replication objects and download the latest changes from the Publisher. For more information, see [Synchronize a Pull Subscription](../../../2014/relational-databases/replication/synchronize-a-pull-subscription.md).  
   
@@ -58,9 +58,9 @@ manager: "jhubbard"
   
 1.  Ensure that the schema and data exist on the subscription database. For more information, see [Initialize a Transactional Subscription Without a Snapshot](../../../2014/relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
-2.  At the Publisher on the publication database, execute [sp_addsubscription](../Topic/sp_addsubscription%20\(Transact-SQL\).md). Specify the name of the database at the Subscriber containing the published data for **@destination_db**, a value of **push** for **@subscription_type**, and a value of **replication support only** for **@sync_type**. For updating subscriptions, see [Create an Updatable Subscription to a Transactional Publication](../../../2014/relational-databases/replication/create-an-updatable-subscription-to-a-transactional-publication.md).  
+2.  At the Publisher on the publication database, execute [sp_addsubscription](~/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Specify the name of the database at the Subscriber containing the published data for **@destination_db**, a value of **push** for **@subscription_type**, and a value of **replication support only** for **@sync_type**. For updating subscriptions, see [Create an Updatable Subscription to a Transactional Publication](../../../2014/relational-databases/replication/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
-3.  At the Publisher on the publication database, execute [sp_addpushsubscription_agent](../Topic/sp_addpullsubscription_agent%20\(Transact-SQL\).md). For more information, see [Create a Push Subscription](../../../2014/relational-databases/replication/create-a-push-subscription.md).  
+3.  At the Publisher on the publication database, execute [sp_addpushsubscription_agent](~/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). For more information, see [Create a Push Subscription](../../../2014/relational-databases/replication/create-a-push-subscription.md).  
   
 4.  Start the Distribution Agent to transfer replication objects and download the latest changes from the Publisher. For more information, see [Synchronize a Push Subscription](../../../2014/relational-databases/replication/synchronize-a-push-subscription.md).  
   
@@ -68,11 +68,11 @@ manager: "jhubbard"
   
 1.  Ensure that the schema and data exist on the subscription database. This can be done by restoring a backup of the publication database at the Subscriber.  
   
-2.  At the Publisher, execute [sp_addmergesubscription](../Topic/sp_addmergesubscription%20\(Transact-SQL\).md). Specify **@publication**, **@subscriber**, **@subscriber_db**, and a value of **pull** for **@subscription_type**. This registers the pull subscription.  
+2.  At the Publisher, execute [sp_addmergesubscription](~/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md). Specify **@publication**, **@subscriber**, **@subscriber_db**, and a value of **pull** for **@subscription_type**. This registers the pull subscription.  
   
-3.  At the Subscriber on the database containing the published data, execute [sp_addmergepullsubscription](../Topic/sp_addmergepullsubscription%20\(Transact-SQL\).md). Specify a value of **none** for **@sync_type**.  
+3.  At the Subscriber on the database containing the published data, execute [sp_addmergepullsubscription](~/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Specify a value of **none** for **@sync_type**.  
   
-4.  At the Subscriber, execute [sp_addmergepullsubscription_agent](../Topic/sp_addmergepullsubscription_agent%20\(Transact-SQL\).md). For more information, see [Create a Pull Subscription](../../../2014/relational-databases/replication/create-a-pull-subscription.md).  
+4.  At the Subscriber, execute [sp_addmergepullsubscription_agent](~/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md). For more information, see [Create a Pull Subscription](../../../2014/relational-databases/replication/create-a-pull-subscription.md).  
   
 5.  Start the Merge Agent to transfer replication objects and download the latest changes from the Publisher. For more information, see [Synchronize a Pull Subscription](../../../2014/relational-databases/replication/synchronize-a-pull-subscription.md).  
   
@@ -80,9 +80,9 @@ manager: "jhubbard"
   
 1.  Ensure that the schema and data exist on the subscription database. This can be done by restoring a backup of the publication database at the Subscriber.  
   
-2.  At the Publisher on the publication database, execute [sp_addmergesubscription](../Topic/sp_addmergesubscription%20\(Transact-SQL\).md). Specify the name of the database at the Subscriber containing the published data for **@subscriber_db**, a value of **push** for **@subscription_type**, and a value of **none** for **@sync_type**.  
+2.  At the Publisher on the publication database, execute [sp_addmergesubscription](~/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md). Specify the name of the database at the Subscriber containing the published data for **@subscriber_db**, a value of **push** for **@subscription_type**, and a value of **none** for **@sync_type**.  
   
-3.  At the Publisher on the publication database, execute [sp_addmergepushsubscription_agent](../Topic/sp_addmergepushsubscription_agent%20\(Transact-SQL\).md). For more information, see [Create a Push Subscription](../../../2014/relational-databases/replication/create-a-push-subscription.md).  
+3.  At the Publisher on the publication database, execute [sp_addmergepushsubscription_agent](~/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md). For more information, see [Create a Push Subscription](../../../2014/relational-databases/replication/create-a-push-subscription.md).  
   
 4.  Start the Merge Agent to transfer replication objects and download the latest changes from the Publisher. For more information, see [Synchronize a Push Subscription](../../../2014/relational-databases/replication/synchronize-a-push-subscription.md).  
   

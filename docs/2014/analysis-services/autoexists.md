@@ -41,11 +41,11 @@ WHERE Measures.[Internet Sales Amount]
 ```  
   
 > [!NOTE]  
->  This query uses the [Members (Set) (MDX)](../Topic/Members%20\(Set\)%20\(MDX\).md) function to return the set of members of the Gender attribute hierarchy on the column axis, and crosses this set with the specified set of members from the Customer attribute hierarchy on the row axis.  
+>  This query uses the [Members (Set) (MDX)](~/mdx/members-set-mdx.md) function to return the set of members of the Gender attribute hierarchy on the column axis, and crosses this set with the specified set of members from the Customer attribute hierarchy on the row axis.  
   
  When you execute the previous query, the cell at the intersection of Aaron A. Allen and Female displays a null. Similarly, the cell at the intersection of Abigail Clark and Male displays a null. These cells do not exist and cannot contain a value, but cells that do not exist can appear in the result returned by a query.  
   
- When you use the [Crossjoin (MDX)](../Topic/Crossjoin%20\(MDX\).md) function to return the cross-product of attribute hierarchy members from attribute hierarchies in the same dimension, auto-exists limits those tuples being returned to the set of tuples that actually exist, rather than returning a full Cartesian product. For example, run and then examine the results from the execution of the following query.  
+ When you use the [Crossjoin (MDX)](~/mdx/crossjoin-mdx.md) function to return the cross-product of attribute hierarchy members from attribute hierarchies in the same dimension, auto-exists limits those tuples being returned to the set of tuples that actually exist, rather than returning a full Cartesian product. For example, run and then examine the results from the execution of the following query.  
   
 ```  
 SELECT CROSSJOIN  
@@ -83,7 +83,7 @@ WHERE (Measures.[Internet Sales Amount],
   
  The cells values returned will be identical, although the metadata in the result set will be different. For example, with the previous query, the Country hierarchy was moved to the slicer axis (in the WHERE clause) and therefore does not appear explicitly in the result set.  
   
- Each of these three previous queries demonstrates the effect of the auto-exists behavior in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+ Each of these three previous queries demonstrates the effect of the auto-exists behavior in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
 ## Deep and Shallow Autoexists  
  Autoexists can be applied to the expressions as Deep or Shallow. `Deep Autoexists` means that all expressions will be evaluated to meet the deepest possible space after applying the slicer expressions, the sub select expressions in the axis, and so on. `Shallow Autoexists` means that external expressions are evaluated before the current expression and those results are passed to the current expression. The default setting is deep autoexists.  
@@ -314,7 +314,7 @@ WHERE (Measures.[Internet Sales Amount],
  [Tuples](../../2014/analysis-services/tuples.md)   
  [Working with Members, Tuples, and Sets &#40;MDX&#41;](../../2014/analysis-services/working-with-members-tuples-and-sets-mdx.md)   
  [Visual Totals and Non Visual Totals](../../2014/analysis-services/visual-totals-and-non-visual-totals.md)   
- [MDX Language Reference &#40;MDX&#41;](../Topic/MDX%20Language%20Reference%20\(MDX\).md)   
- [Multidimensional Expressions &#40;MDX&#41; Reference](../Topic/Multidimensional%20Expressions%20\(MDX\)%20Reference.md)  
+ [MDX Language Reference &#40;MDX&#41;](~/mdx/mdx-language-reference-mdx.md)   
+ [Multidimensional Expressions &#40;MDX&#41; Reference](~/mdx/multidimensional-expressions-mdx-reference.md)  
   
   

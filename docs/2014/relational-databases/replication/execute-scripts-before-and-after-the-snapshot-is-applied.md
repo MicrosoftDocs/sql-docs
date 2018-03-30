@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 9a6872c2-9bed-477f-9d2f-332d640edcf2
 caps.latest.revision: 34
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Execute Scripts Before and After the Snapshot Is Applied
@@ -27,13 +27,13 @@ manager: "jhubbard"
   
  The script is run by launching the **sqlcmd** utility. Before deploying a script, run it with **sqlcmd** to ensure it executes as expected. The contents of scripts that are executed before and after the snapshot is applied must be repeatable. For example, if you create a table in the script, you should first check for its existence and take appropriate action if it exists. The script must be repeatable because if you need to reinitialize a subscription for which the script has already been applied, the script will be applied again when the new snapshot is applied during reinitialization.  
   
- If you are compressing the snapshot file (by putting it in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] CAB file format), the scripts are also compressed and placed in the CAB file. After the compressed snapshot file is transferred to the Subscriber and decompressed to a working directory on the Subscriber, any script indicated as a pre-snapshot script is executed. Likewise, any post-snapshot script is decompressed and executed at the Subscriber as the last step in applying the snapshot.  
+ If you are compressing the snapshot file (by putting it in [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB file format), the scripts are also compressed and placed in the CAB file. After the compressed snapshot file is transferred to the Subscriber and decompressed to a working directory on the Subscriber, any script indicated as a pre-snapshot script is executed. Likewise, any post-snapshot script is decompressed and executed at the Subscriber as the last step in applying the snapshot.  
   
  **To execute scripts before and after the snapshot is applied**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [How to: Execute Scripts Before and After a Snapshot is Applied \(SQL Server Management Studio\)](../../../2014/relational-databases/replication/execute-scripts-before-and-after-a-snapshot-is-applied.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [How to: Execute Scripts Before and After a Snapshot is Applied \(SQL Server Management Studio\)](../../../2014/relational-databases/replication/execute-scripts-before-and-after-a-snapshot-is-applied.md)  
   
--   Replication [!INCLUDE[tsql](../../../includes/tsql-md.md)] programming: [Configure Snapshot Properties &#40;Replication Transact-SQL Programming&#41;](../../../2014/relational-databases/replication/configure-snapshot-properties-replication-transact-sql-programming.md)  
+-   Replication [!INCLUDE[tsql](../../includes/tsql-md.md)] programming: [Configure Snapshot Properties &#40;Replication Transact-SQL Programming&#41;](../../../2014/relational-databases/replication/configure-snapshot-properties-replication-transact-sql-programming.md)  
   
 ## See Also  
  [Initialize a Subscription with a Snapshot](../../../2014/relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   

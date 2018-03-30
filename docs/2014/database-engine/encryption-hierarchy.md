@@ -18,11 +18,11 @@ helpviewer_keywords:
 ms.assetid: 96c276d5-1bba-4e95-b678-10f059f1fbcf
 caps.latest.revision: 40
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Encryption Hierarchy
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encrypts data with a hierarchical encryption and key management infrastructure. Each layer encrypts the layer below it by using a combination of certificates, asymmetric keys, and symmetric keys. Asymmetric keys and symmetric keys can be stored outside of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in an Extensible Key Management (EKM) module.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] encrypts data with a hierarchical encryption and key management infrastructure. Each layer encrypts the layer below it by using a combination of certificates, asymmetric keys, and symmetric keys. Asymmetric keys and symmetric keys can be stored outside of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in an Extensible Key Management (EKM) module.  
   
  The following illustration shows that each layer of the encryption hierarchy encrypts the layer beneath it, and displays the most common encryption configurations. The access to the start of the hierarchy is usually protected by a password.  
   
@@ -32,7 +32,7 @@ manager: "jhubbard"
   
 -   For best performance, encrypt data using symmetric keys instead of certificates or asymmetric keys.  
   
--   Database master keys are protected by the Service Master Key. The Service Master Key is created by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup and is encrypted with the Windows Data Protection API (DPAPI).  
+-   Database master keys are protected by the Service Master Key. The Service Master Key is created by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] setup and is encrypted with the Windows Data Protection API (DPAPI).  
   
 -   Other encryption hierarchies stacking additional layers are possible.  
   
@@ -50,12 +50,12 @@ manager: "jhubbard"
   
 -   In this illustration, arrows indicate common encryption hierarchies.  
   
--   Symmetric and asymmetric keys in the EKM can protect access to the symmetric and asymmetric keys stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The dotted line associated with EKM indicates that keys in the EKM could replace the symmetric and asymmetric keys stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Symmetric and asymmetric keys in the EKM can protect access to the symmetric and asymmetric keys stored in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. The dotted line associated with EKM indicates that keys in the EKM could replace the symmetric and asymmetric keys stored in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## Encryption Mechanisms  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the following mechanisms for encryption:  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provides the following mechanisms for encryption:  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] functions  
+-   [!INCLUDE[tsql](../includes/tsql-md.md)] functions  
   
 -   Asymmetric keys  
   
@@ -66,7 +66,7 @@ manager: "jhubbard"
 -   Transparent Data Encryption  
   
 ### Transact-SQL Functions  
- Individual items can be encrypted as they are inserted or updated using [!INCLUDE[tsql](../../includes/tsql-md.md)] functions. For more information, see [ENCRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](../Topic/ENCRYPTBYPASSPHRASE%20\(Transact-SQL\).md) and [DECRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](../Topic/DECRYPTBYPASSPHRASE%20\(Transact-SQL\).md).  
+ Individual items can be encrypted as they are inserted or updated using [!INCLUDE[tsql](../includes/tsql-md.md)] functions. For more information, see [ENCRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](~/t-sql/functions/encryptbypassphrase-transact-sql.md) and [DECRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](~/t-sql/functions/decryptbypassphrase-transact-sql.md).  
   
 ### Certificates  
  A public key certificate, usually just called a certificate, is a digitally-signed statement that binds the value of a public key to the identity of the person, device, or service that holds the corresponding private key. Certificates are issued and signed by a certification authority (CA). The entity that receives a certificate from a CA is the subject of that certificate. Typically, certificates contain the following information.  
@@ -91,7 +91,7 @@ manager: "jhubbard"
   
  The issuer can revoke a certificate before it expires. Revocation cancels the binding of a public key to an identity that is asserted in the certificate. Each issuer maintains a certificate revocation list that can be used by programs when they are checking the validity of any given certificate.  
   
- The self-signed certificates created by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] follow the X.509 standard and support the X.509 v1 fields.  
+ The self-signed certificates created by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] follow the X.509 standard and support the X.509 v1 fields.  
   
 ### Asymmetric Keys  
  An asymmetric key is made up of a private key and the corresponding public key. Each key can decrypt data encrypted by the other. Asymmetric encryption and decryption are relatively resource-intensive, but they provide a higher level of security than symmetric encryption. An asymmetric key can be used to encrypt a symmetric key for storage in a database.  
@@ -105,7 +105,7 @@ manager: "jhubbard"
 ## Related Content  
  [Securing SQL Server](../../2014/database-engine/securing-sql-server.md)  
   
- [Security Functions &#40;Transact-SQL&#41;](../Topic/Security%20Functions%20\(Transact-SQL\).md)  
+ [Security Functions &#40;Transact-SQL&#41;](~/t-sql/functions/security-functions-transact-sql.md)  
   
 ## See Also  
  [Permissions Hierarchy &#40;Database Engine&#41;](../../2014/database-engine/permissions-hierarchy-database-engine.md)   

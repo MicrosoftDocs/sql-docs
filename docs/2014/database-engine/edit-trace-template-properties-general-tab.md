@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Edit Trace Template Properties (General Tab)
-  Use the **General** tab of the **Trace Template Properties** dialog box to view or edit existing trace templates by using the following options. To access this dialog box, on the [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **File** menu, point to **Templates**, and then click **Edit Template**.  
+  Use the **General** tab of the **Trace Template Properties** dialog box to view or edit existing trace templates by using the following options. To access this dialog box, on the [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **File** menu, point to **Templates**, and then click **Edit Template**.  
   
 ## Options  
  **Select server type**  

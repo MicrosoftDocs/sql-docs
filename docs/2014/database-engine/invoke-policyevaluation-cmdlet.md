@@ -22,7 +22,7 @@ ms.author: "mblythe"
 manager: "jhubbard"
 ---
 # Invoke-PolicyEvaluation cmdlet
-  **Invoke-PolicyEvaluation** is a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cmdlet that reports whether a target set of SQL Server objects complies with the conditions specified in one or more Policy-Based Management policies.  
+  **Invoke-PolicyEvaluation** is a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cmdlet that reports whether a target set of SQL Server objects complies with the conditions specified in one or more Policy-Based Management policies.  
   
 ## Using Invoke-PolicyEvaluation  
  **Invoke-PolicyEvaluation** evaluates one or more policies against a set of SQL Server objects called the target set. The set of target objects comes from a target server. Each policy defines conditions, which are the allowed states for the target objects. For example, the **Trustworthy Database** policy states that the TRUSTWORTHY database property must be set to OFF.  
@@ -82,7 +82,7 @@ gci "Database Status.xml", "Trustworthy Database.xml" | Invoke-PolicyEvaluation 
 ## Specifying the Target Set  
  Use three parameters to specify the set of target objects:  
   
--   **-TargetServerName** specifies the instance of SQL Server containing the target objects. You can specify the information in a string that uses the format defined for the ConnectionString property of the <xref:System.Data.SqlClient.SQLConnection> class. You can use the <xref:System.Data.SqlClient.SqlConnectionStringBuilder> class to build a correctly formatted connection string. You can also create a <xref:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection> object and pass it to **-TargetServer**. If you supply a string that has only the name of the server, **Invoke-PolicyEvaluation** uses Windows Authentication to connect to the server.  
+-   **-TargetServerName** specifies the instance of SQL Server containing the target objects. You can specify the information in a string that uses the format defined for the ConnectionString property of the <xref:System.Data.SqlClient.SqlConnection> class. You can use the <xref:System.Data.SqlClient.SqlConnectionStringBuilder> class to build a correctly formatted connection string. You can also create a <xref:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection> object and pass it to **-TargetServer**. If you supply a string that has only the name of the server, **Invoke-PolicyEvaluation** uses Windows Authentication to connect to the server.  
   
 -   **-TargetObjects** takes an object or array of objects that represent the SQL Server objects in the target set. For example, you could create an array of <xref:Microsoft.SqlServer.Management.Smo.Database> class objects to pass in to **-TargetObjects**.  
   
@@ -106,7 +106,7 @@ Invoke-PolicyEvaluation -Policy "Database Status.xml" -TargetServerName "MyCompu
 ```  
   
 ## Evaluating Analysis Services Policies  
- To evaluate policies against an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], you must load and register an assembly into PowerShell, create a variable with an Analysis Services connection object, and pass the variable to the **-TargetObject** parameter. This example shows evaluating the Best Practices surface area configuration policy for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:  
+ To evaluate policies against an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], you must load and register an assembly into PowerShell, create a variable with an Analysis Services connection object, and pass the variable to the **-TargetObject** parameter. This example shows evaluating the Best Practices surface area configuration policy for [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]:  
   
 ```  
 sl "C:\Program Files\Microsoft SQL Server\120\Tools\Policies\AnalysisServices\1033"  
@@ -117,7 +117,7 @@ Invoke-PolicyEvaluation -Policy "Surface Area Configuration for Analysis Service
 ```  
   
 ## Evaluating Reporting Services Policies  
- To evaluate [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] policies, you must load and register an assembly into PowerShell, create a variable with a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] connection object, and pass the variable to the **-TargetObject** parameter. This example shows evaluating the Best Practices surface area configuration policy for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]:  
+ To evaluate [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] policies, you must load and register an assembly into PowerShell, create a variable with a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] connection object, and pass the variable to the **-TargetObject** parameter. This example shows evaluating the Best Practices surface area configuration policy for [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]:  
   
 ```  
 sl "C:\Program Files\Microsoft SQL Server\120\Tools\Policies\ReportingServices\1033"  

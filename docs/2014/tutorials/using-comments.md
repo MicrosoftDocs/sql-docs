@@ -12,11 +12,11 @@ ms.topic: "article"
 ms.assetid: 0e9e6eab-0343-4840-9690-1736552ce371
 caps.latest.revision: 27
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Using Comments
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] allows you to easily comment out a portion of your script.  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] allows you to easily comment out a portion of your script.  
   
 ## Commenting Out Part of a Script  
   

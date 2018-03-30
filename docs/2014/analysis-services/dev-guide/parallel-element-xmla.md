@@ -63,7 +63,7 @@ manager: "mblythe"
   
 |Attribute|Description|  
 |---------------|-----------------|  
-|maxParallel|Optional `Integer` attribute. Indicates the maximum number of threads on which to run commands in parallel. If not specified or set to 0, the instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] determines an optimal number of threads based on the number of processors available on the computer.|  
+|maxParallel|Optional `Integer` attribute. Indicates the maximum number of threads on which to run commands in parallel. If not specified or set to 0, the instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] determines an optimal number of threads based on the number of processors available on the computer.|  
   
 ## Remarks  
   

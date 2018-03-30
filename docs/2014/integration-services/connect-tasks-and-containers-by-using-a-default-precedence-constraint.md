@@ -24,11 +24,11 @@ manager: "jhubbard"
   Precedence constraints connect two executables. An executable can be any task or a For Loop, Foreach Loop, or Sequence container. This procedure describes how to set the default behavior for precedence constraints, and how to connect executables using the default precedence constraints.  
   
 ## Creating Default Precedence Constraints  
- When you first use [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, the default value of a precedence constraint is `Success`. Follow these steps to configure [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer to use a different default value for precedence constraints.  
+ When you first use [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, the default value of a precedence constraint is `Success`. Follow these steps to configure [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer to use a different default value for precedence constraints.  
   
 #### To set the default value for precedence constraints  
   
-1.  Open [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+1.  Open [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 2.  On the **Tools** menu, click **Options**.  
   
@@ -42,7 +42,7 @@ manager: "jhubbard"
   
 #### To create a default precedence constraint  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project that contains the package you want.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project that contains the package you want.  
   
 2.  In Solution Explorer, double-click the package to open it.  
   

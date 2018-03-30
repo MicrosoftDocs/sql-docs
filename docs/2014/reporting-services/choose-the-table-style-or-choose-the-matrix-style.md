@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: e0026583-5744-4863-afa2-6e1585f9e8f3
 caps.latest.revision: 27
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Choose the Table Style or Choose the Matrix Style

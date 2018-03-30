@@ -19,18 +19,18 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Cloud Adapter for SQL Server
-  The Cloud Adapter service is created as part of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provisioning on a Windows Azure VM. The Cloud Adapter service generates a self-signed SSL certificate as part of its first run, and then runs as a **Local System** account. It generates a configuration file that is used to configure itself. The Cloud Adapter also creates a Windows Firewall rule to allow its incoming TCP connections at default port 11435.  
+  The Cloud Adapter service is created as part of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provisioning on a Windows Azure VM. The Cloud Adapter service generates a self-signed SSL certificate as part of its first run, and then runs as a **Local System** account. It generates a configuration file that is used to configure itself. The Cloud Adapter also creates a Windows Firewall rule to allow its incoming TCP connections at default port 11435.  
   
- The Cloud Adapter is a stateless, synchronous service that receives messages from the on-premise instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. When the Cloud Adapter service is stopped, it stops the remote access Cloud Adapter, unbinds the SSL certificate, and disables the Windows Firewall rule.  
+ The Cloud Adapter is a stateless, synchronous service that receives messages from the on-premise instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. When the Cloud Adapter service is stopped, it stops the remote access Cloud Adapter, unbinds the SSL certificate, and disables the Windows Firewall rule.  
   
 ## Cloud Adapter Requirements  
- Note the following requirements to install, enable, and run the Cloud Adapter for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+ Note the following requirements to install, enable, and run the Cloud Adapter for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
--   Cloud Adapter is supported with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 and higher. On [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012, the Cloud Adapter for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requires SQL Management Objects for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012.  
+-   Cloud Adapter is supported with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012 and higher. On [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012, the Cloud Adapter for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] requires SQL Management Objects for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012.  
   
 -   Cloud Adapter web service runs as a **Local System** account and verifies client credentials before executing any task. Credentials supplied by the client must belong to the use account that is a member of the local **Administrators** group on the remote machine.  
   
--   Cloud Adapter supports only [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.  
+-   Cloud Adapter supports only [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication.  
   
 -   Cloud Adapter uses VM local administrator account to execute commands on the local machine, not an sa account.  
   
@@ -78,7 +78,7 @@ manager: "jhubbard"
 |ExposeExceptionDetails|True/False|False||  
   
 ## Cloud Adapter Troubleshooting  
- Use the following information to troubleshoot the Cloud Adapter for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+ Use the following information to troubleshoot the Cloud Adapter for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
 -   **Error handling and logging** – Errors and status messages are written to the Application Event Log.  
   

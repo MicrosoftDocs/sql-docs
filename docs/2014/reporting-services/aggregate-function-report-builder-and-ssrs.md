@@ -12,14 +12,14 @@ ms.topic: "article"
 ms.assetid: 16ce643f-bbb3-40a5-ba78-7aed73156f3e
 caps.latest.revision: 7
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Aggregate Function (Report Builder and SSRS)
   Returns a custom aggregate of the specified expression, as defined by the data provider.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## Syntax  
   
@@ -39,16 +39,16 @@ Aggregate(expression, scope)
  Return type is determined by the data provider. Returns `Nothing` if the data provider does not support this function or data is not available.  
   
 ## Remarks  
- The `Aggregate` function provides a way to use aggregates that are calculated on the external data source. Support for this feature is determined by the data extension. For example, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data processing extension retrieves flattened rowsets from an MDX query. Some rows in the result set can contain aggregate values calculated on the data source server. These are known as *server aggregates*. To view server aggregates in the graphical query designer for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], you can use the **Show Aggregate** button on the toolbar. For more information, see [Analysis Services MDX Query Designer User Interface &#40;Report Builder&#41;](../../2014/reporting-services/analysis-services-mdx-query-designer-user-interface-report-builder.md).  
+ The `Aggregate` function provides a way to use aggregates that are calculated on the external data source. Support for this feature is determined by the data extension. For example, the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data processing extension retrieves flattened rowsets from an MDX query. Some rows in the result set can contain aggregate values calculated on the data source server. These are known as *server aggregates*. To view server aggregates in the graphical query designer for [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], you can use the **Show Aggregate** button on the toolbar. For more information, see [Analysis Services MDX Query Designer User Interface &#40;Report Builder&#41;](../../2014/reporting-services/analysis-services-mdx-query-designer-user-interface-report-builder.md).  
   
  When you display the combination of aggregate and detail dataset values on detail rows of a Tablix data region, server aggregates would not typically be included because they are not detail data. However, you may want to display all values retrieved for the dataset and customize the way aggregate data is calculated and displayed.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] detects the use of the `Aggregate` function in expressions in your report in order to determine whether to display server aggregates on detail rows. If you include `Aggregate` in an expression in a data region, server aggregates can only appear on group total or grand total rows, not on detail rows. If you want to display server aggregates on detail rows, do not use the `Aggregate` function.  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] detects the use of the `Aggregate` function in expressions in your report in order to determine whether to display server aggregates on detail rows. If you include `Aggregate` in an expression in a data region, server aggregates can only appear on group total or grand total rows, not on detail rows. If you want to display server aggregates on detail rows, do not use the `Aggregate` function.  
   
  You can change this default behavior by changing the value of the **Interpret subtotals as details** option on the **Dataset Properties** dialog box. When this option is set to `True`, all data, including server aggregates, appears as detail data. When set to `False`, server aggregates appear as totals. The setting for this property affects all data regions that are linked to this dataset.  
   
 > [!NOTE]  
->  All containing groups for the report item that references `Aggregate` must have simple field references for their group expressions, for example, `[FieldName]`. You cannot use `Aggregate` in a data region that uses complex group expressions. For the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data processing extension, your query must include MDX fields of type `LevelProperty` (not `MemberProperty`) to support aggregation using the `Aggregate`function.  
+>  All containing groups for the report item that references `Aggregate` must have simple field references for their group expressions, for example, `[FieldName]`. You cannot use `Aggregate` in a data region that uses complex group expressions. For the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data processing extension, your query must include MDX fields of type `LevelProperty` (not `MemberProperty`) to support aggregation using the `Aggregate`function.  
   
  *Expression* can contain calls to nested aggregate functions with the following exceptions and conditions:  
   

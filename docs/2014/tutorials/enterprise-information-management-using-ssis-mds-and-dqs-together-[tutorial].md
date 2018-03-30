@@ -20,7 +20,7 @@ manager: "jhubbard"
 # Enterprise Information Management using SSIS, MDS, and DQS Together [Tutorial]
   Managing information in an enterprise typically involves integrating data from across the enterprise and beyond, cleansing the data, matching the data to remove any duplicates, standardizing the data, enriching the data, making the data conform to legal and compliance requirements, and then storing the data in a centralized location with all the necessary security settings.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] provides all the components needed for an effective Enterprise Information Management (EIM) solution in a single product. Key components that help you build an EIM solution are:  
+ [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] provides all the components needed for an effective Enterprise Information Management (EIM) solution in a single product. Key components that help you build an EIM solution are:  
   
 -   SQL Server Integration Services  
   

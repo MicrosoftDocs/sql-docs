@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
 caps.latest.revision: 8
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Formatting Pointers on a Gauge (Report Builder and SSRS)
@@ -25,7 +25,7 @@ manager: "mblythe"
 -   On a linear gauge, you can specify a thermometer pointer, which is a variation of the bar pointer. The thermometer pointer lets you specify the shape of the bulb.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ##  <a name="HowPointer"></a> How the Pointer is Connected to Data  
  By default, when a gauge is added, it contains one pointer that has no associated field. This is known as an empty pointer. It will display zero until a field is added to the data pane. When you add a field to the data pane, the pointer is connected to that field. If you delete a field from the data pane, the pointer that is associated with that field is also deleted.  

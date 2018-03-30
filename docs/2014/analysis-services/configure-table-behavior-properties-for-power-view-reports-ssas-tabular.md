@@ -18,14 +18,14 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Configure Table Behavior Properties for Power View Reports (SSAS Tabular)
-  If you are using a tabular model as a data model for [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], you can set table behavior properties that expose detail rows at a more granular level. Setting table behavior properties changes the grouping behavior of detail rows and produces a better default placement of identifying information (such as names, photo IDs, or logo images) in tile, card, and chart layouts.  
+  If you are using a tabular model as a data model for [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], you can set table behavior properties that expose detail rows at a more granular level. Setting table behavior properties changes the grouping behavior of detail rows and produces a better default placement of identifying information (such as names, photo IDs, or logo images) in tile, card, and chart layouts.  
   
- [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] differs from other reporting applications in that it will group items automatically during report design, by evaluating which columns you placed in the report field list against the presentation format you are using. In most cases, the default grouping produces an optimum result. But for some tables, primarily those that contain detail data, the default grouping behavior will sometimes group rows that should not be grouped. For such tables, you can set properties that change how groups are evaluated.  
+ [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] differs from other reporting applications in that it will group items automatically during report design, by evaluating which columns you placed in the report field list against the presentation format you are using. In most cases, the default grouping produces an optimum result. But for some tables, primarily those that contain detail data, the default grouping behavior will sometimes group rows that should not be grouped. For such tables, you can set properties that change how groups are evaluated.  
   
  Setting table behavior properties is recommended for tables where the individual rows are of primary interest, such as employee or customer records. In contrast, tables that do not benefit from these properties include those that act as a lookup table (for example, a date table, a product category table, or a department table, where the table consists of a relatively small number of rows and columns), or summary tables containing rows that are only interesting when summarized (for example, census data that rolls up by gender, age, or geography). For lookup and summary tables, the default grouping behavior produces the best result.  
   
 > [!NOTE]  
->  Table behavior properties only affect tabular models used as data models in [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]. Table behavior properties are not supported in Excel pivot reports.  
+>  Table behavior properties only affect tabular models used as data models in [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]. Table behavior properties are not supported in Excel pivot reports.  
   
  Table behavior properties include the following:  
   
@@ -42,7 +42,7 @@ manager: "mblythe"
   
 ## Opening the Table Behavior dialog box  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], click the table (tab) for which you are configuring a default field list.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], click the table (tab) for which you are configuring a default field list.  
   
 2.  In the **Properties** window, in the **Table Behavior** property, click **Click to edit**.  
   
@@ -53,11 +53,11 @@ manager: "mblythe"
   
  Setting this property changes the default grouping behavior from dynamic grouping based on the columns present on the canvas, to a fixed grouping behavior that summarizes based on the row identifier. Changing the default grouping behavior is relevant for report layouts, such as a matrix, that would otherwise group (or show subtotals) for each column in the row.  
   
- In [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], setting a row identifier enables the following additional properties: **Keep Unique Rows** property, **Default Label** property, and **Default Image** property.  
+ In [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], setting a row identifier enables the following additional properties: **Keep Unique Rows** property, **Default Label** property, and **Default Image** property.  
   
  You can also use **Row Identifier** by itself, as a standalone property, to enable the following:  
   
--   Use of binary images in a report. By removing ambiguity around row uniqueness, [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] can determine how to assign default images and default labels for a given row.  
+-   Use of binary images in a report. By removing ambiguity around row uniqueness, [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] can determine how to assign default images and default labels for a given row.  
   
 -   Remove unwanted subtotals from a matrix report. Default grouping at the field level creates a subtotal for each field. If you only want a single subtotal that is calculated at the row level, setting the Row Identifier produces this result.  
   
@@ -82,7 +82,7 @@ manager: "mblythe"
  This property specifies an image that appears in the navigation strip of a tile report, or at the front of a card. In the report, when you select the column that contains the default image, the default image will appear placed in the navigation strip of a tile report layout, or at the front of a card. A default image should be visual content. Examples include a photo ID in the employees table, a customer logo in a customer table, or a country shape in a geography table.  
   
 > [!NOTE]  
->  Images can be sourced from URL addresses to an image file on a web server, or as binary data embedded in the workbook. If the image is based on a URL, be sure to also set the column as an image type so that [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] retrieves the image rather than displaying the URL as text data in the report.  
+>  Images can be sourced from URL addresses to an image file on a web server, or as binary data embedded in the workbook. If the image is based on a URL, be sure to also set the column as an image type so that [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] retrieves the image rather than displaying the URL as text data in the report.  
   
 ##  <a name="bkmk_optimizeforlayout"></a> Optimizing for Specific Layouts  
  This section describes the effect of setting table behavior properties from the standpoint of a particular presentation format and characteristics of the data. If you are trying to fine tune the layout of a matrix report, for example, you can use this information to understand how to improve a matrix presentation using table behavior properties in the model.  
@@ -92,10 +92,10 @@ manager: "mblythe"
   
  ![Image URLs appear as text in a report](../../2014/analysis-services/media/ssas-rptprop-noimageurl.gif "Image URLs appear as text in a report")  
   
- By default, text in the model is interpreted as text in the report. If a text column is a URL address to a report image, remember to set the **Image URL** property so that [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] retrieves the image file. For binary images, remember to set the **Row Identifier** property.  
+ By default, text in the model is interpreted as text in the report. If a text column is a URL address to a report image, remember to set the **Image URL** property so that [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] retrieves the image file. For binary images, remember to set the **Row Identifier** property.  
   
 ### Tables are missing one or more rows  
- Sometimes the default grouping behavior results in an outcome that is opposite of what you intended; specifically, detail rows that are present in the model do not appear in the report. By default, [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] groups on the columns you add to the canvas. If you add **Country Name** to the report, each country appears once on the canvas, even though the underlying table might contain thousands of rows that include multiple instances of each country name. In this case, the default grouping behavior produces the correct result.  
+ Sometimes the default grouping behavior results in an outcome that is opposite of what you intended; specifically, detail rows that are present in the model do not appear in the report. By default, [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] groups on the columns you add to the canvas. If you add **Country Name** to the report, each country appears once on the canvas, even though the underlying table might contain thousands of rows that include multiple instances of each country name. In this case, the default grouping behavior produces the correct result.  
   
  However, consider a different example where you might want multiple instances of a row to appear, because in fact the underlying rows contain data about different entities. In this example, assume you have two customers both named **Jon Yang**. Using the default grouping behavior, only one instance of **Jon Yang** will appear in the report. Moreover, because only one instance appears in the list, the measure **Annual Income** is the sum of that value for both customers.  
   

@@ -15,7 +15,7 @@ f1_keywords:
 ms.assetid: 3a0bb42a-af1b-4228-bc9d-f9a02bb3b987
 caps.latest.revision: 8
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Calculated Series Properties Dialog Box, Markers (Report Builder and SSRS)

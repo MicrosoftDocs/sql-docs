@@ -18,16 +18,16 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Read-only databases cannot be upgraded
-  Upgrade Advisor has determined that some databases on this instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cannot be upgraded.  
+  Upgrade Advisor has determined that some databases on this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot be upgraded.  
   
 ## Component  
- [!INCLUDE[ssDE](../../../includes/ssde-md.md)]  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## Description  
  A read-only database has been detected. To upgrade the database, Setup must be able to write to the database.  
   
 ## Corrective Action  
- When no one is using the database, use the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise Manager, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], or the ALTER DATABASE statement to change the database to read-write. The following statement changes the database to read-write.  
+ When no one is using the database, use the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Manager, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], or the ALTER DATABASE statement to change the database to read-write. The following statement changes the database to read-write.  
   
 ```  
 USE master;  
@@ -37,10 +37,10 @@ SET READ_WRITE;
 GO  
 ```  
   
- For more information about the ALTER DATABASE statement, see the "ALTER DATABASE ([!INCLUDE[tsql](../../../includes/tsql-md.md)])" topic in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online.  
+ For more information about the ALTER DATABASE statement, see the "ALTER DATABASE ([!INCLUDE[tsql](../../includes/tsql-md.md)])" topic in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
 ## See Also  
  [Database Engine Upgrade Issues](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;new&#93;](../Topic/SQL%20Server%202014%20Upgrade%20Advisor%20[new].md)  
+ [SQL Server 2014 Upgrade Advisor &#91;new&#93;](~/2014/sql-server/install/sql-server-2014-upgrade-advisor.md)  
   
   

@@ -20,9 +20,9 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Data Import (Master Data Services)
-  Once you've created a model for your data in [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], you can start adding data and make changes to data in the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database.   You use [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] staging tables, stored procedures and Master Data Manager .  
+  Once you've created a model for your data in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], you can start adding data and make changes to data in the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.   You use [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] staging tables, stored procedures and Master Data Manager .  
   
- You can also use the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], to add data to the MDS repository ([!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database). For more information, see [Publishing Data &#40;MDS Add-in for Excel&#41;](../../2014/master-data-services/publishing-data-mds-add-in-for-excel.md).  
+ You can also use the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)], to add data to the MDS repository ([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database). For more information, see [Publishing Data &#40;MDS Add-in for Excel&#41;](../../2014/master-data-services/publishing-data-mds-add-in-for-excel.md).  
   
  When you add and update data, you can do the following.  
   
@@ -34,14 +34,14 @@ manager: "jhubbard"
   
  Adding and updating data  includes the following main tasks.  
   
-1.  Load data into the staging tables in the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database.  
+1.  Load data into the staging tables in the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.  
   
-2.  Load the data from the staging tables into the appropriate [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] tables.  
+2.  Load the data from the staging tables into the appropriate [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] tables.  
   
-     You use staging stored procedures or [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] to load the data.  
+     You use staging stored procedures or [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] to load the data.  
   
 > [!NOTE]  
->  In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], support for the [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] staging processes is deprecated.  
+>  In [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], support for the [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] staging processes is deprecated.  
   
 ## Deactivating and Deleting Members  
  Deactivating means the member can be reactivated. If you reactivate a member, its attributes and its membership in hierarchies and collections are restored. All previous transactions are intact. Deactivation transactions are visible to administrators in the **Version Management** functional area of the Master Data Manager.  
@@ -65,7 +65,7 @@ manager: "jhubbard"
 -   A consolidated member as a sibling of a leaf or consolidated member.  
   
 ## Staging Tables and Stored Procedures  
- The [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database includes the following types of staging tables that you can populate with your  data.  
+ The [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database includes the following types of staging tables that you can populate with your  data.  
   
 -   [Leaf Member Staging Table &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)  
   
@@ -79,7 +79,7 @@ manager: "jhubbard"
   
  The name of the  table is specified when an entity is created and cannot be changed. If the staging table name contains a _1 or other number, another table of that name already existed when the entity was created.  
   
- The [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] includes the following types of staging stored procedures.  
+ The [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] includes the following types of staging stored procedures.  
   
 -   stg.udp_\<name>_Leaf  
   
@@ -94,9 +94,9 @@ manager: "jhubbard"
  For more information on the stored procedures, see [Staging Stored Procedure &#40;Master Data Services&#41;](../../2014/master-data-services/staging-stored-procedure-master-data-services.md).  
   
 ## Logging Transactions  
- All transactions that occur when data or relationships are imported or updated can be logged. An option in the stored procedure allows this logging. If you initiate the staging process using [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], no logging occurs.  
+ All transactions that occur when data or relationships are imported or updated can be logged. An option in the stored procedure allows this logging. If you initiate the staging process using [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], no logging occurs.  
   
- In [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)], the **Log staging transactions** setting does not apply to this method of staging data.  
+ In [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], the **Log staging transactions** setting does not apply to this method of staging data.  
   
 ## Related Content  
   

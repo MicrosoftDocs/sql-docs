@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: beea1a5c-0053-4971-a68f-0da53063fcbb
 caps.latest.revision: 18
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Configure the Transaction Set Job for an Oracle Publisher (Replication Transact-SQL Programming)
@@ -27,32 +27,32 @@ manager: "jhubbard"
   
 1.  At the Oracle Publisher, set the **job_queue_processes** initialization parameter to a sufficient value to allow the Xactset job run. For more information about this parameter, see the database documentation for the Oracle Publisher.  
   
-2.  At the Distributor, execute [sp_publisherproperty &#40;Transact-SQL&#41;](../Topic/sp_publisherproperty%20\(Transact-SQL\).md). Specify the name of the Oracle Publisher for **@publisher**, a value of `xactsetbatching` for **@propertyname**, and a value of `enabled` for **@propertyvalue**.  
+2.  At the Distributor, execute [sp_publisherproperty &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md). Specify the name of the Oracle Publisher for **@publisher**, a value of `xactsetbatching` for **@propertyname**, and a value of `enabled` for **@propertyvalue**.  
   
-3.  At the Distributor, execute [sp_publisherproperty &#40;Transact-SQL&#41;](../Topic/sp_publisherproperty%20\(Transact-SQL\).md). Specify the name of the Oracle Publisher for **@publisher**, a value of `xactsetjobinterval` for **@propertyname**, and the job interval, in minutes, for **@propertyvalue**.  
+3.  At the Distributor, execute [sp_publisherproperty &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md). Specify the name of the Oracle Publisher for **@publisher**, a value of `xactsetjobinterval` for **@propertyname**, and the job interval, in minutes, for **@propertyvalue**.  
   
-4.  At the Distributor, execute [sp_publisherproperty &#40;Transact-SQL&#41;](../Topic/sp_publisherproperty%20\(Transact-SQL\).md). Specify the name of the Oracle Publisher for **@publisher**, a value of `xactsetjob` for **@propertyname**, and a value of `enabled` for **@propertyvalue**.  
+4.  At the Distributor, execute [sp_publisherproperty &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md). Specify the name of the Oracle Publisher for **@publisher**, a value of `xactsetjob` for **@propertyname**, and a value of `enabled` for **@propertyvalue**.  
   
 ### To configure the transaction set job  
   
-1.  (Optional) At the Distributor, execute [sp_publisherproperty &#40;Transact-SQL&#41;](../Topic/sp_publisherproperty%20\(Transact-SQL\).md). Specify the name of the Oracle Publisher for **@publisher**. This returns properties of the **Xactset** job at the Publisher.  
+1.  (Optional) At the Distributor, execute [sp_publisherproperty &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md). Specify the name of the Oracle Publisher for **@publisher**. This returns properties of the **Xactset** job at the Publisher.  
   
-2.  At the Distributor, execute [sp_publisherproperty &#40;Transact-SQL&#41;](../Topic/sp_publisherproperty%20\(Transact-SQL\).md). Specify the name of the Oracle Publisher for **@publisher**, the name of the Xactset job property being set for **@propertyname**, and new setting for **@propertyvalue**.  
+2.  At the Distributor, execute [sp_publisherproperty &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md). Specify the name of the Oracle Publisher for **@publisher**, the name of the Xactset job property being set for **@propertyname**, and new setting for **@propertyvalue**.  
   
 3.  (Optional) Repeat step 2 for each Xactset job property being set. When changing the `xactsetjobinterval` property, you must restart the job on the Oracle Publisher for the new interval to take effect.  
   
 ### To view properties of the transaction set job  
   
-1.  At the Distributor, execute [sp_helpxactsetjob](../Topic/sp_helpxactsetjob%20\(Transact-SQL\).md). Specify the name of the Oracle Publisher for **@publisher**.  
+1.  At the Distributor, execute [sp_helpxactsetjob](~/relational-databases/system-stored-procedures/sp-helpxactsetjob-transact-sql.md). Specify the name of the Oracle Publisher for **@publisher**.  
   
 ### To disable the transaction set job  
   
-1.  At the Distributor, execute [sp_publisherproperty &#40;Transact-SQL&#41;](../Topic/sp_publisherproperty%20\(Transact-SQL\).md). Specify the name of the Oracle Publisher for **@publisher**, a value of `xactsetjob` for **@propertyname**, and a value of `disabled` for **@propertyvalue**.  
+1.  At the Distributor, execute [sp_publisherproperty &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md). Specify the name of the Oracle Publisher for **@publisher**, a value of `xactsetjob` for **@propertyname**, and a value of `disabled` for **@propertyvalue**.  
   
 ## Example  
  The following example enables the `Xactset` job and sets an interval of three minutes between runs.  
   
- [!code-sql[HowTo#sp_enable_xactsetjob](../../../snippets/tsql/SQL15/replication/howto/tsql/enablexactsetjob.sql#sp_enable_xactsetjob)]  
+ [!code-sql[HowTo#sp_enable_xactsetjob](../../snippets/tsql/SQL15/replication/howto/tsql/enablexactsetjob.sql#sp_enable_xactsetjob)]  
   
 ## See Also  
  [Performance Tuning for Oracle Publishers](../../../2014/relational-databases/replication/performance-tuning-for-oracle-publishers.md)   

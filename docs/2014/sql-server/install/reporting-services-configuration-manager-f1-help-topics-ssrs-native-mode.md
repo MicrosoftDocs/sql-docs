@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 7b6fb18e-ec39-4661-88e3-977ed64e2c82
 caps.latest.revision: 6
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "jhubbard"
 ---
 # Reporting Services Configuration Manager F1 Help Topics (SSRS Native Mode)
   This section provides F1 help for the Reporting Services Configuration Manager.  
   
- [!INCLUDE[applies](../../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Native mode.  
+ [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode.  
   
 ## In This Section  
   
@@ -55,6 +55,6 @@ manager: "jhubbard"
 -   [Scale-out Deployment](../../../2014/sql-server/install/scale-out-deployment-native-mode-report-server.md)  
   
 ## See Also  
- [Reporting Services Configuration Manager &#40;del&#41;](../Topic/Reporting%20Services%20Configuration%20Manager%20\(del\).md)  
+ [Reporting Services Configuration Manager &#40;del&#41;](~/2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   
   

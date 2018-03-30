@@ -60,7 +60,7 @@ manager: "mblythe"
 11. Click **OK**.  
   
 ## See Also  
- [PowerPivot Gallery](../Topic/PowerPivot%20Gallery.md)   
+ [PowerPivot Gallery](~/2014/books-online-for-sql-server-2014.md)   
  [Create and Customize PowerPivot Gallery](../../2014/analysis-services/create-and-customize-powerpivot-gallery.md)   
  [Use PowerPivot Gallery](../../2014/analysis-services/use-powerpivot-gallery.md)  
   

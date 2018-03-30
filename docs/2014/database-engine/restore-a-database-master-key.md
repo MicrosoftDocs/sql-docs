@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: 16897cc5-db8f-43bb-a38e-6855c82647cf
 caps.latest.revision: 14
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Restore a Database Master Key
-  This topic describes how to restore the database master key in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  This topic describes how to restore the database master key in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -34,7 +34,7 @@ manager: "jhubbard"
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
--   When the master key is restored, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] decrypts all the keys that are encrypted with the currently active master key, and then encrypts these keys with the restored master key. This resource-intensive operation should be scheduled during a period of low demand. If the current database master key is not open or cannot be opened, or if any of the keys that are encrypted by it cannot be decrypted, the restore operation fails.  
+-   When the master key is restored, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] decrypts all the keys that are encrypted with the currently active master key, and then encrypts these keys with the restored master key. This resource-intensive operation should be scheduled during a period of low demand. If the current database master key is not open or cannot be opened, or if any of the keys that are encrypted by it cannot be decrypted, the restore operation fails.  
   
 -   If any one of the decryptions fails, the restore will fail. You can use the FORCE option to ignore errors, but this option will cause the loss of any data that cannot be decrypted.  
   
@@ -53,7 +53,7 @@ manager: "jhubbard"
   
 1.  Retrieve a copy of the backed-up database master key, either from a physical backup medium or a directory on the local file system.  
   
-2.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+2.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 3.  On the Standard bar, click **New Query**.  
   
@@ -73,6 +73,6 @@ manager: "jhubbard"
     > [!NOTE]  
     >  The file path to the key and the key's password (if it exists) will be different than what is indicated above. Please make sure that both are specific to your server and key set-up.  
   
- For more information, see [RESTORE MASTER KEY &#40;Transact-SQL&#41;](../Topic/RESTORE%20MASTER%20KEY%20\(Transact-SQL\).md)  
+ For more information, see [RESTORE MASTER KEY &#40;Transact-SQL&#41;](~/t-sql/statements/restore-master-key-transact-sql.md)  
   
   

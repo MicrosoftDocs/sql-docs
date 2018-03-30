@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: 2d45fcd2-0f0f-4167-9027-316d6696c106
 caps.latest.revision: 25
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Full-Text Catalog Properties (Tables and Views Page)
@@ -51,12 +51,12 @@ manager: "jhubbard"
 |||  
 |-|-|  
 |**Automatic**|The full-text index is automatically updated when the data in the underlying table is modified, added, or deleted.|  
-|**Manual**|When data is modified, added, or deleted in the indexed data, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracks the changes. When **Manual** change tracking is in effect, the index is not automatically updated with these changes. Instead, an administrator can apply the changes manually by using an [ALTER FULLTEXT INDEX ... START UPDATE POPULATION](../Topic/ALTER%20FULLTEXT%20INDEX%20\(Transact-SQL\).md) statement.|  
+|**Manual**|When data is modified, added, or deleted in the indexed data, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tracks the changes. When **Manual** change tracking is in effect, the index is not automatically updated with these changes. Instead, an administrator can apply the changes manually by using an [ALTER FULLTEXT INDEX ... START UPDATE POPULATION](~/t-sql/statements/alter-fulltext-index-transact-sql.md) statement.|  
 |**Do not track change**|With this option in effect, changes to the indexed data in the catalog are not recorded. An administrator must build the index by using ALTER FULLTEXT INDEX with either FULL POPULATION or INCREMENTAL POPULATION.|  
   
 ## See Also  
- [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../Topic/CREATE%20FULLTEXT%20CATALOG%20\(Transact-SQL\).md)   
- [ALTER FULLTEXT CATALOG &#40;Transact-SQL&#41;](../Topic/ALTER%20FULLTEXT%20CATALOG%20\(Transact-SQL\).md)   
+ [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](~/t-sql/statements/create-fulltext-catalog-transact-sql.md)   
+ [ALTER FULLTEXT CATALOG &#40;Transact-SQL&#41;](~/t-sql/statements/alter-fulltext-catalog-transact-sql.md)   
  [Populate Full-Text Indexes](../../2014/database-engine/populate-full-text-indexes.md)  
   
   

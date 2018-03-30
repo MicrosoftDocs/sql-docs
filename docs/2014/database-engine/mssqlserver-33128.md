@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 12c1096f-d120-439b-85f3-f794859503c9
 caps.latest.revision: 7
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_33128
@@ -38,7 +38,7 @@ manager: "jhubbard"
  When the database compatibility level is 110 or higher, decryption operations succeed, the deprecation event is raised, and the message appears only in the ring buffer. Encryption operations will fail, the deprecation event is raised, and the message is displayed for the user, and the message appears in the ring buffer.  
   
 > [!NOTE]  
->  The ring buffer is an internal component which is not fully documented and is not intended to be used by customers. Messages from the ring buffer are useful when contacting [!INCLUDE[msCoName](../../includes/msconame-md.md)] Customer Support. To view the ring buffer, query the sys.dm_os_ring_buffers dynamic management view.  
+>  The ring buffer is an internal component which is not fully documented and is not intended to be used by customers. Messages from the ring buffer are useful when contacting [!INCLUDE[msCoName](../includes/msconame-md.md)] Customer Support. To view the ring buffer, query the sys.dm_os_ring_buffers dynamic management view.  
   
 |State|Description|  
 |-----------|-----------------|  

@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: f643c7c3-f238-4835-b81e-2c2b3b53b23f
 caps.latest.revision: 19
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Distributor Properties

@@ -18,18 +18,18 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Remove colon following reserved keyword
-  The Upgrade Advisor detected a script that contains a colon (:) following a reserved keyword. In earlier versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], this syntax is ignored and the statements execute successfully. Now, this syntax causes the statement to fail when the database compatibility mode is set to 100 or later.  
+  The Upgrade Advisor detected a script that contains a colon (:) following a reserved keyword. In earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this syntax is ignored and the statements execute successfully. Now, this syntax causes the statement to fail when the database compatibility mode is set to 100 or later.  
   
  User databases maintain their compatibility mode.  
   
 ## Component  
- [!INCLUDE[ssDE](../../../includes/ssde-md.md)]  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## Corrective Action  
- Before you change the database compatibility mode to 100 or later, modify your scripts by removing colons that follow reserved keywords. For more information, see "sp_dbcmptlevel" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online.  
+ Before you change the database compatibility mode to 100 or later, modify your scripts by removing colons that follow reserved keywords. For more information, see "sp_dbcmptlevel" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
 ## See Also  
  [Database Engine Upgrade Issues](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;new&#93;](../Topic/SQL%20Server%202014%20Upgrade%20Advisor%20[new].md)  
+ [SQL Server 2014 Upgrade Advisor &#91;new&#93;](~/2014/sql-server/install/sql-server-2014-upgrade-advisor.md)  
   
   

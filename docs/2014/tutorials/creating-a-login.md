@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: a2512310-bdb6-41dc-858a-e866b2b58afc
 caps.latest.revision: 15
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Creating a Login
-  To access the [!INCLUDE[ssDE](../../includes/ssde-md.md)], users require a login. The login can represent the user's identity as a Windows account or as a member of a Windows group, or the login can be a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login that exists only in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Whenever possible you should use Windows Authentication.  
+  To access the [!INCLUDE[ssDE](../includes/ssde-md.md)], users require a login. The login can represent the user's identity as a Windows account or as a member of a Windows group, or the login can be a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] login that exists only in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Whenever possible you should use Windows Authentication.  
   
- By default, administrators on your computer have full access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For this lesson, we want to have a less privileged user; therefore, you will create a new local Windows Authentication account on your computer. To do this, you must be an administrator on your computer. Then you will grant that new user access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ By default, administrators on your computer have full access to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For this lesson, we want to have a less privileged user; therefore, you will create a new local Windows Authentication account on your computer. To do this, you must be an administrator on your computer. Then you will grant that new user access to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ### To create a new Windows account  
   
@@ -34,7 +34,7 @@ manager: "jhubbard"
   
 ### To create a login  
   
-1.  In a Query Editor window of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], type and execute the following code replacing `computer_name` with the name of your computer. `FROM WINDOWS` indicates that Windows will authenticate the user. The optional `DEFAULT_DATABASE` argument connects `Mary` to the `TestData` database, unless her connection string indicates another database. This statement introduces the semicolon as an optional termination for a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement.  
+1.  In a Query Editor window of [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], type and execute the following code replacing `computer_name` with the name of your computer. `FROM WINDOWS` indicates that Windows will authenticate the user. The optional `DEFAULT_DATABASE` argument connects `Mary` to the `TestData` database, unless her connection string indicates another database. This statement introduces the semicolon as an optional termination for a [!INCLUDE[tsql](../includes/tsql-md.md)] statement.  
   
     ```  
     CREATE LOGIN [computer_name\Mary]  
@@ -43,7 +43,7 @@ manager: "jhubbard"
     GO  
     ```  
   
-     This authorizes a user name `Mary`, authenticated by your computer, to access this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If there is more than one instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the computer, you must create the login on each instance that `Mary` must access.  
+     This authorizes a user name `Mary`, authenticated by your computer, to access this instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. If there is more than one instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on the computer, you must create the login on each instance that `Mary` must access.  
   
     > [!NOTE]  
     >  Because `Mary` is not a domain account, this user name can only be authenticated on this computer.  
@@ -52,7 +52,7 @@ manager: "jhubbard"
  [Granting Access to a Database](../../2014/tutorials/granting-access-to-a-database.md)  
   
 ## See Also  
- [CREATE LOGIN &#40;Transact-SQL&#41;](../Topic/CREATE%20LOGIN%20\(Transact-SQL\).md)   
+ [CREATE LOGIN &#40;Transact-SQL&#41;](~/t-sql/statements/create-login-transact-sql.md)   
  [Choose an Authentication Mode](../../2014/database-engine/choose-an-authentication-mode.md)  
   
   

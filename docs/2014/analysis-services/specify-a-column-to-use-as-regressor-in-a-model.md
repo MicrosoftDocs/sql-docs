@@ -24,7 +24,7 @@ manager: "mblythe"
   
 ### How to create a simple linear regression model  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], in **Solution Explorer**, expand **Mining Structures**.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], in **Solution Explorer**, expand **Mining Structures**.  
   
 2.  Double-click Call Center.dmm to open it in the designer.  
   

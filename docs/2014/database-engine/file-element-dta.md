@@ -16,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: 73dce835-9a80-4aef-8e0f-9dcf07dd5b80
 caps.latest.revision: 15
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # File Element (DTA)
-  Specifies the workload file. A workload is a set of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that execute against a database or databases that you want to tune. Workload files can be [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts (.sql) or trace files (.trc). For more information, see[Start and Use the Database Engine Tuning Advisor](../../2014/database-engine/start-and-use-the-database-engine-tuning-advisor.md).  
+  Specifies the workload file. A workload is a set of [!INCLUDE[tsql](../includes/tsql-md.md)] statements that execute against a database or databases that you want to tune. Workload files can be [!INCLUDE[tsql](../includes/tsql-md.md)] scripts (.sql) or trace files (.trc). For more information, see[Start and Use the Database Engine Tuning Advisor](../../2014/database-engine/start-and-use-the-database-engine-tuning-advisor.md).  
   
 ## Syntax  
   

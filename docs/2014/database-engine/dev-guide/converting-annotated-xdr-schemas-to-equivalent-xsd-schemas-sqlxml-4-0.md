@@ -25,7 +25,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Converting Annotated XDR Schemas to Equivalent XSD Schemas (SQLXML 4.0)
-  The XML Schema Definition (XSD) language is the successor to the XML-Data Reduced (XDR) schema definition language. With the introduction of XSD support in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0, it is assumed that new annotated schemas are created using XSD. SQLXML 4.0 includes an XDR to XSD converter tool that is designed to help you convert your existing annotated XDR schemas to equivalent XSD schemas.  
+  The XML Schema Definition (XSD) language is the successor to the XML-Data Reduced (XDR) schema definition language. With the introduction of XSD support in [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0, it is assumed that new annotated schemas are created using XSD. SQLXML 4.0 includes an XDR to XSD converter tool that is designed to help you convert your existing annotated XDR schemas to equivalent XSD schemas.  
   
 > [!IMPORTANT]  
 >  Use this tool only when you want to convert annotated XDR schemas to XSD for use with SQLXML 4.0. This is not a general purpose XDR to XSD converter tool. The converted XSD schemas may not behave the same as the original XDR schemas when used in other environments.  

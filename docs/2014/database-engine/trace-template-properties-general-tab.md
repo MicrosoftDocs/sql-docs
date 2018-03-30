@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Trace Template Properties (General Tab)
-  Use the **General** tab of the **Trace Template Properties** dialog box to create new trace templates by using the following options. To access this dialog box, on the [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **File** menu, point to **Templates**, and then click **New Template**.  
+  Use the **General** tab of the **Trace Template Properties** dialog box to create new trace templates by using the following options. To access this dialog box, on the [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **File** menu, point to **Templates**, and then click **New Template**.  
   
 ## Options  
  **Select server type**  

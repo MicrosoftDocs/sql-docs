@@ -20,11 +20,11 @@ helpviewer_keywords:
 ms.assetid: 83afbf74-fd50-4c39-831c-b1f473a50620
 caps.latest.revision: 42
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Shrink a Database
-  This topic describes how to shrink a database by using Object in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  This topic describes how to shrink a database by using Object in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
  Shrinking data files recovers space by moving pages of data from the end of the file to unoccupied space closer to the front of the file. When enough free space is created at the end of the file, data pages at end of the file can be deallocated and returned to the file system.  
   
@@ -63,7 +63,7 @@ manager: "jhubbard"
   
 #### To shrink a database  
   
-1.  In **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], and then expand that instance.  
+1.  In **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], and then expand that instance.  
   
 2.  Expand **Databases**, and then right-click the database that you want to shrink.  
   
@@ -90,23 +90,23 @@ manager: "jhubbard"
   
 #### To shrink a database  
   
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example uses [DBCC SHRINKDATABASE](../Topic/DBCC%20SHRINKDATABASE%20\(Transact-SQL\).md) to decreases the size of the data and log files in the `UserDB` database and to allow for `10` percent free space in the database.  
+3.  Copy and paste the following example into the query window and click **Execute**. This example uses [DBCC SHRINKDATABASE](~/t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md) to decreases the size of the data and log files in the `UserDB` database and to allow for `10` percent free space in the database.  
   
- [!code-sql[DBCC#DBCC_SHRINKDB1](../../snippets/tsql/SQL14/tsql/dbcc/transact-sql/dbcc_other.sql#dbcc_shrinkdb1)]  
+ [!code-sql[DBCC#DBCC_SHRINKDB1](../snippets/tsql/SQL14/tsql/dbcc/transact-sql/dbcc_other.sql#dbcc_shrinkdb1)]  
   
 ##  <a name="FollowUp"></a> Follow Up: After you shrink a database  
  Data that is moved to shrink a file can be scattered to any available location in the file. This causes index fragmentation and can slow the performance of queries that search a range of the index. To eliminate the fragmentation, consider rebuilding the indexes on the file after shrinking.  
   
 ## See Also  
  [Shrink a File](../../2014/database-engine/shrink-a-file.md)   
- [sys.databases &#40;Transact-SQL&#41;](../Topic/sys.databases%20\(Transact-SQL\).md)   
- [sys.database_files &#40;Transact-SQL&#41;](../Topic/sys.database_files%20\(Transact-SQL\).md)   
- [DBCC &#40;Transact-SQL&#41;](../Topic/DBCC%20\(Transact-SQL\).md)   
- [DBCC SHRINKFILE &#40;Transact-SQL&#41;](../Topic/DBCC%20SHRINKFILE%20\(Transact-SQL\).md)   
+ [sys.databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
+ [sys.database_files &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
+ [DBCC &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-transact-sql.md)   
+ [DBCC SHRINKFILE &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)   
  [Database Files and Filegroups](../../2014/database-engine/database-files-and-filegroups.md)  
   
   

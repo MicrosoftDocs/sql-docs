@@ -12,14 +12,14 @@ ms.topic: "article"
 ms.assetid: 0445b0ac-acae-4462-80fb-fe9735ac66db
 caps.latest.revision: 6
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Add or Delete a Group in a Chart (Report Builder and SSRS)
   Click in the chart data region to display the **Chart Data** pane. Create groups by dragging dataset fields to the **Category Groups** and **Series Groups** areas. To add nested groups, add multiple fields to the area.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ### To add a parent or child group to a chart  
   
@@ -35,7 +35,7 @@ manager: "mblythe"
   
 3.  Add or remove group expressions, filters, sort expressions, and group variables.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ### To edit a series group on a chart  
   
@@ -45,7 +45,7 @@ manager: "mblythe"
   
 3.  Add or remove group expressions, filters, sort expressions, and group variables.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ### To delete a group from a chart  
   

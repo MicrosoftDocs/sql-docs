@@ -19,13 +19,13 @@ manager: "jhubbard"
   This section provides information about database management activities that can be performed on the DQS databases such as backup/restore or detach/attach.  
   
 ##  <a name="BackupRestore"></a> Backup and Restore the DQS Databases  
- Backup and restore of SQL Server databases are common operations that database administrators perform for preventing loss of data in a case of disaster by recovering data from the backup databases. [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] is primarily implemented by two SQL Server databases: DQS_MAIN and DQS_PROJECTS. The backup and restore procedures of the [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) databases are similar to any other SQL Server databases.There are three challenges that are associated with backup and restore of the DQS databases:  
+ Backup and restore of SQL Server databases are common operations that database administrators perform for preventing loss of data in a case of disaster by recovering data from the backup databases. [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] is primarily implemented by two SQL Server databases: DQS_MAIN and DQS_PROJECTS. The backup and restore procedures of the [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) databases are similar to any other SQL Server databases.There are three challenges that are associated with backup and restore of the DQS databases:  
   
--   The backup and restore operations of the DQS databases must be synchronized. Otherwise the restored [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] will not be functional.  
+-   The backup and restore operations of the DQS databases must be synchronized. Otherwise the restored [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] will not be functional.  
   
 -   The two DQS databases, DQS_MAIN and DQS_PROJECTS, contain assemblies and other complex objects, apart from just simple database objects (such as tables and stored procedures).  
   
--   There are some entities outside of the DQS databases that must exist for the DQS databases to be functional as [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)], specifically the two SQL Server logins (##MS_dqs_db_owner_login## and ##MS_dqs_service_login##), and an initialization stored procedure (DQInitDQS_MAIN) in the master database.  
+-   There are some entities outside of the DQS databases that must exist for the DQS databases to be functional as [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)], specifically the two SQL Server logins (##MS_dqs_db_owner_login## and ##MS_dqs_service_login##), and an initialization stored procedure (DQInitDQS_MAIN) in the master database.  
   
  For detailed information about backup and restore in SQL Server, see [Back Up and Restore of SQL Server Databases](../../2014/database-engine/back-up-and-restore-of-sql-server-databases.md).  
   

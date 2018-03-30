@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: fc83b8d2-bc79-4b56-8970-34a1cbbcc176
 caps.latest.revision: 29
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Move Items Page (Report Manager)

@@ -12,11 +12,11 @@ ms.topic: "article"
 ms.assetid: 7f041821-6a12-4ab5-bb3a-a8345a9bc00b
 caps.latest.revision: 27
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Full-Text Search F1 Help
-  This section provides topics about the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Full-Text Search dialog boxes in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. To access a user interface topic, press F1 or click **Help** while the dialog box is open.  
+  This section provides topics about the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Full-Text Search dialog boxes in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. To access a user interface topic, press F1 or click **Help** while the dialog box is open.  
   
 |||  
 |-|-|  
@@ -29,9 +29,9 @@ manager: "jhubbard"
   
 ## See Also  
  [Full-Text Search](../../2014/database-engine/full-text-search.md)   
- [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../Topic/CREATE%20FULLTEXT%20CATALOG%20\(Transact-SQL\).md)   
- [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../Topic/CREATE%20FULLTEXT%20INDEX%20\(Transact-SQL\).md)   
- [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../Topic/CREATE%20FULLTEXT%20STOPLIST%20\(Transact-SQL\).md)   
- [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../Topic/CREATE%20SEARCH%20PROPERTY%20LIST%20\(Transact-SQL\).md)  
+ [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](~/t-sql/statements/create-fulltext-catalog-transact-sql.md)   
+ [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-fulltext-index-transact-sql.md)   
+ [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](~/t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
+ [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](~/t-sql/statements/create-search-property-list-transact-sql.md)  
   
   

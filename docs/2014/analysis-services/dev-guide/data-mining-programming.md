@@ -19,19 +19,19 @@ ms.author: "jeannt"
 manager: "mblythe"
 ---
 # Data Mining Programming
-  If you find that the built-in tools and viewers in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] do not meet your requirements, you can extend the power of [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] by coding your own extensions. In this approach, you have two options:  
+  If you find that the built-in tools and viewers in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] do not meet your requirements, you can extend the power of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] by coding your own extensions. In this approach, you have two options:  
   
 -   **XMLA**  
   
-     [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] supports XML for Analysis (XMLA) as a protocol for communication with client applications. Additional commands are supported by [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] that extend the XML for Analysis specification.  
+     [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] supports XML for Analysis (XMLA) as a protocol for communication with client applications. Additional commands are supported by [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] that extend the XML for Analysis specification.  
   
-     Because [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] uses XMLA for data definition, data manipulation, and data control support, you can create mining structures and mining models by using the visual tools provided by [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], and then extend the data mining objects that you have created by using Data Mining Extensions (DMX) and Analysis Services Scripting Language (ASSL) scripts.  
+     Because [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] uses XMLA for data definition, data manipulation, and data control support, you can create mining structures and mining models by using the visual tools provided by [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], and then extend the data mining objects that you have created by using Data Mining Extensions (DMX) and Analysis Services Scripting Language (ASSL) scripts.  
   
      You can create and modify data mining objects entirely in XMLA scripts, and run prediction queries against the models programmatically from your own applications.  
   
 -   **Analysis Management Objects (AMO)**  
   
-     [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] also provides a complete framework that enables third-party data mining providers to integrate the data mining objects into [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+     [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] also provides a complete framework that enables third-party data mining providers to integrate the data mining objects into [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
      You can create mining structures and mining models by using AMO. See the following samples in CodePlex:  
   
@@ -47,7 +47,7 @@ manager: "mblythe"
   
 -   **DMX**  
   
-     You can use DMX to encapsulate command statements, prediction queries, and metadata queries and return results in a tabular format, assuming you have created a connection to an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] server.  
+     You can use DMX to encapsulate command statements, prediction queries, and metadata queries and return results in a tabular format, assuming you have created a connection to an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server.  
   
 ## In This Section  
  [OLE DB for Data Mining](../../../2014/analysis-services/dev-guide/ole-db-for-data-mining.md)  
@@ -65,6 +65,6 @@ manager: "mblythe"
   
 ## See Also  
  [Developer's Guide &#40;Analysis Services&#41;](../../../2014/analysis-services/dev-guide/developer-s-guide-analysis-services.md)   
- [Data Mining Extensions &#40;DMX&#41; Reference](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Reference.md)  
+ [Data Mining Extensions &#40;DMX&#41; Reference](~/dmx/data-mining-extensions-dmx-reference.md)  
   
   

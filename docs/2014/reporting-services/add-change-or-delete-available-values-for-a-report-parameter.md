@@ -16,7 +16,7 @@ f1_keywords:
 ms.assetid: 0e03264c-523f-4c59-b71b-ceef600f75f6
 caps.latest.revision: 10
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Add, Change, or Delete Available Values for a Report Parameter (Report Builder and SSRS)
@@ -27,7 +27,7 @@ manager: "mblythe"
  You can provide a static list of values or a list from a report dataset. You can optionally provide a friendly name for values by specifying a label field. For example, for a parameter based on a `ProductID` field, you can display the `ProductName` field in the parameter label. When the report runs, the user can choose from the product names, but the actual chosen value is the corresponding `ProductID`.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
  After you publish a report, you can override the available values that you define in the report in the report authoring tool, by setting parameter property values on the report server. For more information, see [Report Parameters &#40;Report Builder and Report Designer&#41;](../../2014/reporting-services/report-parameters-report-builder-and-report-designer.md).  
   
@@ -57,7 +57,7 @@ manager: "mblythe"
   
          In **Label field**, choose the name of the field that provides the friendly names for the parameter. If there is no separate field for friendly names, choose the same field as you chose for the **Value** field.  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
      When you preview the report, you see a drop-down list of available values for the parameter.  
   
@@ -69,7 +69,7 @@ manager: "mblythe"
   
 3.  In **Select from one of the following options**, click **None**.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
      When you preview the report, you the drop-down list of available values for the parameter no longer appears.  
   

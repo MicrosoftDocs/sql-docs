@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: edad9498-69f7-4726-8699-fa615f704dff
 caps.latest.revision: 40
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Image Device Information Settings
@@ -32,7 +32,7 @@ manager: "mblythe"
 |**MarginLeft**|The left margin value, in inches, to set for the report. You must include an integer or decimal value followed by "in" (for example, `1in`). This value overrides the report's original settings.|  
 |**MarginRight**|The right margin value, in inches, to set for the report. You must include an integer or decimal value followed by "in" (for example, `1in`). This value overrides the report's original settings.|  
 |**MarginTop**|The top margin value, in inches, to set for the report. You must include an integer or decimal value followed by "in" (for example, `1in`). This value overrides the report's original settings.|  
-|**OutputFormat**|One of the [!INCLUDE[ndptecgdiexpanded](../../includes/ndptecgdiexpanded-md.md)] ([!INCLUDE[ndptecgdi](../../includes/ndptecgdi-md.md)]) supported output formats: `BMP`, `EMF`, `GIF`, `JPEG`, `PNG`, or `TIFF`.|  
+|**OutputFormat**|One of the [!INCLUDE[ndptecgdiexpanded](../includes/ndptecgdiexpanded-md.md)] ([!INCLUDE[ndptecgdi](../includes/ndptecgdi-md.md)]) supported output formats: `BMP`, `EMF`, `GIF`, `JPEG`, `PNG`, or `TIFF`.|  
 |**PageHeight**|The page height, in inches, to set for the report. You must include an integer or decimal value followed by "in" (for example, `11in`). This value overrides the report's original settings.|  
 |**PageWidth**|The page width, in inches, to set for the report. You must include an integer or decimal value followed by "in" (for example, `8.5in`). This value overrides the report's original settings.|  
 |**PrintDpiX**|The horizontal resolution of the output image. The default value is `300`. Applies to the Enhanced MetaFile (`EMF`) output format.|  

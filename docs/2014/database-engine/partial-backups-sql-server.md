@@ -21,7 +21,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Partial Backups (SQL Server)
-  All [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recovery models support partial backups, so this topic is relevant for all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases. However, partial backups are designed for use under the simple recovery model to improve flexibility for backing up very large databases that contain one or more read-only filegroups.  
+  All [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] recovery models support partial backups, so this topic is relevant for all [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] databases. However, partial backups are designed for use under the simple recovery model to improve flexibility for backing up very large databases that contain one or more read-only filegroups.  
   
  Partial backups are useful whenever you want to exclude read-only filegroups. A *partial backup* resembles a full database backup, but a partial backup does not contain all the filegroups. Instead, for a read-write database, a partial backup contains the data in the primary filegroup, every read-write filegroup, and, optionally, one or more read-only files. A partial backup of a read-only database contains only the primary filegroup.  
   
@@ -35,11 +35,11 @@ manager: "jhubbard"
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
 > [!NOTE]  
->  Partial backups are not supported by [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or the Maintenance Plan Wizard.  
+>  Partial backups are not supported by [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or the Maintenance Plan Wizard.  
   
  **To create a partial backup**  
   
--   [BACKUP &#40;Transact-SQL&#41;](../Topic/BACKUP%20\(Transact-SQL\).md) (READ_WRITE_FILEGROUPS; FILEGROUP option, if needed)  
+-   [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md) (READ_WRITE_FILEGROUPS; FILEGROUP option, if needed)  
   
  **To use a partial backup in a restore sequence**  
   

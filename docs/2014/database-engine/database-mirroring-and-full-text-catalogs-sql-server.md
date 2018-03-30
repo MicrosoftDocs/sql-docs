@@ -43,9 +43,9 @@ manager: "jhubbard"
          ALTER FULLTEXT INDEX ON *table_name* SET CHANGE_TRACKING AUTO  
   
     > [!NOTE]  
-    >  To see whether auto change tracking is on, you can use the [OBJECTPROPERTYEX](../Topic/OBJECTPROPERTYEX%20\(Transact-SQL\).md) function to query the **TableFullTextBackgroundUpdateIndexOn** property of the table.  
+    >  To see whether auto change tracking is on, you can use the [OBJECTPROPERTYEX](~/t-sql/functions/objectproperty-transact-sql.md) function to query the **TableFullTextBackgroundUpdateIndexOn** property of the table.  
   
- For more information, see [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../Topic/ALTER%20FULLTEXT%20INDEX%20\(Transact-SQL\).md).  
+ For more information, see [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-fulltext-index-transact-sql.md).  
   
 > [!NOTE]  
 >  Starting a crawl after failover works the same as starting a crawl after a restore.  
@@ -54,9 +54,9 @@ manager: "jhubbard"
  After service is forced to the mirror server (with possible data loss), start a full crawl. The method to use for starting a full crawl depends on whether the full-text index is change tracked. For more information, see "Full-Text Indexes After Failover," earlier in this topic.  
   
 ## See Also  
- [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../Topic/ALTER%20FULLTEXT%20INDEX%20\(Transact-SQL\).md)   
- [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../Topic/CREATE%20FULLTEXT%20INDEX%20\(Transact-SQL\).md)   
- [DROP FULLTEXT INDEX &#40;Transact-SQL&#41;](../Topic/DROP%20FULLTEXT%20INDEX%20\(Transact-SQL\).md)   
+ [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-fulltext-index-transact-sql.md)   
+ [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-fulltext-index-transact-sql.md)   
+ [DROP FULLTEXT INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/drop-fulltext-index-transact-sql.md)   
  [Database Mirroring &#40;SQL Server&#41;](../../2014/database-engine/database-mirroring-sql-server.md)   
  [Back Up and Restore Full-Text Catalogs and Indexes](../../2014/database-engine/back-up-and-restore-full-text-catalogs-and-indexes.md)  
   

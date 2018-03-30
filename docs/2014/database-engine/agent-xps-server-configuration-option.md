@@ -19,23 +19,23 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Agent XPs Server Configuration Option
-  Use the **Agent XPs** option to enable the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent extended stored procedures on this server. When this option is not enabled, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent node is not available in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Object Explorer.  
+  Use the **Agent XPs** option to enable the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent extended stored procedures on this server. When this option is not enabled, the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent node is not available in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Object Explorer.  
   
- When you use the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] tool to start the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service, these extended stored procedures are enabled automatically. For more information, see [Surface Area Configuration](../../2014/database-engine/surface-area-configuration.md).  
+ When you use the [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] tool to start the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent service, these extended stored procedures are enabled automatically. For more information, see [Surface Area Configuration](../../2014/database-engine/surface-area-configuration.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Object Explorer does not display the contents of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent node unless these extended stored procedures are enabled regardless of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service state.  
+>  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Object Explorer does not display the contents of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Agent node unless these extended stored procedures are enabled regardless of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent service state.  
   
  The possible values are:  
   
--   **0**, indicating that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent extended stored procedures are not available (the default).  
+-   **0**, indicating that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent extended stored procedures are not available (the default).  
   
--   **1**, indicating that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent extended stored procedures are available.  
+-   **1**, indicating that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent extended stored procedures are available.  
   
  The setting takes effect immediately without a server stop and restart.  
   
 ## Examples  
- The following example enables the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent extended stored procedures.  
+ The following example enables the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent extended stored procedures.  
   
 ```  
 sp_configure 'show advanced options', 1;  

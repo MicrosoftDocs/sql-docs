@@ -18,19 +18,19 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Data Flow Tab
-  Use the **Data Flow** tab of [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer to create data flows in a [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package.  
+  Use the **Data Flow** tab of [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer to create data flows in a [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package.  
   
  Create the data flows by dragging graphical objects that represent sources, transformations, and destinations from the **Toolbox** to the design surface of the **Data Flow** tab, and then connecting the objects to create paths that determine the sequence in which the transformations run.  
   
  Right-click a path, and then click **Data Viewers,** to add data viewers to view the data before and after each data flow object.  
   
- You can also use [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer to add the following functionality from the **Data Flow** tab:  
+ You can also use [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer to add the following functionality from the **Data Flow** tab:  
   
 -   Manage variables  
   
 -   Add annotations  
   
- To add these functions in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, right-click the design surface, and then select the option you want.  
+ To add these functions in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, right-click the design surface, and then select the option you want.  
   
 ## See Also  
  [Integration Services Paths](../../2014/integration-services/integration-services-paths.md)   

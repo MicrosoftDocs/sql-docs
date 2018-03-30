@@ -40,15 +40,15 @@ manager: "jhubbard"
   
 -   When converting noncharacter data to character data, **bcp** suggests a default field length large enough to store the data.  
   
--   If the file storage type is noncharacter, the **bcp** command does not prompt for a field length. The data is stored in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native data representation (native format).  
+-   If the file storage type is noncharacter, the **bcp** command does not prompt for a field length. The data is stored in the [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] native data representation (native format).  
   
 ## Using Default Field Lengths  
- Generally, [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends that you accept the **bcp**-suggested default values for the field length. When a character mode data file is created, using the default field length ensures that data is not truncated and that numeric overflow errors do not occur.  
+ Generally, [!INCLUDE[msCoName](../includes/msconame-md.md)] recommends that you accept the **bcp**-suggested default values for the field length. When a character mode data file is created, using the default field length ensures that data is not truncated and that numeric overflow errors do not occur.  
   
  If you specify a field length that is incorrect, problems can occur. For instance, if you copy numeric data and you specify a field length that is too short for the data, the **bcp** utility prints an overflow message and does not copy the data. Also, if you export `datetime` data and specify a field length of less than 26 bytes for the character string, the **bcp** utility truncates the data without an error message.  
   
 > [!IMPORTANT]  
->  When the default size option is used, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] expects to read an entire string. In some situations, use of a default field length can lead to an "unexpected end of file" error. Typically, this error occurs with the `money` and `datetime` data types when only part of the expected field occurs in the data file; for example, when a `datetime` value of *mm*/*dd*/*yy* is specified without the time component and is, therefore, shorter than the expected 24 character length of a `datetime` value in `char` format. To avoid this type of error, use field terminators or fixed-length data fields, or change the default field length by specifying another value.  
+>  When the default size option is used, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] expects to read an entire string. In some situations, use of a default field length can lead to an "unexpected end of file" error. Typically, this error occurs with the `money` and `datetime` data types when only part of the expected field occurs in the data file; for example, when a `datetime` value of *mm*/*dd*/*yy* is specified without the time component and is, therefore, shorter than the expected 24 character length of a `datetime` value in `char` format. To avoid this type of error, use field terminators or fixed-length data fields, or change the default field length by specifying another value.  
   
 ### Default Field Lengths for Character File Storage  
  The following table lists the default field lengths for data to be stored as a character-file storage type. Nullable data is the same length as nonnull data.  
@@ -85,7 +85,7 @@ manager: "jhubbard"
 |UDT|Length of the user-defined term (UDT) column|  
 |XML|0|  
   
- \*For more information about the `decimal` and `numeric` data types, see [decimal and numeric &#40;Transact-SQL&#41;](../Topic/decimal%20and%20numeric%20\(Transact-SQL\).md).  
+ \*For more information about the `decimal` and `numeric` data types, see [decimal and numeric &#40;Transact-SQL&#41;](~/t-sql/data-types/decimal-and-numeric-transact-sql.md).  
   
 > [!NOTE]  
 >  A column of type `tinyint` can have values from 0 through 255; the maximum number of characters that are needed to represent any number in that range is three (representing values 100 through 255).  
@@ -114,13 +114,13 @@ manager: "jhubbard"
 |`uniqueidentifier`|16|  
 |`timestamp`|8|  
   
- <sup>1</sup> For more information about the `decimal` and `numeric` data types, see [decimal and numeric &#40;Transact-SQL&#41;](../Topic/decimal%20and%20numeric%20\(Transact-SQL\).md).  
+ <sup>1</sup> For more information about the `decimal` and `numeric` data types, see [decimal and numeric &#40;Transact-SQL&#41;](~/t-sql/data-types/decimal-and-numeric-transact-sql.md).  
   
- In all of the preceding cases, to create a data file for later reloading into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that keeps the storage space to a minimum, use a length prefix with the default file storage type and the default field length.  
+ In all of the preceding cases, to create a data file for later reloading into [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that keeps the storage space to a minimum, use a length prefix with the default file storage type and the default field length.  
   
 ## See Also  
  [bcp Utility](../../2014/database-engine/bcp-utility.md)   
- [Data Types &#40;Transact-SQL&#41;](../Topic/Data%20Types%20\(Transact-SQL\).md)   
+ [Data Types &#40;Transact-SQL&#41;](~/t-sql/data-types/data-types-transact-sql.md)   
  [Specify Field and Row Terminators &#40;SQL Server&#41;](../../2014/database-engine/specify-field-and-row-terminators-sql-server.md)   
  [Specify Prefix Length in Data Files by Using bcp &#40;SQL Server&#41;](../../2014/database-engine/specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)   
  [Specify File Storage Type by Using bcp &#40;SQL Server&#41;](../../2014/database-engine/specify-file-storage-type-by-using-bcp-sql-server.md)   

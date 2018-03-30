@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: ae8c138b-e356-4ad8-862c-a4a8d0c04149
 caps.latest.revision: 8
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Column Charts (Report Builder and SSRS)
@@ -21,7 +21,7 @@ manager: "mblythe"
  The column chart is well suited for this data because all three series share a common time period, allowing for valid comparisons to be made.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## Variations of a Column Chart  
   

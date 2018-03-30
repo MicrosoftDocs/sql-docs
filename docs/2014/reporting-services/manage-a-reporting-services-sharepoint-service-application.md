@@ -12,11 +12,11 @@ ms.topic: "article"
 ms.assetid: bfda2e04-2d82-4534-bb50-90925f7386ae
 caps.latest.revision: 15
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Manage a Reporting Services SharePoint Service Application
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Service Applications are managed from SharePoint Central Administration. The Management and Properties pages allow you to update the configuration of the service application as well as common administration tasks.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Service Applications are managed from SharePoint Central Administration. The Management and Properties pages allow you to update the configuration of the service application as well as common administration tasks.  
   
  This topic covers the following information:  
   
@@ -35,7 +35,7 @@ manager: "mblythe"
 -   [Provision Subscriptions and Alerts](#bkmk_provisionsubscriptions)  
   
 ## To Open Service Application Properties Page  
- To open the properties page for a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application, complete the following:  
+ To open the properties page for a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service application, complete the following:  
   
 1.  In Central Administration, in the Application Management group, click **Manage service applications**.  
   
@@ -44,7 +44,7 @@ manager: "mblythe"
  For more information on service application properties, see [Step 3: Create a Reporting Services Service Application](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md#bkmk_create_serrviceapplication).  
   
 ##  <a name="bkmk_openpages"></a> To Open Service Application Management Pages  
- To open the management pages for a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application, complete the following:  
+ To open the management pages for a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service application, complete the following:  
   
 1.  In Central Administration, in the Application Management group, click **Manage service applications**.  
   
@@ -91,7 +91,7 @@ manager: "mblythe"
 |Enable Execution Logging|Default is TRUE.<br /><br /> specify whether the report server generates trace logs and the number of days the log is kept. . The logs are stored on the report server computer in the \Microsoft SQL Server\MSSQL.n\ReportServer\Log folder. A new log file is started each time the service is restarted. For more information about log files, see [Report Server Service Trace Log](../../2014/reporting-services/report-server-service-trace-log.md)|  
 |Execution Log Days Kept|Default is 60 days.|  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] all supports SharePoint ULS logging.  For more information, see [Turn on Reporting Services events for the SharePoint trace log &#40;ULS&#41;](../../2014/reporting-services/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] all supports SharePoint ULS logging.  For more information, see [Turn on Reporting Services events for the SharePoint trace log &#40;ULS&#41;](../../2014/reporting-services/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
   
 ###  <a name="bkmk_security_settings_section"></a> Security Settings  
   
@@ -125,7 +125,7 @@ manager: "mblythe"
   
 |Page|Description|  
 |----------|-----------------|  
-|Backup Encryptions Key|1) Type a password in to the **Password:** and **Confirm Password:** boxes and click **Export**. You will see a warning if the password you typed is does not meet the complexity requirements of the domain policy.<br /><br /> 2) You will be prompted for a file location of where to save the key file. You should consider storing the key file on a separate computer from the one that is running [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. The default file name is the same name as the service application.|  
+|Backup Encryptions Key|1) Type a password in to the **Password:** and **Confirm Password:** boxes and click **Export**. You will see a warning if the password you typed is does not meet the complexity requirements of the domain policy.<br /><br /> 2) You will be prompted for a file location of where to save the key file. You should consider storing the key file on a separate computer from the one that is running [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. The default file name is the same name as the service application.|  
 |Restore Encryption Key|1) Type or browse to the key file in the **File Location** box<br /><br /> 2) In the **Password** box, type the password that was used to back up the encryption file.<br /><br /> 3) Click **OK**|  
 |Change Encryption Key|This operation will create a new key and re-encrypt your encrypted content. If you have a lot of content, this operation make take several hour.<br /><br /> When the change encryption key operation is complete, it is recommended you make a backup of your new key.|  
 |Deleted Encrypted Content|Deleted content cannot be recovered.<br /><br /> **\*\* Important \*\*** The action of deleting and recreating the symmetric key cannot be reversed or undone. Deleting or recreating the key can have important ramifications on your current installation. If you delete the key, any existing data encrypted by the symmetric key will also deleted. Deleted data includes connection strings to external report data sources, stored connection strings, and some subscription information.|  
@@ -145,7 +145,7 @@ manager: "mblythe"
   
  ![PowerShell related content](../../2014/reporting-services/media/rs-powershellicon.jpg "PowerShell related content")  
   
- The following is an example PowerShell command to return the list of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service applications with the UEAccount property:  
+ The following is an example PowerShell command to return the list of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service applications with the UEAccount property:  
   
 ```  
 Get-SPRSServiceApplication | select typename, name, service, ueaccountname  
@@ -180,7 +180,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
  Specifies the e-mail address to use in the From: field of a generated e-mail. You must specify a user account that has permission to send mail from the SMTP server.  
   
 ##  <a name="bkmk_provisionsubscriptions"></a> Provision Subscriptions and Alerts  
- Use this page to verify if SQL Server Agent is running and to provision access for reporting services to use SQL Server Agent. SQL Server Agent is required for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] subscriptions, schedules, and data alerts. [Provision Subscriptions and Alerts for SSRS Service Applications](../../2014/sql-server/install/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)  
+ Use this page to verify if SQL Server Agent is running and to provision access for reporting services to use SQL Server Agent. SQL Server Agent is required for [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] subscriptions, schedules, and data alerts. [Provision Subscriptions and Alerts for SSRS Service Applications](../../2014/sql-server/install/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)  
   
 ## Proxy association  
  When you created the Reporting Services service application you selected the web application to associate and provision permissions for access by the Reporting Services service application. If you chose to not associate or you want to change the association, you can use the following steps.  
@@ -189,7 +189,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
   
 2.  On the Service application Associations page, change the view to **Service Applications**.  
   
-3.  Find and click the name of your new [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Service application. You could also click the application proxy group name **default** to add the proxy to default group rather than completing the following steps.  
+3.  Find and click the name of your new [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Service application. You could also click the application proxy group name **default** to add the proxy to default group rather than completing the following steps.  
   
 4.  Select **Custom** in the selection box **Edit the following group of connections**.  
   

@@ -16,11 +16,11 @@ ms.author: "owend"
 manager: "jhubbard"
 ---
 # Browsing the Deployed Cube
-  In the following task, you browse the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Tutorial cube. Because our analysis compares measure across multiple dimensions, you will use an Excel PivotTable to browse your data. Using a PivotTable lets you place customer, date, and product information on different axes so that you can see how Internet Sales change when viewed across specific time periods, customer demographics, and product lines.  
+  In the following task, you browse the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial cube. Because our analysis compares measure across multiple dimensions, you will use an Excel PivotTable to browse your data. Using a PivotTable lets you place customer, date, and product information on different axes so that you can see how Internet Sales change when viewed across specific time periods, customer demographics, and product lines.  
   
 ### To browse the deployed cube  
   
-1.  To switch to Cube Designer in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], double-click the **[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Tutorial** cube in the **Cubes** folder of the Solution Explorer.  
+1.  To switch to Cube Designer in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], double-click the **[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial** cube in the **Cubes** folder of the Solution Explorer.  
   
 2.  Open the **Browser** tab, and then click the **Reconnect** button on the toolbar of the designer.  
   

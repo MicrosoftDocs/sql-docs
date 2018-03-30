@@ -19,11 +19,11 @@ ms.topic: "article"
 ms.assetid: 5148c993-6cd4-42f0-9109-1ec08d8e798c
 caps.latest.revision: 8
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Getting Started (SQL Server 2014)
-  Find sources of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] information, system requirements, installation instructions, and more.  
+  Find sources of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] information, system requirements, installation instructions, and more.  
   
  [Product Specifications for SQL Server 2014](../../2014/getting-started/sql-server-2014-product-specifications.md)  
   
@@ -33,7 +33,7 @@ manager: "jhubbard"
   
  [Quick-Start Installation of SQL Server 2014](../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)  
   
- [Get Started with Product Documentation for SQL Server](../Topic/Get%20Started%20with%20Product%20Documentation%20for%20SQL%20Server.md)  
+ [Get Started with Product Documentation for SQL Server](~/2014/books-online-for-sql-server-2014.md)  
   
  [Getting Assistance &#40;SQL Server 2014&#41;](../../2014/getting-started/getting-assistance-sql-server-2014.md)  
   

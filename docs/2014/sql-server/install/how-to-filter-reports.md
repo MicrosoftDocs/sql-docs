@@ -29,11 +29,11 @@ manager: "jhubbard"
   
     -   **All issues**. This displays all issues that have not been marked as resolved.  
   
-    -   **All upgrade issues**. This displays all issues that are related to upgrading to [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+    -   **All upgrade issues**. This displays all issues that are related to upgrading to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-    -   **Pre-upgrade issues**. This displays all issues that should or must be fixed before upgrading to [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+    -   **Pre-upgrade issues**. This displays all issues that should or must be fixed before upgrading to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-    -   **All migration issues**. This displays all issues that are related to migrating data or applications to [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+    -   **All migration issues**. This displays all issues that are related to migrating data or applications to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
     -   **Resolved Issues**. This displays all issues that have been marked as resolved.  
   

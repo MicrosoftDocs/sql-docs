@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: ecf26dd5-4535-4ed6-86fc-c73f9d9dedec
 caps.latest.revision: 11
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Lesson 3: Deleting Database Objects

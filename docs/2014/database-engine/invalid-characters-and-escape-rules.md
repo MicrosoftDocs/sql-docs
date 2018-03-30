@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: f2e9b997-f400-4963-b225-59d46c6b93e8
 caps.latest.revision: 16
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Invalid Characters and Escape Rules
   This topic describes how invalid XML characters are handled by the FOR XML clause, and lists the escape rules for characters that are invalid in XML names.  
   
 ## For XML and Invalid Characters  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entitizes invalid XML characters when they are returned within FOR XML queries that do not use the TYPE directive.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] entitizes invalid XML characters when they are returned within FOR XML queries that do not use the TYPE directive.  
   
  Although XML 1.0 conformant parsers raise parse errors regardless of whether these characters are entitized or not, the entitized form is better aligned with XML 1.1. The entitized form is also potentially better aligned with future versions of the XML standard. Additionally, it makes debugging simpler, because the code point of the invalid character becomes visible.  
   
@@ -37,7 +37,7 @@ manager: "jhubbard"
  These characters are preserved in output, and a parser will not normalize them.  
   
 ## Escape Rules  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] names that contain characters that are invalid in XML names, such as spaces, are translated into XML names in a way in which the invalid characters are translated into escaped numeric entity encoding.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] names that contain characters that are invalid in XML names, such as spaces, are translated into XML names in a way in which the invalid characters are translated into escaped numeric entity encoding.  
   
  There are only two non-alphabetic characters that can occur within an XML name: the colon (:) and the underscore (_). Because the colon is already reserved for namespaces, the underscore is chosen as the escape character. Following are the escape rules that are used for encoding:  
   

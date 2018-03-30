@@ -14,14 +14,14 @@ f1_keywords:
 ms.assetid: d1f66762-2d40-4f24-b635-a417d22ee79a
 caps.latest.revision: 34
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Full-Text Catalog Properties (General Page)
   This section shows the options and functions available on the **General** page of the **Full-Text Catalog Properties** dialog box.  
   
 > [!NOTE]  
->  For [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] databases, a full-text catalog is a logical concept that refers to a group of full-text indexes. The full-text catalog is a virtual object that does not belong to any filegroup.  
+>  For [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] databases, a full-text catalog is a logical concept that refers to a group of full-text indexes. The full-text catalog is a virtual object that does not belong to any filegroup.  
   
 ## Options  
   

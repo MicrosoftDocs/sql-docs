@@ -75,7 +75,7 @@ manager: "jhubbard"
  You can expand an issue to display additional information, a link to detailed information about resolving the issue, and a link to show issue details. When you click the link to get detailed information for the issue, a Help topic with information about the issue and instructions for addressing the issue is displayed. After you have fixed an issue, or to manage your action items, you can mark issues as complete by selecting the **This issue has been resolved** check box. If you want to remove the resolved issues from the list of upgrade issues, click **Refresh**. The issue is not displayed again until you either run the Upgrade Advisor Analysis Wizard against the same component or apply the **Resolved Issues** filter from the **Filter By** option.  
   
 ## Report Files  
- The Upgrade Advisor Analysis Wizard creates reports in the My Documents\\[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Upgrade Advisor\110\Reports directory and creates a subdirectory for each server that you analyze. The report files are XML files that follow a specific naming convention. When you launch the Upgrade Advisor Report Viewer, the report files in the default directory are displayed. If you copy report files into this folder, they must adhere to the naming convention or the report viewer will not display them automatically.  
+ The Upgrade Advisor Analysis Wizard creates reports in the My Documents\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade Advisor\110\Reports directory and creates a subdirectory for each server that you analyze. The report files are XML files that follow a specific naming convention. When you launch the Upgrade Advisor Report Viewer, the report files in the default directory are displayed. If you copy report files into this folder, they must adhere to the naming convention or the report viewer will not display them automatically.  
   
  If you want to share the information with other people, you can send them the XML report. Or, if you want to use another application, you can export the report into a comma-separated value file that you can use to create a spreadsheet, text file, or e-mail message.  
   
@@ -84,6 +84,6 @@ manager: "jhubbard"
  [How to: Export Reports](../../../2014/sql-server/install/how-to-export-reports.md)   
  [How to: Filter Reports](../../../2014/sql-server/install/how-to-filter-reports.md)   
  [Resolving Upgrade Issues](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;new&#93;](../Topic/SQL%20Server%202014%20Upgrade%20Advisor%20[new].md)  
+ [SQL Server 2014 Upgrade Advisor &#91;new&#93;](~/2014/sql-server/install/sql-server-2014-upgrade-advisor.md)  
   
   

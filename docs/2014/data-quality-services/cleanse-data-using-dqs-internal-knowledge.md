@@ -21,7 +21,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Cleanse Data Using DQS (Internal) Knowledge
-  This topic describes how to cleanse your data by using a data quality project in [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS). Data cleansing is performed on your source data using a knowledge base that has been built in DQS against a high-quality data set. For more information, see [Building a Knowledge Base](../../2014/data-quality-services/building-a-knowledge-base.md).  
+  This topic describes how to cleanse your data by using a data quality project in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Data cleansing is performed on your source data using a knowledge base that has been built in DQS against a high-quality data set. For more information, see [Building a Knowledge Base](../../2014/data-quality-services/building-a-knowledge-base.md).  
   
  Data cleansing is performed in four stages: a *mapping* stage in which you identify the data source to be cleansed, and map it to required domains in a knowledge base, a *computer-assisted cleansing* stage where DQS applies the knowledge base to the data to be cleansed, and proposes/makes changes to the source data, an *interactive cleansing* stage where data stewards can analyze the data changes, and accept/reject the data changes, and finally the *export* stage that lets you export the cleansed data. Each of these processes is performed on a separate page of the cleansing activity wizard, enabling you to move back and forth to different pages, to re-run the process, and to close out of a specific cleansing process and then return to the same stage of the process. DQS provides you with statistics about the source data and the cleansing results that enable you to make informed decisions about data cleansing.  
   
@@ -31,9 +31,9 @@ manager: "jhubbard"
   
 -   You must have specified appropriate threshold values for the cleansing activity. For information about doing so, see [Configure Threshold Values for Cleansing and Matching](../../2014/data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
--   A DQS knowledge base must be available on [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] against which you want to compare, and cleanse your source data. Additionally, the knowledge base must contain knowledge about the type of data that you want to cleanse. For example, if you want to cleanse your source data that contains US addresses, you must have a knowledge base that was created against a “high-quality” sample data for US addresses.  
+-   A DQS knowledge base must be available on [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] against which you want to compare, and cleanse your source data. Additionally, the knowledge base must contain knowledge about the type of data that you want to cleanse. For example, if you want to cleanse your source data that contains US addresses, you must have a knowledge base that was created against a “high-quality” sample data for US addresses.  
   
--   Microsoft Excel must be installed on the [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] computer if the source data to be cleansed is in an Excel file. Otherwise, you will not be able to select the Excel file in the mapping stage. The files created by Microsoft Excel can have an extension of .xlsx, .xls, or .csv. If the 64-bit version of Excel is used, only Excel 2003 files (.xls) are supported; Excel 2007 or 2010 files (.xlsx) are not supported. If you are using 64-bit version of Excel 2007 or 2010, save the file as an .xls file or a .csv file, or install a 32-bit version of Excel instead.  
+-   Microsoft Excel must be installed on the [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] computer if the source data to be cleansed is in an Excel file. Otherwise, you will not be able to select the Excel file in the mapping stage. The files created by Microsoft Excel can have an extension of .xlsx, .xls, or .csv. If the 64-bit version of Excel is used, only Excel 2003 files (.xls) are supported; Excel 2007 or 2010 files (.xlsx) are not supported. If you are using 64-bit version of Excel 2007 or 2010, save the file as an .xls file or a .csv file, or install a 32-bit version of Excel instead.  
   
 ###  <a name="Security"></a> Security  
   
@@ -56,9 +56,9 @@ manager: "jhubbard"
   
 1.  On the **Map** page of the cleansing data quality wizard, select your source data to be cleansed: **SQL Server** or **Excel File**:  
   
-    1.  **SQL Server**: Select **DQS_STAGING_DATA** as the source database if you have copied your source data to this database, and then select appropriate table/view that contains your source data. Otherwise, select your source database and appropriate table/view. Your source database must be present in the same SQL Server instance as [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] to be available in the **Database** drop-down list.  
+    1.  **SQL Server**: Select **DQS_STAGING_DATA** as the source database if you have copied your source data to this database, and then select appropriate table/view that contains your source data. Otherwise, select your source database and appropriate table/view. Your source database must be present in the same SQL Server instance as [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] to be available in the **Database** drop-down list.  
   
-    2.  **Excel File**: Click **Browse**, and select the Excel file that contains the data to be cleansed. Microsoft Excel must be installed on the [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] computer to select an Excel file. Otherwise, the **Browse** button will not be available, and you will be notified beneath this text box that Microsoft Excel is not installed. Also, leave the **Use first row as header** check box selected if the first row of the Excel file contains header data.  
+    2.  **Excel File**: Click **Browse**, and select the Excel file that contains the data to be cleansed. Microsoft Excel must be installed on the [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] computer to select an Excel file. Otherwise, the **Browse** button will not be available, and you will be notified beneath this text box that Microsoft Excel is not installed. Also, leave the **Use first row as header** check box selected if the first row of the Excel file contains header data.  
   
 2.  Under **Mappings**, map the data columns in your source data with appropriate domains in the knowledge base by selecting a source column from the drop-down list in the **Source Column** column, and then selecting a domain from the drop-down list in the **Domain** column in the same row. Repeat this step to map all the columns in your source data with appropriate domains in the knowledge base. If required, you can click the **Add a column mapping** icon to add rows to the mapping table.  
   
@@ -141,11 +141,11 @@ manager: "jhubbard"
     > [!IMPORTANT]  
     >  If you are using 64-bit version of Excel, you cannot export your cleansed data to an Excel file; you can export only to a SQL Server database or to a .csv file.  
   
-    1.  **SQL Server**: Select **DQS_STAGING_DATA** as the destination database if you want to export your data here, and then specify a table name that will be created to store your exported data. Otherwise, select another database if you want to export data to a different database, and then specify a table name that will be created to store your exported data. Your destination database must be present in the same SQL Server instance as [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] to be available in the **Database** drop-down list.  
+    1.  **SQL Server**: Select **DQS_STAGING_DATA** as the destination database if you want to export your data here, and then specify a table name that will be created to store your exported data. Otherwise, select another database if you want to export data to a different database, and then specify a table name that will be created to store your exported data. Your destination database must be present in the same SQL Server instance as [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] to be available in the **Database** drop-down list.  
   
-    2.  **CSV File**: Click **Browse**, and specify the name and location of the .csv file where you want to export the cleansed data. You can also type the file name for the .csv file along with the full path where you want to export the cleansed data. For example, “c:\ExportedData.csv”. The file is saved on the computer where [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] is installed.  
+    2.  **CSV File**: Click **Browse**, and specify the name and location of the .csv file where you want to export the cleansed data. You can also type the file name for the .csv file along with the full path where you want to export the cleansed data. For example, “c:\ExportedData.csv”. The file is saved on the computer where [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] is installed.  
   
-    3.  **Excel File**: Click **Browse**, and specify the name and location of the Excel file where you want to export the cleansed data. You can also type the file name for the Excel file along with the full path where you want to export the cleansed data. For example, “c:\ExportedData.xlsx”. The file is saved on the computer where [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] is installed.  
+    3.  **Excel File**: Click **Browse**, and specify the name and location of the Excel file where you want to export the cleansed data. You can also type the file name for the Excel file along with the full path where you want to export the cleansed data. For example, “c:\ExportedData.xlsx”. The file is saved on the computer where [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] is installed.  
   
 2.  Select the **Standardize Output** check box to standardize the output based on the output format selected for the domain. For example, change the string value to upper case or capitalize the first letter of the word. For information about specifying the output format of a domain, see the **Format Output to** list in [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md).  
   
@@ -174,9 +174,9 @@ manager: "jhubbard"
   
     -   **SQL Server** as the data destination, a new table with the specified name will be created in the selected database.  
   
-    -   **CSV File** as the data destination, a .csv file will be created at the location on the [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] computer with the file name that you specified earlier in the **CSV File** name box.  
+    -   **CSV File** as the data destination, a .csv file will be created at the location on the [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] computer with the file name that you specified earlier in the **CSV File** name box.  
   
-    -   **Excel File** as the data destination, an Excel file will be created at the location on the [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] computer with the file name that you specified earlier in the **Excel file name** box.  
+    -   **Excel File** as the data destination, an Excel file will be created at the location on the [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] computer with the file name that you specified earlier in the **Excel file name** box.  
   
 5.  Click **Finish** to close the data quality project.  
   

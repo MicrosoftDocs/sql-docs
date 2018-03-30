@@ -21,7 +21,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Move a Workload Group
-  You can move a Resource Governor workload group to a different resource pool by using either [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or Transact-SQL.  
+  You can move a Resource Governor workload group to a different resource pool by using either [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or Transact-SQL.  
   
 -   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
@@ -31,13 +31,13 @@ manager: "jhubbard"
  You cannot move a workload group if there is a pending Resource Governor configuration operation.  
   
 ###  <a name="LimitationsRestrictions"></a> Limitations and Restrictions  
- You cannot move a workload group if there is a pending Resource Governor configuration operation. You can determine whether there is a configuration pending by querying the [sys.dm_resource_governor_configuration &#40;Transact-SQL&#41;](../Topic/sys.dm_resource_governor_configuration%20\(Transact-SQL\).md) dynamic management view to get the current status of is_configuration_pending.  
+ You cannot move a workload group if there is a pending Resource Governor configuration operation. You can determine whether there is a configuration pending by querying the [sys.dm_resource_governor_configuration &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md) dynamic management view to get the current status of is_configuration_pending.  
   
 ###  <a name="Permissions"></a> Permissions  
  Moving a workload group requires CONTROL SERVER permission.  
   
 ##  <a name="MoveWGSSMS"></a> Move a Workload Group Using SQL Server Management Studio  
- **To move a workload group by using [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**  
+ **To move a workload group by using [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]**  
   
 1.  In Object Explorer, recursively expand the **Management** node down to **Resource Governor**.  
   
@@ -76,7 +76,7 @@ GO
  [Enable Resource Governor](../../2014/database-engine/enable-resource-governor.md)   
  [Create a Resource Pool](../../2014/database-engine/create-a-resource-pool.md)   
  [Create a Workload Group](../../2014/database-engine/create-a-workload-group.md)   
- [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../Topic/ALTER%20WORKLOAD%20GROUP%20\(Transact-SQL\).md)   
- [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../Topic/ALTER%20RESOURCE%20GOVERNOR%20\(Transact-SQL\).md)  
+ [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](~/t-sql/statements/alter-workload-group-transact-sql.md)   
+ [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](~/t-sql/statements/alter-resource-governor-transact-sql.md)  
   
   

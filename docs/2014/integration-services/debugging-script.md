@@ -20,9 +20,9 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Debugging Script
-  You write the scripts that the Script task and Script component use, in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA).  
+  You write the scripts that the Script task and Script component use, in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA).  
   
- You set and script breakpoints in VSTA. You can manage breakpoints in VSTA, but you can also manage the breakpoints using the **Set Breakpoints** dialog box that [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer provides. For more information, see [Debugging Control Flow](../../2014/integration-services/debugging-control-flow.md).  
+ You set and script breakpoints in VSTA. You can manage breakpoints in VSTA, but you can also manage the breakpoints using the **Set Breakpoints** dialog box that [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer provides. For more information, see [Debugging Control Flow](../../2014/integration-services/debugging-control-flow.md).  
   
  The **Set Breakpoints** dialog box includes the script breakpoints. These breakpoints appear at the bottom of the breakpoint list, and display the line number and the name of the function in which the breakpoint appears. You can delete a script breakpoint from the **Set Breakpoints** dialog box.  
   

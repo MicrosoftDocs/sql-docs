@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Create a Resource Pool
-  You can create a resource pool by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  You can create a resource pool by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
 -   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
@@ -36,9 +36,9 @@ manager: "jhubbard"
  Creating a resource pool requires CONTROL SERVER permission.  
   
 ##  <a name="CreRPProp"></a> Create a Resource Pool Using SQL Server Management Studio  
- **To create a resource pool by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
+ **To create a resource pool by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]**  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], open Object Explorer and recursively expand the **Management** node down to and including **Resource Governor**.  
+1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], open Object Explorer and recursively expand the **Management** node down to and including **Resource Governor**.  
   
 2.  Right-click **Resource Governor**, and then click **Properties**.  
   
@@ -51,7 +51,7 @@ manager: "jhubbard"
 6.  To save the changes, click **OK**  
   
 ##  <a name="CreRPTSQL"></a> Create a Resource Pool Using Transact-SQL  
- **To create a resource pool by using [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
+ **To create a resource pool by using [!INCLUDE[tsql](../includes/tsql-md.md)]**  
   
 1.  Run the `CREATE RESOURCE POOL` statement specifying the property values to be set.  
   
@@ -77,7 +77,7 @@ GO
  [Configure Resource Governor Using a Template](../../2014/database-engine/configure-resource-governor-using-a-template.md)   
  [Resource Governor Workload Group](../../2014/database-engine/resource-governor-workload-group.md)   
  [Resource Governor Classifier Function](../../2014/database-engine/resource-governor-classifier-function.md)   
- [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../Topic/CREATE%20RESOURCE%20POOL%20\(Transact-SQL\).md)   
- [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../Topic/ALTER%20RESOURCE%20GOVERNOR%20\(Transact-SQL\).md)  
+ [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](~/t-sql/statements/create-resource-pool-transact-sql.md)   
+ [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](~/t-sql/statements/alter-resource-governor-transact-sql.md)  
   
   

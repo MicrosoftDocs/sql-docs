@@ -28,7 +28,7 @@ manager: "jhubbard"
  The examples of modified format files in this topic are based on the following table and data file.  
   
 ### Sample Table  
- The examples require that a table named `myTestSkipField` be created in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database under the `dbo` schema. To create this table, in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor, run the following code:  
+ The examples require that a table named `myTestSkipField` be created in the [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] sample database under the `dbo` schema. To create this table, in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Query Editor, run the following code:  
   
 ```  
 USE AdventureWorks2012;  
@@ -82,7 +82,7 @@ GO
 ### Examples  
  The following example uses `INSERT ... SELECT * FROM OPENROWSET(BULK...)` using the `myTestSkipField.fmt` format file. The example bulk imports the `myTestSkipField-c.dat` data file into the `myTestSkipField` table. To create the sample table and data file, see "Sample Data File and Table," earlier in this topic.  
   
- In the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor, run the following code:  
+ In the [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Query Editor, run the following code:  
   
 ```  
 USE AdventureWorks2012;  
@@ -122,7 +122,7 @@ GO
 ### Examples  
  The following example uses `INSERT ... SELECT * FROM OPENROWSET(BULK...)` using the `myTestSkipField.Xml` format file. The example bulk imports the `myTestSkipField-c.dat` data file into the `myTestSkipField` table. To create the sample table and data file, see "Sample Data File and Table," earlier in this topic.  
   
- In the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor, run the following code:  
+ In the [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Query Editor, run the following code:  
   
 ```  
 USE AdventureWorks2012;  
@@ -141,8 +141,8 @@ GO
   
 ## See Also  
  [bcp Utility](../../2014/database-engine/bcp-utility.md)   
- [BULK INSERT &#40;Transact-SQL&#41;](../Topic/BULK%20INSERT%20\(Transact-SQL\).md)   
- [OPENROWSET &#40;Transact-SQL&#41;](../Topic/OPENROWSET%20\(Transact-SQL\).md)   
+ [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md)   
+ [OPENROWSET &#40;Transact-SQL&#41;](~/t-sql/functions/openrowset-transact-sql.md)   
  [Use a Format File to Skip a Table Column &#40;SQL Server&#41;](../../2014/database-engine/use-a-format-file-to-skip-a-table-column-sql-server.md)   
  [Use a Format File to Map Table Columns to Data-File Fields &#40;SQL Server&#41;](../../2014/database-engine/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   

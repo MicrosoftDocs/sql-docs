@@ -12,14 +12,14 @@ ms.topic: "article"
 ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
 caps.latest.revision: 7
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # LookupSet Function (Report Builder and SSRS)
   Returns the set of matching values for the specified name from a dataset that contains name/value pairs.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## Syntax  
   
@@ -97,7 +97,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 ## Example  
  Because `LookupSet` returns a collection of objects, you cannot display the result expression directly in a text box. You can concatenate the value of each object in the collection as a string.  
   
- Use the [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] function `Join` create a delimited string from a set of objects. Use a comma as a separator to combine the objects in a single line. In some renderers, you might use a [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] line feed (`vbCrLF`) as a separator to list each value on a new line.  
+ Use the [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] function `Join` create a delimited string from a set of objects. Use a comma as a separator to combine the objects in a single line. In some renderers, you might use a [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] line feed (`vbCrLF`) as a separator to list each value on a new line.  
   
  The following expression, when it is used as the Value property for a text box, uses `Join` to create a list.  
   
@@ -108,7 +108,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 ## Example  
  For text boxes that only render a few times, you might choose to add custom code to generate HTML to display values in a text box. HTML in a text box requires extra processing, so this would not be a good choice for a text box that is rendered thousands of times.  
   
- Copy the following [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] functions to a Code block in a report definition. **MakeList** takes the object array that is returned in *result_expression* and builds an unordered list by using HTML tags. **Length** returns the number of items in the object array.  
+ Copy the following [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] functions to a Code block in a report definition. **MakeList** takes the object array that is returned in *result_expression* and builds an unordered list by using HTML tags. **Length** returns the number of items in the object array.  
   
 ```  
 Function MakeList(ByVal items As Object()) As String  

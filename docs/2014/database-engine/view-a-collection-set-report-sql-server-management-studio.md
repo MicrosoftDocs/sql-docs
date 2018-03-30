@@ -21,7 +21,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # View a Collection Set Report (SQL Server Management Studio)
-  After you have configured the management data warehouse, you can view a collection set report in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Reports are provided for the System Data collection sets that are installed during Setup. The reports include the following:  
+  After you have configured the management data warehouse, you can view a collection set report in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Reports are provided for the System Data collection sets that are installed during Setup. The reports include the following:  
   
 -   Disk Usage Summary  
   

@@ -16,7 +16,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Automatic Code Creation (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], numeric values can be automatically generated for the Code attribute, or for any other numeric attribute. When codes are generated automatically, you are not prevented from entering other values for codes; rather an initial value is automatically set.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], numeric values can be automatically generated for the Code attribute, or for any other numeric attribute. When codes are generated automatically, you are not prevented from entering other values for codes; rather an initial value is automatically set.  
   
 ## Generating Code Values  
  Administrators can configure automatically-generated values for the Code attribute by editing the associated entity’s properties. They can specify an initial value, and each subsequent value is increased by one.  
@@ -33,7 +33,7 @@ manager: "jhubbard"
   
 -   In the **Version Management** functional area, an administrator can reverse the transaction that occurred when the member was deleted. However, this means that all of the former member’s attributes and membership in hierarchies and collections is restored. For more information, see [Reverse a Transaction &#40;Master Data Services&#41;](../../2014/master-data-services/reverse-a-transaction-master-data-services.md).  
   
--   An administrator can use the staging process to permanently delete the member. For more information, see [Deactivate or Delete Members by Using the Staging Process &#40;Master Data Services&#41;](../Topic/Deactivate%20or%20Delete%20Members%20by%20Using%20the%20Staging%20Process%20\(Master%20Data%20Services\).md).  
+-   An administrator can use the staging process to permanently delete the member. For more information, see [Deactivate or Delete Members by Using the Staging Process &#40;Master Data Services&#41;](~/2014/master-data-services/add-update-and-delete-data-master-data-services.md).  
   
 ## Related Tasks  
   

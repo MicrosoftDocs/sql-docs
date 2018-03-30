@@ -31,7 +31,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Use the Copy Database Wizard
-  The Copy Database Wizard lets you move or copy databases and their objects easily from one server to another, with no server downtime. You can also upgrade databases from a previous [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. By using this wizard, you can do the following:  
+  The Copy Database Wizard lets you move or copy databases and their objects easily from one server to another, with no server downtime. You can also upgrade databases from a previous [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] version to [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. By using this wizard, you can do the following:  
   
 -   Pick a source and destination server.  
   
@@ -85,9 +85,9 @@ manager: "jhubbard"
   
 -   If you select the **Move** option, the wizard deletes the source database automatically after moving the database. The Copy Database Wizard does not delete a source database if you select the **Copy** option.  
   
--   If you use the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Object method to move the full-text catalog, you must repopulate the index after the move.  
+-   If you use the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object method to move the full-text catalog, you must repopulate the index after the move.  
   
--   The detach-and-attach method detaches the database, moves or copies the database .mdf, .ndf, .ldf files and reattaches the database in the new location. For the detach-and-attach method, to avoid data loss or inconsistency, active sessions cannot be attached to the database being moved or copied. If any active sessions exist, the Copy Database Wizard does not execute the move or copy operation. For the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Object method, active sessions are allowed because the database is never taken offline.  
+-   The detach-and-attach method detaches the database, moves or copies the database .mdf, .ndf, .ldf files and reattaches the database in the new location. For the detach-and-attach method, to avoid data loss or inconsistency, active sessions cannot be attached to the database being moved or copied. If any active sessions exist, the Copy Database Wizard does not execute the move or copy operation. For the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object method, active sessions are allowed because the database is never taken offline.  
   
 ###  <a name="Prerequisites"></a> Prerequisites  
  Ensure that SQL Server Agent is started on the destination server.  
@@ -105,24 +105,24 @@ manager: "jhubbard"
   
 ##  <a name="Copy_Move"></a> Copy, Move or Upgrade Databases  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], in Object Explorer, expand **Databases**, right-click a database, point to **Tasks**, and then click **Copy Database**.  
+1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], in Object Explorer, expand **Databases**, right-click a database, point to **Tasks**, and then click **Copy Database**.  
   
 2.  From the **Select a Source Server** page, specify the server with the database to move or copy, and to enter login information. After you select the authentication method and enter login information, click **Next** to establish the connection to the source server. This connection remains open throughout the session.  
   
      **Source server**  
-     Select the name of the server on which the database or databases you want to move or copy are located, or click the browse (**...**) button to locate the server you want. The server must be at least [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+     Select the name of the server on which the database or databases you want to move or copy are located, or click the browse (**...**) button to locate the server you want. The server must be at least [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)].  
   
      **Use Windows Authentication**  
-     Allow a user to connect through a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows user account.  
+     Allow a user to connect through a [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows user account.  
   
      **Use SQL Server Authentication**  
-     Allow a user to connect by providing a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication user name and password.  
+     Allow a user to connect by providing a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication user name and password.  
   
      **User name**  
-     Enter the user name to connect with. This option is only available if you have selected to connect using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication .  
+     Enter the user name to connect with. This option is only available if you have selected to connect using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication .  
   
      **Password**  
-     Enter the password for the login. This option is only available if you have selected to connect using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.  
+     Enter the password for the login. This option is only available if you have selected to connect using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication.  
   
      **Next**  
      Connect to the server and validate the user. This process checks whether the user is a member of the **sysadmin** fixed server role on the selected computer.  
@@ -136,16 +136,16 @@ manager: "jhubbard"
     >  You can use a destination that is a clustered server; the Copy Database Wizard will make sure you select only shared drives on a clustered destination server.  
   
      **Use Windows Authentication**  
-     Allow a user to connect through a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows user account.  
+     Allow a user to connect through a [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows user account.  
   
      **Use SQL Server Authentication**  
-     Allow a user to connect by providing a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication user name and password.  
+     Allow a user to connect by providing a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication user name and password.  
   
      **User name**  
-     Enter the user name to connect with. This option is only available if you have selected [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.  
+     Enter the user name to connect with. This option is only available if you have selected [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication.  
   
      **Password**  
-     Enter the password for the login. This option is only available if you have selected [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.  
+     Enter the password for the login. This option is only available if you have selected [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication.  
   
      **Next**  
      Connect to the server and validate the user. This process checks whether the user has the permissions listed above on the selected computers.  
@@ -153,7 +153,7 @@ manager: "jhubbard"
 4.  From the **Select a Transfer Method** page, select the transfer method.  
   
      **Use the detach and attach method**  
-     Detach the database from the source server, copy the database files (.mdf, .ndf, and .ldf) to the destination server, and attach the database at the destination server. This method is usually the faster method because the principal work is reading the source disk and writing the destination disk. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logic is required to create objects within the database, or create data storage structures. This method can be slower, however, if the database contains a large amount of allocated but unused space. For instance, a new and practically empty database that is created allocating 100 MB, copies the entire 100 MB, even if only 5 MB is full.  
+     Detach the database from the source server, copy the database files (.mdf, .ndf, and .ldf) to the destination server, and attach the database at the destination server. This method is usually the faster method because the principal work is reading the source disk and writing the destination disk. No [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] logic is required to create objects within the database, or create data storage structures. This method can be slower, however, if the database contains a large amount of allocated but unused space. For instance, a new and practically empty database that is created allocating 100 MB, copies the entire 100 MB, even if only 5 MB is full.  
   
     > [!NOTE]  
     >  This method makes the database unavailable to users during the transfer.  
@@ -213,7 +213,7 @@ manager: "jhubbard"
      Include full-text catalogs from the source database.  
   
      **SSIS Package**  
-     Include [!INCLUDE[ssIS](../../includes/ssis-md.md)] packages defined in the source database.  
+     Include [!INCLUDE[ssIS](../includes/ssis-md.md)] packages defined in the source database.  
   
      **Description**  
      A description of the object.  
@@ -233,13 +233,13 @@ manager: "jhubbard"
   
      For example: "\\\\*server_name*\C$\Program Files\Microsoft SQL Server\MSSQL110.MSSQLSERVER\MSSQL\Data  
   
-9. The Copy Database Wizard creates a [!INCLUDE[ssIS](../../includes/ssis-md.md)] package to transfer the database From the **Configure the Package** page, customize the package if appropriate.  
+9. The Copy Database Wizard creates a [!INCLUDE[ssIS](../includes/ssis-md.md)] package to transfer the database From the **Configure the Package** page, customize the package if appropriate.  
   
      **Package location**  
-     Displays where the [!INCLUDE[ssIS](../../includes/ssis-md.md)] package will be written.  
+     Displays where the [!INCLUDE[ssIS](../includes/ssis-md.md)] package will be written.  
   
      **Package name**  
-     Enter a name for the [!INCLUDE[ssIS](../../includes/ssis-md.md)] package.  
+     Enter a name for the [!INCLUDE[ssIS](../includes/ssis-md.md)] package.  
   
      **Logging options**  
      Select whether to store the logging information in the Windows event log, or in a text file.  
@@ -247,7 +247,7 @@ manager: "jhubbard"
      **Error log file path**  
      Provide a path for the location of the log file. This option is only available if the text file logging option is selected.  
   
-10. From the **Schedule the Package** page, specify when you want the move or copy operation to start. If you are not a system administrator, you must specify a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy account that has access to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) Package execution subsystem.  
+10. From the **Schedule the Package** page, specify when you want the move or copy operation to start. If you are not a system administrator, you must specify a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent Proxy account that has access to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) Package execution subsystem.  
   
      **Run immediately**  
      Start the move or copy operation after you click **Next**.  
@@ -261,7 +261,7 @@ manager: "jhubbard"
      **Integration Services proxy account**  
      Select an available proxy account. To schedule the transfer, there must be at least one proxy account available to the user, configured with permission to the **SQL Server Integration Services package execution** subsystem.  
   
-     To create a proxy account for [!INCLUDE[ssIS](../../includes/ssis-md.md)] package execution, in Object Explorer, expand **SQL Server Agent**, expand **Proxies**, right-click **SSIS Package Execution**, and then click **New Proxy**.  
+     To create a proxy account for [!INCLUDE[ssIS](../includes/ssis-md.md)] package execution, in Object Explorer, expand **SQL Server Agent**, expand **Proxies**, right-click **SSIS Package Execution**, and then click **New Proxy**.  
   
      Members of the **sysadmin** fixed server role can select the **SQL Server Agent Service Account**, which has the necessary permissions.  
   
@@ -277,9 +277,9 @@ manager: "jhubbard"
      Provides any messages returned from each step.  
   
 ##  <a name="FollowUp"></a> Follow Up: After Upgrading a SQL Server Database  
- After you use the Copy Database Wizard to upgrade a database from an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], the database becomes available immediately and is automatically upgraded. If the database has full-text indexes, the upgrade process either imports, resets, or rebuilds them, depending on the setting of the **Full-Text Upgrade Option** server property. If the upgrade option is set to **Import** or **Rebuild**, the full-text indexes will be unavailable during the upgrade. Depending the amount of data being indexed, importing can take several hours, and rebuilding can take up to ten times longer. Note also that when the upgrade option is set to **Import**, if a full-text catalog is not available, the associated full-text indexes are rebuilt. For information about viewing or changing the setting of the **Full-Text Upgrade Option** property, see [Manage and Monitor Full-Text Search for a Server Instance](../../2014/database-engine/manage-and-monitor-full-text-search-for-a-server-instance.md).  
+ After you use the Copy Database Wizard to upgrade a database from an earlier version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], the database becomes available immediately and is automatically upgraded. If the database has full-text indexes, the upgrade process either imports, resets, or rebuilds them, depending on the setting of the **Full-Text Upgrade Option** server property. If the upgrade option is set to **Import** or **Rebuild**, the full-text indexes will be unavailable during the upgrade. Depending the amount of data being indexed, importing can take several hours, and rebuilding can take up to ten times longer. Note also that when the upgrade option is set to **Import**, if a full-text catalog is not available, the associated full-text indexes are rebuilt. For information about viewing or changing the setting of the **Full-Text Upgrade Option** property, see [Manage and Monitor Full-Text Search for a Server Instance](../../2014/database-engine/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
- If the compatibility level of a user database was 100 or higher before upgrade, it remains the same after upgrade. If the compatibility level was 90 in the upgraded database, the compatibility level is set to 100, which is the lowest supported compatibility level in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md).  
+ If the compatibility level of a user database was 100 or higher before upgrade, it remains the same after upgrade. If the compatibility level was 90 in the upgraded database, the compatibility level is set to 100, which is the lowest supported compatibility level in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 ## See Also  
  [Upgrade a Database Using Detach and Attach &#40;Transact-SQL&#41;](../../2014/database-engine/upgrade-a-database-using-detach-and-attach-transact-sql.md)   

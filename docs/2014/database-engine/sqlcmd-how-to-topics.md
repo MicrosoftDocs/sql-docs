@@ -16,7 +16,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # sqlcmd How-to Topics
-  The [sqlcmd Utility](../../2014/database-engine/sqlcmd-utility.md) lets you enter [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, system procedures, and script files at the command prompt, in Query Editor in SQLCMD mode, in a Windows script file or in an operating system (Cmd.exe) job step of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job.  
+  The [sqlcmd Utility](../../2014/database-engine/sqlcmd-utility.md) lets you enter [!INCLUDE[tsql](../includes/tsql-md.md)] statements, system procedures, and script files at the command prompt, in Query Editor in SQLCMD mode, in a Windows script file or in an operating system (Cmd.exe) job step of a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent job.  
   
 ## Related Tasks  
  The following topics discuss how to use the [sqlcmd Utility](../../2014/database-engine/sqlcmd-utility.md):  

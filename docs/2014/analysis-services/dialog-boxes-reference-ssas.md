@@ -16,7 +16,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Dialog Boxes Reference (SSAS)
-  To learn about the dialog boxes in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], see the following topics.  
+  To learn about the dialog boxes in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], see the following topics.  
   
 -   [Column Width Dialog Box &#40;SSAS&#41;](../../2014/analysis-services/column-width-dialog-box-ssas.md)  
   

@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 caps.latest.revision: 50
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Replication Log Reader Agent
@@ -67,7 +67,7 @@ manager: "jhubbard"
  Displays usage information.  
   
  **-Publisher** *server_name*[**\\***instance_name*]  
- Is the name of the Publisher. Specify *server_name* for the default instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server. Specify *server_name***\\***instance_name* for a named instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server.  
+ Is the name of the Publisher. Specify *server_name* for the default instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on that server. Specify *server_name***\\***instance_name* for a named instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on that server.  
   
  **-PublisherDB** *publisher_database*  
  Is the name of the Publisher database.  
@@ -79,7 +79,7 @@ manager: "jhubbard"
  Is the path of the agent definition file. An agent definition file contains command-line arguments for the agent. The content of the file is parsed as an executable file. Use double quotation marks (") to specify argument values that contain arbitrary characters.  
   
  **-Distributor** *server_name*[**\\***instance_name*]  
- Is the Distributor name. Specify *server_name* for the default instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server. Specify *server_name***\\***instance_name* for a named instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server.  
+ Is the Distributor name. Specify *server_name* for the default instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on that server. Specify *server_name***\\***instance_name* for a named instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on that server.  
   
  **-DistributorLogin** *distributor_login*  
  Is the Distributor login name.  
@@ -88,7 +88,7 @@ manager: "jhubbard"
  Is the Distributor password.  
   
  **-DistributorSecurityMode** [ **0**| **1**]  
- Specifies the security mode of the Distributor. A value of **0** indicates [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication Mode (default), and a value of **1** indicates [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows Authentication Mode.  
+ Specifies the security mode of the Distributor. A value of **0** indicates [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication Mode (default), and a value of **1** indicates [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Authentication Mode.  
   
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  Is the level of Secure Sockets Layer (SSL) encryption that is used by the Log Reader Agent when making connections.  
@@ -126,7 +126,7 @@ manager: "jhubbard"
  Specifies the maximum number of statements grouped into a transaction as the Log Reader writes commands to the distribution database. Using this parameter allows the Log Reader Agent and Distribution Agent to divide large transactions (consisting of many commands) at the Publisher into several smaller transactions when applied at the Subscriber. Specifying this parameter can reduce contention at the Distributor and reduce latency between the Publisher and Subscriber. Because the original transaction is applied in smaller units, the Subscriber can access rows of a large logical Publisher transaction prior to the end of the original transaction, breaking strict transactional atomicity. The default is **0**, which preserves the transaction boundaries of the Publisher.  
   
 > [!NOTE]  
->  This parameter is ignored for non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] publications. For more information, see the section "Configuring the Transaction Set Job" in [Performance Tuning for Oracle Publishers](../../../2014/relational-databases/replication/performance-tuning-for-oracle-publishers.md).  
+>  This parameter is ignored for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publications. For more information, see the section "Configuring the Transaction Set Job" in [Performance Tuning for Oracle Publishers](../../../2014/relational-databases/replication/performance-tuning-for-oracle-publishers.md).  
   
  **-MessageInterval** *message_interval*  
  Is the time interval used for history logging. A history event is logged when the **MessageInterval** value is reached after the last history event is logged.  
@@ -159,10 +159,10 @@ manager: "jhubbard"
  Specifies an agent profile to use for agent parameters. If **ProfileName** is NULL, the agent profile is disabled. If **ProfileName** is not specified, the default profile for the agent type is used. For information, see [Replication Agent Profiles](../../../2014/relational-databases/replication/replication-agent-profiles.md).  
   
  **-PublisherFailoverPartner** *server_name*[**\\***instance_name*]  
- Specifies the failover partner instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] participating in a database mirroring session with the publication database. For more information, see [Database Mirroring and Replication &#40;SQL Server&#41;](../../../2014/database-engine/database-mirroring-and-replication-sql-server.md).  
+ Specifies the failover partner instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] participating in a database mirroring session with the publication database. For more information, see [Database Mirroring and Replication &#40;SQL Server&#41;](../../../2014/database-engine/database-mirroring-and-replication-sql-server.md).  
   
  **-PublisherSecurityMode** [ **0**| **1**]  
- Specifies the security mode of the Publisher. A value of **0** indicates [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication (default), and a value of **1** indicates Windows Authentication Mode.  
+ Specifies the security mode of the Publisher. A value of **0** indicates [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication (default), and a value of **1** indicates Windows Authentication Mode.  
   
  **-PublisherLogin** *publisher_login*  
  Is the Publisher login name.  
@@ -180,12 +180,12 @@ manager: "jhubbard"
  Is the number of replication commands to be read from the transaction log before being issued to the Subscriber by the Distribution Agent. The default is 0. If this parameter is not specified, the Log Reader Agent will read to the end of the log or to the number specified in **-ReadBatchSize** (number of transactions).  
   
  **-RecoverFromDataErrors**  
- Specifies that the Log Reader Agent continue to run when it encounters errors in column data published from a non-SQL Server Publisher. By default, such errors cause the Log Reader Agent to fail. When you use **-RecoverFromDataErrors**, erroneous column data is replicated either as NULL or an appropriate nonnull value, and warning messages are logged to the [MSlogreader_history](../Topic/MSlogreader_history%20\(Transact-SQL\).md) table. This parameter is only supported for Oracle Publishers.  
+ Specifies that the Log Reader Agent continue to run when it encounters errors in column data published from a non-SQL Server Publisher. By default, such errors cause the Log Reader Agent to fail. When you use **-RecoverFromDataErrors**, erroneous column data is replicated either as NULL or an appropriate nonnull value, and warning messages are logged to the [MSlogreader_history](~/relational-databases/system-tables/mslogreader-history-transact-sql.md) table. This parameter is only supported for Oracle Publishers.  
   
 ## Remarks  
   
 > [!IMPORTANT]  
->  If you installed [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent to run under a local system account instead of under a domain user account (the default), the service can access only the local computer. If the Log Reader Agent that runs under [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent is configured to use Windows Authentication Mode when it logs in to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], the Log Reader Agent fails. The default setting is [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication. For information about changing security accounts, see [View and Modify Replication Security Settings](../../../2014/relational-databases/replication/view-and-modify-replication-security-settings.md).  
+>  If you installed [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to run under a local system account instead of under a domain user account (the default), the service can access only the local computer. If the Log Reader Agent that runs under [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is configured to use Windows Authentication Mode when it logs in to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the Log Reader Agent fails. The default setting is [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. For information about changing security accounts, see [View and Modify Replication Security Settings](../../../2014/relational-databases/replication/view-and-modify-replication-security-settings.md).  
   
  To start the Log Reader Agent, execute **logread.exe** from the command prompt. For information, see [Replication Agent Executables Concepts](../../../2014/relational-databases/replication/dev-guide/replication-agent-executables-concepts.md).  
   

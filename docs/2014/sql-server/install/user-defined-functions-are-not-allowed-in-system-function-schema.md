@@ -22,7 +22,7 @@ manager: "jhubbard"
   The Upgrade Advisor detected user-defined functions that are owned by the undocumented user **system_function_schema**. You cannot create a user-defined system function by specifying this user. The **system_function_schema** user name does not exist, and the user ID that is associated with this name (UID = 4) is reserved for the **sys** schema and is restricted to internal use only.  
   
 ## Component  
- [!INCLUDE[ssDE](../../../includes/ssde-md.md)]  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## Description  
  System object storage and access has changed in the following ways:  
@@ -39,7 +39,7 @@ manager: "jhubbard"
   
 -   Data Definition Language (DDL) statements that reference **system_function_schema** will fail. For example, the statement `CREATE FUNCTION system`_`function`\_`schema.fn`\_`MySystemFunction` … will not succeed.  
   
--   After you upgrade to [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], existing objects that are owned by **system_function_schema** are contained only in the **sys** schema of the **master** database. Because system objects cannot be modified, these functions can never be changed or dropped from the **master** database. Additionally, these functions cannot be invoked from other databases by specifying only a one-part function name.  
+-   After you upgrade to [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], existing objects that are owned by **system_function_schema** are contained only in the **sys** schema of the **master** database. Because system objects cannot be modified, these functions can never be changed or dropped from the **master** database. Additionally, these functions cannot be invoked from other databases by specifying only a one-part function name.  
   
 ## Corrective Action  
  Before you upgrade , complete the following tasks:  
@@ -63,7 +63,7 @@ manager: "jhubbard"
 -   "Resource Database"  
   
 ## See Also  
- [SQL Server 2014 Upgrade Advisor &#91;new&#93;](../Topic/SQL%20Server%202014%20Upgrade%20Advisor%20[new].md)   
+ [SQL Server 2014 Upgrade Advisor &#91;new&#93;](~/2014/sql-server/install/sql-server-2014-upgrade-advisor.md)   
  [Database Engine Upgrade Issues](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [Remove statements that modify system objects](../../../2014/sql-server/install/remove-statements-that-modify-system-objects.md)   
  [Remove statements that drop system objects](../../../2014/sql-server/install/remove-statements-that-drop-system-objects.md)  

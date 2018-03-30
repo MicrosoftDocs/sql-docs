@@ -24,7 +24,7 @@ manager: "jhubbard"
   
 -   **Preparing for change capture**: When the verification passes successfully, the Oracle CDC Instance scans all of the capture instances currently defined and prepares the Oracle LogMiner queries and other support structures required for change capture. In addition, the Oracle instance re-loads the internal capture state that was saved the last time the Oracle CDC Instance run.  
   
--   **Capturing changes from Oracle**: The Oracle CDC Instance pools changes from Oracle by means of the Oracle LogMiner facility, orders them in according to transaction commit, and then changes the time in a transaction and writes them to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] change tables in the CDC database.  
+-   **Capturing changes from Oracle**: The Oracle CDC Instance pools changes from Oracle by means of the Oracle LogMiner facility, orders them in according to transaction commit, and then changes the time in a transaction and writes them to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] change tables in the CDC database.  
   
 -   **Handling service shutdown**: The life cycle of the Oracle CDC Instance is managed by the Oracle CDC Service. When the Oracle CDC Instance is requested to shut down, it performs the following tasks:  
   

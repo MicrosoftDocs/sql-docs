@@ -16,18 +16,18 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Data Mining Projects
-  A data mining project is part of an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] solution. During the design process, the objects that you create in this project are available for testing and querying as part of a workspace database. When you want users to be able to query or browse the objects in the project, you must deploy the project to an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] running in multidimensional mode.  
+  A data mining project is part of an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] solution. During the design process, the objects that you create in this project are available for testing and querying as part of a workspace database. When you want users to be able to query or browse the objects in the project, you must deploy the project to an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] running in multidimensional mode.  
   
  This topic provides you with the basic information needed to understand and create data mining projects.  
   
  
 ##  <a name="bkmk_Overview"></a> Creating Data Mining Projects  
- In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], you build data mining projects using the template, **OLAP and Data Mining Project**. You can also create data mining projects programmatically, by using AMO. Individual data mining objects can be scripted using the Analysis Services Scripting language (ASSL). For more information, see [Multidimensional Model Data Access &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
+ In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], you build data mining projects using the template, **OLAP and Data Mining Project**. You can also create data mining projects programmatically, by using AMO. Individual data mining objects can be scripted using the Analysis Services Scripting language (ASSL). For more information, see [Multidimensional Model Data Access &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
   
- If you create a data mining project within an existing solution, by default the data mining objects will be deployed to an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database with the same name as the solution file. You can change this name and the target server by using the **Project Properties** dialog box. For more information, see [Configure Analysis Services Project Properties &#40;SSDT&#41;](../../2014/analysis-services/configure-analysis-services-project-properties-ssdt.md).  
+ If you create a data mining project within an existing solution, by default the data mining objects will be deployed to an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database with the same name as the solution file. You can change this name and the target server by using the **Project Properties** dialog box. For more information, see [Configure Analysis Services Project Properties &#40;SSDT&#41;](../../2014/analysis-services/configure-analysis-services-project-properties-ssdt.md).  
   
 > [!WARNING]  
->  To successfully build and deploy your project, you must have access to an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] that is running in OLAP/Data Mining mode. You cannot develop or deploy data mining solutions on an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] that supports tabular models, nor can you use data directly from a PowerPivot workbook or from a tabular model that uses the in-memory data store. To determine whether the instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] that you have can support data mining, see [Determine the Server Mode of an Analysis Services Instance](../../2014/analysis-services/determine-the-server-mode-of-an-analysis-services-instance.md).  
+>  To successfully build and deploy your project, you must have access to an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] that is running in OLAP/Data Mining mode. You cannot develop or deploy data mining solutions on an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] that supports tabular models, nor can you use data directly from a PowerPivot workbook or from a tabular model that uses the in-memory data store. To determine whether the instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] that you have can support data mining, see [Determine the Server Mode of an Analysis Services Instance](../../2014/analysis-services/determine-the-server-mode-of-an-analysis-services-instance.md).  
   
  Within each data mining project that you create, you will follow these steps:  
   
@@ -64,11 +64,11 @@ manager: "mblythe"
  
   
 ###  <a name="bkmk_DataSources"></a> Data Sources  
- The data source defines the connection string and authentication information that the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server will use to connect to the data source. The data source can contain multiple tables or views; it can be as simple as a single Excel workbook or text file, or as complex as an Online Analytical Processing (OLAP) database or large relational database.  
+ The data source defines the connection string and authentication information that the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] server will use to connect to the data source. The data source can contain multiple tables or views; it can be as simple as a single Excel workbook or text file, or as complex as an Online Analytical Processing (OLAP) database or large relational database.  
   
  A single data mining project can reference multiple data sources. Even though a mining model can use only one data source at a time, the project could have multiple models drawing on different data sources.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supports data from many external providers, and SQL Server Data Mining can use both relational and cube data as a data source. However, if you develop both types of projects—models based on relational sources and models based on OLAP cubes—you might wish to develop and manage these in separate projects.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supports data from many external providers, and SQL Server Data Mining can use both relational and cube data as a data source. However, if you develop both types of projects—models based on relational sources and models based on OLAP cubes—you might wish to develop and manage these in separate projects.  
   
 -   Typically models that are based on an OLAP cube should be developed within the OLAP design solution. One reason is that models based on a cube must process the cube to update data. Generally, you should use cube data only when that is the principal means of data storage and access, or when you require the aggregations, dimensions, and attributes created by the multidimensional project.  
   
@@ -93,7 +93,7 @@ manager: "mblythe"
   
 -   Create derived columns, such as dateparts, substrings, etc.  
   
--   Aggregate values using [!INCLUDE[tsql](../../includes/tsql-md.md)] statements such as GROUP BY  
+-   Aggregate values using [!INCLUDE[tsql](../includes/tsql-md.md)] statements such as GROUP BY  
   
 -   Restrict data temporarily, or sample data  
   
@@ -117,7 +117,7 @@ manager: "mblythe"
   
 -   When you use data from an OLAP cube, the mining structure must be in the same database as the OLAP solution.  To create a mining structure, you select attributes from the dimensions and related measures in your OLAP solution. Numeric values are typically found in measures, and categorical variables in dimensions. For more information, see [Create an OLAP Mining Structure](../../2014/analysis-services/create-an-olap-mining-structure.md).  
   
--   You can also define mining structures by using DMX. For more information, see [Data Mining Extensions &#40;DMX&#41; Data Definition Statements](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Data%20Definition%20Statements.md).  
+-   You can also define mining structures by using DMX. For more information, see [Data Mining Extensions &#40;DMX&#41; Data Definition Statements](~/dmx/dmx-statements-data-definition.md).  
   
  After you have created the initial mining structure, you can copy, modify, and alias the structure columns.  
   
@@ -154,9 +154,9 @@ manager: "mblythe"
  
   
 ###  <a name="bkmk_ViewExplore"></a> View and Explore Models  
- After you have created a model, you can use visual tools and queries to explore the patterns in the model and learn more about the underlying patterns and statistics. On the **Mining Model Viewer** tab in Data Mining Designer, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] provides viewers for each mining model type, which you can use to explore the mining models.  
+ After you have created a model, you can use visual tools and queries to explore the patterns in the model and learn more about the underlying patterns and statistics. On the **Mining Model Viewer** tab in Data Mining Designer, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] provides viewers for each mining model type, which you can use to explore the mining models.  
   
- These visualizations are temporary, and are closed without saving when you exit the session with [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Therefore, if you need to export these visualizations to another application for presentation or further analysis, use the **Copy** commands provided in each tab or pane of the viewer interface.  
+ These visualizations are temporary, and are closed without saving when you exit the session with [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Therefore, if you need to export these visualizations to another application for presentation or further analysis, use the **Copy** commands provided in each tab or pane of the viewer interface.  
   
  The Data Mining Add-ins for Excel also provides a Visio template that you can use to represent your models in a Visio diagram and annotate and modify the diagram using Visio tools. For more information, see [Microsoft SQL Server 2008 SP2 Data Mining Add-ins for Microsoft Office 2007](http://go.microsoft.com/fwlink/?LinkID=123146).  
   
@@ -165,7 +165,7 @@ manager: "mblythe"
 ###  <a name="bkmk_Validate"></a> Test and Validate Models  
  After you have created a model, you can investigate the results and make decisions about which models perform the best.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] provides several charts  that you can use to provides tools that you can use to directly compare mining models and choose the most accurate or useful mining model. These tools include a lift chart, profit chart, and a classification matrix. You can generate these charts by using the **Mining Accuracy Chart** tab of Data Mining Designer.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] provides several charts  that you can use to provides tools that you can use to directly compare mining models and choose the most accurate or useful mining model. These tools include a lift chart, profit chart, and a classification matrix. You can generate these charts by using the **Mining Accuracy Chart** tab of Data Mining Designer.  
   
  You can also use the cross-validation report to perform iterative subsampling of your data to determine whether the model is biased to a particular set of data. The statistics that the report provides can be used to objectively compare models and assess the quality of your training data.  
   
@@ -176,14 +176,14 @@ manager: "mblythe"
 
   
 ###  <a name="bkmk_Predict"></a> Create Predictions  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] provides a query language called Data Mining Extensions (DMX) that is the basis for creating predictions and is easily scriptable. To help you build DMX prediction queries, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a query builder, available in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. There are also many DMX templates for the query editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].If you are new to prediction queries, we recommend that you use the query builder that is provided in both Data Mining Designer and [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information, see [Data Mining Tools](../../2014/analysis-services/data-mining-tools.md).  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] provides a query language called Data Mining Extensions (DMX) that is the basis for creating predictions and is easily scriptable. To help you build DMX prediction queries, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provides a query builder, available in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. There are also many DMX templates for the query editor in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].If you are new to prediction queries, we recommend that you use the query builder that is provided in both Data Mining Designer and [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. For more information, see [Data Mining Tools](../../2014/analysis-services/data-mining-tools.md).  
   
- The predictions that you create in either [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] or [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] are not persisted, so if your queries are complex, or you need to reproduce the results, we recommend that you save your prediction queries to DMX query files, script them, or embed the queries as part of an Integration Services package.  
+ The predictions that you create in either [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] or [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] are not persisted, so if your queries are complex, or you need to reproduce the results, we recommend that you save your prediction queries to DMX query files, script them, or embed the queries as part of an Integration Services package.  
   
  
   
 ##  <a name="bkmk_API"></a> Programmatic Access to Data Mining Objects  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] provides several tools that you can use to programmatically work with data mining projects and the objects in them. The DMX language provides statements that you can use to create data sources and data source views, and to create, train, and use data mining structure and models. For more information, see [Data Mining Extensions &#40;DMX&#41; Reference](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Reference.md).  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] provides several tools that you can use to programmatically work with data mining projects and the objects in them. The DMX language provides statements that you can use to create data sources and data source views, and to create, train, and use data mining structure and models. For more information, see [Data Mining Extensions &#40;DMX&#41; Reference](~/dmx/data-mining-extensions-dmx-reference.md).  
   
  You can also perform these tasks by using the Analysis Services Scripting Language (ASSL), or by using Analysis Management Objects (AMO). For more information, see [Developing with XMLA in Analysis Services](../../2014/analysis-services/dev-guide/developing-with-xmla-in-analysis-services.md).  
   

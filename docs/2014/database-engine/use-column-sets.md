@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 caps.latest.revision: 27
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Use Column Sets
@@ -23,7 +23,7 @@ manager: "jhubbard"
   
  You should consider using column sets when the number of columns in a table is large, and operating on them individually is cumbersome. Applications might see some performance improvement when they select and insert data by using column sets on tables that have lots of columns. However, the performance of column sets can be reduced when many indexes are defined on the columns in the table. This is because the amount of memory that is required for an execution plan increases.  
   
- To define a column set, use the *<column_set_name>* FOR ALL_SPARSE_COLUMNS keywords in the[CREATE TABLE](../Topic/CREATE%20TABLE%20\(Transact-SQL\).md) or [ALTER TABLE](../Topic/ALTER%20TABLE%20\(Transact-SQL\).md) statements.  
+ To define a column set, use the *<column_set_name>* FOR ALL_SPARSE_COLUMNS keywords in the[CREATE TABLE](~/t-sql/statements/create-table-transact-sql.md) or [ALTER TABLE](~/t-sql/statements/alter-table-transact-sql.md) statements.  
   
 ## Guidelines for Using Column Sets  
  When you use column sets, consider the following guidelines:  
@@ -71,7 +71,7 @@ manager: "jhubbard"
   
 -   Conceptually, a column set is a type of updatable, computed XML column that aggregates a set of underlying relational columns into a single XML representation. The column set only supports the ALL_SPARSE_COLUMNS property. This property is used to aggregate all nonnull values from all sparse columns for a particular row.  
   
--   In the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] table editor, column sets are displayed as an editable XML field. Define column sets in the format:  
+-   In the [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] table editor, column sets are displayed as an editable XML field. Define column sets in the format:  
   
     ```  
     <column_name_1>value1</column_name_1><column_name_2>value2</column_name_2>...  
@@ -187,7 +187,7 @@ GO
 SELECT DocID, Title, SpecialPurposeColumns FROM DocumentStoreWithColumnSet ;  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+ [!INCLUDE[ssResult](../includes/ssresult-md.md)]  
   
  `DocID Title        SpecialPurposeColumns`  
   
@@ -206,7 +206,7 @@ FROM DocumentStoreWithColumnSet
 WHERE ProductionSpecification IS NOT NULL ;  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+ [!INCLUDE[ssResult](../includes/ssresult-md.md)]  
   
  `DocID Title        SpecialPurposeColumns`  
   
@@ -223,7 +223,7 @@ FROM DocumentStoreWithColumnSet
 WHERE ProductionSpecification IS NOT NULL ;  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+ [!INCLUDE[ssResult](../includes/ssresult-md.md)]  
   
  `DocID Title        ProductionSpecification ProductionLocation`  
   

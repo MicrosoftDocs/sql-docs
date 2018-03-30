@@ -18,15 +18,15 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # About the SQL Server Database Engine
-  The [!INCLUDE[ssDE](../../../includes/ssde-md.md)] component of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is the core service for storing, processing, and securing data. The [!INCLUDE[ssDE](../../../includes/ssde-md.md)] provides controlled access and rapid transaction processing to meet the requirements of the most demanding data consuming applications in your enterprise.  
+  The [!INCLUDE[ssDE](../../includes/ssde-md.md)] component of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is the core service for storing, processing, and securing data. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] provides controlled access and rapid transaction processing to meet the requirements of the most demanding data consuming applications in your enterprise.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports up to 50 instances of the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] on a single computer. To create a typical [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installation, see [Install SQL Server 2014 from the Installation Wizard &#40;Setup&#41;](../../../2014/sql-server/install/install-sql-server-2014-from-the-installation-wizard-setup.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports up to 50 instances of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] on a single computer. To create a typical [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation, see [Install SQL Server 2014 from the Installation Wizard &#40;Setup&#41;](../../../2014/sql-server/install/install-sql-server-2014-from-the-installation-wizard-setup.md).  
   
- **Important** For local installations, you must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share.  
+ **Important** For local installations, you must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share.  
   
- The following features are installed when you select **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Database Engine** on the Components to Install page of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Installation Wizard:  
+ The following features are installed when you select **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine** on the Components to Install page of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard:  
   
--   [!INCLUDE[ssDE](../../../includes/ssde-md.md)]  
+-   [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 -   Replication - is an optional component  
   
@@ -41,7 +41,7 @@ manager: "jhubbard"
   
 -   Data Quality Client  
   
--   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]  
+-   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
   
 -   Connectivity components  
   
@@ -49,12 +49,12 @@ manager: "jhubbard"
   
 -   Management tools  
   
--   [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]  
+-   [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]  
   
 -   Documentation components  
   
 > [!NOTE]  
->  By default, sample databases and sample code are not installed as part of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup. To install sample databases and sample code, see the [CodePlex Web site](http://go.microsoft.com/fwlink/?LinkId=87843).  
+>  By default, sample databases and sample code are not installed as part of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup. To install sample databases and sample code, see the [CodePlex Web site](http://go.microsoft.com/fwlink/?LinkId=87843).  
   
 ## See Also  
  [Features Supported by the Editions of SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   

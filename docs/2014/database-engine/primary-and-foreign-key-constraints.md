@@ -17,11 +17,11 @@ helpviewer_keywords:
 ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
 caps.latest.revision: 16
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Primary and Foreign Key Constraints
-  Primary keys and foreign keys are two types of constraints that can be used to enforce data integrity in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables. These are important database objects.  
+  Primary keys and foreign keys are two types of constraints that can be used to enforce data integrity in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tables. These are important database objects.  
   
  This topic contains the following sections.  
   
@@ -34,7 +34,7 @@ manager: "jhubbard"
 ##  <a name="PKeys"></a> Primary Key Constraints  
  A table typically has a column or combination of columns that contain values that uniquely identify each row in the table. This column, or columns, is called the primary key (PK) of the table and enforces the entity integrity of the table. Because primary key constraints guarantee unique data, they are frequently defined on an identity column.  
   
- When you specify a primary key constraint for a table, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] enforces data uniqueness by automatically creating a unique index for the primary key columns. This index also permits fast access to data when the primary key is used in queries. If a primary key constraint is defined on more than one column, values may be duplicated within one column, but each combination of values from all the columns in the primary key constraint definition must be unique.  
+ When you specify a primary key constraint for a table, the [!INCLUDE[ssDE](../includes/ssde-md.md)] enforces data uniqueness by automatically creating a unique index for the primary key columns. This index also permits fast access to data when the primary key is used in queries. If a primary key constraint is defined on more than one column, values may be duplicated within one column, but each combination of values from all the columns in the primary key constraint definition must be unique.  
   
  As shown in the following illustration, the **ProductID** and **VendorID** columns in the **Purchasing.ProductVendor** table form a composite primary key constraint for this table. This makes sure that that every row in the **ProductVendor** table has a unique combination of **ProductID** and **VendorID**. This prevents the insertion of duplicate rows.  
   
@@ -60,7 +60,7 @@ manager: "jhubbard"
 ### Indexes on Foreign Key Constraints  
  Unlike primary key constraints, creating a foreign key constraint does not automatically create a corresponding index. However, manually creating an index on a foreign key is often useful for the following reasons:  
   
--   Foreign key columns are frequently used in join criteria when the data from related tables is combined in queries by matching the column or columns in the foreign key constraint of one table with the primary or unique key column or columns in the other table. An index enables the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to quickly find related data in the foreign key table. However, creating this index is not required. Data from two related tables can be combined even if no primary key or foreign key constraints are defined between the tables, but a foreign key relationship between two tables indicates that the two tables have been optimized to be combined in a query that uses the keys as its criteria.  
+-   Foreign key columns are frequently used in join criteria when the data from related tables is combined in queries by matching the column or columns in the foreign key constraint of one table with the primary or unique key column or columns in the other table. An index enables the [!INCLUDE[ssDE](../includes/ssde-md.md)] to quickly find related data in the foreign key table. However, creating this index is not required. Data from two related tables can be combined even if no primary key or foreign key constraints are defined between the tables, but a foreign key relationship between two tables indicates that the two tables have been optimized to be combined in a query that uses the keys as its criteria.  
   
 -   Changes to primary key constraints are checked with foreign key constraints in related tables.  
   
@@ -70,10 +70,10 @@ manager: "jhubbard"
  A foreign key constraint prevents this situation. The constraint enforces referential integrity by guaranteeing that changes cannot be made to data in the primary key table if those changes invalidate the link to data in the foreign key table. If an attempt is made to delete the row in a primary key table or to change a primary key value, the action will fail when the deleted or changed primary key value corresponds to a value in the foreign key constraint of another table. To successfully change or delete a row in a foreign key constraint, you must first either delete the foreign key data in the foreign key table or change the foreign key data in the foreign key table, which links the foreign key to different primary key data.  
   
 #### Cascading Referential Integrity  
- By using cascading referential integrity constraints, you can define the actions that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] takes when a user tries to delete or update a key to which existing foreign keys point. The following cascading actions can be defined.  
+ By using cascading referential integrity constraints, you can define the actions that the [!INCLUDE[ssDE](../includes/ssde-md.md)] takes when a user tries to delete or update a key to which existing foreign keys point. The following cascading actions can be defined.  
   
  NO ACTION  
- The [!INCLUDE[ssDE](../../includes/ssde-md.md)] raises an error and the delete or update action on the row in the parent table is rolled back.  
+ The [!INCLUDE[ssDE](../includes/ssde-md.md)] raises an error and the delete or update action on the row in the parent table is rolled back.  
   
  CASCADE  
  Corresponding rows are updated or deleted in the referencing table when that row is updated or deleted in the parent table. CASCADE cannot be specified if a `timestamp` column is part of either the foreign key or the referenced key. ON DELETE CASCADE cannot be specified for a table that has an INSTEAD OF DELETE trigger. ON UPDATE CASCADE cannot be specified for tables that have INSTEAD OF UPDATE triggers.  
@@ -84,14 +84,14 @@ manager: "jhubbard"
  SET DEFAULT  
  All the values that make up the foreign key are set to their default values if the corresponding row in the parent table is updated or deleted. For this constraint to execute, all foreign key columns must have default definitions. If a column is nullable, and there is no explicit default value set, NULL becomes the implicit default value of the column. Cannot be specified for tables that have INSTEAD OF UPDATE triggers.  
   
- CASCADE, SET NULL, SET DEFAULT and NO ACTION can be combined on tables that have referential relationships with each other. If the [!INCLUDE[ssDE](../../includes/ssde-md.md)] encounters NO ACTION, it stops and rolls back related CASCADE, SET NULL and SET DEFAULT actions. When a DELETE statement causes a combination of CASCADE, SET NULL, SET DEFAULT and NO ACTION actions, all the CASCADE, SET NULL and SET DEFAULT actions are applied before the [!INCLUDE[ssDE](../../includes/ssde-md.md)] checks for any NO ACTION.  
+ CASCADE, SET NULL, SET DEFAULT and NO ACTION can be combined on tables that have referential relationships with each other. If the [!INCLUDE[ssDE](../includes/ssde-md.md)] encounters NO ACTION, it stops and rolls back related CASCADE, SET NULL and SET DEFAULT actions. When a DELETE statement causes a combination of CASCADE, SET NULL, SET DEFAULT and NO ACTION actions, all the CASCADE, SET NULL and SET DEFAULT actions are applied before the [!INCLUDE[ssDE](../includes/ssde-md.md)] checks for any NO ACTION.  
   
 ### Triggers and Cascading Referential Actions  
  Cascading referential actions fire the AFTER UPDATE or AFTER DELETE triggers in the following manner:  
   
 -   All the cascading referential actions directly caused by the original DELETE or UPDATE are performed first.  
   
--   If there are any AFTER triggers defined on the affected tables, these triggers fire after all cascading actions are performed. These triggers fire in opposite order of the cascading action. If there are multiple triggers on a single table, they fire in random order, unless there is a dedicated first or last trigger for the table. This order is as specified by using [sp_settriggerorder](../Topic/sp_settriggerorder%20\(Transact-SQL\).md).  
+-   If there are any AFTER triggers defined on the affected tables, these triggers fire after all cascading actions are performed. These triggers fire in opposite order of the cascading action. If there are multiple triggers on a single table, they fire in random order, unless there is a dedicated first or last trigger for the table. This order is as specified by using [sp_settriggerorder](~/relational-databases/system-stored-procedures/sp-settriggerorder-transact-sql.md).  
   
 -   If multiple cascading chains originate from the table that was the direct target of an UPDATE or DELETE action, the order in which these chains fire their respective triggers is unspecified. However, one chain always fires all its triggers before another chain starts firing.  
   

@@ -23,7 +23,7 @@ manager: "jhubbard"
   Retrieves a read-only copy of the selected item from the source control database to your working folder, or another folder that you specify.  
   
 ## Dialog Box Access  
- In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], select an item in Solution Explorer. On the **File** menu, click **Source Control,** then click **Get**.  
+ In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], select an item in Solution Explorer. On the **File** menu, click **Source Control,** then click **Get**.  
   
 > [!NOTE]  
 >  This dialog box is also available by right-clicking the item in Solution Explorer.  

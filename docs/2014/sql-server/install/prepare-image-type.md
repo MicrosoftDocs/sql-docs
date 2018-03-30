@@ -16,18 +16,18 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Prepare Image Type
-  Use the **Prepare Image Type** page of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Installation Wizard to specify whether to install a new instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], or add features to an existing instance.  
+  Use the **Prepare Image Type** page of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard to specify whether to install a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or add features to an existing instance.  
   
 ## Options  
  Select the radio button that specifies your choice:  
   
--   Prepare a new instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   Prepare a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Add features to an existing prepared instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+-   Add features to an existing prepared instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-     If you select the option to add features to an existing instance, use the drop-down list to select the prepared instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to update.  
+     If you select the option to add features to an existing instance, use the drop-down list to select the prepared instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to update.  
   
     > [!NOTE]  
-    >  You can add the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SysPrep supported features to a prepared image of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+    >  You can add the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep supported features to a prepared image of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
   

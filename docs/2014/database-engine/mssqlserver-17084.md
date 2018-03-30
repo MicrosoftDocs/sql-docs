@@ -23,7 +23,7 @@ manager: "jhubbard"
   
 |||  
 |-|-|  
-|Product Name|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|Product Name|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|  
 |Event ID|17084|  
 |Event Source|MSSQLSERVER|  
 |Component|SQLEngine|  

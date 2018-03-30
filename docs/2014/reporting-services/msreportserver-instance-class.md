@@ -21,7 +21,7 @@ helpviewer_keywords:
 ms.assetid: 0c2e8587-1dda-4e7b-8ef8-646fcda051fc
 caps.latest.revision: 14
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # MSReportServer_Instance Class
@@ -40,12 +40,12 @@ public class MSReportServer_Instance
 ```  
   
 ## Thread Safety  
- Any public static (**Shared** in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) members of this type are safe for multithreaded operations. Any instance members are not guaranteed to be thread-safe.  
+ Any public static (**Shared** in [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) members of this type are safe for multithreaded operations. Any instance members are not guaranteed to be thread-safe.  
   
 ## Requirements  
- **Namespace:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspc](../includes/ssrswminmspc-md.md)]  
   
- **Platform:** [!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
+ **Platform:** [!INCLUDE[ssRSWMIPlatform](../includes/ssrswmiplatform-md.md)]  
   
 ## See Also  
  [MSReportServer_Instance Members](../../2014/reporting-services/msreportserver-instance-members.md)  

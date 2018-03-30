@@ -23,7 +23,7 @@ manager: "mblythe"
   
  **To view cube data:**  
   
-1.  In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], in Solution Explorer, double-click a cube to open it in Cube Designer.  
+1.  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], in Solution Explorer, double-click a cube to open it in Cube Designer.  
   
 2.  Click the **Browser** tab.  
   
@@ -38,7 +38,7 @@ manager: "mblythe"
  Objects and data are viewed within the context of the effective user or role and perspective. When using Excel, the credentials of the current user, not the credentials specified in the **Impersonation Information** page, are used to connect to the data source when a query is executed.  
   
 > [!NOTE]  
->  To use the Analyze in Excel feature, Excel must be installed on the same computer as [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. If Excel is not installed on the same computer, you can use Excel on another computer and connect to the cube as a data source. You can then manually add a PivotTable to the worksheet. Model objects (tables, columns, measures, and KPIs) are included as fields in the PivotTable field list.  
+>  To use the Analyze in Excel feature, Excel must be installed on the same computer as [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. If Excel is not installed on the same computer, you can use Excel on another computer and connect to the cube as a data source. You can then manually add a PivotTable to the worksheet. Model objects (tables, columns, measures, and KPIs) are included as fields in the PivotTable field list.  
   
  For more information about the **Analyze in Excel** feature, see these resources:  
   

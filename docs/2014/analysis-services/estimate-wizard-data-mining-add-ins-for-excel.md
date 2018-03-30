@@ -31,7 +31,7 @@ manager: "mblythe"
   
 2.  In the **Select Source Data** dialog box, select the source data to use. You can use data in an Excel **Table**, an Excel **Data Range**, or from an **External data source**.  
   
-     If you use an external data source, you can create custom views or queries and save them as an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data source.  
+     If you use an external data source, you can create custom views or queries and save them as an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data source.  
   
 3.  In the **Estimation** dialog box, select the **Column to analyze**.  
   
@@ -88,7 +88,7 @@ manager: "mblythe"
  [Microsoft Neural Network Algorithm Technical Reference](../../2014/analysis-services/microsoft-neural-network-algorithm-technical-reference.md)  
   
 ### Requirements  
- To use the Estimate Data Wizard, you must be connected to a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database.  
+ To use the Estimate Data Wizard, you must be connected to a [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database.  
   
  For information about how to create a connection, see [Connect to Source Data &#40;Data Mining Client for Excel&#41;](../../2014/analysis-services/connect-to-source-data-data-mining-client-for-excel.md).  
   

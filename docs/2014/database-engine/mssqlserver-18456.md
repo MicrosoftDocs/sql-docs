@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
 caps.latest.revision: 16
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_18456
@@ -56,18 +56,18 @@ manager: "jhubbard"
  "Login failed for user '<user_name>'."  
   
 ## Additional Error Information  
- To increase security, the error message that is returned to the client deliberately hides the nature of the authentication error. However, in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log, a corresponding error contains an error state that maps to an authentication failure condition. Compare the error state to the following list to determine the reason for the login failure.  
+ To increase security, the error message that is returned to the client deliberately hides the nature of the authentication error. However, in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] error log, a corresponding error contains an error state that maps to an authentication failure condition. Compare the error state to the following list to determine the reason for the login failure.  
   
 |State|Description|  
 |-----------|-----------------|  
-|1|Error information is not available. This state usually means you do not have permission to receive the error details. Contact your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administrator for more information.|  
+|1|Error information is not available. This state usually means you do not have permission to receive the error details. Contact your [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] administrator for more information.|  
 |2|User ID is not valid.|  
 |5|User ID is not valid.|  
 |6|An attempt was made to use a Windows login name with SQL Server Authentication.|  
 |7|Login is disabled, and the password is incorrect.|  
 |8|The password is incorrect.|  
 |9|Password is not valid.|  
-|11|Login is valid, but server access failed. One possible cause of this error is when the Windows user has access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as a member of the local administrators group, but Windows is not providing administrator credentials. To connect, start the connecting program using the **Run as administrator** option, and then add the Windows user to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as a specific login.|  
+|11|Login is valid, but server access failed. One possible cause of this error is when the Windows user has access to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] as a member of the local administrators group, but Windows is not providing administrator credentials. To connect, start the connecting program using the **Run as administrator** option, and then add the Windows user to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] as a specific login.|  
 |12|Login is valid login, but server access failed.|  
 |18|Password must be changed.|  
   
@@ -92,21 +92,21 @@ manager: "jhubbard"
 |2007-12-05 20:12:56.34|Logon|Login failed for user '<user_name>'. [CLIENT: \<ip address>]|  
   
 > [!NOTE]  
->  When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed using Windows Authentication mode and is later changed to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Windows Authentication mode, the **sa** login is initially disabled. This causes the state 7 error: "Login failed for user 'sa'." To enable the **sa** login, see [Change Server Authentication Mode](../../2014/database-engine/change-server-authentication-mode.md).  
+>  When [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is installed using Windows Authentication mode and is later changed to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and Windows Authentication mode, the **sa** login is initially disabled. This causes the state 7 error: "Login failed for user 'sa'." To enable the **sa** login, see [Change Server Authentication Mode](../../2014/database-engine/change-server-authentication-mode.md).  
   
 ## User Action  
- If you are trying to connect using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, verify that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is configured in Mixed Authentication Mode.  
+ If you are trying to connect using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication, verify that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is configured in Mixed Authentication Mode.  
   
- If you are trying to connect using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, verify that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login exists and that you have spelled it properly.  
+ If you are trying to connect using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication, verify that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] login exists and that you have spelled it properly.  
   
  If you are trying to connect using Windows Authentication, verify that you are properly logged into the correct domain.  
   
- If your error indicates state 1, contact your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administrator.  
+ If your error indicates state 1, contact your [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] administrator.  
   
  If you are trying to connect using your administrator credentials, start you application by using the **Run as Administrator** option. When connected, add your Windows user as an individual login.  
   
- If the [!INCLUDE[ssDE](../../includes/ssde-md.md)] supports contained databases, confirm that the login was not deleted after migration to a contained database user.  
+ If the [!INCLUDE[ssDE](../includes/ssde-md.md)] supports contained databases, confirm that the login was not deleted after migration to a contained database user.  
   
- When connecting locally to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], connections from services running under **NT AUTHORITY\NETWORK SERVICE** must authenticate using the computers fully qualified domain name. For more information, see [How To: Use the Network Service Account to Access Resources in ASP.NET](http://msdn.microsoft.com/library/ff647402.aspx)  
+ When connecting locally to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], connections from services running under **NT AUTHORITY\NETWORK SERVICE** must authenticate using the computers fully qualified domain name. For more information, see [How To: Use the Network Service Account to Access Resources in ASP.NET](http://msdn.microsoft.com/library/ff647402.aspx)  
   
   

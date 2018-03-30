@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: d5a3e536-62d2-4473-a178-877ba52f7d7f
 caps.latest.revision: 33
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Add Articles to and Drop Articles from a Publication (SQL Server Management Studio)
@@ -32,13 +32,13 @@ manager: "jhubbard"
   
 2.  Select the check box next to each article you want to add.  
   
-3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ### To delete an article  
   
 1.  On the **Articles** page of the **Publication Properties - \<Publication>** dialog box, clear the check box next to each article you want to delete.  
   
-2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## See Also  
  [Define an Article](../../../2014/relational-databases/replication/define-an-article.md)   

@@ -47,7 +47,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Transformation Custom Properties
-  In addition to the properties that are common to most data flow objects in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] object model, many data flow objects have custom properties that are specific to the object. These custom properties are available only at run time, and are not documented in the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Managed Programming Reference Documentation.  
+  In addition to the properties that are common to most data flow objects in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] object model, many data flow objects have custom properties that are specific to the object. These custom properties are available only at run time, and are not documented in the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Managed Programming Reference Documentation.  
   
  This topic lists and describes the custom properties of the various data flow transformations. For information about the properties common to most data flow objects, see [Common Properties](../../2014/integration-services/common-properties.md).  
   
@@ -181,7 +181,7 @@ manager: "jhubbard"
   
 |Property|Data type|Description|  
 |--------------|---------------|-----------------|  
-|FastParse|Boolean|A value that indicates whether the column uses the quicker, but locale-insensitive, fast parsing routines that [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides, or the locale-sensitive standard parsing routines. The default value of this property is `False`. For more information, see [Fast Parse](../../2014/integration-services/fast-parse.md) and [Standard Parse](../../2014/integration-services/standard-parse.md). .<br /><br /> Note: This property is not available in the **Data Conversion Transformation Editor**, but can be set by using the **Advanced Editor**.|  
+|FastParse|Boolean|A value that indicates whether the column uses the quicker, but locale-insensitive, fast parsing routines that [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides, or the locale-sensitive standard parsing routines. The default value of this property is `False`. For more information, see [Fast Parse](../../2014/integration-services/fast-parse.md) and [Standard Parse](../../2014/integration-services/standard-parse.md). .<br /><br /> Note: This property is not available in the **Data Conversion Transformation Editor**, but can be set by using the **Advanced Editor**.|  
 |SourceInputColumnLineageId|Integer|The `LineageID` of the input column that is the source of the output column.|  
   
  The input, the input columns, and the output of the Data Conversion transformation have no custom properties.  
@@ -196,8 +196,8 @@ manager: "jhubbard"
 |Property|Data type|Description|  
 |--------------|---------------|-----------------|  
 |ASConnectionId|String|The unique identifier of the connection object.|  
-|ASConnectionString|String|The connection string to an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project or an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database.|  
-|CatalogName|String|The name of an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database.|  
+|ASConnectionString|String|The connection string to an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project or an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database.|  
+|CatalogName|String|The name of an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database.|  
 |ModelName|String|The name of the data mining model.|  
 |ModelStructureName|String|The name of the mining structure.|  
 |ObjectRef|String|An XML tag that identifies the data mining structure that the transformation uses.|  
@@ -295,13 +295,13 @@ manager: "jhubbard"
 |Delimiters|String|The delimiters that the transformation uses to tokenize column values. The default delimiters include the following characters: space ( ), comma (,), period (.) semicolon(;), colon (:) hyphen (-), double straight quotation mark ("), single straight quotation mark ('), ampersand (&), slash mark (/), backslash (\\), at sign (@), exclamation point (!), question mark (?), opening parenthesis ((), closing parenthesis ()), less than (\<), greater than (>), opening bracket ([), closing bracket (]), opening brace ({), closing brace (}), pipe (&#124;). number sign (#), asterisk (*), caret (^), and percent (%).|  
 |DropExistingMatchIndex|Boolean|A value that specifies whether the match index specified in MatchIndexName is deleted when MatchIndexOptions is not set to ReuseExistingIndex. The default value for this property is `True`.|  
 |Exhaustive|Boolean|A value that specifies whether each input record is compared to every other input record. The value of `True` is intended mostly for debugging purposes. The default value of this property is `False`.<br /><br /> Note: This property is not available in the **Fuzzy Lookup Transformation Editor**, but can be set by using the **Advanced Editor**.|  
-|MatchIndexName|String|The name of the match index. The match index is the table in which the transformation creates and saves the index that it uses. If the match index is reused, MatchIndexName specifies the index to reuse. MatchIndexName must be a valid [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifier name. For example, if the name contains spaces, the name must be enclosed in brackets.|  
+|MatchIndexName|String|The name of the match index. The match index is the table in which the transformation creates and saves the index that it uses. If the match index is reused, MatchIndexName specifies the index to reuse. MatchIndexName must be a valid [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] identifier name. For example, if the name contains spaces, the name must be enclosed in brackets.|  
 |MatchIndexOptions|Integer (enumeration)|A value that specifies how the transformation manages the match index. This property can have one of the following values:<br /><br /> `ReuseExistingIndex` (0)<br /><br /> **GenerateNewIndex** (1)<br /><br /> **GenerateAndPersistNewIndex** (2)<br /><br /> **GenerateAndMaintainNewIndex** (3)|  
 |MaxMemoryUsage|Integer|The maximum cache size for the lookup table. The default value of this property is **0**, which means the cache size has no limit.<br /><br /> The value of this property can be specified by using a property expression.<br /><br /> Note: This property is not available in the **Fuzzy Lookup Transformation Editor**, but can be set by using the **Advanced Editor**.|  
 |MaxOutputMatchesPerInput|Integer|The maximum number of matches the transformation can return for each input row. The default value of this property is **1**.<br /><br /> Note: Values greater than 100 can only be specified by using the **Advanced Editor**.|  
 |MinSimilarity|Integer|The similarity threshold that the transformation uses at the component level, specified as a value between 0 and 1. Only rows greater than the threshold qualify as matches.|  
-|ReferenceMetadataXML|String|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|ReferenceTableName|String|The name of the lookup table. The name must be a valid [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifier name. For example, if the name contains spaces, the name must be enclosed in brackets.|  
+|ReferenceMetadataXML|String|[!INCLUDE[ssInternalOnly](../includes/ssinternalonly-md.md)]|  
+|ReferenceTableName|String|The name of the lookup table. The name must be a valid [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] identifier name. For example, if the name contains spaces, the name must be enclosed in brackets.|  
 |WarmCaches|Boolean|When true, the lookup partially loads the index and reference table into memory before execution begins. This can enhance performance.|  
   
  The following table describes the custom properties of the input columns of the Fuzzy Lookup transformation. All properties are read/write.  
@@ -373,7 +373,7 @@ manager: "jhubbard"
 |JoinType|Integer (enumeration)|Specifies whether the join is an inner (2), left outer (1), or full join (0).|  
 |MaxBuffersPerInput|Integer|You no longer have to configure the value of the `MaxBuffersPerInput` property because Microsoft has made changes that reduce the risk that the Merge Join transformation will consume excessive memory. This problem sometimes occurred when the multiple inputs of the Merge Join produced data at uneven rates.|  
 |NumKeyColumns|Integer|The number of columns that are used in the join.|  
-|TreatNullsAsEqual|Boolean|A value that specifies whether the transformation handles null values as equal values. The default value of this property is `True`. If the property value is `False`, the transformation handles null values like [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does.|  
+|TreatNullsAsEqual|Boolean|A value that specifies whether the transformation handles null values as equal values. The default value of this property is `True`. If the property value is `False`, the transformation handles null values like [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does.|  
   
  The following table describes the custom properties of the output columns of the Merge Join transformation. All properties are read/write.  
   

@@ -26,7 +26,7 @@ manager: "jhubbard"
   
  Make sure your INCLUDE environment variable includes the directory that contains sqlncli.h.  
   
- The server must have a directory called C:\DBFsa; this is where the sample will create the database. Your instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] must have write access to this location (for example, log on as a local system account).  
+ The server must have a directory called C:\DBFsa; this is where the sample will create the database. Your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must have write access to this location (for example, log on as a local system account).  
   
  Copy the first code listing and paste it into a file called ISSHelper.h.  
   
@@ -38,7 +38,7 @@ manager: "jhubbard"
   
  When you run this sample, you must pass the name of a server, or a server\instance_name, as well as a value between 4 MB (0x400001) and 4 GB (0xFFFFFFFF) indicating the amount of data to write.  
   
- The fourth ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) code listing deletes the database created by this sample.  
+ The fourth ([!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing deletes the database created by this sample.  
   
 ```  
 // ISSHelper.h: interface for the CISSHelper class.  

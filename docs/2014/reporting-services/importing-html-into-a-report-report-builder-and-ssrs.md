@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
 caps.latest.revision: 10
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Importing HTML into a Report (Report Builder and SSRS)
@@ -28,7 +28,7 @@ manager: "mblythe"
  To quickly get started, see [Tutorial: Format Text &#40;Report Builder&#41;](../../2014/tutorials/tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## Supported HTML Tags  
  The following is a complete list of tags that will render as HTML when defined as placeholder text:  
@@ -39,7 +39,7 @@ manager: "mblythe"
   
  If the text in your text box contains only one block of text, any HTML in the placeholder that defines block elements will render correctly. However, if the text box has multiple blocks of text, the HTML tags are ignored and the structure of the text is defined by the blocks of text.  
   
- If more than one tag is defined for text, and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] detects a conflict between the HTML and existing report constraints, only the innermost HTML tag will be treated as HTML.  
+ If more than one tag is defined for text, and [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] detects a conflict between the HTML and existing report constraints, only the innermost HTML tag will be treated as HTML.  
   
  When using the list handling tags, the font and style of all bullets and number prefixes will be fixed to Arial black.  
   

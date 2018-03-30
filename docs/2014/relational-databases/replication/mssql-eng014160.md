@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: d0f3855e-d095-4a81-a5bd-9d7ad51f2c77
 caps.latest.revision: 10
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQL_ENG014160
@@ -26,14 +26,14 @@ manager: "jhubbard"
 |Product Name|SQL Server|  
 |Event ID|14160|  
 |Event Source|MSSQLSERVER|  
-|Component|[!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]|  
+|Component|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Symbolic Name||  
 |Message Text|The threshold [%s:%s] for the publication [%s] has been set. One or more subscriptions to this publication have expired.|  
   
 ## Explanation  
  Replication lets you enable warnings for several conditions. This includes imminent subscription expiration. Subscriptions can expire if they are not synchronized within a specified *retention period*. For more information, see [Subscription Expiration and Deactivation](../../../2014/relational-databases/replication/subscription-expiration-and-deactivation.md).  
   
- When you enable a warning by using Replication Monitor or [sp_replmonitorchangepublicationthreshold](../Topic/sp_replmonitorchangepublicationthreshold%20\(Transact-SQL\).md), you specify a threshold that determines when a warning is triggered. When that threshold is met or exceeded, a warning is displayed in Replication Monitor, and an event is written to the Windows event log. Reaching a threshold can also trigger a SQL Server Agent alert. For more information, see [Set Thresholds and Warnings in Replication Monitor](../../../2014/relational-databases/replication/set-thresholds-and-warnings-in-replication-monitor.md) and [Programmatically Monitor Replication](../../../2014/relational-databases/replication/programmatically-monitor-replication.md).  
+ When you enable a warning by using Replication Monitor or [sp_replmonitorchangepublicationthreshold](~/relational-databases/system-stored-procedures/sp-replmonitorchangepublicationthreshold-transact-sql.md), you specify a threshold that determines when a warning is triggered. When that threshold is met or exceeded, a warning is displayed in Replication Monitor, and an event is written to the Windows event log. Reaching a threshold can also trigger a SQL Server Agent alert. For more information, see [Set Thresholds and Warnings in Replication Monitor](../../../2014/relational-databases/replication/set-thresholds-and-warnings-in-replication-monitor.md) and [Programmatically Monitor Replication](../../../2014/relational-databases/replication/programmatically-monitor-replication.md).  
   
 ## User Action  
  The resolution for this issue depends on the reason the warning was raised:  

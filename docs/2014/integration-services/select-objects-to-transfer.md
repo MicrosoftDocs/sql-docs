@@ -18,7 +18,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Select Objects to Transfer
-  Use this dialog box to select objects to transfer from one instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to another by using an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] transfer task.  
+  Use this dialog box to select objects to transfer from one instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to another by using an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] transfer task.  
   
  To specify that all objects should be transferred, select the check box in the title row of the objects grid.  
   

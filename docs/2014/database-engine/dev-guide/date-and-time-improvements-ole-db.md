@@ -20,13 +20,13 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Date and Time Improvements (OLE DB)
-  [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] introduces new date and time data types. This section describes how these new types are exposed as extensions in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. For an overview of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client support for the new date and time data types, see [Date and Time Improvements](../../../2014/database-engine/dev-guide/date-and-time-improvements.md). For a sample, see [Use Enhanced Date and Time Features &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/use-enhanced-date-and-time-features-ole-db.md).  
+  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] introduces new date and time data types. This section describes how these new types are exposed as extensions in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. For an overview of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client support for the new date and time data types, see [Date and Time Improvements](../../../2014/database-engine/dev-guide/date-and-time-improvements.md). For a sample, see [Use Enhanced Date and Time Features &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/use-enhanced-date-and-time-features-ole-db.md).  
   
- For more general information about date and time data types, see [datetime &#40;Transact-SQL&#41;](../Topic/datetime%20\(Transact-SQL\).md).  
+ For more general information about date and time data types, see [datetime &#40;Transact-SQL&#41;](~/t-sql/data-types/datetime-transact-sql.md).  
   
 ## In This Section  
  [Data Type Support for OLE DB Date and Time Improvements](../../../2014/database-engine/dev-guide/data-type-support-for-ole-db-date-and-time-improvements.md)  
- Provides information about OLE DB ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client) types that support [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] date and time data types.  
+ Provides information about OLE DB ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client) types that support [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] date and time data types.  
   
  [Metadata &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/metadata-ole-db.md)  
  Contains information about the DBBINDING structure, `ICommandWithParameters::GetParameterInfo`, `ICommandWithParameters::SetParameterInfo`, `IColumnsRowset::GetColumnsRowset`, and I`ColumnsInfo::GetColumnInfo`. Also provides information about updates to OLE DB schema rowsets.  
@@ -44,7 +44,7 @@ manager: "jhubbard"
  Describes date/time types and `IRowsetFind`.  
   
  [New Date and Time Features with Previous SQL Server Versions &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/new-date-and-time-features-with-previous-sql-server-versions-ole-db.md)  
- Describes the expected behavior when a client application that uses enhanced date and time features communicates with an older version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], and when a client compiled with an older version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client sends commands to a server that supports enhanced date and time features.  
+ Describes the expected behavior when a client application that uses enhanced date and time features communicates with an older version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and when a client compiled with an older version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client sends commands to a server that supports enhanced date and time features.  
   
 ## See Also  
  [SQL Server Native Client &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/sql-server-native-client-ole-db.md)  

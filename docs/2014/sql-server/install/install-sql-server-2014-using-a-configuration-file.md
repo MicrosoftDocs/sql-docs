@@ -16,7 +16,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Install SQL Server 2014 Using a Configuration File
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup provides the ability to generate a configuration file based upon the system default and run-time inputs. You can use the configuration file to deploy [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] throughout the enterprise with the same configuration. You can also standardize manual installations throughout the enterprise, by creating a batch file that launches Setup.exe.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup provides the ability to generate a configuration file based upon the system default and run-time inputs. You can use the configuration file to deploy [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] throughout the enterprise with the same configuration. You can also standardize manual installations throughout the enterprise, by creating a batch file that launches Setup.exe.  
   
  Setup supports the use of the configuration file only through the command prompt. The processing order of the parameters while using the configuration file is outlined below:  
   
@@ -47,49 +47,49 @@ FEATURES=SQL,Tools
   
 #### How to generate a configuration file  
   
-1.  Insert the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installation media. From the root folder, double-click Setup.exe. To install from a network share, locate the root folder on the share, and then double-click Setup.exe.  
+1.  Insert the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation media. From the root folder, double-click Setup.exe. To install from a network share, locate the root folder on the share, and then double-click Setup.exe.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express Edition setup does not create a configuration file automatically. The following command will start  setup and create a configuration file.  
+    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Edition setup does not create a configuration file automatically. The following command will start  setup and create a configuration file.  
     >   
     >  SETUP.exe /UIMODE=Normal /ACTION=INSTALL  
   
-2.  Follow the wizard through to the **Ready to Install** page. The path to the configuration file is specified in the **Ready to Install** page in the configuration file path section. For more information about how to install [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], see [Install SQL Server 2014 from the Installation Wizard &#40;Setup&#41;](../../../2014/sql-server/install/install-sql-server-2014-from-the-installation-wizard-setup.md).  
+2.  Follow the wizard through to the **Ready to Install** page. The path to the configuration file is specified in the **Ready to Install** page in the configuration file path section. For more information about how to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Install SQL Server 2014 from the Installation Wizard &#40;Setup&#41;](../../../2014/sql-server/install/install-sql-server-2014-from-the-installation-wizard-setup.md).  
   
 3.  Cancel the setup without actually completing the installation, to generate the INI file.  
   
     > [!NOTE]  
     >  The setup infrastructure writes out all the appropriate parameters for the actions that were run, with the exception of sensitive information such as passwords. The /IAcceptSQLServerLicenseTerms parameter is also not written out to the configuration file and requires either a modification of the configuration file or a value to be supplied at the command prompt. For more information, see [Install SQL Server 2014 from the Command Prompt](../../../2014/sql-server/install/install-sql-server-2014-from-the-command-prompt.md). In addition, a value is included for Boolean parameters where a value is usually not supplied through the command prompt.  
   
-## Using the Configuration File to Install [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+## Using the Configuration File to Install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  You can only use the configuration file on command-line installations.  
   
 > [!NOTE]  
 >  If you need to make changes to the configuration file, we recommend that you make a copy and work with the copy.  
   
-#### How to use a configuration file to install a stand-alone [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance  
+#### How to use a configuration file to install a stand-alone [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance  
   
 -   Run the installation through the command prompt and supply the ConfigurationFile.ini using the *ConfigurationFile* parameter.  
   
-#### How to use a configuration file to prepare and complete an image of a stand-alone [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance (SysPrep)  
+#### How to use a configuration file to prepare and complete an image of a stand-alone [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance (SysPrep)  
   
-1.  To prepare one or more instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and configure them on the same machine.  
+1.  To prepare one or more instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and configure them on the same machine.  
   
-    -   Run **Image preparation of a stand-alone instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** from the **Advanced** page of the Installation Center and capture the prepare image configuration file.  
+    -   Run **Image preparation of a stand-alone instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** from the **Advanced** page of the Installation Center and capture the prepare image configuration file.  
   
-    -   Use the same prepare image configuration file as a template to prepare more instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+    -   Use the same prepare image configuration file as a template to prepare more instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-    -   Run **Image completion of a prepared stand-alone instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** from the **Advanced** page of the Installation Center to configure a prepared instances on the machine.  
+    -   Run **Image completion of a prepared stand-alone instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** from the **Advanced** page of the Installation Center to configure a prepared instances on the machine.  
   
-2.  To prepare an image of the operating system including an unconfigured prepared instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], using Windows SysPrep tool.  
+2.  To prepare an image of the operating system including an unconfigured prepared instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], using Windows SysPrep tool.  
   
-    -   Run the **Image preparation of a stand-alone instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** from the Advanced page of the Installation Center and capture the prepare image configuration file.  
+    -   Run the **Image preparation of a stand-alone instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** from the Advanced page of the Installation Center and capture the prepare image configuration file.  
   
-    -   Run the **Image completion of a prepared stand-alone instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** from the **Advanced** page of the Installation Center, but cancel it on the **Ready to Complete** page after capturing the complete configuration file.  
+    -   Run the **Image completion of a prepared stand-alone instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** from the **Advanced** page of the Installation Center, but cancel it on the **Ready to Complete** page after capturing the complete configuration file.  
   
     -   The complete image configuration file can be stored with the Windows image for automating the configuration of the prepared instances.  
   
-#### How to install a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster using the configuration file  
+#### How to install a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster using the configuration file  
   
 1.  Integrated Install option (create a single node failover cluster on a node and for additional nodes, run AddNode on them):  
   
@@ -111,11 +111,11 @@ FEATURES=SQL,Tools
   
     -   You can then supply this ConfigurationFile.ini file to complete the failover cluster.  
   
-#### How to add or remove a node to a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster using the configuration file  
+#### How to add or remove a node to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster using the configuration file  
   
 -   If you have a configuration file that was previously used to add a node to or remove a node from a failover cluster, you can reuse that same file to add or remove additional nodes.  
   
-#### How to upgrade a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster using the configuration file  
+#### How to upgrade a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster using the configuration file  
   
 1.  Run upgrade on the passive node and capture the ConfigurationFile.ini file. You can do this either by performing the actual upgrade, or exiting at the end without doing the actual upgrade.  
   

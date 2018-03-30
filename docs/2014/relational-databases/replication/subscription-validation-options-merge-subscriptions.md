@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 4958c4ab-2025-42ce-b836-6fb4e9e6f24d
 caps.latest.revision: 14
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Subscription Validation Options (Merge Subscriptions)
@@ -27,7 +27,7 @@ manager: "jhubbard"
  Select to validate whether the table at the Subscriber has the same number of rows as the table at the Publisher. This method does not validate that the content of the rows matches. Row count validation provides a lightweight approach to validation that can make you aware of issues with your data.  
   
  **Verify the row counts and compare checksums to verify the row data**  
- In addition to taking a count of rows at the Publisher and Subscriber, a checksum of all the data is calculated using the binary checksum algorithm. If the row count fails, the checksum is not performed. This option is not valid for [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../../includes/ssew-md.md)].  
+ In addition to taking a count of rows at the Publisher and Subscriber, a checksum of all the data is calculated using the binary checksum algorithm. If the row count fails, the checksum is not performed. This option is not valid for [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)].  
   
 ## See Also  
  [Validate Data at the Subscriber](../../../2014/relational-databases/replication/validate-data-at-the-subscriber.md)   

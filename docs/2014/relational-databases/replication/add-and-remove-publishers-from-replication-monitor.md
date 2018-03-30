@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: fa36c4b4-bfa5-494e-92e3-07a02d7332c3
 caps.latest.revision: 37
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Add and Remove Publishers from Replication Monitor
@@ -36,7 +36,7 @@ manager: "jhubbard"
   
 7.  Select the group under which the Publisher should be displayed in Replication Monitor. To create a new group, click **New Group**, and then enter a group name; select the group in the **Show this Publisher(s) in the following group** list.  
   
-8.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ### To add an Oracle Publisher  
   
@@ -44,7 +44,7 @@ manager: "jhubbard"
   
 2.  In the **Add Publisher** dialog box, click **Add**, and then click **Add Oracle Publisher**.  
   
-3.  In the **Connect to Server** dialog box, enter the name of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributor associated with the Oracle Publisher, and then select the authentication type. If you select **SQL Server Authentication**, enter a login and password. The credentials you specify are saved by Replication Monitor to use when connecting to this server in the future. The Windows account or SQL Server login specified must be a member of the **sysadmin** fixed server role or a member of the **replmonitor** fixed database role in the distribution database.  
+3.  In the **Connect to Server** dialog box, enter the name of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor associated with the Oracle Publisher, and then select the authentication type. If you select **SQL Server Authentication**, enter a login and password. The credentials you specify are saved by Replication Monitor to use when connecting to this server in the future. The Windows account or SQL Server login specified must be a member of the **sysadmin** fixed server role or a member of the **replmonitor** fixed database role in the distribution database.  
   
 4.  Click **Connect**.  
   
@@ -54,7 +54,7 @@ manager: "jhubbard"
   
 7.  Select the group under which the Publisher should be displayed in Replication Monitor. To create a new group, click **New Group**, and then enter a group name; select the group in the **Show this Publisher(s) in the following group** list.  
   
-8.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ### To add one or more Publishers that use the same Distributor  
   
@@ -72,7 +72,7 @@ manager: "jhubbard"
   
 7.  Select the group under which Publishers should be displayed in Replication Monitor. To create a new group, click **New Group**, and then enter a group name; select the group in the **Show this Publisher(s) in the following group** list.  
   
-8.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ### To modify settings for the Publisher and Publisher Groups  
   
@@ -84,7 +84,7 @@ manager: "jhubbard"
   
     -   To move a Publisher from one group to another, select the Publisher in the **Start monitoring the following Publisher(s)** grid, and then select the new group in the **Show this Publisher(s) in the following group** list.  
   
-3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ### To remove a Publisher from Replication Monitor  
   

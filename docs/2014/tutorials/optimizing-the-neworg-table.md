@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 89ff6d37-94c0-4773-8be9-dde943fff023
 caps.latest.revision: 23
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Optimizing the NewOrg Table
@@ -28,7 +28,7 @@ manager: "jhubbard"
   
 #### To index the NewOrg table for efficient searches  
   
-1.  To help queries at the same level in the hierarchy, use the [GetLevel](../Topic/GetLevel%20\(Database%20Engine\).md) method to create a computed column that contains the level in the hierarchy. Then, create a composite index on the level and the `Hierarchyid`. Run the following code to create the computed column and the breadth-first index:  
+1.  To help queries at the same level in the hierarchy, use the [GetLevel](~/t-sql/data-types/getlevel-database-engine.md) method to create a computed column that contains the level in the hierarchy. Then, create a composite index on the level and the `Hierarchyid`. Run the following code to create the computed column and the breadth-first index:  
   
     ```  
     ALTER TABLE NewOrg   
@@ -67,7 +67,7 @@ manager: "jhubbard"
   
 4.  Compare the result sets to see how the order is stored in each type of index. Only the first four rows of each output follow.  
   
-     [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+     [!INCLUDE[ssResult](../includes/ssresult-md.md)]  
   
      Depth-first index: Employee records are stored adjacent to their manager.  
   

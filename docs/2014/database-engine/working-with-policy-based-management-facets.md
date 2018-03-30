@@ -21,9 +21,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Working with Policy-Based Management Facets
-  A Policy-Based Management facet is a set of logical properties that are related to an area of management interest. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes several predefined facets. For example, the Surface Area Configuration facet defines, as properties, the features that are off by default.  
+  A Policy-Based Management facet is a set of logical properties that are related to an area of management interest. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] includes several predefined facets. For example, the Surface Area Configuration facet defines, as properties, the features that are off by default.  
   
- When you manage many similar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] environments, you can configure a facet in one instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], copy the state of the facet to a file, and then import that file into another instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as a policy. When the state has been converted to a policy, the policy can be applied to other instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], instance objects, databases, or database objects.  
+ When you manage many similar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] environments, you can configure a facet in one instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], copy the state of the facet to a file, and then import that file into another instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] as a policy. When the state has been converted to a policy, the policy can be applied to other instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], instance objects, databases, or database objects.  
   
  This topic describes how to copy the state of a facet to an XML file.  
   

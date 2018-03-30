@@ -29,7 +29,7 @@ manager: "jhubbard"
   
  This transformation has one input and one output. It does not support an error output.  
   
- You can set properties through the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through the [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer or programmatically.  
   
  For more information about the properties that you can set in the **Copy Column Transformation Editor** dialog box, see [Copy Column Transformation Editor](../../2014/integration-services/copy-column-transformation-editor.md).  
   

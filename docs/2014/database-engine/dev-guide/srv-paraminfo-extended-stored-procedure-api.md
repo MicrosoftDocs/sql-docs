@@ -29,7 +29,7 @@ manager: "jhubbard"
 # srv_paraminfo (Extended Stored Procedure API)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
   
  Returns information about a parameter. This function supersedes the following functions: [srv_paramtype](../../../2014/database-engine/dev-guide/srv-paramtype-extended-stored-procedure-api.md), [srv_paramlen](../../../2014/database-engine/dev-guide/srv-paramlen-extended-stored-procedure-api.md), [srv_parammaxlen](../../../2014/database-engine/dev-guide/srv-parammaxlen-extended-stored-procedure-api.md), and [srv_paramdata](../../../2014/database-engine/dev-guide/srv-paramdata-extended-stored-procedure-api.md). **srv_paraminfo** supports the data types in [Data Types](../../../2014/database-engine/dev-guide/data-types-extended-stored-procedure-api.md) and zero-length data.  
   

@@ -23,12 +23,12 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Solution Explorer
-  The Solution Explorer pane in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] provides containers called projects for managing items such as database scripts, queries, data connections, and files. One or more projects that are related to each other can be combined in a container called a solution.  
+  The Solution Explorer pane in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] provides containers called projects for managing items such as database scripts, queries, data connections, and files. One or more projects that are related to each other can be combined in a container called a solution.  
   
  A solution includes one or more projects, plus files and metadata that help define the solution as a whole. A project is a set of files, plus related metadata such as connection information. Solutions and projects contain items that represent the scripts, queries, connection information and files that you need to create your database solution.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)]  
   
 ## Benefits of Using Solutions  
  Use these containers to:  
@@ -43,7 +43,7 @@ manager: "jhubbard"
   
 -   Work on miscellaneous files that are independent from solutions or projects.  
   
- The items contained in projects depend on the project type and whether you are using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ The items contained in projects depend on the project type and whether you are using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 ## Related Tasks  
  Use the following topics to get started with SQL Server Solutions:  
@@ -54,6 +54,6 @@ manager: "jhubbard"
 |Describes how to collect one or more projects in a solution.|[Solutions &#40;SQL Server Management Studio&#41;](../../2014/database-engine/solutions-sql-server-management-studio.md)|  
 |Describes how to create a project and add items like scripts and connections.|[Projects &#40;SQL Server Management Studio&#41;](../../2014/database-engine/projects-sql-server-management-studio.md)|  
 |Describes how to integrate solutions or individual projects into a source code control system.|[Solution Explorer Source Control](../../2014/database-engine/solution-explorer-source-control.md)|  
-|Provides information about the files used by [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to manage solutions and files.|[Files That Manage Solutions and Projects](../../2014/database-engine/files-that-manage-solutions-and-projects.md)|  
+|Provides information about the files used by [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to manage solutions and files.|[Files That Manage Solutions and Projects](../../2014/database-engine/files-that-manage-solutions-and-projects.md)|  
   
   

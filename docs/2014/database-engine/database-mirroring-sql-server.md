@@ -31,9 +31,9 @@ manager: "jhubbard"
 # Database Mirroring (SQL Server)
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] instead.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] Use [!INCLUDE[ssHADR](../includes/sshadr-md.md)] instead.  
   
- *Database mirroring* is a solution for increasing the availability of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. Mirroring is implemented on a per-database basis and works only with databases that use the full recovery model.  
+ *Database mirroring* is a solution for increasing the availability of a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database. Mirroring is implemented on a per-database basis and works only with databases that use the full recovery model.  
   
 > [!IMPORTANT]  
 >  For information about support for database mirroring, restrictions, prerequisites, recommendations for configuring partner servers, and recommendations for deploying database mirroring, see [Prerequisites, Restrictions, and Recommendations for Database Mirroring](../../2014/database-engine/prerequisites-restrictions-and-recommendations-for-database-mirroring.md).  
@@ -51,11 +51,11 @@ manager: "jhubbard"
   
      Database mirroring provides complete or almost complete redundancy of the data, depending on whether the operating mode is high-safety or high-performance. For more information, see [Operating Modes](#OperatingModes), later in this topic.  
   
-     A database mirroring partner running on [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] or later versions automatically tries to resolve certain types of errors that prevent reading a data page. The partner that is unable to read a page requests a fresh copy from the other partner. If this request succeeds, the unreadable page is replaced by the copy, which usually resolves the error. For more information, see [Automatic Page Repair &#40;For Availability Groups and Database Mirroring&#41;](../../2014/database-engine/automatic-page-repair-for-availability-groups-and-database-mirroring.md).  
+     A database mirroring partner running on [!INCLUDE[ssEnterpriseEd10](../includes/ssenterpriseed10-md.md)] or later versions automatically tries to resolve certain types of errors that prevent reading a data page. The partner that is unable to read a page requests a fresh copy from the other partner. If this request succeeds, the unreadable page is replaced by the copy, which usually resolves the error. For more information, see [Automatic Page Repair &#40;For Availability Groups and Database Mirroring&#41;](../../2014/database-engine/automatic-page-repair-for-availability-groups-and-database-mirroring.md).  
   
 -   Improves the availability of the production database during upgrades.  
   
-     To minimize downtime for a mirrored database, you can sequentially upgrade the instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that are hosting the failover partners. This will incur the downtime of only a single failover. This form of upgrade is known as a *rolling upgrade*. For more information, see [Install a Service Pack on a System with Minimal Downtime for Mirrored Databases](../../2014/database-engine/install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md).  
+     To minimize downtime for a mirrored database, you can sequentially upgrade the instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that are hosting the failover partners. This will incur the downtime of only a single failover. This form of upgrade is known as a *rolling upgrade*. For more information, see [Install a Service Pack on a System with Minimal Downtime for Mirrored Databases](../../2014/database-engine/install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md).  
   
 ##  <a name="TermsAndDefinitions"></a> Database Mirroring Terms and Definitions  
  automatic failover  
@@ -115,16 +115,16 @@ manager: "jhubbard"
  For use only with high-safety mode, an optional instance of SQL Server that enables the mirror server to recognize when to initiate an automatic failover. Unlike the two failover partners, the witness does not serve the database. Supporting automatic failover is the only role of the witness.  
   
 ##  <a name="HowWorks"></a> Overview of Database Mirroring  
- Database mirroring maintains two copies of a single database that must reside on different server instances of [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Typically, these server instances reside on computers in different locations. Starting database mirroring on a database, initiates a relationship, known as a *database mirroring session*, between these server instances.  
+ Database mirroring maintains two copies of a single database that must reside on different server instances of [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. Typically, these server instances reside on computers in different locations. Starting database mirroring on a database, initiates a relationship, known as a *database mirroring session*, between these server instances.  
   
  One server instance serves the database to clients (the *principal server*). The other instance acts as a hot or warm standby server (the *mirror server*), depending on the configuration and state of the mirroring session. When a database mirroring session is synchronized, database mirroring provides a hot standby server that supports rapid failover without a loss of data from committed transactions. When the session is not synchronized, the mirror server is typically available as a warm standby server (with possible data loss).  
   
  The principal and mirror servers communicate and cooperate as *partners* in a *database mirroring session*. The two partners perform complementary roles in the session: the *principal role* and the *mirror role*. At any given time, one partner performs the principal role, and the other partner performs the mirror role. Each partner is described as *owning* its current role. The partner that owns the principal role is known as the *principal server*, and its copy of the database is the current principal database. The partner that owns the mirror role is known as the *mirror server*, and its copy of the database is the current mirror database. When database mirroring is deployed in a production environment, the principal database is the *production database*.  
   
- Database mirroring involves *redoing* every insert, update, and delete operation that occurs on the principal database onto the mirror database as quickly as possible. Redoing is accomplished by sending a stream of active transaction log records to the mirror server, which applies log records to the mirror database, in sequence, as quickly as possible. Unlike replication, which works at the logical level, database mirroring works at the level of the physical log record. Beginning in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], the principal server compresses the stream of transaction log records before sending it to the mirror server. This log compression occurs in all mirroring sessions.  
+ Database mirroring involves *redoing* every insert, update, and delete operation that occurs on the principal database onto the mirror database as quickly as possible. Redoing is accomplished by sending a stream of active transaction log records to the mirror server, which applies log records to the mirror database, in sequence, as quickly as possible. Unlike replication, which works at the logical level, database mirroring works at the level of the physical log record. Beginning in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], the principal server compresses the stream of transaction log records before sending it to the mirror server. This log compression occurs in all mirroring sessions.  
   
 > [!NOTE]  
->  A given server instance can participate in multiple concurrent database mirroring sessions with the same or different partners. A server instance can be a partner in some sessions and a witness in other sessions. The mirror server instance must be running the same edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  A given server instance can participate in multiple concurrent database mirroring sessions with the same or different partners. A server instance can be a partner in some sessions and a witness in other sessions. The mirror server instance must be running the same edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  
   
@@ -150,12 +150,12 @@ manager: "jhubbard"
  For more information, see [Role Switching](#RoleSwitching), later in this topic.  
   
 > [!NOTE]  
->  Establishing a new mirroring session or adding a witness to an existing mirroring configuration requires that all involved server instances run the same version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. However, when you are upgrading to [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or a later version, the versions of the involved instances can vary. For more information, see [Minimize Downtime for Mirrored Databases When Upgrading Server Instances](../../2014/database-engine/minimize-downtime-for-mirrored-databases-when-upgrading-server-instances.md).  
+>  Establishing a new mirroring session or adding a witness to an existing mirroring configuration requires that all involved server instances run the same version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. However, when you are upgrading to [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] or a later version, the versions of the involved instances can vary. For more information, see [Minimize Downtime for Mirrored Databases When Upgrading Server Instances](../../2014/database-engine/minimize-downtime-for-mirrored-databases-when-upgrading-server-instances.md).  
   
 ####  <a name="TxnSafety"></a> Transaction Safety and Operating Modes  
- Whether an operating mode is asynchronous or synchronous depends on the transaction safety setting. If you exclusively use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to configure database mirroring, transaction safety settings are configured automatically when you select the operation mode.  
+ Whether an operating mode is asynchronous or synchronous depends on the transaction safety setting. If you exclusively use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to configure database mirroring, transaction safety settings are configured automatically when you select the operation mode.  
   
- If you use [!INCLUDE[tsql](../../includes/tsql-md.md)] to configure database mirroring, you must understand how to set transaction safety. Transaction safety is controlled by the SAFETY property of the ALTER DATABASE statement. On a database that is being mirrored, SAFETY is either FULL or OFF.  
+ If you use [!INCLUDE[tsql](../includes/tsql-md.md)] to configure database mirroring, you must understand how to set transaction safety. Transaction safety is controlled by the SAFETY property of the ALTER DATABASE statement. On a database that is being mirrored, SAFETY is either FULL or OFF.  
   
 -   If the SAFETY option is set to FULL, database mirroring operation is synchronous, after the initial synchronizing phase. If a witness is set in high-safety mode, the session supports automatic failover.  
   
@@ -210,7 +210,7 @@ manager: "jhubbard"
 >  Because mirrored databases are independent of each other, databases cannot fail over as a group.  
   
 ###  <a name="ClientConnections"></a> Client Connections  
- Client-connection support for database mirroring sessions is provided by the [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Connect Clients to a Database Mirroring Session &#40;SQL Server&#41;](../../2014/database-engine/connect-clients-to-a-database-mirroring-session-sql-server.md).  
+ Client-connection support for database mirroring sessions is provided by the [!INCLUDE[msCoName](../includes/msconame-md.md)] .NET Data Provider for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For more information, see [Connect Clients to a Database Mirroring Session &#40;SQL Server&#41;](../../2014/database-engine/connect-clients-to-a-database-mirroring-session-sql-server.md).  
   
 ###  <a name="ImpactOfPausing"></a> Impact of Pausing a Session on the Principal Transaction Log  
  At any time, the database owner can pause a session. Pausing preserves the session state while removing mirroring. When a session is paused, the principal server does not send any new log records to the mirror server. All of these records remain active and accumulate in the transaction log of the principal database. As long as a database mirroring session remains paused, the transaction log cannot be truncated. Therefore, if the database mirroring session is paused for too long, the log can fill up.  
@@ -221,7 +221,7 @@ manager: "jhubbard"
  Before a mirroring session can begin, the database owner or system administrator must create the mirror database, set up endpoints and logins, and, in some cases, create and set up certificates. For more information, see [Setting Up Database Mirroring &#40;SQL Server&#41;](../../2014/database-engine/setting-up-database-mirroring-sql-server.md).  
   
 ##  <a name="InterOp"></a> Interoperability and Coexistence with Other Database Engine Features  
- Database mirroring can be used with the following features or components of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Database mirroring can be used with the following features or components of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 -   [Log shipping](../../2014/database-engine/database-mirroring-and-log-shipping-sql-server.md)  
   
@@ -245,7 +245,7 @@ manager: "jhubbard"
  Contains information about switching partner roles during a database mirroring session, including automatic failover, manual failover, and forced service (with possible data loss). Also, contains information about estimating the interruption of service during role switching.  
   
  [Possible Failures During Database Mirroring](../../2014/database-engine/possible-failures-during-database-mirroring.md)  
- Discusses physical, operating system, and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] problems, including hard errors and soft errors, that can cause a failure in a database mirroring session. Discusses how the mirroring time-out mechanism responds to soft errors.  
+ Discusses physical, operating system, and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] problems, including hard errors and soft errors, that can cause a failure in a database mirroring session. Discusses how the mirroring time-out mechanism responds to soft errors.  
   
  [The Database Mirroring Endpoint &#40;SQL Server&#41;](../../2014/database-engine/the-database-mirroring-endpoint-sql-server.md)  
  Discusses how the database mirroring endpoint functions.  

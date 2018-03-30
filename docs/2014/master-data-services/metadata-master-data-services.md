@@ -21,9 +21,9 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Metadata (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], user-defined metadata is information that you use to describe model objects. For example, you may want to track the owners of a particular model or entity, or track the source systems that supply data to an entity.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], user-defined metadata is information that you use to describe model objects. For example, you may want to track the owners of a particular model or entity, or track the source systems that supply data to an entity.  
   
- User-defined metadata is managed by a model called **Metadata**. This model is automatically included when [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] is installed, and it is similar to all other MDS models, except that you cannot create versions of it.  
+ User-defined metadata is managed by a model called **Metadata**. This model is automatically included when [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] is installed, and it is similar to all other MDS models, except that you cannot create versions of it.  
   
  After you populate the Metadata model with user-defined metadata, you can include it in subscription views, so it can be consumed by subscribing systems.  
   
@@ -45,7 +45,7 @@ manager: "jhubbard"
   
 -   A free-form attribute named Last Review Date, which you use to track the date that an object was last reviewed by the owner.  
   
--   A domain-based attribute named Sources, which you use to track and manage the source systems that interact with the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] instance.  
+-   A domain-based attribute named Sources, which you use to track and manage the source systems that interact with the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] instance.  
   
 ## Related Tasks  
   

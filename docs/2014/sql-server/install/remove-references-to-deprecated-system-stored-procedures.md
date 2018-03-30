@@ -19,10 +19,10 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Remove references to deprecated system stored procedures
-  Upgrade Advisor detected statements that reference undocumented system stored procedures and extended stored procedures that are no longer available in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Statements that reference these objects will fail. Do not use undocumented system objects or APIs as the functionality might change or be removed without notification in a future release.  
+  Upgrade Advisor detected statements that reference undocumented system stored procedures and extended stored procedures that are no longer available in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Statements that reference these objects will fail. Do not use undocumented system objects or APIs as the functionality might change or be removed without notification in a future release.  
   
 ## Component  
- [!INCLUDE[ssDE](../../../includes/ssde-md.md)]  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## Description  
   
@@ -101,6 +101,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Database Engine Upgrade Issues](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;new&#93;](../Topic/SQL%20Server%202014%20Upgrade%20Advisor%20[new].md)  
+ [SQL Server 2014 Upgrade Advisor &#91;new&#93;](~/2014/sql-server/install/sql-server-2014-upgrade-advisor.md)  
   
   

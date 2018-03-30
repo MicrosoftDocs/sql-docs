@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Registered Servers F1 Help
-  This section contains the F1 Help topics for the Registered Servers component in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  This section contains the F1 Help topics for the Registered Servers component in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
  [New or Edit Server Registration &#40;General Tab&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/database-engine/new-edit-server-registration-analysis-services-multidimensional-data.md)  
   

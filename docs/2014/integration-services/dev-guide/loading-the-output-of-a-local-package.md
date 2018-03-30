@@ -23,7 +23,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Loading the Output of a Local Package
-  Client applications can read the output of [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] packages when the output is saved to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] destinations by using [!INCLUDE[vstecado](../../../includes/vstecado-md.md)], or when the output is saved to a flat file destination by using the classes in the **System.IO** namespace. However, a client application can also read the output of a package directly from memory, without the need for an intermediate step to persist the data. The key to this solution is the `Microsoft.SqlServer.Dts.DtsClient` namespace, which contains specialized implementations of the `IDbConnection`, `IDbCommand`, and **IDbDataParameter** interfaces from the **System.Data** namespace. The assembly Microsoft.SqlServer.Dts.DtsClient.dll is installed by default in **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**.  
+  Client applications can read the output of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages when the output is saved to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destinations by using [!INCLUDE[vstecado](../../includes/vstecado-md.md)], or when the output is saved to a flat file destination by using the classes in the **System.IO** namespace. However, a client application can also read the output of a package directly from memory, without the need for an intermediate step to persist the data. The key to this solution is the `Microsoft.SqlServer.Dts.DtsClient` namespace, which contains specialized implementations of the `IDbConnection`, `IDbCommand`, and **IDbDataParameter** interfaces from the **System.Data** namespace. The assembly Microsoft.SqlServer.Dts.DtsClient.dll is installed by default in **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**.  
   
 > [!NOTE]  
 >  The procedure described in this topic requires that the DelayValidation property of the Data Flow task and of any parent objects be set to its default value of **False**.  
@@ -35,12 +35,12 @@ manager: "jhubbard"
   
 1.  In the package, configure a DataReader destination to receive the output that you want to read into the client application. Give the DataReader destination a descriptive name, since you will use this name later in your client application. Make a note of the name of the DataReader destination.  
   
-2.  In the development project, set a reference to the `Microsoft.SqlServer.Dts.DtsClient` namespace by locating the assembly **Microsoft.SqlServer.Dts.DtsClient.dll**. By default, this assembly is installed in **C:\Program Files\Microsoft SQL Server\100\DTS\Binn**. Import the namespace into your code by using the C# `Using` or the [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] `Imports` statement.  
+2.  In the development project, set a reference to the `Microsoft.SqlServer.Dts.DtsClient` namespace by locating the assembly **Microsoft.SqlServer.Dts.DtsClient.dll**. By default, this assembly is installed in **C:\Program Files\Microsoft SQL Server\100\DTS\Binn**. Import the namespace into your code by using the C# `Using` or the [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] `Imports` statement.  
   
 3.  In your code, create an object of type `DtsClient.DtsConnection` with a connection string that contains the command-line parameters required by **dtexec.exe** to run the package. For more information, see [dtexec Utility](../../../2014/integration-services/dtexec-utility.md). Then open the connection with this connection string. You can also use the **dtexecui** utility to create the required connection string visually.  
   
     > [!NOTE]  
-    >  The sample code demonstrates loading the package from the file system by using the `/FILE <path and filename>` syntax. However you can also load the package from the MSDB database by using the `/SQL <package name>` syntax, or from the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] package store by using the `/DTS \<folder name>\<package name>` syntax.  
+    >  The sample code demonstrates loading the package from the file system by using the `/FILE <path and filename>` syntax. However you can also load the package from the MSDB database by using the `/SQL <package name>` syntax, or from the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package store by using the `/DTS \<folder name>\<package name>` syntax.  
   
 4.  Create an object of type `DtsClient.DtsCommand` that uses the previously created `DtsConnection` and set its `CommandText` property to the name of the DataReader destination in the package. Then call the `ExecuteReader` method of the command object to load the package results into a new DataReader.  
   
@@ -66,11 +66,11 @@ manager: "jhubbard"
   
 #### To create the test package  
   
-1.  Create a new [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] package. The sample code uses "DtsClientWParamPkg.dtsx" as the name of the package.  
+1.  Create a new [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package. The sample code uses "DtsClientWParamPkg.dtsx" as the name of the package.  
   
 2.  Add a variable of type String in the DtsClient namespace. The sample code use Country as the name of the variable. (You may need to click the **Choose Variable Columns** toolbar button in the **Variables** window to display the **Namespace** column.)  
   
-3.  Add an OLE DB connection manager that connects to the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] sample database.  
+3.  Add an OLE DB connection manager that connects to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database.  
   
 4.  Add a data flow task to the package and switch to the Data Flow design surface.  
   
@@ -294,7 +294,7 @@ namespace DtsClientWParamCS
   
 ||  
 |-|  
-|![Integration Services icon (small)](../../../2014/integration-services/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
+|![Integration Services icon (small)](../../../2014/integration-services/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
   
 ## See Also  
  [Understanding the Differences between Local and Remote Execution](../../../2014/integration-services/dev-guide/understanding-the-differences-between-local-and-remote-execution.md)   

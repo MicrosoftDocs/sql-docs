@@ -23,7 +23,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Dimension Processing Destination
-  The Dimension Processing destination loads and processes an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dimension. For more information about dimensions, see [Dimensions &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dev-guide/dimensions-analysis-services-multidimensional-data.md).  
+  The Dimension Processing destination loads and processes an [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dimension. For more information about dimensions, see [Dimensions &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dev-guide/dimensions-analysis-services-multidimensional-data.md).  
   
  The Dimension Processing destination includes the following features:  
   
@@ -33,14 +33,14 @@ manager: "jhubbard"
   
 -   Mapping of input columns to columns in dimension tables.  
   
- For more information about processing [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects, see [Processing Options and Settings &#40;Analysis Services&#41;](../../2014/analysis-services/processing-options-and-settings-analysis-services.md).  
+ For more information about processing [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objects, see [Processing Options and Settings &#40;Analysis Services&#41;](../../2014/analysis-services/processing-options-and-settings-analysis-services.md).  
   
 ## Configuration of the Dimension Processing Destination  
- The Dimension Processing destination uses an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] connection manager to connect to the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project or the instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] that contains the dimensions the destination processes. For more information, see [Analysis Services Connection Manager](../../2014/integration-services/analysis-services-connection-manager.md).  
+ The Dimension Processing destination uses an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] connection manager to connect to the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project or the instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] that contains the dimensions the destination processes. For more information, see [Analysis Services Connection Manager](../../2014/integration-services/analysis-services-connection-manager.md).  
   
  This destination has one input. It does not support an error output.  
   
- You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer or programmatically.  
   
  For more information about the properties that you can set in the **Dimension Processing Destination Editor** dialog box, click one of the following topics:  
   

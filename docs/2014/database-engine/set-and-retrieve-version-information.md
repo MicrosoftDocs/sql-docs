@@ -25,7 +25,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Set and Retrieve Version Information
-  Version information includes the history and current status of a source-controlled file. For every source-controlled file, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual SourceSafe maintains a comprehensive history, so you can track the evolution of one or more files over time. You can also use this information to retrieve a local copy of any version of the file or to compare any two file versions.  
+  Version information includes the history and current status of a source-controlled file. For every source-controlled file, [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe maintains a comprehensive history, so you can track the evolution of one or more files over time. You can also use this information to retrieve a local copy of any version of the file or to compare any two file versions.  
   
  The history of a file includes:  
   

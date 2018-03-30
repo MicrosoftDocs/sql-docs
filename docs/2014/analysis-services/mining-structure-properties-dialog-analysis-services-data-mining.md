@@ -20,7 +20,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Mining Structure Properties Dialog (Analysis Services - Data Mining)
-  Use the **Mining Structure Properties** dialog box in **SQL Server Management Studio** to set the properties of a mining structure in an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database. You can display the **Mining Structure Properties** dialog box by right-clicking a mining structure in **Object Explorer** and selecting **Properties** from the context menu.  
+  Use the **Mining Structure Properties** dialog box in **SQL Server Management Studio** to set the properties of a mining structure in an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database. You can display the **Mining Structure Properties** dialog box by right-clicking a mining structure in **Object Explorer** and selecting **Properties** from the context menu.  
   
  The **Mining Structure Properties** dialog box contains the following pages:  
   

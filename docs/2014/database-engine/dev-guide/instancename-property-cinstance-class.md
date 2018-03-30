@@ -25,7 +25,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # InstanceName Property (CInstance Class)
-  Gets the name of the instance of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] client.  
+  Gets the name of the instance of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client.  
   
 ## Syntax  
   
@@ -37,10 +37,10 @@ object
   
 ## Parts  
  *object*  
- A [CInstance Class](../../../2014/database-engine/dev-guide/cinstance-class.md) object that represents a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] client instance.  
+ A [CInstance Class](../../../2014/database-engine/dev-guide/cinstance-class.md) object that represents a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client instance.  
   
 ## Property Value/Return Value  
- A string value that specifies the name of the instance of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] client.  
+ A string value that specifies the name of the instance of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client.  
   
 ## Remarks  
   

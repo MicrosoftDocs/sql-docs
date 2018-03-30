@@ -18,11 +18,11 @@ helpviewer_keywords:
 ms.assetid: d9c7c0b3-fce4-4a65-b679-408273e6a925
 caps.latest.revision: 35
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Analysis Services MDX Query Designer User Interface
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides graphical query designers for building Multidimensional Expression (MDX) queries and Data Mining Expression (DMX) queries for an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data source. This topic describes the MDX query designer. For more information about the DMX query designer, see [Analysis Services Connection Type for DMX &#40;SSRS&#41;](../../2014/reporting-services/analysis-services-connection-type-for-dmx-ssrs.md).  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] provides graphical query designers for building Multidimensional Expression (MDX) queries and Data Mining Expression (DMX) queries for an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data source. This topic describes the MDX query designer. For more information about the DMX query designer, see [Analysis Services Connection Type for DMX &#40;SSRS&#41;](../../2014/reporting-services/analysis-services-connection-type-for-dmx-ssrs.md).  
   
  The MDX graphical query designer has two modes: design mode and query mode. Each mode provides a metadata pane from which you can drag members from the selected cubes to build an MDX query that retrieves data when the report is processed.  
   
@@ -95,7 +95,7 @@ manager: "mblythe"
   
  The Metadata pane displays tabs for **Metadata**, **Functions**, and **Templates**. From the **Metadata** tab, you can drag dimensions, hierarchies, KPIs, and measures onto the MDX Query pane. From the **Functions** tab, you can drag functions onto the MDX Query pane. From the **Templates** tab, you can add MDX templates to the MDX Query pane. When you execute the query, the Result pane displays the results for the MDX query.  
   
- You can extend the default MDX query generated in Design mode to include additional member properties and cell properties. When you run the query, these values do not appear in the result set. However, they are passed back to [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and you can use these values in a report. For more information, see Extended Field Properties for an Analysis Services Database (SSRS).  
+ You can extend the default MDX query generated in Design mode to include additional member properties and cell properties. When you run the query, these values do not appear in the result set. However, they are passed back to [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] and you can use these values in a report. For more information, see Extended Field Properties for an Analysis Services Database (SSRS).  
   
 ### Graphical Query Designer Toolbar in Query Mode  
  The query designer toolbar provides buttons to help you design MDX queries using the graphical interface.  

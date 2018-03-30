@@ -23,7 +23,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Mining Model Viewer Tasks and How-tos
-  Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] contains several tools that you can use to explore mining models. The following topics provide step-by-step instructions on how to complete tasks that are specific to using the **Mining Model Viewer** tab in the designer.  
+  Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] contains several tools that you can use to explore mining models. The following topics provide step-by-step instructions on how to complete tasks that are specific to using the **Mining Model Viewer** tab in the designer.  
   
 ## In This Section  
   

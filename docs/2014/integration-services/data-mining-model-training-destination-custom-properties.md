@@ -23,7 +23,7 @@ manager: "jhubbard"
 |Property|Data Type|Description|  
 |--------------|---------------|-----------------|  
 |ASConnectionId|String|The unique identifier of the connection manager.|  
-|ASConnectionString|String|The connection string to an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] or to an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project.|  
+|ASConnectionString|String|The connection string to an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] or to an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project.|  
 |ObjectRef|String|An XML tag that identifies the data mining structure that the transformation uses.|  
   
  The input and the input columns of the Data Mining Model Training destination have no custom properties.  

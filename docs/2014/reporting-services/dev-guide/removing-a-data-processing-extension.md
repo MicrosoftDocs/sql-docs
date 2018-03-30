@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 1d89e32b-0631-44f6-8178-a57fb791d26d
 caps.latest.revision: 33
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Removing a Data Processing Extension

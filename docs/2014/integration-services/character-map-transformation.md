@@ -66,7 +66,7 @@ manager: "jhubbard"
   
 -   Specify the operations to apply to each column.  
   
- You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer or programmatically.  
   
  For more information about the properties that you can set in the **Character Map Transformation Editor** dialog box, see [Character Map Transformation Editor](../../2014/integration-services/character-map-transformation-editor.md).  
   

@@ -16,16 +16,16 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # PowerPivot Configuration using Windows PowerShell
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] includes Windows PowerShell cmdlets that you can use to configure an installation of [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. To fully configure an installation with PowerShell requires the use of both SharePoint cmdlets and PowerPivot for SharePoint cmdlets. A majority of configuration can be completed using one of the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] tools. For more information on the tools, see [PowerPivot Configuration Tools](../../2014/analysis-services/powerpivot-configuration-tools.md).  
+  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] includes Windows PowerShell cmdlets that you can use to configure an installation of [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)]. To fully configure an installation with PowerShell requires the use of both SharePoint cmdlets and PowerPivot for SharePoint cmdlets. A majority of configuration can be completed using one of the [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] tools. For more information on the tools, see [PowerPivot Configuration Tools](../../2014/analysis-services/powerpivot-configuration-tools.md).  
   
 > [!IMPORTANT]  
->  For a SharePoint 2010 farm, SharePoint 2010 SP1 must be installed before you can configure either PowerPivot for SharePoint, or a SharePoint farm that uses a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] database server. If you have not yet installed the service pack, install it before you begin configuring the server.  
+>  For a SharePoint 2010 farm, SharePoint 2010 SP1 must be installed before you can configure either PowerPivot for SharePoint, or a SharePoint farm that uses a [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] database server. If you have not yet installed the service pack, install it before you begin configuring the server.  
   
 ## Benefits of Configuring PowerPivot for SharePoint Using PowerShell  
  You can build Windows PowerShell script (.ps1) files to automate configuration tasks. This approach is recommended if you require scripted installation and configuration steps that you can run on any server. You might require such a script as part of a disaster recovery plan for rebuilding a server in the event of a hardware failure.  
   
 ## View a list of the PowerPivot Cmdlets on a Server  
- To see content and examples of the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] cmdlets, see [PowerShell Reference for PowerPivot for SharePoint](../Topic/PowerShell%20Reference%20for%20PowerPivot%20for%20SharePoint.md).  
+ To see content and examples of the [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] cmdlets, see [PowerShell Reference for PowerPivot for SharePoint](~/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md).  
   
  To use PowerShell to view a list of the PowerPivot cmdlets:  
   
@@ -83,6 +83,6 @@ manager: "mblythe"
   
  [PowerPivot Configuration Tools](../../2014/analysis-services/powerpivot-configuration-tools.md)  
   
- [PowerShell Reference for PowerPivot for SharePoint](../Topic/PowerShell%20Reference%20for%20PowerPivot%20for%20SharePoint.md)  
+ [PowerShell Reference for PowerPivot for SharePoint](~/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)  
   
   

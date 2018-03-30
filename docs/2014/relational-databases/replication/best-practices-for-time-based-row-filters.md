@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
 caps.latest.revision: 15
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Best Practices for Time-Based Row Filters
@@ -68,7 +68,7 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
 WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND Replicate = 1  
 ```  
   
- The SQL Server Agent job could execute [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements similar to the following before each Merge Agent run:  
+ The SQL Server Agent job could execute [!INCLUDE[tsql](../../includes/tsql-md.md)] statements similar to the following before each Merge Agent run:  
   
 ```  
 UPDATE Events SET Replicate = 0 WHERE Replicate = 1  
@@ -77,7 +77,7 @@ UPDATE Events SET Replicate = 1 WHERE EventDate <= GETDATE()+6
 GO  
 ```  
   
- The first line resets the **Replicate** column to **0**, and the second line sets the column to **1** for events that occur in the next seven days. If this [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement runs on 10/07/2006, the table is updated to:  
+ The first line resets the **Replicate** column to **0**, and the second line sets the column to **1** for events that occur in the next seven days. If this [!INCLUDE[tsql](../../includes/tsql-md.md)] statement runs on 10/07/2006, the table is updated to:  
   
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**Replicate**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
@@ -89,7 +89,7 @@ GO
  The events for the next week are now flagged as being ready to replicate. The next time the Merge Agent runs for the subscription that event coordinator 112 uses, rows 2, 3, and 4 will be downloaded to the Subscriber and row 1 will be removed from the Subscriber.  
   
 ## See Also  
- [GETDATE &#40;Transact-SQL&#41;](../Topic/GETDATE%20\(Transact-SQL\).md)   
+ [GETDATE &#40;Transact-SQL&#41;](~/t-sql/functions/getdate-transact-sql.md)   
  [Implement Jobs](../../../2014/database-engine/implement-jobs.md)   
  [Parameterized Row Filters](../../../2014/relational-databases/replication/parameterized-row-filters.md)  
   

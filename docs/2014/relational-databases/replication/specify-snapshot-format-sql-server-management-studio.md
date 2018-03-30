@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 7c95f545-731a-4743-9acb-0b325ef9b98b
 caps.latest.revision: 36
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Specify Snapshot Format (SQL Server Management Studio)
@@ -26,9 +26,9 @@ manager: "jhubbard"
 1.  On the **Snapshot** page of the **Publication Properties - \<Publication>** dialog box, select **Native SQL Server - all Subscribers must be servers running SQL Server** or **Character - required if a Publisher or Subscriber is not running SQL Server**.  
   
     > [!NOTE]  
-    >  It is recommended to select the native format unless this publication must support subscriptions to a [!INCLUDE[ssEW](../../../includes/ssew-md.md)] database or a non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database.  
+    >  It is recommended to select the native format unless this publication must support subscriptions to a [!INCLUDE[ssEW](../../includes/ssew-md.md)] database or a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
   
-2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## See Also  
  [Configure Snapshot Properties &#40;Replication Transact-SQL Programming&#41;](../../../2014/relational-databases/replication/configure-snapshot-properties-replication-transact-sql-programming.md)   

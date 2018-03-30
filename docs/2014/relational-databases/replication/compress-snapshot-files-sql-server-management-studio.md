@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 174ade3e-74a1-4e67-a6da-b874be3ff50f
 caps.latest.revision: 34
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Compress Snapshot Files (SQL Server Management Studio)
@@ -37,7 +37,7 @@ manager: "jhubbard"
   
 2.  Select **Compress snapshot files in this folder**.  
   
-3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## See Also  
  [Configure Snapshot Properties &#40;Replication Transact-SQL Programming&#41;](../../../2014/relational-databases/replication/configure-snapshot-properties-replication-transact-sql-programming.md)   

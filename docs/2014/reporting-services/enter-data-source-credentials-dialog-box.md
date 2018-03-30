@@ -15,11 +15,11 @@ f1_keywords:
 ms.assetid: 70258400-0c6b-49fe-a507-344427255223
 caps.latest.revision: 26
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Enter Data Source Credentials Dialog Box
-  Use the **Enter Data Source Credentials** dialog box to provide your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credentials so that you can retrieve data from the data source.  
+  Use the **Enter Data Source Credentials** dialog box to provide your [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] credentials so that you can retrieve data from the data source.  
   
 ## Options  
  **User name**  

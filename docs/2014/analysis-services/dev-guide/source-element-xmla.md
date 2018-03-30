@@ -64,7 +64,7 @@ manager: "mblythe"
  The `Source` element is an object reference to a single partition to be merged into a target partition specified by the `Target` element of the parent `MergePartitions` element.  
   
 ## Example  
- The following example combines all four partitions of the `Internet Sales` measure group into the `Internet_Sales_2004` target partition. The example refers to the **Adventure Works** cube of the [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] sample [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] database.  
+ The following example combines all four partitions of the `Internet Sales` measure group into the `Internet_Sales_2004` target partition. The example refers to the **Adventure Works** cube of the [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] sample [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database.  
   
 ```  
 <MergePartitions xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  

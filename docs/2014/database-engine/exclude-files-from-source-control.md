@@ -19,9 +19,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Exclude Files from Source Control
-  If the solution you are working on contains files that do not require source control services, you can use the **Exclude from Source Control** command to exclude the file from source control. When you do this, the file remains in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual SourceSafe database, but it is no longer checked in or out with the project.  
+  If the solution you are working on contains files that do not require source control services, you can use the **Exclude from Source Control** command to exclude the file from source control. When you do this, the file remains in the [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe database, but it is no longer checked in or out with the project.  
   
- You should use the **Exclude from Source Control** command only on generated files. A generated file is one that can be entirely re-created by [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] based on the contents of another file in the solution.  
+ You should use the **Exclude from Source Control** command only on generated files. A generated file is one that can be entirely re-created by [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] based on the contents of another file in the solution.  
   
 ### To exclude a file from source control  
   

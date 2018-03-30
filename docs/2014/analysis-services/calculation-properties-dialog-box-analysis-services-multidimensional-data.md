@@ -20,7 +20,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Calculation Properties Dialog Box (Analysis Services - Multidimensional Data)
-  Use the **Calculation Properties** dialog box in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to view or edit the display folder and associated measure group properties of calculations defined on the **Calculations** tab in Cube Designer for the selected cube. You can display the **Calculation Properties** dialog box by clicking **Calculation Properties** on the **Toolbar** pane on the **Calculations** tab in Cube Designer.  
+  Use the **Calculation Properties** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to view or edit the display folder and associated measure group properties of calculations defined on the **Calculations** tab in Cube Designer for the selected cube. You can display the **Calculation Properties** dialog box by clicking **Calculation Properties** on the **Toolbar** pane on the **Calculations** tab in Cube Designer.  
   
 ## Options  
  **Calculation Name**  
@@ -30,10 +30,10 @@ manager: "mblythe"
 >  Script commands are not displayed.  
   
  **Display Folder**  
- Type the name of the display folder in which the calculation should be displayed in client applications, including [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] and [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ Type the name of the display folder in which the calculation should be displayed in client applications, including [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] and [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
  **Associated Measure Group**  
- Select the measure group in which the calculated member or named set should be displayed in client applications, including [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] and [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ Select the measure group in which the calculated member or named set should be displayed in client applications, including [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] and [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 ## See Also  
  [Calculations &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/calculations-cube-designer-analysis-services-multidimensional-data.md)   

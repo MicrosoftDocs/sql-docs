@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: e2b300b0-e734-4c43-a4da-c78e6e5d4fba
 caps.latest.revision: 33
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Deny Permissions on an XML Schema Collection
@@ -190,8 +190,8 @@ GO
  [Compare Typed XML to Untyped XML](../../2014/database-engine/compare-typed-xml-to-untyped-xml.md)   
  [XML Schema Collections &#40;SQL Server&#41;](../../2014/database-engine/xml-schema-collections-sql-server.md)   
  [Requirements and Limitations for XML Schema Collections on the Server](../../2014/database-engine/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)   
- [DENY Object Permissions &#40;Transact-SQL&#41;](../Topic/DENY%20Object%20Permissions%20\(Transact-SQL\).md)   
- [GRANT Object Permissions &#40;Transact-SQL&#41;](../Topic/GRANT%20Object%20Permissions%20\(Transact-SQL\).md)   
+ [DENY Object Permissions &#40;Transact-SQL&#41;](~/t-sql/statements/deny-object-permissions-transact-sql.md)   
+ [GRANT Object Permissions &#40;Transact-SQL&#41;](~/t-sql/statements/grant-object-permissions-transact-sql.md)   
  [XML Data &#40;SQL Server&#41;](../../2014/database-engine/xml-data-sql-server.md)  
   
   

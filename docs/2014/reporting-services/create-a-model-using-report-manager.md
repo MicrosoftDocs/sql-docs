@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 8e5d2bd3-48ec-45f3-afee-6d86797c8f28
 caps.latest.revision: 28
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Create a Model Using Report Manager
-  You can generate models from an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cube, a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, or an Oracle database using Report Manager. Report models are generated from shared data sources that are published on the report server. If you do not already have a shared data source, you must create one.  
+  You can generate models from an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cube, a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database, or an Oracle database using Report Manager. Report models are generated from shared data sources that are published on the report server. If you do not already have a shared data source, you must create one.  
   
  The report model that you generate is based entirely on the schema of the shared data source. You cannot choose which parts of the data source are included in the model, nor can you edit the rules or metadata of a generated model. However, you can set properties on the model after it is generated and define role assignments that restrict access to all or part of the model.  
   
 > [!NOTE]  
->  An Oracle-based model generated using Report Manager or [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] will include database objects that are a part of the schema for the user account used to connect to the Oracle data source. The user account name is specified in the data source properties credentials.  
+>  An Oracle-based model generated using Report Manager or [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[offSPServ](../includes/offspserv-md.md)] 2007 [!INCLUDE[SPS2010](../includes/sps2010-md.md)] will include database objects that are a part of the schema for the user account used to connect to the Oracle data source. The user account name is specified in the data source properties credentials.  
   
 ### To create a new data source for a report model using Report Manager  
   
@@ -44,14 +44,14 @@ manager: "mblythe"
   
 8.  Select the connection method that Report Builder users will need to use to connect to the database.  
   
-    -   Windows Authentication: Select this option when you want the operating system to authenticate [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] users. This option allows [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to use Windows security features, such as password encryption, to authenticate users. It is strongly recommended that you select this option.  
+    -   Windows Authentication: Select this option when you want the operating system to authenticate [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] users. This option allows [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to use Windows security features, such as password encryption, to authenticate users. It is strongly recommended that you select this option.  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication: Select this option when you want users to use a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login account that you created. Users must supply a valid [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login name and password.  
+    -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication: Select this option when you want users to use a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] login account that you created. Users must supply a valid [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] login name and password.  
   
         > [!CAUTION]  
         >  Whenever possible, use Windows Authentication.  
   
-9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ### To create a report model using Report Manager  
   
@@ -73,7 +73,7 @@ manager: "mblythe"
   
      By default, the report model is saved to Report Manager Home.  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
      The report model is created and saved to the location that you specified. You can assign permissions to this model by using Report Manager.  
   

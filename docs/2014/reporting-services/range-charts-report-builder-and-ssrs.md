@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 48e351d3-ac5b-4eda-a4bd-32a0de206a30
 caps.latest.revision: 4
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Range Charts (Report Builder and SSRS)
@@ -23,7 +23,7 @@ manager: "mblythe"
  ![Range chart](../../2014/reporting-services/media/rs-rangechart.gif "Range chart")  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## Variations  
   

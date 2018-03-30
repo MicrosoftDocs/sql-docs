@@ -18,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
 caps.latest.revision: 34
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Define Parameters in the MDX Query Designer for Analysis Services (Report Builder and SSRS)
-  To parameterize an MDX query for an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data source, you must add a query parameter to the query. In the MDX query designer, you can add a query parameter in both Design mode and Query mode by specifying a filter. After you define the query with a query parameter, Reporting Services automatically creates a report parameter and a dataset to provide the list of valid values. This enables a user to specify a value that is passed directly to the query.  
+  To parameterize an MDX query for an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data source, you must add a query parameter to the query. In the MDX query designer, you can add a query parameter in both Design mode and Query mode by specifying a filter. After you define the query with a query parameter, Reporting Services automatically creates a report parameter and a dataset to provide the list of valid values. This enables a user to specify a value that is passed directly to the query.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ### To define a query parameter in MDX in Design mode  
   
-1.  In the Report Data pane, right-click on a dataset created from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data source type, and then click **Query**. The MDX query designer opens in Design mode.  
+1.  In the Report Data pane, right-click on a dataset created from a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data source type, and then click **Query**. The MDX query designer opens in Design mode.  
   
 2.  Drag a dimension to the filter area and drop it on the first cell in the **Dimension** column.  
   
@@ -45,7 +45,7 @@ manager: "mblythe"
   
      After you run the query, click **Design** on the toolbar to toggle to Query mode to view the MDX query that was created. Do not change the query text in Query mode if you want to continue to use Design mode to develop the query. Click **Design** to toggle back to Design mode.  
   
-8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
      In the Report Data pane, expand the Parameters node to display the report parameter that was automatically created for the filter.  
   
@@ -53,7 +53,7 @@ manager: "mblythe"
   
 ### To define a query parameter in MDX in Query mode  
   
-1.  In the Report Data pane, right-click on a dataset created from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data source type, and then click **Query**. The MDX query designer opens in Design mode.  
+1.  In the Report Data pane, right-click on a dataset created from a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data source type, and then click **Query**. The MDX query designer opens in Design mode.  
   
 2.  On the toolbar, click **Design** to toggle to Query mode.  
   
@@ -69,11 +69,11 @@ manager: "mblythe"
   
 8.  In the **Default** column, from the drop-down list, select a single value or multiple values depending on your choice in step 5.  
   
-9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 10. On the query designer toolbar, click **Run**.  
   
-11. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
      In the Report Data pane, expand the Parameters node to display the report parameter that was automatically created for the filter.  
   

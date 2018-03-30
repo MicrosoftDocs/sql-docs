@@ -30,7 +30,7 @@ manager: "jhubbard"
      To resolve this error, make sure a proxy account exists on the target server with the same name as the master server proxy account under which the job step runs.  
   
 > [!CAUTION]  
->  [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
+>  [!INCLUDE[ssNoteRegistry](../includes/ssnoteregistry-md.md)]  
   
 ## See Also  
  [Create a Multiserver Environment](../../2014/database-engine/create-a-multiserver-environment.md)  

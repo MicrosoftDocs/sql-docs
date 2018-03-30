@@ -28,7 +28,7 @@ manager: "jhubbard"
  Type the path of a file that contains a Policy-Based Management policy, or use the Browse (**...**) button to select the file.  
   
  **Server**  
- Select to connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] that contains the policy that you want.  
+ Select to connect to an instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] that contains the policy that you want.  
   
  **Policies: Policy**  
  Click to open the policy dialog box for the specified policy.  
@@ -40,7 +40,7 @@ manager: "jhubbard"
  The facet implemented by the policy. This box is read-only.  
   
  **Evaluate**  
- Runs the policy in evaluation mode. This generates a compliance report for the target set but does not reconfigure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or enforce future compliance.  
+ Runs the policy in evaluation mode. This generates a compliance report for the target set but does not reconfigure [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] or enforce future compliance.  
   
 ## Possible Errors  
   
@@ -48,15 +48,15 @@ manager: "jhubbard"
   
      The target set could be empty due to any of the following reasons:  
   
-    -   There are no targets on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] of the type specified by the policy.  
+    -   There are no targets on the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] of the type specified by the policy.  
   
-    -   The server restriction might exclude the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that contains the target.  
+    -   The server restriction might exclude the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that contains the target.  
   
     -   If the policy is on an object in a database (for example a table, view, or user) the database might not subscribe to the category of the policy.  
   
-    -   The target-set filter might exclude all targets on this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+    -   The target-set filter might exclude all targets on this instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-    -   The target server type is different from the server type on which the policy is evaluated. For example, in the [!INCLUDE[ssDE](../../includes/ssde-md.md)], if you try to evaluate a policy that has been created for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], you will receive an empty target set  
+    -   The target server type is different from the server type on which the policy is evaluated. For example, in the [!INCLUDE[ssDE](../includes/ssde-md.md)], if you try to evaluate a policy that has been created for [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], you will receive an empty target set  
   
 ## See Also  
  [Administer Servers by Using Policy-Based Management](../../2014/database-engine/administer-servers-by-using-policy-based-management.md)   

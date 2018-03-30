@@ -20,12 +20,12 @@ ms.author: "jroth"
 manager: "jhubbard"
 ---
 # Configure the Flexible Failover Policy to Control Conditions for Automatic Failover (Always On Availability Groups)
-  This topic describes how to configure the flexible failover policy for an AlwaysOn availability group by using [!INCLUDE[tsql](../../includes/tsql-md.md)] or PowerShell in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. A flexible failover policy provides granular control over the conditions that cause automatic failover for an availability group. By changing the failure conditions that trigger an automatic failover and the frequency of health checks, you can increase or decrease the likelihood of an automatic failover to support your SLA for high availability.  
+  This topic describes how to configure the flexible failover policy for an AlwaysOn availability group by using [!INCLUDE[tsql](../includes/tsql-md.md)] or PowerShell in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. A flexible failover policy provides granular control over the conditions that cause automatic failover for an availability group. By changing the failure conditions that trigger an automatic failover and the frequency of health checks, you can increase or decrease the likelihood of an automatic failover to support your SLA for high availability.  
   
   
   
     > [!NOTE]  
-    >  The flexible failover policy of an availability group cannot be configured by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+    >  The flexible failover policy of an availability group cannot be configured by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
@@ -53,11 +53,11 @@ manager: "jhubbard"
   
 1.  Connect to the server instance that hosts the primary replica.  
   
-2.  For a new availability group, use the [CREATE AVAILABILITY GROUP](../Topic/CREATE%20AVAILABILITY%20GROUP%20\(Transact-SQL\).md)[!INCLUDE[tsql](../../includes/tsql-md.md)] statement. If you are modifying an existing availability group, use the [ALTER AVAILABILITY GROUP](../Topic/ALTER%20AVAILABILITY%20GROUP%20\(Transact-SQL\).md)[!INCLUDE[tsql](../../includes/tsql-md.md)] statement.  
+2.  For a new availability group, use the [CREATE AVAILABILITY GROUP](~/t-sql/statements/create-availability-group-transact-sql.md)[!INCLUDE[tsql](../includes/tsql-md.md)] statement. If you are modifying an existing availability group, use the [ALTER AVAILABILITY GROUP](~/t-sql/statements/alter-availability-group-transact-sql.md)[!INCLUDE[tsql](../includes/tsql-md.md)] statement.  
   
     -   To set the failover condition level, use the FAILURE_CONDITION_LEVEL = *n* option, where, *n* is an integer from 1 to 5.  
   
-         For example, the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement changes the failure-condition level of an existing availability group, `AG1`, to level one:  
+         For example, the following [!INCLUDE[tsql](../includes/tsql-md.md)] statement changes the failure-condition level of an existing availability group, `AG1`, to level one:  
   
         ```  
   
@@ -66,7 +66,7 @@ manager: "jhubbard"
   
          The relationship of these integer values to the failure condition levels is as follows:  
   
-        |[!INCLUDE[tsql](../../includes/tsql-md.md)] Value|Level|Automatic Is Failover Initiated When…|  
+        |[!INCLUDE[tsql](../includes/tsql-md.md)] Value|Level|Automatic Is Failover Initiated When…|  
         |------------------------------|-----------|-------------------------------------------|  
         |1|One|On server down. The SQL Server service stops because of a failover or restart.|  
         |2|Two|On server unresponsive. Any condition of lower value is satisfied, the SQL Server service is connected to the cluster and the health check timeout threshold is exceeded, or the current primary replica is in a failed state.|  
@@ -78,7 +78,7 @@ manager: "jhubbard"
   
     -   To configure the health check timeout threshold, use the HEALTH_CHECK_TIMEOUT = *n* option, where, *n* is an integer from 15000 milliseconds (15 seconds) to 4294967295 milliseconds. The default value is 30000 milliseconds (30 seconds)  
   
-         For example, the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement changes the health-check timeout threshold of an existing availability group, `AG1`, to 60,000 milliseconds (one minute).  
+         For example, the following [!INCLUDE[tsql](../includes/tsql-md.md)] statement changes the health-check timeout threshold of an existing availability group, `AG1`, to 60,000 milliseconds (one minute).  
   
         ```  
   
@@ -123,7 +123,7 @@ manager: "jhubbard"
         ```  
   
 > [!NOTE]  
->  To view the syntax of a cmdlet, use the `Get-Help` cmdlet in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../2014/database-engine/get-help-sql-server-powershell.md).  
+>  To view the syntax of a cmdlet, use the `Get-Help` cmdlet in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../2014/database-engine/get-help-sql-server-powershell.md).  
   
  **To set up and use the SQL Server PowerShell provider**  
   
@@ -137,6 +137,6 @@ manager: "jhubbard"
  [Failover and Failover Modes &#40;AlwaysOn Availability Groups&#41;](../../2014/database-engine/failover-and-failover-modes-alwayson-availability-groups.md)   
  [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../2014/database-engine/windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [Failover Policy for Failover Cluster Instances](../../2014/database-engine/failover-policy-for-failover-cluster-instances.md)   
- [sp_server_diagnostics &#40;Transact-SQL&#41;](../Topic/sp_server_diagnostics%20\(Transact-SQL\).md)  
+ [sp_server_diagnostics &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md)  
   
   

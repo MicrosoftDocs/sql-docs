@@ -15,7 +15,7 @@ f1_keywords:
 ms.assetid: f9d406dd-a87c-4321-bf23-339d90654062
 caps.latest.revision: 38
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Report Properties Dialog Box, Page Setup

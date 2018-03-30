@@ -19,7 +19,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Object Naming Rules (Analysis Services)
-  This topic describes object naming conventions, as well as the reserved words and characters that cannot be used in any object name, in code or script in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+  This topic describes object naming conventions, as well as the reserved words and characters that cannot be used in any object name, in code or script in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ##  <a name="bkmk_Names"></a> Naming Conventions  
  Every object has a `Name` and `ID` property that must be unique within the scope of the parent collection. For example, two dimensions can have same name as long as each one resides in a different database.  
@@ -87,7 +87,7 @@ manager: "mblythe"
  Databases can have a ModelType of default. Default is equivalent to multidimensional, and thus does not support the use of reserved characters in column names.  
   
 ## See Also  
- [MDX Reserved Words](../Topic/MDX%20Reserved%20Words.md)   
+ [MDX Reserved Words](~/mdx/mdx-reserved-words.md)   
  [Translations &#40;Analysis Services&#41;](../../../2014/analysis-services/translations-analysis-services.md)   
  [XML for Analysis Compliance &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/xml-for-analysis-compliance-xmla.md)  
   

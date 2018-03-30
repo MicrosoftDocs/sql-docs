@@ -31,7 +31,7 @@ manager: "jhubbard"
 >  You can define a database maintenance plan to create database backups. For more information, see [Maintenance Plans](../../2014/database-engine/maintenance-plans.md) and [Use the Maintenance Plan Wizard](../../2014/database-engine/use-the-maintenance-plan-wizard.md).  
   
 > [!NOTE]  
->  When you specify a backup task by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], you can generate the corresponding [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](../Topic/BACKUP%20\(Transact-SQL\).md) script by clicking the **Script** button and then selecting a destination for the script.  
+>  When you specify a backup task by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], you can generate the corresponding [!INCLUDE[tsql](../includes/tsql-md.md)][BACKUP](~/t-sql/statements/backup-transact-sql.md) script by clicking the **Script** button and then selecting a destination for the script.  
   
 ## Options  
   
@@ -55,10 +55,10 @@ manager: "jhubbard"
 |**On**|Specify a specific date when the backup set expires and can be overwritten.|  
   
 ### Compression  
- [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (or a later version) supports [backup compression](../../2014/database-engine/backup-compression-sql-server.md).  
+ [!INCLUDE[ssEnterpriseEd10](../includes/ssenterpriseed10-md.md)] (or a later version) supports [backup compression](../../2014/database-engine/backup-compression-sql-server.md).  
   
  **Set backup compression**  
- In [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (or a later version), select one of the following backup compression values:  
+ In [!INCLUDE[ssEnterpriseEd10](../includes/ssenterpriseed10-md.md)] (or a later version), select one of the following backup compression values:  
   
 |||  
 |-|-|  
@@ -85,7 +85,7 @@ manager: "jhubbard"
 >  Only keys residing in the Extensible Key Management (EKM) are supported.  
   
 ## See Also  
- [BACKUP &#40;Transact-SQL&#41;](../Topic/BACKUP%20\(Transact-SQL\).md)   
+ [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)   
  [Back Up a Transaction Log &#40;SQL Server&#41;](../../2014/database-engine/back-up-a-transaction-log-sql-server.md)   
  [Back Up Files and Filegroups &#40;SQL Server&#41;](../../2014/database-engine/back-up-files-and-filegroups-sql-server.md)   
  [Back Up the Transaction Log When the Database Is Damaged &#40;SQL Server&#41;](../../2014/database-engine/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)  

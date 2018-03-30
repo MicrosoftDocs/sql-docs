@@ -18,7 +18,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # MERGE in Integration Services Packages
-  In the current release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], the SQL statement in an Execute SQL task can contain a MERGE statement. This MERGE statement enables you to accomplish multiple INSERT, UPDATE, and DELETE operations in a single statement.  
+  In the current release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], the SQL statement in an Execute SQL task can contain a MERGE statement. This MERGE statement enables you to accomplish multiple INSERT, UPDATE, and DELETE operations in a single statement.  
   
  To use the MERGE statement in a package, follow these steps:  
   
@@ -36,15 +36,15 @@ manager: "jhubbard"
  For a sample destination component that supports the use of the MERGE statement, see the CodePlex community sample, [MERGE Destination](http://go.microsoft.com/fwlink/?LinkId=141215).  
   
 ## Using MERGE  
- Typically, you use the MERGE statement when you want to apply changes that include inserts, updates, and deletions from one table to another table. Prior to [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], this process required both a Lookup transformation and multiple OLE DB Command transformations. The Lookup transformation performed a row-by-row lookup to determine whether each row was new or changed. The OLE DB Command transformations then performed the necessary INSERT, UPDATE, and DELETE operations. Beginning in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], a single MERGE statement can replace both the Lookup transformation and the corresponding OLE DB Command transformations.  
+ Typically, you use the MERGE statement when you want to apply changes that include inserts, updates, and deletions from one table to another table. Prior to [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], this process required both a Lookup transformation and multiple OLE DB Command transformations. The Lookup transformation performed a row-by-row lookup to determine whether each row was new or changed. The OLE DB Command transformations then performed the necessary INSERT, UPDATE, and DELETE operations. Beginning in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], a single MERGE statement can replace both the Lookup transformation and the corresponding OLE DB Command transformations.  
   
 ### MERGE with Incremental Loads  
- The change data capture functionality that is new in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] makes it easier to perform incremental loads reliably to a data warehouse. As an alternative to using parameterized OLE DB Command transformations to perform the inserts and the updates, you can use the MERGE statement to combine both operations.  
+ The change data capture functionality that is new in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] makes it easier to perform incremental loads reliably to a data warehouse. As an alternative to using parameterized OLE DB Command transformations to perform the inserts and the updates, you can use the MERGE statement to combine both operations.  
   
  For more information, see [Apply the Changes to the Destination](../../2014/integration-services/apply-the-changes-to-the-destination.md).  
   
 #### MERGE in Other Scenarios  
- In the following scenarios, you can use the MERGE statement either outside or inside an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package. However, an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package is often required to load this data from multiple heterogeneous sources, and then to combine and cleanse the data. Therefore, you might consider using the MERGE statement in a package for convenience and ease of maintenance.  
+ In the following scenarios, you can use the MERGE statement either outside or inside an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package. However, an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package is often required to load this data from multiple heterogeneous sources, and then to combine and cleanse the data. Therefore, you might consider using the MERGE statement in a package for convenience and ease of maintenance.  
   
 ##### Track Buying Habits  
  The FactBuyingHabits table in the data warehouse tracks the last date on which a customer bought a given product. The table consists of ProductID, CustomerID and PurchaseDate columns. Every week, the transactional database generates a PurchaseRecords table that includes the purchases made during that week. The objective is to use a single MERGE statement to merge the information in the PurchaseRecords table into the FactBuyingHabits table. For product-customer pairs that do not exist, the MERGE statement inserts new rows. For product-customer pairs that exist, the MERGE statement updates the most recent date-of-purchase.  

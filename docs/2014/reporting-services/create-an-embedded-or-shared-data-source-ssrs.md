@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: b111a8d0-a60d-4c8b-b00a-51644b19c34b
 caps.latest.revision: 40
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Create an Embedded or Shared Data Source (SSRS)
-  A report data source specifies a name and connection information. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supports two types of data sources: embedded and shared. An embedded data source is defined in a report definition and used only by that report. A shared data source is defined as a separate item and can be used by multiple reports. For more information, see [Embedded and Shared Data Connections or Data Sources &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md).  
+  A report data source specifies a name and connection information. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] supports two types of data sources: embedded and shared. An embedded data source is defined in a report definition and used only by that report. A shared data source is defined as a separate item and can be used by multiple reports. For more information, see [Embedded and Shared Data Connections or Data Sources &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md).  
   
  In Report Builder, you browse to the report server or SharePoint site and select data sources or create embedded data sources. You cannot create shared data sources in Report Builder.  
   
  In Report Designer, you can create shared or embedded data sources. From the Report Data pane, begin to create a data source reference, and then select the **New** option. After you create the data source reference, a new shared data source will automatically be added to Solution Explorer under the Shared Data Sources folder.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
  You can also create shared data sources directly on a report server or SharePoint site. For more information, see [Create, Delete, or Modify a Shared Data Source &#40;Report Manager&#41;](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md) or [Create and Manage Shared Data Sources &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../2014/reporting-services/create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md).  
   
@@ -46,7 +46,7 @@ manager: "mblythe"
   
     -   Type the connection string directly in the **Connection string** text box. For a list of example connection strings, see [Data Connections, Data Sources, and Connection Strings in Report Builder](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md) or [Data Connections, Data Sources, and Connection Strings in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
-    -   Click the expression (**fx)** button to create an expression that evaluates to a connection string. In the **Expression** dialog box, type the expression in the Expression pane. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+    -   Click the expression (**fx)** button to create an expression that evaluates to a connection string. In the **Expression** dialog box, type the expression in the Expression pane. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
     -   Click **Edit** to open the **Connection Properties** dialog box for the data source type you chose in step 2.  
   
@@ -56,11 +56,11 @@ manager: "mblythe"
   
     1.  Click **New**. In the **Shared Data Source** properties dialog box, follow steps 2 and 3 to create a new data source.  
   
-    2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+    2.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
          The new shared data source appears in the Shared Data Sources folder in Solution Explorer.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
      The data source appears in the Report Data pane. In the Report Data pane, a shared data source points to the data source definition. In Report Builder, the data source definition is on a report server or SharePoint site. In Report Designer, the data source definition is a file in Solution Explorer under the Shared Data Sources folder.  
   
@@ -70,7 +70,7 @@ manager: "mblythe"
   
 2.  Navigate to an existing Report Definition Shared data source (rds) file and then click **Open**.  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ### To convert an embedded data source to a shared data source in Report Designer  
   

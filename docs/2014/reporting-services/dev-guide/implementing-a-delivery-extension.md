@@ -18,23 +18,23 @@ helpviewer_keywords:
 ms.assetid: 600cd229-efcd-480e-8c95-3c3c39ff4e7a
 caps.latest.revision: 31
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Implementing a Delivery Extension
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] enables users to create and publish reports that, once created and published, can be delivered to various locations. In addition, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] includes several delivery extensions and a delivery API that enable developers to create additional delivery extensions to further extend the functionality of delivery in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enables users to create and publish reports that, once created and published, can be delivered to various locations. In addition, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] includes several delivery extensions and a delivery API that enable developers to create additional delivery extensions to further extend the functionality of delivery in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
  For a sample implementation of a delivery extension, see [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## In This Section  
  [Delivery Extensions Overview](../../../2014/reporting-services/dev-guide/delivery-extensions-overview.md)  
- Introduces how to write a custom delivery extension for [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
+ Introduces how to write a custom delivery extension for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
  [Preparing to Implement a Delivery Extension](../../../2014/reporting-services/dev-guide/preparing-to-implement-a-delivery-extension.md)  
- Describes the interfaces and classes available when implementing an [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] delivery extension, as well as issues to consider before implementation.  
+ Describes the interfaces and classes available when implementing an [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] delivery extension, as well as issues to consider before implementation.  
   
  [Creating a Delivery Extension Library](../../../2014/reporting-services/dev-guide/creating-a-delivery-extension-library.md)  
- Describes assigning a namespace for your [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] delivery extension and compiling your delivery extension into a library DLL.  
+ Describes assigning a namespace for your [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] delivery extension and compiling your delivery extension into a library DLL.  
   
  [Implementing the IDeliveryExtension Interface for a Delivery Extension](../../../2014/reporting-services/dev-guide/implementing-the-ideliveryextension-interface-for-a-delivery-extension.md)  
  Describes the attributes of a delivery extension, and how to implement your own delivery extension class.  

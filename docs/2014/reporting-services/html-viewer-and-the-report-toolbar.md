@@ -15,11 +15,11 @@ helpviewer_keywords:
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
 caps.latest.revision: 32
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # HTML Viewer and the Report Toolbar
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides an HTML Viewer that is used to display reports on demand as they are requested from the report server. HTML Viewer provides a framework for viewing reports in HTML. It includes a report toolbar, a parameter section, a credentials section, and a document map. The report toolbar in HTML Viewer includes features you can use to work with your report, including export options so that you can view your report in formats other than HTML. The parameter section and document map appear only when you open reports that are configured to use parameters and a document map control.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] provides an HTML Viewer that is used to display reports on demand as they are requested from the report server. HTML Viewer provides a framework for viewing reports in HTML. It includes a report toolbar, a parameter section, a credentials section, and a document map. The report toolbar in HTML Viewer includes features you can use to work with your report, including export options so that you can view your report in formats other than HTML. The parameter section and document map appear only when you open reports that are configured to use parameters and a document map control.  
   
 > [!NOTE]  
 >  Although you cannot modify the report toolbar, you can configure parameters on a report URL to hide it on a report. For more information about hiding the report toolbar, see [URL Access Parameter Reference](../../2014/reporting-services/url-access-parameter-reference.md).  
@@ -38,7 +38,7 @@ manager: "mblythe"
 |Use this icon or control||To|  
 |------------------------------|-|--------|  
 |![Page navigation controls](../../2014/reporting-services/media/htmlviewer-pagenav.gif "Page navigation controls")|**Page navigation controls**|Open the first or last page of a report, scroll through a report page by page, and open a specific page in a report. To view a specific page, type the page number and press ENTER.|  
-|![Page display controls](../../2014/reporting-services/media/htmlviewer-pagesize.gif "Page display controls")|**Page display controls**|Enlarge or reduce the size of the report page. In addition to percentage-based changes, you can select **Page Width** to fit the horizontal length of a report page in the browser window, or **Whole Page** to fit the vertical length of a report in the browser window. A **Zoom** option is supported by [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 5.5 and later.|  
+|![Page display controls](../../2014/reporting-services/media/htmlviewer-pagesize.gif "Page display controls")|**Page display controls**|Enlarge or reduce the size of the report page. In addition to percentage-based changes, you can select **Page Width** to fit the horizontal length of a report page in the browser window, or **Whole Page** to fit the vertical length of a report in the browser window. A **Zoom** option is supported by [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 5.5 and later.|  
 |![Search field](../../2014/reporting-services/media/htmlviewer-search.gif "Search field")|**Search field**|Search for content in the report by typing a word or phrase that you want to find (the maximum value length is 256 characters). The search is case-insensitive and starts at the page or section that is currently selected. Only visible content is included in a search operation. To search for subsequent occurrences of the same value, click **Next**.|  
 |![Export formats](../../2014/reporting-services/media/htmlviewer-export.GIF "Export formats")|**Export formats**|Open a new browser window and render the report in the selected format. The formats that are available are determined by the rendering extensions that are installed on the report server. TIFF is recommended for printing. Click **Export** to view the report in the selected format.|  
 |![Document map icon](../../2014/reporting-services/media/htmlviewer-docmap.GIF "Document map icon")|**Document map icon**|Show or hide the document map pane in a report that includes a document map. A document map is a report navigation control similar to the navigation pane on a Web site. You can click on items in the document map to navigate to a specific group, page, or subreport.|  
@@ -57,9 +57,9 @@ manager: "mblythe"
 |XML|View a report in XML syntax. Reports viewed in XML open in a new browser window.|  
 |CSV|View a report in a comma-delimited format. The report opens in an application that is associated with the CSV file type.|  
 |Acrobat (PDF) file|View a report using a client-side PDF viewer. You must have third-party PDF viewer (for example, Adobe Acrobat Reader) to use this format.|  
-|Excel|View the report in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.|  
+|Excel|View the report in [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel.|  
 |Web archive|View the report in an MIME-encoded HTML format that keeps images and linked content together with a report.|  
-|TIFF file|View the report in the default TIFF viewer. For some [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows clients, this is the Windows Picture and Fax Viewer. Select this format to a view a report in a page-oriented layout.|  
+|TIFF file|View the report in the default TIFF viewer. For some [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows clients, this is the Windows Picture and Fax Viewer. Select this format to a view a report in a page-oriented layout.|  
   
 ## Parameters  
  Parameters are values that are used to select specific data (specifically, they are used to complete a query that selects the data for your report, or to filter the result set). Parameters that are commonly used in reports include dates, names, and IDs. When you specify a value for a parameter, the report contains only the data that matches the value; for example, employee data based on an Employee ID parameter. Parameters correspond to fields on the report. After you specify a parameter, click **View Report** to get the data.  

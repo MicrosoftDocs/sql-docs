@@ -12,14 +12,14 @@ ms.topic: "article"
 ms.assetid: 9fe06b03-d98c-4337-9f89-54da98f49f9f
 caps.latest.revision: 26
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # CircularString
   A `CircularString` is a collection of zero or more continuous circular arc segments. A circular arc segment is a curved segment defined by three points in a two-dimensional plane; the first point cannot be the same as the third point. If all three points of a circular arc segment are collinear, the arc segment is treated as a line segment.  
   
 > [!IMPORTANT]  
->  For a detailed description and examples of the new spatial features introduced in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], including the `CircularString` subtype, download the white paper, [New Spatial Features in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
+>  For a detailed description and examples of the new spatial features introduced in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], including the `CircularString` subtype, download the white paper, [New Spatial Features in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
   
 ## CircularString instances  
  The drawing below shows valid `CircularString` instances:  
@@ -158,18 +158,18 @@ SET @g = geometry::STGeomFromText('CIRCULARSTRING(0 0, 1 2, 2 4)', 0);
 ## See Also  
  [Spatial Data Types Overview](../../2014/database-engine/spatial-data-types-overview.md)   
  [CompoundCurve](../../2014/database-engine/compoundcurve.md)   
- [MakeValid &#40;geography Data Type&#41;](../Topic/MakeValid%20\(geography%20Data%20Type\).md)   
- [MakeValid &#40;geometry Data Type&#41;](../Topic/MakeValid%20\(geometry%20Data%20Type\).md)   
- [STIsValid &#40;geometry Data Type&#41;](../Topic/STIsValid%20\(geometry%20Data%20Type\).md)   
- [STIsValid &#40;geography Data Type&#41;](../Topic/STIsValid%20\(geography%20Data%20Type\).md)   
- [STLength &#40;geometry Data Type&#41;](../Topic/STLength%20\(geometry%20Data%20Type\).md)   
- [STStartPoint &#40;geometry Data Type&#41;](../Topic/STStartPoint%20\(geometry%20Data%20Type\).md)   
- [STEndpoint &#40;geometry Data Type&#41;](../Topic/STEndpoint%20\(geometry%20Data%20Type\).md)   
- [STPointN &#40;geometry Data Type&#41;](../Topic/STPointN%20\(geometry%20Data%20Type\).md)   
- [STNumPoints &#40;geometry Data Type&#41;](../Topic/STNumPoints%20\(geometry%20Data%20Type\).md)   
- [STIsRing &#40;geometry Data Type&#41;](../Topic/STIsRing%20\(geometry%20Data%20Type\).md)   
- [STIsClosed &#40;geometry Data Type&#41;](../Topic/STIsClosed%20\(geometry%20Data%20Type\).md)   
- [STPointOnSurface &#40;geometry Data Type&#41;](../Topic/STPointOnSurface%20\(geometry%20Data%20Type\).md)   
+ [MakeValid &#40;geography Data Type&#41;](~/t-sql/spatial-geography/makevalid-geography-data-type.md)   
+ [MakeValid &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/makevalid-geometry-data-type.md)   
+ [STIsValid &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stisvalid-geometry-data-type.md)   
+ [STIsValid &#40;geography Data Type&#41;](~/t-sql/spatial-geography/stisvalid-geography-data-type.md)   
+ [STLength &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stlength-geometry-data-type.md)   
+ [STStartPoint &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/ststartpoint-geometry-data-type.md)   
+ [STEndpoint &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stendpoint-geometry-data-type.md)   
+ [STPointN &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stpointn-geometry-data-type.md)   
+ [STNumPoints &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stnumpoints-geometry-data-type.md)   
+ [STIsRing &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stisring-geometry-data-type.md)   
+ [STIsClosed &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stisclosed-geometry-data-type.md)   
+ [STPointOnSurface &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stpointonsurface-geometry-data-type.md)   
  [LineString](../../2014/database-engine/linestring.md)  
   
   

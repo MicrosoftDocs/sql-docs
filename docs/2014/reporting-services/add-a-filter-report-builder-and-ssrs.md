@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 10ae54e7-0e8a-4dff-995d-05516c51d076
 caps.latest.revision: 7
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Add a Filter (Report Builder and SSRS)
@@ -25,7 +25,7 @@ manager: "mblythe"
  For more information about filtering embedded and shared datasets, see [Add a Filter to a Dataset &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-a-filter-to-a-dataset-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ### To set a filter on a data region  
   
@@ -50,7 +50,7 @@ manager: "mblythe"
   
      For examples of filter equations, see [Filter Equation Examples &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/filter-equation-examples-report-builder-and-ssrs.md).  
   
-9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ### To set a filter on a Tablix row or column group  
   
@@ -74,7 +74,7 @@ manager: "mblythe"
   
      For examples of filter equations, see [Filter Equation Examples &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/filter-equation-examples-report-builder-and-ssrs.md).  
   
-10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ### To set a filter on a Chart category group  
   
@@ -98,7 +98,7 @@ manager: "mblythe"
   
      For examples of filter equations, see [Filter Equation Examples &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/filter-equation-examples-report-builder-and-ssrs.md).  
   
-10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ### To set a filter on a Chart series group  
   
@@ -122,7 +122,7 @@ manager: "mblythe"
   
      For examples of filter equations, see [Filter Equation Examples &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/filter-equation-examples-report-builder-and-ssrs.md).  
   
-10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## See Also  
  [Add Dataset Filters, Data Region Filters, and Group Filters &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-dataset-filters-data-region-filters-and-group-filters.md)   

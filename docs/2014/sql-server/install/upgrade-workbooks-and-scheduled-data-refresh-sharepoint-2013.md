@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: a49c4af4-e243-4926-be97-74da1f9d54eb
 caps.latest.revision: 18
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "jhubbard"
 ---
 # Upgrade Workbooks and Scheduled Data Refresh (SharePoint 2013)
@@ -36,12 +36,12 @@ manager: "jhubbard"
 ##  <a name="bkmk_overview"></a> Overview of Upgrading Workbooks  
  A PowerPivot workbook is an Excel workbook that contains embedded PowerPivot data. Upgrading a workbook has two benefits:  
   
--   Use new features in [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)].  
+-   Use new features in [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)].  
   
--   Enables scheduled data refresh for workbooks that run with a [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] Analysis Services server in SharePoint mode.  
+-   Enables scheduled data refresh for workbooks that run with a [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] Analysis Services server in SharePoint mode.  
   
 > [!IMPORTANT]  
->  You cannot rollback an upgraded workbook, so be sure to make a copy of the file if you want to use it in the previous version of [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)], or on a previous version of [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)].  
+>  You cannot rollback an upgraded workbook, so be sure to make a copy of the file if you want to use it in the previous version of [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)], or on a previous version of [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
   
  The following table lists the support and behavior of PowerPivot workbooks based on the environment  in which the workbook was created. The behavior described includes the general user experience, the supported upgrade options to upgrade the workbook to the particular environment, and the behavior of scheduled data refresh of a workbook that has not yet been upgraded.  
   
@@ -113,9 +113,9 @@ manager: "jhubbard"
   
  There are two ways to upgrade:  
   
-1.  Upgrade each workbook manually by opening it in Excel on a computer that has the [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] version of PowerPivot for Excel, and then republish it to the server. When you open the workbook in the newer version of the add-in, the following internal operations occur: the data provider in the workbook data connection string is updated to MSOLAP.5, metadata is updated, and relationships are recreated to conform to a newer implementation.  
+1.  Upgrade each workbook manually by opening it in Excel on a computer that has the [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] version of PowerPivot for Excel, and then republish it to the server. When you open the workbook in the newer version of the add-in, the following internal operations occur: the data provider in the workbook data connection string is updated to MSOLAP.5, metadata is updated, and relationships are recreated to conform to a newer implementation.  
   
-2.  Alternatively, a SharePoint Administrator  can enable the auto-upgrade feature for the PowerPivot System Service in a SharePoint farm to  automatically upgrade a [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] PowerPivot workbook when schedule data refresh runs (only workbooks that are configured for scheduled data refresh are upgraded).  
+2.  Alternatively, a SharePoint Administrator  can enable the auto-upgrade feature for the PowerPivot System Service in a SharePoint farm to  automatically upgrade a [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] PowerPivot workbook when schedule data refresh runs (only workbooks that are configured for scheduled data refresh are upgraded).  
   
     > [!NOTE]  
     >  Automatic upgrade is a server configuration feature; you cannot enable or disable it for specific workbooks, libraries, or site collections.  
@@ -141,22 +141,22 @@ PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefr
  After you upgrade the workbook, you can use scheduled data refresh and new features in the PowerPivot for Excel add-in.  
   
 ##  <a name="bkmk_runold"></a> Running Multiple Workbook Versions on a Newer Server  
- You can run older and newer versions of PowerPivot workbooks side by side on a [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] instance of [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)].  
+ You can run older and newer versions of PowerPivot workbooks side by side on a [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] instance of [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
   
  Depending on how you installed the server, **you might need** to install a previous version of the Analysis Services OLE DB provider before you can access older and newer workbooks on the same server.  
   
- Note that Publishing newer version workbooks on previous SQL Server instances of [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] is not supported. A [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] instance will not load a workbook that you created in the [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] version of [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)], and a SQL Server 2012 instance will not load Office 2013 workbooks with advanced data models that you created using the [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] version of PowerPivot in Excel.  
+ Note that Publishing newer version workbooks on previous SQL Server instances of [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] is not supported. A [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] instance will not load a workbook that you created in the [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] version of [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)], and a SQL Server 2012 instance will not load Office 2013 workbooks with advanced data models that you created using the [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] version of PowerPivot in Excel.  
   
 ###  <a name="bkmk_msolapxslx"></a> How to Check for MSOLAP Data Provider Information in a PowerPivot Workbook  
- Use the following instructions to check which OLE DB provider is used in a PowerPivot workbook. Checking the data connection information does not require the [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] add-in to be installed.  
+ Use the following instructions to check which OLE DB provider is used in a PowerPivot workbook. Checking the data connection information does not require the [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] add-in to be installed.  
   
 1.  In Excel, on the Data tab, click **Connections**. Click **Properties**.  
   
 2.  On the **Definition** tab, the provider version appears at the beginning of the connection string.  
   
-     **Provider=MSOLAP.5** indicates the workbook is [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
+     **Provider=MSOLAP.5** indicates the workbook is [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
-     **Provider=MSOLAP.4** indicates [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)].  
+     **Provider=MSOLAP.4** indicates [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].  
   
      **Data Source=$Embedded$** indicates that the workbook is a PowerPivot workbook, using an embedded database.  
   

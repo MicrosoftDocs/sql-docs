@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
 caps.latest.revision: 41
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Process Large Reports
@@ -62,7 +62,7 @@ manager: "mblythe"
   
 -   Configure a subscription to use file share delivery if you are using PDF or Excel. Once the report is delivered, you can use a desktop application to work with the report. You must set permissions on the file share to determine who can view the report.  
   
-     Note that once the report is on the file share, it is no longer controlled or secured by [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. If you want to be notified when the report is updated, create a second subscription that uses e-mail delivery to send a notification only.  
+     Note that once the report is on the file share, it is no longer controlled or secured by [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. If you want to be notified when the report is updated, create a second subscription that uses e-mail delivery to send a notification only.  
   
  If you want to use e-mail report delivery, configure the subscription to include a link. Avoid sending the report as an attachment.  
   

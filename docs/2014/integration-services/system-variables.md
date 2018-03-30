@@ -22,12 +22,12 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # System Variables
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides a set of system variables that store information about the running package and its objects. These variables can be used in expressions and property expressions to customize packages, containers, tasks, and event handlers.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides a set of system variables that store information about the running package and its objects. These variables can be used in expressions and property expressions to customize packages, containers, tasks, and event handlers.  
   
  All variables—system and user-defined— can be used in the parameter bindings that the Execute SQL task uses to map variables to parameters.  
   
 ## System Variables for Packages  
- The following table describes the system variables that [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides for packages.  
+ The following table describes the system variables that [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides for packages.  
   
 |System variable|Data type|Description|  
 |---------------------|---------------|-----------------|  
@@ -39,14 +39,14 @@ manager: "jhubbard"
 |`ExecutionInstanceGUID`|String|The unique identifier of the executing instance of a package.|  
 |`FailedConfigurations`|String|The names of package configurations that have failed.|  
 |`IgnoreConfigurationsOnLoad`|Boolean|Indicates whether package configurations are ignored when loading the package.|  
-|**InteractiveMode**|Boolean|Indicates whether the package is run in interactive mode. If a package is running in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, this property is set to `True`. If a package is running using the **DTExec** command prompt utility, the property is set to `False`.|  
+|**InteractiveMode**|Boolean|Indicates whether the package is run in interactive mode. If a package is running in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, this property is set to `True`. If a package is running using the **DTExec** command prompt utility, the property is set to `False`.|  
 |`LocaleId`|Int32|The locale that the package uses.|  
 |**MachineName**|String|The name of the computer on which the package is running.|  
 |**OfflineMode**|Boolean|Indicates whether the package is in offline mode. Offline mode does not acquire connections to data sources.|  
 |**PackageID**|String|The unique identifier of the package.|  
 |**PackageName**|String|The name of the package.|  
 |**StartTime**|DateTime|The time that the package started to run.|  
-|`ServerExecutionID`|Int64|Execution ID for the package that is executed on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.<br /><br /> The default value is zero. The value is changed only if the package is executed by ISServerExec on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Server. When there is a child package, the value is passed from the parent package to child package.|  
+|`ServerExecutionID`|Int64|Execution ID for the package that is executed on the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server.<br /><br /> The default value is zero. The value is changed only if the package is executed by ISServerExec on the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Server. When there is a child package, the value is passed from the parent package to child package.|  
 |**UserName**|String|The account of the user who started the package. The user name is qualified by the domain name.|  
 |**VersionBuild**|Int32|The package version.|  
 |**VersionComment**|String|Comments about the package version.|  
@@ -55,14 +55,14 @@ manager: "jhubbard"
 |**VersionMinor**|Int32|The minor version of the package.|  
   
 ## System Variables for Containers  
- The following table describes the system variables that [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides for the For Loop, Foreach Loop, and Sequence containers.  
+ The following table describes the system variables that [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides for the For Loop, Foreach Loop, and Sequence containers.  
   
 |System variable|Data type|Description|Container|  
 |---------------------|---------------|-----------------|---------------|  
 |`LocaleId`|Int32|The locale that the container uses.|For Loop container<br /><br /> Foreach Loop container<br /><br /> Sequence container|  
   
 ## System Variables for Tasks  
- The following table describes the system variables that [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides for tasks.  
+ The following table describes the system variables that [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides for tasks.  
   
 |System variable|Data type|Description|  
 |---------------------|---------------|-----------------|  
@@ -73,7 +73,7 @@ manager: "jhubbard"
 |`TaskTransactionOption`|Int32|The transaction option that the task uses.|  
   
 ## System Variables for Event Handlers  
- The following table describes the system variables that [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides for event handlers. Not all variables are available to all event handlers.  
+ The following table describes the system variables that [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides for event handlers. Not all variables are available to all event handlers.  
   
 |System variable|Data type|Description|Event handler|  
 |---------------------|---------------|-----------------|-------------------|  

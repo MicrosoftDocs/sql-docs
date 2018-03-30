@@ -12,14 +12,14 @@ ms.topic: "article"
 ms.assetid: aa1ee96f-9fc4-4775-b9d4-c6187dc37e27
 caps.latest.revision: 7
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Min Function (Report Builder and SSRS)
   Returns the minimum value of all non-null numeric values specified by the expression, in the context of the given scope.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## Syntax  
   

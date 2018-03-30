@@ -22,7 +22,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Expression Builder (Integration Services)
-  The **Expression Builder** dialog box provides a graphical user interface for building the expressions that property expressions use. You can access the **Expression Builder** dialog box from the custom task dialog boxes in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, and from the **Properties** window in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+  The **Expression Builder** dialog box provides a graphical user interface for building the expressions that property expressions use. You can access the **Expression Builder** dialog box from the custom task dialog boxes in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, and from the **Properties** window in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
  You can use the **Expression Builder** dialog box to perform the following tasks:  
   

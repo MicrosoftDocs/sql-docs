@@ -22,7 +22,7 @@ manager: "jhubbard"
   This topic describes how to send data to a stored procedure as a table-valued parameter when all values are in memory. For another sample demonstrating table-valued parameters, see [Use Table-Valued Parameters &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/use-table-valued-parameters-odbc.md).  
   
 ## Prerequisite  
- This procedure assumes that the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] has been executed on the server:  
+ This procedure assumes that the following [!INCLUDE[tsql](../../includes/tsql-md.md)] has been executed on the server:  
   
 ```  
 create type TVParam as table(ProdCode integer, Qty integer)  

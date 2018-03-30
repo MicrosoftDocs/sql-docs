@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
 caps.latest.revision: 38
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Setting Time-out Values for Report and Shared Dataset Processing (SSRS)

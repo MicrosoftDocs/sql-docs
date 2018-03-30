@@ -19,12 +19,12 @@ manager: "jhubbard"
   Upgrade Advisor detected the use of Web Assistant stored procedures.  
   
 ## Component  
- [!INCLUDE[ssDE](../../../includes/ssde-md.md)]  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## Description  
  Web Assistant stored procedures **sp_makewebtask**, **sp_dropwebtask**, **sp_runwebtask**, and **sp_enumcodepages** have been removed.  
   
 ## Corrective Action  
- We recommend that you use [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] instead.  
+ We recommend that you use [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instead.  
   
   

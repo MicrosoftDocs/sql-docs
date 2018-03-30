@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 1aa7e6a5-7ccb-43c8-a1fd-d50e92e0a798
 caps.latest.revision: 16
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_5235
@@ -31,7 +31,7 @@ manager: "jhubbard"
 |Message Text|[EMERGENCY] DBCC DBCC_COMMAND_DETAILS executed by USER_NAME terminated abnormally due to error state ERROR_STATE. Elapsed time: HOURS hours MINUTES minutes SECONDS seconds.|  
   
 ## Explanation  
- This is the summary message that DBCC prints to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log when an unexpected termination occurs while the command is running. The error state reported in the message defines the type of unexpected termination.  
+ This is the summary message that DBCC prints to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] error log when an unexpected termination occurs while the command is running. The error state reported in the message defines the type of unexpected termination.  
   
  The following table lists and defines the error states.  
   
@@ -50,13 +50,13 @@ manager: "jhubbard"
 |Error state|User action|  
 |-----------------|-----------------|  
 |State 0|Restore from backup.|  
-|State 1|Contact [!INCLUDE[msCoName](../../includes/msconame-md.md)] Customer Service and Support (CSS).|  
+|State 1|Contact [!INCLUDE[msCoName](../includes/msconame-md.md)] Customer Service and Support (CSS).|  
 |State 2|Restore from backup.|  
 |State 3|Restore from backup.|  
 |State 4|Contact CSS.|  
 |State 5|Run the command again. If the problem persists, contact CSS.|  
   
 ## See Also  
- [DBCC &#40;Transact-SQL&#41;](../Topic/DBCC%20\(Transact-SQL\).md)  
+ [DBCC &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-transact-sql.md)  
   
   

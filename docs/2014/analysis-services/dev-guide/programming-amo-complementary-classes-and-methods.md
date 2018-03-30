@@ -37,7 +37,7 @@ manager: "mblythe"
 -   [CaptureLog class and CaptureXML attribute](#CL)  
   
 ##  <a name="Assembly"></a> Assembly Class  
- Assemblies let users extend the functionality of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] by adding new stored procedures or Multidimensional Expressions (MDX) functions. For more information, see [AMO Other Classes and Methods](../../../2014/analysis-services/dev-guide/amo-other-classes-and-methods.md).  
+ Assemblies let users extend the functionality of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] by adding new stored procedures or Multidimensional Expressions (MDX) functions. For more information, see [AMO Other Classes and Methods](../../../2014/analysis-services/dev-guide/amo-other-classes-and-methods.md).  
   
  Adding and dropping assemblies is simple and can be performed online. You must be a database administrator to add an assembly to the database or a server administrator to add the assembly to the server object.  
   
@@ -73,7 +73,7 @@ static public void CreateStoredProcedures(Database db)
 ##  <a name="BU"></a> Backup and Restore Methods  
  The Backup and Restore methods let administrators back up databases and restore them.  
   
- The following sample creates backups for all databases in the specified server. If a backup file already exists, then it is overwritten. Backup files are saved in the BackUp folder in the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Data folder.  
+ The following sample creates backups for all databases in the specified server. If a backup file already exists, then it is overwritten. Backup files are saved in the BackUp folder in the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Data folder.  
   
 ```  
 static public void BackUpAllDatabases(Server svr)  
@@ -166,7 +166,7 @@ static public void DefaultTrace_Stopped(ITrace sender, TraceStoppedEventArgs e)
   
 4.  Drop the trace when no longer needed.  
   
- In the following sample, if the trace already exists, it is dropped and then recreated. Trace files are saved in the Log folder of [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] data folders.  
+ In the following sample, if the trace already exists, it is dropped and then recreated. Trace files are saved in the Log folder of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data folders.  
   
 ```  
 static public void TestServerTraces(Server svr)  

@@ -16,15 +16,15 @@ ms.author: "sstein"
 manager: "jhubbard"
 ---
 # SQL Server Management Studio Support for In-Memory OLTP
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] is an integrated environment for managing your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] infrastructure. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] provides tools to configure, monitor, and administer instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [SQL Server Management Studio](../../2014/database-engine/sql-server-management-studio.md)  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] is an integrated environment for managing your [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] infrastructure. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] provides tools to configure, monitor, and administer instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For more information, see [SQL Server Management Studio](../../2014/database-engine/sql-server-management-studio.md)  
   
- The tasks in this topic describe how to use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to manage memory-optimized tables; indexes on memory-optimized tables; natively compiled stored procedures; and user-defined, memory-optimized table types.  
+ The tasks in this topic describe how to use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to manage memory-optimized tables; indexes on memory-optimized tables; natively compiled stored procedures; and user-defined, memory-optimized table types.  
   
  For information on how to programmatically create memory-optimized tables, see [Creating a Memory-Optimized Table and a Natively Compiled Stored Procedure](../../2014/database-engine/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).  
   
 ### To create a database with a memory-optimized data filegroup  
   
-1.  In **Object Explorer**, connect to an instance of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine and then expand that instance.  
+1.  In **Object Explorer**, connect to an instance of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Database Engine and then expand that instance.  
   
 2.  Right-click **Databases**, and then click **New Database**.  
   
@@ -32,7 +32,7 @@ manager: "jhubbard"
   
 4.  To add a file (container) to the filegroup, click the **General** page. Under **Database files**, click **Add**. Select **File Type** as **FILESTREAM Data**, specify the logical name of the container, select the memory-optimized filegroup, and make sure that **Autogrowth / Maxsize** is set to **Unlimited**.  
   
-     For more information on how to create a new database by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], see [Create a Database](../../2014/database-engine/create-a-database.md).  
+     For more information on how to create a new database by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], see [Create a Database](../../2014/database-engine/create-a-database.md).  
   
 ### To create a memory-optimized table  
   
@@ -64,7 +64,7 @@ manager: "jhubbard"
   
 2.  To replace the template parameters, click **Specify Values for Template Parameters** on the **Query** menu.  
   
-     For more information on how to create a new stored procedure, see [CREATE TYPE &#40;Transact-SQL&#41;](../Topic/CREATE%20TYPE%20\(Transact-SQL\).md).  
+     For more information on how to create a new stored procedure, see [CREATE TYPE &#40;Transact-SQL&#41;](~/t-sql/statements/create-type-transact-sql.md).  
   
 ## Memory Monitoring  
   
@@ -82,10 +82,10 @@ manager: "jhubbard"
   
     -   In **Object Explorer**, right-click on your database, click **Properties**, and then click the **General** page. The value for the **Memory Allocated To Memory Optimized Objects** property indicates the memory allocated to memory-optimized objects in the database. The value for the **Memory Used By Memory Optimized Objects** property indicates the memory used by memory-optimized objects in the database.  
   
-## Supported Features in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] supports features and operations that are supported by the database engine on databases with memory-optimized data filegroup, memory-optimized tables, indexes, and natively compiled stored procedures.  
+## Supported Features in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]  
+ [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] supports features and operations that are supported by the database engine on databases with memory-optimized data filegroup, memory-optimized tables, indexes, and natively compiled stored procedures.  
   
- For database, table, stored procedure, user-defined table type, or index objects, the following [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] features have been updated or extended to support In-Memory OLTP.  
+ For database, table, stored procedure, user-defined table type, or index objects, the following [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] features have been updated or extended to support In-Memory OLTP.  
   
 -   Object Explorer  
   
@@ -108,7 +108,7 @@ manager: "jhubbard"
              The **Attach Databases** user interface does not display the memory-optimized data filegroup. However, you can proceed with attaching the database and the database will be attached correctly.  
   
             > [!NOTE]  
-            >  If you want to use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to attach a database that has a memory-optimized data filegroup container, and if the database's memory-optimized data filegroup container was created on another computer, the location of the memory-optimized data filegroup container must be the same on both computers. If you want the location of the database's memory-optimized data filegroup container to be different on the new computer, you can, use [!INCLUDE[tsql](../../includes/tsql-md.md)] to attach the database. In the following example, the location of the memory-optimized data filegroup container on the new computer is C:\Folder2. But when the memory-optimized data filegroup container was created, on the first computer, the location was C:\Folder1.  
+            >  If you want to use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to attach a database that has a memory-optimized data filegroup container, and if the database's memory-optimized data filegroup container was created on another computer, the location of the memory-optimized data filegroup container must be the same on both computers. If you want the location of the database's memory-optimized data filegroup container to be different on the new computer, you can, use [!INCLUDE[tsql](../includes/tsql-md.md)] to attach the database. In the following example, the location of the memory-optimized data filegroup container on the new computer is C:\Folder2. But when the memory-optimized data filegroup container was created, on the first computer, the location was C:\Folder1.  
             >   
             >  `CREATE DATABASE[imoltp] ON`  
             >   
@@ -134,9 +134,9 @@ manager: "jhubbard"
   
         -   Copy databases. For databases with memory-optimized objects, the creation of the database on the destination server and transfer of data will not be executed within a transaction.  
   
-        -   Import and export data. Use the **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export WizardCopy data from one or more tables or views** option. If the destination table is a memory-optimized table that does not exist in the destination database:  
+        -   Import and export data. Use the **[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Import and Export WizardCopy data from one or more tables or views** option. If the destination table is a memory-optimized table that does not exist in the destination database:  
   
-            1.  In the **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard**, in the **Specify Table Copy or Query** screen, select **Copy data from one or more tables or views**. Then click **Next**.  
+            1.  In the **[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Import and Export Wizard**, in the **Specify Table Copy or Query** screen, select **Copy data from one or more tables or views**. Then click **Next**.  
   
             2.  Click **Edit Mappings**. Then select **Create destination table** and click **Edit SQL**. Enter the CREATE TABLE syntax for creating a memory-optimized table on the destination database. Click **OK** and complete the remaining steps in the wizard.  
   
@@ -148,10 +148,10 @@ manager: "jhubbard"
   
 -   Template Explorer  
   
-## Unsupported Features in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
- For In-Memory OLTP objects, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] does not support features and operations that are also not supported by the database engine.  
+## Unsupported Features in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]  
+ For In-Memory OLTP objects, [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] does not support features and operations that are also not supported by the database engine.  
   
- For more information on unsupported [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features, see [Supported SQL Server Features](../../2014/database-engine/supported-sql-server-features.md).  
+ For more information on unsupported [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] features, see [Supported SQL Server Features](../../2014/database-engine/supported-sql-server-features.md).  
   
 ## See Also  
  [SQL Server Support for In-Memory OLTP](../../2014/database-engine/sql-server-support-for-in-memory-oltp.md)  

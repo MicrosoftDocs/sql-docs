@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 5d745f22-9c6b-4e11-8c62-bc50e9a8bf38
 caps.latest.revision: 33
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Snapshot Replication
@@ -47,7 +47,7 @@ manager: "jhubbard"
  [Distribution and Merge Agents](#DistAgent)  
   
 ##  <a name="HowWorks"></a> How Snapshot Replication Works  
- By default, all three types of replication use a snapshot to initialize Subscribers. The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Snapshot Agent always generates the snapshot files, but the agent that delivers the files differs depending on the type of replication being used. Snapshot replication and transactional replication use the Distribution Agent to deliver the files, whereas merge replication uses the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Merge Agent. The Snapshot Agent runs at the Distributor. The Distribution Agent and Merge Agent run at the Distributor for push subscriptions, or at Subscribers for pull subscriptions.  
+ By default, all three types of replication use a snapshot to initialize Subscribers. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Snapshot Agent always generates the snapshot files, but the agent that delivers the files differs depending on the type of replication being used. Snapshot replication and transactional replication use the Distribution Agent to deliver the files, whereas merge replication uses the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Merge Agent. The Snapshot Agent runs at the Distributor. The Distribution Agent and Merge Agent run at the Distributor for push subscriptions, or at Subscribers for pull subscriptions.  
   
  Snapshots can be generated and applied either immediately after the subscription is created or according to a schedule set at the time the publication is created. The Snapshot Agent prepares snapshot files containing the schema and data of published tables and database objects, stores the files in the snapshot folder for the Publisher, and records tracking information in the distribution database on the Distributor. You specify a default snapshot folder when you configure a Distributor, but you can specify an alternate location for a publication instead of or in addition to the default.  
   

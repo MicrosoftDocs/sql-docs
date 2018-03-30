@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 8622db47-c223-48fa-87ff-0b4362cd069a
 caps.latest.revision: 11
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Distributor and Publisher Information Script
@@ -95,21 +95,21 @@ SELECT object_name(object_id) AS merge_published_table, name AS published_column
   
 ## See Also  
  [Frequently Asked Questions for Replication Administrators](../../../2014/relational-databases/replication/frequently-asked-questions-for-replication-administrators.md)   
- [sp_get_distributor &#40;Transact-SQL&#41;](../Topic/sp_get_distributor%20\(Transact-SQL\).md)   
- [sp_helparticle &#40;Transact-SQL&#41;](../Topic/sp_helparticle%20\(Transact-SQL\).md)   
- [sp_helpdistributiondb &#40;Transact-SQL&#41;](../Topic/sp_helpdistributiondb%20\(Transact-SQL\).md)   
- [sp_helpdistpublisher &#40;Transact-SQL&#41;](../Topic/sp_helpdistpublisher%20\(Transact-SQL\).md)   
- [sp_helpdistributor &#40;Transact-SQL&#41;](../Topic/sp_helpdistributor%20\(Transact-SQL\).md)   
- [sp_helpmergearticle &#40;Transact-SQL&#41;](../Topic/sp_helpmergearticle%20\(Transact-SQL\).md)   
- [sp_helpmergepublication &#40;Transact-SQL&#41;](../Topic/sp_helpmergepublication%20\(Transact-SQL\).md)   
- [sp_helppublication &#40;Transact-SQL&#41;](../Topic/sp_helppublication%20\(Transact-SQL\).md)   
- [sp_helpreplicationdboption &#40;Transact-SQL&#41;](../Topic/sp_helpreplicationdboption%20\(Transact-SQL\).md)   
- [sp_helpsubscriberinfo &#40;Transact-SQL&#41;](../Topic/sp_helpsubscriberinfo%20\(Transact-SQL\).md)   
- [sys.columns &#40;Transact-SQL&#41;](../Topic/sys.columns%20\(Transact-SQL\).md)   
- [sys.databases &#40;Transact-SQL&#41;](../Topic/sys.databases%20\(Transact-SQL\).md)   
- [sys.procedures &#40;Transact-SQL&#41;](../Topic/sys.procedures%20\(Transact-SQL\).md)   
- [sys.servers &#40;Transact-SQL&#41;](../Topic/sys.servers%20\(Transact-SQL\).md)   
- [sys.tables &#40;Transact-SQL&#41;](../Topic/sys.tables%20\(Transact-SQL\).md)   
- [sys.views &#40;Transact-SQL&#41;](../Topic/sys.views%20\(Transact-SQL\).md)  
+ [sp_get_distributor &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-get-distributor-transact-sql.md)   
+ [sp_helparticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
+ [sp_helpdistributiondb &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
+ [sp_helpdistpublisher &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
+ [sp_helpdistributor &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
+ [sp_helpmergearticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
+ [sp_helpmergepublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
+ [sp_helppublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
+ [sp_helpreplicationdboption &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-helpreplicationdboption-transact-sql.md)   
+ [sp_helpsubscriberinfo &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
+ [sys.columns &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
+ [sys.databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
+ [sys.procedures &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-procedures-transact-sql.md)   
+ [sys.servers &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-servers-transact-sql.md)   
+ [sys.tables &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
+ [sys.views &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-views-transact-sql.md)  
   
   

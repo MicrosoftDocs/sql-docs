@@ -30,7 +30,7 @@ manager: "jhubbard"
 |-----------|-----------------|  
 |[CursorClose Event Class](../../2014/database-engine/cursorclose-event-class.md)|Describes cursor close events that occur in application programming interface (API) cursors.|  
 |[CursorExecute Event Class](../../2014/database-engine/cursorexecute-event-class.md)|Describes cursor execute events that occur in API cursors.|  
-|[CursorImplicitConversion Event Class](../../2014/database-engine/cursorimplicitconversion-event-class.md)|Describes cursor implicit conversion events that occur in API or [!INCLUDE[tsql](../../includes/tsql-md.md)] cursors.|  
+|[CursorImplicitConversion Event Class](../../2014/database-engine/cursorimplicitconversion-event-class.md)|Describes cursor implicit conversion events that occur in API or [!INCLUDE[tsql](../includes/tsql-md.md)] cursors.|  
 |[CursorOpen Event Class](../../2014/database-engine/cursoropen-event-class.md)|Describes cursor open events that occur in API cursors.|  
 |[CursorPrepare Event Class](../../2014/database-engine/cursorprepare-event-class.md)|Describes cursor prepare events that occur in API cursors.|  
 |[CursorRecompile Event Class](../../2014/database-engine/cursorrecompile-event-class.md)|Describes cursor recompile events that occur in API cursors.|  

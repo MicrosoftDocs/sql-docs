@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Set Global Trace Options (SQL Server Profiler)
-  This topic describes how to set options that apply to all traces that are created with a specific instance of [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+  This topic describes how to set options that apply to all traces that are created with a specific instance of [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)].  
   
 ### To set global trace options  
   
@@ -52,7 +52,7 @@ manager: "jhubbard"
   
         |Value|Description|  
         |-----------|-----------------|  
-        |**0**|Minimum value. A setting of **0** means that [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] will never stop a blocking process.|  
+        |**0**|Minimum value. A setting of **0** means that [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] will never stop a blocking process.|  
         |**3600**|Default value. Allow blocking processes that do not exceed **3600** seconds, or one hour.|  
         |**86400**|Maximum value. Allow blocking processes that do not exceed **86400** seconds, or one day.|  
   
@@ -60,7 +60,7 @@ manager: "jhubbard"
   
         |Value|Description|  
         |-----------|-----------------|  
-        |**1**|Minimum value. A setting of **1** means [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] will poll for blocking processes once per second.|  
+        |**1**|Minimum value. A setting of **1** means [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] will poll for blocking processes once per second.|  
         |**60**|Default value. Poll for blocking processes once per minute.|  
         |**86400**|Maximum value. Poll for blocking processes once per **86400** seconds, or one day.|  
   

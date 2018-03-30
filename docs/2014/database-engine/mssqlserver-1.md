@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: bad25b91-eaed-46c0-a5b7-71117a32304c
 caps.latest.revision: 11
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_-1
@@ -25,34 +25,34 @@ manager: "jhubbard"
   
 |||  
 |-|-|  
-|Product Name|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|Product Name|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|  
 |Event ID|-1|  
 |Event Source|MSSQLSERVER|  
 |Component|SQLEngine|  
 |Symbolic Name||  
-|Message Text|An error has occurred while establishing a connection to the server.  When connecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this failure may be caused by the fact that under the default settings [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not allow remote connections. (provider: SQL Network Interfaces, error: 28 - Server doesn't support requested protocol) (Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Error: -1)|  
+|Message Text|An error has occurred while establishing a connection to the server.  When connecting to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], this failure may be caused by the fact that under the default settings [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not allow remote connections. (provider: SQL Network Interfaces, error: 28 - Server doesn't support requested protocol) (Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Error: -1)|  
   
 ## Explanation  
- The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client cannot connect to the server. This error could be caused by one of the following reasons:  
+ The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] client cannot connect to the server. This error could be caused by one of the following reasons:  
   
--   A specified [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name is not valid.  
+-   A specified [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance name is not valid.  
   
 -   The TCP, or named pipes protocols are not enabled.  
   
 -   The firewall on the server has refused the connection.  
   
--   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser service (sqlbrowser) is not started.  
+-   The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser service (sqlbrowser) is not started.  
   
 ## User Action  
  To resolve this error, try one of the following actions:  
   
--   Check the spelling of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name that is specified in the connection string.  
+-   Check the spelling of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance name that is specified in the connection string.  
   
--   Use the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager tool to enable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to accept remote connections over the TCP or named pipes protocols.  
+-   Use the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager tool to enable [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to accept remote connections over the TCP or named pipes protocols.  
   
--   Make sure that you have configured the firewall on the server instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to open ports for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser port (UDP 1434).  
+-   Make sure that you have configured the firewall on the server instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to open ports for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser port (UDP 1434).  
   
--   Make sure that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser service is started on the server.  
+-   Make sure that the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser service is started on the server.  
   
 ## See Also  
  [Configure a Windows Firewall for Database Engine Access](../../2014/database-engine/configure-a-windows-firewall-for-database-engine-access.md)   

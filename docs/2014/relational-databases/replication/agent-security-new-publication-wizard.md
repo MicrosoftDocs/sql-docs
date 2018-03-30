@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: 05ae44df-8e9f-46ea-95f6-972ad109c6c0
 caps.latest.revision: 22
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Agent Security (New Publication Wizard)
@@ -24,7 +24,7 @@ manager: "jhubbard"
   
 -   The Log Reader Agent for all transactional publications.  
   
--   The Queue Reader Agent for transactional publications that allow updatable subscriptions. The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent job for this agent is created if you specified **Transactional publication with updatable subscriptions** on the **Publication Type** page, regardless of the type of updatable subscriptions you use. For more information about updatable subscriptions, see [Updatable Subscriptions for Transactional Replication](../../../2014/relational-databases/replication/updatable-subscriptions-for-transactional-replication.md).  
+-   The Queue Reader Agent for transactional publications that allow updatable subscriptions. The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job for this agent is created if you specified **Transactional publication with updatable subscriptions** on the **Publication Type** page, regardless of the type of updatable subscriptions you use. For more information about updatable subscriptions, see [Updatable Subscriptions for Transactional Replication](../../../2014/relational-databases/replication/updatable-subscriptions-for-transactional-replication.md).  
   
  For information about permissions required by agents and best practices for replication security, see [Replication Agent Security Model](../../../2014/relational-databases/replication/replication-agent-security-model.md) and [Replication Security Best Practices](../../../2014/relational-databases/replication/replication-security-best-practices.md).  
   
@@ -43,7 +43,7 @@ manager: "jhubbard"
 >  There is one Log Reader Agent for each database that is published using transactional replication. If a transactional publication already exists in the database, the security settings are read-only. You can change the settings in the **Publication Properties** dialog box, but changes affect all transactional publications in the database.  
   
  **Queue Reader Agent**  
- Displayed for transactional publications that allow updatable subscriptions. Click **Security Settings** to specify security settings in the **Queue Reader Agent Security** dialog box. A Queue Reader Agent job is created when this wizard completes; it does not depend on you creating any queued updating subscriptions. If you do not plan to create any queued updating subscriptions, you can disable the job. Right-click the job (named in the form: *[\<Publisher>].\<integer>*.) in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent **Jobs** folder, and then click **Disable**.  
+ Displayed for transactional publications that allow updatable subscriptions. Click **Security Settings** to specify security settings in the **Queue Reader Agent Security** dialog box. A Queue Reader Agent job is created when this wizard completes; it does not depend on you creating any queued updating subscriptions. If you do not plan to create any queued updating subscriptions, you can disable the job. Right-click the job (named in the form: *[\<Publisher>].\<integer>*.) in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent **Jobs** folder, and then click **Disable**.  
   
  Click **Help** on the **Queue Reader Agent Security** dialog box for more information about the permissions required for accounts used by the Queue Reader Agent.  
   

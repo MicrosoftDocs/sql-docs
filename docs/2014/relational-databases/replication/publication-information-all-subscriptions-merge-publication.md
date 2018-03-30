@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: 0f4fa946-a0d9-4d3b-b90b-53503c40fba2
 caps.latest.revision: 27
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Publication Information, All Subscriptions (Merge Publication)
@@ -34,7 +34,7 @@ manager: "jhubbard"
  Filter settings are specific to each grid. Column selection and sorting are applied to all grids of the same type, such as the publications grid for each Publisher.  
   
  **Show**  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and later versions only. Select the subscription states to display for the selected subscription type. For example, you can select to display only those subscriptions that have an error.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only. Select the subscription states to display for the selected subscription type. For example, you can select to display only those subscriptions that have an error.  
   
  **Status**  
  The status of each subscription, which is determined by the status of the Merge Agent.  
@@ -43,13 +43,13 @@ manager: "jhubbard"
   
 -   Error  
   
--   Performance critical ([!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and later versions only)  
+-   Performance critical ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only)  
   
--   Long-running merge ([!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and later versions only)  
+-   Long-running merge ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only)  
   
--   Expiring soon/Expired ([!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and later versions only)  
+-   Expiring soon/Expired ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only)  
   
--   Uninitialized subscription ([!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and later versions only)  
+-   Uninitialized subscription ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only)  
   
 -   Retrying failed command  
   
@@ -67,10 +67,10 @@ manager: "jhubbard"
  The name of each subscription, in the form:*SubscriberName: SubscriptionDatabaseName*.  
   
  **Friendly Name**  
- [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and later versions only. The description of each subscription. The description is entered in the **Subscription Properties** dialog box or specified with the **@description** parameter of [sp_addmergesubscription](../Topic/sp_addmergesubscription%20\(Transact-SQL\).md) or [sp_addmergepullsubscription](../Topic/sp_addmergepullsubscription%20\(Transact-SQL\).md). Users often use the description as a "friendly name" or nickname for the subscription.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only. The description of each subscription. The description is entered in the **Subscription Properties** dialog box or specified with the **@description** parameter of [sp_addmergesubscription](~/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) or [sp_addmergepullsubscription](~/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Users often use the description as a "friendly name" or nickname for the subscription.  
   
  **Performance**  
- [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and later versions only. The performance rating for each subscription, based on the most recent measurements of delivery rate taken by Replication Monitor. The rating is determined by comparing individual subscription performance to the average historical performance of subscriptions to the publication that have the same connection type (dial-up or LAN). Replication Monitor displays a value after five synchronizations have occurred with 50 or more changes each over the same type of connection. If there have been less than five synchronizations with 50 or more changes or the most recent synchronization has less than 50 changes, this column is blank.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only. The performance rating for each subscription, based on the most recent measurements of delivery rate taken by Replication Monitor. The rating is determined by comparing individual subscription performance to the average historical performance of subscriptions to the publication that have the same connection type (dial-up or LAN). Replication Monitor displays a value after five synchronizations have occurred with 50 or more changes each over the same type of connection. If there have been less than five synchronizations with 50 or more changes or the most recent synchronization has less than 50 changes, this column is blank.  
   
 > [!NOTE]  
 >  Performance is based on the connection type displayed in the **Connection** column; therefore it is possible for a subscription with a lower delivery rate to display a better performance rating than another subscription if the first subscription is synchronized over a slower connection.  
@@ -97,7 +97,7 @@ manager: "jhubbard"
  The amount of time the Merge Agent has run during the last synchronization. The time represents elapsed time if the Merge Agent is currently synchronizing and total time if the Merge Agent has synchronized previously.  
   
  **Connection**  
- [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and later versions only. The type of connection between the Subscriber and the Publisher. The possible values are **LAN**, **Dialup**, and **Internet**. The **Internet** value is displayed if the subscription uses Web synchronization.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only. The type of connection between the Subscriber and the Publisher. The possible values are **LAN**, **Dialup**, and **Internet**. The **Internet** value is displayed if the subscription uses Web synchronization.  
   
 ## See Also  
  [Start the Replication Monitor](../../../2014/relational-databases/replication/start-the-replication-monitor.md)   

@@ -19,12 +19,12 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Use Native Format to Import or Export Data (SQL Server)
-  Native format is recommended when you bulk transfer data between multiple instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using a data file that does not contain any extended/double-byte character set (DBCS) characters.  
+  Native format is recommended when you bulk transfer data between multiple instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using a data file that does not contain any extended/double-byte character set (DBCS) characters.  
   
 > [!NOTE]  
->  To bulk transfer data between multiple instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using a data file that contains extended or DBCS characters, you should use the Unicode native format. For more information, see [Use Unicode Native Format to Import or Export Data &#40;SQL Server&#41;](../../2014/database-engine/use-unicode-native-format-to-import-or-export-data-sql-server.md).  
+>  To bulk transfer data between multiple instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] by using a data file that contains extended or DBCS characters, you should use the Unicode native format. For more information, see [Use Unicode Native Format to Import or Export Data &#40;SQL Server&#41;](../../2014/database-engine/use-unicode-native-format-to-import-or-export-data-sql-server.md).  
   
- Native format maintains the native data types of a database. Native format is intended for high-speed data transfer of data between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables. If you use a format file, the source and target tables do not need to be identical. The data transfer involves two steps:  
+ Native format maintains the native data types of a database. Native format is intended for high-speed data transfer of data between [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tables. If you use a format file, the source and target tables do not need to be identical. The data transfer involves two steps:  
   
 1.  Bulk exporting the data from a source table into a data file  
   
@@ -51,14 +51,14 @@ manager: "jhubbard"
   
 -   Noncharacter data  
   
-     The bcp utility uses the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] internal binary data format to write noncharacter data from a table to a data file.  
+     The bcp utility uses the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] internal binary data format to write noncharacter data from a table to a data file.  
   
 -   `char` or `varchar` data  
   
      At the beginning of each `char` or `varchar` field, **bcp** adds the prefix length.  
   
     > [!IMPORTANT]  
-    >  When native mode is used, by default, the **bcp** utility converts characters from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to OEM characters before it copies them to a data file. The **bcp** utility converts characters from a data file to ANSI characters before it bulk imports them into a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table. During these conversions, extended character data can be lost. For extended characters, either use Unicode native format or specify a code page.  
+    >  When native mode is used, by default, the **bcp** utility converts characters from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to OEM characters before it copies them to a data file. The **bcp** utility converts characters from a data file to ANSI characters before it bulk imports them into a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] table. During these conversions, extended character data can be lost. For extended characters, either use Unicode native format or specify a code page.  
   
 -   `sql_variant` data  
   
@@ -66,7 +66,7 @@ manager: "jhubbard"
   
      If the data type of the destination column is not `sql_variant`, each data value is converted to the data type of the destination column, following the normal rules of implicit data conversion. If an error occurs during data conversion, the current batch is rolled back. Any `char` and `varchar` values that are transferred between `sql_variant` columns may have code page conversion issues.  
   
-     For more information about data conversion, see [Data Type Conversion &#40;Database Engine&#41;](../Topic/Data%20Type%20Conversion%20\(Database%20Engine\).md).  
+     For more information about data conversion, see [Data Type Conversion &#40;Database Engine&#41;](~/t-sql/data-types/data-type-conversion-database-engine.md).  
   
 ## Command Options for Native Format  
  You can import native format data into a table using **bcp**, BULK INSERT or INSERT ... SELECT \* FROM OPENROWSET(BULK...). For a **bcp** command or BULK INSERT statement, you can specify the data format on the command line. For an INSERT ... SELECT * FROM OPENROWSET(BULK...) statement, you must specify the data format in a format file.  
@@ -78,9 +78,9 @@ manager: "jhubbard"
 |**bcp**|**-n**|Causes the **bcp** utility to use the native data types of the data.<sup>1</sup>|  
 |BULK INSERT|DATAFILETYPE **='**native**'**|Uses the native or wide native data types of the data. Note that DATAFILETYPE is not needed if a format file specifies the data types.|  
   
- <sup>1</sup> To load native (**-n**) data to a format compatible with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] clients, use the **-V** switch. For more information, see [Import Native and Character Format Data from Earlier Versions of SQL Server](../../2014/database-engine/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
+ <sup>1</sup> To load native (**-n**) data to a format compatible with earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] clients, use the **-V** switch. For more information, see [Import Native and Character Format Data from Earlier Versions of SQL Server](../../2014/database-engine/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
   
- For more information, see [bcp Utility](../../2014/database-engine/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](../Topic/BULK%20INSERT%20\(Transact-SQL\).md), or [OPENROWSET &#40;Transact-SQL&#41;](../Topic/OPENROWSET%20\(Transact-SQL\).md).  
+ For more information, see [bcp Utility](../../2014/database-engine/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md), or [OPENROWSET &#40;Transact-SQL&#41;](~/t-sql/functions/openrowset-transact-sql.md).  
   
 > [!NOTE]  
 >  Alternatively, you can specify formatting on a per-field basis in a format file. For more information, see [Format Files for Importing or Exporting Data &#40;SQL Server&#41;](../../2014/database-engine/format-files-for-importing-or-exporting-data-sql-server.md).  
@@ -89,7 +89,7 @@ manager: "jhubbard"
  The following examples demonstrate how to bulk export native data using **bcp** and bulk import the same data using BULK INSERT.  
   
 ### Sample Table  
- The examples require that a table named **myTestNativeData** table be created in the **AdventureWorks** sample database under the **dbo** schema. Before you can run the examples, you must create this table. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor, execute:  
+ The examples require that a table named **myTestNativeData** table be created in the **AdventureWorks** sample database under the **dbo** schema. Before you can run the examples, you must create this table. In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Query Editor, execute:  
   
 ```  
 USE AdventureWorks;  
@@ -119,9 +119,9 @@ SELECT Col1,Col2,Col3 FROM myTestNativeData
 |Qualifiers|Description|  
 |----------------|-----------------|  
 |**-n**|Specifies native data types.|  
-|**-T**|Specifies that the **bcp** utility connects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with a trusted connection using integrated security. If **-T** is not specified, you need to specify **-U** and **-P** to successfully log in.|  
+|**-T**|Specifies that the **bcp** utility connects to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] with a trusted connection using integrated security. If **-T** is not specified, you need to specify **-U** and **-P** to successfully log in.|  
   
- The following example bulk exports data in native format from the `myTestNativeData` table into a new data file named `myTestNativeData-n.Dat` data file. At the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows command prompt, enter:  
+ The following example bulk exports data in native format from the `myTestNativeData` table into a new data file named `myTestNativeData-n.Dat` data file. At the [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows command prompt, enter:  
   
 ```  
 bcp AdventureWorks..myTestNativeData out C:\myTestNativeData-n.Dat -n -T  
@@ -129,7 +129,7 @@ bcp AdventureWorks..myTestNativeData out C:\myTestNativeData-n.Dat -n -T
 ```  
   
 ### Using BULK INSERT to Bulk Import Native Data  
- The following example uses BULK INSERT to import the data in the `myTestNativeData-n.Dat` data file into the `myTestNativeData` table. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor, execute:  
+ The following example uses BULK INSERT to import the data in the `myTestNativeData-n.Dat` data file into the `myTestNativeData` table. In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Query Editor, execute:  
   
 ```  
 USE AdventureWorks;  
@@ -156,11 +156,11 @@ GO
   
 ## See Also  
  [bcp Utility](../../2014/database-engine/bcp-utility.md)   
- [BULK INSERT &#40;Transact-SQL&#41;](../Topic/BULK%20INSERT%20\(Transact-SQL\).md)   
- [Data Types &#40;Transact-SQL&#41;](../Topic/Data%20Types%20\(Transact-SQL\).md)   
- [sql_variant &#40;Transact-SQL&#41;](../Topic/sql_variant%20\(Transact-SQL\).md)   
+ [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md)   
+ [Data Types &#40;Transact-SQL&#41;](~/t-sql/data-types/data-types-transact-sql.md)   
+ [sql_variant &#40;Transact-SQL&#41;](~/t-sql/data-types/sql-variant-transact-sql.md)   
  [Import Native and Character Format Data from Earlier Versions of SQL Server](../../2014/database-engine/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)   
- [OPENROWSET &#40;Transact-SQL&#41;](../Topic/OPENROWSET%20\(Transact-SQL\).md)   
+ [OPENROWSET &#40;Transact-SQL&#41;](~/t-sql/functions/openrowset-transact-sql.md)   
  [Use Unicode Native Format to Import or Export Data &#40;SQL Server&#41;](../../2014/database-engine/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
   

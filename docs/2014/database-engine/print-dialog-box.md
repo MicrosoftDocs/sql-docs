@@ -22,7 +22,7 @@ manager: "jhubbard"
   
 ## Printer  
  **Name**  
- Specifies the printer. Select a printer from the list. The printer you select becomes the default printer until you close [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or select a different printer. The information that appears in the fields below the list applies to the selected printer.  
+ Specifies the printer. Select a printer from the list. The printer you select becomes the default printer until you close [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or select a different printer. The information that appears in the fields below the list applies to the selected printer.  
   
  **Status**  
  Describes the state of the selected printer—for example, busy or ready.  

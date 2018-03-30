@@ -41,8 +41,8 @@ from [Model]
 |2004|25808962.34||  
   
 ## See Also  
- [CREATE MEMBER Statement &#40;MDX&#41;](../Topic/CREATE%20MEMBER%20Statement%20\(MDX\).md)   
- [MDX Function Reference &#40;MDX&#41;](../Topic/MDX%20Function%20Reference%20\(MDX\).md)   
- [SELECT Statement &#40;MDX&#41;](../Topic/SELECT%20Statement%20\(MDX\).md)  
+ [CREATE MEMBER Statement &#40;MDX&#41;](~/mdx/mdx-data-definition-create-member.md)   
+ [MDX Function Reference &#40;MDX&#41;](~/mdx/mdx-function-reference-mdx.md)   
+ [SELECT Statement &#40;MDX&#41;](~/mdx/mdx-data-manipulation-select.md)  
   
   

@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Server Element (ASSL)
-  Describes an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+  Describes an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ## Syntax  
   
@@ -72,7 +72,7 @@ manager: "mblythe"
 |Child elements|[Name](../../../2014/analysis-services/dev-guide/name-element-assl.md), [ID](../../../2014/analysis-services/dev-guide/id-element-assl.md), [CreatedTimestamp](../../../2014/analysis-services/dev-guide/createdtimestamp-element-assl.md), [LastSchemaUpdate](../../../2014/analysis-services/dev-guide/lastschemaupdate-element-assl.md), [Description](../../../2014/analysis-services/dev-guide/description-element-assl.md), [Annotations](../../../2014/analysis-services/dev-guide/annotations-element-assl.md), [ProductName](../../../2014/analysis-services/dev-guide/productname-element-assl.md), [Edition](../../../2014/analysis-services/dev-guide/edition-element-assl.md), [EditionId](../../../2014/analysis-services/dev-guide/editionid-element.md), [Version](../../../2014/analysis-services/dev-guide/version-element-assl.md), [ServerMode](../../../2014/analysis-services/dev-guide/editionid-element.md), [ProductLevel](../../../2014/analysis-services/dev-guide/productlabel-element.md), [Databases](../../../2014/analysis-services/dev-guide/databases-element-assl.md), [Assemblies](../../../2014/analysis-services/dev-guide/assemblies-element-assl.md), [Traces](../../../2014/analysis-services/dev-guide/traces-element-assl.md), [Roles](../../../2014/analysis-services/dev-guide/roles-element-assl.md), [ServerProperties](../../../2014/analysis-services/dev-guide/serverproperties-element-assl.md)>|  
   
 ## Remarks  
- The `Server` element represents an instance of [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], and serves as the topmost node in the Analysis Services Scripting Language (ASSL) node hierarchy.  
+ The `Server` element represents an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], and serves as the topmost node in the Analysis Services Scripting Language (ASSL) node hierarchy.  
   
  The corresponding element in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.Server>.  
   

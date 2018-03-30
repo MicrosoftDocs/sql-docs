@@ -23,7 +23,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Using ADO to Execute SQLXML 4.0 Queries
-  In previous versions of SQLXML, HTTP-based query execution was supported using SQLXML IIS virtual directories and the SQLXML ISAPI filter. In SQLXML 4.0, these components have been removed as similar and overlapping functionality is provided with native XML Web services beginning in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
+  In previous versions of SQLXML, HTTP-based query execution was supported using SQLXML IIS virtual directories and the SQLXML ISAPI filter. In SQLXML 4.0, these components have been removed as similar and overlapping functionality is provided with native XML Web services beginning in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
  As an alternative, you can execute queries and use SQLXML 4.0 with your COM-based applications, by leveraging the SQLXML extensions to ActiveX Data Objects (ADO) that were first introduced in Microsoft Data Access Components (MDAC) 2.6 and later.  
   
@@ -92,7 +92,7 @@ manager: "jhubbard"
   
     -   Find "`@@FILE_NAME@@`" and replace it with the name of your template file.  
   
-    -   Find "`@@SERVER_NAME@@`" and replace it with the name of your [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance (for example, "`(local)`" if [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is running locally).  
+    -   Find "`@@SERVER_NAME@@`" and replace it with the name of your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance (for example, "`(local)`" if [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running locally).  
   
     -   Find "`@@DATABASE_NAME@@`" and replace it with the name of the database (for example, either "`AdventureWorks2012`" or "`tempdb`").  
   
@@ -109,7 +109,7 @@ manager: "jhubbard"
   
 #### To use the SQLXML 4.0 query tester  
   
-1.  Verify that [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client is installed, as follows:  
+1.  Verify that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client is installed, as follows:  
   
     1.  From the **Start** menu, point to **Settings**, and then click **Control Panel**.  
   
@@ -118,7 +118,7 @@ manager: "jhubbard"
     3.  In the list of currently installed programs, verify that **Microsoft SQL Server Native Client** appears in the list.  
   
         > [!NOTE]  
-        >  If you need to install [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, see [Installing SQL Server Native Client](../../../2014/database-engine/dev-guide/installing-sql-server-native-client.md).  
+        >  If you need to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, see [Installing SQL Server Native Client](../../../2014/database-engine/dev-guide/installing-sql-server-native-client.md).  
   
 2.  Verify that the version of MDAC installed for the client computer is 2.6 or later. If you need to verify MDAC version information, you can use the MDAC Component Checker tool, which is provided as free download from the Microsoft Web site (www.microsoft.com). Fore more information, search on "MDAC Component Checker" on the Microsoft Web site.  
   

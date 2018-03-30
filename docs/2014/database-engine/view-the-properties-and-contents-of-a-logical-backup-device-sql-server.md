@@ -26,7 +26,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # View the Properties and Contents of a Logical Backup Device (SQL Server)
-  This topic describes how to view the properties and contents of a logical backup device in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  This topic describes how to view the properties and contents of a logical backup device in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -43,16 +43,16 @@ manager: "jhubbard"
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
 ###  <a name="Security"></a> Security  
- For information about security, see [RESTORE LABELONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md).  
+ For information about security, see [RESTORE LABELONLY &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-labelonly-transact-sql.md).  
   
 ####  <a name="Permissions"></a> Permissions  
- In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions, obtaining information about a backup set or backup device requires CREATE DATABASE permission. For more information, see [GRANT Database Permissions &#40;Transact-SQL&#41;](../Topic/GRANT%20Database%20Permissions%20\(Transact-SQL\).md).  
+ In [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] and later versions, obtaining information about a backup set or backup device requires CREATE DATABASE permission. For more information, see [GRANT Database Permissions &#40;Transact-SQL&#41;](~/t-sql/statements/grant-database-permissions-transact-sql.md).  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   
 #### To view the properties and contents of a logical backup device  
   
-1.  After connecting to the appropriate instance of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in Object Explorer, click the server name to expand the server tree.  
+1.  After connecting to the appropriate instance of the [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], in Object Explorer, click the server name to expand the server tree.  
   
 2.  Expand **Server Objects**, and expand **Backup Devices**.  
   
@@ -81,11 +81,11 @@ manager: "jhubbard"
   
 #### To view the properties and contents of a logical backup device  
   
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Use the [RESTORE LABELONLY](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md) statement. This example returns information about the `AdvWrks2008R2Backup` logical backup device.  
+3.  Use the [RESTORE LABELONLY](~/t-sql/statements/restore-statements-labelonly-transact-sql.md) statement. This example returns information about the `AdvWrks2008R2Backup` logical backup device.  
   
 ```tsql  
 USE AdventureWorks2012 ;  
@@ -96,12 +96,12 @@ GO
 ```  
   
 ## See Also  
- [backupfilegroup &#40;Transact-SQL&#41;](../Topic/backupfilegroup%20\(Transact-SQL\).md)   
- [backupfile &#40;Transact-SQL&#41;](../Topic/backupfile%20\(Transact-SQL\).md)   
- [backupset &#40;Transact-SQL&#41;](../Topic/backupset%20\(Transact-SQL\).md)   
- [backupmediaset &#40;Transact-SQL&#41;](../Topic/backupmediaset%20\(Transact-SQL\).md)   
- [backupmediafamily &#40;Transact-SQL&#41;](../Topic/backupmediafamily%20\(Transact-SQL\).md)   
- [sp_addumpdevice &#40;Transact-SQL&#41;](../Topic/sp_addumpdevice%20\(Transact-SQL\).md)   
+ [backupfilegroup &#40;Transact-SQL&#41;](~/relational-databases/system-tables/backupfilegroup-transact-sql.md)   
+ [backupfile &#40;Transact-SQL&#41;](~/relational-databases/system-tables/backupfile-transact-sql.md)   
+ [backupset &#40;Transact-SQL&#41;](~/relational-databases/system-tables/backupset-transact-sql.md)   
+ [backupmediaset &#40;Transact-SQL&#41;](~/relational-databases/system-tables/backupmediaset-transact-sql.md)   
+ [backupmediafamily &#40;Transact-SQL&#41;](~/relational-databases/system-tables/backupmediafamily-transact-sql.md)   
+ [sp_addumpdevice &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
  [Backup Devices &#40;SQL Server&#41;](../../2014/database-engine/backup-devices-sql-server.md)  
   
   

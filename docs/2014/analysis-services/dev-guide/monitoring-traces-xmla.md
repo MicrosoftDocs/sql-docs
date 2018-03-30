@@ -22,10 +22,10 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Monitoring Traces (XMLA)
-  You can use the [Subscribe](../../../2014/analysis-services/dev-guide/subscribe-element-xmla.md) command in XML for Analysis (XMLA) to monitor an existing trace defined on an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. The `Subscribe` command returns the results of a trace as a rowset.  
+  You can use the [Subscribe](../../../2014/analysis-services/dev-guide/subscribe-element-xmla.md) command in XML for Analysis (XMLA) to monitor an existing trace defined on an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. The `Subscribe` command returns the results of a trace as a rowset.  
   
 ## Specifying a Trace  
- The [Object](../../../2014/analysis-services/dev-guide/object-element-xmla.md) property of the `Subscribe` command must contain an object reference to either an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance or a trace on an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance. If the `Object` property is not specified, or a trace identifier is not specified in the `Object` property, the `Subscribe` command monitors the default session trace for the explicit session specified in the SOAP header for the command.  
+ The [Object](../../../2014/analysis-services/dev-guide/object-element-xmla.md) property of the `Subscribe` command must contain an object reference to either an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance or a trace on an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance. If the `Object` property is not specified, or a trace identifier is not specified in the `Object` property, the `Subscribe` command monitors the default session trace for the explicit session specified in the SOAP header for the command.  
   
 ## Returning Results  
  The `Subscribe` command returns a rowset containing the trace events captured by the specified trace. The `Subscribe` command returns trace results until the command is canceled by the [Cancel](../../../2014/analysis-services/dev-guide/cancel-element-xmla.md) command.  
@@ -62,11 +62,11 @@ manager: "mblythe"
 |NTDomainName|String|The Windows domain of the user associated with the event.|  
 |ClientHostName|String|The name of the computer on which the client application is running. This column is populated with the values passed by the client application.|  
 |ClientProcessID|Long integer|The process identifier of the client application.|  
-|ApplicationName|String|The name of the client application that created the connection to the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance. This column is populated with the values passed by the client application, rather than the displayed name of the program.|  
+|ApplicationName|String|The name of the client application that created the connection to the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance. This column is populated with the values passed by the client application, rather than the displayed name of the program.|  
 |NTCanonicalUserName|String|The Windows canonical user name of the user associated with the event.|  
 |SPID|String|The server process ID (SPID) of the session for which the event occurred. The value of this column directly corresponds to the session ID specified in the SOAP header of the XMLA message for which the event occurred.|  
 |TextData|String|The text data associated with the event. The contents of this column depend on the event class and subclass of the event.|  
-|ServerName|String|The name of the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance for which the event occurred.|  
+|ServerName|String|The name of the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance for which the event occurred.|  
 |RequestParameters|String|The parameters of the parameterized query or XMLA command for which the event occurred.|  
 |RequestProperties|String|The properties of the XMLA method for which the event occurred.|  
   

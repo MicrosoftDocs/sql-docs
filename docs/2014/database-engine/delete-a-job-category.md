@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Delete a Job Category
-  This topic describes how to delete a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job category in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] or SQL Server Management Objects.  
+  This topic describes how to delete a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent job category in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../includes/tsql-md.md)] or SQL Server Management Objects.  
   
  Job categories help you organize your jobs for easy filtering and grouping. For example, you can organize all your database backup jobs in the Database Maintenance category.  
   
@@ -31,7 +31,7 @@ manager: "jhubbard"
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
- When you delete a user-defined job category, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent prompts you to reassign the jobs that are assigned to it to another job category. You can only delete user-defined job categories.  
+ When you delete a user-defined job category, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent prompts you to reassign the jobs that are assigned to it to another job category. You can only delete user-defined job categories.  
   
 ###  <a name="Security"></a> Security  
  For detailed information, see [Implement SQL Server Agent Security](../../2014/database-engine/implement-sql-server-agent-security.md).  
@@ -62,7 +62,7 @@ manager: "jhubbard"
   
 #### To delete a job category  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -78,7 +78,7 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [sp_delete_category &#40;Transact-SQL&#41;](../Topic/sp_delete_category%20\(Transact-SQL\).md).  
+ For more information, see [sp_delete_category &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md).  
   
 
   

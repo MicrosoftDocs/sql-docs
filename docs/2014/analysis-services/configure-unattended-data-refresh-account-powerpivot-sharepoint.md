@@ -20,7 +20,7 @@ manager: "mblythe"
   
  ![SSAS_PowerpivotKJ_DataRefreshCreds](../../2014/analysis-services/media/ssas-powerpivotkj-datarefreshcreds.gif "SSAS_PowerpivotKJ_DataRefreshCreds")  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2010  
+ **[!INCLUDE[applies](../includes/applies-md.md)]**  SharePoint 2010  
   
  Depending on which options you selected when configuring the server, the unattended data refresh account might already be created. In a default configuration, the identity of the unattended data refresh account is initially set to the farm account. You can improve the security of your deployment by changing the account to run as a different user. Follow these instructions to change the account: [Update the credentials used by an existing PowerPivot unattended data refresh account](#bkmk_editUA).  
   

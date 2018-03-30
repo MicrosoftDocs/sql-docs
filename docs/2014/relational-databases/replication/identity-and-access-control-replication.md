@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 4da0e793-1ee4-4f69-a80b-45c6732a238d
 caps.latest.revision: 7
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Identity and Access Control (Replication)
@@ -35,7 +35,7 @@ manager: "jhubbard"
   
 -   The publication access list (PAL)  
   
-     Grant access to publications through the PAL. The PAL functions similarly to a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows access control list. When a Subscriber connects to the Publisher or Distributor and requests access to a publication, the authentication information passed by the agent is checked against the PAL. For more information and best practices for the PAL, see [Secure the Publisher](../../../2014/relational-databases/replication/secure-the-publisher.md).  
+     Grant access to publications through the PAL. The PAL functions similarly to a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows access control list. When a Subscriber connects to the Publisher or Distributor and requests access to a publication, the authentication information passed by the agent is checked against the PAL. For more information and best practices for the PAL, see [Secure the Publisher](../../../2014/relational-databases/replication/secure-the-publisher.md).  
   
 ## Filtering Published Data  
  In addition to using authentication and authorization to control access to replicated data and objects, replication includes two options to control what data is available at a Subscriber: column filtering and row filtering. For more information about filtering, see [Filter Published Data](../../../2014/relational-databases/replication/filter-published-data.md).  

@@ -23,23 +23,23 @@ manager: "jhubbard"
  Enter the following information in the Connect to SQL Server dialog box.  
   
  **Server Name**  
- Type the name of the server where the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is located.  
+ Type the name of the server where the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is located.  
   
  **Authentication**  
  Select one of the following:  
   
 -   **Windows Authentication**  
   
--   **SQL Server Authentication**: If you select this option, you must type the **Login** and **Password** for the user in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] you are connecting to.  
+-   **SQL Server Authentication**: If you select this option, you must type the **Login** and **Password** for the user in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] you are connecting to.  
   
  **Options**  
  Click the arrow to view available options to be configured. You can choose to leave these options with their default value. The available options are:  
   
--   **Connection Timeout**: Type the time (in seconds) the program waits for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connection to be established before producing a timeout error. The default value is **15**.  
+-   **Connection Timeout**: Type the time (in seconds) the program waits for the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] connection to be established before producing a timeout error. The default value is **15**.  
   
 -   **Execution Timeout**: Type the time (in seconds) that the program waits for SQL command execution to finish before producing a timeout error. The default value is **30**.  
   
--   **Encrypt Connection**: Select **Encrypt Connection** to ensure that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connection that being established is encrypted to guarantee privacy.  
+-   **Encrypt Connection**: Select **Encrypt Connection** to ensure that the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] connection that being established is encrypted to guarantee privacy.  
   
 -   **Advanced**: Click **Advanced** and type any additional connection properties into the Advanced Connection Properties dialog box, if necessary.  
   

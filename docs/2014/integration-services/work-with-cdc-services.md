@@ -18,7 +18,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Work with CDC Services
-  You can use the CDC Service Configuration Console to create a new CDC service and to prepare a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database for CDC.  
+  You can use the CDC Service Configuration Console to create a new CDC service and to prepare a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database for CDC.  
   
 ## Options  
  **Prepare SQL Server**  
@@ -28,7 +28,7 @@ manager: "jhubbard"
   
  The Preparing SQL Server Instance for Oracle CDC dialog box opens.  
   
- For information on how to use this dialog box, see [Prepare SQL Server for CDC](../../2014/integration-services/prepare-sql-server-for-cdc.md). For information on how to enable a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance for CDC, see [How to Prepare SQL Server for CDC](../../2014/integration-services/how-to-prepare-sql-server-for-cdc.md).  
+ For information on how to use this dialog box, see [Prepare SQL Server for CDC](../../2014/integration-services/prepare-sql-server-for-cdc.md). For information on how to enable a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance for CDC, see [How to Prepare SQL Server for CDC](../../2014/integration-services/how-to-prepare-sql-server-for-cdc.md).  
   
  **Create a new CDC service**  
  Click **New Service** from the **Actions** pane on the right side of the CDC Service Configuration Console.  

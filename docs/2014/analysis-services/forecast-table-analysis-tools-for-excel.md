@@ -81,13 +81,13 @@ manager: "mblythe"
 ## Related Tools  
  The Data Mining Client for Excel, which is a separate add-in that provides more advanced data mining functionality, also contains a wizard for forecasting.  
   
- Both the **Forecast** tool (in the Table Analysis Tools for Excel) and the **Forecast** wizard (in the Data Mining Client for Excel) use the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series algorithm.  
+ Both the **Forecast** tool (in the Table Analysis Tools for Excel) and the **Forecast** wizard (in the Data Mining Client for Excel) use the [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series algorithm.  
   
 -   The **Forecast** tool is easier to use because it automatically configures the algorithm to use the settings that are best for your data.  
   
 -   The **Forecast** wizard in the Data Mining Client for Excel provides you with the ability to customize the parameters.  
   
- For more information about the **Forecast** wizard, see [Forecast Wizard &#40;Data Mining Add-ins for Excel&#41;](../../2014/analysis-services/forecast-wizard-data-mining-add-ins-for-excel.md). For more information about the algorithm used for forecasting, see the topic "Microsoft Time Series Algorithm" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+ For more information about the **Forecast** wizard, see [Forecast Wizard &#40;Data Mining Add-ins for Excel&#41;](../../2014/analysis-services/forecast-wizard-data-mining-add-ins-for-excel.md). For more information about the algorithm used for forecasting, see the topic "Microsoft Time Series Algorithm" in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online.  
   
 ## See Also  
  [Table Analysis Tools for Excel](../../2014/analysis-services/table-analysis-tools-for-excel.md)  

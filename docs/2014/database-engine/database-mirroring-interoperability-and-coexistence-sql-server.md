@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Database Mirroring: Interoperability and Coexistence (SQL Server)
-  Database mirroring can be used with the following features or components of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+  Database mirroring can be used with the following features or components of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
 -   [AlwaysOn Failover Cluster Instances (SQL Server Failover Clustering)](../../2014/database-engine/database-mirroring-and-sql-server-failover-cluster-instances.md)  
   
@@ -39,7 +39,7 @@ manager: "jhubbard"
   
      For information about why such transactions are not supported, see [Cross-Database Transactions Not Supported For Database Mirroring or AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/transactions-always-on-availability-and-database-mirroring.md).  
   
--   [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]  
+-   [!INCLUDE[ssHADR](../includes/sshadr-md.md)]  
   
 ## See Also  
  [Database Mirroring &#40;SQL Server&#41;](../../2014/database-engine/database-mirroring-sql-server.md)  

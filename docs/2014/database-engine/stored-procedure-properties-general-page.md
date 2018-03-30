@@ -15,7 +15,7 @@ f1_keywords:
 ms.assetid: 8ee433b6-3931-47e8-b1cf-332806f71161
 caps.latest.revision: 12
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Stored Procedure Properties (General Page)
@@ -60,7 +60,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Stored Procedures &#40;Database Engine&#41;](../../2014/database-engine/stored-procedures-database-engine.md)   
- [CREATE PROCEDURE &#40;Transact-SQL&#41;](../Topic/CREATE%20PROCEDURE%20\(Transact-SQL\).md)   
- [ALTER PROCEDURE &#40;Transact-SQL&#41;](../Topic/ALTER%20PROCEDURE%20\(Transact-SQL\).md)  
+ [CREATE PROCEDURE &#40;Transact-SQL&#41;](~/t-sql/statements/create-procedure-transact-sql.md)   
+ [ALTER PROCEDURE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-procedure-transact-sql.md)  
   
   

@@ -25,7 +25,7 @@ manager: "jhubbard"
   For character data fields, optional terminating characters allow you to mark the end of each field in a data file with a *field terminator* and the end of each row with a *row terminator*. Terminating characters are one way to indicate to programs that read the data file where one field or row ends and another field or row begins.  
   
 > [!IMPORTANT]  
->  When you use native or Unicode native format, use length prefixes rather than field terminators. Native format data can conflict with terminators because a native-format data file is stored in the [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] internal binary data format.  
+>  When you use native or Unicode native format, use length prefixes rather than field terminators. Native format data can conflict with terminators because a native-format data file is stored in the [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] internal binary data format.  
   
 ## Characters Supported As Terminators  
  The **bcp** command, BULK INSERT statement, and the OPENROWSET bulk rowset provider support a variety of characters as field or row terminators and always look for the first instance of each terminator. The following table lists the supported characters for terminators.  
@@ -100,11 +100,11 @@ manager: "jhubbard"
 |**-c**|Specifies that the data fields be loaded as character data.|  
 |**-t** `,`|Specifies a comma (,) as the field terminator.|  
 |**-r** \n|Specifies the row terminator as a newline character. This is the default row terminator, so specifying it is optional.|  
-|**-T**|Specifies that the **bcp** utility connects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with a trusted connection using integrated security. If **-T** is not specified, you need to specify **-U** and **-P** to successfully log in.|  
+|**-T**|Specifies that the **bcp** utility connects to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] with a trusted connection using integrated security. If **-T** is not specified, you need to specify **-U** and **-P** to successfully log in.|  
   
  For more information, see [bcp Utility](../../2014/database-engine/bcp-utility.md).  
   
- At the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows command prompt enter:  
+ At the [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows command prompt enter:  
   
 ```  
 bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, -r \n -T  
@@ -128,16 +128,16 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
     |FIELDTERMINATOR **='*`field_terminator`*'**|Specifies the field terminator to be used for character and Unicode character data files.<br /><br /> The default is \t (tab character).|  
     |ROWTERMINATOR **='*`row_terminator`*'**|Specifies the row terminator to be used for character and Unicode character data files.<br /><br /> The default is \n (newline character).|  
   
-     For more information, see [BULK INSERT &#40;Transact-SQL&#41;](../Topic/BULK%20INSERT%20\(Transact-SQL\).md).  
+     For more information, see [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md).  
   
 -   INSERT ... SELECT * FROM OPENROWSET(BULK...)  
   
      For the OPENROWSET bulk rowset provider, terminators can be specified only in the format file (which is required except for large-object data types). If a character data file uses a non-default terminator, it must be defined in the format file. For more information, see [Create a Format File &#40;SQL Server&#41;](../../2014/database-engine/create-a-format-file-sql-server.md) and [Use a Format File to Bulk Import Data &#40;SQL Server&#41;](../../2014/database-engine/use-a-format-file-to-bulk-import-data-sql-server.md).  
   
-     For more information about the OPENROWSET BULK clause, see [OPENROWSET &#40;Transact-SQL&#41;](../Topic/OPENROWSET%20\(Transact-SQL\).md).  
+     For more information about the OPENROWSET BULK clause, see [OPENROWSET &#40;Transact-SQL&#41;](~/t-sql/functions/openrowset-transact-sql.md).  
   
 ### Examples  
- The examples in this section bulk import character data form the `Department-c-t.txt` data file created in the preceding example into the `myDepartment` table in the [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] sample database. Before you can run the examples, you must create this table. To create this table under the **dbo** schema, in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor, execute the following code:  
+ The examples in this section bulk import character data form the `Department-c-t.txt` data file created in the preceding example into the `myDepartment` table in the [!INCLUDE[ssSampleDBUserInputNonLocal](../includes/sssampledbuserinputnonlocal-md.md)] sample database. Before you can run the examples, you must create this table. To create this table under the **dbo** schema, in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Query Editor, execute the following code:  
   
 ```  
 USE AdventureWorks;  
@@ -171,7 +171,7 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
 |FIELDTERMINATOR **='**`,`**'**|Specifies a comma (`,`) as the field terminator.|  
 |ROWTERMINATOR **='**`\n`**'**|Specifies the row terminator as a newline character.|  
   
- In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor, execute the following code:  
+ In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Query Editor, execute the following code:  
   
 ```  
 USE AdventureWorks;  
@@ -187,8 +187,8 @@ GO
   
 ## See Also  
  [bcp Utility](../../2014/database-engine/bcp-utility.md)   
- [BULK INSERT &#40;Transact-SQL&#41;](../Topic/BULK%20INSERT%20\(Transact-SQL\).md)   
- [OPENROWSET &#40;Transact-SQL&#41;](../Topic/OPENROWSET%20\(Transact-SQL\).md)   
+ [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md)   
+ [OPENROWSET &#40;Transact-SQL&#41;](~/t-sql/functions/openrowset-transact-sql.md)   
  [Specify Field Length by Using bcp &#40;SQL Server&#41;](../../2014/database-engine/specify-field-length-by-using-bcp-sql-server.md)   
  [Specify Prefix Length in Data Files by Using bcp &#40;SQL Server&#41;](../../2014/database-engine/specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)   
  [Specify File Storage Type by Using bcp &#40;SQL Server&#41;](../../2014/database-engine/specify-file-storage-type-by-using-bcp-sql-server.md)  

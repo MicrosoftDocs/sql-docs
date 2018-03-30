@@ -20,7 +20,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # New Measure Dialog Box (Analysis Services - Multidimensional Data)
-  Use the **New Measure** dialog box in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to add a new measure to a measure group in Cube Designer. You can display the **New Measure** dialog box by:  
+  Use the **New Measure** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to add a new measure to a measure group in Cube Designer. You can display the **New Measure** dialog box by:  
   
 -   Clicking **New Measure** in the **Toolbar** pane on the **Cube Structure** tab in Cube Designer.  
   

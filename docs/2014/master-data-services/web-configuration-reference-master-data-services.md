@@ -18,14 +18,14 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Web Configuration Reference (Master Data Services)
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] uses a Web.config file to contain the configuration settings that enable Internet Information Services (IIS) to host the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web application and the Web service. This Web.config file is located in the WebApplication folder of the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] installation path. For more information about the path and permissions, see [Folder and File Permissions &#40;Master Data Services&#41;](../../2014/master-data-services/folder-and-file-permissions-master-data-services.md).  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] uses a Web.config file to contain the configuration settings that enable Internet Information Services (IIS) to host the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web application and the Web service. This Web.config file is located in the WebApplication folder of the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] installation path. For more information about the path and permissions, see [Folder and File Permissions &#40;Master Data Services&#41;](../../2014/master-data-services/folder-and-file-permissions-master-data-services.md).  
   
 ## Web.Config Elements  
- The Web.config file contains a custom [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] element, **\<masterDataServices>**, in addition to standard IIS, .NET Framework, ASP.NET, and Windows Communication Foundation (WCF) configuration elements. The following table describes the elements included in the Web.config file.  
+ The Web.config file contains a custom [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] element, **\<masterDataServices>**, in addition to standard IIS, .NET Framework, ASP.NET, and Windows Communication Foundation (WCF) configuration elements. The following table describes the elements included in the Web.config file.  
   
 |Configuration Element|Description|  
 |---------------------------|-----------------|  
-|`masterDataServices`|Custom element. Connects the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web service to a [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database.|  
+|`masterDataServices`|Custom element. Connects the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web service to a [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.|  
 |`connectionStrings`|ASP.NET element. For more information, see [connectionStrings Element (ASP.NET Settings Schema)](http://go.microsoft.com/fwlink/?LinkId=178347) in the MSDN Library.|  
 |`system.web`|ASP.NET element. For more information, see [system.web Element (ASP.NET Settings Schema)](http://go.microsoft.com/fwlink/?LinkId=178348) in the MSDN Library.|  
 |`startup`|.NET Framework element. For more information, see [\<startup> Element](http://go.microsoft.com/fwlink/?LinkId=178349) in the MSDN Library.|  
@@ -38,7 +38,7 @@ manager: "jhubbard"
 |`appSettings`|ASP.NET element. For more information, see [appSettings Element (General Settings Schema)](http://go.microsoft.com/fwlink/?LinkId=178356) in the MSDN Library.|  
   
 ## masterDataServices Element  
- The **\<masterDataServices>** element is a custom element that is used to connect a [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web service to a [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database.  
+ The **\<masterDataServices>** element is a custom element that is used to connect a [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web service to a [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.  
   
 ### Syntax  
   
@@ -53,8 +53,8 @@ manager: "jhubbard"
 |Item|Description|  
 |----------|-----------------|  
 |`instance`|Child element. Contains attributes that specify information for the Web service and database connection string.|  
-|`virtualPath`|Attribute. Specifies the virtual path of the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web application and service. This corresponds to the `path` attribute of the **\<application>** element under the **\<site>** element in the IIS ApplicationHost.config file.|  
-|`siteName`|Attribute. Specifies the name of the site that hosts the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web application and service. This corresponds to the `name` attribute of the **\<site>** element under **\<sites>** in the IIS ApplicationHost.config file.|  
+|`virtualPath`|Attribute. Specifies the virtual path of the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web application and service. This corresponds to the `path` attribute of the **\<application>** element under the **\<site>** element in the IIS ApplicationHost.config file.|  
+|`siteName`|Attribute. Specifies the name of the site that hosts the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web application and service. This corresponds to the `name` attribute of the **\<site>** element under **\<sites>** in the IIS ApplicationHost.config file.|  
 |`connectionName`|Attribute. Specifies the name of the connection to use. This corresponds to the `name` attribute of the **\<add>** element under the **\<connectionStrings>** element in Web.config.|  
 |`serviceName`|Attribute. Specifies the name of the Web service. This corresponds to the `name` attribute of the **\<service>** element under the **\<services>** element in Web.config.|  
   

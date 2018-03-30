@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: 0b2e3d4e-03b7-4c31-8f96-48648d750010
 caps.latest.revision: 26
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Publisher Information, Publications
@@ -62,7 +62,7 @@ manager: "jhubbard"
 -   For snapshot replication, "synchronizing" means that the Distribution Agent is running and that data is currently being replicated.  
   
  **Current Average Performance** and **Current Worst Performance**  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and later versions only. The average performance rating and the worst performance rating, respectively, for all subscriptions to a publication. Ratings are based on the most recent measurements taken by Replication Monitor and do not reflect the performance of a subscription over time.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only. The average performance rating and the worst performance rating, respectively, for all subscriptions to a publication. Ratings are based on the most recent measurements taken by Replication Monitor and do not reflect the performance of a subscription over time.  
   
  For transactional replication, Replication Monitor displays a value only for publications that have performance thresholds defined. If performance thresholds are not defined for a publication, this column displays **Not enabled**. For merge replication, Replication Monitor displays a value after five synchronizations have occurred with 50 or more changes each over the same type of connection (dial-up or LAN). If there have been less than five synchronizations with 50 or more changes or the most recent synchronization has less than 50 changes, this column is blank.  
   

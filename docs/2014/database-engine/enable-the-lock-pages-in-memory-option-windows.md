@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: cd581fbc-4747-439e-87f9-2f18e39c5bb9
 caps.latest.revision: 35
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Enable the Lock Pages in Memory Option (Windows)
@@ -23,7 +23,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  Locking pages in memory may boost performance when paging memory to disk is expected.  
   
- Use the Windows Group Policy tool (gpedit.msc) to enable this policy for the account used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You must be a system administrator to change this policy.  
+ Use the Windows Group Policy tool (gpedit.msc) to enable this policy for the account used by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. You must be a system administrator to change this policy.  
   
 ### To enable the lock pages in memory option  
   

@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: b8a131c7-e7bd-4203-bf26-234f1ebfe622
 caps.latest.revision: 30
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Server Properties (Security Page)
@@ -28,10 +28,10 @@ manager: "jhubbard"
 >  Windows Authentication is much more secure than SQL Server Authentication. When possible, you should use Windows Authentication.  
   
  **SQL Server and Windows Authentication mode**  
- Uses mixed mode authentication to verify attempted connections, for backward compatibility with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If the **sa** password is blank when the security mode is being changed, the user is prompted to enter an **sa** password.  
+ Uses mixed mode authentication to verify attempted connections, for backward compatibility with earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. If the **sa** password is blank when the security mode is being changed, the user is prompted to enter an **sa** password.  
   
 > [!NOTE]  
->  Changing the security configuration requires a restart of the service. When changing the Server Authentication to SQL Server and Windows Authentication mode the SA account is not automatically enabled. To use the SA account, execute [ALTER LOGIN](../Topic/ALTER%20LOGIN%20\(Transact-SQL\).md) with the ENABLE option.  
+>  Changing the security configuration requires a restart of the service. When changing the Server Authentication to SQL Server and Windows Authentication mode the SA account is not automatically enabled. To use the SA account, execute [ALTER LOGIN](~/t-sql/statements/alter-login-transact-sql.md) with the ENABLE option.  
   
 ## Login Auditing  
  **None**  
@@ -64,7 +64,7 @@ manager: "jhubbard"
   
 ## Options  
  **Enable C2 audit tracing**  
- Audits all attempts to access statements and objects and records them to a file in the \MSSQL\Data directory for default instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or the \MSSQL$*instancename*\Data directory for named instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [c2 audit mode Server Configuration Option](../../2014/database-engine/c2-audit-mode-server-configuration-option.md).  
+ Audits all attempts to access statements and objects and records them to a file in the \MSSQL\Data directory for default instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], or the \MSSQL$*instancename*\Data directory for named instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For more information, see [c2 audit mode Server Configuration Option](../../2014/database-engine/c2-audit-mode-server-configuration-option.md).  
   
  **Cross database ownership chaining**  
  Select to allow the database to be the source or target of a cross-database ownership chain. For more information, see [cross db ownership chaining Server Configuration Option](../../2014/database-engine/cross-db-ownership-chaining-server-configuration-option.md).  

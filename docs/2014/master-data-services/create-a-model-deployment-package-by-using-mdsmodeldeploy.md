@@ -16,13 +16,13 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Create a Model Deployment Package by Using MDSModelDeploy
-  In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], use the MDSModelDeploy tool to create a package. Depending on the commands you specify, the package can contain either:  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], use the MDSModelDeploy tool to create a package. Depending on the commands you specify, the package can contain either:  
   
 -   Model objects only.  
   
 -   Model objects and data.  
   
- If you want to deploy a package that contains model objects only, you can use the model deployment wizard in the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application instead. For more information, see [Create a Model Deployment Package by Using the Wizard](../../2014/master-data-services/create-a-model-deployment-package-by-using-the-wizard.md).  
+ If you want to deploy a package that contains model objects only, you can use the model deployment wizard in the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] web application instead. For more information, see [Create a Model Deployment Package by Using the Wizard](../../2014/master-data-services/create-a-model-deployment-package-by-using-the-wizard.md).  
 > [!NOTE]  
 > This version of the MDSModelDeploy tool cannot use more than gigabytes (GB) of memory. When you create or deploy large models by using **Model objects and data** option, you may experience "Out of Memory" or "Stream was too long" errors. To resolve this issue, use MDS staging to deploy the data; or upgrade to MDS 2016 or a later version, which includes the updated version of the MDSModelDeploy tool.
 ## Prerequisites  

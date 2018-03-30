@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: ac6a213f-5c38-44ad-bc85-a62863786614
 caps.latest.revision: 19
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_611
@@ -31,7 +31,7 @@ manager: "jhubbard"
 |Message Text|Cannot insert or update a row because total variable column size, including overhead, is %d bytes more than the limit.|  
   
 ## Explanation  
- The maximum variable column size is more than that allowed by the schema. Error 611 is returned when the variable column is over the limit in the fixed case when vardecimal storage format is enabled, or when the variable column size is over the limit allowed in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] for a compressed data record.  
+ The maximum variable column size is more than that allowed by the schema. Error 611 is returned when the variable column is over the limit in the fixed case when vardecimal storage format is enabled, or when the variable column size is over the limit allowed in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] for a compressed data record.  
   
 ## User Action  
  Reduce the size of the record.  

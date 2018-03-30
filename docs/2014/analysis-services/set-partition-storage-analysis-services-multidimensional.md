@@ -31,9 +31,9 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Set Partition Storage (Analysis Services - Multidimensional)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] provides several standard storage configurations for storage modes and caching options. These provide commonly used configurations for update notification, latency, and rebuilding data.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] provides several standard storage configurations for storage modes and caching options. These provide commonly used configurations for update notification, latency, and rebuilding data.  
   
- You can specify partition storage in the Partitions tab of the cube in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], or on the partition property page in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ You can specify partition storage in the Partitions tab of the cube in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], or on the partition property page in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 ## Guidelines for choosing a storage mode  
  For a large measure group, it's common practice to configure storage differently for different partitions. Consider the following guidelines:  

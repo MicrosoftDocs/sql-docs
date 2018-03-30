@@ -24,7 +24,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Database Snapshots (SQL Server)
-  A database snapshot is a read-only, static view of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database (the *source database*). The database snapshot is transactionally consistent with the source database as of the moment of the snapshot's creation. A database snapshot always resides on the same server instance as its source database. As the source database is updated, the database snapshot is updated. Therefore, the longer a database snapshot exists, the more likely it is to use up its available disk space.  
+  A database snapshot is a read-only, static view of a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database (the *source database*). The database snapshot is transactionally consistent with the source database as of the moment of the snapshot's creation. A database snapshot always resides on the same server instance as its source database. As the source database is updated, the database snapshot is updated. Therefore, the longer a database snapshot exists, the more likely it is to use up its available disk space.  
   
  Multiple snapshots can exist on a given source database. Each database snapshot persists until it is explicitly dropped by the database owner.  
   
@@ -117,7 +117,7 @@ manager: "jhubbard"
 ###  <a name="Prerequisites"></a> Prerequisites  
  The source database, which can use any recovery model, must meet the following prerequisites:  
   
--   The server instance must be running on an edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that supports database snapshots. For more information, see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+-   The server instance must be running on an edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that supports database snapshots. For more information, see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 -   The source database must be online, unless the database is a mirror database within a database mirroring session.  
   
@@ -190,7 +190,7 @@ manager: "jhubbard"
     > [!NOTE]  
     >  A SELECT statement that is executed on a database snapshot must not specify a FILESTREAM column; otherwise, the following error message will be returned: `Could not continue scan with NOLOCK due to data movement.`  
   
--   When statistics on a read-only snapshot are missing or stale, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] creates and maintains temporary statistics in tempdb. For more information, see [Statistics](../../2014/database-engine/statistics.md).  
+-   When statistics on a read-only snapshot are missing or stale, the [!INCLUDE[ssDE](../includes/ssde-md.md)] creates and maintains temporary statistics in tempdb. For more information, see [Statistics](../../2014/database-engine/statistics.md).  
   
 ###  <a name="DiskSpace"></a> Disk Space Requirements  
  Database snapshots consume disk space. If a database snapshot runs out of disk space, it is marked as suspect and must be dropped. (The source database, however, is not affected; actions on it continue normally.) Compared to a full copy of a database, however, snapshots are highly space efficient. A snapshot requires only enough storage for the pages that change during its lifetime. Generally, snapshots are kept for a limited time, so their size is not a major concern.  

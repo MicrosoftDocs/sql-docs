@@ -19,7 +19,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Entities (Master Data Services)
-  Entities are objects that are contained in [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] models. Each entity contains members, which are the rows of master data that you manage.  
+  Entities are objects that are contained in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] models. Each entity contains members, which are the rows of master data that you manage.  
   
 ## How Many Entities are Appropriate?  
  Models can contain as many entities as you want to manage. Each entity should group a similar kind of data. For example, you might want an entity for all of your corporate accounts, or an entity for your master list of employees.  
@@ -56,7 +56,7 @@ manager: "jhubbard"
  ![Product Entity Tree Structure](../../2014/master-data-services/media/mds-conc-entity-ui.gif "Product Entity Tree Structure")  
   
 > [!NOTE]  
->  This is an example based on the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] user interface (UI). The hierarchical tree structure shows relationships between entities and domain-based attributes. It is intended to show relationships rather than represent levels of importance.  
+>  This is an example based on the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] user interface (UI). The hierarchical tree structure shows relationships between entities and domain-based attributes. It is intended to show relationships rather than represent levels of importance.  
   
 ## Related Tasks  
   

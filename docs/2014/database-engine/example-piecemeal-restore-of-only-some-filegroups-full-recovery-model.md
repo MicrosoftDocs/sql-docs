@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Example: Piecemeal Restore of Only Some Filegroups (Full Recovery Model)
-  This topic is relevant for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases under the full recovery model that contain multiple files or filegroups.  
+  This topic is relevant for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] databases under the full recovery model that contain multiple files or filegroups.  
   
  A piecemeal restore sequence restores and recovers a database in stages at the filegroup level, starting with the primary and all read/write, secondary filegroups.  
   
@@ -94,10 +94,10 @@ manager: "jhubbard"
 -   [Example: Online Restore of a Read-Only File &#40;Full Recovery Model&#41;](../../2014/database-engine/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
 ## See Also  
- [BACKUP &#40;Transact-SQL&#41;](../Topic/BACKUP%20\(Transact-SQL\).md)   
+ [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)   
  [Online Restore &#40;SQL Server&#41;](../../2014/database-engine/online-restore-sql-server.md)   
  [Apply Transaction Log Backups &#40;SQL Server&#41;](../../2014/database-engine/apply-transaction-log-backups-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)   
  [Piecemeal Restores &#40;SQL Server&#41;](../../2014/database-engine/piecemeal-restores-sql-server.md)  
   
   

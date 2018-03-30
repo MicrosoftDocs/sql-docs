@@ -19,18 +19,18 @@ helpviewer_keywords:
 ms.assetid: a4b222e5-0cbd-409c-92c4-046a674db8ac
 caps.latest.revision: 47
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Using URL Access in a Windows Application
-  Although URL access to a report server is optimized for a Web environment, you can also use URL access to embed [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] reports into a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows application. However, URL access that involves Windows Forms still requires that you use Web browser technology. You can use the following integration scenarios with URL access and Windows Forms:  
+  Although URL access to a report server is optimized for a Web environment, you can also use URL access to embed [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] reports into a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows application. However, URL access that involves Windows Forms still requires that you use Web browser technology. You can use the following integration scenarios with URL access and Windows Forms:  
   
 -   Display a report from a Windows Form application by starting a Web browser programmatically.  
   
 -   Use the <xref:System.Windows.Forms.WebBrowser> control on a Windows Form to display a report.  
   
 ## Starting Internet Explorer from a Windows Form  
- You can use the <xref:System.Diagnostics.Process> class to access a process that is running on a computer. The <xref:System.Diagnostics.Process> class is a useful [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] construct for starting, stopping, controlling, and monitoring applications. To view a specific report in your report server database, you can start the **IExplore** process, passing in the URL to the report. The following code example can be used to start [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Internet Explorer and pass a specific report URL when the user clicks a button on a Windows Form.  
+ You can use the <xref:System.Diagnostics.Process> class to access a process that is running on a computer. The <xref:System.Diagnostics.Process> class is a useful [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] construct for starting, stopping, controlling, and monitoring applications. To view a specific report in your report server database, you can start the **IExplore** process, passing in the URL to the report. The following code example can be used to start [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer and pass a specific report URL when the user clicks a button on a Windows Form.  
   
 ```vb  
 Private Sub viewReportButton_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles viewReportButton.Click  
@@ -86,7 +86,7 @@ private void viewReportButton_Click(object sender, System.EventArgs e)
   
 ###### To add the WebBrowser control to your Windows Form  
   
-1.  Create a new Windows application in either [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] or [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)].  
+1.  Create a new Windows application in either [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] or [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
 2.  Locate the <xref:System.Windows.Forms.WebBrowser> control in the **Toolbox** Dialog Box.  
   

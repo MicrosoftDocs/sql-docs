@@ -25,10 +25,10 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Calling a Stored Procedure
-  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver supports both the ODBC CALL escape sequence and the [!INCLUDE[tsql](../../../includes/tsql-md.md)][EXECUTE](../Topic/EXECUTE%20\(Transact-SQL\).md) statement for executing stored procedures; the ODBC CALL escape sequence is the preferred method. Using ODBC syntax enables an application to retrieve the return codes of stored procedures and the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver is also optimized to use a protocol originally developed for sending remote procedure (RPC) calls between computers running [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. This RPC protocol increases performance by eliminating much of the parameter processing and statement parsing done on the server.  
+  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver supports both the ODBC CALL escape sequence and the [!INCLUDE[tsql](../../includes/tsql-md.md)][EXECUTE](~/t-sql/language-elements/execute-transact-sql.md) statement for executing stored procedures; the ODBC CALL escape sequence is the preferred method. Using ODBC syntax enables an application to retrieve the return codes of stored procedures and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver is also optimized to use a protocol originally developed for sending remote procedure (RPC) calls between computers running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This RPC protocol increases performance by eliminating much of the parameter processing and statement parsing done on the server.  
   
 > [!NOTE]  
->  When calling [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stored procedures using named parameters with ODBC (for more information, see [Binding Parameters by Name (Named Parameters)](http://go.microsoft.com/fwlink/?LinkID=209721)), the parameter names must start with the '@' character. This is a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] specific restriction. The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver enforces this restriction more strictly than the Microsoft Data Access Components (MDAC).  
+>  When calling [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stored procedures using named parameters with ODBC (for more information, see [Binding Parameters by Name (Named Parameters)](http://go.microsoft.com/fwlink/?LinkID=209721)), the parameter names must start with the '@' character. This is a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specific restriction. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver enforces this restriction more strictly than the Microsoft Data Access Components (MDAC).  
   
  The ODBC CALL escape sequence for calling a procedure is:  
   
@@ -57,19 +57,19 @@ manager: "jhubbard"
  If an input/output parameter is omitted, or if a literal is supplied for the parameter, the driver discards the output value. Similarly, if the parameter marker for the return value of a procedure is omitted, the driver discards the return value. Finally, if an application specifies a return value parameter for a procedure that does not return a value, the driver sets the value of the length/indicator buffer bound to the parameter to SQL_NULL_DATA.  
   
 ## Delimiters in CALL Statements  
- The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver by default also supports a compatibility option specific to the ODBC { CALL } escape sequence. The driver accepts CALL statements with only a single set of double quotation marks delimiting the entire stored procedure name:  
+ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver by default also supports a compatibility option specific to the ODBC { CALL } escape sequence. The driver accepts CALL statements with only a single set of double quotation marks delimiting the entire stored procedure name:  
   
 ```  
 { CALL "master.dbo.sp_who" }  
 ```  
   
- By default the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver also accepts CALL statements that follow the ISO rules and enclose each identifier in double quotation marks:  
+ By default the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver also accepts CALL statements that follow the ISO rules and enclose each identifier in double quotation marks:  
   
 ```  
 { CALL "master"."dbo"."sp_who" }  
 ```  
   
- When running with the default settings, however, the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver does not support using either form of quoted identifier with identifiers that contain characters not specified as legal in identifiers by the ISO standard. For example, the driver cannot access a stored procedure named **"My.Proc"** using a CALL statement with quoted identifiers:  
+ When running with the default settings, however, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver does not support using either form of quoted identifier with identifiers that contain characters not specified as legal in identifiers by the ISO standard. For example, the driver cannot access a stored procedure named **"My.Proc"** using a CALL statement with quoted identifiers:  
   
 ```  
 { CALL "MyDB"."MyOwner"."My.Proc" }  

@@ -18,7 +18,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Event Handlers Tab
-  Use the **Event Handlers** tab of [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer to build a control flow in an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package. An event handler runs in response to an event raised by the package or by a task or container in the package.  
+  Use the **Event Handlers** tab of [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer to build a control flow in an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package. An event handler runs in response to an event raised by the package or by a task or container in the package.  
   
 ## Options  
  **Executable**  
@@ -33,7 +33,7 @@ manager: "jhubbard"
  **Click here to create an \<event handler name> for the executable \<executable name>**  
  Click to create the event handler.  
   
- Create the control flow by dragging graphical objects that represent [!INCLUDE[ssIS](../../includes/ssis-md.md)] tasks and containers from the **Toolbox** to the design surface of the **Event Handlers** tab, and then connecting the objects by using precedence constraints to define the sequence in which they run.  
+ Create the control flow by dragging graphical objects that represent [!INCLUDE[ssIS](../includes/ssis-md.md)] tasks and containers from the **Toolbox** to the design surface of the **Event Handlers** tab, and then connecting the objects by using precedence constraints to define the sequence in which they run.  
   
  Additionally, to add annotations, right-click the design surface, and then on the menu, click **Add Annotation**.  
   

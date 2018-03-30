@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 2520ae24-0609-4890-807d-3267018aba8e
 caps.latest.revision: 6
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Scatter Charts (Report Builder and SSRS)
@@ -23,7 +23,7 @@ manager: "mblythe"
  ![Scatter chart](../../2014/reporting-services/media/rs-scatterchart.gif "Scatter chart")  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## Variations  
   

@@ -18,11 +18,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Manage the Size of the Transaction Log File
-  In some cases, it can be useful to physically shrink or expand the physical log file of the transaction log of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. This topic contains information about how to monitor the size of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transaction log, shrink the transaction log, add or enlarge a transaction log file, optimize the **tempdb** transaction log growth rate, and control the growth of a transaction log file.  
+  In some cases, it can be useful to physically shrink or expand the physical log file of the transaction log of a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database. This topic contains information about how to monitor the size of a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] transaction log, shrink the transaction log, add or enlarge a transaction log file, optimize the **tempdb** transaction log growth rate, and control the growth of a transaction log file.  
   
   
 ##  <a name="MonitorSpaceUse"></a> Monitor Log Space Use  
- You can monitor log space use by using DBCC SQLPERF (LOGSPACE). This command returns information about the amount of log space currently used and indicates when the transaction log is in need of truncation. For more information, see [DBCC SQLPERF &#40;Transact-SQL&#41;](../Topic/DBCC%20SQLPERF%20\(Transact-SQL\).md). For information about the current size of a log file, its maximum size, and the autogrow option for the file, you can also use the **size**, **max_size**, and **growth** columns for that log file in **sys.database_files**. For more information, see [sys.database_files &#40;Transact-SQL&#41;](../Topic/sys.database_files%20\(Transact-SQL\).md).  
+ You can monitor log space use by using DBCC SQLPERF (LOGSPACE). This command returns information about the amount of log space currently used and indicates when the transaction log is in need of truncation. For more information, see [DBCC SQLPERF &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md). For information about the current size of a log file, its maximum size, and the autogrow option for the file, you can also use the **size**, **max_size**, and **growth** columns for that log file in **sys.database_files**. For more information, see [sys.database_files &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-files-transact-sql.md).  
   
 > [!IMPORTANT]  
 >  We recommend that you avoid overloading the log disk.  
@@ -38,7 +38,7 @@ manager: "jhubbard"
   
  **To shrink a log file (without shrinking database files)**  
   
--   [DBCC SHRINKFILE &#40;Transact-SQL&#41;](../Topic/DBCC%20SHRINKFILE%20\(Transact-SQL\).md)  
+-   [DBCC SHRINKFILE &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)  
   
 -   [Shrink a File](../../2014/database-engine/shrink-a-file.md)  
   
@@ -48,12 +48,12 @@ manager: "jhubbard"
   
  `To monitor log space`  
   
--   [DBCC SQLPERF &#40;Transact-SQL&#41;](../Topic/DBCC%20SQLPERF%20\(Transact-SQL\).md)  
+-   [DBCC SQLPERF &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)  
   
--   [sys.database_files &#40;Transact-SQL&#41;](../Topic/sys.database_files%20\(Transact-SQL\).md) (See the **size**, **max_size**, and **growth** columns for the log file or files.)  
+-   [sys.database_files &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-files-transact-sql.md) (See the **size**, **max_size**, and **growth** columns for the log file or files.)  
   
 > [!NOTE]  
->  Shrinking database and log files can be set to occur automatically. However, we recommend against automatic shrinking, and the `autoshrink` database property is set to FALSE by default. If `autoshrink` is set to TRUE, automatic shrinking reduces the size of a file only when more than 25 percent of its space is unused. The file is shrunk either to the size at which only 25 percent of the file is unused space or to the original size of the file, whichever is larger. For information about changing the setting of the `autoshrink` property, see [View or Change the Properties of a Database](../../2014/database-engine/view-or-change-the-properties-of-a-database.md)—use the **Auto Shrink** property on the **Options** page—or [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)—use the AUTO_SHRINK option.  
+>  Shrinking database and log files can be set to occur automatically. However, we recommend against automatic shrinking, and the `autoshrink` database property is set to FALSE by default. If `autoshrink` is set to TRUE, automatic shrinking reduces the size of a file only when more than 25 percent of its space is unused. The file is shrunk either to the size at which only 25 percent of the file is unused space or to the original size of the file, whichever is larger. For information about changing the setting of the `autoshrink` property, see [View or Change the Properties of a Database](../../2014/database-engine/view-or-change-the-properties-of-a-database.md)—use the **Auto Shrink** property on the **Options** page—or [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-set-options.md)—use the AUTO_SHRINK option.  
   
   
 ##  <a name="AddOrEnlarge"></a> Add or Enlarge a Log File  
@@ -61,7 +61,7 @@ manager: "jhubbard"
   
 -   To add a log file to the database, use the ADD LOG FILE clause of the ALTER DATABASE statement. Adding a log file allows the log to grow.  
   
--   To enlarge the log file, use the MODIFY FILE clause of the ALTER DATABASE statement, specifying the SIZE and MAXSIZE syntax. For more information, see [ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20\(Transact-SQL\).md).  
+-   To enlarge the log file, use the MODIFY FILE clause of the ALTER DATABASE statement, specifying the SIZE and MAXSIZE syntax. For more information, see [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md).  
   
   
 ##  <a name="tempdbOptimize"></a> Optimize the Size of the tempdb Transaction Log  
@@ -69,19 +69,19 @@ manager: "jhubbard"
   
   
 ##  <a name="ControlGrowth"></a> Control the Growth of a Transaction Log File  
- You can use the [ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20\(Transact-SQL\).md) statement to manage the growth of a transaction log file. Note the following:  
+ You can use the [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md) statement to manage the growth of a transaction log file. Note the following:  
   
 -   To change the current file size in KB, MB, GB, and TB units, use the SIZE option.  
   
 -   To change the growth increment, use the FILEGROWTH option. A value of 0 indicates that automatic growth is set to off and no additional space is permitted. A small autogrowth increment on a log file can reduce performance. The file growth increment on a log file should be sufficiently large to avoid frequent expansion. The default growth increment of 10 percent is generally suitable.  
   
-     For information on changing the file-growth property on a log file, see [ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20\(Transact-SQL\).md).  
+     For information on changing the file-growth property on a log file, see [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md).  
   
 -   To control the maximum the size of a log file in KB, MB, GB, and TB units or to set growth to UNLIMITED, use the MAXSIZE option.  
   
   
 ## See Also  
- [BACKUP &#40;Transact-SQL&#41;](../Topic/BACKUP%20\(Transact-SQL\).md)   
+ [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)   
  [Troubleshoot a Full Transaction Log &#40;SQL Server Error 9002&#41;](../../2014/database-engine/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
   

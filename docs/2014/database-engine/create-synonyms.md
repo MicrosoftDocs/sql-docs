@@ -17,11 +17,11 @@ helpviewer_keywords:
 ms.assetid: fedfa7a5-d0b6-4e2b-90f4-a08122958e33
 caps.latest.revision: 6
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Create Synonyms
-  This topic describes how to create a synonym in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  This topic describes how to create a synonym in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -77,14 +77,14 @@ manager: "jhubbard"
   
 #### To Create a Synonym  
   
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
 3.  Copy and paste the following examples into the query window and click **Execute**.  
   
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
- The following example creates a synonym for an existing table in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. The synonym is then used in subsequent examples.  
+ The following example creates a synonym for an existing table in the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database. The synonym is then used in subsequent examples.  
   
 ```  
 USE tempdb;  

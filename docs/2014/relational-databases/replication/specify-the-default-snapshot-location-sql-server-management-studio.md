@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 27c5d9ad-a915-4c59-a8b7-82e3af61ac4d
 caps.latest.revision: 36
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Specify the Default Snapshot Location (SQL Server Management Studio)
@@ -32,7 +32,7 @@ manager: "jhubbard"
     > [!NOTE]  
     >  The Snapshot Agent must have write permissions for the directory you specify, and the Distribution Agent or Merge Agent must have read permissions. If pull subscriptions are used, you must specify a shared directory as a universal naming convention (UNC) path, such as \\\computername\snapshot. For more information, see [Secure the Snapshot Folder](../../../2014/relational-databases/replication/secure-the-snapshot-folder.md).  
   
-3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## See Also  
  [Alternate Snapshot Folder Locations](../../../2014/relational-databases/replication/alternate-snapshot-folder-locations.md)   

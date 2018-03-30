@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Get the Configurable Parameters for the ADD TARGET Argument
-  Accomplishing this task involves using Query Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  Accomplishing this task involves using Query Editor in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
  After the statements in this procedure finish, the **Results** tab of Query Editor displays the following columns:  
   
@@ -34,7 +34,7 @@ manager: "jhubbard"
 -   required  
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
- Before you create a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events session, it is useful to find out what parameters you can set when you use the ADD TARGET argument in CREATE EVENT SESSION or ALTER EVENT SESSION.  
+ Before you create a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Extended Events session, it is useful to find out what parameters you can set when you use the ADD TARGET argument in CREATE EVENT SESSION or ALTER EVENT SESSION.  
   
 ### To get the configurable parameters for the ADD TARGET argument using Query Editor  
   
@@ -51,9 +51,9 @@ manager: "jhubbard"
     ```  
   
 ## See Also  
- [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../Topic/CREATE%20EVENT%20SESSION%20\(Transact-SQL\).md)   
- [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../Topic/ALTER%20EVENT%20SESSION%20\(Transact-SQL\).md)   
- [sys.dm_xe_objects &#40;Transact-SQL&#41;](../Topic/sys.dm_xe_objects%20\(Transact-SQL\).md)   
- [sys.dm_xe_packages &#40;Transact-SQL&#41;](../Topic/sys.dm_xe_packages%20\(Transact-SQL\).md)  
+ [CREATE EVENT SESSION &#40;Transact-SQL&#41;](~/t-sql/statements/create-event-session-transact-sql.md)   
+ [ALTER EVENT SESSION &#40;Transact-SQL&#41;](~/t-sql/statements/alter-event-session-transact-sql.md)   
+ [sys.dm_xe_objects &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md)   
+ [sys.dm_xe_packages &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-xe-packages-transact-sql.md)  
   
   

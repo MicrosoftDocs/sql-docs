@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Specify a Target Server&#39;s Location (SQL Server Management Studio)
-  This topic describes how to specify the location of a target server in a multiserver administration configuration in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  This topic describes how to specify the location of a target server in a multiserver administration configuration in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -61,7 +61,7 @@ manager: "jhubbard"
   
 #### To specify a target server's location  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -77,6 +77,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [sp_msx_enlist &#40;Transact-SQL&#41;](../Topic/sp_msx_enlist%20\(Transact-SQL\).md).  
+ For more information, see [sp_msx_enlist &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql.md).  
   
   

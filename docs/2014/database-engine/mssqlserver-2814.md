@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 22800748-9be9-4511-9428-6b8b40e5bef9
 caps.latest.revision: 15
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_2814
@@ -51,7 +51,7 @@ manager: "jhubbard"
   
 ## User Action  
   
-1.  View the statement causing the recompilation by running the following query. Replace the *sql_handle*, *starting_offset*, *ending_offset*, and *plan_handle* placeholders with the values specified in the error message. Note that the **database_name** and **object_name** columns will be NULL for ad hoc and prepared [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.  
+1.  View the statement causing the recompilation by running the following query. Replace the *sql_handle*, *starting_offset*, *ending_offset*, and *plan_handle* placeholders with the values specified in the error message. Note that the **database_name** and **object_name** columns will be NULL for ad hoc and prepared [!INCLUDE[tsql](../includes/tsql-md.md)] statements.  
   
      SELECT DB_NAME(st.dbid) AS database_name  
   

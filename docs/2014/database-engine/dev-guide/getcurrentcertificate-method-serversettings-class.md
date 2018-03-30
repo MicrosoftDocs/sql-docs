@@ -40,7 +40,7 @@ SHA
   
 ## Parts  
  *object*  
- A `ServerSettings` object that represents the server settings on an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ A `ServerSettings` object that represents the server settings on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 #### Parameters  
   

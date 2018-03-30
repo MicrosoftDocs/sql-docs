@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: c4abf03a-7a0e-4087-8aa6-91e4277ab65c
 caps.latest.revision: 18
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # SendUsingSMTPServer Property (WMI MSReportServer_ConfigurationSetting)
@@ -43,7 +43,7 @@ public Boolean SendUsingSMTPServer;
  [MSReportServer_ConfigurationSetting Class](../../2014/reporting-services/msreportserver-configurationsetting-class.md)  
   
 ## Requirements  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../includes/ssrswminmspca-md.md)]  
   
 ## See Also  
  [MSReportServer_ConfigurationSetting Members](../../2014/reporting-services/msreportserver-configurationsetting-members.md)  

@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: c288daab-5181-4d4b-ba2a-8a147098e758
 caps.latest.revision: 34
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Set the History Retention Period (SQL Server Management Studio)
@@ -27,7 +27,7 @@ manager: "jhubbard"
   
 2.  Enter a value in the **Store replication performance history at least** box.  
   
-3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## See Also  
  [Configure Distribution](../../../2014/relational-databases/replication/configure-distribution.md)  

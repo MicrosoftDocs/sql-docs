@@ -25,17 +25,17 @@ manager: "mblythe"
 # Backing Up, Restoring, and Synchronizing Databases (XMLA)
   In XML for Analysis, there are three commands that back up, restore, and synchronize databases:  
   
--   The [Backup](../../../2014/analysis-services/dev-guide/backup-element-xmla.md) command backs up a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] database using an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] backup file (.abf), as described in the section, [Backing Up Databases](#backing_up_databases).  
+-   The [Backup](../../../2014/analysis-services/dev-guide/backup-element-xmla.md) command backs up a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database using an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] backup file (.abf), as described in the section, [Backing Up Databases](#backing_up_databases).  
   
--   The [Restore](../../../2014/analysis-services/dev-guide/restore-element-xmla.md) command restores an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] database from an .abf file, as described in the section, [Restoring Databases](#restoring_databases).  
+-   The [Restore](../../../2014/analysis-services/dev-guide/restore-element-xmla.md) command restores an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database from an .abf file, as described in the section, [Restoring Databases](#restoring_databases).  
   
--   The [Synchronize](../../../2014/analysis-services/dev-guide/synchronize-element-xmla.md) command synchronizes one [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] database with the data and metadata of another database, as described in the section, [Synchronizing Databases](#synchronizing_databases).  
+-   The [Synchronize](../../../2014/analysis-services/dev-guide/synchronize-element-xmla.md) command synchronizes one [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database with the data and metadata of another database, as described in the section, [Synchronizing Databases](#synchronizing_databases).  
   
 ##  <a name="backing_up_databases"></a> Backing Up Databases  
- As mentioned earlier, the `Backup` command backs up a specified [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] database to a backup file. The `Backup` command has various properties that let you specify the database to be backed up, the backup file to use, how to back up security definitions, and the remote partitions to be backed up.  
+ As mentioned earlier, the `Backup` command backs up a specified [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database to a backup file. The `Backup` command has various properties that let you specify the database to be backed up, the backup file to use, how to back up security definitions, and the remote partitions to be backed up.  
   
 > [!IMPORTANT]  
->  The Analysis Services service account must have permission to write to the backup location specified for each file. Also, the user must have one of the following roles: administrator role on the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance, or a member of a database role with Full Control (Administrator) permissions on the database to be backed up.  
+>  The Analysis Services service account must have permission to write to the backup location specified for each file. Also, the user must have one of the following roles: administrator role on the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance, or a member of a database role with Full Control (Administrator) permissions on the database to be backed up.  
   
 ### Specifying the Database and Backup File  
  To specify the database to be backed up, you set the [Object](../../../2014/analysis-services/dev-guide/object-element-xmla.md) property of the `Backup` command. The `Object` property must contain an object identifier for a database, or an error occurs.  
@@ -54,7 +54,7 @@ manager: "mblythe"
     >  If `ApplyCompression` and `Password` properties are not specified, the backup file stores user names and passwords that are contained in connection strings in clear text. Data that is stored in clear text may be retrieved. For increased security, use the `ApplyCompression` and `Password` settings to both compress and encrypt the backup file.  
   
 ### Backing Up Security Settings  
- The [Security](../../../2014/analysis-services/dev-guide/security-element-xmla.md) property determines whether the `Backup` command backs up the security definitions, such as roles and permissions, defined on an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] database. The `Security` property also determines whether the backup file includes the Windows user accounts and groups defined as members of the security definitions.  
+ The [Security](../../../2014/analysis-services/dev-guide/security-element-xmla.md) property determines whether the `Backup` command backs up the security definitions, such as roles and permissions, defined on an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database. The `Security` property also determines whether the backup file includes the Windows user accounts and groups defined as members of the security definitions.  
   
  The value of the `Security` property is limited to one of the strings listed in the following table.  
   
@@ -65,15 +65,15 @@ manager: "mblythe"
 |*IgnoreSecurity*|Exclude security definitions from the backup file.|  
   
 ### Backing Up Remote Partitions  
- To back up remote partitions in the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] database, you set the [BackupRemotePartitions](../../../2014/analysis-services/dev-guide/backupremotepartitions-element-xmla.md) property of the `Backup` command to true. This setting causes the `Backup` command to create a remote backup file for each remote data source that is used to store remote partitions for the database.  
+ To back up remote partitions in the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database, you set the [BackupRemotePartitions](../../../2014/analysis-services/dev-guide/backupremotepartitions-element-xmla.md) property of the `Backup` command to true. This setting causes the `Backup` command to create a remote backup file for each remote data source that is used to store remote partitions for the database.  
   
  For each remote data source to be backed up, you can specify its corresponding backup file by including a [Location](../../../2014/analysis-services/dev-guide/location-element-xmla.md) element in the [Locations](../../../2014/analysis-services/dev-guide/locations-element-xmla.md) property of the `Backup` command. The `Location` element should have its `File` property set to the UNC path and file name of the remote backup file, and its [DataSourceID](../../../2014/analysis-services/dev-guide/datasourceid-element-xmla.md) property set to the identifier of the remote data source defined in the database.  
   
 ##  <a name="restoring_databases"></a> Restoring Databases  
- The `Restore` command restores a specified [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] database from a backup file. The `Restore` command has various properties that let you specify the database to restore, the backup file to use, how to restore security definitions, the remote partitions to be stored, and the relocation relational OLAP (ROLAP) objects.  
+ The `Restore` command restores a specified [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database from a backup file. The `Restore` command has various properties that let you specify the database to restore, the backup file to use, how to restore security definitions, the remote partitions to be stored, and the relocation relational OLAP (ROLAP) objects.  
   
 > [!IMPORTANT]  
->  For each backup file, the user who runs the restore command must have permission to read from the backup location specified for each file. To restore an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] database that is not installed on the server, the user must also be a member of the server role for that [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance. To overwrite an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] database, the user must have one of the following roles: a member of the server role for the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance or a member of a database role with Full Control (Administrator) permissions on the database to be restored.  
+>  For each backup file, the user who runs the restore command must have permission to read from the backup location specified for each file. To restore an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database that is not installed on the server, the user must also be a member of the server role for that [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance. To overwrite an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database, the user must have one of the following roles: a member of the server role for the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance or a member of a database role with Full Control (Administrator) permissions on the database to be restored.  
   
 > [!NOTE]  
 >  After restoring an existing database, the user who restored the database might lose access to the restored database. This loss of access can occur if, at the time that the backup was performed, the user was not a member of the server role or was not a member of the database role with Full Control (Administrator) permissions.  
@@ -84,7 +84,7 @@ manager: "mblythe"
  You should set the `File` property of the `Restore` command to a UNC path and file name for the backup file to be restored to the specified database. You can also set the `Password` property for the specified backup file. If the `Password` property is set to any non-blank value, the backup file is decrypted by using the specified password. If the backup file was not encrypted, or if the specified password does not match the password used to encrypt the backup file, an error occurs.  
   
 ### Restoring Security Settings  
- The `Security` property determines whether the `Restore` command restores the security definitions, such as roles and permissions, defined on an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] database. The `Security` property also determines whether the `Restore` command includes the Windows user accounts and groups defined as members of the security definitions as part of the restore process.  
+ The `Security` property determines whether the `Restore` command restores the security definitions, such as roles and permissions, defined on an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database. The `Security` property also determines whether the `Restore` command includes the Windows user accounts and groups defined as members of the security definitions as part of the restore process.  
   
  The value of this element is limited to one of the strings listed in the following table.  
   
@@ -97,7 +97,7 @@ manager: "mblythe"
 ### Restoring Remote Partitions  
  For each remote backup file created during a previous `Backup` command, you can restore its associated remote partition by including a `Location` element in the `Locations` property of the `Restore` command. The [DataSourceType](../../../2014/analysis-services/dev-guide/datasourcetype-element-xmla.md) property for each `Location` element must be excluded or explicitly set to *Remote*.  
   
- For each specified `Location` element, the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance contacts the remote data source specified in the `DataSourceID` property to restore the partitions defined in the remote backup file specified in the `File` property. Besides the `DataSourceID` and `File` properties, the following properties are available for each `Location` element used to restore a remote partition:  
+ For each specified `Location` element, the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance contacts the remote data source specified in the `DataSourceID` property to restore the partitions defined in the remote backup file specified in the `File` property. Besides the `DataSourceID` and `File` properties, the following properties are available for each `Location` element used to restore a remote partition:  
   
 -   To override the connection string for the remote data source specified in `DataSourceID`, you can set the `ConnectionString` property of the `Location` element to a different connection string. The `Restore` command will then use the connection string that is contained in the `ConnectionString` property. If `ConnectionString` is not specified, the `Restore` command uses the connection string stored in the backup file for the specified remote data source. You can use the `ConnectionString` setting to move a remote partition to a different remote instance. However, you cannot use the `ConnectionString` setting to restore a remote partition to the same instance that contains the restored database. In other words, you cannot use the `ConnectionString` property to make a remote partition into a local partition.  
   
@@ -109,7 +109,7 @@ manager: "mblythe"
  You can use the `Location` element in a `Restore` command to relocate ROLAP objects. For each `Location` element used to relocate a data source, the `DataSourceType` property must be explicitly set to *Local*. You also have to set the `ConnectionString` property of the `Location` element to the connection string of the new location. During the restore, the `Restore` command will replace the connection string for the data source identified by the `DataSourceID` property of the `Location` element with the value of the `ConnectionString` property of the `Location` element.  
   
 ##  <a name="synchronizing_databases"></a> Synchronizing Databases  
- The `Synchronize` command synchronizes the data and metadata of a specified [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] database with another database. The `Synchronize` command has various properties that let you specify the source database, how to synchronize security definitions, the remote partitions to be synchronized, and the synchronization of ROLAP objects.  
+ The `Synchronize` command synchronizes the data and metadata of a specified [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database with another database. The `Synchronize` command has various properties that let you specify the source database, how to synchronize security definitions, the remote partitions to be synchronized, and the synchronization of ROLAP objects.  
   
 > [!NOTE]  
 >  The `Synchronize` command can be executed only by server administrators and database administrators. Both the source and destination database must have the same database compatibility level.  

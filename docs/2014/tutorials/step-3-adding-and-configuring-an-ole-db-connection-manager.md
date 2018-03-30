@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
 caps.latest.revision: 19
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Step 3: Adding and Configuring an OLE DB Connection Manager
@@ -28,7 +28,7 @@ manager: "jhubbard"
   
 3.  For **Server name**, enter **localhost**.  
   
-     When you specify localhost as the server name, the connection manager connects to the default instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the local computer. To use a remote instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], replace localhost with the name of the server to which you want to connect.  
+     When you specify localhost as the server name, the connection manager connects to the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on the local computer. To use a remote instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], replace localhost with the name of the server to which you want to connect.  
   
 4.  In the **Log on to the server** group, verify that **Use Windows Authentication** is selected.  
   

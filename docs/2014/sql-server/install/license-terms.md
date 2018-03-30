@@ -19,7 +19,7 @@ manager: "jhubbard"
   Use the License Terms page to accept the license terms for this release.  
   
 ## Options  
- To proceed with the installation, you must accept the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] license terms.  
+ To proceed with the installation, you must accept the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] license terms.  
   
  Use the **Print** button to print a copy of the license terms for this release. To end the installation, click **Cancel**.  
   

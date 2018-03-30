@@ -37,7 +37,7 @@ manager: "jhubbard"
  This transformation has multiple inputs and one output. It does not support an error output.  
   
 ## Configuration of the Union All Transformation  
- You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer or programmatically.  
   
  For more information about the properties that you can set in the **Union All Transformation Editor** dialog box, see [Union All Transformation Editor](../../2014/integration-services/union-all-transformation-editor.md).  
   

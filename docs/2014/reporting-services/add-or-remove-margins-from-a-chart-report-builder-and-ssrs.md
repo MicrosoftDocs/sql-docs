@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 91c43f58-5771-4d33-a54d-0e802d2f5cba
 caps.latest.revision: 6
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Add or Remove Margins from a Chart (Report Builder and SSRS)
@@ -21,7 +21,7 @@ manager: "mblythe"
  This topic does not apply to pie, doughnut, funnel, or pyramid chart types.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ### To enable or disable side margins  
   
@@ -33,7 +33,7 @@ manager: "mblythe"
   
     -   **Disabled** Bar, column, and scatter charts will have no side margins.  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## See Also  
  [Formatting Axis Labels on a Chart &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   

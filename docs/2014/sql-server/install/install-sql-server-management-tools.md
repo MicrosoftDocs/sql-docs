@@ -18,23 +18,23 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Install SQL Server Management Tools
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management tools include the following components:  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management tools include the following components:  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
--   [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]  
+-   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Database Tuning Advisor  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Tuning Advisor  
   
 -   Command prompt tools, such as sqlcmd.exe and osql.exe.  
   
--   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] add-ins to [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]  
+-   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] add-ins to [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]  
   
- Note that [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] is a separate option during [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installation.  
+ Note that [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] is a separate option during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation.  
   
- Regardless of how many instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], or [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] are installed on a computer, only one copy of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Management Tools will be installed.  
+ Regardless of how many instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], or [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] are installed on a computer, only one copy of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Management Tools will be installed.  
   
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Management Tools can run side-by-side on the same computer with earlier versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Tools.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Management Tools can run side-by-side on the same computer with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Tools.  
   
 ## See Also  
  [Features Supported by the Editions of SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   

@@ -20,11 +20,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQL Server Properties (FILESTREAM Page)
-  Use this page to enable FILESTREAM for this installation of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  Use this page to enable FILESTREAM for this installation of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
 ## UIElement List  
  **Enable FILESTREAM for Transact-SQL access**  
- Select to enable FILESTREAM for [!INCLUDE[tsql](../../includes/tsql-md.md)] access. This control must be checked before the other control options will be available.  
+ Select to enable FILESTREAM for [!INCLUDE[tsql](../includes/tsql-md.md)] access. This control must be checked before the other control options will be available.  
   
  **Enable FILESTREAM for file I/O streaming access**  
  Select to enable Win32 streaming access for FILESTREAM.  
@@ -37,6 +37,6 @@ manager: "jhubbard"
   
 ## See Also  
  [FILESTREAM &#40;SQL Server&#41;](../../2014/database-engine/filestream-sql-server.md)   
- [sp_configure &#40;Transact-SQL&#41;](../Topic/sp_configure%20\(Transact-SQL\).md)  
+ [sp_configure &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   

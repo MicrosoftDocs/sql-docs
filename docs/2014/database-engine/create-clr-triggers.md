@@ -20,33 +20,33 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Create CLR Triggers
-  You can create a database object inside [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is programmed in an assembly created in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime (CLR). Database objects that can leverage the rich programming model provided by the CLR include DML triggers, DDL triggers, stored procedures, functions, aggregate functions, and types.  
+  You can create a database object inside [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that is programmed in an assembly created in the [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] common language runtime (CLR). Database objects that can leverage the rich programming model provided by the CLR include DML triggers, DDL triggers, stored procedures, functions, aggregate functions, and types.  
   
- Creating a CLR trigger (DML or DDL) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] involves the following steps:  
+ Creating a CLR trigger (DML or DDL) in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] involves the following steps:  
   
--   Define the trigger as a class in a .NET Framework-supported language. For more information about how to program triggers in the CLR, see [CLR Triggers](../../2014/database-engine/dev-guide/clr-triggers.md). Then, compile the class to build an assembly in the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] using the appropriate language compiler.  
+-   Define the trigger as a class in a .NET Framework-supported language. For more information about how to program triggers in the CLR, see [CLR Triggers](../../2014/database-engine/dev-guide/clr-triggers.md). Then, compile the class to build an assembly in the [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] using the appropriate language compiler.  
   
--   Register the assembly in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using the CREATE ASSEMBLY statement. For more information about assemblies in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Assemblies &#40;Database Engine&#41;](../../2014/database-engine/dev-guide/assemblies-database-engine.md).  
+-   Register the assembly in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using the CREATE ASSEMBLY statement. For more information about assemblies in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see [Assemblies &#40;Database Engine&#41;](../../2014/database-engine/dev-guide/assemblies-database-engine.md).  
   
 -   Create the trigger that references the registered assembly.  
   
 > [!NOTE]  
->  Deploying a SQL Server Project in [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] registers an assembly in the database that was specified for the project. Deploying the project also creates CLR triggers in the database for all methods annotated with the `SqlTrigger` attribute. For more information, see [Deploying CLR Database Objects](../../2014/database-engine/dev-guide/deploying-clr-database-objects.md).  
+>  Deploying a SQL Server Project in [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vsprvs](../includes/vsprvs-md.md)] registers an assembly in the database that was specified for the project. Deploying the project also creates CLR triggers in the database for all methods annotated with the `SqlTrigger` attribute. For more information, see [Deploying CLR Database Objects](../../2014/database-engine/dev-guide/deploying-clr-database-objects.md).  
   
 > [!NOTE]  
->  The ability of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to execute CLR code is off by default. You can create, alter, and drop database objects that reference managed code modules, but these references will not execute in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unless the [clr enabled Option](../../2014/database-engine/clr-enabled-server-configuration-option.md) is enabled using [sp_configure (Transact-SQL)](../Topic/sp_configure%20\(Transact-SQL\).md).  
+>  The ability of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to execute CLR code is off by default. You can create, alter, and drop database objects that reference managed code modules, but these references will not execute in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unless the [clr enabled Option](../../2014/database-engine/clr-enabled-server-configuration-option.md) is enabled using [sp_configure (Transact-SQL)](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
  **To create, modify, or drop an assembly**  
   
--   [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../Topic/CREATE%20ASSEMBLY%20\(Transact-SQL\).md)  
+-   [CREATE ASSEMBLY &#40;Transact-SQL&#41;](~/t-sql/statements/create-assembly-transact-sql.md)  
   
--   [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../Topic/ALTER%20ASSEMBLY%20\(Transact-SQL\).md)  
+-   [ALTER ASSEMBLY &#40;Transact-SQL&#41;](~/t-sql/statements/alter-assembly-transact-sql.md)  
   
--   [DROP ASSEMBLY &#40;Transact-SQL&#41;](../Topic/DROP%20ASSEMBLY%20\(Transact-SQL\).md)  
+-   [DROP ASSEMBLY &#40;Transact-SQL&#41;](~/t-sql/statements/drop-assembly-transact-sql.md)  
   
  **To create a CLR trigger**  
   
--   [CREATE TRIGGER &#40;Transact-SQL&#41;](../Topic/CREATE%20TRIGGER%20\(Transact-SQL\).md)  
+-   [CREATE TRIGGER &#40;Transact-SQL&#41;](~/t-sql/statements/create-trigger-transact-sql.md)  
   
 ## See Also  
  [DML Triggers](../../2014/database-engine/dml-triggers.md)   

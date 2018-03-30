@@ -25,9 +25,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SInstance Class
-  The [SInstance Class](../../../2014/database-engine/dev-guide/sinstance-class.md) represents an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  The [SInstance Class](../../../2014/database-engine/dev-guide/sinstance-class.md) represents an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- The [SInstance Class](../../../2014/database-engine/dev-guide/sinstance-class.md) can be used to manage protocols and network libraries associated with the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. A security certificate can also be specified for the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ The [SInstance Class](../../../2014/database-engine/dev-guide/sinstance-class.md) can be used to manage protocols and network libraries associated with the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A security certificate can also be specified for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## See Also  
  [Configuring Server Network Protocols and Net-Libraries](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 caps.latest.revision: 10
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Tutorial: Creating Drillthrough and Main Reports (Report Builder)
@@ -87,7 +87,7 @@ manager: "mblythe"
   
 #### To create a new report  
   
-1.  Click **Start**, point to **Programs**, point to [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] **Report Builder**, and then click **Report Builder**.  
+1.  Click **Start**, point to **Programs**, point to [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **Report Builder**, and then click **Report Builder**.  
   
      The **Getting Started** dialog box opens. If it does not appear, from the **Report Builder** button, click **New**.  
   
@@ -96,7 +96,7 @@ manager: "mblythe"
 3.  In the right pane, verify that **Table or Matrix Wizard** is selected.  
   
 ##  <a name="DConnection"></a> 1a. Specify a Data Connection  
- A data connection contains the information necessary to connect to an external data source such as an Analysis Services cube or a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. To specify a data connection, you can use a shared data source from the report server or create an embedded data source that is used only in this report. In this tutorial, you will use an embedded data source. To learn more about using a shared data source, see [Alternative Ways to Get a Data Connection &#40;Report Builder&#41;](../../2014/tutorials/alternative-ways-to-get-a-data-connection-report-builder.md).  
+ A data connection contains the information necessary to connect to an external data source such as an Analysis Services cube or a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database. To specify a data connection, you can use a shared data source from the report server or create an embedded data source that is used only in this report. In this tutorial, you will use an embedded data source. To learn more about using a shared data source, see [Alternative Ways to Get a Data Connection &#40;Report Builder&#41;](../../2014/tutorials/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 #### To create an embedded data source  
   
@@ -114,7 +114,7 @@ manager: "mblythe"
   
 7.  In **Select or enter a database name**, select the Contoso cube.  
   
-8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 9. Verify that **Connection string** contains the following syntax:  
   
@@ -122,14 +122,14 @@ manager: "mblythe"
     Data Source=<servername>; Initial Catalog = Contoso  
     ```  
   
-     The `<servername>` is the name of an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with Analysis Services installed.  
+     The `<servername>` is the name of an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] with Analysis Services installed.  
   
 10. Click **Credentials type**.  
   
     > [!NOTE]  
     >  Depending on how permissions are configured on the data source, you might need to change the default authentication options. For more information, see [Security &#40;Report Builder&#41;](../../2014/reporting-services/security-report-builder.md).  
   
-11. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
      The **Choose a connection to a data source** page appears.  
   
@@ -137,7 +137,7 @@ manager: "mblythe"
   
      The message **Connection created successfully** appears.  
   
-13. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+13. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 14. Click **Next**.  
   
@@ -288,7 +288,7 @@ manager: "mblythe"
   
 5.  In the **Select Sparkline Type** dialog box, verify that **Column** type is selected.  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 7.  Right-click the sparkline.  
   
@@ -352,10 +352,10 @@ manager: "mblythe"
   
 5.  Optionally, click **Available Values** and **Default Values** and review their options. Do not change any options on these tabs.  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ##  <a name="DSave"></a> 6. Save the Report to a SharePoint Library  
- You can save the report to a SharePoint library, report server, or your computer. If you save the report to your computer, a number of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] features such as report parts and subreports are not available. In this tutorial, you will save the report to a SharePoint library.  
+ You can save the report to a SharePoint library, report server, or your computer. If you save the report to your computer, a number of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features such as report parts and subreports are not available. In this tutorial, you will save the report to a SharePoint library.  
   
 #### To save the report  
   
@@ -392,7 +392,7 @@ manager: "mblythe"
   
 #### To create a new report  
   
-1.  Click **Start**, point to **Programs**, point to [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] **Report Builder**, and then click **Report Builder**.  
+1.  Click **Start**, point to **Programs**, point to [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **Report Builder**, and then click **Report Builder**.  
   
 2.  In the **Getting Started** dialog box, verify that **New Report** is selected, and then click **Table or Matrix Wizard**.  
   
@@ -411,11 +411,11 @@ manager: "mblythe"
   
 5.  In **Data source**, verify that the data source is **Microsoft SQL Server Analysis Services (AdomdClient)**.  
   
-6.  In **Server name**, type the name of a server where an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] is installed.  
+6.  In **Server name**, type the name of a server where an instance of [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] is installed.  
   
 7.  In **Select or enter a database name**, select the Contoso cube.  
   
-8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 9. Verify that the **Connection string** contains the following syntax:  
   
@@ -427,11 +427,11 @@ manager: "mblythe"
   
      Depending on how permissions are configured on the data source, you might need to change the default authentication.  
   
-11. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 12. To verify that you can connect to the data source, click **Test Connection**.  
   
-13. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+13. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 14. Click **Next**.  
   
@@ -611,7 +611,7 @@ manager: "mblythe"
     > [!IMPORTANT]  
     >  You must include the `UniqueName` property because the drillthrough action requires a unique value.  
   
-9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 #### To format the drillthrough field  
   
@@ -623,7 +623,7 @@ manager: "mblythe"
   
 4.  In the **Color** list, select **Blue**.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 6.  To preview your report, click **Run**.  
   
@@ -673,7 +673,7 @@ manager: "mblythe"
   
 4.  Optionally, click the **Available Values** and **Default Values** tabs and review their options. Do not change any options on these tabs.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ##  <a name="MTitle"></a> 6. Add a Report Title  
  Add a title to the main report.  

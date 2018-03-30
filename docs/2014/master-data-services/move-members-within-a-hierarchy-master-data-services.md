@@ -21,7 +21,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Move Members within a Hierarchy (Master Data Services)
-  In [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], move members within a hierarchy to change their location or parent assignment.  
+  In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], move members within a hierarchy to change their location or parent assignment.  
   
 ## Prerequisites  
  To perform this procedure:  
@@ -34,7 +34,7 @@ manager: "jhubbard"
   
 ### To move members within a hierarchy  
   
-1.  On the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] home page, from the **Model** list, select a model.  
+1.  On the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] home page, from the **Model** list, select a model.  
   
 2.  From the **Version** list, select a version.  
   
@@ -54,7 +54,7 @@ manager: "jhubbard"
     >  In derived hierarchies, you can move members to the same level only. Also, you cannot change the sort order of members.  
   
 ## See Also  
- [Move Explicit Hierarchy Members by Using the Staging Process &#40;Master Data Services&#41;](../Topic/Move%20Explicit%20Hierarchy%20Members%20by%20Using%20the%20Staging%20Process%20\(Master%20Data%20Services\).md)   
+ [Move Explicit Hierarchy Members by Using the Staging Process &#40;Master Data Services&#41;](~/2014/master-data-services/add-update-and-delete-data-master-data-services.md)   
  [Derived Hierarchies &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)   
  [Explicit Hierarchies &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
   

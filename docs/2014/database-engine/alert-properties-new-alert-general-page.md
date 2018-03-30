@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Alert Properties-New Alert (General Page)
-  Use this page to view and modify the general properties of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent alerts.  
+  Use this page to view and modify the general properties of [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent alerts.  
   
 ## Options  
  **Name**  
@@ -30,7 +30,7 @@ manager: "jhubbard"
  **Type**  
  Select the type of alert:  
   
--   **SQL Server event alert** responds to messages in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows event log.  
+-   **SQL Server event alert** responds to messages in the [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows event log.  
   
 -   **SQL Server performance condition alert** responds to a specific condition in a performance counter.  
   
@@ -70,7 +70,7 @@ manager: "jhubbard"
   
 ## WMI Event Alert Options  
  **Namespace**  
- Specify the namespace to use for the WMI Query Language (WQL) statement. Only namespaces on the computer that runs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent are supported.  
+ Specify the namespace to use for the WMI Query Language (WQL) statement. Only namespaces on the computer that runs [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent are supported.  
   
  **Query**  
  Specify the WQL statement that identifies the event that the alert responds to.  

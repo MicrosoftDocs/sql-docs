@@ -91,7 +91,7 @@ manager: "mblythe"
   
  Basic information includes the name and ID (internal identifier) of the mining model.  
   
- An algorithm definition refers to any one of the standard algorithms provided in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], or any custom algorithms enabled on the server.  
+ An algorithm definition refers to any one of the standard algorithms provided in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], or any custom algorithms enabled on the server.  
   
  Columns are a collection of the columns that are used by the algorithm and their usage definition.  
   

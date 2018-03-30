@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
 caps.latest.revision: 16
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Best Practices for Replication Administration
@@ -61,7 +61,7 @@ manager: "jhubbard"
  Replicated databases require special attention with regards to backing up and restoring data. For more information, see [Back Up and Restore Replicated Databases](../../../2014/relational-databases/replication/back-up-and-restore-replicated-databases.md).  
   
 ## Script the replication topology  
- All replication components in a topology should be scripted as part of a disaster recovery plan, and scripts can also be used to automate repetitive tasks. A script contains the [!INCLUDE[tsql](../../../includes/tsql-md.md)] system stored procedures necessary to implement the replication component(s) scripted, such as a publication or subscription. Scripts can be created in a wizard (such as the New Publication Wizard) or in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] after you create a component. You can view, modify, and run the script using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or **sqlcmd**. Scripts can be stored with backup files to be used in case a replication topology must be reconfigured. For more information, see [Scripting Replication](../../../2014/relational-databases/replication/scripting-replication.md).  
+ All replication components in a topology should be scripted as part of a disaster recovery plan, and scripts can also be used to automate repetitive tasks. A script contains the [!INCLUDE[tsql](../../includes/tsql-md.md)] system stored procedures necessary to implement the replication component(s) scripted, such as a publication or subscription. Scripts can be created in a wizard (such as the New Publication Wizard) or in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] after you create a component. You can view, modify, and run the script using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or **sqlcmd**. Scripts can be stored with backup files to be used in case a replication topology must be reconfigured. For more information, see [Scripting Replication](../../../2014/relational-databases/replication/scripting-replication.md).  
   
  A component should be rescripted if any property changes are made. If you use custom stored procedures with transactional replication, a copy of each procedure should be stored with the scripts; the copy should be updated if the procedure changes (procedures are typically updated due to schema changes or changing application requirements). For more information about custom procedures, see [Specify How Changes Are Propagated for Transactional Articles](../../../2014/relational-databases/replication/specify-how-changes-are-propagated-for-transactional-articles.md).  
   
@@ -112,7 +112,7 @@ manager: "jhubbard"
   
 -   Replication Monitor is the most important tool for monitoring replication, allowing you to monitor the overall health of a replication topology. For more information, see [Monitoring Replication](../../../2014/relational-databases/replication/monitoring-replication.md).  
   
--   [!INCLUDE[tsql](../../../includes/tsql-md.md)] and Replication Management Objects (RMO) provide interfaces for monitoring replication. For more information, see [Monitoring Replication](../../../2014/relational-databases/replication/monitoring-replication.md).  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] and Replication Management Objects (RMO) provide interfaces for monitoring replication. For more information, see [Monitoring Replication](../../../2014/relational-databases/replication/monitoring-replication.md).  
   
 -   System Monitor can also be useful for monitoring replication performance. For more information, see [Monitoring Replication with System Monitor](../../../2014/relational-databases/replication/monitoring-replication-with-system-monitor.md).  
   
@@ -131,7 +131,7 @@ manager: "jhubbard"
  After you have created a publication, it might be necessary to add or drop articles, or change publication and article properties. Most changes are allowed after a publication is created, but in some cases, it is necessary to generate a new snapshot for a publication and/or reinitialize subscriptions to the publication. For more information, see [Change Publication and Article Properties](../../../2014/relational-databases/replication/change-publication-and-article-properties.md) and [Add Articles to and Drop Articles from Existing Publications](../../../2014/relational-databases/replication/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ## Understand how to make schema changes if application requirements change  
- In many cases, schema changes are required after an application is in production. In a replication topology, these changes must often be propagated to all Subscribers. Replication supports a wide range of schema changes to published objects. When you make any of the following schema changes on the appropriate published object at a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Publisher, that change is propagated by default to all [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers:  
+ In many cases, schema changes are required after an application is in production. In a replication topology, these changes must often be propagated to all Subscribers. Replication supports a wide range of schema changes to published objects. When you make any of the following schema changes on the appropriate published object at a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher, that change is propagated by default to all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers:  
   
 -   ALTER TABLE  
   

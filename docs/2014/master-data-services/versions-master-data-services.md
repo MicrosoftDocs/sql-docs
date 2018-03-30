@@ -21,7 +21,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Versions (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], you can create multiple versions of the master data within a model. Versions can be locked while you validate your data and committed after the data is validated. Committed versions form an auditable record of changes. Each version you create contains all members, attribute values, hierarchy members, hierarchy relationships, and collections for the model.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], you can create multiple versions of the master data within a model. Versions can be locked while you validate your data and committed after the data is validated. Committed versions form an auditable record of changes. Each version you create contains all members, attribute values, hierarchy members, hierarchy relationships, and collections for the model.  
   
 ## When to Use Versions  
  Use versions to:  
@@ -43,7 +43,7 @@ manager: "jhubbard"
 ## Workflow for Version Management  
  Use the following workflow for version management:  
   
-1.  An initial version is created automatically when you create a model and populate the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database with your company's master data. Based on permissions, users can make changes to this version as needed.  
+1.  An initial version is created automatically when you create a model and populate the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database with your company's master data. Based on permissions, users can make changes to this version as needed.  
   
 2.  When you want to commit a version of a model, lock the version so that only model administrators can update the data. For more information, see [Administrators &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md). If notifications are configured, an email notification is sent to model administrators each time the version's status changes. For more information, see [Configure Email Notifications &#40;Master Data Services&#41;](../../2014/master-data-services/configure-email-notifications-master-data-services.md).  
   
@@ -61,7 +61,7 @@ manager: "jhubbard"
 -   **Simultaneous versions.** Create simultaneous versions of your model when you want to work on two or more versions of your data at once. This is useful when your company has reorganizations or mergers that coincide with the normal course of business and you want to determine how the new master data might fit into your existing structures.  
   
     > [!NOTE]  
-    >  A setting in [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] determines whether or not you can copy all versions or only those that are committed. To create simultaneous versions you must configure [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] to allow you to copy all versions. This setting is also available in the System Settings table. For more information, see [System Settings &#40;Master Data Services&#41;](../../2014/master-data-services/system-settings-master-data-services.md).  
+    >  A setting in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] determines whether or not you can copy all versions or only those that are committed. To create simultaneous versions you must configure [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] to allow you to copy all versions. This setting is also available in the System Settings table. For more information, see [System Settings &#40;Master Data Services&#41;](../../2014/master-data-services/system-settings-master-data-services.md).  
   
 ## Related Tasks  
   

@@ -20,10 +20,10 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # HumanResources.myTeam Sample Table (SQL Server)
-  Many of the code examples in [Importing and Exporting Bulk Data](../../2014/database-engine/bulk-import-and-export-of-data-sql-server.md) require a special-purpose test table named **myTeam**. Before you can run the examples, you must create the **myTeam** table in the **HumanResources** schema of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
+  Many of the code examples in [Importing and Exporting Bulk Data](../../2014/database-engine/bulk-import-and-export-of-data-sql-server.md) require a special-purpose test table named **myTeam**. Before you can run the examples, you must create the **myTeam** table in the **HumanResources** schema of the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database.  
   
 > [!NOTE]  
->  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] is one of the sample databases in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+>  [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] is one of the sample databases in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
  The **myTeam** table is contains the following columns.  
   
@@ -36,7 +36,7 @@ manager: "jhubbard"
   
  **To create HumanResources.myTeam**  
   
--   Use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements:  
+-   Use the following [!INCLUDE[tsql](../includes/tsql-md.md)] statements:  
   
     ```  
     --Create HumanResources.MyTeam:   

@@ -16,7 +16,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Troubleshoot Process Data (SSAS Tabular)
-  This topic provides information about processing (refresh) model data when authoring a model by using [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. This topic does not provide information about processing data in models that has been deployed to an Analysis Services server instance. For more information about processing data in a deployed model, see [Script Administrative Tasks in Analysis Services](../../2014/analysis-services/script-administrative-tasks-in-analysis-services.md).  
+  This topic provides information about processing (refresh) model data when authoring a model by using [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. This topic does not provide information about processing data in models that has been deployed to an Analysis Services server instance. For more information about processing data in a deployed model, see [Script Administrative Tasks in Analysis Services](../../2014/analysis-services/script-administrative-tasks-in-analysis-services.md).  
   
  Sections in this topic:  
   
@@ -37,7 +37,7 @@ manager: "mblythe"
   
  Processing of data takes place as a transaction. This means that once you begin updating data, the entire update must either fail or succeed; you will never have data that is partly correct.  
   
- Manual data process, which you initiate from [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], is handled by the local in-memory instance of Analysis Services. Therefore, the data process operation can affect the performance of other tasks on your computer. However, if you schedule automatic process of data in a deployed model by using a script, the instance of Analysis Services manages the import process and its timing.  
+ Manual data process, which you initiate from [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], is handled by the local in-memory instance of Analysis Services. Therefore, the data process operation can affect the performance of other tasks on your computer. However, if you schedule automatic process of data in a deployed model by using a script, the instance of Analysis Services manages the import process and its timing.  
   
 ##  <a name="bkmk_impact_of_df"></a> Impact of Data Processing  
  A process of data usually triggers recalculation of data.  Processing data means getting the latest data from the external sources;  recalculating means updating the result of all formulas that use data that has changed. A process operation usually triggers recalculation.  
@@ -55,7 +55,7 @@ manager: "mblythe"
 -   When you change a filter, the entire model must be recalculated.  
   
 ##  <a name="bkmk_det_source"></a> Determining the Source of Data  
- If you are not sure where the data in your model came from, you can use the tools in the [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] to get the details, including the source file name and path.  
+ If you are not sure where the data in your model came from, you can use the tools in the [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] to get the details, including the source file name and path.  
   
 #### To find the source of existing data  
   
@@ -65,7 +65,7 @@ manager: "mblythe"
   
 3.  In the **Edit Table Properties** dialog box, make note of the value listed for **Connection Name**.  
   
-4.  In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], on the **Model** menu, click **Existing Connections**.  
+4.  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], on the **Model** menu, click **Existing Connections**.  
   
 5.  In the **Existing Connections** dialog box, select the data source with the name you found in step 3, and then click **Edit**.  
   

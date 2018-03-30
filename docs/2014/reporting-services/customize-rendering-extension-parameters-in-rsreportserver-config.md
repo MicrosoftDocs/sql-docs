@@ -19,11 +19,11 @@ helpviewer_keywords:
 ms.assetid: 3bf7ab2b-70bb-41c8-acda-227994d15aed
 caps.latest.revision: 31
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Customize Rendering Extension Parameters in RSReportServer.Config
-  You can specify rendering extension parameters in the RSReportServer configuration file to override default report rendering behavior for reports that run on a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server. You can modify rendering extension parameters to achieve the following objectives:  
+  You can specify rendering extension parameters in the RSReportServer configuration file to override default report rendering behavior for reports that run on a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report server. You can modify rendering extension parameters to achieve the following objectives:  
   
 -   Change how the rendering extension name appears in the Export list of the report toolbar (for example, to change "Web archive" to "MHTML"), or localize the name to a different language.  
   
@@ -89,7 +89,7 @@ manager: "mblythe"
   
      Each instance must have a unique value for the `Name` attribute. The following example uses the names "IMAGE (EMF Landscape)" and "IMAGE (EMF Portrait)" to distinguish between the two instances.  
   
-     Use caution when changing the name of a rendering extension that is already deployed. Developers who specify rendering extensions programmatically use the extension name to identify which instance to use for a particular render operation. If you are running custom [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] applications on your report server, make sure that the developer knows if you modify an existing extension name or add a new one.  
+     Use caution when changing the name of a rendering extension that is already deployed. Developers who specify rendering extensions programmatically use the extension name to identify which instance to use for a particular render operation. If you are running custom [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] applications on your report server, make sure that the developer knows if you modify an existing extension name or add a new one.  
   
 -   Specify a unique display name so that users can understand the differences for each output format.  
   

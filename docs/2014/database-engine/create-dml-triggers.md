@@ -21,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: b2b52258-642b-462e-8e0f-18c09d2eccf4
 caps.latest.revision: 30
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Create DML Triggers
-  This topic describes how to create a [!INCLUDE[tsql](../../includes/tsql-md.md)] DML trigger by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and by using the [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TRIGGER statement.  
+  This topic describes how to create a [!INCLUDE[tsql](../includes/tsql-md.md)] DML trigger by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] and by using the [!INCLUDE[tsql](../includes/tsql-md.md)] CREATE TRIGGER statement.  
   
 ##  <a name="Top"></a> Before You Begin  
   
 ### Limitations and Restrictions  
- For a list of limitations and restrictions related to creating DML triggers, see [CREATE TRIGGER &#40;Transact-SQL&#41;](../Topic/CREATE%20TRIGGER%20\(Transact-SQL\).md).  
+ For a list of limitations and restrictions related to creating DML triggers, see [CREATE TRIGGER &#40;Transact-SQL&#41;](~/t-sql/statements/create-trigger-transact-sql.md).  
   
 ###  <a name="Permissions"></a> Permissions  
  Requires ALTER permission on the table or view on which the trigger is being created.  
@@ -44,9 +44,9 @@ manager: "jhubbard"
   
 ###  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)] and then expand that instance.  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)] and then expand that instance.  
   
-2.  Expand **Databases**, expand the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database, expand **Tables** and then expand the table **Purchasing.PurchaseOrderHeader**.  
+2.  Expand **Databases**, expand the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database, expand **Tables** and then expand the table **Purchasing.PurchaseOrderHeader**.  
   
 3.  Right-click **Triggers**, and then select **New Trigger**.  
   
@@ -100,7 +100,7 @@ manager: "jhubbard"
   
 ###  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)] and then expand that instance.  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)] and then expand that instance.  
   
 2.  From the **File** menu, click **New Query**.  
   

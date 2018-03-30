@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Notification Events Data Columns
-  Notification events are events that are not directly caused by users of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. For example, notifications occur because of users updating underlying tables for proactive caching.  
+  Notification events are events that are not directly caused by users of [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. For example, notifications occur because of users updating underlying tables for proactive caching.  
   
  The Notifications Events event category has the following event class:  
   
@@ -53,7 +53,7 @@ manager: "mblythe"
 |NTCanonicalUserName|40|8|Contains the Windows user name associated with the notification event. The user name is in canonical form. For example, engineering.microsoft.com/software/user.|  
 |SPID|41|1|Contains the server process ID (SPID) that uniquely identifies the user session associated with the notification event. The SPID directly corresponds to the session GUID used by XMLA.|  
 |TextData|42|9|Contains the text data associated with the notification event.|  
-|ServerName|43|8|Contains the name of the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance on which the notification event occurred.|  
+|ServerName|43|8|Contains the name of the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance on which the notification event occurred.|  
 |RequestProperties|45|9|Contains the properties of the XMLA request.|  
   
 ## User Defined  
@@ -72,7 +72,7 @@ manager: "mblythe"
 |NTCanonicalUserName|40|8|Contains the Windows user name associated with the notification event. The user name is in canonical form. For example, engineering.microsoft.com/software/user.|  
 |SPID|41|1|Contains the server process ID (SPID) that uniquely identifies the user session associated with the notification event. The SPID directly corresponds to the session GUID used by XMLA.|  
 |TextData|42|9|Contains the text data associated with the notification event.|  
-|ServerName|43|8|Contains the name of the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance on which the notification event occurred.|  
+|ServerName|43|8|Contains the name of the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance on which the notification event occurred.|  
   
 ## See Also  
  [Notification Events Event Category](../../2014/analysis-services/notification-events-event-category.md)  

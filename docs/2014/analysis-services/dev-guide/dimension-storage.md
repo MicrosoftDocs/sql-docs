@@ -26,7 +26,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Dimension Storage
-  Dimensions in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] support two storage modes:  
+  Dimensions in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] support two storage modes:  
   
 -   Relational OLAP (ROLAP)  
   
@@ -35,7 +35,7 @@ manager: "mblythe"
  The storage mode determines the location and form of a dimension's data. MOLAP is the default storage mode for dimensions. **Related topics:**[Partition Storage Modes and Processing](../../../2014/analysis-services/dev-guide/partition-storage-modes-and-processing.md)  
   
 ## MOLAP  
- Data for a dimension that uses MOLAP is stored in a multidimensional structure in the instance of [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. This multidimensional structure is created and populated when the dimension is processed. MOLAP dimensions provide better query performance than ROLAP dimensions.  
+ Data for a dimension that uses MOLAP is stored in a multidimensional structure in the instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. This multidimensional structure is created and populated when the dimension is processed. MOLAP dimensions provide better query performance than ROLAP dimensions.  
   
 ## ROLAP  
  Data for a dimension that uses ROLAP is actually stored in the tables used to define the dimension. The ROLAP storage mode can be used to support large dimensions without duplicating large amounts of data, but at the expense of query performance. Because the dimension relies directly on the tables in the data source view used to define the dimension, the ROLAP storage mode also supports real-time OLAP.  

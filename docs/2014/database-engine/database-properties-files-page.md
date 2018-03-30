@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
 caps.latest.revision: 40
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Database Properties (Files Page)
@@ -28,7 +28,7 @@ manager: "jhubbard"
  Specify the owner of the database by selecting from the list.  
   
  **Use full-text indexing**  
- This check box is checked and disabled because full-text indexing is always enabled in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For more information, see [Full-Text Search](../../2014/database-engine/full-text-search.md).  
+ This check box is checked and disabled because full-text indexing is always enabled in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. For more information, see [Full-Text Search](../../2014/database-engine/full-text-search.md).  
   
  **Database Files**  
  Add, view, modify, or remove database files for the associated database. Database files have the following properties:  
@@ -65,7 +65,7 @@ manager: "jhubbard"
  **Path**  
  Displays the path of the selected file. To specify a path for a new file, click the edit button next to the path for the file, and navigate to the destination folder. You cannot modify the path of an existing file.  
   
- For FILESTREAM files, the path is a folder. The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] will create the underlying files in this folder.  
+ For FILESTREAM files, the path is a folder. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] will create the underlying files in this folder.  
   
  **File Name**  
  Displays the name of the file.  
@@ -81,7 +81,7 @@ manager: "jhubbard"
  For information about files, see [Database Files and Filegroups](../../2014/database-engine/database-files-and-filegroups.md).  
   
 ## See Also  
- [ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20\(Transact-SQL\).md)   
- [sys.databases &#40;Transact-SQL&#41;](../Topic/sys.databases%20\(Transact-SQL\).md)  
+ [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)   
+ [sys.databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
   
   

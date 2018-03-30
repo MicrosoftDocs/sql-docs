@@ -18,13 +18,13 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Run Transact-SQL Script Files Using sqlcmd
-  You can use `sqlcmd` to run a [!INCLUDE[tsql](../../includes/tsql-md.md)] script file. A [!INCLUDE[tsql](../../includes/tsql-md.md)] script file is a text file that can contain a combination of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, `sqlcmd` commands, and scripting variables.  
+  You can use `sqlcmd` to run a [!INCLUDE[tsql](../includes/tsql-md.md)] script file. A [!INCLUDE[tsql](../includes/tsql-md.md)] script file is a text file that can contain a combination of [!INCLUDE[tsql](../includes/tsql-md.md)] statements, `sqlcmd` commands, and scripting variables.  
   
- To create a simple [!INCLUDE[tsql](../../includes/tsql-md.md)] script file by using Notepad, follow these steps:  
+ To create a simple [!INCLUDE[tsql](../includes/tsql-md.md)] script file by using Notepad, follow these steps:  
   
 1.  Click **Start**, point to **All Programs**, point to **Accessories**, and then click **Notepad**.  
   
-2.  Copy and paste the following [!INCLUDE[tsql](../../includes/tsql-md.md)] code into Notepad:  
+2.  Copy and paste the following [!INCLUDE[tsql](../includes/tsql-md.md)] code into Notepad:  
   
     ```  
     USE AdventureWorks2012;  
@@ -51,7 +51,7 @@ manager: "jhubbard"
   
 3.  Press ENTER.  
   
- A list of [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] employee names and addresses is written to the command prompt window.  
+ A list of [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] employee names and addresses is written to the command prompt window.  
   
 ### To save this output to a text file  
   

@@ -15,7 +15,7 @@ f1_keywords:
 ms.assetid: 8c0310ba-eedd-4c9f-95bd-1f9e2a1a8ed3
 caps.latest.revision: 6
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Map Viewport Properties Dialog Box, Optimization

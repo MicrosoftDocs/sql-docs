@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Column Properties (Visual Database Tools)
-  There are two sets of properties for columns: a full set that you can see in the **Column Properties** tab within Table Designer (available only for [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases) and a subset you can see in the Properties window using Server Explorer.  
+  There are two sets of properties for columns: a full set that you can see in the **Column Properties** tab within Table Designer (available only for [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] databases) and a subset you can see in the Properties window using Server Explorer.  
   
 > [!NOTE]  
 >  The properties in this topic are ordered by category rather than alphabet.  
@@ -34,7 +34,7 @@ manager: "jhubbard"
  These properties appear in the Properties window when you select a column in Server Explorer.  
   
 > [!NOTE]  
->  These properties, accessed using Server Explorer, are read-only. To edit column properties for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases, select the column in Table Designer. Those properties are described later in this topic.  
+>  These properties, accessed using Server Explorer, are read-only. To edit column properties for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] databases, select the column in Table Designer. Those properties are described later in this topic.  
   
  **Identity Category**  
  Expands to show the **Name** and **Database** properties.  
@@ -49,16 +49,16 @@ manager: "jhubbard"
  Expands to show the remaining properties.  
   
  **Data Type**  
- Shows the data type of the selected column. For more information, see [Data Types &#40;Transact-SQL&#41;](../Topic/Data%20Types%20\(Transact-SQL\).md).  
+ Shows the data type of the selected column. For more information, see [Data Types &#40;Transact-SQL&#41;](~/t-sql/data-types/data-types-transact-sql.md).  
   
  **Identity Increment**  
- Shows the increment that will be added to the **Identity Seed** for each subsequent row of the identity column. (Applies only to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
+ Shows the increment that will be added to the **Identity Seed** for each subsequent row of the identity column. (Applies only to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].)  
   
  **Identity Seed**  
- Shows the seed value assigned to the first row in the table for the identity column. (Applies only to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
+ Shows the seed value assigned to the first row in the table for the identity column. (Applies only to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].)  
   
  **Is Identity**  
- Shows whether the selected column is the identity column for the table. (Applies only to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
+ Shows whether the selected column is the identity column for the table. (Applies only to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].)  
   
  **Length**  
  Shows the number of characters allowed for character-based data types.  
@@ -76,7 +76,7 @@ manager: "jhubbard"
  To access these properties, in Server Explorer right-click the table to which the column belongs, choose **Open Table Definition**, and select the row in the table grid in Table Designer.  
   
 > [!NOTE]  
->  These properties apply only to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  These properties apply only to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **General Category**  
  Expands to show **Name**, **Allow Nulls**, **Data Type**, **Default Value or Binding**, **Length**, **Precision**, and **Scale**.  
@@ -91,7 +91,7 @@ manager: "jhubbard"
  Shows whether or not the column's data type allows null values.  
   
  **Data Type**  
- Shows the data type for the selected column. To edit this property, click its value, expand the drop-down list, and choose another value. For more information, see [Data Types &#40;Transact-SQL&#41;](../Topic/Data%20Types%20\(Transact-SQL\).md).  
+ Shows the data type for the selected column. To edit this property, click its value, expand the drop-down list, and choose another value. For more information, see [Data Types &#40;Transact-SQL&#41;](~/t-sql/data-types/data-types-transact-sql.md).  
   
  **Default Value or Binding**  
  Shows the default for this column when no value is specified for this column. The drop-down list contains all global defaults defined in the data source. To bind the column to a global default, select from the drop-down list. Alternatively, to create a default constraint for the column, type the default value directly as text.  
@@ -177,12 +177,12 @@ manager: "jhubbard"
  Shows whether this column is replicated in another location.  
   
  **Is RowGuid**  
- Indicates whether [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses the column as a ROWGUID. You can set this value to **Yes** only for a column with the data type of `uniqueidentifier`. To edit this property, click its value, expand the drop-down list, and choose another value.  
+ Indicates whether [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses the column as a ROWGUID. You can set this value to **Yes** only for a column with the data type of `uniqueidentifier`. To edit this property, click its value, expand the drop-down list, and choose another value.  
   
  **Size**  
  Shows the size in bytes allowed by column's data type. For example, a `nchar` data type may have a length of 10 (the number of characters) but it would have a size of 20 to account for Unicode character sets.  
   
 > [!NOTE]  
->  The length of a `varchar(max)` data type varies for each row. sp_help returns (-1) as the length of `varchar(max)` column. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] displays -1 as the column size.  
+>  The length of a `varchar(max)` data type varies for each row. sp_help returns (-1) as the length of `varchar(max)` column. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] displays -1 as the column size.  
   
   

@@ -14,11 +14,11 @@ f1_keywords:
 ms.assetid: 3ec788c7-22c3-4216-9ad0-81a168d17074
 caps.latest.revision: 27
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Options (Query Execution:SQL Server:Advanced Page)
-  Several options are available using the SET command. Use this page to specify a **set** option for running [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] queries in the SQL Server Query Editor. They have no effect on other code editors. Changes to these options are only applied to new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] queries. To change the options for the current queries, click **Query Options** on the **Query** menu or the shortcut menu of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Query window. Under **Execution**, click **Advanced**. For more information on each of these, see [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+  Several options are available using the SET command. Use this page to specify a **set** option for running [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] queries in the SQL Server Query Editor. They have no effect on other code editors. Changes to these options are only applied to new [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] queries. To change the options for the current queries, click **Query Options** on the **Query** menu or the shortcut menu of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query window. Under **Execution**, click **Advanced**. For more information on each of these, see [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online.  
   
 ## Options  
  **SET NOCOUNT**  
@@ -34,7 +34,7 @@ manager: "jhubbard"
  When this check box is selected, queries that concatenate an existing value with a NULL, always return a NULL as the result. When this check box is cleared, an existing value concatenated with a NULL, returns the existing value. This check box is selected by default.  
   
  **SET ARITHABORT**  
- When this check box is selected, when an INSERT, DELETE, or UPDATE statement encounters an arithmetic error (overflow, divide-by-zero, or a domain error) during expression evaluation the query or batch is terminated. When this check box is cleared, a NULL is provided for that value if possible, the query continues, and a message is included with the result. For more information, see [SET ARITHABORT &#40;Transact-SQL&#41;](../Topic/SET%20ARITHABORT%20\(Transact-SQL\).md). This check box is selected by default.  
+ When this check box is selected, when an INSERT, DELETE, or UPDATE statement encounters an arithmetic error (overflow, divide-by-zero, or a domain error) during expression evaluation the query or batch is terminated. When this check box is cleared, a NULL is provided for that value if possible, the query continues, and a message is included with the result. For more information, see [SET ARITHABORT &#40;Transact-SQL&#41;](~/t-sql/statements/set-arithabort-transact-sql.md). This check box is selected by default.  
   
  **SET SHOWPLAN_TEXT**  
  When this check box is selected, the query plan is returned in text format with each query. This check box cleared by default.  
@@ -46,7 +46,7 @@ manager: "jhubbard"
  When this check box is selected, statistics regarding input and output are returned with each query. This check box is cleared by default.  
   
  **SET TRANSACTION ISOLATION LEVEL**  
- The READ COMMITTED transaction isolation level is set by default. For more information, see [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../Topic/SET%20TRANSACTION%20ISOLATION%20LEVEL%20\(Transact-SQL\).md). SNAPSHOT transaction isolation level is not available. To use SNAPSHOT isolation, add the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement:  
+ The READ COMMITTED transaction isolation level is set by default. For more information, see [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](~/t-sql/statements/set-transaction-isolation-level-transact-sql.md). SNAPSHOT transaction isolation level is not available. To use SNAPSHOT isolation, add the following [!INCLUDE[tsql](../includes/tsql-md.md)] statement:  
   
 ```  
 SET TRANSACTION ISOLATION LEVEL SNAPSHOT;  
@@ -66,7 +66,7 @@ GO
  When this check box is selected, status messages from the provider (such as the SQLClient provider) are not displayed. This check box is selected by default. Clear this check box to see the provider messages when troubleshooting queries that may be failing at the provider level.  
   
  **Disconnect after the query executes**  
- When this check box is selected, the connection to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is terminated after the query completes. This check box is cleared by default.  
+ When this check box is selected, the connection to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is terminated after the query completes. This check box is cleared by default.  
   
  **Reset to Default**  
  Resets all values on this page to the original default values.  

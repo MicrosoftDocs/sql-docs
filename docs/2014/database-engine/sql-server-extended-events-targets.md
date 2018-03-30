@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQL Server Extended Events Targets
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events targets are event consumers. Targets can write to a file, store event data in a memory buffer, or aggregate event data. Targets can process data synchronously or asynchronously.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Extended Events targets are event consumers. Targets can write to a file, store event data in a memory buffer, or aggregate event data. Targets can process data synchronously or asynchronously.  
   
  The Extended Events design ensures that targets are guaranteed to receive events once and only once per session.  
   
@@ -39,7 +39,7 @@ manager: "jhubbard"
   
 -   [Event Tracing for Windows (ETW)](../../2014/database-engine/event-tracing-for-windows-target.md)  
   
-     Use to correlate [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] events with Windows operating system or application event data. This is a synchronous target.  
+     Use to correlate [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] events with Windows operating system or application event data. This is a synchronous target.  
   
 -   [Histogram](../../2014/database-engine/histogram-target.md)  
   

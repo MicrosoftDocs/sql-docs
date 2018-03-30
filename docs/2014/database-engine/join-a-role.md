@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 05c8d10d-5823-46c6-8b1a-81722da6a42b
 caps.latest.revision: 12
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Join a Role
-  This topic describes how to assign roles to logins and database users in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Use roles in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to efficiently manage permissions. Assign permissions to roles, and then add and remove users and logins to the roles. By using roles, permissions do not have to be individually maintained for each user.  
+  This topic describes how to assign roles to logins and database users in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)]. Use roles in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to efficiently manage permissions. Assign permissions to roles, and then add and remove users and logins to the roles. By using roles, permissions do not have to be individually maintained for each user.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports four types of roles.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supports four types of roles.  
   
 -   Fixed server roles  
   
@@ -33,7 +33,7 @@ manager: "jhubbard"
   
 -   User-defined database roles  
   
- The fixed roles are automatically available in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Fixed roles have the necessary permissions to accomplish common tasks. For more information about fixed roles, see the following links. User-defined roles are created by you, and can be customized with the permissions that you select. For more information about user-defined roles, see the following links.  
+ The fixed roles are automatically available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Fixed roles have the necessary permissions to accomplish common tasks. For more information about fixed roles, see the following links. User-defined roles are created by you, and can be customized with the permissions that you select. For more information about user-defined roles, see the following links.  
   
  **In This Topic**  
   
@@ -78,7 +78,7 @@ manager: "jhubbard"
   
 6.  In the **Select Server Login or Role** dialog box, under **Enter the object names to select (examples)**, enter the login or server role to add to this server role. Alternately, click **Browse…** and select any or all of the available objects in the **Browse for Objects** dialog box. Click **OK** to return to the **Server Role Properties –***server_role_name* dialog box.  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 #### To add a member to a user-defined database role  
   
@@ -100,13 +100,13 @@ manager: "jhubbard"
   
 9. In the **Select Database User or Role** dialog box, under **Enter the object names to select (examples)**, enter the login or database role to add to this database role. Alternately, click **Browse…** and select any or all of the available objects in the **Browse for Objects** dialog box. Click **OK** to return to the **Database Role Properties –***database_role_name* dialog box.  
   
-10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To add a member to a fixed server role  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -117,11 +117,11 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [ALTER ROLE &#40;Transact-SQL&#41;](../Topic/ALTER%20ROLE%20\(Transact-SQL\).md).  
+ For more information, see [ALTER ROLE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-role-transact-sql.md).  
   
 #### To add a member to a user-defined database role  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -132,7 +132,7 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [sp_addrolemember &#40;Transact-SQL&#41;](../Topic/sp_addrolemember%20\(Transact-SQL\).md).  
+ For more information, see [sp_addrolemember &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md).  
   
 ## See Also  
  [Server-Level Roles](../../2014/database-engine/server-level-roles.md)   

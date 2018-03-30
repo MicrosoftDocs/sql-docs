@@ -20,23 +20,23 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Configure the Windows Firewall to Allow Analysis Services Access
-  An essential first step in making [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] or [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] available on the network is to determine whether you need to unblock ports in a firewall. Most installations will require that you create at least one in-bound firewall rule that allows connections to [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+  An essential first step in making [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] or [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] available on the network is to determine whether you need to unblock ports in a firewall. Most installations will require that you create at least one in-bound firewall rule that allows connections to [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
- Firewall configuration requirements vary depending on how you installed [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:  
+ Firewall configuration requirements vary depending on how you installed [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]:  
   
--   Open TCP port 2383 when installing a default instance or creating an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] failover cluster.  
+-   Open TCP port 2383 when installing a default instance or creating an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] failover cluster.  
   
--   Open TCP port 2382 when installing a named instance. Named instances use dynamic port assignments. As the discovery service for Analysis Services, SQL Server Browser service listens on TCP port 2382 and redirects the connection request to the port currently used by [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+-   Open TCP port 2382 when installing a named instance. Named instances use dynamic port assignments. As the discovery service for Analysis Services, SQL Server Browser service listens on TCP port 2382 and redirects the connection request to the port currently used by [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
--   Open TCP port 2382 when installing [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in SharePoint mode to support [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013. In [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013, the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance is external to SharePoint. Inbound requests to the named 'PowerPivot' instance originate from SharePoint web applications over a network connection, requiring an open port. As with other [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] named instances, create an inbound rule for SQL Server Browser service on TCP 2382 to allow access to [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
+-   Open TCP port 2382 when installing [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in SharePoint mode to support [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] 2013. In [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] 2013, the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance is external to SharePoint. Inbound requests to the named 'PowerPivot' instance originate from SharePoint web applications over a network connection, requiring an open port. As with other [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] named instances, create an inbound rule for SQL Server Browser service on TCP 2382 to allow access to [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)].  
   
--   For [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010, do not open ports in Windows Firewall. As an add-in to SharePoint, the service uses ports configured for SharePoint and makes only local connections to the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance that loads and queries [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data models.  
+-   For [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] 2010, do not open ports in Windows Firewall. As an add-in to SharePoint, the service uses ports configured for SharePoint and makes only local connections to the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance that loads and queries [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] data models.  
   
--   For [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instances running on Windows Azure Virtual Machines, use alternate instructions for configuring server access. See [SQL Server Business Intelligence in Windows Azure Virtual Machines](http://msdn.microsoft.com/library/windowsazure/jj992719.aspx).  
+-   For [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instances running on Windows Azure Virtual Machines, use alternate instructions for configuring server access. See [SQL Server Business Intelligence in Windows Azure Virtual Machines](http://msdn.microsoft.com/library/windowsazure/jj992719.aspx).  
   
- Although the default instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] listens on TCP port 2383, you can configure the server to listen on a different fixed port, connecting to the server in this format: \<servername>:\<portnumber>.  
+ Although the default instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] listens on TCP port 2383, you can configure the server to listen on a different fixed port, connecting to the server in this format: \<servername>:\<portnumber>.  
   
- Only one TCP port can be used by an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance. On computers having multiple network cards or multiple IP addresses, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] listens on one TCP port for all IP addresses assigned or aliased to the computer. If you have specific multi-port requirements, consider configuring [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] for HTTP access. You can then set up multiple HTTP endpoints on whatever ports you choose. See [Configure HTTP Access to Analysis Services on Internet Information Services &#40;IIS&#41; 8.0](../../2014/analysis-services/configure-http-access-to-analysis-services-on-iis-8-0.md).  
+ Only one TCP port can be used by an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance. On computers having multiple network cards or multiple IP addresses, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] listens on one TCP port for all IP addresses assigned or aliased to the computer. If you have specific multi-port requirements, consider configuring [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] for HTTP access. You can then set up multiple HTTP endpoints on whatever ports you choose. See [Configure HTTP Access to Analysis Services on Internet Information Services &#40;IIS&#41; 8.0](../../2014/analysis-services/configure-http-access-to-analysis-services-on-iis-8-0.md).  
   
  This topic contains the following sections:  
   
@@ -55,7 +55,7 @@ manager: "mblythe"
  For more information about the default Windows firewall settings, and a description of the TCP ports that affect the Database Engine, Analysis Services, Reporting Services, and Integration Services, see [Configure the Windows Firewall to Allow SQL Server Access](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 ##  <a name="bkmk_checkport"></a> Check port and firewall settings for Analysis Services  
- On the Microsoft Windows operating systems that are supported by [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], Windows Firewall is on by default and is blocking remote connections. You must manually open a port in the firewall to allow inbound requests to Analysis Services. SQL Server Setup does not perform this step for you.  
+ On the Microsoft Windows operating systems that are supported by [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], Windows Firewall is on by default and is blocking remote connections. You must manually open a port in the firewall to allow inbound requests to Analysis Services. SQL Server Setup does not perform this step for you.  
   
  Port settings are specified in the msmdsrv.ini file and in the General properties page of an Analysis Services instance in SQL Server Management Studio. If `Port` is set to a positive integer, the service is listening on a fixed port. If `Port` is set to 0, the service is listening on port 2383 if it is the default instance or on a dynamically assigned port if it is a named instance.  
   
@@ -71,10 +71,10 @@ manager: "mblythe"
   
  To check whether firewall settings are already defined for Analysis Services, use Windows Firewall with Advanced Security in Control Panel. The Firewall page in the Monitoring folder shows a complete list of the rules defined for the local server.  
   
- Note that for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], all firewall rules must be manually defined. Although [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and SQL Server Browser reserve ports 2382 and 2383, neither the SQL Server setup program nor any of the configuration tools define firewall rules that allow access to either the ports or the program executable files.  
+ Note that for [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], all firewall rules must be manually defined. Although [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] and SQL Server Browser reserve ports 2382 and 2383, neither the SQL Server setup program nor any of the configuration tools define firewall rules that allow access to either the ports or the program executable files.  
   
 ##  <a name="bkmk_default"></a> Configure Windows Firewall for a default instance of Analysis Services  
- The default instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] listens on TCP port 2383. If you installed the default instance and want to use this port, you only need to unblock inbound access to TCP port 2383 in Windows Firewall to enable remote access to the default instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. If you installed the default instance but want to configure the service to listen on a fixed port, see [Use a fixed port for a default or named instance of Analysis Services](#bkmk_fixed) in this topic.  
+ The default instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] listens on TCP port 2383. If you installed the default instance and want to use this port, you only need to unblock inbound access to TCP port 2383 in Windows Firewall to enable remote access to the default instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. If you installed the default instance but want to configure the service to listen on a fixed port, see [Use a fixed port for a default or named instance of Analysis Services](#bkmk_fixed) in this topic.  
   
  To verify whether the service is running as the default instance (MSSQLServerOLAPService), check the service name in SQL Server Configuration Manager. A default instance of Analysis Services is always listed as **SQL Server Analysis Services (MSSQLSERVER)**.  
   
@@ -99,7 +99,7 @@ manager: "mblythe"
   
 7.  In Name, type a descriptive name for this rule (for example, `SQL Server Analysis Services (tcp-in) 2383`), and then click **Finish**.  
   
-8.  To verify that remote connections are enabled, open SQL Server Management Studio or Excel on a different computer and connect to [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] by specifying the network name of the server in **Server name**.  
+8.  To verify that remote connections are enabled, open SQL Server Management Studio or Excel on a different computer and connect to [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] by specifying the network name of the server in **Server name**.  
   
     > [!NOTE]  
     >  Other users will not have access to this server until you grant permissions. For more information, see [Authorizing access to objects and operations &#40;Analysis Services&#41;](../../2014/analysis-services/authorizing-access-to-objects-and-operations-analysis-services.md).  
@@ -113,9 +113,9 @@ manager: "mblythe"
     ```  
   
 ##  <a name="bkmk_named"></a> Configure Windows Firewall access for a named instance of Analysis Services  
- Named instances of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] can either listen on a fixed port or on a dynamically assigned port, where SQL Server Browser service provides the connection information that is current for the service at the time of the connection.  
+ Named instances of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] can either listen on a fixed port or on a dynamically assigned port, where SQL Server Browser service provides the connection information that is current for the service at the time of the connection.  
   
- SQL Server Browser service listens on TCP port 2382. UDP is not used. TCP is the only transmission protocol used by [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+ SQL Server Browser service listens on TCP port 2382. UDP is not used. TCP is the only transmission protocol used by [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
  Choose one of the following approaches to enable remote access to a named instance of Analysis Services:  
   
@@ -212,16 +212,16 @@ manager: "mblythe"
 5.  Verify by connecting locally (in Management Studio) and then remotely from a client application on another computer. To use Management Studio, connect to an Analysis Services default instance by specifying a server name in this format: \<servername>:\<portnumber>. For a named instance, specify the server name as \<servername>\\<instancename\>.  
   
 ##  <a name="bkmk_cluster"></a> Port configuration for an Analysis Services cluster  
- An [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] failover cluster always listens on TCP port 2383, regardless of whether you installed it as a default instance or named instance. Dynamic port assignments are not used by [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] when it is installed on a Windows failover cluster. Be sure to open TCP 2383 on every node running [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in the cluster. For more information about clustering [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], see [How to Cluster SQL Server Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=396548).  
+ An [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] failover cluster always listens on TCP port 2383, regardless of whether you installed it as a default instance or named instance. Dynamic port assignments are not used by [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] when it is installed on a Windows failover cluster. Be sure to open TCP 2383 on every node running [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in the cluster. For more information about clustering [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], see [How to Cluster SQL Server Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=396548).  
   
 ##  <a name="bkmk_powerpivot"></a> Port configuration for PowerPivot for SharePoint  
- Server architecture for [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] is fundamentally different depending on which version of SharePoint you are using.  
+ Server architecture for [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] is fundamentally different depending on which version of SharePoint you are using.  
   
  **SharePoint 2013**  
   
- In SharePoint 2013, Excel Services redirects requests for Power Pivot data models, which are subsequently loaded on an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance outside of the SharePoint environment. Connections follow the typical pattern, where an Analysis Services client library on a local computer sends a connection request to a remote [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance in the same network.  
+ In SharePoint 2013, Excel Services redirects requests for Power Pivot data models, which are subsequently loaded on an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance outside of the SharePoint environment. Connections follow the typical pattern, where an Analysis Services client library on a local computer sends a connection request to a remote [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance in the same network.  
   
- Because [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] always installs [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] as a named instance, you should assume SQL Server Browser service and dynamic port assignments. As noted earlier, SQL Server Browser service listens on TCP port 2382 for connection requests sent to [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] named instances, redirecting the request to the current port.  
+ Because [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] always installs [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] as a named instance, you should assume SQL Server Browser service and dynamic port assignments. As noted earlier, SQL Server Browser service listens on TCP port 2382 for connection requests sent to [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] named instances, redirecting the request to the current port.  
   
  Note that Excel Services in SharePoint 2013 does not support the fixed port connection syntax, so make sure SQL Server Browser service is accessible.  
   

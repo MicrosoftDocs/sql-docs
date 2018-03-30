@@ -20,7 +20,7 @@ manager: "jhubbard"
 # Set the Properties of a Data Flow Component
   To set the properties of data flow components, which include sources, destinations, and transformations, use one of the following features:  
   
--   The component editors that [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides. These editors include only the custom properties of each data flow component.  
+-   The component editors that [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides. These editors include only the custom properties of each data flow component.  
   
 -   The **Properties** window lists the component-level custom properties of each element, as well as the properties common to all data flow elements.  
   
@@ -28,7 +28,7 @@ manager: "jhubbard"
   
 ### To set the properties of a data flow component by using a component editor  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project that contains the package you want.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project that contains the package you want.  
   
 2.  In Solution Explorer, double-click the package to open it.  
   
@@ -42,7 +42,7 @@ manager: "jhubbard"
   
 ### To set the properties of a data flow component by using the Properties window  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project that contains the package you want.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project that contains the package you want.  
   
 2.  In Solution Explorer, double-click the package to open it.  
   
@@ -59,7 +59,7 @@ manager: "jhubbard"
   
 ### To set the properties of a data flow component by using the Advanced Editor  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project that contains the package you want.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project that contains the package you want.  
   
 2.  In Solution Explorer, double-click the package to open it.  
   
@@ -68,7 +68,7 @@ manager: "jhubbard"
 4.  In the data flow designer, right-click the data flow component, and then click **Show Advanced Editor**.  
   
     > [!NOTE]  
-    >  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], data flow components that support multiple inputs cannot use the **Advanced Editor**.  
+    >  In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], data flow components that support multiple inputs cannot use the **Advanced Editor**.  
   
 5.  In the **Advanced Editor** dialog box, do any of the following steps:  
   

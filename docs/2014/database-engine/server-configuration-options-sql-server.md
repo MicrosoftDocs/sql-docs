@@ -29,14 +29,14 @@ helpviewer_keywords:
 ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
 caps.latest.revision: 116
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Server Configuration Options (SQL Server)
-  You can manage and optimize [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resources through configuration options by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or the sp_configure system stored procedure. The most commonly used server configuration options are available through [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]; all configuration options are accessible through sp_configure. Consider the effects on your system carefully before setting these options. For more information, see [View or Change Server Properties &#40;SQL Server&#41;](../../2014/database-engine/view-or-change-server-properties-sql-server.md).  
+  You can manage and optimize [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] resources through configuration options by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or the sp_configure system stored procedure. The most commonly used server configuration options are available through [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]; all configuration options are accessible through sp_configure. Consider the effects on your system carefully before setting these options. For more information, see [View or Change Server Properties &#40;SQL Server&#41;](../../2014/database-engine/view-or-change-server-properties-sql-server.md).  
   
 > [!IMPORTANT]  
->  Advanced options should be changed only by an experienced database administrator or certified [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] technician.  
+>  Advanced options should be changed only by an experienced database administrator or certified [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] technician.  
   
 ## Categories of Configuration Options  
  Configuration options take effect either:  
@@ -45,20 +45,20 @@ manager: "jhubbard"
   
      -or-  
   
--   After performing the above actions and restarting the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   After performing the above actions and restarting the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- Options that require [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to restart will initially show the changed value only in the value column. After restart, the new value will appear in both the value column and the value_in_use column.  
+ Options that require [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to restart will initially show the changed value only in the value column. After restart, the new value will appear in both the value column and the value_in_use column.  
   
  Some options require a server restart before the new configuration value takes effect. If you set the new value and run sp_configure before restarting the server, the new value appears in the configuration options value column, but not in the value_in_use column. After restarting the server, the new value appears in the value_in_use column.  
   
- Self-configuring options are those that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] adjusts according to the needs of the system. In most cases, this eliminates the need for setting the values manually. Examples include the min server memory and max server memory options and the user connections option.  
+ Self-configuring options are those that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] adjusts according to the needs of the system. In most cases, this eliminates the need for setting the values manually. Examples include the min server memory and max server memory options and the user connections option.  
   
 ## Configuration Options Table  
  The following table lists all available configuration options, the range of possible settings, and default values. Configuration options are marked with letter codes as follows:  
   
--   A= Advanced options, which should be changed only by an experienced database administrator or a certified [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] technician, and which require setting show advanced options to 1.  
+-   A= Advanced options, which should be changed only by an experienced database administrator or a certified [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] technician, and which require setting show advanced options to 1.  
   
--   RR = Options requiring a restart of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+-   RR = Options requiring a restart of the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 -   SC = Self-configuring options.  
   
@@ -68,10 +68,10 @@ manager: "jhubbard"
     |[access check cache quota](../../2014/database-engine/access-check-cache-server-configuration-options.md) (A)|0|2147483647|0|  
     |[ad hoc distributed queries](../../2014/database-engine/ad-hoc-distributed-queries-server-configuration-option.md) (A)|0|1|0|  
     |[affinity I/O mask](../../2014/database-engine/affinity-input-output-mask-server-configuration-option.md) (A, RR)|-2147483648|2147483647|0|  
-    |[affinity64 I/O mask](../../2014/database-engine/affinity64-input-output-mask-server-configuration-option.md) (A, only available on 64-bit version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])|-2147483648|2147483647|0|  
+    |[affinity64 I/O mask](../../2014/database-engine/affinity64-input-output-mask-server-configuration-option.md) (A, only available on 64-bit version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)])|-2147483648|2147483647|0|  
     |[affinity mask](../../2014/database-engine/affinity-mask-server-configuration-option.md) (A)|-2147483648|2147483647|0|  
-    |[affinity64 mask](../../2014/database-engine/affinity64-mask-server-configuration-option.md) (A, RR), only available on 64-bit version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|-2147483648|2147483647|0|  
-    |[Agent XPs](../../2014/database-engine/agent-xps-server-configuration-option.md) (A)|0|1|0<br /><br /> (Changes to 1 when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is started. Default value is 0 if [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is set to automatic start during Setup.)|  
+    |[affinity64 mask](../../2014/database-engine/affinity64-mask-server-configuration-option.md) (A, RR), only available on 64-bit version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|-2147483648|2147483647|0|  
+    |[Agent XPs](../../2014/database-engine/agent-xps-server-configuration-option.md) (A)|0|1|0<br /><br /> (Changes to 1 when [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent is started. Default value is 0 if [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent is set to automatic start during Setup.)|  
     |[allow updates](../../2014/database-engine/allow-updates-server-configuration-option.md) (Obsolete. Do not use. Will cause an error during reconfigure.)|0|1|0|  
     |[backup checksum default](../../2014/database-engine/backup-checksum-default.md)|0|1|0|  
     |[backup compression default](../../2014/database-engine/view-or-configure-the-backup-compression-default-server-configuration-option.md)|0|1|0|  
@@ -103,7 +103,7 @@ manager: "jhubbard"
     |[max full-text crawl range](../../2014/database-engine/max-full-text-crawl-range-server-configuration-option.md) (A)|0|256|4|  
     |[max server memory](../../2014/database-engine/server-memory-server-configuration-options.md) (A, SC)|16|2147483647|2147483647|  
     |[max text repl size](../../2014/database-engine/configure-the-max-text-repl-size-server-configuration-option.md)|0|2147483647|65536|  
-    |[max worker threads](../../2014/database-engine/configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> (1024 is the maximum recommended for 32-bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 2048 for 64-bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)|0<br /><br /> Zero auto-configures the number of max worker threads depending on the number of processors, using the formula (256+(*\<processors>* -4) * 8) for 32-bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and twice that for 64-bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+    |[max worker threads](../../2014/database-engine/configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> (1024 is the maximum recommended for 32-bit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], 2048 for 64-bit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].)|0<br /><br /> Zero auto-configures the number of max worker threads depending on the number of processors, using the formula (256+(*\<processors>* -4) * 8) for 32-bit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and twice that for 64-bit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
     |[media retention](../../2014/database-engine/configure-the-media-retention-server-configuration-option.md) (A, RR)|0|365|0|  
     |[min memory per query](../../2014/database-engine/configure-the-min-memory-per-query-server-configuration-option.md) (A)|512|2147483647|1024|  
     |[min server memory](../../2014/database-engine/server-memory-server-configuration-options.md) (A, SC)|0|2147483647|0|  
@@ -136,7 +136,7 @@ manager: "jhubbard"
     |[xp_cmdshell](../../2014/database-engine/xp-cmdshell-server-configuration-option.md) (A)|0|1|0|  
   
 ## See Also  
- [sp_configure &#40;Transact-SQL&#41;](../Topic/sp_configure%20\(Transact-SQL\).md)   
- [RECONFIGURE &#40;Transact-SQL&#41;](../Topic/RECONFIGURE%20\(Transact-SQL\).md)  
+ [sp_configure &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
+ [RECONFIGURE &#40;Transact-SQL&#41;](~/t-sql/language-elements/reconfigure-transact-sql.md)  
   
   

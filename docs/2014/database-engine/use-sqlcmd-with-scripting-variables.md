@@ -157,7 +157,7 @@ manager: "jhubbard"
   
  `GO`  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+ [!INCLUDE[ssResult](../includes/ssresult-md.md)]  
   
  `Changed database context to 'AdventureWorks2012'`  
   
@@ -302,7 +302,7 @@ manager: "jhubbard"
   
  `>4 GO`  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+ [!INCLUDE[ssResult](../includes/ssresult-md.md)]  
   
  `>1 Col1`  
   

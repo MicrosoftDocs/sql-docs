@@ -12,14 +12,14 @@ ms.topic: "article"
 ms.assetid: 3a327ffa-3b69-40d6-8015-cc01cfae9161
 caps.latest.revision: 7
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Troubleshoot Charts (Report Builder and SSRS)
   These issues can be helpful when working with charts.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## Why does my chart count, not sum, the values on the value axis?  
  Most chart types require numeric values along the value axis, which is typically the y-axis, in order to draw correctly. If the data type of your value field is `String`, the chart cannot display a numeric value, even if there are numerals in the fields. Instead, the chart displays a count of the total number of rows that contain a value in that field. To avoid this behavior, make sure that the fields that you use for value series have numeric data types, as opposed to strings that contain formatted numbers.  

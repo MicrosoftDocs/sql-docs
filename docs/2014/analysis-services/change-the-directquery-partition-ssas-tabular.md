@@ -16,11 +16,11 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Change the DirectQuery Partition (SSAS Tabular)
-  Because only one partition in a table can be designated as the DirectQuery partition, by default, Analysis Services uses the first partition that was created in the table. During model project authoring, you can change the DirectQuery partition by using the Partition Manager dialog box in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. For deployed models, you can change the DirectQuery partition by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  Because only one partition in a table can be designated as the DirectQuery partition, by default, Analysis Services uses the first partition that was created in the table. During model project authoring, you can change the DirectQuery partition by using the Partition Manager dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. For deployed models, you can change the DirectQuery partition by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 ### Change the DirectQuery partition for a tabular model project  
   
-1.  In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], in the model designer, click on the table (tab) that contains the partitioned table.  
+1.  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], in the model designer, click on the table (tab) that contains the partitioned table.  
   
 2.  Click on the **Table** menu, and then click **Partitions**.  
   
@@ -32,7 +32,7 @@ manager: "mblythe"
   
 ### Change the DirectQuery partition for a deployed tabular model  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], open the model database in Object Explorer.  
+1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], open the model database in Object Explorer.  
   
 2.  Expand the **Tables** node, then right-click the partitioned table, and then select **Partitions**.  
   

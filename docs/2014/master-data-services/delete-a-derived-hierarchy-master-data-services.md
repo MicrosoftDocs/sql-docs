@@ -19,7 +19,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Delete a Derived Hierarchy (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], delete a derived hierarchy when you are sure you no longer need it.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], delete a derived hierarchy when you are sure you no longer need it.  
   
 > [!NOTE]  
 >  Deleting a derived hierarchy has no effect on the attribute relationships that the hierarchy is based on.  
@@ -33,7 +33,7 @@ manager: "jhubbard"
   
 ### To delete a derived hierarchy  
   
-1.  In [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], click **System Administration**.  
+1.  In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], click **System Administration**.  
   
 2.  On the **Model View** page, from the menu bar, point to **Manage** and click **Derived Hierarchies**.  
   

@@ -22,7 +22,7 @@ manager: "jhubbard"
   Upgrade Advisor detected a user-defined type (UDT) that is named after a term reserved for either the `geometry` or the `geography` data types. The `geometry` and `geography` data types are part of the spatial data feature.  
   
 ## Component  
- [!INCLUDE[ssDE](../../../includes/ssde-md.md)]  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## Description  
  The terms used for spatial data types should not be used as names for either common language runtime (CLR) or alias UDTs.  

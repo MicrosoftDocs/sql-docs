@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Cube Element (ASSL)
-  Defines a regular, virtual, or linked cube in a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] [Database](../../../2014/analysis-services/dev-guide/database-element-assl.md) element.  
+  Defines a regular, virtual, or linked cube in a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [Database](../../../2014/analysis-services/dev-guide/database-element-assl.md) element.  
   
 ## Syntax  
   

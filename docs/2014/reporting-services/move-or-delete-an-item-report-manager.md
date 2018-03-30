@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 980a66c7-a18b-4af7-8954-45726fa517d6
 caps.latest.revision: 44
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Move or Delete an Item (Report Manager)
@@ -47,11 +47,11 @@ manager: "mblythe"
   
 4.  In the drop-down menu, click **Move**.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 6.  For **Location**, specify the folder you want to move the item to. You can type the fully qualified folder name or use the tree control to navigate to the folder.  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
  Alternatively, you can navigate to the object you want to move, click **Properties**, and then click **Move** at the top of the page.  
   
@@ -68,7 +68,7 @@ manager: "mblythe"
   
 4.  In the drop-down menu, click **Delete**.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## See Also  
  [Contents Page &#40;Report Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md)   

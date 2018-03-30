@@ -27,7 +27,7 @@ manager: "mblythe"
 -   [Tips for Choosing Data Sources](#bkmk_tips)  
   
 ##  <a name="bkmk_supported_ds"></a> Supported Data Sources  
- You can import data from the data sources in the following table. When you install [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], setup does not install the providers that are listed for each data source. Some providers might already be installed with other applications on your computer; in other cases you will need to download and install the provider.  
+ You can import data from the data sources in the following table. When you install [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], setup does not install the providers that are listed for each data source. Some providers might already be installed with other applications on your computer; in other cases you will need to download and install the provider.  
   
 |||||  
 |-|-|-|-|  
@@ -43,9 +43,9 @@ manager: "mblythe"
 |Other relational databases|(not applicable)|(not applicable)|OLE DB provider or ODBC driver|  
 |Text files|(not applicable)|.txt, .tab, .csv|ACE 14 OLE DB provider for Microsoft Access|  
 |Microsoft Excel files|Excel 97-2003, 2007, 2010|.xlsx, xlsm, .xlsb, .xltx, .xltm|ACE 14 OLE DB provider|  
-|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook|Microsoft SQL Server 2008 R2 Analysis Services|xlsx, xlsm, .xlsb, .xltx, .xltm|ASOLEDB 10.5<br /><br /> (used only with [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks that are published to SharePoint farms that have [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installed)|  
+|[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] workbook|Microsoft SQL Server 2008 R2 Analysis Services|xlsx, xlsm, .xlsb, .xltx, .xltm|ASOLEDB 10.5<br /><br /> (used only with [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] workbooks that are published to SharePoint farms that have [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] installed)|  
 |Analysis Services cube|Microsoft SQL Server 2005, 2008, 2008 R2 Analysis Services|(not applicable)|ASOLEDB 10|  
-|Data feeds<br /><br /> (used to import data from Reporting Services reports, Atom service documents, Microsoft Azure Marketplace DataMarket, and single data feed)|Atom 1.0 format<br /><br /> Any database or document that is exposed as a Windows Communication Foundation (WCF) Data Service (formerly ADO.NET Data Services).|.atomsvc for a service document that defines one or more feeds<br /><br /> .atom for an Atom web feed document|Microsoft Data Feed Provider for [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]<br /><br /> .NET Framework data feed data provider for [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]|  
+|Data feeds<br /><br /> (used to import data from Reporting Services reports, Atom service documents, Microsoft Azure Marketplace DataMarket, and single data feed)|Atom 1.0 format<br /><br /> Any database or document that is exposed as a Windows Communication Foundation (WCF) Data Service (formerly ADO.NET Data Services).|.atomsvc for a service document that defines one or more feeds<br /><br /> .atom for an Atom web feed document|Microsoft Data Feed Provider for [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]<br /><br /> .NET Framework data feed data provider for [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]|  
 |Office Database Connection files||.odc||  
   
  <sup>1</sup> You can also use the OLE DB Provider for ODBC.  

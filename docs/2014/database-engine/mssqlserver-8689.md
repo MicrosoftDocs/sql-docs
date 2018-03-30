@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 99467a32-6576-4272-a076-b16c06933f2a
 caps.latest.revision: 13
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_8689
@@ -37,7 +37,7 @@ manager: "jhubbard"
  Ensure all databases that are specified in the USE PLAN hint exist.  
   
 ## See Also  
- [Query Hints &#40;Transact-SQL&#41;](../Topic/Query%20Hints%20\(Transact-SQL\).md)   
+ [Query Hints &#40;Transact-SQL&#41;](~/t-sql/queries/hints-transact-sql-query.md)   
  [Plan Guides](../../2014/database-engine/plan-guides.md)  
   
   

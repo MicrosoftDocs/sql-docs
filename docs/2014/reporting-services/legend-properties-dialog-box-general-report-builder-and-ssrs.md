@@ -15,7 +15,7 @@ f1_keywords:
 ms.assetid: db718f8f-f185-422f-871c-96f0749e5893
 caps.latest.revision: 8
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Legend Properties Dialog Box, General (Report Builder and SSRS)

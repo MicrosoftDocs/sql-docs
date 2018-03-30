@@ -35,7 +35,7 @@ manager: "jhubbard"
 -   Table locking is specified (using TABLOCK).  
   
     > [!NOTE]  
-    >  Although data insertions are not logged in the transaction log during a minimally logged bulk-import operation, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] still logs extent allocations each time a new extent is allocated to the table.  
+    >  Although data insertions are not logged in the transaction log during a minimally logged bulk-import operation, the [!INCLUDE[ssDE](../includes/ssde-md.md)] still logs extent allocations each time a new extent is allocated to the table.  
   
 -   Table is not a memory-optimized table.  
   
@@ -69,11 +69,11 @@ manager: "jhubbard"
 ## See Also  
  [Recovery Models &#40;SQL Server&#41;](../../2014/database-engine/recovery-models-sql-server.md)   
  [bcp Utility](../../2014/database-engine/bcp-utility.md)   
- [BULK INSERT &#40;Transact-SQL&#41;](../Topic/BULK%20INSERT%20\(Transact-SQL\).md)   
- [OPENROWSET &#40;Transact-SQL&#41;](../Topic/OPENROWSET%20\(Transact-SQL\).md)   
- [BACKUP &#40;Transact-SQL&#41;](../Topic/BACKUP%20\(Transact-SQL\).md)   
- [ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20\(Transact-SQL\).md)   
- [Table Hints &#40;Transact-SQL&#41;](../Topic/Table%20Hints%20\(Transact-SQL\).md)   
- [INSERT &#40;Transact-SQL&#41;](../Topic/INSERT%20\(Transact-SQL\).md)  
+ [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md)   
+ [OPENROWSET &#40;Transact-SQL&#41;](~/t-sql/functions/openrowset-transact-sql.md)   
+ [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)   
+ [Table Hints &#40;Transact-SQL&#41;](~/t-sql/queries/hints-transact-sql-table.md)   
+ [INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/insert-transact-sql.md)  
   
   

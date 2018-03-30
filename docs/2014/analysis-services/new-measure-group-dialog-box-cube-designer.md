@@ -20,7 +20,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # New Measure Group Dialog Box (Cube Designer)
-  Use the **New Measure Group** dialog box in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to add a new measure group to a cube in Cube Designer. You can display the **New Measure Group** dialog box by:  
+  Use the **New Measure Group** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to add a new measure group to a cube in Cube Designer. You can display the **New Measure Group** dialog box by:  
   
 -   Clicking **New Measure Group** in the **Toolbar** pane on the **Cube Structure** tab in Cube Designer.  
   

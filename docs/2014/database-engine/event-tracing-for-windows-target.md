@@ -29,20 +29,20 @@ manager: "jhubbard"
  The ETW target is a singleton target, although the target can be added to many sessions. If an event is raised on many sessions, the event will only be propagated to the ETW target one time per event occurrence. The Extended Events engine is limited to a single instance per process.  
   
 > [!IMPORTANT]  
->  For the ETW target to work, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service startup account must be a member of the Performance Log Users group.  
+>  For the ETW target to work, the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Service startup account must be a member of the Performance Log Users group.  
   
  The configuration of the events present in an ETW session is controlled by the process that hosts the Extended Events engine. The engine controls which events to raise and what conditions must be met for an event to occur.  
   
- After binding to an Extended Events session, which attaches the ETW target for the first time during the lifetime of a process, the ETW target opens a single ETW session on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider. If an ETW session already exists, the ETW target obtains a reference to the existing session. This ETW session is shared across all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances on a given computer. This ETW session receives all the events from sessions that have the ETW target.  
+ After binding to an Extended Events session, which attaches the ETW target for the first time during the lifetime of a process, the ETW target opens a single ETW session on the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provider. If an ETW session already exists, the ETW target obtains a reference to the existing session. This ETW session is shared across all [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instances on a given computer. This ETW session receives all the events from sessions that have the ETW target.  
   
  Because ETW needs providers to be enabled to consume events and flow them down to the ETW, all Extended Events packages are enabled on the session. When an event is fired, the ETW target sends the event to the session on which the provider for the event is enabled.  
   
  The ETW target supports synchronous publishing of events on the thread that raises the event. However, the ETW target does not support asynchronous event publishing.  
   
- The ETW target does not support control from external ETW controllers such as Logman.exe. To produce ETW traces, an event session must be created with the ETW target. For more information, see [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../Topic/CREATE%20EVENT%20SESSION%20\(Transact-SQL\).md).  
+ The ETW target does not support control from external ETW controllers such as Logman.exe. To produce ETW traces, an event session must be created with the ETW target. For more information, see [CREATE EVENT SESSION &#40;Transact-SQL&#41;](~/t-sql/statements/create-event-session-transact-sql.md).  
   
 > [!NOTE]  
->  Enabling the ETW target creates an ETW session that is named XE_DEFAULT_ETW_SESSION. If a session with the name XE_DEFAULT_ETW_SESSION already exists, it is used without modifying any properties of the existing session. The XE_DEFAULT_ETW_SESSION is shared between all instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. After you start the XE_DEFAULT_ETW_SESSION, you must stop it by using an ETW controller, such as the Logman tool. For example, you can run the following command at the command prompt: `logman stop XE_DEFAULT_ETW_SESSION -ets`.  
+>  Enabling the ETW target creates an ETW session that is named XE_DEFAULT_ETW_SESSION. If a session with the name XE_DEFAULT_ETW_SESSION already exists, it is used without modifying any properties of the existing session. The XE_DEFAULT_ETW_SESSION is shared between all instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. After you start the XE_DEFAULT_ETW_SESSION, you must stop it by using an ETW controller, such as the Logman tool. For example, you can run the following command at the command prompt: `logman stop XE_DEFAULT_ETW_SESSION -ets`.  
   
  The following table describes the available options for configuring the ETW target.  
   
@@ -86,8 +86,8 @@ ADD TARGET package0.etw_classic_sync_target
   
 ## See Also  
  [SQL Server Extended Events Targets](../../2014/database-engine/sql-server-extended-events-targets.md)   
- [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](../Topic/sys.dm_xe_session_targets%20\(Transact-SQL\).md)   
- [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../Topic/CREATE%20EVENT%20SESSION%20\(Transact-SQL\).md)   
- [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../Topic/ALTER%20EVENT%20SESSION%20\(Transact-SQL\).md)  
+ [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md)   
+ [CREATE EVENT SESSION &#40;Transact-SQL&#41;](~/t-sql/statements/create-event-session-transact-sql.md)   
+ [ALTER EVENT SESSION &#40;Transact-SQL&#41;](~/t-sql/statements/alter-event-session-transact-sql.md)  
   
   

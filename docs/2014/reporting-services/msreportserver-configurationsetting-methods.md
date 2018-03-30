@@ -21,7 +21,7 @@ helpviewer_keywords:
 ms.assetid: a08c2476-5b8e-4792-94da-1360fe231c6e
 caps.latest.revision: 45
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # MSReportServer_ConfigurationSetting Methods
@@ -41,7 +41,7 @@ manager: "mblythe"
 |[GetAdminSiteUrl Method &#40;WMI&#41;](../../2014/reporting-services/getadminsiteurl-method-wmi.md)|Gets the absolute URL to the Central Administration Web site.|  
 |[GetDatabaseVersionDisplayName](../../2014/reporting-services/getdatabaseversiondisplayname-method-wmi.md)|Gets the display name for a given report server database version string.|  
 |[InitializeReportServer](../../2014/reporting-services/initializereportserver-method-wmi-msreportserver-configurationsetting.md)|Initializes the specified report server instance.|  
-|[ListInstalledSharePointVersions Method &#40;WMI&#41;](../../2014/reporting-services/listinstalledsharepointversions-method-wmi.md)|Returns a set of tokens that represent the versions of Microsoft [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)], [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], or [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] that are installed on the same computer as the report server.|  
+|[ListInstalledSharePointVersions Method &#40;WMI&#41;](../../2014/reporting-services/listinstalledsharepointversions-method-wmi.md)|Returns a set of tokens that represent the versions of Microsoft [!INCLUDE[winSPServ](../includes/winspserv-md.md)] [!INCLUDE[offSPServ](../includes/offspserv-md.md)], [!INCLUDE[SPF2010](../includes/spf2010-md.md)], or [!INCLUDE[SPS2010](../includes/sps2010-md.md)] that are installed on the same computer as the report server.|  
 |[ListIPAddresses Method &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../2014/reporting-services/listipaddresses-method-wmi-msreportserver-configurationsetting.md)|Lists IP addresses for the computer.|  
 |[ListReportServersInDatabase](../../2014/reporting-services/listreportserversindatabase-method-wmi-msreportserver-configurationsetting.md)|Returns a list of report server installations that are present in the report server database, regardless of whether those installations have access to secure information.|  
 |[ListReservedURLs Method &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../2014/reporting-services/listreservedurls-method-wmi-msreportserver-configurationsetting.md)|Lists URLs reserved for all applications on the report server.|  

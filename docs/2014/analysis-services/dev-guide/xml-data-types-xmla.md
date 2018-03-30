@@ -33,7 +33,7 @@ manager: "mblythe"
 |----------------|-----------------|  
 |Boolean|The standard XML `boolean` data type.|  
 |Decimal|The standard XML `decimal` data type.|  
-|[EmptyResult](../../../2014/analysis-services/dev-guide/emptyresult-data-type-xmla.md)|A namespace on the `root` element. This namespace is returned when an XMLA command does not return a result because either the XMLA command does not normally return a result or because an error occurred on the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance while executing the XMLA command.|  
+|[EmptyResult](../../../2014/analysis-services/dev-guide/emptyresult-data-type-xmla.md)|A namespace on the `root` element. This namespace is returned when an XMLA command does not return a result because either the XMLA command does not normally return a result or because an error occurred on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance while executing the XMLA command.|  
 |[EnumString](../../../2014/analysis-services/dev-guide/enumstring-data-type-xmla.md)|A set of named string constants for a given enumerator.|  
 |Integer|The standard XML `int` data type.|  
 |[MDDataSet](../../../2014/analysis-services/dev-guide/mddataset-data-type-xmla.md)|Multidimensional data returned by the *Result* parameter of the [Execute](../../../2014/analysis-services/dev-guide/execute-method-xmla.md) method.|  

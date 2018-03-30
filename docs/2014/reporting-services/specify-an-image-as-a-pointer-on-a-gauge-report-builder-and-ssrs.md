@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 9d73b3c3-a068-4868-a2be-0cd261b6e92b
 caps.latest.revision: 7
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Specify an Image as a Pointer on a Gauge (Report Builder and SSRS)
@@ -27,7 +27,7 @@ manager: "mblythe"
  Since the pointer is an irregular shape, you will need to specify a transparency color to hide the unnecessary portions of the image. Consider using a color that would not normally be shown on the gauge as the transparency color, since the colors specified will not appear on the gauge.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ### To specify an image as a pointer on the gauge  
   

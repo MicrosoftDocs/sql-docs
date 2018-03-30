@@ -21,10 +21,10 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Deprecated Analysis Services Features in SQL Server 2014
-  This topic describes the deprecated [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] features that are still available in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. These features are scheduled to be removed in a future release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Deprecated features should not be used in new applications.  
+  This topic describes the deprecated [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] features that are still available in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. These features are scheduled to be removed in a future release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Deprecated features should not be used in new applications.  
   
 ## Features Not Supported in the Next Version of SQL Server  
- The following [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] features will not be supported in the next version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Do not use these features in new development work, and modify applications that currently use these features as soon as possible.  
+ The following [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] features will not be supported in the next version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Do not use these features in new development work, and modify applications that currently use these features as soon as possible.  
   
 |Category|Deprecated feature|Replacement|  
 |--------------|------------------------|-----------------|  
@@ -35,7 +35,7 @@ manager: "mblythe"
 |Objects|COM assemblies|COM assemblies can pose a security risk. Support for COM assemblies will be removed in a future release.|  
   
 ## Features Not Supported in a Future Version of SQL Server  
- The following [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] features are supported in the next version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], but will be removed in a later version. The specific version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has not been determined.  
+ The following [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] features are supported in the next version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], but will be removed in a later version. The specific version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has not been determined.  
   
 |Category|Deprecated feature|Replacement|  
 |--------------|------------------------|-----------------|  

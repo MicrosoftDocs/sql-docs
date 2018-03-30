@@ -16,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: f76c37b4-2f6e-4274-8ee2-87e89d98e8a2
 caps.latest.revision: 12
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # EventString Element (DTA)
-  Specifies a [!INCLUDE[tsql](../../includes/tsql-md.md)] script workload directly in the XML input file.  
+  Specifies a [!INCLUDE[tsql](../includes/tsql-md.md)] script workload directly in the XML input file.  
   
 ## Syntax  
   

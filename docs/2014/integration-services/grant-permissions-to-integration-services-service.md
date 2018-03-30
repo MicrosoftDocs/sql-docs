@@ -16,7 +16,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Grant Permissions to Integration Services Service
-  In previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], by default when you installed [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] all users in the Users group had access to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service. When you install the current release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], users do not have access to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service. The service is secure by default. After [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed, the administrator must grant access to the service.  
+  In previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], by default when you installed [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] all users in the Users group had access to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service. When you install the current release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], users do not have access to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service. The service is secure by default. After [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is installed, the administrator must grant access to the service.  
   
 ### To grant access to the Integration Services service  
   
@@ -34,6 +34,6 @@ manager: "jhubbard"
   
 7.  Restart SQL Server Management Studio.  
   
-8.  Restart the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Service.  
+8.  Restart the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Service.  
   
   

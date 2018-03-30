@@ -12,11 +12,11 @@ ms.topic: "article"
 ms.assetid: 501aa9ee-8c13-458c-bf6f-24e00c82681b
 caps.latest.revision: 9
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Reporting Services SharePoint Service and Service Applications
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode is architected on the SharePoint service architecture and utilizes a SharePoint service and one to many service applications. Creating a service application makes the service available and generates the service application database. You can create multiple Reporting Services service applications but one service application is sufficient for most deployment scenarios.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint mode is architected on the SharePoint service architecture and utilizes a SharePoint service and one to many service applications. Creating a service application makes the service available and generates the service application database. You can create multiple Reporting Services service applications but one service application is sufficient for most deployment scenarios.  
   
  This topic covers the following information:  
   
@@ -31,7 +31,7 @@ manager: "mblythe"
 -   [Related Tasks](#bkmk_related)  
   
 ##  <a name="bkmk_createapp"></a> Creating a Reporting Services Service Application  
- You can use SharePoint Central Administration or PowerShell scripts to create the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] services applications. For more information on using SharePoint Central Administration, see the “Create a Reporting Services Service Application” section in [Install Reporting Services SharePoint Mode for SharePoint 2010](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md). See the PowerShell section later in this topic for a sample PowerShell script for creating service applications.  
+ You can use SharePoint Central Administration or PowerShell scripts to create the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] services applications. For more information on using SharePoint Central Administration, see the “Create a Reporting Services Service Application” section in [Install Reporting Services SharePoint Mode for SharePoint 2010](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md). See the PowerShell section later in this topic for a sample PowerShell script for creating service applications.  
   
 ##  <a name="bkmk_associations"></a> Modify the Associations of the Service Application with a proxy group  
  The New page for creating a services application contains the section **Web Application Association**. The section allows you to associate your service application as you create it. Use the following steps to change the association and assign a customer configuration to the service application. The same general process can also be used to add the proxy to the default group rather than changing the association of the service application to a custom group.  
@@ -40,7 +40,7 @@ manager: "mblythe"
   
 2.  On the Service application Associations page, change the view to **Service Applications**.  
   
-3.  Find and click the name of your new [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Service application. You could also click the application proxy group name **default** to add the proxy to default group rather than completing the following steps.  
+3.  Find and click the name of your new [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Service application. You could also click the application proxy group name **default** to add the proxy to default group rather than completing the following steps.  
   
 4.  Select **Custom** in the selection box **Edit the following group of connections**.  
   

@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: fbc5bf3c-120c-4aec-a4f2-f5391bd415f6
 caps.latest.revision: 14
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # GetAdminSiteUrl Method (WMI)
-  Gets the absolute URL for the Central Administration Web site for the Microsoft [!INCLUDE[winSPServ](../../includes/winspserv-md.md)], [!INCLUDE[offSPServ](../../includes/offspserv-md.md)], [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], or [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] farm that the report server is integrated with.  
+  Gets the absolute URL for the Central Administration Web site for the Microsoft [!INCLUDE[winSPServ](../includes/winspserv-md.md)], [!INCLUDE[offSPServ](../includes/offspserv-md.md)], [!INCLUDE[SPF2010](../includes/spf2010-md.md)], or [!INCLUDE[SPS2010](../includes/sps2010-md.md)] farm that the report server is integrated with.  
   
 ## Syntax  
   
@@ -42,7 +42,7 @@ public void GetAdminSiteUrl(out string AdminSiteUrl, out Int32 HRESULT);
  Returns an *HRESULT* indicating success or failure of the method call. A value of 0 indicates that the method call was successful. A non-zero value indicates that an error has occurred.  
   
 ## Requirements  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../includes/ssrswminmspca-md.md)]  
   
 ## See Also  
  [MSReportServer_ConfigurationSetting Methods](../../2014/reporting-services/msreportserver-configurationsetting-methods.md)  

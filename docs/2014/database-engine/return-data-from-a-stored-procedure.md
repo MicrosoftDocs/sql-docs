@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 7a428ffe-cd87-4f42-b3f1-d26aa8312bf7
 caps.latest.revision: 25
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Return Data from a Stored Procedure
   There are two ways of returning result sets or data from a procedure to a calling program: output parameters and return codes. This topic provides information on both approaches.  
   
 ## Returning Data Using an Output Parameter  
- If you specify the OUTPUT keyword for a parameter in the procedure definition, the procedure can return the current value of the parameter to the calling program when the procedure exits. To save the value of the parameter in a variable that can be used in the calling program, the calling program must use the OUTPUT keyword when executing the procedure. For more information about what data types can be used as output parameters, see [CREATE PROCEDURE &#40;Transact-SQL&#41;](../Topic/CREATE%20PROCEDURE%20\(Transact-SQL\).md).  
+ If you specify the OUTPUT keyword for a parameter in the procedure definition, the procedure can return the current value of the parameter to the calling program when the procedure exits. To save the value of the parameter in a variable that can be used in the calling program, the calling program must use the OUTPUT keyword when executing the procedure. For more information about what data types can be used as output parameters, see [CREATE PROCEDURE &#40;Transact-SQL&#41;](~/t-sql/statements/create-procedure-transact-sql.md).  
   
 ### Examples of Output Parameter  
  The following example shows a procedure with an input and an output parameter. The `@SalesPerson` parameter would receive an input value specified by the calling program. The SELECT statement uses the value passed into the input parameter to obtain the correct `SalesYTD` value. The SELECT statement also assigns the value to the `@SalesYTD` output parameter, which returns the value to the calling program when the procedure exits.  
@@ -69,10 +69,10 @@ GO
  If you specify OUTPUT for a parameter when you call a procedure and that parameter is not defined by using OUTPUT in the procedure definition, you get an error message. However, you can execute a procedure with output parameters and not specify OUTPUT when executing the procedure. No error is returned, but you cannot use the output value in the calling program.  
   
 ### Using the Cursor Data Type in OUTPUT Parameters  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] procedures can use the `cursor` data type only for OUTPUT parameters. If the `cursor` data type is specified for a parameter, both the VARYING and OUTPUT keywords must be specified for that parameter in the procedure definition. A parameter can be specified as only OUTPUT but if the VARYING keyword is specified in the parameter declaration, the data type must be `cursor` and the OUTPUT keyword must also be specified.  
+ [!INCLUDE[tsql](../includes/tsql-md.md)] procedures can use the `cursor` data type only for OUTPUT parameters. If the `cursor` data type is specified for a parameter, both the VARYING and OUTPUT keywords must be specified for that parameter in the procedure definition. A parameter can be specified as only OUTPUT but if the VARYING keyword is specified in the parameter declaration, the data type must be `cursor` and the OUTPUT keyword must also be specified.  
   
 > [!NOTE]  
->  The `cursor` data type cannot be bound to application variables through the database APIs such as OLE DB, ODBC, ADO, and DB-Library. Because OUTPUT parameters must be bound before an application can execute a procedure, procedures with `cursor` OUTPUT parameters cannot be called from the database APIs. These procedures can be called from [!INCLUDE[tsql](../../includes/tsql-md.md)] batches, procedures, or triggers only when the `cursor` OUTPUT variable is assigned to a [!INCLUDE[tsql](../../includes/tsql-md.md)] local `cursor` variable.  
+>  The `cursor` data type cannot be bound to application variables through the database APIs such as OLE DB, ODBC, ADO, and DB-Library. Because OUTPUT parameters must be bound before an application can execute a procedure, procedures with `cursor` OUTPUT parameters cannot be called from the database APIs. These procedures can be called from [!INCLUDE[tsql](../includes/tsql-md.md)] batches, procedures, or triggers only when the `cursor` OUTPUT variable is assigned to a [!INCLUDE[tsql](../includes/tsql-md.md)] local `cursor` variable.  
   
 ### Rules for Cursor Output Parameters  
  The following rules pertain to `cursor` output parameters when the procedure is executed:  
@@ -150,7 +150,7 @@ DECLARE @result int;
 EXECUTE @result = my_proc;  
 ```  
   
- Return codes are commonly used in control-of-flow blocks within procedures to set the return code value for each possible error situation. You can use the @@ERROR function after a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement to detect whether an error occurred during the execution of the statement.  
+ Return codes are commonly used in control-of-flow blocks within procedures to set the return code value for each possible error situation. You can use the @@ERROR function after a [!INCLUDE[tsql](../includes/tsql-md.md)] statement to detect whether an error occurred during the execution of the statement.  
   
 ### Examples of Return Codes  
  The following example shows the `usp_GetSalesYTD` procedure with error handling that sets special return code values for various errors. The following table shows the integer value that is assigned by the procedure to each possible error, and the corresponding meaning for each value.  
@@ -252,11 +252,11 @@ GO
 ```  
   
 ## See Also  
- [DECLARE @local_variable &#40;Transact-SQL&#41;](../Topic/DECLARE%20@local_variable%20\(Transact-SQL\).md)   
- [PRINT &#40;Transact-SQL&#41;](../Topic/PRINT%20\(Transact-SQL\).md)   
- [SET @local_variable &#40;Transact-SQL&#41;](../Topic/SET%20@local_variable%20\(Transact-SQL\).md)   
+ [DECLARE @local_variable &#40;Transact-SQL&#41;](~/t-sql/language-elements/declare-local-variable-transact-sql.md)   
+ [PRINT &#40;Transact-SQL&#41;](~/t-sql/language-elements/print-transact-sql.md)   
+ [SET @local_variable &#40;Transact-SQL&#41;](~/t-sql/language-elements/set-local-variable-transact-sql.md)   
  [Cursors](../../2014/database-engine/cursors.md)   
- [RETURN &#40;Transact-SQL&#41;](../Topic/RETURN%20\(Transact-SQL\).md)   
- [@@ERROR &#40;Transact-SQL&#41;](../Topic/@@ERROR%20\(Transact-SQL\).md)  
+ [RETURN &#40;Transact-SQL&#41;](~/t-sql/language-elements/return-transact-sql.md)   
+ [@@ERROR &#40;Transact-SQL&#41;](~/t-sql/functions/error-transact-sql.md)  
   
   

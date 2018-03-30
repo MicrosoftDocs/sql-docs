@@ -28,7 +28,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Change an Operator&#39;s Availability
-  This topic describes how to change an operator's schedule for receiving alert notifications in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  This topic describes how to change an operator's schedule for receiving alert notifications in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -69,7 +69,7 @@ manager: "jhubbard"
   
 #### To change an operator's availability  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -86,6 +86,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [sp_update_operator &#40;Transact-SQL&#41;](../Topic/sp_update_operator%20\(Transact-SQL\).md).  
+ For more information, see [sp_update_operator &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md).  
   
   

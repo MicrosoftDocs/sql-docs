@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
 caps.latest.revision: 44
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Web Synchronization for Merge Replication
@@ -27,11 +27,11 @@ manager: "jhubbard"
   
 -   Synchronizing data from mobile users over the Internet.  
   
--   Synchronizing data between [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] databases across a corporate firewall.  
+-   Synchronizing data between [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases across a corporate firewall.  
   
- For example, a traveling sales representative can use Web synchronization. The company, [!INCLUDE[ssSampleDBCoFull](../../../includes/sssampledbcofull-md.md)], has sales representatives that travel to various stores and suppliers throughout their regions. On longer trips the representatives stay in hotels and need a convenient way to upload sales data and download any product updates at the end of each day.  
+ For example, a traveling sales representative can use Web synchronization. The company, [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)], has sales representatives that travel to various stores and suppliers throughout their regions. On longer trips the representatives stay in hotels and need a convenient way to upload sales data and download any product updates at the end of each day.  
   
- The [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)] IT department has configured each portable computer with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and has enabled merge replication to use Web synchronization. The Merge Agent on each portable computer has an Internet URL that points to the replication components that are installed on a computer that is running [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Internet Information Services (IIS). These components synchronize the Subscriber with the Publisher. Each representative can now connect through any available Internet connection without using a remote dial-up connection, and can upload and download the appropriate data. The Internet connection uses Secure Sockets Layer (SSL); therefore, a virtual private network (VPN) is not required.  
+ The [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] IT department has configured each portable computer with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and has enabled merge replication to use Web synchronization. The Merge Agent on each portable computer has an Internet URL that points to the replication components that are installed on a computer that is running [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS). These components synchronize the Subscriber with the Publisher. Each representative can now connect through any available Internet connection without using a remote dial-up connection, and can upload and download the appropriate data. The Internet connection uses Secure Sockets Layer (SSL); therefore, a virtual private network (VPN) is not required.  
   
  For information about how to configure the components that are required for Web synchronization, see [Configure Web Synchronization](../../../2014/relational-databases/replication/configure-web-synchronization.md), [Configure IIS for Web Synchronization](../../../2014/relational-databases/replication/configure-iis-for-web-synchronization.md), and [Configure IIS 7 for Web Synchronization](../../../2014/relational-databases/replication/configure-iis-7-for-web-synchronization.md).  
   
@@ -47,9 +47,9 @@ manager: "jhubbard"
   
  Web synchronization is an option only for pull subscriptions; therefore, a Merge Agent will always run on the Subscriber. This Merge Agent can be the standard Merge Agent, the Merge Agent ActiveX control, or an application that provides synchronization through Replication Management Objects (RMO). To specify the location of the computer that is running IIS, use the **–InternetUrl** parameter for the Merge Agent.  
   
- The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Listener (Replisapi.dll) is configured on the computer that is running IIS and is responsible for handling messages that are sent to the server from the Publisher and Subscribers. Each node in the topology handles the XML data stream by using the Merge Replication Reconciler (Replrec.dll).  
+ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener (Replisapi.dll) is configured on the computer that is running IIS and is responsible for handling messages that are sent to the server from the Publisher and Subscribers. Each node in the topology handles the XML data stream by using the Merge Replication Reconciler (Replrec.dll).  
   
- [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] or a later version is required for all computers that participate in Web synchronization.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or a later version is required for all computers that participate in Web synchronization.  
   
 ### Synchronization Process  
  The following steps occur during synchronization:  
@@ -64,7 +64,7 @@ manager: "jhubbard"
   
     4.  Uploads data changes as an XML message.  
   
-2.  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Listener and Merge Replication Reconciler that are hosted on the computer that is running IIS do the following:  
+2.  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener and Merge Replication Reconciler that are hosted on the computer that is running IIS do the following:  
   
     1.  Respond to the HTTPS request.  
   

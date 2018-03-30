@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: d34c7ef8-cf77-4ffd-887f-3c4214dfd71e
 caps.latest.revision: 20
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # &lt;AgentName&gt; Agent Security
@@ -29,25 +29,25 @@ manager: "jhubbard"
  The name of each Subscriber.  
   
  **Connection to Distributor**  
- Displayed for transactional and snapshot replication. The context under which the connection to the Distributor is made. Local connections are always made using the context of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows account under which the agent runs:  
+ Displayed for transactional and snapshot replication. The context under which the connection to the Distributor is made. Local connections are always made using the context of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows account under which the agent runs:  
   
 -   For push subscriptions, the local connection is the connection to the Distributor, so this field will always display: **Impersonate '\<Domain>\\<Login\>'** or **Impersonate '\<Computer>\\<Login\>'** for push subscriptions.  
   
--   For pull subscriptions, the connection can also be made under the context of a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login. The field displays one of the following: **Use login '\<Login>'**, **Impersonate '\<Domain>\\<Login\>'** or **Impersonate '\<Computer>\\<Login\>'**. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recommends that all connections be made using the context of the Windows account.  
+-   For pull subscriptions, the connection can also be made under the context of a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login. The field displays one of the following: **Use login '\<Login>'**, **Impersonate '\<Domain>\\<Login\>'** or **Impersonate '\<Computer>\\<Login\>'**. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends that all connections be made using the context of the Windows account.  
   
  **Connection to Publisher & Distributor**  
  Displayed for merge replication. The context under which the connections to the Publisher and Distributor are made. Local connections are always made using the context of the Windows account under which the agent runs:  
   
 -   For push subscriptions, the local connection is the connection to the Publisher and Distributor, so this field will always display: **Impersonate '\<Domain>\\<Login\>'** or **Impersonate '\<Computer>\\<Login\>'** for push subscriptions.  
   
--   For pull subscriptions, the connection can also be made under the context of a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login. The field displays one of the following: **Use login '\<Login>'**, **Impersonate '\<Domain>\\<Login\>'** or **Impersonate '\<Computer>\\<Login\>'**. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recommends that all connections be made using the context of the Windows account.  
+-   For pull subscriptions, the connection can also be made under the context of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login. The field displays one of the following: **Use login '\<Login>'**, **Impersonate '\<Domain>\\<Login\>'** or **Impersonate '\<Computer>\\<Login\>'**. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends that all connections be made using the context of the Windows account.  
   
  **Connection to Subscriber**  
  The context under which the connection to the Subscriber is made. Local connections are always made using the context of the Windows account under which the agent runs:  
   
 -   For pull subscriptions, the local connection is the connection to the Subscriber, so this field will always display: **Impersonate '\<Domain>\\<Login\>'** or **Impersonate '\<Computer>\\<Login\>'** for push subscriptions.  
   
--   For push subscriptions, the connection can also be made under the context of a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login. The field displays one of the following: **Use login '\<Login>'**, **Impersonate '\<Domain>\\<Login\>'** or **Impersonate '\<Computer>\\<Login\>'**. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recommends that all connections be made using the context of the Windows account.  
+-   For push subscriptions, the connection can also be made under the context of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login. The field displays one of the following: **Use login '\<Login>'**, **Impersonate '\<Domain>\\<Login\>'** or **Impersonate '\<Computer>\\<Login\>'**. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends that all connections be made using the context of the Windows account.  
   
 ## See Also  
  [View and Modify Pull Subscription Properties](../../../2014/relational-databases/replication/view-and-modify-pull-subscription-properties.md)   

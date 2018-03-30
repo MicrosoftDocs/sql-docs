@@ -42,7 +42,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SQLXML3\SchemaCacheSize
 ```  
   
 > [!CAUTION]  
->  [!INCLUDE[ssNoteRegistry](../../../includes/ssnoteregistry-md.md)]  
+>  [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
   
  For more information about side-by-side installation, see [What's New in SQLXML 4.0 SP1](../../../2014/database-engine/dev-guide/what-s-new-in-sqlxml-4-0-sp1.md).  
   

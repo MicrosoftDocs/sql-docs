@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 caps.latest.revision: 13
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Tutorial: Format Text (Report Builder)
@@ -24,7 +24,7 @@ manager: "mblythe"
   
  In one step, you make a mistake on purpose so you can see why it is a mistake. Then you correct the mistake to achieve the desired effect.  
   
- An enhanced version of the report you create in this tutorial is available as a sample [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Report Builder report. For more information about downloading this sample report and others, see [Report Builder sample reports](http://go.microsoft.com/fwlink/?LinkId=184851).  
+ An enhanced version of the report you create in this tutorial is available as a sample [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Report Builder report. For more information about downloading this sample report and others, see [Report Builder sample reports](http://go.microsoft.com/fwlink/?LinkId=184851).  
   
 ##  <a name="BackToTop"></a> What You Will Learn  
   
@@ -55,7 +55,7 @@ manager: "mblythe"
   
 #### To create a blank report  
   
-1.  Click **Start**, point to **Programs**, point to [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]**Report Builder**, and then click **Report Builder**.  
+1.  Click **Start**, point to **Programs**, point to [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]**Report Builder**, and then click **Report Builder**.  
   
     > [!NOTE]  
     >  The **Getting Started** dialog box should appear. If it does not, from the Report Builder button, click **New**.  
@@ -75,9 +75,9 @@ manager: "mblythe"
 4.  Verify that the connection type is Microsoft SQL Server, and then in the **Connection string** box type: **Data Source = \<servername>**  
   
     > [!NOTE]  
-    >  The expression \<servername>, for example Report001, specifies a computer on which an instance of the SQL Server Database Engine is installed. This tutorial does not need specific data; it just needs a connection to a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] database. If you already have a data source connection listed under **Data Source Connections**, you can select it and go to the next procedure, "To create a dataset." For more information, see [Alternative Ways to Get a Data Connection &#40;Report Builder&#41;](../../2014/tutorials/alternative-ways-to-get-a-data-connection-report-builder.md).  
+    >  The expression \<servername>, for example Report001, specifies a computer on which an instance of the SQL Server Database Engine is installed. This tutorial does not need specific data; it just needs a connection to a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] database. If you already have a data source connection listed under **Data Source Connections**, you can select it and go to the next procedure, "To create a dataset." For more information, see [Alternative Ways to Get a Data Connection &#40;Report Builder&#41;](../../2014/tutorials/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 #### To create a dataset  
   
@@ -130,7 +130,7 @@ manager: "mblythe"
   
      The query results are the data available to display in your report.  
   
-8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ##  <a name="AddField"></a> Add a Field to the Report Design Surface  
  If you want a field from your dataset to appear in a report, your first impulse may be to drag it directly to the design surface. This exercise points out why that doesn't work and what to do instead.  

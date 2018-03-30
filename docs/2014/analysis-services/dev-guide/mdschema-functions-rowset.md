@@ -32,7 +32,7 @@ manager: "mblythe"
 |-----------------|--------------------|------------|-----------------|  
 |**FUNCTION_NAME**|**DBTYPE_WSTR**||The name of the function.|  
 |**DESCRIPTION**|**DBTYPE_WSTR**||A description of the function.|  
-|**PARAMETER_LIST**|**DBTYPE_WSTR**||A comma delimited list of parameters formatted as in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic. For example, a parameter might be Name as String.|  
+|**PARAMETER_LIST**|**DBTYPE_WSTR**||A comma delimited list of parameters formatted as in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic. For example, a parameter might be Name as String.|  
 |**RETURN_TYPE**|**DBTYPE_I4**||The **VARTYPE** of the return data type of the function.|  
 |**ORIGIN**|**DBTYPE_I4**||The origin of the function:<br /><br /> -   1 for MDX functions.<br />-   2 for user-defined functions.|  
 |**INTERFACE_NAME**|**DBTYPE_WSTR**||The name of the interface for user-defined functions<br /><br /> The group name for Multidimensional Expressions (MDX) functions.|  

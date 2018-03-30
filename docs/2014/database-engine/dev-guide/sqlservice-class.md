@@ -25,9 +25,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SqlService Class
-  The [SqlService Class](../../../2014/database-engine/dev-guide/sqlservice-class.md) represents an instance of a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service.  
+  The [SqlService Class](../../../2014/database-engine/dev-guide/sqlservice-class.md) represents an instance of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service.  
   
- The [SqlService Class](../../../2014/database-engine/dev-guide/sqlservice-class.md) is used to programmatically manage the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service. With the [SqlService Class](../../../2014/database-engine/dev-guide/sqlservice-class.md) object, you can perform the following tasks:  
+ The [SqlService Class](../../../2014/database-engine/dev-guide/sqlservice-class.md) is used to programmatically manage the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service. With the [SqlService Class](../../../2014/database-engine/dev-guide/sqlservice-class.md) object, you can perform the following tasks:  
   
 -   Connect to the service.  
   

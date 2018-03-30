@@ -24,7 +24,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Recover a Database Without Restoring Data (Transact-SQL)
-  Usually, all of the data in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database is restored before the database is recovered. However, a restore operation can recover a database without actually restoring a backup; for example, when recovering a read-only file that is consistent with the database. This is referred to as a *recovery-only restore*. When offline data is already consistent with the database and needs only to be made available, a recovery-only restore operation completes the recovery of the database and bring the data online.  
+  Usually, all of the data in a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database is restored before the database is recovered. However, a restore operation can recover a database without actually restoring a backup; for example, when recovering a read-only file that is consistent with the database. This is referred to as a *recovery-only restore*. When offline data is already consistent with the database and needs only to be made available, a recovery-only restore operation completes the recovery of the database and bring the data online.  
   
  A recovery-only restore can occur for a whole database or for one or more a files or filegroups.  
   
@@ -35,7 +35,7 @@ manager: "jhubbard"
   
 -   The database is in standby mode, and you want to make the database updatable without applying another log backup.  
   
- The [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) syntax for a recovery-only database restore is as follows:  
+ The [RESTORE](~/t-sql/statements/restore-statements-transact-sql.md) syntax for a recovery-only database restore is as follows:  
   
  RESTORE DATABASE *database_name* WITH RECOVERY  
   
@@ -44,7 +44,7 @@ manager: "jhubbard"
   
  **Example**  
   
- The following example recovers the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database in a restore operation without restoring data.  
+ The following example recovers the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] sample database in a restore operation without restoring data.  
   
 ```  
 -- Restore database using WITH RECOVERY.  
@@ -59,7 +59,7 @@ RESTORE DATABASE AdventureWorks2012
   
  A recovery-only restore operation brings the data in the offline filegroup online; no data-copy, redo, or undo phase occurs. For information about the phases of restore, see [Restore and Recovery Overview &#40;SQL Server&#41;](../../2014/database-engine/restore-and-recovery-overview-sql-server.md).  
   
- The [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) syntax for a recovery-only file restore is:  
+ The [RESTORE](~/t-sql/statements/restore-statements-transact-sql.md) syntax for a recovery-only file restore is:  
   
  RESTORE DATABASE *database_name* { FILE **=***logical_file_name* | FILEGROUP **=***logical_filegroup_name* }[ **,**...*n* ] WITH RECOVERY  
   
@@ -91,6 +91,6 @@ RESTORE DATABASE Sales FILEGROUP=SalesGroup2 WITH RECOVERY;
  [Piecemeal Restores &#40;SQL Server&#41;](../../2014/database-engine/piecemeal-restores-sql-server.md)   
  [File Restores &#40;Simple Recovery Model&#41;](../../2014/database-engine/file-restores-simple-recovery-model.md)   
  [File Restores &#40;Full Recovery Model&#41;](../../2014/database-engine/file-restores-full-recovery-model.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)  
   
   

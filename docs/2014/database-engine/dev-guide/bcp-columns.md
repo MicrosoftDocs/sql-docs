@@ -25,7 +25,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # bcp_columns
-  Sets the total number of columns found in the user file for use with a bulk copy into or out of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. [bcp_setbulkmode](../../../2014/database-engine/dev-guide/bcp-setbulkmode.md) can be used instead of bcp_columns and [bcp_colfmt](../../../2014/database-engine/dev-guide/bcp-colfmt.md).  
+  Sets the total number of columns found in the user file for use with a bulk copy into or out of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [bcp_setbulkmode](../../../2014/database-engine/dev-guide/bcp-setbulkmode.md) can be used instead of bcp_columns and [bcp_colfmt](../../../2014/database-engine/dev-guide/bcp-colfmt.md).  
   
 ## Syntax  
   
@@ -46,7 +46,7 @@ nColumns
  Is the bulk copy-enabled ODBC connection handle.  
   
  *nColumns*  
- Is the total number of columns in the user file. Even if you are preparing to bulk copy data from the user file to an [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] table and do not intend to copy all columns in the user file, you must still set *nColumns* to the total number of user-file columns.  
+ Is the total number of columns in the user file. Even if you are preparing to bulk copy data from the user file to an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table and do not intend to copy all columns in the user file, you must still set *nColumns* to the total number of user-file columns.  
   
 ## Returns  
  SUCCEED or FAIL.  

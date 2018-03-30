@@ -19,7 +19,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Models (Master Data Services)
-  Models are the highest level of data organization in [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. A model defines the structure of data in your master data management solution. A model contains the following objects:  
+  Models are the highest level of data organization in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. A model defines the structure of data in your master data management solution. A model contains the following objects:  
   
 -   Entities  
   
@@ -29,7 +29,7 @@ manager: "jhubbard"
   
 -   Collections  
   
- Models organize the structure of your master data. Your [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] implementation can have one or many models that each group similar kinds of data. In general, master data can be categorized in one of four ways: people, places, things, or concepts. For example, you can create a Product model to contain product-related data or a Customer model to contain customer-related data.  
+ Models organize the structure of your master data. Your [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] implementation can have one or many models that each group similar kinds of data. In general, master data can be categorized in one of four ways: people, places, things, or concepts. For example, you can create a Product model to contain product-related data or a Customer model to contain customer-related data.  
   
  You can assign users and groups permission to view and update objects within the model. If you do not give permission to the model, it is not displayed.  
   
@@ -47,9 +47,9 @@ manager: "jhubbard"
 > [!NOTE]  
 >  Derived hierarchies are also model objects, but they are not shown in the image. Derived hierarchies are derived from the domain-based attribute relationships that exist between entities. See [Derived Hierarchies &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md) for more information.  
   
- Master data is the data that is contained in the model objects. In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], master data is stored as members in an entity.  
+ Master data is the data that is contained in the model objects. In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], master data is stored as members in an entity.  
   
- Model objects are maintained in the **System Administration** functional area of the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] user interface.  
+ Model objects are maintained in the **System Administration** functional area of the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] user interface.  
   
 ## Model Example  
  In the following example, the objects in the Product model logically group product-related data.  

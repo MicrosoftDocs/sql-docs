@@ -28,7 +28,7 @@ manager: "jhubbard"
 2.  **To unpack a DAC, using:**  [Unpack Data-tier Application Dialog](#UnpackDACDial), [Examine the Contents of a DAC Package](#ExamDACPack)  
   
 ##  <a name="Security"></a> Security  
- We recommend that you do not deploy a DAC package from unknown or untrusted sources. Such DACs could contain malicious code that might execute unintended [!INCLUDE[tsql](../../includes/tsql-md.md)] code or cause errors by modifying the schema. Before you use a DAC from an unknown or untrusted source, deploy it on an isolated test instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], unpack the DAC and examine the code, such as stored procedures or other user-defined code.  
+ We recommend that you do not deploy a DAC package from unknown or untrusted sources. Such DACs could contain malicious code that might execute unintended [!INCLUDE[tsql](../includes/tsql-md.md)] code or cause errors by modifying the schema. Before you use a DAC from an unknown or untrusted source, deploy it on an isolated test instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)], unpack the DAC and examine the code, such as stored procedures or other user-defined code.  
   
 ##  <a name="UnpackDACDial"></a> Unpack Data-tier Application Dialog  
  **To Unpack a DAC Package File**  

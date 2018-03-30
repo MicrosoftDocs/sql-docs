@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 6a586659-5c2b-453b-8f40-a3a469277b17
 caps.latest.revision: 5
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Searching for Reports and Other Items (Report Builder  and SSRS)
@@ -28,7 +28,7 @@ manager: "mblythe"
 -   To search for specific text within a report, use the toolbar at the top of the report.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## See Also  
  [Finding and Viewing Reports in Report Manager &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/finding-and-viewing-reports-in-report-manager-report-builder-and-ssrs.md)   

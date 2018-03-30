@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: 8a487497-c207-45b2-8c92-87c58cc68716
 caps.latest.revision: 18
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # ReencryptSecureInformation Method (WMI MSReportServer_ConfigurationSetting)
@@ -56,7 +56,7 @@ public void ReencryptSecureInformation (out Int32 HRESULT, out string[] Extended
  If this method is run on a computer in a scale-out deployment, each computer in the scale-out deployment will need to be initialized again.  
   
 ## Requirements  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../includes/ssrswminmspca-md.md)]  
   
 ## See Also  
  [MSReportServer_ConfigurationSetting Members](../../2014/reporting-services/msreportserver-configurationsetting-members.md)  

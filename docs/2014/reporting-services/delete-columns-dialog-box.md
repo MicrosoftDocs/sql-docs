@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 44587147-1013-4937-a26c-4fd023eea578
 caps.latest.revision: 7
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Delete Columns Dialog Box

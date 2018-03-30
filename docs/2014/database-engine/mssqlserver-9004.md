@@ -31,7 +31,7 @@ manager: "jhubbard"
 |Message Text|An error occurred while processing the log for database '%.*ls'.  If possible, restore from backup. If a backup is not available, it might be necessary to rebuild the log.|  
   
 ## Explanation  
- An error was encountered while processing the log during rollback, recovery, or replication. This could indicate an error detected by the operating system-or an internal consistency error detected by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ An error was encountered while processing the log during rollback, recovery, or replication. This could indicate an error detected by the operating system-or an internal consistency error detected by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## User Action  
  One of the following actions will correct this error:  

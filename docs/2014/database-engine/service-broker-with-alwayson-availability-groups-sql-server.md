@@ -19,7 +19,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Service Broker with AlwaysOn Availability Groups (SQL Server)
-  This topic contains information about configuring Service Broker to work with [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  This topic contains information about configuring Service Broker to work with [!INCLUDE[ssHADR](../includes/sshadr-md.md)] in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
  **In This Topic:**  
   
@@ -35,14 +35,14 @@ manager: "jhubbard"
   
 2.  **Ensure that the Service Broker endpoint exists and is correctly configured.**  
   
-     On every instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that hosts an availability replica for the availability group, configure the Service Broker endpoint, as follows:  
+     On every instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that hosts an availability replica for the availability group, configure the Service Broker endpoint, as follows:  
   
     -   Set LISTENER_IP to 'ALL'. This setting enables connections on any valid IP address that is bound to the availability group listener.  
   
     -   Set the Service Broker PORT to the same port number on all the host server instances.  
   
         > [!TIP]  
-        >  To view the port number of the Service Broker endpoint on a given server instance, query the **port** column of the [sys.tcp_endpoints](../Topic/sys.tcp_endpoints%20\(Transact-SQL\).md) catalog view, where **type_desc** = 'SERVICE_BROKER'.  
+        >  To view the port number of the Service Broker endpoint on a given server instance, query the **port** column of the [sys.tcp_endpoints](~/relational-databases/system-catalog-views/sys-tcp-endpoints-transact-sql.md) catalog view, where **type_desc** = 'SERVICE_BROKER'.  
   
      The following example creates a Windows authenticated Service Broker endpoint that uses the default Service Broker port (4022) and listens to all valid IP addresses.  
   
@@ -53,7 +53,7 @@ manager: "jhubbard"
         FOR SERVICE_BROKER (AUTHENTICATION = WINDOWS)  
     ```  
   
-     For more information, see [CREATE ENDPOINT &#40;Transact-SQL&#41;](../Topic/CREATE%20ENDPOINT%20\(Transact-SQL\).md).  
+     For more information, see [CREATE ENDPOINT &#40;Transact-SQL&#41;](~/t-sql/statements/create-endpoint-transact-sql.md).  
   
 3.  **Grant CONNECT permission on the endpoint.**  
   
@@ -65,14 +65,14 @@ manager: "jhubbard"
     GRANT CONNECT ON ENDPOINT::[broker_endpoint] TO [PUBLIC]  
     ```  
   
-     For more information, see [GRANT &#40;Transact-SQL&#41;](../Topic/GRANT%20\(Transact-SQL\).md).  
+     For more information, see [GRANT &#40;Transact-SQL&#41;](~/t-sql/statements/grant-transact-sql.md).  
   
 4.  **Ensure that msdb contains either an AutoCreatedLocal route or a route to the specific service.**  
   
     > [!NOTE]  
     >  By default, each user database, including **msdb**, contains the route **AutoCreatedLocal**. This route matches any service name and broker instance and specifies that the message should be delivered within the current instance. **AutoCreatedLocal** has lower priority than routes that explicitly specify a specific service that communicates with a remote instance.  
   
-     For information about creating routes, see [Service Broker Routing Examples](http://msdn.microsoft.com/library/ms166090\(SQL.105\).aspx) (in the [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] version of Books Online) and [CREATE ROUTE &#40;Transact-SQL&#41;](../Topic/CREATE%20ROUTE%20\(Transact-SQL\).md).  
+     For information about creating routes, see [Service Broker Routing Examples](http://msdn.microsoft.com/library/ms166090\(SQL.105\).aspx) (in the [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] version of Books Online) and [CREATE ROUTE &#40;Transact-SQL&#41;](~/t-sql/statements/create-route-transact-sql.md).  
   
 ##  <a name="SendRemoteMessages"></a> Requirements for Sending Messages to a Remote Service in an Availability Group  
   
@@ -93,17 +93,17 @@ manager: "jhubbard"
   
     ```  
   
-     For more information, see [CREATE ROUTE &#40;Transact-SQL&#41;](../Topic/CREATE%20ROUTE%20\(Transact-SQL\).md).  
+     For more information, see [CREATE ROUTE &#40;Transact-SQL&#41;](~/t-sql/statements/create-route-transact-sql.md).  
   
 2.  **Ensure that msdb contains either an AutoCreatedLocal route or a route to the specific service.** (For more information, see [Requirements for a Service in an Availability Group to Receive Remote Messages](#ReceiveRemoteMessages), earlier in this topic.)  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
--   [CREATE ENDPOINT &#40;Transact-SQL&#41;](../Topic/CREATE%20ENDPOINT%20\(Transact-SQL\).md)  
+-   [CREATE ENDPOINT &#40;Transact-SQL&#41;](~/t-sql/statements/create-endpoint-transact-sql.md)  
   
--   [CREATE ROUTE &#40;Transact-SQL&#41;](../Topic/CREATE%20ROUTE%20\(Transact-SQL\).md)  
+-   [CREATE ROUTE &#40;Transact-SQL&#41;](~/t-sql/statements/create-route-transact-sql.md)  
   
--   [GRANT &#40;Transact-SQL&#41;](../Topic/GRANT%20\(Transact-SQL\).md)  
+-   [GRANT &#40;Transact-SQL&#41;](~/t-sql/statements/grant-transact-sql.md)  
   
 -   [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](../../2014/database-engine/create-or-configure-an-availability-group-listener-sql-server.md).  
   

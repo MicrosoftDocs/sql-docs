@@ -23,7 +23,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # User Defined Functions and Stored Procedures
-  With ADOMD.NET server objects, you can create user defined function (UDF) or stored procedures for [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] that interact with metadata and data from the server. These in-process methods are called through Multidimensional Expressions (MDX) or Data Mining Extensions (DMX) statements to provide added functionality without the latencies associated with network communications.  
+  With ADOMD.NET server objects, you can create user defined function (UDF) or stored procedures for [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] that interact with metadata and data from the server. These in-process methods are called through Multidimensional Expressions (MDX) or Data Mining Extensions (DMX) statements to provide added functionality without the latencies associated with network communications.  
   
 ## UDF Examples  
  A UDF is a method that can be called in the context of an MDX or DMX statement, can take any number of parameters, and can return any type of data.  
@@ -92,7 +92,7 @@ WHERE [Measures].[Reseller Freight Cost]
 ### Applying a Filter to a Tuple  
  In the following example, a UDF is defined that takes a set, and applies a filter to each tuple in the set, using the Expression object. Any tuples that conform to the filter will be added to a set that is returned.  
   
- [!code-csharp[Adomd.NetServer#FilterSet](../../../snippets/csharp/SQL14/adomd.net/adomd.netserver/cs/class1.cs#filterset)]  
+ [!code-csharp[Adomd.NetServer#FilterSet](../../snippets/csharp/SQL14/adomd.net/adomd.netserver/cs/class1.cs#filterset)]  
   
  The previous example is called in the following MDX example, which filters the set to cities with names beginning with 'A'.  
   
@@ -105,6 +105,6 @@ From [Adventure Works]
 ## Stored Procedure Example  
  In the following example, an MDX-based stored procedure uses AMO to create partitions, if needed, for Internet Sales.  
   
- [!code-csharp[Adomd.NetServer#CreateInternetSalesMeasureGroupPartitions](../../../snippets/csharp/SQL14/adomd.net/adomd.netserver/cs/class1.cs#createinternetsalesmeasuregrouppartitions)]  
+ [!code-csharp[Adomd.NetServer#CreateInternetSalesMeasureGroupPartitions](../../snippets/csharp/SQL14/adomd.net/adomd.netserver/cs/class1.cs#createinternetsalesmeasuregrouppartitions)]  
   
   

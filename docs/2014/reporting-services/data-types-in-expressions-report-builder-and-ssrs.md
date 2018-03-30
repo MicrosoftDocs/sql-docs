@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 caps.latest.revision: 9
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Data Types in Expressions (Report Builder and SSRS)
@@ -21,7 +21,7 @@ manager: "mblythe"
  For more information about display formats, see [Formatting Report Items &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/formatting-report-items-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## Report Definition Language (RDL) Data Types and Common Language Runtime (CLR) Data Types  
  Values that are specified in an RDL file must be an RDL data type. When the report is compiled and processed, RDL data types are converted to CLR data types. The following table displays the conversion, which is marked Default:  
@@ -63,7 +63,7 @@ manager: "mblythe"
   
 -   Create a calculated field based on an existing report dataset field by writing an expression that converts all the data in one result set column to a new column with a different data type. For example, the following expression converts the field Year from an integer value to a string value: `=CStr(Fields!Year.Value)`. For more information, see [Add, Edit, Refresh Fields in the Report Data Pane &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   
--   Check whether the data processing extension you are using includes metadata for retrieving preformatted data. For example, a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX query includes a FORMATTED_VALUE extended property for cube values that have already been formatted when processing the cube. For more information, see [Extended Field Properties for an Analysis Services Database &#40;SSRS&#41;](../../2014/reporting-services/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
+-   Check whether the data processing extension you are using includes metadata for retrieving preformatted data. For example, a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] MDX query includes a FORMATTED_VALUE extended property for cube values that have already been formatted when processing the cube. For more information, see [Extended Field Properties for an Analysis Services Database &#40;SSRS&#41;](../../2014/reporting-services/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
 ## Understanding Parameter Data Types  
  Report parameters must be one of five data types: Boolean, DateTime, Integer, Float, or Text (also known as String). When a dataset query includes query parameters, report parameters are automatically created and linked to the query parameters. The default data type for a report parameter is String. To change the default data type of a report parameter, select the correct value from the **Data type** drop-down list on the **General** page of the **Report Parameter Properties** dialog box.  
@@ -120,7 +120,7 @@ manager: "mblythe"
   
 -   Add a new calculated field to the report dataset that uses an expression to extract parts of the string. For more information, see [Add, Edit, Refresh Fields in the Report Data Pane &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   
--   Change the report dataset query to use [!INCLUDE[tsql](../../includes/tsql-md.md)] functions to extract the date and time values independently to create separate columns. The following example shows how to use the function `DatePart` to add a column for the year and a column for the UTC time zone converted to minutes:  
+-   Change the report dataset query to use [!INCLUDE[tsql](../includes/tsql-md.md)] functions to extract the date and time values independently to create separate columns. The following example shows how to use the function `DatePart` to add a column for the year and a column for the UTC time zone converted to minutes:  
   
      `SELECT`  
   
@@ -136,9 +136,9 @@ manager: "mblythe"
   
      `2008-07-01 06:05:07             2008                   480`  
   
- For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database data types, see [Data Types &#40;Transact-SQL&#41;](../Topic/Data%20Types%20\(Transact-SQL\).md), and [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../Topic/Date%20and%20Time%20Data%20Types%20and%20Functions%20\(Transact-SQL\).md) in [SQL Server Books Online](http://go.microsoft.com/fwlink/?linkid=120955).  
+ For more information about [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database data types, see [Data Types &#40;Transact-SQL&#41;](~/t-sql/data-types/data-types-transact-sql.md), and [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](~/t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) in [SQL Server Books Online](http://go.microsoft.com/fwlink/?linkid=120955).  
   
- For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data types, see [Data Types in Analysis Services](../../2014/analysis-services/dev-guide/data-types-in-analysis-services.md) in [SQL Server Books Online](http://go.microsoft.com/fwlink/?linkid=120955).  
+ For more information about [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data types, see [Data Types in Analysis Services](../../2014/analysis-services/dev-guide/data-types-in-analysis-services.md) in [SQL Server Books Online](http://go.microsoft.com/fwlink/?linkid=120955).  
   
 ## See Also  
  [Formatting Report Items &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/formatting-report-items-report-builder-and-ssrs.md)  

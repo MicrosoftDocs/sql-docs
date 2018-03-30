@@ -20,9 +20,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Format Files for Importing or Exporting Data (SQL Server)
-  When you bulk import data into a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table or bulk export data from a table, you can use a *format file* to store all the format information that is required to bulk export or bulk import data. This includes format information for each field in a data file relative to that table.  
+  When you bulk import data into a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] table or bulk export data from a table, you can use a *format file* to store all the format information that is required to bulk export or bulk import data. This includes format information for each field in a data file relative to that table.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supports two types of format files: XML formats and non-XML format files. Both non-XML format files and XML format files contain descriptions of every field in a data file, and XML format files also contain descriptions of the corresponding table columns. Generally, XML and non-XML format files are interchangeable. However, we recommend that you use the XML syntax for new format files because they provide several advantages over non-XML format files. For more information, see [XML Format Files &#40;SQL Server&#41;](../../2014/database-engine/xml-format-files-sql-server.md).  
+ [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] supports two types of format files: XML formats and non-XML format files. Both non-XML format files and XML format files contain descriptions of every field in a data file, and XML format files also contain descriptions of the corresponding table columns. Generally, XML and non-XML format files are interchangeable. However, we recommend that you use the XML syntax for new format files because they provide several advantages over non-XML format files. For more information, see [XML Format Files &#40;SQL Server&#41;](../../2014/database-engine/xml-format-files-sql-server.md).  
   
  
   
@@ -33,13 +33,13 @@ manager: "jhubbard"
 -   Enables you to bulk import data without having to add or delete unnecessary data or to reorder existing data in the data file. Format files are particularly useful when a mismatch exists between fields in the data file and columns in the table.  
   
 ##  <a name="ExamplesOfFFs"></a> Examples of Format Files  
- The following examples show the layout of a non-XML format file and of an XML format file. These format files correspond to the `HumanResources.myTeam` table in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database. This table contains four columns: `EmployeeID`, `Name`, `Title`, and `ModifiedDate`.  
+ The following examples show the layout of a non-XML format file and of an XML format file. These format files correspond to the `HumanResources.myTeam` table in the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] sample database. This table contains four columns: `EmployeeID`, `Name`, `Title`, and `ModifiedDate`.  
   
 > [!NOTE]  
 >  For information about this table and how to create it, see [HumanResources.myTeam Sample Table &#40;SQL Server&#41;](../../2014/database-engine/humanresources-myteam-sample-table-sql-server.md).  
   
 ### A. Using a non-XML format file  
- The following non-XML format file uses the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native data format for the `HumanResources.myTeam` table. This format file was created by using the following `bcp` command.  
+ The following non-XML format file uses the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] native data format for the `HumanResources.myTeam` table. This format file was created by using the following `bcp` command.  
   
 ```  
 bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Fmt -n -T   
@@ -56,7 +56,7 @@ The contents of this format file are as follows: 9.0
  
   
 ### B. Using an XML format file  
- The following XML format file uses the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native data format for the `HumanResources.myTeam` table. This format file was created by using the following `bcp` command.  
+ The following XML format file uses the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] native data format for the `HumanResources.myTeam` table. This format file was created by using the following `bcp` command.  
   
 ```  
 bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T   

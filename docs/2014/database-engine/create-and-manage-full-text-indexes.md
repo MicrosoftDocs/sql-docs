@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
 caps.latest.revision: 20
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Create and Manage Full-Text Indexes
-  The information in full-text indexes is used by the Full-Text Engine to compile full-text queries that can quickly search a table for particular words or combinations of words. A full-text index stores information about significant words and their location within one or more columns of a database table. A full-text index is a special type of token-based functional index that is built and maintained by the Full-Text Engine for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The process of building a full-text index differs from building other types of indexes. Instead of constructing a B-tree structure based on a value stored in a particular row, the Full-Text Engine builds an inverted, stacked, compressed index structure based on individual tokens from the text being indexed.  The size of a full-text index is limited only by the available memory resources of the computer on which the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running.  
+  The information in full-text indexes is used by the Full-Text Engine to compile full-text queries that can quickly search a table for particular words or combinations of words. A full-text index stores information about significant words and their location within one or more columns of a database table. A full-text index is a special type of token-based functional index that is built and maintained by the Full-Text Engine for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. The process of building a full-text index differs from building other types of indexes. Instead of constructing a B-tree structure based on a value stored in a particular row, the Full-Text Engine builds an inverted, stacked, compressed index structure based on individual tokens from the text being indexed.  The size of a full-text index is limited only by the available memory resources of the computer on which the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is running.  
   
- Beginning in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], the full-text indexes are integrated with the Database Engine, instead of residing in the file system as in previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a new database, the full-text catalog is now a virtual object that does not belong to any filegroup; it is merely a logical concept that refers to a group of the full-text indexes. Note, however, that during upgrade of a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database, any full-text catalog that contains data files, a new filegroup is created; for more information, see [Upgrade Full-Text Search](../../2014/database-engine/upgrade-full-text-search.md).  
+ Beginning in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], the full-text indexes are integrated with the Database Engine, instead of residing in the file system as in previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For a new database, the full-text catalog is now a virtual object that does not belong to any filegroup; it is merely a logical concept that refers to a group of the full-text indexes. Note, however, that during upgrade of a [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] database, any full-text catalog that contains data files, a new filegroup is created; for more information, see [Upgrade Full-Text Search](../../2014/database-engine/upgrade-full-text-search.md).  
   
 > [!NOTE]  
->  In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions, the Full-Text Engine resides in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process, rather than in a separate service. Integrating the Full-Text Engine into the Database Engine improves full-text manageability, optimization of mixed query, and overall performance.  
+>  In [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] and later versions, the Full-Text Engine resides in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process, rather than in a separate service. Integrating the Full-Text Engine into the Database Engine improves full-text manageability, optimization of mixed query, and overall performance.  
   
  Only one full-text index is allowed per table. For a full-text index to be created on a table, the table must have a single, unique nonnull column. You can build a full-text index on columns of type `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml`, `varbinary`, and `varbinary(max)` can be indexed for full-text search. Creating a full-text index on a column whose data type is  `varbinary`, `varbinary(max)`, `image`, or `xml` requires that you specify a type column. A *type column* is a table column in which you store the file extension (.doc, .pdf, .xls, and so forth) of the document in each row.  
   
@@ -32,20 +32,20 @@ manager: "jhubbard"
 ##  <a name="tasks"></a> Common Tasks  
  **To create a full-text index**  
   
--   [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../Topic/CREATE%20FULLTEXT%20INDEX%20\(Transact-SQL\).md)  
+-   [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-fulltext-index-transact-sql.md)  
   
  **To alter a full-text index**  
   
--   [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../Topic/ALTER%20FULLTEXT%20INDEX%20\(Transact-SQL\).md)  
+-   [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-fulltext-index-transact-sql.md)  
   
  **To drop a full-text index**  
   
--   [DROP FULLTEXT INDEX &#40;Transact-SQL&#41;](../Topic/DROP%20FULLTEXT%20INDEX%20\(Transact-SQL\).md)  
+-   [DROP FULLTEXT INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/drop-fulltext-index-transact-sql.md)  
   
  [In This Topic](#top)  
   
 ##  <a name="structure"></a> Full-Text Index Structure  
- A good understanding of the structure of a full-text index will help you understand how the Full-Text Engine works. This topic uses the following excerpt of the **Document** table in [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] as an example table. This excerpt shows only two columns, the **DocumentID** column and the **Title** column, and three rows from the table.  
+ A good understanding of the structure of a full-text index will help you understand how the Full-Text Engine works. This topic uses the following excerpt of the **Document** table in [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] as an example table. This excerpt shows only two columns, the **DocumentID** column and the **Title** column, and three rows from the table.  
   
  For this example, we will assume that a full-text index has been created on the **Title** column.  
   
@@ -84,7 +84,7 @@ manager: "jhubbard"
   
  The **ColId** column contains a value that corresponds to a particular column that is full-text indexed.  
   
- The `DocId` column contains values for an eight-byte integer that maps to a particular full-text key value in a full-text indexed table. This mapping is necessary when the full-text key is not an integer data type. In such cases, mappings between full-text key values and `DocId` values are maintained in a separate table called the DocId Mapping table. To query for these mappings use the [sp_fulltext_keymappings](../Topic/sp_fulltext_keymappings%20\(Transact-SQL\).md) system stored procedure. To satisfy a search condition, DocId values from the above table need to be joined with the DocId Mapping table to retrieve rows from the base table being queried. If the full-text key value of the base table is an integer type, the value directly serves as the DocId and no mapping is necessary. Therefore, using integer full-text key values can help optimize full-text queries.  
+ The `DocId` column contains values for an eight-byte integer that maps to a particular full-text key value in a full-text indexed table. This mapping is necessary when the full-text key is not an integer data type. In such cases, mappings between full-text key values and `DocId` values are maintained in a separate table called the DocId Mapping table. To query for these mappings use the [sp_fulltext_keymappings](~/relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md) system stored procedure. To satisfy a search condition, DocId values from the above table need to be joined with the DocId Mapping table to retrieve rows from the base table being queried. If the full-text key value of the base table is an integer type, the value directly serves as the DocId and no mapping is necessary. Therefore, using integer full-text key values can help optimize full-text queries.  
   
  The **Occurrence** column contains an integer value. For each DocId value, there is a list of occurrence values that correspond to the relative word offsets of the particular keyword within that DocId. Occurrence values are useful in determining phrase or proximity matches, for example, phrases have numerically adjacent occurrence values. They are also useful in computing relevance scores; for example, the number of occurrences of a keyword in a DocId may be used in scoring.  
   
@@ -97,7 +97,7 @@ manager: "jhubbard"
 |----------------|-----------|  
 |3|Rear Reflector|  
   
- In the following example, which shows Fragment 2, the fragment contains newer data about DocId 3 compared to Fragment 1. Therefore, when the user queries for "Rear Reflector" the data from Fragment 2 is used for DocId 3. Each fragment is marked with a creation timestamp that can be queried by using the [sys.fulltext_index_fragments](../Topic/sys.fulltext_index_fragments%20\(Transact-SQL\).md) catalog view.  
+ In the following example, which shows Fragment 2, the fragment contains newer data about DocId 3 compared to Fragment 1. Therefore, when the user queries for "Rear Reflector" the data from Fragment 2 is used for DocId 3. Each fragment is marked with a creation timestamp that can be queried by using the [sys.fulltext_index_fragments](~/relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql.md) catalog view.  
   
  **Fragment 2**  
   
@@ -106,7 +106,7 @@ manager: "jhubbard"
 |Rear|1|3|1|  
 |Reflector|1|3|2|  
   
- As can be seen from Fragment 2, full-text queries need to query each fragment internally and discard older entries. Therefore, too many full-text index fragments in the full-text index can lead to substantial degradation in query performance. To reduce the number of fragments, reorganize the fulltext catalog by using the REORGANIZE option of the [ALTER FULLTEXT CATALOG](../Topic/ALTER%20FULLTEXT%20CATALOG%20\(Transact-SQL\).md)[!INCLUDE[tsql](../../includes/tsql-md.md)] statement. This statement performs a *master merge*, which merges the fragments into a single larger fragment and removes all obsolete entries from the full-text index.  
+ As can be seen from Fragment 2, full-text queries need to query each fragment internally and discard older entries. Therefore, too many full-text index fragments in the full-text index can lead to substantial degradation in query performance. To reduce the number of fragments, reorganize the fulltext catalog by using the REORGANIZE option of the [ALTER FULLTEXT CATALOG](~/t-sql/statements/alter-fulltext-catalog-transact-sql.md)[!INCLUDE[tsql](../includes/tsql-md.md)] statement. This statement performs a *master merge*, which merges the fragments into a single larger fragment and removes all obsolete entries from the full-text index.  
   
  After being reorganized, the example index would contain the following rows:  
   

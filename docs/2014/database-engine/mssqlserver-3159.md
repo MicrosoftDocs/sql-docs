@@ -23,7 +23,7 @@ manager: "jhubbard"
   
 |||  
 |-|-|  
-|Product Name|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|Product Name|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|  
 |Event ID|3159|  
 |Event Source|MSSQLSERVER|  
 |Component|SQLEngine|  
@@ -31,11 +31,11 @@ manager: "jhubbard"
 |Message Text|The tail of the log for the database "%ls" has not been backed up. Use BACKUP LOG WITH NORECOVERY to back up the log if it contains work that you do not want to lose. Use the WITH REPLACE or WITH STOPAT clause of the RESTORE statement to just overwrite the contents of the log.|  
   
 ## Explanation  
- In most cases, under the full or bulk-logged recovery models, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requires that you back up the tail of the log to capture the log records that have not yet been backed up. A log backup taken of the tail of the log just before a restore operation is called a tail-log backup.  
+ In most cases, under the full or bulk-logged recovery models, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] requires that you back up the tail of the log to capture the log records that have not yet been backed up. A log backup taken of the tail of the log just before a restore operation is called a tail-log backup.  
   
  When you are recovering a database to the point of a failure, the tail-log backup is the last backup of interest in the recovery plan. If you cannot back up the tail of the log, you can recover a database only to the end of the last backup that was created before the failure.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usually requires that you take a tail-log backup before you start to restore a database. The tail-log backup prevents work loss and keeps the log chain intact. However, not all restore scenarios require a tail-log backup. You do not have to have a tail-log backup if the recovery point is included in an earlier log backup, or if you are moving or replacing (overwriting) the database and do not need to restore it to a point of time after the most recent backup. Also, if the log files are damaged and a tail-log backup cannot be created, you must restore the database without using a tail-log backup. Any transactions committed after the latest log backup are lost. For more information, see "Restoring Without Using a Tail-Log Backup," later in this topic.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usually requires that you take a tail-log backup before you start to restore a database. The tail-log backup prevents work loss and keeps the log chain intact. However, not all restore scenarios require a tail-log backup. You do not have to have a tail-log backup if the recovery point is included in an earlier log backup, or if you are moving or replacing (overwriting) the database and do not need to restore it to a point of time after the most recent backup. Also, if the log files are damaged and a tail-log backup cannot be created, you must restore the database without using a tail-log backup. Any transactions committed after the latest log backup are lost. For more information, see "Restoring Without Using a Tail-Log Backup," later in this topic.  
   
 > [!CAUTION]  
 >  REPLACE should be used rarely, and only after careful consideration.  

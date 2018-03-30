@@ -75,7 +75,7 @@ manager: "mblythe"
   
 |||  
 |-|-|  
-|**DirectQuery only**|For the  **Impersonation Settings** property, specify the account that will be used to connect to the SQL Server data source.<br /><br /> If you use the value, **ImpersonateCurrentUser**, the instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] that hosts the model will pass the credentials of the current user of the model to the SQL Server database.|  
+|**DirectQuery only**|For the  **Impersonation Settings** property, specify the account that will be used to connect to the SQL Server data source.<br /><br /> If you use the value, **ImpersonateCurrentUser**, the instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] that hosts the model will pass the credentials of the current user of the model to the SQL Server database.|  
 |**Hybrid mode**|For the **Impersonation Settings** property, specify the account that will be used to access the data in the SQL Server data source.<br /><br /> This setting does not affect the credentials that are used to process the cache used by the model.|  
   
  **Step 7. Deploy the model**  
@@ -91,7 +91,7 @@ manager: "mblythe"
   
  **Step 8. Verify deployed model**  
   
- In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], open the instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] where you deployed the model. Right-click the name of the database and select **Properties**.  
+ In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], open the instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] where you deployed the model. Right-click the name of the database and select **Properties**.  
   
 -   The property, **DirectQueryMode**, was set when you defined the deployment properties.  
   
@@ -103,7 +103,7 @@ manager: "mblythe"
  **DirectQuery Only**  
  This option is preferred when you want to guarantee a single source of data, or when your data is too large to fit in memory. If you are working with a very large relational data source, during design time you can create the model by using some subset of the data. When you deploy the model in DirectQuery only mode, you can edit the data source definition to include all the required data.  
   
- This option is also preferred if you want to use the security provided by the relational data source to control user access to data. With cached tabular models, you can also use [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] roles to control data access, but the data stored in the cache must also be secured. You should always use this option if your security context requires that data should never be cached.  
+ This option is also preferred if you want to use the security provided by the relational data source to control user access to data. With cached tabular models, you can also use [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] roles to control data access, but the data stored in the cache must also be secured. You should always use this option if your security context requires that data should never be cached.  
   
  The following table describes the possible deployment outcomes for DirectQuery only mode:  
   

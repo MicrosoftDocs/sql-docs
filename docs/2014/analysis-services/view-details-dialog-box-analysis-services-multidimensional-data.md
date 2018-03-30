@@ -18,11 +18,11 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # View Details Dialog Box (Analysis Services - Multidimensional Data)
-  Use the **View Details** dialog box in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] and [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to view additional details about a message or operation in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. You can display the **View Details** dialog box by  
+  Use the **View Details** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] and [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to view additional details about a message or operation in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. You can display the **View Details** dialog box by  
   
 -   Double-clicking an item in **Status tree view** of the **Process Progress** dialog box, or selecting an item in **Status tree view** of the **Process Progress** dialog box and clicking **View Details**.  
   
--   Double-clicking an item in **Status tree view** of the **Deployment Progress** window in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+-   Double-clicking an item in **Status tree view** of the **Deployment Progress** window in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 ## Options  
  **Details**  

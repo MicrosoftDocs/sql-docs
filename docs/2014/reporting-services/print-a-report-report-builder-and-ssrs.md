@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: b96936c9-c387-41a9-8c19-6eb325769ffd
 caps.latest.revision: 6
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Print a Report (Report Builder and SSRS)
@@ -34,7 +34,7 @@ manager: "mblythe"
  For more information about report paging, see [Pagination in Reporting Services &#40;Report Builder  and SSRS&#41;](../../2014/reporting-services/pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ### To print a report in Report Builder  
   
@@ -80,7 +80,7 @@ manager: "mblythe"
   
 1.  Right-click outside of the report body and click **Report Properties**.  
   
-2.  In **Page Setup**, select a value from the **Paper Size** list. Each option populates the **Width** and **Height** properties. You can also specify a custom size by typing numeric values in the **Width** and **Height** boxes. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+2.  In **Page Setup**, select a value from the **Paper Size** list. Each option populates the **Width** and **Height** properties. You can also specify a custom size by typing numeric values in the **Width** and **Height** boxes. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
     > [!NOTE]  
     >  Size values have a default unit based on the user's locale settings. To designate a different unit, type a physical unit designator such as cm, mm, pt, or pc after the numeric value.  

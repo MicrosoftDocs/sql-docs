@@ -35,21 +35,21 @@ helpviewer_keywords:
 ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 caps.latest.revision: 93
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Discontinued Database Engine Functionality in SQL Server 2014
-  This topic describes the [!INCLUDE[ssDE](../../includes/ssde-md.md)] features that are no longer available in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  This topic describes the [!INCLUDE[ssDE](../includes/ssde-md.md)] features that are no longer available in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
-## Discontinued Features in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
- The following table lists features that were removed in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
+## Discontinued Features in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+ The following table lists features that were removed in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
 |Category|Discontinued feature|Replacement|  
 |--------------|--------------------------|-----------------|  
-|Compatibility level|90 compatibility level|Databases must be set to at least compatibility level 100. When a database with a compatibility level of less than 100 is upgraded to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], the compatibility level of the database is set to 100 during the upgrade operation.|  
+|Compatibility level|90 compatibility level|Databases must be set to at least compatibility level 100. When a database with a compatibility level of less than 100 is upgraded to [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], the compatibility level of the database is set to 100 during the upgrade operation.|  
   
-## Discontinued Features in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
- The following table lists features that were removed in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+## Discontinued Features in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+ The following table lists features that were removed in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
   
 |Category|Discontinued feature|Replacement|  
 |--------------|--------------------------|-----------------|  
@@ -67,7 +67,7 @@ manager: "jhubbard"
 |Query hints|`FASTFIRSTROW` hint|`OPTION (FAST` *n* `)`.|  
 |Remote servers|The ability for users to create new remote servers by using `sp_addserver` is discontinued. `sp_addserver` with the 'local' option remains available. Remote servers preserved during upgrade or created by replication can be used.|Replace remote servers by using linked servers.|  
 |Security|`sp_dropalias`|Replace aliases with a combination of user accounts and database roles. Use `sp_dropalias` to remove aliases in upgraded databases.|  
-|Security|The version parameter of **PWDCOMPARE** representing a value from a login earlier than [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2000 is discontinued.|None|  
+|Security|The version parameter of **PWDCOMPARE** representing a value from a login earlier than [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 is discontinued.|None|  
 |Service Broker programmability in SMO|The **Microsoft.SqlServer.Management.Smo.Broker.BrokerPriority** class no longer implements the **Microsoft.SqlServer.Management.Smo.IObjectPermission** interface.||  
 |SET options|`SET DISABLE_DEF_CNST_CHK`|None.|  
 |System tables|sys.database_principal_aliases|Use roles instead of aliases.|  

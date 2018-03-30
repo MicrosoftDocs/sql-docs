@@ -20,7 +20,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Execute Package Task Editor
-  Use the Execute Package Task Editor to configure the Execute Package Task. The Execute Package task extends the enterprise capabilities of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] by letting packages run other packages as part of a workflow.  
+  Use the Execute Package Task Editor to configure the Execute Package Task. The Execute Package task extends the enterprise capabilities of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] by letting packages run other packages as part of a workflow.  
   
  **What do you want to do?**  
   
@@ -34,7 +34,7 @@ manager: "jhubbard"
   
 ##  <a name="open"></a> Open the Execute Package Task Editor  
   
-1.  Open an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] that contains an Execute Package task.  
+1.  Open an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] that contains an Execute Package task.  
   
 2.  Right-click the task in the SSIS Designer, and then click **Edit**.  
   
@@ -59,7 +59,7 @@ manager: "jhubbard"
  If the child package is password protected, provide the password for the child package, or click the ellipsis button (…) and create a new password for the child package.  
   
  `ExecuteOutOfProcess`  
- Specify whether the child package runs in the process of the parent package or in a separate process. By default, the ExecuteOutOfProcess property of the Execute Package task is set to `False`, and the child package runs in the same process as the parent package. If you set this property to `true`, the child package runs in a separate process. This may slow down the launching of the child package. In addition, if set the property to `true`, you cannot debug the package in a tools-only install; you must install the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] product. For more information, see [Install Integration Services](../../2014/sql-server/install/install-integration-services.md).  
+ Specify whether the child package runs in the process of the parent package or in a separate process. By default, the ExecuteOutOfProcess property of the Execute Package task is set to `False`, and the child package runs in the same process as the parent package. If you set this property to `true`, the child package runs in a separate process. This may slow down the launching of the child package. In addition, if set the property to `true`, you cannot debug the package in a tools-only install; you must install the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] product. For more information, see [Install Integration Services](../../2014/sql-server/install/install-integration-services.md).  
   
 ### ReferenceType Dynamic Options  
   
@@ -69,7 +69,7 @@ manager: "jhubbard"
   
 |Value|Description|  
 |-----------|-----------------|  
-|**SQL Server**|Set the location to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**SQL Server**|Set the location to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
 |**File system**|Set the location to the file system.|  
   
  **Connection**  

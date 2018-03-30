@@ -15,11 +15,11 @@ helpviewer_keywords:
 ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 caps.latest.revision: 14
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Configure Replication for Always On Availability Groups (SQL Server)
-  Configuring [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] replication and AlwaysOn availability groups involves seven steps. Each step is described in more detail in the following sections.  
+  Configuring [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] replication and AlwaysOn availability groups involves seven steps. Each step is described in more detail in the following sections.  
   
 
   
@@ -48,10 +48,10 @@ manager: "jhubbard"
         @security_mode = 1;  
     ```  
   
-3.  Configure the remote publisher. If stored procedures are being used to configure the distributor, run `sp_adddistpublisher`. The *@security_mode* parameter is used to determine how the publisher validation stored procedure that is run from the replication agents, connects to the current primary. If set to 1 Windows authentication is used to connect to the current primary. If set to 0, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication is used with the specified *@login* and *@password* values. The login and password specified must be valid at each secondary replica for the validation stored procedure to successfully connect to that replica.  
+3.  Configure the remote publisher. If stored procedures are being used to configure the distributor, run `sp_adddistpublisher`. The *@security_mode* parameter is used to determine how the publisher validation stored procedure that is run from the replication agents, connects to the current primary. If set to 1 Windows authentication is used to connect to the current primary. If set to 0, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] authentication is used with the specified *@login* and *@password* values. The login and password specified must be valid at each secondary replica for the validation stored procedure to successfully connect to that replica.  
   
     > [!NOTE]  
-    >  If any modified replication agents run on a computer other than the distributor, use of Windows authentication for the connection to the primary will require Kerberos authentication to be configured for the communication between the replica host computers. Use of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login for the connection to the current primary will not require Kerberos authentication.  
+    >  If any modified replication agents run on a computer other than the distributor, use of Windows authentication for the connection to the primary will require Kerberos authentication to be configured for the communication between the replica host computers. Use of a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] login for the connection to the current primary will not require Kerberos authentication.  
   
     ```  
     USE master;  
@@ -64,7 +64,7 @@ manager: "jhubbard"
         @password = '**Strong password for publisher**';  
     ```  
   
- For more information, see [sp_adddistpublisher &#40;Transact-SQL&#41;](../Topic/sp_adddistpublisher%20\(Transact-SQL\).md).  
+ For more information, see [sp_adddistpublisher &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md).  
   
  **Configure the publisher at the original publisher**  
   
@@ -107,7 +107,7 @@ ALTER AVAILABILITY GROUP 'MyAG'
  For more information, see [Creation and Configuration of Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/creation-and-configuration-of-availability-groups-sql-server.md).  
   
 ##  <a name="step3"></a> 3. Insure that all of the Secondary Replica Hosts are Configured for Replication  
- At each secondary replica host, verify that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has been configured to support replication. The following query can be run at each secondary replica host to determine whether replication is installed:  
+ At each secondary replica host, verify that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has been configured to support replication. The following query can be run at each secondary replica host to determine whether replication is installed:  
   
 ```  
 USE master;  
@@ -117,7 +117,7 @@ EXEC @installed = sys.sp_MS_replication_installed;
 SELECT @installed;  
 ```  
   
- If *@installed* is 0, replication must be added to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation.  
+ If *@installed* is 0, replication must be added to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] installation.  
   
 ##  <a name="step4"></a> 4. Configure the Secondary Replica Hosts as Replication Publishers  
  A secondary replica cannot act as a replication publisher or republisher but replication must be configured so that the secondary can take over after a failover. At the distributor, configure distribution for each secondary replica host. Specify the same distribution database and working directory as was specified when the original publisher was added to the distributor. If you are using stored procedures to configure distribution, use `sp_adddistpublisher` to associate the remote publishers with the distributor. If *@login* and *@password* were used for the original publisher, specify the same values for each when you add the secondary replica hosts as publishers.  
@@ -178,7 +178,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
 >   
 >  Msg 21899, Level 11, State 1, Procedure `sp_hadr_verify_subscribers_at_publisher`, Line 109  
 >   
->  The query at the redirected publisher 'MyReplicaHostName' to determine whether there were sysserver entries for the subscribers of the original publisher 'MyOriginalPublisher' failed with error '976', error message 'Error 976, Level 14, State 1, Message: The target database, 'MyPublishedDB', is participating in an availability group and is currently not accessible for queries. Either data movement is suspended or the availability replica is not enabled for read access. To allow read-only access to this and other databases in the availability group, enable read access to one or more secondary availability replicas in the group.  For more information, see the `ALTER AVAILABILITY GROUP` statement in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.'.  
+>  The query at the redirected publisher 'MyReplicaHostName' to determine whether there were sysserver entries for the subscribers of the original publisher 'MyOriginalPublisher' failed with error '976', error message 'Error 976, Level 14, State 1, Message: The target database, 'MyPublishedDB', is participating in an availability group and is currently not accessible for queries. Either data movement is suspended or the availability replica is not enabled for read access. To allow read-only access to this and other databases in the availability group, enable read access to one or more secondary availability replicas in the group.  For more information, see the `ALTER AVAILABILITY GROUP` statement in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online.'.  
 >   
 >  One or more publisher validation errors were encountered for replica host 'MyReplicaHostName'.  
   

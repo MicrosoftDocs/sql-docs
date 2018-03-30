@@ -15,11 +15,11 @@ helpviewer_keywords:
 ms.assetid: 78c83277-1dbb-4e07-95bd-47b14d2b5cd4
 caps.latest.revision: 19
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Page Compression Implementation
-  This topic summarizes how the [!INCLUDE[ssDE](../../includes/ssde-md.md)] implements page compression. This summary provides basic information to help you plan the storage space that you need for your data.  
+  This topic summarizes how the [!INCLUDE[ssDE](../includes/ssde-md.md)] implements page compression. This summary provides basic information to help you plan the storage space that you need for your data.  
   
  Page compression is similar for tables, table partitions, indexes, and index partitions. The following description of page compression for a table applies equally to page compression for all object types. The following examples compress character strings, but both prefix and dictionary compression apply the same principles to other data types.  
   

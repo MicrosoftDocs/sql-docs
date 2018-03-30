@@ -22,13 +22,13 @@ manager: "jhubbard"
 # Execution Characteristics of Extended Stored Procedures
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Use CLR Integration instead.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR Integration instead.  
   
  The execution of an extended stored procedure has these characteristics:  
   
--   The extended stored procedure function is executed under the security context of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   The extended stored procedure function is executed under the security context of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   The extended stored procedure function runs in the process space of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   The extended stored procedure function runs in the process space of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   The thread associated with the execution of the extended stored procedure is the same one used for the client connection.  
   
@@ -37,9 +37,9 @@ manager: "jhubbard"
   
 -  
   
- After the extended stored procedure DLL is loaded, the DLL remains loaded in the address space of the server until [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is stopped or the administrator explicitly unloads the DLL by using DBCC *DLL_name* (FREE).  
+ After the extended stored procedure DLL is loaded, the DLL remains loaded in the address space of the server until [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is stopped or the administrator explicitly unloads the DLL by using DBCC *DLL_name* (FREE).  
   
- The extended stored procedure can be executed from [!INCLUDE[tsql](../../../includes/tsql-md.md)] as a stored procedure by using the EXECUTE statement:  
+ The extended stored procedure can be executed from [!INCLUDE[tsql](../../includes/tsql-md.md)] as a stored procedure by using the EXECUTE statement:  
   
 ```  
 EXECUTE @retval = xp_extendedProcName @param1, @param2 OUTPUT  
@@ -56,7 +56,7 @@ EXECUTE @retval = xp_extendedProcName @param1, @param2 OUTPUT
  Is an input/output parameter.  
   
 > [!CAUTION]  
->  Extended stored procedures offer performance enhancements and extend [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] functionality. However, because the extended stored procedure DLL and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] share the same address space, a problem procedure can adversely affect [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] functioning. Although exceptions thrown by the extended stored procedure DLL are handled by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], it is possible to damage [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data areas. As a security precaution, only [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] system administrators can add extended stored procedures to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. These procedures should be thoroughly tested before they are installed.  
+>  Extended stored procedures offer performance enhancements and extend [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] functionality. However, because the extended stored procedure DLL and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] share the same address space, a problem procedure can adversely affect [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] functioning. Although exceptions thrown by the extended stored procedure DLL are handled by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], it is possible to damage [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data areas. As a security precaution, only [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system administrators can add extended stored procedures to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. These procedures should be thoroughly tested before they are installed.  
   
 ## See Also  
  [Programming Extended Stored Procedures](../../../2014/database-engine/dev-guide/programming-extended-stored-procedures.md)   

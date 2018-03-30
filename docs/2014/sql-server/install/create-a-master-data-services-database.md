@@ -16,7 +16,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Create a Master Data Services Database
-  Create a [!INCLUDE[ssMDSshort](../../../includes/ssmdsshort-md.md)] database when you need a new database to support the [!INCLUDE[ssMDSmdm](../../../includes/ssmdsmdm-md.md)] web application and [!INCLUDE[ssMDSshort](../../../includes/ssmdsshort-md.md)] web service.  
+  Create a [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database when you need a new database to support the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application and [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] web service.  
   
 ## Prerequisites  
   
@@ -24,7 +24,7 @@ manager: "jhubbard"
   
 ### To create a Master Data Services database  
   
-1.  Open [!INCLUDE[ssMDScfgmgr](../../../includes/ssmdscfgmgr-md.md)].  
+1.  Open [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
   
 2.  In the left pane, click **Database Configuration**.  
   
@@ -36,7 +36,7 @@ manager: "jhubbard"
   
 -   Configure system settings for the database and web application. For more information, see [System Settings &#40;Master Data Services&#41;](../../../2014/master-data-services/system-settings-master-data-services.md).  
   
--   Create a [!INCLUDE[ssMDSmdm](../../../includes/ssmdsmdm-md.md)] web application to associate with this database. For more information, see [Create a Master Data Manager Web Application &#40;Master Data Services&#41;](../../../2014/sql-server/install/create-a-master-data-manager-web-application-master-data-services.md).  
+-   Create a [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application to associate with this database. For more information, see [Create a Master Data Manager Web Application &#40;Master Data Services&#41;](../../../2014/sql-server/install/create-a-master-data-manager-web-application-master-data-services.md).  
   
 -   Configure a maintenance plan to back up the database and transaction logs. For more information, see [Database Requirements &#40;Master Data Services&#41;](../../../2014/sql-server/install/database-requirements-master-data-services.md).  
   

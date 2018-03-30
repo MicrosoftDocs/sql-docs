@@ -12,13 +12,13 @@ ms.topic: "article"
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
 caps.latest.revision: 50
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Lesson 3: Defining a Dataset for the Table Report (Reporting Services)
-  After you define the data source, you need to define a dataset. In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], data that you use in reports is contained in a *dataset*. A dataset includes a pointer to a data source and a query to be used by the report, as well as calculated fields and variables.  
+  After you define the data source, you need to define a dataset. In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], data that you use in reports is contained in a *dataset*. A dataset includes a pointer to a data source and a query to be used by the report, as well as calculated fields and variables.  
   
- You can use the query designer in Report Designer to design the query. For this tutorial, you will create a query that retrieves sales order information from the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]**2008** database.  
+ You can use the query designer in Report Designer to design the query. For this tutorial, you will create a query that retrieves sales order information from the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]**2008** database.  
   
 ### To define a Transact-SQL query for report data  
   
@@ -57,7 +57,7 @@ manager: "mblythe"
   
 6.  (Optional) Click the **Query Designer** button. The query is displayed in the text-based query designer. You can toggle to the graphical query designer by clicking **Edit As Text**. View the results of the query by clicking the run **(!)** button on the query designer toolbar.  
   
-     You see the data from six fields from four different tables in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. The query makes use of Transact-SQL functionality such as aliases. For example, the SalesOrderHeader table is called soh.  
+     You see the data from six fields from four different tables in the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database. The query makes use of Transact-SQL functionality such as aliases. For example, the SalesOrderHeader table is called soh.  
   
      Click **OK** to exit the query designer.  
   

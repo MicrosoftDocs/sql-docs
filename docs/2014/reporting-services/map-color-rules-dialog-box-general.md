@@ -15,7 +15,7 @@ f1_keywords:
 ms.assetid: 14ff5fc1-4cf8-4a45-9d98-47a1bf1c52c4
 caps.latest.revision: 7
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Map Color Rules Dialog Box, General

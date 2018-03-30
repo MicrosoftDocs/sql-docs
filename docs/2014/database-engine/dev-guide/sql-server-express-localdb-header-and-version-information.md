@@ -43,7 +43,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12E.LOCALDB\ MSS
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server Local DB\Installed Versions]  
 ```  
   
- Under this key there is a list of keys, one for each version of LocalDB installed on the computer. Each of these keys is named with the LocalDB version number in the format *\<major-version>*.*\<minor-version>* (for example, the key for [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] is named 12.0). Under each version key there is an `InstanceAPIPath` name-value pair that defines the full path to the SQLUserInstance.dll file installed with that version. The following example shows the registry entries for a computer that has LocalDB versions 11.0 and 12.0 installed:  
+ Under this key there is a list of keys, one for each version of LocalDB installed on the computer. Each of these keys is named with the LocalDB version number in the format *\<major-version>*.*\<minor-version>* (for example, the key for [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] is named 12.0). Under each version key there is an `InstanceAPIPath` name-value pair that defines the full path to the SQLUserInstance.dll file installed with that version. The following example shows the registry entries for a computer that has LocalDB versions 11.0 and 12.0 installed:  
   
 ```  
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server Local DB\Installed Versions\12.0]  

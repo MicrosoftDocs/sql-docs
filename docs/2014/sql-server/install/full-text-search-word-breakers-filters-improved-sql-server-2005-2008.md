@@ -22,7 +22,7 @@ manager: "jhubbard"
   The word breakers and filters were significantly changed. Additional improvements have been made to word breakers, including enhanced language coverage and reliability.  
   
 ## Description  
- Word breakers and filters used by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Full-Text Search have been significantly modified to achieve improvements in functionality and reliability. In some specific cases, changes to the word breakers can impact how some data is tokenized. Tokens created in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] may be different from earlier tokens created in [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] or [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
+ Word breakers and filters used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Full-Text Search have been significantly modified to achieve improvements in functionality and reliability. In some specific cases, changes to the word breakers can impact how some data is tokenized. Tokens created in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] may be different from earlier tokens created in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] or [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
  For information about word breakers, see [Configure and Manage Word Breakers and Stemmers for Search](../../../2014/database-engine/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   

@@ -23,7 +23,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Working with Excel Files with the Script Task
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] provides the Excel connection manager, Excel source, and Excel destination for working with data stored in spreadsheets in the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Excel file format. The techniques described in this topic use the Script task to obtain information about available Excel databases (workbook files) and tables (worksheets and named ranges). These samples can easily be modified to work with any of the other file-based data sources supported by the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Jet OLE DB Provider.  
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides the Excel connection manager, Excel source, and Excel destination for working with data stored in spreadsheets in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel file format. The techniques described in this topic use the Script task to obtain information about available Excel databases (workbook files) and tables (worksheets and named ranges). These samples can easily be modified to work with any of the other file-based data sources supported by the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet OLE DB Provider.  
   
  [Configuring a Package to Test the Samples](#configuring)  
   
@@ -41,11 +41,11 @@ manager: "jhubbard"
 >  If you want to create a task that you can more easily reuse across multiple packages, consider using the code in this Script task sample as the starting point for a custom task. For more information, see [Developing a Custom Task](../../../2014/integration-services/dev-guide/developing-a-custom-task.md).  
   
 ##  <a name="configuring"></a> Configuring a Package to Test the Samples  
- You can configure a single package to test all the samples in this topic. The samples use many of the same package variables and the same [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] classes.  
+ You can configure a single package to test all the samples in this topic. The samples use many of the same package variables and the same [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] classes.  
   
 #### To configure a package for use with the examples in this topic  
   
-1.  Create a new [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] project in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] and open the default package for editing.  
+1.  Create a new [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] and open the default package for editing.  
   
 2.  **Variables**. Open the **Variables** window and define the following variables:  
   
@@ -63,7 +63,7 @@ manager: "jhubbard"
   
     -   `ExcelTables`, of type `Object`.  
   
-3.  **Imports statements**. Most of the code samples require you to import one or both of the following [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] namespaces at the top of your script file:  
+3.  **Imports statements**. Most of the code samples require you to import one or both of the following [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] namespaces at the top of your script file:  
   
     -   `System.IO`, for file system operations.  
   
@@ -542,7 +542,7 @@ public class ScriptMain
   
 ||  
 |-|  
-|![Integration Services icon (small)](../../../2014/integration-services/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
+|![Integration Services icon (small)](../../../2014/integration-services/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
   
 ## See Also  
  [Excel Connection Manager](../../../2014/integration-services/excel-connection-manager.md)   

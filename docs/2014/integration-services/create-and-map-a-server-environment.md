@@ -21,7 +21,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Create and Map a Server Environment
-  You create a server environment to specify runtime values for packages contained in a project you’ve deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. You can then map the environment variables to parameters, for a specific package, for entry-point packages, or for all the packages in a given project. An entry-point package is typically a parent package that executes a child package.  
+  You create a server environment to specify runtime values for packages contained in a project you’ve deployed to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server. You can then map the environment variables to parameters, for a specific package, for entry-point packages, or for all the packages in a given project. An entry-point package is typically a parent package that executes a child package.  
   
 > [!IMPORTANT]  
 >  For a given execution, a package can execute only with the values contained in a single server environment.  
@@ -30,7 +30,7 @@ manager: "jhubbard"
   
 ### To create and use a server environment  
   
-1.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], expand the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Catalogs> **SSISDB** node in Object Explorer, and locate the **Environments** folder of the project for which you want to create an environment.  
+1.  In [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], expand the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Catalogs> **SSISDB** node in Object Explorer, and locate the **Environments** folder of the project for which you want to create an environment.  
   
 2.  Right-click the **Environments** folder, and then click **Create Environment**.  
   
@@ -75,7 +75,7 @@ manager: "jhubbard"
   
 11. Right-click the project again, and then click **Configure**.  
   
-12. To map the environment variable to a parameter that you added to the package at design-time or to a parameter that was generated when you converted the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project to the project deployment model, do the following.,  
+12. To map the environment variable to a parameter that you added to the package at design-time or to a parameter that was generated when you converted the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project to the project deployment model, do the following.,  
   
     1.  In the **Parameters** tab on the **Parameters** page, click the browse button next to the **Value** field.  
   

@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Create a Database Snapshot (Transact-SQL)
-  The only way to create a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database snapshot is to use [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] does not support the creation of database snapshots.  
+  The only way to create a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database snapshot is to use [!INCLUDE[tsql](../includes/tsql-md.md)]. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] does not support the creation of database snapshots.  
   
 -   **Before you begin:**  
   
@@ -35,7 +35,7 @@ manager: "jhubbard"
 ###  <a name="Prerequisites"></a> Prerequisites  
  The source database, which can use any recovery model, must meet the following prerequisites:  
   
--   The server instance must be running an edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that supports database snapshot. For information about support for database snapshots in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+-   The server instance must be running an edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that supports database snapshot. For information about support for database snapshots in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 -   The source database must be online, unless the database is a mirror database within a database mirroring session.  
   
@@ -64,7 +64,7 @@ manager: "jhubbard"
   
 -   The creation date and time of the snapshot, a sequence number, or some other information, such as time of day, to distinguish sequential snapshots on a given database.  
   
- For example, consider a series of snapshots for the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. Three daily snapshots are created at 6-hour intervals between 6 A.M. and 6 P.M., based on a 24-hour clock. Each daily snapshot is kept for 24 hours before being dropped and replaced by a new snapshot of the same name. Note that each snapshot name indicates the hour, but not the day:  
+ For example, consider a series of snapshots for the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database. Three daily snapshots are created at 6-hour intervals between 6 A.M. and 6 P.M., based on a 24-hour clock. Each daily snapshot is kept for 24 hours before being dropped and replaced by a new snapshot of the same name. Note that each snapshot name indicates the hour, but not the day:  
   
 ```  
 AdventureWorks_snapshot_0600  
@@ -87,7 +87,7 @@ AdventureWorks_snapshot_evening
 >  If you want to revert to a database snapshot, you need to delete any other snapshots from that database.  
   
 ####  <a name="Client_Connections"></a> Best Practice: Client Connections to a Database Snapshot  
- To use a database snapshot, clients need to know where to find it. Users can read from one database snapshot while another is being created or deleted. However, when you substitute a new snapshot for an existing one, you need to redirect clients to the new snapshot. Users can manually connect to a database snapshot by means of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. However, to support a production environment, you should create a programmatic solution that transparently directs report-writing clients to the latest database snapshot of the database.  
+ To use a database snapshot, clients need to know where to find it. Users can read from one database snapshot while another is being created or deleted. However, when you substitute a new snapshot for an existing one, you need to redirect clients to the new snapshot. Users can manually connect to a database snapshot by means of [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. However, to support a production environment, you should create a programmatic solution that transparently directs report-writing clients to the latest database snapshot of the database.  
   
 ###  <a name="Security"></a> Security  
   
@@ -120,7 +120,7 @@ AdventureWorks_snapshot_evening
   
      [;]  
   
-     Where *source_**database_name* is the source database, *logical_file_name i*s the logical name used in SQL Server when referencing the file, *os_file_name* is the path and file name used by the operating system when you create the file, and *database_snapshot_name* is the name of the snapshot to which you want to revert the database. For a full description of this syntax, see [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../Topic/CREATE%20DATABASE%20\(SQL%20Server%20Transact-SQL\).md).  
+     Where *source_**database_name* is the source database, *logical_file_name i*s the logical name used in SQL Server when referencing the file, *os_file_name* is the path and file name used by the operating system when you create the file, and *database_snapshot_name* is the name of the snapshot to which you want to revert the database. For a full description of this syntax, see [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](~/t-sql/statements/create-database-sql-server-transact-sql.md).  
   
     > [!NOTE]  
     >  When you create a database snapshot, log files, offline files, restoring files, and defunct files are not allowed in the CREATE DATABASE statement.  
@@ -148,7 +148,7 @@ GO
 ```  
   
 ####  <a name="Creating_on_Sales"></a> B. Creating a snapshot on the Sales database  
- This example creates a database snapshot, `sales_snapshot1200`, on the `Sales` database. This database was created in the example, "Creating a database that has filegroups," in [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../Topic/CREATE%20DATABASE%20\(SQL%20Server%20Transact-SQL\).md).  
+ This example creates a database snapshot, `sales_snapshot1200`, on the `Sales` database. This database was created in the example, "Creating a database that has filegroups," in [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](~/t-sql/statements/create-database-sql-server-transact-sql.md).  
   
 ```  
 --Creating sales_snapshot1200 as snapshot of the  
@@ -179,7 +179,7 @@ GO
 -   [Drop a Database Snapshot &#40;Transact-SQL&#41;](../../2014/database-engine/drop-a-database-snapshot-transact-sql.md)  
   
 ## See Also  
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../Topic/CREATE%20DATABASE%20\(SQL%20Server%20Transact-SQL\).md)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](~/t-sql/statements/create-database-sql-server-transact-sql.md)   
  [Database Snapshots &#40;SQL Server&#41;](../../2014/database-engine/database-snapshots-sql-server.md)  
   
   

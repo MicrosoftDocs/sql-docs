@@ -25,7 +25,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # InstanceName Property (ServerNetworkProtocolProperty Class)
-  Gets the name of an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on which the server network protocol is installed.  
+  Gets the name of an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on which the server network protocol is installed.  
   
 ## Syntax  
   
@@ -37,10 +37,10 @@ object
   
 ## Parts  
  *object*  
- A [ServerNetworkProtocolProperty Class](../../../2014/database-engine/dev-guide/servernetworkprotocolproperty-class.md) object that represents an attribute of the network protocol on the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ A [ServerNetworkProtocolProperty Class](../../../2014/database-engine/dev-guide/servernetworkprotocolproperty-class.md) object that represents an attribute of the network protocol on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Property Value/Return Value  
- A string value that specifies the name of the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on which the server network protocol is installed.  
+ A string value that specifies the name of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on which the server network protocol is installed.  
   
 ## Remarks  
   

@@ -32,7 +32,7 @@ manager: "jhubbard"
  Provide the destination package name, or use the default name that the wizard provides.  
   
 > [!NOTE]  
->  You can also change the destination package name after upgrading the package. In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] or [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], open the upgraded package and change the package name.  
+>  You can also change the destination package name after upgrading the package. In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] or [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], open the upgraded package and change the package name.  
   
  **Password**  
  Specify the password that is used to decrypt the selected upgrade packages.  

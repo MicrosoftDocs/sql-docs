@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 9696fb05-e9e8-4836-b359-d4de0be0eeb2
 caps.latest.revision: 22
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # OLE Automation Return Codes and Error Information
@@ -111,6 +111,6 @@ GO
 ```  
   
 ## Related Content  
- [sp_OAGetErrorInfo &#40;Transact-SQL&#41;](../Topic/sp_OAGetErrorInfo%20\(Transact-SQL\).md)  
+ [sp_OAGetErrorInfo &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-oageterrorinfo-transact-sql.md)  
   
   

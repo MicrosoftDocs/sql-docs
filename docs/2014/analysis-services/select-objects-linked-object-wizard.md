@@ -28,6 +28,6 @@ manager: "mblythe"
  Select the objects to link or import.  
   
 > [!NOTE]  
->  Only dimensions are available if a cube is not selected in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] when opening the Linked Object Wizard.  
+>  Only dimensions are available if a cube is not selected in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] when opening the Linked Object Wizard.  
   
   

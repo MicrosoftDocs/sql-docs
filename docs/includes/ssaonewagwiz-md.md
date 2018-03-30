@@ -1,1 +1,1 @@
-New Availability Group Wizard
+ New Availability Group Wizard 

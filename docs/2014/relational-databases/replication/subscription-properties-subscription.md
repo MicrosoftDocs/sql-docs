@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: db2be511-c76e-4f21-8be4-6a8c60a50d30
 caps.latest.revision: 18
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Subscription Properties - &lt;Subscription&gt;

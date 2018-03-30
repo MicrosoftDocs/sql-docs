@@ -18,11 +18,11 @@ f1_keywords:
 ms.assetid: d3b31e81-c0b6-4615-8fb3-997edb2acb7a
 caps.latest.revision: 19
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Options (Query Results-SQL Server-General Page)
-  Use this page to determine the default behavior of the query Results pane. To display these settings, on the **Tools** menu, click **Options**,expand the **Query Results** folder, select **SQL Server**, and then click **General**. Changes to these options are applied only to new [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] queries. To change the options for the current queries, click **Query Options** on the **Query** menu or, in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query window, right-click and select **Query Options**.  
+  Use this page to determine the default behavior of the query Results pane. To display these settings, on the **Tools** menu, click **Options**,expand the **Query Results** folder, select **SQL Server**, and then click **General**. Changes to these options are applied only to new [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] queries. To change the options for the current queries, click **Query Options** on the **Query** menu or, in a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] query window, right-click and select **Query Options**.  
   
 ## UIElement List  
  **Default destination for results**  

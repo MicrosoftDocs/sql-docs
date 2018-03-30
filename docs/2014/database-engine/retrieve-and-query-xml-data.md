@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 24a28760-1225-42b3-9c89-c9c0332d9c51
 caps.latest.revision: 15
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Retrieve and Query XML Data
   This topic describes the query options that you have to specify to query XML data. It also describes the parts of XML instances that are not preserved when they are stored in databases.  
   
 ##  <a name="features"></a> Features of an XML Instance That Are Not Preserved  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] preserves the content of the XML instance, but does not preserve aspects of the XML instance that are not considered to be significant in the XML data model. This means that a retrieved XML instance might not be identical to the instance that was stored in the server, but will contain the same information.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] preserves the content of the XML instance, but does not preserve aspects of the XML instance that are not considered to be significant in the XML data model. This means that a retrieved XML instance might not be identical to the instance that was stored in the server, but will contain the same information.  
   
 ### XML Declaration  
  The XML declaration in an instance is not preserved when the instance is stored in the database. For example:  

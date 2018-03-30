@@ -29,7 +29,7 @@ manager: "jhubbard"
   
 #### To select the data set  
   
-1.  Switch to the **Mining Accuracy Chart** tab in Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] and select the **Input Selection** tab.  
+1.  Switch to the **Mining Accuracy Chart** tab in Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] and select the **Input Selection** tab.  
   
 2.  In the **Select data set to be used for Accuracy Chart** group box, select **Use mining structure test cases**. This is the testing data that you set aside when you created the mining structure.  
   

@@ -29,7 +29,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Media Sets, Media Families, and Backup Sets (SQL Server)
-  This topic introduces the basic backup-media terminology of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup and restore and is intended for readers who are new to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This topic describes the format that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses for backup media, the correspondence between backup media and backup devices, the organization of backups on backup media, and several considerations for media sets and media families. The topic also describes the steps initializing or formatting backup media before you use it for the first time or replace an old media set with a new media set, how to overwrite old backup sets in a media set, and how to append new backup sets to a media set.  
+  This topic introduces the basic backup-media terminology of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] backup and restore and is intended for readers who are new to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. This topic describes the format that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses for backup media, the correspondence between backup media and backup devices, the organization of backups on backup media, and several considerations for media sets and media families. The topic also describes the steps initializing or formatting backup media before you use it for the first time or replace an old media set with a new media set, how to overwrite old backup sets in a media set, and how to append new backup sets to a media set.  
   
 > [!NOTE]  
 >  For more information on SQL Server backup to the Windows Azure Blob storage service,, see, [SQL Server Backup and Restore with Windows Azure Blob Storage Service](../../2014/database-engine/sql-server-backup-and-restore-with-windows-azure-blob-storage-service.md).  
@@ -54,7 +54,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  Media sets can be mirrored to protect against a damaged media volume (a tape or disk file). For more information, see [Mirrored Backup Media Sets &#40;SQL Server&#41;](../../2014/database-engine/mirrored-backup-media-sets-sql-server.md).  
   
- [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] and later supports compressing backups. Compressed and uncompressed backups cannot occur together in a media set. Any edition of [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later can read compressed backups. For more information, see [Backup Compression &#40;SQL Server&#41;](../../2014/database-engine/backup-compression-sql-server.md).  
+ [!INCLUDE[ssEnterpriseEd10](../includes/ssenterpriseed10-md.md)] and later supports compressing backups. Compressed and uncompressed backups cannot occur together in a media set. Any edition of [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] or later can read compressed backups. For more information, see [Backup Compression &#40;SQL Server&#41;](../../2014/database-engine/backup-compression-sql-server.md).  
   
   
 ### Media Families  
@@ -87,9 +87,9 @@ manager: "jhubbard"
 -   Whether the media description contains an MTF media label or a media description.  
   
     > [!NOTE]  
-    >  All media that is used for a backup or restore operation use a standard backup format called [!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format (MTF). MTF allows users to specify a tape label that contains a MTF-specific description. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] preserves any MTF media label written by another application but does not write MTF media labels.  
+    >  All media that is used for a backup or restore operation use a standard backup format called [!INCLUDE[msCoName](../includes/msconame-md.md)] Tape Format (MTF). MTF allows users to specify a tape label that contains a MTF-specific description. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] preserves any MTF media label written by another application but does not write MTF media labels.  
   
--   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format media label or the media description (in free-form text).  
+-   The [!INCLUDE[msCoName](../includes/msconame-md.md)] Tape Format media label or the media description (in free-form text).  
   
 -   The name of the backup software that wrote the label.  
   
@@ -99,12 +99,12 @@ manager: "jhubbard"
   
 -   The number of mirrors in the set (1-4); 1 indicates an unmirrored device.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] can process media formatted by earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] can process media formatted by earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ### Backup Sets  
  A successful backup operation adds a single *backup set* to the media set. The backup set is described in terms of the media set to which the backup belongs. If the backup media consists of only one media family, that family contains the entire backup set. If the backup media consists of multiple media families, the backup set is distributed among them. On each medium, the backup set contains a header that describes the backup set.  
   
- The following example shows a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement that creates a media set called `MyAdvWorks_MediaSet_1` for the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database using three tape drives as backup devices:  
+ The following example shows a [!INCLUDE[tsql](../includes/tsql-md.md)] statement that creates a media set called `MyAdvWorks_MediaSet_1` for the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database using three tape drives as backup devices:  
   
 ```  
 BACKUP DATABASE AdventureWorks2012  
@@ -138,7 +138,7 @@ WITH
   
  ![Second backup set spread across 3 media-set tapes](../../2014/database-engine/media/bnr-mediaset-appendedto.gif "Second backup set spread across 3 media-set tapes")  
   
- When you are restoring backups, you can use you the FILE option to specify which backups you want to use. The following example shows the use of FILE **=***backup_set_file_number* clauses when restoring a full database backup of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database followed by a differential database backup on the same media set. The media set uses three backup tapes, which are on tape drives `\\.\tape0`, `tape1`, and `tape2`.  
+ When you are restoring backups, you can use you the FILE option to specify which backups you want to use. The following example shows the use of FILE **=***backup_set_file_number* clauses when restoring a full database backup of the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database followed by a differential database backup on the same media set. The media set uses three backup tapes, which are on tape drives `\\.\tape0`, `tape1`, and `tape2`.  
   
 ```  
 RESTORE DATABASE AdventureWorks2012 FROM TAPE = '\\.\tape0', TAPE = '\\.\tape1', TAPE = '\\.\tape2'  
@@ -191,7 +191,7 @@ GO
   
 -   Overwrite all existing backup sets with the current backup, leaving the current media header in place.  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup has safeguards to prevent you from accidentally overwriting media. However, backup can automatically overwrite backup sets that have reached a predefined expiration date.  
+     [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] backup has safeguards to prevent you from accidentally overwriting media. However, backup can automatically overwrite backup sets that have reached a predefined expiration date.  
   
      For tape headers, leaving the header in place can make sense. For more information, see [Overwriting Backup Sets](#Overwriting), later in this section.  
   
@@ -201,14 +201,14 @@ GO
 ####  <a name="Appending"></a> Appending to Existing Backup Sets  
  Backups performed at different times from the same or different databases can be stored on the same media. By appending another backup set to existing media, the previous contents of the media remain intact, and the new backup is written after the end of the last backup on the media.  
   
- By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] always appends new backups to media. Appending can occur only at the end of the media. For example, if a media volume contains five backup sets, it is not possible to skip the first three backup sets to overwrite the fourth backup set with a new backup set.  
+ By default, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] always appends new backups to media. Appending can occur only at the end of the media. For example, if a media volume contains five backup sets, it is not possible to skip the first three backup sets to overwrite the fourth backup set with a new backup set.  
   
- If you use BACKUP WITH NOREWIND for a tape backup, the tape will be left open at the end of the operation. This allows you to append further backups to the tape without rewinding the tape and then scanning forward again to find the last backup set. You can find the list of open tape drives in the **sys.dm_io_backup_tapes** dynamic management view; for more information, see [sys.dm_io_backup_tapes &#40;Transact-SQL&#41;](../Topic/sys.dm_io_backup_tapes%20\(Transact-SQL\).md).  
+ If you use BACKUP WITH NOREWIND for a tape backup, the tape will be left open at the end of the operation. This allows you to append further backups to the tape without rewinding the tape and then scanning forward again to find the last backup set. You can find the list of open tape drives in the **sys.dm_io_backup_tapes** dynamic management view; for more information, see [sys.dm_io_backup_tapes &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md).  
   
- Microsoft Windows backups and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups can share the same media, but they are not interoperable. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup cannot back up Windows data.  
+ Microsoft Windows backups and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] backups can share the same media, but they are not interoperable. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] backup cannot back up Windows data.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] and later supports compressing backups. Compressed and uncompressed backups cannot occur together in a media set. Any edition of [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later versions can read compressed backups. For more information, see [Backup Compression &#40;SQL Server&#41;](../../2014/database-engine/backup-compression-sql-server.md).  
+>  [!INCLUDE[ssEnterpriseEd10](../includes/ssenterpriseed10-md.md)] and later supports compressing backups. Compressed and uncompressed backups cannot occur together in a media set. Any edition of [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] or later versions can read compressed backups. For more information, see [Backup Compression &#40;SQL Server&#41;](../../2014/database-engine/backup-compression-sql-server.md).  
   
   
 ####  <a name="Overwriting"></a> Overwriting Backup Sets  
@@ -217,13 +217,13 @@ GO
  For tape headers, leaving the header in place can make sense. For disk backup media, only the files used by the backup devices specified in the backup operation are overwritten; other files on the disk are unaffected. When overwriting backups, any existing media header is preserved, and the new backup is created as the first backup on the backup device. If there is no existing media header, a valid media header with an associated media name and media description is written automatically. If the existing media header is invalid, the backup operation terminates. If the media is empty, the new media header is generated with the given MEDIANAME, MEDIAPASSWORD, and MEDIADESCRIPTION, if any.  
   
 > [!IMPORTANT]  
->  Beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], the MEDIAPASSWORD option is discontinued for creating backups. However, you can still restore backups created with passwords.  
+>  Beginning with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], the MEDIAPASSWORD option is discontinued for creating backups. However, you can still restore backups created with passwords.  
   
  Backup media is not overwritten if either of the following conditions exists:  
   
 -   The existing backups on the media have not expired. (If SKIP is specified, expiration is not checked.)  
   
-     The expiration date specifies the date that the backup expires and can be overwritten by another backup. You can specify the expiration date when a backup is created. By default, the expiration date is determined by the **media retention** option set with **sp_configure**. For more information, see [sp_configure &#40;Transact-SQL&#41;](../Topic/sp_configure%20\(Transact-SQL\).md).  
+     The expiration date specifies the date that the backup expires and can be overwritten by another backup. You can specify the expiration date when a backup is created. By default, the expiration date is determined by the **media retention** option set with **sp_configure**. For more information, see [sp_configure &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
 -   The media name, if provided, does not match the name on the backup media.  
   
@@ -261,7 +261,7 @@ GO
   
 -   [Create a Full Database Backup &#40;SQL Server&#41;](../../2014/database-engine/create-a-full-database-backup-sql-server.md) (**Back up to a new media set, and erase all existing backup sets** option)  
   
--   [BACKUP &#40;Transact-SQL&#41;](../Topic/BACKUP%20\(Transact-SQL\).md) (FORMAT option)  
+-   [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md) (FORMAT option)  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Backup.FormatMedia%2A>  
   
@@ -269,13 +269,13 @@ GO
   
 -   [Create a Full Database Backup &#40;SQL Server&#41;](../../2014/database-engine/create-a-full-database-backup-sql-server.md) (**Append to the existing backup set** option)  
   
--   [BACKUP &#40;Transact-SQL&#41;](../Topic/BACKUP%20\(Transact-SQL\).md) (NOINIT option)  
+-   [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md) (NOINIT option)  
   
  **To overwrite existing backup sets**  
   
 -   [Create a Full Database Backup &#40;SQL Server&#41;](../../2014/database-engine/create-a-full-database-backup-sql-server.md) (**Overwrite all existing backup sets** option)  
   
--   [BACKUP &#40;Transact-SQL&#41;](../Topic/BACKUP%20\(Transact-SQL\).md) (INIT option)  
+-   [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md) (INIT option)  
   
  **To set the expiration date**  
   
@@ -285,7 +285,7 @@ GO
   
 -   [View the Properties and Contents of a Logical Backup Device &#40;SQL Server&#41;](../../2014/database-engine/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
--   [backupmediafamily &#40;Transact-SQL&#41;](../Topic/backupmediafamily%20\(Transact-SQL\).md) (**family_sequence_number** column)  
+-   [backupmediafamily &#40;Transact-SQL&#41;](~/relational-databases/system-tables/backupmediafamily-transact-sql.md) (**family_sequence_number** column)  
   
  **To view the backup sets on a particular backup device**  
   
@@ -293,11 +293,11 @@ GO
   
 -   [View the Properties and Contents of a Logical Backup Device &#40;SQL Server&#41;](../../2014/database-engine/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
--   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)  
+-   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-headeronly-transact-sql.md)  
   
  **To read the media header of the media on a backup device**  
   
--   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md)  
+-   [RESTORE LABELONLY &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-labelonly-transact-sql.md)  
   
   
 ## See Also  
@@ -305,9 +305,9 @@ GO
  [Possible Media Errors During Backup and Restore &#40;SQL Server&#41;](../../2014/database-engine/possible-media-errors-during-backup-and-restore-sql-server.md)   
  [Backup History and Header Information &#40;SQL Server&#41;](../../2014/database-engine/backup-history-and-header-information-sql-server.md)   
  [Mirrored Backup Media Sets &#40;SQL Server&#41;](../../2014/database-engine/mirrored-backup-media-sets-sql-server.md)   
- [BACKUP &#40;Transact-SQL&#41;](../Topic/BACKUP%20\(Transact-SQL\).md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
- [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20REWINDONLY%20\(Transact-SQL\).md)   
- [sp_configure &#40;Transact-SQL&#41;](../Topic/sp_configure%20\(Transact-SQL\).md)  
+ [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)   
+ [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)   
+ [RESTORE REWINDONLY &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-rewindonly-transact-sql.md)   
+ [sp_configure &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   

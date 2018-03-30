@@ -39,7 +39,7 @@ manager: "jhubbard"
 ### Specifying and Securing Credentials  
  If your OData service requires basic authentication, you can specify a username and password in the [OData Connection Manager Editor](../../2014/integration-services/odata-connection-manager-editor.md). The values you enter in the editor are persisted in the package. The password value is encrypted according to the package protection level.  
   
- There are multiple ways to externalize/parameterize the username and password values. The two primary ways of doing this in [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)] are by using parameters, or by setting the connection manager properties directly when you run the package using SQL Server Management Studio.  
+ There are multiple ways to externalize/parameterize the username and password values. The two primary ways of doing this in [!INCLUDE[ssISversion11](../includes/ssisversion11-md.md)] are by using parameters, or by setting the connection manager properties directly when you run the package using SQL Server Management Studio.  
   
 ## OData Connection Manager Properties  
  The following list describes some of the OData Connection Manager properties that you may want to change.  

@@ -29,7 +29,7 @@ ms.author: "mblythe"
 manager: "mblythe"
 ---
 # BeginTransaction Element (XMLA)
-  Begins a transaction on the current session with an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+  Begins a transaction on the current session with an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ## Syntax  
   
@@ -56,7 +56,7 @@ manager: "mblythe"
 |Child elements|None|  
   
 ## Remarks  
- The `BeginTransaction` command begins an active transaction on the current session. If an active transaction already exists, the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance increments the reference count of transactions for the current session. If not, the instance will begin a new transaction and set the reference count for the current session to 1. If an active transaction is explicitly specified using the `BeginTransaction` command, all subsequent commands are executed inside the explicitly specified transaction.  
+ The `BeginTransaction` command begins an active transaction on the current session. If an active transaction already exists, the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance increments the reference count of transactions for the current session. If not, the instance will begin a new transaction and set the reference count for the current session to 1. If an active transaction is explicitly specified using the `BeginTransaction` command, all subsequent commands are executed inside the explicitly specified transaction.  
   
  When the current session is ended and the reference count for transactions is higher than zero, all active transactions are rolled back.  
   

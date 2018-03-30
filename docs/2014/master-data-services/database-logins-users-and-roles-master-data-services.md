@@ -23,14 +23,14 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Database Logins, Users, and Roles (Master Data Services)
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] includes logins, users, and roles that are automatically installed on the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] instance that hosts the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database. These logins, users, and roles should not be modified.  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] includes logins, users, and roles that are automatically installed on the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] instance that hosts the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database. These logins, users, and roles should not be modified.  
   
 ## Logins  
   
 |Login|Description|  
 |-----------|-----------------|  
-|`mds_dlp_login`|Allows creation of UNSAFE assemblies.<br /><br /> -Disabled login with randomly-generated password.<br /><br /> -Maps to dbo for the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database.<br /><br /> -For msdb, mds_clr_user maps to this login.<br /><br /> <br /><br /> For more information, see [Creating an Assembly](../../2014/database-engine/dev-guide/creating-an-assembly.md).|  
-|`mds_email_login`|Enabled login used for notifications.<br /><br /> For msdb and the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database, mds_email_user maps to this login.|  
+|`mds_dlp_login`|Allows creation of UNSAFE assemblies.<br /><br /> -Disabled login with randomly-generated password.<br /><br /> -Maps to dbo for the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.<br /><br /> -For msdb, mds_clr_user maps to this login.<br /><br /> <br /><br /> For more information, see [Creating an Assembly](../../2014/database-engine/dev-guide/creating-an-assembly.md).|  
+|`mds_email_login`|Enabled login used for notifications.<br /><br /> For msdb and the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database, mds_email_user maps to this login.|  
   
 ## msdb Users  
   
@@ -51,15 +51,15 @@ manager: "jhubbard"
   
 |Role|Description|  
 |----------|-----------------|  
-|`mds_exec`|This role contains the account you designate in [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] when you create a [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application and designate an account for the application pool. The mds_exec role has:<br /><br /> **EXECUTE** permission on all schemas.<br /><br /> **ALTER**, **INSERT**, and **SELECT** permission on these tables:<br />mdm.tblStgMember<br />mdm.tblStgMemberAttribute<br />mdm.tbleStgRelationship<br /><br /> **SELECT** permission on these tables:<br />mdm.tblUser<br />mdm.tblUserGroup<br />mdm.tblUserPreference<br /><br /> **SELECT** permission on these views:<br />mdm.viw_SYSTEM_SECURITY_NAVIGATION<br />mdm.viw_SYSTEM_SECURITY_ROLE_ACCCESSCONTROL<br />mdm.viw_SYSTEM_SECURITY_ROLE_ACCCESSCONTROL_MEMBER<br />mdm.viw_SYSTEM_SECURITY_USER_MODEL|  
+|`mds_exec`|This role contains the account you designate in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] when you create a [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] web application and designate an account for the application pool. The mds_exec role has:<br /><br /> **EXECUTE** permission on all schemas.<br /><br /> **ALTER**, **INSERT**, and **SELECT** permission on these tables:<br />mdm.tblStgMember<br />mdm.tblStgMemberAttribute<br />mdm.tbleStgRelationship<br /><br /> **SELECT** permission on these tables:<br />mdm.tblUser<br />mdm.tblUserGroup<br />mdm.tblUserPreference<br /><br /> **SELECT** permission on these views:<br />mdm.viw_SYSTEM_SECURITY_NAVIGATION<br />mdm.viw_SYSTEM_SECURITY_ROLE_ACCCESSCONTROL<br />mdm.viw_SYSTEM_SECURITY_ROLE_ACCCESSCONTROL_MEMBER<br />mdm.viw_SYSTEM_SECURITY_USER_MODEL|  
   
 ## Schemas  
   
 |Role|Description|  
 |----------|-----------------|  
-|`mdm`|Contains all [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database and Service Broker objects other than the functions contained in the mdq schema.|  
-|`mdq`|Contains [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database functions related to filtering member results based on regular expressions or similarity, and for formatting notification emails.|  
-|**stg**|Contains [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database tables, stored procedures, and views related to the staging process. Do not delete any of these objects. For more information about the staging process, see [Data Import &#40;Master Data Services&#41;](../../2014/master-data-services/data-import-master-data-services.md).|  
+|`mdm`|Contains all [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database and Service Broker objects other than the functions contained in the mdq schema.|  
+|`mdq`|Contains [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database functions related to filtering member results based on regular expressions or similarity, and for formatting notification emails.|  
+|**stg**|Contains [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database tables, stored procedures, and views related to the staging process. Do not delete any of these objects. For more information about the staging process, see [Data Import &#40;Master Data Services&#41;](../../2014/master-data-services/data-import-master-data-services.md).|  
   
 ## See Also  
  [Database Object Security &#40;Master Data Services&#41;](../../2014/master-data-services/database-object-security-master-data-services.md)  

@@ -27,7 +27,7 @@ manager: "jhubbard"
  Select a dimension column from the list.  
   
  **Change Type**  
- Select a **Fixed Attribute**, or select one of the two types of changing attributes. Use **Fixed Attribute** when the value in a column should not change; [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] then treats changes as errors. Use **Changing Attribute** to overwrite existing values with changed values. Use **Historical Attribute** to save changed values in new records, while marking previous records as outdated.  
+ Select a **Fixed Attribute**, or select one of the two types of changing attributes. Use **Fixed Attribute** when the value in a column should not change; [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] then treats changes as errors. Use **Changing Attribute** to overwrite existing values with changed values. Use **Historical Attribute** to save changed values in new records, while marking previous records as outdated.  
   
  **Remove**  
  Select a dimension column, and remove it from the list of mapped columns by clicking **Remove**.  

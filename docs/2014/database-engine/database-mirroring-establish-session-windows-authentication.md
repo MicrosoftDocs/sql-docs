@@ -21,7 +21,7 @@ manager: "jhubbard"
 # Establish a Database Mirroring Session Using Windows Authentication (Transact-SQL)
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] instead.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] Use [!INCLUDE[ssHADR](../includes/sshadr-md.md)] instead.  
   
  After the mirror database is prepared (see [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](../../2014/database-engine/prepare-a-mirror-database-for-mirroring-sql-server.md)), you can establish a database mirroring session. The principal, mirror, and witness server instances must be separate server instances, which should be on separate host systems.  
   
@@ -29,7 +29,7 @@ manager: "jhubbard"
 >  We recommend that you configure database mirroring during off-peak hours because configuring mirroring can impact performance.  
   
 > [!NOTE]  
->  A given server instance can participate in multiple concurrent database mirroring sessions with the same or different partners. A server instance can be a partner in some sessions and a witness in other sessions. The mirror server instance must be running the same edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as the principal server instance. Database mirroring is not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Also, we strongly recommend that they run on comparable systems that can handle identical workloads.  
+>  A given server instance can participate in multiple concurrent database mirroring sessions with the same or different partners. A server instance can be a partner in some sessions and a witness in other sessions. The mirror server instance must be running the same edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] as the principal server instance. Database mirroring is not available in every edition of [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Also, we strongly recommend that they run on comparable systems that can handle identical workloads.  
   
 ### To establish a database mirroring session  
   
@@ -46,7 +46,7 @@ manager: "jhubbard"
   
      To execute a SET PARTNER statement, the STATE of the endpoints of both partners must be set to STARTED.  
   
-     To learn whether a server instance has a database mirroring endpoint and to learn its role and state, on that instance, use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement:  
+     To learn whether a server instance has a database mirroring endpoint and to learn its role and state, on that instance, use the following [!INCLUDE[tsql](../includes/tsql-md.md)] statement:  
   
     ```  
     SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints  
@@ -159,7 +159,7 @@ manager: "jhubbard"
     GO  
     ```  
   
-5.  After you create the full database backup, you must create a log backup on the principal database. For example, the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement backs up the log to the same file used by the preceding database backup:  
+5.  After you create the full database backup, you must create a log backup on the principal database. For example, the following [!INCLUDE[tsql](../includes/tsql-md.md)] statement backs up the log to the same file used by the preceding database backup:  
   
     ```  
     BACKUP LOG AdventureWorks   
@@ -169,7 +169,7 @@ manager: "jhubbard"
   
 6.  Before you can start mirroring, you must apply the required log backup (and any subsequent log backups).  
   
-     For example, the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement restores the first log from C:\AdventureWorks.bak:  
+     For example, the following [!INCLUDE[tsql](../includes/tsql-md.md)] statement restores the first log from C:\AdventureWorks.bak:  
   
     ```  
     RESTORE LOG AdventureWorks   
@@ -209,7 +209,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Setting Up Database Mirroring &#40;SQL Server&#41;](../../2014/database-engine/setting-up-database-mirroring-sql-server.md)   
- [ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20\(Transact-SQL\).md)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)   
  [Allow Network Access to a Database Mirroring Endpoint Using Windows Authentication &#40;SQL Server&#41;](../../2014/database-engine/database-mirroring-allow-network-access-windows-authentication.md)   
  [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](../../2014/database-engine/prepare-a-mirror-database-for-mirroring-sql-server.md)   
  [Create a Database Mirroring Endpoint for Windows Authentication &#40;Transact-SQL&#41;](../../2014/database-engine/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   

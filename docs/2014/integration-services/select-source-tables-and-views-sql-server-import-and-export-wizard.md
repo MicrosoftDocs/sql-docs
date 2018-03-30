@@ -37,7 +37,7 @@ manager: "jhubbard"
  Select a destination table from the list for each source table.  
   
 > [!NOTE]  
->  If you pause at this point in the wizard to create a destination table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or another tool, the new table is not immediately visible in the list of available destination tables. To refresh the list of destination tables, step back two pages to the **Choose a Destination** page, re-select the destination database, then step forward again to the **Select Source Tables and Views**.  
+>  If you pause at this point in the wizard to create a destination table in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] or another tool, the new table is not immediately visible in the list of available destination tables. To refresh the list of destination tables, step back two pages to the **Choose a Destination** page, re-select the destination database, then step forward again to the **Select Source Tables and Views**.  
   
 ### Other Options  
  **Edit mappings**  

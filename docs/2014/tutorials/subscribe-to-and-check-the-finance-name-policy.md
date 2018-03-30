@@ -24,11 +24,11 @@ manager: "jhubbard"
   
 2.  Select the **Subscribed** checkbox for the `Finance` category.  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ### To test the enforcement of the Finance Name policy  
   
-1.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], open a query window. Execute the following statements that try to create a table that violates the **Finance Name** policy. The table violates the policy because the table name does not begin with the letters **fintbl**.  
+1.  In [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], open a query window. Execute the following statements that try to create a table that violates the **Finance Name** policy. The table violates the policy because the table name does not begin with the letters **fintbl**.  
   
     ```  
     USE Finance ;  
@@ -60,7 +60,7 @@ manager: "jhubbard"
   
 2.  In the **Manage Policy Categories** dialog box, locate the Finance category, and select the **Mandate Database Subscriptions** checkbox for the Finance category.  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] Now the Finance category applies to all databases, but the condition that you have created restricts the Finance Name policy to the Finance database. This shows how you can use complex combinations of conditions to target policies in ways that will apply correctly on many servers.  
+3.  [!INCLUDE[clickOK](../includes/clickok-md.md)] Now the Finance category applies to all databases, but the condition that you have created restricts the Finance Name policy to the Finance database. This shows how you can use complex combinations of conditions to target policies in ways that will apply correctly on many servers.  
   
 ## Summary  
  This tutorial has shown you how to create Policy-Based Management conditions, policies and policy groups, and how to apply filters and check the compliance of Policy-Based Management targets.  

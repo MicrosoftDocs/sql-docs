@@ -25,7 +25,7 @@ manager: "jhubbard"
  The server instance.  
   
  **Authentication**  
- Indicates whether the connection is made with Windows Authentication or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.  
+ Indicates whether the connection is made with Windows Authentication or [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication.  
   
 ## See Also  
  [Maintenance Plans](../../2014/database-engine/maintenance-plans.md)  

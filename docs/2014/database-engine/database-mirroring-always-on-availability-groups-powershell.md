@@ -20,7 +20,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Create a Database Mirroring Endpoint for AlwaysOn Availability Groups (SQL Server PowerShell)
-  This topic describes how to create a database mirroring endpoint for use by [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using PowerShell.  
+  This topic describes how to create a database mirroring endpoint for use by [!INCLUDE[ssHADR](../includes/sshadr-md.md)] in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using PowerShell.  
   
  **In This Topic**  
   
@@ -33,10 +33,10 @@ manager: "jhubbard"
 ###  <a name="Security"></a> Security  
   
 > [!IMPORTANT]  
->  The RC4 algorithm is deprecated. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] We recommend that you use AES.  
+>  The RC4 algorithm is deprecated. [!INCLUDE[ssNoteDepFutureDontUse](../includes/ssnotedepfuturedontuse-md.md)] We recommend that you use AES.  
   
 ####  <a name="Permissions"></a> Permissions  
- Requires CREATE ENDPOINT permission, or membership in the sysadmin fixed server role. For more information, see [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](../Topic/GRANT%20Endpoint%20Permissions%20\(Transact-SQL\).md).  
+ Requires CREATE ENDPOINT permission, or membership in the sysadmin fixed server role. For more information, see [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](~/t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
   
 ##  <a name="PowerShellProcedure"></a> Using PowerShell  
  **To create a database mirroring endpoint**  
@@ -77,7 +77,7 @@ Set-SqlHadrEndpoint -InputObject $endpoint -State "Started"
   
  **To View Information About the Database Mirroring Endpoint**  
   
--   [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](../Topic/sys.database_mirroring_endpoints%20\(Transact-SQL\).md)  
+-   [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)  
   
 ## See Also  
  [Create an Availability Group &#40;Transact-SQL&#41;](../../2014/database-engine/create-an-availability-group-transact-sql.md)   

@@ -29,7 +29,7 @@ ms.author: "mblythe"
 manager: "mblythe"
 ---
 # Subscribe Element (XMLA)
-  Subscribes to a trace and returns a rowset that contains the trace events from a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance.  
+  Subscribes to a trace and returns a rowset that contains the trace events from a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance.  
   
 ## Syntax  
   
@@ -58,11 +58,11 @@ manager: "mblythe"
 |Child elements|[Object](../../../2014/analysis-services/dev-guide/object-element-xmla.md)|  
   
 ## Remarks  
- The `Subscribe` command subscribes to and streams back a rowset from a specified trace on an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance. If an object other than a trace is specified in the `Object` element, an error occurs.  
+ The `Subscribe` command subscribes to and streams back a rowset from a specified trace on an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance. If an object other than a trace is specified in the `Object` element, an error occurs.  
   
- If the `Object` element is not specified, a session trace is defined and subscribed to on the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance. The session trace returns a fixed set of trace events from the current session.  
+ If the `Object` element is not specified, a session trace is defined and subscribed to on the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance. The session trace returns a fixed set of trace events from the current session.  
   
- The rowset stream returned by this command is terminated if the client application closes the connection to the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance, or if the session on which the `Subscribe` command is executed is terminated.  
+ The rowset stream returned by this command is terminated if the client application closes the connection to the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance, or if the session on which the `Subscribe` command is executed is terminated.  
   
 ## See Also  
  [Commands &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/commands-xmla.md)  

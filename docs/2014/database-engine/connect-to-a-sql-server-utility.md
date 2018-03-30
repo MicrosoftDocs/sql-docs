@@ -16,15 +16,15 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Connect to a SQL Server Utility
-  Before you can connect to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility, you must create a utility control point (UCP). For more information, see [SQL Server Utility Features and Tasks](../../2014/database-engine/sql-server-utility-features-and-tasks.md).  
+  Before you can connect to a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility, you must create a utility control point (UCP). For more information, see [SQL Server Utility Features and Tasks](../../2014/database-engine/sql-server-utility-features-and-tasks.md).  
   
- To view and manage [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resource health, use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) to connect to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility.  
+ To view and manage [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] resource health, use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) to connect to a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility.  
   
- To connect to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility through SSMS:  
+ To connect to a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility through SSMS:  
   
 1.  Launch SSMS.  
   
-2.  In SSMS, connect to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+2.  In SSMS, connect to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 3.  Click **View** and then **Utility Explorer**.  
   
@@ -32,9 +32,9 @@ manager: "jhubbard"
   
 5.  In the **Connect to Server** dialog box, specify the UCP instance name, then click **Connect**.  
   
-6.  View the Utility Explorer Navigation Pane to see a tree view of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resources in the UCP.  
+6.  View the Utility Explorer Navigation Pane to see a tree view of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] resources in the UCP.  
   
- Creating a new UCP also connects you to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility. For more information, see [Create a SQL Server Utility Control Point &#40;SQL Server Utility&#41;](../../2014/database-engine/create-a-sql-server-utility-control-point-sql-server-utility.md).  
+ Creating a new UCP also connects you to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility. For more information, see [Create a SQL Server Utility Control Point &#40;SQL Server Utility&#41;](../../2014/database-engine/create-a-sql-server-utility-control-point-sql-server-utility.md).  
   
 ## See Also  
  [SQL Server Utility Features and Tasks](../../2014/database-engine/sql-server-utility-features-and-tasks.md)   

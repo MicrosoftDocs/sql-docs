@@ -23,16 +23,16 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Translations (Analysis Services)
-  **[!INCLUDE[applies](../../includes/applies-md.md)]**  Multidimensional only  
+  **[!INCLUDE[applies](../includes/applies-md.md)]**  Multidimensional only  
   
- In an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] multidimensional data model, you can embed multiple translations of a caption to provide locale-specific strings based on the LCID. Translations can be added for the database name, cube objects, and database dimension objects.  
+ In an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] multidimensional data model, you can embed multiple translations of a caption to provide locale-specific strings based on the LCID. Translations can be added for the database name, cube objects, and database dimension objects.  
   
  Defining a translation creates the metadata and translated caption inside the model, but to render localized strings in a client application, you must either set the `Language` property on the object, or pass a `Locale Identifier` parameter on the connection string (for example, by setting `LocaleIdentifier=1036` to return French strings). Plan on using `Locale Identifier` if you want to support multiple, simultaneous translations of the same object in different languages. Setting the `Language` property works, but it also impacts processing and queries, which could have unintended consequences. Setting `Locale Identifier` is the better choice because it's only used to return translated strings.  
   
  A translation consists of a locale identifier (LCID), a translated caption for the object (for example, the dimension or attribute name), and optionally, a binding to a column that provides data values in the target language. You can have multiple translations, but you can only use one for any given connection. There is no theoretical limit on the number of translations you can embed in model, but each translation adds complexity to testing, and all translations must share the same collation, so when designing your solution keep these natural constraints in mind.  
   
 > [!TIP]  
->  You can use client applications such as Excel, Management Studio, and [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to return translated strings. See [Globalization Tips and Best Practices &#40;Analysis Services&#41;](../../2014/analysis-services/globalization-tips-and-best-practices-analysis-services.md) for details.  
+>  You can use client applications such as Excel, Management Studio, and [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] to return translated strings. See [Globalization Tips and Best Practices &#40;Analysis Services&#41;](../../2014/analysis-services/globalization-tips-and-best-practices-analysis-services.md) for details.  
   
 ## Setting up a model to support translated members  
  A data model used in a multi-lingual solution needs more than translated labels (field names and descriptions). It also needs to provide data values that are articulated in various language scripts. Achieving a multi-lingual solution requires that you have individual attributes, bound to columns in an external database that return the data.  
@@ -54,7 +54,7 @@ manager: "mblythe"
  [Lesson 9: Defining Perspectives and Translations](../../2014/tutorials/lesson-9-defining-perspectives-and-translations.md) in the Analysis Services Tutorial will walk you through the steps for creating and testing translations.  
   
 ## Defining Translations  
- Defining a translation creates a `Translation` object as a child of the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database, dimension, or cube object. Use [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] to open the solution and define translations.  
+ Defining a translation creates a `Translation` object as a child of the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database, dimension, or cube object. Use [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] to open the solution and define translations.  
   
 ### Add translations to a cube  
  You can add translations to the cube, measure groups, measures, cube dimension, perspectives, KPIs, actions, named sets, and calculated members.  
@@ -76,7 +76,7 @@ manager: "mblythe"
   
  Translated captions are added to the model manually using your keyboard or copy-paste, but for dimension attribute members, you can obtain translated values from an external database. Specifically, the `CaptionColumn` property of an attribute can be bound to a column in a data source view.  
   
- At the attribute level, you can override collation settings, for example you might want to adjust width-sensitivity or use a binary sort for a specific attribute. In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], collation is exposed where data bindings are defined. Because you are binding a dimension attribute translation to a different source column in the DSV, a collation setting is available so that you can specify the collation used by the source column. See [Set or Change the Column Collation](../../2014/database-engine/set-or-change-the-column-collation.md) for details about column collation in the relational database.  
+ At the attribute level, you can override collation settings, for example you might want to adjust width-sensitivity or use a binary sort for a specific attribute. In [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], collation is exposed where data bindings are defined. Because you are binding a dimension attribute translation to a different source column in the DSV, a collation setting is available so that you can specify the collation used by the source column. See [Set or Change the Column Collation](../../2014/database-engine/set-or-change-the-column-collation.md) for details about column collation in the relational database.  
   
 1.  In Solution Explorer, double-click the dimension name to open dimension designer.  
   
@@ -112,7 +112,7 @@ manager: "mblythe"
 4.  Build and deploy the database.  
   
 ## Resolving Translations  
- If a client application requests a locale identifier, the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance attempts to resolve data and metadata for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects to the closest matching LCID. If the client application does not specify a default language, or specifies the neutral locale identifier (0) or process default language identifier (1024), then [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] uses the default language for the instance to return data and metadata for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects.  
+ If a client application requests a locale identifier, the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance attempts to resolve data and metadata for [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objects to the closest matching LCID. If the client application does not specify a default language, or specifies the neutral locale identifier (0) or process default language identifier (1024), then [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] uses the default language for the instance to return data and metadata for [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objects.  
   
 ## See Also  
  [Globalization scenarios for Analysis Services Multiidimensional](../../2014/analysis-services/globalization-scenarios-for-analysis-services-multiidimensional.md)   

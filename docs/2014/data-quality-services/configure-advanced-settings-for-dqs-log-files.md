@@ -19,10 +19,10 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Configure Advanced Settings for DQS Log Files
-  This topic describes how to configure advanced settings for [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] and [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] log files, such as set the rolling file size limit of the log files, set the time stamp pattern of the events, and so on.  
+  This topic describes how to configure advanced settings for [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] and [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] log files, such as set the rolling file size limit of the log files, set the time stamp pattern of the events, and so on.  
   
 > [!NOTE]  
->  These activities cannot be performed using [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)], and is intended for advanced users only.  
+>  These activities cannot be performed using [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)], and is intended for advanced users only.  
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
@@ -32,16 +32,16 @@ manager: "jhubbard"
   
 -   Your Windows user account must be a member of the sysadmin fixed server role in the SQL Server instance to modify configuration settings in the A_CONFIGURATION table in the DQS_MAIN database.  
   
--   You must be logged on as a member of the Administrators group on the computer where you are modifying the DQLog.Client.xml file to configure the [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] logging settings.  
+-   You must be logged on as a member of the Administrators group on the computer where you are modifying the DQLog.Client.xml file to configure the [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] logging settings.  
   
 ##  <a name="DQSServer"></a> Configure Data Quality Server Log Settings  
- The [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] log settings are present in an XML format in the **VALUE** column of the **ServerLogging** row in the A_CONFIGURATION table in the DQS_MAIN database. You can run the following SQL query to view the configuration information:  
+ The [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] log settings are present in an XML format in the **VALUE** column of the **ServerLogging** row in the A_CONFIGURATION table in the DQS_MAIN database. You can run the following SQL query to view the configuration information:  
   
 ```  
 select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'  
 ```  
   
- You must update the appropriate information in the **VALUE** column of the **ServerLogging** row to change the configuration settings for [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] logging. In this example, we will update the [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] log settings to set the rolling file size limit to 25000 KB (the default is 20000 KB).  
+ You must update the appropriate information in the **VALUE** column of the **ServerLogging** row to change the configuration settings for [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] logging. In this example, we will update the [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] log settings to set the rolling file size limit to 25000 KB (the default is 20000 KB).  
   
 1.  Start Microsoft SQL Server Management Studio, and connect to the appropriate SQL Server instance.  
   
@@ -93,7 +93,7 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
   
 4.  Press F5 to execute the statements. Check the **Results** pane to verify that the statements have executed successfully.  
   
-5.  To apply changes done to the [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] logging configuration, you must run the following Transact-SQL statements. Open a new Query Editor window, and paste the following Transact-SQL statements:  
+5.  To apply changes done to the [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] logging configuration, you must run the following Transact-SQL statements. Open a new Query Editor window, and paste the following Transact-SQL statements:  
   
     ```  
     USE [DQS_MAIN]  
@@ -108,10 +108,10 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
 6.  Press F5 to execute the statements. Check the **Results** pane to verify that the statements have executed successfully.  
   
 > [!NOTE]  
->  The [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] logging settings configuration is dynamically generated and stored in the DQS_MAIN.Log file, which is typically available at C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Log if you installed the default instance of SQL Server. However, changes done directly in this file do not hold, and are overwritten by the configuration settings in the A_CONFIGURATION table in the DQS_MAIN database.  
+>  The [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] logging settings configuration is dynamically generated and stored in the DQS_MAIN.Log file, which is typically available at C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Log if you installed the default instance of SQL Server. However, changes done directly in this file do not hold, and are overwritten by the configuration settings in the A_CONFIGURATION table in the DQS_MAIN database.  
   
 ##  <a name="DQSClient"></a> Configure Data Quality Client Log Settings  
- The [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] log setting configuration file, DQLog.Client.xml, is typically available at C:\Program Files\Microsoft SQL Server\120\Tools\Binn\DQ\config. The contents of the XML file is similar to the XML file that you modified earlier for the [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] log configuration settings. To configure the [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] log settings:  
+ The [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] log setting configuration file, DQLog.Client.xml, is typically available at C:\Program Files\Microsoft SQL Server\120\Tools\Binn\DQ\config. The contents of the XML file is similar to the XML file that you modified earlier for the [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] log configuration settings. To configure the [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] log settings:  
   
 1.  Run any XML editing tool or notepad as an administrator.  
   

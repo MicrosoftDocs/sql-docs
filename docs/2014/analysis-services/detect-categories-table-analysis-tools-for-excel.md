@@ -76,13 +76,13 @@ manager: "mblythe"
 >  When you use the **Detect Categories** tool, it creates a new column, Category, in the original data table. If you leave this column in the data table and then perform subsequent data mining operations, the presence of this column could influence your results. To ensure that this does not affect other operations, you should make a copy of the data table without the Category column before using other data mining tools.  
   
 ## Related Tools  
- When the **Detect Categories** tool analyzes your data, it creates a data mining structure and data mining model by using the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering algorithm.  
+ When the **Detect Categories** tool analyzes your data, it creates a data mining structure and data mining model by using the [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering algorithm.  
   
  After you have created a data mining model by using the **Analyze Key Influencers** tool, you can use the Data Mining Client for Excel to browse the model and explore relationships in more detail. The Data Mining Client for Excel is a separate add-in that provides more advanced data mining functionality. For information, see [Browsing Models in Excel &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/browsing-models-in-excel-sql-server-data-mining-add-ins.md).  
   
  For more information about using the data modeling capabilities in the Data Mining Client for Excel, see [Creating a Data Mining Model](../../2014/analysis-services/creating-a-data-mining-model.md).  
   
- For more information about the algorithm used by the **Detect Categories** tool, see the topic "Microsoft Clustering Algorithm" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+ For more information about the algorithm used by the **Detect Categories** tool, see the topic "Microsoft Clustering Algorithm" in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online.  
   
 ## See Also  
  [Table Analysis Tools for Excel](../../2014/analysis-services/table-analysis-tools-for-excel.md)  

@@ -30,11 +30,11 @@ manager: "jhubbard"
   
 3.  Type or enter the required information in the New Oracle CDC Service dialog box. See [Create and Edit an Oracle CDC Service](../../2014/integration-services/create-and-edit-an-oracle-cdc-service.md) for information on how to enter information in the New Oracle CDC Service dialog box.  
   
-     The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login provided in the New Oracle CDC Service dialog box is used by the Oracle CDC Service when the service runs. This login only needs to be a member of the public fixed-server role, no other privileges are needed. Once new Oracle CDC Instances are added, that login receives **db_owner** access to the associated [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC databases.  
+     The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] login provided in the New Oracle CDC Service dialog box is used by the Oracle CDC Service when the service runs. This login only needs to be a member of the public fixed-server role, no other privileges are needed. Once new Oracle CDC Instances are added, that login receives **db_owner** access to the associated [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] CDC databases.  
   
 4.  When you finish entering the required information, click **OK**.  
   
-     To create the Oracle CDC Windows Service definition, the program needs update access to the MSXDBCDC database in the associated [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. When you click **OK**, a dialog box prompts the user to enter a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login with an update access to the MSXDBCDC database.  
+     To create the Oracle CDC Windows Service definition, the program needs update access to the MSXDBCDC database in the associated [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance. When you click **OK**, a dialog box prompts the user to enter a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] login with an update access to the MSXDBCDC database.  
   
      For information about the data you must type into the Connect to SQL Server dialog box, see [Connection to SQL Server](../../2014/integration-services/connection-to-sql-server.md).  
   

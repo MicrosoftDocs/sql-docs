@@ -30,7 +30,7 @@ manager: "jhubbard"
   
 -   Detach and then attach the database specifying separate locations for the data and log devices.  
   
--   Specify a new location by running the ALTER DATABASE statement with the MODIFY FILE option, and then restarting the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Specify a new location by running the ALTER DATABASE statement with the MODIFY FILE option, and then restarting the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## For More Information  
  [Move Database Files](../../2014/database-engine/move-database-files.md)  

@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: 3b546560-720f-48b8-9d63-cf159290e9d4
 caps.latest.revision: 24
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Add or Edit Join
@@ -56,7 +56,7 @@ manager: "jhubbard"
         > [!CAUTION]  
         >  Selecting this option indicates that the relationship between the child and parent tables in a join filter is one to one or one to many. Only select this option if you have a constraint on the joining column in the parent table that guarantees uniqueness. If the option is set incorrectly, non-convergence of data can occur.  
   
-    -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and later versions only. By default, merge replication processes changes on a row-by-row basis during synchronization. To have related changes processed as a unit, select **Logical record**. This option is available only if the article and publication requirements for using logical records are met. For more information, see the section "Considerations for Using Logical Records" in [Group Changes to Related Rows with Logical Records](../../../2014/relational-databases/replication/group-changes-to-related-rows-with-logical-records.md).  
+    -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only. By default, merge replication processes changes on a row-by-row basis during synchronization. To have related changes processed as a unit, select **Logical record**. This option is available only if the article and publication requirements for using logical records are met. For more information, see the section "Considerations for Using Logical Records" in [Group Changes to Related Rows with Logical Records](../../../2014/relational-databases/replication/group-changes-to-related-rows-with-logical-records.md).  
   
  After you have added or edited a filter, click **OK** to save changes and close the dialog box. The filter you specified is parsed and run against the table in the SELECT clause. If the filter statement contains syntax errors or other problems, you will be notified and will be able to edit the filter statement.  
   

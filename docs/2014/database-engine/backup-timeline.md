@@ -26,7 +26,7 @@ manager: "jhubbard"
  The Database Recovery Advisor ensures that only backups that are required for restoring to that point in time are selected. These selected backups make up the recommended restore plan for your restore operation. You should use only the selected backups. For information about the Database Recovery Advisor, see [Restore and Recovery Overview &#40;SQL Server&#41;](../../2014/database-engine/restore-and-recovery-overview-sql-server.md).  
   
 ## Restore to  
- **Last backup taken** is selected by default. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] will select the appropriate backups to restore the database, and will restore the database to the point of the last backup. Click **A specific date and time** to manually set the date and time (selecting a specific point in time).  
+ **Last backup taken** is selected by default. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] will select the appropriate backups to restore the database, and will restore the database to the point of the last backup. Click **A specific date and time** to manually set the date and time (selecting a specific point in time).  
   
  **Specific date and time** permits you stop the restore at a specific date and time that you select. The timeline shows a representation of the backup operations performed in the 24 hours around the select date and time.  
   

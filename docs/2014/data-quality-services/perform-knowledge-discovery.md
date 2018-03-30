@@ -21,14 +21,14 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Perform Knowledge Discovery
-  This topic describes how to build a knowledge base through knowledge discovery. In the discovery process, [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) analyzes the data in a sample data source through a computer-assisted process, and adds the knowledge that it gains to the knowledge base. This knowledge can be modified and enhanced in the **Manage Domain Values** step of the knowledge discovery activity, or in the domain management activity.  
+  This topic describes how to build a knowledge base through knowledge discovery. In the discovery process, [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) analyzes the data in a sample data source through a computer-assisted process, and adds the knowledge that it gains to the knowledge base. This knowledge can be modified and enhanced in the **Manage Domain Values** step of the knowledge discovery activity, or in the domain management activity.  
   
  Knowledge discovery is a wizard-driven process that includes three steps, each of which must be completed.  
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
 ###  <a name="Prerequisites"></a> Prerequisites  
- Microsoft Excel must be installed on the [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] computer if the source data against which you are running the discovery is in an Excel file. Otherwise, you will not be able to select the Excel file in the mapping stage. The files created by Microsoft Excel can have an extension of .xlsx, .xls, or .csv. If the 64-bit version of Excel is used, only Excel 2003 files (.xls) are supported; Excel 2007 or 2010 files (.xlsx) are not supported. If you are using 64-bit version of Excel 2007 or 2010, save the file as an .xls file or a .csv file, or install a 32-bit version of Excel instead.  
+ Microsoft Excel must be installed on the [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] computer if the source data against which you are running the discovery is in an Excel file. Otherwise, you will not be able to select the Excel file in the mapping stage. The files created by Microsoft Excel can have an extension of .xlsx, .xls, or .csv. If the 64-bit version of Excel is used, only Excel 2003 files (.xls) are supported; Excel 2007 or 2010 files (.xlsx) are not supported. If you are using 64-bit version of Excel 2007 or 2010, save the file as an .xls file or a .csv file, or install a 32-bit version of Excel instead.  
   
 ###  <a name="Security"></a> Security  
   
@@ -37,7 +37,7 @@ manager: "jhubbard"
   
 ##  <a name="FirstStep"></a> First step: Start Knowledge Discovery  
   
-1.  [!INCLUDE[ssDQSInitialStep](../../includes/ssdqsinitialstep-md.md)] [Run the Data Quality Client Application](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Run the Data Quality Client Application](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  If you want to perform knowledge discovery on a new knowledge base, click **New knowledge base**, enter the name and description, and specify what you are creating the knowledge base from, if applicable. If you want to perform knowledge discovery on an existing knowledge base, click **Open knowledge base**, and then select a knowledge base.  
   
@@ -52,13 +52,13 @@ manager: "jhubbard"
   
 2.  If the data source is **SQL Server**, proceed as follows:  
   
-    1.  In the **Database** field select the source database that you want to analyze to create the knowledge base. The text box drop-down will list the databases that are available. The source database must be present in the same SQL Server instance as [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]. Otherwise, it will not appear in the drop-down list.  
+    1.  In the **Database** field select the source database that you want to analyze to create the knowledge base. The text box drop-down will list the databases that are available. The source database must be present in the same SQL Server instance as [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]. Otherwise, it will not appear in the drop-down list.  
   
     2.  In the **Table/View** field select the table or view that you want to analyze to create the knowledge base. This table or view should be sample data, not an entire source database that you are performing data cleansing or matching on. The text box drop-down will list the tables and views that are available for the selected database.  
   
 3.  If the data source is **Excel**, proceed as follows:  
   
-    1.  Click **Browse** and select the Excel file that you want to analyze to create the knowledge base. Excel must be installed on the [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] computer to select an Excel file. If Excel is not installed on the [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] computer, the Browse button will not be available, and you will be notified beneath this text box that Excel is not installed.  
+    1.  Click **Browse** and select the Excel file that you want to analyze to create the knowledge base. Excel must be installed on the [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] computer to select an Excel file. If Excel is not installed on the [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] computer, the Browse button will not be available, and you will be notified beneath this text box that Excel is not installed.  
   
     2.  Select the **Use first row as header** checkbox if the first row of the Excel file contains header data.  
   

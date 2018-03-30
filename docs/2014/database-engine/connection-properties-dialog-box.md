@@ -27,7 +27,7 @@ manager: "jhubbard"
  Note that the query time-out period for SQL Azure is 30 minutes.  
   
 ## Authentication  
- View authentication properties for the current connection. Authentication properties are the login and authentication method when the connection was established. To change the authentication properties, disconnect from [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and then connect Object Explorer to the server again, using the desired connection options.  
+ View authentication properties for the current connection. Authentication properties are the login and authentication method when the connection was established. To change the authentication properties, disconnect from [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], and then connect Object Explorer to the server again, using the desired connection options.  
   
  **Authentication Method**  
  The authentication method used for the current connection.  
@@ -45,13 +45,13 @@ manager: "jhubbard"
  The system process ID assigned by the server to the connection. This cannot be changed for this connection.  
   
  **Network Protocol**  
- The network protocol of the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] connection. To change this, connect again with the desired connection properties.  
+ The network protocol of the [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] connection. To change this, connect again with the desired connection properties.  
   
  **Network Packet Size**  
  The packet size used when communicating with the server. To change this, connect again with the desired connection properties.  
   
  **Connection Timeout**  
- The amount of time is seconds to wait when connecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] before timing out and returning a failure to connect error to the user. To change this, connect again with the desired connection properties.  
+ The amount of time is seconds to wait when connecting to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] before timing out and returning a failure to connect error to the user. To change this, connect again with the desired connection properties.  
   
  **Execution Timeout**  
  The amount of time in seconds to wait before execution of a task is completed on the server. To change this, connect again with the desired connection properties.  
@@ -60,37 +60,37 @@ manager: "jhubbard"
  Whether the current connection is encrypted. To change this, connect again with the desired connection properties.  
   
 ## Product Category  
- View product properties for the current connection. These properties describe the server product, version, instance name, and collation. The properties are set during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation.  
+ View product properties for the current connection. These properties describe the server product, version, instance name, and collation. The properties are set during [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] installation.  
   
  **Product Name**  
- The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] product name.  
+ The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] product name.  
   
  **Product Version**  
- The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] product version.  
+ The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] product version.  
   
  **Server Name**  
- The name of the computer running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ The name of the computer running [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **Instance Name**  
  The instance name of the server. The default instance is blank.  
   
  **Language**  
- The language version of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] product.  
+ The language version of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] product.  
   
  **Collation**  
  The collation of the server.  
   
 ## Server Environment Category  
- View server environment properties for the current connection related to the server hardware and operating system. The properties cannot be configured by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ View server environment properties for the current connection related to the server hardware and operating system. The properties cannot be configured by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **Computer Name**  
- The name of the server computer that is running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ The name of the server computer that is running [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **Platform**  
  The operating system name, manufacturer name, and CPU family of the server.  
   
  **Operating System**  
- The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows version installed on the server.  
+ The [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows version installed on the server.  
   
  **Processors**  
  The number of processors on the server.  

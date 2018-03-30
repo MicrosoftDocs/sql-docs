@@ -29,7 +29,7 @@ manager: "jhubbard"
 # srv_paramtype (Extended Stored Procedure API)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
   
  Returns the data type of a remote stored procedure call parameter.  
   
@@ -57,7 +57,7 @@ n
 ## Returns  
  A token value for the data type of the parameter. For information about data types, see [Data Types &#40;Extended Stored Procedure API&#41;](../../../2014/database-engine/dev-guide/data-types-extended-stored-procedure-api.md). If there is no *n*th parameter or if there is no remote stored procedure, it returns - 1.  
   
- This function returns the following values, if the parameter is one of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] data types.  
+ This function returns the following values, if the parameter is one of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] data types.  
   
 |New data types|Return value|  
 |--------------------|------------------|  

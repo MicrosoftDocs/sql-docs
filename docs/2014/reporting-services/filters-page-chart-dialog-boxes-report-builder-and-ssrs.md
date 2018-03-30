@@ -19,7 +19,7 @@ f1_keywords:
 ms.assetid: fab97b2f-d53f-42f2-900c-c159653d89ed
 caps.latest.revision: 14
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Filters page, Chart Dialog Boxes (Report Builder and SSRS)

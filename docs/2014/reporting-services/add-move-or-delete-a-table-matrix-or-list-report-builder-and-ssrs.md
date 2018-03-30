@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 4b97c470-cde0-4bb1-a46e-5f5f5553feaa
 caps.latest.revision: 6
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Add, Move, or Delete a Table, Matrix, or List (Report Builder and SSRS)
@@ -24,7 +24,7 @@ manager: "mblythe"
 >  The wizard is available only in Report Builder.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ### To add a table or matrix to a report by using the New Table or New Matrix Wizard  
   

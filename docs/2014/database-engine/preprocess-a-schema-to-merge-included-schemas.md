@@ -21,11 +21,11 @@ helpviewer_keywords:
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
 caps.latest.revision: 25
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Preprocess a Schema to Merge Included Schemas
-  The W3C XSD **include** element provides support for schema modularity in which an XML schema can be partitioned into more than one physical file. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] currently does not support this element. XML schemas that include this element will be rejected by the server.  
+  The W3C XSD **include** element provides support for schema modularity in which an XML schema can be partitioned into more than one physical file. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] currently does not support this element. XML schemas that include this element will be rejected by the server.  
   
  As a solution, XML schemas that include the \<xsd:include> directive can be preprocessed to copy and merge the contents of any included schemas into a single schema for uploading to the server. The following C# code can be used for the preprocessing. The comments in the early part of the code provide information about how to use it.  
   

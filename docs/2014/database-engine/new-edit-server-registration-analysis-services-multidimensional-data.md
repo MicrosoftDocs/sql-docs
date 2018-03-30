@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # New or Edit Server Registration (General Tab) (Analysis Services - Multidimensional Data)
-  Use this tab to specify options when registering an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+  Use this tab to specify options when registering an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
  To access this page, in Registered Servers click **Analysis Services** on the Registered Servers toolbar, right-click any registered servers group, such as **Analysis Services**, point to **New**, and then click **Server Registration**.  
   
@@ -30,7 +30,7 @@ manager: "jhubbard"
  Select the server instance to connect to. The server instance last connected to is displayed by default.  
   
  **Authentication**  
- Windows Authentication allows a user to connect using their [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows credentials, as a Windows user or as a member of a Windows group.  
+ Windows Authentication allows a user to connect using their [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows credentials, as a Windows user or as a member of a Windows group.  
   
  **User name**  
  This option is not available in this release.  

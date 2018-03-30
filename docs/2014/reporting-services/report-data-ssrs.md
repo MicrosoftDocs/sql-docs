@@ -12,14 +12,14 @@ ms.topic: "article"
 ms.assetid: e22b7c24-edab-42d6-82f6-95068e1c6043
 caps.latest.revision: 14
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Report Data (SSRS)
   Report data can come from multiple sources of data in your organization. Your first step in designing a report is to create data sources and datasets that represent the underlying report data. Each data source includes data connection information. Each dataset includes a query command that defines the set of fields to use as data from a data source. To visualize data from each dataset, add a data region, such as a table, matrix, chart, or map. When the report is processed, the queries run on the data source, and each data region expands as needed to display the query results for the dataset.  
   
 ##  <a name="BkMk_ReportDataTerms"></a> Terms  
- If you are unfamiliar with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] concepts, review the following terms in [Reporting Services Concepts &#40;SSRS&#41;](../../2014/reporting-services/reporting-services-concepts-ssrs.md): *data connection*, *embedded data sources*, *shared data sources*, *embedded datasets*, *shared datasets*, *dataset queries*, *report parts*, and *data alerts*.  
+ If you are unfamiliar with [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] concepts, review the following terms in [Reporting Services Concepts &#40;SSRS&#41;](../../2014/reporting-services/reporting-services-concepts-ssrs.md): *data connection*, *embedded data sources*, *shared data sources*, *embedded datasets*, *shared datasets*, *dataset queries*, *report parts*, and *data alerts*.  
   
 ##  <a name="BkMk_ReportDataTips"></a> Tips for Specifying Report Data  
  Use the following information to design your report data strategy.  
@@ -53,11 +53,11 @@ manager: "mblythe"
   
 -   Understand the software data layer architecture for your organization and the potential issues arising from data types. Understand how data extensions and data processing extensions can affect query results. Data types differ among the source of data, data providers, and the data types stored in the report definition (.rdl) file.  
   
--   Understand the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] client/server architectures and tools. For example, in Report Designer, you author reports on a client machine that uses built-in data source types. When you publish a report, the data source types must be supported on the report server or SharePoint site.  For more information, see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../2014/reporting-services/data-sources-supported-by-reporting-services-ssrs.md).  
+-   Understand the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] client/server architectures and tools. For example, in Report Designer, you author reports on a client machine that uses built-in data source types. When you publish a report, the data source types must be supported on the report server or SharePoint site.  For more information, see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../2014/reporting-services/data-sources-supported-by-reporting-services-ssrs.md).  
   
 -   Data sources and datasets are authored in a report and published to a report server or SharePoint site from a client authoring tool. Data sources can be created directly on the report server. After they are published, you can configure credentials and other properties on the report server. For more information, see [Data Connections, Data Sources, and Connection Strings in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md) and [Reporting Services Tools](../../2014/reporting-services/reporting-services-tools.md).  
   
--   The data sources you can use depend on which [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data extensions are installed. Support for data sources can differ by client authoring tool, report server version, and report server platform. For more information, see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../2014/reporting-services/data-sources-supported-by-reporting-services-ssrs.md).  
+-   The data sources you can use depend on which [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] data extensions are installed. Support for data sources can differ by client authoring tool, report server version, and report server platform. For more information, see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../2014/reporting-services/data-sources-supported-by-reporting-services-ssrs.md).  
   
 -   Data source credentials vary based on data source type and on whether you are viewing reports on your client or report server or SharePoint site. For more information, see [Set Permissions for Report Server Items on a SharePoint Site &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../2014/reporting-services/set-permissions-for-report-server-items-on-a-sharepoint-site.md), [Specify Credential and Connection Information for Report Data Sources](../../2014/reporting-services/specify-credential-and-connection-information-for-report-data-sources.md), and credential information specific to each tool in [Reporting Services Tools](../../2014/reporting-services/reporting-services-tools.md).  
   

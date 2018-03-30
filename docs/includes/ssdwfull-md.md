@@ -1,1 +1,1 @@
-SQL Server 2008 R2 Parallel Data Warehouse
+ SQL Server 2008 R2 Parallel Data Warehouse 

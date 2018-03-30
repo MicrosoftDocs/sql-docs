@@ -36,18 +36,18 @@ manager: "jhubbard"
   
  ![A For Loop container repeats a task four times](../../2014/integration-services/media/ssis-forloop.gif "A For Loop container repeats a task four times")  
   
- The expressions must be valid [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] expressions.  
+ The expressions must be valid [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] expressions.  
   
- To create the initialization and assignment expressions, you can use the assignment operator (=). This operator is not otherwise supported by the Integration Services expression grammar and can only be used by the initialization and assignment expression types in the For Loop container. Any expression that uses the assignment operator must have the syntax `@Var = <expression>`, where **Var** is a run-time variable and \<expression> is an expression that follows the rules of the [!INCLUDE[ssIS](../../includes/ssis-md.md)] expression syntax. The expression can include the variables, literals, and any operators and functions that the SSIS expression grammar supports. The expression must evaluate to a data type that can be cast to the data type of the variable.  
+ To create the initialization and assignment expressions, you can use the assignment operator (=). This operator is not otherwise supported by the Integration Services expression grammar and can only be used by the initialization and assignment expression types in the For Loop container. Any expression that uses the assignment operator must have the syntax `@Var = <expression>`, where **Var** is a run-time variable and \<expression> is an expression that follows the rules of the [!INCLUDE[ssIS](../includes/ssis-md.md)] expression syntax. The expression can include the variables, literals, and any operators and functions that the SSIS expression grammar supports. The expression must evaluate to a data type that can be cast to the data type of the variable.  
   
  A For Loop container can have only one evaluation expression. This means that the For Loop container runs all its control flow elements the same number of times. Because the For Loop container can include other For Loop containers, you can build nested loops and implement complex looping in packages.  
   
  You can set a transaction property on the For Loop container to define a transaction for a subset of the package control flow. In this way, you can manage transactions at a more granular level. For example, if a For Loop container repeats a control flow that updates data in a table multiple times, you can configure the For Loop and its control flow to use a transaction to ensure that if not all data is updated successfully, no data is updated. For more information, see [Integration Services Transactions](../../2014/integration-services/integration-services-transactions.md).  
   
 ## Configuration of the For Loop Container  
- You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer or programmatically.  
   
- For more information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click one of the following topics:  
+ For more information about the properties that you can set in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click one of the following topics:  
   
 -   [For Loop Editor](../../2014/integration-services/for-loop-editor.md)  
   

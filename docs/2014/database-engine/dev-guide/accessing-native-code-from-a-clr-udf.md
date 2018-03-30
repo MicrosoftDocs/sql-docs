@@ -61,7 +61,7 @@ public class StoreProcedures {
 }  
 ```  
   
- Finally, execute the following [!INCLUDE[tsql](../../../includes/tsql-md.md)]:  
+ Finally, execute the following [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
   
 ```  
 USE MASTER  

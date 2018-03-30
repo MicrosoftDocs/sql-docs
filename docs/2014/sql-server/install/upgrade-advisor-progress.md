@@ -23,17 +23,17 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Upgrade Advisor Progress
-  Upgrade Advisor analysis starts with a dedicated analyzer that performs an analysis of each [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] component that you selected. As components are analyzed, progress is reported in the **Progress** dialog box.  
+  Upgrade Advisor analysis starts with a dedicated analyzer that performs an analysis of each [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] component that you selected. As components are analyzed, progress is reported in the **Progress** dialog box.  
   
 ## Options  
  **Action**  
- Specifies the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] component that is selected for analysis.  
+ Specifies the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] component that is selected for analysis.  
   
  **Status**  
- Displays the status value returned from the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] component progress interface.  
+ Displays the status value returned from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] component progress interface.  
   
  **Message**  
- Displays error, failure, or success messages returned from the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] individual analyzer.  
+ Displays error, failure, or success messages returned from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] individual analyzer.  
   
 > [!NOTE]  
 >  If the analysis is taking too long, you can stop the analysis, exit the Upgrade Advisor Analysis Wizard, and then rerun the wizard. To reduce analysis time, select fewer components to scan.  

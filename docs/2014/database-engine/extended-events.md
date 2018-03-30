@@ -19,15 +19,15 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Extended Events
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events has a highly scalable and highly configurable architecture that allows users to collect as much or as little information as is necessary to troubleshoot or identify a performance problem.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Extended Events has a highly scalable and highly configurable architecture that allows users to collect as much or as little information as is necessary to troubleshoot or identify a performance problem.  
   
  You can find more information about Extended Events on the web at [SQL Server Extended Events](http://blogs.msdn.com/b/extended_events/).  
   
-## Benefits of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events  
+## Benefits of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Extended Events  
  Extended Events is a light weight performance monitoring system that uses very few performance resources. Extended Events provides two graphical user interfaces (**New Session Wizard** and **New Session**) to create, modify, display, and analyze your session data.  
   
 ## Extended Events Concepts  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events (Extended Events) builds on existing concepts, such as an event or an event consumer, uses concepts from Event Tracing for Windows, and introduces new concepts.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Extended Events (Extended Events) builds on existing concepts, such as an event or an event consumer, uses concepts from Event Tracing for Windows, and introduces new concepts.  
   
  The following table describes the concepts in Extended Events.  
   
@@ -39,7 +39,7 @@ manager: "jhubbard"
 |[SQL Server Extended Events Sessions](../../2014/database-engine/sql-server-extended-events-sessions.md)|Describes the Extended Events session.|  
   
 ## Extended Events Architecture  
- Extended Events (Extended Events) is a general event-handling system for server systems. The Extended Events infrastructure supports the correlation of data from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and under certain conditions, the correlation of data from the operating system and database applications. In the latter case, Extended Events output must be directed to Event Tracing for Windows (ETW) to correlate the event data with operating system or application event data.  
+ Extended Events (Extended Events) is a general event-handling system for server systems. The Extended Events infrastructure supports the correlation of data from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], and under certain conditions, the correlation of data from the operating system and database applications. In the latter case, Extended Events output must be directed to Event Tracing for Windows (ETW) to correlate the event data with operating system or application event data.  
   
  All applications have execution points that are useful both inside and outside an application. Inside the application, asynchronous processing may be enqueued using information that is collected during the initial execution of a task. Outside the application, execution points provide monitoring utilities with information about the behavioral and performance characteristics of the monitored application.  
   
@@ -47,7 +47,7 @@ manager: "jhubbard"
   
 -   Tracing tools, such as SQL Trace and System Monitor.  
   
--   Logging tools, such as the Windows event log or the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log.  
+-   Logging tools, such as the Windows event log or the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] error log.  
   
 -   Users administering a product or developing applications on a product.  
   
@@ -67,21 +67,21 @@ manager: "jhubbard"
   
 -   Integration with, and support for existing ETW tools.  
   
--   A fully configurable event handling mechanism that is based on [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+-   A fully configurable event handling mechanism that is based on [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
 -   The ability to dynamically monitor active processes, while having minimal effect on those processes.  
   
 -   A default system health session that runs without any noticeable performance effects. The session collects system data that you can use to help troubleshoot performance issues. For more information, see [Use the system_health Session](../../2014/database-engine/use-the-system-health-session.md).  
   
 ## Extended Events Tasks  
- Using [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)] to execute [!INCLUDE[tsql](../../includes/tsql-md.md)] Data Definition Language (DDL) statements, dynamic management views and functions, or catalog views, you can create simple or complex [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events troubleshooting solutions for your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] environment.  
+ Using [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)] to execute [!INCLUDE[tsql](../includes/tsql-md.md)] Data Definition Language (DDL) statements, dynamic management views and functions, or catalog views, you can create simple or complex [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Extended Events troubleshooting solutions for your [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] environment.  
   
 |Task Description|Topic|  
 |----------------------|-----------|  
 |Use the **Object Explorer** to manage event sessions.|[Manage Event Sessions in the Object Explorer](../../2014/database-engine/manage-event-sessions-in-the-object-explorer.md)|  
 |Describes how to create an Extended Events session.|[Create an Extended Events Session](../../2014/database-engine/create-an-extended-events-session.md)|  
 |Describes how to view and refresh target data.|[View Event Session Data](../../2014/database-engine/view-event-session-data.md)|  
-|Describes how to use Extended Events tools to create and manage your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events sessions.|[Extended Events Tools](../../2014/database-engine/extended-events-tools.md)|  
+|Describes how to use Extended Events tools to create and manage your [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Extended Events sessions.|[Extended Events Tools](../../2014/database-engine/extended-events-tools.md)|  
 |Describes how to alter an Extended Events session.|[Alter an Extended Events Session](../../2014/database-engine/alter-an-extended-events-session.md)|  
 |Describes how to copy or export target data.|[Copy or Export Target Data](../../2014/database-engine/copy-or-export-target-data.md)|  
 |Describes how to modify your trace results view to customize how you want to analyze your data.|[Modify the Trace Results View](../../2014/database-engine/modify-the-trace-results-view.md)|  
@@ -91,7 +91,7 @@ manager: "jhubbard"
 |Describes how to view the Extended Events events and actions that are equivalent to each SQL Trace event and its associated columns.|[View the Extended Events Equivalents to SQL Trace Event Classes](../../2014/database-engine/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)|  
 |Describes how to find the parameters you can set when you use the ADD TARGET argument in CREATE EVENT SESSION or ALTER EVENT SESSION.|[Get the Configurable Parameters for the ADD TARGET Argument](../../2014/database-engine/get-the-configurable-parameters-for-the-add-target-argument.md)|  
 |Describes how to convert an existing SQL Trace script to an Extended Events session.|[Convert an Existing SQL Trace Script to an Extended Events Session](../../2014/database-engine/convert-an-existing-sql-trace-script-to-an-extended-events-session.md)|  
-|Describes how to determine which queries are holding the lock, the plan of the query, and the [!INCLUDE[tsql](../../includes/tsql-md.md)] stack at the time the lock was taken.|[Determine Which Queries Are Holding Locks](../../2014/database-engine/determine-which-queries-are-holding-locks.md)|  
+|Describes how to determine which queries are holding the lock, the plan of the query, and the [!INCLUDE[tsql](../includes/tsql-md.md)] stack at the time the lock was taken.|[Determine Which Queries Are Holding Locks](../../2014/database-engine/determine-which-queries-are-holding-locks.md)|  
 |Describes how to identify the source of locks that are hindering database performance.|[Find the Objects That Have the Most Locks Taken on Them](../../2014/database-engine/find-the-objects-that-have-the-most-locks-taken-on-them.md)|  
 |Describes how to use Extended Events with Event Tracing for Windows to monitor system activity.|[Monitor System Activity Using Extended Events](../../2014/database-engine/monitor-system-activity-using-extended-events.md)|  
   
@@ -100,7 +100,7 @@ manager: "jhubbard"
  [DAC Support For SQL Server Objects and Versions](../../2014/database-engine/dac-support-for-sql-server-objects-and-versions.md)   
  [Deploy a Data-tier Application](../../2014/database-engine/deploy-a-data-tier-application.md)   
  [Monitor Data-tier Applications](../../2014/database-engine/monitor-data-tier-applications.md)   
- [Extended Events Dynamic Management Views](../Topic/Extended%20Events%20Dynamic%20Management%20Views.md)   
- [Extended Events Catalog Views &#40;Transact-SQL&#41;](../Topic/Extended%20Events%20Catalog%20Views%20\(Transact-SQL\).md)  
+ [Extended Events Dynamic Management Views](~/relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
+ [Extended Events Catalog Views &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql  
   
   

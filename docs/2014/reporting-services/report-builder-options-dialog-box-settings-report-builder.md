@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 caps.latest.revision: 13
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Report Builder Options Dialog Box, Settings (Report Builder)

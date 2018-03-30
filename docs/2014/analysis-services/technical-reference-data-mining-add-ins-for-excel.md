@@ -32,7 +32,7 @@ manager: "mblythe"
   
  **Configuration wizard help**  
   
- The configuration wizard runs the first time that you open the add-ins, to help you connect to an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server. If you have trouble with any of the steps, see this topic for additional help.  
+ The configuration wizard runs the first time that you open the add-ins, to help you connect to an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] server. If you have trouble with any of the steps, see this topic for additional help.  
   
 -   [Server Configuration Utility &#40;Data Mining Add-ins for Excel&#41;](../../2014/analysis-services/server-configuration-utility-data-mining-add-ins-for-excel.md)  
   

@@ -17,26 +17,26 @@ helpviewer_keywords:
 ms.assetid: d8afa405-1012-4349-a72d-e10d94f8453d
 caps.latest.revision: 21
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Developer&#39;s Guide (Reporting Services)
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] offers several programming interfaces that you can leverage in your own applications. You can use the existing features and capabilities of [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] to build custom reporting and management tools into Web sites and Windows applications, or you can extend the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] platform.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] offers several programming interfaces that you can leverage in your own applications. You can use the existing features and capabilities of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] to build custom reporting and management tools into Web sites and Windows applications, or you can extend the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] platform.  
   
- Extending the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] platform includes creating new components and resources that can be used for data access, report delivery and more. You can market these components and resources to companies that are using [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] in their organization.  
+ Extending the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] platform includes creating new components and resources that can be used for data access, report delivery and more. You can market these components and resources to companies that are using [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in their organization.  
   
 ## In This Section  
  [Integrating Reporting Services into Applications](../../../2014/reporting-services/dev-guide/integrating-reporting-services-into-applications.md)  
- Provides an overview of how to use [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] to integrate reporting into custom applications. Describes when to use direct URL access and when to use the Web service to access the report server.  
+ Provides an overview of how to use [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] to integrate reporting into custom applications. Describes when to use direct URL access and when to use the Web service to access the report server.  
   
  [Report Server Web Service](../../../2014/reporting-services/dev-guide/report-server-web-service.md)  
  The Report Server Web service provides access to the full functionality of the report server. The Web service uses SOAP over HTTP and is designed to act as a communications interface between client programs and the report server. The Web service and its methods expose the functionality of the report server and allow you to create custom tools for any part of the report life cycle, from management to execution.  
   
  [URL Access &#40;SSRS&#41;](../../../2014/reporting-services/url-access-ssrs.md)  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] supports a complete set of URL-based requests that you can use as a quick and easy access point for report navigation and viewing. You can use this technology in conjunction with the Report Server Web service to integrate a complete reporting solution into your custom business applications. URL access is particularly useful when integrating reports as part of a Web portal or when viewing reports from a Web browser.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supports a complete set of URL-based requests that you can use as a quick and easy access point for report navigation and viewing. You can use this technology in conjunction with the Report Server Web service to integrate a complete reporting solution into your custom business applications. URL access is particularly useful when integrating reports as part of a Web portal or when viewing reports from a Web browser.  
   
  [Reporting Services Extensions](../../../2014/reporting-services/dev-guide/reporting-services-extensions.md)  
- The modular architecture of [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] is designed for extensibility. A managed code API is available so that you can easily develop, install, and manage extensions consumed by many [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] components. You can create assemblies using the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] and add new [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] rendering, security, delivery, and data processing functionality to meet your evolving business needs.  
+ The modular architecture of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] is designed for extensibility. A managed code API is available so that you can easily develop, install, and manage extensions consumed by many [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] components. You can create assemblies using the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] and add new [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] rendering, security, delivery, and data processing functionality to meet your evolving business needs.  
   
  [Custom Report Items](../../../2014/reporting-services/dev-guide/custom-report-items.md)  
  Describes how to create Custom Report Items to add functionality to RDL or extend functionality of existing controls.  
@@ -45,7 +45,7 @@ manager: "jhubbard"
  Describes how to use custom assemblies with Reports by including code references within the report definition.  
   
  [Access the Reporting Services WMI Provider](../../../2014/reporting-services/access-the-reporting-services-wmi-provider.md)  
- Describes how to use the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] WMI Provider to manage report server deployments.  
+ Describes how to use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI Provider to manage report server deployments.  
   
 ## See Also  
  [Reporting Services &#40;SSRS&#41;](../../../2014/reporting-services/reporting-services-ssrs.md)   

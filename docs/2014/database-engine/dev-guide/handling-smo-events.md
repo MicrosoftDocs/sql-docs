@@ -24,7 +24,7 @@ manager: "jhubbard"
 # Handling SMO Events
   There are server event types that can be subscribed to by using an event handler and the <xref:Microsoft.SqlServer.Management.Common.ServerConnection> object.  
   
- Many of the instance classes in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO) can trigger events when certain actions on the server occur.  
+ Many of the instance classes in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) can trigger events when certain actions on the server occur.  
   
  These events can be handled programmatically by setting up an event handler and subscribing to the associated events. This type of event handling is transient because all the subscriptions are removed when the SMO client program exits.  
   
@@ -39,7 +39,7 @@ manager: "jhubbard"
  The types of database and server events that can be handled are listed in the <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> class and the <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>class.  
   
 ## Example  
- [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  
+ [!INCLUDE[ssChooseProgEnv](../../includes/sschooseprogenv-md.md)]  
   
 ## Registering Event Handlers and Subscribing to Event Handling in Visual Basic  
  This code example shows how to set up the event handler, and how to subscribe to the database events.  

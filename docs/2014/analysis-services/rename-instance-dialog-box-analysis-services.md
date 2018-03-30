@@ -18,14 +18,14 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Rename Instance Dialog Box (Analysis Services)
-  Use the **Rename Instance** dialog box to rename an existing instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. You can display the **Rename Instance** dialog box by launching the **Instance Rename** tool (asinstancerename.exe) from C:\Program Files\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE.  
+  Use the **Rename Instance** dialog box to rename an existing instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. You can display the **Rename Instance** dialog box by launching the **Instance Rename** tool (asinstancerename.exe) from C:\Program Files\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE.  
   
 ## Options  
   
 |Term|Definition|  
 |----------|----------------|  
 |**Instance to rename**|Select the instance to be renamed.|  
-|**New instance name**|Type the desired instance name. Do not include the server name. That is, instead of entering \<server name>\\<instance name\>, enter only \<instance name>.<br /><br /> If you want the instance you are renaming to be the default [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance, leave the name blank.|  
+|**New instance name**|Type the desired instance name. Do not include the server name. That is, instead of entering \<server name>\\<instance name\>, enter only \<instance name>.<br /><br /> If you want the instance you are renaming to be the default [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance, leave the name blank.|  
 |**Username**|Shows the account the service will use to start. The user name cannot be changed.|  
 |**Password**|Type the password of the service account.|  
   

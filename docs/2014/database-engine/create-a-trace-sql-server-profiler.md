@@ -18,11 +18,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Create a Trace (SQL Server Profiler)
-  This topic describes how to use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to create a trace.  
+  This topic describes how to use [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] to create a trace.  
   
 ### To create a trace  
   
-1.  On the **File** menu, click **New Trace**, and connect to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+1.  On the **File** menu, click **New Trace**, and connect to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
      The **Trace Properties** dialog box appears.  
   
@@ -44,7 +44,7 @@ manager: "jhubbard"
          Optionally, click **Set maximum rows**, and specify a value.  
   
     > [!CAUTION]  
-    >  When you do not save the trace results to a file or table, you can view the trace while [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] is open. However, you lose the trace results after you stop the trace and close [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. To avoid losing the trace results in this way, click **Save** on the **File** menu to save the results before you close [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+    >  When you do not save the trace results to a file or table, you can view the trace while [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] is open. However, you lose the trace results after you stop the trace and close [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]. To avoid losing the trace results in this way, click **Save** on the **File** menu to save the results before you close [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)].  
   
 5.  Optionally, select the **Enable trace stop time** check box, and specify a stop date and time.  
   

@@ -20,10 +20,10 @@ manager: "jhubbard"
   
 |Topic|Information|  
 |-----------|-----------------|  
-|[Connect to a SQL Server Utility](../../2014/database-engine/connect-to-a-sql-server-utility.md)|Describes viewing the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility dashboard and viewpoints.|  
-|[Reduce Noise in CPU Utilization Policies &#40;SQL Server Utility&#41;](../../2014/database-engine/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)|Describes reducing reporting noise and unwanted violations in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility monitoring policies.|  
-|[View Resource Health Policy Results &#40;SQL Server Utility&#41;](../../2014/database-engine/view-resource-health-policy-results-sql-server-utility.md)|Describes viewing the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility dashboard and list view in SSMS Utility Explorer.|  
-|[Modify a Resource Health Policy Definition &#40;SQL Server Utility&#41;](../../2014/database-engine/modify-a-resource-health-policy-definition-sql-server-utility.md)|Describes viewing or modifying [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility resource health policy definitions.|  
+|[Connect to a SQL Server Utility](../../2014/database-engine/connect-to-a-sql-server-utility.md)|Describes viewing the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility dashboard and viewpoints.|  
+|[Reduce Noise in CPU Utilization Policies &#40;SQL Server Utility&#41;](../../2014/database-engine/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)|Describes reducing reporting noise and unwanted violations in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility monitoring policies.|  
+|[View Resource Health Policy Results &#40;SQL Server Utility&#41;](../../2014/database-engine/view-resource-health-policy-results-sql-server-utility.md)|Describes viewing the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility dashboard and list view in SSMS Utility Explorer.|  
+|[Modify a Resource Health Policy Definition &#40;SQL Server Utility&#41;](../../2014/database-engine/modify-a-resource-health-policy-definition-sql-server-utility.md)|Describes viewing or modifying [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility resource health policy definitions.|  
   
 ## See Also  
  [SQL Server Utility Features and Tasks](../../2014/database-engine/sql-server-utility-features-and-tasks.md)  

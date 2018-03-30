@@ -62,7 +62,7 @@ public SqlXmlCommand(string cnString)
  Writes the query results to an existing stream. This method is useful when you have a stream to which you need the results appended (for example, to have the query results written to the System.Web.HttpResponse.OutputStream). For a working sample, see [Executing SQL Queries &#40;SQLXML Managed Classes&#41;](../../../2014/database-engine/dev-guide/executing-sql-queries-sqlxml-managed-classes.md).  
   
  XmlReader ExecuteXmlReader()  
- Returns an XmlReader object. You can use this method to either manipulate data in the XmlReader object directly or plug in the chainable architecture of System.Xml. For more information, see the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework documentation. For a working sample, see [Executing SQL Queries by Using the ExecuteXMLReader Method](../../../2014/database-engine/dev-guide/executing-sql-queries-by-using-the-executexmlreader-method.md).  
+ Returns an XmlReader object. You can use this method to either manipulate data in the XmlReader object directly or plug in the chainable architecture of System.Xml. For more information, see the [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework documentation. For a working sample, see [Executing SQL Queries by Using the ExecuteXMLReader Method](../../../2014/database-engine/dev-guide/executing-sql-queries-by-using-the-executexmlreader-method.md).  
   
  TheSqlXmlCommand object also supports these additional methods:  
   

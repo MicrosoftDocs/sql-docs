@@ -18,14 +18,14 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Options (Environment-Help-General Page)
-  Use the **Options** dialog box to choose documentation sets and decide whether to display topics internally in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or externally in a separate window. To access this dialog box, click **Options** on the **Tools** menu, expand **Help** in the **Environment** node, and then click **General**.  
+  Use the **Options** dialog box to choose documentation sets and decide whether to display topics internally in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] or externally in a separate window. To access this dialog box, click **Options** on the **Tools** menu, expand **Help** in the **Environment** node, and then click **General**.  
   
 > [!NOTE]  
 >  Changes made to the options on this page do not take effect until the environment is restarted.  
   
 ## Settings  
  **Show Help using**  
- Specifies how Help is displayed. Select **External Help Viewer** from the drop-down list to display topics in an external floating window. Select **Integrated Help Viewer** to display Help topics in a Web browser window docked inside [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+ Specifies how Help is displayed. Select **External Help Viewer** from the drop-down list to display topics in an external floating window. Select **Integrated Help Viewer** to display Help topics in a Web browser window docked inside [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
  **Search results per page**  
  Specifies the number of topics that are displayed on a single **Search Results** page.  

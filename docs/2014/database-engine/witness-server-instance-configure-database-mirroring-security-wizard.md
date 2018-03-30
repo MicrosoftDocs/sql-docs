@@ -21,7 +21,7 @@ manager: "jhubbard"
   Use this page to specify information about the server instance that is to serve as the witness for the session.  
   
 > [!NOTE]  
->  A witness server instance is not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+>  A witness server instance is not available in every edition of [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  **To configure database mirroring by using SQL Server Management Studio**  
   
@@ -48,7 +48,7 @@ manager: "jhubbard"
   
 -   If the listener port does not exist for the server instance, port number 5022 is displayed in the **Port** text box. You can enter any available port number, such as, 7022.  
   
--   When the mirroring endpoint already exists, the port number from the endpoint is displayed. If you need to change that port, use an ALTER ENDPOINT statement. For more information, see [ALTER ENDPOINT &#40;Transact-SQL&#41;](../Topic/ALTER%20ENDPOINT%20\(Transact-SQL\).md).  
+-   When the mirroring endpoint already exists, the port number from the endpoint is displayed. If you need to change that port, use an ALTER ENDPOINT statement. For more information, see [ALTER ENDPOINT &#40;Transact-SQL&#41;](~/t-sql/statements/alter-endpoint-transact-sql.md).  
   
     > [!NOTE]  
     >  A port number is required.  
@@ -57,7 +57,7 @@ manager: "jhubbard"
  If the mirroring endpoint exists for this server instance, the endpoint name is displayed here. If the endpoint does not exist, you can specify the name of the endpoint.  
   
  **Encrypt data sent through this endpoint**  
- By default, encryption is enabled. When enabled, encryption is required (not merely supported) and uses the default values for all of the encryption options. For more information, see [CREATE ENDPOINT &#40;Transact-SQL&#41;](../Topic/CREATE%20ENDPOINT%20\(Transact-SQL\).md).  
+ By default, encryption is enabled. When enabled, encryption is required (not merely supported) and uses the default values for all of the encryption options. For more information, see [CREATE ENDPOINT &#40;Transact-SQL&#41;](~/t-sql/statements/create-endpoint-transact-sql.md).  
   
  To disable encryption, clear the check box. To re-enable encryption, select the check box.  
   

@@ -22,11 +22,11 @@ helpviewer_keywords:
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 caps.latest.revision: 63
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Permissions (Database Engine)
-  Every [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] securable has associated permissions that can be granted to a principal. This topic provides the following information:  
+  Every [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] securable has associated permissions that can be granted to a principal. This topic provides the following information:  
   
 -   [Permissions naming conventions](#_conventions)  
   
@@ -43,7 +43,7 @@ manager: "jhubbard"
   
 -   CONTROL  
   
-     Confers ownership-like capabilities on the grantee. The grantee effectively has all defined permissions on the securable. A principal that has been granted CONTROL can also grant permissions on the securable. Because the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security model is hierarchical, CONTROL at a particular scope implicitly includes CONTROL on all the securables under that scope. For example, CONTROL on a database implies all permissions on the database, all permissions on all assemblies in the database, all permissions on all schemas in the database, and all permissions on objects within all schemas within the database.  
+     Confers ownership-like capabilities on the grantee. The grantee effectively has all defined permissions on the securable. A principal that has been granted CONTROL can also grant permissions on the securable. Because the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] security model is hierarchical, CONTROL at a particular scope implicitly includes CONTROL on all the securables under that scope. For example, CONTROL on a database implies all permissions on the database, all permissions on all assemblies in the database, all permissions on all schemas in the database, and all permissions on objects within all schemas within the database.  
   
 -   ALTER  
   
@@ -92,32 +92,32 @@ manager: "jhubbard"
      The REFERENCES permission is needed on an object to create a FUNCTION or VIEW with the `WITH SCHEMABINDING` clause that references that object.  
   
 ## Chart of SQL Server Permissions  
- For a poster sized chart of all [!INCLUDE[ssDE](../../includes/ssde-md.md)] permissions in pdf format, see [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
+ For a poster sized chart of all [!INCLUDE[ssDE](../includes/ssde-md.md)] permissions in pdf format, see [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
   
 ##  <a name="_securables"></a> Permissions Applicable to Specific Securables  
  The following table lists major classes of permissions and the kinds of securables to which they may be applied.  
   
 |Permission|Applies to|  
 |----------------|----------------|  
-|SELECT|Synonyms<br /><br /> Tables and columns<br /><br /> Table-valued functions, [!INCLUDE[tsql](../../includes/tsql-md.md)] and common language runtime (CLR), and columns<br /><br /> Views and columns|  
+|SELECT|Synonyms<br /><br /> Tables and columns<br /><br /> Table-valued functions, [!INCLUDE[tsql](../includes/tsql-md.md)] and common language runtime (CLR), and columns<br /><br /> Views and columns|  
 |VIEW CHANGE TRACKING|Tables<br /><br /> Schemas|  
 |UPDATE|Synonyms<br /><br /> Tables and columns<br /><br /> Views and columns<br /><br /> Sequence objects|  
-|REFERENCES|Scalar and aggregate functions ([!INCLUDE[tsql](../../includes/tsql-md.md)] and CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] queues<br /><br /> Tables and columns<br /><br /> Table-valued functions ([!INCLUDE[tsql](../../includes/tsql-md.md)] and CLR), and columns<br /><br /> Types<br /><br /> Views and columns<br /><br /> Sequence objects|  
+|REFERENCES|Scalar and aggregate functions ([!INCLUDE[tsql](../includes/tsql-md.md)] and CLR)<br /><br /> [!INCLUDE[ssSB](../includes/sssb-md.md)] queues<br /><br /> Tables and columns<br /><br /> Table-valued functions ([!INCLUDE[tsql](../includes/tsql-md.md)] and CLR), and columns<br /><br /> Types<br /><br /> Views and columns<br /><br /> Sequence objects|  
 |INSERT|Synonyms<br /><br /> Tables and columns<br /><br /> Views and columns|  
 |DELETE|Synonyms<br /><br /> Tables and columns<br /><br /> Views and columns|  
-|EXECUTE|Procedures ([!INCLUDE[tsql](../../includes/tsql-md.md)] and CLR)<br /><br /> Scalar and aggregate functions ([!INCLUDE[tsql](../../includes/tsql-md.md)] and CLR)<br /><br /> Synonyms<br /><br /> CLR types|  
-|RECEIVE|[!INCLUDE[ssSB](../../includes/sssb-md.md)] queues|  
-|VIEW DEFINITION|Availability groups<br /><br /> Procedures ([!INCLUDE[tsql](../../includes/tsql-md.md)] and CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] queues<br /><br /> Scalar and aggregate functions ([!INCLUDE[tsql](../../includes/tsql-md.md)] and CLR)<br /><br /> Logins, users, and roles<br /><br /> Synonyms<br /><br /> Tables<br /><br /> Table-valued functions ([!INCLUDE[tsql](../../includes/tsql-md.md)] and CLR)<br /><br /> Views<br /><br /> Sequence objects|  
-|ALTER|Availability groups<br /><br /> Procedures ([!INCLUDE[tsql](../../includes/tsql-md.md)] and CLR)<br /><br /> Scalar and aggregate functions ([!INCLUDE[tsql](../../includes/tsql-md.md)] and CLR)<br /><br /> Sequence objects<br /><br /> Logins, users, and roles<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] queues<br /><br /> Tables<br /><br /> Table-valued functions ([!INCLUDE[tsql](../../includes/tsql-md.md)] and CLR)<br /><br /> Views|  
-|TAKE OWNERSHIP|Availability groups<br /><br /> Roles<br /><br /> Procedures ([!INCLUDE[tsql](../../includes/tsql-md.md)] and CLR)<br /><br /> Scalar and aggregate functions ([!INCLUDE[tsql](../../includes/tsql-md.md)] and CLR)<br /><br /> Server roles<br /><br /> Synonyms<br /><br /> Tables<br /><br /> Table-valued functions ([!INCLUDE[tsql](../../includes/tsql-md.md)] and CLR)<br /><br /> Views<br /><br /> Sequence objects|  
-|CONTROL|Availability groups<br /><br /> Procedures ([!INCLUDE[tsql](../../includes/tsql-md.md)] and CLR)<br /><br /> Scalar and aggregate functions ([!INCLUDE[tsql](../../includes/tsql-md.md)] and CLR)<br /><br /> Logins, users, and roles<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] queues<br /><br /> Synonyms<br /><br /> Tables<br /><br /> Table-valued functions ([!INCLUDE[tsql](../../includes/tsql-md.md)] and CLR)<br /><br /> Views<br /><br /> Sequence objects|  
+|EXECUTE|Procedures ([!INCLUDE[tsql](../includes/tsql-md.md)] and CLR)<br /><br /> Scalar and aggregate functions ([!INCLUDE[tsql](../includes/tsql-md.md)] and CLR)<br /><br /> Synonyms<br /><br /> CLR types|  
+|RECEIVE|[!INCLUDE[ssSB](../includes/sssb-md.md)] queues|  
+|VIEW DEFINITION|Availability groups<br /><br /> Procedures ([!INCLUDE[tsql](../includes/tsql-md.md)] and CLR)<br /><br /> [!INCLUDE[ssSB](../includes/sssb-md.md)] queues<br /><br /> Scalar and aggregate functions ([!INCLUDE[tsql](../includes/tsql-md.md)] and CLR)<br /><br /> Logins, users, and roles<br /><br /> Synonyms<br /><br /> Tables<br /><br /> Table-valued functions ([!INCLUDE[tsql](../includes/tsql-md.md)] and CLR)<br /><br /> Views<br /><br /> Sequence objects|  
+|ALTER|Availability groups<br /><br /> Procedures ([!INCLUDE[tsql](../includes/tsql-md.md)] and CLR)<br /><br /> Scalar and aggregate functions ([!INCLUDE[tsql](../includes/tsql-md.md)] and CLR)<br /><br /> Sequence objects<br /><br /> Logins, users, and roles<br /><br /> [!INCLUDE[ssSB](../includes/sssb-md.md)] queues<br /><br /> Tables<br /><br /> Table-valued functions ([!INCLUDE[tsql](../includes/tsql-md.md)] and CLR)<br /><br /> Views|  
+|TAKE OWNERSHIP|Availability groups<br /><br /> Roles<br /><br /> Procedures ([!INCLUDE[tsql](../includes/tsql-md.md)] and CLR)<br /><br /> Scalar and aggregate functions ([!INCLUDE[tsql](../includes/tsql-md.md)] and CLR)<br /><br /> Server roles<br /><br /> Synonyms<br /><br /> Tables<br /><br /> Table-valued functions ([!INCLUDE[tsql](../includes/tsql-md.md)] and CLR)<br /><br /> Views<br /><br /> Sequence objects|  
+|CONTROL|Availability groups<br /><br /> Procedures ([!INCLUDE[tsql](../includes/tsql-md.md)] and CLR)<br /><br /> Scalar and aggregate functions ([!INCLUDE[tsql](../includes/tsql-md.md)] and CLR)<br /><br /> Logins, users, and roles<br /><br /> [!INCLUDE[ssSB](../includes/sssb-md.md)] queues<br /><br /> Synonyms<br /><br /> Tables<br /><br /> Table-valued functions ([!INCLUDE[tsql](../includes/tsql-md.md)] and CLR)<br /><br /> Views<br /><br /> Sequence objects|  
 |IMPERSONATE|Logins and users|  
   
 > [!CAUTION]  
->  The default permissions that are granted to system objects at the time of setup are carefully evaluated against possible threats and need not be altered as part of hardening the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation. Any changes to the permissions on the system objects could limit or break the functionality and could potentially leave your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation in an unsupported state.  
+>  The default permissions that are granted to system objects at the time of setup are carefully evaluated against possible threats and need not be altered as part of hardening the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] installation. Any changes to the permissions on the system objects could limit or break the functionality and could potentially leave your [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] installation in an unsupported state.  
   
 ##  <a name="_permissions"></a> SQL Server and SQL Database Permissions  
- The following table provides a complete list of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permissions. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] permissions are only available for base securables that are supported. Server level permissions cannot be granted in [!INCLUDE[ssSDS](../../includes/sssds-md.md)], however in some cases database permissions are available instead.  
+ The following table provides a complete list of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] permissions. [!INCLUDE[ssSDS](../includes/sssds-md.md)] permissions are only available for base securables that are supported. Server level permissions cannot be granted in [!INCLUDE[ssSDS](../includes/sssds-md.md)], however in some cases database permissions are available instead.  
   
 |Base securable|Granular permissions on base securable|Permission type code|Securable that contains base securable|Permission on container securable that implies granular permission on base securable|  
 |--------------------|--------------------------------------------|--------------------------|--------------------------------------------|------------------------------------------------------------------------------------------|  
@@ -157,7 +157,7 @@ manager: "jhubbard"
 |DATABASE|ALTER ANY DATABASE AUDIT|ALDA|SERVER|ALTER ANY SERVER AUDIT|  
 |DATABASE|ALTER ANY DATABASE DDL TRIGGER|ALTG|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE EVENT NOTIFICATION|ALED|SERVER|ALTER ANY EVENT NOTIFICATION|  
-|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> Note: Only applies to [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|ALTER ANY EVENT SESSION|  
+|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> Note: Only applies to [!INCLUDE[ssSDS](../includes/sssds-md.md)].|SERVER|ALTER ANY EVENT SESSION|  
 |DATABASE|ALTER ANY DATASPACE|ALDS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY FULLTEXT CATALOG|ALFT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY MESSAGE TYPE|ALMT|SERVER|CONTROL SERVER|  
@@ -165,7 +165,7 @@ manager: "jhubbard"
 |DATABASE|ALTER ANY ROLE|ALRL|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROUTE|ALRT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SCHEMA|ALSM|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> Note: Only applies to [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> Note: Only applies to [!INCLUDE[ssSDS](../includes/sssds-md.md)].|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SERVICE|ALSV|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SYMMETRIC KEY|ALSK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY USER|ALUS|SERVER|CONTROL SERVER|  
@@ -204,7 +204,7 @@ manager: "jhubbard"
 |DATABASE|DELETE|DL|SERVER|CONTROL SERVER|  
 |DATABASE|EXECUTE|EX|SERVER|CONTROL SERVER|  
 |DATABASE|INSERT|IN|SERVER|CONTROL SERVER|  
-|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> Note: Only applies to [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Use ALTER ANY CONNECTION in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|  
+|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> Note: Only applies to [!INCLUDE[ssSDS](../includes/sssds-md.md)]. Use ALTER ANY CONNECTION in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|  
 |DATABASE|REFERENCES|RF|SERVER|CONTROL SERVER|  
 |DATABASE|SELECT|SL|SERVER|CONTROL SERVER|  
 |DATABASE|SHOWPLAN|SPLN|SERVER|ALTER TRACE|  
@@ -400,7 +400,7 @@ manager: "jhubbard"
  The examples in this section show how to retrieve permissions information.  
   
 ### A. Returning the complete list of grantable permissions  
- The following statement returns all [!INCLUDE[ssDE](../../includes/ssde-md.md)] permission by using the `fn_builtin_permissions` function. For more information, see [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../Topic/sys.fn_builtin_permissions%20\(Transact-SQL\).md).  
+ The following statement returns all [!INCLUDE[ssDE](../includes/ssde-md.md)] permission by using the `fn_builtin_permissions` function. For more information, see [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](~/relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md).  
   
 ```  
 SELECT * FROM fn_builtin_permissions(default);  
@@ -416,7 +416,7 @@ GO
 ```  
   
 ### C. Returning the permissions granted to the executing principal on an object  
- The following example uses `fn_my_permissions` to return a list of the effective permissions that are held by the calling principal on a specified securable. The example returns permissions on an object named `Orders55`. For more information, see [sys.fn_my_permissions &#40;Transact-SQL&#41;](../Topic/sys.fn_my_permissions%20\(Transact-SQL\).md).  
+ The following example uses `fn_my_permissions` to return a list of the effective permissions that are held by the calling principal on a specified securable. The example returns permissions on an object named `Orders55`. For more information, see [sys.fn_my_permissions &#40;Transact-SQL&#41;](~/relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md).  
   
 ```  
 SELECT * FROM fn_my_permissions('Orders55', 'object');  
@@ -434,6 +434,6 @@ GO
   
 ## See Also  
  [Permissions Hierarchy &#40;Database Engine&#41;](../../2014/database-engine/permissions-hierarchy-database-engine.md)   
- [sys.database_permissions &#40;Transact-SQL&#41;](../Topic/sys.database_permissions%20\(Transact-SQL\).md)  
+ [sys.database_permissions &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)  
   
   

@@ -18,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
 caps.latest.revision: 30
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Using the RSClientPrint Control in Custom Applications
-  The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ActiveX control, **RSPrintClient**, provides client-side printing for reports viewed in HTML Viewer. It provides a **Print** dialog box so that a user can initiate a print job, preview a report, specify pages to print, and change the margins. During a client-side print operation, the report server renders the report in the Image (EMF) rendering extension and uses the print capabilities of the operating system to create the print job and send it to a printer.  
+  The [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX control, **RSPrintClient**, provides client-side printing for reports viewed in HTML Viewer. It provides a **Print** dialog box so that a user can initiate a print job, preview a report, specify pages to print, and change the margins. During a client-side print operation, the report server renders the report in the Image (EMF) rendering extension and uses the print capabilities of the operating system to create the print job and send it to a printer.  
   
  Client-side printing provides a way to control and improve the quality of a printout for an HTML report by side-stepping browser print settings on the user's computer, and instead using the page dimensions, margins, header, and footer text of the report to create the print output. The print control reads property values of the report to set page size and margins.  
   
  Developers who want to enable the client-side printing feature in third-party toolbars or viewers can access the ActiveX control through the **RSClientPrint** COM object. The control can be distributed freely. The following list provides recommendations for using the control:  
   
--   Use the control to improve printing for Web-based reports. You can specify the object in any of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-compatible programming languages or in script. The control is not intended for [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows Forms applications.  
+-   Use the control to improve printing for Web-based reports. You can specify the object in any of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-compatible programming languages or in script. The control is not intended for [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Forms applications.  
   
--   Copy the .cab file from the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] program files and add it to your custom application code base.  
+-   Copy the .cab file from the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] program files and add it to your custom application code base.  
   
 -   Use an \<OBJECT> tag to specify the control.  
   
@@ -41,7 +41,7 @@ manager: "jhubbard"
 -   Review the Books Online topics about Image (EMF) rendering to understand how pages are rendered for print preview and output.  
   
 ## RSPrintClient Overview  
- The control displays a custom print dialog box that supports features common to other print dialog boxes, including print preview, page selections for specifying specific pages and ranges, page margins, and orientation. The control is packaged as a CAB file. The text in the **Print** dialog box is localized into all of the languages supported in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. **RSPrintClient** ActiveX control uses the Image rendering extension (EMF) to print the report. The following EMF device information is used: StartPage, EndPage, MarginBottom, MarginLeft, MarginTop, MarginRight, PageHeight, and PageWidth. Other device information settings for image rendering are not supported.  
+ The control displays a custom print dialog box that supports features common to other print dialog boxes, including print preview, page selections for specifying specific pages and ranges, page margins, and orientation. The control is packaged as a CAB file. The text in the **Print** dialog box is localized into all of the languages supported in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **RSPrintClient** ActiveX control uses the Image rendering extension (EMF) to print the report. The following EMF device information is used: StartPage, EndPage, MarginBottom, MarginLeft, MarginTop, MarginRight, PageHeight, and PageWidth. Other device information settings for image rendering are not supported.  
   
 ### Language Support  
  The print control provides user interface text in different languages, and accepts input values calibrated to different measurement systems. The language and measurement system used are determined by the **Culture** and **UICulture** properties. Both properties accept LCID values. If you specify an LCID for a language that is a variation on a supported language, you will get the language that provides the closest match. If you specify an LCID that is not supported and for which no other LCID is a close match, you will get English (United States).  

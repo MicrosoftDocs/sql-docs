@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 635c2845-93c5-4c7f-8f33-ea848ca48b7c
 caps.latest.revision: 23
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Maximizing Query Editor

@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 2dbddcc7-427a-4537-a8e2-56d99b9d967d
 caps.latest.revision: 17
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "jhubbard"
 ---
 # Deployment Checklist: Scale-out by adding PowerPivot Servers to a SharePoint 2010 farm
@@ -25,9 +25,9 @@ manager: "jhubbard"
   
  SharePoint Server 2010 SP1 is applied and the farm is upgraded.  
   
- The existing PowerPivot for SharePoint instance in the farm is [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] (either a new installation or upgraded from SQL Server 2008 R2).  
+ The existing PowerPivot for SharePoint instance in the farm is [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (either a new installation or upgraded from SQL Server 2008 R2).  
   
- The computer on which you are installing the new [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] PowerPivot for SharePoint server is joined to the farm. The computer and the other servers in the farm must be in the same domain.  
+ The computer on which you are installing the new [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot for SharePoint server is joined to the farm. The computer and the other servers in the farm must be in the same domain.  
   
  Review the following additional topics to understand system and version requirements:  
   

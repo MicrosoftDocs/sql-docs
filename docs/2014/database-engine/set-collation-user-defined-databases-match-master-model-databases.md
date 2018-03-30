@@ -21,7 +21,7 @@ manager: "jhubbard"
   This rule checks whether user-defined databases are defined by using a database collation that is the same as the collation for master or model.  
   
 ## Best Practices Recommendations  
- We recommend that the collations of user-defined databases match the collation of master or model. Otherwise, collation conflicts can occur that might prevent code from executing. For example, when a stored procedure joins one table to a temporary table, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might end the batch and return a collation conflict error if the collations of the user-defined database and the model database are different. This occurs because temporary tables are created in tempdb, which bases its collation on that of model.  
+ We recommend that the collations of user-defined databases match the collation of master or model. Otherwise, collation conflicts can occur that might prevent code from executing. For example, when a stored procedure joins one table to a temporary table, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] might end the batch and return a collation conflict error if the collations of the user-defined database and the model database are different. This occurs because temporary tables are created in tempdb, which bases its collation on that of model.  
   
  If you experience collation conflict errors, consider one of the following solutions:  
   
@@ -40,11 +40,11 @@ manager: "jhubbard"
   
  [Set or Change the Column Collation](../../2014/database-engine/set-or-change-the-column-collation.md)  
   
- [ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20\(Transact-SQL\).md)  
+ [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)  
   
- [COLLATE &#40;Transact-SQL&#41;](../Topic/COLLATE%20\(Transact-SQL\).md)  
+ [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)  
   
- [sys.databases &#40;Transact-SQL&#41;](../Topic/sys.databases%20\(Transact-SQL\).md)  
+ [sys.databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
   
  [Microsoft Knowledge Base article 325335](http://go.microsoft.com/fwlink/?linkid=117751)  
   

@@ -50,7 +50,7 @@ manager: "jhubbard"
   
 ##  <a name="LogShipPrereqs"></a> Log Shipping Prerequisites  
   
--   The log shipping primary database must reside on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that hosts the initial/current primary replica of the availability group.  
+-   The log shipping primary database must reside on the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that hosts the initial/current primary replica of the availability group.  
   
 -   For a given log shipping secondary database to be converted to an AlwaysOn secondary database, it must:  
   

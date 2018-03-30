@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 9212fc68-f0a6-4f79-83c1-84baf4d1957e
 caps.latest.revision: 23
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # New Folder Page (Report Manager)

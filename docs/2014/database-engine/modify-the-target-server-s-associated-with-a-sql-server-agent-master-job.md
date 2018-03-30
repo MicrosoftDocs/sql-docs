@@ -16,7 +16,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Modify the Target Server(s) Associated with a SQL Server Agent Master Job
-  This topic describes how to modify the target server(s) associated with a SQL Server Agent master job in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  This topic describes how to modify the target server(s) associated with a SQL Server Agent master job in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -35,7 +35,7 @@ manager: "jhubbard"
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
- A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent master job cannot be targeted at both local and remote servers.  
+ A [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent master job cannot be targeted at both local and remote servers.  
   
 ###  <a name="Security"></a> Security  
   
@@ -62,7 +62,7 @@ manager: "jhubbard"
   
 #### To delete a target server currently associated with a SQL Server Agent master job  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -80,11 +80,11 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [sp_delete_jobserver &#40;Transact-SQL&#41;](../Topic/sp_delete_jobserver%20\(Transact-SQL\).md).  
+ For more information, see [sp_delete_jobserver &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md).  
   
 #### To associate a target server with the current SQL Server Agent master job  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -103,6 +103,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [sp_add_jobserver &#40;Transact-SQL&#41;](../Topic/sp_add_jobserver%20\(Transact-SQL\).md).  
+ For more information, see [sp_add_jobserver &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md).  
   
   

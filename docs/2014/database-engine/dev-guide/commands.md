@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Commands
-  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider exposes the **ICommand** interface and command objects, which are described in this section:  
+  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider exposes the **ICommand** interface and command objects, which are described in this section:  
   
 -   [Command Syntax](../../../2014/database-engine/dev-guide/command-syntax.md)  
   

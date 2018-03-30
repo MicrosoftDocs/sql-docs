@@ -45,7 +45,7 @@ manager: "jhubbard"
   
  **SQL Server Database**  
   
--   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] edition with support for SQL Server CDC  
+-   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] edition with support for SQL Server CDC  
   
 ## Software Prerequisites  
  The following software is required:  

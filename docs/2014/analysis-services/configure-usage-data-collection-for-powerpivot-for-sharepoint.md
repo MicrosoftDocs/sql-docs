@@ -57,7 +57,7 @@ manager: "mblythe"
     |**PowerPivot Connections**|PowerPivot Connection event is used to monitor PowerPivot server connections that are made on behalf of a user.|  
     |**PowerPivot Load Data Usage**|PowerPivot Load Data Usage is used to monitor requests that load PowerPivot data into server memory. A load event is generated for PowerPivot data files loaded from a content database or from cache.|  
     |**PowerPivot Unload Data Usage**|PowerPivot Unload Data Usage is used to monitor requests for unloading a PowerPivot data source after a period of inactivity. Caching a PowerPivot data source to disk will be reported as an unload event.|  
-    |**PowerPivot Query Usage**|PowerPivot Query Usage is used to monitor query processing times for data that is loaded in an [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] instance.|  
+    |**PowerPivot Query Usage**|PowerPivot Query Usage is used to monitor query processing times for data that is loaded in an [!INCLUDE[ssGeminiSrv](../includes/ssgeminisrv-md.md)] instance.|  
   
     > [!NOTE]  
     >  Server health and data refresh operations also generate usage data, but there is no event associated with these processes.  

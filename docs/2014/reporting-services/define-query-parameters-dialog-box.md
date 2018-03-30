@@ -15,7 +15,7 @@ f1_keywords:
 ms.assetid: a9697101-aa52-4a62-8f33-fad8f5bc2a0c
 caps.latest.revision: 11
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Define Query Parameters Dialog Box

@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: 005f5c71-0401-490e-8823-adc54a2e9675
 caps.latest.revision: 24
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Filter Table Rows
@@ -75,7 +75,7 @@ manager: "jhubbard"
  Select a shortcut node in the pane and click **Find Table**. The pane is expanded and the table is highlighted. If you click **Find Table** without a shortcut node selected, a **Find Table** dialog box is launched.  
   
  **Filter**  
- Contains the [!INCLUDE[tsql](../../../includes/tsql-md.md)] definition for the filter selected in the filter pane.  
+ Contains the [!INCLUDE[tsql](../../includes/tsql-md.md)] definition for the filter selected in the filter pane.  
   
 ## See Also  
  [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md)   

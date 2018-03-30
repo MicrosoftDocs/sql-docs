@@ -58,7 +58,7 @@ manager: "mblythe"
 |Child elements|None|  
   
 ## Remarks  
- For more information about processing options available to objects on an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], see [Multidimensional Model Object Processing](../../../2014/analysis-services/multidimensional-model-object-processing.md).  
+ For more information about processing options available to objects on an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], see [Multidimensional Model Object Processing](../../../2014/analysis-services/multidimensional-model-object-processing.md).  
   
  The value of the `Type` element is limited to one of the strings listed in the following table.  
   

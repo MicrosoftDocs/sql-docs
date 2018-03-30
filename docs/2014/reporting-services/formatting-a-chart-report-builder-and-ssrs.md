@@ -53,7 +53,7 @@ f1_keywords:
 ms.assetid: d3984300-c766-42f8-b7c4-863123d67c99
 caps.latest.revision: 6
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Formatting a Chart (Report Builder and SSRS)
@@ -64,7 +64,7 @@ manager: "mblythe"
  To effectively format the chart using a minimal number of steps, change the default border style, palette and drawing style. These three features produce the largest visible change on the chart. Drawing styles are only applicable to pie, doughnut, bar and column charts.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## In This Section  
  [Formatting Series Colors on a Chart &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)  

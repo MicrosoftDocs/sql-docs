@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: f061c204-5cd5-4467-9a9c-8a12803d93ba
 caps.latest.revision: 8
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Change Row Height or Column Width (Report Builder and SSRS)
@@ -23,7 +23,7 @@ manager: "mblythe"
  If a cell in a row or column contains a rectangle or data region, the minimum height and width of the cell is determined by the height and width of the contained item. For more information, see [Rendering Behaviors &#40;Report Builder  and SSRS&#41;](../../2014/reporting-services/rendering-behaviors-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ### To change row height by moving row handles  
   

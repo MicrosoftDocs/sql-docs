@@ -53,7 +53,7 @@ manager: "jhubbard"
  Use the **DatabaseMail XPs** option to enable Database Mail on this server. For more information, see [Database Mail XPs Server Configuration Option](../../2014/database-engine/database-mail-xps-server-configuration-option.md) reference topic.  
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
- Enabling [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker in any database requires a database lock. If Service Broker was deactivated in **msdb**, to enable Database Mail, first stop [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent so Service Broker can obtain the necessary lock.  
+ Enabling [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Service Broker in any database requires a database lock. If Service Broker was deactivated in **msdb**, to enable Database Mail, first stop [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent so Service Broker can obtain the necessary lock.  
   
 ###  <a name="Security"></a> Security  
  To configure Database Mail you must be a member of the **sysadmin** fixed server role. To send Database Mail you must be a member of the **DatabaseMailUserRole** database role in the **msdb** database.  
@@ -107,9 +107,9 @@ manager: "jhubbard"
 ###  <a name="NewAccount"></a> New Account Page  
  Use this page to create a new Database Mail account. A Database Mail account contains information for sending e-mail to an SMTP server.  
   
- A Database Mail account contains the information that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses to send e-mail messages to an SMTP server. Each account contains information for one e-mail server.  
+ A Database Mail account contains the information that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses to send e-mail messages to an SMTP server. Each account contains information for one e-mail server.  
   
- A Database Mail account is only used for Database Mail. A Database Mail account does not correspond to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account or a Microsoft Windows account. Database Mail can be sent using the credentials of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], using other credentials that you supply, or anonymously. When using basic authentication, the user name and password in a Database Mail account are only used for authentication with the e-mail server. An account need not correspond to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user or a user on the computer running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ A Database Mail account is only used for Database Mail. A Database Mail account does not correspond to a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] account or a Microsoft Windows account. Database Mail can be sent using the credentials of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], using other credentials that you supply, or anonymously. When using basic authentication, the user name and password in a Database Mail account are only used for authentication with the e-mail server. An account need not correspond to a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] user or a user on the computer running [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **Account name**  
  Type the name of the new account.  
@@ -118,13 +118,13 @@ manager: "jhubbard"
  Type a description of the account. The description is optional.  
   
  **E-mail address**  
- Type the name of the e-mail address for the account. This is the e-mail address that e-mail is sent from. For example, an account for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent may send e-mail from the address SqlAgent@Adventure-Works.com.  
+ Type the name of the e-mail address for the account. This is the e-mail address that e-mail is sent from. For example, an account for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent may send e-mail from the address SqlAgent@Adventure-Works.com.  
   
  **Display name**  
- Type the name to show on e-mail messages sent from this account. The display name is optional. This is the name displayed on messages sent from this account. For example, an account for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent may display the name "SQL Server Agent Automated Mailer" on e-mail messages.  
+ Type the name to show on e-mail messages sent from this account. The display name is optional. This is the name displayed on messages sent from this account. For example, an account for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent may display the name "SQL Server Agent Automated Mailer" on e-mail messages.  
   
  **Reply e-mail**  
- Type the e-mail address that will be used for replies to e-mail messages sent from this account. The reply e-mail is optional. For example, replies to an account for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent may go to the database administrator, danw@Adventure-Works.com.  
+ Type the e-mail address that will be used for replies to e-mail messages sent from this account. The reply e-mail is optional. For example, replies to an account for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent may go to the database administrator, danw@Adventure-Works.com.  
   
  **Server name**  
  Type the name or IP address of the SMTP server the account uses to send e-mail. Typically this is in a format similar to `smtp.`*<your_company>*`.com`. For help with this, consult your mail administrator.  
@@ -136,7 +136,7 @@ manager: "jhubbard"
  Encrypts communication using Secure Sockets Layer.  
   
  **Windows Authentication using Database Engine service credentials**  
- Connection is made to the SMTP server using the credentials configured for the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] service.  
+ Connection is made to the SMTP server using the credentials configured for the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] service.  
   
  **Basic Authentication**  
  Specify the user name and password required by the SMTP server.  
@@ -186,7 +186,7 @@ manager: "jhubbard"
  Encrypts communication using Secure Sockets Layer.  
   
  **Windows Authentication using Database Engine service credentials**  
- Connection is made to the SMTP server using the credentials configured for the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] service.  
+ Connection is made to the SMTP server using the credentials configured for the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] service.  
   
  **Basic Authentication**  
  Specify the user name and password required by the SMTP server.  
@@ -431,6 +431,6 @@ manager: "jhubbard"
   
 6.  Execute the script to create the configuration.  
   
-7.  The script does not grant any database users access to the profile. Therefore, by default, the profile can only be used by members of the **sysadmin** fixed security role. For more information about granting access to profiles, see [sysmail_add_principalprofile_sp &#40;Transact-SQL&#41;](../Topic/sysmail_add_principalprofile_sp%20\(Transact-SQL\).md)  
+7.  The script does not grant any database users access to the profile. Therefore, by default, the profile can only be used by members of the **sysadmin** fixed security role. For more information about granting access to profiles, see [sysmail_add_principalprofile_sp &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md)  
   
   

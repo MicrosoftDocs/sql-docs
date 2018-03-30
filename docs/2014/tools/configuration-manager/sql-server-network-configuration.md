@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: ef2e5e6a-e2cf-4391-803c-23096dee1a14
 caps.latest.revision: 15
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # SQL Server Network Configuration

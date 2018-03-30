@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Fast Forward-Only Cursors (ODBC)
-  When connected to an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver supports performance optimizations for forward-only, read-only cursors. Fast forward-only cursors are implemented internally by the driver and server in a manner very similar to default result sets. Besides having high performance, fast forward-only cursors also have these characteristics:  
+  When connected to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver supports performance optimizations for forward-only, read-only cursors. Fast forward-only cursors are implemented internally by the driver and server in a manner very similar to default result sets. Besides having high performance, fast forward-only cursors also have these characteristics:  
   
 -   [SQLGetData](../../../2014/database-engine/dev-guide/sqlgetdata.md) is not supported. The result set columns must be bound to program variables.  
   

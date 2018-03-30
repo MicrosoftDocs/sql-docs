@@ -15,7 +15,7 @@ f1_keywords:
 ms.assetid: 642a06f5-293f-48e0-97a6-1489dbefa719
 caps.latest.revision: 6
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Map Viewport Properties Dialog Box, Center and Zoom

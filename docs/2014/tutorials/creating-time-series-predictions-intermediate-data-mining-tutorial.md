@@ -16,7 +16,7 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Creating Time Series Predictions (Intermediate Data Mining Tutorial)
-  In the previous tasks in this lesson, you created a time series model and explored the results. By default, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] always creates a set of five (5) predictions for a time series model and displays the predicted values as part of the forecasting chart. However, you can also create forecasts by building Data Mining Extensions (DMX) prediction queries.  
+  In the previous tasks in this lesson, you created a time series model and explored the results. By default, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] always creates a set of five (5) predictions for a time series model and displays the predicted values as part of the forecasting chart. However, you can also create forecasts by building Data Mining Extensions (DMX) prediction queries.  
   
  In this task, you will create a prediction query that generates the same predictions that you saw in the viewer. This task assumes that you have already completed the lessons in the Basic Data Mining Tutorial and are familiar with how to use Prediction Query Builder. You will now learn how to create queries specific to time series models.  
   
@@ -127,7 +127,7 @@ manager: "jhubbard"
 ## Saving the Prediction Results  
  You have several different options for using the prediction results. You can flatten the results, copy the data from the Results view, and paste it into an Excel worksheet or other file.  
   
- To simplify the process of saving results, Data Mining Designer also provides the ability to save the data to a data source view. The functionality for saving results to a data source view is available only in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. The results can only be stored in a flattened format.  
+ To simplify the process of saving results, Data Mining Designer also provides the ability to save the data to a data source view. The functionality for saving results to a data source view is available only in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. The results can only be stored in a flattened format.  
   
 #### To flatten the results in the Results pane  
   
@@ -166,7 +166,7 @@ manager: "jhubbard"
   
 1.  Click **Save query results**.  
   
-2.  In the **Save Data Mining Query Result** dialog box, for **Data Source**, select [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)]. You can also create a data source if you want to save the data to a different relational database.  
+2.  In the **Save Data Mining Query Result** dialog box, for **Data Source**, select [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]. You can also create a data source if you want to save the data to a different relational database.  
   
 3.  In the **Table Name** column, type a new temporary table name, such as **Test Predictions**.  
   

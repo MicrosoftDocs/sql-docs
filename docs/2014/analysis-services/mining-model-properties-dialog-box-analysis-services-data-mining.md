@@ -20,7 +20,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Mining Model Properties Dialog Box (Analysis Services - Data Mining)
-  Use the **Mining Model Properties** dialog box in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to set the properties of a mining model in an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database. You can display the **Mining Model Properties** dialog box by right-clicking a mining model in **Object Explorer** and selecting **Properties**.  
+  Use the **Mining Model Properties** dialog box in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to set the properties of a mining model in an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database. You can display the **Mining Model Properties** dialog box by right-clicking a mining model in **Object Explorer** and selecting **Properties**.  
   
 ## Options  
   

@@ -22,7 +22,7 @@ manager: "mblythe"
 # Schedule a Data Refresh (PowerPivot for SharePoint)
   You can schedule data refresh to get automatic updates to PowerPivot data inside an Excel workbook that you published to a SharePoint site.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2010  
+ **[!INCLUDE[applies](../includes/applies-md.md)]**  SharePoint 2010  
   
  **In this topic:**  
   
@@ -44,7 +44,7 @@ manager: "mblythe"
   
  The data source cannot be an Office document or Access database. Office does not support the use of the Office data connectivity components in a server environment. If your workbook contains data from these sources, be sure to remove those sources from the data source list in your data refresh schedule.  
   
- The workbook must be a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] version. If you use workbooks that were created in the previous release of PowerPivot for Excel, schedule data refresh will not work unless you upgrade the database to the most recent version.  
+ The workbook must be a [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] version. If you use workbooks that were created in the previous release of PowerPivot for Excel, schedule data refresh will not work unless you upgrade the database to the most recent version.  
   
  The workbook must be checked in at the time the refresh operation is finished. A lock on the workbook is placed on the file at the end of data refresh, when the file is saved, rather than when refresh starts.  
   
@@ -116,7 +116,7 @@ manager: "mblythe"
   
      Be sure to select only those data sources that meet the following criteria:  
   
-    -   The data source must be available at the time that data refresh occurs and at the stated location. If the original data source is on a local disk drive of the person who authored the workbook, you must either exclude that data source from the data refresh operation, or find a way to publish that data source to a location that is accessible through a network connection. If you move a data source to a network location, be sure to open the workbook in [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] and update the data source connection information. This is necessary to re-establish the connection information that is stored in the PowerPivot workbook.  
+    -   The data source must be available at the time that data refresh occurs and at the stated location. If the original data source is on a local disk drive of the person who authored the workbook, you must either exclude that data source from the data refresh operation, or find a way to publish that data source to a location that is accessible through a network connection. If you move a data source to a network location, be sure to open the workbook in [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] and update the data source connection information. This is necessary to re-establish the connection information that is stored in the PowerPivot workbook.  
   
     -   The data source must be accessed using the credential information that is embedded in the PowerPivot workbook or that is specified in the schedule. Embedded credential information is stored in the PowerPivot workbook when you import data using PowerPivot for Excel. Embedded credential information is often SSPI=IntegratedSecurity or SSPI=TrustedConnection, which means use the credentials of the current user to connect to the data source. If you want to override the credential information in your data refresh schedule, you can specify predefined, stored credentials. For more information, see [Configure Stored Credentials for PowerPivot Data Refresh &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
   
@@ -145,7 +145,7 @@ manager: "mblythe"
   
  The history page appears, showing a complete record for all refresh activity for PowerPivot data in the current Excel workbook, including the status of the most recent data refresh operation.  
   
- In some cases, you might see actual processing times that differ from the time you specified. This will occur if there is a heavy processing load on the server. Under heavy load, the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] service instance will wait until enough system resources are free before it begins a data refresh.  
+ In some cases, you might see actual processing times that differ from the time you specified. This will occur if there is a heavy processing load on the server. Under heavy load, the [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] service instance will wait until enough system resources are free before it begins a data refresh.  
   
  The workbook must be checked in when the refresh operation is finished. The workbook will be saved with the refreshed data at that time. If the file is checked out, data refresh is skipped until the next scheduled time.  
   

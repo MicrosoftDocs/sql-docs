@@ -18,27 +18,27 @@ helpviewer_keywords:
 ms.assetid: 2124bcf5-d60a-475f-a4ae-de6df44d2860
 caps.latest.revision: 21
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # View Reporting Services Reports on Microsoft Surface Devices and  Apple iOS Devices
-  This article describes the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] features and workflows supported for Microsoft Surface devices, and devices with Apple iOS 6 and Apple Safari such as the iPad.  
+  This article describes the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features and workflows supported for Microsoft Surface devices, and devices with Apple iOS 6 and Apple Safari such as the iPad.  
   
 ## View and Interact With Reports  
- Starting with [!INCLUDE[ssSQL11SP1long](../../includes/sssql11sp1long-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supports viewing and basic interactivity with reports on Microsoft Surface devices, and devices with Apple iOS 6 and Apple Safari browser such as the iPad. You can also publish reports using Microsoft Surface devices.  
+ Starting with [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)], [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] supports viewing and basic interactivity with reports on Microsoft Surface devices, and devices with Apple iOS 6 and Apple Safari browser such as the iPad. You can also publish reports using Microsoft Surface devices.  
   
  ![IPad Desktop](../../2014/reporting-services/media/videothumbnail.jpg "IPad Desktop")  
 Watch a demonstration of viewing reports on an iPad.  
   
- You can also view [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] reports on a Windows Phone 8 device.  
+ You can also view [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] reports on a Windows Phone 8 device.  
   
  To utilize the features described in this topic, install one of the following:  
   
--   For a native mode report server, install [!INCLUDE[ssSQL11SP1long](../../includes/sssql11sp1long-md.md)] or later.  
+-   For a native mode report server, install [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)] or later.  
   
-     [!INCLUDE[ssSQL11SP1long](../../includes/sssql11sp1long-md.md)] is available for download from the [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=35575).  
+     [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)] is available for download from the [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=35575).  
   
--   For a SharePoint mode report server, install [!INCLUDE[ssSQL11SP1long](../../includes/sssql11sp1long-md.md)] or later of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] add-in for SharePoint products.  
+-   For a SharePoint mode report server, install [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)] or later of the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] add-in for SharePoint products.  
   
  **To view and interact with a report on an iPad device or Microsoft Surface device**  
   
@@ -46,18 +46,18 @@ Watch a demonstration of viewing reports on an iPad.
   
 2.  Open the report by doing one of the following.  
   
-    -   **Start from e-mail:** From an e-mail that is created by a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] subscription, tap the URL of the report. The report will open in the browser.  
+    -   **Start from e-mail:** From an e-mail that is created by a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] subscription, tap the URL of the report. The report will open in the browser.  
   
-    -   **Start from Report Server:** Browse the directory on the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server, and then tap the report name to open the report.  
+    -   **Start from Report Server:** Browse the directory on the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report server, and then tap the report name to open the report.  
   
-    -   **Start from a SharePoint document library:** Browse to a SharePoint document library that contains [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] reports, and then tap the report name. You can view and interact with the report.  
+    -   **Start from a SharePoint document library:** Browse to a SharePoint document library that contains [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] reports, and then tap the report name. You can view and interact with the report.  
   
         > [!IMPORTANT]  
         >  For the iPad, ensure that the **Private Browsing** property for Safari is turned off.  
   
-    -   **SharePoint web part:** If the web part has been added to a SharePoint page, you can view [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] reports.  
+    -   **SharePoint web part:** If the web part has been added to a SharePoint page, you can view [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] reports.  
   
-3.  On your Microsoft Surface device, you can also open the report by using Report Manager. Browse the directory in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Report Manager, and then tap the report name to open the report.  
+3.  On your Microsoft Surface device, you can also open the report by using Report Manager. Browse the directory in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Report Manager, and then tap the report name to open the report.  
   
     > [!IMPORTANT]  
     >  Viewing reports in Report Manager is not supported on an iPad.  
@@ -105,7 +105,7 @@ Watch a demonstration of viewing reports on an iPad.
         -   If you’re viewing the report on an iPad, you can export the report as a TIFF or PDF file.  
   
 ## Authentication  
- RSWindowsNTLM authentication and RSWindowsBasic authentication work with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in native mode and the iPad.  
+ RSWindowsNTLM authentication and RSWindowsBasic authentication work with [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in native mode and the iPad.  
   
  In general, it is recommended that RSWindowsBasic is not used in non-https environments because this type of authentication provides no confidentiality for the transmitted credentials.  
   
@@ -122,7 +122,7 @@ Watch a demonstration of viewing reports on an iPad.
 -   Upload a report definition file to the report server database by opening Report Manager and tapping **Upload File**.  
   
 ## Additional Information  
- For more information on [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and supported browsers, see:  
+ For more information on [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] and supported browsers, see:  
   
 -   [Planning for Reporting Services and Power View Browser Support &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)  
   

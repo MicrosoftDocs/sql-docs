@@ -20,7 +20,7 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Lesson 2: Building a Forecasting Scenario (Intermediate Data Mining Tutorial)
-  As the sales analyst for [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)], you have been asked to forecast the sales of products for the next year. In particular, you have been asked to compare forecasts for the different regions and product lines. Additionally, you have been asked to determine whether sales of different products vary depending on the time of the year.  
+  As the sales analyst for [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], you have been asked to forecast the sales of products for the next year. In particular, you have been asked to compare forecasts for the different regions and product lines. Additionally, you have been asked to determine whether sales of different products vary depending on the time of the year.  
   
  To find the requested information, in this lesson you will summarize the company's sales data at the monthly level, and you will also summarize sales figures by three regions: Europe, North America, and the Pacific.  
   
@@ -38,10 +38,10 @@ manager: "jhubbard"
   
 -   Part Two walks you through creation of a general time series model, based on all regions. You can use this general model for *cross-prediction*.  
   
- To complete the tasks in this lesson, which are listed below, you will use the [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)] data source that you created in [Lesson 1: Creating the Intermediate Data Mining Solution &#40;Intermediate Data Mining Tutorial&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md).  
+ To complete the tasks in this lesson, which are listed below, you will use the [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] data source that you created in [Lesson 1: Creating the Intermediate Data Mining Solution &#40;Intermediate Data Mining Tutorial&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md).  
   
 > [!WARNING]  
->  The dates in the [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] sample database have been updated for this release. If you use an earlier version of [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)], you can build the model following these steps, but you might see different results.  
+>  The dates in the [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] sample database have been updated for this release. If you use an earlier version of [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], you can build the model following these steps, but you might see different results.  
   
  **Creating a Simple Forecasting Model**  
   

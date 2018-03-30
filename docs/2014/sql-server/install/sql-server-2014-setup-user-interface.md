@@ -16,6 +16,6 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQL Server 2014 Setup User Interface
-  The content in this section describes the installation user interface for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  The content in this section describes the installation user interface for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
   

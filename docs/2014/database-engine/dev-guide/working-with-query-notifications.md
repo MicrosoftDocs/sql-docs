@@ -28,7 +28,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Working with Query Notifications
-  Query notifications were introduced in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Built upon the Service Broker infrastructure introduced in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], query notifications allow applications to be notified when data has changed. This feature is particularly useful for applications that provide a cache of information from a database, such as a Web application, and need to be notified when the source data is changed.  
+  Query notifications were introduced in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Built upon the Service Broker infrastructure introduced in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], query notifications allow applications to be notified when data has changed. This feature is particularly useful for applications that provide a cache of information from a database, such as a Web application, and need to be notified when the source data is changed.  
   
  Query notifications allow you to request notification within a specified time-out period when the underlying data of a query changes. The request for notification specifies the notification options, which include the service name, message text, and time-out value to the server. Notifications are delivered through a Service Broker queue that applications may poll for available notifications.  
   
@@ -44,14 +44,14 @@ manager: "jhubbard"
   
  Notifications are sent only once. For continuous notification of data change, a new subscription must be created by re-executing the query after each notification is processed.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client applications typically receive notifications by using the [!INCLUDE[tsql](../../../includes/tsql-md.md)] [RECEIVE](../Topic/RECEIVE%20\(Transact-SQL\).md) command to read notifications from the queue associated with the service specified in the notification options.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client applications typically receive notifications by using the [!INCLUDE[tsql](../../includes/tsql-md.md)] [RECEIVE](~/t-sql/statements/receive-transact-sql.md) command to read notifications from the queue associated with the service specified in the notification options.  
   
 > [!NOTE]  
 >  Table names must be qualified in queries for which notification is required, for example, `dbo.myTable`. Table names must be qualified with two part names. Subscription is invalid if three- or four-part names are used.  
   
- The notification infrastructure is built on top of a queuing feature introduced in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. In general, notifications generated at the server are sent through these queues to be processed later.  
+ The notification infrastructure is built on top of a queuing feature introduced in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. In general, notifications generated at the server are sent through these queues to be processed later.  
   
- To use query notifications a queue and a service must exist on the server. These can be created using [!INCLUDE[tsql](../../../includes/tsql-md.md)] similar to the following:  
+ To use query notifications a queue and a service must exist on the server. These can be created using [!INCLUDE[tsql](../../includes/tsql-md.md)] similar to the following:  
   
 ```  
 CREATE QUEUE myQueue  
@@ -64,13 +64,13 @@ CREATE SERVICE myService ON QUEUE myQueue
 >  The service must use the predefined contract `http://schemas.microsoft.com/SQL/Notifications/PostQueryNotification` as shown above.  
   
 ## SQL Server Native Client OLE DB Provider  
- The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider supports consumer notification on rowset modification. The consumer receives notification at every phase of rowset modification and on any attempted change.  
+ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider supports consumer notification on rowset modification. The consumer receives notification at every phase of rowset modification and on any attempted change.  
   
 > [!NOTE]  
->  Passing a notifications query to the server with **ICommand::Execute** is the only valid way to subscribe to query notifications with the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider.  
+>  Passing a notifications query to the server with **ICommand::Execute** is the only valid way to subscribe to query notifications with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider.  
   
 ### The DBPROPSET_SQLSERVERROWSET Property Set  
- In order to support query notifications through OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client adds the following new properties to the DBPROPSET_SQLSERVERROWSET property set.  
+ In order to support query notifications through OLE DB, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client adds the following new properties to the DBPROPSET_SQLSERVERROWSET property set.  
   
 |Name|Type|Description|  
 |----------|----------|-----------------|  
@@ -94,7 +94,7 @@ RECEIVE * FROM MyQueue
   
  This statement immediately returns an empty result set if the queue is empty; otherwise it returns all queue notifications.  
   
- If SSPROP_QP_NOTIFICATION_MSGTEXT and SSPROP_QP_NOTIFICATION_OPTIONS are non-NULL and non-empty, the query notifications TDS header containing the three properties defined above are sent to the server with each execution of the command. If either of them is null (or empty), the header is not sent and DB_E_ERRORSOCCURRED is raised, (or DB_S_ERRORSOCCURRED if the properties are both marked as optional), and the status value is set to DBPROPSTATUS_BADVALUE. The validation occurs on Execute/Prepare. Similarly, DB_S_ERRORSOCCURED is raised when the query notification properties are set for connections to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] versions before [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. The status value in this case is DBPROPSTATUS_NOTSUPPORTED.  
+ If SSPROP_QP_NOTIFICATION_MSGTEXT and SSPROP_QP_NOTIFICATION_OPTIONS are non-NULL and non-empty, the query notifications TDS header containing the three properties defined above are sent to the server with each execution of the command. If either of them is null (or empty), the header is not sent and DB_E_ERRORSOCCURRED is raised, (or DB_S_ERRORSOCCURRED if the properties are both marked as optional), and the status value is set to DBPROPSTATUS_BADVALUE. The validation occurs on Execute/Prepare. Similarly, DB_S_ERRORSOCCURED is raised when the query notification properties are set for connections to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions before [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. The status value in this case is DBPROPSTATUS_NOTSUPPORTED.  
   
  Initiating a subscription does not guarantee that subsequent messages will be successfully delivered. In addition, no check is made as to the validity of the service name specified.  
   
@@ -104,7 +104,7 @@ RECEIVE * FROM MyQueue
  For more information about the DBPROPSET_SQLSERVERROWSET property set, see [Rowset Properties and Behaviors](../../../2014/database-engine/dev-guide/rowset-properties-and-behaviors.md).  
   
 ## SQL Server Native Client ODBC Driver  
- The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver supports query notifications through the addition of three new attributes to the [SQLGetStmtAttr](../../../2014/database-engine/dev-guide/sqlgetstmtattr.md) and [SQLSetStmtAttr](../../../2014/database-engine/dev-guide/sqlsetstmtattr.md) functions:  
+ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver supports query notifications through the addition of three new attributes to the [SQLGetStmtAttr](../../../2014/database-engine/dev-guide/sqlgetstmtattr.md) and [SQLSetStmtAttr](../../../2014/database-engine/dev-guide/sqlsetstmtattr.md) functions:  
   
 -   SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT  
   
@@ -112,7 +112,7 @@ RECEIVE * FROM MyQueue
   
 -   SQL_SOPT_SS_QUERYNOTIFICATION_TIMEOUT  
   
- If SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT and SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS are not NULL, the query notifications TDS header containing the three attributes defined above will be sent to the server each time the command is executed. If either of them is null, the header is not sent, and SQL_SUCCESS_WITH_INFO is returned. The validation occurs on [SQLPrepare Function](http://go.microsoft.com/fwlink/?LinkId=59360), **SqlExecDirect**, and **SqlExecute**, all of which fail if the attributes are not valid. Similarly, when these query notification attributes are set for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] versions before [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], the execution fails with SQL_SUCCESS_WITH_INFO.  
+ If SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT and SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS are not NULL, the query notifications TDS header containing the three attributes defined above will be sent to the server each time the command is executed. If either of them is null, the header is not sent, and SQL_SUCCESS_WITH_INFO is returned. The validation occurs on [SQLPrepare Function](http://go.microsoft.com/fwlink/?LinkId=59360), **SqlExecDirect**, and **SqlExecute**, all of which fail if the attributes are not valid. Similarly, when these query notification attributes are set for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions before [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], the execution fails with SQL_SUCCESS_WITH_INFO.  
   
 > [!NOTE]  
 >  Prepare statements will never cause the subscription to be initiated; subscription can be initiated by statement execution.  

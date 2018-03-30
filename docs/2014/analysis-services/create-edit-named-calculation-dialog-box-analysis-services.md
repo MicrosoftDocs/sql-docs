@@ -20,7 +20,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Create-Edit Named Calculation Dialog Box (Analysis Services)
-  Use the **Create/Edit Named Calculation** dialog box in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to define or modify a named calculation for a table in a data source view. You can display the **Create/Edit Named Calculation** dialog box by:  
+  Use the **Create/Edit Named Calculation** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to define or modify a named calculation for a table in a data source view. You can display the **Create/Edit Named Calculation** dialog box by:  
   
 -   Clicking **New Named Calculation** in the **Toolbar** pane of **Data Source View Designer**.  
   

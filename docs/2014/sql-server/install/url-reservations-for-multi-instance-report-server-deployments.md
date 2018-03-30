@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: f67c83c0-1f74-42bb-bfc1-e50c38152d3d
 caps.latest.revision: 5
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "jhubbard"
 ---
 # URL Reservations for Multi-Instance Report Server Deployments  (SSRS Configuration Manager)
-  If you install multiple instances of [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] on the same computer, you must consider how you will define the URL reservations for each instance. Within each instance, the Report Server Web service and Report Manager must have at least one URL reservation each. The entire set of reservations must be unique in HTTP.SYS.  
+  If you install multiple instances of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] on the same computer, you must consider how you will define the URL reservations for each instance. Within each instance, the Report Server Web service and Report Manager must have at least one URL reservation each. The entire set of reservations must be unique in HTTP.SYS.  
   
  Duplicate URLs are detected during URL registration, which occurs when the service starts. If you create URL reservations that are not unique, the name conflict might not be detected until you start the service. For this reason, make sure that you follow naming conventions or rules to ensure all values are unique.  
   
 ## Default Naming Conventions  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] can be installed within a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] named instance. When you install or configure a report server within a named instance, the instance name is automatically included in the virtual directory in the default URL reservation that [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] provides. The following table shows the URL reservations for a default instance and a named instance.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] can be installed within a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] named instance. When you install or configure a report server within a named instance, the instance name is automatically included in the virtual directory in the default URL reservation that [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides. The following table shows the URL reservations for a default instance and a named instance.  
   
 |SQL Server Instance|Default URL Reservation|  
 |-------------------------|-----------------------------|  
@@ -43,7 +43,7 @@ manager: "jhubbard"
 |http://www.contoso.com/reportserver|http://SRVR-46/reportserver|Each instance responds to different server names (fully qualified domain name, and machine name).|  
   
 ## Uniqueness Requirements  
- The underlying technologies used by [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] impose requirements around unique names. HTTP.SYS requires that all URLs within its repository be unique. You can vary the port, host name, or virtual directory name to create a unique URL. [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] requires that application identities be unique within the same process. This requirement affects the virtual directory names. It specifies that you cannot duplicate a virtual directory name within the same report server instance.  
+ The underlying technologies used by [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] impose requirements around unique names. HTTP.SYS requires that all URLs within its repository be unique. You can vary the port, host name, or virtual directory name to create a unique URL. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] requires that application identities be unique within the same process. This requirement affects the virtual directory names. It specifies that you cannot duplicate a virtual directory name within the same report server instance.  
   
 ## See Also  
  [Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-report-server-urls-ssrs-configuration-manager.md)   

@@ -17,11 +17,11 @@ helpviewer_keywords:
 ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
 caps.latest.revision: 43
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Role Definitions
-  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], a *role**definition* is a named collection of tasks that define the operations available on a report server. Role definitions provide the rules used by the report server to enforce security. When a user attempts to perform a task, such as publishing a report, the report server checks the user's role assignment to determine whether the task is included in their role definition. If the task is included in the role definition, the request is submitted.  
+  In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], a *role**definition* is a named collection of tasks that define the operations available on a report server. Role definitions provide the rules used by the report server to enforce security. When a user attempts to perform a task, such as publishing a report, the report server checks the user's role assignment to determine whether the task is included in their role definition. If the task is included in the role definition, the request is submitted.  
   
 ## Using Roles to Authorize Access to a Report Server  
  A role becomes operative only when it is used in a role assignment. For more information about how roles provide security, see [Role Assignments](../../2014/reporting-services/role-assignments.md).  
@@ -30,7 +30,7 @@ manager: "mblythe"
  Role definitions are either item-level or system-level definitions. An *item-level role definition* describes tasks that relate to items that are stored and managed on a report server, such as reports, folder, and models. Manage reports, View folders, and Manage individual subscriptions are examples of tasks you can include in an item-level role definitions. A *system role definition* includes tasks that apply to the site as a whole. View report server properties is an example of a task you might include in a system role.  
   
 ## Predefined Roles  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] includes predefined roles that correspond to different levels of user interaction. The following list contains the predefined roles you can use:  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] includes predefined roles that correspond to different levels of user interaction. The following list contains the predefined roles you can use:  
   
 -   Content Manager, Publisher, Browser, Report Builder, and My Reports are item-level role definitions that you can use when creating role assignments for accessing report server content.  
   
@@ -43,7 +43,7 @@ manager: "mblythe"
   
  A role must have a unique name. To be valid, the role definition must contain at least one task. For more information, see [Tasks and Permissions](../../2014/reporting-services/tasks-and-permissions.md).  
   
- To create a role definition, use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. For more information, see [Create, Delete, or Modify a Role &#40;Management Studio&#41;](../../2014/reporting-services/create-delete-or-modify-a-role-management-studio.md).  
+ To create a role definition, use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. For more information, see [Create, Delete, or Modify a Role &#40;Management Studio&#41;](../../2014/reporting-services/create-delete-or-modify-a-role-management-studio.md).  
   
  After you create a role definition, you can use it by selecting it in a role assignment. For more information, see [Grant User Access to a Report Server &#40;Report Manager&#41;](../../2014/reporting-services/grant-user-access-to-a-report-server-report-manager.md).  
   

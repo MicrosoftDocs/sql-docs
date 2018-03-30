@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 10b941b2-28e6-4408-9ee4-acebc63c8496
 caps.latest.revision: 43
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Configure General Properties for a Report (Report Manager)

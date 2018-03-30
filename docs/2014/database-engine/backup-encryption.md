@@ -16,11 +16,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Backup Encryption
-  This topic provides an overview of the encryption options for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups. It includes details of the usage, benefits, and recommended practices for encrypting during backup.  
+  This topic provides an overview of the encryption options for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] backups. It includes details of the usage, benefits, and recommended practices for encrypting during backup.  
   
   
 ##  <a name="Overview"></a> Overview  
- Starting in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SQL Server has the ability to encrypt the data while creating a backup. By specifying the encryption algorithm and the encryptor (a Certificate or Asymmetric Key) when creating a backup, you can create an encrypted backup file. All storage destinations: on-premises and Window Azure storage are supported. In addition, encryption options can be configured for [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] operations, a new feature introduced in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
+ Starting in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], SQL Server has the ability to encrypt the data while creating a backup. By specifying the encryption algorithm and the encryptor (a Certificate or Asymmetric Key) when creating a backup, you can create an encrypted backup file. All storage destinations: on-premises and Window Azure storage are supported. In addition, encryption options can be configured for [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] operations, a new feature introduced in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
  To encrypt during backup, you must specify an encryption algorithm, and an encryptor to secure the encryption key. The following are the supported encryption options:  
   
@@ -41,7 +41,7 @@ manager: "jhubbard"
   
 2.  Encryption can also be used for databases that are encrypted using TDE.  
   
-3.  Encryption is supported for backups done by [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)], which provides additional security for off-site backups.  
+3.  Encryption is supported for backups done by [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], which provides additional security for off-site backups.  
   
 4.  This feature supports multiple encryption algorithms up to AES 256 bit. This gives you the option to select an algorithm that aligns with your requirements.  
   
@@ -53,7 +53,7 @@ manager: "jhubbard"
   
 1.  **Create a Database Master Key for the master database:** The database master key is a symmetric key that is used to protect the private keys of certificates and asymmetric keys that are present in the database. For more information, see [SQL Server and Database Encryption Keys &#40;Database Engine&#41;](../../2014/database-engine/sql-server-and-database-encryption-keys-database-engine.md).  
   
-2.  Create a certificate or asymmetric Key to use for backup encryption. For more information on creating a certificate, see [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../Topic/CREATE%20CERTIFICATE%20\(Transact-SQL\).md). For more information on creating an asymmetric key, see [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../Topic/CREATE%20ASYMMETRIC%20KEY%20\(Transact-SQL\).md).  
+2.  Create a certificate or asymmetric Key to use for backup encryption. For more information on creating a certificate, see [CREATE CERTIFICATE &#40;Transact-SQL&#41;](~/t-sql/statements/create-certificate-transact-sql.md). For more information on creating an asymmetric key, see [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](~/t-sql/statements/create-asymmetric-key-transact-sql.md).  
   
     > [!IMPORTANT]  
     >  Only asymmetric keys residing in an Extended Key Management (EKM) are supported.  
@@ -65,7 +65,7 @@ manager: "jhubbard"
   
 -   SQL Server Express and SQL Server Web do not support encryption during backup. However restoring from an encrypted backup to an instance of SQL Server Express or SQL Server Web is supported.  
   
--   Previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot read encrypted backups.  
+-   Previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cannot read encrypted backups.  
   
 -   Appending to an existing backup set option is not supported for encrypted backups.  
   
@@ -106,7 +106,7 @@ GO
   
 ```  
   
- For the full Transact-SQL statement syntax, see [BACKUP &#40;Transact-SQL&#41;](../Topic/BACKUP%20\(Transact-SQL\).md).  
+ For the full Transact-SQL statement syntax, see [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md).  
   
 ### Using PowerShell  
  This example creates the encryption options and uses it as a parameter value in **Backup-SqlDatabase** cmdlet to create an encrypted backup.  
@@ -133,7 +133,7 @@ C:\PS>Backup-SqlDatabase -ServerInstance . -Database "MyTestDB" -BackupFile "MyT
 |Topic/Task|Description|  
 |-----------------|-----------------|  
 |[Create an Encrypted Backup](../../2014/database-engine/create-an-encrypted-backup.md)|Describes the basic steps required to create an encrypted backup|  
-|[SQL Server Managed Backup to Windows Azure - Retention and Storage Settings](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)|Describes the basic steps required to configure [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] with the encryption options specified.|  
+|[SQL Server Managed Backup to Windows Azure - Retention and Storage Settings](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)|Describes the basic steps required to configure [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] with the encryption options specified.|  
 |[Extensible Key Management Using Azure Key Vault &#40;SQL Server&#41;](../../2014/database-engine/extensible-key-management-using-azure-key-vault-sql-server.md)|Provides an example of creating an encrypted backup protected by keys in the Azure Key Vault.|  
   
 ## See Also  

@@ -30,17 +30,17 @@ select [definition] from sys.sql_modules where object_id=object_id
  For more information about the `sp_statement_completed` extended event, see [How to retrieve the statement that caused an event](http://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx).  
   
 ## Using Data Management Views  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports collecting execution statistics for natively compiled stored procedures, both on the procedure level and the query level. Collecting execution statistics is not enabled by default due to performance impact.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supports collecting execution statistics for natively compiled stored procedures, both on the procedure level and the query level. Collecting execution statistics is not enabled by default due to performance impact.  
   
- You can enable and disable statistics collection on natively compiled stored procedures using [sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../Topic/sys.sp_xtp_control_proc_exec_stats%20\(Transact-SQL\).md).  
+ You can enable and disable statistics collection on natively compiled stored procedures using [sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md).  
   
- When statistics collection is enabled with [sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../Topic/sys.sp_xtp_control_proc_exec_stats%20\(Transact-SQL\).md), you can use [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../Topic/sys.dm_exec_procedure_stats%20\(Transact-SQL\).md) to monitor performance of a natively compiled stored procedure.  
+ When statistics collection is enabled with [sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md), you can use [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) to monitor performance of a natively compiled stored procedure.  
   
- When statistics collection is enabled with [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../Topic/sys.sp_xtp_control_query_exec_stats%20\(Transact-SQL\).md), you can use [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../Topic/sys.dm_exec_query_stats%20\(Transact-SQL\).md) to monitor performance of a natively compiled stored procedure.  
+ When statistics collection is enabled with [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md), you can use [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) to monitor performance of a natively compiled stored procedure.  
   
  At the start of collection, enable statistics collection. Then, execute the natively compiled stored procedure. At the end of collection, disable statistics collection. Then, analyze the execution statistics returned by the DMVs.  
   
- After you collect statistics, the execution statistics for natively compiled stored procedures can be queried for a procedure with [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../Topic/sys.dm_exec_procedure_stats%20\(Transact-SQL\).md), and for queries with [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../Topic/sys.dm_exec_query_stats%20\(Transact-SQL\).md).  
+ After you collect statistics, the execution statistics for natively compiled stored procedures can be queried for a procedure with [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md), and for queries with [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md).  
   
 > [!NOTE]  
 >  For natively compiled stored procedures when statistics collection is enabled, worker time is collected in milliseconds. If the query executes in less than a millisecond, the value will be 0. For natively compiled stored procedures, **total_worker_time** may not be accurate if many executions take less than 1 millisecond.  
@@ -96,7 +96,7 @@ order by qs.total_worker_time desc
   
 -   Missing indexes  
   
- Showplan XML is obtained by executing the following [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
+ Showplan XML is obtained by executing the following [!INCLUDE[tsql](../includes/tsql-md.md)]:  
   
 ```tsql  
 SET SHOWPLAN_XML ON  
@@ -107,9 +107,9 @@ SET SHOWPLAN_XML OFF
 GO  
 ```  
   
- Alternatively, in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], select the procedure name and click **Display Estimated Execution Plan**.  
+ Alternatively, in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], select the procedure name and click **Display Estimated Execution Plan**.  
   
- The estimated execution plan for natively compiled stored procedures shows the query operators and expressions for the queries in the procedure. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] does not support all SHOWPLAN_XML attributes for natively compiled stored procedures. For example, attributes related to query optimizer costing are not part of the SHOWPLAN_XML for the procedure.  
+ The estimated execution plan for natively compiled stored procedures shows the query operators and expressions for the queries in the procedure. [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] does not support all SHOWPLAN_XML attributes for natively compiled stored procedures. For example, attributes related to query optimizer costing are not part of the SHOWPLAN_XML for the procedure.  
   
 ## See Also  
  [Natively Compiled Stored Procedures](../../2014/database-engine/natively-compiled-stored-procedures.md)  

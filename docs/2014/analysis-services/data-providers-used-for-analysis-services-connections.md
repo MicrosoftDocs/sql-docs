@@ -18,7 +18,7 @@ manager: "mblythe"
 # Data providers used for Analysis Services connections
   Analysis Services provides three data providers for server and data access. All applications connecting to Analysis Services do so using one of these providers. Two of the providers, ADOMD.NET and Analysis Services Management Objects (AMO), are managed data providers. The Analysis Services OLE DB provider (MSOLAP DLL) is a native data provider.  
   
- In organizations that run multiple versions of Analysis Services, you might need to install more recent versions of the data providers on user workstations connecting to Analysis Services data. Connections to newer versions of Analysis Services require data providers from the same major release. For example, to connect to [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)], each workstation must have a data provider from the 2014 release. Although Excel installs the data providers it needs to connect, that provider can be out of date relative to the Analysis Services instances you are using.  
+ In organizations that run multiple versions of Analysis Services, you might need to install more recent versions of the data providers on user workstations connecting to Analysis Services data. Connections to newer versions of Analysis Services require data providers from the same major release. For example, to connect to [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)], each workstation must have a data provider from the 2014 release. Although Excel installs the data providers it needs to connect, that provider can be out of date relative to the Analysis Services instances you are using.  
   
  This topic contains the following section:  
   
@@ -39,7 +39,7 @@ manager: "mblythe"
   
 -   In SQL Server Management Studio, connect to the Analysis Services instance. Right-click the instance you want to check, point to **Reports**, and click **General**. Edition and version build information appears in the report.  
   
- The major build number of the initial release of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] is 12.0.2000.9.  
+ The major build number of the initial release of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] is 12.0.2000.9.  
   
  For more information about getting version and build information, see [How to determine the version and edition of SQL Server and its components](http://support.microsoft.com/kb/321185).  
   
@@ -54,7 +54,7 @@ manager: "mblythe"
   
 2.  Right-click msolap120.dll and click **Properties**.  
   
- If you cannot find the file at this location, or if the folder path includes AS OLEDB\110 or AS OLEDB\90, you are using an older library and must now install a newer version (AS OLEDB\11) to connect to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ If you cannot find the file at this location, or if the folder path includes AS OLEDB\110 or AS OLEDB\90, you are using an older library and must now install a newer version (AS OLEDB\11) to connect to [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
 #### Find the file version of ADOMD.NET and AMO  
   
@@ -82,7 +82,7 @@ manager: "mblythe"
   
  The Analysis Services OLE DB provider is installed automatically by SQL Server Setup, Excel, and other applications that are frequently used to access Analysis Services databases. You can also install it manually by downloading it from the download center. By default, the provider can be found in the \Program Files\Microsoft Analysis Services folder. The provider must be installed on any workstation used to access Analysis Services data.  
   
- MSOLAP130.dll is the version of the Analysis Services OLE DB provider that ships in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Other recent previous versions include MSOLAP10.dll (for SQL Server 2008 and 2008 R2) and MSOLAP90.dll (for SQL Server 2005).  
+ MSOLAP130.dll is the version of the Analysis Services OLE DB provider that ships in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Other recent previous versions include MSOLAP10.dll (for SQL Server 2008 and 2008 R2) and MSOLAP90.dll (for SQL Server 2005).  
   
  OLE DB providers are often specified on connection strings. An Analysis Services connection string uses a different nomenclature to refer to the OLE DB provider: MSOLAP.\<version>.dll  
   

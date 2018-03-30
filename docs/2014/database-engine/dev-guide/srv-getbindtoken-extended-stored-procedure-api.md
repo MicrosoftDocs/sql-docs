@@ -29,7 +29,7 @@ manager: "jhubbard"
 # srv_getbindtoken (Extended Stored Procedure API)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
   
  Obtains a bind token of the transaction in the current client session that invokes the extended stored procedure.  
   
@@ -76,7 +76,7 @@ bindtoken
 >  You should thoroughly review the source code of extended stored procedures, and you should test the compiled DLLs before you install them on a production server. For information about security review and testing, see this [Microsoft Web site](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/).  
   
 ## See Also  
- [sp_bindsession &#40;Transact-SQL&#41;](../Topic/sp_bindsession%20\(Transact-SQL\).md)   
- [sp_getbindtoken &#40;Transact-SQL&#41;](../Topic/sp_getbindtoken%20\(Transact-SQL\).md)  
+ [sp_bindsession &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-bindsession-transact-sql.md)   
+ [sp_getbindtoken &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-getbindtoken-transact-sql.md)  
   
   

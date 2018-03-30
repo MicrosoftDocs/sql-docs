@@ -109,7 +109,7 @@ manager: "mblythe"
  If you save your model by using the **Analyze Key Influencers** tool, you can use the Data Mining Client to browse the model and explore relationships in more detail. For information, see [Browsing Models in Excel &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/browsing-models-in-excel-sql-server-data-mining-add-ins.md). You can also use Microsoft Office Visio to create charts and diagrams that display the relationships as cluster or as dependency networks. For more information, see [Troubleshooting Visio Data Mining Diagrams &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins.md).  
   
 > [!NOTE]  
->  The models that are created when you use the Table Analysis Tools are deleted when you close your worksheet or terminate the connection with the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server. Therefore, you can only browse the models as long as the connection remains open. You cannot render the models in Visio if you close the connection or close the worksheet.  
+>  The models that are created when you use the Table Analysis Tools are deleted when you close your worksheet or terminate the connection with the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] server. Therefore, you can only browse the models as long as the connection remains open. You cannot render the models in Visio if you close the connection or close the worksheet.  
   
  For more information about the algorithm used by the **Analyze Key Influencers** tool, see "Microsoft Naïve Bayes Algorithm" in SQL Server Books Online.  
   

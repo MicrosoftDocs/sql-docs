@@ -16,7 +16,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Change Steps of a SQL Server Agent Master Job
-  This topic describes how to make changes to the steps of a SQL Server Agent master job in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  This topic describes how to make changes to the steps of a SQL Server Agent master job in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -35,7 +35,7 @@ manager: "jhubbard"
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
- A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent master job cannot be targeted at both local and remote servers.  
+ A [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent master job cannot be targeted at both local and remote servers.  
   
 ###  <a name="Security"></a> Security  
   
@@ -66,7 +66,7 @@ manager: "jhubbard"
   
 #### To make changes to the steps of a SQL Server Agent master job  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -85,6 +85,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [sp_update_jobstep &#40;Transact-SQL&#41;](../Topic/sp_update_jobstep%20\(Transact-SQL\).md).  
+ For more information, see [sp_update_jobstep &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md).  
   
   

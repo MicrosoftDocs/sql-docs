@@ -21,7 +21,7 @@ ms.author: "jroth"
 manager: "jhubbard"
 ---
 # Change the Failover Mode of an Availability Replica (SQL Server)
-  This topic describes how to change the failover mode of an availability replica in an AlwaysOn availability group in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or PowerShell. The failover mode is a replica property that determines the failover mode for replicas that run under synchronous-commit availability mode. For more information, see [Failover and Failover Modes &#40;AlwaysOn Availability Groups&#41;](../../2014/database-engine/failover-and-failover-modes-alwayson-availability-groups.md) and [Availability Modes &#40;AlwaysOn Availability Groups&#41;](../../2014/database-engine/availability-modes-always-on-availability-groups.md).  
+  This topic describes how to change the failover mode of an availability replica in an AlwaysOn availability group in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../includes/tsql-md.md)], or PowerShell. The failover mode is a replica property that determines the failover mode for replicas that run under synchronous-commit availability mode. For more information, see [Failover and Failover Modes &#40;AlwaysOn Availability Groups&#41;](../../2014/database-engine/failover-and-failover-modes-alwayson-availability-groups.md) and [Availability Modes &#40;AlwaysOn Availability Groups&#41;](../../2014/database-engine/availability-modes-always-on-availability-groups.md).  
   
 
   
@@ -56,7 +56,7 @@ manager: "jhubbard"
   
 1.  Connect to the server instance that hosts the primary replica.  
   
-2.  Use the [ALTER AVAILABILITY GROUP](../Topic/ALTER%20AVAILABILITY%20GROUP%20\(Transact-SQL\).md) statement, as follows:  
+2.  Use the [ALTER AVAILABILITY GROUP](~/t-sql/statements/alter-availability-group-transact-sql.md) statement, as follows:  
   
      ALTER AVAILABILITY GROUP *group_name* MODIFY REPLICA ON '*server_name*'  
   
@@ -74,18 +74,18 @@ manager: "jhubbard"
   
     -   { '*system_name*[\\*instance_name*]' | '*FCI_network_name*[\\*instance_name*]' }  
   
-         Specifies the address of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that hosts the availability replica to be altered. The components of this address are as follows:  
+         Specifies the address of the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that hosts the availability replica to be altered. The components of this address are as follows:  
   
          *system_name*  
          Is the NetBIOS name of the computer system on which a stand-alone server instance resides.  
   
          *FCI_network_name*  
-         Is the network name that is used to access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster in which a target server instance is a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover partner (an FCI).  
+         Is the network name that is used to access a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] failover cluster in which a target server instance is a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] failover partner (an FCI).  
   
          *instance_name*  
-         Is the name of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that hosts the target availability replica. For a default server instance, *instance_name* is optional.  
+         Is the name of the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that hosts the target availability replica. For a default server instance, *instance_name* is optional.  
   
-     For more information about these parameters, see [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../Topic/ALTER%20AVAILABILITY%20GROUP%20\(Transact-SQL\).md).  
+     For more information about these parameters, see [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](~/t-sql/statements/alter-availability-group-transact-sql.md).  
   
      The following example, entered on the primary replica of the *MyAG* availability group, changes the failover mode to automatic failover on the availability replica that is located on the default server instance on a computer named *COMPUTER01*.  
   
@@ -109,7 +109,7 @@ manager: "jhubbard"
     ```  
   
     > [!NOTE]  
-    >  To view the syntax of a cmdlet, use the `Get-Help` cmdlet in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../2014/database-engine/get-help-sql-server-powershell.md).  
+    >  To view the syntax of a cmdlet, use the `Get-Help` cmdlet in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../2014/database-engine/get-help-sql-server-powershell.md).  
   
  **To set up and use the SQL Server PowerShell provider**  
   

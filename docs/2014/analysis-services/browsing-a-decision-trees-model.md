@@ -23,7 +23,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Browsing a Decision Trees Model
-  When you open a classification model using **Browse**, the model is displayed in an interactive decision tree viewer, similar to the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees viewer in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. The viewer displays the results of classification as a graph that is designed to highlight the criteria that differentiate one group of data from another. You can also drill down into individual subsets of the tree and retrieve the underlying data.  
+  When you open a classification model using **Browse**, the model is displayed in an interactive decision tree viewer, similar to the [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees viewer in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. The viewer displays the results of classification as a graph that is designed to highlight the criteria that differentiate one group of data from another. You can also drill down into individual subsets of the tree and retrieve the underlying data.  
   
 ##  <a name="bkmk_Top"></a> Explore the Model  
  Models based on the Decision Trees algorithm have lots of interesting information to explore. The **Browse** window includes the following tabs and panes to help you learn the patterns and predict outcomes using the graph:  

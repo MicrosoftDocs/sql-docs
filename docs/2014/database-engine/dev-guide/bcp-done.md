@@ -25,7 +25,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # bcp_done
-  Ends a bulk copy from program variables to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] performed with [bcp_sendrow](../../../2014/database-engine/dev-guide/bcp-sendrow.md).  
+  Ends a bulk copy from program variables to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] performed with [bcp_sendrow](../../../2014/database-engine/dev-guide/bcp-sendrow.md).  
   
 ## Syntax  
   

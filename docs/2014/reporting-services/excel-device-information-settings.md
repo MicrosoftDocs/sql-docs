@@ -15,11 +15,11 @@ helpviewer_keywords:
 ms.assetid: bb5f3566-f033-4470-be87-1f52fb7a4ab6
 caps.latest.revision: 40
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Excel Device Information Settings
-  The following table lists the device information settings for rendering in [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] format.  
+  The following table lists the device information settings for rendering in [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] format.  
   
 |Setting|Value|  
 |-------------|-----------|  

@@ -24,15 +24,15 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Manage the suspect_pages Table (SQL Server)
-  This topic describes how to manage the **suspect_pages** table in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **suspect_pages** table is used for maintaining information about suspect pages, and is relevant in helping to decide whether a restore is necessary. The [suspect_pages](../Topic/suspect_pages%20\(Transact-SQL\).md) table resides in the [msdb database](../../2014/database-engine/msdb-database.md).  
+  This topic describes how to manage the **suspect_pages** table in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)]. The **suspect_pages** table is used for maintaining information about suspect pages, and is relevant in helping to decide whether a restore is necessary. The [suspect_pages](~/relational-databases/system-tables/suspect-pages-transact-sql.md) table resides in the [msdb database](../../2014/database-engine/msdb-database.md).  
   
- A page is considered "suspect" when the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] encounters one of the following errors when it tries to read a data page:  
+ A page is considered "suspect" when the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] encounters one of the following errors when it tries to read a data page:  
   
 -   An [823 error](../../2014/database-engine/mssqlserver-823.md) that was caused by a cyclic redundancy check (CRC) issued by the operating system, such as a disk error (certain hardware errors)  
   
 -   An [824 error](../../2014/database-engine/mssqlserver-824.md), such as a torn page (any logical error)  
   
- The page ID of every suspect page is recorded in the **suspect_pages** table. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] records any suspect pages encountered during regular processing, such as the following:  
+ The page ID of every suspect page is recorded in the **suspect_pages** table. The [!INCLUDE[ssDE](../includes/ssde-md.md)] records any suspect pages encountered during regular processing, such as the following:  
   
 -   A query has to read a page.  
   
@@ -77,7 +77,7 @@ manager: "jhubbard"
   
 -   **How the Database Engine Updates the suspect_pages Table**  
   
-     The [!INCLUDE[ssDE](../../includes/ssde-md.md)] takes the following actions on the **suspect_pages** table:  
+     The [!INCLUDE[ssDE](../includes/ssde-md.md)] takes the following actions on the **suspect_pages** table:  
   
     -   If the table is not full, it is updated for every 824 error, to indicate that an error has occurred, and the error counter is incremented. If a page has an error after it is fixed by being repaired, restored, or deallocated, its **number_of_errors** count is incremented and its **last_update** column is updated  
   
@@ -122,7 +122,7 @@ manager: "jhubbard"
   
 #### To manage the suspect_pages table  
   
-1.  In **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], expand that instance, and then expand **Databases**.  
+1.  In **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], expand that instance, and then expand **Databases**.  
   
 2.  Expand **System Databases**, expand **msdb**, expand **Tables**, and then expand **System Tables**.  
   
@@ -134,7 +134,7 @@ manager: "jhubbard"
   
 #### To manage the suspect_pages table  
   
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
@@ -159,12 +159,12 @@ GO
 ```  
   
 ## See Also  
- [DROP DATABASE &#40;Transact-SQL&#41;](../Topic/DROP%20DATABASE%20\(Transact-SQL\).md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
- [BACKUP &#40;Transact-SQL&#41;](../Topic/BACKUP%20\(Transact-SQL\).md)   
- [DBCC &#40;Transact-SQL&#41;](../Topic/DBCC%20\(Transact-SQL\).md)   
+ [DROP DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/drop-database-audit-specification-transact-sql.md)   
+ [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)   
+ [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)   
+ [DBCC &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-transact-sql.md)   
  [Restore Pages &#40;SQL Server&#41;](../../2014/database-engine/restore-pages-sql-server.md)   
- [suspect_pages &#40;Transact-SQL&#41;](../Topic/suspect_pages%20\(Transact-SQL\).md)   
+ [suspect_pages &#40;Transact-SQL&#41;](~/relational-databases/system-tables/suspect-pages-transact-sql.md)   
  [MSSQLSERVER_823](../../2014/database-engine/mssqlserver-823.md)   
  [MSSQLSERVER_824](../../2014/database-engine/mssqlserver-824.md)  
   

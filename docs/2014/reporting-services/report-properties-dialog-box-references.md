@@ -15,7 +15,7 @@ f1_keywords:
 ms.assetid: 4639d368-9918-4bb1-9953-7a724ca78dea
 caps.latest.revision: 39
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Report Properties Dialog Box, References

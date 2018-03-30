@@ -29,9 +29,9 @@ manager: "jhubbard"
   
  A server connection alias is required when both the following occur:  
   
--   The client is connecting to an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] over a network transport that is not the default network transport.  
+-   The client is connecting to an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] over a network transport that is not the default network transport.  
   
--   The instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to which the client is connected listens on an alternate named pipe.  
+-   The instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to which the client is connected listens on an alternate named pipe.  
   
  **Note:** The [SqlServerAlias Class](../../../2014/database-engine/dev-guide/sqlserveralias-class.md) inherits the `Put` method from the Provider class. However, it does not return any results as indicated by the `Provider::Put` method. For more information, see the WMI documentation.  
   

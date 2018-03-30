@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: e257186c-4af4-4d02-bd4d-712264a9dace
 caps.latest.revision: 9
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Replication Agents

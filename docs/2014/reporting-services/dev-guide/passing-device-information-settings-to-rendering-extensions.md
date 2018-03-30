@@ -24,13 +24,13 @@ helpviewer_keywords:
 ms.assetid: fe718939-7efe-4c7f-87cb-5f5b09caeff4
 caps.latest.revision: 46
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Passing Device Information Settings to Rendering Extensions
-  In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], device information settings are used to pass rendering parameters to a rendering extension. Settings in the Report Server Web service are passed as a **DeviceInfo** XML element and processed by the report server. Because device information settings have default values, they are considered optional arguments in the rendering process. However, you can use device information settings to customize rendering and to override the default values that are supplied by the server.  
+  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], device information settings are used to pass rendering parameters to a rendering extension. Settings in the Report Server Web service are passed as a **DeviceInfo** XML element and processed by the report server. Because device information settings have default values, they are considered optional arguments in the rendering process. However, you can use device information settings to customize rendering and to override the default values that are supplied by the server.  
   
- You can specify device information settings in a variety of ways. Programmatically, you can use the Render method. If you are accessing a report through its URL, you can specify device information as URL parameters. You can also edit the device information settings in the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] configuration files to specify rendering parameters globally. For more information about specifying rendering parameters globally, see [Customize Rendering Extension Parameters in RSReportServer.Config](../../../2014/reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md).  
+ You can specify device information settings in a variety of ways. Programmatically, you can use the Render method. If you are accessing a report through its URL, you can specify device information as URL parameters. You can also edit the device information settings in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configuration files to specify rendering parameters globally. For more information about specifying rendering parameters globally, see [Customize Rendering Extension Parameters in RSReportServer.Config](../../../2014/reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md).  
   
 ## Passing Device Information Using the Render Method  
  To pass device information settings to a rendering extension, use the <xref:ReportExecution2005.ReportExecutionService.Render%2A> method. For example, the following XML string can be passed to the <xref:ReportExecution2005.ReportExecutionService.Render%2A> method to create an HTML fragment when rendering to HTML.  

@@ -18,7 +18,7 @@ ms.author: "jroth"
 manager: "jhubbard"
 ---
 # View Availability Group Properties (SQL Server)
-  This topic describes how to view the properties of an availability group for an AlwaysOn availability group by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  This topic describes how to view the properties of an availability group for an AlwaysOn availability group by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)] in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
 
   
@@ -42,18 +42,18 @@ manager: "jhubbard"
   
  To query the properties and states of the availability groups for which the server instance hosts an availability replica, use the following views:  
   
- [sys.availability_groups](../Topic/sys.availability_groups%20\(Transact-SQL\).md)  
- Returns a row for each availability group for which the local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hosts an availability replica. Each row contains a cached copy of the availability group metadata.  
+ [sys.availability_groups](~/relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)  
+ Returns a row for each availability group for which the local instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] hosts an availability replica. Each row contains a cached copy of the availability group metadata.  
   
  **Column names:** group_id, name, resource_id, resource_group_id, failure_condition_level, health_check_timeout, automated_backup_preference, automated_backup_preference_desc  
   
- [sys.availability_groups_cluster](../Topic/sys.availability_groups_cluster%20\(Transact-SQL\).md)  
+ [sys.availability_groups_cluster](~/relational-databases/system-catalog-views/sys-availability-groups-cluster-transact-sql.md)  
  Returns a row for each availability group in the WSFC cluster. Each row contains the availability group metadata from the Windows Server Failover Clustering (WSFC) cluster.  
   
  **Column names:** group_id, name, resource_id, resource_group_id, failure_condition_level, health_check_timeout, automated_backup_preference, automated_backup_preference_desc  
   
- [sys.dm_hadr_availability_group_states](../Topic/sys.dm_hadr_availability_group_states%20\(Transact-SQL\).md)  
- Returns a row for each availability group that possesses an availability replica on the local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Each row displays the states that define the health of a given availability group.  
+ [sys.dm_hadr_availability_group_states](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md)  
+ Returns a row for each availability group that possesses an availability replica on the local instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Each row displays the states that define the health of a given availability group.  
   
  **Column names:** group_id, primary_replica, primary_recovery_health, primary_recovery_health_desc, secondary_recovery_health, secondary_recovery_health_desc, synchronization_health, synchronization_health_desc  
   

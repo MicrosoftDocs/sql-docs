@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6ae0a369-1bc7-4ae4-be89-2b483697cd1f
 caps.latest.revision: 26
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # View the Dependencies of a Stored Procedure
     
-##  <a name="Top"></a> This topic describes how to view stored procedure dependencies in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+##  <a name="Top"></a> This topic describes how to view stored procedure dependencies in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
 -   **Before you begin:**  [Security](#Security)  
   
@@ -51,7 +51,7 @@ manager: "jhubbard"
 ###  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  **To view the dependencies of a procedure in Object Explorer**  
   
-1.  In Object Explorer, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)] and then expand that instance.  
+1.  In Object Explorer, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)] and then expand that instance.  
   
 2.  Expand **Databases**, expand the database in which the procedure belongs, and then expand **Programmability**.  
   
@@ -69,15 +69,15 @@ manager: "jhubbard"
  System Function: `sys.dm_sql_referencing_entities`  
  This function is used to display the objects that depend on a procedure.  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)] and then expand that instance.  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)] and then expand that instance.  
   
 2.  Expand **Databases**, expand the database in which the procedure belongs.  
   
 3.  Click on **New Query** under the **File** menu.  
   
-4.  Copy and paste the following examples into the query editor. The first example creates the `uspVendorAllInfo` procedure, which returns the names of all the vendors in the [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] database, the products they supply, their credit ratings, and their availability.  
+4.  Copy and paste the following examples into the query editor. The first example creates the `uspVendorAllInfo` procedure, which returns the names of all the vendors in the [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] database, the products they supply, their credit ratings, and their availability.  
   
-     [!code-sql[ProcedureDDL#CreateProc8](../../snippets/tsql/SQL14/tsql/procedureddl/transact-sql/createproc.sql#createproc8)]  
+     [!code-sql[ProcedureDDL#CreateProc8](../snippets/tsql/SQL14/tsql/procedureddl/transact-sql/createproc.sql#createproc8)]  
   
 5.  After the procedure is created, the second example uses the sys.dm_sql_referencing_entities function to display the objects that depend on the procedure.  
   
@@ -93,15 +93,15 @@ manager: "jhubbard"
  System Function: `sys.dm_sql_referenced_entities`  
  This function is used to display the objects a procedure depends on.  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)] and then expand that instance.  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)] and then expand that instance.  
   
 2.  Expand **Databases**, expand the database in which the procedure belongs.  
   
 3.  Click on **New Query** under the **File** menu.  
   
-4.  Copy and paste the following examples into the query editor. The first example creates the `uspVendorAllInfo` procedure, which returns the names of all the vendors in the [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] database, the products they supply, their credit ratings, and their availability.  
+4.  Copy and paste the following examples into the query editor. The first example creates the `uspVendorAllInfo` procedure, which returns the names of all the vendors in the [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] database, the products they supply, their credit ratings, and their availability.  
   
-     [!code-sql[ProcedureDDL#CreateProc8](../../snippets/tsql/SQL14/tsql/procedureddl/transact-sql/createproc.sql#createproc8)]  
+     [!code-sql[ProcedureDDL#CreateProc8](../snippets/tsql/SQL14/tsql/procedureddl/transact-sql/createproc.sql#createproc8)]  
   
 5.  After the procedure is created, the second example uses the sys.dm_sql_referenced_entities function to display the objects that the procedure depends on.  
   
@@ -119,15 +119,15 @@ manager: "jhubbard"
  This view can be used to display objects that a procedure depends on or that depend on a procedure.  
   
  Displaying the objects that depend on a procedure.  
- 1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)] and then expand that instance.  
+ 1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)] and then expand that instance.  
   
 2.  Expand **Databases**, expand the database in which the procedure belongs.  
   
 3.  Click on **New Query** under the **File** menu.  
   
-4.  Copy and paste the following examples into the query editor. The first example creates the `uspVendorAllInfo` procedure, which returns the names of all the vendors in the [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] database, the products they supply, their credit ratings, and their availability.  
+4.  Copy and paste the following examples into the query editor. The first example creates the `uspVendorAllInfo` procedure, which returns the names of all the vendors in the [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] database, the products they supply, their credit ratings, and their availability.  
   
-     [!code-sql[ProcedureDDL#CreateProc8](../../snippets/tsql/SQL14/tsql/procedureddl/transact-sql/createproc.sql#createproc8)]  
+     [!code-sql[ProcedureDDL#CreateProc8](../snippets/tsql/SQL14/tsql/procedureddl/transact-sql/createproc.sql#createproc8)]  
   
 5.  After the procedure is created, the second example uses the sys.sql_expression_dependencies view to display the objects that depend on the procedure.  
   
@@ -150,15 +150,15 @@ manager: "jhubbard"
     ```  
   
  Displaying the objects a procedure depends on.  
- 1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)] and then expand that instance.  
+ 1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)] and then expand that instance.  
   
 2.  Expand **Databases**, expand the database in which the procedure belongs.  
   
 3.  Click on **New Query** under the **File** menu.  
   
-4.  Copy and paste the following examples into the query editor. The first example creates the `uspVendorAllInfo` procedure, which returns the names of all the vendors in the [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] database, the products they supply, their credit ratings, and their availability.  
+4.  Copy and paste the following examples into the query editor. The first example creates the `uspVendorAllInfo` procedure, which returns the names of all the vendors in the [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] database, the products they supply, their credit ratings, and their availability.  
   
-     [!code-sql[ProcedureDDL#CreateProc8](../../snippets/tsql/SQL14/tsql/procedureddl/transact-sql/createproc.sql#createproc8)]  
+     [!code-sql[ProcedureDDL#CreateProc8](../snippets/tsql/SQL14/tsql/procedureddl/transact-sql/createproc.sql#createproc8)]  
   
 5.  After the procedure is created, the second example uses the sys.sql_expression_dependencies view to display the objects the procedure depends on.  
   
@@ -181,8 +181,8 @@ manager: "jhubbard"
   
 ## See Also  
  [Rename a Stored Procedure](../../2014/database-engine/rename-a-stored-procedure.md)   
- [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../Topic/sys.dm_sql_referencing_entities%20\(Transact-SQL\).md)   
- [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../Topic/sys.dm_sql_referenced_entities%20\(Transact-SQL\).md)   
- [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../Topic/sys.sql_expression_dependencies%20\(Transact-SQL\).md)  
+ [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)   
+ [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
+ [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
   
   

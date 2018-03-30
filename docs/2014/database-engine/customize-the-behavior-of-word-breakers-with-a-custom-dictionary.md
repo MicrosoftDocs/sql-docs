@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: a8e278d1-aeaa-48f1-a0c6-5de232c983e4
 caps.latest.revision: 5
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Customize the Behavior of Word Breakers with a Custom Dictionary
@@ -22,7 +22,7 @@ manager: "jhubbard"
   
  [Create a custom dictionary (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=215011)  
   
- For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], place custom dictionary files in the following folder:  
+ For [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], place custom dictionary files in the following folder:  
   
  `C:\Program Files\Microsoft SQL Server\<instance name>\MSSQL\Binn`  
   

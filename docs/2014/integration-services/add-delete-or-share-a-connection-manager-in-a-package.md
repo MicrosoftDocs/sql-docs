@@ -19,9 +19,9 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Add, Delete, or Share a Connection Manager in a Package
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes a variety of connection managers for connecting to different data sources, such as relational databases, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] databases, and files in CSV and XML formats. A connection manager can be created at the package level or at the project level. The connection manager created at the project level is available all the packages in the project. Whereas, connection manager created at the package level is available to that specific package.  
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes a variety of connection managers for connecting to different data sources, such as relational databases, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] databases, and files in CSV and XML formats. A connection manager can be created at the package level or at the project level. The connection manager created at the project level is available all the packages in the project. Whereas, connection manager created at the package level is available to that specific package.  
   
- You use connection managers that are created at the project level in place of data sources, to share connections to sources. To add a connection manager at the project level, the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project must use the project deployment model. When a project is configured to use this model, the **Connection Managers** folder appears in **Solution Explorer**, and the **Data Sources** folder is removed from **Solution Explorer**.  
+ You use connection managers that are created at the project level in place of data sources, to share connections to sources. To add a connection manager at the project level, the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project must use the project deployment model. When a project is configured to use this model, the **Connection Managers** folder appears in **Solution Explorer**, and the **Data Sources** folder is removed from **Solution Explorer**.  
   
 > [!NOTE]  
 >  If you want to use data sources in your package, you need to convert the project to the package deployment model.  
@@ -44,17 +44,17 @@ manager: "jhubbard"
   
 ##  <a name="wizard"></a> To add a connection manager when creating a package  
   
--   Use the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard  
+-   Use the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Import and Export Wizard  
   
      In addition to creating and configuring a connection manager, the wizard also helps you create and configure the sources and destinations that use the connection manager. For more information, see [Create Packages in SQL Server Data Tools](../../2014/integration-services/create-packages-in-sql-server-data-tools.md).  
   
 ##  <a name="package"></a> To add a connection manager to an existing package  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project that contains the package you want.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project that contains the package you want.  
   
 2.  In Solution Explorer, double-click the package to open it  
   
-3.  In [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the **Control Flow** tab, the **Data Flow** tab, or the **Event Handler** tab to make the **Connection Managers** area available.  
+3.  In [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click the **Control Flow** tab, the **Data Flow** tab, or the **Event Handler** tab to make the **Connection Managers** area available.  
   
 4.  Right-click anywhere in the **Connection Managers** area, and then do one of the following:  
   
@@ -94,7 +94,7 @@ manager: "jhubbard"
   
 ##  <a name="project"></a> To add a connection manager at the project level  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project.  
   
 2.  In **Solution Explorer**, right-click **Connection Managers**, and click **New Connection Manager**.  
   
@@ -137,11 +137,11 @@ manager: "jhubbard"
   
 ##  <a name="DeletePackageLevel"></a> To delete a connection manager from a package  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project that contains the package you want.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project that contains the package you want.  
   
 2.  In Solution Explorer, double-click the package to open it.  
   
-3.  In [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the **Control Flow** tab, the **Data Flow** tab, or the **Event Handler** tab to make the **Connection Managers** area available.  
+3.  In [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click the **Control Flow** tab, the **Data Flow** tab, or the **Event Handler** tab to make the **Connection Managers** area available.  
   
 4.  Right-click the connection manager that you want to delete, and then click **Delete**.  
   
@@ -157,7 +157,7 @@ manager: "jhubbard"
   
 ##  <a name="DeleteProjectLevel"></a> To delete a shared connection manager (project level connection manager)  
   
-1.  To delete a project-level connection manager, right-click the connection manager under **Connection Managers** node in the **Solution Explorer** window, and then click **Delete**. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] displays the following warning message:  
+1.  To delete a project-level connection manager, right-click the connection manager under **Connection Managers** node in the **Solution Explorer** window, and then click **Delete**. [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] displays the following warning message:  
   
     > [!WARNING]  
     >  When you delete a project connection manager, packages that use the connection manager might not run. You cannot undo this action. Do you want to delete the connection manager?  

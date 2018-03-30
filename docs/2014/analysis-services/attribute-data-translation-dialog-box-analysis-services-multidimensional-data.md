@@ -45,7 +45,7 @@ manager: "mblythe"
  **Binary**  
  Select this option to sort and compare data based on the bit patterns defined for each character. Binary sort order is case-sensitive, that is, lowercase precedes uppercase, and accent-sensitive. This is the fastest sorting order.  
   
- If this option is not selected, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] follows sorting and comparison rules as defined in dictionaries for the associated language or alphabet.  
+ If this option is not selected, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] follows sorting and comparison rules as defined in dictionaries for the associated language or alphabet.  
   
 > [!NOTE]  
 >  If this option is selected, the **Case sensitive**, **Accent sensitive**, **Kana sensitive**, and **Width sensitive** options are disabled.  
@@ -53,22 +53,22 @@ manager: "mblythe"
  **Case sensitive**  
  Select this option to sort and compare data based on the dictionary rules provided for the associated language or alphabet, and to distinguish between uppercase and lowercase letters.  
   
- If not selected, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] considers the uppercase and lowercase versions of letters to be equal. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] does not define whether lowercase letters sort lower or higher in relation to uppercase letters when **Case-sensitive** is not selected.  
+ If not selected, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considers the uppercase and lowercase versions of letters to be equal. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] does not define whether lowercase letters sort lower or higher in relation to uppercase letters when **Case-sensitive** is not selected.  
   
  **Accent sensitive**  
  Select this option to sort and compare data based on the dictionary rules provided for the associated language or alphabet, and to distinguish between accented and unaccented characters. For example, 'a' is not equal to 'á'.  
   
- If not selected, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] considers the accented and unaccented versions of letters to be equal.  
+ If not selected, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considers the accented and unaccented versions of letters to be equal.  
   
  **Kana sensitive**  
  Select this option to sort and compare data based on the dictionary rules provided for the associated language or alphabet, and to distinguish between the two types of Japanese kana characters: Hiragana and Katakana.  
   
- If not selected, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] considers Hiragana and Katakana characters to be equal.  
+ If not selected, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considers Hiragana and Katakana characters to be equal.  
   
  **Width sensitive**  
  Select this option to sort and compare data based on the dictionary rules provided for the associated language or alphabet, and to distinguish between a single-byte character (half-width) and the same character when represented as a double-byte character (full-width).  
   
- If not selected, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] considers the single-byte and double-byte representation of the same character to be equal.  
+ If not selected, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considers the single-byte and double-byte representation of the same character to be equal.  
   
 ## See Also  
  [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](../../2014/analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   

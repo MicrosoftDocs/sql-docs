@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Impersonation Information Dialog Box (Table Import Wizard)
-  Use the **Impersonation Information** page to specify the credentials that [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] will use to connect to the data source. For more information about credentials impersonation, see [Impersonation &#40;SSAS Tabular&#41;](../../2014/analysis-services/impersonation-ssas-tabular.md).  
+  Use the **Impersonation Information** page to specify the credentials that [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] will use to connect to the data source. For more information about credentials impersonation, see [Impersonation &#40;SSAS Tabular&#41;](../../2014/analysis-services/impersonation-ssas-tabular.md).  
   
 ## Options  
  **Specific Windows user name and password**  
@@ -37,7 +37,7 @@ manager: "mblythe"
  This option is enabled only if **Use a specific name and password** is selected.  
   
  **Service account**  
- Select this option to use the security credentials associated with the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] service that manages the model.  
+ Select this option to use the security credentials associated with the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] service that manages the model.  
   
 ## See Also  
  [Impersonation &#40;SSAS Tabular&#41;](../../2014/analysis-services/impersonation-ssas-tabular.md)  

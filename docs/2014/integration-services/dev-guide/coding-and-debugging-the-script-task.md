@@ -31,9 +31,9 @@ manager: "jhubbard"
   After configuring the Script task in the **Script Task Editor**, you write your custom code in the Script task development environment.  
   
 ## Script Task Development Environment  
- The Script task uses [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) as the development environment for the script itself.  
+ The Script task uses [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) as the development environment for the script itself.  
   
- Script code is written in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic or [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#. You specify the script language by setting the **ScriptLanguage** property in the **Script Task Editor**. If you prefer to use another programming language, you can develop a custom assembly in your language of choice and call its functionality from the code in the Script task.  
+ Script code is written in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic or [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#. You specify the script language by setting the **ScriptLanguage** property in the **Script Task Editor**. If you prefer to use another programming language, you can develop a custom assembly in your language of choice and call its functionality from the code in the Script task.  
   
  The script that you create in the Script task is stored in the package definition. There is no separate script file. Therefore, the use of the Script task does not affect package deployment.  
   
@@ -48,7 +48,7 @@ manager: "jhubbard"
 ### Project Items and Classes in the Script Task Project  
  By default, the Script task project displayed in the VSTA Project Explorer window contains a single item, `ScriptMain`. The `ScriptMain` item, in turn, contains a single class, also named `ScriptMain`. The code elements in the class vary depending on the programming language that you selected for the Script task:  
   
--   When the Script task is configured for the [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] programming language, the `ScriptMain` class has a public subroutine, `Main`. The `ScriptMain.Main` subroutine is the method that the runtime calls when you run your Script task.  
+-   When the Script task is configured for the [!INCLUDE[vb_orcas_long](../../includes/vb-orcas-long-md.md)] programming language, the `ScriptMain` class has a public subroutine, `Main`. The `ScriptMain.Main` subroutine is the method that the runtime calls when you run your Script task.  
   
      By default, the only code in the `Main` subroutine of a new script is the line `Dts.TaskResult = ScriptResults.Success`. This line informs the runtime that the task was successful in its operation. The `Dts.TaskResult` property is discussed in [Returning Results from the Script Task](../../../2014/integration-services/dev-guide/returning-results-from-the-script-task.md).  
   
@@ -205,7 +205,7 @@ To open Help, press F1.
 >  You can view project references in the VSTA IDE in **Class View** or in **Project Explorer**. You open either of these windows from the **View** menu. You can add a new reference from the **Project** menu, from **Project Explorer**, or from **Class View**.  
   
 ## Interacting with the Package in the Script Task  
- The Script task uses the global `Dts` object, which is an instance of the <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> class, and its members to interact with the containing package and with the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] runtime.  
+ The Script task uses the global `Dts` object, which is an instance of the <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> class, and its members to interact with the containing package and with the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] runtime.  
   
  The following table lists the principal public members of the <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> class, which is exposed to Script task code through the global `Dts` object. The topics in this section discuss the use of these members in more detail.  
   
@@ -226,7 +226,7 @@ To open Help, press F1.
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.VariableDispenser%2A>|The <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> property provides more convenient access to variables. Although you can use the <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.VariableDispenser%2A>, you must explicitly call methods to lock and unlock variables for reading and writing. The Script task handles locking semantics for you when you use the <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> property.|  
   
 ## Debugging the Script Task  
- To debug the code in your Script task, set at least one breakpoint in the code, and then close the VSTA IDE to run the package in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. When package execution enters the Script task, the VSTA IDE reopens and displays your code in read-only mode. After execution reaches your breakpoint, you can examine variable values and step through the remaining code.  
+ To debug the code in your Script task, set at least one breakpoint in the code, and then close the VSTA IDE to run the package in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. When package execution enters the Script task, the VSTA IDE reopens and displays your code in read-only mode. After execution reaches your breakpoint, you can examine variable values and step through the remaining code.  
   
 > [!WARNING]  
 >  You can debug the Script task when you run the package in 64-bit mode.  
@@ -246,7 +246,7 @@ To open Help, press F1.
   
 ||  
 |-|  
-|![Integration Services icon (small)](../../../2014/integration-services/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from [!INCLUDE[msCoName](../../../includes/msconame-md.md)], as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
+|![Integration Services icon (small)](../../../2014/integration-services/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from [!INCLUDE[msCoName](../../includes/msconame-md.md)], as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
   
 ## See Also  
  [Referencing Other Assemblies in Scripting Solutions](../../../2014/integration-services/dev-guide/referencing-other-assemblies-in-scripting-solutions.md)   

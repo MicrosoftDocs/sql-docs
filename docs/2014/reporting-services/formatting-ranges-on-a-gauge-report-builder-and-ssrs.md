@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: ffdec8ca-3e95-41cd-850b-9e8c83be4b49
 caps.latest.revision: 5
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Formatting Ranges on a Gauge (Report Builder and SSRS)
@@ -23,7 +23,7 @@ manager: "mblythe"
  You can position the range in the same way that you position pointers on a scale. The **Position** and **Distance from scale** properties determine the position of the range. For more information, see [Gauges &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/gauges-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## See Also  
  [Formatting Scales on a Gauge &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   

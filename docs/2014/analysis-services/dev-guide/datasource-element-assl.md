@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # DataSource Element (ASSL)
-  Defines a data source in a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] [Database](../../../2014/analysis-services/dev-guide/database-element-assl.md) element.  
+  Defines a data source in a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [Database](../../../2014/analysis-services/dev-guide/database-element-assl.md) element.  
   
 ## Syntax  
   

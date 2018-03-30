@@ -19,9 +19,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Open Solutions from Source Control
-  You can use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to open solutions directly from source control. When you do this, the Studio environment creates a copy of the latest version of the solution files at the location you specify.  
+  You can use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to open solutions directly from source control. When you do this, the Studio environment creates a copy of the latest version of the solution files at the location you specify.  
   
- If a local copy of the solution does not exist on your local disk, you must open the project from source control before you can use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to check out the solution or retrieve solution files.  
+ If a local copy of the solution does not exist on your local disk, you must open the project from source control before you can use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to check out the solution or retrieve solution files.  
   
 > [!NOTE]  
 >  If you already have a local copy of the solution you are opening from source control, you are prompted to overwrite the local copy.  
@@ -30,7 +30,7 @@ manager: "jhubbard"
   
 1.  On the **File** menu, point to **Source Control**, and click **Open From Source Control**.  
   
-2.  If prompted, log on to [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual SourceSafe.  
+2.  If prompted, log on to [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe.  
   
 3.  In the **Create local project from SourceSafe** dialog box, select the folder that contains the solution you want to open, and click **OK**.  
   

@@ -18,18 +18,18 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Backup Database Dialog Box (Analysis Services - Multidimensional Data)
-  Use the **Backup Database** dialog box in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to back up an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database to a backup file using the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Backup File (.abf) format.  
+  Use the **Backup Database** dialog box in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to back up an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database to a backup file using the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Backup File (.abf) format.  
   
 > [!IMPORTANT]  
->  For each backup file, the user who runs the backup command must have permission to write to the backup location specified for each file. Also, the user must have one of the following roles: a member of a server role for the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance, or a member of a database role with Full Control (Administrator) permissions on the database to be backed up.  
+>  For each backup file, the user who runs the backup command must have permission to write to the backup location specified for each file. Also, the user must have one of the following roles: a member of a server role for the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance, or a member of a database role with Full Control (Administrator) permissions on the database to be backed up.  
   
  **To display the Backup Database dialog box**  
   
--   In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], right-click either the **Databases** folder of an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance or a database in **Object Explorer**, and then click **Backup**.  
+-   In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], right-click either the **Databases** folder of an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance or a database in **Object Explorer**, and then click **Backup**.  
   
 ## Options  
  **Script**  
- Creates a backup script that is based on the options selected in the dialog box. The restore script is written in the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripting Language (ASSL).  
+ Creates a backup script that is based on the options selected in the dialog box. The restore script is written in the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Scripting Language (ASSL).  
   
  Clicking the **Script** icon sends the backup script into a new query window, by default.  
   
@@ -44,7 +44,7 @@ manager: "mblythe"
 -   To a job.  
   
  **Database**  
- Displays the name of the currently selected [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database.  
+ Displays the name of the currently selected [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database.  
   
  **Backup file**  
  Type the full path and file name of the backup file to use.  
@@ -80,15 +80,15 @@ manager: "mblythe"
  Select to include location information and data for remote partitions in the backup file.  
   
 > [!NOTE]  
->  This option is enabled only if the currently selected [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database uses remote partitions.  
+>  This option is enabled only if the currently selected [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database uses remote partitions.  
   
  **Remote partition backup location**  
  Displays the location of remote partitions associated with the selected database, as well as the remote backup file used to back up the data and metadata for the remote partitions. The following columns are available:  
   
 |Column|Description|  
 |------------|-----------------|  
-|**Server**|Displays the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance that manages the remote partitions.|  
-|**Database**|Displays the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database that contains the remote partitions.|  
+|**Server**|Displays the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance that manages the remote partitions.|  
+|**Database**|Displays the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database that contains the remote partitions.|  
 |**Partition List**|Displays the list of remote partitions contained by the database displayed in **Database**.|  
 |**Remote backup file**|Type the full path and file name of the remote backup file to use, or click the ellipsis button (**...**) to display the **Save File As** dialog box and select the path and file name of the remote backup file to use. For more information about the **Save File As** dialog box, see [Save File As Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/save-file-as-dialog-box-analysis-services-multidimensional-data.md).|  
   

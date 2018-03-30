@@ -27,7 +27,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Loading and Running a Local Package Programmatically
-  You can run [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] packages as needed or at predetermined times by using the methods described in [Running Packages](../../../2014/integration-services/execution-of-projects-and-packages.md). However, with only a few lines of code, you can also run a package from a custom application such as a Windows Forms application, a console application, an ASP.NET Web form or Web service, or a Windows service.  
+  You can run [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages as needed or at predetermined times by using the methods described in [Running Packages](../../../2014/integration-services/execution-of-projects-and-packages.md). However, with only a few lines of code, you can also run a package from a custom application such as a Windows Forms application, a console application, an ASP.NET Web form or Web service, or a Windows service.  
   
  This topic discusses:  
   
@@ -44,7 +44,7 @@ manager: "jhubbard"
 |----------------------|--------------------|  
 |File|<xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadPackage%2A>|  
 |SSIS Package Store|<xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A>|  
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromSqlServer%2A>|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromSqlServer%2A>|  
   
 > [!IMPORTANT]  
 >  The methods of the <xref:Microsoft.SqlServer.Dts.Runtime.Application> class for working with the SSIS Package Store only support ".", localhost, or the server name for the local server. You cannot use "(local)".  
@@ -63,9 +63,9 @@ manager: "jhubbard"
 4.  Add the following code in the main routine. The completed console application should look like the following example.  
   
     > [!NOTE]  
-    >  The sample code demonstrates loading the package from the file system by using the <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadPackage%2A> method. However you can also load the package from the MSDB database by calling the <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromSqlServer%2A> method, or from the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] package store by calling the <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> method.  
+    >  The sample code demonstrates loading the package from the file system by using the <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadPackage%2A> method. However you can also load the package from the MSDB database by calling the <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromSqlServer%2A> method, or from the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package store by calling the <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> method.  
   
-5.  Run the project. The sample code executes the CalculatedColumns sample package that is installed with the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] samples. The result of package execution is displayed in the console window.  
+5.  Run the project. The sample code executes the CalculatedColumns sample package that is installed with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] samples. The result of package execution is displayed in the console window.  
   
 ### Sample Code  
   
@@ -133,7 +133,7 @@ namespace RunFromClientAppCS
   
 2.  Add the following code in the main routine. The completed console application should look like the following example.  
   
-3.  Run the project. The sample code executes the CalculatedColumns sample package that is installed with the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] samples. The result of package execution is displayed in the console window, along with any errors that occur.  
+3.  Run the project. The sample code executes the CalculatedColumns sample package that is installed with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] samples. The result of package execution is displayed in the console window, along with any errors that occur.  
   
 ### Sample Code  
   
@@ -224,7 +224,7 @@ namespace RunFromClientAppWithEventsCS
   
 ||  
 |-|  
-|![Integration Services icon (small)](../../../2014/integration-services/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
+|![Integration Services icon (small)](../../../2014/integration-services/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
   
 ## See Also  
  [Understanding the Differences between Local and Remote Execution](../../../2014/integration-services/dev-guide/understanding-the-differences-between-local-and-remote-execution.md)   

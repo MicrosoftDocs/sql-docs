@@ -26,7 +26,7 @@ manager: "mblythe"
  Click to display the **Process** dialog box and process the cube.  
   
  **Reconnect**  
- Click to reconnect the **KPIs** tab to the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance and database that contains the cube, if the session for the **KPIs** tab is disconnected due to connection loss or timeout.  
+ Click to reconnect the **KPIs** tab to the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance and database that contains the cube, if the session for the **KPIs** tab is disconnected due to connection loss or timeout.  
   
  **New KPI**  
  Click to display the **KPI Form Editor** and create a new Key Performance Indicator (KPI).  

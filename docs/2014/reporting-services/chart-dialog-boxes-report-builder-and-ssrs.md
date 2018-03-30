@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 3a62e345-d67f-4387-a7ca-e5c4728a7b16
 caps.latest.revision: 4
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Chart Dialog Boxes (Report Builder and SSRS)

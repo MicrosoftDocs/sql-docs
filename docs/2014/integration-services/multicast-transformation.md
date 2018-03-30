@@ -32,7 +32,7 @@ manager: "jhubbard"
  This transformation has one input and multiple outputs. It does not support an error output.  
   
 ## Configuration of the Multicast Transformation  
- You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer or programmatically.  
   
  For information about the properties that you can set in the **Multicast Transformation Editor** dialog box, see [Multicast Transformation Editor](../../2014/integration-services/multicast-transformation-editor.md).  
   

@@ -18,11 +18,11 @@ helpviewer_keywords:
 ms.assetid: f67c11e3-c519-40c9-82c1-07efa9d9985e
 caps.latest.revision: 23
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Log In to an Instance of SQL Server (Command Prompt)
-  This topic describes how to test connectivity to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use the **sqlcmd** utility.  
+  This topic describes how to test connectivity to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], use the **sqlcmd** utility.  
   
 ##  <a name="SSMSProcedure"></a>  
   

@@ -20,7 +20,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Show Table Dialog Box (Analysis Services - Multidimensional Data)
-  Use the **Show Table** dialog box in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to include tables from the data source view associated with a dimension, cube, or mining structure. You can display this dialog box in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] by:  
+  Use the **Show Table** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to include tables from the data source view associated with a dimension, cube, or mining structure. You can display this dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] by:  
   
 -   Clicking **Show Tables** from the **Toolbar** pane on the **Dimension Structure** page of **Dimension Designer**.  
   

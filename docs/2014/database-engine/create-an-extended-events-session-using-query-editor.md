@@ -40,7 +40,7 @@ manager: "jhubbard"
   
 #### To create an Extended Events session  
   
-1.  The following procedure shows how to create an Extended Events session by using Query Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+1.  The following procedure shows how to create an Extended Events session by using Query Editor in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
      Determine which events that you want to use in the session. To see all the events that are available, together with the keyword and channel, use the following query:  
   
@@ -97,7 +97,7 @@ manager: "jhubbard"
     ADD EVENT sqlserver.file_write_completed  
     ```  
   
-4.  (Optional) After you add an event, you can add actions to take. You can also add predicates. Predicates are used to establish criteria for when the event information should be consumed by the target. Actions are added by using an ACTION clause, and predicates are added by using a WHERE clause. For example, to add an action and predicate where the [!INCLUDE[tsql](../../includes/tsql-md.md)] text is captured for the sqlserver.file_read_completed event, where the file ID equals 1, you would include the following statement:  
+4.  (Optional) After you add an event, you can add actions to take. You can also add predicates. Predicates are used to establish criteria for when the event information should be consumed by the target. Actions are added by using an ACTION clause, and predicates are added by using a WHERE clause. For example, to add an action and predicate where the [!INCLUDE[tsql](../includes/tsql-md.md)] text is captured for the sqlserver.file_read_completed event, where the file ID equals 1, you would include the following statement:  
   
     ```  
     ADD EVENT sqlserver.file_read_completed  
@@ -184,7 +184,7 @@ manager: "jhubbard"
     > [!NOTE]  
     >  For information about the different target types, see [SQL Server Extended Events Targets](../../2014/database-engine/sql-server-extended-events-targets.md).  
   
-6.  Review and add any additional configuration options. For example, you can configure options such as the event retention mode, how long events are buffered in memory, or whether the event session should start automatically when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] starts. The options are described in the topic [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../Topic/ALTER%20EVENT%20SESSION%20\(Transact-SQL\).md). Be aware that default values are assigned if these options are not specified.  
+6.  Review and add any additional configuration options. For example, you can configure options such as the event retention mode, how long events are buffered in memory, or whether the event session should start automatically when [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] starts. The options are described in the topic [ALTER EVENT SESSION &#40;Transact-SQL&#41;](~/t-sql/statements/alter-event-session-transact-sql.md). Be aware that default values are assigned if these options are not specified.  
   
 7.  Start the session.  
   
@@ -193,7 +193,7 @@ manager: "jhubbard"
   
  The following example creates an Extended Events session named IOActivity that captures the following information:  
   
--   Event data for completed file reads, including the associated [!INCLUDE[tsql](../../includes/tsql-md.md)] text for file reads where the file ID is equal to 1.  
+-   Event data for completed file reads, including the associated [!INCLUDE[tsql](../includes/tsql-md.md)] text for file reads where the file ID is equal to 1.  
   
 -   Event data for completed file writes.  
   
@@ -217,7 +217,7 @@ ADD TARGET package0.asynchronous_file_target
 ```  
   
 ## See Also  
- [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../Topic/CREATE%20EVENT%20SESSION%20\(Transact-SQL\).md)   
+ [CREATE EVENT SESSION &#40;Transact-SQL&#41;](~/t-sql/statements/create-event-session-transact-sql.md)   
  [SQL Server Extended Events Targets](../../2014/database-engine/sql-server-extended-events-targets.md)   
  [SQL Server Extended Events Packages](../../2014/database-engine/sql-server-extended-events-packages.md)  
   

@@ -20,14 +20,14 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # PowerPivot Data Refresh with SharePoint 2010
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]t data refresh is a scheduled server-side operation that queries external data sources to update embedded [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data in an Excel 2010 workbook that is stored in a content library.  
+  [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]t data refresh is a scheduled server-side operation that queries external data sources to update embedded [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] data in an Excel 2010 workbook that is stored in a content library.  
   
- Data refresh is a built-in feature of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint, but using it requires that you run specific services and timer jobs in your SharePoint 2010 farm. Additional administrative steps, such as installing data providers and checking database permissions, are often required for data refresh to succeed.  
+ Data refresh is a built-in feature of [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] for SharePoint, but using it requires that you run specific services and timer jobs in your SharePoint 2010 farm. Additional administrative steps, such as installing data providers and checking database permissions, are often required for data refresh to succeed.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2010  
+ **[!INCLUDE[applies](../includes/applies-md.md)]**  SharePoint 2010  
   
 > [!NOTE]  
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and SharePoint Server 2013 Excel Services use a different architecture for data refresh of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data models. The new architecture utilizes Excel Services as the primary component to load PowerPivot data models. The previous data refresh architecture used relied on a server running PowerPivot System Service and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in SharePoint mode to load data models. For more information, see [PowerPivot Data Refresh with SharePoint 2013](../../2014/analysis-services/powerpivot-data-refresh-with-sharepoint-2013.md).  
+>  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] and SharePoint Server 2013 Excel Services use a different architecture for data refresh of [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] data models. The new architecture utilizes Excel Services as the primary component to load PowerPivot data models. The previous data refresh architecture used relied on a server running PowerPivot System Service and [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in SharePoint mode to load data models. For more information, see [PowerPivot Data Refresh with SharePoint 2013](../../2014/analysis-services/powerpivot-data-refresh-with-sharepoint-2013.md).  
   
  **In this topic:**  
   
@@ -223,7 +223,7 @@ manager: "mblythe"
  Once you understand which accounts require data access, you can begin to check permissions on the data sources that are most often used in PowerPivot workbooks. Start with any data warehouses or reporting databases that are actively used, but also solicit input from your most active PowerPivot users to find out which data sources they are using. Once you have a list of data sources, you can begin checking each one to ensure that permissions are set correctly.  
   
 ##  <a name="bkmk_upgradewrkbk"></a> Step 7: Enable workbook upgrade for data refresh  
- By default, workbooks that were created using the [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] version of PowerPivot for Excel cannot be configured for scheduled data refresh on a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] version of PowerPivot for SharePoint. If you host newer and older versions of PowerPivot workbooks in your SharePoint environment, you must upgrade any [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] workbooks first before they can be scheduled for automatic data refresh on the server.  
+ By default, workbooks that were created using the [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] version of PowerPivot for Excel cannot be configured for scheduled data refresh on a [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] version of PowerPivot for SharePoint. If you host newer and older versions of PowerPivot workbooks in your SharePoint environment, you must upgrade any [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] workbooks first before they can be scheduled for automatic data refresh on the server.  
   
 ##  <a name="bkmk_verify"></a> Step 8: Verify data refresh configuration  
  To verify data refresh, you must have a PowerPivot workbook that is published to a SharePoint site. You must have Contribute permissions on the workbook and permissions to access any data sources that are included in the data refresh schedule.  

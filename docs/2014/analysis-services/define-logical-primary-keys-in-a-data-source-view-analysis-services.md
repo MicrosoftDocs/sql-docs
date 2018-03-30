@@ -26,11 +26,11 @@ manager: "mblythe"
  Occasionally, you may need to manually define a primary key in the data source view. For example, for performance or design reasons, tables in a data source may not have explicitly defined primary key columns. Named queries and views may also omit the primary key column for a table. If a table, view, or named query does not have a physical primary key defined, you can manually define a logical primary key on the table, view or named query in Data Source View Designer.  
   
 ## Set a Logical Primary Key  
- Primary keys are required in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] to uniquely identify records in a table, identify key columns in dimension tables and to support relationships between tables, views and named queries. These relationships are used to construct queries for retrieving data and metadata from underlying data sources, and to take advantage of advanced business intelligence features.  
+ Primary keys are required in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] to uniquely identify records in a table, identify key columns in dimension tables and to support relationships between tables, views and named queries. These relationships are used to construct queries for retrieving data and metadata from underlying data sources, and to take advantage of advanced business intelligence features.  
   
  Any column can be used for the logical primary key, including a named calculation. When you create a logical primary key, a unique constraint is created in the data source view and marked as a primary key constraint. Any other existing logical primary key specified in the selected table is deleted.  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the project or connect to the database that contains the data source view in which you wish to set a logical primary key.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the project or connect to the database that contains the data source view in which you wish to set a logical primary key.  
   
 2.  In Solution Explorer, expand the **Data Source Views** folder, then double-click the data source view.  
   

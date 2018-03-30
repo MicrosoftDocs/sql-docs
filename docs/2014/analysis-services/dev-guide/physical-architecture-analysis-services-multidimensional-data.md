@@ -21,12 +21,12 @@ manager: "mblythe"
 # Physical Architecture (Analysis Services - Multidimensional Data)
     
 ## In This Section  
- The following topics provide more information about the architecture of an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] solution.  
+ The following topics provide more information about the architecture of an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] solution.  
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[OLAP Engine Server Components](../../../2014/analysis-services/dev-guide/olap-engine-server-components.md)|Describes the components of an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] server.|  
-|[Local Cubes &#40;Analysis Services - Multidimensional Data&#41;](../../../2014/analysis-services/dev-guide/local-cubes-analysis-services-multidimensional-data.md)|Describes how stand-alone cubes are implemented and the scope of such implementation under an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] solution.|  
-|[Client Architecture Requirements for Analysis Services Development](../../../2014/analysis-services/dev-guide/client-architecture-requirements-for-analysis-services-development.md)|Describes the client architecture to access data and metadata from an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] solution.|  
+|[OLAP Engine Server Components](../../../2014/analysis-services/dev-guide/olap-engine-server-components.md)|Describes the components of an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server.|  
+|[Local Cubes &#40;Analysis Services - Multidimensional Data&#41;](../../../2014/analysis-services/dev-guide/local-cubes-analysis-services-multidimensional-data.md)|Describes how stand-alone cubes are implemented and the scope of such implementation under an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] solution.|  
+|[Client Architecture Requirements for Analysis Services Development](../../../2014/analysis-services/dev-guide/client-architecture-requirements-for-analysis-services-development.md)|Describes the client architecture to access data and metadata from an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] solution.|  
   
   

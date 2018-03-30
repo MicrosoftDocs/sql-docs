@@ -22,18 +22,18 @@ helpviewer_keywords:
 ms.assetid: a131d329-386e-4470-aaa9-ffcde4e5ec0c
 caps.latest.revision: 63
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "jhubbard"
 ---
 # Upgrade Analysis Services
-  Use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup to upgrade [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. For detailed information on upgrading [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in SharePoint mode, see [Upgrade PowerPivot for SharePoint](../../../2014/sql-server/install/upgrade-powerpivot-for-sharepoint.md). For more information about upgrading an existing SQL Server instance, see [Upgrade to SQL Server 2014 Using the Installation Wizard &#40;Setup&#41;](../../../2014/sql-server/install/upgrade-to-sql-server-2014-using-the-installation-wizard-setup.md).  
+  Use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup to upgrade [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For detailed information on upgrading [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in SharePoint mode, see [Upgrade PowerPivot for SharePoint](../../../2014/sql-server/install/upgrade-powerpivot-for-sharepoint.md). For more information about upgrading an existing SQL Server instance, see [Upgrade to SQL Server 2014 Using the Installation Wizard &#40;Setup&#41;](../../../2014/sql-server/install/upgrade-to-sql-server-2014-using-the-installation-wizard-setup.md).  
   
 ## Known Upgrade Issues  
- Before upgrading to [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], review the following:  
+ Before upgrading to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], review the following:  
   
 -   [SQL Server 2014 Release Notes](http://go.microsoft.com/fwlink/?LinkID=296445).  
   
--   To learn which [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] features and functionality have been discontinued, deprecated, or changed see [Analysis Services Backward Compatibility](../../../2014/analysis-services/analysis-services-backward-compatibility.md).  
+-   To learn which [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] features and functionality have been discontinued, deprecated, or changed see [Analysis Services Backward Compatibility](../../../2014/analysis-services/analysis-services-backward-compatibility.md).  
   
 ## Pre-Upgrade Checklist  
  Before upgrading, review the following information:  
@@ -53,27 +53,27 @@ manager: "jhubbard"
 ## Upgrading Analysis Services  
  You can choose from several approaches to upgrade server and data:  
   
--   An **in-place upgrade** replaces the existing program files with [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] program files. Databases remain in the same location. Program folders are updated to reflect the new name.  
+-   An **in-place upgrade** replaces the existing program files with [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] program files. Databases remain in the same location. Program folders are updated to reflect the new name.  
   
--   A **side-by-side upgrade** is a new installation of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] on the same computer that has an existing Analysis Services instance. You can move databases over to the new instance on the same computer, and then uninstall the old version if you no longer use it.  
+-   A **side-by-side upgrade** is a new installation of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] on the same computer that has an existing Analysis Services instance. You can move databases over to the new instance on the same computer, and then uninstall the old version if you no longer use it.  
   
 -   You can also install Analysis Services on new hardware and then migrate existing databases to that server.  
   
 ## In-place Upgrade  
- You can upgrade an existing instance of [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] to [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] and, as part of the upgrade process, automatically migrate existing databases from the old instance to the new instance. Because the metadata and binary data is compatible between the two versions, you will retain the data after you upgrade and you do not have to manually migrate the data.  
+ You can upgrade an existing instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and, as part of the upgrade process, automatically migrate existing databases from the old instance to the new instance. Because the metadata and binary data is compatible between the two versions, you will retain the data after you upgrade and you do not have to manually migrate the data.  
   
  To upgrade an existing instance, run Setup and specify the name of the existing instance as the name of the new instance.  
   
 ## Upgrading Databases  
- Databases that were created in previous versions of [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] run on the upgraded server under an older database compatibility level setting. Databases created in the following versions, have a database compatibility level of 105. You can change the compatibility level if you want to use features that require a newer database compatibility level. Otherwise, you can run the databases on the upgraded server using the original settings. For more information, see [Set the Compatibility Level of a Multidimensional Database &#40;Analysis Services&#41;](../../../2014/analysis-services/set-the-compatibility-level-of-a-multidimensional-database-analysis-services.md).  
+ Databases that were created in previous versions of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] run on the upgraded server under an older database compatibility level setting. Databases created in the following versions, have a database compatibility level of 105. You can change the compatibility level if you want to use features that require a newer database compatibility level. Otherwise, you can run the databases on the upgraded server using the original settings. For more information, see [Set the Compatibility Level of a Multidimensional Database &#40;Analysis Services&#41;](../../../2014/analysis-services/set-the-compatibility-level-of-a-multidimensional-database-analysis-services.md).  
   
--   [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]  
+-   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
--   [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]  
+-   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
   
--   [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]  
+-   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
   
--   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]  
+-   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
   
 ## See Also  
  [Features Supported by the Editions of SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   

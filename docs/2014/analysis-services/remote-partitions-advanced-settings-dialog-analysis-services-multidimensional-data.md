@@ -18,13 +18,13 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Remote Partitions - Advanced Settings Dialog Box (Analysis Services - Multidimensional Data)
-  Use the **Remote Partitions - Advanced Settings** dialog box in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to edit advanced settings, such as the connection string of the data source representing the remote [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database maintaining remote partitions, while restoring remote partitions from a remote backup file to an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database by using the **Restore Database** dialog box. You can display the **Remote Partitions - Advanced Settings** dialog box from the **Partitions** page of the **Restore Database** dialog box by clicking the ellipsis button (**...**) for a remote partition after selecting the **Restore remote partitions** option.  
+  Use the **Remote Partitions - Advanced Settings** dialog box in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to edit advanced settings, such as the connection string of the data source representing the remote [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database maintaining remote partitions, while restoring remote partitions from a remote backup file to an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database by using the **Restore Database** dialog box. You can display the **Remote Partitions - Advanced Settings** dialog box from the **Partitions** page of the **Restore Database** dialog box by clicking the ellipsis button (**...**) for a remote partition after selecting the **Restore remote partitions** option.  
   
 ## Options  
   
 |Term|Definition|  
 |----------|----------------|  
-|**Data source name**|Displays the name of the data source that represents the remote [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database that manages the listed remote partitions.|  
+|**Data source name**|Displays the name of the data source that represents the remote [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database that manages the listed remote partitions.|  
 |**Backup file**|Displays the name of the remote backup file that contains the data to be restored for the listed remote partitions.<br /><br /> Note: No backup file is displayed if a remote backup file was specified in the **Backup file** column on the **Partitions** page of the **Restore Database** dialog box.|  
 |**Connection string**|Displays the connection string for the data source displayed in **Data source name**.|  
 |**Edit**|Click to display the **Data Link Properties** dialog box and edit the properties contained in the connection string.|  

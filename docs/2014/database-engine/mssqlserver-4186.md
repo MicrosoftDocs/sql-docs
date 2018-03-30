@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 1ae88554-f291-45bc-a186-6f41d9cd0fca
 caps.latest.revision: 14
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_4186
@@ -105,6 +105,6 @@ WHERE ProductModelID BETWEEN 75 and 80;
 -   Remove the column from the OUTPUT clause.  
   
 ## See Also  
- [OUTPUT Clause &#40;Transact-SQL&#41;](../Topic/OUTPUT%20Clause%20\(Transact-SQL\).md)  
+ [OUTPUT Clause &#40;Transact-SQL&#41;](~/t-sql/queries/output-clause-transact-sql.md)  
   
   

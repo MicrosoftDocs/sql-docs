@@ -12,15 +12,15 @@ ms.topic: "article"
 ms.assetid: 1dfc6b5c-0a93-450f-b5b3-34ae0ca79717
 caps.latest.revision: 27
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Select the Keyboard Shortcut Scheme
-  Instead of the standard [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] keyboard scheme, you can configure [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to use a keyboard scheme compatible with [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)].  
+  Instead of the standard [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] keyboard scheme, you can configure [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to use a keyboard scheme compatible with [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)].  
   
-## Changing to the [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)] Keyboard Scheme  
+## Changing to the [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] Keyboard Scheme  
   
-#### To apply [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)] compatible keyboard scheme  
+#### To apply [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] compatible keyboard scheme  
   
 1.  On the **Tools** menu, click **Options**.  
   

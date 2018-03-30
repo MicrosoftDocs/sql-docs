@@ -19,12 +19,12 @@ manager: "jhubbard"
   In this lesson, you will learn how to use some of the advanced properties of attributes, attribute hierarchies, and dimension properties.  
   
 > [!NOTE]  
->  This lesson is based on an enhanced version of the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Tutorial project that you completed in the first three lessons of this tutorial. The first task in this lesson describes where to locate the appropriate sample project to use for the lesson, and the difference between this project and the project that you created in the first three lessons.  
+>  This lesson is based on an enhanced version of the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial project that you completed in the first three lessons of this tutorial. The first task in this lesson describes where to locate the appropriate sample project to use for the lesson, and the difference between this project and the project that you created in the first three lessons.  
   
  This lesson contains the following tasks:  
   
  [Using a Modified Version of the Analysis Services Tutorial Project](../../2014/tutorials/using-a-modified-version-of-the-analysis-services-tutorial-project.md)  
- In this task, you open, review, and deploy a modified version of the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Tutorial project, which has multiple measure groups and additional dimensions.  
+ In this task, you open, review, and deploy a modified version of the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial project, which has multiple measure groups and additional dimensions.  
   
  [Defining Parent Attribute Properties in a Parent-Child Hierarchy](../../2014/tutorials/defining-parent-attribute-properties-in-a-parent-child-hierarchy.md)  
  In this task, you define level names in a parent-child dimension and specify whether data related to parent members is displayed. For more information, see [Parent-Child Hierarchy](../../2014/analysis-services/parent-child-hierarchy.md) and [Attributes in Parent-Child Hierarchies](../../2014/analysis-services/attributes-in-parent-child-hierarchies.md).  

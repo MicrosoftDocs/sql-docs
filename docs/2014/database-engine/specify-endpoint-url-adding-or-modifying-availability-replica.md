@@ -21,7 +21,7 @@ ms.author: "jroth"
 manager: "jhubbard"
 ---
 # Specify the Endpoint URL When Adding or Modifying an Availability Replica (SQL Server)
-  To host an availability replica for an availability group, a server instance must possess a database mirroring endpoint. The server instance uses this endpoint to listen for [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] messages from availability replicas hosted by other server instances. To define an availability replica for an availability group, you must specify the endpoint URL of the server instance that will host the replica. The *endpoint URL* identifies the transport protocol of the database mirroring endpoint—TCP, the system address of the server instance, and the port number associated with the endpoint.  
+  To host an availability replica for an availability group, a server instance must possess a database mirroring endpoint. The server instance uses this endpoint to listen for [!INCLUDE[ssHADR](../includes/sshadr-md.md)] messages from availability replicas hosted by other server instances. To define an availability replica for an availability group, you must specify the endpoint URL of the server instance that will host the replica. The *endpoint URL* identifies the transport protocol of the database mirroring endpoint—TCP, the system address of the server instance, and the port number associated with the endpoint.  
   
 > [!NOTE]  
 >  The term "endpoint URL" is synonymous with the term "server network address" used by the database mirroring user interface and documentation.  
@@ -65,7 +65,7 @@ manager: "jhubbard"
   
      ![Server network addresses of a default instance](../../2014/database-engine/media/dbm-2-instances-ports-1-system.gif "Server network addresses of a default instance")  
   
-     To identify the port currently associated with database mirroring endpoint of a server instance, use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement:  
+     To identify the port currently associated with database mirroring endpoint of a server instance, use the following [!INCLUDE[tsql](../includes/tsql-md.md)] statement:  
   
     ```  
     SELECT type_desc, port FROM sys.TCP_endpoints  
@@ -132,11 +132,11 @@ manager: "jhubbard"
   
 -   [Specify a Server Network Address &#40;Database Mirroring&#41;](../../2014/database-engine/specify-a-server-network-address-database-mirroring.md)  
   
--   [Troubleshoot AlwaysOn Availability Groups Configuration &#40;SQL Server&#41;deleted](../Topic/Troubleshoot%20AlwaysOn%20Availability%20Groups%20Configuration%20\(SQL%20Server\)deleted.md)  
+-   [Troubleshoot AlwaysOn Availability Groups Configuration &#40;SQL Server&#41;deleted](troubleshoot-alwayson-availability-groups-configuration-sql-server.md)  
   
  **To View Information About the Database Mirroring Endpoint**  
   
--   [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](../Topic/sys.database_mirroring_endpoints%20\(Transact-SQL\).md)  
+-   [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)  
   
  **To add an availability replica**  
   
@@ -151,6 +151,6 @@ manager: "jhubbard"
 ## See Also  
  [Creation and Configuration of Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/creation-and-configuration-of-availability-groups-sql-server.md)   
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/overview-of-alwayson-availability-groups-sql-server.md)   
- [CREATE ENDPOINT &#40;Transact-SQL&#41;](../Topic/CREATE%20ENDPOINT%20\(Transact-SQL\).md)  
+ [CREATE ENDPOINT &#40;Transact-SQL&#41;](~/t-sql/statements/create-endpoint-transact-sql.md)  
   
   

@@ -24,11 +24,11 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Integration Services Data Types
-  When data enters a data flow in a package, the source that extracts the data converts the data to an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data type. Numeric data is assigned a numeric data type, string data is assigned a character data type, and dates are assigned a date data type. Other data, such as GUIDs and Binary Large Object Blocks (BLOBs), are also assigned appropriate [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data types. If data has a data type that is not convertible to an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data type, an error occurs.  
+  When data enters a data flow in a package, the source that extracts the data converts the data to an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] data type. Numeric data is assigned a numeric data type, string data is assigned a character data type, and dates are assigned a date data type. Other data, such as GUIDs and Binary Large Object Blocks (BLOBs), are also assigned appropriate [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] data types. If data has a data type that is not convertible to an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] data type, an error occurs.  
   
- Some data flow components convert data types between the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data types and the managed data types of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. For more information about the mapping between [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] and managed data types, see [Working with Data Types in the Data Flow](../../2014/integration-services/dev-guide/working-with-data-types-in-the-data-flow.md).  
+ Some data flow components convert data types between the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] data types and the managed data types of the [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]. For more information about the mapping between [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] and managed data types, see [Working with Data Types in the Data Flow](../../2014/integration-services/dev-guide/working-with-data-types-in-the-data-flow.md).  
   
- The following table lists the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data types. Some of the data types in the table have precision and scale information that applies to them. For more information about precision and scale, see [Precision, Scale, and Length &#40;Transact-SQL&#41;](../Topic/Precision,%20Scale,%20and%20Length%20\(Transact-SQL\).md).  
+ The following table lists the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] data types. Some of the data types in the table have precision and scale information that applies to them. For more information about precision and scale, see [Precision, Scale, and Length &#40;Transact-SQL&#41;](~/t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
 |Data type|Description|  
 |---------------|-----------------|  
@@ -52,7 +52,7 @@ manager: "jhubbard"
 |DT_NUMERIC|An exact numeric value with a fixed precision and scale. This data type is a 16-byte unsigned integer with a separate sign, a scale of 0 - 38, and a maximum precision of 38.|  
 |DT_R4|A single-precision floating-point value.|  
 |DT_R8|A double-precision floating-point value.|  
-|DT_STR|A null-terminated [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/MBCS character string with a maximum length of 8000 characters. (If a column value contains additional null terminators, the string will be truncated at the occurrence of the first null.)|  
+|DT_STR|A null-terminated [!INCLUDE[vcpransi](../includes/vcpransi-md.md)]/MBCS character string with a maximum length of 8000 characters. (If a column value contains additional null terminators, the string will be truncated at the occurrence of the first null.)|  
 |DT_UI1|A one-byte, unsigned integer.|  
 |DT_UI2|A two-byte, unsigned integer.|  
 |DT_UI4|A four-byte, unsigned integer.|  
@@ -60,12 +60,12 @@ manager: "jhubbard"
 |DT_WSTR|A null-terminated Unicode character string with a maximum length of 4000 characters. (If a column value contains additional null terminators, the string will be truncated at the occurrence of the first null.)|  
 |DT_IMAGE|A binary value with a maximum size of 2<sup>31</sup>-1 (2,147,483,647) bytes. .|  
 |DT_NTEXT|A Unicode character string with a maximum length of 2<sup>30</sup> - 1 (1,073,741,823) characters.|  
-|DT_TEXT|An [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/MBCS character string with a maximum length of 2<sup>31</sup>-1 (2,147,483,647) characters.|  
+|DT_TEXT|An [!INCLUDE[vcpransi](../includes/vcpransi-md.md)]/MBCS character string with a maximum length of 2<sup>31</sup>-1 (2,147,483,647) characters.|  
   
 ## Conversion of Data Types  
  If the data in a column does not require the full width allocated by the source data type, you might want to change the data type of the column. Making each data row as narrow as possible helps optimize performance when transferring data because the narrower each row is, the faster the data is moved from source to destination.  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes a complete set of numeric data types, so that you can match the data type closely to the size of the data. For example, if the values in a column with a DT_UI8 data type are always integers between 0 and 3000, you can change the data type to DT_UI2. Similarly, if a column with the DT_CY data type can meet the package data requirements by using an integer data type instead, you can change the data type to DT_I4.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes a complete set of numeric data types, so that you can match the data type closely to the size of the data. For example, if the values in a column with a DT_UI8 data type are always integers between 0 and 3000, you can change the data type to DT_UI2. Similarly, if a column with the DT_CY data type can meet the package data requirements by using an integer data type instead, you can change the data type to DT_I4.  
   
  You can change the data type of a column in the following ways:  
   
@@ -208,7 +208,7 @@ manager: "jhubbard"
 |DT_DBTIMESTAMPOFFSET|Removes the fractional second value when its scale is greater than the number of fractional second digits that the destination DT_DBTIMESTAMPOFFSET data type can contain. After removing the fractional second value, generates a report about this data truncation. For more information, see [Error Handling in Data](../../2014/integration-services/error-handling-in-data.md).|  
   
 ## Mapping of Integration Services Data Types to Database Data Types  
- The following table provides guidance on mapping the data types used by certain databases to [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data types. These mappings are summarized from the mapping files used by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard when it imports data from these sources. For more information about these mapping files, see [SQL Server Import and Export Wizard](../../2014/integration-services/sql-server-import-and-export-wizard.md).  
+ The following table provides guidance on mapping the data types used by certain databases to [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] data types. These mappings are summarized from the mapping files used by the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Import and Export Wizard when it imports data from these sources. For more information about these mapping files, see [SQL Server Import and Export Wizard](../../2014/integration-services/sql-server-import-and-export-wizard.md).  
   
 > [!IMPORTANT]  
 >  These mappings are not intended to represent strict equivalency, but only to provide guidance. In certain situations, you may need to use a different data type than the one shown in this table.  
@@ -222,12 +222,12 @@ manager: "jhubbard"
 |DT_BYTES|binary, varbinary, timestamp|binary, varbinary, timestamp|BigBinary, VarBinary|RAW|||  
 |DT_CY|smallmoney, money|smallmoney, money|Currency||||  
 |DT_DATE|||||||  
-|DT_DBDATE|[date &#40;Transact-SQL&#41;](../Topic/date%20\(Transact-SQL\).md)|[date &#40;Transact-SQL&#41;](../Topic/date%20\(Transact-SQL\).md)||date|date|date|  
+|DT_DBDATE|[date &#40;Transact-SQL&#41;](~/t-sql/data-types/date-transact-sql.md)|[date &#40;Transact-SQL&#41;](~/t-sql/data-types/date-transact-sql.md)||date|date|date|  
 |DT_DBTIME||||timestamp|time|time|  
-|DT_DBTIME2|[time &#40;Transact-SQL&#41;](../Topic/time%20\(Transact-SQL\).md)(p)|[time &#40;Transact-SQL&#41;](../Topic/time%20\(Transact-SQL\).md) (p)|||||  
-|DT_DBTIMESTAMP|[datetime &#40;Transact-SQL&#41;](../Topic/datetime%20\(Transact-SQL\).md), [smalldatetime &#40;Transact-SQL&#41;](../Topic/smalldatetime%20\(Transact-SQL\).md)|[datetime &#40;Transact-SQL&#41;](../Topic/datetime%20\(Transact-SQL\).md), [smalldatetime &#40;Transact-SQL&#41;](../Topic/smalldatetime%20\(Transact-SQL\).md)|DateTime|TIMESTAMP, DATE, INTERVAL|TIME, TIMESTAMP, DATE|TIME, TIMESTAMP, DATE|  
-|DT_DBTIMESTAMP2|[datetime2 &#40;Transact-SQL&#41;](../Topic/datetime2%20\(Transact-SQL\).md)|[datetime2 &#40;Transact-SQL&#41;](../Topic/datetime2%20\(Transact-SQL\).md)||timestamp|timestamp|timestamp|  
-|DT_DBTIMESTAMPOFFSET|[datetimeoffset &#40;Transact-SQL&#41;](../Topic/datetimeoffset%20\(Transact-SQL\).md)(p)|[datetimeoffset &#40;Transact-SQL&#41;](../Topic/datetimeoffset%20\(Transact-SQL\).md) (p)||timestampoffset|timestamp,<br /><br /> varchar|timestamp,<br /><br /> varchar|  
+|DT_DBTIME2|[time &#40;Transact-SQL&#41;](~/t-sql/data-types/time-transact-sql.md)(p)|[time &#40;Transact-SQL&#41;](~/t-sql/data-types/time-transact-sql.md) (p)|||||  
+|DT_DBTIMESTAMP|[datetime &#40;Transact-SQL&#41;](~/t-sql/data-types/datetime-transact-sql.md), [smalldatetime &#40;Transact-SQL&#41;](~/t-sql/data-types/smalldatetime-transact-sql.md)|[datetime &#40;Transact-SQL&#41;](~/t-sql/data-types/datetime-transact-sql.md), [smalldatetime &#40;Transact-SQL&#41;](~/t-sql/data-types/smalldatetime-transact-sql.md)|DateTime|TIMESTAMP, DATE, INTERVAL|TIME, TIMESTAMP, DATE|TIME, TIMESTAMP, DATE|  
+|DT_DBTIMESTAMP2|[datetime2 &#40;Transact-SQL&#41;](~/t-sql/data-types/datetime2-transact-sql.md)|[datetime2 &#40;Transact-SQL&#41;](~/t-sql/data-types/datetime2-transact-sql.md)||timestamp|timestamp|timestamp|  
+|DT_DBTIMESTAMPOFFSET|[datetimeoffset &#40;Transact-SQL&#41;](~/t-sql/data-types/datetimeoffset-transact-sql.md)(p)|[datetimeoffset &#40;Transact-SQL&#41;](~/t-sql/data-types/datetimeoffset-transact-sql.md) (p)||timestampoffset|timestamp,<br /><br /> varchar|timestamp,<br /><br /> varchar|  
 |DT_DECIMAL|||||||  
 |DT_FILETIME|||||||  
 |DT_GUID|uniqueidentifier|uniqueidentifier|GUID||||  

@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Date and Time and Schema Rowsets
-  This topic provides information about COLUMNS rowset and PROCEDURE_PARAMETERS rowset. This information relates to the OLE DB date and time enhancements introduced in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  
+  This topic provides information about COLUMNS rowset and PROCEDURE_PARAMETERS rowset. This information relates to the OLE DB date and time enhancements introduced in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
 ## COLUMNS Rowset  
  The following column values are returned for date/time types:  
@@ -53,7 +53,7 @@ manager: "jhubbard"
   
  A new flag, DBCOLUMNFLAGS_SS_ISVARIABLESCALE, is provided in COLUMN_FLAGS to allow an application to determine the server type of columns where DATA_TYPE is DBTYPE_DBTIMESTAMP. DATETIME_PRECISION must also be used to identify the server type.  
   
- DBCOLUMNFLAGS_SS_ISVARIABLESCALE is only valid when connected to a [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] or later server. DBCOLUMNFLAGS_SS_ISFIXEDSCALE is undefined when connected to down-level servers.  
+ DBCOLUMNFLAGS_SS_ISVARIABLESCALE is only valid when connected to a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later server. DBCOLUMNFLAGS_SS_ISFIXEDSCALE is undefined when connected to down-level servers.  
   
 ## PROCEDURE_PARAMETERS Rowset  
  DATA_TYPE contains the same values as the COLUMNS schema rowset and TYPE_NAME contains the server type.  
@@ -87,7 +87,7 @@ manager: "jhubbard"
 |BEST_MATCH|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE unless one of the following is true:<br /><br /> -   Is client connected to a down-level server.<br />-   The data type compatibility connection property specifies a compatibility level that equals 80.|VARIANT_TRUE unless one of the following is true:<br /><br /> -   Is client connected to a down-level server.<br />-   The data type compatibility connection property specifies a compatibility level that equals 80.|VARIANT_TRUE|  
 |IS_FIXEDLENGTH|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|  
   
- OLE DB only defines MINIMUM_SCALE and MAXIMUM_SCALE for numeric and decimal types, so [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client's use of these columns for time, datetime2 and datetimeoffset is non-standard.  
+ OLE DB only defines MINIMUM_SCALE and MAXIMUM_SCALE for numeric and decimal types, so [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client's use of these columns for time, datetime2 and datetimeoffset is non-standard.  
   
 ## See Also  
  [Metadata &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/metadata-ole-db.md)  

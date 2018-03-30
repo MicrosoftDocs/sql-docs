@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: c1ddaeb6-c540-49fa-b06e-b6359d377ee8
 caps.latest.revision: 32
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Detail Property
-  The **Detail** property of the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] **SoapException** class has the following XML structure:  
+  The **Detail** property of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **SoapException** class has the following XML structure:  
   
 ## Elements  
  **Detail**  
  The top-level element that contains all other error detail elements.  
   
  **ErrorCode**  
- The [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-specific error code.  
+ The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-specific error code.  
   
  **HttpStatus**  
  The HTTP status code.  
@@ -45,13 +45,13 @@ manager: "jhubbard"
  The name of the product. The default value is **Microsoft SQL Server Reporting Services**.  
   
  **ProductVersion**  
- The version of [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. The maximum length is 15 characters. The format of the version number should be as follows: 8.00.0xxx.00.  
+ The version of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. The maximum length is 15 characters. The format of the version number should be as follows: 8.00.0xxx.00.  
   
  **ProductLocaleId**  
  The locale ID or language ID of the application's INTL DLL (for example, 0x41A).  
   
  **OperatingSystem**  
- The operating system [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] is installed on. Valid values include **0** for operating system independent, **1** for [!INCLUDE[win2kfamily](../../../includes/win2kfamily-md.md)], and **16** for Windows XP.  
+ The operating system [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] is installed on. Valid values include **0** for operating system independent, **1** for [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)], and **16** for Windows XP.  
   
  **CountryLocaleId**  
  The locale ID or language ID of the operating system. For example, the value for the French version of Windows is 0x040c.  

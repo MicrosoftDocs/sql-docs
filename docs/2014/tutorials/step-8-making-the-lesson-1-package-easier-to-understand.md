@@ -12,17 +12,17 @@ ms.topic: "article"
 ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
 caps.latest.revision: 17
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Step 8: Making the Lesson 1 Package Easier to Understand
   Now that you have completed the configuration of the Lesson 1 package, it is a good idea to tidy up the package layout. If the shapes in the control and data flow layouts are random sizes, or if the shapes are not aligned or grouped, the functionality of package can be more difficult to understand.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools provides tools that make it easy and quick to format the package layout. The formatting features include the ability to make shapes the same size, align shapes, and manipulate the horizontal and vertical spacing between shapes.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools provides tools that make it easy and quick to format the package layout. The formatting features include the ability to make shapes the same size, align shapes, and manipulate the horizontal and vertical spacing between shapes.  
   
  Another way to improve the understanding of package functionality is to add annotations that describe package functionality.  
   
- In this task, you will use the formatting features in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools to improve the layout of the data flow and also add an annotation to the data flow.  
+ In this task, you will use the formatting features in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools to improve the layout of the data flow and also add an annotation to the data flow.  
   
 ### To format the layout of the data flow  
   

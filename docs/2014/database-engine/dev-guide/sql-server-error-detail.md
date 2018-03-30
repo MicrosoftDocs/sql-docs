@@ -24,7 +24,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQL Server Error Detail
-  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider defines the provider-specific error interface [ISQLServerErrorInfo](../../../2014/database-engine/dev-guide/isqlservererrorinfo-ole-db.md). The interface returns more detail about a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] error and is valuable when command execution or rowset operations fail.  
+  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider defines the provider-specific error interface [ISQLServerErrorInfo](../../../2014/database-engine/dev-guide/isqlservererrorinfo-ole-db.md). The interface returns more detail about a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error and is valuable when command execution or rowset operations fail.  
   
  There are two ways to obtain access to **ISQLServerErrorInfo** interface.  
   
@@ -45,16 +45,16 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
   
 |Member|Description|  
 |------------|-----------------|  
-|*pwszMessage*|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] error message. Identical to the string returned in **IErrorInfo::GetDescription**.|  
-|*pwszServer*|Name of the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] for the session.|  
+|*pwszMessage*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error message. Identical to the string returned in **IErrorInfo::GetDescription**.|  
+|*pwszServer*|Name of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for the session.|  
 |*pwszProcedure*|If appropriate, the name of the procedure in which the error originated. An empty string otherwise.|  
-|*lNative*|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native error number. Identical to the value returned in the *plNativeError* parameter of **ISQLErrorInfo::GetSQLInfo**.|  
-|*bState*|State of a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] error message.|  
-|*bClass*|Severity of a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] error message.|  
+|*lNative*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native error number. Identical to the value returned in the *plNativeError* parameter of **ISQLErrorInfo::GetSQLInfo**.|  
+|*bState*|State of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error message.|  
+|*bClass*|Severity of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error message.|  
 |*wLineNumber*|When applicable, the line number of a stored procedure on which the error occurred.|  
   
 ## See Also  
  [Errors](../../../2014/database-engine/dev-guide/errors.md)   
- [RAISERROR &#40;Transact-SQL&#41;](../Topic/RAISERROR%20\(Transact-SQL\).md)  
+ [RAISERROR &#40;Transact-SQL&#41;](~/t-sql/language-elements/raiserror-transact-sql.md)  
   
   

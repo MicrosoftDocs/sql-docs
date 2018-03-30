@@ -17,26 +17,26 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Handling Large Objects Using CLR
-  The `HandlingLOBUsingCLR` sample for SQL Server demonstrates transferring large objects (LOBs) between [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and a file system that is available to the server by using common language runtime (CLR) stored procedures. This sample demonstrates how to access files in server-side code, and then invoke both dynamic queries and stored procedures from CLR-based stored procedures. It also demonstrates how to unregister and register CLR methods and assemblies by using [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+  The `HandlingLOBUsingCLR` sample for SQL Server demonstrates transferring large objects (LOBs) between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and a file system that is available to the server by using common language runtime (CLR) stored procedures. This sample demonstrates how to access files in server-side code, and then invoke both dynamic queries and stored procedures from CLR-based stored procedures. It also demonstrates how to unregister and register CLR methods and assemblies by using [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## Prerequisites  
  To create and run this project the following the following software must be installed:  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] or [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express. You can obtain [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express free of charge from the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express Documentation and Samples [Web site](http://go.microsoft.com/fwlink/?LinkId=31046)  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. You can obtain [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express free of charge from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [Web site](http://go.microsoft.com/fwlink/?LinkId=31046)  
   
--   The AdventureWorks database that is available at the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Developer [Web site](http://go.microsoft.com/fwlink/?linkid=62796)  
+-   The AdventureWorks database that is available at the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Developer [Web site](http://go.microsoft.com/fwlink/?linkid=62796)  
   
 -   .NET Framework SDK 2.0 or later or Microsoft Visual Studio 2005 or later. You can obtain .NET Framework SDK free of charge.  
   
 -   In addition, the following conditions must be met:  
   
--   The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance you are using must have CLR integration enabled.  
+-   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance you are using must have CLR integration enabled.  
   
 -   In order to enable CLR integration, perform the following steps:  
   
     #### Enabling CLR Integration  
   
-    -   Execute the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] commands:  
+    -   Execute the following [!INCLUDE[tsql](../../includes/tsql-md.md)] commands:  
   
      `sp_configure 'clr enabled', 1`  
   
@@ -49,9 +49,9 @@ manager: "jhubbard"
     > [!NOTE]  
     >  To enable CLR, you must have `ALTER SETTINGS` server level permission, which is implicitly held by members of the `sysadmin` and `serveradmin` fixed server roles.  
   
--   The AdventureWorks database must be installed on the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance you are using.  
+-   The AdventureWorks database must be installed on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance you are using.  
   
--   If you are not an administrator for the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance you are using, you must have an administrator grant you **CreateAssembly**  permission to complete the installation.  
+-   If you are not an administrator for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance you are using, you must have an administrator grant you **CreateAssembly**  permission to complete the installation.  
   
 ## Building the Sample  
   
@@ -452,7 +452,7 @@ End Class
   
 ```  
   
- This is the [!INCLUDE[tsql](../../../includes/tsql-md.md)] installation script (`Install.sql`), which deploys the assembly and creates the stored procedures and security objects required by this example.  
+ This is the [!INCLUDE[tsql](../../includes/tsql-md.md)] installation script (`Install.sql`), which deploys the assembly and creates the stored procedures and security objects required by this example.  
   
 ```  
 USE AdventureWorks  
@@ -572,7 +572,7 @@ END  -- END of sp_InsertDocument
 GO  
 ```  
   
- The following [!INCLUDE[tsql](../../../includes/tsql-md.md)] (`test.sql`) tests the example by exercising the stored procedures.  
+ The following [!INCLUDE[tsql](../../includes/tsql-md.md)] (`test.sql`) tests the example by exercising the stored procedures.  
   
 ```  
 USE AdventureWorks  
@@ -586,7 +586,7 @@ go
   
 ```  
   
- The following [!INCLUDE[tsql](../../../includes/tsql-md.md)] removes the assembly, login, key and stored procedures from the database.  
+ The following [!INCLUDE[tsql](../../includes/tsql-md.md)] removes the assembly, login, key and stored procedures from the database.  
   
 ```  
   

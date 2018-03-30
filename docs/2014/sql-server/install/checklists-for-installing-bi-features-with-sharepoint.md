@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 1c220dcc-4014-4bfd-b997-6685902e6f67
 caps.latest.revision: 7
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "jhubbard"
 ---
 # Checklists for Installing BI Features with SharePoint

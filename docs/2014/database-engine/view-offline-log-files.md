@@ -15,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 caps.latest.revision: 16
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # View Offline Log Files
-  Beginning in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], you can view [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log files from a local or remote instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] when the target instance is offline or cannot start.  
+  Beginning in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], you can view [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] log files from a local or remote instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] when the target instance is offline or cannot start.  
   
  You can access the offline log files from Registered Servers, or programmatically through WMI and WQL (WMI Query Language) queries.  
   
 > [!NOTE]  
->  You can also use these methods to connect to an instance that is online, but for some reason, you cannot connect through a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connection.  
+>  You can also use these methods to connect to an instance that is online, but for some reason, you cannot connect through a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] connection.  
   
 ## Before you Begin  
- To connect to offline log files, an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be installed on the computer that you are using to view the offline log files, and on the computer where the log files that you want to view are located. If an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed on both computers, you can view offline files for instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and for instances that are running earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on either computer.  
+ To connect to offline log files, an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] must be installed on the computer that you are using to view the offline log files, and on the computer where the log files that you want to view are located. If an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is installed on both computers, you can view offline files for instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], and for instances that are running earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on either computer.  
   
- If you are using Registered Servers, the instance that you want to connect to must be registered under **Local Server Groups** or under **Central Management Servers**. (The instance can be registered on its own or be a member of a server group.) For more information about how to add an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to Registered Servers, see the following topics:  
+ If you are using Registered Servers, the instance that you want to connect to must be registered under **Local Server Groups** or under **Central Management Servers**. (The instance can be registered on its own or be a member of a server group.) For more information about how to add an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to Registered Servers, see the following topics:  
   
 -   [Create or Edit a Server Group &#40;SQL Server Management Studio&#41;](../../2014/database-engine/create-or-edit-a-server-group-sql-server-management-studio.md)  
   
@@ -41,14 +41,14 @@ manager: "jhubbard"
   
 -   [SqlErrorLogEvent Class](../../2014/database-engine/dev-guide/sqlerrorlogevent-class.md) (This topic shows how to retrieve values for logged events in a specified log file.)  
   
--   [SqlErrorLogFile Class](../../2014/database-engine/dev-guide/sqlerrorlogfile-class.md) (This topic shows how to retrieve information about all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log files on a specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
+-   [SqlErrorLogFile Class](../../2014/database-engine/dev-guide/sqlerrorlogfile-class.md) (This topic shows how to retrieve information about all [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] log files on a specified instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].)  
   
 ##  <a name="BeforeYouBegin"></a> Permissions  
  To connect to an offline log file, you must have the following permissions on both the local and remote computers:  
   
 -   Read access to the **Root\Microsoft\SqlServer\ComputerManagement12** WMI namespace. By default, everyone has read access through the Enable Account permission. For more information, see the "To verify WMI permissions" procedure later in this section.  
   
--   Read permission to the folder that contains the error log files. By default the error log files are located in the following path (where \<*Drive>* represents the drive where you installed [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and \<*InstanceName*> is the name of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]):  
+-   Read permission to the folder that contains the error log files. By default the error log files are located in the following path (where \<*Drive>* represents the drive where you installed [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and \<*InstanceName*> is the name of the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]):  
   
      **\<Drive>:\Program Files\Microsoft SQL Server\MSSQL12.\<InstanceName>\MSSQL\Log**  
   
@@ -87,13 +87,13 @@ manager: "jhubbard"
 ### View Log Files  
  The following procedure shows how to view offline log files through Registered Servers. The procedure assumes the following:  
   
- The instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that you want to connect to is already registered in Registered Servers.  
+ The instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that you want to connect to is already registered in Registered Servers.  
   
 ##### To view log files for instances that are offline  
   
-1.  If you want to view offline log files on a local instance, make sure that you start [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] with elevated permissions. To do this, when you start [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], right-click **SQL Server Management Studio**, and then click **Run as administrator**.  
+1.  If you want to view offline log files on a local instance, make sure that you start [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] with elevated permissions. To do this, when you start [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], right-click **SQL Server Management Studio**, and then click **Run as administrator**.  
   
-2.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], on the **View** menu, click **Registered Servers**.  
+2.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], on the **View** menu, click **Registered Servers**.  
   
 3.  In the console tree, locate the instance on which you want to view the offline files.  
   

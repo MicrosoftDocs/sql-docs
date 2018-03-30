@@ -48,7 +48,7 @@ manager: "jhubbard"
  In addition, if a transaction (TxA) reads rows that have been inserted or modified by another transaction (TxB) that is in the process of committing, it will optimistically assume the other transaction will commit rather than wait for the commit to occur. In this case, transaction TxA will take a commit dependency on transaction TxB.  
   
 ## Conflict Detection, Validation, and Commit Dependency Checks  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] detects conflicts between concurrent transactions, as well as isolation level violations, and will doom one of the conflicting transactions. This transaction will need to be retried. (For more information, see [Guidelines for Retry Logic for Transactions on Memory-Optimized Tables](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md).)  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] detects conflicts between concurrent transactions, as well as isolation level violations, and will doom one of the conflicting transactions. This transaction will need to be retried. (For more information, see [Guidelines for Retry Logic for Transactions on Memory-Optimized Tables](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md).)  
   
  The system optimistically assumes there are no conflicts and no violations of transaction isolation. If any conflicts occur that may cause inconsistencies in the database or that may violate transaction isolation, these conflicts are detected, and the transaction is terminated.  
   
@@ -72,7 +72,7 @@ manager: "jhubbard"
 Lifetime of a transaction that accesses memory-optimized tables.  
   
 #### Regular Processing  
- During this phase, the user-issued [!INCLUDE[tsql](../../includes/tsql-md.md)] statements are executed. Rows are read from the tables, and new row versions are written to the database. The transaction is isolated from all other concurrent transactions. The transaction uses the snapshot of the memory-optimized tables that exists at the start of the transaction.  
+ During this phase, the user-issued [!INCLUDE[tsql](../includes/tsql-md.md)] statements are executed. Rows are read from the tables, and new row versions are written to the database. The transaction is isolated from all other concurrent transactions. The transaction uses the snapshot of the memory-optimized tables that exists at the start of the transaction.  
   
  Writes to the tables in this phase of the transaction are not yet visible to other transactions, with one exception: row updates and deletes are visible to update and delete operations in other transactions, in order to detect write conflicts.  
   
@@ -101,7 +101,7 @@ Lifetime of a transaction that accesses memory-optimized tables.
   
  If any of the rows have been updated or changed, the transaction fails to commit with error 41305 ("The current transaction failed to commit due to a repeatable read validation failure.").  
   
- This error can also occur if a table is dropped after an insert, update, or delete operation and before the transaction commits. This applies only to insert, update, or delete operations in natively compiled stored procedures. Such write operations performed through interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)] cause the DROP TABLE statement to block and wait until the transaction commits.  
+ This error can also occur if a table is dropped after an insert, update, or delete operation and before the transaction commits. This applies only to insert, update, or delete operations in natively compiled stored procedures. Such write operations performed through interpreted [!INCLUDE[tsql](../includes/tsql-md.md)] cause the DROP TABLE statement to block and wait until the transaction commits.  
   
 ##### Serializable Validation  
  Serializable validation is performed in two cases:  

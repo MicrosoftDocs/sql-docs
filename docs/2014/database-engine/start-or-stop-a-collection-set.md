@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Start or Stop a Collection Set
-  This topic describes how to start or stop a collection set in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  This topic describes how to start or stop a collection set in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -53,7 +53,7 @@ manager: "jhubbard"
   
 ###  <a name="Recommendations"></a> Recommendations  
   
--   To obtain information about collection sets, query the [syscollector_collection_sets](../Topic/syscollector_collection_sets%20\(Transact-SQL\).md) catalog view.  
+-   To obtain information about collection sets, query the [syscollector_collection_sets](~/relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md) catalog view.  
   
 ###  <a name="Security"></a> Security  
   
@@ -82,11 +82,11 @@ manager: "jhubbard"
   
 #### To start a collection set  
   
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example uses [sp_syscollector_start_collection_set](../Topic/sp_syscollector_start_collection_set%20\(Transact-SQL\).md) to start the collection set that has the ID of `1`.  
+3.  Copy and paste the following example into the query window and click **Execute**. This example uses [sp_syscollector_start_collection_set](~/relational-databases/system-stored-procedures/sp-syscollector-start-collection-set-transact-sql.md) to start the collection set that has the ID of `1`.  
   
 ```tsql  
 USE msdb;  
@@ -96,11 +96,11 @@ EXEC sp_syscollector_start_collection_set @collection_set_id = 1;
   
 #### To stop a collection set  
   
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example uses [sp_syscollector_stop_collection_set](../Topic/sp_syscollector_stop_collection_set%20\(Transact-SQL\).md) to stop the collection set that has the ID of `1`.  
+3.  Copy and paste the following example into the query window and click **Execute**. This example uses [sp_syscollector_stop_collection_set](~/relational-databases/system-stored-procedures/sp-syscollector-stop-collection-set-transact-sql.md) to stop the collection set that has the ID of `1`.  
   
 ```tsql  
 USE msdb;  
@@ -109,7 +109,7 @@ EXEC sp_syscollector_stop_collection_set @collection_set_id = 1;
 ```  
   
 ## See Also  
- [Data Collector Views &#40;Transact-SQL&#41;](../Topic/Data%20Collector%20Views%20\(Transact-SQL\).md)   
+ [Data Collector Views &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
  [Data Collection](../../2014/database-engine/data-collection.md)  
   
   

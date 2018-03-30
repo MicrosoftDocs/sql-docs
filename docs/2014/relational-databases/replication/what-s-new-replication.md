@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 130a760a-4162-4d7d-b266-453eb5759d7a
 caps.latest.revision: 37
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # What&#39;s New (Replication)
-  [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] has not introduced significant new features to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] replication.  
+  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] has not introduced significant new features to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] replication.  
   
- [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] does not support replication to or from [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] or [!INCLUDE[ssEW](../../../includes/ssew-md.md)].  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] does not support replication to or from [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or [!INCLUDE[ssEW](../../includes/ssew-md.md)].  
   
 ## See Also  
  [Features Supported by the Editions of SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  

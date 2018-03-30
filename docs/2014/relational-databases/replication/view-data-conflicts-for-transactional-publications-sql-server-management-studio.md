@@ -16,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: 9977dd75-b0de-4376-9c13-86d80567d8aa
 caps.latest.revision: 36
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # View Data Conflicts for Transactional Publications (SQL Server Management Studio)
-  You can view conflicts for peer-to-peer transactional replication and transactional replication with queued updating subscriptions in the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Replication Conflict Viewer. For information about how conflicts are detected and resolved, see [Conflict Detection in Peer-to-Peer Replication](../../../2014/relational-databases/replication/conflict-detection-in-peer-to-peer-replication.md) and [Set Queued Updating Conflict Resolution Options &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md).  
+  You can view conflicts for peer-to-peer transactional replication and transactional replication with queued updating subscriptions in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Replication Conflict Viewer. For information about how conflicts are detected and resolved, see [Conflict Detection in Peer-to-Peer Replication](../../../2014/relational-databases/replication/conflict-detection-in-peer-to-peer-replication.md) and [Set Queued Updating Conflict Resolution Options &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md).  
   
  The availability of conflict data depends on the type of replication and the conflict retention period:  
   
@@ -28,13 +28,13 @@ manager: "jhubbard"
   
 -   For queued updating subscriptions, data is available for every conflict. Conflict data is available in the Replication Conflict Viewer for the amount of time specified for the conflict retention period, with a default of 14 days. To set the conflict retention period, perform either of the following:  
   
-    -   Specify a retention value for the @conflict_retention parameter of [sp_addpublication](../Topic/sp_addpublication%20\(Transact-SQL\).md).  
+    -   Specify a retention value for the @conflict_retention parameter of [sp_addpublication](~/relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md).  
   
-    -   Specify a value of `'conflict_retention'` for the @property parameter and a retention value for the @value parameter of [sp_changepublication](../Topic/sp_changepublication%20\(Transact-SQL\).md).  
+    -   Specify a value of `'conflict_retention'` for the @property parameter and a retention value for the @value parameter of [sp_changepublication](~/relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md).  
   
 ### To view conflicts  
   
-1.  Connect to the appropriate server in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], and then expand the server node:  
+1.  Connect to the appropriate server in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], and then expand the server node:  
   
     -   For peer-to-peer replication, this is the node at which the conflict occurred.  
   

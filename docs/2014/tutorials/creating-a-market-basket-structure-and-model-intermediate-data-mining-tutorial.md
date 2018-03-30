@@ -16,14 +16,14 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Creating a Market Basket Structure and Model (Intermediate Data Mining Tutorial)
-  Now that you have created a data source view, you will use the Data Mining Wizard to create a new mining structure. In this task, you will create a mining structure and a mining model that is based on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association algorithm.  
+  Now that you have created a data source view, you will use the Data Mining Wizard to create a new mining structure. In this task, you will create a mining structure and a mining model that is based on the [!INCLUDE[msCoName](../includes/msconame-md.md)] Association algorithm.  
   
 > [!NOTE]  
 >  If you encounter an error stating that vAssocSeqLineItems cannot be used as a nested table, return to the previous task in the lesson, and be sure to create the many-to-one join by dragging from the vAssocSeqLineItems table (the many side) to the vAssocSeqOrders table (the one side). You can also edit the relationship between the tables by right-clicking the join line.  
   
 ### To create an association mining structure  
   
-1.  In Solution Explorer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], right-click **Mining Structures** and select **New Mining Structure** to open the Data Mining Wizard.  
+1.  In Solution Explorer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], right-click **Mining Structures** and select **New Mining Structure** to open the Data Mining Wizard.  
   
 2.  On the **Welcome to the Data Mining Wizard** page, click **Next**.  
   
@@ -41,7 +41,7 @@ manager: "jhubbard"
   
 8.  Set the key for the nested table, vAssocSeqLineItems, by selecting the **Key** check box next to Model. The **Input** check box is also automatically selected when you do this. Select the **Predictable** check box for `Model` as well.  
   
-     In a market basket model, you do not care about the sequence of products in the shopping basket, and therefore you should not include **LineNumber** as a key for the nested table. You would use **LineNumber** as a key only in a model where the sequence is important. You will create a model that uses the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering algorithm in Lesson 4.  
+     In a market basket model, you do not care about the sequence of products in the shopping basket, and therefore you should not include **LineNumber** as a key for the nested table. You would use **LineNumber** as a key only in a model where the sequence is important. You will create a model that uses the [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Clustering algorithm in Lesson 4.  
   
 9. Select the check box to the left of IncomeGroup and Region,but do not make any other selections. Checking the leftmost column adds the columns to the structure for later reference, but the columns will not be used in the model. Your selections should look like the following:  
   
@@ -62,7 +62,7 @@ manager: "jhubbard"
 12. On the **Create testing set** page, the default value for the option **Percentage of data for testing** is 30 percent. Change this to **0**. Click **Next**.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] provides different charts for measuring model accuracy. However, some accuracy chart types, such as the lift chart and cross-validation report, are designed for classification and estimation. They are not supported for associative prediction.  
+    >  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] provides different charts for measuring model accuracy. However, some accuracy chart types, such as the lift chart and cross-validation report, are designed for classification and estimation. They are not supported for associative prediction.  
   
 13. On the **Completing the Wizard** page, in **Mining structure name**, type `Association`.  
   

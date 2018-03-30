@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 7f7e8b19-0c0b-4b1f-9cc1-057099aa07eb
 caps.latest.revision: 28
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Data Source Selection Page (Report Manager)

@@ -16,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: b6feff89-dd6e-41fe-b2f9-449f2532e1c4
 caps.latest.revision: 13
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Bookmarks F1 Help
-  This section contains the F1 Help for the **Bookmarks** pages in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  This section contains the F1 Help for the **Bookmarks** pages in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
  [Manage Bookmarks](../../2014/database-engine/manage-bookmarks.md)  
   

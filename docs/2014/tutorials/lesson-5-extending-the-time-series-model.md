@@ -16,7 +16,7 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Lesson 5: Extending the Time Series Model
-  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise, you can add new data to a time series model and automatically incorporate the new data into the model. You add new data to a time series mining model in one of two ways:  
+  In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise, you can add new data to a time series model and automatically incorporate the new data into the model. You add new data to a time series mining model in one of two ways:  
   
 -   Use a PREDICTION JOIN to join data in an external source to the training data.  
   
@@ -47,7 +47,7 @@ PREDICTION JOIN <source query>
   
 #### To create a singleton prediction query on a time series model  
   
-1.  In **Object Explorer**, right-click the instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], point to **New Query**, and then click **DMX**.  
+1.  In **Object Explorer**, right-click the instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], point to **New Query**, and then click **DMX**.  
   
      Query Editor opens and contains a new, blank query.  
   
@@ -181,7 +181,7 @@ PREDICTION JOIN <source query>
   
 -   The first two predictions for the M200 Europe series are exactly the same as the new data you supplied. By design, Analysis Services returns the actual new data points instead of making a prediction. That is because when you extend the model cases, the time steps used for prediction queries always start at the end of the original series. Therefore, if you add two new data points, the first two predictions returned overlap with the new data.  
   
--   After all the new data points are used up, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] makes predictions based on the updated model. Therefore, starting in September 2005, you can see the difference between predictions for M200 Europe from the original model, in the left-hand column, and the model that uses EXTEND_MODEL_CASES, in the right-hand column. The predictions are different because the model has been updated with the new data.  
+-   After all the new data points are used up, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] makes predictions based on the updated model. Therefore, starting in September 2005, you can see the difference between predictions for M200 Europe from the original model, in the left-hand column, and the model that uses EXTEND_MODEL_CASES, in the right-hand column. The predictions are different because the model has been updated with the new data.  
   
 ## Using Start and End Time Steps to Control Predictions  
  When you extend a model, the new data is always attached to the end of the series. However, for the purpose of prediction, the time slices used for prediction queries start at the end of the original series. If you want to obtain only the new predictions when you add the new data, you must specify the starting point as a number of time slices. For example, if you are adding two new data points and want to make four new predictions, you would do the following:  
@@ -232,6 +232,6 @@ WHERE [ModelRegion] = 'M200 Europe'
   
 ## See Also  
  [Time Series Model Query Examples](../../2014/analysis-services/time-series-model-query-examples.md)   
- [PredictTimeSeries &#40;DMX&#41;](../Topic/PredictTimeSeries%20\(DMX\).md)  
+ [PredictTimeSeries &#40;DMX&#41;](~/dmx/predicttimeseries-dmx.md)  
   
   

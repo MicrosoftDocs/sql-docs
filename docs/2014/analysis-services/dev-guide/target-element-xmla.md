@@ -64,7 +64,7 @@ manager: "mblythe"
  The `Target` element is an object reference to a single partition into which the contents of the source partitions, specified by the [Sources](../../../2014/analysis-services/dev-guide/sources-element-xmla.md) element of the parent `MergePartitions` element, are to be merged.  
   
 ## Example  
- The following example combines all four partitions of the Internet Sales measure group into the `Internet_Sales_2004` target partition. The example refers to the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] cube of the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] sample [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] database.  
+ The following example combines all four partitions of the Internet Sales measure group into the `Internet_Sales_2004` target partition. The example refers to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] cube of the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database.  
   
 ```  
 <MergePartitions xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  

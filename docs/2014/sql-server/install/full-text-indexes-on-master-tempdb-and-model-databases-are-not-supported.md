@@ -18,10 +18,10 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Full-text indexes on master, tempdb and model databases are not supported
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] does not allow full-text indexes on any system database.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not allow full-text indexes on any system database.  
   
 ## Description  
- In [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)], full-text indexes were supported on the master, tempdb, and model databases.  
+ In [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], full-text indexes were supported on the master, tempdb, and model databases.  
   
  Any full-text catalogs in the master, tempdb, and model databases are removed during the upgrade.  
   

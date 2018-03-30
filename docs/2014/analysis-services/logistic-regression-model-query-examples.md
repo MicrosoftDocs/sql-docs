@@ -103,12 +103,12 @@ FROM [TM_Logistic Regression].CONTENT
 >  The results have been flattened for easier viewing, but you can return the nested table in a single column if your provider supports hierarchical rowsets.  
   
 ## Prediction Queries on a Logistic Regression Model  
- You can use the [Predict &#40;DMX&#41;](../Topic/Predict%20\(DMX\).md) function with every kind of mining model to provide new data to the model and make predictions based on the new values. You can also use functions to return additional information about the prediction, such as the probability that a prediction is correct. This section provides some examples of prediction queries on a logistic regression model.  
+ You can use the [Predict &#40;DMX&#41;](~/dmx/predict-dmx.md) function with every kind of mining model to provide new data to the model and make predictions based on the new values. You can also use functions to return additional information about the prediction, such as the probability that a prediction is correct. This section provides some examples of prediction queries on a logistic regression model.  
   
 ###  <a name="bkmk_Query3"></a> Sample Query 3: Making Predictions for a Continuous Value  
  Because logistic regression supports the use of continuous attributes for both input and prediction, it is easy to create models that correlate various factors in your data. You can use prediction queries to explore the relationship among these factors.  
   
- The following query sample is based on the Call Center model, from the Intermediate Tutorial, and creates a singleton query that predicts service grade for the Friday AM shift. The [PredictHistogram (DMX)](../Topic/PredictHistogram%20\(DMX\).md) function returns a nested table that provides statistics relevant to understanding the validity of the predicted value.  
+ The following query sample is based on the Call Center model, from the Intermediate Tutorial, and creates a singleton query that predicts service grade for the Friday AM shift. The [PredictHistogram (DMX)](~/dmx/predicthistogram-dmx.md) function returns a nested table that provides statistics relevant to understanding the validity of the predicted value.  
   
 ```  
 SELECT  
@@ -143,7 +143,7 @@ NATURAL PREDICTION JOIN
   
 ##### To create a discretized version of the Call Center mining structure and models  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], in Solution Explorer, expand **Mining Structures**.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], in Solution Explorer, expand **Mining Structures**.  
   
 2.  Right-click Call Center.dmm and select **Copy**.  
   
@@ -187,23 +187,23 @@ NATURAL PREDICTION JOIN
  Note that the predicted outcomes have been grouped into three categories as specified; however, these groupings are based on the clustering of actual values in the data, not arbitrary values that you might set as business goals.  
   
 ## List of Prediction Functions  
- All [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithms support a common set of functions. However, the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Logistic Regression algorithm supports the additional functions listed in the following table.  
+ All [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithms support a common set of functions. However, the [!INCLUDE[msCoName](../includes/msconame-md.md)] Logistic Regression algorithm supports the additional functions listed in the following table.  
   
 |||  
 |-|-|  
 |Prediction Function|Usage|  
-|[IsDescendant &#40;DMX&#41;](../Topic/IsDescendant%20\(DMX\).md)|Determines whether one node is a child of another node in the model.|  
-|[PredictAdjustedProbability &#40;DMX&#41;](../Topic/PredictAdjustedProbability%20\(DMX\).md)|Returns the adjusted probability of a specified state.|  
-|[PredictHistogram &#40;DMX&#41;](../Topic/PredictHistogram%20\(DMX\).md)|Returns a predicted value, or set of values, for a specified column.|  
-|[PredictProbability &#40;DMX&#41;](../Topic/PredictProbability%20\(DMX\).md)|Returns the probability for a specified state.|  
-|[PredictStdev &#40;DMX&#41;](../Topic/PredictStdev%20\(DMX\).md)|Returns standard deviation for the predicted value.|  
-|[PredictSupport &#40;DMX&#41;](../Topic/PredictSupport%20\(DMX\).md)|Returns the support value for a specified state.|  
-|[PredictVariance &#40;DMX&#41;](../Topic/PredictVariance%20\(DMX\).md)|Returns the variance of a specified column.|  
+|[IsDescendant &#40;DMX&#41;](~/dmx/isdescendant-dmx.md)|Determines whether one node is a child of another node in the model.|  
+|[PredictAdjustedProbability &#40;DMX&#41;](~/dmx/predictadjustedprobability-dmx.md)|Returns the adjusted probability of a specified state.|  
+|[PredictHistogram &#40;DMX&#41;](~/dmx/predicthistogram-dmx.md)|Returns a predicted value, or set of values, for a specified column.|  
+|[PredictProbability &#40;DMX&#41;](~/dmx/predictprobability-dmx.md)|Returns the probability for a specified state.|  
+|[PredictStdev &#40;DMX&#41;](~/dmx/predictstdev-dmx.md)|Returns standard deviation for the predicted value.|  
+|[PredictSupport &#40;DMX&#41;](~/dmx/predictsupport-dmx.md)|Returns the support value for a specified state.|  
+|[PredictVariance &#40;DMX&#41;](~/dmx/predictvariance-dmx.md)|Returns the variance of a specified column.|  
   
- For a list of the functions that are common to all [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithms, see [General Prediction Functions &#40;DMX&#41;](../Topic/General%20Prediction%20Functions%20\(DMX\).md). For the syntax of specific functions, see [Data Mining Extensions &#40;DMX&#41; Function Reference](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Function%20Reference.md).  
+ For a list of the functions that are common to all [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithms, see [General Prediction Functions &#40;DMX&#41;](~/dmx/general-prediction-functions-dmx.md). For the syntax of specific functions, see [Data Mining Extensions &#40;DMX&#41; Function Reference](~/dmx/data-mining-extensions-dmx-function-reference.md).  
   
 > [!NOTE]  
->  For neural network and logistic regression models, the [PredictSupport &#40;DMX&#41;](../Topic/PredictSupport%20\(DMX\).md) function returns a single value that represents the size of the training set for the entire model.  
+>  For neural network and logistic regression models, the [PredictSupport &#40;DMX&#41;](~/dmx/predictsupport-dmx.md) function returns a single value that represents the size of the training set for the entire model.  
   
 ## See Also  
  [Data Mining Queries](../../2014/analysis-services/data-mining-queries.md)   

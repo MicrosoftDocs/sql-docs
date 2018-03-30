@@ -20,7 +20,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Setting Security for Stored Procedures
-  Security for stored procedures is set with the `PermissionSet` property on a stored procedure for an instance of [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] (server level), an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] database, or an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] project.  
+  Security for stored procedures is set with the `PermissionSet` property on a stored procedure for an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (server level), an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database, or an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project.  
   
 ## See Also  
  [Multidimensional Model Assemblies Management](../../../2014/analysis-services/multidimensional-model-assemblies-management.md)   

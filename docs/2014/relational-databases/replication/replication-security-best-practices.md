@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 1ab2635d-0992-4c99-b17d-041d02ec9a7c
 caps.latest.revision: 41
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Replication Security Best Practices
@@ -49,7 +49,7 @@ manager: "jhubbard"
   
 -   If you use pull subscriptions, use a network share rather than a local path for the snapshot folder.  
   
- If your replication topology includes computers that are not in the same domain or are in domains that do not have trust relationships with each other, you can use Windows Authentication or [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication for the connections made by agents (For more information about domains, see the Windows documentation). It is recommended as a security best practice that you use Windows Authentication.  
+ If your replication topology includes computers that are not in the same domain or are in domains that do not have trust relationships with each other, you can use Windows Authentication or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication for the connections made by agents (For more information about domains, see the Windows documentation). It is recommended as a security best practice that you use Windows Authentication.  
   
 -   To use Windows Authentication:  
   
@@ -57,13 +57,13 @@ manager: "jhubbard"
   
     -   Ensure that a given agent (for example the Distribution Agent for a subscription) runs under the same account at each computer.  
   
--   To use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication:  
+-   To use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication:  
   
-    -   Add a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] account for each agent at the appropriate nodes (use the same account name and password at each node). For example, the Distribution Agent for a push subscription runs at the Distributor and makes connections to the Distributor and Subscriber. The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] account for the Distribution Agent should be added to the Distributor and Subscriber.  
+    -   Add a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account for each agent at the appropriate nodes (use the same account name and password at each node). For example, the Distribution Agent for a push subscription runs at the Distributor and makes connections to the Distributor and Subscriber. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account for the Distribution Agent should be added to the Distributor and Subscriber.  
   
     -   Ensure that a given agent (for example the Distribution Agent for a subscription) makes connections under the same account at each computer.  
   
-    -   In situations that require [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication, access to UNC snapshot shares is often not available (for example access might be blocked by a firewall). In this case, you can transfer the snapshot to Subscribers through file transfer protocol (FTP). For more information, see [Transfer Snapshots Through FTP](../../../2014/relational-databases/replication/transfer-snapshots-through-ftp.md).  
+    -   In situations that require [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, access to UNC snapshot shares is often not available (for example access might be blocked by a firewall). In this case, you can transfer the snapshot to Subscribers through file transfer protocol (FTP). For more information, see [Transfer Snapshots Through FTP](../../../2014/relational-databases/replication/transfer-snapshots-through-ftp.md).  
   
 ## See Also  
  [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../../2014/database-engine/enable-encrypted-connections-to-the-database-engine.md)   

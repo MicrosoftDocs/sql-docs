@@ -12,11 +12,11 @@ ms.topic: "article"
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 caps.latest.revision: 17
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Turn on Reporting Services events for the SharePoint trace log (ULS)
-  Starting with [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] servers in SharePoint mode can write [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] events to the SharePoint Unified Logging Service (ULS) trace log. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] specific categories are available on the Monitoring page of SharePoint Central Administration.  
+  Starting with [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)], [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] servers in SharePoint mode can write [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] events to the SharePoint Unified Logging Service (ULS) trace log. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] specific categories are available on the Monitoring page of SharePoint Central Administration.  
   
  In this Topic:  
   
@@ -35,12 +35,12 @@ manager: "mblythe"
 -   [Trace Log Location](#bkmk_trace)  
   
 ##  <a name="bkmk_general"></a> General ULS Log Recommendations  
- The following table lists event categories and levels that are recommended for monitoring a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] environment.. When an event is logged, each entry includes the time the event was logged, the process name, and the thread ID.  
+ The following table lists event categories and levels that are recommended for monitoring a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] environment.. When an event is logged, each entry includes the time the event was logged, the process name, and the thread ID.  
   
 |Category|Level|Description|  
 |--------------|-----------|-----------------|  
 |Database|Verbose|Logs events that involve database access.|  
-|General|Verbose|Logs events that involve access to the following items:<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web pages<br /><br /> Report Viewer HTTP handler<br /><br /> Report access (.rdl files)<br /><br /> Data sources (.rsds files)<br /><br /> URLs on the SharePoint site (.smdl files)|  
+|General|Verbose|Logs events that involve access to the following items:<br /><br /> [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Web pages<br /><br /> Report Viewer HTTP handler<br /><br /> Report access (.rdl files)<br /><br /> Data sources (.rsds files)<br /><br /> URLs on the SharePoint site (.smdl files)|  
 |Office Server General|Exception|Logs logon failures.|  
 |Topology|Verbose|Logs current user information.|  
 |Web Parts|Verbose|Logs events that involve access to the Report Viewer Web Part.|  
@@ -62,7 +62,7 @@ manager: "mblythe"
 7.  At the bottom of the categories list, select an event level for the **Least critical event to report to the trace log**. Select **None** to disable tracing.  
   
 > [!NOTE]  
->  The option **Least critical event to report to the event log** is not supported by [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. The option is ignored.  
+>  The option **Least critical event to report to the event log** is not supported by [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. The option is ignored.  
   
 ##  <a name="bkmk_recommended"></a> Recommended Configuration  
  The following logging options are recommended as a standard configuration:  
@@ -80,7 +80,7 @@ Get-SPDiagnosticConfig
 ```  
   
 ##  <a name="bkmk_readentries"></a> Reading the logs entries  
- The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] entries in the log are formatted in the following way.  
+ The [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] entries in the log are formatted in the following way.  
   
 1.  **Product:SQL Server Reporting Services**  
   
@@ -99,7 +99,7 @@ Get-SPDiagnosticConfig
 |Local Mode Rendering||  
 |SOAP Client Proxy||  
 |UI Pages||  
-|Power View|Log entries that were written to the **LogClientTraceEvents** API. These entries are sourced from client applications, including [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], a feature of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Add-in for [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition.<br /><br /> All log entries from the LogClientTraceEvents API will be logged under the **Category** of “SQL Server Reporting Services” and the **Area** of “Power View”.<br /><br /> The content of entries logged with the area of “Power View” is determined by the client application.|  
+|Power View|Log entries that were written to the **LogClientTraceEvents** API. These entries are sourced from client applications, including [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], a feature of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Add-in for [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[SPS2010](../includes/sps2010-md.md)] Enterprise Edition.<br /><br /> All log entries from the LogClientTraceEvents API will be logged under the **Category** of “SQL Server Reporting Services” and the **Area** of “Power View”.<br /><br /> The content of entries logged with the area of “Power View” is determined by the client application.|  
 |Report Server Alerting Runtime||  
 |Report Server App Domain Manager||  
 |Report Server Buffered Response||  
@@ -137,7 +137,7 @@ Get-SPDiagnosticConfig
 |Shared Service|Sample entries:<br /><br /> MediumUpdating ReportingWebServiceApplication<br /><br /> MediumGranting access to content databases.<br /><br /> MediumProvisioning instances for ReportingWebServiceApplication<br /><br /> MediumProcessing service account change for ReportingWebServiceApplication<br /><br /> MediumSetting database permissions.|  
   
 ##  <a name="bkmk_powershell"></a> View a Log file with PowerShell  
- ![PowerShell related content](../../2014/reporting-services/media/rs-powershellicon.jpg "PowerShell related content")You can use PowerShell to return a list of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] related events from a ULS Log file. Type the following command from the SharePoint 2010 Management Shell to return a filtered list of rows from the file a ULS log file UESQL11SPOINT-20110606-1530.log, that contain “**sql server reporting services**”:  
+ ![PowerShell related content](../../2014/reporting-services/media/rs-powershellicon.jpg "PowerShell related content")You can use PowerShell to return a list of the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] related events from a ULS Log file. Type the following command from the SharePoint 2010 Management Shell to return a filtered list of rows from the file a ULS log file UESQL11SPOINT-20110606-1530.log, that contain “**sql server reporting services**”:  
   
 ```  
 Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services”  

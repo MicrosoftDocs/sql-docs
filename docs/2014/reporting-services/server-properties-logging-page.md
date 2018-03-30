@@ -14,13 +14,13 @@ f1_keywords:
 ms.assetid: b338deab-4868-4951-9f22-0605add2fc95
 caps.latest.revision: 15
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Server Properties (Logging Page)
   Use this page to set limits on the report execution data that is collected by a report server. Execution data is stored internally in the report server database. You can track report activity for report server that runs in native mode or SharePoint integrated mode. If the report server is part of a scale-out deployment, the report execution log maintains a record of all report activity for the entire deployment in a single log file.  
   
- To open this page, start [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connect to a report server, right-click the report server name, and select **Properties**. Click **Logging** to open this page.  
+ To open this page, start [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], connect to a report server, right-click the report server name, and select **Properties**. Click **Logging** to open this page.  
   
 ## Options  
  **Enable report execution logging**  

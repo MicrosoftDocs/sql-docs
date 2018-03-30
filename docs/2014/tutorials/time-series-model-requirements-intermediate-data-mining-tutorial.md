@@ -22,10 +22,10 @@ manager: "jhubbard"
   
  For this tutorial, sales data is collected on a daily basis in the transactional sales database, but for data mining, the data has been pre-aggregated by the month, using a view.  
   
- Additionally, it is desirable for analysis that the data have as few gaps as possible. If you plan to analyze multiple series of data, all series should preferably start and end on the same date. If the data has gaps, but the gaps are not at the beginning or end of a series, you can use the MISSING_VALUE_SUBSTITUTION parameter to fill in the series. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] also provides several options for replacing missing data with values, such as using means or constants.  
+ Additionally, it is desirable for analysis that the data have as few gaps as possible. If you plan to analyze multiple series of data, all series should preferably start and end on the same date. If the data has gaps, but the gaps are not at the beginning or end of a series, you can use the MISSING_VALUE_SUBSTITUTION parameter to fill in the series. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] also provides several options for replacing missing data with values, such as using means or constants.  
   
 > [!WARNING]  
->  The PivotChart and PivotTable tools that were included in earlier versions of the data source view designer are no longer provided. We recommend that you identify gaps in time series data beforehand, by using tools such as the Data Profiler included in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+>  The PivotChart and PivotTable tools that were included in earlier versions of the data source view designer are no longer provided. We recommend that you identify gaps in time series data beforehand, by using tools such as the Data Profiler included in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
 ### To identify the time key for the forecasting model  
   

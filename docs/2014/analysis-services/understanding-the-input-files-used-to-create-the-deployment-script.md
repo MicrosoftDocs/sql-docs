@@ -24,20 +24,20 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Understanding the Input Files Used to Create the Deployment Script
-  When you build a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] generates XML files for the project. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] puts these XML files in the Output folder of the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project. By default output is out in the \Bin folder. The following table lists the XML files that [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] creates.  
+  When you build a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project, [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] generates XML files for the project. [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] puts these XML files in the Output folder of the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project. By default output is out in the \Bin folder. The following table lists the XML files that [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] creates.  
   
 |XMLA file|Description|  
 |---------------|-----------------|  
-|\<*project name*>.asdatabase|Contains the declarative definitions for all the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects in the project.|  
-|\<*project name*>.deploymenttargets|Contains the name of the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance and database in which the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects will be created.|  
+|\<*project name*>.asdatabase|Contains the declarative definitions for all the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objects in the project.|  
+|\<*project name*>.deploymenttargets|Contains the name of the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance and database in which the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objects will be created.|  
 |\<*project name*>.configsettings|Contains environment specific settings, such as data source connection information and object storage locations. Settings in this file override settings in the \<*project name*>.asdatabase file.|  
 |\<*project name*>.deploymentoptions|Contains deployment options, such as whether deployment is transactional and whether deployed objects should be processed after deployment.|  
   
 > [!NOTE]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] never stores passwords in its project files.  
+>  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] never stores passwords in its project files.  
   
 ## Modifying the Input Files  
- Modifying the values in the input files, or the values retrieved from the input files, makes it possible to change the deployment destination, the configuration settings, and deployment options without editing the whole \<*project name*>.asdatabase file (or a whole XMLA script file if you generate a script from an existing [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database). Being able to modify individual files lets you easily create different deployment scripts for different purposes.  
+ Modifying the values in the input files, or the values retrieved from the input files, makes it possible to change the deployment destination, the configuration settings, and deployment options without editing the whole \<*project name*>.asdatabase file (or a whole XMLA script file if you generate a script from an existing [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database). Being able to modify individual files lets you easily create different deployment scripts for different purposes.  
   
  The following topics explain how to modify values in the various input files:  
   

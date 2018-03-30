@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Subscribe or Unsubscribe a Database  to a Policy Category
-  This topic describes how to subscribe or unsubscribe a database to a policy category.in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  This topic describes how to subscribe or unsubscribe a database to a policy category.in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -80,7 +80,7 @@ manager: "jhubbard"
   
 #### To subscribe a database to a policy category  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -93,11 +93,11 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [sp_syspolicy_subscribe_to_policy_category &#40;Transact-SQL&#41;](../Topic/sp_syspolicy_subscribe_to_policy_category%20\(Transact-SQL\).md).  
+ For more information, see [sp_syspolicy_subscribe_to_policy_category &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-syspolicy-subscribe-to-policy-category-transact-sql.md).  
   
 #### To unsubscribe a database to a policy category  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -110,6 +110,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [sp_syspolicy_unsubscribe_from_policy_category &#40;Transact-SQL&#41;](../Topic/sp_syspolicy_unsubscribe_from_policy_category%20\(Transact-SQL\).md).  
+ For more information, see [sp_syspolicy_unsubscribe_from_policy_category &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-syspolicy-unsubscribe-from-policy-category-transact-sql.md).  
   
   

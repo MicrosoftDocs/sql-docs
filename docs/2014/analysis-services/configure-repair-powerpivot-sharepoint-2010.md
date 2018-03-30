@@ -16,9 +16,9 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Configure or Repair PowerPivot for SharePoint 2010 (PowerPivot Configuration Tool)
-  To configure or repair an installation of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] PowerPivot for SharePoint 2010, use the PowerPivot Configuration tool. The configuration tool starts by scanning the system and returns a list of actions needed to complete or repair an installation. The [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] setup wizard installs the PowerPivot Configuration Tool for SharePoint 2010 as well as a PowerPivot Configuration Tool for SharePoint 2013. This topic describes the PowerPivot Configuration Tool for SharePoint 2010. For more information on SharePoint 2010, see [Configure or Repair PowerPivot for SharePoint 2013 &#40;PowerPivot Configuration Tool&#41;](../../2014/analysis-services/configure-or-repair-power-pivot-for-sharepoint-2013.md).  
+  To configure or repair an installation of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerPivot for SharePoint 2010, use the PowerPivot Configuration tool. The configuration tool starts by scanning the system and returns a list of actions needed to complete or repair an installation. The [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] setup wizard installs the PowerPivot Configuration Tool for SharePoint 2010 as well as a PowerPivot Configuration Tool for SharePoint 2013. This topic describes the PowerPivot Configuration Tool for SharePoint 2010. For more information on SharePoint 2010, see [Configure or Repair PowerPivot for SharePoint 2013 &#40;PowerPivot Configuration Tool&#41;](../../2014/analysis-services/configure-or-repair-power-pivot-for-sharepoint-2013.md).  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2010  
+ **[!INCLUDE[applies](../includes/applies-md.md)]**  SharePoint 2010  
   
  
   
@@ -50,7 +50,7 @@ manager: "mblythe"
 ##  <a name="bkmk_steps"></a> Configuration steps  
  The link to the configuration tool is only visible when PowerPivot for SharePoint 2010 is installed on the local server.  
   
-1.  On the **Start** menu, point to **All Programs**, click [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], click **Configuration Tools**, and then click **PowerPivot Configuration Tool**.  
+1.  On the **Start** menu, point to **All Programs**, click [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], click **Configuration Tools**, and then click **PowerPivot Configuration Tool**.  
   
 2.  Click **Configure or Repair PowerPivot for SharePoint**.  
   
@@ -123,7 +123,7 @@ manager: "mblythe"
 ||Unattended Account User Name and Password||Type the credentials of a Windows user account that is used by the target application and used to run unattended data refresh.|  
 ||Site URL||Type the site URL of the site collection associated wit the target application. To associate with additional site collections, use SharePoint Central administration.|  
 |**Create Excel Services Service Application**|Service Application Name||Type a service application name. A service application database with the same name will be created on the SharePoint farm’s database server.|  
-|**Add MSOLAP.5 as a Trusted Provider**|Service Application Name||Excel Services in SharePoint 2010 uses the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] OLE DB provider to connect to [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data. This step will add the version of the OLE DB provider installed with PowerPivot for SharePoint, as a trusted provider to Excel Services.|  
+|**Add MSOLAP.5 as a Trusted Provider**|Service Application Name||Excel Services in SharePoint 2010 uses the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] OLE DB provider to connect to [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data. This step will add the version of the OLE DB provider installed with PowerPivot for SharePoint, as a trusted provider to Excel Services.|  
 ||PowerPivot Server Name|||  
 |||||  
   

@@ -19,11 +19,11 @@ helpviewer_keywords:
 ms.assetid: 5fd726a4-aed7-4e6c-9404-ccb2db66cf26
 caps.latest.revision: 34
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Analysis Services DMX Query Designer User Interface
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides graphical query designers for building Data Mining Expressions (DMX) queries and Multidimensional Expression (MDX) queries for an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data source. This topic describes the DMX query designer. For more information about the MDX query designer, see [Analysis Services MDX Query Designer User Interface](../../2014/reporting-services/analysis-services-mdx-query-designer-user-interface.md).  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] provides graphical query designers for building Data Mining Expressions (DMX) queries and Multidimensional Expression (MDX) queries for an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data source. This topic describes the DMX query designer. For more information about the MDX query designer, see [Analysis Services MDX Query Designer User Interface](../../2014/reporting-services/analysis-services-mdx-query-designer-user-interface.md).  
   
  The DMX graphical query designer has three modes: Design, Query, and Result. To switch modes, right-click on the Query Design pane, and select the mode. Each mode provides a Metadata pane from which you can drag members from the selected cubes to build a DMX query that retrieves data for a dataset when the report is processed.  
   
@@ -43,7 +43,7 @@ manager: "mblythe"
 |![Switch to Design mode](../../2014/analysis-services/media/rsqdicon-designmode.gif "Switch to Design mode")|Toggle between Design mode and Query mode. To change to result view, right-click on the Design pane and choose **Result**.|  
   
 ## Graphical DMX Query Designer in Design Mode  
- When you edit a dataset that uses an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data source that has no valid cubes but that does have valid mining models, the graphical query designer opens in Design mode. The following figure labels the panes for Design mode.  
+ When you edit a dataset that uses an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data source that has no valid cubes but that does have valid mining models, the graphical query designer opens in Design mode. The following figure labels the panes for Design mode.  
   
  ![Analysis Services DMX query designer, design view](../../2014/reporting-services/media/rsqd-dsawas-dmx-designmode.gif "Analysis Services DMX query designer, design view")  
   

@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
 caps.latest.revision: 43
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Define a Logical Record Relationship Between Merge Table Articles
-  This topic describes how to define a logical record relationship between merge table articles in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or Replication Management Objects (RMO).  
+  This topic describes how to define a logical record relationship between merge table articles in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or Replication Management Objects (RMO).  
   
  Merge replication allows you to define a relationship between related rows in different tables. These rows can then be processed as a transactional unit during synchronization. A logical record can be defined between two articles whether or not they have a join filter relationship. For more information, see [Group Changes to Related Rows with Logical Records](../../../2014/relational-databases/replication/group-changes-to-related-rows-with-logical-records.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
  **In This Topic**  
   
@@ -74,7 +74,7 @@ manager: "jhubbard"
   
     2.  In the **Edit Join** dialog box, clear the check box **Logical Record**.  
   
-    3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+    3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
      To delete the logical record relationship and join filter associated with it:  
   
@@ -85,18 +85,18 @@ manager: "jhubbard"
   
 #### To define a logical record relationship without an associated join filter  
   
-1.  If the publication contains any articles that are filtered, execute [sp_helpmergepublication](../Topic/sp_helpmergepublication%20\(Transact-SQL\).md), and note the value of **use_partition_groups** in the result set.  
+1.  If the publication contains any articles that are filtered, execute [sp_helpmergepublication](~/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md), and note the value of **use_partition_groups** in the result set.  
   
     -   If the value is **1**, then precomputed partitions are already being used.  
   
-    -   If the value is **0**, then execute [sp_changemergepublication](../Topic/sp_changemergepublication%20\(Transact-SQL\).md) at the Publisher on the publication database. Specify a value of **use_partition_groups** for **@property** and a value of **true** for **@value**.  
+    -   If the value is **0**, then execute [sp_changemergepublication](~/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) at the Publisher on the publication database. Specify a value of **use_partition_groups** for **@property** and a value of **true** for **@value**.  
   
         > [!NOTE]  
         >  If the publication does not support precomputed partitions, then logical records cannot be used. For more information, see Requirements for Using Precomputed Partitions in the topic [Optimize Parameterized Filter Performance with Precomputed Partitions](../../../2014/relational-databases/replication/optimize-parameterized-filter-performance-with-precomputed-partitions.md).  
   
     -   If the value is NULL, then the Snapshot Agent needs to be run to generate the initial snapshot for the publication.  
   
-2.  If the articles that will comprise the logical record do not exist, execute [sp_addmergearticle](../Topic/sp_addmergearticle%20\(Transact-SQL\).md) at the Publisher on the publication database. Specify one of the following conflict detection and resolution options for the logical record:  
+2.  If the articles that will comprise the logical record do not exist, execute [sp_addmergearticle](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) at the Publisher on the publication database. Specify one of the following conflict detection and resolution options for the logical record:  
   
     -   To detect and resolve conflicts that occur within related rows in the logic record, specify a value of **true** for **@logical_record_level_conflict_detection** and **@logical_record_level_conflict_resolution**.  
   
@@ -104,7 +104,7 @@ manager: "jhubbard"
   
 3.  Repeat step 2 for each article that will comprise the logical record. You must use the same conflict detection and resolution option for each article in the logical record. For more information, see [Detecting and Resolving Conflicts in Logical Records](../../../2014/relational-databases/replication/detecting-and-resolving-conflicts-in-logical-records.md).  
   
-4.  At the publisher on the publication database, execute [sp_addmergefilter](../Topic/sp_addmergefilter%20\(Transact-SQL\).md). Specify **@publication**, the name of one article in the relationship for **@article**, the name of the second article for **@join_articlename**, a name for the relationship for **@filtername**, a clause that defines the relationship between the two articles for **@join_filterclause**, the type of join for **@join_unique_key** and one of the following values for **@filter_type**:  
+4.  At the publisher on the publication database, execute [sp_addmergefilter](~/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md). Specify **@publication**, the name of one article in the relationship for **@article**, the name of the second article for **@join_articlename**, a name for the relationship for **@filtername**, a clause that defines the relationship between the two articles for **@join_filterclause**, the type of join for **@join_unique_key** and one of the following values for **@filter_type**:  
   
     -   **2** - Defines a logical relationship.  
   
@@ -119,33 +119,33 @@ manager: "jhubbard"
   
 1.  To detect and resolve conflicts that occur within related rows in the logical record:  
   
-    -   At the Publisher on the publication database, execute [sp_changemergearticle](../Topic/sp_changemergearticle%20\(Transact-SQL\).md). Specify a value of **logical_record_level_conflict_detection** for **@property** and a value of **true** for **@value**. Specify a value of **1** for **@force_invalidate_snapshot** and **@force_reinit_subscription**.  
+    -   At the Publisher on the publication database, execute [sp_changemergearticle](~/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Specify a value of **logical_record_level_conflict_detection** for **@property** and a value of **true** for **@value**. Specify a value of **1** for **@force_invalidate_snapshot** and **@force_reinit_subscription**.  
   
-    -   At the Publisher on the publication database, execute [sp_changemergearticle](../Topic/sp_changemergearticle%20\(Transact-SQL\).md). Specify a value of **logical_record_level_conflict_resolution** for **@property** and a value of **true** for **@value**. Specify a value of **1** for **@force_invalidate_snapshot** and **@force_reinit_subscription**.  
+    -   At the Publisher on the publication database, execute [sp_changemergearticle](~/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Specify a value of **logical_record_level_conflict_resolution** for **@property** and a value of **true** for **@value**. Specify a value of **1** for **@force_invalidate_snapshot** and **@force_reinit_subscription**.  
   
 2.  To use the standard row-level or column-level conflict detection and resolution:  
   
-    -   At the Publisher on the publication database, execute [sp_changemergearticle](../Topic/sp_changemergearticle%20\(Transact-SQL\).md). Specify a value of **logical_record_level_conflict_detection** for **@property** and a value of `false` for **@value**. Specify a value of **1** for **@force_invalidate_snapshot** and **@force_reinit_subscription**.  
+    -   At the Publisher on the publication database, execute [sp_changemergearticle](~/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Specify a value of **logical_record_level_conflict_detection** for **@property** and a value of `false` for **@value**. Specify a value of **1** for **@force_invalidate_snapshot** and **@force_reinit_subscription**.  
   
-    -   At the Publisher on the publication database, execute [sp_changemergearticle](../Topic/sp_changemergearticle%20\(Transact-SQL\).md). Specify a value of **logical_record_level_conflict_resolution** for **@property** and a value of `false` for **@value**. Specify a value of **1** for **@force_invalidate_snapshot** and **@force_reinit_subscription**.  
+    -   At the Publisher on the publication database, execute [sp_changemergearticle](~/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Specify a value of **logical_record_level_conflict_resolution** for **@property** and a value of `false` for **@value**. Specify a value of **1** for **@force_invalidate_snapshot** and **@force_reinit_subscription**.  
   
 #### To remove a logical record relationship  
   
 1.  At the Publisher on the publication database, execute the following query to return information about all logical record relationships defined for the specified publication:  
   
-     [!code-sql[HowTo#sp_ReturnMergeLogicalRecords](../../../snippets/tsql/SQL15/replication/howto/tsql/createlogicalrecordpub.sql#sp_returnmergelogicalrecords)]  
+     [!code-sql[HowTo#sp_ReturnMergeLogicalRecords](../../snippets/tsql/SQL15/replication/howto/tsql/createlogicalrecordpub.sql#sp_returnmergelogicalrecords)]  
   
      Note the name of the logical record relationship being removed in the `filtername` column in the result set.  
   
     > [!NOTE]  
-    >  This query returns the same information as [sp_helpmergefilter](../Topic/sp_helpmergefilter%20\(Transact-SQL\).md); however, this system stored procedure only returns information about logical record relationships that are also join filters.  
+    >  This query returns the same information as [sp_helpmergefilter](~/relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md); however, this system stored procedure only returns information about logical record relationships that are also join filters.  
   
-2.  At the Publisher on the publication database, execute [sp_dropmergefilter](../Topic/sp_dropmergefilter%20\(Transact-SQL\).md). Specify **@publication**, the name of one of the articles in the relationship for **@article**, and the name of the relationship from step 1 for **@filtername**.  
+2.  At the Publisher on the publication database, execute [sp_dropmergefilter](~/relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md). Specify **@publication**, the name of one of the articles in the relationship for **@article**, and the name of the relationship from step 1 for **@filtername**.  
   
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
  This example enables precomputed partitions on an existing publication, and creates a logical record comprising the two new articles for the `SalesOrderHeader` and `SalesOrderDetail` tables.  
   
- [!code-sql[HowTo#sp_AddMergeLogicalRecord](../../../snippets/tsql/SQL15/replication/howto/tsql/createlogicalrecordpub.sql#sp_addmergelogicalrecord)]  
+ [!code-sql[HowTo#sp_AddMergeLogicalRecord](../../snippets/tsql/SQL15/replication/howto/tsql/createlogicalrecordpub.sql#sp_addmergelogicalrecord)]  
   
 ##  <a name="RMOProcedure"></a> Using Replication Management Objects (RMO)  
   
@@ -195,9 +195,9 @@ manager: "jhubbard"
 ###  <a name="PShellExample"></a> Example (RMO)  
  This example creates a logical record comprising the two new articles for the `SalesOrderHeader` and `SalesOrderDetail` tables.  
   
- [!code-csharp[HowTo#rmo_CreateLogicalRecord](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_createlogicalrecord)]  
+ [!code-csharp[HowTo#rmo_CreateLogicalRecord](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_createlogicalrecord)]  
   
- [!code-vb[HowTo#rmo_vb_CreateLogicalRecord](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_createlogicalrecord)]  
+ [!code-vb[HowTo#rmo_vb_CreateLogicalRecord](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_createlogicalrecord)]  
   
 ## See Also  
  [Define and Modify a Join Filter Between Merge Articles](../../../2014/relational-databases/replication/define-and-modify-a-join-filter-between-merge-articles.md)   

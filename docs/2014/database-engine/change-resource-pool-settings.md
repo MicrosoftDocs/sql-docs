@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Change Resource Pool Settings
-  You can change resource pool settings by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  You can change resource pool settings by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
 -   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
@@ -36,9 +36,9 @@ manager: "jhubbard"
  Changing resource pool settings requires CONTROL SERVER permission.  
   
 ##  <a name="ChgRPProp"></a> Change Resource Pool Settings Using SQL Server Management Studio  
- **To change resource pool settings by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
+ **To change resource pool settings by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]**  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], open Object Explorer and recursively expand the **Management** node down to and including **Resource Pools**.  
+1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], open Object Explorer and recursively expand the **Management** node down to and including **Resource Pools**.  
   
 2.  Right-click the resource pool to be modified, and then click **Properties**.  
   
@@ -49,7 +49,7 @@ manager: "jhubbard"
 5.  To save the changes, click **OK**  
   
 ##  <a name="ChgRPTSQL"></a> Change Resource Pool Settings Using Transact-SQL  
- **To change resource pool settings by using [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
+ **To change resource pool settings by using [!INCLUDE[tsql](../includes/tsql-md.md)]**  
   
 1.  Run the `ALTER RESOURCE POOL` statement specifying the property values to be changed.  
   
@@ -73,7 +73,7 @@ GO
  [Delete a Resource Pool](../../2014/database-engine/delete-a-resource-pool.md)   
  [Resource Governor Workload Group](../../2014/database-engine/resource-governor-workload-group.md)   
  [Resource Governor Classifier Function](../../2014/database-engine/resource-governor-classifier-function.md)   
- [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../Topic/ALTER%20RESOURCE%20POOL%20\(Transact-SQL\).md)   
- [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../Topic/ALTER%20RESOURCE%20GOVERNOR%20\(Transact-SQL\).md)  
+ [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](~/t-sql/statements/alter-resource-pool-transact-sql.md)   
+ [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](~/t-sql/statements/alter-resource-governor-transact-sql.md)  
   
   

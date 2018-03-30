@@ -12,14 +12,14 @@ ms.topic: "article"
 ms.assetid: 2b45a024-398d-43b8-9948-b8b23fb674c9
 caps.latest.revision: 7
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Sum Function (Report Builder and SSRS)
   Returns the sum of all the non-null numeric values specified by the expression, evaluated in the given scope.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## Syntax  
   

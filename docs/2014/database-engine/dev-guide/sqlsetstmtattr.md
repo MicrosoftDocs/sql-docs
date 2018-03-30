@@ -21,7 +21,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQLSetStmtAttr
-  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver does not support the mixed (keyset/dynamic) cursor model. Attempts to set the keyset size using SQL_ATTR_KEYSET_SIZE will fail if the value set is not equal to 0.  
+  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver does not support the mixed (keyset/dynamic) cursor model. Attempts to set the keyset size using SQL_ATTR_KEYSET_SIZE will fail if the value set is not equal to 0.  
   
  The application sets SQL_ATTR_ROW_ARRAY_SIZE on all statements to declare the number of rows returned on a **SQLFetch** or [SQLFetchScroll](../../../2014/database-engine/dev-guide/sqlfetchscroll.md) function call. On statements indicating a server cursor, the driver uses SQL_ATTR_ROW_ARRAY_SIZE to determine the size of the block of rows the server generates to satisfy a fetch request from the cursor. Within the block size of a dynamic cursor, row membership and ordering are fixed if the transaction isolation level is sufficient to ensure repeatable reads of committed transactions. The cursor is completely dynamic outside of the block indicated by this value. Server cursor block size is completely dynamic and can be changed at any point in fetch processing.  
   
@@ -42,7 +42,7 @@ manager: "jhubbard"
  SQLSetStmtAttr can be used to set SQL_SOPT_SS_NAME_SCOPE. For more information, see the SQL_SOPT_SS_NAME_SCOPE section, later in this topic.For more information about sparse columns, see [Sparse Columns Support &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/sparse-columns-support-odbc.md).  
   
 ## Statement Attributes  
- The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver also supports the following driver-specific statement attributes.  
+ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver also supports the following driver-specific statement attributes.  
   
 ### SQL_SOPT_SS_CURSOR_OPTIONS  
  The SQL_SOPT_SS_CURSOR attribute specifies whether the driver will use driver-specific performance options on cursors. [SQLGetData](../../../2014/database-engine/dev-guide/sqlgetdata.md) is not allowed when these options are set. The default setting is SQL_CO_OFF. The *ValuePtr* value is of type SQLLEN.  
@@ -59,7 +59,7 @@ manager: "jhubbard"
  If the select list contains a **text**, **ntext**, or **image** column, the fast forward-only cursor is converted to a dynamic cursor and **SQLGetData** is allowed.  
   
 ### SQL_SOPT_SS_DEFER_PREPARE  
- The SQL_SOPT_SS_DEFER_PREPARE attribute determines whether the statement is prepared immediately or deferred until **SQLExecute**, [SQLDescribeCol](../../../2014/database-engine/dev-guide/sqldescribecol.md) or [SQLDescribeParam](../../../2014/database-engine/dev-guide/sqldescribeparam.md) is executed. In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 and earlier, this property is ignored (no deferred prepare). The *ValuePtr* value is of type SQLLEN.  
+ The SQL_SOPT_SS_DEFER_PREPARE attribute determines whether the statement is prepared immediately or deferred until **SQLExecute**, [SQLDescribeCol](../../../2014/database-engine/dev-guide/sqldescribecol.md) or [SQLDescribeParam](../../../2014/database-engine/dev-guide/sqldescribeparam.md) is executed. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 and earlier, this property is ignored (no deferred prepare). The *ValuePtr* value is of type SQLLEN.  
   
 |*ValuePtr* value|Description|  
 |----------------------|-----------------|  
@@ -67,7 +67,7 @@ manager: "jhubbard"
 |SQL_DP_OFF|The statement is prepared as soon as **SQLPrepare** is executed.|  
   
 ### SQL_SOPT_SS_REGIONALIZE  
- The SQL_SOPT_SS_REGIONALIZE attribute is used to determine data conversion at the statement level. The attribute causes the driver to respect the client locale setting when converting date, time, and currency values to character strings. The conversion is from [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native data types to character strings only.  
+ The SQL_SOPT_SS_REGIONALIZE attribute is used to determine data conversion at the statement level. The attribute causes the driver to respect the client locale setting when converting date, time, and currency values to character strings. The conversion is from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native data types to character strings only.  
   
  The *ValuePtr* value is of type SQLLEN.  
   
@@ -92,7 +92,7 @@ manager: "jhubbard"
 |SQL_TL_ON|Default. Enables logging of operations performed on **text** and **image** data.|  
   
 ### SQL_SOPT_SS_HIDDEN_COLUMNS  
- The SQL_SOPT_SS_HIDDEN_COLUMNS attribute exposes, in the result set, columns hidden in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SELECT FOR BROWSE statement. The driver does not expose these columns by default. The *ValuePtr* value is of type SQLLEN.  
+ The SQL_SOPT_SS_HIDDEN_COLUMNS attribute exposes, in the result set, columns hidden in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SELECT FOR BROWSE statement. The driver does not expose these columns by default. The *ValuePtr* value is of type SQLLEN.  
   
 |*ValuePtr* value|Description|  
 |----------------------|-----------------|  

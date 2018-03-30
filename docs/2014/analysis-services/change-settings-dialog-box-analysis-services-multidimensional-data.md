@@ -18,10 +18,10 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Change Settings Dialog Box (Analysis Services - Multidimensional Data)
-  Use the **Change Settings** dialog box in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] and [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to change the settings that govern the processing of objects listed in the **Process** dialog box. You can display the **Change Settings** dialog box by clicking **Change Settings** on the **Process** dialog box.  
+  Use the **Change Settings** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] and [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to change the settings that govern the processing of objects listed in the **Process** dialog box. You can display the **Change Settings** dialog box by clicking **Change Settings** on the **Process** dialog box.  
   
 > [!NOTE]  
->  Settings specified in this dialog box override default settings inherited from the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database for the objects listed in the **Process** dialog box.  
+>  Settings specified in this dialog box override default settings inherited from the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database for the objects listed in the **Process** dialog box.  
   
 ## Options  
  **Processing options**  
@@ -31,7 +31,7 @@ manager: "mblythe"
  Click to process the objects in parallel.  
   
  **Maximum parallel tasks**  
- Select the maximum number of tasks to execute in parallel by the processing operation, or choose **Let the server decide** to allow [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] to select an optimal number of parallel tasks.  
+ Select the maximum number of tasks to execute in parallel by the processing operation, or choose **Let the server decide** to allow [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] to select an optimal number of parallel tasks.  
   
  **Sequential**  
  Click to process the objects sequentially.  

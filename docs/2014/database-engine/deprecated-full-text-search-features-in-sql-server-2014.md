@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: ab0d799c-ba79-4459-837b-c4862730dafd
 caps.latest.revision: 31
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Deprecated Full-Text Search Features in SQL Server 2014
-  This topic describes the deprecated full-text search features that are still available in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. These features are scheduled to be removed in a future release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Deprecated features should not be used in new applications.  
+  This topic describes the deprecated full-text search features that are still available in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. These features are scheduled to be removed in a future release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Deprecated features should not be used in new applications.  
   
  You can monitor the use of deprecated features by using the **SQL Server:Deprecated Features** object performance counter and trace events. For more information, see [Use SQL Server Objects](../../2014/database-engine/use-sql-server-objects.md).  
   
 ## Features Not Supported in the Next Version of SQL Server  
- The following full-text search features will not be supported in the next release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ The following full-text search features will not be supported in the next release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 |Deprecated feature|Replacement|Feature name|Feature ID|  
 |------------------------|-----------------|------------------|----------------|  
@@ -40,7 +40,7 @@ manager: "jhubbard"
 |sys.fulltext_catalogs columns:<br /><br /> path<br /><br /> data_space_id<br /><br /> file_id columns|None.|fulltext_catalogs.path<br /><br /> fulltext_catalogs.data_space_id<br /><br /> fulltext_catalogs.file_id|215<br /><br /> 216<br /><br /> 217|  
   
 ## Features Not Supported in a Future Version of SQL Server  
- The following full-text search features are supported in the next version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], but will be removed in a later version. The specific version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has not been determined.  
+ The following full-text search features are supported in the next version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], but will be removed in a later version. The specific version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has not been determined.  
   
  The **Feature name** value appears in trace events as the ObjectName and in performance counters and sys.dm_os_performance_counters as the instance name. The **Feature ID** value appears in trace events as the ObjectId.  
   

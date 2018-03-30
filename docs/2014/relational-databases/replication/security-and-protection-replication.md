@@ -19,11 +19,11 @@ helpviewer_keywords:
 ms.assetid: 310a8203-c0aa-4794-93fe-737d7c3fcfd6
 caps.latest.revision: 41
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Security and Protection (Replication)
-  Help protect the replication scenarios that you deploy in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] from malicious attacks and improve the security of your data.  
+  Help protect the replication scenarios that you deploy in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] from malicious attacks and improve the security of your data.  
   
  ![Small File Folder Icon](../../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") **Security Overview**  
  [Threat and Vulnerability Mitigation &#40;Replication&#41;](../../../2014/relational-databases/replication/threat-and-vulnerability-mitigation-replication.md)  

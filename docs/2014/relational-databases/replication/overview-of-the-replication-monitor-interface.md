@@ -15,11 +15,11 @@ helpviewer_keywords:
 ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 caps.latest.revision: 39
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Overview of the Replication Monitor Interface
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Monitor presents a Publisher-focused view or Distributor-focused view of all replication activity in a two pane format. You add a Publisher to the monitor in the left pane, and in the right pane the monitor displays information on the Publisher, its publications, the subscriptions to those publications, and the various replication agents. In addition to presenting information for the replication topology, Replication Monitor allows you to perform a number of tasks, such as starting and stopping agents, and validating data.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Monitor presents a Publisher-focused view or Distributor-focused view of all replication activity in a two pane format. You add a Publisher to the monitor in the left pane, and in the right pane the monitor displays information on the Publisher, its publications, the subscriptions to those publications, and the various replication agents. In addition to presenting information for the replication topology, Replication Monitor allows you to perform a number of tasks, such as starting and stopping agents, and validating data.  
   
 ## Viewing Information for the Entire Topology  
  The left pane of Replication Monitor displays  
@@ -61,7 +61,7 @@ manager: "jhubbard"
   
          The grid on this tab displays error and warning icons for any subscriptions that require your attention.  
   
-     This tab is not available for Distributors that are running versions of [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] or earlier.  
+     This tab is not available for Distributors that are running versions of [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or earlier.  
   
 -   **Agents** tab  
   
@@ -96,7 +96,7 @@ manager: "jhubbard"
   
          The grid on this tab displays error and warning icons for any subscriptions that require your attention.  
   
-     This tab is not displayed for Distributors running versions prior to [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
+     This tab is not displayed for Distributors running versions prior to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
 -   **Agents** tab  
   
@@ -157,7 +157,7 @@ manager: "jhubbard"
   
          View the total time for a transaction to travel through the system and also compare it to previous times.  
   
-     This tab is not displayed for Distributors running [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] or earlier. For more information on tracer tokens, see [Measure Latency and Validate Connections for Transactional Replication](../../../2014/relational-databases/replication/measure-latency-and-validate-connections-for-transactional-replication.md).  
+     This tab is not displayed for Distributors running [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or earlier. For more information on tracer tokens, see [Measure Latency and Validate Connections for Transactional Replication](../../../2014/relational-databases/replication/measure-latency-and-validate-connections-for-transactional-replication.md).  
   
 -   Detail windows for the agents associated with a publication. The following agents are associated with publications:  
   

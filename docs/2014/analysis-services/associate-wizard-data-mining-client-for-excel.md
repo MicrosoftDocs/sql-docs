@@ -21,9 +21,9 @@ manager: "mblythe"
 # Associate Wizard (Data Mining Client for Excel)
   ![Associate wizard in Data Mining ribbon](../../2014/analysis-services/media/dmc-associate.gif "Associate wizard in Data Mining ribbon")  
   
- The Associate wizard helps you create a data mining model using the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules algorithm. Such mining models are particularly useful for creating *recommendation systems*.  
+ The Associate wizard helps you create a data mining model using the [!INCLUDE[msCoName](../includes/msconame-md.md)] Association Rules algorithm. Such mining models are particularly useful for creating *recommendation systems*.  
   
- How it works is that the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules algorithm scans a dataset comprised of transactions or events, and finds the combinations that frequently appear together. There can be many thousand combinations, but the algorithm can be customized to find more or fewer, and to retain only the most probable combinations.  
+ How it works is that the [!INCLUDE[msCoName](../includes/msconame-md.md)] Association Rules algorithm scans a dataset comprised of transactions or events, and finds the combinations that frequently appear together. There can be many thousand combinations, but the algorithm can be customized to find more or fewer, and to retain only the most probable combinations.  
   
  You can apply association analysis to many problems. The most popular application of this method is market basket analysis, which finds individual products that are often purchased together. You can then use that information to recommend products to customers based on items they have already bought.  
   
@@ -82,12 +82,12 @@ manager: "mblythe"
 9. The wizard analyzes all possible combinations and creates a report that contains the itemsets and rules.  
   
 ## More About Association Models  
- The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules algorithm examines the training data to find items that appear together in a transaction. Each group of items constitutes an *itemset*. The algorithm then counts the number of times each itemset appears and calculates the relative importance of each itemset across all transactions.  
+ The [!INCLUDE[msCoName](../includes/msconame-md.md)] Association Rules algorithm examines the training data to find items that appear together in a transaction. Each group of items constitutes an *itemset*. The algorithm then counts the number of times each itemset appears and calculates the relative importance of each itemset across all transactions.  
   
  The algorithm uses this information about itemsets to generate rules that can be used to predict associations or make recommendations. For example, a rule could be "if the user purchased a book by Author 1 and a book by Author 2, then it is likely that the user will also purchase a book by Author 3". Each recommendation is assigned a probability, based on the strength of the associations.  
   
 ### Requirements  
- To use the Associate wizard, you must be connected to a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database.  
+ To use the Associate wizard, you must be connected to a [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database.  
   
  Your source data must be organized as a transaction table. The source data must contain one column that contains the transaction identifier. This column identifies each group of items. That transaction column must be in a one-to-many relationship with a second column, the item ID, which stores names or ID numbers for the individual items in the group.  
   

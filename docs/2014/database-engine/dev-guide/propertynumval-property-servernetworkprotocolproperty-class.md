@@ -37,7 +37,7 @@ object
   
 ## Parts  
  *object*  
- A [ServerNetworkProtocolProperty Class](../../../2014/database-engine/dev-guide/servernetworkprotocolproperty-class.md) object that represents an attribute of the network protocol on the instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ A [ServerNetworkProtocolProperty Class](../../../2014/database-engine/dev-guide/servernetworkprotocolproperty-class.md) object that represents an attribute of the network protocol on the instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Property Value/Return Value  
  A `uint32` value that specifies the numeric value of the referenced property.  

@@ -23,7 +23,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # DISCOVER_LITERALS Rowset
-  Returns information about literals, including data types and values, supported by the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) provider.  
+  Returns information about literals, including data types and values, supported by the [!INCLUDE[msCoName](../../includes/msconame-md.md)] XML for Analysis (XMLA) provider.  
   
  If you call the [Discover](../../../2014/analysis-services/dev-guide/discover-method-xmla.md) method with the `DISCOVER_LITERALS` enumeration value in the [RequestType](../../../2014/analysis-services/dev-guide/requesttype-element-xmla.md) element, the `Discover` method returns the `DISCOVER_LITERALS` rowset.  
   

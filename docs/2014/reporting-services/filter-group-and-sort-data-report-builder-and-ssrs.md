@@ -21,7 +21,7 @@ f1_keywords:
 ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
 caps.latest.revision: 7
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Filter, Group, and Sort Data (Report Builder and SSRS)
@@ -50,7 +50,7 @@ manager: "mblythe"
 -   [Report Samples (Report Builder and SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ##  <a name="Filtering"></a> Filtering Data in the Report  
  Filters are parts of a report that help control report data after it is retrieved from the data connection. Use filters when you cannot change a dataset query to filter data before it is retrieved from an external data source.  
@@ -86,7 +86,7 @@ manager: "mblythe"
   
  The group name identifies an expression scope. You can specify the name of a group as a scope in which to calculate aggregates, to organize data hierarchically and toggle the display of child nodes from parent nodes in a drilldown report, to display different views of the same data on multiple data regions, and to visualize summary data in a table, matrix, chart, gauge, or map. For more information, see [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
- To group on several dataset fields, add each field to the set of group expressions. You can also write your own group expressions in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. For example, you can group by a range of values, or by using a report parameter to enable your user to select how to group data in a data region. For more information, see [Group Expression Examples &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/group-expression-examples-report-builder-and-ssrs.md).  
+ To group on several dataset fields, add each field to the set of group expressions. You can also write your own group expressions in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]. For example, you can group by a range of values, or by using a report parameter to enable your user to select how to group data in a data region. For more information, see [Group Expression Examples &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/group-expression-examples-report-builder-and-ssrs.md).  
   
  For report presentation, you can add page breaks before and after each group, or each instance of a group, to reduce the amount of data on each page and help you manage report rendering performance. For more information, see [Add a Page Break &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-a-page-break-report-builder-and-ssrs.md).  
   
@@ -114,7 +114,7 @@ manager: "mblythe"
 ### Sorting Data in a Dataset Query  
  Include sort order in the dataset query to pre-sort data before it is retrieved for a report. By sorting data in the query, the sorting work is done by the data source instead of by the report processor.  
   
- For a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data source type, you can add an ORDER BY clause to the dataset query. For example, the following [!INCLUDE[tsql](../../includes/tsql-md.md)] query sorts the columns Sales and Region by Sales in descending order from the table SalesOrders: `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`. For more information, see "Sorting Rows with ORDER BY" in [SQL Server Books Online](http://go.microsoft.com/fwlink/?linkid=98335).  
+ For a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] data source type, you can add an ORDER BY clause to the dataset query. For example, the following [!INCLUDE[tsql](../includes/tsql-md.md)] query sorts the columns Sales and Region by Sales in descending order from the table SalesOrders: `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`. For more information, see "Sorting Rows with ORDER BY" in [SQL Server Books Online](http://go.microsoft.com/fwlink/?linkid=98335).  
   
 > [!NOTE]  
 >  Not all data sources support the ability to specify sort order in the query.  
@@ -139,7 +139,7 @@ manager: "mblythe"
   
  Alternatively, you can define a dataset that includes only the sizes and a value that specifies the order that you want. You can change the sort expression to use the Lookup function for the sort order value.  
   
- For example, assume that the following [!INCLUDE[tsql](../../includes/tsql-md.md)] query defines a dataset named Sizes. The query uses a CASE statement to define a sort order value SizeSortOrder for each value of Size:  
+ For example, assume that the following [!INCLUDE[tsql](../includes/tsql-md.md)] query defines a dataset named Sizes. The query uses a CASE statement to define a sort order value SizeSortOrder for each value of Size:  
   
 ```  
 SELECT Size,   

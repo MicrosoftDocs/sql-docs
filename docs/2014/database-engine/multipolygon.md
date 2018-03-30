@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 2c5db358-2a16-49d9-aac5-a74e86813932
 caps.latest.revision: 20
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MultiPolygon
@@ -91,9 +91,9 @@ SET @g = geometry::Parse('MULTIPOLYGON EMPTY');
   
 ## See Also  
  [Polygon](../../2014/database-engine/polygon.md)   
- [STArea &#40;geometry Data Type&#41;](../Topic/STArea%20\(geometry%20Data%20Type\).md)   
- [STCentroid &#40;geometry Data Type&#41;](../Topic/STCentroid%20\(geometry%20Data%20Type\).md)   
- [STPointOnSurface &#40;geometry Data Type&#41;](../Topic/STPointOnSurface%20\(geometry%20Data%20Type\).md)   
+ [STArea &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/starea-geometry-data-type.md)   
+ [STCentroid &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stcentroid-geometry-data-type.md)   
+ [STPointOnSurface &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stpointonsurface-geometry-data-type.md)   
  [Spatial Data &#40;SQL Server&#41;](../../2014/database-engine/spatial-data-sql-server.md)  
   
   

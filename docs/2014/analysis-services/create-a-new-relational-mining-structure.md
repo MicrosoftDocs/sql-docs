@@ -20,11 +20,11 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Create a New Relational Mining Structure
-  Use the Data Mining Wizard to create a new mining structure, using data from a relational database or other source, and then save the structure and any related models to a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database.  
+  Use the Data Mining Wizard to create a new mining structure, using data from a relational database or other source, and then save the structure and any related models to a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database.  
   
 ### To create a relational mining structure  
   
-1.  In Solution Explorer, right-click the **Mining Structures** folder in an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project, and then click **New Mining Structure**.  
+1.  In Solution Explorer, right-click the **Mining Structures** folder in an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project, and then click **New Mining Structure**.  
   
      The Data Mining Wizard opens.  
   

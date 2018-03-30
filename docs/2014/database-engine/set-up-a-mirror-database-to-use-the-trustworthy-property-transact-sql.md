@@ -35,7 +35,7 @@ manager: "jhubbard"
     SELECT name, database_id, is_trustworthy_on FROM sys.databases   
     ```  
   
-     For more information, see [sys.databases &#40;Transact-SQL&#41;](../Topic/sys.databases%20\(Transact-SQL\).md).  
+     For more information, see [sys.databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
 2.  After starting mirroring, verify that the database is currently the principal database, the session is using a synchronous operating mode, and the session is already synchronized.  
   
@@ -43,7 +43,7 @@ manager: "jhubbard"
     SELECT database_id, mirroring_role, mirroring_safety_level_desc, mirroring_state_desc FROM sys.database_mirroring  
     ```  
   
-     For more information, see [sys.database_mirroring &#40;Transact-SQL&#41;](../Topic/sys.database_mirroring%20\(Transact-SQL\).md).  
+     For more information, see [sys.database_mirroring &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md).  
   
 3.  Once the mirroring session is synchronized, manually fail over to the mirror database.  
   
@@ -59,7 +59,7 @@ manager: "jhubbard"
     ALTER DATABASE <database_name> SET TRUSTWORTHY ON  
     ```  
   
-     For more information, see[ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20\(Transact-SQL\).md).  
+     For more information, see[ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md).  
   
 5.  Optionally, manually failover again to return to the original principal.  
   

@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
 caps.latest.revision: 7
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Lesson 2: Define a Data Connection and Data Table for Parent Report

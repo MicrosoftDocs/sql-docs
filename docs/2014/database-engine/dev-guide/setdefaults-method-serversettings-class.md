@@ -25,7 +25,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SetDefaults Method (ServerSettings Class)
-  Sets all the default values for the instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] with the option to overwrite existing data.  
+  Sets all the default values for the instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with the option to overwrite existing data.  
   
 ## Syntax  
   
@@ -40,13 +40,13 @@ OverwriteAll
   
 ## Parts  
  *object*  
- A [ServerSettings Class](../../../2014/database-engine/dev-guide/serversettings-class.md) object that represents a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] client instance.  
+ A [ServerSettings Class](../../../2014/database-engine/dev-guide/serversettings-class.md) object that represents a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client instance.  
   
 #### Parameters  
   
 |Parameter|Description|  
 |---------------|-----------------|  
-|*OverwriteAll*|A Boolean value that specifies whether to overwrite existing values on the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: `true` to overwrite existing data, or `false` if existing data is not to be overwritten.|  
+|*OverwriteAll*|A Boolean value that specifies whether to overwrite existing values on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: `true` to overwrite existing data, or `false` if existing data is not to be overwritten.|  
   
 ## Property Value/Return Value  
  A u`int32` value, which is 0 if the service was successfully modified, 1 if the request is not supported, and any other number to indicate an error.  

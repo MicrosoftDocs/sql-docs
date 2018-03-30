@@ -21,7 +21,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # DataReader Destination
-  The DataReader destination exposes the data in a data flow by using the ADO.NET `DataReader` interface. The data can then be consumed by other applications. For example, you can configure the data source of a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report to use the result of running a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package. To do this, you create a data flow that implements the DataReader destination.  
+  The DataReader destination exposes the data in a data flow by using the ADO.NET `DataReader` interface. The data can then be consumed by other applications. For example, you can configure the data source of a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report to use the result of running a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package. To do this, you create a data flow that implements the DataReader destination.  
   
  For information about accessing and reading values in the DataReader destination programmatically, see [Loading the Output of a Local Package](../../2014/integration-services/dev-guide/loading-the-output-of-a-local-package.md).  
   
@@ -30,7 +30,7 @@ manager: "jhubbard"
   
  The DataReader destination has one input. It does not support an error output.  
   
- You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer or programmatically.  
   
  For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   

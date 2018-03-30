@@ -12,15 +12,15 @@ ms.topic: "article"
 ms.assetid: 4380040a-1368-4a47-8930-47c65a192e59
 caps.latest.revision: 17
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "jhubbard"
 ---
 # Deployment Checklist: Multi-Server Installation of PowerPivot for SharePoint 2010
-  This checklist guides you through the steps for adding [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint to a three-tier SharePoint 2010 farm that you build from the ground up. A three-tier farm includes database, application, and web tiers. Adding [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] to this topology requires that you run SQL Server Setup to install [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] on the application tier. PowerPivot program files are added to the web tier, but only as a post-installation task when you the deploy web application solution. Although there are deployment steps, there is no separate installation step on either the web tier or data tier that you need to perform. The only installation step that you need to perform is installing [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] on the application servers.  
+  This checklist guides you through the steps for adding [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint to a three-tier SharePoint 2010 farm that you build from the ground up. A three-tier farm includes database, application, and web tiers. Adding [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] to this topology requires that you run SQL Server Setup to install [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] on the application tier. PowerPivot program files are added to the web tier, but only as a post-installation task when you the deploy web application solution. Although there are deployment steps, there is no separate installation step on either the web tier or data tier that you need to perform. The only installation step that you need to perform is installing [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] on the application servers.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2010|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2010|  
   
   
   
@@ -218,7 +218,7 @@ manager: "jhubbard"
 10. On the computer file system, check the following folder to determine whether files are cached to disk. The presence of cached files is further verification that your deployment is operational. To view the file cache, go to the \Program Files\Microsoft SQL Server\MSAS10_50.POWERPIVOT\OLAP\Backup folder.  
   
 ##  <a name="nextsteps"></a> Post-Installation Steps  
- After you verify the installation, finish service configuration by creating a PowerPivot Gallery or tuning individual configuration settings. To make full use of the server components you just installed, you can download [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] to create and then publish your first PowerPivot workbook.  
+ After you verify the installation, finish service configuration by creating a PowerPivot Gallery or tuning individual configuration settings. To make full use of the server components you just installed, you can download [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] to create and then publish your first PowerPivot workbook.  
   
 ####  <a name="bkmk_disk"></a> Set Upper Limits on Disk Space Usage  
  You can set a maximum limit on how much disk space is used for PowerPivot data files that are cached to disk. The default is to use all available disk space. For instructions on how to limit disk space usage, see [Configure Disk Space Usage &#40;PowerPivot for SharePoint&#41;](../../../2014/analysis-services/configure-disk-space-usage-powerpivot-for-sharepoint.md).  

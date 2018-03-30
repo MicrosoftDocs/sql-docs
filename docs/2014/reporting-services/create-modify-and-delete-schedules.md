@@ -24,7 +24,7 @@ helpviewer_keywords:
 ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
 caps.latest.revision: 45
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Create, Modify, and Delete Schedules
@@ -39,7 +39,7 @@ manager: "mblythe"
 -   [Create and Manage Shared Schedules (Native Mode)](#bkmk_native)  
   
 ##  <a name="bkmk_overview"></a> Overview of Managing Shared Schedules  
- To manage shared schedules for native mode, use the Schedules page in Report Manager or the Shared Schedules folder in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. For SharePoint mode use, the management pages for the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application.  
+ To manage shared schedules for native mode, use the Schedules page in Report Manager or the Shared Schedules folder in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. For SharePoint mode use, the management pages for the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service application.  
   
  You can view all the shared schedules that are defined for the report server, pause and resume schedules (on Report Manager only), and select schedules to modify or delete. The Shared Schedules page summarizes the following information about the state of each schedule: frequency, owner, expiration date, and status.  
   
@@ -59,7 +59,7 @@ manager: "mblythe"
  You can identify a specific schedule by its descriptive name. If a name is not specified, a default name is created based on facts about the schedule, such as its recurrence pattern or dates and times when it runs.  
   
 > [!NOTE]  
->  Creating shared schedules requires [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service.  
+>  Creating shared schedules requires [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent service.  
   
 ### Create Shared Schedules (SharePoint)  
   
@@ -73,7 +73,7 @@ manager: "mblythe"
   
 4.  Click **Add Schedule** to open the Schedule Properties page.  
   
-5.  Enter a descriptive name for the schedule. On the application pages used to work with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] reports, this name will appear in drop-down lists in schedule definition pages throughout the site. Avoid long names that are hard to read. Do follow a naming convention that puts the most description information at the beginning of the name.  
+5.  Enter a descriptive name for the schedule. On the application pages used to work with [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] reports, this name will appear in drop-down lists in schedule definition pages throughout the site. Avoid long names that are hard to read. Do follow a naming convention that puts the most description information at the beginning of the name.  
   
 6.  Choose a frequency. Depending on the frequency you choose, the schedule options that appear on the page might change to support that frequency (for example, if you choose **Month**, the name of each month will appear on the page).  
   
@@ -101,7 +101,7 @@ manager: "mblythe"
 4.  Select the schedule, and click **Delete**.  
   
 ##  <a name="bkmk_native"></a> Create and Manage Shared Schedules (Native Mode)  
- Shared schedules must be deleted manually using the Schedules page in Report Manager or the Shared Schedules folder in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. If you delete a shared schedule that is in use, all references to it are replaced with report-specific schedules.  
+ Shared schedules must be deleted manually using the Schedules page in Report Manager or the Shared Schedules folder in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. If you delete a shared schedule that is in use, all references to it are replaced with report-specific schedules.  
   
  Report and subscription-specific schedules are deleted when you delete the report or subscription, or when you choose a different approach to run the report or subscription. For example, choosing **Always run this report with the most recent data** will delete a report-specific schedule that you created to run a report as a report execution snapshot.  
   
@@ -116,7 +116,7 @@ manager: "mblythe"
   
 -   Report-specific schedules are created when you define a subscription or set report execution properties; filling out schedule information is part of defining a subscription or setting properties. To define a report-specific schedule, you open the report or subscription that uses it.  
   
- A shared schedule contains schedule and recurrence information that can be used by any number of published reports and subscriptions that run on a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server. If you have many reports and subscriptions that run at the same time, you can create a shared schedule for those jobs. If you want to subsequently change the recurrence pattern or the end date, you can make the change in one place.  
+ A shared schedule contains schedule and recurrence information that can be used by any number of published reports and subscriptions that run on a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report server. If you have many reports and subscriptions that run at the same time, you can create a shared schedule for those jobs. If you want to subsequently change the recurrence pattern or the end date, you can make the change in one place.  
   
  Shared schedules are easier to maintain and give you more flexibility in managing scheduled operations. For example, you can pause and resume shared schedules. Also, if you find that too many scheduled operations are running at the same time, you can create multiple shared schedules that run at different times and then adjust the schedule information until the processing load evens out across the report server.  
   
@@ -142,7 +142,7 @@ manager: "mblythe"
   
 8.  Optionally, select a date to end the schedule. The schedule stops running on this date, but is not deleted.  
   
-9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ##### To delete a shared schedule (Report Manager)  
   
@@ -155,12 +155,12 @@ manager: "mblythe"
   
 3.  Select the check box next to the schedule you want to delete, and then click **Delete**.  
   
- If you delete a shared schedule that is used by multiple reports and subscriptions, the report server will create individual schedules for each report and subscription that previously used the shared schedule. Each new individual schedule will contain the date, time, and recurrence pattern that was specified in the shared schedule. Note that [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] does not provide central management of individual schedules. If you delete a shared schedule, you will now have to maintain the schedule information for each individual item.  
+ If you delete a shared schedule that is used by multiple reports and subscriptions, the report server will create individual schedules for each report and subscription that previously used the shared schedule. Each new individual schedule will contain the date, time, and recurrence pattern that was specified in the shared schedule. Note that [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] does not provide central management of individual schedules. If you delete a shared schedule, you will now have to maintain the schedule information for each individual item.  
   
- If you are not sure whether a shared schedule is used, consider deleting it in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] instead. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] provides the same shared schedule management features as Report Manager, but it provides an additional Reports page that shows you the name of each report that uses the schedule.  
+ If you are not sure whether a shared schedule is used, consider deleting it in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] instead. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] provides the same shared schedule management features as Report Manager, but it provides an additional Reports page that shows you the name of each report that uses the schedule.  
   
 ### Create, Delete, or Modify a Shared Schedule (Management Studio)  
- A shared schedule contains schedule and recurrence information that can be used by any number of published reports and subscriptions that run on a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server. If you have many reports and subscriptions that run at the same time, you can create a shared schedule for those jobs. If you want to subsequently change the recurrence pattern or the end date, you can make the change in one place.  
+ A shared schedule contains schedule and recurrence information that can be used by any number of published reports and subscriptions that run on a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report server. If you have many reports and subscriptions that run at the same time, you can create a shared schedule for those jobs. If you want to subsequently change the recurrence pattern or the end date, you can make the change in one place.  
   
  Shared schedules are easier to maintain and give you more flexibility in managing scheduled operations. For example, you can pause and resume shared schedules. Also, if you find that too many scheduled operations are running at the same time, you can create multiple shared schedules that run at different times and then adjust the schedule information until the processing load evens out across the report server.  
   
@@ -184,7 +184,7 @@ manager: "mblythe"
   
      Or, to specify a one-time (non-recurring) schedule, select **Once**, and then specify a **Start time**.  
   
-8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ##### To delete a shared schedule (Management Studio)  
   
@@ -192,9 +192,9 @@ manager: "mblythe"
   
 2.  Expand the Shared Schedules folder, right-click the schedule you want to delete, and then click **Delete**. The **Delete Catalog Items** dialog box appears.  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
- If you delete a shared schedule that is used by multiple reports and subscriptions, the report server will create individual schedules for each report and subscription that previously used the shared schedule. Each new individual schedule will contain the date, time, and recurrence pattern that was specified in the shared schedule. Note that [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] does not provide central management of individual schedules. If you delete a shared schedule, you will now have to maintain the schedule information for each individual item. Before deleting a shared schedule, use the [Reports Page](../../2014/reporting-services/schedule-properties-reports-page.md) to determine which reports are currently using the shared schedule.  
+ If you delete a shared schedule that is used by multiple reports and subscriptions, the report server will create individual schedules for each report and subscription that previously used the shared schedule. Each new individual schedule will contain the date, time, and recurrence pattern that was specified in the shared schedule. Note that [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] does not provide central management of individual schedules. If you delete a shared schedule, you will now have to maintain the schedule information for each individual item. Before deleting a shared schedule, use the [Reports Page](../../2014/reporting-services/schedule-properties-reports-page.md) to determine which reports are currently using the shared schedule.  
   
 ## See Also  
  [Schedules](../../2014/reporting-services/schedules.md)   

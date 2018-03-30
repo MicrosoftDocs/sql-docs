@@ -56,9 +56,9 @@ manager: "mblythe"
 |Child elements|None|  
   
 ## Remarks  
- The `DefaultMember` element defines the default member for the parent element. If `DefaultMember` is not specified or is set to an empty string, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] chooses a member to use as the default member.  
+ The `DefaultMember` element defines the default member for the parent element. If `DefaultMember` is not specified or is set to an empty string, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] chooses a member to use as the default member.  
   
- For `ManyToManyMeasureGroupDimension` elements, the `DefaultMember` element contains an MDX expression that specifies a member in the dimension identified in the `CubeDimensionID` element of the `ManyToManyMeasureGroupDimension`. The MDX expression is similar to the [StrToMember](../Topic/StrToMember%20\(MDX\).md) MDX function with the CONSTRAINED keyword, in that it cannot include MDX or user-defined functions.  
+ For `ManyToManyMeasureGroupDimension` elements, the `DefaultMember` element contains an MDX expression that specifies a member in the dimension identified in the `CubeDimensionID` element of the `ManyToManyMeasureGroupDimension`. The MDX expression is similar to the [StrToMember](~/mdx/strtomember-mdx.md) MDX function with the CONSTRAINED keyword, in that it cannot include MDX or user-defined functions.  
   
  For more information about default members, see [Define a Default Member](../../../2014/analysis-services/define-a-default-member.md).  
   

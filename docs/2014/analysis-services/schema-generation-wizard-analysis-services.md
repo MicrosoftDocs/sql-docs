@@ -18,11 +18,11 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Schema Generation Wizard (Analysis Services)
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] supports two methods of working with relational schemas when defining OLAP objects within an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project or database. Generally, you will define OLAP objects based on a logical data model constructed in a data source view within an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project or database. This data source view is defined based on schema elements from one or more relational data sources, as customized in the data source view.  
+  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] supports two methods of working with relational schemas when defining OLAP objects within an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project or database. Generally, you will define OLAP objects based on a logical data model constructed in a data source view within an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project or database. This data source view is defined based on schema elements from one or more relational data sources, as customized in the data source view.  
   
  Alternatively, you can define OLAP objects first, and then generate a data source view, a data source, and the underlying relational database schema that supports these OLAP objects. This relational database is referred to as the subject area database.  
   
- This approach is sometimes called top-down design and is frequently used for prototyping and analysis modeling. When you use this approach, you use the Schema Generation Wizard to create the underlying data source view and data source objects based on the OLAP objects defined in an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project or database.  
+ This approach is sometimes called top-down design and is frequently used for prototyping and analysis modeling. When you use this approach, you use the Schema Generation Wizard to create the underlying data source view and data source objects based on the OLAP objects defined in an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project or database.  
   
  This is an iterative approach. You will most likely rerun the wizard multiple times as you change the design of the dimensions and cubes. Each time you run the wizard, it incorporates the changes into the underlying objects and, as much as is possible, preserves the data contained in the underlying databases.  
   

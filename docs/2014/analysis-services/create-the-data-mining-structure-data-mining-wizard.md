@@ -32,7 +32,7 @@ manager: "mblythe"
  Select the data mining algorithm to use with this model.  
   
 > [!NOTE]  
->  The list of algorithms is populated from the instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] on which you are creating the mining structure. If the server is not available, only the default algorithms will be available.  
+>  The list of algorithms is populated from the instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] on which you are creating the mining structure. If the server is not available, only the default algorithms will be available.  
   
  **Create mining structure with no models**  
  Select to create only a mining structure.  

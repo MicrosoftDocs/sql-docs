@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: a7d15816-a788-4099-ad91-dc4b26618299
 caps.latest.revision: 22
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Grant Permissions on a Stored Procedure
-  This topic describes how to grant permissions on a stored procedure in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Permissions can be granted to an existing user, database role, or application role in the database.  
+  This topic describes how to grant permissions on a stored procedure in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)]. Permissions can be granted to an existing user, database role, or application role in the database.  
   
  **In This Topic**  
   
@@ -38,18 +38,18 @@ manager: "jhubbard"
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
--   You cannot use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to grant permissions on system procedures or system functions. Use [GRANT Object Permissions](../Topic/GRANT%20Object%20Permissions%20\(Transact-SQL\).md) instead.  
+-   You cannot use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to grant permissions on system procedures or system functions. Use [GRANT Object Permissions](~/t-sql/statements/grant-object-permissions-transact-sql.md) instead.  
   
 ###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> Permissions  
- The grantor (or the principal specified with the AS option) must have either the permission itself with GRANT OPTION, or a higher permission that implies the permission being granted. Requires ALTER permission on the schema to which the procedure belongs, or CONTROL permission on the procedure. For more information, see [GRANT Object Permissions &#40;Transact-SQL&#41;](../Topic/GRANT%20Object%20Permissions%20\(Transact-SQL\).md).  
+ The grantor (or the principal specified with the AS option) must have either the permission itself with GRANT OPTION, or a higher permission that implies the permission being granted. Requires ALTER permission on the schema to which the procedure belongs, or CONTROL permission on the procedure. For more information, see [GRANT Object Permissions &#40;Transact-SQL&#41;](~/t-sql/statements/grant-object-permissions-transact-sql.md).  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   
 #### To grant permissions on a stored procedure  
   
-1.  In Object Explorer, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)] and then expand that instance.  
+1.  In Object Explorer, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)] and then expand that instance.  
   
 2.  Expand **Databases**, expand the database in which the procedure belongs, and then expand **Programmability**.  
   
@@ -71,7 +71,7 @@ manager: "jhubbard"
   
 #### To grant permissions on a stored procedure  
   
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
@@ -85,8 +85,8 @@ GO
 ```  
   
 ## See Also  
- [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../Topic/sys.fn_builtin_permissions%20\(Transact-SQL\).md)   
- [GRANT Object Permissions &#40;Transact-SQL&#41;](../Topic/GRANT%20Object%20Permissions%20\(Transact-SQL\).md)   
+ [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](~/relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
+ [GRANT Object Permissions &#40;Transact-SQL&#41;](~/t-sql/statements/grant-object-permissions-transact-sql.md)   
  [Create a Stored Procedure](../../2014/database-engine/create-a-stored-procedure.md)   
  [Modify a Stored Procedure](../../2014/database-engine/modify-a-stored-procedure.md)   
  [Delete a Stored Procedure](../../2014/database-engine/delete-a-stored-procedure.md)   

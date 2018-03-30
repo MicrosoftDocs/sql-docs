@@ -28,7 +28,7 @@ manager: "mblythe"
   
  To generated calculated values for specifically for cells, you need to use the calculated cells feature in MDX. Calculated cells let you define a specific slice of cells, called a *calculation subcube*, and apply a formula to each and every cell within the calculation subcube, subject to an optional condition that can be applied to each cell.  
   
- Calculated cells also offer complex functionality, such as goal-seeking formulas, as used in KPIs, or speculative analysis formulas. This level of functionality comes from the pass order feature in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] that allows recursive passes to be made with calculated cells, with calculation formulas applied at specific passes in the pass order. For more information on pass order, see [Understanding Pass Order and Solve Order &#40;MDX&#41;](../../2014/analysis-services/understanding-pass-order-and-solve-order-mdx.md).  
+ Calculated cells also offer complex functionality, such as goal-seeking formulas, as used in KPIs, or speculative analysis formulas. This level of functionality comes from the pass order feature in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] that allows recursive passes to be made with calculated cells, with calculation formulas applied at specific passes in the pass order. For more information on pass order, see [Understanding Pass Order and Solve Order &#40;MDX&#41;](../../2014/analysis-services/understanding-pass-order-and-solve-order-mdx.md).  
   
  In terms of creation scope, calculated cells are similar to both named sets and calculated members in that calculated cells can be temporarily created for the lifetime of either a session or a single query, or made globally available as part of a cube:  
   
@@ -41,8 +41,8 @@ manager: "mblythe"
      For more information about how to use either the CREATE CELL CALCULATION or ALTER CUBE statement to create calculated cells in a session, see [Creating Session-Scoped Calculated Cells](../../2014/analysis-services/creating-session-scoped-calculated-cells.md)  
   
 ## See Also  
- [ALTER CUBE Statement &#40;MDX&#41;](../Topic/ALTER%20CUBE%20Statement%20\(MDX\).md)   
- [CREATE CELL CALCULATION Statement &#40;MDX&#41;](../Topic/CREATE%20CELL%20CALCULATION%20Statement%20\(MDX\).md)   
+ [ALTER CUBE Statement &#40;MDX&#41;](~/mdx/mdx-data-definition-alter-cube.md)   
+ [CREATE CELL CALCULATION Statement &#40;MDX&#41;](~/mdx/mdx-data-definition-create-cell-calculation.md)   
  [Creating Query-Scoped Cell Calculations &#40;MDX&#41;](../../2014/analysis-services/creating-query-scoped-cell-calculations-mdx.md)   
  [MDX Query Fundamentals &#40;Analysis Services&#41;](../../2014/analysis-services/mdx-query-fundamentals-analysis-services.md)  
   

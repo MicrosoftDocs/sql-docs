@@ -25,7 +25,7 @@ manager: "jhubbard"
   
  A database snapshot on a secondary replica should continue to work if the replica is DISCONNECTED from the primary replica.  
   
- Some [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] conditions cause both the source database and its database snapshots to be restarted, temporarily disconnecting users. These conditions are as follows:  
+ Some [!INCLUDE[ssHADR](../includes/sshadr-md.md)] conditions cause both the source database and its database snapshots to be restarted, temporarily disconnecting users. These conditions are as follows:  
   
 -   The primary replica changes roles, whether because the current primary replica goes off line and comes back online on the same server instance or because the availability group fails over.  
   

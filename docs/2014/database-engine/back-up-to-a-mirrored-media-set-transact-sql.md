@@ -16,10 +16,10 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Back Up to a Mirrored Media Set (Transact-SQL)
-  This topic describes how to use the [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](../Topic/BACKUP%20\(Transact-SQL\).md) statement to specify a mirrored media set when backing up a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. In your BACKUP statement, specify the first mirror in the TO clause. Then, specify each mirror in its own MIRROR TO clause. The TO and MIRROR TO clauses must specify the same number and type of backup devices.  
+  This topic describes how to use the [!INCLUDE[tsql](../includes/tsql-md.md)][BACKUP](~/t-sql/statements/backup-transact-sql.md) statement to specify a mirrored media set when backing up a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database. In your BACKUP statement, specify the first mirror in the TO clause. Then, specify each mirror in its own MIRROR TO clause. The TO and MIRROR TO clauses must specify the same number and type of backup devices.  
   
 ## Example  
- The following example creates the mirrored media set illustrated in the previous illustration and backs up the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to both mirrors.  
+ The following example creates the mirrored media set illustrated in the previous illustration and backs up the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database to both mirrors.  
   
 ```  
 BACKUP DATABASE AdventureWorks2012  
@@ -34,10 +34,10 @@ GO
 ## Related Tasks  
  **To restore from a mirrored backup**  
   
--   [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+-   [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)  
   
 ## See Also  
- [BACKUP &#40;Transact-SQL&#41;](../Topic/BACKUP%20\(Transact-SQL\).md)   
+ [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)   
  [Mirrored Backup Media Sets &#40;SQL Server&#41;](../../2014/database-engine/mirrored-backup-media-sets-sql-server.md)  
   
   

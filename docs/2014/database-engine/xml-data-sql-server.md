@@ -15,11 +15,11 @@ helpviewer_keywords:
 ms.assetid: 6a1793c9-9856-485c-aac5-88fda62f61a8
 caps.latest.revision: 13
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # XML Data (SQL Server)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a powerful platform for developing rich applications for semi-structured data management. Support for XML is integrated into all the components in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and includes the following:  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provides a powerful platform for developing rich applications for semi-structured data management. Support for XML is integrated into all the components in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and includes the following:  
   
 -   The `xml` data type. XML values can be stored natively in an `xml` data type column that can be typed according to a collection of XML schemas, or left untyped. You can index the XML column.  
   
@@ -36,9 +36,9 @@ manager: "jhubbard"
  [XML Indexes &#40;SQL Server&#41;](../../2014/database-engine/xml-indexes-sql-server.md)  
  [XML Schema Collections &#40;SQL Server&#41;](../../2014/database-engine/xml-schema-collections-sql-server.md)  
  [FOR XML &#40;SQL Server&#41;](../../2014/database-engine/for-xml-sql-server.md)  
- [OPENXML &#40;Transact-SQL&#41;](../Topic/OPENXML%20\(Transact-SQL\).md)  
+ [OPENXML &#40;Transact-SQL&#41;](~/t-sql/functions/openxml-transact-sql.md)  
   
 ## Related Content  
  [Examples of Bulk Import and Export of XML Documents &#40;SQL Server&#41;](../../2014/database-engine/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
- [XQuery Language Reference &#40;SQL Server&#41;](../Topic/XQuery%20Language%20Reference%20\(SQL%20Server\).md)  
+ [XQuery Language Reference &#40;SQL Server&#41;](~/xquery/xquery-language-reference-sql-server.md)  
   

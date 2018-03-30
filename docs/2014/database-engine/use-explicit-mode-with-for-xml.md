@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
 caps.latest.revision: 31
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Use EXPLICIT Mode with FOR XML
@@ -169,7 +169,7 @@ ElementName!TagNumber!AttributeName!Directive
  [Use RAW Mode with FOR XML](../../2014/database-engine/use-raw-mode-with-for-xml.md)   
  [Use AUTO Mode with FOR XML](../../2014/database-engine/use-auto-mode-with-for-xml.md)   
  [Use PATH Mode with FOR XML](../../2014/database-engine/use-path-mode-with-for-xml.md)   
- [SELECT &#40;Transact-SQL&#41;](../Topic/SELECT%20\(Transact-SQL\).md)   
+ [SELECT &#40;Transact-SQL&#41;](~/t-sql/queries/select-transact-sql.md)   
  [FOR XML &#40;SQL Server&#41;](../../2014/database-engine/for-xml-sql-server.md)  
   
   

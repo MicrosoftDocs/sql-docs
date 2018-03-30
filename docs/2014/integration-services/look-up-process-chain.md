@@ -18,14 +18,14 @@ manager: "jhubbard"
 # Look Up Process Chain
   Use the **Look Up Process Chain** dialog box to look up a process chain that is defined in the SAP Netweaver BW system. When the list of available process chains appears, select the chain that you want, and the source will populate the associated options with the required values.  
   
- The SAP BW source of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW uses the **Look Up Process Chain** dialog box. To learn more about the SAP BW source, see [SAP BW Source](../../2014/integration-services/sap-bw-source.md).  
+ The SAP BW source of the [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW uses the **Look Up Process Chain** dialog box. To learn more about the SAP BW source, see [SAP BW Source](../../2014/integration-services/sap-bw-source.md).  
   
 > [!IMPORTANT]  
 >  The documentation for the Microsoft Connector 1.1 for SAP BW assumes familiarity with the SAP Netweaver BW environment. For more information about SAP Netweaver BW, or for information about how to configure SAP Netweaver BW objects and processes, see your SAP documentation.  
   
  **To open the Look Up Process Chain dialog box**  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package that contains the SAP BW source.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package that contains the SAP BW source.  
   
 2.  On the **Data Flow** tab, double-click the SAP BW source.  
   

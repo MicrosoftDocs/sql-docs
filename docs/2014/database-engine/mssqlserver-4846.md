@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: a455e809-1883-4c7d-b3e3-835ee5bfe258
 caps.latest.revision: 19
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_4846
@@ -48,19 +48,19 @@ manager: "jhubbard"
   
     -   **min memory per query**  
   
-     Notice any unusual settings. Correct them as necessary. Account for memory requirements for [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Default settings are listed in "Setting Server Configuration Options" in SQL Server Books Online.  
+     Notice any unusual settings. Correct them as necessary. Account for memory requirements for [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Default settings are listed in "Setting Server Configuration Options" in SQL Server Books Online.  
   
 4.  Observe DBCC MEMORYSTATUS output and the way it changes when you see these error messages.  
   
 5.  Check the workload (for example, number of concurrent sessions, currently executing queries).  
   
- The following actions may make more memory available to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+ The following actions may make more memory available to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
 -   If applications besides SQL Server are consuming resources, try stopping running these applications or consider running them on a separate server. This will remove external memory pressure.  
   
 -   If you have configured **max server memory,** increase its setting.  
   
- Run the following DBCC commands to free several [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memory caches.  
+ Run the following DBCC commands to free several [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] memory caches.  
   
 -   DBCC FREESYSTEMCACHE  
   

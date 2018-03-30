@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 12be8341-cb57-45e8-a421-2bf66b50234d
 caps.latest.revision: 43
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Create a Linked Report
@@ -32,9 +32,9 @@ manager: "mblythe"
   
 2.  Type a name for the new linked report. Optionally type a description.  
   
-3.  To select a different folder for the report, click **Change Location**. Click the folder you want to use, or type the folder name in the **Location** box. [!INCLUDE[clickOK](../../includes/clickok-md.md)] If you do not select a different folder, the linked report is created in the current folder (where the report it is based on is stored).  
+3.  To select a different folder for the report, click **Change Location**. Click the folder you want to use, or type the folder name in the **Location** box. [!INCLUDE[clickOK](../includes/clickok-md.md)] If you do not select a different folder, the linked report is created in the current folder (where the report it is based on is stored).  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] The linked report opens.  
+4.  [!INCLUDE[clickOK](../includes/clickok-md.md)] The linked report opens.  
   
      A linked report's icon differs from other items managed by a report server. The following icon indicates a linked report:  
   

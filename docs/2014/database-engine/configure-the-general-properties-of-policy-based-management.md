@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Configure the General Properties of Policy-Based Management
-  This topic describes how to configure the properties for Policy-Based Management in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  This topic describes how to configure the properties for Policy-Based Management in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -72,7 +72,7 @@ manager: "jhubbard"
   
 #### To configure Policy-Based Management  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -88,6 +88,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [sp_syspolicy_configure &#40;Transact-SQL&#41;](../Topic/sp_syspolicy_configure%20\(Transact-SQL\).md).  
+ For more information, see [sp_syspolicy_configure &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-syspolicy-configure-transact-sql.md).  
   
   

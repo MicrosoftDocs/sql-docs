@@ -16,7 +16,7 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Testing a Filtered Model (Basic Data Mining Tutorial)
-  Now that you have determined that the `TM_Decision_Tree` model is the most accurate, you will customize the model to better suit the needs of the [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] targeted mailing campaign. Specifically, the Marketing department would like to know if there are any differences between male and female customers. The information could help them decide which magazines to use for advertising and which products to feature in their mailings.  
+  Now that you have determined that the `TM_Decision_Tree` model is the most accurate, you will customize the model to better suit the needs of the [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] targeted mailing campaign. Specifically, the Marketing department would like to know if there are any differences between male and female customers. The information could help them decide which magazines to use for advertising and which products to feature in their mailings.  
   
 ## Using Filters  
  Filtering enables you to easily create models built on subsets of your data. The filter is applied only to the model and does not change the underlying data source.  
@@ -27,7 +27,7 @@ manager: "jhubbard"
   
 #### To copy the Decision Tree Model  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], in Solution Explorer, select **BasicDataMining**.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], in Solution Explorer, select **BasicDataMining**.  
   
 2.  Click the **Mining Models** tab.  
   
@@ -101,11 +101,11 @@ manager: "jhubbard"
   
 6.  Repeat steps 1 - 5 for `TM_Decision_Tree_Female`.  
   
-7.  Explore the results for the `TM_Decision_Tree` and the models filtered for gender. Compared to all bike buyers, male and female bike buyers share some of the same characteristics as the unfiltered bike buyers but all three have interesting differences as well. This is useful information that [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] can use to develop their marketing campaign.  
+7.  Explore the results for the `TM_Decision_Tree` and the models filtered for gender. Compared to all bike buyers, male and female bike buyers share some of the same characteristics as the unfiltered bike buyers but all three have interesting differences as well. This is useful information that [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] can use to develop their marketing campaign.  
   
 #### To test the lift of the filtered models  
   
-1.  Switch to the **Mining Accuracy Chart** tab in Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] and select the **Input Selection** tab.  
+1.  Switch to the **Mining Accuracy Chart** tab in Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] and select the **Input Selection** tab.  
   
 2.  In the **Select data set to be used for Accuracy Chart** group box, select **Use mining structure test cases**.  
   

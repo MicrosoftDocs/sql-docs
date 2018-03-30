@@ -24,7 +24,7 @@ ms.author: "jroth"
 manager: "jhubbard"
 ---
 # Active Secondaries: Backup on Secondary Replicas (Always On Availability Groups)
-  The [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] active secondary capabilities include support for performing backup operations on secondary replicas. Backup operations can put significant strain on I/O and CPU (with backup compression). Offloading backups to a synchronized or synchronizing secondary replica allows you to use the resources on server instance that hosts the primary replica for your tier-1 workloads.  
+  The [!INCLUDE[ssHADR](../includes/sshadr-md.md)] active secondary capabilities include support for performing backup operations on secondary replicas. Backup operations can put significant strain on I/O and CPU (with backup compression). Offloading backups to a synchronized or synchronizing secondary replica allows you to use the resources on server instance that hosts the primary replica for your tier-1 workloads.  
   
 > [!NOTE]  
 >  RESTORE statements are not allowed on either the primary or secondary databases of an availability group.  
@@ -46,7 +46,7 @@ manager: "jhubbard"
 ##  <a name="WhereBuJobsRun"></a> Configuring Where Backup Jobs Run  
  Performing backups on a secondary replica to offload the backup workload from the primary production server is a great benefit. However, performing backups on secondary replicas introduce significant complexity to the process of determining where backup jobs should run. To address this, configure where backup jobs run as follows:  
   
-1.  Configure the availability group to specify which availability replicas where you would prefer backups to be performed. For more information, see *AUTOMATED_BACKUP_PREFERENCE* and *BACKUP_PRIORITY* parameters in [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../Topic/CREATE%20AVAILABILITY%20GROUP%20\(Transact-SQL\).md) or [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../Topic/ALTER%20AVAILABILITY%20GROUP%20\(Transact-SQL\).md).  
+1.  Configure the availability group to specify which availability replicas where you would prefer backups to be performed. For more information, see *AUTOMATED_BACKUP_PREFERENCE* and *BACKUP_PRIORITY* parameters in [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](~/t-sql/statements/create-availability-group-transact-sql.md) or [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](~/t-sql/statements/alter-availability-group-transact-sql.md).  
   
 2.  Create scripted backup jobs for every availability database on every server instance that hosts an availability replica that is a candidate for performing backups. For more information, see the "Follow Up: After Configuring Backup on Secondary Replicas" section of [Configure Backup on Availability Replicas &#40;SQL Server&#41;](../../2014/database-engine/configure-backup-on-availability-replicas-sql-server.md).  
   
@@ -57,7 +57,7 @@ manager: "jhubbard"
   
  **To determine whether the current replica is the preferred backup replica**  
   
--   [sys.fn_hadr_backup_is_preferred_replica](../Topic/sys.fn_hadr_backup_is_preferred_replica%20%20\(Transact-SQL\).md)  
+-   [sys.fn_hadr_backup_is_preferred_replica](~/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md)  
   
  **To create a backup job**  
   
@@ -69,7 +69,7 @@ manager: "jhubbard"
 ## See Also  
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/overview-of-alwayson-availability-groups-sql-server.md)   
  [Copy-Only Backups &#40;SQL Server&#41;](../../2014/database-engine/copy-only-backups-sql-server.md)   
- [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../Topic/CREATE%20AVAILABILITY%20GROUP%20\(Transact-SQL\).md)   
- [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../Topic/ALTER%20AVAILABILITY%20GROUP%20\(Transact-SQL\).md)  
+ [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](~/t-sql/statements/create-availability-group-transact-sql.md)   
+ [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](~/t-sql/statements/alter-availability-group-transact-sql.md)  
   
   

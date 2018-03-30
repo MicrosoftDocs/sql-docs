@@ -18,17 +18,17 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Configure Default Field Set for Power View Reports (SSAS Tabular)
-  A default field set is a predefined list of columns and measures that are automatically added to a [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] report canvas when the table is selected in the report field list. Tabular model authors can create a default field set to eliminate redundant steps for report authors who use the model for their reports. For example, if you know that most report authors who work with customer contact information always want to see a contact name, a primary phone number, an email address, and a company name, you can pre-select those columns so that they are always added to the report canvas when the author clicks the Customer Contact table.  
+  A default field set is a predefined list of columns and measures that are automatically added to a [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] report canvas when the table is selected in the report field list. Tabular model authors can create a default field set to eliminate redundant steps for report authors who use the model for their reports. For example, if you know that most report authors who work with customer contact information always want to see a contact name, a primary phone number, an email address, and a company name, you can pre-select those columns so that they are always added to the report canvas when the author clicks the Customer Contact table.  
   
 > [!NOTE]  
->  A default field set applies only to a tabular model used as a data model in [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]. Default field sets are not supported in Excel pivot reports.  
+>  A default field set applies only to a tabular model used as a data model in [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]. Default field sets are not supported in Excel pivot reports.  
   
 ## Creating a Default Field Set  
- You can determine which fields, if any, are included by default whenever a specific table is selected in [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]. You can also determine the order in which fields appear in the list. To specify a default field set, you set report properties in the tabular model project.  
+ You can determine which fields, if any, are included by default whenever a specific table is selected in [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]. You can also determine the order in which fields appear in the list. To specify a default field set, you set report properties in the tabular model project.  
   
 #### To add a default field set  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], click the table (tab) for which you are configuring a default field list.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], click the table (tab) for which you are configuring a default field list.  
   
 2.  In the **Properties** window, in the **Default Field Set** property, click **Click to edit**.  
   

@@ -77,7 +77,7 @@ manager: "mblythe"
  [Microsoft Neural Network Algorithm Technical Reference](../../2014/analysis-services/microsoft-neural-network-algorithm-technical-reference.md)  
   
 ### Requirements  
- To use the **Classify** wizard, you must be connected to an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database. For information about how to create a connection, see [Connect to Source Data &#40;Data Mining Client for Excel&#41;](../../2014/analysis-services/connect-to-source-data-data-mining-client-for-excel.md).  
+ To use the **Classify** wizard, you must be connected to an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database. For information about how to create a connection, see [Connect to Source Data &#40;Data Mining Client for Excel&#41;](../../2014/analysis-services/connect-to-source-data-data-mining-client-for-excel.md).  
   
 ## See Also  
  [Creating a Data Mining Model](../../2014/analysis-services/creating-a-data-mining-model.md)  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: ef5a514e-e818-4041-a8b0-15835f9a046b
 caps.latest.revision: 37
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Publish Reports
-  From[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], you can publish either all the reports and shared data sources in a Report Server project to a report server by deploying the project, or you can publish a single report. Before you can publish a report you must specify the URL of the target report server. For more information, see [Set Deployment Properties &#40;Reporting Services&#41;](../../2014/reporting-services/set-deployment-properties-reporting-services.md).  
+  From[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], you can publish either all the reports and shared data sources in a Report Server project to a report server by deploying the project, or you can publish a single report. Before you can publish a report you must specify the URL of the target report server. For more information, see [Set Deployment Properties &#40;Reporting Services&#41;](../../2014/reporting-services/set-deployment-properties-reporting-services.md).  
   
- You can use the [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] version of [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to open, modify, preview, save, and publish both [!INCLUDE[ssRSversion2005](../../includes/ssrsversion2005-md.md)] and [!INCLUDE[ssRSversion10](../../includes/ssrsversion10-md.md)] reports. For more information, see [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41;](../../2014/reporting-services/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
+ You can use the [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] version of [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to open, modify, preview, save, and publish both [!INCLUDE[ssRSversion2005](../includes/ssrsversion2005-md.md)] and [!INCLUDE[ssRSversion10](../includes/ssrsversion10-md.md)] reports. For more information, see [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41;](../../2014/reporting-services/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
 ### To publish all reports in a project  
   

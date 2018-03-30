@@ -20,11 +20,11 @@ helpviewer_keywords:
 ms.assetid: 0ec6ef80-3b48-40c1-9618-2326a1d167a5
 caps.latest.revision: 36
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # DatabaseName Property (WMI MSReportServer_ConfigurationSetting)
-  Specifies the name of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance that hosts the report server database. Read only.  
+  Specifies the name of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance that hosts the report server database. Read only.  
   
 ## Syntax  
   
@@ -43,7 +43,7 @@ public string DatabaseName;
  [MSReportServer_ConfigurationSetting Class](../../2014/reporting-services/msreportserver-configurationsetting-class.md)  
   
 ## Requirements  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../includes/ssrswminmspca-md.md)]  
   
 ## See Also  
  [MSReportServer_ConfigurationSetting Members](../../2014/reporting-services/msreportserver-configurationsetting-members.md)  

@@ -15,11 +15,11 @@ helpviewer_keywords:
 ms.assetid: b8ea6c3b-01d6-4efc-bbfb-03b264530bbd
 caps.latest.revision: 32
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Manage Oracle Tablespaces
-  A tablespace is a unit of database storage that is roughly equivalent to a file group in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Tablespaces allow storage and management of database objects within individual groups. For more information, see the Oracle documentation.  
+  A tablespace is a unit of database storage that is roughly equivalent to a file group in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Tablespaces allow storage and management of database objects within individual groups. For more information, see the Oracle documentation.  
   
  When you configure a table as part of an Oracle publication, you can optionally specify an existing Oracle tablespace to be used when storing replication logging information. If unspecified, the tablespace for the replication objects is the default tablespace associated with the replication administrative user schema that was configured when configuring the Publisher.  
   
@@ -27,7 +27,7 @@ manager: "jhubbard"
   
 -   Specify a tablespace in the **Article Properties** dialog box. For more information about accessing this dialog box, see [View and Modify Publication Properties](../../../2014/relational-databases/replication/view-and-modify-publication-properties.md).  
   
--   Use [sp_changearticle &#40;Transact-SQL&#41;](../Topic/sp_changearticle%20\(Transact-SQL\).md). To use **sp_changearticle**, specify the following:  
+-   Use [sp_changearticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md). To use **sp_changearticle**, specify the following:  
   
     -   The name of the Oracle Publisher for the parameter **@publisher**.  
   

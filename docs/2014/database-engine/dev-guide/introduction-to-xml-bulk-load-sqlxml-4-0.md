@@ -23,9 +23,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Introduction to XML Bulk Load (SQLXML 4.0)
-  XML Bulk Load is a stand-alone COM object that allows you to load semistructured XML data into Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tables.  
+  XML Bulk Load is a stand-alone COM object that allows you to load semistructured XML data into Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables.  
   
- You can insert XML data into a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database by using an INSERT statement and the OPENXML function; however, the Bulk Load utility provides better performance when you need to insert large amounts of XML data.  
+ You can insert XML data into a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database by using an INSERT statement and the OPENXML function; however, the Bulk Load utility provides better performance when you need to insert large amounts of XML data.  
   
  The Execute method of the XML Bulk Load object model takes two parameters:  
   
@@ -35,14 +35,14 @@ manager: "jhubbard"
   
  XML Bulk Load interprets the mapping schema and identifies the table(s) into which the XML data is to be inserted.  
   
- It is assumed that you are familiar with the following [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] features:  
+ It is assumed that you are familiar with the following [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features:  
   
 -   Annotated XSD and XDR schemas. For more information about annotated XSD schemas, see [Introduction to Annotated XSD Schemas &#40;SQLXML 4.0&#41;](../../../2014/database-engine/dev-guide/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). For information about annotated XDR schemas, see [Annotated XDR Schemas &#40;Deprecated in SQLXML 4.0&#41;](../../../2014/database-engine/dev-guide/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bulk insert mechanisms, such as the [!INCLUDE[tsql](../../../includes/tsql-md.md)] BULK INSERT statement and the bcp utility. For more information, see [BULK INSERT &#40;Transact-SQL&#41;](../Topic/BULK%20INSERT%20\(Transact-SQL\).md) and [bcp Utility](../../../2014/database-engine/bcp-utility.md).  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bulk insert mechanisms, such as the [!INCLUDE[tsql](../../includes/tsql-md.md)] BULK INSERT statement and the bcp utility. For more information, see [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md) and [bcp Utility](../../../2014/database-engine/bcp-utility.md).  
   
 ## Streaming of XML Data  
- Because the source XML document can be large, the entire document is not read into memory for bulk load processing. Instead, XML Bulk Load interprets the XML data as a stream and reads it. As the utility reads the data, it identifies the database table(s), generates the appropriate record(s) from the XML data source, and then sends the record(s) to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] for insertion.  
+ Because the source XML document can be large, the entire document is not read into memory for bulk load processing. Instead, XML Bulk Load interprets the XML data as a stream and reads it. As the utility reads the data, it identifies the database table(s), generates the appropriate record(s) from the XML data source, and then sends the record(s) to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for insertion.  
   
  For example, the following source XML document consists of **\<Customer>** elements and **\<Order>** child elements:  
   
@@ -55,7 +55,7 @@ manager: "jhubbard"
 ...  
 ```  
   
- As XML Bulk Load reads the **\<Customer>** element, it generates a record for the Customertable. When it reads the **\</Customer>** end tag, XML Bulk Load inserts that record into the table in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. In the same way, when it reads the **\<Order>** element, XML Bulk Load generates a record for the Ordertable, and then inserts that record into the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] table upon reading the **\</Order>** end tag.  
+ As XML Bulk Load reads the **\<Customer>** element, it generates a record for the Customertable. When it reads the **\</Customer>** end tag, XML Bulk Load inserts that record into the table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In the same way, when it reads the **\<Order>** element, XML Bulk Load generates a record for the Ordertable, and then inserts that record into the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table upon reading the **\</Order>** end tag.  
   
 ## Transacted and Nontransacted XML Bulk Load Operations  
  XML Bulk Load can operate in either a transacted or a nontransacted mode. Performance is usually optimal if you are bulk loading in a nontransacted mode: that is, the Transaction property is set to FALSE) and either of the following conditions is true:  
@@ -69,7 +69,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  In nontransacted mode, XML Bulk Load uses a default internal transaction and commits it. When the Transaction property is set to TRUE, XML Bulk Load does not call commit on this transaction.  
   
- If the Transaction property is set to TRUE, XML Bulk Load creates temporary files, one for each table that is identified in the mapping schema. XML Bulk Load first stores the records from the source XML document in these temporary files. Then, a [!INCLUDE[tsql](../../../includes/tsql-md.md)] BULK INSERT statement retrieves these records from the files and stores them in the corresponding tables. You can specify the location for these temporary files by using the TempFilePath property. You must ensure that the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] account used with XML Bulk Load has access to this path. If the TempFilePath property is not specified, the default file path that is specified in the TEMP environment variable is used to create the temporary files.  
+ If the Transaction property is set to TRUE, XML Bulk Load creates temporary files, one for each table that is identified in the mapping schema. XML Bulk Load first stores the records from the source XML document in these temporary files. Then, a [!INCLUDE[tsql](../../includes/tsql-md.md)] BULK INSERT statement retrieves these records from the files and stores them in the corresponding tables. You can specify the location for these temporary files by using the TempFilePath property. You must ensure that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account used with XML Bulk Load has access to this path. If the TempFilePath property is not specified, the default file path that is specified in the TEMP environment variable is used to create the temporary files.  
   
  If the Transaction property is set to FALSE (the default setting), XML Bulk Load uses the OLE DB interface IRowsetFastLoad to bulk load the data.  
   

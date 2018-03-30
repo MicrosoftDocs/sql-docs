@@ -21,7 +21,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Ready to Install
-  The Ready to Install page provides a summary of features to be installed or changed by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup.  
+  The Ready to Install page provides a summary of features to be installed or changed by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup.  
   
 ## Options  
  You have the following options on this page:  

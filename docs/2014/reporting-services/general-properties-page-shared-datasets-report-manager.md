@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 10798e41-24c3-4e69-893b-7ee6af7fc958
 caps.latest.revision: 4
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # General Properties Page, Shared Datasets (Report Manager)

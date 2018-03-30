@@ -20,13 +20,13 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Installing Upgrade Advisor
-  Where you install SQL Server 2014 Upgrade Advisor depends on what you will be analyzing. Upgrade Advisor supports remote analysis of all [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] components except [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. If you are not scanning instances of [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], you can install Upgrade Advisor on any computer that can connect to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], and that meets the [Upgrade Advisor Prerequisites](../../../2014/sql-server/install/upgrade-advisor-prerequisites.md). If you are scanning instances of [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], you must install Upgrade Advisor on the report server.  
+  Where you install SQL Server 2014 Upgrade Advisor depends on what you will be analyzing. Upgrade Advisor supports remote analysis of all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components except [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. If you are not scanning instances of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], you can install Upgrade Advisor on any computer that can connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and that meets the [Upgrade Advisor Prerequisites](../../../2014/sql-server/install/upgrade-advisor-prerequisites.md). If you are scanning instances of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], you must install Upgrade Advisor on the report server.  
   
  Run the **SQLUA.msi** file to install Upgrade Advisor. You can install from the command prompt for unattended and automated installations. See [Installing Upgrade Advisor from the Command Prompt](../../../2014/sql-server/install/installing-upgrade-advisor-from-the-command-prompt.md) for syntax and examples.  
   
  Get SQLUA.msi:  
   
--   In the **redist** folder of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] product media.  
+-   In the **redist** folder of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] product media.  
   
 -   As part of the [SQL 2014 Feature Pack download](http://www.microsoft.com/download/details.aspx?id=42295).  
   

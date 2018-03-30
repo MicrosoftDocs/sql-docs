@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: aad2da1a-d7b1-4afa-a66a-1ff102e8306f
 caps.latest.revision: 9
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Lesson 7: Add Drillthrough Action on Parent Report

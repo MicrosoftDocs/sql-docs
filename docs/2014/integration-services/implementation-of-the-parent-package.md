@@ -20,10 +20,10 @@ manager: "jhubbard"
 # Implementation of the Parent Package
   When load balancing SSIS packages across various servers, the next step after the child packages have been created, deployed, and remote SQL Server Agent Jobs created to run them, is to create the parent package. The parent package will contain many Execute SQL Server Agent Job tasks, each task responsible for calling a different SQL Server Agent job that runs one of the child packages. The Execute SQL Server Agent Job tasks in the parent package in turn run the various SQL Server Agent jobs. Each task in the parent package contains information such as how to connect to the remote server and what job to run on that server. For more information, see [Execute SQL Server Agent Job Task](../../2014/integration-services/execute-sql-server-agent-job-task.md).  
   
- To identify the parent package that executes child packages, in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] right click the package in Solution Explorer and then click **Entry-point Package**.  
+ To identify the parent package that executes child packages, in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] right click the package in Solution Explorer and then click **Entry-point Package**.  
   
 ## Listing Child Packages  
- If you deploy your project that contains a parent package and child package(s) to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, you can view a list of the child packages that are executed by the parent package. When you run the parent package, an **Overview** report for the parent package is automatically generated in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. The report lists the child packages that were executed by the Execute Package task contained in the parent package, as shown in the following image.  
+ If you deploy your project that contains a parent package and child package(s) to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server, you can view a list of the child packages that are executed by the parent package. When you run the parent package, an **Overview** report for the parent package is automatically generated in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. The report lists the child packages that were executed by the Execute Package task contained in the parent package, as shown in the following image.  
   
  ![Overview Report with list of child packages](../../2014/integration-services/media/overviewreport-childpackagelisting.png "Overview Report with list of child packages")  
   
@@ -37,7 +37,7 @@ manager: "jhubbard"
  Failure in this scenario means only that there has been a failure in calling the remote SQL Server Agent Job task. One situation where this can occur is when the remote server is down and the agent does not respond. However, as long as the agent fires, the parent package has successfully completed its task.  
   
 > [!NOTE]  
->  You can use an Execute SQL Task that contains a Transact-SQL statement of **sp_start_job N'package_name'**. For more information, see [sp_start_job &#40;Transact-SQL&#41;](../Topic/sp_start_job%20\(Transact-SQL\).md).  
+>  You can use an Execute SQL Task that contains a Transact-SQL statement of **sp_start_job N'package_name'**. For more information, see [sp_start_job &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-start-job-transact-sql.md).  
   
 ## Debugging Environment  
  When testing the parent package, use the debugging environment of the designer by running it using Debug / Start Debugging (F5). Alternatively, you can use the command prompt utility, **dtexec**. For more information, see [dtexec Utility](../../2014/integration-services/dtexec-utility.md).  

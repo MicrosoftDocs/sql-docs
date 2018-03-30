@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: a8316a58-bb57-485e-845f-84c23360314c
 caps.latest.revision: 5
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Complete Transact-SQL Snippets
-  Once a [!INCLUDE[tsql](../../includes/tsql-md.md)] code snippet has been inserted into a script, you edit the contents of the snippet to build a complete [!INCLUDE[tsql](../../includes/tsql-md.md)] statement.  
+  Once a [!INCLUDE[tsql](../includes/tsql-md.md)] code snippet has been inserted into a script, you edit the contents of the snippet to build a complete [!INCLUDE[tsql](../includes/tsql-md.md)] statement.  
   
 ## Completing Snippets  
- When you add a [!INCLUDE[tsql](../../includes/tsql-md.md)] snippet to your script, the inserted snippet statement has one or more replacement points, which are highlighted. If you rest your mouse pointer on a replacement point, a tooltip appears with a description of the syntax element you can specify. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor recognizes the snippet as separate from the surrounding script until you close the source file. The replacement points remain active until you close the source file.  
+ When you add a [!INCLUDE[tsql](../includes/tsql-md.md)] snippet to your script, the inserted snippet statement has one or more replacement points, which are highlighted. If you rest your mouse pointer on a replacement point, a tooltip appears with a description of the syntax element you can specify. The [!INCLUDE[ssDE](../includes/ssde-md.md)] Query Editor recognizes the snippet as separate from the surrounding script until you close the source file. The replacement points remain active until you close the source file.  
   
  You can also add additional syntax elements to the template code inserted by a snippet. For example, the Create Table snippet template generates two column definitions; you must add additional column definitions to create a table with more than two columns.  
   

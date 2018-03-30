@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # DAC Support For SQL Server Objects and Versions
-  A data-tier application (DAC) supports the most commonly used [!INCLUDE[ssDE](../../includes/ssde-md.md)] objects.  
+  A data-tier application (DAC) supports the most commonly used [!INCLUDE[ssDE](../includes/ssde-md.md)] objects.  
   
  **In This Topic**  
   
@@ -32,7 +32,7 @@ manager: "jhubbard"
 -   [Additional Considerations for Deployment Actions](#Considerations)  
   
 ##  <a name="SupportedObjects"></a> Supported SQL Server Objects  
- Only supported objects can be specified in a data-tier application as it is being authored or edited. You cannot extract, register, or import a DAC from an existing database that contains objects that are not supported in a DAC. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supports the following objects in a DAC.  
+ Only supported objects can be specified in a data-tier application as it is being authored or edited. You cannot extract, register, or import a DAC from an existing database that contains objects that are not supported in a DAC. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] supports the following objects in a DAC.  
   
 |||  
 |-|-|  
@@ -53,29 +53,29 @@ manager: "jhubbard"
 |VIEW||  
   
 ##  <a name="SupportByVersion"></a> Data-tier Application Support by the Versions of SQL Server  
- The versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] have different levels of support for DAC operations. All of the DAC operations supported by a version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are supported by all editions of that version.  
+ The versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] have different levels of support for DAC operations. All of the DAC operations supported by a version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] are supported by all editions of that version.  
   
- Instances of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] support the following DAC operations:  
+ Instances of the [!INCLUDE[ssDE](../includes/ssde-md.md)] support the following DAC operations:  
   
--   Export and extract are supported on all supported versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Export and extract are supported on all supported versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
--   All operations are supported on [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and all versions of [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], and [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].  
+-   All operations are supported on [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] and all versions of [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], and [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)].  
   
--   All operations are supported on [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Service Pack 2 (SP2) or later, and [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4 or later.  
+-   All operations are supported on [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] Service Pack 2 (SP2) or later, and [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] SP4 or later.  
   
  The DAC Framework comprises the client-side tools for building and processing DAC packages and export files. The following products include the DAC Framework  
   
--   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] includes DAC Framework 3.0, which supports all DAC operations.  
+-   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] and [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] includes DAC Framework 3.0, which supports all DAC operations.  
   
--   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP1 and Visual Studio 2010 SP1 included DAC Framework 1.1, which supports all DAC operations except export and import.  
+-   [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] SP1 and Visual Studio 2010 SP1 included DAC Framework 1.1, which supports all DAC operations except export and import.  
   
--   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] and Visual Studio 2010 included DAC Framework 1.0, which supports all DAC operations except export, import, and in—place upgrade.  
+-   [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] and Visual Studio 2010 included DAC Framework 1.0, which supports all DAC operations except export, import, and in—place upgrade.  
   
 -   The client tools from earlier versions of SQL Server or Visual Studio do not support DAC operations.  
   
- A DAC package or export file built with one version of the DAC Framework cannot be processed by an earlier version of the DAC Framework. For example, a DAC package extracted using the [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] client tools cannot be deployed using the [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] client tools.  
+ A DAC package or export file built with one version of the DAC Framework cannot be processed by an earlier version of the DAC Framework. For example, a DAC package extracted using the [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] client tools cannot be deployed using the [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] client tools.  
   
- A DAC package or export file built with one version of the DAC Framework can be processed by any later version of the DAC Framework. For example, a DAC package extracted using the [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] client tools can be deployed using either the [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP1 or higher client tools.  
+ A DAC package or export file built with one version of the DAC Framework can be processed by any later version of the DAC Framework. For example, a DAC package extracted using the [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] client tools can be deployed using either the [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] SP1 or higher client tools.  
   
 ##  <a name="DeploymentLimitations"></a> Data Deployment Limitations  
  Note these fidelity limitations in the DAC Framework data deployment engine in SQL Server 2012 SP1. The limitations apply to the following DAC Framework actions: deploy or publish a .dacpac file, and import a .bacpac file.  

@@ -30,7 +30,7 @@ manager: "mblythe"
   Defines a derived data type that represents a COM library associated with a [Server](../../../2014/analysis-services/dev-guide/server-element-assl.md) or [Database](../../../2014/analysis-services/dev-guide/database-element-assl.md) element.  
   
 > [!IMPORTANT]  
->  COM assemblies might pose a security risk. Due to this risk and other considerations, COM assemblies were deprecated in [!INCLUDE[ssASversion10](../../../includes/ssasversion10-md.md)]. COM assemblies might not be supported in future releases.  
+>  COM assemblies might pose a security risk. Due to this risk and other considerations, COM assemblies were deprecated in [!INCLUDE[ssASversion10](../../includes/ssasversion10-md.md)]. COM assemblies might not be supported in future releases.  
   
 ## Syntax  
   
@@ -58,7 +58,7 @@ manager: "mblythe"
 |Derived elements|See [Assembly](../../../2014/analysis-services/dev-guide/assembly-element-assl.md) ([Assemblies](../../../2014/analysis-services/dev-guide/assemblies-element-assl.md) collection of [Database](../../../2014/analysis-services/dev-guide/database-element-assl.md) or [Server](../../../2014/analysis-services/dev-guide/server-element-assl.md))|  
   
 ## Remarks  
- The `ComAssembly` element contains a reference (either the fully qualified file name or the programmatic identifier) to a COM library associated with an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] or with a specific database on an instance of [!INCLUDE[ssAS](../../../includes/ssas-md.md)].  
+ The `ComAssembly` element contains a reference (either the fully qualified file name or the programmatic identifier) to a COM library associated with an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] or with a specific database on an instance of [!INCLUDE[ssAS](../../includes/ssas-md.md)].  
   
  The corresponding element in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.ComAssembly>.  
   

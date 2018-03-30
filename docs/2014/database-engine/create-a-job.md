@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Create a Job
-  This topic describes how to create a SQL Server Agent job in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or SQL Server Management Objects (SMO).  
+  This topic describes how to create a SQL Server Agent job in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../includes/tsql-md.md)], or SQL Server Management Objects (SMO).  
   
  To add job steps, schedules, alerts, and notifications that can be sent to operators, see the links to topics in the See Also section.  
   
@@ -41,11 +41,11 @@ manager: "jhubbard"
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
--   To create a job, a user must be a member of one of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent fixed database roles or the **sysadmin** fixed server role. A job can be edited only by its owner or members of the **sysadmin** role. For more information about the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent fixed database roles, see [SQL Server Agent Fixed Database Roles](../../2014/database-engine/sql-server-agent-fixed-database-roles.md).  
+-   To create a job, a user must be a member of one of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent fixed database roles or the **sysadmin** fixed server role. A job can be edited only by its owner or members of the **sysadmin** role. For more information about the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent fixed database roles, see [SQL Server Agent Fixed Database Roles](../../2014/database-engine/sql-server-agent-fixed-database-roles.md).  
   
 -   Assigning a job to another login does not guarantee that the new owner has sufficient permission to run the job successfully.  
   
--   Local jobs are cached by the local [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Therefore, any modifications implicitly force [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to re-cache the job. Because [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent does not cache the job until **sp_add_jobserver** is called, it is more efficient to call **sp_add_jobserver** last.  
+-   Local jobs are cached by the local [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent. Therefore, any modifications implicitly force [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent to re-cache the job. Because [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent does not cache the job until **sp_add_jobserver** is called, it is more efficient to call **sp_add_jobserver** last.  
   
 ###  <a name="Security"></a> Security  
   
@@ -54,7 +54,7 @@ manager: "jhubbard"
 -   For security reasons, only the job owner or a member of the **sysadmin** role can change the definition of the job. Only members of the **sysadmin** fixed server role can assign job ownership to other users, and they can run any job, regardless of the job owner.  
   
     > [!NOTE]  
-    >  If you change job ownership to a user who is not a member of the **sysadmin** fixed server role, and the job is executing job steps that require proxy accounts (for example, [!INCLUDE[ssIS](../../includes/ssis-md.md)] package execution), make sure that the user has access to that proxy account or else the job will fail.  
+    >  If you change job ownership to a user who is not a member of the **sysadmin** fixed server role, and the job is executing job steps that require proxy accounts (for example, [!INCLUDE[ssIS](../includes/ssis-md.md)] package execution), make sure that the user has access to that proxy account or else the job will fail.  
   
 ####  <a name="Permissions"></a> Permissions  
  For detailed information, see [Implement SQL Server Agent Security](../../2014/database-engine/implement-sql-server-agent-security.md).  
@@ -77,7 +77,7 @@ manager: "jhubbard"
   
 7.  On the **Alerts** page, organize the alerts for the job. For more information on the available options on this page, see [Job Properties: New Job &#40;Alerts Page&#41;](../../2014/database-engine/job-properties-new-job-alerts-page.md)  
   
-8.  On the **Notifications** page, set actions for [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to perform when the job completes. For more information on the available options on this page, see [Job Properties: New Job &#40;Notifications Page&#41;](../../2014/database-engine/job-properties-new-job-notifications-page.md).  
+8.  On the **Notifications** page, set actions for [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent to perform when the job completes. For more information on the available options on this page, see [Job Properties: New Job &#40;Notifications Page&#41;](../../2014/database-engine/job-properties-new-job-notifications-page.md).  
   
 9. On the **Targets** page, manage the target servers for the job. For more information on the available options on this page, see [Job Properties: New Job &#40;Targets Page&#41;](../../2014/database-engine/job-properties-new-job-targets-page.md).  
   
@@ -87,7 +87,7 @@ manager: "jhubbard"
   
 #### To create a SQL Server Agent job  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -124,15 +124,15 @@ manager: "jhubbard"
   
  For more information, see:  
   
--   [sp_add_job &#40;Transact-SQL&#41;](../Topic/sp_add_job%20\(Transact-SQL\).md)  
+-   [sp_add_job &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)  
   
--   [sp_add_jobstep &#40;Transact-SQL&#41;](../Topic/sp_add_jobstep%20\(Transact-SQL\).md)  
+-   [sp_add_jobstep &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)  
   
--   [sp_add_schedule &#40;Transact-SQL&#41;](../Topic/sp_add_schedule%20\(Transact-SQL\).md)  
+-   [sp_add_schedule &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)  
   
--   [sp_attach_schedule &#40;Transact-SQL&#41;](../Topic/sp_attach_schedule%20\(Transact-SQL\).md)  
+-   [sp_attach_schedule &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
   
--   [sp_add_jobserver &#40;Transact-SQL&#41;](../Topic/sp_add_jobserver%20\(Transact-SQL\).md)  
+-   [sp_add_jobserver &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)  
   
 ##  <a name="SMOProcedure"></a> Using SQL Server Management Objects  
  **To create a SQL Server Agent job**  

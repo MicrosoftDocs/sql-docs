@@ -27,7 +27,7 @@ manager: "jhubbard"
  Specify the name of the trace.  
   
  **Trace provider name**  
- Shows the name of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that will be traced. This field is populated automatically with the name of the server that you specified when you connected. To change the name of the trace provider, click **Cancel** to close the dialog box, and start a new trace.  
+ Shows the name of the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that will be traced. This field is populated automatically with the name of the server that you specified when you connected. To change the name of the trace provider, click **Cancel** to close the dialog box, and start a new trace.  
   
  **Trace provider type**  
  Shows the server type that is providing the trace. The trace definition file populates the **Trace provider type** field automatically. You cannot modify this field.  

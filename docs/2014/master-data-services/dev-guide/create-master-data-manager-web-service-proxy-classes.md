@@ -17,12 +17,12 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Create Master Data Manager Web Service Proxy Classes
-  The [!INCLUDE[ssMDSmdm](../../../includes/ssmdsmdm-md.md)] web service lets you make programmatic use of the features of [!INCLUDE[ssMDSshort](../../../includes/ssmdsshort-md.md)] from any computer that can access your [!INCLUDE[ssMDSmdm](../../../includes/ssmdsmdm-md.md)] web site. Before you can start writing code to access the web service, you must generate proxy classes. The main proxy class you use to perform web service operations is the <xref:Microsoft.MasterDataServices.ServiceClient> class, which implements the <xref:Microsoft.MasterDataServices.IService> interface.  
+  The [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web service lets you make programmatic use of the features of [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] from any computer that can access your [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web site. Before you can start writing code to access the web service, you must generate proxy classes. The main proxy class you use to perform web service operations is the <xref:Microsoft.MasterDataServices.ServiceClient> class, which implements the <xref:Microsoft.MasterDataServices.IService> interface.  
   
 ## Enable Web Service Metadata Publishing  
  Before you can generate proxy classes, you must enable web service metadata publishing. Follow these steps to do this:  
   
-1.  Open the [!INCLUDE[ssMDSshort](../../../includes/ssmdsshort-md.md)] Web.config file in a text editor. This file is in the WebApplication folder of the [!INCLUDE[ssMDSshort](../../../includes/ssmdsshort-md.md)] installation path.  
+1.  Open the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web.config file in a text editor. This file is in the WebApplication folder of the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] installation path.  
   
 2.  Find the `mdsWsHttpBehavior` section under **\<serviceBehaviors>**. For the **\<serviceMetadata>** element, set `httpGetEnabled` to `true`.  
   
@@ -35,10 +35,10 @@ manager: "jhubbard"
     “You have created a service.”  
   
 ## Creating Proxy Classes by Using Visual Studio  
- If you have Visual Studio 2010 installed, the simplest way to generate proxy classes is to add a **Service Reference** to your project. The address of the service reference is the URL of the [!INCLUDE[ssMDSmdm](../../../includes/ssmdsmdm-md.md)] web application, appended with /service/service.svc. For example: http://yourserver/MDS/service/service.svc. For more information, see [How to: Add, Update, or Remove a Service Reference](http://go.microsoft.com/fwlink/?LinkId=221167).  
+ If you have Visual Studio 2010 installed, the simplest way to generate proxy classes is to add a **Service Reference** to your project. The address of the service reference is the URL of the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application, appended with /service/service.svc. For example: http://yourserver/MDS/service/service.svc. For more information, see [How to: Add, Update, or Remove a Service Reference](http://go.microsoft.com/fwlink/?LinkId=221167).  
   
 ## Creating Proxy Classes by Using Svcutil.exe  
- You must have either [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] or the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows SDK installed in order to have Svcutil.exe on your computer. If you use [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], you must use the [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] command prompt to run the command. For more information, see [ServiceModel Metadata Utility Tool (Svcutil.exe)](http://go.microsoft.com/fwlink/?LinkId=165027) and [Generating a WCF Client from Service Metadata](http://go.microsoft.com/fwlink/?LinkId=164821).  
+ You must have either [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] or the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows SDK installed in order to have Svcutil.exe on your computer. If you use [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], you must use the [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] command prompt to run the command. For more information, see [ServiceModel Metadata Utility Tool (Svcutil.exe)](http://go.microsoft.com/fwlink/?LinkId=165027) and [Generating a WCF Client from Service Metadata](http://go.microsoft.com/fwlink/?LinkId=164821).  
   
  To create a set of C# proxy classes by using Svcutil.exe, use a command such as the following:  
   
@@ -51,9 +51,9 @@ svcutil.exe http://<server_name:port>/<virtual_path>/Service/Service.svc
   
  Where:  
   
--   *servername*:*port* are the computer name and port number of the computer that hosts [!INCLUDE[ssMDSmdm](../../../includes/ssmdsmdm-md.md)].  
+-   *servername*:*port* are the computer name and port number of the computer that hosts [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].  
   
--   *virtual_path* is the virtual path of [!INCLUDE[ssMDSmdm](../../../includes/ssmdsmdm-md.md)] in Internet Information Services (IIS).  
+-   *virtual_path* is the virtual path of [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] in Internet Information Services (IIS).  
   
 -   *proxy_name* is the name for the generated proxy file.  
   

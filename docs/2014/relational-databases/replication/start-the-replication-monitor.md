@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: e037bd27-cc87-4ee9-9e5f-83f6d717cfa4
 caps.latest.revision: 35
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Start the Replication Monitor
-  Replication Monitor can be started from [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] on any instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], or from the command prompt. After starting Replication Monitor, add one or more Publishers to monitor. For more information, see [Add and Remove Publishers from Replication Monitor](../../../2014/relational-databases/replication/add-and-remove-publishers-from-replication-monitor.md).  
+  Replication Monitor can be started from [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] on any instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or from the command prompt. After starting Replication Monitor, add one or more Publishers to monitor. For more information, see [Add and Remove Publishers from Replication Monitor](../../../2014/relational-databases/replication/add-and-remove-publishers-from-replication-monitor.md).  
   
 ### To start Replication Monitor from SQL Server Management Studio  
   
-1.  Connect to an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], and then expand the server node.  
+1.  Connect to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], and then expand the server node.  
   
 2.  Right-click the **Replication** folder or any of its subfolders, and then click **Launch Replication Monitor**.  
   
 ### To start Replication Monitor from the command prompt  
   
-1.  From the command prompt, navigate to the tools installation directory. The default path is [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]Tools\Binn\ .  
+1.  From the command prompt, navigate to the tools installation directory. The default path is [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\ .  
   
 2.  Run sqlmonitor.exe.  
   

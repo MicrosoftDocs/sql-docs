@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: a70656cb-21c9-4489-be77-ccd396747e3b
 caps.latest.revision: 27
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Subscriber Types
@@ -25,11 +25,11 @@ manager: "jhubbard"
 ## Options  
  Select each Subscriber type that this publication must support.  
   
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  The publication can use all features.  
   
- [!INCLUDE[ssEW](../../../includes/ssew-md.md)]  
- The publication requires snapshot files to be in character format (this is handled automatically by the Snapshot Agent). [!INCLUDE[ssEW](../../../includes/ssew-md.md)] also has a number of restrictions not related to compatibility level.  
+ [!INCLUDE[ssEW](../../includes/ssew-md.md)]  
+ The publication requires snapshot files to be in character format (this is handled automatically by the Snapshot Agent). [!INCLUDE[ssEW](../../includes/ssew-md.md)] also has a number of restrictions not related to compatibility level.  
   
  If this option is selected, the Web synchronization option is enabled for the publication. For more information about Web synchronization, see [Web Synchronization for Merge Replication](../../../2014/relational-databases/replication/web-synchronization-for-merge-replication.md).  
   

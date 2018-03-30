@@ -23,13 +23,13 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Reactivate a Member or Collection (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], you can reactivate a member that was either:  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], you can reactivate a member that was either:  
   
 -   Deactivated by the staging process.  
   
--   Deleted in the MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)].  
+-   Deleted in the MDS [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)].  
   
--   Deleted in the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application.  
+-   Deleted in the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] web application.  
   
  When you reactivate a member, its attributes and its membership in hierarchies and collections are restored.  
   
@@ -40,13 +40,13 @@ manager: "jhubbard"
 ## Prerequisites  
  To perform this procedure:  
   
--   In [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], you must have permission to the **Version Management** functional area.  
+-   In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], you must have permission to the **Version Management** functional area.  
   
 -   You must be a model administrator. For more information, see [Administrators &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md).  
   
 ### To reactivate a member or collection  
   
-1.  On the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] home page, click **Version Management**.  
+1.  On the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] home page, click **Version Management**.  
   
 2.  On the menu bar, click **Transactions**.  
   
@@ -61,7 +61,7 @@ manager: "jhubbard"
 7.  On the confirmation dialog box, click **OK**. A new transaction is added, showing **Active** in the **New Value** column.  
   
 ## See Also  
- [Deactivate or Delete Members by Using the Staging Process &#40;Master Data Services&#41;](../Topic/Deactivate%20or%20Delete%20Members%20by%20Using%20the%20Staging%20Process%20\(Master%20Data%20Services\).md)   
+ [Deactivate or Delete Members by Using the Staging Process &#40;Master Data Services&#41;](~/2014/master-data-services/add-update-and-delete-data-master-data-services.md)   
  [Delete a Member or Collection &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)   
  [Members &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)   
  [Collections &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  

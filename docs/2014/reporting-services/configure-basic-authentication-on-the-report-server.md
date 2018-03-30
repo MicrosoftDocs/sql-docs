@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
 caps.latest.revision: 25
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Configure Basic Authentication on the Report Server
@@ -84,7 +84,7 @@ manager: "mblythe"
   
 |Element|Required|Valid Values|  
 |-------------|--------------|------------------|  
-|LogonMethod|Yes<br /><br /> If you do not specify a value, 3 will be used.|`2` = Network logon, intended for high performance servers to authenticate plain text passwords.<br /><br /> `3` = Cleartext logon, which preserves logon credentials in the authentication package that is sent with each HTTP request, allowing the server to impersonate the user when connecting to other servers in the network. (Default)<br /><br /> Note: Values 0 (for interactive logon) and 1 (for batch logon) are not supported in [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].|  
+|LogonMethod|Yes<br /><br /> If you do not specify a value, 3 will be used.|`2` = Network logon, intended for high performance servers to authenticate plain text passwords.<br /><br /> `3` = Cleartext logon, which preserves logon credentials in the authentication package that is sent with each HTTP request, allowing the server to impersonate the user when connecting to other servers in the network. (Default)<br /><br /> Note: Values 0 (for interactive logon) and 1 (for batch logon) are not supported in [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)].|  
 |Realm|Optional|Specifies a resource partition that includes authorization and authentication features used to control access to protected resources in your organization.|  
 |DefaultDomain|Optional|Specifies the domain used by the server to authenticate the user. This value is optional, but if you omit it the report server will use the computer name as the domain. If the computer is a member of domain, that domain is the default domain. If you installed the report server on a domain controller, the domain used is the one controlled by the computer.|  
   

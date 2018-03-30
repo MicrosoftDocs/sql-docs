@@ -34,21 +34,21 @@ manager: "jhubbard"
   
  To create and run this project the following the following software must be installed:  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] or [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express. You can obtain [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express free of charge from the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express Documentation and Samples [Web site](http://go.microsoft.com/fwlink/?LinkId=31046)  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. You can obtain [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express free of charge from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [Web site](http://go.microsoft.com/fwlink/?LinkId=31046)  
   
--   The AdventureWorks database that is available at the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Developer [Web site](http://go.microsoft.com/fwlink/?linkid=62796)  
+-   The AdventureWorks database that is available at the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Developer [Web site](http://go.microsoft.com/fwlink/?linkid=62796)  
   
 -   .NET Framework SDK 2.0 or later or Microsoft Visual Studio 2005 or later. You can obtain .NET Framework SDK free of charge.  
   
 -   In addition, the following conditions must be met:  
   
--   The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance you are using must have CLR integration enabled.  
+-   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance you are using must have CLR integration enabled.  
   
 -   In order to enable CLR integration, perform the following steps:  
   
     #### Enabling CLR Integration  
   
-    -   Execute the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] commands:  
+    -   Execute the following [!INCLUDE[tsql](../../includes/tsql-md.md)] commands:  
   
      `sp_configure 'clr enabled', 1`  
   
@@ -61,9 +61,9 @@ manager: "jhubbard"
     > [!NOTE]  
     >  To enable CLR, you must have `ALTER SETTINGS` server level permission, which is implicitly held by members of the `sysadmin` and `serveradmin` fixed server roles.  
   
--   The AdventureWorks database must be installed on the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance you are using.  
+-   The AdventureWorks database must be installed on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance you are using.  
   
--   If you are not an administrator for the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance you are using, you must have an administrator grant you **CreateAssembly**  permission to complete the installation.  
+-   If you are not an administrator for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance you are using, you must have an administrator grant you **CreateAssembly**  permission to complete the installation.  
   
 ## Building the Sample  
   
@@ -141,13 +141,13 @@ manager: "jhubbard"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-16. Copy [!INCLUDE[tsql](../../../includes/tsql-md.md)] test command script into a file and save it as `test.sql` in the sample directory.  
+16. Copy [!INCLUDE[tsql](../../includes/tsql-md.md)] test command script into a file and save it as `test.sql` in the sample directory.  
   
 17. Execute the test script with the following command  
   
     -   `sqlcmd -E -I -i test.sql`  
   
-18. Copy the [!INCLUDE[tsql](../../../includes/tsql-md.md)] cleanup script into a file and save it as `cleanup.sql` in the sample directory.  
+18. Copy the [!INCLUDE[tsql](../../includes/tsql-md.md)] cleanup script into a file and save it as `cleanup.sql` in the sample directory.  
   
 19. Execute the script with the  following command  
   
@@ -264,7 +264,7 @@ al /t:lib /culture:ja /embed:Messages.ja.resources /out:ja\HelloWorldReady.resou
 al /t:lib /culture:"" /embed:Messages.resources /out:HelloWorldReady.resources.dll  
 ```  
   
- This is the [!INCLUDE[tsql](../../../includes/tsql-md.md)] installation script (`Install.sql`), which deploys the assemblies and creates the stored procedure within the database.  
+ This is the [!INCLUDE[tsql](../../includes/tsql-md.md)] installation script (`Install.sql`), which deploys the assemblies and creates the stored procedure within the database.  
   
 ```  
 USE AdventureWorks  
@@ -401,7 +401,7 @@ SELECT @GreetingJa AS OUTPUT_PARAMETER_JA;
 GO  
 ```  
   
- The following [!INCLUDE[tsql](../../../includes/tsql-md.md)] removes the assemblies and stored procedure from the database.  
+ The following [!INCLUDE[tsql](../../includes/tsql-md.md)] removes the assemblies and stored procedure from the database.  
   
 ```  
 USE AdventureWorks;  

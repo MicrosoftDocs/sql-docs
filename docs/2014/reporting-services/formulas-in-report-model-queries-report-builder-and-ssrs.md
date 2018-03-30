@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: fbf68c59-7afc-4afe-bfcd-40ce84629af0
 caps.latest.revision: 9
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Formulas in Report Model Queries (Report Builder and SSRS)
@@ -33,7 +33,7 @@ manager: "mblythe"
  After you define a formula, you can see the result in the query designer.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## References  
  A reference is a field name. This can be an existing field name within the entity, or a calculated field name that you have created and added to the Fields list. The reference tells Report Builder where to look for the values, or data, you want to use within a formula. You can refer to fields within your context entity and to fields in other entities within one formula or use the value from one field in several formulas.  

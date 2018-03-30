@@ -14,13 +14,13 @@ f1_keywords:
 ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
 caps.latest.revision: 16
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "erikre"
 ---
 # Server Properties (Advanced Page) - Reporting Services
   Use this page to set system properties on the report server. There are a number of ways to set system properties. This tool provides a graphical user interface so that you can set properties without having to write code.  
   
- To open this page, start [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connect to a report server instance, right-click the report server name, and select **Properties**. Click **Advanced** to open this page.  
+ To open this page, start [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], connect to a report server instance, right-click the report server name, and select **Properties**. Click **Advanced** to open this page.  
   
 ## Options  
  **EnableMyReports**  
@@ -45,7 +45,7 @@ manager: "erikre"
  This is a read-only property that indicates the server mode. If this value is False, the report server runs in native mode.  
   
  **SiteName**  
- The name of the report server site displayed in the page title of Report Manager. The default value is [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. This property can be an empty string. The maximum length is 8,000 characters.  
+ The name of the report server site displayed in the page title of Report Manager. The default value is [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. This property can be an empty string. The maximum length is 8,000 characters.  
   
  **StoredParametersLifetime**  
  Specifies the maximum number of days that a stored parameter can be stored. Valid values are `-1`, `+1` through `2,147,483,647`. The default value is `180` days.  

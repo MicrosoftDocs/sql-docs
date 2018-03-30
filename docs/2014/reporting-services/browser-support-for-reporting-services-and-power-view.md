@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
 caps.latest.revision: 99
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Planning for Reporting Services and Power View Browser Support (Reporting Services 2014)
-  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], you use a web browser to view reports and run Report Manager. Not all browsers support all report functionality. This topic describes the support and requirements for Report Manager management features, viewing reports, the Report Viewer controls in Visual Studio. The topic also summarizes feature availability for the supported browsers, authentication requirements, and script requirements.  
+  In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], you use a web browser to view reports and run Report Manager. Not all browsers support all report functionality. This topic describes the support and requirements for Report Manager management features, viewing reports, the Report Viewer controls in Visual Studio. The topic also summarizes feature availability for the supported browsers, authentication requirements, and script requirements.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode  
+ **[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint mode | [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Native mode  
   
  **In this Topic:**  
   
@@ -42,15 +42,15 @@ manager: "mblythe"
 -   [Browser Support for ReportViewer Web Server Controls in Visual Studio](#bkmk_controls)  
   
 ##  <a name="bkmk_powerview"></a> Power View Browser Scenarios  
- The list of supported browsers and browser versions that [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] supports, depends on what type of document is opened. Excel 2013 workbooks and “**.rdlx**” files utilize different components.  
+ The list of supported browsers and browser versions that [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] supports, depends on what type of document is opened. Excel 2013 workbooks and “**.rdlx**” files utilize different components.  
   
 |Document Type|Environment|Browser support|  
 |-------------------|-----------------|---------------------|  
-|Power View report (.RDLX)|**SharePoint Server:** [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] on [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint integrated mode and the Power View web application.|See [Power View on SharePoint Server and Reporting Services SharePoint Integrated Mode](#bkmk_powerview_on_SSRS).|  
-|Excel 2013 workbook with Power View sheets|**SharePoint Server:** [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] in Excel Services.<br /><br /> **SharePoint Online (Office 365):** [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] on Excel Web App.|See [Power View on Excel Services or the Excel Web App on SharePoint Online](#bkmk_powerview_on_ExcelServices).|  
+|Power View report (.RDLX)|**SharePoint Server:** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] on [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint integrated mode and the Power View web application.|See [Power View on SharePoint Server and Reporting Services SharePoint Integrated Mode](#bkmk_powerview_on_SSRS).|  
+|Excel 2013 workbook with Power View sheets|**SharePoint Server:** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] in Excel Services.<br /><br /> **SharePoint Online (Office 365):** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] on Excel Web App.|See [Power View on Excel Services or the Excel Web App on SharePoint Online](#bkmk_powerview_on_ExcelServices).|  
   
 ###  <a name="bkmk_powerview_on_SSRS"></a> Power View on SharePoint Server and Reporting Services SharePoint Integrated Mode  
- The following table summarizes the supported browser versions for [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] when a user opens a Power View report (.RDLX) on a SharePoint farm that has a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application and the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] add-in for SharePoint installed and configured.  
+ The following table summarizes the supported browser versions for [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] when a user opens a Power View report (.RDLX) on a SharePoint farm that has a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service application and the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] add-in for SharePoint installed and configured.  
   
 -   The table applies to SharePoint 2010 and SharePoint 2013.  
   
@@ -71,10 +71,10 @@ manager: "mblythe"
 >  "32-bit" refers to the browser, not the operating system. You can use 32-bit Internet Explorer 9 on 64-bit Windows 7, for example.  
   
 #### InPrivate browsing feature in Internet Explorer  
- [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] does not support the InPrivate browsing feature in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 8 and Internet Explorer 9. For more information about InPrivate browsing, see [What is InPrivate Browsing?](http://windows.microsoft.com/Windows7/What-is-InPrivate-Browsing) (http://windows.microsoft.com/Windows7/What-is-InPrivate-Browsing).  
+ [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] does not support the InPrivate browsing feature in [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 8 and Internet Explorer 9. For more information about InPrivate browsing, see [What is InPrivate Browsing?](http://windows.microsoft.com/Windows7/What-is-InPrivate-Browsing) (http://windows.microsoft.com/Windows7/What-is-InPrivate-Browsing).  
   
 ###  <a name="bkmk_powerview_on_ExcelServices"></a> Power View on Excel Services or the Excel Web App on SharePoint Online  
- The following table summarizes the supported browser versions for [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] when a user opens an Excel 2013 workbook with Power View sheets on a SharePoint Server that is running Excel Services:  
+ The following table summarizes the supported browser versions for [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] when a user opens an Excel 2013 workbook with Power View sheets on a SharePoint Server that is running Excel Services:  
   
 -   For more information on the SharePoint 2013 browser support, see [Plan browser support in SharePoint 2013](http://technet.microsoft.com/library/cc263526\(office.15\).aspx) (http://technet.microsoft.com/library/cc263526(office.15).aspx).  
   
@@ -91,7 +91,7 @@ manager: "mblythe"
  **(\*)** Chrome will stop supporting the Netscape Plug-in API (NPAPI), used by Silverlight. Power View is dependent on Silverlight.  For more information, see [The Final Countdown for NPAPI](http://blog.chromium.org/2014/11/the-final-countdown-for-npapi.html).  
   
 ##  <a name="bkmk_reportmanager"></a> Report Manager Browser Requirements (Native mode)  
- The following is the current list of supported browsers you can use to run the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] native mode Report Manager to manage reports and the report server.  
+ The following is the current list of supported browsers you can use to run the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] native mode Report Manager to manage reports and the report server.  
   
 |Browser|  
 |-------------|  
@@ -101,7 +101,7 @@ manager: "mblythe"
 |Google Chrome (latest publically released version)|  
   
 ##  <a name="bkmk_reportviewer"></a> Browser Requirements for Viewing Reports  
- The following is the current list of browsers and features supported with the report viewer. The report viewer supports viewing reports from [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report manager and SharePoint libraries.  
+ The following is the current list of browsers and features supported with the report viewer. The report viewer supports viewing reports from [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report manager and SharePoint libraries.  
   
 |**Browser**|**Windows 8 and 8.1**|**Windows 7**|**Windows Server 2012 and 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 – 10.9**|**iOS 6 -7 for iPad**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|----------------------------|  
@@ -122,7 +122,7 @@ manager: "mblythe"
   
 -   For more information, see [View Reporting Services Reports on Microsoft Surface Devices and  Apple iOS Devices](../../2014/reporting-services/view-reporting-services-reports-surface-ios-devices.md).  
   
- **Note** If you are accessing a report server from a Macintosh computer, we recommend that you use Safari. If you are using a SharePoint product that is integrated with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], see [Plan browser support (Windows SharePoint Services)](http://go.microsoft.com/fwlink/?LinkId=183583).  
+ **Note** If you are accessing a report server from a Macintosh computer, we recommend that you use Safari. If you are using a SharePoint product that is integrated with [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], see [Plan browser support (Windows SharePoint Services)](http://go.microsoft.com/fwlink/?LinkId=183583).  
   
 ### URL Access for Viewing Reports  
  To view reports directly, rather than viewing them through Report Manager, you can use URL Access to link to the report and the report viewer. URL access supports a variety of browsers.  

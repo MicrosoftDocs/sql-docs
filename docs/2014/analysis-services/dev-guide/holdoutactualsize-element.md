@@ -52,12 +52,12 @@ manager: "mblythe"
 |Child elements|None|  
   
 ## Remarks  
- The value for `HoldoutActualSize` depends on the source data, and on the values for [HoldoutMaxCases](../../../2014/analysis-services/dev-guide/holdoutmaxcases-element.md), [HoldoutMaxPercent](../../../2014/analysis-services/dev-guide/holdoutmaxpercent-element.md), and [HoldoutSeed](../../../2014/analysis-services/dev-guide/holdoutseed-element.md). Therefore, the value for `HoldoutActualSize` is not available until after [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] processes the mining structure.  
+ The value for `HoldoutActualSize` depends on the source data, and on the values for [HoldoutMaxCases](../../../2014/analysis-services/dev-guide/holdoutmaxcases-element.md), [HoldoutMaxPercent](../../../2014/analysis-services/dev-guide/holdoutmaxpercent-element.md), and [HoldoutSeed](../../../2014/analysis-services/dev-guide/holdoutseed-element.md). Therefore, the value for `HoldoutActualSize` is not available until after [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] processes the mining structure.  
   
  The element that corresponds to the parent of `HoldoutActualSize` in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.MiningStructure>.  
   
 > [!NOTE]  
->  In [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] did not support the use of holdout partitions on a mining structure. Therefore, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Scripting Language (ASSL) statements that contain one of the holdout parameters, `HoldoutMaxCases`, `HoldoutMaxPercent`, `HoldoutSeed`, or `HoldoutActualSize`, cannot be used in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. If you use one of these holdout parameters in an ASSL statement in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] will return an error.  
+>  In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] did not support the use of holdout partitions on a mining structure. Therefore, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripting Language (ASSL) statements that contain one of the holdout parameters, `HoldoutMaxCases`, `HoldoutMaxPercent`, `HoldoutSeed`, or `HoldoutActualSize`, cannot be used in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. If you use one of these holdout parameters in an ASSL statement in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] will return an error.  
   
 ## See Also  
  [Properties &#40;ASSL&#41;](../../../2014/analysis-services/dev-guide/properties-assl.md)   

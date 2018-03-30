@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 caps.latest.revision: 13
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Create a Document Map (Report Builder and SSRS)
@@ -23,7 +23,7 @@ manager: "mblythe"
  You can also create a URL to a report that overrides the display of the document map, so that you can run the report without displaying the document map, and then click the **Show/Hide Document Map** button on the report viewer toolbar to toggle the display.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ##  <a name="DocMapRenderExtensions"></a> Document Maps and Rendering Extensions  
  The document map is intended for use in the HTML rendering extension—for example, in Preview and the Report Viewer. Other rendering extensions have different ways of articulating a document map:  
@@ -68,7 +68,7 @@ manager: "mblythe"
   
 4.  In the **Document map** list box, type or select an expression that matches the group expression.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 6.  Repeat steps 1-4 for every group that you want to appear in the document map.  
   
@@ -81,7 +81,7 @@ manager: "mblythe"
   
 1.  In Report Manager, browse to the report that has the document map.  
   
-     For example, for the [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] sample reports, the following URL specifies the report named Product Catalog.  
+     For example, for the [!INCLUDE[ssSampleDBUserInputNonLocal](../includes/sssampledbuserinputnonlocal-md.md)] sample reports, the following URL specifies the report named Product Catalog.  
   
     ```  
     http://localhost/Reports/Pages/Report.aspx?ItemPath=%2fAdventureWorks2012+Sample+Reports%2fProduct+Catalog  
@@ -110,7 +110,7 @@ manager: "mblythe"
 4.  Paste the URL in Report Manager, and then press ENTER. The report runs, and the document map is hidden.  
   
 > [!NOTE]  
->  For more information about downloading sample reports, see [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][Report Builder and Report Designer sample reports](http://go.microsoft.com/fwlink/?LinkId=198283).  
+>  For more information about downloading sample reports, see [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][Report Builder and Report Designer sample reports](http://go.microsoft.com/fwlink/?LinkId=198283).  
 >   
 >  For more information, see "URL Access" in the [Reporting Services documentation](http://go.microsoft.com/fwlink/?linkid=121312) in SQL Server Books Online.  
   

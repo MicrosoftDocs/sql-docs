@@ -43,7 +43,7 @@ manager: "mblythe"
 ### Example of Retrieving Data from the XmlReader  
  The following example runs a command and retrieves the data as an `XmlReader`, outputting the contents of the file to the console.  
   
- [!code-csharp[Adomd.NetClient#OutputDataWithXML](../../../snippets/csharp/SQL14/adomd.net/adomd.netclient/cs/adomdexample.cs#outputdatawithxml)]  
+ [!code-csharp[Adomd.NetClient#OutputDataWithXML](../../snippets/csharp/SQL14/adomd.net/adomd.netclient/cs/adomdexample.cs#outputdatawithxml)]  
   
 ## See Also  
  [Retrieving Data from an Analytical Data Source](../../../2014/analysis-services/dev-guide/retrieving-data-from-an-analytical-data-source.md)   

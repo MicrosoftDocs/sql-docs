@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: dbb94fdf-c85b-477b-8e84-f830d259bade
 caps.latest.revision: 19
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Deleting Database Objects
@@ -45,7 +45,7 @@ manager: "jhubbard"
   
     ```  
   
-4.  Use the `DROP` statement to remove permission for `Mary` to access this instance of [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]:  
+4.  Use the `DROP` statement to remove permission for `Mary` to access this instance of [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]:  
   
     ```  
     DROP LOGIN [<computer_name>\Mary];  
@@ -95,19 +95,19 @@ manager: "jhubbard"
   
     ```  
   
- This concludes the Writing [!INCLUDE[tsql](../../includes/tsql-md.md)] Statements tutorial. Remember, this tutorial is a brief overview and it does not describe all the options to the statements that are used. Designing and creating an efficient database structure and configuring secure access to the data requires a more complex database than that shown in this tutorial.  
+ This concludes the Writing [!INCLUDE[tsql](../includes/tsql-md.md)] Statements tutorial. Remember, this tutorial is a brief overview and it does not describe all the options to the statements that are used. Designing and creating an efficient database structure and configuring secure access to the data requires a more complex database than that shown in this tutorial.  
   
 ## Return to SQL Server Tools Portal  
  [Tutorial: Writing Transact-SQL Statements](../../2014/tutorials/tutorial-writing-transact-sql-statements.md)  
   
 ## See Also  
- [REVOKE &#40;Transact-SQL&#41;](../Topic/REVOKE%20\(Transact-SQL\).md)   
- [DROP USER &#40;Transact-SQL&#41;](../Topic/DROP%20USER%20\(Transact-SQL\).md)   
- [DROP LOGIN &#40;Transact-SQL&#41;](../Topic/DROP%20LOGIN%20\(Transact-SQL\).md)   
- [DROP PROCEDURE &#40;Transact-SQL&#41;](../Topic/DROP%20PROCEDURE%20\(Transact-SQL\).md)   
- [DROP VIEW &#40;Transact-SQL&#41;](../Topic/DROP%20VIEW%20\(Transact-SQL\).md)   
- [DELETE &#40;Transact-SQL&#41;](../Topic/DELETE%20\(Transact-SQL\).md)   
- [DROP TABLE &#40;Transact-SQL&#41;](../Topic/DROP%20TABLE%20\(Transact-SQL\).md)   
- [DROP DATABASE &#40;Transact-SQL&#41;](../Topic/DROP%20DATABASE%20\(Transact-SQL\).md)  
+ [REVOKE &#40;Transact-SQL&#41;](~/t-sql/statements/revoke-transact-sql.md)   
+ [DROP USER &#40;Transact-SQL&#41;](~/t-sql/statements/drop-user-transact-sql.md)   
+ [DROP LOGIN &#40;Transact-SQL&#41;](~/t-sql/statements/drop-login-transact-sql.md)   
+ [DROP PROCEDURE &#40;Transact-SQL&#41;](~/t-sql/statements/drop-procedure-transact-sql.md)   
+ [DROP VIEW &#40;Transact-SQL&#41;](~/t-sql/statements/drop-view-transact-sql.md)   
+ [DELETE &#40;Transact-SQL&#41;](~/t-sql/statements/delete-transact-sql.md)   
+ [DROP TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/drop-table-transact-sql.md)   
+ [DROP DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/drop-database-audit-specification-transact-sql.md)  
   
   

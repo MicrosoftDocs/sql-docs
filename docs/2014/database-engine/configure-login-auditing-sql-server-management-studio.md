@@ -16,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: 16961116-57ac-4eef-8037-791b26ade548
 caps.latest.revision: 20
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Configure Login Auditing (SQL Server Management Studio)
-  This topic describes how to configure login auditing in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] to monitor [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] login activity. Login auditing can be configured to write to the error log on the following events.  
+  This topic describes how to configure login auditing in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] to monitor [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] login activity. Login auditing can be configured to write to the error log on the following events.  
   
 -   Failed logins  
   
@@ -28,13 +28,13 @@ manager: "jhubbard"
   
 -   Both failed and successful logins  
   
- You must restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] before this option will take effect.  
+ You must restart [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] before this option will take effect.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   
 #### To configure login auditing  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] with Object Explorer.  
+1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], connect to an instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] with Object Explorer.  
   
 2.  In Object Explorer, right-click the server name, and then click **Properties**.  
   

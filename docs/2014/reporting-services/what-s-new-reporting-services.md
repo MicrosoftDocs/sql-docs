@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: bc909063-6b84-4b3a-80d2-e93fc04b4b9d
 caps.latest.revision: 143
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # What&#39;s New (Reporting Services)
@@ -25,11 +25,11 @@ manager: "mblythe"
   
 ||  
 |-|  
-|The [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] release of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] adds support for the Google Chrome browser. For more information on supported browsers, see [Planning for Reporting Services and Power View Browser Support &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).|  
+|The [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] release of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] adds support for the Google Chrome browser. For more information on supported browsers, see [Planning for Reporting Services and Power View Browser Support &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).|  
   
- For information about other [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] products and technologies, see [What's New in SQL Server 2014](../../2014/getting-started/what-s-new-in-sql-server-2014.md).  
+ For information about other [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] products and technologies, see [What's New in SQL Server 2014](../../2014/getting-started/what-s-new-in-sql-server-2014.md).  
   
- For more information on changes related to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Business Intelligence, see [What's New in Analysis Services and Business Intelligence](../../2014/analysis-services/what-s-new-in-analysis-services-and-business-intelligence.md).  
+ For more information on changes related to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Business Intelligence, see [What's New in Analysis Services and Business Intelligence](../../2014/analysis-services/what-s-new-in-analysis-services-and-business-intelligence.md).  
   
 ## See Also  
  [Reporting Services Backward Compatibility](../../2014/reporting-services/reporting-services-backward-compatibility.md)   

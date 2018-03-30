@@ -25,9 +25,9 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # XML for Analysis Schema Rowsets
-  The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) provider includes schema rowsets that return metadata about server state, activity, and objects. Retrieving metadata is necessary if you are developing a client application that connects to an Analysis Services model whose structure and characteristics are variable.  
+  The [!INCLUDE[msCoName](../../includes/msconame-md.md)] XML for Analysis (XMLA) provider includes schema rowsets that return metadata about server state, activity, and objects. Retrieving metadata is necessary if you are developing a client application that connects to an Analysis Services model whose structure and characteristics are variable.  
   
- Schema rowsets also provide insight into internal processes and operations that can help you monitor the server and troubleshoot problems. To better support ad hoc administrative tasks, you can run a Dynamic Management View (DMV) query against most schema rowsets. DMV queries return results in a readable, tabular format that you can view in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
+ Schema rowsets also provide insight into internal processes and operations that can help you monitor the server and troubleshoot problems. To better support ad hoc administrative tasks, you can run a Dynamic Management View (DMV) query against most schema rowsets. DMV queries return results in a readable, tabular format that you can view in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
  The following table lists and describes each XMLA schema rowset, and identifies whether it returns information specific to tabular data models.  
   
@@ -69,7 +69,7 @@ manager: "mblythe"
 |[DISCOVER_TRANSACTIONS Rowset](../../../2014/analysis-services/dev-guide/discover-transactions-rowset.md)|Returns the current set of pending transactions on the system.|  
 |[DISCOVER_XML_METADATA Rowset](../../../2014/analysis-services/dev-guide/discover-xml-metadata-rowset.md)|Returns an XML document describing a requested object.|  
   
- <sup>1</sup> All the schema rowsets listed here are supported by the MSOLAP data source provider for the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XMLA Provider.  
+ <sup>1</sup> All the schema rowsets listed here are supported by the MSOLAP data source provider for the [!INCLUDE[msCoName](../../includes/msconame-md.md)] XMLA Provider.  
   
 ## See Also  
  [Developing with XMLA in Analysis Services](../../../2014/analysis-services/dev-guide/developing-with-xmla-in-analysis-services.md)   

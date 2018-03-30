@@ -29,7 +29,7 @@ ms.author: "mblythe"
 manager: "mblythe"
 ---
 # ObjectDefinition Element (XMLA)
-  Contains one or more Analysis Services Scripting Language (ASSL) elements, used to create or alter objects on an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+  Contains one or more Analysis Services Scripting Language (ASSL) elements, used to create or alter objects on an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ## Syntax  
   
@@ -57,12 +57,12 @@ manager: "mblythe"
 |Relationship|Element|  
 |------------------|-------------|  
 |Parent elements|[Alter](../../../2014/analysis-services/dev-guide/alter-element-xmla.md), [Create](../../../2014/analysis-services/dev-guide/create-element-xmla.md)|  
-|Child elements|Required ASSL elements. One or more ASSL elements, used to define [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objects. For more information about ASSL, see [Properties &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/properties-xmla.md).|  
+|Child elements|Required ASSL elements. One or more ASSL elements, used to define [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects. For more information about ASSL, see [Properties &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/properties-xmla.md).|  
   
 ## Remarks  
   
 ## Example  
- The following example creates an empty database named `Test Database` on an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance.  
+ The following example creates an empty database named `Test Database` on an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance.  
   
 ```  
   

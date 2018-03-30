@@ -30,7 +30,7 @@ manager: "jhubbard"
  The Sort transformation includes a set of comparison options to define how the transformation handles the string data in a column. For more information, see [Comparing String Data](../../2014/integration-services/comparing-string-data.md).  
   
 > [!NOTE]  
->  The Sort transformation does not sort GUIDs in the same order as the ORDER BY clause does in Transact-SQL. While the Sort transformation sorts GUIDs that start with 0-9 before GUIDs that start with A-F, the ORDER BY clause, as implemented in the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], sorts them differently. For more information, see [ORDER BY Clause &#40;Transact-SQL&#41;](../Topic/ORDER%20BY%20Clause%20\(Transact-SQL\).md).  
+>  The Sort transformation does not sort GUIDs in the same order as the ORDER BY clause does in Transact-SQL. While the Sort transformation sorts GUIDs that start with 0-9 before GUIDs that start with A-F, the ORDER BY clause, as implemented in the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], sorts them differently. For more information, see [ORDER BY Clause &#40;Transact-SQL&#41;](~/t-sql/queries/select-order-by-clause-transact-sql.md).  
   
  The Sort transformation can also remove duplicate rows as part of its sort. Duplicate rows are rows with the same sort key values. The sort key value is generated based on the string comparison options being used, which means that different literal strings may have the same sort key values. The transformation identifies rows in the input columns that have different values but the same sort key as duplicates.  
   
@@ -39,7 +39,7 @@ manager: "jhubbard"
  This transformation has one input and one output. It does not support error outputs.  
   
 ## Configuration of the Sort Transformation  
- You can set properties through the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through the [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer or programmatically.  
   
  For information about the properties that you can set in the **Sort Transformation Editor** dialog box, see [Sort Transformation Editor](../../2014/integration-services/sort-transformation-editor.md).  
   

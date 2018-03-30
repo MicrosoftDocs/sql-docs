@@ -20,14 +20,14 @@ ms.author: "jroth"
 manager: "jhubbard"
 ---
 # Specify Replicas Page (New Availability Group Wizard: Add Replica Wizard)
-  This topic describes the options of the **Specify Replicas** page. This page applies to the [!INCLUDE[ssAoNewAgWiz](../../includes/ssaonewagwiz-md.md)] and the [!INCLUDE[ssAoAddRepWiz](../../includes/ssaoaddrepwiz-md.md)] of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Use the **Specify Replicas** page to specify and configure one or more availability replicas to add the availability group. This page contains four tabs, which are introduced in the following table. Click the name of a tab in the table to go to the corresponding section, later in this topic.  
+  This topic describes the options of the **Specify Replicas** page. This page applies to the [!INCLUDE[ssAoNewAgWiz](../includes/ssaonewagwiz-md.md)] and the [!INCLUDE[ssAoAddRepWiz](../includes/ssaoaddrepwiz-md.md)] of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Use the **Specify Replicas** page to specify and configure one or more availability replicas to add the availability group. This page contains four tabs, which are introduced in the following table. Click the name of a tab in the table to go to the corresponding section, later in this topic.  
   
 |Tab|Brief Description|  
 |---------|-----------------------|  
-|[Replicas](#ReplicasTab)|Use this tab to specify each instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that will host or currently hosts a secondary replica. Note that the server instance to which you are currently connected must host the primary replica.<br /><br /> Tip: Finish specifying all the replicas on the **Replicas** tab before starting the other tabs.|  
+|[Replicas](#ReplicasTab)|Use this tab to specify each instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that will host or currently hosts a secondary replica. Note that the server instance to which you are currently connected must host the primary replica.<br /><br /> Tip: Finish specifying all the replicas on the **Replicas** tab before starting the other tabs.|  
 |[Endpoints](#EndpointsTab)|Use this tab to verify any existing database mirroring endpoints and also, if this endpoint is lacking on a server instance whose service accounts use Windows Authentication, to create the endpoint automatically.|  
 |[Backup Preferences](#BackupPreferencesTab)|Use this tab to specify your backup preference for the availability group as a whole and your backup priorities for the individual availability replicas.|  
-|[Listener](#Listener)|Use this tab, if available, to create an availability group listener. By default, a listener is not created.<br /><br /> Note: This tab is available only if you are running the [!INCLUDE[ssAoNewAgWiz](../../includes/ssaonewagwiz-md.md)].|  
+|[Listener](#Listener)|Use this tab, if available, to create an availability group listener. By default, a listener is not created.<br /><br /> Note: This tab is available only if you are running the [!INCLUDE[ssAoNewAgWiz](../includes/ssaonewagwiz-md.md)].|  
   
 ##  <a name="ReplicasTab"></a> Replicas Tab  
  **Server Instance**  
@@ -88,9 +88,9 @@ manager: "jhubbard"
  Indicates whether data sent over this endpoint is encrypted. For a proposed new endpoint, you can change this setting.  
   
  **SQL Server Service Account**  
- Username of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account.  
+ Username of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] service account.  
   
- For a server instance to use an endpoint that uses Windows Authentication, its [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account must be a domain account.  
+ For a server instance to use an endpoint that uses Windows Authentication, its [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] service account must be a domain account.  
   
  This requirement determines your next configuration step, as follows:  
   
@@ -98,9 +98,9 @@ manager: "jhubbard"
   
 -   If any server instance is running under a non-domain service account, you need to do make a manual change to your server instance before you can proceed in the wizard. In this case, clicking **Next** brings up a warning dialog box; you should click **No**, which returns you to the**Endpoints** tab. While leaving the wizard on the **Specify Replicas** page, make one of the following changes to each server instance for which the **SQL Server Service Account** column displays a nondomain service account, either:  
   
-    -   Use the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager to change the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account to a domain account. For more information, see [Change the Service Startup Account for SQL Server &#40;SQL Server Configuration Manager&#41;](../../2014/database-engine/scm-services-change-the-service-startup-account.md).  
+    -   Use the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager to change the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] service account to a domain account. For more information, see [Change the Service Startup Account for SQL Server &#40;SQL Server Configuration Manager&#41;](../../2014/database-engine/scm-services-change-the-service-startup-account.md).  
   
-    -   Use [!INCLUDE[tsql](../../includes/tsql-md.md)] or PowerShell to manually create a database mirroring endpoint that uses a certificate. For more information, see [CREATE ENDPOINT &#40;Transact-SQL&#41;](../Topic/CREATE%20ENDPOINT%20\(Transact-SQL\).md) or [Create a Database Mirroring Endpoint for AlwaysOn Availability Groups &#40;SQL Server PowerShell&#41;](../../2014/database-engine/database-mirroring-always-on-availability-groups-powershell.md).  
+    -   Use [!INCLUDE[tsql](../includes/tsql-md.md)] or PowerShell to manually create a database mirroring endpoint that uses a certificate. For more information, see [CREATE ENDPOINT &#40;Transact-SQL&#41;](~/t-sql/statements/create-endpoint-transact-sql.md) or [Create a Database Mirroring Endpoint for AlwaysOn Availability Groups &#40;SQL Server PowerShell&#41;](../../2014/database-engine/database-mirroring-always-on-availability-groups-powershell.md).  
   
      If you leave the **Specify Availability Replicas** page open while you configure endpoints, return to the **Endpoints** tab and click **Refresh** to update the **Endpoint values** grid.  
   
@@ -126,7 +126,7 @@ manager: "jhubbard"
  Use the **Replica backup priorities** grid to specify your backup priorities for each of replicas of the availability group. This grid contains the following columns:  
   
  **Server Instance**  
- Displays the name of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that hosts the availability replica.  
+ Displays the name of the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that hosts the availability replica.  
   
  **Backup Priority (Lowest=1, Highest=100)**  
  Assign the priority for backups being performed on this replica relative to the other replicas in the same availability group. The default value is 50. You can select any other integer in the range of 0..100. 1 indicates the lowest priority, and 100 indicates the highest priority. If you set **Backup Priority** to 1, the availability replica will be choosen for performing backups only if no higher priority availability replica is currently available.  
@@ -202,13 +202,13 @@ manager: "jhubbard"
   
 -   [Use Certificates for a Database Mirroring Endpoint &#40;Transact-SQL&#41;](../../2014/database-engine/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
--   [CREATE ENDPOINT &#40;Transact-SQL&#41;](../Topic/CREATE%20ENDPOINT%20\(Transact-SQL\).md)  
+-   [CREATE ENDPOINT &#40;Transact-SQL&#41;](~/t-sql/statements/create-endpoint-transact-sql.md)  
   
 -   [Create a Database Mirroring Endpoint for AlwaysOn Availability Groups &#40;SQL Server PowerShell&#41;](../../2014/database-engine/database-mirroring-always-on-availability-groups-powershell.md)  
   
 ## See Also  
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/overview-of-alwayson-availability-groups-sql-server.md)   
- [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../Topic/CREATE%20AVAILABILITY%20GROUP%20\(Transact-SQL\).md)   
+ [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](~/t-sql/statements/create-availability-group-transact-sql.md)   
  [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/prereqs-restrictions-recommendations-always-on-availability.md)  
   
   

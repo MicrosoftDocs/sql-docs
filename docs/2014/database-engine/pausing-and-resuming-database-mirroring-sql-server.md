@@ -66,7 +66,7 @@ manager: "jhubbard"
 -   [Remove Database Mirroring &#40;SQL Server&#41;](../../2014/database-engine/remove-database-mirroring-sql-server.md)  
   
 ## See Also  
- [ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20\(Transact-SQL\).md)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)   
  [Database Mirroring &#40;SQL Server&#41;](../../2014/database-engine/database-mirroring-sql-server.md)   
  [Removing Database Mirroring &#40;SQL Server&#41;](../../2014/database-engine/removing-database-mirroring-sql-server.md)  
   

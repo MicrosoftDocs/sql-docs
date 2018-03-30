@@ -22,7 +22,7 @@ manager: "mblythe"
   
 ## Options  
  **Model Name**  
- Select the OLAP mining model on which the data mining dimension will be based from a list of OLAP mining models in the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project.  
+ Select the OLAP mining model on which the data mining dimension will be based from a list of OLAP mining models in the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project.  
   
  **Dimension Name**  
  Enter a name for the new dimension.  

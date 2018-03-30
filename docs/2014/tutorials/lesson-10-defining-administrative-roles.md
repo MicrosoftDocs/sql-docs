@@ -24,7 +24,7 @@ manager: "jhubbard"
  This lesson contains the following task:  
   
  [Granting Process Database Permissions](../../2014/tutorials/granting-process-database-permissions.md)  
- In this task, you define a security role that has permissions to process the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database, and then you test this security role.  
+ In this task, you define a security role that has permissions to process the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database, and then you test this security role.  
   
 ## See Also  
  [Analysis Services Tutorial Scenario](../../2014/tutorials/analysis-services-tutorial-scenario.md)   

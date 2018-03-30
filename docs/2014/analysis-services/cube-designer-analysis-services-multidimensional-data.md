@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Cube Designer (Analysis Services - Multidimensional Data)
-  Use **Cube Designer** in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to edit various properties of an existing cube, including the measure groups and measures, cube dimensions and dimension relationships, calculations, key performance indicators (KPIs), actions, partitions, perspectives, and translations included in the cube, as well as to browse the data contained by the cube. You can display the **Cube Designer** dialog box by:  
+  Use **Cube Designer** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to edit various properties of an existing cube, including the measure groups and measures, cube dimensions and dimension relationships, calculations, key performance indicators (KPIs), actions, partitions, perspectives, and translations included in the cube, as well as to browse the data contained by the cube. You can display the **Cube Designer** dialog box by:  
   
 -   Right-clicking a cube in **Solution Explorer** and selecting **Open** or **View Designer** from the context menu.  
   

@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 caps.latest.revision: 22
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Load Files into FileTables
@@ -27,8 +27,8 @@ manager: "jhubbard"
   
 |Current location of files|Options for migration|  
 |-------------------------------|---------------------------|  
-|Files are currently stored in the file system.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has no knowledge of the files.|Since a FileTable appears as a folder in the Windows file system, you can easily load files into a new FileTable by using any of the available methods for moving or copying files. These methods include Windows Explorer, command line options including xcopy and robocopy, and custom scripts or applications.<br /><br /> You cannot convert an existing folder to a FileTable.|  
-|Files are currently stored in the file system.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contains a table of metadata that contains pointers to the files.|The first step is to move or copy the files by using one of the methods mentioned above.<br /><br /> The second step is to update the existing table of metadata to point to the new location of the files.<br /><br /> For more information, see [Example: Migrating Files from the File System into a FileTable](#HowToMigrateFiles) in this topic.|  
+|Files are currently stored in the file system.<br /><br /> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has no knowledge of the files.|Since a FileTable appears as a folder in the Windows file system, you can easily load files into a new FileTable by using any of the available methods for moving or copying files. These methods include Windows Explorer, command line options including xcopy and robocopy, and custom scripts or applications.<br /><br /> You cannot convert an existing folder to a FileTable.|  
+|Files are currently stored in the file system.<br /><br /> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contains a table of metadata that contains pointers to the files.|The first step is to move or copy the files by using one of the methods mentioned above.<br /><br /> The second step is to update the existing table of metadata to point to the new location of the files.<br /><br /> For more information, see [Example: Migrating Files from the File System into a FileTable](#HowToMigrateFiles) in this topic.|  
   
 ###  <a name="HowToLoadNew"></a> How To: Load Files into a FileTable  
  The methods that you can use to load files into a FileTable include the following:  
@@ -40,7 +40,7 @@ manager: "jhubbard"
 -   Write a custom application in C# or Visual Basic.NET that uses methods from the **System.IO** namespace to move or copy the files.  
   
 ###  <a name="HowToMigrateFiles"></a> Example: Migrating Files from the File System into a FileTable  
- In this scenario, your files are stored in the file system, and you have a table of metadata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that contains pointers to the files. You want to move the files into a FileTable, and then replace the original UNC path for each file in the metadata with the FileTable UNC path. The [GetPathLocator &#40;Transact-SQL&#41;](../Topic/GetPathLocator%20\(Transact-SQL\).md) function helps you to achieve this goal.  
+ In this scenario, your files are stored in the file system, and you have a table of metadata in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that contains pointers to the files. You want to move the files into a FileTable, and then replace the original UNC path for each file in the metadata with the FileTable UNC path. The [GetPathLocator &#40;Transact-SQL&#41;](~/relational-databases/system-functions/getpathlocator-transact-sql.md) function helps you to achieve this goal.  
   
  For this example, assume that there is an existing database table, `PhotoMetadata`, which contains data about photographs. This table has a column `UNCPath` of type `varchar`(512) which contains the actual UNC path to a .jpg file.  
   

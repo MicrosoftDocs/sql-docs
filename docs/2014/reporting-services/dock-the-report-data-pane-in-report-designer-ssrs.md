@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: 8b87bb59-6083-44cb-ab34-493855b41585
 caps.latest.revision: 14
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Dock the Report Data Pane in Report Designer (SSRS)
-  In Report Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], the Report Data pane displays a hierarchical view of data objects that you can use in a report, including data sources, datasets, fields, parameters, and images. Data sources in this view can be embedded or references to shared data sources that are displayed in Solution Explorer.  
+  In Report Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], the Report Data pane displays a hierarchical view of data objects that you can use in a report, including data sources, datasets, fields, parameters, and images. Data sources in this view can be embedded or references to shared data sources that are displayed in Solution Explorer.  
   
 ### To display the Report Data pane  
   

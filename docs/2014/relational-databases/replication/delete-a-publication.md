@@ -17,11 +17,11 @@ helpviewer_keywords:
 ms.assetid: 408a1360-12ee-4896-ac94-482ae839593b
 caps.latest.revision: 35
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Delete a Publication
-  This topic describes how to delete a publication in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or Replication Management Objects (RMO).  
+  This topic describes how to delete a publication in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or Replication Management Objects (RMO).  
   
  **In This Topic**  
   
@@ -34,11 +34,11 @@ manager: "jhubbard"
      [Replication Management Objects (RMO)](#RMOProcedure)  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
- Delete publications from the **Local Publications** folder in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
+ Delete publications from the **Local Publications** folder in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 #### To delete a publication  
   
-1.  Connect to the Publisher in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], and then expand the server node.  
+1.  Connect to the Publisher in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], and then expand the server node.  
   
 2.  Expand the **Replication** folder, and then expand the **Local Publications** folder.  
   
@@ -54,40 +54,40 @@ manager: "jhubbard"
   
 1.  Do one of the following:  
   
-    -   To delete a single publication, execute [sp_droppublication](../Topic/sp_droppublication%20\(Transact-SQL\).md) at the Publisher on the publication database.  
+    -   To delete a single publication, execute [sp_droppublication](~/relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md) at the Publisher on the publication database.  
   
-    -   To delete all publications in and remove all replication objects from a published database, execute [sp_removedbreplication](../Topic/sp_removedbreplication%20\(Transact-SQL\).md) at the Publisher. Specify a value of `tran` for **@type**. (Optional) If the Distributor cannot be accessed or if the status of the database is suspect or offline, specify a value of **1** for **@force**. (Optional) Specify the name of the database for **@dbname** if [sp_removedbreplication](../Topic/sp_removedbreplication%20\(Transact-SQL\).md) is not executed on the publication database.  
+    -   To delete all publications in and remove all replication objects from a published database, execute [sp_removedbreplication](~/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) at the Publisher. Specify a value of `tran` for **@type**. (Optional) If the Distributor cannot be accessed or if the status of the database is suspect or offline, specify a value of **1** for **@force**. (Optional) Specify the name of the database for **@dbname** if [sp_removedbreplication](~/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) is not executed on the publication database.  
   
         > [!NOTE]  
         >  Specifying a value of **1** for **@force** may leave replication-related publishing objects in the database.  
   
-2.  (Optional) If this database has no other publications, execute [sp_replicationdboption &#40;Transact-SQL&#41;](../Topic/sp_replicationdboption%20\(Transact-SQL\).md) to disable publication of the current database using snapshot or transactional replication.  
+2.  (Optional) If this database has no other publications, execute [sp_replicationdboption &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) to disable publication of the current database using snapshot or transactional replication.  
   
-3.  (Optional) At the Subscriber on the subscription database, execute [sp_subscription_cleanup](../Topic/sp_subscription_cleanup%20\(Transact-SQL\).md) to remove any remaining replication metadata in the subscription database.  
+3.  (Optional) At the Subscriber on the subscription database, execute [sp_subscription_cleanup](~/relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md) to remove any remaining replication metadata in the subscription database.  
   
 #### To delete a merge publication  
   
 1.  Do one of the following:  
   
-    -   To delete a single publication, execute [sp_dropmergepublication &#40;Transact-SQL&#41;](../Topic/sp_dropmergepublication%20\(Transact-SQL\).md) at the Publisher on the publication database.  
+    -   To delete a single publication, execute [sp_dropmergepublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md) at the Publisher on the publication database.  
   
-    -   To delete all publications in and remove all replication objects from a published database, execute [sp_removedbreplication](../Topic/sp_removedbreplication%20\(Transact-SQL\).md) at the Publisher. Specify a value of `merge` for **@type**. (Optional) If the Distributor cannot be accessed or if the status of the database is suspect or offline, specify a value of **1** for **@force**. (Optional) Specify the name of the database for **@dbname** if [sp_removedbreplication](../Topic/sp_removedbreplication%20\(Transact-SQL\).md) is not executed on the publication database.  
+    -   To delete all publications in and remove all replication objects from a published database, execute [sp_removedbreplication](~/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) at the Publisher. Specify a value of `merge` for **@type**. (Optional) If the Distributor cannot be accessed or if the status of the database is suspect or offline, specify a value of **1** for **@force**. (Optional) Specify the name of the database for **@dbname** if [sp_removedbreplication](~/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) is not executed on the publication database.  
   
         > [!NOTE]  
         >  Specifying a value of **1** for **@force** may leave replication-related publishing objects in the database.  
   
-2.  (Optional) If this database has no other publications, execute [sp_replicationdboption &#40;Transact-SQL&#41;](../Topic/sp_replicationdboption%20\(Transact-SQL\).md) to disable publication of the current database using merge replication.  
+2.  (Optional) If this database has no other publications, execute [sp_replicationdboption &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) to disable publication of the current database using merge replication.  
   
-3.  (Optional) At the Subscriber on the subscription database, execute [sp_mergesubscription_cleanup &#40;Transact-SQL&#41;](../Topic/sp_mergesubscription_cleanup%20\(Transact-SQL\).md) to remove any remaining replication metadata in the subscription database.  
+3.  (Optional) At the Subscriber on the subscription database, execute [sp_mergesubscription_cleanup &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md) to remove any remaining replication metadata in the subscription database.  
   
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
  This example shows how to remove a transactional publication and disable transactional publishing for a database. This example assumes that all subscriptions were previously removed. For more information, see [Delete a Pull Subscription](../../../2014/relational-databases/replication/delete-a-pull-subscription.md) or [Delete a Push Subscription](../../../2014/relational-databases/replication/delete-a-push-subscription.md).  
   
- [!code-sql[HowTo#sp_droppublication](../../../snippets/tsql/SQL15/replication/howto/tsql/droptranpub.sql#sp_droppublication)]  
+ [!code-sql[HowTo#sp_droppublication](../../snippets/tsql/SQL15/replication/howto/tsql/droptranpub.sql#sp_droppublication)]  
   
  This example shows how to remove a merge publication and disable merge publishing for a database. This example assumes that all subscriptions were previously removed. For more information, see [Delete a Pull Subscription](../../../2014/relational-databases/replication/delete-a-pull-subscription.md) or [Delete a Push Subscription](../../../2014/relational-databases/replication/delete-a-push-subscription.md).  
   
- [!code-sql[HowTo#sp_dropmergepublication](../../../snippets/tsql/SQL15/replication/howto/tsql/dropmergepub.sql#sp_dropmergepublication)]  
+ [!code-sql[HowTo#sp_dropmergepublication](../../snippets/tsql/SQL15/replication/howto/tsql/dropmergepub.sql#sp_dropmergepublication)]  
   
 ##  <a name="RMOProcedure"></a> Using Replication Management Objects (RMO)  
  You can delete publications programmatically by using Replication Management Objects (RMO). The RMO classes that you use to remove a publication depend on the type of publication you remove.  
@@ -143,15 +143,15 @@ manager: "jhubbard"
 ###  <a name="PShellExample"></a> Examples (RMO)  
  The following example deletes a transactional publication. If no other transactional publications exist for this database, transactional publishing is also disabled.  
   
- [!code-csharp[HowTo#rmo_DropTranPub](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_droptranpub)]  
+ [!code-csharp[HowTo#rmo_DropTranPub](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_droptranpub)]  
   
- [!code-vb[HowTo#rmo_vb_DropTranPub](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_droptranpub)]  
+ [!code-vb[HowTo#rmo_vb_DropTranPub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_droptranpub)]  
   
  The following example deletes a merge publication. If no other merge publications exist for this database, merge publishing is also disabled.  
   
- [!code-csharp[HowTo#rmo_DropMergePub](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_dropmergepub)]  
+ [!code-csharp[HowTo#rmo_DropMergePub](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_dropmergepub)]  
   
- [!code-vb[HowTo#rmo_vb_DropMergePub](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_dropmergepub)]  
+ [!code-vb[HowTo#rmo_vb_DropMergePub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_dropmergepub)]  
   
 ## See Also  
  [Replication System Stored Procedures Concepts](../../../2014/relational-databases/replication/dev-guide/replication-system-stored-procedures-concepts.md)   

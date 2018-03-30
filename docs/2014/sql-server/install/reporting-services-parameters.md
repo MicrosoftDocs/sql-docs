@@ -18,11 +18,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Reporting Services Parameters
-  To analyze [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], you must specify an instance of [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] and provide information about how to connect to that instance.  
+  To analyze [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], you must specify an instance of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and provide information about how to connect to that instance.  
   
 ## Options  
  **Reporting Services instance name**  
- Select an instance of [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] from the list.  
+ Select an instance of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] from the list.  
   
 ## See Also  
  [Working with Upgrade Advisor](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   

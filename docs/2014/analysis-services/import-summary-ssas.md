@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Import Summary (SSAS)
-  This page of the **Table Import Wizard** enables you to view the filters that are specified for the data import. To access the wizard from the [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], on the **Model** menu, click **Import from Data Source**.  
+  This page of the **Table Import Wizard** enables you to view the filters that are specified for the data import. To access the wizard from the [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], on the **Model** menu, click **Import from Data Source**.  
   
  The filter is based on the options that you selected in the **Preview Selected Table** dialog box.  
   

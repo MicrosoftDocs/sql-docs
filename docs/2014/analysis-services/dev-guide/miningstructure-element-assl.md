@@ -79,10 +79,10 @@ manager: "mblythe"
  The mining structure defines the columns and the bindings. After defining a mining structure, you can use that structure to define many mining models. The mining structure, and each mining model it contains, can be processed independently.  
   
 > [!NOTE]  
->  The holdout properties, `HoldoutMaxCases`, `HoldoutMaxPercent`, `HoldoutSeed`, and `HoldoutActualSize`, were introduced in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]. They enable you to define a partition on a mining structure that acts as the test set for all the mining models that are associated with the structure. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] does not support these properties. Therefore, if you try to use these properties on an instance of [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] will return an error.  
+>  The holdout properties, `HoldoutMaxCases`, `HoldoutMaxPercent`, `HoldoutSeed`, and `HoldoutActualSize`, were introduced in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. They enable you to define a partition on a mining structure that acts as the test set for all the mining models that are associated with the structure. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] does not support these properties. Therefore, if you try to use these properties on an instance of [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] will return an error.  
   
 ## Drillthrough to Structure Columns  
- In [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], a new permission element has been added to the [MiningStructurePermissions Element &#40;ASSL&#41;](../../../2014/analysis-services/dev-guide/miningstructurepermissions-element-assl.md) collection. If you add `AllowDrillthrough` permission to both the [MiningStructurePermissions](../../../2014/analysis-services/dev-guide/miningstructurepermissions-element-assl.md) and [MiningModelPermission](../../../2014/analysis-services/dev-guide/miningmodelpermission-element-assl.md) collections, drillthrough is enabled from the mining model to the structure, in such a way that members of a role that has `AllowDrillthrough` permissions on the model can query the data mining model, and return structure columns that were not included in the model.  
+ In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], a new permission element has been added to the [MiningStructurePermissions Element &#40;ASSL&#41;](../../../2014/analysis-services/dev-guide/miningstructurepermissions-element-assl.md) collection. If you add `AllowDrillthrough` permission to both the [MiningStructurePermissions](../../../2014/analysis-services/dev-guide/miningstructurepermissions-element-assl.md) and [MiningModelPermission](../../../2014/analysis-services/dev-guide/miningmodelpermission-element-assl.md) collections, drillthrough is enabled from the mining model to the structure, in such a way that members of a role that has `AllowDrillthrough` permissions on the model can query the data mining model, and return structure columns that were not included in the model.  
   
  Therefore, to protect sensitive data or personal information, you should construct your data source view to mask sensitive information, and grant `AllowDrillthrough` permission on a mining structure only when necessary. For more information, see [AllowDrillThrough Element &#40;ASSL&#41;](../../../2014/analysis-services/dev-guide/allowdrillthrough-element-assl.md).  
   
@@ -91,6 +91,6 @@ manager: "mblythe"
 ## See Also  
  [MiningModel Element &#40;ASSL&#41;](../../../2014/analysis-services/dev-guide/miningmodel-element-assl.md)   
  [Objects &#40;ASSL&#41;](../../../2014/analysis-services/dev-guide/objects-assl.md)   
- [SELECT &#40;DMX&#41;](../Topic/SELECT%20\(DMX\).md)  
+ [SELECT &#40;DMX&#41;](~/dmx/select-dmx.md)  
   
   

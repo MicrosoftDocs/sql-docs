@@ -46,7 +46,7 @@ manager: "jhubbard"
   
          -OR-  
   
-    -   **Use regional settings to display date and time values** is checked in the **General Options** dialog box. To view the **General Options** dialog box, on the [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **Tools** menu, click **Option**.  
+    -   **Use regional settings to display date and time values** is checked in the **General Options** dialog box. To view the **General Options** dialog box, on the [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **Tools** menu, click **Option**.  
   
          -AND-  
   

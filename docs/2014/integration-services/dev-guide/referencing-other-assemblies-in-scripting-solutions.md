@@ -31,24 +31,24 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Referencing Other Assemblies in Scripting Solutions
-  The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] class library provides the script developer with a powerful set of tools for implementing custom functionality in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] packages. The Script task and the Script component can also use custom managed assemblies.  
+  The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] class library provides the script developer with a powerful set of tools for implementing custom functionality in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages. The Script task and the Script component can also use custom managed assemblies.  
   
 > [!NOTE]  
->  To enable your packages to use the objects and methods from a Web service, use the **Add Web Reference** command available in [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA). In earlier versions of [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], you had to generate a proxy class to use a Web service.  
+>  To enable your packages to use the objects and methods from a Web service, use the **Add Web Reference** command available in [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA). In earlier versions of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], you had to generate a proxy class to use a Web service.  
   
 ## Using a Managed Assembly  
- For [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] to find a managed assembly at design time, you must do the following steps:  
+ For [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] to find a managed assembly at design time, you must do the following steps:  
   
 1.  Store the managed assembly in any folder on your computer.  
   
     > [!NOTE]  
-    >  In earlier versions of [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], you could only add a reference to a managed assembly that was stored in the %windir%\Microsoft.NET\Framework\vx.x.xxxxx folder or the %ProgramFiles%\Microsoft SQL Server\100\SDK\Assemblies folder.  
+    >  In earlier versions of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], you could only add a reference to a managed assembly that was stored in the %windir%\Microsoft.NET\Framework\vx.x.xxxxx folder or the %ProgramFiles%\Microsoft SQL Server\100\SDK\Assemblies folder.  
   
 2.  Add a reference to the managed assembly.  
   
      To add the reference, in VSTA, in the **Add Reference** dialog box, on the **Browse** tab, locate and add the managed assembly.  
   
- For [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] to find the managed assembly at run time, you must do the following steps:  
+ For [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] to find the managed assembly at run time, you must do the following steps:  
   
 1.  Sign the managed assembly with a strong name.  
   
@@ -57,9 +57,9 @@ manager: "jhubbard"
      For more information, see [Building, Deploying, and Debugging Custom Objects](../../../2014/integration-services/dev-guide/building-deploying-and-debugging-custom-objects.md).  
   
 ## Using the Microsoft .NET Framework Class Library  
- The Script task and the Script component can take advantage of all the other objects and functionality exposed by the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] class library. For example, by using the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], you can retrieve information about your environment and interact with the computer that is running the package.  
+ The Script task and the Script component can take advantage of all the other objects and functionality exposed by the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] class library. For example, by using the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], you can retrieve information about your environment and interact with the computer that is running the package.  
   
- This list describes several of the more frequently used [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] classes:  
+ This list describes several of the more frequently used [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] classes:  
   
 -   `System.Data` Contains the ADO.NET architecture.  
   
@@ -79,11 +79,11 @@ manager: "jhubbard"
   
 -   `System.Threading` Enables multithreaded programming.  
   
- For more information about the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], see the MSDN Library.  
+ For more information about the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], see the MSDN Library.  
   
 ||  
 |-|  
-|![Integration Services icon (small)](../../../2014/integration-services/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
+|![Integration Services icon (small)](../../../2014/integration-services/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
   
 ## See Also  
  [Extending Packages with Scripting](../../../2014/integration-services/dev-guide/extending-packages-with-scripting.md)  

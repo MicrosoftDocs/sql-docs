@@ -16,20 +16,20 @@ ms.author: "mblythe"
 manager: "jhubbard"
 ---
 # Work With SQL Server PowerShell Paths
-  After you have navigated to a node in a [!INCLUDE[ssDE](../../includes/ssde-md.md)] provider path, you can perform work or retrieve information by using the methods and properties from the [!INCLUDE[ssDE](../../includes/ssde-md.md)] management object associated with the node.  
+  After you have navigated to a node in a [!INCLUDE[ssDE](../includes/ssde-md.md)] provider path, you can perform work or retrieve information by using the methods and properties from the [!INCLUDE[ssDE](../includes/ssde-md.md)] management object associated with the node.  
   
 1.  [Before You Begin](#BeforeYouBegin)  
   
 2.  **To work on a path node:**  [Listing Methods and Properties](#ListPropMeth), [Using Methods and Properties](#UsePropMeth)  
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
- After you have navigated to a node in a [!INCLUDE[ssDE](../../includes/ssde-md.md)] provider path, you can perform two types of actions:  
+ After you have navigated to a node in a [!INCLUDE[ssDE](../includes/ssde-md.md)] provider path, you can perform two types of actions:  
   
 -   You can run Windows PowerShell cmdlets that operate on nodes, such as **Rename-Item**.  
   
--   You can call the methods from the associated [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] management object model, such as SMO. For example, if you navigate to the Databases node in a path, you can use the methods and properties of the <xref:Microsoft.SqlServer.Management.Smo.Database> class.  
+-   You can call the methods from the associated [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] management object model, such as SMO. For example, if you navigate to the Databases node in a path, you can use the methods and properties of the <xref:Microsoft.SqlServer.Management.Smo.Database> class.  
   
- The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider is used to manage the objects in an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. It is not used to work with the data in databases. If you have navigated to a table or view, you cannot use the provider to select, insert, update, or delete data. Use the **Invoke-Sqlcmd** cmdlet to query or change data in tables and views from the Windows PowerShell environment. For more information, see [Invoke-Sqlcmd cmdlet](../../2014/database-engine/invoke-sqlcmd-cmdlet.md).  
+ The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provider is used to manage the objects in an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)]. It is not used to work with the data in databases. If you have navigated to a table or view, you cannot use the provider to select, insert, update, or delete data. Use the **Invoke-Sqlcmd** cmdlet to query or change data in tables and views from the Windows PowerShell environment. For more information, see [Invoke-Sqlcmd cmdlet](../../2014/database-engine/invoke-sqlcmd-cmdlet.md).  
   
 ##  <a name="ListPropMeth"></a> Listing Methods and Properties  
  **Listing Methods and Properties**  
@@ -64,7 +64,7 @@ Get-Item . | Get-Member -Type Properties
 ##  <a name="UsePropMeth"></a> Using Methods and Properties  
  **Using SMO Methods and Properties**  
   
- To perform work on objects from a [!INCLUDE[ssDE](../../includes/ssde-md.md)] provider path, you can use SMO methods and properties.  
+ To perform work on objects from a [!INCLUDE[ssDE](../includes/ssde-md.md)] provider path, you can use SMO methods and properties.  
   
 ### Examples: Using Methods and Properties  
  This example uses the SMO **Schema** property to get a list of the tables from the Sales schema in AdventureWorks2012:  

@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 caps.latest.revision: 23
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Create, Alter, and Drop FileTables
@@ -25,7 +25,7 @@ manager: "jhubbard"
 ##  <a name="BasicsCreate"></a> Creating a FileTable  
  A FileTable is a specialized user table that has a pre-defined and fixed schema. This schema stores FILESTREAM data, file and directory information, and file attributes. For information about the FileTable schema, see [FileTable Schema](../../2014/database-engine/filetable-schema.md).  
   
- You can create a new FileTable by using Transact-SQL or [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Since a FileTable has a fixed schema, you do not have to specify a list of columns. The simple syntax for creating a FileTable lets you specify:  
+ You can create a new FileTable by using Transact-SQL or [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Since a FileTable has a fixed schema, you do not have to specify a list of columns. The simple syntax for creating a FileTable lets you specify:  
   
 -   A directory name. In the FileTable folder hierarchy, this table-level directory becomes the child of the database directory specified at the database level, and the parent of the files or directories stored in the table.  
   
@@ -35,7 +35,7 @@ manager: "jhubbard"
   
 ###  <a name="HowToCreate"></a> How To: Create a FileTable  
  **Create a FileTable by Using Transact-SQL**  
- Create a FileTable by calling the [CREATE TABLE &#40;Transact-SQL&#41;](../Topic/CREATE%20TABLE%20\(Transact-SQL\).md) statement with the **AS FileTable** option. Since a FileTable has a fixed schema, you do not have to specify a list of columns. You can specify the following settings for the new FileTable:  
+ Create a FileTable by calling the [CREATE TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/create-table-transact-sql.md) statement with the **AS FileTable** option. Since a FileTable has a fixed schema, you do not have to specify a list of columns. You can specify the following settings for the new FileTable:  
   
 1.  **FILETABLE_DIRECTORY**. Specifies the directory that serves as the root directory for all the files and directories stored in the FileTable. This name should be unique among all the FileTable directory names in the database. Comparison for uniqueness is case-insensitive, regardless of the current collation settings.  
   
@@ -129,7 +129,7 @@ GO
 -   You cannot add new user columns, computed columns, or persisted computed columns to a FileTable.  
   
 ##  <a name="BasicsDrop"></a> Dropping a FileTable  
- You can drop a FileTable by using the ordinary syntax for the [DROP TABLE &#40;Transact-SQL&#41;](../Topic/DROP%20TABLE%20\(Transact-SQL\).md) statement.  
+ You can drop a FileTable by using the ordinary syntax for the [DROP TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/drop-table-transact-sql.md) statement.  
   
  When you drop a FileTable, the following objects are also dropped:  
   
@@ -140,7 +140,7 @@ GO
  The DROP TABLE command fails if there are open file handles in the FileTable’s file namespace. For information about closing open handles, see [Manage FileTables](../../2014/database-engine/manage-filetables.md).  
   
 ##  <a name="BasicsOtherObjects"></a> Other Database Objects Are Created When You Create a FileTable  
- When you create a new FileTable, some system-defined indexes and constraints are also created. You cannot alter or drop these objects; they disappear only when the FileTable itself is dropped. To see the list of these objects, query the catalog view [sys.filetable_system_defined_objects &#40;Transact-SQL&#41;](../Topic/sys.filetable_system_defined_objects%20\(Transact-SQL\).md).  
+ When you create a new FileTable, some system-defined indexes and constraints are also created. You cannot alter or drop these objects; they disappear only when the FileTable itself is dropped. To see the list of these objects, query the catalog view [sys.filetable_system_defined_objects &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql.md).  
   
 ```tsql  
 --View all objects for all filetables, unsorted  

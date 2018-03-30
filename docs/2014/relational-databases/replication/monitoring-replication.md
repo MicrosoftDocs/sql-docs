@@ -1,5 +1,5 @@
 ---
-title: "Monitoring Replication | Microsoft Docs"
+title: "Monitoring (Replication) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
@@ -10,80 +10,45 @@ ms.technology:
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
-  - "monitoring performance [SQL Server replication], Replication Monitor"
-  - "Replication Monitor, about Replication Monitor"
-ms.assetid: 81f596d2-27a5-489d-bf8d-0f4361decd02
-caps.latest.revision: 36
+  - "monitoring performance [SQL Server replication], about monitoring replication"
+  - "transactional replication, monitoring"
+  - "monitoring [SQL Server replication]"
+  - "merge replication monitoring [SQL Server replication]"
+  - "snapshot replication [SQL Server], monitoring"
+  - "replication [SQL Server], monitoring"
+  - "administering replication, monitoring"
+ms.assetid: f182f43a-6af8-45bc-a708-08d5f7a6984a
+caps.latest.revision: 38
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
-# Monitoring Replication
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Monitor is a graphical tool that allows you to monitor the overall health of a replication topology. Replication Monitor provides detailed information on the status and performance of publications and subscriptions, allowing you to answer common questions, such as:  
+# Monitoring (Replication)
+  Monitoring a replication topology is an important aspect of deploying replication. Because replication activity is distributed, it is essential to track activity and status across all computers involved in replication. The following tools can be used to monitor replication:  
   
--   Is my replication system healthy?  
+-   [!INCLUDE[msCoName](../includes/msCoName-md.md)] [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Replication Monitor  
   
--   Which subscriptions are slow?  
+     Replication Monitor is the most important tool for monitoring replication, presenting a Publisher-focused view of all replication activity. For more information, see [Monitor Replication](monitor-replication.md).  
   
--   How far behind is my transactional subscription?  
+-   [!INCLUDE[msCoName](../includes/msCoName-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssManStudioFull-md.md)]  
   
--   How long will it take a transaction committed now to reach a Subscriber in transactional replication?  
+     [!INCLUDE[ssManStudio](../includes/ssManStudio-md.md)] provides access to Replication Monitor. It also allows you to view the current status and last message logged by the following agents and allows you start and stop each agent: Log Reader Agent, Snapshot Agent, Merge Agent, and Distribution Agent. For more information, see [Monitor Replication Agents](monitor-replication-agents.md).  
   
--   Why is my merge subscription slow?  
+-   [!INCLUDE[tsql](../includes/tsql-md.md)] and Replication Management Objects (RMO)  
   
--   Why is an agent not running?  
+     Both interfaces allow you to monitor all types of replication from the Distributor. Merge replication also provides the ability to monitor replication from the Subscriber.  
   
- To monitor replication, a user must be a member of the **sysadmin** fixed server role at the Distributor or a member of the **replmonitor** fixed database role in the distribution database. A system administrator can add any user to the **replmonitor** role, which allows that user to view replication activity in Replication Monitor; however, the user cannot administer replication.  
+-   Alerts for replication agent events  
   
-## In This Section  
- The following topics provide information about Replication Monitor features.  
+     Replication provides a number of predefined alerts for replication agent events, and you can create additional alerts if necessary. Alerts can be used to trigger an automated response to an event and/or notify an administrator. For more information, see [Use Alerts for Replication Agent Events](use-alerts-for-replication-agent-events.md).  
   
- [Overview of the Replication Monitor Interface](../../../2014/relational-databases/replication/overview-of-the-replication-monitor-interface.md)  
- Describes each window and tab in Replication Monitor and provides information on how to answer the questions listed above.  
+-   System Monitor  
   
- [Start the Replication Monitor](../../../2014/relational-databases/replication/start-the-replication-monitor.md)  
- Describes how to start the Replication Monitor.  
+     System Monitor can be useful for monitoring performance, providing a number of counters for replication. For more information, see [Monitoring Replication with System Monitor](monitoring-replication-with-system-monitor.md).  
   
- [Allow Non-Administrators to Use Replication Monitor](../../../2014/relational-databases/replication/allow-non-administrators-to-use-replication-monitor.md)  
- Describes how to assign permissions to non-administrators so that they can use Replication Monitor.  
-  
- [Add and Remove Publishers from Replication Monitor](../../../2014/relational-databases/replication/add-and-remove-publishers-from-replication-monitor.md)  
- Describes how to add or remove Publishers from Replication Monitor.  
-  
- [Refresh Data in Replication Monitor](../../../2014/relational-databases/replication/refresh-data-in-replication-monitor.md)  
- Describes how to refresh data in Replication Monitor.  
-  
- [Monitor Performance with Replication Monitor](../../../2014/relational-databases/replication/monitor-performance-with-replication-monitor.md)  
- Describes how to monitor performance in Replication Monitor, including information on setting performance thresholds. Includes information on article-level statistics for merge replication, which provide a detailed view of processing.  
-  
- [Measure Latency and Validate Connections for Transactional Replication](../../../2014/relational-databases/replication/measure-latency-and-validate-connections-for-transactional-replication.md)  
- Describes tracer tokens, which allow you to measure the performance of a transactional replication topology.  
-  
- [Monitor Replication Agents](../../../2014/relational-databases/replication/monitor-replication-agents.md)  
- Describes how to find information about each replication agent.  
-  
- [Set Thresholds and Warnings in Replication Monitor](../../../2014/relational-databases/replication/set-thresholds-and-warnings-in-replication-monitor.md)  
- Describes the warnings, thresholds, and alerts you can set in Replication Monitor. It is recommended that you enable warnings for your topology, so that you are informed about status and performance in a timely manner.  
-  
- [Caching, Refresh, and Replication Monitor Performance](../../../2014/relational-databases/replication/caching-refresh-and-replication-monitor-performance.md)  
- Describes how Replication Monitor caches data and calculations to improve performance; explains how refresh of the user interface relates to refresh of the cache.  
-  
- [View Publication and Subscription Status in Replication Monitor](../../../2014/relational-databases/replication/view-publication-and-subscription-status-in-replication-monitor.md)  
- Describes how to view status information a Publication or Subscription by using the Replication Monitor.  
-  
- [View Information and Perform Tasks for a Publisher &#40;Replication Monitor&#41;](../../../2014/relational-databases/replication/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)  
- Describes how to view information and perform tasks for a Publisher by using the Replication Monitor.  
-  
- [View Information and Perform Tasks for a Publication &#40;Replication Monitor&#41;](../../../2014/relational-databases/replication/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)  
- Describes how to view information and perform tasks for a Publication by using the Replication Monitor.  
-  
- [View Information and Perform Tasks for the Agents Associated With a Publication &#40;Replication Monitor&#41;](../../../2014/relational-databases/replication/view-information-and-perform-tasks-for-publication-agents.md)  
- Describes how to view information and perform tasks for the agents associated with a Publication by using the Replication Monitor.  
-  
- [View Information and Perform Tasks for a Subscription &#40;Replication Monitor&#41;](../../../2014/relational-databases/replication/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
- Describes how to view information and perform tasks for a Subscription by using the Replication Monitor.  
-  
- [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](../../../2014/relational-databases/replication/view-information-and-perform-tasks-for-subscription-agents.md)  
- Describes how to view information and perform tasks for the agents associated with a Subscription by using the Replication Monitor.  
+## See Also  
+ [Administration &#40;Replication&#41;](administration-replication.md)   
+ [Best Practices for Replication Administration](best-practices-for-replication-administration.md)   
+ [Monitor Replication](monitor-replication.md)  
   
   

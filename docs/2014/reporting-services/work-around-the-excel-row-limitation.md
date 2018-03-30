@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: a4c8700b-bef5-4440-a99c-bba5dcc46bfd
 caps.latest.revision: 6
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Work Around the Excel Row Limitation
@@ -22,7 +22,7 @@ manager: "mblythe"
   
 ### To create an explicit page break  
   
-1.  Open the report in [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] or Report Manager.  
+1.  Open the report in [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] or Report Manager.  
   
 2.  Right click the Data row in the table, and then click **Add Group** > **Parent Group** to add an outer table group.  
   

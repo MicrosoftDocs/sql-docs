@@ -23,13 +23,13 @@ manager: "jhubbard"
 # SQLGetInfo
   The table shows the values returned by **SQLGetInfo**. These values might vary based on the version number of the connected server.  
   
- **SQLGetInfo** in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client differs from **SQLGetInfo** in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC driver (SQLSRV32.DLL) when **SQLGetInfo** is called with SQL_KEYWORDS and a 0 buffer length.  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client driver returns SQL_SUCCESS but the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC driver returns SQL_SUCCESS_WITH_INFO.  However, when called with a nonzero buffer length that is less than the output keyword string, **SQLGetInfo** in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client returns SQL_SUCCESS_WITH_INFO and a SQLState of 01004.  
+ **SQLGetInfo** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client differs from **SQLGetInfo** in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC driver (SQLSRV32.DLL) when **SQLGetInfo** is called with SQL_KEYWORDS and a 0 buffer length.  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client driver returns SQL_SUCCESS but the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC driver returns SQL_SUCCESS_WITH_INFO.  However, when called with a nonzero buffer length that is less than the output keyword string, **SQLGetInfo** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client returns SQL_SUCCESS_WITH_INFO and a SQLState of 01004.  
   
 |fInfoType|rgbInfoValue|  
 |---------------|------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"Y"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
-|SQL_ACTIVE_CONNECTIONS|The number of connections is limited by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. The driver returns 0 for this **SQLGetInfo** request.|  
+|SQL_ACTIVE_CONNECTIONS|The number of connections is limited by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The driver returns 0 for this **SQLGetInfo** request.|  
 |SQL_ACTIVE_ENVIRONMENTS|The number of environments is not limited by the driver. The driver returns 0 for this **SQLGetInfo** request.|  
 |SQL_ACTIVE_STATEMENTS|The driver returns 1 for this **SQLGetInfo** request. The number of statement handles available to an application is not limited by the driver, but default execution on a statement handle will block execution on any other handle.|  
 |SQL_ALTER_DOMAIN|FALSE|  
@@ -48,13 +48,13 @@ manager: "jhubbard"
 |SQL_COLLATION_SEQ|The currently assigned collation sequence for the connection and server.|  
 |SQL_COLUMN_ALIAS|"Y"|  
 |SQL_CONCAT_NULL_BEHAVIOR|SQL_CB_NULL|  
-|SQL_CONVERT_BIGINT|No support for conversion of the ODBC SQL_BIGINT data type. The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver supports the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **decimal(19,0)** data type as ODBC type SQL_DECIMAL. See SQL_CONVERT_DECIMAL below.|  
+|SQL_CONVERT_BIGINT|No support for conversion of the ODBC SQL_BIGINT data type. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver supports the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **decimal(19,0)** data type as ODBC type SQL_DECIMAL. See SQL_CONVERT_DECIMAL below.|  
 |SQL_CONVERT_BINARY|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_TINYINT SQL_CVT_LONGVARBINARY SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_BIT|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_CHAR|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_LONGVARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_TIMESTAMP SQL_CVT_LONGVARBINARY SQL_CVT_WCHAR SQL_CVT_WLONGVARCHAR SQL_CVT_WVARCHAR|  
-|SQL_CONVERT_DATE|No support for conversion of the ODBC SQL_TYPE_DATE data type. The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver supports the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **datetime** data type as ODBC type SQL_TYPE_TIMESTAMP. See SQL_CONVERT_TIMESTAMP below.|  
+|SQL_CONVERT_DATE|No support for conversion of the ODBC SQL_TYPE_DATE data type. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver supports the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** data type as ODBC type SQL_TYPE_TIMESTAMP. See SQL_CONVERT_TIMESTAMP below.|  
 |SQL_CONVERT_DECIMAL|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
-|SQL_CONVERT_DOUBLE|No support for conversion of ODBC SQL_DOUBLE data type. The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver supports the ODBC SQL_DOUBLE data type as SQL_FLOAT. See SQL_CONVERT_FLOAT below.|  
+|SQL_CONVERT_DOUBLE|No support for conversion of ODBC SQL_DOUBLE data type. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver supports the ODBC SQL_DOUBLE data type as SQL_FLOAT. See SQL_CONVERT_FLOAT below.|  
 |SQL_CONVERT_FLOAT|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_FUNCTIONS|SQL_FN_CVT_CONVERT SQL_FN_CVT_CAST|  
 |SQL_CONVERT_INTEGER|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
@@ -65,7 +65,7 @@ manager: "jhubbard"
 |SQL_CONVERT_NUMERIC|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_REAL|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_SMALLINT|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
-|SQL_CONVERT_TIME|No support for conversion of the ODBC SQL_TYPE_TIME data type. The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver supports the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**datetime** data type as ODBC type SQL_TYPE_TIMESTAMP. See SQL_CONVERT_TIMESTAMP below.|  
+|SQL_CONVERT_TIME|No support for conversion of the ODBC SQL_TYPE_TIME data type. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver supports the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**datetime** data type as ODBC type SQL_TYPE_TIMESTAMP. See SQL_CONVERT_TIMESTAMP below.|  
 |SQL_CONVERT_TIMESTAMP|SQL_CVT_CHAR SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_TIMESTAMP SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_TINYINT|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_VARBINARY|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_TINYINT SQL_CVT_LONGVARBINARY SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
@@ -88,8 +88,8 @@ manager: "jhubbard"
 |SQL_DATA_SOURCE_NAME|Current data source name. Sets value pointed to by *StringLengthPtr* to 0 if connection did not specify a data source name.|  
 |SQL_DATA_SOURCE_READ_ONLY|Depends on setting of connection attribute SQL_ATTR_ACCESS_MODE.|  
 |SQL_DATABASE_NAME|The connection's current database.|  
-|SQL_DBMS_NAME|"Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]"|  
-|SQL_DBMS_VER|The version number of the connected instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|SQL_DBMS_NAME|"Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]"|  
+|SQL_DBMS_VER|The version number of the connected instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |SQL_DEFAULT_TXN_ISOLATION|SQL_TXN_READ_COMMITTED|  
 |SQL_DESCRIBE_PARAMETER|"Y"|  
 |SQL_DRIVER_NAME|"sqlncli11.dll"|  
@@ -116,7 +116,7 @@ manager: "jhubbard"
 |SQL_IDENTIFIER_QUOTE_CHAR|" (the double quote character)|  
 |SQL_INDEX_KEYWORDS|SQL_IK_ASC SQL_IK_DESC|  
 |SQL_INFO_SCHEMA_VIEWS|Request not supported by driver.|  
-|SQL_INFO_SS_NETLIB_NAME|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver-specific attribute. The name of the network library in use by the connection.<br /><br /> By default, DBNETLIB is returned.  In this situation, DBNETLIB refers to the network library and is not related to dbnetlib.dll.|  
+|SQL_INFO_SS_NETLIB_NAME|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver-specific attribute. The name of the network library in use by the connection.<br /><br /> By default, DBNETLIB is returned.  In this situation, DBNETLIB refers to the network library and is not related to dbnetlib.dll.|  
 |SQL_INTEGRITY|"Y"|  
 |SQL_KEYSET_CURSOR_ATTRIBUTES1|SQL_CA1_ABSOLUTE SQL_CA1_BOOKMARK SQL_CA1_BULK_ADD SQL_CA1_BULK_DELETE_BY_BOOKMARK SQL_CA1_BULK_FETCH_BY_BOOKMARK SQL_CA1_BULK_UPDATE_BY_BOOKMARK SQL_CA1_LOCK_NO_CHANGE SQL_CA1_NEXT SQL_CA1_POS_DELETE SQL_CA1_POS_POSITION SQL_CA1_POS_REFRESH SQL_CA1_POS_UPDATE SQL_CA1_POSITIONED_DELETE SQL_CA1_POSITIONED_UPDATE SQL_CA1_RELATIVE SQL_CA1_SELECT_FOR_UPDATE|  
 |SQL_KEYSET_CURSOR_ATTRIBUTES2|SQL_CA2_CRC_EXACT SQL_CA2_LOCK_CONCURRENCY SQL_CA2_MAX_ROWS_CATALOG SQL_CA2_MAX_ROWS_DELETE SQL_CA2_MAX_ROWS_INSERT SQL_CA2_MAX_ROWS_SELECT SQL_CA2_MAX_ROWS_UPDATE SQL_CA2_OPT_ROWVER_CONCURRENCY SQL_CA2_OPT_VALUES_CONCURRENCY SQL_CA2_READ_ONLY_CONCURRENCY SQL_CA2_SENSITIVITY_ADDITIONS SQL_CA2_SENSITIVITY_UPDATES SQL_CA2_SIMULATE_UNIQUE|  
@@ -178,7 +178,7 @@ manager: "jhubbard"
 |SQL_SCROLL_CONCURRENCY|SQL_SCCO_LOCK SQL_SCCO_OPT_ROWVER SQL_SCCO_OPT_VALUES SQL_SCCO_READ_ONLY|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
 |SQL_SERVER_NAME|The connection's server name.|  
-|SQL_SPECIAL_CHARACTERS|Depends on [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-installed character set.|  
+|SQL_SPECIAL_CHARACTERS|Depends on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-installed character set.|  
 |SQL_SQL92_DATETIME_FUNCTIONS|FALSE|  
 |SQL_SQL92_FOREIGN_KEY_DELETE_RULE|FALSE|  
 |SQL_SQL92_FOREIGN_KEY_UPDATE_RULE|FALSE|  

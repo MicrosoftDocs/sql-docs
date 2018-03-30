@@ -33,7 +33,7 @@ manager: "jhubbard"
   User-defined types (UDTs) are supported by using a `System.Data.DataSet` and a `System.Data.SqlClient.SqlDataAdapter` to retrieve and modify data.  
   
 ## Populating a Dataset  
- You can use a [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT statement to select UDT column values to populate a dataset using a data adapter. The following example assumes that you have a **Points** table defined with the following structure and some sample data. The following [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements create the **Points** table and insert a few rows.  
+ You can use a [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT statement to select UDT column values to populate a dataset using a data adapter. The following example assumes that you have a **Points** table defined with the following structure and some sample data. The following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements create the **Points** table and insert a few rows.  
   
 ```  
 CREATE TABLE dbo.Points (id int PRIMARY Key, p Point);  
@@ -66,12 +66,12 @@ da.Fill(datTable);
   
 -   Provide custom `InsertCommand`, `UpdateCommand` and `DeleteCommand` objects for a `SqlDataAdapter` object.  
   
--   Use the command builder (`System.Data.SqlClient.SqlCommandBuilder`) to create automatically the INSERT, UPDATE, and DELETE commands for you. In order to have conflict detection, add a `timestamp` column (alias `rowversion`) to the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] table that contains the UDT. The `timestamp` data type allows you to version-stamp the rows in a table, and is guaranteed to be unique within a database. When a value in the table is changed, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] automatically updates the eight-byte binary number for the row affected by the change.  
+-   Use the command builder (`System.Data.SqlClient.SqlCommandBuilder`) to create automatically the INSERT, UPDATE, and DELETE commands for you. In order to have conflict detection, add a `timestamp` column (alias `rowversion`) to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table that contains the UDT. The `timestamp` data type allows you to version-stamp the rows in a table, and is guaranteed to be unique within a database. When a value in the table is changed, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatically updates the eight-byte binary number for the row affected by the change.  
   
  Note that the `SqlCommandBuilder` does not consider the UDT for conflict detection unless there is a `timestamp` column in the underlying table. UDTs may or may not be comparable, so they are not included in the WHERE clause when the "compare original values" option is used to generate a command.  
   
 ### Example  
- The following example requires the creation of a second table containing the `Point` UDT column as well as a `timestamp` column. Both tables are used to illustrate how to create custom command objects to update data, and how to update using a `timestamp` column. Run the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements to create the second table and populate it with sample data.  
+ The following example requires the creation of a second table containing the `Point` UDT column as well as a `timestamp` column. Both tables are used to illustrate how to create custom command objects to update data, and how to update using a `timestamp` column. Run the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements to create the second table and populate it with sample data.  
   
 ```  
 CREATE TABLE dbo.Points_ts (id int PRIMARY KEY, p Point, ts timestamp);  

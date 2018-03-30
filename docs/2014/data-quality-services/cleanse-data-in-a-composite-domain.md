@@ -16,7 +16,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Cleanse Data in a Composite Domain
-  This topic provides information about cleansing of composite domains in [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS). A composite domain consists of two or more single domains, and maps to a data field that consists of multiple related terms. The individual domains in a composite domain must have a common area of knowledge. For detailed information about composite domains, see [Managing a Composite Domain](../../2014/data-quality-services/managing-a-composite-domain.md).  
+  This topic provides information about cleansing of composite domains in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). A composite domain consists of two or more single domains, and maps to a data field that consists of multiple related terms. The individual domains in a composite domain must have a common area of knowledge. For detailed information about composite domains, see [Managing a Composite Domain](../../2014/data-quality-services/managing-a-composite-domain.md).  
   
 ##  <a name="Mapping"></a> Mapping a Composite Domain to the Source Data  
  There are two ways in which you can map your source data to a composite domain:  

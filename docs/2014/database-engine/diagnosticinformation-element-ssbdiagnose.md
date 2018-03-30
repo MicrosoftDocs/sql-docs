@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 0cfda544-542c-4cf4-86d2-8031c91b10f6
 caps.latest.revision: 14
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # DiagnosticInformation Element (ssbdiagnose)
@@ -53,7 +53,7 @@ manager: "jhubbard"
 |**Child elements**|[Banner Element &#40;ssbdiagnose&#41;](../../2014/database-engine/banner-element-ssbdiagnose.md)<br /><br /> [Issue Element &#40;ssbdiagnose&#41;](../../2014/database-engine/issue-element-ssbdiagnose.md)|  
   
 ## Remarks  
- For more information about XML namespaces, see [Namespaces in an XML Document](http://go.microsoft.com/fwlink/?LinkId=7341) in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN Library.  
+ For more information about XML namespaces, see [Namespaces in an XML Document](http://go.microsoft.com/fwlink/?LinkId=7341) in the [!INCLUDE[msCoName](../includes/msconame-md.md)] MSDN Library.  
   
 ## See Also  
  [ssbdiagnose Utility &#40;Service Broker&#41;](../../2014/database-engine/ssbdiagnose-utility-service-broker.md)  

@@ -16,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: 6b8da1f5-3d8e-4f88-b111-b915788b06f1
 caps.latest.revision: 26
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Create an Application Role
-  This topic describes how to create an application role in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Application roles restrict user access to a database except through specific applications. Application roles have no users, so the **Role Members** list is not displayed when **Application role** is selected.  
+  This topic describes how to create an application role in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)]. Application roles restrict user access to a database except through specific applications. Application roles have no users, so the **Role Members** list is not displayed when **Application role** is selected.  
   
 > [!IMPORTANT]  
 >  Password complexity is checked when application role passwords are set. Applications that invoke application roles must store their passwords. Application role passwords should always be stored encrypted.  
@@ -64,7 +64,7 @@ manager: "jhubbard"
   
 8.  Under **Schemas owned by this role**, select or view schemas that will be owned by this role. A schema can be owned by only one schema or role.  
   
-9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ### Additional Options  
  The **Application Role – New** dialog box also offers options on two additional pages: **Securables** and **Extended Properties**.  
@@ -77,7 +77,7 @@ manager: "jhubbard"
   
 #### To create an application role  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -92,6 +92,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../Topic/CREATE%20APPLICATION%20ROLE%20\(Transact-SQL\).md).  
+ For more information, see [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](~/t-sql/statements/create-application-role-transact-sql.md).  
   
   

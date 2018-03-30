@@ -20,7 +20,7 @@ manager: "mblythe"
   
 ### To add a table from an existing data source  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], click the **Model** menu, and then click **Existing Connections**.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], click the **Model** menu, and then click **Existing Connections**.  
   
 2.  On the **Existing Connections** page, select the connection to the data source that has the table you want to add, and then click **Open**.  
   

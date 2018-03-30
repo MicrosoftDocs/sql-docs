@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Disable Resource Governor
-  You can disable the Resource Governor by using either [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or Transact-SQL.  
+  You can disable the Resource Governor by using either [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or Transact-SQL.  
   
 -   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
@@ -50,14 +50,14 @@ manager: "jhubbard"
 ##  <a name="RGOffObjEx"></a> Disable Resource Governor Using Object Explorer  
  **To disable the Resource Governor by using Object Explorer**  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], open Object Explorer and recursively expand the **Management** node down to **Resource Governor**.  
+1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], open Object Explorer and recursively expand the **Management** node down to **Resource Governor**.  
   
 2.  Right-click **Resource Governor**, and then click **Disable**.  
   
 ##  <a name="RGOffProp"></a> Disable Resource Governor Using Resource Governor Properties  
  **To disable the Resource Governor by using the Resource Governor Properties page**  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], open Object Explorer and recursively expand the **Management** node down to **Resource Governor**.  
+1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], open Object Explorer and recursively expand the **Management** node down to **Resource Governor**.  
   
 2.  Right-click **Resource Governor** and then click **Properties**, this opens the **Resource Governor Properties** page.  
   
@@ -82,6 +82,6 @@ GO
  [Resource Governor Resource Pool](../../2014/database-engine/resource-governor-resource-pool.md)   
  [Resource Governor Workload Group](../../2014/database-engine/resource-governor-workload-group.md)   
  [Resource Governor Classifier Function](../../2014/database-engine/resource-governor-classifier-function.md)   
- [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../Topic/ALTER%20RESOURCE%20GOVERNOR%20\(Transact-SQL\).md)  
+ [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](~/t-sql/statements/alter-resource-governor-transact-sql.md)  
   
   

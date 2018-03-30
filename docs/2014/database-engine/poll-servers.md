@@ -45,7 +45,7 @@ EXECUTE msdb.dbo.sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
  You do not have to post operations explicitly if you use the following:  
   
--   Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to control multiserver jobs.  
+-   Microsoft [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to control multiserver jobs.  
   
 -   Job stored procedures that do not modify job schedules or job steps.  
   
@@ -53,7 +53,7 @@ EXECUTE msdb.dbo.sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
 -   [SQL Server Management Studio](../../2014/database-engine/force-a-target-server-to-poll-the-master-server.md)  
   
--   [Transact-SQL](../Topic/sp_post_msx_operation%20\(Transact-SQL\).md)  
+-   [Transact-SQL](~/relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql.md)  
   
 ## See Also  
  [Manage Events](../../2014/database-engine/manage-events.md)  

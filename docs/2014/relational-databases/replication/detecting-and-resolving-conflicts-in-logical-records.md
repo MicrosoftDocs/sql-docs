@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: f2e55040-ca69-4ccf-97d1-c362e1633f26
 caps.latest.revision: 31
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Detecting and Resolving Conflicts in Logical Records
@@ -24,9 +24,9 @@ manager: "jhubbard"
  To specify the conflict tracking and resolution level for an article, see [Specify the Conflict Tracking and Resolution Level for Merge Articles](../../../2014/relational-databases/replication/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md).  
   
 ## Conflict Detection  
- The way in which conflicts are detected for logical records is determined by two article properties: **column_tracking** and **logical_record_level_conflict_detection**. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and later versions also support logical record-level detection.  
+ The way in which conflicts are detected for logical records is determined by two article properties: **column_tracking** and **logical_record_level_conflict_detection**. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions also support logical record-level detection.  
   
- The **logical_record_level_conflict_detection** article property can be set to TRUE or FALSE. The value should only be set for the top-level parent article and will be ignored by child articles. If this value is FALSE, merge replication detects conflicts as in previous versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], based solely on the value of the **column_tracking** property for the article. If this value is TRUE, merge replication will ignore the **column_tracking** property of the article, and detect a conflict if changes are made anywhere in the logical record. For example, consider this scenario:  
+ The **logical_record_level_conflict_detection** article property can be set to TRUE or FALSE. The value should only be set for the top-level parent article and will be ignored by child articles. If this value is FALSE, merge replication detects conflicts as in previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], based solely on the value of the **column_tracking** property for the article. If this value is TRUE, merge replication will ignore the **column_tracking** property of the article, and detect a conflict if changes are made anywhere in the logical record. For example, consider this scenario:  
   
  ![Three table logical record with values](../../../2014/relational-databases/replication/media/logical-records-05.gif "Three table logical record with values")  
   

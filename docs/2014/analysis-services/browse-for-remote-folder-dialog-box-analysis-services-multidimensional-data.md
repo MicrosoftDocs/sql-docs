@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Browse for Remote Folder Dialog Box (Analysis Services - Multidimensional Data)
-  The **Browse for Remote Folder** dialog box displays a list of available log and data folders defined for an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. You can either select a listed folder, or you can specify a different folder if needed. The **Browse for Remote Folder** dialog box is displayed by doing one of the following steps:  
+  The **Browse for Remote Folder** dialog box displays a list of available log and data folders defined for an instance of [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. You can either select a listed folder, or you can specify a different folder if needed. The **Browse for Remote Folder** dialog box is displayed by doing one of the following steps:  
   
 -   In the Partition Wizard, on the **Processing and Storage Locations** page, clicking the ellipsis button (**...**).  
   

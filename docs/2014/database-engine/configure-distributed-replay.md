@@ -16,7 +16,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Configure Distributed Replay
-  The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay configuration details are specified in XML files on the Distributed Replay controller, clients, and where the administration tool is installed. These files include the following:  
+  The [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Distributed Replay configuration details are specified in XML files on the Distributed Replay controller, clients, and where the administration tool is installed. These files include the following:  
   
 -   [Controller configuration file](#DReplayController)  
   
@@ -27,7 +27,7 @@ manager: "jhubbard"
 -   [Replay configuration file](#ReplayConfig)  
   
 ##  <a name="DReplayController"></a> Controller Configuration File: DReplayController.config  
- When the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay controller service starts, it loads the logging level from the controller configuration file, `DReplayController.config`. This file is located in the folder where you installed the Distributed Replay controller service:  
+ When the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Distributed Replay controller service starts, it loads the logging level from the controller configuration file, `DReplayController.config`. This file is located in the folder where you installed the Distributed Replay controller service:  
   
  **\<controller installation path>\DReplayController.config**  
   
@@ -48,7 +48,7 @@ manager: "jhubbard"
 ```  
   
 ##  <a name="DReplayClient"></a> Client Configuration File: DReplayClient.config  
- When the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay client service starts, it loads configuration settings from the client configuration file, `DReplayClient.config`. This file is located on each client, in the folder where you installed the Distributed Replay client service:  
+ When the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Distributed Replay client service starts, it loads configuration settings from the client configuration file, `DReplayClient.config`. This file is located on each client, in the folder where you installed the Distributed Replay client service:  
   
  **\<client installation path>\DReplayClient.config**  
   
@@ -119,7 +119,7 @@ manager: "jhubbard"
   
 |Setting|XML Element|Description|Allowed Values|Required|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
-|Target instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (the test server)|`<Server>`|Specifies the name of the server and instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to connect to.|*server_name*[\\*instance_name*]<br /><br /> You cannot use "`localhost`" or "`.`" to represent the local host.|No, if the server name is already specified by using the **-s***target server* parameter with the **replay** option of the administration tool.|  
+|Target instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (the test server)|`<Server>`|Specifies the name of the server and instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to connect to.|*server_name*[\\*instance_name*]<br /><br /> You cannot use "`localhost`" or "`.`" to represent the local host.|No, if the server name is already specified by using the **-s***target server* parameter with the **replay** option of the administration tool.|  
 |Sequencing mode|`<SequencingMode>`|Specifies the mode that is used for event scheduling.|`synchronization` &#124; `stress`|No. By default, the value is `stress`.|  
 |Stress scale granularity|`<StressScaleGranularity>`|Specifies whether all connections on the Service Profile Identifier (SPID) should be scaled together (SPID) or independently (Connection) under stress mode.|SPID &#124; Connection|Yes. By default, the value is `SPID`.|  
 |Connect time scale|`<ConnectTimeScale>`|Is used to scale the connect time in stress mode.|An integer between `1` and `100`.|No. By default, the value is `100`.|  

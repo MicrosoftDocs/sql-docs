@@ -16,21 +16,21 @@ ms.author: "owend"
 manager: "jhubbard"
 ---
 # Lesson 1: Defining a Data Source View within an Analysis Services Project
-  Designing a business intelligence application in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] starts with creating an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Within this project, you define all the elements of your solution, starting with a data source view.  
+  Designing a business intelligence application in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] starts with creating an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Within this project, you define all the elements of your solution, starting with a data source view.  
   
  This lesson contains the following tasks:  
   
  [Creating an Analysis Services Project](../../2014/tutorials/creating-an-analysis-services-project.md)  
- In this task, you create the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Tutorial project, based on an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] multidimensional model template.  
+ In this task, you create the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial project, based on an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] multidimensional model template.  
   
  [Defining a Data Source](../../2014/tutorials/defining-a-data-source.md)  
- In this task, you specify the **AdventureWorksDW2012** database as the data source for the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dimensions and cubes that you will define in subsequent lessons.  
+ In this task, you specify the **AdventureWorksDW2012** database as the data source for the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dimensions and cubes that you will define in subsequent lessons.  
   
  [Defining a Data Source View](../../2014/tutorials/defining-a-data-source-view.md)  
  In this task, you define a single unified view of the metadata from selected tables in the **AdventureWorksDW2012** database.  
   
  [Modifying Default Table Names](../../2014/tutorials/modifying-default-table-names.md)  
- In this task, you modify table names in the data source view, so that the names of subsequent [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects that you define will be more user-friendly.  
+ In this task, you modify table names in the data source view, so that the names of subsequent [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objects that you define will be more user-friendly.  
   
  Compare your results against a sample project file that was built for this lesson. For more information about downloading the sample projects that go with this tutorial, see [SSAS Multidimensional Model Projects for SQL Server 2012](http://go.microsoft.com/fwlink/p/?LinkID=221866) on the product samples page on codeplex.  
   

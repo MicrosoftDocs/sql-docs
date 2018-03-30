@@ -24,7 +24,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Retrieving Unconsumed Data Using the sql:overflow-field (SQLXML 4.0)
-  When records are inserted in a database from an XML document by using the [!INCLUDE[tsql](../../../includes/tsql-md.md)] OPENXML function, all the unconsumed data from the source XML document can be stored in a column. When you retrieve data from a database by using annotated schemas, you can specify the `sql:overflow-field` attribute to identify the column in the table in which the overflow data is stored. The `sql:overflow-field` attribute can be specified on **\<element>**.  
+  When records are inserted in a database from an XML document by using the [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML function, all the unconsumed data from the source XML document can be stored in a column. When you retrieve data from a database by using annotated schemas, you can specify the `sql:overflow-field` attribute to identify the column in the table in which the overflow data is stored. The `sql:overflow-field` attribute can be specified on **\<element>**.  
   
  This data is then retrieved in these ways:  
   

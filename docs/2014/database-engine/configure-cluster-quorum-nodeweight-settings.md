@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Configure Cluster Quorum NodeWeight Settings
-  This topic describes how to configure NodeWeight settings for a member node in a Windows Server Failover Clustering (WSFC) cluster. NodeWeight settings are used during quorum voting to support disaster recovery and multi-subnet scenarios for [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Failover Cluster Instances.  
+  This topic describes how to configure NodeWeight settings for a member node in a Windows Server Failover Clustering (WSFC) cluster. NodeWeight settings are used during quorum voting to support disaster recovery and multi-subnet scenarios for [!INCLUDE[ssHADR](../includes/sshadr-md.md)] and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Failover Cluster Instances.  
   
 -   **Before you start:**  [Prerequisites](#Prerequisites), [Security](#Security)  
   
@@ -30,12 +30,12 @@ manager: "jhubbard"
 ##  <a name="BeforeYouBegin"></a> Before You Start  
   
 ###  <a name="Prerequisites"></a> Prerequisites  
- This feature is supported only in [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] or later versions.  
+ This feature is supported only in [!INCLUDE[firstref_longhorn](../includes/firstref-longhorn-md.md)] or later versions.  
   
 > [!IMPORTANT]  
 >  In order to use NodeWeight settings, the following hotfix must be applied to all servers in the WSFC cluster:  
 >   
->  [KB2494036](http://support.microsoft.com/kb/2494036): A hotfix is available to let you configure a cluster node that does not have quorum votes in [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] and in [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]  
+>  [KB2494036](http://support.microsoft.com/kb/2494036): A hotfix is available to let you configure a cluster node that does not have quorum votes in [!INCLUDE[firstref_longhorn](../includes/firstref-longhorn-md.md)] and in [!INCLUDE[winserver2008r2](../includes/winserver2008r2-md.md)]  
   
 > [!TIP]  
 >  If this hotfix is not installed, the examples in this topic will return empty or NULL values for NodeWeight.  
@@ -73,7 +73,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
 ##  <a name="CommandPromptProcedure"></a> Using Cluster.exe  
   
 > [!NOTE]  
->  The cluster.exe utility is deprecated in the [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] release.  Please use PowerShell with Failover Clustering for future development.  The cluster.exe utility will be removed in the next release of Windows Server. For more information, see [Mapping Cluster.exe Commands to Windows PowerShell Cmdlets for Failover Clusters](http://technet.microsoft.com/library/ee619744\(WS.10\).aspx).  
+>  The cluster.exe utility is deprecated in the [!INCLUDE[winserver2008r2](../includes/winserver2008r2-md.md)] release.  Please use PowerShell with Failover Clustering for future development.  The cluster.exe utility will be removed in the next release of Windows Server. For more information, see [Mapping Cluster.exe Commands to Windows PowerShell Cmdlets for Failover Clusters](http://technet.microsoft.com/library/ee619744\(WS.10\).aspx).  
   
 ##### To configure NodeWeight settings  
   

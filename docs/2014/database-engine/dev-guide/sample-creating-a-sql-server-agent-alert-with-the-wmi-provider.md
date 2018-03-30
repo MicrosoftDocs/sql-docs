@@ -26,14 +26,14 @@ manager: "jhubbard"
 ## Example  
  First, a table is created in the `AdventureWorks` database to hold the deadlock graph event. The table contains two columns: The `AlertTime` column holds the time that the alert runs, and the `DeadlockGraph` column holds the XML document that contains the deadlock graph.  
   
- Then, the alert is created. The script first creates the job that the alert will run, adds a job step to the job, and targets the job to the current instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. The script then creates the alert.  
+ Then, the alert is created. The script first creates the job that the alert will run, adds a job step to the job, and targets the job to the current instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The script then creates the alert.  
   
- The job step retrieves the **TextData** property of the WMI event instance and inserts that value into the **DeadlockGraph** column of the **DeadlockEvents** table. Notice that [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implicitly converts the string into XML format. Because the job step uses the [!INCLUDE[tsql](../../../includes/tsql-md.md)] subsystem, the job step does not specify a proxy.  
+ The job step retrieves the **TextData** property of the WMI event instance and inserts that value into the **DeadlockGraph** column of the **DeadlockEvents** table. Notice that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implicitly converts the string into XML format. Because the job step uses the [!INCLUDE[tsql](../../includes/tsql-md.md)] subsystem, the job step does not specify a proxy.  
   
  The alert runs the job whenever a deadlock graph trace event would be logged. For a WMI alert, SQL Server Agent creates a notification query using the namespace and WQL statement specified. For this alert, SQL Server Agent monitors the default instance on the local computer. The WQL statement requests any `DEADLOCK_GRAPH` event in the default instance. To change the instance that the alert monitors, substitute the instance name for `MSSQLSERVER` in the `@wmi_namespace` for the alert.  
   
 > [!NOTE]  
->  For SQL Server Agent to receive WMI events, [!INCLUDE[ssSB](../../../includes/sssb-md.md)] must be enabled in **msdb** and [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)].  
+>  For SQL Server Agent to receive WMI events, [!INCLUDE[ssSB](../../includes/sssb-md.md)] must be enabled in **msdb** and [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```  
 USE AdventureWorks ;  
@@ -88,7 +88,7 @@ GO
 ```  
   
 ## Testing the Sample  
- To see the job run, provoke a deadlock. In [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], open two **SQL Query** tabs and connect both queries to the same instance. Run the following script in one of the query tabs. This script produces one result set and finishes.  
+ To see the job run, provoke a deadlock. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], open two **SQL Query** tabs and connect both queries to the same instance. Run the following script in one of the query tabs. This script produces one result set and finishes.  
   
 ```  
 USE AdventureWorks ;  
@@ -117,7 +117,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- Run the following script in the first query tab. This script blocks, waiting to acquire a lock on `Production.Location`. After a short time-out, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] will choose either this script or the script in the sample as the deadlock victim and end the transaction.  
+ Run the following script in the first query tab. This script blocks, waiting to acquire a lock on `Production.Location`. After a short time-out, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will choose either this script or the script in the sample as the deadlock victim and end the transaction.  
   
 ```  
 SELECT TOP(1) Name FROM Production.Location WITH (XLOCK) ;  

@@ -18,14 +18,14 @@ manager: "jhubbard"
 # Extensions to AdventureWorks to Demonstrate In-Memory OLTP
     
 ## Overview  
- This sample showcases the new [!INCLUDE[hek_2](../../includes/hek-2-md.md)] feature, which is part of [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. It shows the new memory-optimized tables and natively-compiled stored procedures, and can be used to demonstrate performance benefits of [!INCLUDE[hek_2](../../includes/hek-2-md.md)].  
+ This sample showcases the new [!INCLUDE[hek_2](../includes/hek-2-md.md)] feature, which is part of [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. It shows the new memory-optimized tables and natively-compiled stored procedures, and can be used to demonstrate performance benefits of [!INCLUDE[hek_2](../includes/hek-2-md.md)].  
   
 > [!NOTE]  
 >  To view this topic for SQL Server 2016, see [Extensions to AdventureWorks to Demonstrate In-Memory OLTP](https://msdn.microsoft.com/en-US/library/mt465764.aspx)  
   
- The sample migrates 5 tables in the AdventureWorks database to memory-optimized, and it includes a demo workload for sales order processing. You can use this demo workload to see the performance benefit of using [!INCLUDE[hek_2](../../includes/hek-2-md.md)] on your server.  
+ The sample migrates 5 tables in the AdventureWorks database to memory-optimized, and it includes a demo workload for sales order processing. You can use this demo workload to see the performance benefit of using [!INCLUDE[hek_2](../includes/hek-2-md.md)] on your server.  
   
- In the description of the sample we discuss the tradeoffs that were made in migrating the tables to [!INCLUDE[hek_2](../../includes/hek-2-md.md)] to account for the features that are not (yet) supported for memory-optimized tables in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
+ In the description of the sample we discuss the tradeoffs that were made in migrating the tables to [!INCLUDE[hek_2](../includes/hek-2-md.md)] to account for the features that are not (yet) supported for memory-optimized tables in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
  The documentation of this sample is structured as follows:  
   
@@ -33,7 +33,7 @@ manager: "jhubbard"
   
 -   Instructions for [Installing the In-Memory OLTP sample based on AdventureWorks](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)  
   
--   [Description of the sample tables and procedures](#Descriptionofthesampletablesandprocedures) – this includes descriptions of the tables and procedures added to AdventureWorks by the [!INCLUDE[hek_2](../../includes/hek-2-md.md)] sample, as well as considerations for migrating some of the original AdventureWorks tables to memory-optimized  
+-   [Description of the sample tables and procedures](#Descriptionofthesampletablesandprocedures) – this includes descriptions of the tables and procedures added to AdventureWorks by the [!INCLUDE[hek_2](../includes/hek-2-md.md)] sample, as well as considerations for migrating some of the original AdventureWorks tables to memory-optimized  
   
 -   Instructions for performing [Performance Measurements using the Demo Workload](#PerformanceMeasurementsusingtheDemoWorkload) – this includes instructions for installing and running ostress, a tool using for driving the workload, as well as running the demo workload itself  
   
@@ -41,11 +41,11 @@ manager: "jhubbard"
   
 ##  <a name="Prerequisites"></a> Prerequisites  
   
--   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] RTM – Evaluation, Developer, or Enterprise edition  
+-   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM – Evaluation, Developer, or Enterprise edition  
   
--   For performance testing, a server with specifications similar to your production environment. For this particular sample you should have at least 16GB of memory available to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For general guidelines on hardware for [!INCLUDE[hek_2](../../includes/hek-2-md.md)], see the following blog post:[http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
+-   For performance testing, a server with specifications similar to your production environment. For this particular sample you should have at least 16GB of memory available to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For general guidelines on hardware for [!INCLUDE[hek_2](../includes/hek-2-md.md)], see the following blog post:[http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
   
-##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Installing the [!INCLUDE[hek_2](../../includes/hek-2-md.md)] sample based on AdventureWorks  
+##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Installing the [!INCLUDE[hek_2](../includes/hek-2-md.md)] sample based on AdventureWorks  
  Follow these steps to install the sample:  
   
 1.  Download the archive for the full backup of the AdventureWorks2014 database:  
@@ -56,7 +56,7 @@ manager: "jhubbard"
   
 2.  Extract the **AdventureWorks2014.bak** file to a local folder, for example 'c:\temp'.  
   
-3.  Restore the database backup using [!INCLUDE[tsql](../../includes/tsql-md.md)] or [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
+3.  Restore the database backup using [!INCLUDE[tsql](../includes/tsql-md.md)] or [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]:  
   
     1.  Identify the target folder and filename for the data file, for example  
   
@@ -79,15 +79,15 @@ manager: "jhubbard"
      GO  
     ```  
   
-4.  Change the database owner to a login on your server, by running the following command in the query window of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
+4.  Change the database owner to a login on your server, by running the following command in the query window of [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]:  
   
     ```  
     ALTER AUTHORIZATION ON DATABASE::AdventureWorks2014 TO [<NewLogin>]  
     ```  
   
-5.  Download the sample script ‘[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../../includes/hek-2-md.md)] Sample.sql’ from [SQL Server 2014 RTM In-Memory OLTP Sample](http://go.microsoft.com/fwlink/?LinkID=396372) to a local folder.  
+5.  Download the sample script ‘[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql’ from [SQL Server 2014 RTM In-Memory OLTP Sample](http://go.microsoft.com/fwlink/?LinkID=396372) to a local folder.  
   
-6.  Update the value for the variable ‘checkpoint_files_location’ in the script '[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../../includes/hek-2-md.md)] Sample.sql', to point to the target location for the [!INCLUDE[hek_2](../../includes/hek-2-md.md)] checkpoint files. The checkpoint files should be placed on a drive with good sequential IO performance.  
+6.  Update the value for the variable ‘checkpoint_files_location’ in the script '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql', to point to the target location for the [!INCLUDE[hek_2](../includes/hek-2-md.md)] checkpoint files. The checkpoint files should be placed on a drive with good sequential IO performance.  
   
      Update the value for the variable 'database_name' to point to the AdventureWorks2014 database.  
   
@@ -111,7 +111,7 @@ manager: "jhubbard"
   
     2.  Using Management Studio:  
   
-        1.  Open the script ‘[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../../includes/hek-2-md.md)] Sample.sql’ in a query window  
+        1.  Open the script ‘[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql’ in a query window  
   
         2.  Connect to the target server that contains the database AdventureWorks2014  
   
@@ -132,7 +132,7 @@ manager: "jhubbard"
   
  The new schema 'Demo' contains helper tables and stored procedures to execute a demo workload.  
   
- Concretely, the [!INCLUDE[hek_2](../../includes/hek-2-md.md)] sample adds the following objects to AdventureWorks:  
+ Concretely, the [!INCLUDE[hek_2](../includes/hek-2-md.md)] sample adds the following objects to AdventureWorks:  
   
 ### Tables added by the sample  
   
@@ -178,15 +178,15 @@ manager: "jhubbard"
   
  Sales.SalesOrderHeader_inmem  
   
--   *Default constraints* are supported for memory-optimized tables, and most default constraints we migrated as is. However, the original table Sales.SalesOrderHeader contains two default constraints that retrieve the current date, for the columns OrderDate and ModifiedDate. In a high throughput order processing workload with a lot of concurrency, any global resource can become a point of contention. System time is such a global resource, and we have observed that it can become a bottleneck when running an [!INCLUDE[hek_2](../../includes/hek-2-md.md)] workload that inserts sales orders, in particular if the system time needs to be retrieved for multiple columns in the sales order header, as well as the sales order details. The problem is addressed in this sample by retrieving the system time only once for each sales order that is inserted, and use that value for the datetime columns in SalesOrderHeader_inmem and SalesOrderDetail_inmem, in the stored procedure Sales.usp_InsertSalesOrder_inmem.  
+-   *Default constraints* are supported for memory-optimized tables, and most default constraints we migrated as is. However, the original table Sales.SalesOrderHeader contains two default constraints that retrieve the current date, for the columns OrderDate and ModifiedDate. In a high throughput order processing workload with a lot of concurrency, any global resource can become a point of contention. System time is such a global resource, and we have observed that it can become a bottleneck when running an [!INCLUDE[hek_2](../includes/hek-2-md.md)] workload that inserts sales orders, in particular if the system time needs to be retrieved for multiple columns in the sales order header, as well as the sales order details. The problem is addressed in this sample by retrieving the system time only once for each sales order that is inserted, and use that value for the datetime columns in SalesOrderHeader_inmem and SalesOrderDetail_inmem, in the stored procedure Sales.usp_InsertSalesOrder_inmem.  
   
--   *Alias UDTs* - The original table uses two alias user-defined data types (UDTs) dbo.OrderNumber and dbo.AccountNumber, for the columns PurchaseOrderNumber and AccountNumber, respectively. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] does not support alias UDT for memory-optimized tables, thus the new tables use system data types nvarchar(25) and nvarchar(15), respectively.  
+-   *Alias UDTs* - The original table uses two alias user-defined data types (UDTs) dbo.OrderNumber and dbo.AccountNumber, for the columns PurchaseOrderNumber and AccountNumber, respectively. [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] does not support alias UDT for memory-optimized tables, thus the new tables use system data types nvarchar(25) and nvarchar(15), respectively.  
   
 -   *Nullable columns in index keys* - In the original table, the column SalesPersonID is nullable, while in the new tables the column is not nullable and has a default constraint with value (-1). This is because indexes on memory-optimized tables cannot have nullable columns in the index key; -1 is a surrogate for NULL in this case.  
   
--   *Computed columns* - The computed columns SalesOrderNumber and TotalDue are omitted, as [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] does not support computed columns in memory-optimized tables. The new view Sales.vSalesOrderHeader_extended_inmem reflects the columns SalesOrderNumber and TotalDue. Therefore, you can use this view if these columns are needed.  
+-   *Computed columns* - The computed columns SalesOrderNumber and TotalDue are omitted, as [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] does not support computed columns in memory-optimized tables. The new view Sales.vSalesOrderHeader_extended_inmem reflects the columns SalesOrderNumber and TotalDue. Therefore, you can use this view if these columns are needed.  
   
--   *Foreign key constraints* are not supported for memory-optimized tables in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. In addition, SalesOrderHeader_inmem is a hot table in the example workload, and foreign keys constraints require additional processing for all DML operations, as it requires lookups in all the other tables referenced in these constraints. Therefore, the assumption is that the app ensures referential integrity, and referential integrity is not validated when rows are inserted. Referential integrity for the data in this table can be verified using the stored procedure dbo.usp_ValidateIntegrity, using the following script:  
+-   *Foreign key constraints* are not supported for memory-optimized tables in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. In addition, SalesOrderHeader_inmem is a hot table in the example workload, and foreign keys constraints require additional processing for all DML operations, as it requires lookups in all the other tables referenced in these constraints. Therefore, the assumption is that the app ensures referential integrity, and referential integrity is not validated when rows are inserted. Referential integrity for the data in this table can be verified using the stored procedure dbo.usp_ValidateIntegrity, using the following script:  
   
     ```  
     DECLARE @o int = object_id(N'Sales.SalesOrderHeader_inmem')  
@@ -200,13 +200,13 @@ manager: "jhubbard"
     EXEC dbo.usp_ValidateIntegrity @o  
     ```  
   
--   *Rowguid* - The rowguid column is omitted. While uniqueidentifier is support for memory-optimized tables, the option ROWGUIDCOL is not supported in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Columns of this kind are typically used for either merge replication or tables that have filestream columns. This sample includes neither.  
+-   *Rowguid* - The rowguid column is omitted. While uniqueidentifier is support for memory-optimized tables, the option ROWGUIDCOL is not supported in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Columns of this kind are typically used for either merge replication or tables that have filestream columns. This sample includes neither.  
   
  Sales.SalesOrderDetail  
   
 -   *Default constraints* – similar to SalesOrderHeader, the default constraint requiring the system date/time is not migrated, instead the stored procedure inserting sales orders takes care of inserting the current system date/time on first insert.  
   
--   *Computed columns* – the computed column LineTotal was not migrated as computed columns are not supported with memory-optimized tables in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. To access this column use the view Sales.vSalesOrderDetail_extended_inmem.  
+-   *Computed columns* – the computed column LineTotal was not migrated as computed columns are not supported with memory-optimized tables in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. To access this column use the view Sales.vSalesOrderDetail_extended_inmem.  
   
 -   *Rowguid* - The rowguid column is omitted. For details see the description for the table SalesOrderHeader.  
   
@@ -221,7 +221,7 @@ manager: "jhubbard"
   
 -   *Alias UDTs* – the original table uses the user-defined data type dbo.Flag, which is equivalent to the system data type bit. The migrated table uses the bit data type instead.  
   
--   *BIN2 collation* – The columns Name and ProductNumber are included in index keys, and must thus have BIN2 collations in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Here, the assumption is that the app does not rely on collation specifics, like case insensitivity.  
+-   *BIN2 collation* – The columns Name and ProductNumber are included in index keys, and must thus have BIN2 collations in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Here, the assumption is that the app does not rely on collation specifics, like case insensitivity.  
   
 -   *Rowguid* - The rowguid column is omitted. For details see the description for the table SalesOrderHeader.  
   
@@ -384,7 +384,7 @@ manager: "jhubbard"
     -   It relies on the helper procedures dbo.usp_GenerateCKCheck, dbo.usp_GenerateFKCheck, and dbo.GenerateUQCheck to generate the T-SQL needed for performing the integrity checks.  
   
 ##  <a name="PerformanceMeasurementsusingtheDemoWorkload"></a> Performance Measurements using the Demo Workload  
- Ostress is a command-line tool that was developed by the [!INCLUDE[msCoName](../Token/msCoName_md.md)] CSS [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] support team. This tool can be used to execute queries or run stored procedures in parallel. You can configure the number of threads to run a given T-SQL statement in parallel, and you can specify how many times the statement should be executed on this thread; ostress will spin up the threads and execute the statement on all threads in parallel. After execution finishes for all threads, ostress will report the time taken for all threads to finish execution.  
+ Ostress is a command-line tool that was developed by the [!INCLUDE[msCoName](../includes/msconame-md.md)] CSS [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] support team. This tool can be used to execute queries or run stored procedures in parallel. You can configure the number of threads to run a given T-SQL statement in parallel, and you can specify how many times the statement should be executed on this thread; ostress will spin up the threads and execute the statement on all threads in parallel. After execution finishes for all threads, ostress will report the time taken for all threads to finish execution.  
   
 ### Installing ostress  
  Ostress is installed as part of the RML Utilities; there is no standalone installation for ostress.  
@@ -404,13 +404,13 @@ manager: "jhubbard"
   
  Ensure that the command prompt is located in the RML Utilities installation folder. For example:  
   
- ![](../Image/SQLServer2014RTMIn-MemoryOLTP01.jpg)  
+ ![](../../2014/database-engine/media/SQLServer2014RTMIn-MemoryOLTP01.jpg)  
   
  The command-line options for ostress can be seen when simply running ostress.exe without any command-line options. The main options to consider for running ostress with this sample are:  
   
--   -S name of [!INCLUDE[msCoName](../Token/msCoName_md.md)][!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] instance to connect to  
+-   -S name of [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance to connect to  
   
--   -E use Windows authentication to connect (default); if you use [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] authentication, use the options –U and –P to specify the username and password, respectively  
+-   -E use Windows authentication to connect (default); if you use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] authentication, use the options –U and –P to specify the username and password, respectively  
   
 -   -d name of the database, for this example AdventureWorks2014  
   
@@ -474,7 +474,7 @@ ostress.exe –n10 –r5 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @
   
  If everything works as expected, your command window will look similar to the following. Error messages are not expected.  
   
- ![](../Image/SQLServer2014RTMIn-MemoryOLTP02.jpg)  
+ ![](../../2014/database-engine/media/SQLServer2014RTMIn-MemoryOLTP02.jpg)  
   
  Validate that also the workload functions as expected for disk-based tables by running the following command in the RML Cmd Prompt:  
   
@@ -517,7 +517,7 @@ ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 
   
  On one test server with a total number of 8 physical (16 logical) cores, this took 41 minutes and 25 seconds. On a second test server with 24 physical (48 logical) cores, this took 52 minutes and 16 seconds.  
   
- The main factor in the performance difference between memory-optimized tables and disk-based tables in this test is the fact that when using disk-based tables, [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] cannot not fully utilize the CPU. The reason is latch contention: concurrent transactions are attempting to write to the same data page; latches are used to ensure only one transaction at a time can write to a page. The [!INCLUDE[hek_2](../Token/hek_2_md.md)] engine is latch-free, and data rows are not organized in pages. Thus, concurrent transactions do not block each other’s inserts, thus enabling [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] to fully utilize the CPU.  
+ The main factor in the performance difference between memory-optimized tables and disk-based tables in this test is the fact that when using disk-based tables, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cannot not fully utilize the CPU. The reason is latch contention: concurrent transactions are attempting to write to the same data page; latches are used to ensure only one transaction at a time can write to a page. The [!INCLUDE[hek_2](../includes/hek-2-md.md)] engine is latch-free, and data rows are not organized in pages. Thus, concurrent transactions do not block each other’s inserts, thus enabling [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to fully utilize the CPU.  
   
  You can observe the CPU utilization while the workload is running, for example using task manager. You will see with disk-based tables the CPU utilization is far from 100%. On a test configuration with 16 logical processors, the utilization would hover around 24%.  
   
@@ -537,13 +537,13 @@ ostress.exe -S. -E -dAdventureWorks2014 -Q"EXEC Demo.usp_DemoReset"
 ###  <a name="Troubleshootingslow-runningtests"></a> Troubleshooting slow-running tests  
  Test results will typically vary with hardware, and also the level of concurrency used in the test run. A couple of things to look for if the results are not as expected:  
   
--   Number of concurrent transactions: When running the workload on a single thread, performance gain with [!INCLUDE[hek_2](../Token/hek_2_md.md)] will likely be less than 2X. Latch contention is only a big problem if there is a high level of concurrency.  
+-   Number of concurrent transactions: When running the workload on a single thread, performance gain with [!INCLUDE[hek_2](../includes/hek-2-md.md)] will likely be less than 2X. Latch contention is only a big problem if there is a high level of concurrency.  
   
--   Low number of cores available to [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)]: This means there will be a low level of concurrency in the system, as there can only be as many concurrently executing transactions as there are cores available to SQL.  
+-   Low number of cores available to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]: This means there will be a low level of concurrency in the system, as there can only be as many concurrently executing transactions as there are cores available to SQL.  
   
     -   Symptom: if the CPU utilization is high when running the workload on disk-based tables, this means there is not a lot of contention, pointing to a lack of concurrency.  
   
--   Speed of the log drive: If the log drive cannot keep up with the level of transaction throughput in the system, the workload becomes bottlenecked on log IO. Although logging is more efficient with [!INCLUDE[hek_2](../Token/hek_2_md.md)], if log IO is a bottleneck, the potential performance gain is limited.  
+-   Speed of the log drive: If the log drive cannot keep up with the level of transaction throughput in the system, the workload becomes bottlenecked on log IO. Although logging is more efficient with [!INCLUDE[hek_2](../includes/hek-2-md.md)], if log IO is a bottleneck, the potential performance gain is limited.  
   
     -   Symptom: if the CPU utilization is not close to 100% or is very spiky when running the workload on memory-optimized tables, it is possible there is a log IO bottleneck. This can be confirmed by opening Resource Monitor and looking at the queue length for the log drive.  
   
@@ -553,7 +553,7 @@ ostress.exe -S. -E -dAdventureWorks2014 -Q"EXEC Demo.usp_DemoReset"
 ###  <a name="Memoryutilizationforthememory-optimizedtables"></a> Memory utilization for the memory-optimized tables  
   
 #### Overall utilization of the database  
- The following query can be used to obtain the total memory utilization for [!INCLUDE[hek_2](../Token/hek_2_md.md)] in the system.  
+ The following query can be used to obtain the total memory utilization for [!INCLUDE[hek_2](../includes/hek-2-md.md)] in the system.  
   
 ```  
 SELECT type  
@@ -621,7 +621,7 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 |MEMORYCLERK_XTP|Default|0|  
 |MEMORYCLERK_XTP|Default|0|  
   
- As you can see, [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] is using a bit under 8GB for the memory-optimized tables and indexes in the sample database.  
+ As you can see, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is using a bit under 8GB for the memory-optimized tables and indexes in the sample database.  
   
  Looking at the detailed memory usage per table after one example run:  
   
@@ -650,7 +650,7 @@ WHERE t.type='U'
 #### After demo reset  
  The stored procedure Demo.usp_DemoReset can be used to reset the demo. It deletes the data in the tables SalesOrderHeader_inmem and SalesOrderDetail_inmem, and re-seeds the data from the original tables SalesOrderHeader and SalesOrderDetail.  
   
- Now, even though the rows in the tables have been deleted, this does not mean that memory is reclaimed immediately. [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] reclaims memory from deleted rows in memory-optimized tables in the background, as needed. You will see that immediately after demo reset, with no transactional workload on the system, memory from deleted rows is not yet reclaimed:  
+ Now, even though the rows in the tables have been deleted, this does not mean that memory is reclaimed immediately. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reclaims memory from deleted rows in memory-optimized tables in the background, as needed. You will see that immediately after demo reset, with no transactional workload on the system, memory from deleted rows is not yet reclaimed:  
   
 ```  
 SELECT type  
@@ -743,7 +743,7 @@ ORDER BY state, file_type
 |UNDER CONSTRUCTION|DATA|1|128|  
 |UNDER CONSTRUCTION|DELTA|1|8|  
   
- As you can see, most of the space is used by precreated data and delta files. [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] pre-created one pair of (data, delta) files per logical processor. In addition, data files are pre-sized at 128MB, and delta files at 8MB, in order to make inserting data into these files more efficient.  
+ As you can see, most of the space is used by precreated data and delta files. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pre-created one pair of (data, delta) files per logical processor. In addition, data files are pre-sized at 128MB, and delta files at 8MB, in order to make inserting data into these files more efficient.  
   
  The actual data in the memory-optimized tables is in the single data file.  
   
@@ -873,6 +873,6 @@ ORDER BY state, file_type
  In this case, there are two checkpoint file pairs in the ‘under construction’ state, which means multiple file pairs were moved to the ‘under construction’ state, likely due to the high level of concurrency in the workload. Multiple concurrent threads required a new file pair at the same time, and thus moved a pair from ‘precreated’ to ‘under construction’.  
   
 ## See Also  
- [In-Memory OLTP &#40;In-Memory Optimization&#41;](../Topic/In-Memory%20OLTP%20\(In-Memory%20Optimization\).md)  
+ [In-Memory OLTP &#40;In-Memory Optimization&#41;](in-memory-oltp-in-memory-optimization.md)  
   
   

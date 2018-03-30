@@ -23,10 +23,10 @@ ms.author: "jroth"
 manager: "jhubbard"
 ---
 # Availability Group Listeners, Client Connectivity, and Application Failover (SQL Server)
-  This topic contains information about considerations for [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] client connectivity and application-failover functionality.  
+  This topic contains information about considerations for [!INCLUDE[ssHADR](../includes/sshadr-md.md)] client connectivity and application-failover functionality.  
   
 > [!NOTE]  
->  For the majority of the common listener configurations, you can create the first availability group listener simply by using [!INCLUDE[tsql](../../includes/tsql-md.md)] statements or PowerShell cmdlets. For more information, see [Related Tasks](#RelatedTasks), later in this topic.  
+>  For the majority of the common listener configurations, you can create the first availability group listener simply by using [!INCLUDE[tsql](../includes/tsql-md.md)] statements or PowerShell cmdlets. For more information, see [Related Tasks](#RelatedTasks), later in this topic.  
   
  
   
@@ -82,7 +82,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
  You can still choose to directly reference the instance of SQL Server name of the primary or secondary replicas instead of using the availability group listener server name, however if you choose to do so you will lose the benefit of new connections being directed automatically to the current primary replica.  You will also lose the benefit of read-only routing.  
   
 ##  <a name="ConnectToSecondary"></a> Using a Listener to Connect to a Read-Only Secondary Replica (Read-Only Routing)  
- *Read-only routing* refers to the ability of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to route incoming connections to an availability group listener to a secondary replica that is configured to allow read-only workloads. An incoming connection referencing an availability group listener name can automatically be routed to a read-only replica if the following are true:  
+ *Read-only routing* refers to the ability of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to route incoming connections to an availability group listener to a secondary replica that is configured to allow read-only workloads. An incoming connection referencing an availability group listener name can automatically be routed to a read-only replica if the following are true:  
   
 -   At least one secondary replica is set to read-only access, and each read-only secondary replica and the primary replica are configured to support read-only routing. For more information, see [To Configure Availability Replicas for Read-Only Routing](#ConfigureARsForROR), later in this section.  
   
@@ -135,12 +135,12 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
   
  To the instance of SQL Server it is irrelevant whether a connection logs in using the availability group listener or using another instance endpoint.  The instance of SQL Server will verify the state of the targeted database and either allow or disallow connectivity based on the configuration of the availability group and the current state of the database on the instance.  For example, if a client application connects directly to a instance of SQL Server port and connects to a target database hosted in an availability group, and the target database is in primary state and online, then connectivity will succeed.  If the target database is offline or in a transitional state, connectivity to the database will fail.  
   
- Alternatively, while migrating from database mirroring to [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], applications can specify the database mirroring connection string as long as only one secondary replica exists and it disallows user connections. For more information, see [Using Database-Mirroring Connection Strings with Availability Groups](#DbmConnectionString), later in this section.  
+ Alternatively, while migrating from database mirroring to [!INCLUDE[ssHADR](../includes/sshadr-md.md)], applications can specify the database mirroring connection string as long as only one secondary replica exists and it disallows user connections. For more information, see [Using Database-Mirroring Connection Strings with Availability Groups](#DbmConnectionString), later in this section.  
   
 ###  <a name="DbmConnectionString"></a> Using Database-Mirroring Connection Strings with Availability Groups  
  If an availability group possesses only one secondary replica and is not configured to allow read-access to the secondary replica, clients can connect to the primary replica by using a database mirroring connection string. This approach can be useful while migrating an existing application from database mirroring to an availability group, as long as you limit the availability group to two availability replicas (a primary replica and one secondary replica). If you add additional secondary replicas, you will need to create an availability group listener for the availability group and update your applications to use the availability group listener DNS name.  
   
- When using database mirroring connection strings, the client can use either [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client or .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The connection string provided by a client must minimally supply the name of one server instance, the *initial partner name*, to identify the server instance that initially hosts the availability replica to which you intend to connect. Optionally, the connection string can also supply the name of another server instance, the *failover partner name*, to identify the server instance that initially hosts the secondary replica as the failover partner name.  
+ When using database mirroring connection strings, the client can use either [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client or .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. The connection string provided by a client must minimally supply the name of one server instance, the *initial partner name*, to identify the server instance that initially hosts the availability replica to which you intend to connect. Optionally, the connection string can also supply the name of another server instance, the *failover partner name*, to identify the server instance that initially hosts the secondary replica as the failover partner name.  
   
  For more information about database mirroring connection strings, see [Connect Clients to a Database Mirroring Session &#40;SQL Server&#41;](../../2014/database-engine/connect-clients-to-a-database-mirroring-session-sql-server.md).  
   
@@ -155,7 +155,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
 > [!NOTE]  
 >  We recommend this setting for both single and multi-subnet connections to availability groups listeners and to SQL Server Failover Cluster Instance names.  Enabling this option adds additional optimizations, even for single-subnet scenarios.  
   
- The `MultiSubnetFailover` connection option only works with the TCP network protocol and is only supported when connecting to an availability group listener and for any virtual network name connecting to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ The `MultiSubnetFailover` connection option only works with the TCP network protocol and is only supported when connecting to an availability group listener and for any virtual network name connecting to [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
  An example of a for the ADO.NET provider (System.Data.SqlClient) connection string that enables multi-subnet failover is as follows:  
   

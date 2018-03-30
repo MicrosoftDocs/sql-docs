@@ -18,10 +18,10 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Cluster Resource Group
-  Use the Cluster Resource Group page to specify the disk where [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] virtual server resources will be located.  
+  Use the Cluster Resource Group page to specify the disk where [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] virtual server resources will be located.  
   
 ## Options  
- Specify the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cluster resource group name. You have two options:  
+ Specify the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cluster resource group name. You have two options:  
   
 -   Use the drop-down box to specify an existing group to use.  
   

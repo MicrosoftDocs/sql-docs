@@ -12,14 +12,14 @@ ms.topic: "article"
 ms.assetid: f87ce79b-00d7-4458-a17e-e253a20f720d
 caps.latest.revision: 5
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Hide a Page Header or Footer on the First or Last Page (Report Builder and SSRS)
   A report can contain a page header and page footer that run along the top and bottom of each page, respectively. After you a add a header or footer, you can selectively hide it on the first and last pages of a report.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ### To hide a page header on the first or last page  
   
@@ -31,7 +31,7 @@ manager: "mblythe"
   
 4.  In the **Print options** section, clear the check box for each option to hide the display on the first or last page of the report.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ### To hide a page footer on the first or last page  
   
@@ -43,7 +43,7 @@ manager: "mblythe"
   
 4.  In the **Print options** section, clear the check box for each option to hide the display on the first or last page of the report.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## See Also  
  [Page Headers and Footers &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/page-headers-and-footers-report-builder-and-ssrs.md)   

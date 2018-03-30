@@ -29,7 +29,7 @@ ms.author: "mblythe"
 manager: "mblythe"
 ---
 # Cancel Element (XMLA)
-  Cancels a currently running command an [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance.  
+  Cancels a currently running command an [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance.  
   
 ## Syntax  
   
@@ -67,7 +67,7 @@ manager: "mblythe"
   
  Typically, the `Cancel` command is used to cancel executing commands on the currently active session. In that case, none of the child elements for the `Cancel` command must be specified. The `Cancel` command can also be used by administrators to cancel commands executing on connections or sessions other than the currently active session. Members of a role that has Administer permissions for a given database can cancel commands for connections and sessions applicable to that database, while server administrators can cancel commands for connections and sessions for a given Analysis Services instance.  
   
- To retrieve information about current connections and sessions for an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance, the `Discover` method can be executed to request, respectively, the DISCOVER_CONNECTIONS and DISCOVER_SESSIONS schema rowsets. Members of a role that has Administer permissions for a given database can return sessions only for a given database by specifying that database in the SESSION_CURRENT_DATABASE restriction column for the DISCOVER_SESSIONS schema rowset. For more information about the `Discover` method, see [Discover Method &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/discover-method-xmla.md).  
+ To retrieve information about current connections and sessions for an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance, the `Discover` method can be executed to request, respectively, the DISCOVER_CONNECTIONS and DISCOVER_SESSIONS schema rowsets. Members of a role that has Administer permissions for a given database can return sessions only for a given database by specifying that database in the SESSION_CURRENT_DATABASE restriction column for the DISCOVER_SESSIONS schema rowset. For more information about the `Discover` method, see [Discover Method &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/discover-method-xmla.md).  
   
 ## See Also  
  [Batch Element &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/batch-element-xmla.md)   

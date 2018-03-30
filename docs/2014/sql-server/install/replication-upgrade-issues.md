@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Replication Upgrade Issues
-  The following topics describe the replication issues that might affect your upgrade to [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. The topics describe actions that you can take to help reduce the effects of these changes on your environment.  
+  The following topics describe the replication issues that might affect your upgrade to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. The topics describe actions that you can take to help reduce the effects of these changes on your environment.  
   
 ## In This Section  
   

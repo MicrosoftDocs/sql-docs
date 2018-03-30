@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 748d9899-589d-4420-8048-1258e9e67c20
 caps.latest.revision: 10
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Generate Siblings with a Nested AUTO Mode Query
@@ -24,7 +24,7 @@ manager: "jhubbard"
 ## Example  
  This query constructs XML that provides sales order information. This includes the following:  
   
--   Sales order header information, `SalesOrderID`, `SalesPersonID`, and `OrderDate`. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] stores this information in the `SalesOrderHeader` table.  
+-   Sales order header information, `SalesOrderID`, `SalesPersonID`, and `OrderDate`. [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] stores this information in the `SalesOrderHeader` table.  
   
 -   Sales order detail information. This includes one or more products ordered, the unit price, and the quantity ordered. This information is stored in the `SalesOrderDetail` table.  
   
@@ -138,11 +138,11 @@ FOR XML AUTO, TYPE
 </Sales.SalesOrderHeader>  
 ```  
   
- Because the `TYPE` directive returns a query result as `xml` type, you can query the resulting XML by using various `xml` data type methods. For more information, see [xml Data Type Methods](../Topic/xml%20Data%20Type%20Methods.md). In the following query, note the following:  
+ Because the `TYPE` directive returns a query result as `xml` type, you can query the resulting XML by using various `xml` data type methods. For more information, see [xml Data Type Methods](~/t-sql/xml/xml-data-type-methods.md). In the following query, note the following:  
   
 -   The previous query is added in the `FROM` clause. The query result is returned as a table. Note the `XmlCol` alias that is added.  
   
--   The `SELECT` clause specifies an XQuery against the `XmlCol` returned in the `FROM` clause. The `query()` method of the `xml` data type is used in specifying the XQuery. For more information, see [query&#40;&#41; Method &#40;xml Data Type&#41;](../Topic/query\(\)%20Method%20\(xml%20Data%20Type\).md).  
+-   The `SELECT` clause specifies an XQuery against the `XmlCol` returned in the `FROM` clause. The `query()` method of the `xml` data type is used in specifying the XQuery. For more information, see [query&#40;&#41; Method &#40;xml Data Type&#41;](~/t-sql/xml/query-method-xml-data-type.md).  
   
     ```  
     SELECT XmlCol.query('<Root> { /* } </Root>')  

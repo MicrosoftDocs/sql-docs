@@ -34,7 +34,7 @@ manager: "jhubbard"
  This messages indicates that the principal database encountered an error that caused database mirroring to be suspended.  
   
 ## User Action  
- Most cases of this error are self correcting. If the problem persists, restarting the database or server instance typically corrects the problem. For more information, look in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log on each partner for the associated error that preceded this message.  
+ Most cases of this error are self correcting. If the problem persists, restarting the database or server instance typically corrects the problem. For more information, look in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] error log on each partner for the associated error that preceded this message.  
   
 ## See Also  
  [Monitoring Database Mirroring &#40;SQL Server&#41;](../../2014/database-engine/monitoring-database-mirroring-sql-server.md)  

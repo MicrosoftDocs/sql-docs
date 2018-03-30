@@ -22,13 +22,13 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Add or Delete a User-Defined Hierarchy
-  You add a user-defined hierarchy to or remove a user-defined hierarchy from a dimension on the **Dimension Structure** tab in Dimension Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+  You add a user-defined hierarchy to or remove a user-defined hierarchy from a dimension on the **Dimension Structure** tab in Dimension Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
- When you add a user-defined hierarchy, it is not available to users until it is instantiated in an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance and the dimension is processed. For more information, see [Multidimensional Model Databases &#40;SSAS&#41;](../../2014/analysis-services/multidimensional-model-databases-ssas.md) and [Multidimensional Model Object Processing](../../2014/analysis-services/multidimensional-model-object-processing.md).  
+ When you add a user-defined hierarchy, it is not available to users until it is instantiated in an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance and the dimension is processed. For more information, see [Multidimensional Model Databases &#40;SSAS&#41;](../../2014/analysis-services/multidimensional-model-databases-ssas.md) and [Multidimensional Model Object Processing](../../2014/analysis-services/multidimensional-model-object-processing.md).  
   
 ### To add a user-defined hierarchy to a dimension  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the appropriate [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project, and then open the dimension with which you want to work.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the appropriate [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project, and then open the dimension with which you want to work.  
   
      The dimension opens in Dimension Designer on the **Dimension Structure** tab.  
   

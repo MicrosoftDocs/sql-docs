@@ -25,7 +25,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # NumberOfFlags Property (SInstance Class)
-  Gets the number of flags for the instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Gets the number of flags for the instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Syntax  
   
@@ -40,7 +40,7 @@ object
  An [SInstance Class](../../../2014/database-engine/dev-guide/sinstance-class.md) object that represents a server instance.  
   
 ## Property Value/Return Value  
- A `uint32` value that specifies the number of flags for the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ A `uint32` value that specifies the number of flags for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Remarks  
   

@@ -18,11 +18,11 @@ helpviewer_keywords:
 ms.assetid: 25e1fcc5-45d7-4c53-8c79-5493dfaa1c74
 caps.latest.revision: 72
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Create Filtered Indexes
-  This topic describes how to create a filtered index in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. A filtered index is an optimized nonclustered index especially suited to cover queries that select from a well-defined subset of data. It uses a filter predicate to index a portion of rows in the table. A well-designed filtered index can improve query performance as well as reduce index maintenance and storage costs compared with full-table indexes.  
+  This topic describes how to create a filtered index in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)]. A filtered index is an optimized nonclustered index especially suited to cover queries that select from a well-defined subset of data. It uses a filter predicate to index a portion of rows in the table. A well-designed filtered index can improve query performance as well as reduce index maintenance and storage costs compared with full-table indexes.  
   
  Filtered indexes can provide the following advantages over full-table indexes:  
   
@@ -72,7 +72,7 @@ manager: "jhubbard"
   
     -   Improved plan quality. For example, during query compilation, the query optimizer considers using a filtered index in more situations than the equivalent indexed view.  
   
-    -   Online index rebuilds. You can rebuild filtered indexes while they are available for queries. Online index rebuilds are not supported for indexed views. For more information, see the REBUILD option for [ALTER INDEX &#40;Transact-SQL&#41;](../Topic/ALTER%20INDEX%20\(Transact-SQL\).md).  
+    -   Online index rebuilds. You can rebuild filtered indexes while they are available for queries. Online index rebuilds are not supported for indexed views. For more information, see the REBUILD option for [ALTER INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-index-transact-sql.md).  
   
     -   Non-unique indexes. Filtered indexes can be non-unique, whereas indexed views must be unique.  
   
@@ -121,7 +121,7 @@ manager: "jhubbard"
   
 #### To create a filtered index  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -163,7 +163,7 @@ manager: "jhubbard"
   
 #### To ensure that a filtered index is used in a SQL query  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -178,6 +178,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see  [CREATE INDEX &#40;Transact-SQL&#41;](../Topic/CREATE%20INDEX%20\(Transact-SQL\).md).  
+ For more information, see  [CREATE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md).  
   
   

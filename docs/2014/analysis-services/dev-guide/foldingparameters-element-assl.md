@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # FoldingParameters Element (ASSL)
-  Specifies the parameters used by the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] server when it performs cross-validation of mining models.  
+  Specifies the parameters used by the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server when it performs cross-validation of mining models.  
   
 > [!NOTE]  
 >  These parameters are for internal use only. The information provided here is for reference only.  
@@ -66,9 +66,9 @@ manager: "mblythe"
 ## Remarks  
  These properties are for internal use only, and are not supported for use in DDL statements.  
   
- For information about how to use cross-validation in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], see [Measures in the Cross-Validation Report](../../../2014/analysis-services/measures-in-the-cross-validation-report.md).  
+ For information about how to use cross-validation in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], see [Measures in the Cross-Validation Report](../../../2014/analysis-services/measures-in-the-cross-validation-report.md).  
   
- For information about how to perform cross-validation by using [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] stored procedures, see [Data Mining Stored Procedures &#40;Analysis Services - Data Mining&#41;](../Topic/Data%20Mining%20Stored%20Procedures%20\(Analysis%20Services%20-%20Data%20Mining\).md).  
+ For information about how to perform cross-validation by using [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stored procedures, see [Data Mining Stored Procedures &#40;Analysis Services - Data Mining&#41;](~/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md).  
   
 ## See Also  
  [Properties &#40;ASSL&#41;](../../../2014/analysis-services/dev-guide/properties-assl.md)  

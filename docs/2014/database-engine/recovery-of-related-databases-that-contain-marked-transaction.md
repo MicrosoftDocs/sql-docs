@@ -32,13 +32,13 @@ manager: "jhubbard"
   
  For information about the requirements for restoring to a specific recovery point, see [Restore a SQL Server Database to a Point in Time &#40;Full Recovery Model&#41;](../../2014/database-engine/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports inserting named marks into the transaction log to allow recovery to that specific mark. Log marks are transaction specific and are inserted only if their associated transaction commits. As a result, marks can be tied to specific work, and you can recover to a point that includes or excludes this work.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supports inserting named marks into the transaction log to allow recovery to that specific mark. Log marks are transaction specific and are inserted only if their associated transaction commits. As a result, marks can be tied to specific work, and you can recover to a point that includes or excludes this work.  
   
  Before you insert named marks into the transaction log, consider the following:  
   
 -   Because transaction marks consume log space, use them only for transactions that play a significant role in the database recovery strategy.  
   
--   After a marked transaction commits, a row is inserted in the [logmarkhistory](../Topic/logmarkhistory%20\(Transact-SQL\).md) table in **msdb**.  
+-   After a marked transaction commits, a row is inserted in the [logmarkhistory](~/relational-databases/system-tables/logmarkhistory-transact-sql.md) table in **msdb**.  
   
 -   If a marked transaction spans multiple databases on the same database server or on different servers, the marks must be recorded in the logs of all the affected databases. For more information, see [Use Marked Transactions to Recover Related Databases Consistently &#40;Full Recovery Model&#41;](../../2014/database-engine/use-marked-transactions-to-recover-related-databases-consistently.md).  
   
@@ -46,7 +46,7 @@ manager: "jhubbard"
 >  For information about how to mark transactions, see [Use Marked Transactions to Recover Related Databases Consistently &#40;Full Recovery Model&#41;](../../2014/database-engine/use-marked-transactions-to-recover-related-databases-consistently.md).  
   
 ## Transact-SQL Syntax for Inserting Named Marks into a Transaction Log  
- To insert marks into the transaction logs, use the [BEGIN TRANSACTION](../Topic/BEGIN%20TRANSACTION%20\(Transact-SQL\).md) statement and the WITH MARK [*description*] clause. The mark is named the same as the transaction. The optional *description* is a textual description of the mark, not the mark name. For example, the name of both the transaction and the mark that is created in the following `BEGIN TRANSACTION` statement is `Tx1`:  
+ To insert marks into the transaction logs, use the [BEGIN TRANSACTION](~/t-sql/language-elements/begin-transaction-transact-sql.md) statement and the WITH MARK [*description*] clause. The mark is named the same as the transaction. The optional *description* is a textual description of the mark, not the mark name. For example, the name of both the transaction and the mark that is created in the following `BEGIN TRANSACTION` statement is `Tx1`:  
   
 ```wmimof  
 BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'    
@@ -57,7 +57,7 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
  For information about how to insert a mark into a transaction that spans multiple databases, see [Use Marked Transactions to Recover Related Databases Consistently &#40;Full Recovery Model&#41;](../../2014/database-engine/use-marked-transactions-to-recover-related-databases-consistently.md).  
   
 ## Transact-SQL Syntax for Recovering to a Mark  
- When you target a marked transaction by using a[RESTORE LOG](../Topic/RESTORE%20\(Transact-SQL\).md)statement, you can use one the following clauses to stop at or immediately before the mark:  
+ When you target a marked transaction by using a[RESTORE LOG](~/t-sql/statements/restore-statements-transact-sql.md)statement, you can use one the following clauses to stop at or immediately before the mark:  
   
 -   Use the WITH STOPATMARK = **'*`<mark_name>`*'** clause to specify that the marked transaction is the recovery point.  
   
@@ -78,7 +78,7 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
   
  [Restore a Database to a Marked Transaction &#40;SQL Server Management Studio&#41;](../../2014/database-engine/restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)  
   
 ### Preparing the Log Backups  
  For this example, an appropriate backup strategy for these related databases would be the following:  
@@ -109,8 +109,8 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
 6.  Recover each database.  
   
 ## See Also  
- [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../Topic/BEGIN%20TRANSACTION%20\(Transact-SQL\).md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [BEGIN TRANSACTION &#40;Transact-SQL&#41;](~/t-sql/language-elements/begin-transaction-transact-sql.md)   
+ [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)   
  [Apply Transaction Log Backups &#40;SQL Server&#41;](../../2014/database-engine/apply-transaction-log-backups-sql-server.md)   
  [Use Marked Transactions to Recover Related Databases Consistently &#40;Full Recovery Model&#41;](../../2014/database-engine/use-marked-transactions-to-recover-related-databases-consistently.md)   
  [Restore and Recovery Overview &#40;SQL Server&#41;](../../2014/database-engine/restore-and-recovery-overview-sql-server.md)   

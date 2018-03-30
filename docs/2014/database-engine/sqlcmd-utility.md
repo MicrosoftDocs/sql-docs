@@ -32,10 +32,10 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # sqlcmd Utility
-  The `sqlcmd` utility lets you enter [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, system procedures, and script files at the command prompt, in **Query Editor** in SQLCMD mode, in a Windows script file or in an operating system (Cmd.exe) job step of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job. This utility uses ODBC to execute [!INCLUDE[tsql](../../includes/tsql-md.md)] batches.  
+  The `sqlcmd` utility lets you enter [!INCLUDE[tsql](../includes/tsql-md.md)] statements, system procedures, and script files at the command prompt, in **Query Editor** in SQLCMD mode, in a Windows script file or in an operating system (Cmd.exe) job step of a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent job. This utility uses ODBC to execute [!INCLUDE[tsql](../includes/tsql-md.md)] batches.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] uses the [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]SqlClient for execution in regular and SQLCMD mode in **Query Editor**. When `sqlcmd` is run from the command line, `sqlcmd` uses the ODBC driver. Because different default options may apply, you might see different behavior when you execute the same query in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in SQLCMD Mode and in the `sqlcmd` utility.  
+>  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] uses the [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]SqlClient for execution in regular and SQLCMD mode in **Query Editor**. When `sqlcmd` is run from the command line, `sqlcmd` uses the ODBC driver. Because different default options may apply, you might see different behavior when you execute the same query in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] in SQLCMD Mode and in the `sqlcmd` utility.  
   
  Currently, `sqlcmd` does not require a space between the command line option and the value. However, in a future release, a space may be required between the command line option and the value.  
   
@@ -73,7 +73,7 @@ manager: "jhubbard"
 ## Command-line Options  
  **Login-Related Options**  
   **-A**  
- Logs in to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with a Dedicated Administrator Connection (DAC). This kind of connection is used to troubleshoot a server. This will only work with server computers that support DAC. If DAC is not available, `sqlcmd` generates an error message and then exits. For more information about DAC, see [Diagnostic Connection for Database Administrators](../../2014/database-engine/diagnostic-connection-for-database-administrators.md).  
+ Logs in to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] with a Dedicated Administrator Connection (DAC). This kind of connection is used to troubleshoot a server. This will only work with server computers that support DAC. If DAC is not available, `sqlcmd` generates an error message and then exits. For more information about DAC, see [Diagnostic Connection for Database Administrators](../../2014/database-engine/diagnostic-connection-for-database-administrators.md).  
   
  **-C**  
  This switch is used by the client to configure it to implicitly trust the server certificate without validation. This option is equivalent to the ADO.NET option `TRUSTSERVERCERTIFICATE = true`.  
@@ -85,7 +85,7 @@ manager: "jhubbard"
  Specifies the number of seconds before a `sqlcmd` login to the ODBC driver times out when you try to connect to a server. This option sets the `sqlcmd` scripting variable SQLCMDLOGINTIMEOUT. The default time-out for login to `sqlcmd` is eight seconds. The login time-out must be a number between 0 and 65534. If the value supplied is not numeric or does not fall into that range, `sqlcmd` generates an error message. A value of 0 specifies time-out to be infinite.  
   
  **-E**  
- Uses a trusted connection instead of using a user name and password to log on to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. By default, without -E specified, `sqlcmd` uses the trusted connection option.  
+ Uses a trusted connection instead of using a user name and password to log on to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. By default, without -E specified, `sqlcmd` uses the trusted connection option.  
   
  The **-E** option ignores possible user name and password environment variable settings such as SQLCMDPASSWORD. If the **-E** option is used together with the **-U** option or the **-P** option, an error message is generated.  
   
@@ -96,7 +96,7 @@ manager: "jhubbard"
  Declares the application workload type when connecting to a server. The only currently supported value is **ReadOnly**. If **-K** is not specified, the sqlcmd utility will not support connectivity to a secondary replica in an AlwaysOn availability group. For more information, see [Active Secondaries: Readable Secondary Replicas](../../2014/database-engine/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  `-M` *multisubnet_failover*  
- Always specify `-M` when connecting to the availability group listener of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] availability group or a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Failover Cluster Instance. `-M` provides for faster detection of and connection to the (currently) active server. If `–M` is not specified, `-M` is off. For more information about [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], see [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../2014/database-engine/listeners-client-connectivity-application-failover.md), [Creation and Configuration of Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/creation-and-configuration-of-availability-groups-sql-server.md), [Failover Clustering and AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/failover-clustering-and-alwayson-availability-groups-sql-server.md), and [Active Secondaries: Readable Secondary Replicas](../../2014/database-engine/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) .  
+ Always specify `-M` when connecting to the availability group listener of a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] availability group or a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Failover Cluster Instance. `-M` provides for faster detection of and connection to the (currently) active server. If `–M` is not specified, `-M` is off. For more information about [!INCLUDE[ssHADR](../includes/sshadr-md.md)], see [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../2014/database-engine/listeners-client-connectivity-application-failover.md), [Creation and Configuration of Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/creation-and-configuration-of-availability-groups-sql-server.md), [Failover Clustering and AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/failover-clustering-and-alwayson-availability-groups-sql-server.md), and [Active Secondaries: Readable Secondary Replicas](../../2014/database-engine/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) .  
   
  **-N**  
  This switch is used by the client to request an encrypted connection.  
@@ -134,13 +134,13 @@ manager: "jhubbard"
  If the **-P** option is followed by more than one argument, an error message is generated and the program exits.  
   
  **-S** [*protocol*:]*server*[**\\***instance_name*][**,***port*]  
- Specifies the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to which to connect. It sets the `sqlcmd` scripting variable SQLCMDSERVER.  
+ Specifies the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to which to connect. It sets the `sqlcmd` scripting variable SQLCMDSERVER.  
   
- Specify *server_name* to connect to the default instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on that server computer. Specify *server_name* [ **\\***instance_name* ] to connect to a named instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on that server computer. If no server computer is specified, `sqlcmd` connects to the default instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the local computer. This option is required when you execute `sqlcmd` from a remote computer on the network.  
+ Specify *server_name* to connect to the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on that server computer. Specify *server_name* [ **\\***instance_name* ] to connect to a named instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on that server computer. If no server computer is specified, `sqlcmd` connects to the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on the local computer. This option is required when you execute `sqlcmd` from a remote computer on the network.  
   
  *protocol* can be `tcp` (TCP/IP), `lpc` (shared memory), or `np` (named pipes).  
   
- If you do not specify a *server_name* [ **\\***instance_name* ] when you start `sqlcmd`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] checks for and uses the SQLCMDSERVER environment variable.  
+ If you do not specify a *server_name* [ **\\***instance_name* ] when you start `sqlcmd`, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] checks for and uses the SQLCMDSERVER environment variable.  
   
 > [!NOTE]  
 >  The OSQLSERVER environment variable has been kept for backward compatibility. The SQLCMDSERVER environment variable takes precedence over the OSQLSERVER environment variable; this means that `sqlcmd` and **osql** can be used next to each other without interference and that old scripts will continue to work.  
@@ -151,7 +151,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  The OSQLUSER environment variable is available for backward compatibility. The SQLCMDUSER environment variable takes precedence over the OSQLUSER environment variable. This means that `sqlcmd` and **osql** can be used next to each other without interference. It also means that existing **osql** scripts will continue to work.  
   
- If neither the **-U** option nor the **-P** option is specified, `sqlcmd` tries to connect by using [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Authentication mode. Authentication is based on the Windows account of the user who is running `sqlcmd`.  
+ If neither the **-U** option nor the **-P** option is specified, `sqlcmd` tries to connect by using [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows Authentication mode. Authentication is based on the Windows account of the user who is running `sqlcmd`.  
   
  If the **-U** option is used with the **-E** option (described later in this topic), an error message is generated. If the **–U** option is followed by more than one argument, an error message is generated and the program exits.  
   
@@ -215,7 +215,7 @@ manager: "jhubbard"
  Redirects the error message output to the screen (**stderr**). If you do not specify a parameter or if you specify **0**, only error messages that have a severity level of 11 or higher are redirected. If you specify **1**, all error message output including PRINT is redirected. Has no effect if you use -o. By default, messages are sent to **stdout**.  
   
  **-R**  
- Causes `sqlcmd` to localize numeric, currency, date, and time columns retrieved from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] based on the client’s locale. By default, these columns are displayed using the server’s regional settings.  
+ Causes `sqlcmd` to localize numeric, currency, date, and time columns retrieved from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] based on the client’s locale. By default, these columns are displayed using the server’s regional settings.  
   
  **-u**  
  Specifies that *output_file* is stored in Unicode format, regardless of the format of *input_file*.  
@@ -225,7 +225,7 @@ manager: "jhubbard"
  Writes input scripts to the standard output device (**stdout**).  
   
  **-I**  
- Sets the SET QUOTED_IDENTIFIER connection option to ON. By default, it is set to OFF. For more information, see [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../Topic/SET%20QUOTED_IDENTIFIER%20\(Transact-SQL\).md).  
+ Sets the SET QUOTED_IDENTIFIER connection option to ON. By default, it is set to OFF. For more information, see [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](~/t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  **-q"** *cmdline query* **"**  
  Executes a query when `sqlcmd` starts, but does not exit `sqlcmd` when the query has finished running. Multiple-semicolon-delimited queries can be executed. Use quotation marks around the query, as shown in the following example.  
@@ -332,7 +332,7 @@ manager: "jhubbard"
   
  **Error Reporting Options**  
   `-b`  
- Specifies that `sqlcmd` exits and returns a DOS ERRORLEVEL value when an error occurs. The value that is returned to the DOS ERRORLEVEL variable is **1** when the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error message has a severity level greater than 10; otherwise, the value returned is **0**. If the `-V` option has been set in addition to `-b`, `sqlcmd` will not report an error if the severity level is lower than the values set using `-V`. Command prompt batch files can test the value of ERRORLEVEL and handle the error appropriately. `sqlcmd` does not report errors for severity level 10 (informational messages).  
+ Specifies that `sqlcmd` exits and returns a DOS ERRORLEVEL value when an error occurs. The value that is returned to the DOS ERRORLEVEL variable is **1** when the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] error message has a severity level greater than 10; otherwise, the value returned is **0**. If the `-V` option has been set in addition to `-b`, `sqlcmd` will not report an error if the severity level is lower than the values set using `-V`. Command prompt batch files can test the value of ERRORLEVEL and handle the error appropriately. `sqlcmd` does not report errors for severity level 10 (informational messages).  
   
  If the `sqlcmd` script contains an incorrect comment, syntax error, or is missing a scripting variable, ERRORLEVEL returned is 1.  
   
@@ -349,7 +349,7 @@ manager: "jhubbard"
  Requests a packet of a different size. This option sets the `sqlcmd` scripting variable SQLCMDPACKETSIZE. *packet_size* must be a value between 512 and 32767. The default = 4096. A larger packet size can enhance performance for execution of scripts that have lots of SQL statements between GO commands. You can request a larger packet size. However, if the request is denied, `sqlcmd` uses the server default for packet size.  
   
  **-c** *batch_terminator*  
- Specifies the batch terminator. By default, commands are terminated and sent to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by typing the word "GO" on a line by itself. When you reset the batch terminator, do not use [!INCLUDE[tsql](../../includes/tsql-md.md)] reserved keywords or characters that have special meaning to the operating system, even if they are preceded by a backslash.  
+ Specifies the batch terminator. By default, commands are terminated and sent to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] by typing the word "GO" on a line by itself. When you reset the batch terminator, do not use [!INCLUDE[tsql](../includes/tsql-md.md)] reserved keywords or characters that have special meaning to the operating system, even if they are preceded by a backslash.  
   
  **-L**[**c**]  
  Lists the locally configured server computers, and the names of the server computers that are broadcasting on the network. This parameter cannot be used in combination with other parameters. The maximum number of server computers that can be listed is 3000. If the server list is truncated because of the size of the buffer a warning message is displayed.  
@@ -370,7 +370,7 @@ manager: "jhubbard"
   
  Where:  
   
- `x` = Number of transactions that are processed by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ `x` = Number of transactions that are processed by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  `t1` = Total time for all transactions.  
   
@@ -453,7 +453,7 @@ manager: "jhubbard"
  R/W indicates that the value can be modified by using the **setvar** command and subsequent commands will be influenced by the new value.  
   
 ## sqlcmd Commands  
- In addition to [!INCLUDE[tsql](../../includes/tsql-md.md)] statements within `sqlcmd`, the following commands are also available:  
+ In addition to [!INCLUDE[tsql](../includes/tsql-md.md)] statements within `sqlcmd`, the following commands are also available:  
   
 |||  
 |-|-|  
@@ -478,15 +478,15 @@ manager: "jhubbard"
   
 -   All `sqlcmd` commands are case insensitive.  
   
--   Each command must be on a separate line. A command cannot be followed by a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or another command.  
+-   Each command must be on a separate line. A command cannot be followed by a [!INCLUDE[tsql](../includes/tsql-md.md)] statement or another command.  
   
--   Commands are executed immediately. They are not put in the execution buffer as [!INCLUDE[tsql](../../includes/tsql-md.md)] statements are.  
+-   Commands are executed immediately. They are not put in the execution buffer as [!INCLUDE[tsql](../includes/tsql-md.md)] statements are.  
   
  **Editing Commands**  
   [**:**] **ED**  
- Starts the text editor. This editor can be used to edit the current [!INCLUDE[tsql](../../includes/tsql-md.md)] batch, or the last executed batch. To edit the last executed batch, the **ED** command must be typed immediately after the last batch has completed execution.  
+ Starts the text editor. This editor can be used to edit the current [!INCLUDE[tsql](../includes/tsql-md.md)] batch, or the last executed batch. To edit the last executed batch, the **ED** command must be typed immediately after the last batch has completed execution.  
   
- The text editor is defined by the SQLCMDEDITOR environment variable. The default editor is 'Edit'. To change the editor, set the SQLCMDEDITOR environment variable. For example, to set the editor to [!INCLUDE[msCoName](../../includes/msconame-md.md)] Notepad, at the command prompt, type:  
+ The text editor is defined by the SQLCMDEDITOR environment variable. The default editor is 'Edit'. To change the editor, set the SQLCMDEDITOR environment variable. For example, to set the editor to [!INCLUDE[msCoName](../includes/msconame-md.md)] Notepad, at the command prompt, type:  
   
  `SET SQLCMDEDITOR=notepad`  
   
@@ -595,7 +595,7 @@ manager: "jhubbard"
   
  This error will cause the `sqlcmd` script to end and return the message ID 50001 to the client.  
   
- The return values -1 to -99 are reserved by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; `sqlcmd` defines the following additional return values:  
+ The return values -1 to -99 are reserved by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]; `sqlcmd` defines the following additional return values:  
   
 |Return Values|Description|  
 |-------------------|-----------------|  
@@ -604,13 +604,13 @@ manager: "jhubbard"
 |-102|Conversion error occurred when selecting return value.|  
   
  **GO** [*count*]  
- GO signals both the end of a batch and the execution of any cached [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. When specifying a value for *count*, the cached statements will be executed *count* times, as a single batch.  
+ GO signals both the end of a batch and the execution of any cached [!INCLUDE[tsql](../includes/tsql-md.md)] statements. When specifying a value for *count*, the cached statements will be executed *count* times, as a single batch.  
   
  **Miscellaneous Commands**  
   **:r \<** *filename* **>**  
- Parses additional [!INCLUDE[tsql](../../includes/tsql-md.md)] statements and `sqlcmd` commands from the file specified by **<*`filename`*>**into the statement cache.  
+ Parses additional [!INCLUDE[tsql](../includes/tsql-md.md)] statements and `sqlcmd` commands from the file specified by **<*`filename`*>**into the statement cache.  
   
- If the file contains [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that are not followed by **GO**, you must enter **GO** on the line that follows **:r**.  
+ If the file contains [!INCLUDE[tsql](../includes/tsql-md.md)] statements that are not followed by **GO**, you must enter **GO** on the line that follows **:r**.  
   
 > [!NOTE]  
 >  **\<** *filename* **>** is read relative to the startup directory in which `sqlcmd` was run.  
@@ -624,7 +624,7 @@ manager: "jhubbard"
  Lists the locally configured servers and the names of the servers broadcasting on the network.  
   
  **:Connect**  *server_name*[**\\***instance_name*] [-l *timeout*] [-U *user_name* [-P *password*]]  
- Connects to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Also closes the current connection.  
+ Connects to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Also closes the current connection.  
   
  Time-out options:  
   
@@ -637,7 +637,7 @@ manager: "jhubbard"
   
  If *timeout* is not specified, the value of the SQLCMDLOGINTIMEOUT variable is the default.  
   
- If only *user_name* is specified (either as an option, or as an environment variable), the user will be prompted to enter a password. This is not true if the SQLCMDUSER or SQLCMDPASSWORD environment variables have been set. If neither options nor environment variables are provided, Windows Authentication mode is used to login. For example to connect to an instance, `instance1`, of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], `myserver`, by using integrated security you would use the following:  
+ If only *user_name* is specified (either as an option, or as an environment variable), the user will be prompted to enter a password. This is not true if the SQLCMDUSER or SQLCMDPASSWORD environment variables have been set. If neither options nor environment variables are provided, Windows Authentication mode is used to login. For example to connect to an instance, `instance1`, of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], `myserver`, by using integrated security you would use the following:  
   
  `:connect myserver\instance1`  
   
@@ -675,7 +675,7 @@ manager: "jhubbard"
 -   Each new `sqlcmd` session will overwrite existing files that have the same names.  
   
 ### Informational Messages  
- `sqlcmd` prints any informational message that are sent by the server. In the following example, after the [!INCLUDE[tsql](../../includes/tsql-md.md)] statements are executed, an informational message is printed.  
+ `sqlcmd` prints any informational message that are sent by the server. In the following example, after the [!INCLUDE[tsql](../includes/tsql-md.md)] statements are executed, an informational message is printed.  
   
  At the command prompt, type the following:  
   
@@ -730,7 +730,7 @@ manager: "jhubbard"
   
  The GO command should not appear before the XML OFF command is issued because the XML OFF command switches `sqlcmd` back to row-oriented output.  
   
- XML (streamed) data and rowset data cannot be mixed. If the XML ON command has not been issued before a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement that outputs XML streams is executed, the output will be garbled. If the XML ON command has been issued, you cannot execute [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that output regular row sets.  
+ XML (streamed) data and rowset data cannot be mixed. If the XML ON command has not been issued before a [!INCLUDE[tsql](../includes/tsql-md.md)] statement that outputs XML streams is executed, the output will be garbled. If the XML ON command has been issued, you cannot execute [!INCLUDE[tsql](../includes/tsql-md.md)] statements that output regular row sets.  
   
 > [!NOTE]  
 >  The **:XML** command does not support the SET STATISTICS XML statement.  

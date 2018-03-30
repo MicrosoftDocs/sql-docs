@@ -21,9 +21,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Implement Jobs
-  You can use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs to automate routine administrative tasks and run them on a recurring basis, making administration more efficient.  
+  You can use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent jobs to automate routine administrative tasks and run them on a recurring basis, making administration more efficient.  
   
- A job is a specified series of operations performed sequentially by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. A job can perform a wide range of activities, including running [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts, command-line applications, Microsoft ActiveX scripts, Integration Services packages, Analysis Services commands and queries, or Replication tasks. Jobs can run repetitive tasks or those that can be scheduled, and they can automatically notify users of job status by generating alerts, thereby greatly simplifying [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administration.  
+ A job is a specified series of operations performed sequentially by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent. A job can perform a wide range of activities, including running [!INCLUDE[tsql](../includes/tsql-md.md)] scripts, command-line applications, Microsoft ActiveX scripts, Integration Services packages, Analysis Services commands and queries, or Replication tasks. Jobs can run repetitive tasks or those that can be scheduled, and they can automatically notify users of job status by generating alerts, thereby greatly simplifying [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] administration.  
   
  You can run a job manually, or you can configure it to run according to a schedule or in response to alerts.  
   
@@ -37,7 +37,7 @@ manager: "jhubbard"
 |Contains information about the different kinds of job steps you can create and how to manage them.|[Manage Job Steps](../../2014/database-engine/manage-job-steps.md)|  
 |Contains information about how to define when jobs start running and how often they should run.|[Create and Attach Schedules to Jobs](../../2014/database-engine/create-and-attach-schedules-to-jobs.md)|  
 |Contains information about manually running jobs (without a schedule).|[Run Jobs](../../2014/database-engine/run-jobs.md)|  
-|Contains information about how you can configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to respond to jobs. For example, you can configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to notify administrators when jobs are finished.|[Specify Job Responses](../../2014/database-engine/specify-job-responses.md)|  
+|Contains information about how you can configure [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent to respond to jobs. For example, you can configure [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent to notify administrators when jobs are finished.|[Specify Job Responses](../../2014/database-engine/specify-job-responses.md)|  
 |Contains information about how to view existing jobs, their history once executes, and how to modify them.|[View or Modify Jobs](../../2014/database-engine/view-or-modify-jobs.md)|  
 |Contains information about how to delete jobs.|[Delete Jobs](../../2014/database-engine/delete-jobs.md)|  
   

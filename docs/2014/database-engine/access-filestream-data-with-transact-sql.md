@@ -18,28 +18,28 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Access FILESTREAM Data with Transact-SQL
-  This topic describes how to use the [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT, UPDATE, and DELETE statements to manage FILESTREAM data.  
+  This topic describes how to use the [!INCLUDE[tsql](../includes/tsql-md.md)] INSERT, UPDATE, and DELETE statements to manage FILESTREAM data.  
   
 > [!NOTE]  
 >  The examples in this topic require the FILESTREAM-enabled database and table that are created in [Create a FILESTREAM-Enabled Database](../../2014/database-engine/create-a-filestream-enabled-database.md) and [Create a Table for Storing FILESTREAM Data](../../2014/database-engine/create-a-table-for-storing-filestream-data.md).  
   
 ##  <a name="ins"></a> Inserting a Row That Contains FILESTREAM Data  
- To add a row to a table that supports FILESTREAM data, use the [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT statement. When you insert data into a FILESTREAM column, you can insert NULL or a `varbinary(max)` value.  
+ To add a row to a table that supports FILESTREAM data, use the [!INCLUDE[tsql](../includes/tsql-md.md)] INSERT statement. When you insert data into a FILESTREAM column, you can insert NULL or a `varbinary(max)` value.  
   
 ### Inserting NULL  
- The following example shows how to insert `NULL`. When the FILESTREAM value is `NULL`, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] does not create a file in the file system.  
+ The following example shows how to insert `NULL`. When the FILESTREAM value is `NULL`, the [!INCLUDE[ssDE](../includes/ssde-md.md)] does not create a file in the file system.  
   
- [!code-sql[FILESTREAM#FS_InsertNULL](../../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_insertnull)]  
+ [!code-sql[FILESTREAM#FS_InsertNULL](../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_insertnull)]  
   
 ### Inserting a Zero-Length Record  
  The following example shows how to use `INSERT` to create a zero-length record. This is useful for when you want to obtain a file handle, but will be manipulating the file by using Win32 APIs.  
   
- [!code-sql[FILESTREAM#FS_InsertZero](../../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_insertzero)]  
+ [!code-sql[FILESTREAM#FS_InsertZero](../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_insertzero)]  
   
 ### Creating a Data File  
- The following example shows how to use `INSERT` to create a file that contains data. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] converts the string `Seismic Data` to a `varbinary(max)` value. FILESTREAM creates the Windows file if it does not already exist.The data is then added to the data file.  
+ The following example shows how to use `INSERT` to create a file that contains data. The [!INCLUDE[ssDE](../includes/ssde-md.md)] converts the string `Seismic Data` to a `varbinary(max)` value. FILESTREAM creates the Windows file if it does not already exist.The data is then added to the data file.  
   
- [!code-sql[FILESTREAM#FS_InsertData](../../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_insertdata)]  
+ [!code-sql[FILESTREAM#FS_InsertData](../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_insertdata)]  
   
  When you select all data from the `Archive`.`dbo.Records` table, the results are similar to the results that are shown in the following table. However, the `Id` column will contain different GUIDs.  
   
@@ -50,18 +50,18 @@ manager: "jhubbard"
 |`7F680840-B7A4-45D4-8CD5-527C44D35B3F`|`3`|`0x536569736D69632044617461`|  
   
 ##  <a name="upd"></a> Updating FILESTREAM Data  
- You can use [!INCLUDE[tsql](../../includes/tsql-md.md)] to update the data in the file system file; although, you might not want to do this when you have to stream large amounts of data to a file.  
+ You can use [!INCLUDE[tsql](../includes/tsql-md.md)] to update the data in the file system file; although, you might not want to do this when you have to stream large amounts of data to a file.  
   
  The following example replaces any text in the file record with the text `Xray 1`.  
   
- [!code-sql[FILESTREAM#FS_UpdateData](../../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_updatedata)]  
+ [!code-sql[FILESTREAM#FS_UpdateData](../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_updatedata)]  
   
 ##  <a name="del"></a> Deleting FILESTREAM Data  
- When you delete a row that contains a FILESTREAM field, you also delete its underlying file system files. The only way to delete a row, and therefore the file, is to use the [!INCLUDE[tsql](../../includes/tsql-md.md)] DELETE statement.  
+ When you delete a row that contains a FILESTREAM field, you also delete its underlying file system files. The only way to delete a row, and therefore the file, is to use the [!INCLUDE[tsql](../includes/tsql-md.md)] DELETE statement.  
   
  The following example shows how to delete a row and its associated file system files.  
   
- [!code-sql[FILESTREAM#FS_DeleteData](../../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_deletedata)]  
+ [!code-sql[FILESTREAM#FS_DeleteData](../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_deletedata)]  
   
  When you select all data from the `dbo.Archive` table, the row is gone. You can no longer use the associated file.  
   

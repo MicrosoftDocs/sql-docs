@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Stop a Job
-  This topic describes how to stop a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job. A job is a specified series of actions that SQL Server Agent performs.  
+  This topic describes how to stop a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent job. A job is a specified series of actions that SQL Server Agent performs.  
   
 -   **Before you begin:**  ,  
   
@@ -51,7 +51,7 @@ manager: "jhubbard"
   
 #### To stop a job  
   
-1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], and then expand that instance.  
+1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], and then expand that instance.  
   
 2.  Expand **SQL Server Agent**, expand **Jobs**, right-click the job you want to stop, and then click **Stop Job**.  
   
@@ -61,7 +61,7 @@ manager: "jhubbard"
   
 #### To stop a job  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -77,7 +77,7 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [sp_stop_job &#40;Transact-SQL&#41;](../Topic/sp_stop_job%20\(Transact-SQL\).md).  
+ For more information, see [sp_stop_job &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-stop-job-transact-sql.md).  
   
 ##  <a name="SMO"></a> Using SQL Server Management Objects  
  **To stop a job**  

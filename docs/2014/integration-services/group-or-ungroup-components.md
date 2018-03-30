@@ -21,7 +21,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Group or Ungroup Components
-  The **Control Flow**, **Data Flow**, and **Event Handlers** tabs in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer supports collapsible grouping. If a package has many components, the tabs can become crowded, making it difficult to view all the components at one time and to locate the item with which you want to work. The collapsible grouping feature can conserve space on the work surface and make it easier to work with large packages.  
+  The **Control Flow**, **Data Flow**, and **Event Handlers** tabs in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer supports collapsible grouping. If a package has many components, the tabs can become crowded, making it difficult to view all the components at one time and to locate the item with which you want to work. The collapsible grouping feature can conserve space on the work surface and make it easier to work with large packages.  
   
  You select the components that you want to group, group them, and then expand or collapse the groups to suit your work. Expanding a group provides access to the properties of the components in the group. The precedence constraints that connect tasks and containers are automatically included in the group.  
   
@@ -31,11 +31,11 @@ manager: "jhubbard"
   
 -   Groups can also be nested, making it possible to create groups within groups. The design surface can implement multiple un-nested groups, but a component can belong to only one group, unless the groups are nested.  
   
--   When a package is saved, [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer saves the grouping, but the grouping has no effect on package execution. The ability to group components is a design-time feature; it does not affect the run-time behavior of the package.  
+-   When a package is saved, [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer saves the grouping, but the grouping has no effect on package execution. The ability to group components is a design-time feature; it does not affect the run-time behavior of the package.  
   
 ### To group components  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project that contains the package you want.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project that contains the package you want.  
   
 2.  In Solution Explorer, double-click the package to open it.  
   
@@ -47,7 +47,7 @@ manager: "jhubbard"
   
 ### To ungroup components  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project that contains the package you want.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project that contains the package you want.  
   
 2.  In Solution Explorer, double-click the package to open it.  
   

@@ -15,7 +15,7 @@ f1_keywords:
 ms.assetid: 4560a7e4-e19b-4a6e-8ef4-e963497e01ae
 caps.latest.revision: 6
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Map Parallel Properties Dialog Box, Labels

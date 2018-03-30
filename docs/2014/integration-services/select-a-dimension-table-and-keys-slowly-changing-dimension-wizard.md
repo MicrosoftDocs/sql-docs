@@ -27,7 +27,7 @@ manager: "jhubbard"
  Select an existing OLE DB connection manager from the list, or click **New** to create an OLE DB connection manager.  
   
 > [!NOTE]  
->  The Slowly Changing Dimension Wizard only supports OLE DB connection managers, and only supports connections to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  The Slowly Changing Dimension Wizard only supports OLE DB connection managers, and only supports connections to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **New**  
  Use the **Configure OLE DB Connection Manager** dialog box to select an existing connection manager, or click **New** to create a new OLE DB connection.  

@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 8f81d48f-7ab9-4ef8-bce0-7d16d9a47fbd
 caps.latest.revision: 26
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Updating Reports Using Classes Generated from the RDL Schema (SSRS Tutorial)
-  This tutorial illustrates how to use the XML Schema Definition Tool (Xsd.exe) to generate classes that allow you to serialize and deserialize report definition files (.rdl and .rdlc) with the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Xml.Serialization.XmlSerializer> class.  
+  This tutorial illustrates how to use the XML Schema Definition Tool (Xsd.exe) to generate classes that allow you to serialize and deserialize report definition files (.rdl and .rdlc) with the [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] <xref:System.Xml.Serialization.XmlSerializer> class.  
   
 ## What You Will Learn  
  During the course of this tutorial, you will complete the following activities:  
   
--   Create an application using the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Console Application project template.  
+-   Create an application using the [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Console Application project template.  
   
 -   Generate classes from the Report Definition Language (RDL) schema using the **xsd** tool.  
   
@@ -43,13 +43,13 @@ manager: "mblythe"
 ## Requirements  
  To complete the tutorial, you must have the following:  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)].  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)].  
   
 -   Sufficient permissions to be able to access and publish reports to the Report Server Web service on the computer where your report server is located.  
   
--   The [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database installed to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   The [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] sample database installed to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 -   A report installed on your report server. This tutorial uses the sample report, Company Sales 2012. For more information about sample reports, see [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
   

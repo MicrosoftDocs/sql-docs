@@ -21,12 +21,12 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Implement SQL Server Agent Security
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent lets the database administrator run each job step in a security context that has only the permissions required to perform that job step, which is determined by a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy. To set the permissions for a particular job step, you create a proxy that has the required permissions and then assign that proxy to the job step. A proxy can be specified for more than one job step. For job steps that require the same permissions, you use the same proxy.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent lets the database administrator run each job step in a security context that has only the permissions required to perform that job step, which is determined by a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent proxy. To set the permissions for a particular job step, you create a proxy that has the required permissions and then assign that proxy to the job step. A proxy can be specified for more than one job step. For job steps that require the same permissions, you use the same proxy.  
   
- The following section explains what database role you must grant to users so they can create or execute jobs by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+ The following section explains what database role you must grant to users so they can create or execute jobs by using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent.  
   
 ## Granting Access to SQL Server Agent  
- To use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, users must be a member of one or more of the following fixed database roles:  
+ To use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent, users must be a member of one or more of the following fixed database roles:  
   
 -   **SQLAgentUserRole**  
   
@@ -34,30 +34,30 @@ manager: "jhubbard"
   
 -   **SQLAgentOperatorRole**  
   
- These roles are stored in the **msdb** database. By default, no user is a member of these database roles. Membership in these roles must be granted explicitly. Users who are members of the **sysadmin** fixed server role have full access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, and do not need to be a member of these fixed database roles to use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. If a user is not a member of one of these database roles or of the **sysadmin** role, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent node is not available to them when they connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ These roles are stored in the **msdb** database. By default, no user is a member of these database roles. Membership in these roles must be granted explicitly. Users who are members of the **sysadmin** fixed server role have full access to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent, and do not need to be a member of these fixed database roles to use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent. If a user is not a member of one of these database roles or of the **sysadmin** role, the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent node is not available to them when they connect to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
  Members of these database roles can view and execute jobs that they own, and create job steps that run as an existing proxy account. For more information about the specific permissions that are associated with each of these roles, see [SQL Server Agent Fixed Database Roles](../../2014/database-engine/sql-server-agent-fixed-database-roles.md).  
   
- Members of the **sysadmin** fixed server role have permission to create, modify, and delete proxy accounts. Members of the **sysadmin** role have permission to create job steps that do not specify a proxy, but instead run as the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account, which is the account that is used to start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+ Members of the **sysadmin** fixed server role have permission to create, modify, and delete proxy accounts. Members of the **sysadmin** role have permission to create job steps that do not specify a proxy, but instead run as the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent service account, which is the account that is used to start [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent.  
   
 ## Guidelines  
- Follow these guidelines to improve the security of your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent implementation:  
+ Follow these guidelines to improve the security of your [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent implementation:  
   
 -   Create dedicated user accounts specifically for proxies, and only use these proxy user accounts for running job steps.  
   
 -   Only grant the necessary permissions to proxy user accounts. Grant only those permissions actually required to run the job steps that are assigned to a given proxy account.  
   
--   Do not run the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service under a Microsoft Windows account that is a member of the Windows **Administrators** group.  
+-   Do not run the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent service under a Microsoft Windows account that is a member of the Windows **Administrators** group.  
   
--   Proxies are only as secure as the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credential store.  
+-   Proxies are only as secure as the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] credential store.  
   
--   If user write operations can write to the NT Event log, they can raise alerts via [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+-   If user write operations can write to the NT Event log, they can raise alerts via [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent.  
   
 -   Do not specify the NT Admin account as a service account or proxy account.  
   
--   Note that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent have access to each other’s assets. The two services share a single process space and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is a sysadmin on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service.  
+-   Note that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent have access to each other’s assets. The two services share a single process space and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent is a sysadmin on the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] service.  
   
--   When a TSX enlists with an MSX, the MSX sysadmins gets total control over the TSX instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   When a TSX enlists with an MSX, the MSX sysadmins gets total control over the TSX instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 -   ACE is an extension and cannot invoke itself. ACE is invoked by Chainer ScenarioEngine.exe – also known as Microsoft.SqlServer.Chainer.Setup.exe – or it can be invoked by another host process.  
   
@@ -73,8 +73,8 @@ manager: "jhubbard"
   
 ## See Also  
  [Predefined Roles](../../2014/reporting-services/predefined-roles.md)   
- [sp_addrolemember &#40;Transact-SQL&#41;](../Topic/sp_addrolemember%20\(Transact-SQL\).md)   
- [sp_droprolemember &#40;Transact-SQL&#41;](../Topic/sp_droprolemember%20\(Transact-SQL\).md)   
+ [sp_addrolemember &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
+ [sp_droprolemember &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [Security Center for SQL Server Database Engine and Azure SQL Database](../../2014/database-engine/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

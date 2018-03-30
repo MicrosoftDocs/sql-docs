@@ -18,11 +18,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Analysis Services Parameters
-  To analyze [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], you must specify an instance of [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] and provide information about how to connect to that instance.  
+  To analyze [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], you must specify an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and provide information about how to connect to that instance.  
   
 ## Options  
- **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance name**  
- Select an instance of [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] from the list.  
+ **[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance name**  
+ Select an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] from the list.  
   
  **Computer name**  
  The computer name that is associated with the instance.  

@@ -76,11 +76,11 @@ manager: "jhubbard"
   
 4.  Click on a slicer or filter at the top of the workbook. Month, color, and type are slicers in this workbook. Clicking a slicer starts a PowerPivot query and proves that your server is operational. The server will load PowerPivot data in the background and return the results.  
   
-5.  Go back to the library. Select the down arrow to the right of the workbook, and then click **Launch Power View**. This step confirms that the [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] feature in Reporting Services is operational. If you did not install Reporting Services, skip this step.  
+5.  Go back to the library. Select the down arrow to the right of the workbook, and then click **Launch Power View**. This step confirms that the [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] feature in Reporting Services is operational. If you did not install Reporting Services, skip this step.  
   
      In the next step, you will connect to the server in Management Studio to verify the data is loaded and cached.  
   
-6.  Start SQL Server Management Studio from the [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] program group in the Start menu. If this tool is not installed on your server, you can skip ahead to the last step to confirm the presence of cached files.  
+6.  Start SQL Server Management Studio from the [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] program group in the Start menu. If this tool is not installed on your server, you can skip ahead to the last step to confirm the presence of cached files.  
   
 7.  In Server Type, select **Analysis Services**.  
   

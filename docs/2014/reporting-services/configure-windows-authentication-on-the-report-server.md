@@ -15,11 +15,11 @@ helpviewer_keywords:
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 caps.latest.revision: 23
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Configure Windows Authentication on the Report Server
-  By default, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] accepts requests that specify Negotiate or NTLM authentication. If your deployment includes client applications and browsers that use these security providers, you can use the default values without additional configuration. If you want to use a different security provider for Windows integrated security (for example, if you want to use Kerberos directly), or if you modified the default values and want to restore the original settings, you can use the information in this topic to specify authentication settings on the report server.  
+  By default, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] accepts requests that specify Negotiate or NTLM authentication. If your deployment includes client applications and browsers that use these security providers, you can use the default values without additional configuration. If you want to use a different security provider for Windows integrated security (for example, if you want to use Kerberos directly), or if you modified the default values and want to restore the original settings, you can use the information in this topic to specify authentication settings on the report server.  
   
  To use Windows integrated security, each user who requires access to a report server must have a valid Windows local or domain user account or be a member of a Windows local or domain group account. You can include accounts from other domains as long as those domains are trusted. The accounts must have access to the report server computer, and must be subsequently assigned to roles in order to gain access to specific report server operations.  
   
@@ -30,7 +30,7 @@ manager: "mblythe"
     > [!IMPORTANT]  
     >  Using `RSWindowsNegotiate` will result in a Kerberos authentication error if you configured the Report Server service to run under a domain user account and you did not register a Service Principal Name (SPN) for the account. For more information, see [Resolving Kerberos Authentication Errors When Connecting to a report server](#proxyfirewallRSWindowsNegotiate) in this topic.  
   
--   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] must be configured for Windows Authentication. By default, the Web.config files for the Report Server Web service and Report Manager include the \<authentication mode="Windows"> setting. If you change it to \<authentication mode="Forms">, the Windows Authentication for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] will fail.  
+-   [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] must be configured for Windows Authentication. By default, the Web.config files for the Report Server Web service and Report Manager include the \<authentication mode="Windows"> setting. If you change it to \<authentication mode="Forms">, the Windows Authentication for [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] will fail.  
   
 -   The Web.config files for the Report Server Web service and Report Manager must have \<identity impersonate= "true" />.  
   
@@ -43,7 +43,7 @@ manager: "mblythe"
  The following instructions are intended for a native mode report server. If the report server is deployed in SharePoint integrated mode, you must use the default authentication settings that specify Windows integrated security. The report server uses internal features in the default Windows Authentication extension to support report servers in SharePoint integrated mode.  
   
 ## Extended Protection for Authentication  
- Beginning with [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], support for Extended Protection for Authentication is available. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] feature supports the use of channel binding and service binding to enhance protection of authentication. The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] features need to be used with an operating system that supports Extended Protection. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configuration for extended protection is determined by settings in the RSReportServer.config file. The file can be updated by either editing the file or using WMI APIs. For more information, see [Extended Protection for Authentication with Reporting Services](../../2014/reporting-services/extended-protection-for-authentication-with-reporting-services.md).  
+ Beginning with [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)], support for Extended Protection for Authentication is available. The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] feature supports the use of channel binding and service binding to enhance protection of authentication. The [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features need to be used with an operating system that supports Extended Protection. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] configuration for extended protection is determined by settings in the RSReportServer.config file. The file can be updated by either editing the file or using WMI APIs. For more information, see [Extended Protection for Authentication with Reporting Services](../../2014/reporting-services/extended-protection-for-authentication-with-reporting-services.md).  
   
 ### To configure a report server to use Windows integrated security  
   
@@ -98,7 +98,7 @@ manager: "mblythe"
   
      Note that you cannot use `Custom` with the `RSWindows` types.  
   
-5.  Modify as appropriate the settings for extended protection. Extended protection is disabled by default.  If these entries are not present, the current computer may not be running a version of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] which supports extended protection. For more information, see [Extended Protection for Authentication with Reporting Services](../../2014/reporting-services/extended-protection-for-authentication-with-reporting-services.md)  
+5.  Modify as appropriate the settings for extended protection. Extended protection is disabled by default.  If these entries are not present, the current computer may not be running a version of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] which supports extended protection. For more information, see [Extended Protection for Authentication with Reporting Services](../../2014/reporting-services/extended-protection-for-authentication-with-reporting-services.md)  
   
     ```  
           <RSWindowsExtendedProtectionLevel>Allow</RSWindowsExtendedProtectionLevel>  
@@ -136,7 +136,7 @@ manager: "mblythe"
  There are several sources of logging information that can help resolve Kerberos related issues.  
   
 ##### User-Account-Control Attribute  
- Determine if the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service account has the sufficient attribute set in Active Directory. Review the reporting services service trace log file to find the value logged for the UserAccountControl attribute. The value logged is in decimal form. You need to convert the decimal value to hexadecimal form and then find that value in the MSDN topic describing User-Account-Control Attribute.  
+ Determine if the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service account has the sufficient attribute set in Active Directory. Review the reporting services service trace log file to find the value logged for the UserAccountControl attribute. The value logged is in decimal form. You need to convert the decimal value to hexadecimal form and then find that value in the MSDN topic describing User-Account-Control Attribute.  
   
 -   The reporting services service trace log entry will look similar to the following:  
   
@@ -144,12 +144,12 @@ manager: "mblythe"
     appdomainmanager!DefaultDomain!8f8!01/14/2010-14:42:28:: i INFO: The UserAccountControl value for the service account is 590336  
     ```  
   
--   One option for converting the value Decimal value to hexadecimal form is to us the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Calculator. Windows Calculator supports several modes that show the 'Dec' option and 'Hex' options. Select the 'Dec' option, paste or type in the decimal value you found in the log file and then select the 'Hex' option.  
+-   One option for converting the value Decimal value to hexadecimal form is to us the [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows Calculator. Windows Calculator supports several modes that show the 'Dec' option and 'Hex' options. Select the 'Dec' option, paste or type in the decimal value you found in the log file and then select the 'Hex' option.  
   
 -   Then refer to the topic [User-Account-Control Attribute](http://go.microsoft.com/fwlink/?LinkId=183366) to derive the attribute for the service account.  
   
 ##### SPNs Configured in Active Directory for the Reporting Services service account.  
- To log the SPNs in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service trace log file, you can enable the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Extended Protection feature temporarily.  
+ To log the SPNs in the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service trace log file, you can enable the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Extended Protection feature temporarily.  
   
 -   Modify the configuration file `rsreportserver.config` by setting the following:  
   
@@ -158,15 +158,15 @@ manager: "mblythe"
     <RSWindowsExtendedProtectionScenario>Any</RSWindowsExtendedProtectionScenario>  
     ```  
   
--   Restart the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service and look for entries similar to the following in the trace log file:  
+-   Restart the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service and look for entries similar to the following in the trace log file:  
   
     ```  
     rshost!rshost!e44!01/14/2010-14:43:51:: i INFO: Registered valid SPNs list for endpoint 2: rshost!rshost!e44!01/14/2010-14:43:52:: i INFO: SPN Whitelist Added <Explicit> - <HTTP/sqlpod064-13.w2k3.net>.  
     ```  
   
--   The values under \<Explicit> will contain the SPNs configured in Active Directory for the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service account.  
+-   The values under \<Explicit> will contain the SPNs configured in Active Directory for the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service account.  
   
- If you do not want continue using Extended Protection, then set the configuration values back to defaults and restart the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Service account.  
+ If you do not want continue using Extended Protection, then set the configuration values back to defaults and restart the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Service account.  
   
 ```  
 <RSWindowsExtendedProtectionLevel>Off</RSWindowsExtendedProtectionLevel>  

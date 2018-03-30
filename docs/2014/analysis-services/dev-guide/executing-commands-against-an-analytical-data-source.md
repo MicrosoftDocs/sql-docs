@@ -45,6 +45,6 @@ manager: "mblythe"
 ### Example of Running a Command  
  This example uses the <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> to run an XMLA command that will process the `Adventure Works DW` cube on the local server, without returning data.  
   
- [!code-csharp[Adomd.NetClient#ExecuteXMLAProcessCommand](../../../snippets/csharp/SQL14/adomd.net/adomd.netclient/cs/adomdexample.cs#executexmlaprocesscommand)]  
+ [!code-csharp[Adomd.NetClient#ExecuteXMLAProcessCommand](../../snippets/csharp/SQL14/adomd.net/adomd.netclient/cs/adomdexample.cs#executexmlaprocesscommand)]  
   
   

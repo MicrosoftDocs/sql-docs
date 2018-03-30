@@ -12,14 +12,14 @@ ms.topic: "article"
 ms.assetid: 99ebb4dc-41cc-42ac-82dd-a2b0e31155a0
 caps.latest.revision: 7
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Rendering Report Items (Report Builder and SSRS)
   The number, size, and location of report items affect how the renderers paginate the report body. Below is a description of how various report items are rendered.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## Overlapping Report Items  
  Overlapping report items are not supported in HTML, MHTML, Word, Excel, in Preview, or the Report Viewer. If overlapping items exist, they are moved. The following rules are applied to overlapping report items:  

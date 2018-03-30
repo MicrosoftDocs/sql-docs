@@ -17,23 +17,23 @@ helpviewer_keywords:
 ms.assetid: e09079b8-c4c9-42b4-821b-4ce81a98a086
 caps.latest.revision: 17
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Step Through Transact-SQL Code
-  The [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger enables you to control which [!INCLUDE[tsql](../../includes/tsql-md.md)] statements are run in a [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor window. You can pause the debugger on individual statements and then view the state of the code elements at that point.  
+  The [!INCLUDE[tsql](../includes/tsql-md.md)] debugger enables you to control which [!INCLUDE[tsql](../includes/tsql-md.md)] statements are run in a [!INCLUDE[ssDE](../includes/ssde-md.md)] Query Editor window. You can pause the debugger on individual statements and then view the state of the code elements at that point.  
   
 ## Breakpoints  
- A breakpoint signals the debugger to pause execution on a specific [!INCLUDE[tsql](../../includes/tsql-md.md)] statement. For more information about breakpoints, see Using Transact-SQL Breakpoints.  
+ A breakpoint signals the debugger to pause execution on a specific [!INCLUDE[tsql](../includes/tsql-md.md)] statement. For more information about breakpoints, see Using Transact-SQL Breakpoints.  
   
 ## Controlling Statement Execution  
- In the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger, you can specify the following options for executing from the current statement in [!INCLUDE[tsql](../../includes/tsql-md.md)] code:  
+ In the [!INCLUDE[tsql](../includes/tsql-md.md)] debugger, you can specify the following options for executing from the current statement in [!INCLUDE[tsql](../includes/tsql-md.md)] code:  
   
 -   Run to the next breakpoint.  
   
 -   Step into the next statement.  
   
-     If the next statement invokes a [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure, function, or trigger, the debugger displays a new Query Editor window that contains the code of the module. The window is in debug mode, and execution pauses on the first statement in the module. You can then move through the module code, for example, by setting breakpoints or stepping through the code.  
+     If the next statement invokes a [!INCLUDE[tsql](../includes/tsql-md.md)] stored procedure, function, or trigger, the debugger displays a new Query Editor window that contains the code of the module. The window is in debug mode, and execution pauses on the first statement in the module. You can then move through the module code, for example, by setting breakpoints or stepping through the code.  
   
 -   Step over the next statement.  
   
@@ -45,7 +45,7 @@ manager: "jhubbard"
   
 -   Run from the current location to the current location of the pointer, and ignore all breakpoints.  
   
- The following table lists the various ways in which you can control how statements execute in the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger.  
+ The following table lists the various ways in which you can control how statements execute in the [!INCLUDE[tsql](../includes/tsql-md.md)] debugger.  
   
 |Action|Procedure|  
 |------------|---------------|  

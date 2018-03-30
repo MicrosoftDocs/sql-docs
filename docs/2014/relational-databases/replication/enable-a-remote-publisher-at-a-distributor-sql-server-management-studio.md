@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 6f8e2831-5c45-4e39-8e51-d37e2813cf3d
 caps.latest.revision: 28
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Enable a Remote Publisher at a Distributor (SQL Server Management Studio)
@@ -33,7 +33,7 @@ manager: "jhubbard"
   
 5.  To view and modify settings for a Publisher, click the properties button (**…**).  
   
-6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ### To enable a Publisher in the Distributor Properties dialog box  
   
@@ -47,7 +47,7 @@ manager: "jhubbard"
   
 5.  To view and modify settings for a Publisher, click the properties button (**…**).  
   
-6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## See Also  
  [Configure Publishing and Distribution](../../../2014/relational-databases/replication/configure-publishing-and-distribution.md)   

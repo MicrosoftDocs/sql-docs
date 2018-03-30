@@ -20,11 +20,11 @@ helpviewer_keywords:
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 caps.latest.revision: 35
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Use the inserted and deleted Tables
-  DML trigger statements use two special tables: the deleted table and the inserted tables. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatically creates and manages these tables. You can use these temporary, memory-resident tables to test the effects of certain data modifications and to set conditions for DML trigger actions. You cannot directly modify the data in the tables or perform data definition language (DDL) operations on the tables, such as CREATE INDEX.  
+  DML trigger statements use two special tables: the deleted table and the inserted tables. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] automatically creates and manages these tables. You can use these temporary, memory-resident tables to test the effects of certain data modifications and to set conditions for DML trigger actions. You cannot directly modify the data in the tables or perform data definition language (DDL) operations on the tables, such as CREATE INDEX.  
   
  In DML triggers, the inserted and deleted tables are primarily used to perform the following:  
   
@@ -47,7 +47,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  If trigger actions depend on the number of rows a data modification effects, use tests (such as an examination of @@ROWCOUNT) for multirow data modifications (an INSERT, DELETE, or UPDATE based on a SELECT statement), and take appropriate actions.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] does not allow for `text`, `ntext`, or `image` column references in the inserted and deleted tables for AFTER triggers. However, these data types are included for backward compatibility purposes only. The preferred storage for large data is to use the `varchar(max)`, `nvarchar(max)`, and `varbinary(max)` data types. Both AFTER and INSTEAD OF triggers support `varchar(max)`, `nvarchar(max)`, and `varbinary(max)` data in the inserted and deleted tables. For more information, see [CREATE TRIGGER &#40;Transact-SQL&#41;](../Topic/CREATE%20TRIGGER%20\(Transact-SQL\).md).  
+ [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] does not allow for `text`, `ntext`, or `image` column references in the inserted and deleted tables for AFTER triggers. However, these data types are included for backward compatibility purposes only. The preferred storage for large data is to use the `varchar(max)`, `nvarchar(max)`, and `varbinary(max)` data types. Both AFTER and INSTEAD OF triggers support `varchar(max)`, `nvarchar(max)`, and `varbinary(max)` data in the inserted and deleted tables. For more information, see [CREATE TRIGGER &#40;Transact-SQL&#41;](~/t-sql/statements/create-trigger-transact-sql.md).  
   
  **An Example of Using the inserted Table in a Trigger to Enforce Business Rules**  
   
@@ -55,7 +55,7 @@ manager: "jhubbard"
   
  The following example creates a DML trigger. This trigger checks to make sure the credit rating for the vendor is good when an attempt is made to insert a new purchase order into the `PurchaseOrderHeader` table. To obtain the credit rating of the vendor corresponding to the purchase order that was just inserted, the `Vendor` table must be referenced and joined with the inserted table. If the credit rating is too low, a message is displayed and the insertion does not execute. Note that this example does not allow for multirow data modifications. For more information, see [Create DML Triggers to Handle Multiple Rows of Data](../../2014/database-engine/create-dml-triggers-to-handle-multiple-rows-of-data.md).  
   
- [!code-sql[TriggerDDL#CreateTrigger3](../../snippets/tsql/SQL14/tsql/triggerddl/transact-sql/snippet_create_alter_drop_trigger.sql#createtrigger3)]  
+ [!code-sql[TriggerDDL#CreateTrigger3](../snippets/tsql/SQL14/tsql/triggerddl/transact-sql/snippet_create_alter_drop_trigger.sql#createtrigger3)]  
   
 ## Using the inserted and deleted Tables in INSTEAD OF Triggers  
  The inserted and deleted tables passed to INSTEAD OF triggers defined on tables follow the same rules as the inserted and deleted tables passed to AFTER triggers. The format of the inserted and deleted tables is the same as the format of the table on which the INSTEAD OF trigger is defined. Each column in the inserted and deleted tables maps directly to a column in the base table.  
@@ -70,7 +70,7 @@ manager: "jhubbard"
   
 -   For any columns except computed, identity, or `timestamp` columns, values are optional for any column that allows nulls, or any NOT NULL column that has a DEFAULT definition.  
   
- When an INSERT, UPDATE, or DELETE statement references a view that has an INSTEAD OF trigger, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] calls the trigger instead of taking any direct action against any table. The trigger must use the information presented in the inserted and deleted tables to build any statements required to implement the requested action in the base tables, even when the format of the information in the inserted and deleted tables built for the view is different from the format of the data in the base tables.  
+ When an INSERT, UPDATE, or DELETE statement references a view that has an INSTEAD OF trigger, the [!INCLUDE[ssDE](../includes/ssde-md.md)] calls the trigger instead of taking any direct action against any table. The trigger must use the information presented in the inserted and deleted tables to build any statements required to implement the requested action in the base tables, even when the format of the information in the inserted and deleted tables built for the view is different from the format of the data in the base tables.  
   
  The format of the inserted and deleted tables passed to an INSTEAD OF trigger defined on a view matches the select list of the SELECT statement defined for the view. For example:  
   

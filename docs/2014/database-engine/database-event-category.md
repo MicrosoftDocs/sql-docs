@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Database Event Category
-  The **Database** event category contains event classes to monitor the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
+  The **Database** event category contains event classes to monitor the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)].  
   
 ## In This Section  
   

@@ -22,11 +22,11 @@ manager: "jhubbard"
 # SQL Server Profiler - Replay Configuration (Advanced Replay Options)
   In the **Replay Configuration** dialog box, use the **Advanced Replay Options** tab to specify how to replay a trace file.  
   
- To view this window, use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to open a trace file or table that contains the appropriate events for replay. For more information, see [Replay Requirements](../../2014/database-engine/replay-requirements.md). While the trace file or table is open, on the **Replay** menu, click **Start**, connect to the instance of SQL Server where you want to replay the trace, and then click the **Advanced Replay Options** tab.  
+ To view this window, use [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] to open a trace file or table that contains the appropriate events for replay. For more information, see [Replay Requirements](../../2014/database-engine/replay-requirements.md). While the trace file or table is open, on the **Replay** menu, click **Start**, connect to the instance of SQL Server where you want to replay the trace, and then click the **Advanced Replay Options** tab.  
   
 ## Options  
  **Replay system SPIDs**  
- Specifies whether [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] replays system process identifiers (SPIDs).  
+ Specifies whether [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] replays system process identifiers (SPIDs).  
   
  **Replay one SPID only**  
  Replays only the activity in the source trace file that is related to the selected SPID.  

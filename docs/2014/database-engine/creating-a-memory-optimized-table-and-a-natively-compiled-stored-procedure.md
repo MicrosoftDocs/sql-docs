@@ -18,19 +18,19 @@ manager: "jhubbard"
 # Creating a Memory-Optimized Table and a Natively Compiled Stored Procedure
   This topic contains a sample that introduces you to the syntax for In-Memory OLTP.  
   
- The sample demonstrates enabling an application to use In-Memory OLTP. It sets up the database for In-Memory OLTP, creates memory-optimized tables showing DURABILITY options, and then creates natively compiled stored procedures to access the data in the memory-optimized tables. The following steps are detailed in the [!INCLUDE[tsql](../../includes/tsql-md.md)] below:  
+ The sample demonstrates enabling an application to use In-Memory OLTP. It sets up the database for In-Memory OLTP, creates memory-optimized tables showing DURABILITY options, and then creates natively compiled stored procedures to access the data in the memory-optimized tables. The following steps are detailed in the [!INCLUDE[tsql](../includes/tsql-md.md)] below:  
   
 -   Create a memory-optimized data filegroup and add a container to the filegroup.  
   
--   Create memory-optimized tables and indexes. For more information, see [CREATE TABLE &#40;Transact-SQL&#41;](../Topic/CREATE%20TABLE%20\(Transact-SQL\).md).  
+-   Create memory-optimized tables and indexes. For more information, see [CREATE TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/create-table-transact-sql.md).  
   
--   Using interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)], load data into the memory-optimized table and update statistics before creating natively compiled stored procedures. For more information, see [Statistics for Memory-Optimized Tables](../../2014/database-engine/statistics-for-memory-optimized-tables.md).  
+-   Using interpreted [!INCLUDE[tsql](../includes/tsql-md.md)], load data into the memory-optimized table and update statistics before creating natively compiled stored procedures. For more information, see [Statistics for Memory-Optimized Tables](../../2014/database-engine/statistics-for-memory-optimized-tables.md).  
   
--   Create natively compiled stored procedures to access data in memory-optimized tables. For more information, see [CREATE PROCEDURE &#40;Transact-SQL&#41;](../Topic/CREATE%20PROCEDURE%20\(Transact-SQL\).md).  
+-   Create natively compiled stored procedures to access data in memory-optimized tables. For more information, see [CREATE PROCEDURE &#40;Transact-SQL&#41;](~/t-sql/statements/create-procedure-transact-sql.md).  
   
 -   As needed, migrate data from existing tables to memory-optimized tables.  
   
- For information on how to use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to create memory-optimized tables, see [SQL Server Management Studio Support for In-Memory OLTP](../../2014/database-engine/sql-server-management-studio-support-for-in-memory-oltp.md).  
+ For information on how to use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to create memory-optimized tables, see [SQL Server Management Studio Support for In-Memory OLTP](../../2014/database-engine/sql-server-management-studio-support-for-in-memory-oltp.md).  
   
  The following code sample requires a directory called c:\Data.  
   

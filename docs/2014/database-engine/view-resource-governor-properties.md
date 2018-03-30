@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # View Resource Governor Properties
-  You can create or configure Resource Governor entities, such as resource pools and workload groups, by using the Resource Governor Properties page in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  You can create or configure Resource Governor entities, such as resource pools and workload groups, by using the Resource Governor Properties page in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 1.  **Before you begin:**  [Permissions](#Permissions)  
   
@@ -47,15 +47,15 @@ manager: "jhubbard"
   
  If the create or reconfigure operation for the resource pool or workload group fails, a summary error message appears below the title of the property page. To see a detailed error message, click the down arrow on the error message.  
   
- You can determine whether there is a configuration pending by querying the [sys.dm_resource_governor_configuration](../Topic/sys.dm_resource_governor_configuration%20\(Transact-SQL\).md) dynamic management view to get the current status of is_configuration_pending.  
+ You can determine whether there is a configuration pending by querying the [sys.dm_resource_governor_configuration](~/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md) dynamic management view to get the current status of is_configuration_pending.  
   
 ###  <a name="Permissions"></a> Permissions  
  Viewing resource governor properties requires VIEW SERVER STATER permission. The resource governor configuration tasks require CONTROL SERVER permission.  
   
 ##  <a name="ViewRGProp"></a> View the Resource Governor Properties Page  
- **To view resource governor properties by using the Resource Governor Properties page in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
+ **To view resource governor properties by using the Resource Governor Properties page in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]**  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], open Object Explorer and recursively expand the **Management** node down to **Resource Governor**.  
+1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], open Object Explorer and recursively expand the **Management** node down to **Resource Governor**.  
   
 2.  Right-click **Resource Governor** and then click **Properties**, this opens the **Resource Governor Properties** page.  
   
@@ -88,7 +88,7 @@ manager: "jhubbard"
  **Maximum Memory %**  
  Specify the total server memory that can be used by requests in this resource pool. Range is 0 to 100. The default setting is 100.  
   
- For more information, see [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../Topic/CREATE%20RESOURCE%20POOL%20\(Transact-SQL\).md).  
+ For more information, see [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](~/t-sql/statements/create-resource-pool-transact-sql.md).  
   
  **Workload groups for resource pool**  
  Create or change the workload group configuration by using the grid that is provided. This grid is populated with information for the predefined internal and default groups. Select a group to work with by clicking the first column in the row for the pool. To create a new workload group, click the row that is prefixed by the asterisk (**\***).  
@@ -114,14 +114,14 @@ manager: "jhubbard"
  **Degree of Parallelism**  
  Specify the maximum degree of parallelism (DOP) for parallel requests. Range is 0 to 64.  
   
- For more information, see [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../Topic/CREATE%20WORKLOAD%20GROUP%20\(Transact-SQL\).md).  
+ For more information, see [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](~/t-sql/statements/create-workload-group-transact-sql.md).  
   
 ## View Resource Governor Properties by Using Transact-SQL  
  **View resource governor properties by using Transact-SQL**  
   
-1.  To view the definitions of resource governor entities, use the [Resource Governor Catalog Views &#40;Transact-SQL&#41;](../Topic/Resource%20Governor%20Catalog%20Views%20\(Transact-SQL\).md).  
+1.  To view the definitions of resource governor entities, use the [Resource Governor Catalog Views &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md).  
   
-2.  To view the current configuration of resource governor entities, use the [Resource Governor Related Dynamic Management Views &#40;Transact-SQL&#41;](../Topic/Resource%20Governor%20Related%20Dynamic%20Management%20Views%20\(Transact-SQL\).md).  
+2.  To view the current configuration of resource governor entities, use the [Resource Governor Related Dynamic Management Views &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md).  
   
 ## See Also  
  [Resource Governor](../../2014/database-engine/resource-governor.md)   

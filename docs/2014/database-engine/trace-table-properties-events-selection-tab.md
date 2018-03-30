@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Trace Table Properties (Events Selection Tab)
   Use the **Events Selection** tab of the **Trace Table Properties** dialog box to view the events and data column properties of the trace or to remove events or columns from the trace.  
   
- To view this window, use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to open a trace table. Then on the **File** menu, click **Properties**, and then click the **Events Selection** tab.  
+ To view this window, use [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] to open a trace table. Then on the **File** menu, click **Properties**, and then click the **Events Selection** tab.  
   
 ## Options  
  **Events** column  

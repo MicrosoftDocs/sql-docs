@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: ac7ab037-300c-499d-89d4-756f8d8e99f6
 caps.latest.revision: 49
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Configure Available Memory for Report Server Applications
-  Although [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] can use all available memory, you can override default behavior by configuring an upper limit on the total amount of memory resources that are allocated to [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server applications. You can also set thresholds that cause the report server to change how it prioritizes and processes requests depending on whether it is under low, medium, or heavy memory pressure. At low levels of memory pressure, the report server responds by giving a slightly higher priority to interactive or on-demand report processing. At high levels of memory pressure, the report server uses multiple techniques to remain operational using the limited resources available to it.  
+  Although [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] can use all available memory, you can override default behavior by configuring an upper limit on the total amount of memory resources that are allocated to [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] server applications. You can also set thresholds that cause the report server to change how it prioritizes and processes requests depending on whether it is under low, medium, or heavy memory pressure. At low levels of memory pressure, the report server responds by giving a slightly higher priority to interactive or on-demand report processing. At high levels of memory pressure, the report server uses multiple techniques to remain operational using the limited resources available to it.  
   
  This topic describes the configuration settings that you can specify and how the server responds when memory pressure becomes a factor in processing requests.  
   
 ## Memory Management Policies  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] responds to system resource constraints by adjusting the amount of memory that is allocated to specific applications and types of processing requests. Applications that run in the Report Server service and that are subject to memory management include:  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] responds to system resource constraints by adjusting the amount of memory that is allocated to specific applications and types of processing requests. Applications that run in the Report Server service and that are subject to memory management include:  
   
 -   Report Manager, a Web front-end application for the report server.  
   
@@ -54,7 +54,7 @@ manager: "mblythe"
   
 -   `WorkingSetMaximum` and `WorkingSetMinimum` define the range of available memory. You can configure these settings to set a range of available memory for the report server applications. This can be useful if you are hosting multiple applications on the same computer and you determine that the report server is using a disproportionate amount of system resources relative to other applications on the same computer.  
   
--   `MemorySafetyMargin` and `MemoryThreshold` set the boundaries for low, medium, and high levels of memory pressure. For each state, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] takes corrective action to ensure report processing and other requests are handled appropriately relative to the amount of memory that is available on the computer. You can specify configuration settings that determine the delineation between low, high, and medium pressure levels.  
+-   `MemorySafetyMargin` and `MemoryThreshold` set the boundaries for low, medium, and high levels of memory pressure. For each state, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] takes corrective action to ensure report processing and other requests are handled appropriately relative to the amount of memory that is available on the computer. You can specify configuration settings that determine the delineation between low, high, and medium pressure levels.  
   
      Although you can change the configuration settings, doing so will not improve report processing performance. Changing the configuration settings is useful only if requests are getting dropped before they complete. The best way to improve server performance is to deploy the report server or individual report server applications on dedicated computers.  
   
@@ -72,7 +72,7 @@ manager: "mblythe"
 |`MemorySafetyMargin`|Specifies a percentage of `WorkingSetMaximum` that defines the boundary between medium and low pressure scenarios. This value is the percentage of available memory that is reserved for the system and cannot be used for report server operations. The default value is 80.|  
   
 > [!NOTE]  
->  `MemoryLimit` and `MaximumMemoryLimit` settings are obsolete in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions. If you upgraded an existing installation or using an RSReportServer.config file that includes those settings, the report server no longer reads those values.  
+>  `MemoryLimit` and `MaximumMemoryLimit` settings are obsolete in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] and later versions. If you upgraded an existing installation or using an RSReportServer.config file that includes those settings, the report server no longer reads those values.  
   
 #### Example of Memory Configuration Settings  
  The following example shows the configuration settings for a report server computer that uses custom memory configuration values. If you want to add `WorkingSetMaximum` or `WorkingSetMinimum`, you must type the elements and values in the RSReportServer.config file. Both values are integers that express kilobytes of RAM you are allocating to the server applications. The following example specifies that total memory allocation for the report server applications cannot exceed 4 gigabytes. If the default value for `WorkingSetMinimum` (60% of `WorkingSetMaximum`) is acceptable, you can omit it and specify just `WorkingSetMaximum` in the RSReportServer.config file. This example includes `WorkingSetMinimum` to show how it would appear if you wanted to add it:  
@@ -85,7 +85,7 @@ manager: "mblythe"
 ```  
   
 #### About ASP.NET Memory Configuration Settings  
- Although the Report Server Web service and Report Manager are [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] applications, neither application responds to memory configuration settings that you specify in the `processModel` section of machine.config for [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] applications that run in IIS 5.0 compatibility mode. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] reads memory configuration settings from the RSReportServer.config file only.  
+ Although the Report Server Web service and Report Manager are [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] applications, neither application responds to memory configuration settings that you specify in the `processModel` section of machine.config for [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] applications that run in IIS 5.0 compatibility mode. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] reads memory configuration settings from the RSReportServer.config file only.  
   
 ## See Also  
  [RSReportServer Configuration File](../../2014/reporting-services/rsreportserver-configuration-file.md)   

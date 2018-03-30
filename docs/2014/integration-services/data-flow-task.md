@@ -30,7 +30,7 @@ manager: "jhubbard"
   
  At run time, the Data Flow task builds an execution plan from the data flow, and the data flow engine executes the plan. You can create a Data Flow task that has no data flow, but the task executes only if it includes at least one data flow.  
   
- To bulk insert data from text files into a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, you can use the Bulk Insert task instead of a Data Flow task and a data flow. However, the Bulk Insert task cannot transform data. For more information, see [Bulk Insert Task](../../2014/integration-services/bulk-insert-task.md).  
+ To bulk insert data from text files into a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database, you can use the Bulk Insert task instead of a Data Flow task and a data flow. However, the Bulk Insert task cannot transform data. For more information, see [Bulk Insert Task](../../2014/integration-services/bulk-insert-task.md).  
   
 ## Multiple Flows  
  A Data Flow task can include multiple data flows. If a task copies several sets of data, and if the order in which the data is copied is not significant, it can be more convenient to include multiple data flows in the Data Flow task. For example, you might create five data flows, each copying data from a flat file into a different dimension table in a data warehouse star schema.  
@@ -42,7 +42,7 @@ manager: "jhubbard"
  ![Data flows](../../2014/integration-services/media/mw-dts-09.gif "Data flows")  
   
 ## Log Entries  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides a set of log events that are available to all tasks. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] also provides custom log entries to many tasks. For more information, see [Integration Services &#40;SSIS&#41; Logging](../../2014/integration-services/integration-services-ssis-logging.md) and [Custom Messages for Logging](../../2014/integration-services/custom-messages-for-logging.md). The Data Flow task includes the following custom log entries:  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides a set of log events that are available to all tasks. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] also provides custom log entries to many tasks. For more information, see [Integration Services &#40;SSIS&#41; Logging](../../2014/integration-services/integration-services-ssis-logging.md) and [Custom Messages for Logging](../../2014/integration-services/custom-messages-for-logging.md). The Data Flow task includes the following custom log entries:  
   
 |Log entry|Description|  
 |---------------|-----------------|  

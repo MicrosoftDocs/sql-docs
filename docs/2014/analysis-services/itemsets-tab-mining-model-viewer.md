@@ -30,7 +30,7 @@ manager: "mblythe"
  Choose a mining model to view that is contained in the current mining structure. The mining model will open in its associated viewer.  
   
  **Viewer**  
- Choose a viewer to use to view the selected mining model. You can use either the custom viewer for association models, or the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Generic Content Tree viewer. You can also use plug-in viewers if available.  
+ Choose a viewer to use to view the selected mining model. You can use either the custom viewer for association models, or the [!INCLUDE[msCoName](../includes/msconame-md.md)] Generic Content Tree viewer. You can also use plug-in viewers if available.  
   
  **Minimum support**  
  Change this value to set the minimum support that an itemset must contain to appear in the viewer. The default value that is displayed when you first open the model is calculated by the model, but you can change it to see more or fewer itemsets.  

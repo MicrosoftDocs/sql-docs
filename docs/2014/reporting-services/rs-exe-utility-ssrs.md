@@ -20,14 +20,14 @@ helpviewer_keywords:
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 caps.latest.revision: 55
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # RS.exe Utility (SSRS)
   The rs.exe utility processes script that you provide in an input file. Use this utility to automate report server deployment and administration tasks.  
   
 > [!NOTE]  
->  Beginning with [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], the **rs** utility is supported against report servers that are configured for SharePoint integrated mode as well as servers configured in native mode. Previous versions only supported native mode configurations.  
+>  Beginning with [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)], the **rs** utility is supported against report servers that are configured for SharePoint integrated mode as well as servers configured in native mode. Previous versions only supported native mode configurations.  
   
  **In this topic:**  
   
@@ -102,7 +102,7 @@ manager: "mblythe"
   
  Global variables are created with the names given and set to the values supplied. For example, **-v a=**"`1`" **-v b=**"`2`" results in a variable named `a` with a value of"`1`" and a variable **b** with a value of "`2`".  
   
- Global variables are available to any function in the script. A backslash and quotation mark (**\\"**) is interpreted as a double quotation mark. The quotation marks are required only if the string contains a space. Variable names must be valid for [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]; they must start with alphabetical character or underscore and contain alphabetical characters, digits, or underscores. Reserved words cannot be used as variable names. For more information about using global variables, see [Built-in Collections in Expressions &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/built-in-collections-in-expressions-report-builder-and-ssrs.md).  
+ Global variables are available to any function in the script. A backslash and quotation mark (**\\"**) is interpreted as a double quotation mark. The quotation marks are required only if the string contains a space. Variable names must be valid for [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]; they must start with alphabetical character or underscore and contain alphabetical characters, digits, or underscores. Reserved words cannot be used as variable names. For more information about using global variables, see [Built-in Collections in Expressions &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/built-in-collections-in-expressions-report-builder-and-ssrs.md).  
   
  **-t**  
  (Optional) Outputs error messages to the trace log. This argument does not take a value. For more information, see [Report Server Service Trace Log](../../2014/reporting-services/report-server-service-trace-log.md).  
@@ -111,7 +111,7 @@ manager: "mblythe"
  To run the tool, you must have permission to connect to the report server instance you are running the script against. You can run scripts to make changes to the local computer or a remote computer. To make changes to a report server installed on a remote computer, specify the remote computer in the `-s` argument.  
   
 ##  <a name="bkmk_examples"></a> Examples  
- The following example illustrates how to specify the script file that contains [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET script and Web service methods that you want to execute.  
+ The following example illustrates how to specify the script file that contains [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET script and Web service methods that you want to execute.  
   
 ```  
 rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver  
@@ -122,9 +122,9 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
  For additional examples, see [Run a Reporting Services Script File](../../2014/reporting-services/run-a-reporting-services-script-file.md)  
   
 ## Remarks  
- You can define scripts to set system properties, publish reports, and so forth. The scripts that you create can include any methods of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] API. For more information about the methods and properties available to you, see [Report Server Web Service](../../2014/reporting-services/dev-guide/report-server-web-service.md).  
+ You can define scripts to set system properties, publish reports, and so forth. The scripts that you create can include any methods of the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] API. For more information about the methods and properties available to you, see [Report Server Web Service](../../2014/reporting-services/dev-guide/report-server-web-service.md).  
   
- The script must be written in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET code, and stored in a Unicode or UTF-8 text file with an .rss file name extension. You cannot debug scripts with the **rs** utility. To debug a script, run the code within [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
+ The script must be written in [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET code, and stored in a Unicode or UTF-8 text file with an .rss file name extension. You cannot debug scripts with the **rs** utility. To debug a script, run the code within [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
   
 > [!TIP]  
 >  For a detailed example, see [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](../../2014/reporting-services/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  

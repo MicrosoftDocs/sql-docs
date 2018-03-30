@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: dfb39d16-722a-4734-94bb-98e61e014ee7
 caps.latest.revision: 50
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Security Center for SQL Server Database Engine and Azure SQL Database
-  This page provides links to help you locate the information that you need about security and protection in the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+  This page provides links to help you locate the information that you need about security and protection in the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]and [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)].  
   
 > [!NOTE]  
->  The capabilities of [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] continue to improve. See the most recent version of this topic for the most recent information about [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+>  The capabilities of [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] continue to improve. See the most recent version of this topic for the most recent information about [!INCLUDE[ssSDS](../includes/sssds-md.md)].  
   
 |Authentication: Who are you?|Authorization: What can you do?|Encryption: Storing Secret Data|Connection Security: Restricting and Securing|Auditing: Recording Access|  
 |----------------------------------|-------------------------------------|-------------------------------------|---------------------------------------------------|--------------------------------|  
@@ -34,7 +34,7 @@ manager: "jhubbard"
   
 ## Links to Specific Related Topics  
  ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") **Authentication: Who are you?**  
- **Who Authenticates? (Windows or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])**  
+ **Who Authenticates? (Windows or [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)])**  
   
 -   [Choose an Authentication Mode](../../2014/database-engine/choose-an-authentication-mode.md)  
   
@@ -54,9 +54,9 @@ manager: "jhubbard"
   
 -   [Credentials &#40;Database Engine&#41;](../../2014/database-engine/credentials-database-engine.md)  
   
--   [Execute as Another Login](../Topic/EXECUTE%20AS%20\(Transact-SQL\).md)  
+-   [Execute as Another Login](~/t-sql/statements/execute-as-transact-sql.md)  
   
--   [Execute as Another Database User](../Topic/EXECUTE%20AS%20\(Transact-SQL\).md)  
+-   [Execute as Another Database User](~/t-sql/statements/execute-as-transact-sql.md)  
   
  ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") **Encryption: Storing Secret Data**  
  **Encrypting Files**  
@@ -77,13 +77,13 @@ manager: "jhubbard"
   
  **Column, Data and Key Encryption**  
   
--   [Encrypt by Certificate](../Topic/ENCRYPTBYCERT%20\(Transact-SQL\).md)  
+-   [Encrypt by Certificate](~/t-sql/functions/encryptbycert-transact-sql.md)  
   
--   [Encrypt by Asymmetric Key](../Topic/ENCRYPTBYASYMKEY%20\(Transact-SQL\).md)  
+-   [Encrypt by Asymmetric Key](~/t-sql/functions/encryptbyasymkey-transact-sql.md)  
   
--   [Encrypt by Symmetric Key](../Topic/ENCRYPTBYKEY%20\(Transact-SQL\).md)  
+-   [Encrypt by Symmetric Key](~/t-sql/functions/encryptbykey-transact-sql.md)  
   
--   [Encrypt by Passphrase](../Topic/ENCRYPTBYPASSPHRASE%20\(Transact-SQL\).md)  
+-   [Encrypt by Passphrase](~/t-sql/functions/encryptbypassphrase-transact-sql.md)  
   
  ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") **Authorization: What can you do?**  
  **Granting, Revoking, and Denying Permissions**  
@@ -108,16 +108,16 @@ manager: "jhubbard"
   
 -   [Dynamic Data Masking](http://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  
   
--   [Signed Objects](../Topic/ADD%20SIGNATURE%20\(Transact-SQL\).md)  
+-   [Signed Objects](~\t-sql\statements\add-signature-transact-sql.md)  
   
  ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") **Connection Security: Restricting and Securing**  
  **Firewall Protection**  
   
 -   [Configure a Windows Firewall for Database Engine Access](../../2014/database-engine/configure-a-windows-firewall-for-database-engine-access.md)  
   
--   [Azure SQL Database Firewall Settings](../Topic/sp_set_database_firewall_rule%20\(Azure%20SQL%20Database\).md)  
+-   [Azure SQL Database Firewall Settings](~/relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)  
   
--   [Azure Service Firewall Settings](../Topic/sp_set_firewall_rule%20\(Azure%20SQL%20Database\).md)  
+-   [Azure Service Firewall Settings](~/relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)  
   
  **Encrypting Data in Transit**  
   

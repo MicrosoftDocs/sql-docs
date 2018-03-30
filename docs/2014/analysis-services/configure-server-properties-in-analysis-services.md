@@ -24,7 +24,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Configure Server Properties in Analysis Services
-  An [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] administrator can modify default server configuration properties for an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance. Each instance has its own configuration properties that can be set independently of other instances on the same server.  
+  An [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] administrator can modify default server configuration properties for an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance. Each instance has its own configuration properties that can be set independently of other instances on the same server.  
   
  To set server properties, use SQL Server Management Studio or edit the msmdsrv.ini file of a specific instance.  
   
@@ -38,17 +38,17 @@ manager: "mblythe"
  The property pages in SQL Server Management Studio contain a subset of the available properties, showing only those properties that are more likely to be modified. The full set of properties can be found in the msmdsrv.ini file.  
   
 > [!NOTE]  
->  This topic does not document the deployment configuration properties in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. For more information about deployment configuration, see [Specifying Configuration Settings for Solution Deployment](../../2014/analysis-services/specifying-configuration-settings-for-solution-deployment.md).  
+>  This topic does not document the deployment configuration properties in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. For more information about deployment configuration, see [Specifying Configuration Settings for Solution Deployment](../../2014/analysis-services/specifying-configuration-settings-for-solution-deployment.md).  
   
 #### View or set configuration properties in Management Studio  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connect to an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance.  
+1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], connect to an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance.  
   
-     In Object Explorer, right-click the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance, and then click **Properties**. The General page appears, displaying the more commonly used properties.  
+     In Object Explorer, right-click the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance, and then click **Properties**. The General page appears, displaying the more commonly used properties.  
   
 2.  To view additional properties, click the **Show Advanced (All) Properties** checkbox at the bottom of the page.  
   
-     Modifying server properties is supported only for tabular mode and multidimensional mode servers. If you installed [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], always use the default values unless you are directed otherwise by a Microsoft product support engineer.  
+     Modifying server properties is supported only for tabular mode and multidimensional mode servers. If you installed [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)], always use the default values unless you are directed otherwise by a Microsoft product support engineer.  
   
      For guidance on how to address operational or performance issues through server properties, see [SQL Server 2008 R2 Analysis Services Operations Guide](http://go.microsoft.com/fwlink/?LinkID=225539).  
   
@@ -71,9 +71,9 @@ manager: "mblythe"
 4.  After you save the file, you must restart the service.  
   
 ##  <a name="bkmk_ref"></a> Server Property Reference  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] configuration properties are important for fine tuning your system. For example, to make query log behavior consistent with your requirements, you can set the relevant properties.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] configuration properties are important for fine tuning your system. For example, to make query log behavior consistent with your requirements, you can set the relevant properties.  
   
- The following topics explain the various [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] configuration properties:  
+ The following topics explain the various [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] configuration properties:  
   
 |Topic|Description|  
 |-----------|-----------------|  

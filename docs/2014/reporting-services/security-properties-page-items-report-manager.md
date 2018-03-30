@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 351b8503-354f-4b1b-a7ac-f1245d978da0
 caps.latest.revision: 27
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Security Properties Page, Items (Report Manager)

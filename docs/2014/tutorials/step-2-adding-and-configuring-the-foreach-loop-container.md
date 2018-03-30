@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 caps.latest.revision: 36
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Step 2: Adding and Configuring the Foreach Loop Container
@@ -31,7 +31,7 @@ manager: "jhubbard"
  After you have made these modifications to the package, when the package is run, the Foreach Loop Container will iterate through the collection of files in the Sample Data folder. Each time a file is found that matches the criteria, the Foreach Loop Container will populate the user-defined variable with the file name, map the user-defined variable to the `ConnectionString` property of the Sample Currency Data Flat File connection manager, and then run the data flow against that file. Therefore, in each iteration of the Foreach Loop the Data Flow task will consume a different flat file.  
   
 > [!NOTE]  
->  Because [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] separates control flow from data flow, any looping that you add to the control flow will not require modification to the data flow. Therefore, the data flow that you created in Lesson 1 does not have to be changed.  
+>  Because [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] separates control flow from data flow, any looping that you add to the control flow will not require modification to the data flow. Therefore, the data flow that you created in Lesson 1 does not have to be changed.  
   
 ### To add a Foreach Loop container  
   
@@ -57,7 +57,7 @@ manager: "jhubbard"
   
 5.  In the **Browse for Folder** dialog box, locate the folder on your machine that contains the Currency_*.txt files.  
   
-     This sample data is included with the [!INCLUDE[ssIS](../../includes/ssis-md.md)] lesson packages. To download the sample data and the lesson packages, do the following.  
+     This sample data is included with the [!INCLUDE[ssIS](../includes/ssis-md.md)] lesson packages. To download the sample data and the lesson packages, do the following.  
   
     1.  Navigate to [Integration Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=275027)  
   

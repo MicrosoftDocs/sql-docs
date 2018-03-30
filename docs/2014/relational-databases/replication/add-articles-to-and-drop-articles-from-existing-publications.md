@@ -21,7 +21,7 @@ helpviewer_keywords:
 ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 caps.latest.revision: 44
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Add Articles to and Drop Articles from Existing Publications
@@ -31,7 +31,7 @@ manager: "jhubbard"
  Adding an article involves: adding the article to the publication; creating a new snapshot for the publication; synchronizing the subscription to apply the schema and data for the new article.  
   
 > [!NOTE]  
->  If you add an article to a merge publication and an existing article depends on the new article, you must specify a processing order for both articles using the **@processing_order** parameter of [sp_addmergearticle](../Topic/sp_addmergearticle%20\(Transact-SQL\).md) and [sp_changemergearticle](../Topic/sp_changemergearticle%20\(Transact-SQL\).md). Consider the following scenario: you publish a table but you do not publish a function that the table references. If you do not publish the function, the table cannot be created at the Subscriber. When you add the function to the publication: specify a value of **1** for the **@processing_order** parameter of **sp_addmergearticle**; and specify a value of **2** for the **@processing_order** parameter of **sp_changemergearticle**, specifying the table name for the parameter **@article**. This processing order ensures that you create the function at the Subscriber before the table that depends on it. You can use different numbers for each article, as long as the number for the function is lower than the number for the table.  
+>  If you add an article to a merge publication and an existing article depends on the new article, you must specify a processing order for both articles using the **@processing_order** parameter of [sp_addmergearticle](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) and [sp_changemergearticle](~/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Consider the following scenario: you publish a table but you do not publish a function that the table references. If you do not publish the function, the table cannot be created at the Subscriber. When you add the function to the publication: specify a value of **1** for the **@processing_order** parameter of **sp_addmergearticle**; and specify a value of **2** for the **@processing_order** parameter of **sp_changemergearticle**, specifying the table name for the parameter **@article**. This processing order ensures that you create the function at the Subscriber before the table that depends on it. You can use different numbers for each article, as long as the number for the function is lower than the number for the table.  
   
 1.  Add one or more articles through one of the following methods:  
   
@@ -64,7 +64,7 @@ manager: "jhubbard"
   
 -   For merge publications with a compatibility level lower than 90RTM, articles can be dropped with no special considerations prior to the initial synchronization of subscriptions. If an article is dropped after one or more subscriptions is synchronized, the subscriptions must be dropped, re-created, and synchronized.  
   
--   For snapshot or transactional publications, articles can be dropped with no special considerations prior to subscriptions being created. If an article is dropped after one or more subscriptions is created, the subscriptions must be dropped, recreated, and synchronized. For more information about dropping subscriptions, see [Subscribe to Publications](../../../2014/relational-databases/replication/subscribe-to-publications.md) and [sp_dropsubscription &#40;Transact-SQL&#41;](../Topic/sp_dropsubscription%20\(Transact-SQL\).md). **sp_dropsubscription** allows you to drop a single article from the subscription rather than the entire subscription.  
+-   For snapshot or transactional publications, articles can be dropped with no special considerations prior to subscriptions being created. If an article is dropped after one or more subscriptions is created, the subscriptions must be dropped, recreated, and synchronized. For more information about dropping subscriptions, see [Subscribe to Publications](../../../2014/relational-databases/replication/subscribe-to-publications.md) and [sp_dropsubscription &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md). **sp_dropsubscription** allows you to drop a single article from the subscription rather than the entire subscription.  
   
 1.  Dropping an article from a publication involves dropping the article and creating a new snapshot for the publication. Dropping an article invalidates the current snapshot; therefore a new snapshot must be created.  
   

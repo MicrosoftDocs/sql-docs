@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 4dff9b67-b483-4c51-a822-6dbe706a6840
 caps.latest.revision: 6
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Include Indicators and Gauges in a Gauge Panel (Report Builder and SSRS)
@@ -23,7 +23,7 @@ manager: "mblythe"
  Gauge and indicator options can be set by using expressions. For more information, see [Expressions &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/expressions-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ### To embed an indicator in a gauge  
   
@@ -35,7 +35,7 @@ manager: "mblythe"
   
 4.  Click **Radial**. The first radial gauge is selected.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 6.  Click the gauge. The **Gauge Data** pane opens.  
   
@@ -45,7 +45,7 @@ manager: "mblythe"
   
 9. In the **Select Indicator Style** dialog box, in the left pane, click the indicator type you want, and then click the indicator set.  
   
-10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 11. Click the indicator. The **Gauge Data** pane opens.  
   
@@ -53,7 +53,7 @@ manager: "mblythe"
   
      The field can be the same or a different field from the one you use in the gauge.  
   
-13. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+13. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ### To show an indicator and gauge side by side  
   
@@ -65,7 +65,7 @@ manager: "mblythe"
   
 4.  Click **Radial**. The first radial gauge is selected.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 6.  Click the gauge. The **Gauge Data** pane opens.  
   
@@ -75,7 +75,7 @@ manager: "mblythe"
   
 9. In the **Select Indicator Style** dialog box, in the left pane, click the indicator type you want, and then click the indicator set.  
   
-10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 11. Click the indicator. The **Gauge Data** pane opens.  
   
@@ -83,7 +83,7 @@ manager: "mblythe"
   
      The field can be the same or a different field from the one you use in the gauge.  
   
-13. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+13. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 14. Right-click the gauge panel and click **Add Label**. A label is added to the gauge panel. Repeat one more time.  
   
@@ -95,7 +95,7 @@ manager: "mblythe"
   
 17. Right-click the label near the indicator, click **Label Properties**,and type the text you want in the **Text** box.  
   
-18. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+18. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## See Also  
  [Indicators &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/indicators-report-builder-and-ssrs.md)  

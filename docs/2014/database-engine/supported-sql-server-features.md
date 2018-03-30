@@ -16,18 +16,18 @@ ms.author: "sstein"
 manager: "jhubbard"
 ---
 # Supported SQL Server Features
-  This topic discusses [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features that are or not supported for use with memory-optimized objects.  
+  This topic discusses [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] features that are or not supported for use with memory-optimized objects.  
   
-## [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Features Supported for In-Memory OLTP  
- The following [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features are supported on a database that has memory-optimized objects, including memory-optimized filegroup.  
+## [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Features Supported for In-Memory OLTP  
+ The following [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] features are supported on a database that has memory-optimized objects, including memory-optimized filegroup.  
   
  For information about supported data types, see [Supported Data Types](../../2014/database-engine/supported-data-types.md).  
   
--   Options and operations supported on memory-optimized tables. For more information, see [CREATE TABLE &#40;Transact-SQL&#41;](../Topic/CREATE%20TABLE%20\(Transact-SQL\).md).  
+-   Options and operations supported on memory-optimized tables. For more information, see [CREATE TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/create-table-transact-sql.md).  
   
--   Options and operations supported on natively compiled stored procedures. For more information, see [CREATE PROCEDURE &#40;Transact-SQL&#41;](../Topic/CREATE%20PROCEDURE%20\(Transact-SQL\).md).  
+-   Options and operations supported on natively compiled stored procedures. For more information, see [CREATE PROCEDURE &#40;Transact-SQL&#41;](~/t-sql/statements/create-procedure-transact-sql.md).  
   
--   Ability to access memory-optimized tables using interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)]. Interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)] provides surface area equivalent to accessing tables that are not memory optimized using stored procedures that are not natively compiled and using [!INCLUDE[tsql](../../includes/tsql-md.md)]. For more information, see [Accessing Memory-Optimized Tables Using Interpreted Transact-SQL](../../2014/database-engine/accessing-memory-optimized-tables-using-interpreted-transact-sql.md).  
+-   Ability to access memory-optimized tables using interpreted [!INCLUDE[tsql](../includes/tsql-md.md)]. Interpreted [!INCLUDE[tsql](../includes/tsql-md.md)] provides surface area equivalent to accessing tables that are not memory optimized using stored procedures that are not natively compiled and using [!INCLUDE[tsql](../includes/tsql-md.md)]. For more information, see [Accessing Memory-Optimized Tables Using Interpreted Transact-SQL](../../2014/database-engine/accessing-memory-optimized-tables-using-interpreted-transact-sql.md).  
   
 -   Multi-versioning and optimistic concurrency control. For more information, see [Transaction Isolation Levels](../../2014/database-engine/transaction-isolation-levels.md).  
   
@@ -35,11 +35,11 @@ manager: "jhubbard"
   
 -   Catalog views, dynamic management views, and extended events for supportability. For more information, see [System Views, Stored Procedures, DMVs and Wait Types for In-Memory OLTP](../../2014/database-engine/system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp.md).  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects. For more information, see [SQL Server Management Objects Support for In-Memory OLTP](../../2014/database-engine/sql-server-management-objects-support-for-in-memory-oltp.md).  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects. For more information, see [SQL Server Management Objects Support for In-Memory OLTP](../../2014/database-engine/sql-server-management-objects-support-for-in-memory-oltp.md).  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information, see [SQL Server Management Studio Support for In-Memory OLTP](../../2014/database-engine/sql-server-management-studio-support-for-in-memory-oltp.md).  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. For more information, see [SQL Server Management Studio Support for In-Memory OLTP](../../2014/database-engine/sql-server-management-studio-support-for-in-memory-oltp.md).  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. For more information, see [SQL Server PowerShell Overview](http://msdn.microsoft.com/library/cc281954\(SQL.105\).aspx).  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell. For more information, see [SQL Server PowerShell Overview](http://msdn.microsoft.com/library/cc281954\(SQL.105\).aspx).  
   
 -   Import and Export Bulk Data by using the bcp utility. For more information, see [Import and Export Bulk Data by Using the bcp Utility &#40;SQL Server&#41;](../../2014/database-engine/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md).  
   
@@ -47,9 +47,9 @@ manager: "jhubbard"
   
 -   Multiple containers in a memory-optimized data filegroup to store In-Memory OLTP objects and reduce recovery time objective (RTO).  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transaction log blocks calculate checksum and validate.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] transaction log blocks calculate checksum and validate.  
   
--   The new SNAPSHOT table hint. For more information, see [Table Hints &#40;Transact-SQL&#41;](../Topic/Table%20Hints%20\(Transact-SQL\).md).  
+-   The new SNAPSHOT table hint. For more information, see [Table Hints &#40;Transact-SQL&#41;](~/t-sql/queries/hints-transact-sql-table.md).  
   
 -   DB COMPAT level.  
   
@@ -57,22 +57,22 @@ manager: "jhubbard"
   
 -   Service broker, with limitations. Cannot access a queue from a natively compiled stored procedure. Cannot access a queue in a remote database in a transaction that accesses memory-optimized tables.  
   
--   Failover Clustering: As part of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AlwaysOn offering, AlwaysOn Failover Cluster Instances leverages Windows Server Failover Clustering (WSFC) functionality to provide local high availability through redundancy at the server-instance level—a failover cluster instance (FCI). For more information, see [AlwaysOn Failover Cluster Instances (SQL Server)](../../2014/database-engine/always-on-failover-cluster-instances-sql-server.md).  
+-   Failover Clustering: As part of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] AlwaysOn offering, AlwaysOn Failover Cluster Instances leverages Windows Server Failover Clustering (WSFC) functionality to provide local high availability through redundancy at the server-instance level—a failover cluster instance (FCI). For more information, see [AlwaysOn Failover Cluster Instances (SQL Server)](../../2014/database-engine/always-on-failover-cluster-instances-sql-server.md).  
   
--   Integration with AlwaysOn: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides several options for creating high availability for a server or database, including AlwaysOn. For more information, see [High Availability Solutions &#40;SQL Server&#41;](../../2014/database-engine/high-availability-solutions-sql-server.md).  
+-   Integration with AlwaysOn: [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provides several options for creating high availability for a server or database, including AlwaysOn. For more information, see [High Availability Solutions &#40;SQL Server&#41;](../../2014/database-engine/high-availability-solutions-sql-server.md).  
   
--   Log shipping: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Log shipping allows you to automatically send transaction log backups from a primary database on a primary server instance to one or more secondary databases on separate secondary server instances. For more information, see [About Log Shipping &#40;SQL Server&#41;](../../2014/database-engine/about-log-shipping-sql-server.md).  
+-   Log shipping: [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Log shipping allows you to automatically send transaction log backups from a primary database on a primary server instance to one or more secondary databases on separate secondary server instances. For more information, see [About Log Shipping &#40;SQL Server&#41;](../../2014/database-engine/about-log-shipping-sql-server.md).  
   
 -   Transactional replication to memory-optimized tables on subscribers is supported with some restrictions. For more information, see [Replication to Memory-Optimized Table Subscribers](../../2014/relational-databases/replication/replication-to-memory-optimized-table-subscribers.md).  
   
--   Resource Governor: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resource Governor is a feature that you can use to manage [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] workload and system resource consumption. Resource Governor enables you to specify limits on the amount of CPU, physical IO, and memory that incoming application requests can use. For more information, see [Managing Memory for In-Memory OLTP](../../2014/database-engine/managing-memory-for-in-memory-oltp.md) and [Resource Governor](../../2014/database-engine/resource-governor.md).  
+-   Resource Governor: [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Resource Governor is a feature that you can use to manage [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] workload and system resource consumption. Resource Governor enables you to specify limits on the amount of CPU, physical IO, and memory that incoming application requests can use. For more information, see [Managing Memory for In-Memory OLTP](../../2014/database-engine/managing-memory-for-in-memory-oltp.md) and [Resource Governor](../../2014/database-engine/resource-governor.md).  
   
 -   In-Memory OLTP has restrictions on supported code pages for (var)char columns in memory-optimized tables and supported collations used in indexes and natively compiled stored procedures. For more information, see [Collations and Code Pages](../../2014/database-engine/collations-and-code-pages.md).  
   
 -   BACPAC support.  
   
-## [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Features Not Supported for In-Memory OLTP  
- The following [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features are not supported on a database that has memory-optimized objects (including memory-optimized data filegroup).  
+## [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Features Not Supported for In-Memory OLTP  
+ The following [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] features are not supported on a database that has memory-optimized objects (including memory-optimized data filegroup).  
   
 |Unsupported Feature|Feature Description|  
 |-------------------------|-------------------------|  
@@ -81,7 +81,7 @@ manager: "jhubbard"
 |Transparent Data Encryption (TDE) on the memory-optimized data filegroup of a database.|Transparent data encryption (TDE) performs real-time I/O encryption and decryption of the data and log files. For more information, see [Transparent Data Encryption &#40;TDE&#41;](../../2014/database-engine/transparent-data-encryption-tde.md).<br /><br /> TDE can be enabled on a database that has In-Memory OLTP objects. In-Memory OLTP log records are encrypted if TDE is enabled. The checkpoint files for durable tables are not encrypted, even if TDE is enabled on the database.|  
 |Replication|Replication configurations other than transactional replication to memory-optimized tables on subscribers are incompatible with tables or views referencing memory-optimized tables. Replication using sync_mode=’database snapshot’ is not supported if there is a memory-optimized filegroup. For more information, see [Replication to Memory-Optimized Table Subscribers](../../2014/relational-databases/replication/replication-to-memory-optimized-table-subscribers.md).|  
 |Multiple Active Result Sets (MARS)|Multiple Active Result Sets (MARS) is not supported with memory-optimized tables. This error can also indicate linked server use. Linked server can use MARS. Linked servers are not supported with memory-optimized tables. Instead, connect directly to the server and database that hosts the memory-optimized tables.|  
-|Mirroring|Database mirroring is a solution for increasing the availability of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. For more information, see [Database Mirroring &#40;SQL Server&#41;](../../2014/database-engine/database-mirroring-sql-server.md).|  
+|Mirroring|Database mirroring is a solution for increasing the availability of a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database. For more information, see [Database Mirroring &#40;SQL Server&#41;](../../2014/database-engine/database-mirroring-sql-server.md).|  
 |Rebuild log|Rebuilding the log, either through attach or ALTER DATABASE, is not supported for databases with a MEMORY_OPTIMIZED_DATA filegroup.|  
 |Linked Server|For more information, see [Linked Servers &#40;Database Engine&#41;](../../2014/database-engine/linked-servers-database-engine.md).|  
 |Bulk logging|Regardless of the recovery model of the database, all operations on durable memory-optimized tables are always fully logged.|  
@@ -92,7 +92,7 @@ manager: "jhubbard"
 |Database Containment|Database containment is not supported in a database that has natively-compiled stored procedures and memory-optimized tables. For more information, see [Contained Databases](../../2014/database-engine/contained-databases.md)|  
 |Context Connections|Accessing memory-optimized tables using the context connection from inside CLR stored procedures is not supported.|  
 |Cursors|Keyset and dynamic cursors on queries accessing memory-optimized tables. These queries are degraded to static becoming read-only.|  
-|TABLESTAMP|TABLESTAMP is not supported. See [FROM &#40;Transact-SQL&#41;](../Topic/FROM%20\(Transact-SQL\).md) for more information.|  
+|TABLESTAMP|TABLESTAMP is not supported. See [FROM &#40;Transact-SQL&#41;](~/t-sql/queries/from-transact-sql.md) for more information.|  
 |AUTO_CLOSE|AUTO_CLOSE is not supported. For more information, see [Set the AUTO_CLOSE Database Option to OFF](../../2014/database-engine/set-the-auto-close-database-option-to-off.md).|  
 |Database Snapshots|Database Snapshots are not supported. For more information, see [Database Snapshots &#40;SQL Server&#41;](../../2014/database-engine/database-snapshots-sql-server.md).|  
 |Transactional DDL|Transactional DDL is not supported in In-Memory OLTP.|  

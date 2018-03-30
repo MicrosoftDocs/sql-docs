@@ -31,10 +31,10 @@ manager: "jhubbard"
     >  To create a more secure environment, consider using separate domain accounts for each server instance.  
   
 ##  <a name="CreateLogin"></a> Create a Login for a Different Account  
- If two server instances run as different accounts, the system administrator must use the CREATE LOGIN [!INCLUDE[tsql](../../includes/tsql-md.md)] statement to create a login for the startup service account of the remote instance for each server instance. For more information, see [CREATE LOGIN &#40;Transact-SQL&#41;](../Topic/CREATE%20LOGIN%20\(Transact-SQL\).md).  
+ If two server instances run as different accounts, the system administrator must use the CREATE LOGIN [!INCLUDE[tsql](../includes/tsql-md.md)] statement to create a login for the startup service account of the remote instance for each server instance. For more information, see [CREATE LOGIN &#40;Transact-SQL&#41;](~/t-sql/statements/create-login-transact-sql.md).  
   
 > [!IMPORTANT]  
->  If you run [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] under a non-domain account, you must use certificates. For more information, see [Use Certificates for a Database Mirroring Endpoint &#40;Transact-SQL&#41;](../../2014/database-engine/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
+>  If you run [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] under a non-domain account, you must use certificates. For more information, see [Use Certificates for a Database Mirroring Endpoint &#40;Transact-SQL&#41;](../../2014/database-engine/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
   
  For example, for the server instance sqlA, which runs under loginA, to connect to the server instance sqlB, which runs under loginB, loginA must exist on sqlB, and loginB must exist on sqlA. In addition, for a database mirroring session that includes a witness server instance (sqlC) and in which the three server instances run under different domain accounts, the following logins must be created:  
   
@@ -48,7 +48,7 @@ manager: "jhubbard"
 >  It is possible to connect with the network service account by using the machine account instead of a domain user. If the machine account is used, it must be added as a user on the other server instance.  
   
 ##  <a name="GrantConnect"></a> Grant Connect Permission  
- Once a login has been created on a server instance, the login must be granted permission to connect to the database mirroring endpoint of the server instance. The system administrator grants the connect permission using a GRANT [!INCLUDE[tsql](../../includes/tsql-md.md)] statement. For more information, see [GRANT &#40;Transact-SQL&#41;](../Topic/GRANT%20\(Transact-SQL\).md).  
+ Once a login has been created on a server instance, the login must be granted permission to connect to the database mirroring endpoint of the server instance. The system administrator grants the connect permission using a GRANT [!INCLUDE[tsql](../includes/tsql-md.md)] statement. For more information, see [GRANT &#40;Transact-SQL&#41;](~/t-sql/statements/grant-transact-sql.md).  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
@@ -61,6 +61,6 @@ manager: "jhubbard"
 ## See Also  
  [The Database Mirroring Endpoint &#40;SQL Server&#41;](../../2014/database-engine/the-database-mirroring-endpoint-sql-server.md)   
  [Troubleshoot Database Mirroring Configuration &#40;SQL Server&#41;](../../2014/database-engine/troubleshoot-database-mirroring-configuration-sql-server.md)   
- [Troubleshoot AlwaysOn Availability Groups Configuration &#40;SQL Server&#41;deleted](../Topic/Troubleshoot%20AlwaysOn%20Availability%20Groups%20Configuration%20\(SQL%20Server\)deleted.md)  
+ [Troubleshoot AlwaysOn Availability Groups Configuration &#40;SQL Server&#41;deleted](troubleshoot-alwayson-availability-groups-configuration-sql-server.md)  
   
   

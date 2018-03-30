@@ -12,14 +12,14 @@ ms.topic: "article"
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
 caps.latest.revision: 5
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # XML Data Type and Columns (SQL Server)
-  This topic discusses the advantages and the limitations of the `xml` data type in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and helps you to choose how to store XML data.  
+  This topic discusses the advantages and the limitations of the `xml` data type in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], and helps you to choose how to store XML data.  
   
 ## Relational or XML Data Model  
- If your data is highly structured with known schema, the relational model is likely to work best for data storage. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the required functionality and tools you may need. On the other hand, if the structure is semi-structured or unstructured, or unknown, you have to give consideration to modeling such data.  
+ If your data is highly structured with known schema, the relational model is likely to work best for data storage. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provides the required functionality and tools you may need. On the other hand, if the structure is semi-structured or unstructured, or unknown, you have to give consideration to modeling such data.  
   
  XML is a good choice if you want a platform-independent model in order to ensure portability of the data by using structural and semantic markup. Additionally, it is an appropriate option if some of the following properties are satisfied:  
   
@@ -34,7 +34,7 @@ manager: "jhubbard"
  If none of these conditions is met, you should use the relational data model. For example, if your data is in XML format but your application just uses the database to store and retrieve the data, an `[n]varchar(max)` column is all you require. Storing the data in an XML column has additional benefits. This includes having the engine determine that the data is well formed or valid, and also includes support for fine-grained query and updates into the XML data.  
   
 ## Reasons for Storing XML Data in SQL Server  
- Following are some of the reasons to use native XML features in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instead of managing your XML data in the file system:  
+ Following are some of the reasons to use native XML features in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instead of managing your XML data in the file system:  
   
 -   You want to share, query, and modify your XML data in an efficient and transacted way. Fine-grained data access is important to your application. For example, you may want to extract some of the sections within an XML document, or you may want to insert a new section without replacing your whole document.  
   
@@ -53,7 +53,7 @@ manager: "jhubbard"
  If none of these conditions is satisfied, it may be better to store your data as a non-XML, large object type, such as `[n]varchar(max)` or `varbinary(max)`.  
   
 ## XML Storage Options  
- The storage options for XML in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include the following:  
+ The storage options for XML in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] include the following:  
   
 -   Native storage as `xml` data type  
   
@@ -151,9 +151,9 @@ manager: "jhubbard"
  For highly structured XML data, for example, the content of a table has been converted into XML; you can map all values to relational columns, and possibly use XML view technology.  
   
 ## Granularity of XML Data  
- The granularity of the XML data stored in an XML column is very important for locking and, to a lesser degree, it is also important for updates. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses the same locking mechanism for both XML and non-XML data. Therefore, row-level locking causes all XML instances in the row to be locked. When the granularity is large, locking large XML instances for updates causes throughput to decline in a multiuser scenario. On the other hand, severe decomposition loses object encapsulation and increases reassembly cost.  
+ The granularity of the XML data stored in an XML column is very important for locking and, to a lesser degree, it is also important for updates. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses the same locking mechanism for both XML and non-XML data. Therefore, row-level locking causes all XML instances in the row to be locked. When the granularity is large, locking large XML instances for updates causes throughput to decline in a multiuser scenario. On the other hand, severe decomposition loses object encapsulation and increases reassembly cost.  
   
- A balance between data modeling requirements and locking and update characteristics is important for good design. However, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the size of actual stored XML instances is not as critical.  
+ A balance between data modeling requirements and locking and update characteristics is important for good design. However, in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the size of actual stored XML instances is not as critical.  
   
  For example, updates to an XML instance are performed by using new support for partial binary large object (BLOB) and partial index updates in which the existing stored XML instance is compared to its updated version. Partial binary large object (BLOB) update performs a differential comparison between the two XML instances and updates only the differences. Partial index updates modify only those rows that must be changed in the XML index.  
   

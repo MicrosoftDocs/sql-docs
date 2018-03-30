@@ -12,11 +12,11 @@ ms.topic: "article"
 ms.assetid: cbfbea15-9277-498f-b772-75b4cb06f408
 caps.latest.revision: 16
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Cause and Resolution of Database Engine Errors
-  This topic contains cause and resolution information for a number of errors related to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+  This topic contains cause and resolution information for a number of errors related to the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 ## In This Section  
  The error message topics in this section provide an explanation of the error message, possible causes, and any actions you can take to correct the problem.  

@@ -16,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 caps.latest.revision: 43
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Create a Snapshot for a Merge Publication with Parameterized Filters
-  This topic describes how to create a snapshot for a merge publication with parameterized filters in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or Replication Management Objects (RMO).  
+  This topic describes how to create a snapshot for a merge publication with parameterized filters in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or Replication Management Objects (RMO).  
   
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
@@ -38,11 +38,11 @@ manager: "jhubbard"
   
 1.  Create a merge publication with the New Publication Wizard, and specify one or more parameterized row filters on the **Add Filter** page of the wizard. For more information, see [Define and Modify a Parameterized Row Filter for a Merge Article](../../../2014/relational-databases/replication/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
-2.  Generate a schema snapshot for the publication. By default, a schema snapshot is generated when you complete the New Publication Wizard; you can also generate a schema snapshot from [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
+2.  Generate a schema snapshot for the publication. By default, a schema snapshot is generated when you complete the New Publication Wizard; you can also generate a schema snapshot from [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 #### To generate a schema snapshot  
   
-1.  Connect to the Publisher in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], and then expand the server node.  
+1.  Connect to the Publisher in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], and then expand the server node.  
   
 2.  Expand the **Replication** folder, and then expand the **Publications** folder.  
   
@@ -56,7 +56,7 @@ manager: "jhubbard"
   
 1.  On the **Data Partitions** page of the **Publication Properties - \<Publication>** dialog box, select **Automatically define a partition and generate a snapshot if needed when a new Subscriber tries to synchronize**.  
   
-2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 #### To generate and refresh snapshots  
   
@@ -74,7 +74,7 @@ manager: "jhubbard"
   
 5.  Select the partition in the property grid, and then click **Generate the selected snapshots now**.  
   
-6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  Using stored procedures and the Snapshot Agent, you can perform the following:  
@@ -90,7 +90,7 @@ manager: "jhubbard"
   
 #### To create a publication that allows Subscribers to initiate snapshot generation and delivery  
   
-1.  At the Publisher on the publication database, execute [sp_addmergepublication &#40;Transact-SQL&#41;](../Topic/sp_addmergepublication%20\(Transact-SQL\).md). Specify the following parameters:  
+1.  At the Publisher on the publication database, execute [sp_addmergepublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Specify the following parameters:  
   
     -   The name of the publication for **@publication**.  
   
@@ -98,69 +98,69 @@ manager: "jhubbard"
   
     -   (Optional) The number of dynamic snapshot processes that can run concurrently for **@max_concurrent_dynamic_snapshots**. If the maximum number of processes is running and a Subscriber attempts to generate a snapshot, the process is placed in a queue. By default there is no limit to the number of concurrent processes.  
   
-2.  At the Publisher, execute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../Topic/sp_addpublication_snapshot%20\(Transact-SQL\).md). Specify the publication name used in step 1 for **@publication** and the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows credentials under which the [Replication Snapshot Agent](../../../2014/relational-databases/replication/replication-snapshot-agent.md) runs for **@job_login** and **@password**. If the agent will use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication when connecting to the Publisher, you must also specify a value of **0** for **@publisher_security_mode** and the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login information for **@publisher_login** and **@publisher_password**. This creates a Snapshot Agent job for the publication. For more information about generating an initial snapshot and defining a custom schedule for the Snapshot Agent, see [Create and Apply the Initial Snapshot](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
+2.  At the Publisher, execute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Specify the publication name used in step 1 for **@publication** and the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows credentials under which the [Replication Snapshot Agent](../../../2014/relational-databases/replication/replication-snapshot-agent.md) runs for **@job_login** and **@password**. If the agent will use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication when connecting to the Publisher, you must also specify a value of **0** for **@publisher_security_mode** and the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login information for **@publisher_login** and **@publisher_password**. This creates a Snapshot Agent job for the publication. For more information about generating an initial snapshot and defining a custom schedule for the Snapshot Agent, see [Create and Apply the Initial Snapshot](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
     > [!IMPORTANT]  
     >  When configuring a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../../2014/database-engine/enable-encrypted-connections-to-the-database-engine.md).  
   
-3.  Execute [sp_addmergearticle &#40;Transact-SQL&#41;](../Topic/sp_addmergearticle%20\(Transact-SQL\).md) to add articles to the publication. This stored procedure must be executed once for each article in the publication. When using parameterized filters, you must specify a parameterized row filter for one or more articles using the **@subset_filterclause** parameter. For more information, see [Define and Modify a Parameterized Row Filter for a Merge Article](../../../2014/relational-databases/replication/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
+3.  Execute [sp_addmergearticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) to add articles to the publication. This stored procedure must be executed once for each article in the publication. When using parameterized filters, you must specify a parameterized row filter for one or more articles using the **@subset_filterclause** parameter. For more information, see [Define and Modify a Parameterized Row Filter for a Merge Article](../../../2014/relational-databases/replication/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
-4.  If other articles will be filtered based on the parameterized row filter, execute [sp_addmergefilter &#40;Transact-SQL&#41;](../Topic/sp_addmergefilter%20\(Transact-SQL\).md) to define the join or logical record relationships between articles. This stored procedure must be executed once for each relationship being defined. For more information, see [Define and Modify a Join Filter Between Merge Articles](../../../2014/relational-databases/replication/define-and-modify-a-join-filter-between-merge-articles.md).  
+4.  If other articles will be filtered based on the parameterized row filter, execute [sp_addmergefilter &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) to define the join or logical record relationships between articles. This stored procedure must be executed once for each relationship being defined. For more information, see [Define and Modify a Join Filter Between Merge Articles](../../../2014/relational-databases/replication/define-and-modify-a-join-filter-between-merge-articles.md).  
   
 5.  When the Merge Agent requests the snapshot to initialize the Subscriber, the snapshot for the requesting subscription's partition is automatically generated.  
   
 #### To create a publication and pre-generate or automatically refresh snapshots  
   
-1.  Execute [sp_addmergepublication &#40;Transact-SQL&#41;](../Topic/sp_addmergepublication%20\(Transact-SQL\).md) to create the publication. For more information, see [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md).  
+1.  Execute [sp_addmergepublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) to create the publication. For more information, see [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md).  
   
-2.  At the Publisher, execute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../Topic/sp_addpublication_snapshot%20\(Transact-SQL\).md). Specify the publication name used in step 1 for **@publication** and the Windows credentials under which the Snapshot Agent runs for **@job_login** and **@password**. If the agent will use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication when connecting to the Publisher, you must also specify a value of **0** for **@publisher_security_mode** and the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login information for **@publisher_login** and **@publisher_password**. This creates a Snapshot Agent job for the publication. For more information about generating an initial snapshot and defining a custom schedule for the Snapshot Agent, see [Create and Apply the Initial Snapshot](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
+2.  At the Publisher, execute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Specify the publication name used in step 1 for **@publication** and the Windows credentials under which the Snapshot Agent runs for **@job_login** and **@password**. If the agent will use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication when connecting to the Publisher, you must also specify a value of **0** for **@publisher_security_mode** and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login information for **@publisher_login** and **@publisher_password**. This creates a Snapshot Agent job for the publication. For more information about generating an initial snapshot and defining a custom schedule for the Snapshot Agent, see [Create and Apply the Initial Snapshot](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
     > [!IMPORTANT]  
     >  When configuring a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../../2014/database-engine/enable-encrypted-connections-to-the-database-engine.md).  
   
-3.  Execute [sp_addmergearticle &#40;Transact-SQL&#41;](../Topic/sp_addmergearticle%20\(Transact-SQL\).md) to add articles to the publication. This stored procedure must be executed once for each article in the publication. When using parameterized filters, you must specify a parameterized row filter for one article using the **@subset_filterclause** parameter. For more information, see [Define and Modify a Parameterized Row Filter for a Merge Article](../../../2014/relational-databases/replication/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
+3.  Execute [sp_addmergearticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) to add articles to the publication. This stored procedure must be executed once for each article in the publication. When using parameterized filters, you must specify a parameterized row filter for one article using the **@subset_filterclause** parameter. For more information, see [Define and Modify a Parameterized Row Filter for a Merge Article](../../../2014/relational-databases/replication/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
-4.  If other articles will be filtered based on the parameterized row filter, execute [sp_addmergefilter &#40;Transact-SQL&#41;](../Topic/sp_addmergefilter%20\(Transact-SQL\).md) to define the join or logical record relationships between articles. This stored procedure must be executed once for each relationship being defined. For more information, see [Define and Modify a Join Filter Between Merge Articles](../../../2014/relational-databases/replication/define-and-modify-a-join-filter-between-merge-articles.md).  
+4.  If other articles will be filtered based on the parameterized row filter, execute [sp_addmergefilter &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) to define the join or logical record relationships between articles. This stored procedure must be executed once for each relationship being defined. For more information, see [Define and Modify a Join Filter Between Merge Articles](../../../2014/relational-databases/replication/define-and-modify-a-join-filter-between-merge-articles.md).  
   
-5.  At the Publisher on the publication database, execute [sp_helpmergepublication &#40;Transact-SQL&#41;](../Topic/sp_helpmergepublication%20\(Transact-SQL\).md), specifying the value of **@publication** from step 1. Note the value of the **snapshot_jobid** in the result set.  
+5.  At the Publisher on the publication database, execute [sp_helpmergepublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md), specifying the value of **@publication** from step 1. Note the value of the **snapshot_jobid** in the result set.  
   
 6.  Convert the value of the **snapshot_jobid** obtained in step 5 to **uniqueidentifier**.  
   
-7.  At the Publisher on the **msdb** database, execute [sp_start_job &#40;Transact-SQL&#41;](../Topic/sp_start_job%20\(Transact-SQL\).md), specifying the converted value obtained in step 6 for **@job_id**.  
+7.  At the Publisher on the **msdb** database, execute [sp_start_job &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-start-job-transact-sql.md), specifying the converted value obtained in step 6 for **@job_id**.  
   
-8.  At the Publisher on the publication database, execute [sp_addmergepartition &#40;Transact-SQL&#41;](../Topic/sp_addmergepartition%20\(Transact-SQL\).md). Specify the name of the publication from step 1 for **@publication** and the value used to define the partition for **@suser_sname** if [SUSER_SNAME &#40;Transact-SQL&#41;](../Topic/SUSER_SNAME%20\(Transact-SQL\).md) is used in the filter clause or for **@host_name** if [HOST_NAME &#40;Transact-SQL&#41;](../Topic/HOST_NAME%20\(Transact-SQL\).md) is used in the filter clause.  
+8.  At the Publisher on the publication database, execute [sp_addmergepartition &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md). Specify the name of the publication from step 1 for **@publication** and the value used to define the partition for **@suser_sname** if [SUSER_SNAME &#40;Transact-SQL&#41;](~/t-sql/functions/suser-sname-transact-sql.md) is used in the filter clause or for **@host_name** if [HOST_NAME &#40;Transact-SQL&#41;](~/t-sql/functions/host-name-transact-sql.md) is used in the filter clause.  
   
-9. At the publisher on the publication database, execute [sp_adddynamicsnapshot_job &#40;Transact-SQL&#41;](../Topic/sp_adddynamicsnapshot_job%20\(Transact-SQL\).md). Specify the name of the publication from step 1 for **@publication**, the value of **@suser_sname** or **@host_name** from step 8, and a schedule for the job. This creates the job that generates the parameterized snapshot for the specified partition. For more information, see [Specify Synchronization Schedules](../../../2014/relational-databases/replication/specify-synchronization-schedules.md).  
+9. At the publisher on the publication database, execute [sp_adddynamicsnapshot_job &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-adddynamicsnapshot-job-transact-sql.md). Specify the name of the publication from step 1 for **@publication**, the value of **@suser_sname** or **@host_name** from step 8, and a schedule for the job. This creates the job that generates the parameterized snapshot for the specified partition. For more information, see [Specify Synchronization Schedules](../../../2014/relational-databases/replication/specify-synchronization-schedules.md).  
   
     > [!NOTE]  
-    >  This job runs using the same Windows account as the initial snapshot job defined in step 2. To remove the parameterized snapshot job and its related data partition, execute [sp_dropdynamicsnapshot_job &#40;Transact-SQL&#41;](../Topic/sp_dropdynamicsnapshot_job%20\(Transact-SQL\).md).  
+    >  This job runs using the same Windows account as the initial snapshot job defined in step 2. To remove the parameterized snapshot job and its related data partition, execute [sp_dropdynamicsnapshot_job &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dropdynamicsnapshot-job-transact-sql.md).  
   
-10. At the Publisher on the publication database, execute [sp_helpmergepartition &#40;Transact-SQL&#41;](../Topic/sp_helpmergepartition%20\(Transact-SQL\).md), specifying the value of **@publication** from step 1 and the value of **@suser_sname** or **@host_name** from step 8. Note the value of the **dynamic_snapshot_jobid** in the result set.  
+10. At the Publisher on the publication database, execute [sp_helpmergepartition &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md), specifying the value of **@publication** from step 1 and the value of **@suser_sname** or **@host_name** from step 8. Note the value of the **dynamic_snapshot_jobid** in the result set.  
   
-11. At the Distributor on the **msdb** database, execute [sp_start_job &#40;Transact-SQL&#41;](../Topic/sp_start_job%20\(Transact-SQL\).md), specifying the value obtained in step 9 for **@job_id**. This starts the parameterized snapshot job for the partition.  
+11. At the Distributor on the **msdb** database, execute [sp_start_job &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-start-job-transact-sql.md), specifying the value obtained in step 9 for **@job_id**. This starts the parameterized snapshot job for the partition.  
   
 12. Repeat steps 8-11 to generate a partitioned snapshot for each subscription.  
   
 #### To create a publication and manually create snapshots for each partition  
   
-1.  Execute [sp_addmergepublication &#40;Transact-SQL&#41;](../Topic/sp_addmergepublication%20\(Transact-SQL\).md) to create the publication. For more information, see [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md).  
+1.  Execute [sp_addmergepublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) to create the publication. For more information, see [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md).  
   
-2.  At the Publisher, execute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../Topic/sp_addpublication_snapshot%20\(Transact-SQL\).md). Specify the publication name used in step 1 for **@publication** and the Windows credentials under which the Snapshot Agent runs for **@job_login** and **@password**. If the agent will use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication when connecting to the Publisher, you must also specify a value of **0** for **@publisher_security_mode** and the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login information for **@publisher_login** and **@publisher_password**. This creates a Snapshot Agent job for the publication. For more information about generating an initial snapshot and defining a custom schedule for the Snapshot Agent, see [Create and Apply the Initial Snapshot](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
+2.  At the Publisher, execute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Specify the publication name used in step 1 for **@publication** and the Windows credentials under which the Snapshot Agent runs for **@job_login** and **@password**. If the agent will use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication when connecting to the Publisher, you must also specify a value of **0** for **@publisher_security_mode** and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login information for **@publisher_login** and **@publisher_password**. This creates a Snapshot Agent job for the publication. For more information about generating an initial snapshot and defining a custom schedule for the Snapshot Agent, see [Create and Apply the Initial Snapshot](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
     > [!IMPORTANT]  
     >  When configuring a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../../2014/database-engine/enable-encrypted-connections-to-the-database-engine.md).  
   
-3.  Execute [sp_addmergearticle &#40;Transact-SQL&#41;](../Topic/sp_addmergearticle%20\(Transact-SQL\).md) to add articles to the publication. This stored procedure must be executed once for each article in the publication. When using parameterized filters, you must specify a parameterized row filter for at least one article using the **@subset_filterclause** parameter. For more information, see [Define and Modify a Parameterized Row Filter for a Merge Article](../../../2014/relational-databases/replication/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
+3.  Execute [sp_addmergearticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) to add articles to the publication. This stored procedure must be executed once for each article in the publication. When using parameterized filters, you must specify a parameterized row filter for at least one article using the **@subset_filterclause** parameter. For more information, see [Define and Modify a Parameterized Row Filter for a Merge Article](../../../2014/relational-databases/replication/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
-4.  If other articles will be filtered based on the parameterized row filter, execute [sp_addmergefilter &#40;Transact-SQL&#41;](../Topic/sp_addmergefilter%20\(Transact-SQL\).md) to define the join or logical record relationships between articles. This stored procedure must be executed once for each relationship being defined. For more information, see [Define and Modify a Join Filter Between Merge Articles](../../../2014/relational-databases/replication/define-and-modify-a-join-filter-between-merge-articles.md).  
+4.  If other articles will be filtered based on the parameterized row filter, execute [sp_addmergefilter &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) to define the join or logical record relationships between articles. This stored procedure must be executed once for each relationship being defined. For more information, see [Define and Modify a Join Filter Between Merge Articles](../../../2014/relational-databases/replication/define-and-modify-a-join-filter-between-merge-articles.md).  
   
 5.  Start the snapshot job or run the Replication Snapshot Agent from the command prompt to generate the standard snapshot schema and other files. For more information, see [Create and Apply the Initial Snapshot](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
 6.  Run the Replication Snapshot Agent again from the command prompt to generate bulk copy (.bcp) files, specifying the location of the partitioned snapshot for **-DynamicSnapshotLocation** and one or both of the following properties that defines the partition:  
   
-    -   **-DynamicFilterHostName** - the value if [HOST_NAME &#40;Transact-SQL&#41;](../Topic/HOST_NAME%20\(Transact-SQL\).md) is used.  
+    -   **-DynamicFilterHostName** - the value if [HOST_NAME &#40;Transact-SQL&#41;](~/t-sql/functions/host-name-transact-sql.md) is used.  
   
-    -   **-DynamicFilterLogin** - the value if [SUSER_SNAME &#40;Transact-SQL&#41;](../Topic/SUSER_SNAME%20\(Transact-SQL\).md) is used.  
+    -   **-DynamicFilterLogin** - the value if [SUSER_SNAME &#40;Transact-SQL&#41;](~/t-sql/functions/suser-sname-transact-sql.md) is used.  
   
 7.  Repeat step 6 to generate a partitioned snapshot for each subscription.  
   
@@ -176,15 +176,15 @@ manager: "jhubbard"
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
  This example creates a merge publication with parameterized filters where Subscribers initiate the snapshot generation process. Values for **@job_login** and **@job_password** are passed in using scripting variables.  
   
- [!code-sql[HowTo#sp_MergeDynamicPub1](../../../snippets/tsql/SQL15/replication/howto/tsql/createmergepubdynamic1.sql#sp_mergedynamicpub1)]  
+ [!code-sql[HowTo#sp_MergeDynamicPub1](../../snippets/tsql/SQL15/replication/howto/tsql/createmergepubdynamic1.sql#sp_mergedynamicpub1)]  
   
- This example creates a publication using a parameterized filter where each Subscriber has its partition defined by executing [sp_addmergepartition](../Topic/sp_addmergepartition%20\(Transact-SQL\).md) and the filtered snapshot job created by executing [sp_adddynamicsnapshot_job](../Topic/sp_adddynamicsnapshot_job%20\(Transact-SQL\).md) passing the partitioning information. Values for **@job_login** and **@job_password** are passed in using scripting variables.  
+ This example creates a publication using a parameterized filter where each Subscriber has its partition defined by executing [sp_addmergepartition](~/relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md) and the filtered snapshot job created by executing [sp_adddynamicsnapshot_job](~/relational-databases/system-stored-procedures/sp-adddynamicsnapshot-job-transact-sql.md) passing the partitioning information. Values for **@job_login** and **@job_password** are passed in using scripting variables.  
   
- [!code-sql[HowTo#sp_MergeDynamicPubPlusPartition](../../../snippets/tsql/SQL15/replication/howto/tsql/createmergepubdynamic2.sql#sp_mergedynamicpubpluspartition)]  
+ [!code-sql[HowTo#sp_MergeDynamicPubPlusPartition](../../snippets/tsql/SQL15/replication/howto/tsql/createmergepubdynamic2.sql#sp_mergedynamicpubpluspartition)]  
   
  This example creates a publication using a parameterized filter where each Subscriber must have its data partition and filtered snapshot job created by supplying the partitioning information. A Subscriber supplies partitioning information using command-line parameters when manually running the replication agents. This example assumes that a subscription to the publication has also been created.  
   
- [!code-sql[HowTo#sp_MergeDynamicPubPartitionManual](../../../snippets/tsql/SQL15/replication/howto/tsql/createmergepubdynamic3.sql#sp_mergedynamicpubpartitionmanual)]  
+ [!code-sql[HowTo#sp_MergeDynamicPubPartitionManual](../../snippets/tsql/SQL15/replication/howto/tsql/createmergepubdynamic3.sql#sp_mergedynamicpubpartitionmanual)]  
   
  
 ```
@@ -254,7 +254,7 @@ PAUSE
 >  When filtering for an article yields non-overlapping partitions that are unique for each subscription (by specifying a value of <xref:Microsoft.SqlServer.Replication.PartitionOptions.NonOverlappingSingleSubscription> for <xref:Microsoft.SqlServer.Replication.MergeArticle.PartitionOption%2A> when creating a merge article), metadata is cleaned up whenever the Merge Agent runs. This means that the partitioned snapshot expires more quickly. When you use this option, you should consider allowing Subscribers to request snapshot generation. For more information, see the section Using the Appropriate Filtering Options in the topic [Parameterized Row Filters](../../../2014/relational-databases/replication/parameterized-row-filters.md).  
   
 > [!IMPORTANT]  
->  When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](http://go.microsoft.com/fwlink/?LinkId=34733) provided by the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  
+>  When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](http://go.microsoft.com/fwlink/?LinkId=34733) provided by the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
   
 #### To create a publication that allows Subscribers to initiate snapshot generation and delivery  
   
@@ -276,7 +276,7 @@ PAUSE
   
     -   Use the bitwise logical OR (`|` in Visual C# and `Or` in Visual Basic) operator to add the value <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowSubscriberInitiatedSnapshot> to <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>.  
   
-    -   The <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> and <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> fields of <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> to provide the credentials for the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows account under which the Snapshot Agent job runs.  
+    -   The <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> and <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> fields of <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> to provide the credentials for the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows account under which the Snapshot Agent job runs.  
   
         > [!NOTE]  
         >  Setting <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> is recommended when the publication is created by a member of the `sysadmin` fixed server role. For more information, see [Replication Agent Security Model](../../../2014/relational-databases/replication/replication-agent-security-model.md).  
@@ -310,9 +310,9 @@ PAUSE
   
 6.  Create an instance of the <xref:Microsoft.SqlServer.Replication.MergePartition> class, and set the parameterized filtering criteria for the Subscriber by using one or both of the following properties:  
   
-    -   If the Subscriber's partition is defined by the result of [SUSER_SNAME &#40;Transact-SQL&#41;](../Topic/SUSER_SNAME%20\(Transact-SQL\).md), use <xref:Microsoft.SqlServer.Replication.MergePartition.DynamicFilterLogin%2A>.  
+    -   If the Subscriber's partition is defined by the result of [SUSER_SNAME &#40;Transact-SQL&#41;](~/t-sql/functions/suser-sname-transact-sql.md), use <xref:Microsoft.SqlServer.Replication.MergePartition.DynamicFilterLogin%2A>.  
   
-    -   If the Subscriber's partition is defined by the result of [HOST_NAME &#40;Transact-SQL&#41;](../Topic/HOST_NAME%20\(Transact-SQL\).md) or an overload of this function, use <xref:Microsoft.SqlServer.Replication.MergePartition.DynamicFilterHostName%2A>.  
+    -   If the Subscriber's partition is defined by the result of [HOST_NAME &#40;Transact-SQL&#41;](~/t-sql/functions/host-name-transact-sql.md) or an overload of this function, use <xref:Microsoft.SqlServer.Replication.MergePartition.DynamicFilterHostName%2A>.  
   
 7.  Create an instance of the <xref:Microsoft.SqlServer.Replication.MergeDynamicSnapshotJob> class, and set the same property as in step 6.  
   
@@ -362,9 +362,9 @@ PAUSE
   
 6.  Set one or more of the following properties to define the partitioning parameters:  
   
-    -   If the Subscriber's partition is defined by the result of [SUSER_SNAME &#40;Transact-SQL&#41;](../Topic/SUSER_SNAME%20\(Transact-SQL\).md), use <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DynamicFilterLogin%2A>.  
+    -   If the Subscriber's partition is defined by the result of [SUSER_SNAME &#40;Transact-SQL&#41;](~/t-sql/functions/suser-sname-transact-sql.md), use <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DynamicFilterLogin%2A>.  
   
-    -   If the Subscriber's partition is defined by the result of [HOST_NAME &#40;Transact-SQL&#41;](../Topic/HOST_NAME%20\(Transact-SQL\).md) or an overload of this function, use <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DynamicFilterHostName%2A>.  
+    -   If the Subscriber's partition is defined by the result of [HOST_NAME &#40;Transact-SQL&#41;](~/t-sql/functions/host-name-transact-sql.md) or an overload of this function, use <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DynamicFilterHostName%2A>.  
   
 7.  Call the <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.GenerateSnapshot%2A> method.  
   
@@ -373,21 +373,21 @@ PAUSE
 ###  <a name="PShellExample"></a> Examples (RMO)  
  This example creates a merge publication that allows Subscribers to requested snapshot generation.  
   
- [!code-csharp[HowTo#rmo_CreateMergePub](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_createmergepub)]  
+ [!code-csharp[HowTo#rmo_CreateMergePub](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_createmergepub)]  
   
- [!code-vb[HowTo#rmo_vb_CreateMergePub](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_createmergepub)]  
+ [!code-vb[HowTo#rmo_vb_CreateMergePub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_createmergepub)]  
   
  This example manually creates the Subscriber partition and the filtered snapshot for a merge publication with parameterized row filters.  
   
- [!code-csharp[HowTo#rmo_CreateMergePartition](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_createmergepartition)]  
+ [!code-csharp[HowTo#rmo_CreateMergePartition](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_createmergepartition)]  
   
- [!code-vb[HowTo#rmo_vb_CreateMergePartition](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_createmergepartition)]  
+ [!code-vb[HowTo#rmo_vb_CreateMergePartition](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_createmergepartition)]  
   
  This example manually starts the Snapshot Agent to generate the filtered data snapshot for a Subscriber to a merge publication with parameterized row filters.  
   
- [!code-csharp[HowTo#rmo_GenerateFilteredSnapshot](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_generatefilteredsnapshot)]  
+ [!code-csharp[HowTo#rmo_GenerateFilteredSnapshot](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_generatefilteredsnapshot)]  
   
- [!code-vb[HowTo#rmo_vb_GenerateFilteredSnapshot](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_generatefilteredsnapshot)]  
+ [!code-vb[HowTo#rmo_vb_GenerateFilteredSnapshot](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_generatefilteredsnapshot)]  
   
 ## See Also  
  [Parameterized Row Filters](../../../2014/relational-databases/replication/parameterized-row-filters.md)   

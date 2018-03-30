@@ -24,7 +24,7 @@ manager: "jhubbard"
   Fast parse provides a fast, simple, locale-insensitive set of routines for parsing data. Fast parse supports only a limited set of formats for integer data types.  
   
 ## Integer Data Types  
- The integer data types that [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides are DT_I1, DT_UI1, DT_I2, DT_UI2, DT_I4, DT_UI4, DT_I8, and DT_UI8. For more information, see [Integration Services Data Types](../../2014/integration-services/integration-services-data-types.md).  
+ The integer data types that [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides are DT_I1, DT_UI1, DT_I2, DT_UI2, DT_I4, DT_UI4, DT_I8, and DT_UI8. For more information, see [Integration Services Data Types](../../2014/integration-services/integration-services-data-types.md).  
   
  Fast parse supports the following formats for integer data types:  
   

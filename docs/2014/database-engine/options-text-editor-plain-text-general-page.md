@@ -14,14 +14,14 @@ f1_keywords:
 ms.assetid: 53bfa594-ba36-4c9c-8dd5-4c2dcce7d2dc
 caps.latest.revision: 22
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Options (Text Editor - Plain Text - General Page)
   Use this dialog box to change the general editing behavior of the Text Editor, which is used to edit a document not associated with a particular development language. To display these settings, click **Options** on the **Tools** menu, expand **Text Editor**, expand **Plain Text,** and then click **General**.  
   
 ## Setting Options in Multiple Locations  
- Options for the Plain Text Editor can also be set in the **All Languages General** dialog. If you use the **All Languages** dialogs to set different options for the other [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] editors, such as the DMX or MDX editors, you must reset the Plain Text Editor options using this dialog.  
+ Options for the Plain Text Editor can also be set in the **All Languages General** dialog. If you use the **All Languages** dialogs to set different options for the other [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] editors, such as the DMX or MDX editors, you must reset the Plain Text Editor options using this dialog.  
   
 ## Statement Completion  
  **Auto list members**  

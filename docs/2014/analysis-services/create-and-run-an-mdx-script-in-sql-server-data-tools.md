@@ -20,7 +20,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Create and Run an MDX Script in SQL Server Data Tools
-  To create and run an MDX Script in  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], you need to be in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] with a cube already created and ready for editing.  
+  To create and run an MDX Script in  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], you need to be in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] with a cube already created and ready for editing.  
   
 ### To create a Multidimensional Expressions (MDX) script  
   
@@ -35,6 +35,6 @@ manager: "mblythe"
 ## See Also  
  [The Basic MDX Script &#40;MDX&#41;](../../2014/analysis-services/the-basic-mdx-script-mdx.md)   
  [MDX Scripting Fundamentals &#40;Analysis Services&#41;](../../2014/analysis-services/mdx-scripting-fundamentals-analysis-services.md)   
- [MDX Scripting Statements &#40;MDX&#41;](../Topic/MDX%20Scripting%20Statements%20\(MDX\).md)  
+ [MDX Scripting Statements &#40;MDX&#41;](~/mdx/mdx-scripting-statements-mdx.md)  
   
   

@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: 2f99a288-d4aa-4c64-b310-e457a2aef2c5
 caps.latest.revision: 41
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Upload Files to a Folder
@@ -33,7 +33,7 @@ manager: "mblythe"
 > [!NOTE]  
 >  You cannot upload a report data source (.rds) file to create a shared data source. An .rds file is used only in Report Designer. It cannot provide the content for a shared data source item that you define and manage through Report Manager. As an alternative to uploading, you can write a script that creates a shared data source based on a .rds file.  
   
- The maximum file size for uploaded items is determined by [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. By default, the maximum size is 4 megabytes (MB).  
+ The maximum file size for uploaded items is determined by [!INCLUDE[vstecasp](../includes/vstecasp-md.md)]. By default, the maximum size is 4 megabytes (MB).  
   
  Visually, files that you upload to a report server database are represented in the folder hierarchy with the following icons.  
   

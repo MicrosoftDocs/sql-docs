@@ -12,26 +12,26 @@ ms.topic: "article"
 ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
 caps.latest.revision: 10
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Generating Data Feeds from Reports (Report Builder and SSRS)
-  The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Atom rendering extension generates an Atom service document that lists the data feeds available from a report and the data feeds from the data regions in a report. You use this extension to generate Atom-compliant data feeds that are readable and exchangeable with applications that can consume data feeds generated from reports. For example, you can use the Atom rendering extension to generated data feeds that you can then use in the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] client.  
+  The [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Atom rendering extension generates an Atom service document that lists the data feeds available from a report and the data feeds from the data regions in a report. You use this extension to generate Atom-compliant data feeds that are readable and exchangeable with applications that can consume data feeds generated from reports. For example, you can use the Atom rendering extension to generated data feeds that you can then use in the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] client.  
   
- The Atom service document lists at least one data feed for each data region in a report. Depending on the type of data region and the data that the data region displays, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] might generate multiple data feeds from a data region. For example, a matrix or chart can provide multiple data feeds. When the Atom rendering extension creates the Atom service document, a unique identifier is created for each data feed and you use the identifier in the URL to access the content of the data feed.  
+ The Atom service document lists at least one data feed for each data region in a report. Depending on the type of data region and the data that the data region displays, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] might generate multiple data feeds from a data region. For example, a matrix or chart can provide multiple data feeds. When the Atom rendering extension creates the Atom service document, a unique identifier is created for each data feed and you use the identifier in the URL to access the content of the data feed.  
   
  The way that the Atom rendering extension generates data for a data feed is similar to how the Comma-Separated Value (CSV) rendering extension renders data to a CSV file. Like a CSV file, a data feed is a flattened representation of the report data. For example, a table with a row group that sums the sales within a group repeats the sum in every data row and there is no separate row that contains only the sum.  
   
- You can generate Atom service documents and data feeds using Report Manager, Report Server, or a SharePoint site that is integrated with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+ You can generate Atom service documents and data feeds using Report Manager, Report Server, or a SharePoint site that is integrated with [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
  Atom applies to a pair of related standards. The Atom service document conforms to the RFC 5023 Atom publishing protocol specification and the data feeds conform to the RFC 4287 Atom syndication format protocol specification.  
   
  The following sections provide additional information about how to use the Atom rendering extension:  
   
- [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+ [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ##  <a name="ReportDataAsDataFeeds"></a> Reports as Data Feeds  
- You can export a production report as a data feed or you can create a report whose primary purpose is provide data, in the form of data feeds, to applications. Using reports as a data feed gives you an additional way to provide data to applications when the data is not easy to access through client data providers, or when you prefer to hide the complexity of the data source and make it simpler to use the data. Another benefit of using report data as a data feed is that you can use [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] features such as Report Manager, security, scheduling, and report snapshots to manage the reports that provide data feeds.  
+ You can export a production report as a data feed or you can create a report whose primary purpose is provide data, in the form of data feeds, to applications. Using reports as a data feed gives you an additional way to provide data to applications when the data is not easy to access through client data providers, or when you prefer to hide the complexity of the data source and make it simpler to use the data. Another benefit of using report data as a data feed is that you can use [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features such as Report Manager, security, scheduling, and report snapshots to manage the reports that provide data feeds.  
   
  To get the most from the Atom rendering extension, you should understand how the report is rendered into data feeds. If you are using existing reports, being able to predict what the data feeds the reports will generate is useful; if you are writing report specifically for use as data feeds, being able to include the data and fine tune the report layout to maximize the usefulness of the data feeds is valuable.  
   
@@ -61,7 +61,7 @@ manager: "mblythe"
 
   
 ##  <a name="DataFeeds"></a> Data Feeds  
- The data feed is an XML file that has a consistent tabular format that does not change over time and variable data that can be different each time the report is run. The data feeds generated by [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] are in the same format as those generated by  that ADO.NET Data Services.  
+ The data feed is an XML file that has a consistent tabular format that does not change over time and variable data that can be different each time the report is run. The data feeds generated by [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] are in the same format as those generated by  that ADO.NET Data Services.  
   
  A data feed contains two sections: header and data. The Atom specification defines the elements in each section. The header includes information such as the character encoding schema to use with the data feeds.  
   

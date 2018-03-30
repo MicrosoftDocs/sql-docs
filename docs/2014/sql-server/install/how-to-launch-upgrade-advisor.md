@@ -25,7 +25,7 @@ manager: "jhubbard"
   
 ### To launch Upgrade Advisor  
   
--   To launch Upgrade Advisor, click **Start**, click **All Programs**, click **[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]**, and then click **[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Upgrade Advisor**.  
+-   To launch Upgrade Advisor, click **Start**, click **All Programs**, click **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**, and then click **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor**.  
   
 ## See Also  
  [Running Upgrade Advisor &#40;User Interface&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)   

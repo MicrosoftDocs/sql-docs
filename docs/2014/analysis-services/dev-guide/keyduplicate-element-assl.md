@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # KeyDuplicate Element (ASSL)
-  Determines how [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] handles a duplicate key error if it encounters one during processing.  
+  Determines how [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] handles a duplicate key error if it encounters one during processing.  
   
 ## Syntax  
   
@@ -56,7 +56,7 @@ manager: "mblythe"
 |Child elements|None|  
   
 ## Remarks  
- Duplicate key errors are generated only during dimension processing, when an attribute key is encountered more than once. Because attribute keys must be unique, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] discards the duplicate records. Duplicate key errors typically indicate a flaw in the design of the dimension, specifically in the relationships between attributes.  
+ Duplicate key errors are generated only during dimension processing, when an attribute key is encountered more than once. Because attribute keys must be unique, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] discards the duplicate records. Duplicate key errors typically indicate a flaw in the design of the dimension, specifically in the relationships between attributes.  
   
  The value of this element is limited to one of the strings in the following table.  
   

@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # DAX Formula Compatibility in DirectQuery Mode (SSAS 2014)
-The Data Analysis Expression language (DAX) can be used to create measures and other custom formulas for use in Analysis Services Tabular models, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data models in Excel workbooks, and Power BI Desktop data models. In most respects, the models you create in these environments are identical, and you can use the same measures, relationships, and KPIs, etc. However, if you author an Analysis Services Tabular model and deploy it in DirectQuery mode, there are some restrictions on the formulas that you can use. This topic provides an overview of those differences, lists the functions that are not supported in SQL Server 2014 Analysis Services tabulars model at compatibility level 1100 or 1103 and in DirectQuery mode, and lists the functions that are supported but might return different results.  
+The Data Analysis Expression language (DAX) can be used to create measures and other custom formulas for use in Analysis Services Tabular models, [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] data models in Excel workbooks, and Power BI Desktop data models. In most respects, the models you create in these environments are identical, and you can use the same measures, relationships, and KPIs, etc. However, if you author an Analysis Services Tabular model and deploy it in DirectQuery mode, there are some restrictions on the formulas that you can use. This topic provides an overview of those differences, lists the functions that are not supported in SQL Server 2014 Analysis Services tabulars model at compatibility level 1100 or 1103 and in DirectQuery mode, and lists the functions that are supported but might return different results.  
   
 Within this topic, we use the term *in-memory model* to refer to  Tabular models, which are fully hosted in-memory cached data on an Analysis Services server running in Tabular mode. We use *DirectQuery models* to refer to Tabular models that have been authored and/or deployed in DirectQuery mode. For information about DirectQuery mode, see [DirectQuery Mode (SSAS Tabular)](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5).  
   
@@ -30,7 +30,7 @@ For example, there are differences in the way that certain relational data store
   
 In contrast, the DAX language is intended to emulate as closely as possible the behavior of functions in Microsoft Excel. For example, when handling nulls, empty strings and zero values, Excel attempts to provide the best answer regardless of the precise data type, and therefore the xVelocity engine does the same. However, when a tabular model is deployed in DirectQuery mode and passes formulas to a relational data source for evaluation, the data must be handled according to the semantics of the relational data source, which typically require distinct handling of empty strings vs. nulls. For this reason, the same formula might return a different result when evaluated against cached data and against data returned solely from the relational store.  
   
-Additionally, some functions cannot be used at all in DirectQuery mode because the calculation would require the data in the current context be sent to the relational data source as a parameter. For example, measures in a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook often use time-intelligence functions that reference date ranges available within the workbook. Such formulas generally cannot be used in DirectQuery mode.  
+Additionally, some functions cannot be used at all in DirectQuery mode because the calculation would require the data in the current context be sent to the relational data source as a parameter. For example, measures in a [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] workbook often use time-intelligence functions that reference date ranges available within the workbook. Such formulas generally cannot be used in DirectQuery mode.  
   
 ## Semantic differences  
 This section lists the types of semantic differences that you can expect, and describes any limitations that might apply to the usage of functions or to query results.  
@@ -55,7 +55,7 @@ The formula compares a text string to a number. The expression is **true** in bo
   
 In an in-memory model, the result is **true** because numbers as strings are implicitly cast to a numerical data type for comparisons with other numbers. SQL also implicitly casts text numbers as numbers for comparison to numerical data types.  
   
-Note that this represents a change in behavior from the first version of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], which would return **false**, because the text “2” would always be considered larger than any number.  
+Note that this represents a change in behavior from the first version of [!INCLUDE[ssGemini](../includes/ssgemini-md.md)], which would return **false**, because the text “2” would always be considered larger than any number.  
   
 **Comparison of text with Boolean**  
 EXAMPLE: `“VERDADERO” = TRUE`  
@@ -85,7 +85,7 @@ Casts to the Boolean data type of any other string results in an error.
 **Cast from string to date/time**  
 In DirectQuery mode, casts from string representations of dates and times to actual **datetime** values behave the same way as they do in SQL Server.  
   
-For information about the rules governing casts from string to **datetime** data types in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] models, see the [DAX Syntax Reference](DAX%20Query%20Syntax%20Reference.xml).  
+For information about the rules governing casts from string to **datetime** data types in [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] models, see the [DAX Syntax Reference](https://msdn.microsoft.com/library/ee634217.aspx).  
   
 Models that use the in-memory data store support a more limited range of text formats for dates than the string formats for dates that are supported by SQL Server. However, DAX supports custom date and time formats.  
   
@@ -97,7 +97,7 @@ EXAMPLE: `CONCATENATE(102,”,345”)`
   
 Casting from numbers to strings is not allowed in SQL Server.  
   
-This formula returns an error in tabular models and in DirectQuery mode; however, the formula produces a result in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
+This formula returns an error in tabular models and in DirectQuery mode; however, the formula produces a result in [!INCLUDE[ssGemini](../includes/ssgemini-md.md)].  
   
 **No support for two-try casts in DirectQuery**  
 In-memory models often attempt a second cast when the first one fails. This never happens in DirectQuery mode.  
@@ -133,14 +133,14 @@ SQL Server handles nulls and blanks differently than the xVelocity engine. As a 
   
 The same limitations apply to the other logarithmic functions: LOG10 and LN.  
   
-For more information about the **blank** data type in DAX, see [DAX Syntax Reference](DAX%20Query%20Syntax%20Reference.xml).  
+For more information about the **blank** data type in DAX, see [DAX Syntax Reference](https://msdn.microsoft.com/library/ee634217.aspx).  
   
 **Division by 0 and division by Blank**  
 In DirectQuery mode, division by zero (0) or division by BLANK will always result in an error. SQL Server does not support the notion of infinity, and because the natural result of any division by 0 is infinity, the result is an error. However, SQL Server supports division by nulls, and the result must always equal null.  
   
 Rather than return different results for these operations, in DirectQuery mode, both types of operations (division by zero and division by null) return an error.  
   
-Note that, in Excel and in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] models, division by zero also returns an error. Division by a blank returns a blank.  
+Note that, in Excel and in [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] models, division by zero also returns an error. Division by a blank returns a blank.  
   
 The following expressions are all valid in in-memory models, but will fail in DirectQuery mode:  
   
@@ -155,7 +155,7 @@ The following expressions are all valid in in-memory models, but will fail in Di
 The expression `BLANK/BLANK` is a special case that returns `BLANK` in both for in-memory models, and in DirectQuery mode.  
   
 ### <a name="bkmk_Ranges"></a>Supported numeric and date-time ranges  
-Formulas in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] and tabular models in-memory are subject to the same limitations as Excel with regard to maximum allowed values for real numbers and dates. However, differences can arise when the maximum value is returned from a calculation or query, or when values are converted, cast, rounded, or truncated.  
+Formulas in [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] and tabular models in-memory are subject to the same limitations as Excel with regard to maximum allowed values for real numbers and dates. However, differences can arise when the maximum value is returned from a calculation or query, or when values are converted, cast, rounded, or truncated.  
   
 -   If values of types **Currency** and **Real** are multiplied, and the result is larger than the maximum possible value, in DirectQuery mode, no error is raised, and a null is returned.  
   
@@ -215,7 +215,7 @@ The following example demonstrates how this value is calculated:
 **SQL Time data type not supported**  
 In-memory models do not support use of the new SQL **Time** data type. In DirectQuery mode, formulas that reference columns with this data type will return an error. Time data columns cannot be imported into an in-memory model.  
   
-However, in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] and in cached models, sometimes the engine casts the time value to an acceptable data type, and the formula returns a result.  
+However, in [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] and in cached models, sometimes the engine casts the time value to an acceptable data type, and the formula returns a result.  
   
 This behavior affects all functions that use a date column as a parameter.  
   

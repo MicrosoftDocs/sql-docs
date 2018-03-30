@@ -160,7 +160,7 @@ manager: "jhubbard"
 </xsd:schema>  
 ```  
   
- The `xml` data type was introduced in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
+ The `xml` data type was introduced in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
 ##### To test a sample XPath query against the schema  
   

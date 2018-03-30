@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Conversions from SQL to C
-  The following table lists issues to consider when you convert from [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] date/time types to C types.  
+  The following table lists issues to consider when you convert from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] date/time types to C types.  
   
 ## Conversions  
   
@@ -38,7 +38,7 @@ manager: "jhubbard"
 |Symbol|Meaning|  
 |------------|-------------|  
 |OK|No conversion issues.|  
-|1|Rules prior to [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] apply.|  
+|1|Rules prior to [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] apply.|  
 |2|Leading and trailing spaces are ignored.|  
 |3|The string is parsed into a date, time, timezone, or timezoneoffset, and allows up to 9 digits for fractional seconds. If a timezoneoffset is parsed, the time is converted to the client timezone. If an error occurs during this conversion, a diagnostic record is generated with SQLSTATE 22018 and the message "Datetime field overflow".|  
 |4|If the value is not a valid date, timestamp, or timestampoffset value, a diagnostic record is generated with SQLSTATE 22018 and the message "Invalid character value for cast specification".|  
@@ -61,7 +61,7 @@ manager: "jhubbard"
 |21|If the buffer is large enough to accommodate a SQL_SS_TIMESTAMPOFFSET_STRUCT, the value is returned as a SQL_SS_TIMESTAMPOFFSET_STRUCT. Otherwise, a diagnostic record is generated with SQLSTATE 22003 and the message "Numeric value out of range".|  
 |22|The value is converted to the client timezone before the date is extracted. This provides consistency with other conversions with timestampoffset types. If an error occurs during this conversion, a diagnostic record is generated with SQLSTATE 22008 and the message "Datetime field overflow". This might result in a date that differs from the value obtained by simple truncation.|  
   
- The table in this topic describes conversions between the type returned to the client and the type in the binding. For output parameters, if the server type specified in SQLBindParameter does not match the actual type on the server, an implicit conversion will be performed by the server and the type returned to the client will match the type specified through SQLBindParameter. This can lead to unexpected conversion results when the server’s conversion rules are different from those listed in the preceding table. For example, when a default date must be provided, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] uses 1900-1-1, rather than the current date.  
+ The table in this topic describes conversions between the type returned to the client and the type in the binding. For output parameters, if the server type specified in SQLBindParameter does not match the actual type on the server, an implicit conversion will be performed by the server and the type returned to the client will match the type specified through SQLBindParameter. This can lead to unexpected conversion results when the server’s conversion rules are different from those listed in the preceding table. For example, when a default date must be provided, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses 1900-1-1, rather than the current date.  
   
 ## See Also  
  [Date and Time Improvements &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/date-and-time-improvements-odbc.md)  

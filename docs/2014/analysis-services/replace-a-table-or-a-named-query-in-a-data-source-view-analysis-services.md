@@ -22,7 +22,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Replace a Table or a Named Query in a Data Source View (Analysis Services)
-  In Data Source View Designer, you can replace a table, view, or named query in a data source view (DSV) with a different table or view from the same or a different data source, or with a named query defined in the DSV. When you replace a table, all other objects in an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database or project that have references to the table continue to reference the table because the object ID for the table in the DSV does not change. Any relationships that are still relevant (based on name and column-type matching) are retained. In contrast, if you delete and then add a table, references and relationships are lost and must be recreated.  
+  In Data Source View Designer, you can replace a table, view, or named query in a data source view (DSV) with a different table or view from the same or a different data source, or with a named query defined in the DSV. When you replace a table, all other objects in an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database or project that have references to the table continue to reference the table because the object ID for the table in the DSV does not change. Any relationships that are still relevant (based on name and column-type matching) are retained. In contrast, if you delete and then add a table, references and relationships are lost and must be recreated.  
   
  To replace a table with another table, you must have an active connection to the source data in Data Source View Designer in project mode.  
   
@@ -33,7 +33,7 @@ manager: "mblythe"
   
 ##  <a name="bkmk_nq"></a> Replace a table with a named query  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the project or connect to the database that contains the data source view in which you want to replace a table or a named query.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the project or connect to the database that contains the data source view in which you want to replace a table or a named query.  
   
 2.  In Solution Explorer, expand the **Data Source Views** folder, and then double-click the data source view.  
   
@@ -45,7 +45,7 @@ manager: "mblythe"
   
 ## Replace a table or named query with a table  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the project or connect to the database that contains the data source view in which you want to replace a table or a named query.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the project or connect to the database that contains the data source view in which you want to replace a table or a named query.  
   
 2.  In Solution Explorer, expand the **Data Source Views** folder, and then double-click the data source view.  
   

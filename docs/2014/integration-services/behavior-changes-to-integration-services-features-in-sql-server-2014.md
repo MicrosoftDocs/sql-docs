@@ -19,7 +19,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Behavior Changes to Integration Services Features in SQL Server 2014
-  This topic describes behavior changes in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Behavior changes affect how features work or interact in the current release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] as compared to earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  This topic describes behavior changes in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Behavior changes affect how features work or interact in the current release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] as compared to earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  There are no behavior changes for Integration Services features in SQL Server 2014.  
   

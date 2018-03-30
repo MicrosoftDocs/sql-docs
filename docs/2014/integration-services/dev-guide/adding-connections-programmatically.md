@@ -42,7 +42,7 @@ manager: "jhubbard"
   
  This casts the managed connection manager object to its underlying connection object. If you are using C++, the `QueryInterface` method of the <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> object is called and the interface of the underlying connection object is requested.  
   
- The following table lists the connection managers included with [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]. and the string that is used in the `package.Connections.Add("xxx")` statement. For a list of all connection managers, see [Integration Services &#40;SSIS&#41; Connections](../../../2014/integration-services/integration-services-ssis-connections.md).  
+ The following table lists the connection managers included with [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. and the string that is used in the `package.Connections.Add("xxx")` statement. For a list of all connection managers, see [Integration Services &#40;SSIS&#41; Connections](../../../2014/integration-services/integration-services-ssis-connections.md).  
   
 |String|Connection manager|  
 |------------|------------------------|  
@@ -55,8 +55,8 @@ manager: "jhubbard"
 |"FILE"|Connection manager for file connections.|  
 |"MULTIFLATFILE"|Connection manager for multiple flat file connections.|  
 |"MULTIFILE"|Connection manager for multiple file connections.|  
-|"SQLMOBILE"|Connection manager for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Compact connections.|  
-|"MSOLAP100"|Connection manager for [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] connections.|  
+|"SQLMOBILE"|Connection manager for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact connections.|  
+|"MSOLAP100"|Connection manager for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] connections.|  
 |"FTP"|Connection manager for FTP connections.|  
 |"HTTP"|Connection manager for HTTP connections.|  
 |"MSMQ"|Connection manager for Message Queuing (also known as MSMQ) connections.|  
@@ -210,7 +210,7 @@ End Class
   
 ||  
 |-|  
-|![Integration Services icon (small)](../../../2014/integration-services/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
+|![Integration Services icon (small)](../../../2014/integration-services/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
   
 ## See Also  
  [Integration Services &#40;SSIS&#41; Connections](../../../2014/integration-services/integration-services-ssis-connections.md)   

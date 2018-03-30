@@ -12,11 +12,11 @@ ms.topic: "article"
 ms.assetid: 3806fc48-56f8-44d1-a3c1-df8c33cce0a3
 caps.latest.revision: 7
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Troubleshoot Report Builder
-  Report Builder is a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report authoring tool that you can use to build reports from many different kinds of data sources and to publish your reports to a report server or SharePoint site. The reports that you create can be viewed in Report Builder, in a Web browser, or as part of a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows application or SharePoint site.  
+  Report Builder is a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report authoring tool that you can use to build reports from many different kinds of data sources and to publish your reports to a report server or SharePoint site. The reports that you create can be viewed in Report Builder, in a Web browser, or as part of a [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows application or SharePoint site.  
   
  To learn how to use Report Builder and perform many basic tasks, see the [Tutorials](../../2014/tutorials/tutorials-report-builder.md).  
   
@@ -32,7 +32,7 @@ manager: "mblythe"
 ## Administrators  
  [Install, Uninstall, and Report Builder Support](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)  
   
- Also, see the following topics in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312):  
+ Also, see the following topics in the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312):  
   
 -   [Plan for Map Report Support](../../2014/reporting-services/plan-for-map-report-support.md)  
   

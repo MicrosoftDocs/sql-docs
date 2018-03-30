@@ -24,7 +24,7 @@ manager: "jhubbard"
 # Allowing Partially Trusted Callers
   Sharing code libraries is a common scenario with common language runtime (CLR) integration, where an assembly containing a user-defined type, stored procedure, user-defined function, user-defined aggregate, trigger, or utility class is often accessed by another assembly or application. Code libraries that are to be shared by multiple applications must be signed with a strong name.  
   
- Only applications that are fully trusted by the runtime code access security system are allowed to access a shared managed code assembly that is not explicitly marked with the `System.Security.AllowPartiallyTrustedCallers` attribute. A partially trusted assembly (one that is registered in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] with the `SAFE` or `EXTERNAL_ACCESS` permission set) that attempts to access a strong-name signed assembly without this attribute causes a `System.Security.SecurityException` to be thrown. The error message you see is similar to the following:  
+ Only applications that are fully trusted by the runtime code access security system are allowed to access a shared managed code assembly that is not explicitly marked with the `System.Security.AllowPartiallyTrustedCallers` attribute. A partially trusted assembly (one that is registered in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with the `SAFE` or `EXTERNAL_ACCESS` permission set) that attempts to access a strong-name signed assembly without this attribute causes a `System.Security.SecurityException` to be thrown. The error message you see is similar to the following:  
   
 ```  
 Msg 6522, Level 16, State 1, Procedure usp_RSTest, Line 0  
@@ -38,7 +38,7 @@ IPermission permThatFailed) at
 Microsoft.Samples.SqlServer.TestResultSet.Test()  
 ```  
   
- We recommend that all assemblies registered in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], except those assemblies added to the global assembly cache, be marked with the `AllowPartiallyTrustedCallers` attribute so that assemblies loaded by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] can access each other. Assemblies that are to be added to the global assembly cache should be thoroughly reviewed for safety before adding the `AllowPartiallyTrustedCallers` attribute, as the assembly would then be available to partially trusted callers from unexpected contexts. An assembly should not be made fully trusted (registered with the `UNSAFE` permission set in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
+ We recommend that all assemblies registered in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], except those assemblies added to the global assembly cache, be marked with the `AllowPartiallyTrustedCallers` attribute so that assemblies loaded by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can access each other. Assemblies that are to be added to the global assembly cache should be thoroughly reviewed for safety before adding the `AllowPartiallyTrustedCallers` attribute, as the assembly would then be available to partially trusted callers from unexpected contexts. An assembly should not be made fully trusted (registered with the `UNSAFE` permission set in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]).  
   
  For more information, see the "Using Libraries from Partially Trusted Code" section in the .NET Framework software development kit.  
   
@@ -49,7 +49,7 @@ Microsoft.Samples.SqlServer.TestResultSet.Test()
   
  Sometimes it is useful to be able to execute commands while reading through results of a query without opening a new connection and without reading all the results into memory. The Multiple Active Result Set (MARS) feature in ADO.NET 2.0 is a technology that can help you achieve that. Currently, MARS is not implemented for the in-process provider used for server-side programming. To work around this limitation, you can use server-side cursors. This sample demonstrates how to use server-side cursors to work around the lack of MARS support for server-side programming.  
   
- Using server-side cursors is expensive in terms of server resources and can sometimes prevent the query optimizer in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] from enhancing the performance of your queries. Therefore, you might consider rewriting your code to use JOINs whenever possible.  
+ Using server-side cursors is expensive in terms of server resources and can sometimes prevent the query optimizer in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from enhancing the performance of your queries. Therefore, you might consider rewriting your code to use JOINs whenever possible.  
   
  The API for this class is similar to a data reader except that you can move forward or backward throughout the result set, and other commands can be issued on the connection while the result set is open.  
   
@@ -59,7 +59,7 @@ Microsoft.Samples.SqlServer.TestResultSet.Test()
   
  This sample also demonstrates using the "Allow partially trusted callers" attribute to indicate that the Result Set assembly is a library which may be safely called from other assemblies. This approach is a little more complex but much more secure than registering the calling assembly using the unsafe permission. It is more secure because registering the calling assembly as safe the calling assembly limits affecting resources off the server and prevents damage to the integrity of the server.  
   
- The build instructions for this sample assume that the source code files are in a directory called c:\samples.  If you use another directory, you will have to modify the [!INCLUDE[tsql](../../../includes/tsql-md.md)] scripts. The [!INCLUDE[tsql](../../../includes/tsql-md.md)] scripts also requires the AdventureWorks database. You can download the AdventureWorks sample database from the [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) home page.  
+ The build instructions for this sample assume that the source code files are in a directory called c:\samples.  If you use another directory, you will have to modify the [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts. The [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts also requires the AdventureWorks database. You can download the AdventureWorks sample database from the [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) home page.  
   
  To build and run the sample, paste the first code listing into a file called ResultSet.cs and compile with csc /target:library ResultSet.cs.  
   

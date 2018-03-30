@@ -49,7 +49,7 @@ manager: "jhubbard"
  This C# application executes an XPath query against this schema (MySchema.xml).  
   
 > [!NOTE]  
->  In the code, you must provide the name of the instance of Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in the connection string.  
+>  In the code, you must provide the name of the instance of Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in the connection string.  
   
 ```  
 using System;  
@@ -83,7 +83,7 @@ class Test
   
 ### To test the application  
   
-1.  Make sure that you have the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework installed on your computer.  
+1.  Make sure that you have the [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework installed on your computer.  
   
 2.  Save the XSD schema (MySchema.xml) that is provided in this example in a folder.  
   

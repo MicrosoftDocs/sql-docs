@@ -15,11 +15,11 @@ helpviewer_keywords:
 ms.assetid: e9533f6b-c48a-4f53-a7a0-379e092bb667
 caps.latest.revision: 31
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Technical Reference (Database Engine)
-  Find the tools, languages, and administration programming reference documentation for the [!INCLUDE[ssDE](../../includes/ssde-md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  Find the tools, languages, and administration programming reference documentation for the [!INCLUDE[ssDE](../includes/ssde-md.md)] in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
  ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") **Feature Reference**  
  [Registered Servers F1 Help](../../2014/database-engine/registered-servers-f1-help.md)  

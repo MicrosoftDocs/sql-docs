@@ -16,7 +16,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Install Distributed Replay (Setup)
-  Install the [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay features with the [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Installation Wizard. When planning where to install the features, consider the following:  
+  Install the [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay features with the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Installation Wizard. When planning where to install the features, consider the following:  
   
 -   You can install the administration tool on the same computer as the Distributed Replay controller, or on different computers.  
   
@@ -26,12 +26,12 @@ manager: "jhubbard"
   
 -   Only one instance of the client service can be installed on the Distributed Replay controller computer. If your Distributed Replay environment will have more than one client, we do not recommend installing the client service on the same computer as the controller. Doing so may decrease the overall speed of the distributed replay.  
   
--   For performance testing scenarios, we do not recommend installing the administration tool, Distributed Replay controller service, or client service on the target instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Installing all of these features on the target server should be limited to functional testing for application compatibility.  
+-   For performance testing scenarios, we do not recommend installing the administration tool, Distributed Replay controller service, or client service on the target instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Installing all of these features on the target server should be limited to functional testing for application compatibility.  
   
--   After installation, the controller service, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay controller, must be running before you start the Distributed Replay client service on the clients.  
+-   After installation, the controller service, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay controller, must be running before you start the Distributed Replay client service on the clients.  
   
 > [!NOTE]  
->  To remove or change the Distributed Replay features, use the Windows **Programs and Features** window in **Control Panel**. Select [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] in the **Uninstall or change a program** window, and then click **Remove** to open the [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Installation Wizard. On the **Select Features** page, check the Distributed Replay features you want to remove.  
+>  To remove or change the Distributed Replay features, use the Windows **Programs and Features** window in **Control Panel**. Select [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] in the **Uninstall or change a program** window, and then click **Remove** to open the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Installation Wizard. On the **Select Features** page, check the Distributed Replay features you want to remove.  
   
  **Prerequisites:**  
   
@@ -48,7 +48,7 @@ manager: "jhubbard"
   
 -   On a 32-bit system:  
   
-     [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]Tools  
+     [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools  
   
      \- OR -  
   
@@ -56,7 +56,7 @@ manager: "jhubbard"
   
 -   On a 64-bit system:  
   
-     C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (x86) \120\Tools  
+     C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (x86) \120\Tools  
   
      \- OR -  
   
@@ -64,17 +64,17 @@ manager: "jhubbard"
   
 ### To install Distributed Replay features  
   
-1.  To start the installation of any of the Distributed Replay features, start the [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Installation Wizard.  
+1.  To start the installation of any of the Distributed Replay features, start the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Installation Wizard.  
   
 2.  The **Setup Support Rules** page identifies issues that might occur when installing the SQL Server Setup support files. You must correct any Setup support failures before continuing with Setup.  
   
-3.  On the **Product Key** page, select an option button to indicate whether you are installing a free edition of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], or a production version of the product that has a PID key. For more information, see [Editions and Components of SQL Server 2014](../../../2014/getting-started/editions-and-components-of-sql-server-2014.md).  
+3.  On the **Product Key** page, select an option button to indicate whether you are installing a free edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or a production version of the product that has a PID key. For more information, see [Editions and Components of SQL Server 2014](../../../2014/getting-started/editions-and-components-of-sql-server-2014.md).  
   
-4.  On the **License Terms** page, read the license agreement, and then select the check box to accept the license terms and conditions. To help improve [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], you can also enable the feature usage option and send reports to [!INCLUDE[msCoName](../../../includes/msconame-md.md)].  
+4.  On the **License Terms** page, read the license agreement, and then select the check box to accept the license terms and conditions. To help improve [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can also enable the feature usage option and send reports to [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
-5.  On the **Setup Support Files** page, click **Install** to install or update the Setup Support files for [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+5.  On the **Setup Support Files** page, click **Install** to install or update the Setup Support files for [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-6.  On the **Setup Role** page, select **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Feature Installation**, and then click **Next** to continue to the **Feature Selection** page.  
+6.  On the **Setup Role** page, select **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Feature Installation**, and then click **Next** to continue to the **Feature Selection** page.  
   
 7.  On the **Feature Selection** page, configure which features you want to install.  
   
@@ -100,19 +100,19 @@ manager: "jhubbard"
   
 8.  Optionally, click the ellipsis (…) button to change the shared feature directory path.  
   
-    1.  On 32-bit computers, the default installation path is **C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\**  
+    1.  On 32-bit computers, the default installation path is **C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
   
-    2.  On 64-bit computers, the default installation path is **C:\Program Files (x86)\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\**  
+    2.  On 64-bit computers, the default installation path is **C:\Program Files (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
   
 9. When you are finished, click **Next**.  
   
-10. On the **Installation Rules** page, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup validates your computer configuration. Once the validation process is completed, click **Next**.  
+10. On the **Installation Rules** page, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup validates your computer configuration. Once the validation process is completed, click **Next**.  
   
 11. The **Disk Space Requirements** page calculates the required disk space for the features that you specify. Then it compares the required space to the available disk space.  
   
-12. On the **Error Reporting** page, specify the information that you want to send to [!INCLUDE[msCoName](../../../includes/msconame-md.md)] to help improve [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. By default, option for error reporting is enabled.  
+12. On the **Error Reporting** page, specify the information that you want to send to [!INCLUDE[msCoName](../../includes/msconame-md.md)] to help improve [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. By default, option for error reporting is enabled.  
   
-13. On the **Installation Configuration Rules** page, the System Configuration Checker will run one more set of rules to validate your computer configuration with the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] features that you have specified.  
+13. On the **Installation Configuration Rules** page, the System Configuration Checker will run one more set of rules to validate your computer configuration with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features that you have specified.  
   
 14. On the **Ready to Install the Program** page, click **Install**.  
   
@@ -126,7 +126,7 @@ manager: "jhubbard"
 -   [Install Distributed Replay Using a Configuration File](../../../2014/sql-server/install/install-distributed-replay-using-a-configuration-file.md)  
   
 ## .NET Framework Security  
- You must have administrative permissions in order to install any of the Distributed Replay features. Only a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login having sysadmin permissions can add the client service accounts to the sysadmin server role of the test server. For more information about Distributed Replay security considerations, see [Distributed Replay Security](../../../2014/database-engine/distributed-replay-security.md).  
+ You must have administrative permissions in order to install any of the Distributed Replay features. Only a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login having sysadmin permissions can add the client service accounts to the sysadmin server role of the test server. For more information about Distributed Replay security considerations, see [Distributed Replay Security](../../../2014/database-engine/distributed-replay-security.md).  
   
 ## See Also  
  [Features Supported by the Editions of SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   

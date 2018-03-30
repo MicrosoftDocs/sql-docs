@@ -29,9 +29,9 @@ manager: "jhubbard"
   
 ### To set package properties  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project that contains the package you want to configure.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project that contains the package you want to configure.  
   
-2.  In **Solution Explorer**, double-click the package to open it in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, or right-click and select **View Designer**.  
+2.  In **Solution Explorer**, double-click the package to open it in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, or right-click and select **View Designer**.  
   
 3.  Click the **Control Flow** tab and then do one of the following:  
   

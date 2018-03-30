@@ -14,25 +14,25 @@ helpviewer_keywords:
 ms.assetid: c3c6e0b6-54cd-4b7d-8efb-2cefe14fcd7f
 caps.latest.revision: 18
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Lesson 1: Publishing Data Using Merge Replication
-  In this lesson, you will create a merge publication using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to publish a subset of the **Employee**, **SalesOrderHeader**, and **SalesOrderDetail** tables in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database. These tables are filtered with parameterized row filters so that each subscription contains a unique partition of the data. You will also add the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login used by the Merge Agent to the publication access list (PAL). This tutorial requires that you have completed the previous tutorial, [Preparing the Server for Replication](../../2014/tutorials/tutorial-preparing-the-server-for-replication.md).  
+  In this lesson, you will create a merge publication using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to publish a subset of the **Employee**, **SalesOrderHeader**, and **SalesOrderDetail** tables in the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] sample database. These tables are filtered with parameterized row filters so that each subscription contains a unique partition of the data. You will also add the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] login used by the Merge Agent to the publication access list (PAL). This tutorial requires that you have completed the previous tutorial, [Preparing the Server for Replication](../../2014/tutorials/tutorial-preparing-the-server-for-replication.md).  
   
 ### To create a publication and define articles  
   
-1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], and then expand the server node.  
+1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], and then expand the server node.  
   
 2.  Expand the **Replication** folder, right-click **Local Publications**, and click **New Publication**.  
   
      The Publication Configuration Wizard launches.  
   
-3.  On the Publication Database page, select [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], and then click **Next**.  
+3.  On the Publication Database page, select [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)], and then click **Next**.  
   
 4.  On the Publication Type page, select **Merge publication**, and then click **Next**.  
   
-5.  On the Subscriber Types page, ensure that only [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later is selected, and then click **Next**.  
+5.  On the Subscriber Types page, ensure that only [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] or later is selected, and then click **Next**.  
   
 6.  On the Articles page, expand the **Tables** node, select **SalesOrderHeader** and **SalesOrderDetail**, then expand **Employee**, select **EmployeeID** or **LoginID**, and then click **Next**.  
   
@@ -89,7 +89,7 @@ manager: "jhubbard"
   
 ### To view the status of snapshot generation  
   
-1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expand the server node, and then expand the **Replication** folder.  
+1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], expand the server node, and then expand the **Replication** folder.  
   
 2.  In the Local Publications folder, right-click **AdvWorksSalesOrdersMerge**, and then click **View Snapshot Agent Status**.  
   
@@ -97,7 +97,7 @@ manager: "jhubbard"
   
 ### To add the Merge Agent login to the PAL  
   
-1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expand the server node, and then expand the **Replication** folder.  
+1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], expand the server node, and then expand the **Replication** folder.  
   
 2.  In the Local Publications folder, right-click **AdvWorksSalesOrdersMerge**, and then click **Properties**.  
   

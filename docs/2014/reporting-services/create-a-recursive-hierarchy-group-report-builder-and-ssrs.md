@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
 caps.latest.revision: 7
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Create a Recursive Hierarchy Group (Report Builder and SSRS)
@@ -21,7 +21,7 @@ manager: "mblythe"
  Before you can organize data in a table as a recursive hierarchy group, you must have a single dataset that contains all the hierarchical data, You must have separate fields for the item to group and for the item to group by. For example, a dataset where you want to group employees recursively under their manager might contain a name, an employee name, an employee ID, and a manager ID.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ### To create a recursive hierarchy group  
   
@@ -37,7 +37,7 @@ manager: "mblythe"
   
 6.  In the **Recursive Parent** list, enter or select the field to group on.  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
      Run the report. The report displays the recursive hierarchy group, although there is no indent to show the hierarchy  
   
@@ -56,7 +56,7 @@ manager: "mblythe"
   
      The Padding properties all require a string in the format *nnyy*, where *nn* is a number and *yy* is the unit of measure. The example expression builds a string that uses the `Level` function to increase the size of the padding based on recursion level. For example, a row that has a level of 1 would result in a padding of (2 + (1\*10))=12pt, and a row that has a level of 3 would result in a padding of (2 + (3\*10))=32pt. For information about the `Level` function, see [Level](../../2014/reporting-services/level-function-report-builder-and-ssrs.md).  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
      Run the report. The report displays a hierarchical view of the grouped data.  
   

@@ -17,20 +17,20 @@ helpviewer_keywords:
 ms.assetid: a57b629c-e9ed-48fd-9a48-ed3787d80c8f
 caps.latest.revision: 19
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # FileTables (SQL Server)
-  The FileTable feature brings support for the Windows file namespace and compatibility with Windows applications to the file data stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. FileTable lets an application integrate its storage and data management components, and provides integrated [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services - including full-text search and semantic search - over unstructured data and metadata.  
+  The FileTable feature brings support for the Windows file namespace and compatibility with Windows applications to the file data stored in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. FileTable lets an application integrate its storage and data management components, and provides integrated [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] services - including full-text search and semantic search - over unstructured data and metadata.  
   
- In other words, you can store files and documents in special tables in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] called FileTables, but access them from Windows applications as if they were stored in the file system, without making any changes to your client applications.  
+ In other words, you can store files and documents in special tables in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] called FileTables, but access them from Windows applications as if they were stored in the file system, without making any changes to your client applications.  
   
- The FileTable feature builds on top of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] FILESTREAM technology. To learn more about FILESTREAM, see [FILESTREAM &#40;SQL Server&#41;](../../2014/database-engine/filestream-sql-server.md).  
+ The FileTable feature builds on top of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] FILESTREAM technology. To learn more about FILESTREAM, see [FILESTREAM &#40;SQL Server&#41;](../../2014/database-engine/filestream-sql-server.md).  
   
 ##  <a name="Goals"></a> Benefits of the FileTable Feature  
  The goals of the FileTable feature include the following:  
   
--   Windows API compatibility for file data stored within a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. Windows API compatibility includes the following:  
+-   Windows API compatibility for file data stored within a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database. Windows API compatibility includes the following:  
   
     -   Non-transactional streaming access and in-place updates to FILESTREAM data.  
   
@@ -40,12 +40,12 @@ manager: "jhubbard"
   
     -   Support for Windows file and directory management APIs.  
   
--   Compatibility with other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features including management tools, services, and relational query capabilities over FILESTREAM and file attribute data.  
+-   Compatibility with other [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] features including management tools, services, and relational query capabilities over FILESTREAM and file attribute data.  
   
- Thus FileTables remove a significant barrier to the use of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for the storage and management of unstructured data that is currently residing as files on file servers. Enterprises can move this data from file servers into FileTables to take advantage of integrated administration and services provided by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. At the same time, they can maintain Windows application compatibility for their existing Windows applications that see this data as files in the file system.  
+ Thus FileTables remove a significant barrier to the use of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] for the storage and management of unstructured data that is currently residing as files on file servers. Enterprises can move this data from file servers into FileTables to take advantage of integrated administration and services provided by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. At the same time, they can maintain Windows application compatibility for their existing Windows applications that see this data as files in the file system.  
     
 ##  <a name="Description"></a> What Is a FileTable?  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a special **table of files**, also referred to as a **FileTable**, for applications that require file and directory storage in the database, with Windows API compatibility and non-transactional access. A FileTable is a specialized user table with a pre-defined schema that stores FILESTREAM data, as well as file and directory hierarchy information and file attributes.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provides a special **table of files**, also referred to as a **FileTable**, for applications that require file and directory storage in the database, with Windows API compatibility and non-transactional access. A FileTable is a specialized user table with a pre-defined schema that stores FILESTREAM data, as well as file and directory hierarchy information and file attributes.  
   
  A FileTable provides the following functionality:  
   
@@ -65,7 +65,7 @@ manager: "jhubbard"
   
 -   A FileTable enforces certain system-defined constraints and triggers to maintain file namespace semantics.  
   
--   When the database is configured for non-transactional access, the file and directory hierarchy represented in the FileTable is exposed under the FILESTREAM share configured for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. This provides file system access for Windows applications.  
+-   When the database is configured for non-transactional access, the file and directory hierarchy represented in the FileTable is exposed under the FILESTREAM share configured for the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance. This provides file system access for Windows applications.  
   
  Some additional characteristics of FileTables include the following:  
   
@@ -73,11 +73,11 @@ manager: "jhubbard"
   
 -   The directory hierarchy surfaced through the share is a purely logical directory structure that is maintained within the FileTable.  
   
--   Calls to create or change a file or directory through the Windows share are intercepted by a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] component and reflected in the corresponding relational data in the FileTable.  
+-   Calls to create or change a file or directory through the Windows share are intercepted by a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] component and reflected in the corresponding relational data in the FileTable.  
   
 -   Windows API operations are non-transactional in nature, and are not associated with user transactions. However, transactional access to FILESTREAM data stored in a FileTable is fully supported, as is the case for any FILESTREAM column in a regular table.  
   
--   FileTables can also be queried and updated through normal [!INCLUDE[tsql](../../includes/tsql-md.md)] access. They are also integrated with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] management tools, and features such as backup.  
+-   FileTables can also be queried and updated through normal [!INCLUDE[tsql](../includes/tsql-md.md)] access. They are also integrated with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] management tools, and features such as backup.  
   
   
 ##  <a name="additional"></a> Additional Considerations for Using FileTables  
@@ -97,7 +97,7 @@ manager: "jhubbard"
   
   
 ###  <a name="memory"></a> FileTables Do Not Support Memory-Mapped Files  
- FileTables do not support memory-mapped files. Notepad and Paint are two common examples of applications that use memory-mapped files. You cannot use these applications on the same computer as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to open files that are stored in a FileTable. However you can use these applications from a remote computer to open files that are stored in a FileTable, because in these circumstances the memory-mapping feature is not used.  
+ FileTables do not support memory-mapped files. Notepad and Paint are two common examples of applications that use memory-mapped files. You cannot use these applications on the same computer as [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to open files that are stored in a FileTable. However you can use these applications from a remote computer to open files that are stored in a FileTable, because in these circumstances the memory-mapping feature is not used.  
   
   
 ##  <a name="reltasks"></a> Related Tasks  
@@ -131,7 +131,7 @@ manager: "jhubbard"
  Describes how FileTables work with other features of SQL Server.  
   
  [FileTable DDL, Functions, Stored Procedures, and Views](../../2014/database-engine/filetable-ddl-functions-stored-procedures-and-views.md)  
- Lists the [!INCLUDE[tsql](../../includes/tsql-md.md)] statements and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database objects that have been added or changed to support the FileTable feature.  
+ Lists the [!INCLUDE[tsql](../includes/tsql-md.md)] statements and the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database objects that have been added or changed to support the FileTable feature.  
   
  
   

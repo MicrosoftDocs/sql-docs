@@ -16,7 +16,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Add a Standard Action
-  You add an action to a database by using the Actions view in Cube Designer. That view can be accessed from [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. After you create an action, it becomes available to users after you reprocess the relevant cube. For more information, see [Processing Analysis Services Objects](../../2014/analysis-services/processing-analysis-services-objects.md).  
+  You add an action to a database by using the Actions view in Cube Designer. That view can be accessed from [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. After you create an action, it becomes available to users after you reprocess the relevant cube. For more information, see [Processing Analysis Services Objects](../../2014/analysis-services/processing-analysis-services-objects.md).  
   
 ### To create an action  
   

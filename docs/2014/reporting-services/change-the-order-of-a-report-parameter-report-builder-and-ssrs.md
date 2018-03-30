@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: abd61e19-dba3-423c-a26c-e8bc43197d3f
 caps.latest.revision: 6
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Change the Order of a Report Parameter (Report Builder and SSRS)
@@ -21,7 +21,7 @@ manager: "mblythe"
  The order that you see parameters display on the report viewer toolbar is determined by the order of the parameters in the Report Data pane.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ### To change the order of report parameters  
   

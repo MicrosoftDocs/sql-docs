@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: c398f396-f630-4a2d-a264-f243c5346de1
 caps.latest.revision: 7
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Create, Alter, and Drop Selective XML Indexes
@@ -24,7 +24,7 @@ manager: "jhubbard"
   
 ### How to: Create a Selective XML Index  
  **Create a Selective XML Index by Using Transact-SQL**  
- Create a selective XML index by calling the CREATE SELECTIVE XML INDEX statement. For more information, see [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](../Topic/CREATE%20SELECTIVE%20XML%20INDEX%20\(Transact-SQL\).md).  
+ Create a selective XML index by calling the CREATE SELECTIVE XML INDEX statement. For more information, see [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-selective-xml-index-transact-sql.md).  
   
  **Example**  
   
@@ -48,11 +48,11 @@ FOR(
   
 ### How to: Alter a Selective XML Index  
  **Alter a Selective XML Index by Using Transact-SQL**  
- Alter an existing selective XML index by calling the ALTER INDEX statement. For more information, see [ALTER INDEX &#40;Selective XML Indexes&#41;](../Topic/ALTER%20INDEX%20\(Selective%20XML%20Indexes\).md).  
+ Alter an existing selective XML index by calling the ALTER INDEX statement. For more information, see [ALTER INDEX &#40;Selective XML Indexes&#41;](~/t-sql/statements/alter-index-selective-xml-indexes.md).  
   
  **Example**  
   
- The following example shows an ALTER INDEX statement. This statement adds the path `'/a/b/m'` to the XQuery part of the index and deletes the path `'/a/b/e'` from the SQL part of the index created in the example in the topic [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](../Topic/CREATE%20SELECTIVE%20XML%20INDEX%20\(Transact-SQL\).md). The path to delete is identified by the name that was given to it when it was created.  
+ The following example shows an ALTER INDEX statement. This statement adds the path `'/a/b/m'` to the XQuery part of the index and deletes the path `'/a/b/e'` from the SQL part of the index created in the example in the topic [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-selective-xml-index-transact-sql.md). The path to delete is identified by the name that was given to it when it was created.  
   
 ```tsql  
 ALTER INDEX sxi_index  
@@ -70,7 +70,7 @@ FOR
   
 ### How to: Drop a Selective XML Index  
  **Drop a Selective XML Index by Using Transact-SQL**  
- Drop a selective XML index by calling the DROP INDEX statement. For more information, see [DROP INDEX &#40;Selective XML Indexes&#41;](../Topic/DROP%20INDEX%20\(Selective%20XML%20Indexes\).md).  
+ Drop a selective XML index by calling the DROP INDEX statement. For more information, see [DROP INDEX &#40;Selective XML Indexes&#41;](~/t-sql/statements/drop-index-selective-xml-indexes.md).  
   
  **Example**  
   

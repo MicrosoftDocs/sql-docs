@@ -85,7 +85,7 @@ manager: "mblythe"
  Click to display the **Linked Object Wizard** and link measure groups and dimensions from other cubes, and to import actions, KPIs, and calculations, to the selected cube.  
   
  **Properties**  
- Select to display the **Properties** window of [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] for the selected measure group or measure.  
+ Select to display the **Properties** window of [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] for the selected measure group or measure.  
   
 ## See Also  
  [Configure Measure Properties](../../2014/analysis-services/configure-measure-properties.md)   

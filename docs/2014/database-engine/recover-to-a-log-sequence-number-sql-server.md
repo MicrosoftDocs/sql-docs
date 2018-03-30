@@ -46,21 +46,21 @@ manager: "jhubbard"
 ## Viewing LSNs Used by Backup and Restore  
  The LSN of a log record at which a given backup and restore event occurred is viewable using one or more of the following:  
   
--   [backupset](../Topic/backupset%20\(Transact-SQL\).md)  
+-   [backupset](~/relational-databases/system-tables/backupset-transact-sql.md)  
   
--   [backupfile](../Topic/backupfile%20\(Transact-SQL\).md)  
+-   [backupfile](~/relational-databases/system-tables/backupfile-transact-sql.md)  
   
--   [sys.database_files](../Topic/sys.database_files%20\(Transact-SQL\).md); [sys.master_files](../Topic/sys.master_files%20\(Transact-SQL\).md)  
+-   [sys.database_files](~/relational-databases/system-catalog-views/sys-database-files-transact-sql.md); [sys.master_files](~/relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   
--   [RESTORE HEADERONLY](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)  
+-   [RESTORE HEADERONLY](~/t-sql/statements/restore-statements-headeronly-transact-sql.md)  
   
--   [RESTORE FILELISTONLY](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md)  
+-   [RESTORE FILELISTONLY](~/t-sql/statements/restore-statements-filelistonly-transact-sql.md)  
   
 > [!NOTE]  
 >  LSNs also appear in some message texts.  
   
 ## Transact-SQL Syntax for Restoring to an LSN  
- By using a [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) statement, you can stop at or immediately before the LSN, as follows:  
+ By using a [RESTORE](~/t-sql/statements/restore-statements-transact-sql.md) statement, you can stop at or immediately before the LSN, as follows:  
   
 -   Use the WITH STOPATMARK **='**lsn:*<lsn_number>***'** clause, where lsn:*\<lsnNumber>* is a string that specifies that the log record that contains the specified LSN is the recovery point.  
   
@@ -98,6 +98,6 @@ GO
 ## See Also  
  [Apply Transaction Log Backups &#40;SQL Server&#41;](../../2014/database-engine/apply-transaction-log-backups-sql-server.md)   
  [The Transaction Log &#40;SQL Server&#41;](../../2014/database-engine/the-transaction-log-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)  
   
   

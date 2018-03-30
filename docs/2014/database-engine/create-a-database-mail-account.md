@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Create a Database Mail Account
-  Use either the **Database Mail Configuration Wizard** or [!INCLUDE[tsql](../../includes/tsql-md.md)] to create a Database Mail account.  
+  Use either the **Database Mail Configuration Wizard** or [!INCLUDE[tsql](../includes/tsql-md.md)] to create a Database Mail account.  
   
 -   **Before you begin:**  [Prerequisites](#Prerequisites)  
   
@@ -38,7 +38,7 @@ manager: "jhubbard"
 ##  <a name="SSMSProcedure"></a> Using Database Mail Configuration Wizard  
  **To create a Database Mail account using a Wizard**  
   
--   In Object Explorer, connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance you want to configure Database Mail on, and expand the server tree.  
+-   In Object Explorer, connect to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance you want to configure Database Mail on, and expand the server tree.  
   
 -   Expand the **Management** node  
   

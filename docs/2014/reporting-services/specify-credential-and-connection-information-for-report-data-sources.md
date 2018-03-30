@@ -30,7 +30,7 @@ helpviewer_keywords:
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 caps.latest.revision: 59
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Specify Credential and Connection Information for Report Data Sources
@@ -46,7 +46,7 @@ manager: "mblythe"
   
 -   The credentials provided to the database server are valid. If you are using Windows user credentials, make sure that the user has permission to the server and database.  
   
--   Ports used by the database server are open. If you are accessing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relational databases on external computers, or if the report server database is on an external [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, you must open port 1433 and 1434 on the external computer. Be sure to restart the server after you open ports. For more information, see [Configure a Windows Firewall for Database Engine Access](../../2014/database-engine/configure-a-windows-firewall-for-database-engine-access.md).  
+-   Ports used by the database server are open. If you are accessing [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] relational databases on external computers, or if the report server database is on an external [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance, you must open port 1433 and 1434 on the external computer. Be sure to restart the server after you open ports. For more information, see [Configure a Windows Firewall for Database Engine Access](../../2014/database-engine/configure-a-windows-firewall-for-database-engine-access.md).  
   
 -   Remote connections must be enabled. If you are accessing SQL Server relational databases on external computers, you can use SQL Server Configuration Manager tool to verify that remote connections over TCP are enabled.  
   
@@ -108,7 +108,7 @@ manager: "mblythe"
     2.  If the account is listed, select it and then click **Remove**.  
   
 #### Using Impersonation with Stored Credentials  
- You can also use credentials to impersonate the identity of another user. For SQL Server databases, using the impersonation options sets the [SETUSER](../Topic/SETUSER%20\(Transact-SQL\).md) function.  
+ You can also use credentials to impersonate the identity of another user. For SQL Server databases, using the impersonation options sets the [SETUSER](~/t-sql/statements/setuser-transact-sql.md) function.  
   
 > [!IMPORTANT]  
 >  Do not use impersonation for reports that support subscriptions or that use schedules to generate report history or refresh a report execution snapshot.  
@@ -130,9 +130,9 @@ manager: "mblythe"
 |**Type**|**Context for network connection**|**Data Source Types**<br /><br /> **(SQL Server, Oracle, ODBC, OLE DB, Analysis Services, XML, SAP NetWeaver BI, Hyperion Essbase)**|  
 |--------------|----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|  
 |Integrated security|Impersonate the current user|For all data source types, connect using the current user account.|  
-|Windows credentials|Impersonate the specified user|For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC, and OLE DB: connect using the impersonated user account.|  
-|Database credentials|Impersonate the unattended execution account or the service account.<br /><br /> (Reporting Services removes administrator permissions when sending the connection request using the service identity).|For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC, and OLE DB:<br /><br /> Append the user name and password on the connection string.<br /><br /> For [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:<br /><br /> The connection succeeds if you are using the TCP/IP protocol, otherwise it fails.<br /><br /> For XML:<br /><br /> Fail the connection on the report server if database credentials are used.|  
-|None|Impersonate the unattended execution account.|For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC, and OLE DB:<br /><br /> Use the credentials defined in the connection string. The connection fails on the report server if the unattended execution account is undefined.<br /><br /> For [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:<br /><br /> Always fail the connection if no credentials are specified, even if the unattended execution account is defined.<br /><br /> For XML:<br /><br /> Connect as Anonymous User if the unattended execution account is defined; otherwise, fail the connection.|  
+|Windows credentials|Impersonate the specified user|For [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Oracle, ODBC, and OLE DB: connect using the impersonated user account.|  
+|Database credentials|Impersonate the unattended execution account or the service account.<br /><br /> (Reporting Services removes administrator permissions when sending the connection request using the service identity).|For [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Oracle, ODBC, and OLE DB:<br /><br /> Append the user name and password on the connection string.<br /><br /> For [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]:<br /><br /> The connection succeeds if you are using the TCP/IP protocol, otherwise it fails.<br /><br /> For XML:<br /><br /> Fail the connection on the report server if database credentials are used.|  
+|None|Impersonate the unattended execution account.|For [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Oracle, ODBC, and OLE DB:<br /><br /> Use the credentials defined in the connection string. The connection fails on the report server if the unattended execution account is undefined.<br /><br /> For [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]:<br /><br /> Always fail the connection if no credentials are specified, even if the unattended execution account is defined.<br /><br /> For XML:<br /><br /> Connect as Anonymous User if the unattended execution account is defined; otherwise, fail the connection.|  
   
 ## Setting Credentials Programmatically  
  You can set credentials in your code to control access to reports and to the report server. For more information, see [Data Sources and Connection Methods](../../2014/reporting-services/dev-guide/data-sources-and-connection-methods.md).  

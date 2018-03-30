@@ -27,9 +27,9 @@ manager: "jhubbard"
   
  To give a user access to a functional area other than **Explorer**, the user must be a model administrator, which also involves assigning model object permissions. For more information, see [Administrators &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md).  
   
- Model object permissions are assigned in the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] user interface (UI), in the **User and Group Permissions** functional area on the **Models** tab. On this tab, the model is represented as a tree structure. When you assign permission to an object in the tree, all objects below inherit that permission. You can override that inheritance by assigning permission to individual objects.  
+ Model object permissions are assigned in the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] user interface (UI), in the **User and Group Permissions** functional area on the **Models** tab. On this tab, the model is represented as a tree structure. When you assign permission to an object in the tree, all objects below inherit that permission. You can override that inheritance by assigning permission to individual objects.  
   
- You can assign **Read-only**, **Update**, or **Deny** permission to model objects. If you do not assign any permissions on the **Models** tab, the user cannot view any models or data in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].  
+ You can assign **Read-only**, **Update**, or **Deny** permission to model objects. If you do not assign any permissions on the **Models** tab, the user cannot view any models or data in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
 ## Best Practice  
  In general, you should assign **Update** permission to the model object, and then explicitly assign permission to objects underneath. If you do not assign permission to objects underneath, the permissions are inherited and the user is an administrator.  

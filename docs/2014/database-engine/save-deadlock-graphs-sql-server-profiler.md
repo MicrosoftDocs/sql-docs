@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Save Deadlock Graphs (SQL Server Profiler)
-  This topic describes how to save a deadlock graph by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Deadlock graphs are saved as XML files.  
+  This topic describes how to save a deadlock graph by using [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]. Deadlock graphs are saved as XML files.  
   
 ### To save deadlock graph events separately  
   
@@ -59,7 +59,7 @@ manager: "jhubbard"
   
 10. Click **All Deadlock XML batches in a single file** to save all deadlock graph events in a single XML file, or click **Each Deadlock XML batch in a distinct file**to create a new XML file for each deadlock graph.  
   
- After you have saved the deadlock file, you can open the file in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information, see [Open, View, and Print a Deadlock File &#40;SQL Server Management Studio&#41;](../../2014/database-engine/open-view-and-print-a-deadlock-file-sql-server-management-studio.md).  
+ After you have saved the deadlock file, you can open the file in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. For more information, see [Open, View, and Print a Deadlock File &#40;SQL Server Management Studio&#41;](../../2014/database-engine/open-view-and-print-a-deadlock-file-sql-server-management-studio.md).  
   
 ## See Also  
  [Analyze Deadlocks with SQL Server Profiler](../../2014/database-engine/analyze-deadlocks-with-sql-server-profiler.md)  

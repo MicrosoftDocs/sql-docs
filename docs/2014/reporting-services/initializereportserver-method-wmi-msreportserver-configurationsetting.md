@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: 0304acc2-1fd7-437b-94d9-1c1073dd3ca4
 caps.latest.revision: 20
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # InitializeReportServer Method (WMI MSReportServer_ConfigurationSetting)
@@ -61,7 +61,7 @@ public void InitializeReportServer(string InstallationID,
  If the report server’s [IsInitialized](../../2014/reporting-services/isinitialized-property-wmi-msreportserver-configurationsetting.md) property is set to `true` when the InitializeReportServer method is called, the method returns success without trying to encrypt the encryption key.  
   
 ## Requirements  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../includes/ssrswminmspca-md.md)]  
   
 ## See Also  
  [MSReportServer_ConfigurationSetting Members](../../2014/reporting-services/msreportserver-configurationsetting-members.md)  

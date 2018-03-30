@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 478fd978-11d9-4155-8329-f599fdbec14b
 caps.latest.revision: 9
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_10535
@@ -37,7 +37,7 @@ manager: "jhubbard"
  Specify a cached plan handle. For a list of cached plan handles, query the sys.dm_exec_query_stats dynamic management view.  
   
 ## See Also  
- [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](../Topic/sp_create_plan_guide_from_handle%20\(Transact-SQL\).md)   
- [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../Topic/sys.dm_exec_query_stats%20\(Transact-SQL\).md)  
+ [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)   
+ [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
   
   

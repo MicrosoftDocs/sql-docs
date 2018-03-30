@@ -29,7 +29,7 @@ f1_keywords:
 ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
 caps.latest.revision: 8
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Formatting the Legend on a Chart (Report Builder and SSRS)
@@ -44,10 +44,10 @@ manager: "mblythe"
  You cannot add images, extra columns or other supplementary items to the legend.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## Ordering Legend Items in the Legend  
- Series are ordered in the legend according to the order that they are processed by the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] processing engine. You can change the order by changing the order of fields in the data fields drop-zone. If you are using series grouping, the series data is not known until processing, so that there is no way for you to re-order these items. The changes can be seen in Preview. For more information about series grouping, see [Charts &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/charts-report-builder-and-ssrs.md).  
+ Series are ordered in the legend according to the order that they are processed by the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] processing engine. You can change the order by changing the order of fields in the data fields drop-zone. If you are using series grouping, the series data is not known until processing, so that there is no way for you to re-order these items. The changes can be seen in Preview. For more information about series grouping, see [Charts &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/charts-report-builder-and-ssrs.md).  
   
  You can hide any series from being shown in the legend. If you are using series grouping, all series related to the data field will be hidden. For more information, see [Hide Legend Items on the Chart &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/hide-legend-items-on-the-chart-report-builder-and-ssrs.md).  
   

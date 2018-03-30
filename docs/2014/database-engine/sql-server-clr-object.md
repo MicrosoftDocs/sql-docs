@@ -19,9 +19,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQL Server, CLR Object
-  The **SQLServer:CLR** object provides counters to monitor common language runtime (CLR) execution in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  The **SQLServer:CLR** object provides counters to monitor common language runtime (CLR) execution in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- The following table describes the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **CLR** counters.  
+ The following table describes the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **CLR** counters.  
   
 |CLR counters|Description|  
 |------------------|-----------------|  

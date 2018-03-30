@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 2039cc0a-9a43-4369-a04a-935e384388b6
 caps.latest.revision: 10
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_601
@@ -33,7 +33,7 @@ manager: "jhubbard"
 |Message Text|Could not continue scan with NOLOCK due to data movement.|  
   
 ## Explanation  
- The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] cannot continue executing the query because it is trying to read data that was updated or deleted by another transaction. The query is using either the NOLOCK locking hint or the READ UNCOMMITTED transaction isolation level.  
+ The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] cannot continue executing the query because it is trying to read data that was updated or deleted by another transaction. The query is using either the NOLOCK locking hint or the READ UNCOMMITTED transaction isolation level.  
   
  Typically, access to data that is being changed by another transaction is denied because of locks put on the data. However, the NOLOCK locking hint and READ UNCOMMITTED transaction isolation level let a query read data that is locked by another transaction. This is referred to as a dirty read because you can read values that have not yet been committed and that are subject to change.  
   
@@ -42,8 +42,8 @@ manager: "jhubbard"
   
 ## See Also  
  [MSSQLSERVER_605](../../2014/database-engine/mssqlserver-605.md)   
- [Table Hints &#40;Transact-SQL&#41;](../Topic/Table%20Hints%20\(Transact-SQL\).md)   
- [SELECT &#40;Transact-SQL&#41;](../Topic/SELECT%20\(Transact-SQL\).md)   
- [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../Topic/SET%20TRANSACTION%20ISOLATION%20LEVEL%20\(Transact-SQL\).md)  
+ [Table Hints &#40;Transact-SQL&#41;](~/t-sql/queries/hints-transact-sql-table.md)   
+ [SELECT &#40;Transact-SQL&#41;](~/t-sql/queries/select-transact-sql.md)   
+ [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](~/t-sql/statements/set-transaction-isolation-level-transact-sql.md)  
   
   

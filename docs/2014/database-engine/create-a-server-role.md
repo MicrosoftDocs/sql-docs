@@ -18,11 +18,11 @@ helpviewer_keywords:
 ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
 caps.latest.revision: 13
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Create a Server Role
-  This topic describes how to create a new server role in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  This topic describes how to create a new server role in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -41,7 +41,7 @@ manager: "jhubbard"
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
- Server roles cannot be granted permission on database-level securables. To create database roles, see [CREATE ROLE &#40;Transact-SQL&#41;](../Topic/CREATE%20ROLE%20\(Transact-SQL\).md).  
+ Server roles cannot be granted permission on database-level securables. To create database roles, see [CREATE ROLE &#40;Transact-SQL&#41;](~/t-sql/statements/create-role-transact-sql.md).  
   
 ###  <a name="Security"></a> Security  
   
@@ -79,13 +79,13 @@ manager: "jhubbard"
   
 9. A user-defined server role can be a member of another server role. On the **Memberships** page, select a check box to make the current user-defined server role a member of a selected server role.  
   
-10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To create a new server role  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -98,6 +98,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [CREATE SERVER ROLE &#40;Transact-SQL&#41;](../Topic/CREATE%20SERVER%20ROLE%20\(Transact-SQL\).md).  
+ For more information, see [CREATE SERVER ROLE &#40;Transact-SQL&#41;](~/t-sql/statements/create-server-role-transact-sql.md).  
   
   

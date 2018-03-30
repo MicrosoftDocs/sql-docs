@@ -15,7 +15,7 @@ f1_keywords:
 ms.assetid: 12a18ad3-a578-4ec2-813b-841b96c327b0
 caps.latest.revision: 9
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Text Box Properties Dialog Box, Alignment (Report Builder and SSRS)

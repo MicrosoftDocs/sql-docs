@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Schedule a Job
-  This topic describes how to schedule a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job.  
+  This topic describes how to schedule a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent job.  
   
 -   **Before you begin:** ,  
   
@@ -43,7 +43,7 @@ manager: "jhubbard"
   
 #### To create and attach a schedule to a job  
   
-1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], and then expand that instance.  
+1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], and then expand that instance.  
   
 2.  Expand **SQL Server Agent**, expand **Jobs**, right-click the job you want to schedule, and click **Properties**.  
   
@@ -55,7 +55,7 @@ manager: "jhubbard"
   
 6.  For **Schedule Type**, select one of the following:  
   
-    -   Click **Start automatically when SQL Server Agent starts** to start the job when the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service is started.  
+    -   Click **Start automatically when SQL Server Agent starts** to start the job when the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent service is started.  
   
     -   Click **Start whenever the CPUs become idle** to start the job when the CPUs reach an idle condition.  
   
@@ -65,7 +65,7 @@ manager: "jhubbard"
   
 #### To attach a schedule to a job  
   
-1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], and then expand that instance.  
+1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], and then expand that instance.  
   
 2.  Expand **SQL Server Agent**, expand **Jobs**, right-click the job that you want to schedule, and click **Properties**.  
   
@@ -83,7 +83,7 @@ manager: "jhubbard"
   
 #### To schedule a job  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -107,7 +107,7 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [sp_add_schedule &#40;Transact-SQL&#41;](../Topic/sp_add_schedule%20\(Transact-SQL\).md) and [sp_attach_schedule &#40;Transact-SQL&#41;](../Topic/sp_attach_schedule%20\(Transact-SQL\).md).  
+ For more information, see [sp_add_schedule &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md) and [sp_attach_schedule &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md).  
   
 ##  <a name="SMO"></a> Using SQL Server Management Objects  
  Use the `JobSchedule` class by using a programming language that you choose, such as Visual Basic, Visual C#, or PowerShell. For more information, see[SQL Server Management Objects (SMO)](http://msdn.microsoft.com/library/ms162169.aspx).  

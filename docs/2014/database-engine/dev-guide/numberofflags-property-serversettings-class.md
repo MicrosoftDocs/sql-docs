@@ -25,7 +25,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # NumberOfFlags Property (ServerSettings Class)
-  Gets the number of general flags associated with the instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Gets the number of general flags associated with the instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Syntax  
   
@@ -37,10 +37,10 @@ object
   
 ## Parts  
  *object*  
- A [ServerSettings Class](../../../2014/database-engine/dev-guide/serversettings-class.md) object that represents server settings on an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ A [ServerSettings Class](../../../2014/database-engine/dev-guide/serversettings-class.md) object that represents server settings on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Property Value/Return Value  
- A `uint32` value that specifies the number of general flags associated with the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ A `uint32` value that specifies the number of general flags associated with the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Remarks  
   

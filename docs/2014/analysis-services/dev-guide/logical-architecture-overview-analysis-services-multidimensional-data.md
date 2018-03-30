@@ -25,7 +25,7 @@ manager: "mblythe"
  This topic explains the basic architecture of Analysis Services when operating in Multidimensional and Data Mining mode. For more information about other modes, see [Tabular Modeling &#40;SSAS Tabular&#41;](../../../2014/analysis-services/tabular-modeling-ssas-tabular.md) and [Comparing Tabular and Multidimensional Solutions &#40;SSAS&#41;](../../../2014/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
   
 ## Basic Architecture  
- An instance of [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] can contain multiple databases, and a database can have OLAP objects and data mining objects at the same time. Applications connect to a specified instance of [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] and a specified database. A server computer can host multiple instances of [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Instances of [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] are named as "\<ServerName>\\<InstanceName\>". The following illustration shows all mentioned relationships between [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objects.  
+ An instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] can contain multiple databases, and a database can have OLAP objects and data mining objects at the same time. Applications connect to a specified instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and a specified database. A server computer can host multiple instances of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Instances of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] are named as "\<ServerName>\\<InstanceName\>". The following illustration shows all mentioned relationships between [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects.  
   
  ![AMO running objects relationships](../../../2014/analysis-services/dev-guide/media/amo-runningobjects.gif "AMO running objects relationships")  
   
@@ -36,7 +36,7 @@ manager: "mblythe"
  Cubes are built from dimensions and measure groups. The dimensions in the dimensions collection of a cube belong to the dimensions collection of the database. Measure groups are collections of measures that have the same data source view and have the same subset of dimensions from the cube. A measure group has one or more partitions to manage the physical data. A measure group can have a default aggregation design. The default aggregation design can be used by all partitions in the measure group; also, each partition can have its own aggregation design.  
   
  Server Objects  
- Each instance of [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] is seen as a different server object in AMO; each different instance is connected to a <xref:Microsoft.AnalysisServices.Server> object by a different connection. Each server object contains one or more data sources, data source views, and database objects, as well as assemblies and security roles.  
+ Each instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] is seen as a different server object in AMO; each different instance is connected to a <xref:Microsoft.AnalysisServices.Server> object by a different connection. Each server object contains one or more data sources, data source views, and database objects, as well as assemblies and security roles.  
   
  Dimension Objects  
  Each database object contains multiple dimension objects. Each dimension object contains one or more attributes, which are organized into hierarchies.  
@@ -71,7 +71,7 @@ manager: "mblythe"
  The Route dimension represents the means by which the imports reach their destination. Members of this dimension include ground, nonground, air, sea, road, or rail. The Source dimension represents the locations where the imports are produced, such as Africa or Asia. The Time dimension represents the quarters and halves of a single year.  
   
 ### Aggregates  
- Business users of a cube can determine the value of any measure for each member of every dimension, regardless of the level of the member within the dimension, because [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] aggregates values at upper levels as needed. For example, the measure values in the preceding illustration can be aggregated according to a standard calendar hierarchy by using the Calendar Time hierachy in the Time dimension as illustrated in the following diagram.  
+ Business users of a cube can determine the value of any measure for each member of every dimension, regardless of the level of the member within the dimension, because [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] aggregates values at upper levels as needed. For example, the measure values in the preceding illustration can be aggregated according to a standard calendar hierarchy by using the Calendar Time hierachy in the Time dimension as illustrated in the following diagram.  
   
  ![Diagram of measures organized along time dimension](../../../2014/analysis-services/dev-guide/media/cubeintro2.gif "Diagram of measures organized along time dimension")  
   

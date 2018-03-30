@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: b8f7d6d4-4fcc-45ac-abe5-740c147ac177
 caps.latest.revision: 13
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Technical Reference (Replication)
-  This section contains links to technical reference documentation for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] replication.  
+  This section contains links to technical reference documentation for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] replication.  
   
  ![Small File Folder Icon](../../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") **Errors and Events**  
  [Errors and Events Reference &#40;Replication&#41;](../../../2014/relational-databases/replication/errors-and-events-reference-replication.md)  
@@ -40,33 +40,33 @@ manager: "jhubbard"
  [More…](../../../2014/relational-databases/replication/replication-agents.md)  
   
  ![Small File Folder Icon](../../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") **Replication Stored Procedures**  
- [sp_addarticle &#40;Transact-SQL&#41;](../Topic/sp_addarticle%20\(Transact-SQL\).md)  
+ [sp_addarticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)  
   
- [sp_adddistributiondb &#40;Transact-SQL&#41;](../Topic/sp_adddistributiondb%20\(Transact-SQL\).md)  
+ [sp_adddistributiondb &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)  
   
- [sp_adddistributor &#40;Transact-SQL&#41;](../Topic/sp_adddistributor%20\(Transact-SQL\).md)  
+ [sp_adddistributor &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)  
   
- [sp_addpublication &#40;Transact-SQL&#41;](../Topic/sp_addpublication%20\(Transact-SQL\).md)  
+ [sp_addpublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)  
   
- [sp_addsubscriber &#40;Transact-SQL&#41;](../Topic/sp_addsubscriber%20\(Transact-SQL\).md)  
+ [sp_addsubscriber &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)  
   
- [More…](../Topic/Replication%20Stored%20Procedures%20\(Transact-SQL\).md)  
+ [More…](~/relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
  ![Small File Folder Icon](../../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") **Replication Tables**  
- [MSmerge_conflicts_info &#40;Transact-SQL&#41;](../Topic/MSmerge_conflicts_info%20\(Transact-SQL\).md)  
+ [MSmerge_conflicts_info &#40;Transact-SQL&#41;](~/relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md)  
   
- [MSpeer_response &#40;Transact-SQL&#41;](../Topic/MSpeer_response%20\(Transact-SQL\).md)  
+ [MSpeer_response &#40;Transact-SQL&#41;](~/relational-databases/system-tables/mspeer-response-transact-sql.md)  
   
- [syssubscriptions &#40;Transact-SQL&#41;](../Topic/syssubscriptions%20\(Transact-SQL\).md)  
+ [syssubscriptions &#40;Transact-SQL&#41;](~/relational-databases/system-tables/syssubscriptions-transact-sql.md)  
   
- [More…](../Topic/Replication%20Tables%20\(Transact-SQL\).md)  
+ [More…](~/relational-databases/system-tables/replication-tables-transact-sql.md)  
   
  ![Small File Folder Icon](../../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") **Replication Views**  
- [syspublications &#40;System View&#41; &#40;Transact-SQL&#41;](../Topic/syspublications%20\(System%20View\)%20\(Transact-SQL\).md)  
+ [syspublications &#40;System View&#41; &#40;Transact-SQL&#41;](~/relational-databases/system-views/syspublications-system-view-transact-sql.md)  
   
- [syssubscriptions &#40;System View&#41; &#40;Transact-SQL&#41;](../Topic/syssubscriptions%20\(System%20View\)%20\(Transact-SQL\).md)  
+ [syssubscriptions &#40;System View&#41; &#40;Transact-SQL&#41;](~/relational-databases/system-views/syssubscriptions-system-view-transact-sql.md)  
   
- [More…](../Topic/Replication%20Views%20\(Transact-SQL\).md)  
+ [More…](~/relational-databases/system-views/replication-views-transact-sql.md)  
   
  ![Small File Folder Icon](../../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") **Replication Class Library**  
  <xref:Microsoft.SqlServer.Replication>  

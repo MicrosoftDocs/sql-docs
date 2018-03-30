@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: 9f76a235-0b58-479c-8e5b-50588091b71c
 caps.latest.revision: 25
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # New User Role (Management Studio)
@@ -37,7 +37,7 @@ manager: "mblythe"
  Type a description that explains how to use the role and enumerates what the role supports.  
   
  **Task**  
- Select the tasks that can be performed through this role. You cannot create new tasks or modify the existing tasks that are supported by [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Only item-level tasks can be used in an item-level role definition.  
+ Select the tasks that can be performed through this role. You cannot create new tasks or modify the existing tasks that are supported by [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Only item-level tasks can be used in an item-level role definition.  
   
  **Task Description**  
  Shows a description of the task that enumerates the operations or permissions that the task supports.  

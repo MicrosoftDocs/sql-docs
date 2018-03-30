@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 7af4ad5d-484e-45b4-aa16-83c33b358bb6
 caps.latest.revision: 12
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Query Spatial Data for Nearest Neighbor
@@ -49,7 +49,7 @@ SELECT TOP ( number )
 ```  
   
 ## Nearest Neighbor Query and Spatial Indexes  
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], `TOP` and `ORDER BY` clauses are used to perform a Nearest Neighbor query on spatial data columns. The `ORDER BY` clause contains a call to the `STDistance()` method for the spatial column data type. The `TOP` clause indicates the number of objects to return for the query.  
+ In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], `TOP` and `ORDER BY` clauses are used to perform a Nearest Neighbor query on spatial data columns. The `ORDER BY` clause contains a call to the `STDistance()` method for the spatial column data type. The `TOP` clause indicates the number of objects to return for the query.  
   
  The following requirements must be met for a Nearest Neighbor query to use a spatial index:  
   

@@ -16,7 +16,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Repair Progress
-  Use the **Repair Progress** page of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Installation Wizard to monitor the status of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] repair.  
+  Use the **Repair Progress** page of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard to monitor the status of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] repair.  
   
 ## See Also  
  [View and Read SQL Server Setup Log Files](../../../2014/sql-server/install/view-and-read-sql-server-setup-log-files.md)  

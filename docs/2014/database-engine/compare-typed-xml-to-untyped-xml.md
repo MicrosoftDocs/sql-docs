@@ -27,7 +27,7 @@ helpviewer_keywords:
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
 caps.latest.revision: 57
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Compare Typed XML to Untyped XML
@@ -61,7 +61,7 @@ manager: "jhubbard"
  Typed XML columns, parameters, and variables can store XML documents or content. However, you have to specify with a flag whether you are storing a document or content at the time of declaration. Additionally, you have to provide the collection of XML schemas. Specify DOCUMENT if each XML instance has exactly one top-level element. Otherwise, use CONTENT. The query compiler uses the DOCUMENT flag in type checks during query compilation to infer singleton top-level elements.  
   
 ## Creating Typed XML  
- Before you can create typed `xml` variables, parameters, or columns, you must first register the XML schema collection by using [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../Topic/CREATE%20XML%20SCHEMA%20COLLECTION%20\(Transact-SQL\).md). You can then associate the XML schema collection with variables, parameters, or columns of the `xml` data type.  
+ Before you can create typed `xml` variables, parameters, or columns, you must first register the XML schema collection by using [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](~/t-sql/statements/create-xml-schema-collection-transact-sql.md). You can then associate the XML schema collection with variables, parameters, or columns of the `xml` data type.  
   
  In the following examples, a two-part naming convention is used for specifying the XML schema collection name. The first part is the schema name, and the second part is the XML schema collection name.  
   
@@ -93,7 +93,7 @@ AS
   
  Note the following about the XML schema collection:  
   
--   An XML schema collection is available only in the database in which it was registered by using [Creating an XML Schema Collection](../Topic/CREATE%20XML%20SCHEMA%20COLLECTION%20\(Transact-SQL\).md).  
+-   An XML schema collection is available only in the database in which it was registered by using [Creating an XML Schema Collection](~/t-sql/statements/create-xml-schema-collection-transact-sql.md).  
   
 -   If you cast from a string to a typed `xml` data type, the parsing also performs validation and typing, based on the XML schema namespaces in the collection specified.  
   
@@ -139,13 +139,13 @@ declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);
  You can convert DTDs to XML schema documents by using third-party tools, and load the XML schemas into the database.  
   
 ## Upgrading Typed XML from SQL Server 2005  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] made several extensions to the XML Schema support, including support for lax validation, improved handling of **xs:date**, **xs:time** and **xs:dateTime** instance data, and added support for list and union types. In most cases the changes do not affect the upgrade experience. However if you used an XML Schema collection in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] that allowed values of type **xs:date**, **xs:time**, or **xs:dateTime** (or any subtype) then the following upgrade steps occur when you attach your [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database to a later version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+ [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] made several extensions to the XML Schema support, including support for lax validation, improved handling of **xs:date**, **xs:time** and **xs:dateTime** instance data, and added support for list and union types. In most cases the changes do not affect the upgrade experience. However if you used an XML Schema collection in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] that allowed values of type **xs:date**, **xs:time**, or **xs:dateTime** (or any subtype) then the following upgrade steps occur when you attach your [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] database to a later version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
 1.  For every XML column, that is typed with an XML Schema Collection that contains elements or attributes that are typed as either **xs:anyType**, **xs:anySimpleType**, **xs:date** or any of its subtypes, **xs:time** or any subtype thereof, or **xs:dateTime** or any of its subtypes, or are union or list types containing any of these types the following occurs:  
   
     1.  All XML indices on the column will be disabled.  
   
-    2.  All [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] values will continue to be represented in the Z timezone, because they have been normalized to the Z timezone.  
+    2.  All [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] values will continue to be represented in the Z timezone, because they have been normalized to the Z timezone.  
   
     3.  Any **xs:date** or **xs:dateTime** values that are smaller than January 1st of year 1 will lead to a runtime error when the index gets rebuild or an XQuery or XML-DML statements gets executed against the XML data type containing that value.  
   
@@ -155,8 +155,8 @@ declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);
   
 ## See Also  
  [Create Instances of XML Data](../../2014/database-engine/create-instances-of-xml-data.md)   
- [xml Data Type Methods](../Topic/xml%20Data%20Type%20Methods.md)   
- [XML Data Modification Language &#40;XML DML&#41;](../Topic/XML%20Data%20Modification%20Language%20\(XML%20DML\).md)   
+ [xml Data Type Methods](~/t-sql/xml/xml-data-type-methods.md)   
+ [XML Data Modification Language &#40;XML DML&#41;](~/t-sql/xml/xml-data-modification-language-xml-dml.md)   
  [XML Data &#40;SQL Server&#41;](../../2014/database-engine/xml-data-sql-server.md)  
   
   

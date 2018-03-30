@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 8ad23889-e243-4bd7-bc3e-150403399d89
 caps.latest.revision: 11
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_30053
@@ -49,15 +49,15 @@ manager: "jhubbard"
 |Probable cause|User action|  
 |--------------------|-----------------|  
 |The word breaker for the query language is configured incorrectly.|If you are using a third-party word breaker it might be incorrectly registered with the operating system. In this case, re-register the word breaker. For more information, see [Revert the Word Breakers Used by Search to the Previous Version](../../2014/database-engine/revert-the-word-breakers-used-by-search-to-the-previous-version.md).|  
-|The word breaker malfunctions for a specific query string.|If the word breaker is supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], contact Microsoft Customer Service and Support.|  
-|The word breaker returns too much data for a specific query string.|If the word breaker is supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], contact Microsoft Customer Service and Support.|  
+|The word breaker malfunctions for a specific query string.|If the word breaker is supported by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], contact Microsoft Customer Service and Support.|  
+|The word breaker returns too much data for a specific query string.|If the word breaker is supported by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], contact Microsoft Customer Service and Support.|  
 |The filter daemon process configuration is incorrect.|Ensure that you are using the current password and that a domain policy is not preventing the filter daemon account from logging on.|  
 |A very heavy query workload is running on the server instance.|Try running the query again under a lighter load.|  
   
 ## See Also  
  [Set the Service Account for the Full-text Filter Daemon Launcher](../../2014/database-engine/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
  [Full-Text Search](../../2014/database-engine/full-text-search.md)   
- [sp_help_fulltext_system_components &#40;Transact-SQL&#41;](../Topic/sp_help_fulltext_system_components%20\(Transact-SQL\).md)   
+ [sp_help_fulltext_system_components &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md)   
  [Configure and Manage Word Breakers and Stemmers for Search](../../2014/database-engine/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Configure and Manage Filters for Search](../../2014/database-engine/configure-and-manage-filters-for-search.md)  
   

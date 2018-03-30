@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Define Account Intelligence (Dimension Wizard)
-  Use the **Define Account Intelligence** page to map account types defined on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance to account types defined in the dimension attribute associated with the **Account Type** attribute type in the dimension.  
+  Use the **Define Account Intelligence** page to map account types defined on the [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance to account types defined in the dimension attribute associated with the **Account Type** attribute type in the dimension.  
   
 > [!NOTE]  
 >  This page is displayed only if you selected **Standard dimension** on the **Select the Dimension Type** page and if you mapped a dimension attribute to the **Account Type** attribute type on the **Specify Dimension Type** page.  
@@ -28,9 +28,9 @@ manager: "mblythe"
  Displays the values contained in the dimension attribute assigned to the **Account Type** attribute type in the **Specify Dimension Key and Type** page.  
   
  **Built-In Account Types**  
- Select the account type defined on the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance that maps to the account types in the source table.  
+ Select the account type defined on the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance that maps to the account types in the source table.  
   
- The following table lists the account types that are defined on an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance.  
+ The following table lists the account types that are defined on an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance.  
   
 |Value|Description|  
 |-----------|-----------------|  

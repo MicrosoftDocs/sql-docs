@@ -25,7 +25,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Common Properties
-  The data flow objects in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] object model have common properties and custom properties at the component, input and output, and input column and output column levels. Many properties have read-only values that are assigned at run time by the data flow engine.  
+  The data flow objects in the [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] object model have common properties and custom properties at the component, input and output, and input column and output column levels. Many properties have read-only values that are assigned at run time by the data flow engine.  
   
  This topic lists and describes the common properties of data flow objects.  
   
@@ -78,7 +78,7 @@ manager: "jhubbard"
 -   [XML Source Custom Properties](../../2014/integration-services/xml-source-custom-properties.md)  
   
 ##  <a name="components"></a> Component Properties  
- In the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] object model, a component in the data flow implements the <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> interface.  
+ In the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] object model, a component in the data flow implements the <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> interface.  
   
  The following table describes the properties of the components in a data flow. Some properties have read-only values that are assigned at run time by the data flow engine.  
   
@@ -98,7 +98,7 @@ manager: "jhubbard"
 |Version|Integer|The version of a component.|  
   
 ##  <a name="inputs"></a> Input Properties  
- In the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] object model, transformations and destinations have inputs. An input of a component in the data flow implements the <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100> interface.  
+ In the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] object model, transformations and destinations have inputs. An input of a component in the data flow implements the <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100> interface.  
   
  The following table describes the properties of the inputs of components in a data flow. Some properties have read-only values that are assigned at run time by the data flow engine.  
   
@@ -118,7 +118,7 @@ manager: "jhubbard"
  Destinations and some transformations do not support error outputs, and the ErrorRowDisposition and TruncationRowDisposition properties of these components are read-only.  
   
 ###  <a name="inputcolumns"></a> Input Column Properties  
- In the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] object model, an input contains a collection of input columns. An input column of a component in the data flow implements the <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInputColumn100> interface.  
+ In the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] object model, an input contains a collection of input columns. An input column of a component in the data flow implements the <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInputColumn100> interface.  
   
  The following table describes the properties of the input columns of components in a data flow. Some properties have read-only values that are assigned at run time by the data flow engine.  
   
@@ -141,7 +141,7 @@ manager: "jhubbard"
  Input columns also have the data type properties described under "Data Type Properties."  
   
 ##  <a name="outputs"></a> Output Properties  
- In the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] object model, sources and transformations have outputs. An output of a component in the data flow implements the <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> interface.  
+ In the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] object model, sources and transformations have outputs. An output of a component in the data flow implements the <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> interface.  
   
  The following table describes the properties of the outputs of components in a data flow. Some properties have read-only values that are assigned at run time by the data flow engine.  
   
@@ -162,7 +162,7 @@ manager: "jhubbard"
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|A value that determines how the component handles truncations that occur when processing rows. The values are `Fail component`, `Ignore failure`, and `Redirect row`.|  
   
 ###  <a name="outputcolumns"></a> Output Column Properties  
- In the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] object model, an output contains a collection of output columns. An output column of a component in the data flow implements the <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100> interface.  
+ In the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] object model, an output contains a collection of output columns. An output column of a component in the data flow implements the <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100> interface.  
   
  The following table describes the properties of the output columns of components in a data flow. Some properties have read-only values that are assigned at run time by the data flow engine.  
   
@@ -184,7 +184,7 @@ manager: "jhubbard"
  Output columns also include a set of data type properties.  
   
 ## External Metadata Column Properties  
- In the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] object model, inputs and outputs can contain a collection of external metadata columns. An external metadata column of a component in the data flow implements the <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100> interface.  
+ In the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] object model, inputs and outputs can contain a collection of external metadata columns. An external metadata column of a component in the data flow implements the <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100> interface.  
   
  The following table describes the properties of the external metadata columns of components in a data flow. Some properties have read-only values that are assigned at run time by the data flow engine.  
   
@@ -205,7 +205,7 @@ manager: "jhubbard"
 |Property|Data Type|Description|  
 |--------------|---------------|-----------------|  
 |CodePage|Integer|Specifies the code page for string data that is not Unicode.|  
-|DataType|Integer (enumeration)|The [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data type of the column. For more information, see [Integration Services Data Types](../../2014/integration-services/integration-services-data-types.md).|  
+|DataType|Integer (enumeration)|The [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] data type of the column. For more information, see [Integration Services Data Types](../../2014/integration-services/integration-services-data-types.md).|  
 |Length|Integer|The length, measured in characters, of a column.|  
 |Precision|Integer|The precision of a numeric column.|  
 |Scale|Integer|The scale of a numeric column.|  

@@ -56,7 +56,7 @@ manager: "jhubbard"
   
 #### To use the named calculation for member names  
   
-1.  Open **Dimension Designer** for the Date dimension in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. To do this, double-click the `Date` dimension in the **Dimensions** node of **Solution Explorer**.  
+1.  Open **Dimension Designer** for the Date dimension in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. To do this, double-click the `Date` dimension in the **Dimensions** node of **Solution Explorer**.  
   
 2.  In the **Attributes** pane of the **Dimension Structure** tab, click the **Date Key** attribute.  
   
@@ -131,7 +131,7 @@ manager: "jhubbard"
   
 #### To provide unique dimension member names  
   
-1.  To switch to the **[!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] DW 2012** data source view, double-click it in the **Data Source Views** folder in Solution Explorer.  
+1.  To switch to the **[!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW 2012** data source view, double-click it in the **Data Source Views** folder in Solution Explorer.  
   
 2.  In the **Tables** pane, right-click `Date`, and then click **New Named Calculation**.  
   
@@ -241,7 +241,7 @@ manager: "jhubbard"
   
 #### To deploy and view the changes  
   
-1.  On the **Build** menu of [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], click **Deploy Analysis Services Tutorial**.  
+1.  On the **Build** menu of [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], click **Deploy Analysis Services Tutorial**.  
   
 2.  After you have received the **Deployment Completed Successfully** message, click the **Browser** tab of **Dimension Designer** for the `Date` dimension, and then click the Reconnect button on the toolbar of the designer.  
   
@@ -282,7 +282,7 @@ manager: "jhubbard"
   
      The members of the attribute hierarchy are now sorted first by year and then by month.  
   
-9. On the **Build** menu of [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], click **Deploy Analysis Services Tutorial**. When deployment has successfully completed, click the **Browser** tab in Dimension Designer for the `Date` dimension.  
+9. On the **Build** menu of [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], click **Deploy Analysis Services Tutorial**. When deployment has successfully completed, click the **Browser** tab in Dimension Designer for the `Date` dimension.  
   
 10. On the toolbar of the **Browser** tab, click the Reconnect button.  
   

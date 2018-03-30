@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # WSFC Quorum Modes and Voting Configuration (SQL Server)
-  Both [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)] and AlwaysOn Failover Cluster Instances (FCI) take advantage of Windows Server Failover Clustering (WSFC) as a platform technology.  WSFC uses a quorum-based approach to monitoring overall cluster health and maximize node-level fault tolerance. A fundamental understanding of WSFC quorum modes and node voting configuration is very important to designing, operating, and troubleshooting your AlwaysOn high availability and disaster recovery solution.  
+  Both [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../includes/sshadr-md.md)] and AlwaysOn Failover Cluster Instances (FCI) take advantage of Windows Server Failover Clustering (WSFC) as a platform technology.  WSFC uses a quorum-based approach to monitoring overall cluster health and maximize node-level fault tolerance. A fundamental understanding of WSFC quorum modes and node voting configuration is very important to designing, operating, and troubleshooting your AlwaysOn high availability and disaster recovery solution.  
   
  **In this topic:**  
   
@@ -41,7 +41,7 @@ manager: "jhubbard"
   
  A *quorum* node set is a majority of the voting nodes and witnesses in the WSFC cluster. The overall health and status of a WSFC cluster is determined by a periodic *quorum vote*.  The presence of a quorum means that the cluster is healthy and able to provide node-level fault tolerance.  
   
- The absence of a quorum indicates that the cluster is not healthy.  Overall WSFC cluster health must be maintained in order to ensure that healthy secondary nodes are available for primary nodes to fail over to.  If the quorum vote fails, the WSFC cluster will be set offline as a precautionary measure.  This will also cause all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances registered with the cluster to be stopped.  
+ The absence of a quorum indicates that the cluster is not healthy.  Overall WSFC cluster health must be maintained in order to ensure that healthy secondary nodes are available for primary nodes to fail over to.  If the quorum vote fails, the WSFC cluster will be set offline as a precautionary measure.  This will also cause all [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instances registered with the cluster to be stopped.  
   
 > [!IMPORTANT]  
 >  If a WSFC cluster is set offline because of quorum failure, manual intervention is required to bring it back online.  
@@ -64,7 +64,7 @@ manager: "jhubbard"
 -   **Disk Only.** A shared disk cluster resource is designated as a witness, and connectivity by any node to that shared disk is counted as an affirmative vote.  
   
 > [!TIP]  
->  When using an asymmetric storage configuration for [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], you should generally use the Node Majority quorum mode when you have an odd number of voting nodes, or the Node and File Share Majority quorum mode when you have an even number of voting nodes.  
+>  When using an asymmetric storage configuration for [!INCLUDE[ssHADR](../includes/sshadr-md.md)], you should generally use the Node Majority quorum mode when you have an odd number of voting nodes, or the Node and File Share Majority quorum mode when you have an even number of voting nodes.  
   
 ##  <a name="VotingandNonVotingNodes"></a> Voting and Non-Voting Nodes  
  By default, each node in the WSFC cluster is included as a member of the cluster quorum; each node has a single vote in determining the overall cluster health, and each node will continuously attempt to establish a quorum.  The quorum discussion to this point has carefully qualified the set of WSFC cluster nodes that vote on cluster health as *voting nodes*.  
@@ -85,7 +85,7 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  In order to use NodeWeight settings, the following hotfix must be applied to all servers in the WSFC cluster:  
 >   
->  [KB2494036](http://support.microsoft.com/kb/2494036): A hotfix is available to let you configure a cluster node that does not have quorum votes in [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] and in [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]  
+>  [KB2494036](http://support.microsoft.com/kb/2494036): A hotfix is available to let you configure a cluster node that does not have quorum votes in [!INCLUDE[firstref_longhorn](../includes/firstref-longhorn-md.md)] and in [!INCLUDE[winserver2008r2](../includes/winserver2008r2-md.md)]  
   
 ##  <a name="RecommendedAdjustmentstoQuorumVoting"></a> Recommended Adjustments to Quorum Voting  
  When enabling or disabling a given WSFC node’s vote, follow these guidelines:  
@@ -110,9 +110,9 @@ manager: "jhubbard"
 > -   [KB2494036](http://support.microsoft.com/kb/2494036) is not installed on all cluster nodes that host availability replicas. This patch is required to add or remove votes for cluster nodes in multi-site deployments. However, in single-site deployments, it is usually not required and you may safely ignore the warning.  
   
 > [!TIP]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exposes several system dynamic management views (DMVs) that can help you manage settings related WSFC cluster configuration and node quorum voting.  
+>  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] exposes several system dynamic management views (DMVs) that can help you manage settings related WSFC cluster configuration and node quorum voting.  
 >   
->  For more information, see:  [sys.dm_hadr_cluster](../Topic/sys.dm_hadr_cluster%20\(Transact-SQL\).md), [sys.dm_hadr_cluster_members](../Topic/sys.dm_hadr_cluster_members%20\(Transact-SQL\).md), [sys.dm_os_cluster_nodes](../Topic/sys.dm_os_nodes%20\(Transact-SQL\).md), [sys.dm_hadr_cluster_networks](../Topic/sys.dm_hadr_cluster_networks%20\(Transact-SQL\).md)  
+>  For more information, see:  [sys.dm_hadr_cluster](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md), [sys.dm_hadr_cluster_members](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md), [sys.dm_os_cluster_nodes](~/relational-databases/system-dynamic-management-views/sys-dm-os-nodes-transact-sql.md), [sys.dm_hadr_cluster_networks](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-networks-transact-sql.md)  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   

@@ -16,7 +16,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # DQS Knowledge Bases and Domains
-  This topic describes what a knowledge base is in [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS). To cleanse data, you have to have knowledge about the data. To prepare knowledge for a data quality project, you build and maintain a knowledge base (KB) that DQS can use to identify incorrect or invalid data. DQS enables you to use both computer-assisted and interactive processes to create, build, and update your knowledge base. Knowledge in a knowledge base is maintained in domains, each of which is specific to a data field. The knowledge base is a repository of knowledge about your data that enables you to understand your data and maintain its integrity.  
+  This topic describes what a knowledge base is in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). To cleanse data, you have to have knowledge about the data. To prepare knowledge for a data quality project, you build and maintain a knowledge base (KB) that DQS can use to identify incorrect or invalid data. DQS enables you to use both computer-assisted and interactive processes to create, build, and update your knowledge base. Knowledge in a knowledge base is maintained in domains, each of which is specific to a data field. The knowledge base is a repository of knowledge about your data that enables you to understand your data and maintain its integrity.  
   
  DQS knowledge bases have the following benefits:  
   
@@ -30,7 +30,7 @@ manager: "jhubbard"
   
 -   There is a clear separation between building a knowledge base and applying it in the data correction process, which gives you flexibility in how you build and update the knowledge base.  
   
- The data steward uses the [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] application both to execute and control the computer-assisted steps, and to perform the interactive steps.  
+ The data steward uses the [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] application both to execute and control the computer-assisted steps, and to perform the interactive steps.  
   
  The following illustration displays various components in a knowledge base and a domain in DQS:  
   
@@ -58,7 +58,7 @@ manager: "jhubbard"
   
  The DQS knowledge base is extensible. From within the Knowledge Discovery activity, you can interactively add knowledge to the knowledge base after the computer-assisted knowledge discovery analysis. You can manually add value changes and you can import domain values from an Excel file. In addition, you can run the knowledge discovery process again at a later point if the data in the sample has changed. You can apply more knowledge from within the Domain Management activity and from within the Data Matching activity (see below).  
   
- The knowledge discovery process need not be performed on the same data that data correction is performed on. DQS provides the flexibility to create knowledge from one set of database fields and apply it to a second set of related data that needs to be cleansed. The data steward can create a new knowledge base from scratch, base it on an existing knowledge base, or import a knowledge base from a data file. You can also re-run knowledge discovery on an existing knowledge base. You can maintain multiple knowledge bases on a single [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]. You can also connect multiple instances of an application to the same knowledge base. DQS prevents concurrency conflicts by locking the knowledge base to a user who opens it in a knowledge management session.  
+ The knowledge discovery process need not be performed on the same data that data correction is performed on. DQS provides the flexibility to create knowledge from one set of database fields and apply it to a second set of related data that needs to be cleansed. The data steward can create a new knowledge base from scratch, base it on an existing knowledge base, or import a knowledge base from a data file. You can also re-run knowledge discovery on an existing knowledge base. You can maintain multiple knowledge bases on a single [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]. You can also connect multiple instances of an application to the same knowledge base. DQS prevents concurrency conflicts by locking the knowledge base to a user who opens it in a knowledge management session.  
   
 ### Case Insensitivity in DQS  
  Values in DQS are case-insensitive. That means that when DQS performs knowledge discovery, domain management, or matching, it does not distinguish values by case. If you add a value in value management that differs from another value only by case, they will be considered the same value, not synonyms. If two values that differ only by case are compared in the matching process, they will be considered an exact match.  
@@ -92,7 +92,7 @@ manager: "jhubbard"
  Domain properties define and drive the processing that will be applied to the associated values. You can set the data type and language of the values, specify that the source data will be cleansed with the leading value (if this option is unchecked, the source data will be cleansed with the correct term but not with the leading value), ensure data standardization by configuring the formatting that will be applied when the data values in the domain are output, and define which algorithms (syntax error, speller, and string normalization) will be applied.  
   
 ### Reference Data Services  
- In the domain management process, you can attach online reference data to a domain. This is how you compare the data in your domain to the data maintained by a reference data provider. You must first configure the reference data provider through the DQS configuration capabilities in the **Administration** section of the [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] application. For more information, see [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md).  
+ In the domain management process, you can attach online reference data to a domain. This is how you compare the data in your domain to the data maintained by a reference data provider. You must first configure the reference data provider through the DQS configuration capabilities in the **Administration** section of the [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] application. For more information, see [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md).  
   
 ### Applying Domain Rules  
  You can create domain rules for data validation. A domain rule ensures the accuracy of data, ranging from a basic constraint, such as the possible terms that a string value can be, to a more complex regular expression, such as the valid forms of an email address.  

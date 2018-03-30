@@ -21,7 +21,7 @@ manager: "mblythe"
   Use the **Specify Query Criteria** page to choose one or more filter options in order to identify queries to optimize.  
   
 > [!NOTE]  
->  This page is disabled if [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cannot connect to the query log.  
+>  This page is disabled if [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cannot connect to the query log.  
   
 ## Options  
  **Query log statistics**  

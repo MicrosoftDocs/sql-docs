@@ -16,7 +16,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # XTP Storage
-  The XTP Storage performance object contains counters related to XTP storage in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  The XTP Storage performance object contains counters related to XTP storage in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  This table describes the **XTP Storage** counters.  
   

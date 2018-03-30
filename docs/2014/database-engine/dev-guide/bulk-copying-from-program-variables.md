@@ -47,9 +47,9 @@ manager: "jhubbard"
   
  The **bcp_bind***type* parameter uses DB-Library data type identifiers, not ODBC data type identifiers. DB-Library data type identifiers are defined in sqlncli.h for use with the ODBC **bcp_bind** function.  
   
- Bulk copy functions do not support all ODBC C data types. For example, the bulk copy functions do not support the ODBC SQL_C_TYPE_TIMESTAMP structure, so use [SQLBindCol](../../../2014/database-engine/dev-guide/sqlbindcol.md) or [SQLGetData](../../../2014/database-engine/dev-guide/sqlgetdata.md) to convert ODBC SQL_TYPE_TIMESTAMP data to a SQL_C_CHAR variable. If you then use **bcp_bind** with a *type* parameter of SQLCHARACTER to bind the variable to a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **datetime** column, the bulk copy functions convert the timestamp escape clause in the character variable to the proper datetime format.  
+ Bulk copy functions do not support all ODBC C data types. For example, the bulk copy functions do not support the ODBC SQL_C_TYPE_TIMESTAMP structure, so use [SQLBindCol](../../../2014/database-engine/dev-guide/sqlbindcol.md) or [SQLGetData](../../../2014/database-engine/dev-guide/sqlgetdata.md) to convert ODBC SQL_TYPE_TIMESTAMP data to a SQL_C_CHAR variable. If you then use **bcp_bind** with a *type* parameter of SQLCHARACTER to bind the variable to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** column, the bulk copy functions convert the timestamp escape clause in the character variable to the proper datetime format.  
   
- The following table lists the recommended data types to use in mapping from an ODBC SQL data type to a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data type.  
+ The following table lists the recommended data types to use in mapping from an ODBC SQL data type to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type.  
   
 |ODBC SQLdata type|ODBC C data type|bcp_bind *type* parameter|SQL Server data type|  
 |-----------------------|----------------------|--------------------------------|--------------------------|  
@@ -81,7 +81,7 @@ manager: "jhubbard"
 |SQL_GUID|SQL_C_GUID|SQLUNIQUEID|**uniqueidentifier**|  
 |SQL_INTERVAL_|SQL_C_CHAR|SQLCHARACTER|**char**|  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] does not have signed **tinyint**, unsigned **smallint**, or unsigned **int** data types. To prevent the loss of data values when migrating these data types, create the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] table with the next largest integer data type. To prevent users from later adding values outside the range allowed by the original data type, apply a rule to the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] column to restrict the allowable values to the range supported by the data type in the original source:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not have signed **tinyint**, unsigned **smallint**, or unsigned **int** data types. To prevent the loss of data values when migrating these data types, create the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table with the next largest integer data type. To prevent users from later adding values outside the range allowed by the original data type, apply a rule to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] column to restrict the allowable values to the range supported by the data type in the original source:  
   
 ```  
 CREATE TABLE Sample_Ints(STinyIntCol   SMALLINT,  
@@ -101,13 +101,13 @@ sp_bindrule USmallInt_Rule, 'Sample_Ints.USmallIntCol'
 GO  
 ```  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] does not support interval data types directly. An application can, however, store interval escape sequences as character strings in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] character column. The application can read them for later use, but they cannot be used in [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not support interval data types directly. An application can, however, store interval escape sequences as character strings in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] character column. The application can read them for later use, but they cannot be used in [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.  
   
- The bulk copy functions can be used to quickly load data into [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that has been read from an ODBC data source. Use [SQLBindCol](../../../2014/database-engine/dev-guide/sqlbindcol.md) to bind the columns of a result set to program variables, then use **bcp_bind** to bind the same program variables to a bulk copy operation. Calling [SQLFetchScroll](../../../2014/database-engine/dev-guide/sqlfetchscroll.md) or **SQLFetch** then fetches a row of data from the ODBC data source into the program variables, and calling [bcp_sendrow](../../../2014/database-engine/dev-guide/bcp-sendrow.md) bulk copies the data from the program variables to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+ The bulk copy functions can be used to quickly load data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that has been read from an ODBC data source. Use [SQLBindCol](../../../2014/database-engine/dev-guide/sqlbindcol.md) to bind the columns of a result set to program variables, then use **bcp_bind** to bind the same program variables to a bulk copy operation. Calling [SQLFetchScroll](../../../2014/database-engine/dev-guide/sqlfetchscroll.md) or **SQLFetch** then fetches a row of data from the ODBC data source into the program variables, and calling [bcp_sendrow](../../../2014/database-engine/dev-guide/bcp-sendrow.md) bulk copies the data from the program variables to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  An application can use the [bcp_colptr](../../../2014/database-engine/dev-guide/bcp-colptr.md) function anytime it needs to change the address of the data variable originally specified in the **bcp_bind** *pData* parameter. An application can use the [bcp_collen](../../../2014/database-engine/dev-guide/bcp-collen.md) function anytime it needs to change the data length originally specified in the **bcp_bind***cbData* parameter.  
   
- You cannot read data from [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] into program variables using bulk copy; there is nothing like a "bcp_readrow" function. You can only send data from the application to the server.  
+ You cannot read data from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] into program variables using bulk copy; there is nothing like a "bcp_readrow" function. You can only send data from the application to the server.  
   
 ## See Also  
  [Performing Bulk Copy Operations &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/performing-bulk-copy-operations-odbc.md)  

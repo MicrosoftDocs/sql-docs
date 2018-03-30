@@ -56,7 +56,7 @@ manager: "mblythe"
 |Child elements|None|  
   
 ## Remarks  
- This element contains the value of the `ServerProperty` that will be used the next time the current instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] is started. This value is typically retrieved from wherever the value for the server property is stored—in an initialization file, the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows registry, or another storage mechanism.  
+ This element contains the value of the `ServerProperty` that will be used the next time the current instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] is started. This value is typically retrieved from wherever the value for the server property is stored—in an initialization file, the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows registry, or another storage mechanism.  
   
  The element that corresponds to the parent of `PendingValue` in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.ServerProperty>.  
   

@@ -24,14 +24,14 @@ helpviewer_keywords:
 ms.assetid: 260dc2e9-546c-4f04-9fa1-977e23c9d68c
 caps.latest.revision: 59
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Granting Permissions on a Native Mode Report Server
-  SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] uses role-based authorization and an authentication subsystem to determine who can perform operations and access items on a report server. Role-based authorization categorizes into roles the set of actions that a user or group can perform. Authentication is based on built-in Windows Authentication or a custom authentication module that you provide. You can use predefined or custom roles with either authentication type.  
+  SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] uses role-based authorization and an authentication subsystem to determine who can perform operations and access items on a report server. Role-based authorization categorizes into roles the set of actions that a user or group can perform. Authentication is based on built-in Windows Authentication or a custom authentication module that you provide. You can use predefined or custom roles with either authentication type.  
   
 ## Using Roles to Grant Report Server Access  
- All users interact with a report server within the context of a role that defines a specific level of access. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] includes predefined roles that you can assign to users and groups to provide immediate access to a report server. **ContentManager**, **Publisher**, and **Browser** are examples of predefined roles. Each role defines a collection of related tasks. For example, a **Publisher** has permission to add reports and create folders for storing those reports.  
+ All users interact with a report server within the context of a role that defines a specific level of access. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] includes predefined roles that you can assign to users and groups to provide immediate access to a report server. **ContentManager**, **Publisher**, and **Browser** are examples of predefined roles. Each role defines a collection of related tasks. For example, a **Publisher** has permission to add reports and create folders for storing those reports.  
   
  Role assignments are typically inherited from a parent node, but you can break permission inheritance by creating a new role assignment for a particular item. A user who is a member of the **Content Manager** role for one report may be a member of the **Browser** role for another report.  
   
@@ -51,7 +51,7 @@ manager: "mblythe"
 >  If you configured a report server to run in SharePoint integrated mode, you must set permissions on the SharePoint site to grant access to report server items. For more information, see [Granting Permissions on Report Server Items on a SharePoint Site](../../2014/reporting-services/granting-permissions-on-report-server-items-on-a-sharepoint-site.md).  
   
 ## Who Sets Permissions  
- Initially, only users who are members of the local administrators group can access a report server. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] is installed with two default role assignments that grant item-level and system-level access to members of the local administrators group. These built-in role assignments local Administrators to grant report server access to other users and manage report server items. The built-in role assignments cannot be deleted. A local administrator always has permission to fully manage a report server instance.  
+ Initially, only users who are members of the local administrators group can access a report server. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] is installed with two default role assignments that grant item-level and system-level access to members of the local administrators group. These built-in role assignments local Administrators to grant report server access to other users and manage report server items. The built-in role assignments cannot be deleted. A local administrator always has permission to fully manage a report server instance.  
   
  Because full permissions on a report server include item-level and system-level permissions, a local administrator is assigned to the following roles:  
   

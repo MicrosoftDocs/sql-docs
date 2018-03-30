@@ -14,13 +14,13 @@ f1_keywords:
 ms.assetid: 0210fc2a-74fb-41dd-8e39-4830047ec417
 caps.latest.revision: 29
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # System Role Properties (Management Studio)
   Use the System Roles page to view the system role definitions that are currently defined for the report server. A system role definition contains a named collection of tasks that are performed relative to the entire site, instead of an individual item. Role definitions are assigned to a user or groups to create a resulting role assignment. The tasks in the role definition specify what the user or group can do.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] has two predefined system role definitions: **System Administrator** and **System User**. You can modify these role definitions by changing the task list, or you can create a new system role that supports a different combination of tasks. Editing a role definition affects all role assignments that include the role definition.  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] has two predefined system role definitions: **System Administrator** and **System User**. You can modify these role definitions by changing the task list, or you can create a new system role that supports a different combination of tasks. Editing a role definition affects all role assignments that include the role definition.  
   
 > [!NOTE]  
 >  System role assignments are used only on a report server that runs in native mode. If the report server is configured for SharePoint integration, this page is not available.  
@@ -30,7 +30,7 @@ manager: "mblythe"
  Specifies the name of the system role definition.  
   
  **Description**  
- Shows a description of the system role definition. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], this description is only visible in this page. Users who view this item through Report Manager may see this description when browsing the folder hierarchy.  
+ Shows a description of the system role definition. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], this description is only visible in this page. Users who view this item through Report Manager may see this description when browsing the folder hierarchy.  
   
  **Task**  
  Lists all system-level tasks that can be selected for this role definition. You can add or remove items from the predefined task list to define how users access a given item through this role. You cannot create new tasks, and you cannot modify existing tasks.  

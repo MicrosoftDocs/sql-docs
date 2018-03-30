@@ -21,29 +21,29 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQLDescribeParam
-  To describe the parameters of any SQL statement, the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver builds and executes a [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT statement when SQLDescribeParam is called on a prepared ODBC statement handle. The metadata of the result set determines the characteristics of the parameters in the prepared statement. SQLDescribeParam can return any error code that SQLExecute or SQLExecDirect might return.  
+  To describe the parameters of any SQL statement, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver builds and executes a [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT statement when SQLDescribeParam is called on a prepared ODBC statement handle. The metadata of the result set determines the characteristics of the parameters in the prepared statement. SQLDescribeParam can return any error code that SQLExecute or SQLExecDirect might return.  
   
- Improvements in the database engine starting with [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] allow SQLDescribeParam to obtain more accurate descriptions of the expected results. These more accurate results may differ from the values returned by SQLDescribeParam in previous versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. For more information, see [Metadata Discovery](../../../2014/database-engine/dev-guide/metadata-discovery.md).  
+ Improvements in the database engine starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] allow SQLDescribeParam to obtain more accurate descriptions of the expected results. These more accurate results may differ from the values returned by SQLDescribeParam in previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Metadata Discovery](../../../2014/database-engine/dev-guide/metadata-discovery.md).  
   
- Also new in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], *ParameterSizePtr* now returns a value that aligns with the definition for the size, in characters, of the column or expression of the corresponding parameter marker as defined in the [ODBC specification](http://go.microsoft.com/fwlink/?LinkId=207044). In previous versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, *ParameterSizePtr* could be the corresponding value of `SQL_DESC_OCTET_LENGTH` for the type, or an irrelevant column size value that was supplied to SQLBindParameter for a type, the value of which should be ignored (`SQL_INTEGER`, for example).  
+ Also new in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], *ParameterSizePtr* now returns a value that aligns with the definition for the size, in characters, of the column or expression of the corresponding parameter marker as defined in the [ODBC specification](http://go.microsoft.com/fwlink/?LinkId=207044). In previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, *ParameterSizePtr* could be the corresponding value of `SQL_DESC_OCTET_LENGTH` for the type, or an irrelevant column size value that was supplied to SQLBindParameter for a type, the value of which should be ignored (`SQL_INTEGER`, for example).  
   
  The driver does not support calling SQLDescribeParam in the following situations:  
   
--   After SQLExecDirect for any [!INCLUDE[tsql](../../../includes/tsql-md.md)] UPDATE or DELETE statements containing the FROM clause.  
+-   After SQLExecDirect for any [!INCLUDE[tsql](../../includes/tsql-md.md)] UPDATE or DELETE statements containing the FROM clause.  
   
--   For any ODBC or [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement containing a parameter in a HAVING clause, or compared to the result of a SUM function.  
+-   For any ODBC or [!INCLUDE[tsql](../../includes/tsql-md.md)] statement containing a parameter in a HAVING clause, or compared to the result of a SUM function.  
   
--   For any ODBC or [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement depending on a subquery containing parameters.  
+-   For any ODBC or [!INCLUDE[tsql](../../includes/tsql-md.md)] statement depending on a subquery containing parameters.  
   
 -   For ODBC SQL statements containing parameter markers in both expressions of a comparison, like, or quantified predicate.  
   
 -   For any queries where one of the parameters is a parameter to a function.  
   
--   When there are comments (/* \*/) in the [!INCLUDE[tsql](../../../includes/tsql-md.md)] command.  
+-   When there are comments (/* \*/) in the [!INCLUDE[tsql](../../includes/tsql-md.md)] command.  
   
- When processing a batch of [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements, the driver also does not support calling SQLDescribeParam for parameter markers in statements after the first statement in the batch.  
+ When processing a batch of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, the driver also does not support calling SQLDescribeParam for parameter markers in statements after the first statement in the batch.  
   
- When describing the parameters of prepared stored procedures, SQLDescribeParam uses the system stored procedure [sp_sproc_columns](../Topic/sp_sproc_columns%20\(Transact-SQL\).md) to retrieve parameter characteristics. sp_sproc_columns can report data for stored procedures within the current user database. Preparing a fully qualified stored procedure name allows SQLDescribeParam to execute across databases. For example, the system stored procedure [sp_who](../Topic/sp_who%20\(Transact-SQL\).md) can be prepared and executed in any database as:  
+ When describing the parameters of prepared stored procedures, SQLDescribeParam uses the system stored procedure [sp_sproc_columns](~/relational-databases/system-stored-procedures/sp-sproc-columns-transact-sql.md) to retrieve parameter characteristics. sp_sproc_columns can report data for stored procedures within the current user database. Preparing a fully qualified stored procedure name allows SQLDescribeParam to execute across databases. For example, the system stored procedure [sp_who](~/relational-databases/system-stored-procedures/sp-who-transact-sql.md) can be prepared and executed in any database as:  
   
 ```  
 SQLPrepare(hstmt, "{call sp_who(?)}", SQL_NTS);  
@@ -55,7 +55,7 @@ SQLPrepare(hstmt, "{call sp_who(?)}", SQL_NTS);
 SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);  
 ```  
   
- For large value data types, the value returned in *DataTypePtr* is SQL_VARCHAR, SQL_VARBINARY, or SQL_NVARCHAR. To indicate that the size of the large value data type parameter is "unlimited," the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver sets *ParameterSizePtr* to 0. Actual size values are returned for standard `varchar` parameters.  
+ For large value data types, the value returned in *DataTypePtr* is SQL_VARCHAR, SQL_VARBINARY, or SQL_NVARCHAR. To indicate that the size of the large value data type parameter is "unlimited," the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver sets *ParameterSizePtr* to 0. Actual size values are returned for standard `varchar` parameters.  
   
 > [!NOTE]  
 >  If the parameter has already been bound with a maximum size for the SQL_VARCHAR, SQL_VARBINARY, or SQL_WVARCHAR parameters, the bound size of the parameter is returned, not "unlimited."  

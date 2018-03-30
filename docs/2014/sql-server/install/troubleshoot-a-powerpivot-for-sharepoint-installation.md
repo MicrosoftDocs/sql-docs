@@ -12,13 +12,13 @@ ms.topic: "article"
 ms.assetid: 97bc2ce7-af04-4372-ad79-c96b8c3417ab
 caps.latest.revision: 6
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "jhubbard"
 ---
 # Troubleshoot a PowerPivot for SharePoint Installation
   If you get errors instead of the pages and features you expect, do the following.  
   
--   Review release notes for both SharePoint and [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] to get workarounds for known installation problems. Release notes are provided with the installation media or on the Microsoft site from which you downloaded the software.  
+-   Review release notes for both SharePoint and [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] to get workarounds for known installation problems. Release notes are provided with the installation media or on the Microsoft site from which you downloaded the software.  
   
     -   [SQL Server 2014 Release Notes](http://technet.microsoft.com/library/dn169381\(v=sql.15\).aspx).  
   

@@ -16,6 +16,6 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Ready to Update
-  Use the Summary page to confirm the changes that will be applied to your instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. To continue with the installation, click **Install**.  
+  Use the Summary page to confirm the changes that will be applied to your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. To continue with the installation, click **Install**.  
   
   

@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
 caps.latest.revision: 27
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # rsProcessingError - Reporting Services Error
@@ -23,10 +23,10 @@ manager: "mblythe"
   
 |||  
 |-|-|  
-|Product Name|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|Product Name|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|  
 |Event ID|rsProcessingError|  
 |Event Source|Microsoft.ReportingServices.Diagnostics.Utilities.ErrorStrings.resources|  
-|Component|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
+|Component|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|  
 |Message Text|Errors have occurred in report processing.|  
   
 ## Explanation  
@@ -49,7 +49,7 @@ manager: "mblythe"
   
 -   An expression referenced a non-existing parameter in the Report Parameters collection.  
   
--   A custom assembly or a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] assembly that was incorrectly deployed failed to load.  
+-   A custom assembly or a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] assembly that was incorrectly deployed failed to load.  
   
 -   A parameter that has the Nullable property set to `False` has detected a null value in the parameter.  
   
@@ -82,14 +82,14 @@ manager: "mblythe"
  A multivalue parameter cannot be Null. For more information, see [Report Parameters &#40;Report Builder and Report Designer&#41;](../../2014/reporting-services/report-parameters-report-builder-and-report-designer.md).  
   
 ### Main Report with Subreport Could Not Be Processed  
- A report with subreports must be processed by the same version of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report processor. When upgrading reports to the current version of the report definition schema, the main report and the subreports may or may not be updated at the same time. If the version is not compatible between a report and its subreports, the following message is displayed: "Subreport could not be processed."  
+ A report with subreports must be processed by the same version of the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report processor. When upgrading reports to the current version of the report definition schema, the main report and the subreports may or may not be updated at the same time. If the version is not compatible between a report and its subreports, the following message is displayed: "Subreport could not be processed."  
   
  You must change either the main report or the subreports so that all the reports can be processed by the same version of the report processor. For information about why a report fails to upgrade, see [Upgrade Reports](../../2014/sql-server/install/upgrade-reports.md).  
   
 ### Verify Function Calls are Visual Basic and Not SQL  
- You can use SQL functions in query text on a relational database. You cannot use [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] functions in query text.  
+ You can use SQL functions in query text on a relational database. You cannot use [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] functions in query text.  
   
- In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], expressions can use [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] functions, System.Math or System.String functions, fully qualified [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] functions, or custom functions that you provide in custom code or a custom assembly. You cannot use SQL functions in an expression.  
+ In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], expressions can use [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] functions, System.Math or System.String functions, fully qualified [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] functions, or custom functions that you provide in custom code or a custom assembly. You cannot use SQL functions in an expression.  
   
  Verify that the function calls made in the query and in the expressions are valid.  
   

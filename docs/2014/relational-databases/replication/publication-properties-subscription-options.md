@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 caps.latest.revision: 38
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Publication Properties, Subscription Options
@@ -33,7 +33,7 @@ manager: "jhubbard"
   
 ### Creation and Synchronization  
  **Allow anonymous subscriptions**  
- Determines whether to allow anonymous pull subscriptions. Anonymous subscriptions are supported for [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssEWEd2005](../../../includes/ssewed2005-md.md)], [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssMobileEd2005](../../../includes/ssmobileed2005-md.md)], and [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] for Windows CE. To use this option for snapshot and transactional publications, the option **Snapshot always available** must be set to **True**.  
+ Determines whether to allow anonymous pull subscriptions. Anonymous subscriptions are supported for [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEWEd2005](../../includes/ssewed2005-md.md)], [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssMobileEd2005](../../includes/ssmobileed2005-md.md)], and [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for Windows CE. To use this option for snapshot and transactional publications, the option **Snapshot always available** must be set to **True**.  
   
  **Attachable subscription database**  
  Determines whether subscriptions can be created by attaching a copy of a subscription database (requires that the option **Snapshot always available** is set to **True** for snapshot and transactional publications).  
@@ -46,7 +46,7 @@ manager: "jhubbard"
   
 ### Schema Replication  
  **Replicate schema changes**  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and later versions only. Determines whether to replicate schema changes (such as adding a column to a table or changing the data type of a column) to published objects. For more information, see [Make Schema Changes on Publication Databases](../../../2014/relational-databases/replication/make-schema-changes-on-publication-databases.md).  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only. Determines whether to replicate schema changes (such as adding a column to a table or changing the data type of a column) to published objects. For more information, see [Make Schema Changes on Publication Databases](../../../2014/relational-databases/replication/make-schema-changes-on-publication-databases.md).  
   
 ## Options for snapshot and transactional publications  
   
@@ -58,10 +58,10 @@ manager: "jhubbard"
  Determines whether snapshot files are created every time the Snapshot Agent runs (requires **Independent Distribution Agent**). This option is read-only; it is set to **True** if you select **Create a snapshot immediately and keep the snapshot available to initialize subscriptions** on the **Snapshot Agent** page of the New Publication Wizard (the default). For more information, see [Create and Apply the Snapshot](../../../2014/relational-databases/replication/create-and-apply-the-snapshot.md).  
   
  **Allow initialization from backup files**  
- [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and later versions only. Determines whether to allow backup files to be used to initialize subscriptions. For more information, see [Initialize a Transactional Subscription Without a Snapshot](../../../2014/relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only. Determines whether to allow backup files to be used to initialize subscriptions. For more information, see [Initialize a Transactional Subscription Without a Snapshot](../../../2014/relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
  **Allow non-SQL Server Subscribers**  
- [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and later versions only. Determines whether the publication supports non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers. Setting this option to **True** sets other publication properties to support non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers. This option is read-only if subscriptions exist; it cannot be set to **True** if **Allow immediate updating subscriptions**, **Allow queued updating subscriptions**, or **Allow peer-to-peer subscriptions** is set to **True**. For more information, see [Non-SQL Server Subscribers](../../../2014/relational-databases/replication/non-sql-server-subscribers.md).  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only. Determines whether the publication supports non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers. Setting this option to **True** sets other publication properties to support non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers. This option is read-only if subscriptions exist; it cannot be set to **True** if **Allow immediate updating subscriptions**, **Allow queued updating subscriptions**, or **Allow peer-to-peer subscriptions** is set to **True**. For more information, see [Non-SQL Server Subscribers](../../../2014/relational-databases/replication/non-sql-server-subscribers.md).  
   
 ### Data Transformation  
  **Allow data transformations**  
@@ -72,13 +72,13 @@ manager: "jhubbard"
   
 ### Peer-to-Peer Replication  
  **Allow peer-to-peer subscriptions**  
- Applies to only [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and later versions. Determines whether the publication supports peer-to-peer replication. Setting this option to **True** sets other publication properties to support peer-to-peer replication. This option is read-only if subscriptions exist. This option cannot be set to **True** if **Allow immediate updating subscriptions** or **Allow queued updating subscriptions**, or **Allow non-SQL Server Subscribers** is set to **True**. For more information, see [Peer-to-Peer Transactional Replication](../../../2014/relational-databases/replication/peer-to-peer-transactional-replication.md).  
+ Applies to only [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions. Determines whether the publication supports peer-to-peer replication. Setting this option to **True** sets other publication properties to support peer-to-peer replication. This option is read-only if subscriptions exist. This option cannot be set to **True** if **Allow immediate updating subscriptions** or **Allow queued updating subscriptions**, or **Allow non-SQL Server Subscribers** is set to **True**. For more information, see [Peer-to-Peer Transactional Replication](../../../2014/relational-databases/replication/peer-to-peer-transactional-replication.md).  
   
  **Allow peer-to-peer conflict detection**  
- Applies to only [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] and later versions. Specifies whether conflict detection is enabled for this publication. To use conflict detection, all nodes must be running [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] or a later version; and detection must be enabled for all nodes. To use conflict detection, you must also specify a value for **Peer originator id**. For more information, see [Conflict Detection in Peer-to-Peer Replication](../../../2014/relational-databases/replication/conflict-detection-in-peer-to-peer-replication.md).  
+ Applies to only [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions. Specifies whether conflict detection is enabled for this publication. To use conflict detection, all nodes must be running [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or a later version; and detection must be enabled for all nodes. To use conflict detection, you must also specify a value for **Peer originator id**. For more information, see [Conflict Detection in Peer-to-Peer Replication](../../../2014/relational-databases/replication/conflict-detection-in-peer-to-peer-replication.md).  
   
  **Peer originator id**  
- Applies to only [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] and later versions. Specifies an ID for a node in a peer-to-peer topology. This ID is used for conflict detection if **Allow peer-to-peer conflict detection** is set to **True**. Specify a positive, nonzero ID that has never been used in the topology. For a list of IDs that have already been used, query the [Mspeer_originatorid_history](../Topic/MSpeer_originatorid_history%20\(Transact-SQL\).md) system table.  
+ Applies to only [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions. Specifies an ID for a node in a peer-to-peer topology. This ID is used for conflict detection if **Allow peer-to-peer conflict detection** is set to **True**. Specify a positive, nonzero ID that has never been used in the topology. For a list of IDs that have already been used, query the [Mspeer_originatorid_history](~/relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) system table.  
   
 ### Updatable Subscriptions  
  **Allow immediate updating subscriptions**  
@@ -94,7 +94,7 @@ manager: "jhubbard"
  Specifies the action to take when a Subscriber change conflicts with a Publisher change (requires the option **Allow queued updating subscriptions**). For more information, see [Queued Updating Conflict Detection and Resolution](../../../2014/relational-databases/replication/queued-updating-conflict-detection-and-resolution.md).  
   
  **Queue type**  
- Determines whether to use a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] queue or [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Message Queuing (MSMQ) to queue changes at the Subscriber until they can be applied to the Publisher (requires the option **Allow queued updating subscriptions**). This option is relevant only for [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)]; later versions always use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tables for queuing.  
+ Determines whether to use a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] queue or [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing (MSMQ) to queue changes at the Subscriber until they can be applied to the Publisher (requires the option **Allow queued updating subscriptions**). This option is relevant only for [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]; later versions always use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables for queuing.  
   
 ## Options for merge publications  
   
@@ -110,7 +110,7 @@ manager: "jhubbard"
  Determines which functions to use when validating that a Subscriber has the correct partition of data. Separate multiple values by commas. For more information, see [Validate Partition Information for a Merge Subscriber](../../../2014/relational-databases/replication/validate-partition-information-for-a-merge-subscriber.md).  
   
  **Precompute partitions**  
- [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and later versions only. Determines whether to optimize synchronization by computing in advance which data rows belong in which partitions. This setting defaults to **True** if the publication meets the criteria for precomputed partitions. For more information, see [Optimize Parameterized Filter Performance with Precomputed Partitions](../../../2014/relational-databases/replication/optimize-parameterized-filter-performance-with-precomputed-partitions.md).  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only. Determines whether to optimize synchronization by computing in advance which data rows belong in which partitions. This setting defaults to **True** if the publication meets the criteria for precomputed partitions. For more information, see [Optimize Parameterized Filter Performance with Precomputed Partitions](../../../2014/relational-databases/replication/optimize-parameterized-filter-performance-with-precomputed-partitions.md).  
   
  **Optimize synchronization**  
  Determines whether to optimize merge processing by storing additional metadata at each Subscriber. This optimization has been superseded by precomputed partitions; the **Optimize synchronization** option is only relevant if **Precompute partitions** is set to **False**. For more information, see [Parameterized Row Filters](../../../2014/relational-databases/replication/parameterized-row-filters.md).  

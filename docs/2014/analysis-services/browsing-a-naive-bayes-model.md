@@ -27,7 +27,7 @@ manager: "mblythe"
 -   [Attribute Discrimination](#bkmk_AttDisc)  
   
 ##  <a name="BKMK_Tabs"></a> Explore the Model  
- The purpose of the viewer is to help you explore the interaction between input and output attributes (inputs and dependent variables) that were discovered by the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes model.  
+ The purpose of the viewer is to help you explore the interaction between input and output attributes (inputs and dependent variables) that were discovered by the [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes model.  
   
  If you want to experiment with the Naïve Bayes viewer, use the [Classify Wizard &#40;Data Mining Add-ins for Excel&#41;](../../2014/analysis-services/classify-wizard-data-mining-add-ins-for-excel.md) wizard in the Data Mining ribbon, click the **Advanced** option, and change the algorithm to use the Naïve Bayes algorithm  
   

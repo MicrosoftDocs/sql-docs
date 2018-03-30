@@ -19,18 +19,18 @@ helpviewer_keywords:
 ms.assetid: e50fac44-54c0-470c-a4ea-9c111fa4322b
 caps.latest.revision: 34
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Scripting Replication
-  All replication components in a topology should be scripted as part of a disaster recovery plan, and scripts can also be used to automate repetitive tasks. A script contains the Transact-SQL system stored procedures necessary to implement the replication component(s) scripted, such as a publication or subscription. Scripts can be created in a wizard (such as the New Publication Wizard) or in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] after you create a component. You can view, modify, and run the script using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or **sqlcmd**. Scripts can be stored with backup files to be used in case a replication topology must be reconfigured.  
+  All replication components in a topology should be scripted as part of a disaster recovery plan, and scripts can also be used to automate repetitive tasks. A script contains the Transact-SQL system stored procedures necessary to implement the replication component(s) scripted, such as a publication or subscription. Scripts can be created in a wizard (such as the New Publication Wizard) or in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] after you create a component. You can view, modify, and run the script using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or **sqlcmd**. Scripts can be stored with backup files to be used in case a replication topology must be reconfigured.  
   
  A component should be re-scripted if any property changes are made. If you use custom stored procedures with transactional replication, a copy of each procedure should be stored with the scripts; the copy should be updated if the procedure changes (procedures are typically updated due to schema changes or changing application requirements). For more information about custom procedures, see [Specify How Changes Are Propagated for Transactional Articles](../../../2014/relational-databases/replication/specify-how-changes-are-propagated-for-transactional-articles.md).  
   
  For merge publications that use parameterized filters, publication scripts contain the stored procedure calls to create data partitions. The script provides a reference for the partitions created and a way in which to re-create one or more partitions if necessary.  
   
 ## Example of Automating a Task with Scripts  
- Consider [!INCLUDE[ssSampleDBCoFull](../../../includes/sssampledbcofull-md.md)], which implements merge replication to distribute data to its remote sales force. A sales representative downloads all the data that pertains to the customers in her territory using pull subscriptions. When working offline, the sales representative updates data and enters new customers and orders. Because [!INCLUDE[ssSampleDBCoFull](../../../includes/sssampledbcofull-md.md)] has more than fifty sales representatives in different territories, it would be time-consuming to create the different subscriptions at each Subscriber with the New Subscription Wizard. Instead, the replication administrator can follow these steps:  
+ Consider [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)], which implements merge replication to distribute data to its remote sales force. A sales representative downloads all the data that pertains to the customers in her territory using pull subscriptions. When working offline, the sales representative updates data and enters new customers and orders. Because [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] has more than fifty sales representatives in different territories, it would be time-consuming to create the different subscriptions at each Subscriber with the New Subscription Wizard. Instead, the replication administrator can follow these steps:  
   
 1.  Set up the necessary merge publications with partitions based on the sales representative or their territory.  
   
@@ -43,7 +43,7 @@ manager: "jhubbard"
 5.  Run the script at multiple Subscribers to generate the required pull subscriptions.  
   
 ## Script Replication Objects  
- Script replication objects from the replication wizards or from the **Replication** folder in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. If you script from the wizards, you can choose to create objects and script them, or you can choose only to script them.  
+ Script replication objects from the replication wizards or from the **Replication** folder in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. If you script from the wizards, you can choose to create objects and script them, or you can choose only to script them.  
   
 > [!IMPORTANT]  
 >  All passwords are scripted as NULL. When possible, prompt users to enter security credentials at runtime. If you store credentials in a script file, you must secure the file to prevent unauthorized access.  
@@ -74,7 +74,7 @@ manager: "jhubbard"
   
 #### To script an object from Management Studio  
   
-1.  Connect to the Distributor, Publisher, or Subscriber in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], and then expand the server node.  
+1.  Connect to the Distributor, Publisher, or Subscriber in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], and then expand the server node.  
   
 2.  Expand the **Replication** folder, and then expand the **Local Publications** folder or the **Local Subscriptions** folder.  
   
@@ -90,7 +90,7 @@ manager: "jhubbard"
   
 #### To script multiple objects from Management Studio  
   
-1.  Connect to the Distributor, Publisher, or Subscriber in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], and then expand the server node.  
+1.  Connect to the Distributor, Publisher, or Subscriber in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], and then expand the server node.  
   
 2.  Right-click the **Replication** folder, and then click **Generate Scripts**.  
   

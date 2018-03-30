@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 631f48bf-50c9-4015-b9d8-8f1ad92d1ee2
 caps.latest.revision: 37
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Create and Apply the Snapshot
@@ -25,7 +25,7 @@ manager: "jhubbard"
   
 -   At a scheduled time. Specify a schedule on the **Snapshot Agent** page of the New Publication Wizard or when using stored procedures or Replication Management Objects (RMO).  
   
--   Manually. Run the Snapshot Agent from the command prompt or from [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. For more information about running agents, see [Replication Agent Executables Concepts](../../../2014/relational-databases/replication/dev-guide/replication-agent-executables-concepts.md) and [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/start-and-stop-a-replication-agent-sql-server-management-studio.md).  
+-   Manually. Run the Snapshot Agent from the command prompt or from [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information about running agents, see [Replication Agent Executables Concepts](../../../2014/relational-databases/replication/dev-guide/replication-agent-executables-concepts.md) and [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/start-and-stop-a-replication-agent-sql-server-management-studio.md).  
   
  For merge replication, a snapshot is generated every time the Snapshot Agent runs. For transactional replication, snapshot generation depends on the setting of the publication property **immediate_sync**. If the property is set to TRUE (the default when using the New Publication Wizard), a snapshot is generated every time the Snapshot Agent runs, and it can be applied to a Subscriber at any time. If the property is set to FALSE (the default when using **sp_addpublication**), the snapshot is generated only if a new subscription has been added since the last Snapshot Agent run; Subscribers must wait for the Snapshot Agent to complete before they can synchronize.  
   
@@ -41,13 +41,13 @@ manager: "jhubbard"
   
  To view or modify the default snapshot folder location, see  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Specify the Default Snapshot Location &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/specify-the-default-snapshot-location-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Specify the Default Snapshot Location &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/specify-the-default-snapshot-location-sql-server-management-studio.md)  
   
 -   Replication Programming and RMO programming: [Configure Publishing and Distribution](../../../2014/relational-databases/replication/configure-publishing-and-distribution.md)  
   
 ## See Also  
  [Initialize a Subscription with a Snapshot](../../../2014/relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
  [Secure the Snapshot Folder](../../../2014/relational-databases/replication/secure-the-snapshot-folder.md)   
- [sp_addpublication &#40;Transact-SQL&#41;](../Topic/sp_addpublication%20\(Transact-SQL\).md)  
+ [sp_addpublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)  
   
   

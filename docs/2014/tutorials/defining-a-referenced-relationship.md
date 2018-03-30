@@ -40,7 +40,7 @@ manager: "jhubbard"
   
      In the **Edit Relationship** dialog box, notice that the **GeographyKey** column is the primary key in the **Geography** table and the foreign key in the **Reseller** table.  
   
-7.  Click **Cancel**, switch to Cube Designer for the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Tutorial cube, and then click the **Dimension Usage** tab.  
+7.  Click **Cancel**, switch to Cube Designer for the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial cube, and then click the **Dimension Usage** tab.  
   
      Notice that the **Geography** cube dimension does not currently have a relationship with either the **Internet Sales** measure group or the **Reseller Sales** measure group.  
   
@@ -60,7 +60,7 @@ manager: "jhubbard"
   
 11. In the **Select relationship type** list, select **Referenced**.  
   
-     You define a referenced relationship by specifying a dimension that is directly connected to the measure group table, called an *intermediate dimension*, that [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] can use to link the reference dimension to the fact table. You then specify the attribute that links the reference dimension to the intermediate dimension.  
+     You define a referenced relationship by specifying a dimension that is directly connected to the measure group table, called an *intermediate dimension*, that [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] can use to link the reference dimension to the fact table. You then specify the attribute that links the reference dimension to the intermediate dimension.  
   
 12. In the **Intermediate dimension** list, select **Reseller**.  
   
@@ -86,7 +86,7 @@ manager: "jhubbard"
   
      The Geography Key attribute in the Reseller dimension will only be used to link the Geography dimension to the Reseller Sales fact table. Because it will not be used for browsing, there is no value in defining this attribute hierarchy as visible. Additionally, ordering and optimizing the attribute hierarchy will only negatively affect processing performance. However, the attribute must be enabled to serve as the link between the two dimensions.  
   
-4.  Switch to Cube Designer for the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Tutorial cube, click the **Dimension Usage** tab, and then click the ellipsis button (**…**) at the intersection of the **Reseller Sales** measure group and the **Geography** cube dimension.  
+4.  Switch to Cube Designer for the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial cube, click the **Dimension Usage** tab, and then click the ellipsis button (**…**) at the intersection of the **Reseller Sales** measure group and the **Geography** cube dimension.  
   
 5.  In the **Select relationship type** list, select **Referenced**.  
   
@@ -110,7 +110,7 @@ manager: "jhubbard"
   
 1.  On the **Build** menu, click **Deploy Analysis Services Tutorial**.  
   
-2.  When deployment has successfully completed, click the **Browser** tab in Cube Designer for the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Tutorial cube, and then click the **Reconnect** button.  
+2.  When deployment has successfully completed, click the **Browser** tab in Cube Designer for the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial cube, and then click the **Reconnect** button.  
   
 3.  In the metadata pane, expand `Reseller Geography`, right-click **Geographies**, and then click **Add to Row Area**.  
   

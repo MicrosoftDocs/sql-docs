@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 1e777e95-377a-4de3-b965-867464aadaaf
 caps.latest.revision: 36
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # View Information and Perform Tasks for a Publisher (Replication Monitor)
@@ -28,7 +28,7 @@ manager: "jhubbard"
   
 -   **Subscription Watch List**  
   
-     This tab is intended to display information about subscriptions from all publications available at the selected Publisher that have errors, warnings, or the poorest performance. This tab is not displayed for Distributors running versions prior to [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
+     This tab is intended to display information about subscriptions from all publications available at the selected Publisher that have errors, warnings, or the poorest performance. This tab is not displayed for Distributors running versions prior to [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
 -   **Agents** tab  
   

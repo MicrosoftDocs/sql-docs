@@ -20,10 +20,10 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # View a Database Snapshot (SQL Server)
-  This topic explains how to view a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database snapshot using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  This topic explains how to view a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database snapshot using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 > [!NOTE]  
->  To create, revert to, or delete a database snapshot, you must use [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+>  To create, revert to, or delete a database snapshot, you must use [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -36,7 +36,7 @@ manager: "jhubbard"
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  **To view a database snapshot**  
   
-1.  In Object Explorer, connect to the instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and then expand that instance.  
+1.  In Object Explorer, connect to the instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] and then expand that instance.  
   
 2.  Expand **Databases.**  
   
@@ -45,11 +45,11 @@ manager: "jhubbard"
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  **To view a database snapshot**  
   
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  To list the database snapshots of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], query the **source_database_id** column of the [sys.databases](../Topic/sys.databases%20\(Transact-SQL\).md) catalog view for non-NULL values.  
+3.  To list the database snapshots of the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], query the **source_database_id** column of the [sys.databases](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view for non-NULL values.  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   

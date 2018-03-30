@@ -21,15 +21,15 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Run a Package in SQL Server Data Tools
-  You typically run packages in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] during the development, debugging, and testing of packages. When you run a package from [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, the package always runs immediately.  
+  You typically run packages in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] during the development, debugging, and testing of packages. When you run a package from [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, the package always runs immediately.  
   
- While a package is running, [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer displays the progress of package execution on the **Progress** tab. You can view the start and finish time of the package and its tasks and containers, in addition to information about any tasks or containers in the package that failed. After the package finishes running, the run-time information remains available on the **Execution Results** tab. For more information, see the section, "Progress Reporting," in the topic, [Debugging Control Flow](../../2014/integration-services/debugging-control-flow.md).  
+ While a package is running, [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer displays the progress of package execution on the **Progress** tab. You can view the start and finish time of the package and its tasks and containers, in addition to information about any tasks or containers in the package that failed. After the package finishes running, the run-time information remains available on the **Execution Results** tab. For more information, see the section, "Progress Reporting," in the topic, [Debugging Control Flow](../../2014/integration-services/debugging-control-flow.md).  
   
- **Design-time deployment**. When you run a package in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], the package is built and then deployed to a folder. Before you run the package, you can specify the folder to which the package is deployed. If you do not specify a folder, the **bin** folder is used by default. This type of deployment is called design-time deployment.  
+ **Design-time deployment**. When you run a package in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], the package is built and then deployed to a folder. Before you run the package, you can specify the folder to which the package is deployed. If you do not specify a folder, the **bin** folder is used by default. This type of deployment is called design-time deployment.  
   
 ### To run a package in SQL Server Data Tools  
   
-1.  In Solution Explorer, if your solution contains multiple projects, right-click the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project that contains the package, and then click **Set as StartUp Object** to set the startup project.  
+1.  In Solution Explorer, if your solution contains multiple projects, right-click the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project that contains the package, and then click **Set as StartUp Object** to set the startup project.  
   
 2.  In Solution Explorer, if your project contains multiple packages, right-click a package, and then click **Set as StartUp Object** to set the startup package.  
   
@@ -41,7 +41,7 @@ manager: "jhubbard"
   
 ### To specify a different folder for design-time deployment  
   
-1.  In Solution Explorer, right-click the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project folder that contains the package you want to run, and then click **Properties**.  
+1.  In Solution Explorer, right-click the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project folder that contains the package you want to run, and then click **Properties**.  
   
 2.  In the **\<project name> Property Pages** dialog box, click **Build**.  
   

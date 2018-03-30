@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: b856ee9a-49e7-4fab-a88d-48a633fce269
 caps.latest.revision: 17
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # SQL Server Index Design Guide
@@ -20,9 +20,9 @@ manager: "jhubbard"
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] through [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] unless noted otherwise.|  
+|**Applies to**: [!INCLUDE[ssVersion2005](includes/ssversion2005-md.md)] through [!INCLUDE[ssCurrent](includes/sscurrent-md.md)] unless noted otherwise.|  
   
- This guide assumes the reader has a general understanding of the index types available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For a general description of index types, see [Index Types](http://msdn.microsoft.com/library/ms175049.aspx).  
+ This guide assumes the reader has a general understanding of the index types available in [!INCLUDE[ssNoVersion](includes/ssnoversion-md.md)]. For a general description of index types, see [Index Types](http://msdn.microsoft.com/library/ms175049.aspx).  
   
 ##  <a name="Top"></a> In This Guide  
  [Index Design Basics](#Basics)  
@@ -44,18 +44,18 @@ manager: "jhubbard"
   
  The selection of the right indexes for a database and its workload is a complex balancing act between query speed and update cost. Narrow indexes, or indexes with few columns in the index key, require less disk space and maintenance overhead. Wide indexes, on the other hand, cover more queries. You may have to experiment with several different designs before finding the most efficient index. Indexes can be added, modified, and dropped without affecting the database schema or application design. Therefore, you should not hesitate to experiment with different indexes.  
   
- The query optimizer in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reliably chooses the most effective index in the vast majority of cases. Your overall index design strategy should provide a variety of indexes for the query optimizer to choose from and trust it to make the right decision. This reduces analysis time and produces good performance over a variety of situations. To see which indexes the query optimizer uses for a specific query, in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], on the **Query** menu, select **Include Actual Execution Plan**.  
+ The query optimizer in [!INCLUDE[ssNoVersion](includes/ssnoversion-md.md)] reliably chooses the most effective index in the vast majority of cases. Your overall index design strategy should provide a variety of indexes for the query optimizer to choose from and trust it to make the right decision. This reduces analysis time and produces good performance over a variety of situations. To see which indexes the query optimizer uses for a specific query, in [!INCLUDE[ssManStudioFull](includes/ssmanstudiofull-md.md)], on the **Query** menu, select **Include Actual Execution Plan**.  
   
  Do not always equate index usage with good performance, and good performance with efficient index use. If using an index always helped produce the best performance, the job of the query optimizer would be simple. In reality, an incorrect index choice can cause less than optimal performance. Therefore, the task of the query optimizer is to select an index, or combination of indexes, only when it will improve performance, and to avoid indexed retrieval when it will hinder performance.  
   
 ### Index Design Tasks  
  The follow tasks make up our recommended strategy for designing indexes:  
   
-1.  Understand the characteristics of the database itself. For example, is it an online transaction processing (OLTP) database with frequent data modifications, or a Decision Support System (DSS) or data warehousing (OLAP) database that contains primarily read-only data and must process very large data sets quickly. In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], *xVelocity memory optimized columnstore* index is especially appropriate for typical data warehousing data sets. Columnstore indexes can transform the data warehousing experience for users by enabling faster performance for common data warehousing queries such as filtering, aggregating, grouping, and star-join queries. For more information, see [Columnstore Indexes Described](../2014/database-engine/columnstore-indexes-described.md).  
+1.  Understand the characteristics of the database itself. For example, is it an online transaction processing (OLTP) database with frequent data modifications, or a Decision Support System (DSS) or data warehousing (OLAP) database that contains primarily read-only data and must process very large data sets quickly. In [!INCLUDE[ssSQL11](includes/sssql11-md.md)], *xVelocity memory optimized columnstore* index is especially appropriate for typical data warehousing data sets. Columnstore indexes can transform the data warehousing experience for users by enabling faster performance for common data warehousing queries such as filtering, aggregating, grouping, and star-join queries. For more information, see [Columnstore Indexes Described](../2014/database-engine/columnstore-indexes-described.md).  
   
 2.  Understand the characteristics of the most frequently used queries. For example, knowing that a frequently used query joins two or more tables will help you determine the best type of indexes to use.  
   
-3.  Understand the characteristics of the columns used in the queries. For example, an index is ideal for columns that have an integer data type and are also unique or nonnull columns. For columns that have well-defined subsets of data, you can use a filtered index in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] and higher versions. For more information, see [Filtered Index Design Guidelines](#Filtered) in this guide.  
+3.  Understand the characteristics of the columns used in the queries. For example, an index is ideal for columns that have an integer data type and are also unique or nonnull columns. For columns that have well-defined subsets of data, you can use a filtered index in [!INCLUDE[ssKatmai](includes/sskatmai-md.md)] and higher versions. For more information, see [Filtered Index Design Guidelines](#Filtered) in this guide.  
   
 4.  Determine which index options might enhance performance when the index is created or maintained. For example, creating a clustered index on an existing large table would benefit from the ONLINE index option. The ONLINE option allows for concurrent activity on the underlying data to continue while the index is being created or rebuilt. For more information, see [Set Index Options](../2014/database-engine/set-index-options.md).  
   
@@ -155,9 +155,9 @@ manager: "jhubbard"
  For more information, see [Partitioned Tables and Indexes](../2014/database-engine/partitioned-tables-and-indexes.md).  
   
 ###  <a name="Sort_Order"></a> Index Sort Order Design Guidelines  
- When defining indexes, you should consider whether the data for the index key column should be stored in ascending or descending order. Ascending is the default and maintains compatibility with earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. The syntax of the CREATE INDEX, CREATE TABLE, and ALTER TABLE statements supports the keywords ASC (ascending) and DESC (descending) on individual columns in indexes and constraints.  
+ When defining indexes, you should consider whether the data for the index key column should be stored in ascending or descending order. Ascending is the default and maintains compatibility with earlier versions of [!INCLUDE[ssNoVersion](includes/ssnoversion-md.md)]. The syntax of the CREATE INDEX, CREATE TABLE, and ALTER TABLE statements supports the keywords ASC (ascending) and DESC (descending) on individual columns in indexes and constraints.  
   
- Specifying the order in which key values are stored in an index is useful when queries referencing the table have ORDER BY clauses that specify different directions for the key column or columns in that index. In these cases, the index can remove the need for a SORT operator in the query plan; therefore, this makes the query more efficient. For example, the buyers in the [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] purchasing department have to evaluate the quality of products they purchase from vendors. The buyers are most interested in finding products sent by these vendors with a high rejection rate. As shown in the following query, retrieving the data to meet this criteria requires the `RejectedQty` column in the `Purchasing.PurchaseOrderDetail` table to be sorted in descending order (large to small) and the `ProductID` column to be sorted in ascending order (small to large).  
+ Specifying the order in which key values are stored in an index is useful when queries referencing the table have ORDER BY clauses that specify different directions for the key column or columns in that index. In these cases, the index can remove the need for a SORT operator in the query plan; therefore, this makes the query more efficient. For example, the buyers in the [!INCLUDE[ssSampleDBCoFull](includes/sssampledbcofull-md.md)] purchasing department have to evaluate the quality of products they purchase from vendors. The buyers are most interested in finding products sent by these vendors with a high rejection rate. As shown in the following query, retrieving the data to meet this criteria requires the `RejectedQty` column in the `Purchasing.PurchaseOrderDetail` table to be sorted in descending order (large to small) and the `ProductID` column to be sorted in ascending order (small to large).  
   
 ```  
 SELECT RejectedQty, ((RejectedQty/OrderQty)*100) AS RejectionRate,  
@@ -182,11 +182,11 @@ ON Purchasing.PurchaseOrderDetail
   
  ![Execution plan shows a SORT operator is not used](../2014/media/insertsort2.gif "Execution plan shows a SORT operator is not used")  
   
- The [!INCLUDE[ssDE](../includes/ssde-md.md)] can move equally efficiently in either direction. An index defined as `(RejectedQty DESC, ProductID ASC)` can still be used for a query in which the sort direction of the columns in the ORDER BY clause are reversed. For example, a query with the ORDER BY clause `ORDER BY RejectedQty ASC, ProductID DESC` can use the index.  
+ The [!INCLUDE[ssDE](includes/ssde-md.md)] can move equally efficiently in either direction. An index defined as `(RejectedQty DESC, ProductID ASC)` can still be used for a query in which the sort direction of the columns in the ORDER BY clause are reversed. For example, a query with the ORDER BY clause `ORDER BY RejectedQty ASC, ProductID DESC` can use the index.  
   
- Sort order can be specified only for key columns. The [sys.index_columns](../Topic/sys.index_columns%20(Transact-SQL).md) catalog view and the INDEXKEY_PROPERTY function report whether an index column is stored in ascending or descending order.  
+ Sort order can be specified only for key columns. The [sys.index_columns](~/relational-databases/system-catalog-views/sys-indexes-transact-sql.md) catalog view and the INDEXKEY_PROPERTY function report whether an index column is stored in ascending or descending order.  
   
- ![Arrow icon used with Back to Top link](../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Guide](#Top)  
+ ![Arrow icon used with Back to Top link](../2014/data-quality-services/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Guide](#Top)  
   
 ##  <a name="Clustered"></a> Clustered Index Design Guidelines  
  Clustered indexes sort and store the data rows in the table based on their key values. There can only be one clustered index per table, because the data rows themselves can only be sorted in one order. With few exceptions, every table should have a clustered index defined on the column, or columns, that offer the following:  
@@ -200,12 +200,12 @@ ON Purchasing.PurchaseOrderDetail
   
 -   Can be used in range queries.  
   
- If the clustered index is not created with the UNIQUE property, the [!INCLUDE[ssDE](../includes/ssde-md.md)] automatically adds a 4-byte uniqueifier column to the table. When it is required, the [!INCLUDE[ssDE](../includes/ssde-md.md)] automatically adds a uniqueifier value to a row to make each key unique. This column and its values are used internally and cannot be seen or accessed by users.  
+ If the clustered index is not created with the UNIQUE property, the [!INCLUDE[ssDE](includes/ssde-md.md)] automatically adds a 4-byte uniqueifier column to the table. When it is required, the [!INCLUDE[ssDE](includes/ssde-md.md)] automatically adds a uniqueifier value to a row to make each key unique. This column and its values are used internally and cannot be seen or accessed by users.  
   
 ### Clustered Index Architecture  
- In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], indexes are organized as B-trees. Each page in an index B-tree is called an index node. The top node of the B-tree is called the root node. The bottom nodes in the index are called the leaf nodes. Any index levels between the root and the leaf nodes are collectively known as intermediate levels. In a clustered index, the leaf nodes contain the data pages of the underlying table. The root and intermediate level nodes contain index pages holding index rows. Each index row contains a key value and a pointer to either an intermediate level page in the B-tree, or a data row in the leaf level of the index. The pages in each level of the index are linked in a doubly-linked list.  
+ In [!INCLUDE[ssNoVersion](includes/ssnoversion-md.md)], indexes are organized as B-trees. Each page in an index B-tree is called an index node. The top node of the B-tree is called the root node. The bottom nodes in the index are called the leaf nodes. Any index levels between the root and the leaf nodes are collectively known as intermediate levels. In a clustered index, the leaf nodes contain the data pages of the underlying table. The root and intermediate level nodes contain index pages holding index rows. Each index row contains a key value and a pointer to either an intermediate level page in the B-tree, or a data row in the leaf level of the index. The pages in each level of the index are linked in a doubly-linked list.  
   
- Clustered indexes have one row in [sys.partitions](../Topic/sys.partitions%20(Transact-SQL).md), with **index_id** = 1 for each partition used by the index. By default, a clustered index has a single partition. When a clustered index has multiple partitions, each partition has a B-tree structure that contains the data for that specific partition. For example, if a clustered index has four partitions, there are four B-tree structures; one in each partition.  
+ Clustered indexes have one row in [sys.partitions](~/relational-databases/system-catalog-views/sys-partitions-transact-sql.md), with **index_id** = 1 for each partition used by the index. By default, a clustered index has a single partition. When a clustered index has multiple partitions, each partition has a B-tree structure that contains the data for that specific partition. For example, if a clustered index has four partitions, there are four B-tree structures; one in each partition.  
   
  Depending on the data types in the clustered index, each clustered index structure will have one or more allocation units in which to store and manage the data for a specific partition. At a minimum, each clustered index will have one IN_ROW_DATA allocation unit per partition. The clustered index will also have one LOB_DATA allocation unit per partition if it contains large object (LOB) columns. It will also have one ROW_OVERFLOW_DATA allocation unit per partition if it contains variable length columns that exceed the 8,060 byte row size limit.  
   
@@ -228,7 +228,7 @@ ON Purchasing.PurchaseOrderDetail
   
 -   Use ORDER BY, or GROUP BY clauses.  
   
-     An index on the columns specified in the ORDER BY or GROUP BY clause may remove the need for the [!INCLUDE[ssDE](../includes/ssde-md.md)] to sort the data, because the rows are already sorted. This improves query performance.  
+     An index on the columns specified in the ORDER BY or GROUP BY clause may remove the need for the [!INCLUDE[ssDE](includes/ssde-md.md)] to sort the data, because the rows are already sorted. This improves query performance.  
   
 ### Column Considerations  
  Generally, you should define the clustered index key with as few columns as possible. Consider columns that have one or more of the following attributes:  
@@ -239,7 +239,7 @@ ON Purchasing.PurchaseOrderDetail
   
 -   Are accessed sequentially  
   
-     For example, a product ID uniquely identifies products in the `Production.Product` table in the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database. Queries in which a sequential search is specified, such as `WHERE ProductID BETWEEN 980 and 999`, would benefit from a clustered index on `ProductID`. This is because the rows would be stored in sorted order on that key column.  
+     For example, a product ID uniquely identifies products in the `Production.Product` table in the [!INCLUDE[ssSampleDBobject](includes/sssampledbobject-md.md)] database. Queries in which a sequential search is specified, such as `WHERE ProductID BETWEEN 980 and 999`, would benefit from a clustered index on `ProductID`. This is because the rows would be stored in sorted order on that key column.  
   
 -   Defined as IDENTITY.  
   
@@ -251,13 +251,13 @@ ON Purchasing.PurchaseOrderDetail
   
 -   Columns that undergo frequent changes  
   
-     This causes in the whole row to move, because the [!INCLUDE[ssDE](../includes/ssde-md.md)] must keep the data values of a row in physical order. This is an important consideration in high-volume transaction processing systems in which data is typically volatile.  
+     This causes in the whole row to move, because the [!INCLUDE[ssDE](includes/ssde-md.md)] must keep the data values of a row in physical order. This is an important consideration in high-volume transaction processing systems in which data is typically volatile.  
   
 -   Wide keys  
   
      Wide keys are a composite of several columns or several large-size columns. The key values from the clustered index are used by all nonclustered indexes as lookup keys. Any nonclustered indexes defined on the same table will be significantly larger because the nonclustered index entries contain the clustering key and also the key columns defined for that nonclustered index.  
   
- ![Arrow icon used with Back to Top link](../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Guide](#Top)  
+ ![Arrow icon used with Back to Top link](../2014/data-quality-services/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Guide](#Top)  
   
 ##  <a name="Nonclustered"></a> Nonclustered Index Design Guidelines  
  A nonclustered index contains the index key values and row locators that point to the storage location of the table data. You can create multiple nonclustered indexes on a table or indexed view. Generally, nonclustered indexes should be designed to improve the performance of frequently used queries that are not covered by the clustered index.  
@@ -277,7 +277,7 @@ ON Purchasing.PurchaseOrderDetail
   
 -   If the table has a clustered index, or the index is on an indexed view, the row locator is the clustered index key for the row.  
   
- Nonclustered indexes have one row in [sys.partitions](../Topic/sys.partitions%20(Transact-SQL).md) with **index_id** >1 for each partition used by the index. By default, a nonclustered index has a single partition. When a nonclustered index has multiple partitions, each partition has a B-tree structure that contains the index rows for that specific partition. For example, if a nonclustered index has four partitions, there are four B-tree structures, with one in each partition.  
+ Nonclustered indexes have one row in [sys.partitions](~/relational-databases/system-catalog-views/sys-partitions-transact-sql.md) with **index_id** >1 for each partition used by the index. By default, a nonclustered index has a single partition. When a nonclustered index has multiple partitions, each partition has a B-tree structure that contains the index rows for that specific partition. For example, if a nonclustered index has four partitions, there are four B-tree structures, with one in each partition.  
   
  Depending on the data types in the nonclustered index, each nonclustered index structure will have one or more allocation units in which to store and manage the data for a specific partition. At a minimum, each nonclustered index will have one IN_ROW_DATA allocation unit per partition that stores the index B-tree pages. The nonclustered index will also have one LOB_DATA allocation unit per partition if it contains large object (LOB) columns . Additionally, it will have one ROW_OVERFLOW_DATA allocation unit per partition if it contains variable length columns that exceed the 8,060 byte row size limit.  
   
@@ -327,7 +327,7 @@ ON Purchasing.PurchaseOrderDetail
   
 -   They can be data types not allowed as index key columns.  
   
--   They are not considered by the [!INCLUDE[ssDE](../includes/ssde-md.md)] when calculating the number of index key columns or index key size.  
+-   They are not considered by the [!INCLUDE[ssDE](includes/ssde-md.md)] when calculating the number of index key columns or index key size.  
   
  An index with included nonkey columns can significantly improve query performance when all columns in the query are included in the index either as key or nonkey columns. Performance gains are achieved because the query optimizer can locate all the column values within the index; table or clustered index data is not accessed resulting in fewer disk I/O operations.  
   
@@ -337,7 +337,7 @@ ON Purchasing.PurchaseOrderDetail
  While key columns are stored at all levels of the index, nonkey columns are stored only at the leaf level.  
   
 ##### Using Included Columns to Avoid Size Limits  
- You can include nonkey columns in a nonclustered index to avoid exceeding the current index size limitations of a maximum of 16 key columns and a maximum index key size of 900 bytes. The [!INCLUDE[ssDE](../includes/ssde-md.md)] does not consider nonkey columns when calculating the number of index key columns or index key size.  
+ You can include nonkey columns in a nonclustered index to avoid exceeding the current index size limitations of a maximum of 16 key columns and a maximum index key size of 900 bytes. The [!INCLUDE[ssDE](includes/ssde-md.md)] does not consider nonkey columns when calculating the number of index key columns or index key size.  
   
  For example, assume that you want to index the following columns in the `Document` table:  
   
@@ -426,7 +426,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  You will have to determine whether the gains in query performance outweigh the affect to performance during data modification and in additional disk space requirements.  
   
- ![Arrow icon used with Back to Top link](../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Guide](#Top)  
+ ![Arrow icon used with Back to Top link](../2014/data-quality-services/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Guide](#Top)  
   
 ##  <a name="Unique"></a> Unique Index Design Guidelines  
  A unique index guarantees that the index key contains no duplicate values and therefore every row in the table is in some way unique. Specifying a unique index makes sense only when uniqueness is a characteristic of the data itself. For example, if you want to make sure that the values in the `NationalIDNumber` column in the `HumanResources.Employee` table are unique, when the primary key is `EmployeeID`, create a UNIQUE constraint on the `NationalIDNumber` column. If the user tries to enter the same value in that column for more than one employee, an error message is displayed and the duplicate value is not entered.  
@@ -451,14 +451,14 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
 -   A unique nonclustered index can contain included nonkey columns. For more information, see [Index with Included Columns](#Included_Columns).  
   
- ![Arrow icon used with Back to Top link](../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Guide](#Top)  
+ ![Arrow icon used with Back to Top link](../2014/data-quality-services/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Guide](#Top)  
   
 ##  <a name="Filtered"></a> Filtered Index Design Guidelines  
  A filtered index is an optimized nonclustered index, especially suited to cover queries that select from a well-defined subset of data. It uses a filter predicate to index a portion of rows in the table. A well-designed filtered index can improve query performance, reduce index maintenance costs, and reduce index storage costs compared with full-table indexes.  
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](includes/sscurrent-md.md)].|  
   
  Filtered indexes can provide the following advantages over full-table indexes:  
   
@@ -595,7 +595,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
   
  Moving the data conversion from the left side to the right side of a comparison operator might change the meaning of the conversion. In the above example, when the CONVERT operator was added to the right side, the comparison changed from an integer comparison to a `varbinary` comparison.  
   
- ![Arrow icon used with Back to Top link](../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Guide](#Top)  
+ ![Arrow icon used with Back to Top link](../2014/data-quality-services/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Guide](#Top)  
   
 ##  <a name="Additional_Reading"></a> Additional Reading  
  [Improving Performance with SQL Server 2008 Indexed Views](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  

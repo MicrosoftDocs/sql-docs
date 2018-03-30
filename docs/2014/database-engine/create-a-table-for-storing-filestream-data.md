@@ -24,9 +24,9 @@ manager: "jhubbard"
   
 ### To create a table to store FILESTREAM data  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], click **New Query** to display the Query Editor.  
+1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], click **New Query** to display the Query Editor.  
   
-2.  Copy the [!INCLUDE[tsql](../../includes/tsql-md.md)] code from the following example into the Query Editor. This [!INCLUDE[tsql](../../includes/tsql-md.md)] code creates a FILESTREAM-enabled table called Records.  
+2.  Copy the [!INCLUDE[tsql](../includes/tsql-md.md)] code from the following example into the Query Editor. This [!INCLUDE[tsql](../includes/tsql-md.md)] code creates a FILESTREAM-enabled table called Records.  
   
 3.  To create the table, click **Execute**.  
   
@@ -36,10 +36,10 @@ manager: "jhubbard"
 > [!NOTE]  
 >  This example refers to the Archive database that is created in [Create a FILESTREAM-Enabled Database](../../2014/database-engine/create-a-filestream-enabled-database.md).  
   
- [!code-sql[FILESTREAM#FS_CreateTable](../../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_createtable)]  
+ [!code-sql[FILESTREAM#FS_CreateTable](../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_createtable)]  
   
 ## See Also  
- [CREATE TABLE &#40;Transact-SQL&#41;](../Topic/CREATE%20TABLE%20\(Transact-SQL\).md)   
- [ALTER TABLE &#40;Transact-SQL&#41;](../Topic/ALTER%20TABLE%20\(Transact-SQL\).md)  
+ [CREATE TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/create-table-transact-sql.md)   
+ [ALTER TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-table-transact-sql.md)  
   
   

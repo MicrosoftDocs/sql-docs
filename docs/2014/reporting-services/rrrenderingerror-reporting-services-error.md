@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 0751efc3-b81b-44ee-8aac-8560f86ca322
 caps.latest.revision: 25
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # rrRenderingError - Reporting Services Error
@@ -23,14 +23,14 @@ manager: "mblythe"
   
 |||  
 |-|-|  
-|Product Name|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|Product Name|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|  
 |Event ID|rrRenderingError|  
 |Event Source|Microsoft.ReportingServices.Diagnostics.Utilities.ErrorStrings.resources.Strings|  
-|Component|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
+|Component|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|  
 |Message Text|An error occurred during rendering of the report. (rrRenderingError) %1|  
   
 ## Explanation  
- This message is returned when [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] cannot render or export the report.  
+ This message is returned when [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] cannot render or export the report.  
   
  A message that indicates that the size is not supported is typically caused when the specified RDL page size is not valid. Specify a valid RDL page size and then try again.  
   

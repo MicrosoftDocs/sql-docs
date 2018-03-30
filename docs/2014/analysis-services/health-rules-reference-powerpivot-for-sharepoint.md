@@ -16,15 +16,15 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Health Rules Reference (PowerPivot for SharePoint)
-  This reference topic describes the SharePoint health rules that are added by a PowerPivot for SharePoint installation. These rules are used to report problems with server health, availability, or configuration of a [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] service application or its associated [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance.  
+  This reference topic describes the SharePoint health rules that are added by a PowerPivot for SharePoint installation. These rules are used to report problems with server health, availability, or configuration of a [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] service application or its associated [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance.  
   
  The following table lists the rules in the order in which they appear on the Health Analyzer Rule Definitions page in SharePoint Central Administration. Configurable rules are those for which you can change the thresholds at which the rule is triggered. For more information, see [PowerPivot Health Rules - Configure](../../2014/analysis-services/powerpivot-health-rules-configure.md). Auto Repair indicates that there is a built-in remedy that you can click from within the Problem reports page to resolve the issue.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 &#124; SharePoint 2010|  
+|**[!INCLUDE[applies](../includes/applies-md.md)]**  SharePoint 2013 &#124; SharePoint 2010|  
   
- **Note:** [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installs different sets of health rules for different versions of SharePoint. See the “version” column in the table below, or you can run the following Windows PowerShell command to see the installed rules.  
+ **Note:** [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] installs different sets of health rules for different versions of SharePoint. See the “version” column in the table below, or you can run the following Windows PowerShell command to see the installed rules.  
   
 ```  
 Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -like “*power*”}  | format-table -property * -autosize | out-default  

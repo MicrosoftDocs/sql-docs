@@ -20,7 +20,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Browse Data Source Dialog Box (Analysis Services - Multidimensional Data)
-  Use the **Browse Data Source** dialog box in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to view the first 1,000 records of the selected table.  
+  Use the **Browse Data Source** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to view the first 1,000 records of the selected table.  
   
 ## Options  
  **Data Source Table**  

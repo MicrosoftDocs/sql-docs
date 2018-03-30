@@ -24,7 +24,7 @@ manager: "mblythe"
   
  **To display the Attributes pane**  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project, and then open the dimension that you want.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project, and then open the dimension that you want.  
   
 2.  If not selected, click the **Dimension Structure** tab.  
   

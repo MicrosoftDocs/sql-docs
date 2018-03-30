@@ -16,14 +16,14 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Configure Health Policies (SQL Server Utility)
-  Use the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility dashboard in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to view [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility resource parameters for managed instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and data-tier applications. For more information, see [SQL Server Utility Features and Tasks](../../2014/database-engine/sql-server-utility-features-and-tasks.md).  
+  Use the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility dashboard in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to view [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility resource parameters for managed instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and data-tier applications. For more information, see [SQL Server Utility Features and Tasks](../../2014/database-engine/sql-server-utility-features-and-tasks.md).  
   
- To view [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility health policy results, connect to a utility control point from [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. For more information, see [Use Utility Explorer to Manage the SQL Server Utility](../../2014/database-engine/use-utility-explorer-to-manage-the-sql-server-utility.md).  
+ To view [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility health policy results, connect to a utility control point from [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. For more information, see [Use Utility Explorer to Manage the SQL Server Utility](../../2014/database-engine/use-utility-explorer-to-manage-the-sql-server-utility.md).  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility health policies can be configured for data-tier applications and managed instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Health policies can be defined globally for all data-tier applications and managed instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility, or they can be defined individually for each data-tier application and for each managed instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility health policies can be configured for data-tier applications and managed instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Health policies can be defined globally for all data-tier applications and managed instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility, or they can be defined individually for each data-tier application and for each managed instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility.  
   
 ## Monitoring Policies for Data-tier Applications  
- Overutilization and underutilization policies for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data-tier applications are as follows:  
+ Overutilization and underutilization policies for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] data-tier applications are as follows:  
   
 -   Data-tier application processor utilization.  
   
@@ -41,19 +41,19 @@ manager: "jhubbard"
  For more information about viewing or changing monitoring policies for individual data-tier applications, see [Deployed Data-tier Application Details &#40;SQL Server Utility&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md).  
   
 ## Monitoring Policies for Managed Instances of SQL Server  
- Overutilization and underutilization policies for managed instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are as follows:  
+ Overutilization and underutilization policies for managed instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] are as follows:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance processor utilization.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance processor utilization.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance file space for database files.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance file space for database files.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance file space for storage volumes.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance file space for storage volumes.  
   
 -   Computer processor utilization.  
   
- For more information about viewing or changing global monitoring policies for managed instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Utility Administration &#40;SQL Server Utility&#41;](../../2014/database-engine/utility-administration-sql-server-utility.md).  
+ For more information about viewing or changing global monitoring policies for managed instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see [Utility Administration &#40;SQL Server Utility&#41;](../../2014/database-engine/utility-administration-sql-server-utility.md).  
   
- For more information about viewing or changing monitoring policies for individual managed instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Managed Instance Details &#40;SQL Server Utility&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md).  
+ For more information about viewing or changing monitoring policies for individual managed instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see [Managed Instance Details &#40;SQL Server Utility&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md).  
   
 ## See Also  
  [SQL Server Utility Features and Tasks](../../2014/database-engine/sql-server-utility-features-and-tasks.md)   

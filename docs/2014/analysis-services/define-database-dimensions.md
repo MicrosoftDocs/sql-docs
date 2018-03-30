@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Define Database Dimensions
-  Use Dimension Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to configure an existing database dimension in a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project or database. You can use Dimension Designer to do the following:  
+  Use Dimension Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to configure an existing database dimension in a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project or database. You can use Dimension Designer to do the following:  
   
 -   Configure the dimension-level properties.  
   
@@ -32,7 +32,7 @@ manager: "mblythe"
   
 -   For processed dimensions, you can browse the dimension structure and view data.  
   
- After you modify a dimension, attribute, or hierarchy, you must process that dimension to view the changes. When working in project mode, you deploy the changes to the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance before processing.  
+ After you modify a dimension, attribute, or hierarchy, you must process that dimension to view the changes. When working in project mode, you deploy the changes to the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance before processing.  
   
  For more information about how to open a dimension in Dimension Designer, see [Modify or Delete a Database Dimension in Solution Explorer](../../2014/analysis-services/modify-or-delete-a-database-dimension-in-solution-explorer.md).  
   

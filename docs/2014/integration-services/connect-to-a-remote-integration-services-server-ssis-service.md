@@ -22,34 +22,34 @@ manager: "jhubbard"
 ---
 # Connect to a Remote Integration Services Server (SSIS Service)
     
-> [!IMPORTANT] This topic discusses the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service, a Windows service for managing [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] supports the service for backward compatibility with earlier releases of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Starting in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], you can manage objects such as packages on the Integration Services server.  
+> [!IMPORTANT] This topic discusses the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service, a Windows service for managing [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] supports the service for backward compatibility with earlier releases of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Starting in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], you can manage objects such as packages on the Integration Services server.  
   
- Connecting to an instance of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] on a remote server, from [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or another management application, requires a specific set of rights on the server for the users of the application.  
+ Connecting to an instance of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] on a remote server, from [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or another management application, requires a specific set of rights on the server for the users of the application.  
   
-> [!IMPORTANT] To manage packages that are stored on a remote server, you do not have to connect to the instance of the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service on that remote server. Instead, edit the configuration file for the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service so that [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] displays the packages that are stored on the remote server. For more information, see [Configuring the Integration Services Service &#40;SSIS Service&#41;](../../2014/integration-services/configuring-the-integration-services-service-ssis-service.md).  
+> [!IMPORTANT] To manage packages that are stored on a remote server, you do not have to connect to the instance of the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service on that remote server. Instead, edit the configuration file for the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service so that [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] displays the packages that are stored on the remote server. For more information, see [Configuring the Integration Services Service &#40;SSIS Service&#41;](../../2014/integration-services/configuring-the-integration-services-service-ssis-service.md).  
   
 ## Connecting to Integration Services on a Remote Server  
   
 #### To connect to Integration Services on a Remote Server  
   
-1.  Open [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+1.  Open [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 2.  Select **File**, **Connect Object Explorer** to display the **Connect to Server** dialog box.  
   
 3.  Select **Integration Services** in the **Server type** list.  
   
-4.  Type the name of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server in the **Server name** text box.  
+4.  Type the name of a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server in the **Server name** text box.  
   
     > [!NOTE]  
-    >  The [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service is not instance-specific. You connect to the service by using the name of the computer on which the Integration Services service is running.  
+    >  The [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service is not instance-specific. You connect to the service by using the name of the computer on which the Integration Services service is running.  
   
 5.  Click **Connect**.  
   
 > [!NOTE]  
->  The **Browse for Servers** dialog box does not display remote instances of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. In addition, the options available on the **Connection Options** tab of the **Connect to Server** dialog box, which is displayed by clicking the **Options** button, are not applicable to [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] connections.  
+>  The **Browse for Servers** dialog box does not display remote instances of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. In addition, the options available on the **Connection Options** tab of the **Connect to Server** dialog box, which is displayed by clicking the **Options** button, are not applicable to [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] connections.  
   
 ## Eliminating the "Access Is Denied" Error  
- When a user without sufficient rights attempts to connect to an instance of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] on a remote server, the server responds with an "Access is denied" error message. You can avoid this error message by ensuring that users have the required DCOM permissions.  
+ When a user without sufficient rights attempts to connect to an instance of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] on a remote server, the server responds with an "Access is denied" error message. You can avoid this error message by ensuring that users have the required DCOM permissions.  
   
 #### To configure rights for remote users on Windows Server 2003 or Windows XP  
   
@@ -75,7 +75,7 @@ manager: "jhubbard"
   
 11. Close the MMC snap-in.  
   
-12. Restart the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service.  
+12. Restart the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service.  
   
 #### To configure rights for remote users on Windows 2000 with the latest service packs  
   
@@ -89,13 +89,13 @@ manager: "jhubbard"
   
 5.  Close the dialog boxes and **dcomcnfg.exe**.  
   
-6.  Restart the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service.  
+6.  Restart the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service.  
   
 ## Connecting by using a Local Account  
- If you are working in a local Windows account on a client computer, you can connect to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service on a remote computer only if a local account that has the same name and password and the appropriate rights exists on the remote computer.  
+ If you are working in a local Windows account on a client computer, you can connect to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service on a remote computer only if a local account that has the same name and password and the appropriate rights exists on the remote computer.  
   
 ## By default the SSIS service does not support delegation  
-By default the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service does not support the delegation of credentials, or what is sometimes referred to as a double hop. In this scenario, you are working on a client computer, the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service is running on a second computer, and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running on a third computer. First, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] successfully passes your credentials from the client computer to the second computer on which the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service is running. Then, however, the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service cannot delegate your credentials from the second computer to the third computer on which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running.
+By default the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service does not support the delegation of credentials, or what is sometimes referred to as a double hop. In this scenario, you are working on a client computer, the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service is running on a second computer, and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is running on a third computer. First, [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] successfully passes your credentials from the client computer to the second computer on which the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service is running. Then, however, the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service cannot delegate your credentials from the second computer to the third computer on which [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is running.
 
 You can enable delegation of credentials by granting the **Trust this user for delegation to any service (Kerberos Only)** right to the SQL Server service account, which launches the Integration Services service (ISServerExec.exe) as a child process. Before you grant this right, consider whether it meets the security requirements of your organization.
 

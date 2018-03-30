@@ -34,7 +34,7 @@ manager: "jhubbard"
   
  The graphical tools in the **Query Builder** dialog box let you construct queries using drag-and-drop operations. By default, the Query Builder dialog box constructs SELECT queries, but you can also build INSERT, UPDATE, or DELETE queries. All types of SQL statements can be parsed and run in the **Query Builder** dialog box. For more information about SQL statements in packages, see [Integration Services &#40;SSIS&#41; Queries](../../2014/integration-services/integration-services-ssis-queries.md).  
   
- To learn more about the Transact-SQL language and its syntax, see [Transact-SQL Reference &#40;Database Engine&#41;](../Topic/Transact-SQL%20Reference%20\(Database%20Engine\).md).  
+ To learn more about the Transact-SQL language and its syntax, see [Transact-SQL Reference &#40;Database Engine&#41;](~/t-sql/language-reference.md).  
   
  You can also use variables in a query to provide values to an input parameter, to capture values of output parameters, and to store return codes. To learn more about using variables in the queries that packages use, see [Execute SQL Task](../../2014/integration-services/execute-sql-task.md), [OLE DB Source](../../2014/integration-services/ole-db-source.md), and [Integration Services &#40;SSIS&#41; Queries](../../2014/integration-services/integration-services-ssis-queries.md). To learn more about using variables in the Execute SQL Task, see [Parameters and Return Codes in the Execute SQL Task](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md) and [Result Sets in the Execute SQL Task](../../2014/integration-services/result-sets-in-the-execute-sql-task.md).  
   

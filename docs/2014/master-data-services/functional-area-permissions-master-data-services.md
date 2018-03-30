@@ -20,7 +20,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Functional Area Permissions (Master Data Services)
-  You can assign permission to each of the functional areas of the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] user interface (UI). There are five functional areas:  
+  You can assign permission to each of the functional areas of the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] user interface (UI). There are five functional areas:  
   
 -   **Explorer**  
   
@@ -36,7 +36,7 @@ manager: "jhubbard"
   
  Within the **Explorer** functional area, additional permissions assigned to model objects and hierarchy members determine which data a user can access. Within all other functional areas, a user must be a model administrator to view a model and act on it. For more information, see [Administrators &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md).  
   
- A user or group must have permission to at least one functional area and one model on the **Models** tab in order to access [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].  
+ A user or group must have permission to at least one functional area and one model on the **Models** tab in order to access [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
 ## See Also  
  [Assign Functional Area Permissions &#40;Master Data Services&#41;](../../2014/master-data-services/assign-functional-area-permissions-master-data-services.md)   

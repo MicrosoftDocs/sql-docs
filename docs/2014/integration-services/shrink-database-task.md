@@ -22,7 +22,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Shrink Database Task
-  The Shrink Database task reduces the size of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database data and log files.  
+  The Shrink Database task reduces the size of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database data and log files.  
   
  By using the Shrink Database task, a package can shrink files for a single database or multiple databases.  
   
@@ -40,16 +40,16 @@ manager: "jhubbard"
   
 -   NOTRUNCATE or TRUNCATEONLY.  
   
- If the Shrink Database task shrinks multiple databases, the task runs multiple SHRINKDATABASE commands, one for each database. All instances of the SHRINKDATABASE command use the same argument values, except for the *database_name* argument. For more information, see [DBCC SHRINKDATABASE &#40;Transact-SQL&#41;](../Topic/DBCC%20SHRINKDATABASE%20\(Transact-SQL\).md).  
+ If the Shrink Database task shrinks multiple databases, the task runs multiple SHRINKDATABASE commands, one for each database. All instances of the SHRINKDATABASE command use the same argument values, except for the *database_name* argument. For more information, see [DBCC SHRINKDATABASE &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).  
   
 ## Configuration of the Shrink Database Task  
- You can set properties through the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer. This task is in the **Maintenance Plan Tasks** section of the **Toolbox** in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer.  
+ You can set properties through the [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer. This task is in the **Maintenance Plan Tasks** section of the **Toolbox** in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer.  
   
- For more information about the properties that you can set in the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
+ For more information about the properties that you can set in the [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click the following topic:  
   
 -   [Shrink Database Task &#40;Maintenance Plan&#41;](../../2014/database-engine/shrink-database-task-maintenance-plan.md)  
   
- For more information about setting these properties in the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
+ For more information about setting these properties in the [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click the following topic:  
   
 -   [Set the Properties of a Task or Container](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)  
   

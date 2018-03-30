@@ -20,7 +20,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Create or Edit Named Query Dialog Box (Analysis Services - Multidimensional Data)
-  Use the **Create/Edit Named Query** dialog box in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to create or edit a named query in **Data Source View Designer**. A named query can be treated as a table, on which you can base other [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects. You can display the **Create/Edit Named Query** dialog box by:  
+  Use the **Create/Edit Named Query** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to create or edit a named query in **Data Source View Designer**. A named query can be treated as a table, on which you can base other [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objects. You can display the **Create/Edit Named Query** dialog box by:  
   
 -   Clicking **New Named Query** on the **Toolbar** pane of **Data Source View Designer**.  
   

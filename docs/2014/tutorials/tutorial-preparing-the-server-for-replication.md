@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 caps.latest.revision: 14
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Tutorial: Preparing the Server for Replication
@@ -31,7 +31,7 @@ manager: "jhubbard"
   
  To use this tutorial, your system must have the following components installed:  
   
--   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] with the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. To enhance security, the sample databases are not installed by default.  
+-   [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] with the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database. To enhance security, the sample databases are not installed by default.  
   
  **Estimated time to complete this tutorial: 30 minutes.**  
   

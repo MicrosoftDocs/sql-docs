@@ -29,7 +29,7 @@ manager: "jhubbard"
  The path and name of the trace file displayed.  
   
  **Trace provider name**  
- Shows the name of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that was traced.  
+ Shows the name of the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that was traced.  
   
  **Trace provider type**  
  Shows the server type that provided the trace.  

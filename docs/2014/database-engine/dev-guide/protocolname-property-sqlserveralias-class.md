@@ -37,7 +37,7 @@ object
   
 ## Parts  
  *object*  
- A [SqlServerAlias Class](../../../2014/database-engine/dev-guide/sqlserveralias-class.md) object that represents a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] alias.  
+ A [SqlServerAlias Class](../../../2014/database-engine/dev-guide/sqlserveralias-class.md) object that represents a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alias.  
   
 ## Property Value/Return Value  
  A string value that specifies the name of the protocol used by the server connection alias.  

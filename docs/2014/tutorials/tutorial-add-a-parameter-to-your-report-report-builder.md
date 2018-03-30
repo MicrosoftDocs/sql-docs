@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 caps.latest.revision: 9
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Tutorial: Add a Parameter to Your Report (Report Builder)
@@ -67,7 +67,7 @@ manager: "mblythe"
   
 #### To create a new matrix report  
   
-1.  Click **Start**, point to **Programs**, point to [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]**Report Builder**, and then click **Report Builder**.  
+1.  Click **Start**, point to **Programs**, point to [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]**Report Builder**, and then click **Report Builder**.  
   
      The **Getting Started** dialog box appears.  
   
@@ -110,7 +110,7 @@ manager: "mblythe"
     FROM CTE  
     ```  
   
-     This query combines the results of several [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT statements inside a common table expression to specify values that are based on simplified data from the Contoso sample database. The Contoso sales data represents international sales data for consumer goods. This tutorial uses sales data for cameras. The subcategories represent digital cameras, digital single lens reflex (SLR) cameras, camcorders, and accessories.  
+     This query combines the results of several [!INCLUDE[tsql](../includes/tsql-md.md)] SELECT statements inside a common table expression to specify values that are based on simplified data from the Contoso sample database. The Contoso sales data represents international sales data for consumer goods. This tutorial uses sales data for cameras. The subcategories represent digital cameras, digital single lens reflex (SLR) cameras, camcorders, and accessories.  
   
      The query specifies column names that include a store identifier, a sales item subcategory, and the quantity ordered for sales orders from three stores. In this query, the store name is not part of the result set. Later in this tutorial, you will look up the name of the store that corresponds to the store identifier from a separate dataset.  
   
@@ -164,7 +164,7 @@ manager: "mblythe"
   
 2.  In the Report Data pane, expand the **Datasets** folder, right-click **DataSet1**, and then click **Query**.  
   
-3.  Add the following [!INCLUDE[tsql](../../includes/tsql-md.md)] `WHERE` clause as the last line in the query:  
+3.  Add the following [!INCLUDE[tsql](../includes/tsql-md.md)] `WHERE` clause as the last line in the query:  
   
     ```  
     WHERE StoreID = (@StoreID)  
@@ -176,11 +176,11 @@ manager: "mblythe"
   
 5.  In **Parameter Value**, type **200**.  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
      The result set displays the quantities sold for Accessories, Camcorders, and Digital SLR Cameras for the store identifier **200**.  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 8.  In the Report Data pane, expand the **Parameters** folder.  
   
@@ -199,7 +199,7 @@ manager: "mblythe"
   
 4.  Accept the remaining default values in the dialog box.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 6.  Preview the report. The report viewer displays the prompt for *@StoreID*.  
   
@@ -231,7 +231,7 @@ manager: "mblythe"
     UNION SELECT 306 AS StoreID, 'Contoso Europe Online Store' as StoreName  
     ```  
   
-8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
      The Report Data pane displays the fields StoreID and StoreName under the **Stores** dataset node.  
   
@@ -256,7 +256,7 @@ manager: "mblythe"
   
      The user will now select from a list of store names instead of store identifiers. Note that the parameter data type remains **Integer** because the parameter is based on the store identifier, not the store name.  
   
-8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 9. Preview the report.  
   
@@ -281,7 +281,7 @@ manager: "mblythe"
   
 5.  In **Value field**, from the drop-down list, click StoreID.  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 7.  Preview the report.  
   
@@ -297,7 +297,7 @@ manager: "mblythe"
   
 4.  In **Value**, type **200**.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 6.  Preview the report.  
   
@@ -322,7 +322,7 @@ manager: "mblythe"
   
      The Lookup function takes the value for StoreID, looks it up in the "Stores" dataset, and returns the StoreName value.  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
      The store column header contains the display text for a complex expression: **<\<Expr>>**.  
   
@@ -345,7 +345,7 @@ manager: "mblythe"
   
 5.  Right-click the first expression and click **Expression**. The **Expression** dialog box opens. Replace the text `Value` by `Label`.  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
      The text displays: `[@StoreID.Label] [@StoreID]`.  
   
@@ -368,7 +368,7 @@ manager: "mblythe"
   
 6.  In **Value**, type `[@StoreID]`. `[@StoreID]` is the simple expression syntax that represents `=Parameters!StoreID.Value`.  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 8.  Preview the report.  
   
@@ -389,11 +389,11 @@ manager: "mblythe"
   
 3.  Select **Allow multiple values**.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 5.  In the Report Data pane, expand the **Datasets** folder, right-click **DataSet1**, and then click **Query**.  
   
-6.  Change `equals` (=) to `IN` in the [!INCLUDE[tsql](../../includes/tsql-md.md)] `WHERE` clause in the last line in the query:  
+6.  Change `equals` (=) to `IN` in the [!INCLUDE[tsql](../includes/tsql-md.md)] `WHERE` clause in the last line in the query:  
   
     ```  
     WHERE StoreID IN (@StoreID)  
@@ -401,7 +401,7 @@ manager: "mblythe"
   
      The `IN` operator tests a value for inclusion in a set of values.  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 8.  Right-click a row or column header handle on the matrix, and then click **Tablix Properties**.  
   
@@ -409,7 +409,7 @@ manager: "mblythe"
   
 10. In **Operator**, select **In**.  
   
-11. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 12. In the text box that displays the parameter in the page footer, delete all text.  
   
@@ -417,7 +417,7 @@ manager: "mblythe"
   
      This expression concatenates all store names that the user selected.  
   
-14. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+14. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 15. Click in the text box in front of the expression that you just created, and then type the following: Parameter Values Selected:.  
   
@@ -451,7 +451,7 @@ manager: "mblythe"
   
 7.  In **Value**, type **False**.  
   
-8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 #### To set visibility based on a boolean parameter  
   
@@ -465,9 +465,9 @@ manager: "mblythe"
   
      The text box Visibility option is controlled by the property Hidden. Apply the `Not` operator so that when the parameter is selected, the Hidden property is false, and the text box will be displayed.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 7.  Preview the report.  
   

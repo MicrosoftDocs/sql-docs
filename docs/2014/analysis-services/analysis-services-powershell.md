@@ -16,7 +16,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Analysis Services PowerShell
-  [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] includes an Analysis Services PowerShell (SQLAS) provider and cmdlets so that you can use Windows PowerShell to navigate, administer, and query Analysis Services objects.  
+  [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] includes an Analysis Services PowerShell (SQLAS) provider and cmdlets so that you can use Windows PowerShell to navigate, administer, and query Analysis Services objects.  
   
  Analysis Services PowerShell consists of the following:  
   
@@ -35,7 +35,7 @@ manager: "mblythe"
   
  [Analysis Services PowerShell Tasks](#bkmk_tasks)  
   
- For more information about syntax and examples, see [Analysis Services PowerShell Reference](../Topic/Analysis%20Services%20PowerShell%20Reference.md).  
+ For more information about syntax and examples, see [Analysis Services PowerShell Reference](~/analysis-services/powershell/analysis-services-powershell-reference.md).  
   
 ##  <a name="bkmk_prereq"></a> Prerequisites  
  Windows PowerShell 2.0 must be installed. It is installed by default on newer versions of the Windows operating systems. For more information, see [Install Windows PowerShell 2.0](http://go.microsoft.com/fwlink/?LinkId=227613).  
@@ -47,7 +47,7 @@ manager: "mblythe"
  Remote access to an Analysis Services instance requires that you enable remote administration and file sharing. For more information, see [Enable Remote Administration](#bkmk_remote) in this topic.  
   
 ##  <a name="bkmk_vers"></a> Supported Versions and Modes of Analysis Services  
- Currently, Analysis Services PowerShell is supported on any edition of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Analysis Services running on Windows Server 2008 R2, Windows Server 2008 SP1, or Windows 7.  
+ Currently, Analysis Services PowerShell is supported on any edition of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Analysis Services running on Windows Server 2008 R2, Windows Server 2008 SP1, or Windows 7.  
   
  The following table shows the availability of Analysis Services PowerShell in different contexts.  
   
@@ -55,7 +55,7 @@ manager: "mblythe"
 |-------------|-------------------------------------|  
 |Multidimensional instances and databases|Supported for local and remote administration.<br /><br /> Merge-partition requires a local connection.|  
 |Tabular instances and databases|Supported for local and remote administration.<br /><br /> For more information, see [Manage Tabular Models Using PowerShell](http://go.microsoft.com/fwlink/?linkID=227685).|  
-|PowerPivot for SharePoint instances and databases|Limited support. You can use HTTP connections and the SQLAS provider to view instance and database information.<br /><br /> However, using the cmdlets is not supported. You must not use Analysis Services PowerShell to backup and restore in-memory PowerPivot database, nor should you add or remove roles, process data, or run arbitrary XMLA script.<br /><br /> For configuration purposes, PowerPivot for SharePoint has built-in PowerShell support that is provided separately. For more information, see [PowerShell Reference for PowerPivot for SharePoint](../Topic/PowerShell%20Reference%20for%20PowerPivot%20for%20SharePoint.md).|  
+|PowerPivot for SharePoint instances and databases|Limited support. You can use HTTP connections and the SQLAS provider to view instance and database information.<br /><br /> However, using the cmdlets is not supported. You must not use Analysis Services PowerShell to backup and restore in-memory PowerPivot database, nor should you add or remove roles, process data, or run arbitrary XMLA script.<br /><br /> For configuration purposes, PowerPivot for SharePoint has built-in PowerShell support that is provided separately. For more information, see [PowerShell Reference for PowerPivot for SharePoint](~/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md).|  
 |Native connections to local cubes<br /><br /> “Data Source=c:\backup\test.cub”|Not supported.|  
 |HTTP connections to BI semantic model (.bism) connection files in SharePoint<br /><br /> “Data Source=http://server/shared_docs/name.bism”|Not supported.|  
 |Embedded connections to PowerPivot databases<br /><br /> “Data Source=$Embedded$”|Not supported.|  
@@ -100,7 +100,7 @@ PS SQLSERVER:\SQLAS\Localhost\default> $pwd -is [System.IDisposable]
 True  
 ```  
   
- You can now backup or restore an encrypted database file, passing the $pwd variable to the password parameter. To view a complete example that combines this illustration with other cmdlets, see [Backup-ASDatabase cmdlet](../Topic/Backup-ASDatabase%20cmdlet.md) and [Restore-ASDatabase cmdlet](../Topic/Restore-ASDatabase%20cmdlet.md).  
+ You can now backup or restore an encrypted database file, passing the $pwd variable to the password parameter. To view a complete example that combines this illustration with other cmdlets, see [Backup-ASDatabase cmdlet](~/analysis-services/powershell/backup-asdatabase-cmdlet.md) and [Restore-ASDatabase cmdlet](~/analysis-services/powershell/restore-asdatabase-cmdlet.md).  
   
  As a follow up step, remove both the password and variable from the session.  
   
@@ -110,7 +110,7 @@ PS SQLSERVER:\SQLAS\Localhost\default> Remove-Variable -Name pwd
 ```  
   
 ##  <a name="bkmk_tasks"></a> Analysis Services PowerShell Tasks  
- You can run Analysis Services PowerShell from the Windows PowerShell management shell or a Windows command prompt. Running Analysis Services PowerShell from [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] is not supported.  
+ You can run Analysis Services PowerShell from the Windows PowerShell management shell or a Windows command prompt. Running Analysis Services PowerShell from [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] is not supported.  
   
  This section describes common tasks for using Analysis Services PowerShell.  
   
@@ -144,7 +144,7 @@ PS SQLSERVER:\SQLAS\Localhost\default> Remove-Variable -Name pwd
 ###  <a name="bkmk_remote"></a> Enable Remote Administration  
  Before you can use Analysis Services PowerShell with a remote Analysis Services instance, you must first enable remote administration and file sharing. The following error indicates a firewall configuration issue: “The RPC server is unavailable. (Exception from HRESULT: 0x800706BA)”.  
   
-1.  Verify that both local and remote computers have the [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] versions of the client and server tools.  
+1.  Verify that both local and remote computers have the [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] versions of the client and server tools.  
   
 2.  On the remote server that is hosting an Analysis Services instance, open TCP port 2383 in Windows Firewall. If you installed Analysis Services as a named instance or are using a custom port, the port number will be different. For more information, see [Configure the Windows Firewall to Allow Analysis Services Access](../../2014/analysis-services/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   

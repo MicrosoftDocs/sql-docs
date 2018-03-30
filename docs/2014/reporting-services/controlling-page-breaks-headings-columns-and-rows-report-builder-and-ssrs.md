@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 4b8fa41f-a727-4f23-8efb-fd9bb0d4cd1d
 caps.latest.revision: 4
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Controlling Page Breaks, Headings, Columns, and Rows (Report Builder and SSRS)
@@ -25,7 +25,7 @@ manager: "mblythe"
  For more information, see [Display Row and Column Headers on Multiple Pages &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md) and [Keep Headers Visible When Scrolling Through a Report &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## See Also  
  [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/tables-matrices-and-lists-report-builder-and-ssrs.md)   

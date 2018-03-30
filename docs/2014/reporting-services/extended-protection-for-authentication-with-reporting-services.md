@@ -12,56 +12,56 @@ ms.topic: "article"
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 caps.latest.revision: 15
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Extended Protection for Authentication with Reporting Services
-  Extended Protection is a set of enhancements to recent versions of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows operating system. Extended protection enhances how credentials and authentication can be protected by applications. The feature itself does not directly provide protection against specific attacks such as credential forwarding, but it provides an infrastructure for applications such as [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] to enforce Extended Protection for Authentication.  
+  Extended Protection is a set of enhancements to recent versions of the [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows operating system. Extended protection enhances how credentials and authentication can be protected by applications. The feature itself does not directly provide protection against specific attacks such as credential forwarding, but it provides an infrastructure for applications such as [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] to enforce Extended Protection for Authentication.  
   
  The main authentication enhancements that are part of extended protection are service binding and channel binding. Channel binding uses a channel binding token (CBT), to verify that the channel established between two end points was not compromised. Service binding uses Service Principal Names (SPN) to validate the intended destination of authentication tokens. For more background information about extended protection, see [Integrated Windows Authentication with Extended Protection](http://go.microsoft.com/fwlink/?LinkId=179922).  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supports and enforces Extended Protection that has been enabled in the operating system and configured in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. By default, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] accepts requests that specify Negotiate or NTLM authentication and could therefore benefit from Extended Protection support in the operating system and the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] extended protection features.  
+ [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] supports and enforces Extended Protection that has been enabled in the operating system and configured in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. By default, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] accepts requests that specify Negotiate or NTLM authentication and could therefore benefit from Extended Protection support in the operating system and the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] extended protection features.  
   
 > [!IMPORTANT]  
 >  By default, Windows does not enable Extended Protection. For information about how to enable Extended Protection in Windows, see [Extended Protection for Authentication](http://go.microsoft.com/fwlink/?LinkID=178431). Both the operating system and client authentication stack must support Extended Protection so that authentication succeeds. For older operating systems you may need to install more than one update for a complete, Extended Protection ready computer. For information on recent developments with Extended Protection, see [updated information with Extended Protection](http://go.microsoft.com/fwlink/?LinkId=183362).  
   
 ## Reporting Services Extended Protection Overview  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supports and enforces extended protection that has been enabled in the operating system. If the operating system does not support extended protection or the feature in the operating system has not been enabled, the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] extended protection feature will fail authentication. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Extended Protection also requires an SSL Certificate. For more information, see [Configure SSL Connections on a Native Mode Report Server](../../2014/reporting-services/configure-ssl-connections-on-a-native-mode-report-server.md)  
+ [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] supports and enforces extended protection that has been enabled in the operating system. If the operating system does not support extended protection or the feature in the operating system has not been enabled, the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] extended protection feature will fail authentication. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Extended Protection also requires an SSL Certificate. For more information, see [Configure SSL Connections on a Native Mode Report Server](../../2014/reporting-services/configure-ssl-connections-on-a-native-mode-report-server.md)  
   
 > [!IMPORTANT]  
->  By default, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] does not enable Extended Protection. The feature can be enabled by modifying the `rsreportserver.config` configuration file or using WMI APIs to update the configuration file. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] does not provide a user interface to modify or view extended protection settings. For more information, see the [configuration settings](#ConfigurationSettings) section in this topic.  
+>  By default, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] does not enable Extended Protection. The feature can be enabled by modifying the `rsreportserver.config` configuration file or using WMI APIs to update the configuration file. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] does not provide a user interface to modify or view extended protection settings. For more information, see the [configuration settings](#ConfigurationSettings) section in this topic.  
   
- Common issues that occur because of changes in extended protection settings or incorrectly configured settings are not be exposed with obvious error messages or dialog windows. Issues related to extended protection configuration and compatibility result in authentication failures and errors in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] trace logs.  
+ Common issues that occur because of changes in extended protection settings or incorrectly configured settings are not be exposed with obvious error messages or dialog windows. Issues related to extended protection configuration and compatibility result in authentication failures and errors in the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] trace logs.  
   
 > [!IMPORTANT]  
->  Some data access technologies may not support extended protection. A data access technology is used to connect to SQL Server data sources and to the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] catalog database. Failure of a data access technology to support extended protection impacts [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in the following ways:  
+>  Some data access technologies may not support extended protection. A data access technology is used to connect to SQL Server data sources and to the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] catalog database. Failure of a data access technology to support extended protection impacts [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in the following ways:  
 >   
->  -   The SQL Server that runs the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] catalog database cannot have extended protection enabled or the report server will not successfully connect to the catalog database and return authentication errors.  
-> -   SQL Servers that are used as [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report data sources cannot have extended protection enabled or tries by the report server to connect to the report data source will fail and return authentication errors.  
+>  -   The SQL Server that runs the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] catalog database cannot have extended protection enabled or the report server will not successfully connect to the catalog database and return authentication errors.  
+> -   SQL Servers that are used as [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report data sources cannot have extended protection enabled or tries by the report server to connect to the report data source will fail and return authentication errors.  
 >   
 >  The documentation for a data access technology should have information about support for extended protection.  
   
 ### Upgrade  
   
--   Upgrading a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] adds configuration settings with default values to the `rsreportserver.config` file. If the settings were already present, the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installation will preserve them in the `rsreportserver.config` file.  
+-   Upgrading a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] server to [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] adds configuration settings with default values to the `rsreportserver.config` file. If the settings were already present, the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] installation will preserve them in the `rsreportserver.config` file.  
   
--   When the configuration settings are added to the `rsreportserver.config` configuration file, the default behavior is for the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] extended protection feature to be off and you must enable the feature as described in this topic. For more information, see the [configuration settings](#ConfigurationSettings) section in this topic.  
+-   When the configuration settings are added to the `rsreportserver.config` configuration file, the default behavior is for the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] extended protection feature to be off and you must enable the feature as described in this topic. For more information, see the [configuration settings](#ConfigurationSettings) section in this topic.  
   
 -   The default value for the setting `RSWindowsExtendedProtectionLevel` is `Off`.  
   
 -   The default value for the setting `RSWindowsExtendedProtectionScenario` is `Proxy`.  
   
--   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor does not verify that the operating system or the current installation of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] has Extended Protection support enabled.  
+-   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Upgrade Advisor does not verify that the operating system or the current installation of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] has Extended Protection support enabled.  
   
 ### What Reporting Services extended protection does not cover  
- The following feature areas and scenarios are not supported by the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] extended protection feature:  
+ The following feature areas and scenarios are not supported by the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] extended protection feature:  
   
--   Authors of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] custom security extensions must add support for extended protection to their custom security extension.  
+-   Authors of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] custom security extensions must add support for extended protection to their custom security extension.  
   
--   Third-party components added to or used by a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation must be updated by the third-party vendor, to support extended protection. For more information, contact the third-party vendor.  
+-   Third-party components added to or used by a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] installation must be updated by the third-party vendor, to support extended protection. For more information, contact the third-party vendor.  
   
 ## Deployment Scenarios and recommendations  
- The following scenarios illustrate different deployments and topologies and the recommended configuration to secure them with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Extended Protection.  
+ The following scenarios illustrate different deployments and topologies and the recommended configuration to secure them with [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Extended Protection.  
   
 ### Direct  
  This scenario describes directly connecting to a report server, for example, an intranet environment.  
@@ -99,7 +99,7 @@ manager: "mblythe"
 |Indirect and direct access from client to report server where the client establishes an SSL connection to the proxy or report server.|![RS_ExtendedProtection_CombinationSSL](../../2014/reporting-services/media/rs-extendedprotection-combinationssl.gif "RS_ExtendedProtection_CombinationSSL")<br /><br /> 1) Client application<br /><br /> 2) Report server<br /><br /> 3) Proxy<br /><br /> 4) Client application|Channel Binding can be used<br /><br /> The Proxy name must be known to the report server and the report server administrator should either create a URL reservation for the proxy, with a host header or configure the Proxy name in the Windows registry entry `BackConnectionHostNames`.<br /><br /> Set `RSWindowsExtendedProtectionLevel` to `Allow` or `Require`.<br /><br /> Set `RSWindowsExtendedProtectionScenario` to `Proxy`.|  
   
 ## Configuring Reporting Rervices extended protection  
- The `rsreportserver.config` file contains the configuration values that control the behavior of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] extended protection.  
+ The `rsreportserver.config` file contains the configuration values that control the behavior of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] extended protection.  
   
  For more information on using and editing the `rsreportserver.config` file, see [RSReportServer Configuration File](../../2014/reporting-services/rsreportserver-configuration-file.md). The extended protection settings can also be changed and inspected using WMI APIs. For more information, see [SetExtendedProtectionSettings Method &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../2014/reporting-services/setextendedprotectionsettings-method-wmi-msreportserver-configurationsetting.md).  
   
@@ -123,7 +123,7 @@ manager: "mblythe"
 ```  
   
 ## Service Binding and included SPNs  
- Service binding uses Service Principal Names or SPN to validate the intended destination of authentication tokens. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] uses the existing URL reservation information to build a list of SPNs that are considered valid. Using the URL reservation information for validation of both SPN and URL reservations enables system administrators to manage both from a single location.  
+ Service binding uses Service Principal Names or SPN to validate the intended destination of authentication tokens. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] uses the existing URL reservation information to build a list of SPNs that are considered valid. Using the URL reservation information for validation of both SPN and URL reservations enables system administrators to manage both from a single location.  
   
  The list of valid SPNs is updated when the report server starts, the configuration settings for extended protection are changed, or when the application domain is recycled.  
   

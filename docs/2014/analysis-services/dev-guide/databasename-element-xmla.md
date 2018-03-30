@@ -29,7 +29,7 @@ ms.author: "mblythe"
 manager: "mblythe"
 ---
 # DatabaseName Element (XMLA)
-  Identifies the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] database to be restored by the parent [Restore](../../../2014/analysis-services/dev-guide/restore-element-xmla.md) command.  
+  Identifies the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database to be restored by the parent [Restore](../../../2014/analysis-services/dev-guide/restore-element-xmla.md) command.  
   
 ## Syntax  
   

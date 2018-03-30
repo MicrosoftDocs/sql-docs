@@ -33,12 +33,12 @@ manager: "mblythe"
 |Column name|Type indicator|Length|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |`MODEL_CATALOG`|`DBTYPE_WSTR`||The catalog name. Populated with the name of the database of which the model is a member.|  
-|`MODEL_SCHEMA`|`DBTYPE_WSTR`||The unqualified schema name. This column is not supported by [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; it always contains `NULL`.|  
+|`MODEL_SCHEMA`|`DBTYPE_WSTR`||The unqualified schema name. This column is not supported by [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]; it always contains `NULL`.|  
 |`MODEL_NAME`|`DBTYPE_WSTR`||The mining model name. This column contains the name of the mining model, and it is never empty.|  
 |`MODEL_TYPE`|`DBTYPE_WSTR`||The model type.|  
 |`MODEL_GUID`|`DBTYPE_GUID`||The GUID of the model.|  
 |`DESCRIPTION`|`DBTYPE_WSTR`||A user-friendly description of the model.|  
-|`MODEL_PROPID`|`DBTYPE_UI4`||The property ID of the model. This column is not supported by [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; it always contains `NULL`.|  
+|`MODEL_PROPID`|`DBTYPE_UI4`||The property ID of the model. This column is not supported by [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]; it always contains `NULL`.|  
 |`DATE_CREATED`|`DBTYPE_DBTIMESTAMP`||The date on which the model was created.|  
 |`DATE_MODIFIED`|`DBTYPE_DBTIMESTAMP`||The date on which the model definition was last modified.|  
 |`SERVICE_TYPE_ID`|`DBTYPE_UI4`||An enumeration that identifies the type of data mining algorithm that is used by the model. This type can be one of the following values:<br /><br /> -   `DM_SERVICETYPE_CLASSIFICATION` (1)<br />-   `DM_SERVICETYPE_SEGMENTATION`(2)<br />-   `DM_SERVICETYPE_ ASSOCIATION`(4)<br />-   `DM_SERVICETYPE_ DENSITY_ESTIMATE`(8)<br />-   `DM_SERVICETYPE_SEQUENCE`(16)|  

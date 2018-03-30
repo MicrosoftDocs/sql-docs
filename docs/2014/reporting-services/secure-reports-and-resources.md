@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
 caps.latest.revision: 46
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Secure Reports and Resources
@@ -34,7 +34,7 @@ manager: "mblythe"
  Once you set security on a report or resource, those settings stay with the item even if you move the item to a new location. For example, if you move a report that only a few people are authorized to access, the report continues to be available to just those users even if you move it to a folder that has a relatively open security policy.  
   
 ## Mitigating HTML Injection Attacks in a Published Report or Document  
- In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], reports and resources are processed under the security identity of the user who is running the report. If the report contains expressions, script, custom report items, or custom assemblies, the code runs under the user's credentials. If a resource is an HTML document that contains script, the script will run when the user opens the document on the report server. The ability to run script or code within a report is a powerful feature that comes with a certain level of risk. If the code is malicious, the report server and the user who is running the report are vulnerable to attack.  
+ In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], reports and resources are processed under the security identity of the user who is running the report. If the report contains expressions, script, custom report items, or custom assemblies, the code runs under the user's credentials. If a resource is an HTML document that contains script, the script will run when the user opens the document on the report server. The ability to run script or code within a report is a powerful feature that comes with a certain level of risk. If the code is malicious, the report server and the user who is running the report are vulnerable to attack.  
   
  When granting access to reports and to resources that are processed as HTML, it is important to remember that reports are processed in full trust and that potentially malicious script might be sent to the client. Depending on browser settings, the client will execute the HTML at the level of trust that is specified in the browser.  
   

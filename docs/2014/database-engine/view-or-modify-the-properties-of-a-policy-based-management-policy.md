@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # View or Modify the Properties of a Policy-Based Management Policy
-  This topic describes how to view or modify a Policy-Based Management policy's properties in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  This topic describes how to view or modify a Policy-Based Management policy's properties in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -66,7 +66,7 @@ manager: "jhubbard"
   
 #### To view a policy's properties  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -84,6 +84,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [syspolicy_policies &#40;Transact-SQL&#41;](../Topic/syspolicy_policies%20\(Transact-SQL\).md).  
+ For more information, see [syspolicy_policies &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/syspolicy-policies-transact-sql.md).  
   
   

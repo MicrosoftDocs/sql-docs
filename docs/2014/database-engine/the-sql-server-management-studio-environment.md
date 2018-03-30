@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # The SQL Server Management Studio Environment
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] provides a rich environment for managing and developing queries in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] provides a rich environment for managing and developing queries in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## In This Section  
  [General User Interface Elements](../../2014/database-engine/general-user-interface-elements.md)  
@@ -28,6 +28,6 @@ manager: "jhubbard"
  Introduces Solution Explorer, which provides you with an organized view of your projects and their files as well as ready access to commands for managing them.  
   
  [Solution Explorer Source Control](../../2014/database-engine/solution-explorer-source-control.md)  
- Describes how [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] integrates with source control products.  
+ Describes how [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] integrates with source control products.  
   
   

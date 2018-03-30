@@ -18,11 +18,11 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Completing the Wizard (Import Analysis Services Database Wizard)
-  Use the **Completing the Wizard** page to display the progress of the wizard as the data and metadata from the selected [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database is imported into the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project.  
+  Use the **Completing the Wizard** page to display the progress of the wizard as the data and metadata from the selected [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database is imported into the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project.  
   
 ## Options  
  **(Progress)**  
- Displays the progress of the wizard as each object in the database is imported into the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project.  
+ Displays the progress of the wizard as each object in the database is imported into the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project.  
   
 ## See Also  
  [Import Analysis Services Database Wizard F1 Help](../../2014/analysis-services/import-analysis-services-database-wizard-f1-help.md)   

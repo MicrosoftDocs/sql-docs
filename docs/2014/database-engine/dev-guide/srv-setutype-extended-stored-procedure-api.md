@@ -29,7 +29,7 @@ manager: "jhubbard"
 # srv_setutype (Extended Stored Procedure API)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
   
  Sets the user-defined data type for a column in a row.  
   
@@ -64,7 +64,7 @@ user_type
  SUCCEED or FAIL. Returns FAIL if the column does not exist.  
   
 ## Remarks  
- A column has two data types: its actual data type and its user-defined data type. The user-defined data type is used by [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to store the actual user-defined data type of the column, if any, and column description information, such as nullability and updatability, for the column.  
+ A column has two data types: its actual data type and its user-defined data type. The user-defined data type is used by [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to store the actual user-defined data type of the column, if any, and column description information, such as nullability and updatability, for the column.  
   
  The **srv_setutype** function can be called any time that *column* has been defined with **srv_describe** and before the last row has been sent.  
   

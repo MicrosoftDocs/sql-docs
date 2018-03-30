@@ -22,18 +22,18 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Integration Services Containers
-  Containers are objects in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] that provide structure to packages and services to tasks. They support repeating control flows in packages, and they group tasks and containers into meaningful units of work. Containers can include other containers in addition to tasks.  
+  Containers are objects in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] that provide structure to packages and services to tasks. They support repeating control flows in packages, and they group tasks and containers into meaningful units of work. Containers can include other containers in addition to tasks.  
   
  Packages use containers for the following purposes:  
   
--   Repeat tasks for each element in a collection, such as files in a folder, schemas, or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) objects. For example, a package can run Transact-SQL statements that reside in multiple files.  
+-   Repeat tasks for each element in a collection, such as files in a folder, schemas, or [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects (SMO) objects. For example, a package can run Transact-SQL statements that reside in multiple files.  
   
 -   Repeat tasks until a specified expression evaluates to `false`. For example, a package can send a different e-mail message seven times, one time for every day of the week.  
   
 -   Group tasks and containers that must succeed or fail as a unit. For example, a package can group tasks that delete and add rows in a database table, and then commit or roll back all the tasks when one fails.  
   
 ## Container Types  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides four types of containers for building packages. The following table lists the container types.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides four types of containers for building packages. The following table lists the container types.  
   
 |Container|Description|  
 |---------------|-----------------|  
@@ -45,7 +45,7 @@ manager: "jhubbard"
  Packages and events handlers are also types of containers. For information see [Integration Services &#40;SSIS&#41; Packages](../../2014/integration-services/integration-services-ssis-packages.md) and [Integration Services &#40;SSIS&#41; Event Handlers](../../2014/integration-services/integration-services-ssis-event-handlers.md).  
   
 ### Summary of Container Properties  
- All container types have a set of properties in common. If you create packages using the graphical tools that [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides, the Properties window lists the following properties for the Foreach Loop, For Loop, and Sequence containers. The task host container properties are configured as part of configuring the task that the task host encapsulates. You set the Task Host properties when you configure the task.  
+ All container types have a set of properties in common. If you create packages using the graphical tools that [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides, the Properties window lists the following properties for the Foreach Loop, For Loop, and Sequence containers. The task host container properties are configured as part of configuring the task that the task host encapsulates. You set the Task Host properties when you configure the task.  
   
 |Property|Description|  
 |--------------|-----------------|  
@@ -67,7 +67,7 @@ manager: "jhubbard"
 |`Name`|The name of the container.<br /><br /> For more information, see <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Name%2A>.|  
 |`TransactionOption`|The transactional participation of the container. The values are `NotSupported`, `Supported`, `Required`. The default value of this property is `Supported`. For more information, see <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>.|  
   
- To learn about all the properties that are available to Foreach Loop, For Loop, Sequence, and Task Host containers when configure them programmatically, see the following [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] API topics:  
+ To learn about all the properties that are available to Foreach Loop, For Loop, Sequence, and Task Host containers when configure them programmatically, see the following [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] API topics:  
   
 -   T:Microsoft.SqlServer.Dts.Runtime.ForEachLoop  
   
@@ -81,7 +81,7 @@ manager: "jhubbard"
  Containers include control flows that consist of executables and precedence constraints, and may use event handlers, and variables. The task host container is an exception: because the task host container encapsulates a single task, it does not use precedence constraints.  
   
 ### Executables  
- Executables refers to the container-level tasks and any containers within the container. An executable can be one of the tasks and containers that [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides or a custom task. For more information, see [Integration Services Tasks](../../2014/integration-services/integration-services-tasks.md) and [Integration Services Containers](../../2014/integration-services/integration-services-containers.md).  
+ Executables refers to the container-level tasks and any containers within the container. An executable can be one of the tasks and containers that [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides or a custom task. For more information, see [Integration Services Tasks](../../2014/integration-services/integration-services-tasks.md) and [Integration Services Containers](../../2014/integration-services/integration-services-containers.md).  
   
 ### Precedence Constraints  
  Precedence constraints link containers and tasks within the same parent container into an ordered control flow. For more information, see [Precedence Constraints](../../2014/integration-services/precedence-constraints.md).  
@@ -90,7 +90,7 @@ manager: "jhubbard"
  Event handlers at the container level respond to events raised by the container or the objects it includes. For more information, see [Integration Services &#40;SSIS&#41; Event Handlers](../../2014/integration-services/integration-services-ssis-event-handlers.md).  
   
 ### Variables  
- Variables that are used in containers include the container-level system variables that [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides and the user-defined variables that the container uses. For more information, see [Integration Services &#40;SSIS&#41; Variables](../../2014/integration-services/integration-services-ssis-variables.md).  
+ Variables that are used in containers include the container-level system variables that [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides and the user-defined variables that the container uses. For more information, see [Integration Services &#40;SSIS&#41; Variables](../../2014/integration-services/integration-services-ssis-variables.md).  
   
 ## Break Points  
  When you set a breakpoint on a container and the break condition is **Break when the container recevies the OnVariableValueChanged event**, define the variable in the container scope.  

@@ -27,10 +27,10 @@ manager: "jhubbard"
   
  User-defined table types cannot be altered after they are created. The <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> does not support the Alter method. User-defined table types can have check constraints, but some check operations will throw an exception because the type is not alterable.  
   
- The <xref:Microsoft.SqlServer.Management.Smo.Datatype> class is used to specify the data type that is associated with columns and parameters. Use this type to specify the user-defined table type as a parameter for user-defined functions and stored procedures.  
+ The <xref:Microsoft.SqlServer.Management.Smo.DataType> class is used to specify the data type that is associated with columns and parameters. Use this type to specify the user-defined table type as a parameter for user-defined functions and stored procedures.  
   
 ## Examples  
- [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  
+ [!INCLUDE[ssChooseProgEnv](../../includes/sschooseprogenv-md.md)]  
   
 ## Creating a User Defined Table in Visual Basic  
  For this example, you will have to include an imports statement for the class library that contains the `StringCollection` type.  

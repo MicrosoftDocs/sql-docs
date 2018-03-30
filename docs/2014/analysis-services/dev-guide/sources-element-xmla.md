@@ -62,7 +62,7 @@ manager: "mblythe"
 ## Remarks  
   
 ## Example  
- The following example combines all four partitions of the `Internet Sales` measure group into the `Internet_Sales_2004` target partition. The example uses the Adventure Works DW cube of the [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] sample [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] database.  
+ The following example combines all four partitions of the `Internet Sales` measure group into the `Internet_Sales_2004` target partition. The example uses the Adventure Works DW cube of the [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] sample [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database.  
   
 ```  
 <MergePartitions xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  

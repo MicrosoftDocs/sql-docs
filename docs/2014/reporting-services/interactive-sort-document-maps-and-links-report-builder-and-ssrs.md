@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: cc6ef408-4a76-408a-9d3f-033481fe21cf
 caps.latest.revision: 6
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Interactive Sort, Document Maps, and Links (Report Builder and SSRS)
@@ -27,12 +27,12 @@ manager: "mblythe"
 -   **Drillthrough report links** Jump to other reports on the same report server. For more information, see [Drillthrough Reports &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/drillthrough-reports-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  Links that are bound to dataset fields can be vulnerable to tampering for malicious purposes. For more information, see [Secure Reports and Resources](../../2014/reporting-services/secure-reports-and-resources.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][Books Online](http://go.microsoft.com/fwlink/?LinkId=154888) on msdn.microsoft.com.  
+>  Links that are bound to dataset fields can be vulnerable to tampering for malicious purposes. For more information, see [Secure Reports and Resources](../../2014/reporting-services/secure-reports-and-resources.md) in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][Books Online](http://go.microsoft.com/fwlink/?LinkId=154888) on msdn.microsoft.com.  
   
  You can also let your users control report display and content by designing expressions that include parameter references for sort, filter, and visibility. For more information, see [Report Parameters &#40;Report Builder and Report Designer&#41;](../../2014/reporting-services/report-parameters-report-builder-and-report-designer.md), [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/filter-group-and-sort-data-report-builder-and-ssrs.md), and [Add Dataset Filters, Data Region Filters, and Group Filters &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-dataset-filters-data-region-filters-and-group-filters.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## In This Section  
  [Interactive Sort &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/interactive-sort-report-builder-and-ssrs.md)  

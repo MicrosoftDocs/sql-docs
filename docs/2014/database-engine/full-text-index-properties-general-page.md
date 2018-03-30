@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: f4dff61c-8c2f-4ff9-abe4-70a34421448f
 caps.latest.revision: 27
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Full-Text Index Properties (General Page)
@@ -84,7 +84,7 @@ manager: "jhubbard"
  **Table Full-Text Item Count**  
  Indicates the number of rows that were full-text indexed successfully.  
   
- This property corresponds to the `TableFulltextItemCount` property returned by the OBJECTPROPERTYEX [!INCLUDE[tsql](../../includes/tsql-md.md)] function.  
+ This property corresponds to the `TableFulltextItemCount` property returned by the OBJECTPROPERTYEX [!INCLUDE[tsql](../includes/tsql-md.md)] function.  
   
  **Table Full-Text Docs Processed**  
  Displays the number of rows that have been processed since the start of full-text indexing. In a table that is being indexed for full-text search, all the columns of one row are considered as part of one document to be indexed. Deleted rows are not counted.  
@@ -92,7 +92,7 @@ manager: "jhubbard"
 |||  
 |-|-|  
 |0|Indicates that full-text indexing is completed and there is no active population.|  
-|> 0|For an active population, indicates the number of documents processed by insert or update operations since any of the following: a population, enabling of change tracking with background update index population (such as auto change tracking), changing the full-text index schema, rebuilding the full-text catalog, restarting the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and so forth.|  
+|> 0|For an active population, indicates the number of documents processed by insert or update operations since any of the following: a population, enabling of change tracking with background update index population (such as auto change tracking), changing the full-text index schema, rebuilding the full-text catalog, restarting the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], and so forth.|  
   
  **Table Full-Text Pending Changes**  
  Number of pending change tracking entries to process.  

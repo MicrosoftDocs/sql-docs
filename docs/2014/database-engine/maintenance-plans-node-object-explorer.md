@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Maintenance Plans Node (Object Explorer)
-  This section contains the F1 Help for the **Maintenance Plans** node of Object Explorer in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  This section contains the F1 Help for the **Maintenance Plans** node of Object Explorer in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 ## See Also  
  [Maintenance Plans](../../2014/database-engine/maintenance-plans.md)  

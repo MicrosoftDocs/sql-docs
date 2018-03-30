@@ -22,7 +22,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Comparing the Script Task and the Script Component
-  The Script task, available in the Control Flow window of the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] designer, and the Script component, available in the Data Flow window, have very different purposes in an [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] package. The task is a general-purpose control flow tool, whereas the component serves as a source, transformation, or destination in the data flow. Despite their different purposes, however, the Script task and the Script component have some similarities in the coding tools that they use and the objects in the package that they make available to the developer. Understanding their similarities and differences may help you to use both the task and the component more effectively.  
+  The Script task, available in the Control Flow window of the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] designer, and the Script component, available in the Data Flow window, have very different purposes in an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package. The task is a general-purpose control flow tool, whereas the component serves as a source, transformation, or destination in the data flow. Despite their different purposes, however, the Script task and the Script component have some similarities in the coding tools that they use and the objects in the package that they make available to the developer. Understanding their similarities and differences may help you to use both the task and the component more effectively.  
   
 ## Similarities between the Script Task and the Script Component  
  The Script task and the Script component share the following common features.  
@@ -30,8 +30,8 @@ manager: "jhubbard"
 |Feature|Description|  
 |-------------|-----------------|  
 |Two design-time modes|In both the task and the component, you begin by specifying properties in the editor, and then switch to the development environment to write code.|  
-|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA)|Both the task and the component use the same VSTA IDE, and support code written in either [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic or [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#.|  
-|Precompiled scripts|Beginning in [!INCLUDE[ssISversion10](../../../includes/ssisversion10-md.md)], all scripts are precompiled. In earlier versions, you could specify whether scripts were precompiled.<br /><br /> The script is precompiled into binary code, permitting faster execution, but at the cost of increased package size.|  
+|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA)|Both the task and the component use the same VSTA IDE, and support code written in either [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic or [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#.|  
+|Precompiled scripts|Beginning in [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)], all scripts are precompiled. In earlier versions, you could specify whether scripts were precompiled.<br /><br /> The script is precompiled into binary code, permitting faster execution, but at the cost of increased package size.|  
 |Debugging|Both the task and the component support breakpoints and stepping through code while debugging in the design environment. For more information, see [Coding and Debugging the Script Task](../../../2014/integration-services/dev-guide/coding-and-debugging-the-script-task.md) and [Coding and Debugging the Script Component](../../../2014/integration-services/dev-guide/coding-and-debugging-the-script-component.md).|  
   
 ## Differences between the Script Task and the Script Component  

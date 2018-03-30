@@ -16,7 +16,7 @@ ms.author: "sstein"
 manager: "jhubbard"
 ---
 # Estimate Memory Requirements for Memory-Optimized Tables
-  Whether you are creating a new [!INCLUDE[hek_2](../../includes/hek-2-md.md)] memory-optimized table or migrating an existing disk-based table to a memory-optimized table, it is important to have a reasonable estimate of each table’s memory needs so you can provision the server with sufficient memory. This section describes how to estimate the amount of memory that you need to hold data for a memory-optimized table.  
+  Whether you are creating a new [!INCLUDE[hek_2](../includes/hek-2-md.md)] memory-optimized table or migrating an existing disk-based table to a memory-optimized table, it is important to have a reasonable estimate of each table’s memory needs so you can provision the server with sufficient memory. This section describes how to estimate the amount of memory that you need to hold data for a memory-optimized table.  
   
  If you are contemplating migrating from disk-based tables to memory-optimized tables, before you proceed in this topic, see the topic [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](../../2014/database-engine/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) for guidance on which tables are best to migrate. All the topics under [Migrating to In-Memory OLTP](../../2014/database-engine/migrating-to-in-memory-oltp.md) provide guidance on migrating from disk-based to memory-optimized tables.  
   
@@ -111,7 +111,7 @@ SELECT COUNT(DISTINCT [Col2])
   
  If you are creating a new table, you’ll need to estimate the array size or gather data from your testing prior to deployment.  
   
- For information on how hash indexes work in [!INCLUDE[hek_2](../../includes/hek-2-md.md)] memory-optimized tables, see [Hash Indexes](../../2014/database-engine/hash-indexes.md).  
+ For information on how hash indexes work in [!INCLUDE[hek_2](../includes/hek-2-md.md)] memory-optimized tables, see [Hash Indexes](../../2014/database-engine/hash-indexes.md).  
   
  **Note:** You cannot change the hash index array size on the fly. To change the hash index array size you must drop the table, change the bucket_count value and recreate the table.  
   

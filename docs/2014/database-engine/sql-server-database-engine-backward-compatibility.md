@@ -21,13 +21,13 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQL Server Database Engine Backward Compatibility
-  Topics in the backward compatibility section describe changes in behavior between versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Topics in the backward compatibility section describe changes in behavior between versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Deprecated Database Engine Features in SQL Server 2014](../../2014/database-engine/deprecated-database-engine-features-in-sql-server-2014.md)|Deprecated [!INCLUDE[ssDE](../../includes/ssde-md.md)] features in this release.|  
-|[Discontinued Database Engine Functionality in SQL Server 2014](../../2014/database-engine/discontinued-database-engine-functionality-in-sql-server-2014.md)|Discontinued [!INCLUDE[ssDE](../../includes/ssde-md.md)] features in this release.|  
-|[Breaking Changes to Database Engine Features in SQL Server 2014](../../2014/database-engine/breaking-changes-to-database-engine-features-in-sql-server-2014.md)|[!INCLUDE[ssDE](../../includes/ssde-md.md)] feature changes that might require changes to applications.|  
+|[Deprecated Database Engine Features in SQL Server 2014](../../2014/database-engine/deprecated-database-engine-features-in-sql-server-2014.md)|Deprecated [!INCLUDE[ssDE](../includes/ssde-md.md)] features in this release.|  
+|[Discontinued Database Engine Functionality in SQL Server 2014](../../2014/database-engine/discontinued-database-engine-functionality-in-sql-server-2014.md)|Discontinued [!INCLUDE[ssDE](../includes/ssde-md.md)] features in this release.|  
+|[Breaking Changes to Database Engine Features in SQL Server 2014](../../2014/database-engine/breaking-changes-to-database-engine-features-in-sql-server-2014.md)|[!INCLUDE[ssDE](../includes/ssde-md.md)] feature changes that might require changes to applications.|  
 |[Behavior Changes to Database Engine Features in SQL Server 2014](../../2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014.md)|Other changes to database features in this release.|  
   
   

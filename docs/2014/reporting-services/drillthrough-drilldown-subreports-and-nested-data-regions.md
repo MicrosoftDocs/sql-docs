@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
 caps.latest.revision: 7
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Drillthrough, Drilldown, Subreports, and Nested Data Regions (Report Builder and SSRS)
@@ -31,7 +31,7 @@ manager: "mblythe"
  All of these have commonalities, but they serve different purposes and have different features. Two of them, drillthrough reports and subreports, are actually separate reports. Nesting is a means of putting one data region inside another data region. Drilldown is an action you can apply to any report item to hide and show other report items. They all are ways that you can organize and display data to help your users understand your report better.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ##  <a name="SummaryCharacteristics"></a> Summary of Characteristics  
  This table summarizes these different traits. Details are in separate sections later in this topic. Drilldown isn't included in these comparisons because you can apply its showing and hiding action to any report item.  

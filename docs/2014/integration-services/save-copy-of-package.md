@@ -20,7 +20,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Save Copy of Package
-  Use the **Save Copy of Package** dialog box, available in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], to save a copy of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package from [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to a different location and, optionally, modify the protection level of the package.  
+  Use the **Save Copy of Package** dialog box, available in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], to save a copy of an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package from [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to a different location and, optionally, modify the protection level of the package.  
   
 ## Options  
  **Package location**  
@@ -36,7 +36,7 @@ manager: "jhubbard"
  Type a server name or select a server from the list. This option is available only if the storage location is **SQL Server** or **SSIS Package Store**.  
   
  **Authentication**  
- Select Windows Authentication or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. This option is available only if the storage location is [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Select Windows Authentication or [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication. This option is available only if the storage location is [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
 >  Whenever possible use Windows Authentication.  
@@ -45,10 +45,10 @@ manager: "jhubbard"
  Select an authentication type.  
   
  **User name**  
- If using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, provide a user name.  
+ If using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication, provide a user name.  
   
  **Password**  
- If using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, provide a password.  
+ If using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication, provide a password.  
   
  **Package path**  
  Type the package path, or click the browse **(…)** button and locate the folder in which to store the package.  

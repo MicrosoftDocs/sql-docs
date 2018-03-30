@@ -40,7 +40,7 @@ SHA
   
 ## Parts  
  *object*  
- An [SInstance Class](../../../2014/database-engine/dev-guide/sinstance-class.md) object that represents the server setting on an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ An [SInstance Class](../../../2014/database-engine/dev-guide/sinstance-class.md) object that represents the server setting on an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 #### Parameters  
   

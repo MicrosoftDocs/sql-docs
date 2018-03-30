@@ -16,7 +16,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Start or Stop a PowerPivot for SharePoint Server
-  PowerPivot System Service and an [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] instance operate together on the same local application server to support coordinated request and data processing in a SharePoint farm.  
+  PowerPivot System Service and an [!INCLUDE[ssGeminiSrv](../includes/ssgeminisrv-md.md)] instance operate together on the same local application server to support coordinated request and data processing in a SharePoint farm.  
   
  This topic contains the following sections:  
   
@@ -44,7 +44,7 @@ manager: "mblythe"
   
 2.  At the top of the page, in Server, click the down arrow, and then click **Change Server**.  
   
-3.  Select the SharePoint server that has the PowerPivot System Service or [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] instance that you want to start or stop.  
+3.  Select the SharePoint server that has the PowerPivot System Service or [!INCLUDE[ssGeminiSrv](../includes/ssgeminisrv-md.md)] instance that you want to start or stop.  
   
 4.  Select the service, and then click the action. Remember to start or stop the services as a pair. If you start or stop the PowerPivot System Service, be sure to also start or stop the Analysis Services server instance that runs on the same computer.  
   

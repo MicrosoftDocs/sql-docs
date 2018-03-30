@@ -20,9 +20,9 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Sign a Package by Using a Digital Certificate
-  This topic describes how to sign an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package with a digital certificate. You can use a digital signature, together with other settings, to prevent a package that is not valid from loading and running.  
+  This topic describes how to sign an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package with a digital certificate. You can use a digital signature, together with other settings, to prevent a package that is not valid from loading and running.  
   
- Before you can sign an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package, you must do the following tasks:  
+ Before you can sign an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package, you must do the following tasks:  
   
 -   Create or obtain a private key to associate with the certificate, and store this private key on the local computer.  
   
@@ -30,7 +30,7 @@ manager: "jhubbard"
   
     -   Obtain a certificate from a public, commercial certification authority that issues certificates.  
   
-    -   Obtain a certificate from a certificate server, that enables an organization to internally issue certificates. You have to add the root certificate that is used to sign the certificate to the **Trusted Root Certification Authorities** store. To add the root certificate, you can use the Certificates snap-in for the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC). For more information, see the topic, "[Certificate Services](http://go.microsoft.com/fwlink/?LinkId=100755)," in the MSDN library.  
+    -   Obtain a certificate from a certificate server, that enables an organization to internally issue certificates. You have to add the root certificate that is used to sign the certificate to the **Trusted Root Certification Authorities** store. To add the root certificate, you can use the Certificates snap-in for the [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console (MMC). For more information, see the topic, "[Certificate Services](http://go.microsoft.com/fwlink/?LinkId=100755)," in the MSDN library.  
   
     -   Create your own certificate for testing purposes only. The Certificate Creation Tool (Makecert.exe) generates X.509 certificates for testing purposes. For more information, see the topic, "[Certificate Creation Tool (Makecert.exe)](http://go.microsoft.com/fwlink/?LinkId=100756)," in the MSDN Library.  
   
@@ -44,11 +44,11 @@ manager: "jhubbard"
   
 ### To sign a package  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project that contains the package to be signed.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project that contains the package to be signed.  
   
 2.  In Solution Explorer, double-click the package to open it.  
   
-3.  In [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, on the **SSIS** menu, click **Digital Signing**.  
+3.  In [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, on the **SSIS** menu, click **Digital Signing**.  
   
 4.  In the **Digital Signing** dialog box, click **Sign**.  
   
@@ -62,7 +62,7 @@ manager: "jhubbard"
   
 9. To save the updated package, click **Save Selected Items** on the **File** menu.  
   
-     Although the package has been signed, you must now configure [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] to check or verify the digital signature before loading the package. For more information, see [Identify the Source of Packages with Digital Signatures](../../2014/integration-services/identify-the-source-of-packages-with-digital-signatures.md).  
+     Although the package has been signed, you must now configure [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] to check or verify the digital signature before loading the package. For more information, see [Identify the Source of Packages with Digital Signatures](../../2014/integration-services/identify-the-source-of-packages-with-digital-signatures.md).  
   
 ## See Also  
  [Security Overview &#40;Integration Services&#41;](../../2014/integration-services/security-overview-integration-services.md)  

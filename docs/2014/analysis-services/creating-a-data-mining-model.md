@@ -29,10 +29,10 @@ manager: "mblythe"
   
  The Data Mining Add-ins for Office support data mining through wizards that make it easy to create models. The wizards analyze the data, identify correlations, compute statistical significance of all variables, and automatically select the best model.  
   
- Although this functionality is every bit as powerful as the data mining tools provided by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], the combination of wizards and the familiar Excel interface makes it easy to create, modify, and use data mining.  
+ Although this functionality is every bit as powerful as the data mining tools provided by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] and [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], the combination of wizards and the familiar Excel interface makes it easy to create, modify, and use data mining.  
   
 ## Advanced (Data Mining)  
- The Advanced wizards let you create new data mining models, based on data stored in Excel, by using one of the data mining algorithms in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+ The Advanced wizards let you create new data mining models, based on data stored in Excel, by using one of the data mining algorithms in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
 ### Create Mining Structure  
  The Create Mining Structure wizard helps you build a new data mining structure, which you can use as the basis for multiple mining models. The wizard gives you the option to set aside a portion of the data to use as a testing set, so that you can evaluate all models that use the same data according to a consistent testing standard.  
@@ -76,7 +76,7 @@ manager: "mblythe"
  [Detect Categories &#40;Table Analysis Tools for Excel&#41;](../../2014/analysis-services/detect-categories-table-analysis-tools-for-excel.md)  
   
 ## Estimate (Data Mining)  
- The Estimate wizard builds an estimation model that extracts data patterns and uses the patterns to predict continuous numeric, date, or time values. It uses the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm.  
+ The Estimate wizard builds an estimation model that extracts data patterns and uses the patterns to predict continuous numeric, date, or time values. It uses the [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees algorithm.  
   
  [Estimate Wizard &#40;Data Mining Add-ins for Excel&#41;](../../2014/analysis-services/estimate-wizard-data-mining-add-ins-for-excel.md)  
   

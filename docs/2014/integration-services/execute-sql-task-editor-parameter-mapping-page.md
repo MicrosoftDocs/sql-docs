@@ -58,6 +58,6 @@ manager: "jhubbard"
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Execute SQL Task Editor &#40;General Page&#41;](../../2014/integration-services/execute-sql-task-editor-general-page.md)   
  [Execute SQL Task Editor &#40;Result Set Page&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)   
- [Transact-SQL Reference &#40;Database Engine&#41;](../Topic/Transact-SQL%20Reference%20\(Database%20Engine\).md)  
+ [Transact-SQL Reference &#40;Database Engine&#41;](~/t-sql/language-reference.md)  
   
   

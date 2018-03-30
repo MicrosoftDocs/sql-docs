@@ -19,12 +19,12 @@ ms.author: "jroth"
 manager: "jhubbard"
 ---
 # Always On Availability Groups: Interoperability (SQL Server)
-  This topic documents interoperability of [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] with other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  This topic documents interoperability of [!INCLUDE[ssHADR](../includes/sshadr-md.md)] with other [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] features in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
 
   
 ##  <a name="Interop"></a> Features That Interoperate with AlwaysOn Availability Groups  
- The following table lists [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features that interoperate with [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. A link in the **More Information** column indicates that interoperability considerations exist for a given feature.  
+ The following table lists [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] features that interoperate with [!INCLUDE[ssHADR](../includes/sshadr-md.md)] in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. A link in the **More Information** column indicates that interoperability considerations exist for a given feature.  
   
 |Feature|More Information|  
 |-------------|----------------------|  
@@ -44,7 +44,7 @@ manager: "jhubbard"
 |SQL Server Agent||  
   
 ##  <a name="NoInterop"></a> Features that Do Not Interoperate with AlwaysOn Availability Groups  
- [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] does not interoperate with the following features:  
+ [!INCLUDE[ssHADR](../includes/sshadr-md.md)] does not interoperate with the following features:  
   
 -   Cross-database transactions/distributed transactions  
   

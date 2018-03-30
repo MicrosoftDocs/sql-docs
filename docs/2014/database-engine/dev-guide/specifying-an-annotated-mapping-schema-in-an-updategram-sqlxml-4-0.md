@@ -27,19 +27,19 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Specifying an Annotated Mapping Schema in an Updategram (SQLXML 4.0)
-  This topic explains how the mapping schema (XSD or XDR) that is specified in an updategram is used to process the updates. In an updategram, you can provide the name of an annotated mapping schema to use in mapping the elements and attributes in the updategram to tables and columns in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. When a mapping schema is specified in an updategram, the element and attribute names that are specified in the updategram must map to the elements and attributes in the mapping schema.  
+  This topic explains how the mapping schema (XSD or XDR) that is specified in an updategram is used to process the updates. In an updategram, you can provide the name of an annotated mapping schema to use in mapping the elements and attributes in the updategram to tables and columns in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. When a mapping schema is specified in an updategram, the element and attribute names that are specified in the updategram must map to the elements and attributes in the mapping schema.  
   
  To specify a mapping schema, you use the `mapping-schema` attribute of the **\<sync>** element. The following examples show two updategrams: one that uses a simple mapping schema, and one that uses a more complex schema.  
   
 > [!NOTE]  
->  This documentation assumes that you are familiar with templates and mapping schema support in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. For more information, see [Introduction to Annotated XSD Schemas &#40;SQLXML 4.0&#41;](../../../2014/database-engine/dev-guide/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). For legacy applications that use XDR, see [Annotated XDR Schemas &#40;Deprecated in SQLXML 4.0&#41;](../../../2014/database-engine/dev-guide/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
+>  This documentation assumes that you are familiar with templates and mapping schema support in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Introduction to Annotated XSD Schemas &#40;SQLXML 4.0&#41;](../../../2014/database-engine/dev-guide/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). For legacy applications that use XDR, see [Annotated XDR Schemas &#40;Deprecated in SQLXML 4.0&#41;](../../../2014/database-engine/dev-guide/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
 ## Dealing with Data Types  
- If the schema specifies the `image`, `binary`, or `varbinary`[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data type (by using `sql:datatype`) and does not specify an XML data type, the updategram assumes that the XML data type is `binary base 64`. If your data is `bin.base` type, you must explicitly specify the type (`dt:type=bin.base` or `type="xsd:hexBinary"`).  
+ If the schema specifies the `image`, `binary`, or `varbinary`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type (by using `sql:datatype`) and does not specify an XML data type, the updategram assumes that the XML data type is `binary base 64`. If your data is `bin.base` type, you must explicitly specify the type (`dt:type=bin.base` or `type="xsd:hexBinary"`).  
   
- If the schema specifies the `dateTime`, `date`, or `time` XSD data type, you must also specify the corresponding [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data type by using `sql:datatype="dateTime"`.  
+ If the schema specifies the `dateTime`, `date`, or `time` XSD data type, you must also specify the corresponding [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type by using `sql:datatype="dateTime"`.  
   
- When handling parameters of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `money` type, you must explicitly specify `sql:datatype="money"` on the appropriate node in the mapping schema.  
+ When handling parameters of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `money` type, you must explicitly specify `sql:datatype="money"` on the appropriate node in the mapping schema.  
   
 ## Examples  
  To create working samples using the following examples, you must meet the requirements specified in [Requirements for Running SQLXML Examples](../../../2014/database-engine/dev-guide/requirements-for-running-sqlxml-examples.md).  

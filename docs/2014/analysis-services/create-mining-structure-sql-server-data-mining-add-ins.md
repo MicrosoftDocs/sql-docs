@@ -24,7 +24,7 @@ manager: "mblythe"
   
  After you have created the mining structure, use the [Add Model to Structure](../../2014/analysis-services/add-model-to-structure-data-mining-add-ins-for-excel.md) wizard to create a model based on that structure. You can also create new models by using the **Data Mining Advanced Query Editor**.  
   
- You can also use this option when you intend to build models using one of the advanced algorithms, which are supported by [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] but not available through a wizard, such as linear regression or sequence clustering, or if you are using a custom algorithm.  
+ You can also use this option when you intend to build models using one of the advanced algorithms, which are supported by [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] but not available through a wizard, such as linear regression or sequence clustering, or if you are using a custom algorithm.  
   
 > [!NOTE]  
 >  When you create the mining structure, you can also establish a randomly selected testing data set that you can use to validate all your models. This is handy because you can easily compare model accuracy against a common data set. Just select the option, **Split data into training and testing sets** and specify an appropriate percentage of data to reserve for testing, usually around 30 percent.  
@@ -82,7 +82,7 @@ manager: "mblythe"
   
 |Option|Comments|  
 |------------|--------------|  
-|**Select Source Data** dialog box|When you select an Excel table, you should indicate whether the data already has headers. If you skip this, the first row of data will be used as the column name.<br /><br /> If you use the option, **External data source**, you can use any kind of data that can be defined in an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data source. However, the dialog box in the add-in for creating new data sources does not include the full range of data sources supported by Analysis Services, so we recommend that you create the data sources on the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server in advance and then connect using the add-ins.|  
+|**Select Source Data** dialog box|When you select an Excel table, you should indicate whether the data already has headers. If you skip this, the first row of data will be used as the column name.<br /><br /> If you use the option, **External data source**, you can use any kind of data that can be defined in an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data source. However, the dialog box in the add-in for creating new data sources does not include the full range of data sources supported by Analysis Services, so we recommend that you create the data sources on the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] server in advance and then connect using the add-ins.|  
 |**Data Source Query Editor** dialog box|After you have connected to the specified data source, you can add columns, or create a custom query to generate custom columns.|  
 |**Split data into training and testing data sets**|A recommended value for training vs. testing sets is 70 percent for training and 30 percent for testing; however, if you have a lot of data, you can specify a maximum number of rows for testing.|  
 |Finish dialog box|The options for drillthrough are available on some model types and are very useful if you included detail columns in your mining structure. For example, if you create a clustering model, you can include details such as name or email address for drillthrough but not analysis, to make it easier to contact customers in a particular cluster.|  
@@ -110,7 +110,7 @@ manager: "mblythe"
 -   All algorithms require a **Key** column. The values in the Key column must be unique. A **Key Time** column is required only for forecasting or time series models. .  
   
 ### Requirements  
- To create a data mining structure, you must have a connection to an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. A connection is required even if you are working with temporary structures. For more information about how to create or change a connection, see [Connect to Source Data &#40;Data Mining Client for Excel&#41;](../../2014/analysis-services/connect-to-source-data-data-mining-client-for-excel.md).  
+ To create a data mining structure, you must have a connection to an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. A connection is required even if you are working with temporary structures. For more information about how to create or change a connection, see [Connect to Source Data &#40;Data Mining Client for Excel&#41;](../../2014/analysis-services/connect-to-source-data-data-mining-client-for-excel.md).  
   
 ## See Also  
  [Creating a Data Mining Model](../../2014/analysis-services/creating-a-data-mining-model.md)  

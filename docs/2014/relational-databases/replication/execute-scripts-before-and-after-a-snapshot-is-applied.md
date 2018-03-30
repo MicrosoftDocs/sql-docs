@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: b7bb1e4c-5b48-4bb1-9dc8-47c911f2cc82
 caps.latest.revision: 37
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Execute Scripts Before and After a Snapshot Is Applied (SQL Server Management Studio)
@@ -36,7 +36,7 @@ manager: "jhubbard"
   
     -   To specify a script to execute after the snapshot is applied, click **Browse** to navigate to the script, or enter a UNC path to the script in the **After applying the snapshot, execute this script** text box.  
   
-2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## See Also  
  [Configure Snapshot Properties &#40;Replication Transact-SQL Programming&#41;](../../../2014/relational-databases/replication/configure-snapshot-properties-replication-transact-sql-programming.md)   

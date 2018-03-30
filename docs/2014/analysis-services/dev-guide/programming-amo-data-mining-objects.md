@@ -47,7 +47,7 @@ manager: "mblythe"
   
      Mining structures can be processed, and when they are processed, the children mining models are processed or retrained.  
   
- The following sample code creates a mining structure to forecast sales in a time series. Before running the sample code, make sure that the database *db*, passed as parameter for `CreateSalesForecastingMiningStructure`, contains in `db.DataSourceViews[0]` a reference to the view *dbo.vTimeSeries* in the [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] sample database.  
+ The following sample code creates a mining structure to forecast sales in a time series. Before running the sample code, make sure that the database *db*, passed as parameter for `CreateSalesForecastingMiningStructure`, contains in `db.DataSourceViews[0]` a reference to the view *dbo.vTimeSeries* in the [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] sample database.  
   
 ```  
 public static MiningStructure CreateSalesForecastingMiningStructure(Database db)  

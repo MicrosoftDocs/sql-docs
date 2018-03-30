@@ -16,11 +16,11 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Create a NewTabular Model Project (SSAS Tabular)
-  This topic describes how to create a new, blank tabular model project in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. After a new model project has been created, you can begin authoring your model project by importing data from data sources.  
+  This topic describes how to create a new, blank tabular model project in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. After a new model project has been created, you can begin authoring your model project by importing data from data sources.  
   
 #### To create a new, blank tabular model project  
   
-1.  In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], on the **File** menu, click **New**, and then click **Project**.  
+1.  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], on the **File** menu, click **New**, and then click **Project**.  
   
 2.  In the **New Project** dialog box, under **Installed Templates**, click **Business Intelligence**, and then click **Tabular Model Project**.  
   

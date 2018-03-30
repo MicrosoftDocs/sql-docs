@@ -28,7 +28,7 @@ manager: "jhubbard"
   
 #### To review existing relationships  
   
-1.  In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], click on the **Model** menu, then point to **Model View**, and then click **Diagram View**.  
+1.  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], click on the **Model** menu, then point to **Model View**, and then click **Diagram View**.  
   
      The model designer now appears in Diagram View, a graphical format displaying all of the tables you imported with lines between them. The lines between tables indicate the relationships that were automatically created when you imported the data.  
   

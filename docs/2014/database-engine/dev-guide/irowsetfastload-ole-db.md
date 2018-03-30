@@ -21,7 +21,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # IRowsetFastLoad (OLE DB)
-  The `IRowsetFastLoad` interface exposes support for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] memory-based bulk-copy operations. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider consumers use the interface to rapidly add data to an existing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] table.  
+  The `IRowsetFastLoad` interface exposes support for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memory-based bulk-copy operations. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider consumers use the interface to rapidly add data to an existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table.  
   
  If you set SSPROP_ENABLEFASTLOAD to VARIANT_TRUE for a session, you cannot read data from rowsets subsequently returned from that session. When SSPROP_ENABLEFASTLOAD is set to VARIANT_TRUE, all rowsets created on the session will be of type IRowsetFastLoad. IRowsetFastLoad rowsets do not support rowset fetch functionality; therefore, data from these rowsets cannot be read.  
   
@@ -29,7 +29,7 @@ manager: "jhubbard"
   
 |Method|Description|  
 |------------|-----------------|  
-|[IRowsetFastLoad::Commit &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/irowsetfastload-commit-ole-db.md)|Marks the end of a batch of inserted rows and writes the rows to the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] table.|  
+|[IRowsetFastLoad::Commit &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/irowsetfastload-commit-ole-db.md)|Marks the end of a batch of inserted rows and writes the rows to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table.|  
 |[IRowsetFastLoad::InsertRow &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/irowsetfastload-insertrow-ole-db.md)|Adds a row to the bulk copy rowset.|  
   
 ## See Also  

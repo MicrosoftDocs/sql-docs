@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # ProductName Element (ASSL)
-  Contains the read-only product name of the instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] that is associated with a [Server](../../../2014/analysis-services/dev-guide/server-element-assl.md) element.  
+  Contains the read-only product name of the instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] that is associated with a [Server](../../../2014/analysis-services/dev-guide/server-element-assl.md) element.  
   
 ## Syntax  
   
@@ -56,7 +56,7 @@ manager: "mblythe"
 |Child elements|None|  
   
 ## Remarks  
- The `ProductName` element provides read-only access to the name of the product associated with an instance of [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+ The `ProductName` element provides read-only access to the name of the product associated with an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
  The element that corresponds to the parent of `ProductName` in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.Server>.  
   

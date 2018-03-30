@@ -14,14 +14,14 @@ f1_keywords:
 ms.assetid: 1f499277-7f12-42ba-8cf4-52b683434944
 caps.latest.revision: 9
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Distributor Information, Publications
   The **Publications** tab provides summary information for all publications at the Distributor that is selected in the left pane.  
   
 ## Options  
- The information that is displayed about the publications supported by the Distributor includes a column that contains the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance of the Publisher. Otherwise, the publication information is the same as the publication information that is provided when you view publications in the Publisher view of Replication Monitor. For more information about the columns in the **Publications** tab, see [Publisher Information, Publications](../../../2014/relational-databases/replication/publisher-information-publications.md).  
+ The information that is displayed about the publications supported by the Distributor includes a column that contains the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance of the Publisher. Otherwise, the publication information is the same as the publication information that is provided when you view publications in the Publisher view of Replication Monitor. For more information about the columns in the **Publications** tab, see [Publisher Information, Publications](../../../2014/relational-databases/replication/publisher-information-publications.md).  
   
 ## See Also  
  [Start the Replication Monitor](../../../2014/relational-databases/replication/start-the-replication-monitor.md)   

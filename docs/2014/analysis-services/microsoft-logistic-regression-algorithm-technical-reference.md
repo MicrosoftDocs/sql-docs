@@ -25,7 +25,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Microsoft Logistic Regression Algorithm Technical Reference
-  The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Logistic Regression algorithm is a variation of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network algorithm, where the *HIDDEN_NODE_RATIO* parameter is set to 0. This setting will create a neural network model that does not contain a hidden layer, and that therefore is equivalent to logistic regression.  
+  The [!INCLUDE[msCoName](../includes/msconame-md.md)] Logistic Regression algorithm is a variation of the [!INCLUDE[msCoName](../includes/msconame-md.md)] Neural Network algorithm, where the *HIDDEN_NODE_RATIO* parameter is set to 0. This setting will create a neural network model that does not contain a hidden layer, and that therefore is equivalent to logistic regression.  
   
 ## Implementation of the Microsoft Logistic Regression Algorithm  
  Suppose the predictable column contains only two states, yet you still want to perform a regression analysis, relating input columns to the probability that the predictable column will contain a specific state. The following diagram illustrates the results you will obtain if you assign 1 and 0 to the states of the predictable column, calculate the probability that the column will contain a specific state, and perform a linear regression against an input variable.  
@@ -89,7 +89,7 @@ WHERE NODE_TYPE = 23
  For more information, see [Logistic Regression Model Query Examples](../../2014/analysis-services/logistic-regression-model-query-examples.md).  
   
 ## Customizing the Logistic Regression Algorithm  
- The [!INCLUDE[msCoName](../../includes/msconame-md.md)] logistic regression algorithm supports several parameters that affect the behavior, performance, and accuracy of the resulting mining model. You can also modify the behavior of the model by setting modeling flags on the columns used as input.  
+ The [!INCLUDE[msCoName](../includes/msconame-md.md)] logistic regression algorithm supports several parameters that affect the behavior, performance, and accuracy of the resulting mining model. You can also modify the behavior of the model by setting modeling flags on the columns used as input.  
   
 ### Setting Algorithm Parameters  
  The following table describes the parameters that can be used with the Microsoft Logistic Regression algorithm.  
@@ -127,7 +127,7 @@ WHERE NODE_TYPE = 23
  The default is 10000.  
   
 ### Modeling Flags  
- The following modeling flags are supported for use with the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Logistic Regression algorithm.  
+ The following modeling flags are supported for use with the [!INCLUDE[msCoName](../includes/msconame-md.md)] Logistic Regression algorithm.  
   
  NOT NULL  
  Indicates that the column cannot contain a null. An error will result if Analysis Services encounters a null during model training.  
@@ -143,7 +143,7 @@ WHERE NODE_TYPE = 23
  A logistic regression model must contain a key column, input columns, and at least one predictable column.  
   
 ### Input and Predictable Columns  
- The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Logistic Regression algorithm supports the specific input column content types, predictable column content types, and modeling flags that are listed in the following table. For more information about what the content types mean when used in a mining model, see [Content Types &#40;Data Mining&#41;](../../2014/analysis-services/content-types-data-mining.md).  
+ The [!INCLUDE[msCoName](../includes/msconame-md.md)] Logistic Regression algorithm supports the specific input column content types, predictable column content types, and modeling flags that are listed in the following table. For more information about what the content types mean when used in a mining model, see [Content Types &#40;Data Mining&#41;](../../2014/analysis-services/content-types-data-mining.md).  
   
 |Column|Content types|  
 |------------|-------------------|  

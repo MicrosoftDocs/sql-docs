@@ -18,6 +18,6 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Details (SSAS)
-  This page of the **Table Import Wizard** enables you to view information about a data import operation that succeeded or failed. To access the wizard from the [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], on the **Model** menu, click **Import from Data Source**.  
+  This page of the **Table Import Wizard** enables you to view information about a data import operation that succeeded or failed. To access the wizard from the [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], on the **Model** menu, click **Import from Data Source**.  
   
   

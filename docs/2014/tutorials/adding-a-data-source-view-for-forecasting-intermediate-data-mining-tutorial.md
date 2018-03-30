@@ -24,7 +24,7 @@ manager: "jhubbard"
   
 2.  On the **Welcome to the Data Source View Wizard** page, click **Next**.  
   
-3.  On the **Select a Data Source** page, under **Relational data sources**, select the [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)] data source. Click **Next**.  
+3.  On the **Select a Data Source** page, under **Relational data sources**, select the [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] data source. Click **Next**.  
   
     > [!NOTE]  
     >  If you do not have this data source, you can find the steps to create the data source in the [Basic Data Mining Tutorial](../../2014/tutorials/basic-data-mining-tutorial.md).  
@@ -33,7 +33,7 @@ manager: "jhubbard"
   
 5.  Click **Next**.  
   
-6.  On the **Completing the Wizard** page, by default the data source view is named [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)]. Change the name to **SalesByRegion**, and then click **Finish**.  
+6.  On the **Completing the Wizard** page, by default the data source view is named [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]. Change the name to **SalesByRegion**, and then click **Finish**.  
   
      Data Source View Designer opens and the **SalesByRegion** data source view appears.  
   

@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 3a44c98f-6750-48b9-90c7-82391b134c9d
 caps.latest.revision: 18
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Server Properties F1 Help

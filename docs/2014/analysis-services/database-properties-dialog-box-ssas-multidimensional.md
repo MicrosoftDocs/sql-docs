@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Database Properties Dialog Box (SSAS - Multidimensional)
-  Use the **Database Properties** dialog box in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to set the properties of a database in an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database. You can display the **Database Properties** dialog box by right-clicking a database in Object Explorer and selecting **Properties**.  
+  Use the **Database Properties** dialog box in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to set the properties of a database in an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database. You can display the **Database Properties** dialog box by right-clicking a database in Object Explorer and selecting **Properties**.  
   
 ## Options  
   

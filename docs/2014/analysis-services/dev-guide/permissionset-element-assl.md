@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # PermissionSet Element (ASSL)
-  Identifies the permission set associated with a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework assembly.  
+  Identifies the permission set associated with a [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework assembly.  
   
 ## Syntax  
   
@@ -62,7 +62,7 @@ manager: "mblythe"
 |-----------|-----------------|  
 |*Safe*|Only internal computation and local data access is allowed. *Safe* is the most restrictive permission set. Code executed by an assembly with *Safe* permissions cannot access external system resources such as files, the network, environment variables, or the registry.|  
 |*ExternalAccess*|*Safe*, with the additional ability to access external system resources such as files, networks, environmental variables, and the registry.|  
-|*Unrestricted*|Unrestricted allows assemblies unrestricted access to resources, both within and outside [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Code executing from within an *Unrestricted* assembly can call unmanaged code.|  
+|*Unrestricted*|Unrestricted allows assemblies unrestricted access to resources, both within and outside [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Code executing from within an *Unrestricted* assembly can call unmanaged code.|  
   
  The enumeration that corresponds to the allowed values for `PermissionSet` in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.PermissionSet>.  
   

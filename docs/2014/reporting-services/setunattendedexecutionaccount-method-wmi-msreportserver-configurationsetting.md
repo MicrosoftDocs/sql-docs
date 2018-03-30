@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: 1ba6be6f-b05c-4ea0-af98-cd0780290b70
 caps.latest.revision: 18
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # SetUnattendedExecutionAccount Method (WMI MSReportServer_ConfigurationSetting)
@@ -57,7 +57,7 @@ public void SetUnattendedExecutionAccount (string UserName,
  It is not possible to use the SetUnattendedExecutionAccount method to run unattended executions in the context of the report server Windows service.  
   
 ## Requirements  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../includes/ssrswminmspca-md.md)]  
   
 ## See Also  
  [MSReportServer_ConfigurationSetting Members](../../2014/reporting-services/msreportserver-configurationsetting-members.md)  

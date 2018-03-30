@@ -19,7 +19,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Data Profile Viewer
-  Viewing and analyzing the data profiles is the next step in the data profiling process. You can view these profiles after you have run the Data Profiling task inside an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package and computed the data profiles. For more information about how to set up and run the Data Profiling tasks, see [Setup of the Data Profiling Task](../../2014/integration-services/setup-of-the-data-profiling-task.md).  
+  Viewing and analyzing the data profiles is the next step in the data profiling process. You can view these profiles after you have run the Data Profiling task inside an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package and computed the data profiles. For more information about how to set up and run the Data Profiling tasks, see [Setup of the Data Profiling Task](../../2014/integration-services/setup-of-the-data-profiling-task.md).  
   
 > [!IMPORTANT]  
 >  The output file might contain sensitive data about your database and the data that database contains. For suggestions on how to make this file more secure, see [Access to Files Used by Packages](../../2014/integration-services/access-to-files-used-by-packages.md).  
@@ -27,7 +27,7 @@ manager: "jhubbard"
 ## Data Profiles  
  To view the data profiles, you configure the Data Profiling task to send its output to a file, and then you use the stand-alone Data Profile Viewer. To open the Data Profile Viewer, do one of the following.  
   
--   Right-click the **Data Profiling** task in the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, and then click **Edit**. Click **Open Profile Viewer** on the **General** page of the **Data Profiling Task Editor**.  
+-   Right-click the **Data Profiling** task in the [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, and then click **Edit**. Click **Open Profile Viewer** on the **General** page of the **Data Profiling Task Editor**.  
   
 -   In the folder, *\<drive>*:\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn, run DataProfileViewer.exe.  
   

@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 2d3428e4-a810-4e66-a287-ff18e57fad76
 caps.latest.revision: 12
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Create and Manage Shared Data Sources (Reporting Services in SharePoint Integrated Mode)
@@ -48,7 +48,7 @@ manager: "mblythe"
   
     -   Select **Prompt for credentials** if you want the user to enter his or her credentials each time he or she runs the report. Do not select this option if you want to schedule subscription or data processing for this report.  
   
-    -   Select **Stored credentials** if you want to access the data using a single set of credentials. The credentials are encrypted before they are stored. You can select options that determine how the stored credentials are authenticated. Select Use as Windows credentials if the stored credentials belong to a Windows user account. Select **Set execution context to this account** if you want to set the execution context on the database server. For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases, this option sets the SETUSER function. For more information, see [SETUSER &#40;Transact-SQL&#41;](../Topic/SETUSER%20\(Transact-SQL\).md).  
+    -   Select **Stored credentials** if you want to access the data using a single set of credentials. The credentials are encrypted before they are stored. You can select options that determine how the stored credentials are authenticated. Select Use as Windows credentials if the stored credentials belong to a Windows user account. Select **Set execution context to this account** if you want to set the execution context on the database server. For [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] databases, this option sets the SETUSER function. For more information, see [SETUSER &#40;Transact-SQL&#41;](~/t-sql/statements/setuser-transact-sql.md).  
   
     -   Select **Credentials are not required** if you want to specify credentials in the connection string, or if you want to run the report using a least-privilege account that is configured on the report server. If this account is not configured on the report server, users will be prompted for credentials and any scheduled operations that you define for the report will not run.  
   

@@ -21,7 +21,7 @@ manager: "jhubbard"
   Upgrade Advisor detected the use of XPath functionality. You may be affected by changes in XPath functionality for OPENXML features after you upgrade.  
   
 ## Component  
- [!INCLUDE[ssDE](../../../includes/ssde-md.md)]  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## Description  
  MSXML 3.0 is now the underlying engine that is used to process XPath expressions that are used within OPENXML queries. MSXML 3.0 has a stricter XPath 1.0 engine in which support for the following functions has been removed:  
@@ -39,10 +39,10 @@ manager: "jhubbard"
 -   system-property()  
   
 ## Corrective Action  
- In the case of format-number() and formatNumber(), you can use [!INCLUDE[tsql](../../../includes/tsql-md.md)]. For the other unsupported functions listed earlier, there is no direct workaround.  
+ In the case of format-number() and formatNumber(), you can use [!INCLUDE[tsql](../../includes/tsql-md.md)]. For the other unsupported functions listed earlier, there is no direct workaround.  
   
 ## See Also  
  [Database Engine Upgrade Issues](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;new&#93;](../Topic/SQL%20Server%202014%20Upgrade%20Advisor%20[new].md)  
+ [SQL Server 2014 Upgrade Advisor &#91;new&#93;](~/2014/sql-server/install/sql-server-2014-upgrade-advisor.md)  
   
   

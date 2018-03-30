@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 737cfc80-b39e-497c-817b-b46693deb58f
 caps.latest.revision: 6
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Add Bevel, Emboss, and Texture Styles to a Chart (Report Builder and SSRS)
@@ -25,7 +25,7 @@ manager: "mblythe"
  In addition to these drawing styles, you can add borders and shadows to many chart elements to give the illusion of depth. For more information on other ways to format the chart, see [Formatting a Chart &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/formatting-a-chart-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ### To add bevel or emboss styles to a pie or doughnut chart  
   

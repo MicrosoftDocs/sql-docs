@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Relational Objects Dialog Box (Analysis Services - Multidimensional Data)
-  Use the **Relational Objects** dialog box in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to select tables, views, or other objects from a data source on which you want to set proactive caching. You can display this dialog box in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] by clicking the ellipsis button (**...**) for either of the **Specify tracking tables** options on the **Notifications** tab of the **Storage Options** dialog box.  
+  Use the **Relational Objects** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to select tables, views, or other objects from a data source on which you want to set proactive caching. You can display this dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] by clicking the ellipsis button (**...**) for either of the **Specify tracking tables** options on the **Notifications** tab of the **Storage Options** dialog box.  
   
 ## Options  
  **Select relational objects for which you want to set proactive caching**  

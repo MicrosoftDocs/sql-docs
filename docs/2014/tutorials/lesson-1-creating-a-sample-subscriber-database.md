@@ -12,25 +12,25 @@ ms.topic: "article"
 ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
 caps.latest.revision: 41
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Lesson 1: Creating a Sample Subscriber Database
   Before you can define a data-driven subscription, you must have a data source that provides subscription data. In this step, you will create a small database to store the subscription data used in this tutorial. Later, when the subscription is processed, the report server retrieves this data and uses it to customize report output, delivery options, and report presentation format.  
   
- This lesson assumes you are using [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to create a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] database.  
+ This lesson assumes you are using [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] to create a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] database.  
   
 ### To create a sample Subscriber database  
   
-1.  Start [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], and open a connection to a [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Start [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], and open a connection to a [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  Right-click on Databases, select **New Database...**.  
   
-3.  In the New Database dialog box, in Database Name, type *Subscribers*. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  In the New Database dialog box, in Database Name, type *Subscribers*. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 4.  Click the **New Query** button on the toolbar.  
   
-5.  Copy the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements into the empty query:  
+5.  Copy the following [!INCLUDE[tsql](../includes/tsql-md.md)] statements into the empty query:  
   
     ```  
     Use Subscribers  

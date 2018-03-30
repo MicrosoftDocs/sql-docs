@@ -19,12 +19,12 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Create a Knowledge Base
-  This topic describes how to create a knowledge base in [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS), and prepare it for domain management, knowledge discovery, or adding a matching policy.  
+  This topic describes how to create a knowledge base in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS), and prepare it for domain management, knowledge discovery, or adding a matching policy.  
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
 ###  <a name="Prerequisites"></a> Prerequisites  
- To create a knowledge base, you must have installed [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] and [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)].  
+ To create a knowledge base, you must have installed [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] and [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].  
   
 ###  <a name="Security"></a> Security  
   
@@ -33,9 +33,9 @@ manager: "jhubbard"
   
 ##  <a name="Createaknowledgebase"></a> Create a knowledge base  
   
-1.  [!INCLUDE[ssDQSInitialStep](../../includes/ssdqsinitialstep-md.md)] [Run the Data Quality Client Application](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Run the Data Quality Client Application](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  In the [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] home screen, click **New knowledge base**.  
+2.  In the [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] home screen, click **New knowledge base**.  
   
 3.  Enter a name and description for the new knowledge base.  
   
@@ -43,9 +43,9 @@ manager: "jhubbard"
   
     -   Select **None** if you do not want to base the new knowledge base on an existing knowledge base or data file.  
   
-    -   Select **Existing Knowledge Base** to base the new knowledge base on a knowledge base that has already been created on [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)], or on the default knowledge base. Select the knowledge base from the **Select Knowledge Base** drop-down list, or click **Browse** to display the **Select a Knowledge Base** dialog box, select an existing knowledge base to base the new knowledge base on, and then click **OK**. When you select a knowledge base from the tablet, the domains and matching rules in the knowledge base will be displayed in the right-hand pane of the dialog box. You can also select the **DQS Data** knowledge base, which is the default knowledge base that contains common out-of-the-box domains and knowledge related to U.S. company, address, and party data.  
+    -   Select **Existing Knowledge Base** to base the new knowledge base on a knowledge base that has already been created on [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)], or on the default knowledge base. Select the knowledge base from the **Select Knowledge Base** drop-down list, or click **Browse** to display the **Select a Knowledge Base** dialog box, select an existing knowledge base to base the new knowledge base on, and then click **OK**. When you select a knowledge base from the tablet, the domains and matching rules in the knowledge base will be displayed in the right-hand pane of the dialog box. You can also select the **DQS Data** knowledge base, which is the default knowledge base that contains common out-of-the-box domains and knowledge related to U.S. company, address, and party data.  
   
-    -   Select **Import from DQS File** to base the new knowledge base on a DQS file on [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]. Click **Browse**, select a DQS data file with an extension of .dqs, and then click **OK**.  
+    -   Select **Import from DQS File** to base the new knowledge base on a DQS file on [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]. Click **Browse**, select a DQS data file with an extension of .dqs, and then click **OK**.  
   
 5.  In **Select Activity**, select the activity that you want to perform on the new knowledge base:  
   

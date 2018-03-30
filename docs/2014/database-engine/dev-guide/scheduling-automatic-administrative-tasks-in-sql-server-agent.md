@@ -21,22 +21,22 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Scheduling Automatic Administrative Tasks in SQL Server Agent
-  In SMO, the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent is represented by the following objects:  
+  In SMO, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is represented by the following objects:  
   
 -   The <xref:Microsoft.SqlServer.Management.Smo.Agent.JobServer> object has three collections of jobs, alerts and operators.  
   
--   The <xref:Microsoft.SqlServer.Management.Smo.Agent.OperatorCollection> object represents a list of pager, e-mail addresses and net send operators that can be notified of events automatically by the Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent.  
+-   The <xref:Microsoft.SqlServer.Management.Smo.Agent.OperatorCollection> object represents a list of pager, e-mail addresses and net send operators that can be notified of events automatically by the Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
--   The <xref:Microsoft.SqlServer.Management.Smo.Agent.AlertCollection> object represents a list of circumstances such as system events or performance conditions that are monitored by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   The <xref:Microsoft.SqlServer.Management.Smo.Agent.AlertCollection> object represents a list of circumstances such as system events or performance conditions that are monitored by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   The <xref:Microsoft.SqlServer.Management.Smo.Agent.JobCollection> object is slightly more complex. It represents a list of multi-step tasks that run at specified schedules. The steps and schedule information are stored in the <xref:Microsoft.SqlServer.Management.Smo.Agent.JobStep> and <xref:Microsoft.SqlServer.Management.Smo.Agent.JobSchedule> objects.  
   
- The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent objects are in the <xref:Microsoft.SqlServer.Management.Smo.Agent> namespace.  
+ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent objects are in the <xref:Microsoft.SqlServer.Management.Smo.Agent> namespace.  
   
 ## Examples  
  To use any code example that is provided, you will have to choose the programming environment, the programming template, and the programming language in which to create your application. For more information, see [Create a Visual Basic SMO Project in Visual Studio .NET](../../../2014/database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) or [Create a Visual C&#35; SMO Project in Visual Studio .NET](../../../2014/database-engine/dev-guide/create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
-1.  For programs that use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, you must include the `Imports` statement to qualify the Agent namespace. Insert the statement after the other `Imports` statements, before any declarations in the application, such as:  
+1.  For programs that use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, you must include the `Imports` statement to qualify the Agent namespace. Insert the statement after the other `Imports` statements, before any declarations in the application, such as:  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   
@@ -176,7 +176,7 @@ $jbsch.Create();
   
  **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
   
- An operator is required for the alert notification. The <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> type requires square parentheses because `operator` is a [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] keyword.  
+ An operator is required for the alert notification. The <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> type requires square parentheses because `operator` is a [!INCLUDE[csprcs](../../includes/csprcs-md.md)] keyword.  
   
 ```  
 {  
@@ -209,7 +209,7 @@ $jbsch.Create();
   
  **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
   
- An operator is required for the alert notification. The <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> type requires square parentheses because `operator` is a [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] keyword.  
+ An operator is required for the alert notification. The <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> type requires square parentheses because `operator` is a [!INCLUDE[csprcs](../../includes/csprcs-md.md)] keyword.  
   
 ```  
 #Get a server object which corresponds to the default instance  

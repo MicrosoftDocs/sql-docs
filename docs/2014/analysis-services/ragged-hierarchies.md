@@ -66,7 +66,7 @@ manager: "mblythe"
 |MDX Compatibility Setting|Description|Usage|  
 |-------------------------------|-----------------|-----------|  
 |**1**|Show a placeholder value.|This is the default used by Excel, SSDT, and SSMS. It instructs the server to return placeholder values when drilling down empty levels in a ragged hierarchy. If you click the placeholder value, you can continue down to get to the child (leaf) nodes.<br /><br /> Excel owns the connection string used to connect to Analysis Services, and it always sets `MDX Compatibility` to 1 on each new connection. This behavior preserves backward compatibility.|  
-|**2**|Hide a placeholder value (either a null value or a duplicate of the parent level), but show other levels and nodes having relevant values.|`MDX Compatibility`=2 is typically viewed as the preferred setting in terms of ragged hierarchies. A [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report and some third-party client applications can persist this setting.|  
+|**2**|Hide a placeholder value (either a null value or a duplicate of the parent level), but show other levels and nodes having relevant values.|`MDX Compatibility`=2 is typically viewed as the preferred setting in terms of ragged hierarchies. A [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report and some third-party client applications can persist this setting.|  
   
 ## See Also  
  [Create User-Defined Hierarchies](../../2014/analysis-services/create-user-defined-hierarchies.md)   

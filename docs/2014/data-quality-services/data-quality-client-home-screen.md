@@ -18,7 +18,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Data Quality Client Home Screen
-  Use this screen to gain access to the user interfaces for each the three major [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) groups of tasks: knowledge base management, data quality projects, and administration.  
+  Use this screen to gain access to the user interfaces for each the three major [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) groups of tasks: knowledge base management, data quality projects, and administration.  
   
 ## Options  
   
@@ -52,7 +52,7 @@ manager: "jhubbard"
  DQS administration enables you to monitor, configure, and maintain DQS.  
   
  **Activity Monitoring**  
- Display a view of the status of all activities (both current and historical) that are related to the connected [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]. The types of activities monitored include Knowledge Management, Data Quality Project, and SSIS-based data correction.  
+ Display a view of the status of all activities (both current and historical) that are related to the connected [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]. The types of activities monitored include Knowledge Management, Data Quality Project, and SSIS-based data correction.  
   
  **Configuration**  
  Display the configuration properties for reference data service accounts (both through Windows Azure Marketplace and directly to reference data services), general settings (interactive cleansing, matching, and profiling) and log severity settings.  

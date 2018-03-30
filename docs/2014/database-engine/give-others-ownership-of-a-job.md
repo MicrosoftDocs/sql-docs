@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Give Others Ownership of a Job
-  This topic describes how to reassign ownership of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs to another user.  
+  This topic describes how to reassign ownership of [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent jobs to another user.  
   
 -   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Security](#Security)  
   
@@ -35,7 +35,7 @@ manager: "jhubbard"
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
- To create a job, a user must be a member of one of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent fixed database roles or the **sysadmin** fixed server role. A job can be edited only by its owner or members of the **sysadmin** role. For more information about the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent fixed database roles, see [SQL Server Agent Fixed Database Roles](../../2014/database-engine/sql-server-agent-fixed-database-roles.md).  
+ To create a job, a user must be a member of one of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent fixed database roles or the **sysadmin** fixed server role. A job can be edited only by its owner or members of the **sysadmin** role. For more information about the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent fixed database roles, see [SQL Server Agent Fixed Database Roles](../../2014/database-engine/sql-server-agent-fixed-database-roles.md).  
   
  You must be a system administrator to change the owner of a job.  
   
@@ -45,7 +45,7 @@ manager: "jhubbard"
  For security reasons, only the job owner or a member of the **sysadmin** role can change the definition of the job. Only members of the **sysadmin** fixed server role can assign job ownership to other users, and they can run any job, regardless of the job owner.  
   
 > [!NOTE]  
->  If you change job ownership to a user who is not a member of the **sysadmin** fixed server role, and the job is executing job steps that require proxy accounts (for example, [!INCLUDE[ssIS](../../includes/ssis-md.md)] package execution), make sure that the user has access to that proxy account or else the job will fail.  
+>  If you change job ownership to a user who is not a member of the **sysadmin** fixed server role, and the job is executing job steps that require proxy accounts (for example, [!INCLUDE[ssIS](../includes/ssis-md.md)] package execution), make sure that the user has access to that proxy account or else the job will fail.  
   
 ####  <a name="Permissions"></a> Permissions  
  For detailed information, see [Implement SQL Server Agent Security](../../2014/database-engine/implement-sql-server-agent-security.md).  
@@ -53,7 +53,7 @@ manager: "jhubbard"
 ##  <a name="SSMSProc2"></a> Using SQL Server Management Studio  
  **To give others ownership of a job**  
   
-1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], and then expand that instance.  
+1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], and then expand that instance.  
   
 2.  Expand **SQL Server Agent**, expand **Jobs**, right-click the job, and then click **Properties**.  
   
@@ -68,7 +68,7 @@ manager: "jhubbard"
   
 2.  On the toolbar, click **New Query**.  
   
-3.  In the query window, enter the following statements that use the [sp_manage_jobs_by_login &#40;Transact-SQL&#41;](../Topic/sp_manage_jobs_by_login%20\(Transact-SQL\).md) system stored procedure. The following example reassigns all jobs from `danw` to `françoisa`.  
+3.  In the query window, enter the following statements that use the [sp_manage_jobs_by_login &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-manage-jobs-by-login-transact-sql.md) system stored procedure. The following example reassigns all jobs from `danw` to `françoisa`.  
   
     ```  
     USE msdb ;  

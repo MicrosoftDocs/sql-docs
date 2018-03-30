@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 caps.latest.revision: 12
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Tutorial: Creating a Basic Table Report (Report Builder)
@@ -69,7 +69,7 @@ manager: "mblythe"
 3.  In the right pane, verify that **Table or Matrix Wizard** is selected.  
   
 ##  <a name="DataConnection"></a> 1a. Specify a Data Connection in the Table Wizard  
- A data connection contains the information to connect to an external data source such as a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. Usually, you get the connection information and the type of credentials to use from the data source owner. To specify a data connection, you can use a shared data source from the report server or create an embedded data source that is used only in this report.  
+ A data connection contains the information to connect to an external data source such as a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database. Usually, you get the connection information and the type of credentials to use from the data source owner. To specify a data connection, you can use a shared data source from the report server or create an embedded data source that is used only in this report.  
   
  In this tutorial, you will use an embedded data source. To learn more about using a shared data sources, see [Alternative Ways to Get a Data Connection &#40;Report Builder&#41;](../../2014/tutorials/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
@@ -83,7 +83,7 @@ manager: "mblythe"
   
 4.  In **Select a connection type**, verify that **Microsoft SQL Server** is selected.  
   
-5.  In **Connection string**, type the following text, where *\<servername>* is the name of an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+5.  In **Connection string**, type the following text, where *\<servername>* is the name of an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
     ```  
     Data Source=<servername>  
@@ -93,7 +93,7 @@ manager: "mblythe"
   
 6.  Click **Credentials**. Enter the credentials that you need to access the external data source.  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
      You are back on the **Choose a connection to a data source** page.  
   
@@ -101,7 +101,7 @@ manager: "mblythe"
   
      The message "Connection created successfully" appears.  
   
-9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 10. Click **Next**.  
   
@@ -117,7 +117,7 @@ manager: "mblythe"
   
      Click **Edit As Text**. The text-based query designer displays a query pane and a results pane.  
   
-2.  Paste the following [!INCLUDE[tsql](../../includes/tsql-md.md)] query into the **Query** box.  
+2.  Paste the following [!INCLUDE[tsql](../includes/tsql-md.md)] query into the **Query** box.  
   
     ```  
     SELECT CAST('2009-01-05' AS date) as SalesDate, 'Accessories' as Subcategory,   
@@ -276,7 +276,7 @@ manager: "mblythe"
   
 5.  In the **Type** pane, select **January 31, 2000**.  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
      The cell displays the example date **[January 31, 2000]**.  
   
@@ -322,10 +322,10 @@ manager: "mblythe"
   
 7.  Select **Bold**.  
   
-8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ##  <a name="Save"></a> 6. Save the Report  
- Save the report to a report server or your computer. If you do not save the report to the report server, a number of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] features such as report parts and subreports are not available.  
+ Save the report to a report server or your computer. If you do not save the report to the report server, a number of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features such as report parts and subreports are not available.  
   
 #### To save the report on a report server  
   

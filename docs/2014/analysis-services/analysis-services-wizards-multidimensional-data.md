@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Analysis Services Wizards (Multidimensional Data)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] provides wizards for use in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. The following table describes the wizards that are available.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] provides wizards for use in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] and [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. The following table describes the wizards that are available.  
   
 ## In This Section  
   
@@ -31,11 +31,11 @@ manager: "mblythe"
 |[Data Source Wizard F1 Help &#40;Analysis Services&#41;](../../2014/analysis-services/data-source-wizard-f1-help-analysis-services.md)|Use the Data Source Wizard to define a new data source.|  
 |[Data Source View Wizard F1 Help &#40;Analysis Services&#41;](../../2014/analysis-services/data-source-view-wizard-f1-help-analysis-services.md)|Use the Data Source View Wizard to define a new data source view.|  
 |[Dimension Wizard F1 Help](../../2014/analysis-services/dimension-wizard-f1-help.md)|Use the Dimension Wizard to define a new dimension.|  
-|[Import Analysis Services Database Wizard F1 Help](../../2014/analysis-services/import-analysis-services-database-wizard-f1-help.md)|Use the Import Analysis Services 9.0 Database Wizard to import an existing [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database.|  
+|[Import Analysis Services Database Wizard F1 Help](../../2014/analysis-services/import-analysis-services-database-wizard-f1-help.md)|Use the Import Analysis Services 9.0 Database Wizard to import an existing [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database.|  
 |[Linked Object Wizard F1 Help](../../2014/analysis-services/linked-object-wizard-f1-help.md)|Use the Linked Object Wizard to define a linked dimension or measure group, and optionally import related objects.|  
 |[Partition Wizard F1 Help &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/partition-wizard-f1-help-analysis-services-multidimensional-data.md)|Use the Partition Wizard to define a partition or remote partition.|  
-|[Schema Generation Wizard F1 Help &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)|Use the Schema Generation Wizard to define a data source view, and optionally script the relational schema of the data source view to a data source, from an existing [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] object.|  
-|[Usage-Based Optimization Wizard F1 Help](../../2014/analysis-services/usage-based-optimization-wizard-f1-help.md)|Use the Usage-Based Optimization Wizard to define aggregations for an aggregation design based on queries stored in the query log for an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database.|  
+|[Schema Generation Wizard F1 Help &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)|Use the Schema Generation Wizard to define a data source view, and optionally script the relational schema of the data source view to a data source, from an existing [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] object.|  
+|[Usage-Based Optimization Wizard F1 Help](../../2014/analysis-services/usage-based-optimization-wizard-f1-help.md)|Use the Usage-Based Optimization Wizard to define aggregations for an aggregation design based on queries stored in the query log for an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database.|  
   
 ## See Also  
  [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](../../2014/analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   

@@ -20,25 +20,25 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # View Events for the Integration Services Service
-  There are two tools in which you can view events for the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service:  
+  There are two tools in which you can view events for the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service:  
   
--   The **Log File Viewer** dialog box in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. The **Log File Viewer** dialog box includes options to export, filter, and search the log. For more information about the options in the **Log File Viewer**, see [Log File Viewer F1 Help](../../2014/database-engine/log-file-viewer-f1-help.md).  
+-   The **Log File Viewer** dialog box in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. The **Log File Viewer** dialog box includes options to export, filter, and search the log. For more information about the options in the **Log File Viewer**, see [Log File Viewer F1 Help](../../2014/database-engine/log-file-viewer-f1-help.md).  
   
 -   The Windows Event Viewer.  
   
- For descriptions of the events logged by the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service, see [Events Logged by the Integration Services Service](../../2014/integration-services/events-logged-by-the-integration-services-service.md).  
+ For descriptions of the events logged by the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service, see [Events Logged by the Integration Services Service](../../2014/integration-services/events-logged-by-the-integration-services-service.md).  
   
 ### To view service events for Integration Services in SQL Server Management Studio  
   
-1.  Open [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+1.  Open [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 2.  On the **File** menu, click **Connect Object Explorer**.  
   
-3.  In the **Connect to Server** dialog box, select the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server type, select or locate the server to connect to, and then click **Connect**.  
+3.  In the **Connect to Server** dialog box, select the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server type, select or locate the server to connect to, and then click **Connect**.  
   
-4.  In Object Explorer, right-click [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] and click **View Logs**.  
+4.  In Object Explorer, right-click [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] and click **View Logs**.  
   
-5.  To view [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] events, select **SQL Server Integration Services**. The **NT Events** option is automatically selected and cleared with the **SQL Server Integration Services** option.  
+5.  To view [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] events, select **SQL Server Integration Services**. The **NT Events** option is automatically selected and cleared with the **SQL Server Integration Services** option.  
   
 ### To view service events for Integration Services in Windows Event Viewer  
   

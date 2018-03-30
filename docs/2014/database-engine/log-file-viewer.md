@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: a4ea7fc8-1cb2-4c98-bc86-8991c5e748b2
 caps.latest.revision: 25
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Log File Viewer
-  Log File Viewer in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] is used to access information about errors and events that are captured in log files.  
+  Log File Viewer in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] is used to access information about errors and events that are captured in log files.  
   
 ## Benefits of using Log File Viewer  
- You can view [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log files from a local or remote instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] when the target instance is offline or cannot start. You can access the offline log files from Registered Servers, or programmatically through WMI and WQL (WMI Query Language) queries. For more information, see [View Offline Log Files](../../2014/database-engine/view-offline-log-files.md). Following are the types of log files you can access using Log File Viewer:  
+ You can view [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] log files from a local or remote instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] when the target instance is offline or cannot start. You can access the offline log files from Registered Servers, or programmatically through WMI and WQL (WMI Query Language) queries. For more information, see [View Offline Log Files](../../2014/database-engine/view-offline-log-files.md). Following are the types of log files you can access using Log File Viewer:  
   
 -   Audit Collection  
   

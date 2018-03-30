@@ -26,11 +26,11 @@ manager: "mblythe"
   
 -   You must set impersonation options for users who will be accessing the SQL Server data source.  
   
- This procedure describes how to set the preferred connection method for a DirectQuery model in the designer. It also describes how you can change this property in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] after the model has been deployed.  
+ This procedure describes how to set the preferred connection method for a DirectQuery model in the designer. It also describes how you can change this property in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] after the model has been deployed.  
   
 ### To set the preferred connection method for a DirectQuery model  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the solution file for the DirectQuery model.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the solution file for the DirectQuery model.  
   
 2.  In Visual Studio, from the **Project** menu, select **Properties**.  
   
@@ -46,7 +46,7 @@ manager: "mblythe"
   
 ### To verify or change the preferred connection method for a DirectQuery model  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connect to the instance where you deployed the DirectQuery model.  
+1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], connect to the instance where you deployed the DirectQuery model.  
   
 2.  Right-click the model database, and select **Properties**.  
   

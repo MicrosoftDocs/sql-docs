@@ -20,7 +20,7 @@ manager: "jhubbard"
 # Suggest Column Types Dialog Box UI Reference
   Use the **Suggest Column Types** dialog box to identify the data type and length of columns in a Flat File Connection Manager based on a sampling of the file content.  
   
- To learn more about the data types used by [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], see [Integration Services Data Types](../../2014/integration-services/integration-services-data-types.md).  
+ To learn more about the data types used by [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], see [Integration Services Data Types](../../2014/integration-services/integration-services-data-types.md).  
   
 ## Options  
  **Number of rows**  

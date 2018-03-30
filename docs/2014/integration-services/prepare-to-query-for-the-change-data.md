@@ -18,7 +18,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Prepare to Query for the Change Data
-  In the control flow of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package that performs an incremental load of change data, the third and final task is to prepare to query for the change data and add a Data Flow task.  
+  In the control flow of an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package that performs an incremental load of change data, the third and final task is to prepare to query for the change data and add a Data Flow task.  
   
 > [!NOTE]  
 >  The second task for the control flow is to ensure that the change data for the selected interval is ready. For more information about this task, see [Determine Whether the Change Data Is Ready](../../2014/integration-services/determine-whether-the-change-data-is-ready.md). For a description of the overall process of designing the control flow, see [Change Data Capture &#40;SSIS&#41;](../../2014/integration-services/change-data-capture-ssis.md).  
@@ -26,7 +26,7 @@ manager: "jhubbard"
 ## Design Considerations  
  To retrieve the change data, you will call a Transact-SQL table-valued function that accepts the endpoints of the interval as input parameters and returns change data for the specified interval. A source component in the data flow calls this function. For information about this source component, see [Retrieve and Understand the Change Data](../../2014/integration-services/retrieve-and-understand-the-change-data.md).  
   
- The most frequently used [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] source components, including the OLE DB source, the ADO source, and the ADO NET source, cannot derive parameter information for a table-valued function. Therefore, most sources cannot call a parameterized function directly.  
+ The most frequently used [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] source components, including the OLE DB source, the ADO source, and the ADO NET source, cannot derive parameter information for a table-valued function. Therefore, most sources cannot call a parameterized function directly.  
   
  You have two design options for passing the input parameters to the function:  
   
@@ -44,7 +44,7 @@ manager: "jhubbard"
   
 #### To set up package variables  
   
--   In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], in the **Variables** window, create a variable with a string data type to hold the query string returned by the Execute SQL Task.  
+-   In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], in the **Variables** window, create a variable with a string data type to hold the query string returned by the Execute SQL Task.  
   
      This example uses the variable name, SqlDataQuery.  
   
@@ -93,7 +93,7 @@ manager: "jhubbard"
   
          \- or -  
   
-    -   If you are programming in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], enter the following lines of code:  
+    -   If you are programming in [!INCLUDE[vbprvb](../includes/vbprvb-md.md)], enter the following lines of code:  
   
         ```  
         Dim dataReady As Integer  

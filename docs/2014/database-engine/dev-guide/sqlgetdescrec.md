@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQLGetDescRec
-  This topic discusses SQLGetDescRec functionality that is specific to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
+  This topic discusses SQLGetDescRec functionality that is specific to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
 ## SQLGetDescRec and Table-Valued Parameters  
  SQLGetDescRec can be used to get values for attributes of table-valued parameters and table-valued parameter columns. The *RecNumber* parameter of SQLGetDescRec corresponds to the *ParameterNumber* parameter of SQLBindParameter.  

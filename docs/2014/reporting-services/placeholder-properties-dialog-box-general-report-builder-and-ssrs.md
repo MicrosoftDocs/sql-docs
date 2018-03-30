@@ -15,7 +15,7 @@ f1_keywords:
 ms.assetid: 7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8
 caps.latest.revision: 11
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Placeholder Properties Dialog Box, General (Report Builder and SSRS)

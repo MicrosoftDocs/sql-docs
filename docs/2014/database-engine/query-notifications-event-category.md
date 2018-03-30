@@ -24,7 +24,7 @@ manager: "jhubbard"
   
 ## In This Section  
  [QN:Dynamics Event Class](../../2014/database-engine/qn-dynamics-event-class.md)  
- Reports information about the background activity that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] performs to support query notifications.  
+ Reports information about the background activity that the [!INCLUDE[ssDE](../includes/ssde-md.md)] performs to support query notifications.  
   
  [QN:Parameter Table Event Class](../../2014/database-engine/qn-parameter-table-event-class.md)  
  Reports information about the operations required to create, maintain, and drop the internal tables that store parameter information for subscriptions.  
@@ -38,6 +38,6 @@ manager: "jhubbard"
 ## See Also  
  [SQL Trace](../../2014/database-engine/sql-trace.md)   
  [SQL Server Profiler](../../2014/database-engine/sql-server-profiler.md)   
- [sp_trace_setevent &#40;Transact-SQL&#41;](../Topic/sp_trace_setevent%20\(Transact-SQL\).md)  
+ [sp_trace_setevent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

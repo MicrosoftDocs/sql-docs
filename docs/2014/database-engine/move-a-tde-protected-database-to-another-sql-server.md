@@ -15,11 +15,11 @@ helpviewer_keywords:
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 caps.latest.revision: 15
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Move a TDE Protected Database to Another SQL Server
-  This topic describes how to to protect a database by using transparent data encryption (TDE), and then move the database to another instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. TDE performs real-time I/O encryption and decryption of the data and log files. The encryption uses a database encryption key (DEK), which is stored in the database boot record for availability during recovery. The DEK is a symmetric key secured by using a certificate stored in the `master` database of the server or an asymmetric key protected by an EKM module.  
+  This topic describes how to to protect a database by using transparent data encryption (TDE), and then move the database to another instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)]. TDE performs real-time I/O encryption and decryption of the data and log files. The encryption uses a database encryption key (DEK), which is stored in the database boot record for availability during recovery. The DEK is a symmetric key secured by using a certificate stored in the `master` database of the server or an asymmetric key protected by an EKM module.  
   
  **In This Topic**  
   
@@ -45,11 +45,11 @@ manager: "jhubbard"
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
--   When moving a TDE protected database, you must also move the certificate or asymmetric key that is used to open the DEK. The certificate or asymmetric key must be installed in the `master` database of the destination server, so that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can access the database files. For more information, see [Transparent Data Encryption &#40;TDE&#41;](../../2014/database-engine/transparent-data-encryption-tde.md).  
+-   When moving a TDE protected database, you must also move the certificate or asymmetric key that is used to open the DEK. The certificate or asymmetric key must be installed in the `master` database of the destination server, so that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] can access the database files. For more information, see [Transparent Data Encryption &#40;TDE&#41;](../../2014/database-engine/transparent-data-encryption-tde.md).  
   
 -   You must retain copies of both the certificate file and the private key file in order to recover the certificate. The password for the private key does not have to be the same as the database master key password.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stores the files created here in **C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA** by default. Your file names and locations might be different.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] stores the files created here in **C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA** by default. Your file names and locations might be different.  
   
 ###  <a name="Security"></a> Security  
   
@@ -97,7 +97,7 @@ manager: "jhubbard"
   
 ###  <a name="TsqlCreate"></a> Using Transact-SQL  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -143,17 +143,17 @@ manager: "jhubbard"
   
  For more information, see:  
   
--   [CREATE MASTER KEY &#40;Transact-SQL&#41;](../Topic/CREATE%20MASTER%20KEY%20\(Transact-SQL\).md)  
+-   [CREATE MASTER KEY &#40;Transact-SQL&#41;](~/t-sql/statements/create-master-key-transact-sql.md)  
   
--   [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../Topic/CREATE%20CERTIFICATE%20\(Transact-SQL\).md)  
+-   [CREATE CERTIFICATE &#40;Transact-SQL&#41;](~/t-sql/statements/create-certificate-transact-sql.md)  
   
--   [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](../Topic/BACKUP%20CERTIFICATE%20\(Transact-SQL\).md)  
+-   [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](~/t-sql/statements/backup-certificate-transact-sql.md)  
   
--   [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../Topic/CREATE%20DATABASE%20\(SQL%20Server%20Transact-SQL\).md)  
+-   [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](~/t-sql/statements/create-database-sql-server-transact-sql.md)  
   
--   [CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../Topic/CREATE%20DATABASE%20ENCRYPTION%20KEY%20\(Transact-SQL\).md)  
+-   [CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](~/t-sql/statements/create-database-encryption-key-transact-sql.md)  
   
--   [ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20\(Transact-SQL\).md)  
+-   [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)  
   
 ##  <a name="TsqlProcedure"></a> To move a database  
   
@@ -179,7 +179,7 @@ manager: "jhubbard"
      By default, the detach operation retains any out-of-date optimization statistics when detaching the database; to update the existing optimization statistics, click this check box.  
   
      **Keep Full-Text Catalogs**  
-     By default, the detach operation keeps any full-text catalogs that are associated with the database. To remove them, clear the **Keep Full-Text Catalogs** check box. This option appears only when you are upgrading a database from [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+     By default, the detach operation keeps any full-text catalogs that are associated with the database. To remove them, clear the **Keep Full-Text Catalogs** check box. This option appears only when you are upgrading a database from [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)].  
   
      **Status**  
      Displays one of the following states: **Ready** or **Not ready**.  
@@ -199,11 +199,11 @@ manager: "jhubbard"
   
 4.  Using Windows Explorer, move or copy the backup of the server certificate and the private key file from the source server to the same location on the destination server.  
   
-5.  Create a database master key on the destination instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see **Using Transact-SQL** below.  
+5.  Create a database master key on the destination instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For more information, see **Using Transact-SQL** below.  
   
 6.  Recreate the server certificate by using the original server certificate backup file. For more information, see **Using Transact-SQL** below.  
   
-7.  In Object Explorer in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], right-click the **Databases** folder and select **Attach…**.  
+7.  In Object Explorer in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], right-click the **Databases** folder and select **Attach…**.  
   
 8.  In the **Attach Databases** dialog box, under **Databases to attach**, click **Add**.  
   
@@ -270,7 +270,7 @@ manager: "jhubbard"
   
 ###  <a name="TsqlMove"></a> Using Transact-SQL  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -311,13 +311,13 @@ manager: "jhubbard"
   
  For more information, see:  
   
--   [sp_detach_db &#40;Transact-SQL&#41;](../Topic/sp_detach_db%20\(Transact-SQL\).md)  
+-   [sp_detach_db &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)  
   
--   [CREATE MASTER KEY &#40;Transact-SQL&#41;](../Topic/CREATE%20MASTER%20KEY%20\(Transact-SQL\).md)  
+-   [CREATE MASTER KEY &#40;Transact-SQL&#41;](~/t-sql/statements/create-master-key-transact-sql.md)  
   
--   [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../Topic/CREATE%20CERTIFICATE%20\(Transact-SQL\).md)  
+-   [CREATE CERTIFICATE &#40;Transact-SQL&#41;](~/t-sql/statements/create-certificate-transact-sql.md)  
   
--   [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../Topic/CREATE%20DATABASE%20\(SQL%20Server%20Transact-SQL\).md)  
+-   [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](~/t-sql/statements/create-database-sql-server-transact-sql.md)  
   
 ## See Also  
  [Database Detach and Attach &#40;SQL Server&#41;](../../2014/database-engine/database-detach-and-attach-sql-server.md)  

@@ -20,7 +20,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Audit Transformation Editor
-  The Audit transformation enables the data flow in a package to include data about the environment in which the package runs. For example, the name of the package, computer, and operator can be added to the data flow. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes system variables that provide this information.  
+  The Audit transformation enables the data flow in a package to include data about the environment in which the package runs. For example, the name of the package, computer, and operator can be added to the data flow. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes system variables that provide this information.  
   
  To learn more about the Audit transformation, see [Audit Transformation](../../2014/integration-services/audit-transformation.md).  
   

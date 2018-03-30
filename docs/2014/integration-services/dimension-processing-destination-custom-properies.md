@@ -22,7 +22,7 @@ manager: "jhubbard"
   
 |Property|Data Type|Description|  
 |--------------|---------------|-----------------|  
-|ASConnectionString|String|The connection string to an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] or to an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project.|  
+|ASConnectionString|String|The connection string to an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] or to an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project.|  
 |KeyDuplicate|Integer (enumeration)|When UseDefaultConfiguration is `False`, a value that indicates how to handle duplicate key errors. The possible values are `IgnoreError` (0), `ReportAndContinue` (1), and `ReportAndStop` (2). The default value of this property is `IgnoreError` (0).|  
 |KeyErrorAction|Integer (enumeration)|When UseDefaultConfiguration is `False`, a value that indicates how to handle key error. The possible values are `ConvertToUnknown` (0) and `DiscardRecord` (1). The default value of this property is `ConvertToUnknown` (0).|  
 |KeyErrorLimit|Integer|When UseDefaultConfiguration is `False`, the upper limit of key errors that are enabled.|  

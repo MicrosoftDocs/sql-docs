@@ -63,7 +63,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Data Mining Properties
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supports the data mining server properties listed in the following tables. For more information about additional server properties and how to set them, see [Configure Server Properties in Analysis Services](../../2014/analysis-services/configure-server-properties-in-analysis-services.md).  
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supports the data mining server properties listed in the following tables. For more information about additional server properties and how to set them, see [Configure Server Properties in Analysis Services](../../2014/analysis-services/configure-server-properties-in-analysis-services.md).  
   
  **Applies to:** Multidimensional server mode only  
   

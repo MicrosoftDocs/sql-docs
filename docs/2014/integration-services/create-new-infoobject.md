@@ -25,7 +25,7 @@ manager: "jhubbard"
   
  **To open the Create New InfoObject dialog box**  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package that contains the SAP BW destination.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package that contains the SAP BW destination.  
   
 2.  On the **Data Flow** tab, double-click the SAP BW destination.  
   

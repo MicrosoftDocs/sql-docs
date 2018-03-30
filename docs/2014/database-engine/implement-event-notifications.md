@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 29ac8f68-a28a-4a77-b67b-a8663001308c
 caps.latest.revision: 32
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Implement Event Notifications
   To implement an event notification, you must first create a target service to receive event notifications, and then create the event notification.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssSB](../../includes/sssb-md.md)] dialog security should be configured for event notifications that send messages to a service broker on a remote server. Dialog security must be configured manually according to the full security model.  
+>  [!INCLUDE[ssSB](../includes/sssb-md.md)] dialog security should be configured for event notifications that send messages to a service broker on a remote server. Dialog security must be configured manually according to the full security model.  
   
 ## Creating the Target Service  
- You do not have to create a [!INCLUDE[ssSB](../../includes/sssb-md.md)]-initiating service because [!INCLUDE[ssSB](../../includes/sssb-md.md)] includes the following specific message type and contract for event notifications:  
+ You do not have to create a [!INCLUDE[ssSB](../includes/sssb-md.md)]-initiating service because [!INCLUDE[ssSB](../includes/sssb-md.md)] includes the following specific message type and contract for event notifications:  
   
 ```  
 http://schemas.microsoft.com/SQL/Notifications/PostEventNotification  
@@ -43,10 +43,10 @@ http://schemas.microsoft.com/SQL/Notifications/PostEventNotification
   
 2.  Create a service on the queue that references the event notifications contract.  
   
-3.  Create a route on the service to define the address to which [!INCLUDE[ssSB](../../includes/sssb-md.md)] sends messages for the service. For event notifications that target a service in the same database, specify `ADDRESS = 'LOCAL'`.  
+3.  Create a route on the service to define the address to which [!INCLUDE[ssSB](../includes/sssb-md.md)] sends messages for the service. For event notifications that target a service in the same database, specify `ADDRESS = 'LOCAL'`.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssSB](../../includes/sssb-md.md)] routing determines the service that receives the notification messages. If the event notification targets a service on a remote server, both the source server and the target server must have routes defined on them to make sure that two-way communication occurs.  
+    >  [!INCLUDE[ssSB](../includes/sssb-md.md)] routing determines the service that receives the notification messages. If the event notification targets a service on a remote server, both the source server and the target server must have routes defined on them to make sure that two-way communication occurs.  
   
  The following example creates a queue, a service on the queue, and a route on the service to handle messages from the event notification contract.  
   
@@ -66,7 +66,7 @@ GO
 ```  
   
 ## Creating the Event Notification  
- Event notifications are created by using the [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE EVENT NOTIFICATION statement, and are dropped by using the DROP EVENT NOTIFICATION STATEMENT. To modify an event notification, you must drop and re-create the event notification.  
+ Event notifications are created by using the [!INCLUDE[tsql](../includes/tsql-md.md)] CREATE EVENT NOTIFICATION statement, and are dropped by using the DROP EVENT NOTIFICATION STATEMENT. To modify an event notification, you must drop and re-create the event notification.  
   
  The following example creates the event notification `CreateDatabaseNotification`. This notification sends a message about any `CREATE_DATABASE` event that occurs on the server to the `NotifyService` service that was previously created.  
   
@@ -88,14 +88,14 @@ TO SERVICE 'NotifyService', '8140a771-3c4b-4479-8ac0-81008ab17984' ;
   
  **To create an event notification**  
   
--   [CREATE EVENT NOTIFICATION &#40;Transact-SQL&#41;](../Topic/CREATE%20EVENT%20NOTIFICATION%20\(Transact-SQL\).md)  
+-   [CREATE EVENT NOTIFICATION &#40;Transact-SQL&#41;](~/t-sql/statements/create-event-notification-transact-sql.md)  
   
  **To drop an event notification**  
   
--   [DROP EVENT NOTIFICATION &#40;Transact-SQL&#41;](../Topic/DROP%20EVENT%20NOTIFICATION%20\(Transact-SQL\).md)  
+-   [DROP EVENT NOTIFICATION &#40;Transact-SQL&#41;](~/t-sql/statements/drop-event-notification-transact-sql.md)  
   
 ## See Also  
  [Get Information About Event Notifications](../../2014/database-engine/get-information-about-event-notifications.md)   
- [EVENTDATA &#40;Transact-SQL&#41;](../Topic/EVENTDATA%20\(Transact-SQL\).md)  
+ [EVENTDATA &#40;Transact-SQL&#41;](~/t-sql/functions/eventdata-transact-sql.md)  
   
   

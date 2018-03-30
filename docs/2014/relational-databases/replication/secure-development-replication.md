@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 2322d39c-6689-4fb6-b23b-eae51cbb0222
 caps.latest.revision: 8
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Secure Development (Replication)

@@ -34,7 +34,7 @@ manager: "mblythe"
 |`SCHEMA_NAME`|`DBTYPE_WSTR`||Not supported|  
 |`CUBE_NAME`|`DBTYPE_WSTR`||(Required) The name of the cube to which this hierarchy belongs.|  
 |`DIMENSION_UNIQUE_NAME`|`DBTYPE_WSTR`||The unique name of the dimension to which this hierarchy belongs. For providers that generate unique names by qualification, each component of this name is delimited.|  
-|`HIERARCHY_NAME`|`DBTYPE_WSTR`||The name of the hierarchy. Blank if there is only a single hierarchy in the dimension. This will always have a value in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
+|`HIERARCHY_NAME`|`DBTYPE_WSTR`||The name of the hierarchy. Blank if there is only a single hierarchy in the dimension. This will always have a value in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
 |`HIERARCHY_UNIQUE_NAME`|`DBTYPE_WSTR`||The unique name of the hierarchy.|  
 |`HIERARCHY_GUID`|`DBTYPE_GUID`||Not supported|  
 |`HIERARCHY_CAPTION`|`DBTYPE_WSTR`||A label or a caption associated with the hierarchy. Used primarily for display purposes. If a caption does not exist, `HIERARCHY_NAME` is returned. If the dimension either does not contain a hierarchy or has just one hierarchy, this column will contain the name of the dimension.|  

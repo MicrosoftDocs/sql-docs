@@ -23,7 +23,7 @@ manager: "jhubbard"
 # XML Task
   The XML task is used to work with XML data. Using this task, a package can retrieve XML documents, apply operations to the documents by using Extensible Stylesheet Language Transformations (XSLT) style sheets and XPath expressions, merge multiple documents, or validate, compare, and save the updated documents to files and variables.  
   
- This task enables an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package to dynamically modify XML documents at run time. You can use the XML task for the following purposes:  
+ This task enables an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package to dynamically modify XML documents at run time. You can use the XML task for the following purposes:  
   
 -   Reformat an XML document. For example, the task can access a report that resides in an XML file and dynamically apply an XSLT style sheet to customize the document presentation.  
   
@@ -113,9 +113,9 @@ manager: "jhubbard"
 |`XMLOperation`|Provides information about the operation that the task performs|  
   
 ## Configuration of the XML Task  
- You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer or programmatically.  
   
- For more information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click one of the following topics:  
+ For more information about the properties that you can set in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click one of the following topics:  
   
 -   [XML Task Editor &#40;General Page&#41;](../../2014/integration-services/xml-task-editor-general-page.md)  
   
@@ -123,7 +123,7 @@ manager: "jhubbard"
   
 -   [Expressions Page](../../2014/integration-services/expressions-page.md)  
   
- For more information about how to set properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
+ For more information about how to set properties in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click the following topic:  
   
 -   [Set the Properties of a Task or Container](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)  
   

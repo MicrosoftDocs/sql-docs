@@ -18,7 +18,7 @@ ms.author: "jroth"
 manager: "jhubbard"
 ---
 # Administration of an Availability Group (SQL Server)
-  Managing an existing AlwaysOn availability group in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] involves one or more of the following tasks:  
+  Managing an existing AlwaysOn availability group in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] involves one or more of the following tasks:  
   
 -   Altering the properties of an existing availability replica, for example to change client connection access (for configuring readable secondary replicas), changing its failover mode, availability mode, or session timeout setting.  
   
@@ -34,7 +34,7 @@ manager: "jhubbard"
   
 -   Managing [readable secondary replicas](../../2014/database-engine/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) for a given availability group. This involves configuring one or more replicas to read-only access when running under the secondary role, and configuring read-only routing.  
   
--   Managing [backups on secondary replicas](../../2014/database-engine/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) for a given availability group. This involves configuring where you prefer that backup jobs run and then scripting backup jobs to implement your backup preference. you need to script backup jobs for every database in the availability group on every instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that hosts an availability replica.  
+-   Managing [backups on secondary replicas](../../2014/database-engine/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) for a given availability group. This involves configuring where you prefer that backup jobs run and then scripting backup jobs to implement your backup preference. you need to script backup jobs for every database in the availability group on every instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that hosts an availability replica.  
   
 -   Deleting an availability group.  
   

@@ -24,17 +24,17 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Microsoft Naive Bayes Algorithm Technical Reference
-  The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes algorithm is a classification algorithm provided by [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] for use in predictive modeling. The algorithm calculates the conditional probability between input and predictable columns, and assumes that the columns are independent. This assumption of independence leads to the name Naive Bayes.  
+  The [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes algorithm is a classification algorithm provided by [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] for use in predictive modeling. The algorithm calculates the conditional probability between input and predictable columns, and assumes that the columns are independent. This assumption of independence leads to the name Naive Bayes.  
   
 ## Implementation of the Microsoft Naive Bayes Algorithm  
- This algorithm is less computationally intense than other [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithms, and therefore is useful for quickly generating mining models to discover relationships between input columns and predictable columns. The algorithm considers each pair of input attribute values and output attribute values.  
+ This algorithm is less computationally intense than other [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithms, and therefore is useful for quickly generating mining models to discover relationships between input columns and predictable columns. The algorithm considers each pair of input attribute values and output attribute values.  
   
  A description of the mathematical properties of Bayes Theorem is beyond the scope of this documentation; for more information, see the paper by Microsoft Research titled [Learning Bayesian Networks: The Combination of Knowledge and Statistical Data](http://go.microsoft.com/fwlink/?LinkId=207029).  
   
  For a description of how probabilities in all models are adjusted to account for potential missing values, see [Missing Values &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/missing-values-analysis-services-data-mining.md).  
   
 ### Feature Selection  
- The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes algorithm performs automatic feature selection to limit the number of values that are considered when building the model. For more information, see [Feature Selection &#40;Data Mining&#41;](../../2014/analysis-services/feature-selection-data-mining.md).  
+ The [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes algorithm performs automatic feature selection to limit the number of values that are considered when building the model. For more information, see [Feature Selection &#40;Data Mining&#41;](../../2014/analysis-services/feature-selection-data-mining.md).  
   
 |Algorithm|Method of analysis|Comments|  
 |---------------|------------------------|--------------|  
@@ -49,10 +49,10 @@ manager: "mblythe"
 -   To limit the number of values that can be considered for any one attribute, decrease the value of MINIMUM_STATES.  
   
 ## Customizing the Naive Bayes Algorithm  
- The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes algorithm supports several parameters that affect the behavior, performance, and accuracy of the resulting mining model. You can also set modeling flags on the model columns to control how data is processed, or set flags on the mining structure to specify how missing values or nulls should be handled.  
+ The [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes algorithm supports several parameters that affect the behavior, performance, and accuracy of the resulting mining model. You can also set modeling flags on the model columns to control how data is processed, or set flags on the mining structure to specify how missing values or nulls should be handled.  
   
 ### Setting Algorithm Parameters  
- The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes algorithm supports several parameters that affect the performance and accuracy of the resulting mining model. The following table describes each parameter.  
+ The [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes algorithm supports several parameters that affect the performance and accuracy of the resulting mining model. The following table describes each parameter.  
   
  *MAXIMUM_INPUT_ATTRIBUTES*  
  Specifies the maximum number of input attributes that the algorithm can handle before it invokes feature selection. Setting this value to 0 disables feature selection for input attributes.  
@@ -75,7 +75,7 @@ manager: "mblythe"
  The default is 100.  
   
 ### Modeling Flags  
- The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm supports the following modeling flags. When you create the mining structure or mining model, you define modeling flags to specify how values in each column are handled during analysis. For more information, see [Modeling Flags &#40;Data Mining&#41;](../../2014/analysis-services/modeling-flags-data-mining.md).  
+ The [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees algorithm supports the following modeling flags. When you create the mining structure or mining model, you define modeling flags to specify how values in each column are handled during analysis. For more information, see [Modeling Flags &#40;Data Mining&#41;](../../2014/analysis-services/modeling-flags-data-mining.md).  
   
 |Modeling Flag|Description|  
 |-------------------|-----------------|  
@@ -86,7 +86,7 @@ manager: "mblythe"
  A Naive Bayes tree model must contain a key column, at least one predictable attribute, and at least one input attribute. No attribute can be continuous; if your data contains continuous numeric data, it will be ignored or discretized.  
   
 ### Input and Predictable Columns  
- The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes algorithm supports the specific input columns and predictable columns that are listed in the following table. For more information about what the content types mean when used in a mining model, see [Content Types &#40;Data Mining&#41;](../../2014/analysis-services/content-types-data-mining.md).  
+ The [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes algorithm supports the specific input columns and predictable columns that are listed in the following table. For more information about what the content types mean when used in a mining model, see [Content Types &#40;Data Mining&#41;](../../2014/analysis-services/content-types-data-mining.md).  
   
 |Column|Content types|  
 |------------|-------------------|  

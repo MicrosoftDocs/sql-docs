@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: c8f0e1b4-c7c4-45f2-9221-746714172313
 caps.latest.revision: 20
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_2546
@@ -37,7 +37,7 @@ manager: "jhubbard"
  Rebuild the index by using ALTER INDEX.  
   
 ## See Also  
- [ALTER INDEX &#40;Transact-SQL&#41;](../Topic/ALTER%20INDEX%20\(Transact-SQL\).md)   
+ [ALTER INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-index-transact-sql.md)   
  [Reorganize and Rebuild Indexes](../../2014/database-engine/reorganize-and-rebuild-indexes.md)  
   
   

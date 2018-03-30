@@ -16,12 +16,12 @@ ms.author: "owend"
 manager: "jhubbard"
 ---
 # Lesson 8: Defining Actions
-  In this lesson, you will learn to define actions in your [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project. An action is just a Multidimensional Expressions (MDX) statement that is stored in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and which can be incorporated into client applications and started by a user.  
+  In this lesson, you will learn to define actions in your [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project. An action is just a Multidimensional Expressions (MDX) statement that is stored in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] and which can be incorporated into client applications and started by a user.  
   
 > [!NOTE]  
 >  Completed projects for all of the lessons in this tutorial are available online. You can jump ahead to any lesson by using the completed project from the previous lesson as a starting point. [Click here](http://go.microsoft.com/fwlink/?LinkID=221866) to download the sample projects that go with this tutorial.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supports the types of actions that are described in the following table.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supports the types of actions that are described in the following table.  
   
 |||  
 |-|-|  
@@ -38,7 +38,7 @@ manager: "jhubbard"
  Actions let users start an application or perform other steps within the context of a selected item. For more information, see [Actions &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/actions-analysis-services-multidimensional-data.md), [Actions in Multidimensional Models](../../2014/analysis-services/actions-in-multidimensional-models.md)  
   
 > [!NOTE]  
->  For examples of actions, see the action examples on the Templates tab in the Calculation Tools pane or in the examples in the [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] DW sample data warehouse. For more information about installing this database, see [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](../../2014/tutorials/install-sample-data-and-projects.md).  
+>  For examples of actions, see the action examples on the Templates tab in the Calculation Tools pane or in the examples in the [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW sample data warehouse. For more information about installing this database, see [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](../../2014/tutorials/install-sample-data-and-projects.md).  
   
  This lesson includes the following task:  
   

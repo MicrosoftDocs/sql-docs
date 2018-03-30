@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Export As Policy Dialog Box
-  Use this dialog box to save a set of Policy-Based Management facet properties as a policy. Policies can be saved in an XML file, or saved directly to the current instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+  Use this dialog box to save a set of Policy-Based Management facet properties as a policy. Policies can be saved in an XML file, or saved directly to the current instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 ## Options  
  **Policy definition name**  

@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: bd56ffe4-0855-4ada-8aca-251fbc6ff2ce
 caps.latest.revision: 17
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # MSSQLSERVER_17832
@@ -26,7 +26,7 @@ manager: "jhubbard"
   
 |||  
 |-|-|  
-|Product Name|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|Product Name|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|  
 |Event ID|17832|  
 |Event Source|MSSQLSERVER|  
 |Component|SQLEngine|  
@@ -34,20 +34,20 @@ manager: "jhubbard"
 |Message Text|The login packet used to open the connection is structurally invalid; the connection has been closed. Please contact the vendor of the client library.%.*ls|  
   
 ## Explanation  
- The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer was unable to process the client login packet. This may be because the packet was created improperly or because the packet was damaged during transmission. It can also be caused by the configuration of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer. The IP address listed is the address of the client computer.  
+ The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] computer was unable to process the client login packet. This may be because the packet was created improperly or because the packet was damaged during transmission. It can also be caused by the configuration of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] computer. The IP address listed is the address of the client computer.  
   
 ### More Information  
- When using Windows Authentication in a Kerberos environment, a client receives a Kerberos ticket that contains a Privilege Attribute Certificate (PAC). The PAC contains various types of authorization data including groups that the user is a member of, rights the user has, and what policies apply to the user. When the client receives the Kerberos ticket, the information contained in the PAC is used to generate the user's access token. The client presents the token to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer as part of the login packet.  
+ When using Windows Authentication in a Kerberos environment, a client receives a Kerberos ticket that contains a Privilege Attribute Certificate (PAC). The PAC contains various types of authorization data including groups that the user is a member of, rights the user has, and what policies apply to the user. When the client receives the Kerberos ticket, the information contained in the PAC is used to generate the user's access token. The client presents the token to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] computer as part of the login packet.  
   
- If the token was improperly created or damaged during transmission, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot offer additional information about the problem.  
+ If the token was improperly created or damaged during transmission, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cannot offer additional information about the problem.  
   
- When the user is a member of many groups or has many policies, the token may grow larger than normal to list them all. If the token grows larger than the **MaxTokenSize** value of the server computer, the client fails to connect with a General Network Error (GNE) and error 17832 can occur. This problem may affect only some users: users with many groups or policies. When the problem is the **MaxTokenSize** value of the server computer, error 17832 in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log will be accompanied by an error with state 9. For additional details about the Kerberos and **MaxTokenSize**, see [KB327825](http://support.microsoft.com/kb/327825).  
+ When the user is a member of many groups or has many policies, the token may grow larger than normal to list them all. If the token grows larger than the **MaxTokenSize** value of the server computer, the client fails to connect with a General Network Error (GNE) and error 17832 can occur. This problem may affect only some users: users with many groups or policies. When the problem is the **MaxTokenSize** value of the server computer, error 17832 in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] error log will be accompanied by an error with state 9. For additional details about the Kerberos and **MaxTokenSize**, see [KB327825](http://support.microsoft.com/kb/327825).  
   
 ## User Action  
  To resolve this problem, increase the **MaxTokenSize** value of the server computer, to a size large enough to contain the largest token of any user in your organization. To research the correct token size for your organization, consider using the **Tokensz** application.   
   
 > [!CAUTION]  
->  [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
+>  [!INCLUDE[ssNoteRegistry](../includes/ssnoteregistry-md.md)]  
   
  **To change the MaxTokenSize**  **on the server computer**  
   
@@ -66,7 +66,7 @@ manager: "jhubbard"
     > [!NOTE]  
     >  Hexadecimal value ffff (decimal value 65535) is the maximum recommended token size. Providing this value would probably solve the problem, but could have negative computer-wide effects with regard to performance. We recommend that you establish the minimum **MaxTokenSize** value that allows for the largest token of any user in your organization and enter that value.  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 8.  Close **Registry Editor**.  
   

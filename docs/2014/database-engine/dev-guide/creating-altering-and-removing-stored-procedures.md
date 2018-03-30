@@ -19,20 +19,20 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Creating, Altering, and Removing Stored Procedures
-  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO), stored procedures are represented by the <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> object.  
+  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO), stored procedures are represented by the <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> object.  
   
- Creating a <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> object in SMO requires setting the <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> property to the [!INCLUDE[tsql](../../../includes/tsql-md.md)] script that defines the stored procedure. Parameters require the @ prefix and must be created individually by using <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> objects and adding to the <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> collection of the <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> object.  
+ Creating a <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> object in SMO requires setting the <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> property to the [!INCLUDE[tsql](../../includes/tsql-md.md)] script that defines the stored procedure. Parameters require the @ prefix and must be created individually by using <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> objects and adding to the <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> collection of the <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> object.  
   
 ## Example  
  To use any code example that is provided, you will have to choose the programming environment, the programming template, and the programming language in which to create your application. For more information, see [Create a Visual Basic SMO Project in Visual Studio .NET](../../../2014/database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) or [Create a Visual C&#35; SMO Project in Visual Studio .NET](../../../2014/database-engine/dev-guide/create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## Creating, Altering, and Removing a Stored Procedure in Visual Basic  
- This code example shows how to create a stored procedure for the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] database. The example returns the last name of an employee when it is given the employee ID number. The stored procedure requires one input parameter to specify the employee ID number and one output parameter to return the last name of the employee.  
+ This code example shows how to create a stored procedure for the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. The example returns the last name of an employee when it is given the employee ID number. The stored procedure requires one input parameter to specify the employee ID number and one output parameter to return the last name of the employee.  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBStoredProcs1](SMO How to#SMO_VBStoredProcs1)]  -->  
   
 ## Creating, Altering, and Removing a Stored Procedure in Visual C#  
- This code example shows how to create a stored procedure for the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] database. The example returns the last name of an employee when it is given the employee ID number (`BusinessEntityID`). The stored procedure requires one input parameter to specify the employee ID number and one output parameter to return the last name of the employee.  
+ This code example shows how to create a stored procedure for the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. The example returns the last name of an employee when it is given the employee ID number (`BusinessEntityID`). The stored procedure requires one input parameter to specify the employee ID number and one output parameter to return the last name of the employee.  
   
 ```  
 {  
@@ -72,7 +72,7 @@ manager: "jhubbard"
 ```  
   
 ## Creating, Altering, and Removing a Stored Procedure in PowerShell  
- This code example shows how to create a stored procedure for the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] database. The example returns the last name of an employee when it is given the employee ID number (`BusinessEntityID`). The stored procedure requires one input parameter to specify the employee ID number and one output parameter to return the last name of the employee.  
+ This code example shows how to create a stored procedure for the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. The example returns the last name of an employee when it is given the employee ID number (`BusinessEntityID`). The stored procedure requires one input parameter to specify the employee ID number and one output parameter to return the last name of the employee.  
   
 ```  
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  

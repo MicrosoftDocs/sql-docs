@@ -16,7 +16,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Data Quality Projects (DQS)
-  A data quality project in [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) is a means of using a knowledge base to improve the quality of your source data by performing *data cleansing* and *data matching* activities, and then exporting the resultant data to a SQL Server database or a .csv file. You can create a data quality project as a cleansing project or a matching project to perform respective activities. Cleansing and matching projects can be run using the same knowledge base, because knowledge for data cleansing and matching can be built into the same knowledge base.  
+  A data quality project in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) is a means of using a knowledge base to improve the quality of your source data by performing *data cleansing* and *data matching* activities, and then exporting the resultant data to a SQL Server database or a .csv file. You can create a data quality project as a cleansing project or a matching project to perform respective activities. Cleansing and matching projects can be run using the same knowledge base, because knowledge for data cleansing and matching can be built into the same knowledge base.  
   
  A data quality project has the following benefits:  
   
@@ -55,7 +55,7 @@ manager: "jhubbard"
 |----------------------|-----------|  
 |Describes how to create a data quality project.|[Create a Data Quality Project](../../2014/data-quality-services/create-a-data-quality-project.md)|  
 |Describes how to manage (open, unlock, rename, and delete) a data quality project.|[Manage &#40;Open, Unlock, Rename, and Delete&#41; a Data Quality Project](../../2014/data-quality-services/manage-open-unlock-rename-and-delete-a-data-quality-project.md)|  
-|Describes how to open an Integration Services project in [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)].|[Open Integration Services Projects in Data Quality Client](../../2014/data-quality-services/open-integration-services-projects-in-data-quality-client.md)|  
+|Describes how to open an Integration Services project in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].|[Open Integration Services Projects in Data Quality Client](../../2014/data-quality-services/open-integration-services-projects-in-data-quality-client.md)|  
   
 ## See Also  
  [DQS Knowledge Bases and Domains](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md)  

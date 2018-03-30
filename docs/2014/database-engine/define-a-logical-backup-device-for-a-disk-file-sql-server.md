@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Define a Logical Backup Device for a Disk File (SQL Server)
-  This topic describes how to define a logical backup device for a disk file in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. A logical device is a user-defined name that points to a specific physical backup device (a disk file or tape drive).  The initialization of the physical device occurs later, when a backup is written to the backup device.  
+  This topic describes how to define a logical backup device for a disk file in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)]. A logical device is a user-defined name that points to a specific physical backup device (a disk file or tape drive).  The initialization of the physical device occurs later, when a backup is written to the backup device.  
   
  **In This Topic**  
   
@@ -44,7 +44,7 @@ manager: "jhubbard"
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
--   The logical device name must be unique among all the logical backup devices on the server instance. To view the existing logical device names, query the [sys.backup_devices](../Topic/sys.backup_devices%20\(Transact-SQL\).md) catalog view.  
+-   The logical device name must be unique among all the logical backup devices on the server instance. To view the existing logical device names, query the [sys.backup_devices](~/relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md) catalog view.  
   
 ###  <a name="Recommendations"></a> Recommendations  
   
@@ -61,7 +61,7 @@ manager: "jhubbard"
   
 #### To define a logical backup device for a disk file  
   
-1.  After connecting to the appropriate instance of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in Object Explorer, click the server name to expand the server tree.  
+1.  After connecting to the appropriate instance of the [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], in Object Explorer, click the server name to expand the server tree.  
   
 2.  Expand **Server Objects**, and right-click **Backup Devices**.  
   
@@ -79,11 +79,11 @@ manager: "jhubbard"
   
 #### To define a logical backup for a disk file  
   
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_addumpdevice](../Topic/sp_addumpdevice%20\(Transact-SQL\).md) to define a logical backup device for a disk file. The example adds the disk backup device named `mydiskdump`, with the physical name `c:\dump\dump1.bak`.  
+3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_addumpdevice](~/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md) to define a logical backup device for a disk file. The example adds the disk backup device named `mydiskdump`, with the physical name `c:\dump\dump1.bak`.  
   
 ```tsql  
 USE AdventureWorks2012 ;  
@@ -93,11 +93,11 @@ GO
 ```  
   
 ## See Also  
- [BACKUP &#40;Transact-SQL&#41;](../Topic/BACKUP%20\(Transact-SQL\).md)   
+ [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)   
  [Backup Devices &#40;SQL Server&#41;](../../2014/database-engine/backup-devices-sql-server.md)   
- [sys.backup_devices &#40;Transact-SQL&#41;](../Topic/sys.backup_devices%20\(Transact-SQL\).md)   
- [sp_addumpdevice &#40;Transact-SQL&#41;](../Topic/sp_addumpdevice%20\(Transact-SQL\).md)   
- [sp_dropdevice &#40;Transact-SQL&#41;](../Topic/sp_dropdevice%20\(Transact-SQL\).md)   
+ [sys.backup_devices &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
+ [sp_addumpdevice &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
+ [sp_dropdevice &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
  [Define a Logical Backup Device for a Tape Drive &#40;SQL Server&#41;](../../2014/database-engine/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
  [View the Properties and Contents of a Logical Backup Device &#40;SQL Server&#41;](../../2014/database-engine/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   

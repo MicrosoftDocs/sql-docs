@@ -37,7 +37,7 @@ object
   
 ## Parts  
  *object*  
- A [ServerNetworkProtocolIPAdress Class](../../../2014/database-engine/dev-guide/servernetworkprotocolipaddress-class.md) object that represents an IP address for the network protocol on an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ A [ServerNetworkProtocolIPAdress Class](../../../2014/database-engine/dev-guide/servernetworkprotocolipaddress-class.md) object that represents an IP address for the network protocol on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Property Value/Return Value  
  An array of objects that represent the properties supported by the IP address.  

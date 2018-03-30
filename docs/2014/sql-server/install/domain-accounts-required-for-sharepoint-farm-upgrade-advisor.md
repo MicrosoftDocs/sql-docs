@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 90cd6d3e-a271-4cb8-81f2-fc555b2d3cab
 caps.latest.revision: 7
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "jhubbard"
 ---
 # Domain accounts required for SharePoint farm (Upgrade Advisor)
@@ -20,10 +20,10 @@ manager: "jhubbard"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint mode.|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode.|  
   
 ## Component  
- [!INCLUDE[ssRS](../../../includes/ssrs-md.md)]  
+ [!INCLUDE[ssRS](../../includes/ssrs-md.md)]  
   
 ### Description  
  SharePoint products that are configured for a farm environment require that you use domain accounts for services and database connections. This includes the account you have specified for the Reporting Services service account.  
@@ -33,7 +33,7 @@ manager: "jhubbard"
  "The report server is running under the built-in NT AUTHORITY\NETWORK SERVICE account, which is not supported by a SharePoint farm installation. Please reconfigure the report server to run under a domain account."  
   
 ## Corrective Action  
- For [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] and previous versions, use the Reporting Services Configuration Manager to change the account that is assigned as the report server service account.  
+ For [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and previous versions, use the Reporting Services Configuration Manager to change the account that is assigned as the report server service account.  
   
 #### To change the service account from Configuration Manager  
   

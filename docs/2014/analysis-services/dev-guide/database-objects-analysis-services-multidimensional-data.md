@@ -24,7 +24,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Database Objects (Analysis Services - Multidimensional Data)
-  A [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance contains database objects and assemblies for use with online analytical processing (OLAP) and data mining.  
+  A [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance contains database objects and assemblies for use with online analytical processing (OLAP) and data mining.  
   
 -   Databases contain OLAP and data mining objects, such as data sources, data source views, cubes, measures, measure groups, dimensions, attributes, hierarchies, mining structures, mining models and roles.  
   
@@ -53,17 +53,17 @@ manager: "mblythe"
 -   The visible setting for the database.  
   
 ## In This Section  
- The following topics describe objects shared by both OLAP and data mining features in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+ The following topics describe objects shared by both OLAP and data mining features in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Data Sources in Multidimensional Models](../../../2014/analysis-services/data-sources-in-multidimensional-models.md)|Describes a data source in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
-|[Data Source Views in Multidimensional Models](../../../2014/analysis-services/data-source-views-in-multidimensional-models.md)|Describes a logical data model based on one or more data sources, in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
+|[Data Sources in Multidimensional Models](../../../2014/analysis-services/data-sources-in-multidimensional-models.md)|Describes a data source in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
+|[Data Source Views in Multidimensional Models](../../../2014/analysis-services/data-source-views-in-multidimensional-models.md)|Describes a logical data model based on one or more data sources, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
 |[Cubes in Multidimensional Models](../../../2014/analysis-services/cubes-in-multidimensional-models.md)|Describes cubes and cube objects, including measures, measure groups, dimension usage relationships, calculations, key performance indicators, actions, translations, partitions, and perspectives.|  
 |[Dimensions &#40;Analysis Services - Multidimensional Data&#41;](../../../2014/analysis-services/dev-guide/dimensions-analysis-services-multidimensional-data.md)|Describes dimensions and dimension objects, including attributes, attribute relationships, hierarchies, levels, and members.|  
 |[Mining Structures &#40;Analysis Services - Data Mining&#41;](../../../2014/analysis-services/mining-structures-analysis-services-data-mining.md)|Describes mining structures and mining objects, including mining models.|  
-|[Security Roles  &#40;Analysis Services - Multidimensional Data&#41;](../../../2014/analysis-services/dev-guide/security-roles-analysis-services-multidimensional-data.md)|Describes a role, the security mechanism used to control access to objects in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
-|[Multidimensional Model Assemblies Management](../../../2014/analysis-services/multidimensional-model-assemblies-management.md)|Describes an assembly, a collection of user-defined functions used to extend the MDX and DMX languages, in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
+|[Security Roles  &#40;Analysis Services - Multidimensional Data&#41;](../../../2014/analysis-services/dev-guide/security-roles-analysis-services-multidimensional-data.md)|Describes a role, the security mechanism used to control access to objects in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
+|[Multidimensional Model Assemblies Management](../../../2014/analysis-services/multidimensional-model-assemblies-management.md)|Describes an assembly, a collection of user-defined functions used to extend the MDX and DMX languages, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
   
 ## See Also  
  [Data Sources Supported &#40;SSAS Multidimensional&#41;](../../../2014/analysis-services/data-sources-supported-ssas-multidimensional.md)   

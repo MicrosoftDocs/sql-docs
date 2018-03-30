@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
 caps.latest.revision: 8
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "jhubbard"
 ---
 # Delete and Re-create Encryption Keys  (SSRS Configuration Manager)
@@ -50,7 +50,7 @@ manager: "jhubbard"
   
 2.  Start the Reporting Services Configuration tool, and then connect to the report server instance you want to configure.  
   
-3.  On the Encryption Keys page, click **Change**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+3.  On the Encryption Keys page, click **Change**. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 4.  Restart the Report Server Windows service. If you are recreating encryption keys for a scale-out deployment, restart the service on all instances.  
   
@@ -89,7 +89,7 @@ manager: "jhubbard"
   
 1.  Start the Reporting Services Configuration tool, and then connect to the report server instance you want to configure.  
   
-2.  Click **Encryption Keys**, and then click **Delete**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  Click **Encryption Keys**, and then click **Delete**. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 3.  Restart the Report Server Windows service. For a scale-out deployment, do this on all report server instances.  
   
@@ -107,7 +107,7 @@ manager: "jhubbard"
   
 1.  For each shared data source, you must retype the connection string.  
   
-2.  For each report and shared data source that uses stored credentials, you must retype the user name and password, and then save. For more information, see [Specify Credential and Connection Information for Report Data Sources](../../../2014/reporting-services/specify-credential-and-connection-information-for-report-data-sources.md) in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online.  
+2.  For each report and shared data source that uses stored credentials, you must retype the user name and password, and then save. For more information, see [Specify Credential and Connection Information for Report Data Sources](../../../2014/reporting-services/specify-credential-and-connection-information-for-report-data-sources.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
 3.  For each data-driven subscription, open each subscription and retype the credentials to the subscription database.  
   

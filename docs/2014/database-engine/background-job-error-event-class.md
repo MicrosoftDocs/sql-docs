@@ -36,7 +36,7 @@ manager: "jhubbard"
 |**IntegerData**|**int**|Number of tries attempted by the job (**EventSubClass** 1 only).|25|Yes|  
 |**IntegerData2**|**int**|Job sequence number.|55|Yes|  
 |**ObjectID**|**int**|System-assigned ID of the object.|22|Yes|  
-|**SessionLoginName**|**nvarchar**|Login name of the user that originated the session. For example, if you connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using Login1 and execute a statement as Login2, **SessionLoginName** shows Login1 and **LoginName** shows Login2. This column displays both [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows logins.|64|Yes|  
+|**SessionLoginName**|**nvarchar**|Login name of the user that originated the session. For example, if you connect to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using Login1 and execute a statement as Login2, **SessionLoginName** shows Login1 and **LoginName** shows Login2. This column displays both [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows logins.|64|Yes|  
 |**Severity**|**int**|Severity level of the error on the last attempt (**EventSubClass** 1 only).|20|Yes|  
 |**StartTime**|**datetime**|Time at which the job was created.|14|Yes|  
 |**State**|**int**|State of the error on the last attempt (**EventSubClass** 1 only).|30|Yes|  
@@ -45,7 +45,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Extended Events](../../2014/database-engine/extended-events.md)   
- [sp_trace_setevent &#40;Transact-SQL&#41;](../Topic/sp_trace_setevent%20\(Transact-SQL\).md)   
+ [sp_trace_setevent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Auto Stats Event Class](../../2014/database-engine/auto-stats-event-class.md)  
   
   

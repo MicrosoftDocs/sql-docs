@@ -47,12 +47,12 @@ manager: "jhubbard"
   
  The Merge transformation also requires that the merged columns in its inputs have matching metadata. For example, you cannot merge a column that has a numeric data type with a column that has a character data type. If the data has a string data type, the length of the column in the second input must be less than or equal to the length of the column in the first input with which it is merged.  
   
- In the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, the user interface for the Merge transformation automatically maps columns that have the same metadata. You can then manually map other columns that have compatible data types.  
+ In the [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, the user interface for the Merge transformation automatically maps columns that have the same metadata. You can then manually map other columns that have compatible data types.  
   
  This transformation has two inputs and one output. It does not support an error output.  
   
 ## Configuration of the Merge Transformation  
- You can set properties through the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through the [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer or programmatically.  
   
  For more information about the properties that you can set in the **Merge Transformation Editor** dialog box, see [Merge Transformation Editor](../../2014/integration-services/merge-transformation-editor.md).  
   

@@ -16,7 +16,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # SAP BW Source
-  The SAP BW source is the source component of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. Thus, the SAP BW source extracts data from an SAP Netweaver BW version 7 system and makes this data available to the data flow in a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package.  
+  The SAP BW source is the source component of the [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW. Thus, the SAP BW source extracts data from an SAP Netweaver BW version 7 system and makes this data available to the data flow in a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package.  
   
  This source has one output and one error output.  
   
@@ -79,7 +79,7 @@ manager: "jhubbard"
      The SAP BW source can call the process chain to activate the data transfer process.  
   
 ##  <a name="bkmk_Connect_Database"></a> Connecting to the SAP Netweaver BW System  
- To connect to the SAP Netweaver BW version 7 system, the SAP BW source uses the SAP BW connection manager that is part of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW package. The SAP BW connection manager is the only [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] connection manager that the SAP BW source can use.  
+ To connect to the SAP Netweaver BW version 7 system, the SAP BW source uses the SAP BW connection manager that is part of the [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW package. The SAP BW connection manager is the only [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] connection manager that the SAP BW source can use.  
   
  For more information about the SAP BW connection manager, see [SAP BW Connection Manager](../../2014/integration-services/sap-bw-connection-manager.md).  
   
@@ -90,11 +90,11 @@ manager: "jhubbard"
   
 -   Select one of the following methods for extracting data:  
   
-    -   Trigger a process chain. In this case, the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package starts the extraction process.  
+    -   Trigger a process chain. In this case, the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package starts the extraction process.  
   
     -   Wait for notification from the SAP Netweaver BW system to begin an extraction. In this case, the SAP Netweaver BW system starts the extraction process.  
   
-    -   Retrieve the data that is associated with a particular Request ID. In this case, the SAP Netweaver BW system has already extracted the data to an internal table, and the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package just reads the data.  
+    -   Retrieve the data that is associated with a particular Request ID. In this case, the SAP Netweaver BW system has already extracted the data to an internal table, and the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package just reads the data.  
   
 -   Depending on the method selected for extracting data, provide the following additional information:  
   
@@ -108,14 +108,14 @@ manager: "jhubbard"
   
 -   Use the options that you have selected to preview the data to be extracted.  
   
- You can also enable logging of RFC function calls by the source. (This logging is separate from the optional logging that you can enable on [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages.) You enable logging of RFC function calls when you configure the SAP BW connection manager that the source will use. For more information about how to configure the SAP BW connection manager, see [SAP BW Connection Manager](../../2014/integration-services/sap-bw-connection-manager.md).  
+ You can also enable logging of RFC function calls by the source. (This logging is separate from the optional logging that you can enable on [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages.) You enable logging of RFC function calls when you configure the SAP BW connection manager that the source will use. For more information about how to configure the SAP BW connection manager, see [SAP BW Connection Manager](../../2014/integration-services/sap-bw-connection-manager.md).  
   
  If you do not know all the values that are required to configure the source, you might have to ask your SAP administrator.  
   
  For a walkthrough that demonstrates how to configure and use the SAP BW connection manager, source, and destination, see the white paper, [Using SQL Server 2008 Integration Services with SAP BI 7.0](http://go.microsoft.com/fwlink/?LinkID=137090). This white paper also shows how to configure the required objects in SAP BW.  
   
 ### Using the SSIS Designer to Configure the Source  
- For more information about the properties of the SAP BW source that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click one of the following topics:  
+ For more information about the properties of the SAP BW source that you can set in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click one of the following topics:  
   
 -   [SAP BW Source Editor &#40;Connection Manager Page&#41;](../../2014/integration-services/sap-bw-source-editor-connection-manager-page.md)  
   

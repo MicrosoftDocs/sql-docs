@@ -23,10 +23,10 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Move a Database Using Detach and Attach (Transact-SQL)
-  This topic describes how to move a detached database to another location and re-attach it to the same or a different server instance in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. However, we recommend that you move databases by using the ALTER DATABASE planned relocation procedure, instead of using detach and attach. For more information, see [Move User Databases](../../2014/database-engine/move-user-databases.md).  
+  This topic describes how to move a detached database to another location and re-attach it to the same or a different server instance in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. However, we recommend that you move databases by using the ALTER DATABASE planned relocation procedure, instead of using detach and attach. For more information, see [Move User Databases](../../2014/database-engine/move-user-databases.md).  
   
 > [!IMPORTANT]  
->  We recommend that you do not attach or restore databases from unknown or untrusted sources. Such databases could contain malicious code that might execute unintended [!INCLUDE[tsql](../../includes/tsql-md.md)] code or cause errors by modifying the schema or the physical database structure. Before you use a database from an unknown or untrusted source, run [DBCC CHECKDB](../Topic/DBCC%20CHECKDB%20\(Transact-SQL\).md) on the database on a nonproduction server and also examine the code, such as stored procedures or other user-defined code, in the database.  
+>  We recommend that you do not attach or restore databases from unknown or untrusted sources. Such databases could contain malicious code that might execute unintended [!INCLUDE[tsql](../includes/tsql-md.md)] code or cause errors by modifying the schema or the physical database structure. Before you use a database from an unknown or untrusted source, run [DBCC CHECKDB](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) on the database on a nonproduction server and also examine the code, such as stored procedures or other user-defined code, in the database.  
   
 ## Procedure  
   
@@ -47,9 +47,9 @@ manager: "jhubbard"
 3.  Attach the copied files. For more information, see [Attach a Database](../../2014/database-engine/attach-a-database.md).  
   
 ## Example  
- The following example creates a copy of the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database named `MyAdventureWorks`. The [!INCLUDE[tsql](../../includes/tsql-md.md)] statements are executed in a Query Editor window that is connected to the server instance to which is attached.  
+ The following example creates a copy of the [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] database named `MyAdventureWorks`. The [!INCLUDE[tsql](../includes/tsql-md.md)] statements are executed in a Query Editor window that is connected to the server instance to which is attached.  
   
-1.  Detach the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database by executing the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements:  
+1.  Detach the [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] database by executing the following [!INCLUDE[tsql](../includes/tsql-md.md)] statements:  
   
     ```  
     USE master;  
@@ -63,9 +63,9 @@ manager: "jhubbard"
     > [!IMPORTANT]  
     >  For a production database, place the database and transaction log on separate disks.  
   
-     To copy files over the network to a disk on a remote computer, use the universal naming convention (UNC) name of the remote location. A UNC name takes the form **\\\\***Servername***\\***Sharename***\\***Path***\\***Filename*. As with writing files to the local hard disk, the appropriate permissions that are required to read or write to a file on the remote disk must be granted to the user account used by the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     To copy files over the network to a disk on a remote computer, use the universal naming convention (UNC) name of the remote location. A UNC name takes the form **\\\\***Servername***\\***Sharename***\\***Path***\\***Filename*. As with writing files to the local hard disk, the appropriate permissions that are required to read or write to a file on the remote disk must be granted to the user account used by the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-3.  Attach the moved database and, optionally, its log by executing the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements:  
+3.  Attach the moved database and, optionally, its log by executing the following [!INCLUDE[tsql](../includes/tsql-md.md)] statements:  
   
     ```  
     USE master;  
@@ -77,7 +77,7 @@ manager: "jhubbard"
     GO  
     ```  
   
-     In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], a newly attached database is not immediately visible in Object Explorer. To view the database, in Object Explorer, click **View,** and then **Refresh**. When the **Databases** node is expanded in Object Explorer, the newly attached database now appears in the list of databases.  
+     In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], a newly attached database is not immediately visible in Object Explorer. To view the database, in Object Explorer, click **View,** and then **Refresh**. When the **Databases** node is expanded in Object Explorer, the newly attached database now appears in the list of databases.  
   
 ## See Also  
  [Database Detach and Attach &#40;SQL Server&#41;](../../2014/database-engine/database-detach-and-attach-sql-server.md)  

@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 216eca6f-9a66-42e1-aa54-dcf99cec9f7d
 caps.latest.revision: 13
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "jhubbard"
 ---
 # Virtual directory has unsupported authentication method (Upgrade Advisor)
@@ -22,13 +22,13 @@ manager: "jhubbard"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Native mode.|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode.|  
   
 ## Component  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## Description  
- Setup cannot upgrade a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] installation that uses one of the following authentication methods  
+ Setup cannot upgrade a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation that uses one of the following authentication methods  
   
 -   Anonymous  
   
@@ -36,10 +36,10 @@ manager: "jhubbard"
   
 -   .NET Passport  
   
- To continue, you can either modify the Authentication method that is specified for the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] virtual directories in Internet Information Services (IIS), or you can migrate your installation. For more information about migrating your installation, see [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online.  
+ To continue, you can either modify the Authentication method that is specified for the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] virtual directories in Internet Information Services (IIS), or you can migrate your installation. For more information about migrating your installation, see [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
 ## Corrective Action  
- To continue with upgrade, modify the Authentication method in IIS for the ReportServer and Reports virtual directories. For more information about modifying Authentication methods in IIS, see the IIS documentation. After you modify the Authentication method for the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] virtual directories, re-run Upgrade Advisor to confirm that there are no other upgrade issues.  
+ To continue with upgrade, modify the Authentication method in IIS for the ReportServer and Reports virtual directories. For more information about modifying Authentication methods in IIS, see the IIS documentation. After you modify the Authentication method for the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] virtual directories, re-run Upgrade Advisor to confirm that there are no other upgrade issues.  
   
 ## See Also  
  [Reporting Services Upgrade Issues &#40;Upgrade Advisor&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  

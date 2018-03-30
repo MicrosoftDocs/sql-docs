@@ -31,7 +31,7 @@ manager: "jhubbard"
   
   
 ##  <a name="HCtimeout"></a> Health-Check Timeout Threshold  
- WSFC resource DLL of the availability group performs a *health check* of the primary replica by calling the [sp_server_diagnostics](../Topic/sp_server_diagnostics%20\(Transact-SQL\).md) stored procedure on the instance of SQL Server that hosts the primary replica. **sp_server_diagnostics** returns results at an interval that equals 1/3 of the health-check timeout threshold for the availability group. The default health-check timeout threshold is 30 seconds, which causes **sp_server_diagnostics** to return at a 10-second interval. If **sp_server_diagnostics** is slow or is not returning information, the resource DLL will wait for the full interval of the health-check timeout threshold before determining that the primary replica is unresponsive. If the primary replica is unresponsive, an automatic failover is initiated, if currently supported.  
+ WSFC resource DLL of the availability group performs a *health check* of the primary replica by calling the [sp_server_diagnostics](~/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) stored procedure on the instance of SQL Server that hosts the primary replica. **sp_server_diagnostics** returns results at an interval that equals 1/3 of the health-check timeout threshold for the availability group. The default health-check timeout threshold is 30 seconds, which causes **sp_server_diagnostics** to return at a 10-second interval. If **sp_server_diagnostics** is slow or is not returning information, the resource DLL will wait for the full interval of the health-check timeout threshold before determining that the primary replica is unresponsive. If the primary replica is unresponsive, an automatic failover is initiated, if currently supported.  
   
 > [!IMPORTANT]  
 >  **sp_server_diagnostics** does not perform health checks at the database level.  
@@ -44,16 +44,16 @@ manager: "jhubbard"
   
  The following table describes the failure-conditions that corresponds to each level.  
   
-|Level|Failure Condition|[!INCLUDE[tsql](../../includes/tsql-md.md)] Value|PowerShell Value|  
+|Level|Failure Condition|[!INCLUDE[tsql](../includes/tsql-md.md)] Value|PowerShell Value|  
 |-----------|-----------------------|------------------------------|----------------------|  
-|One|On server down. This is the least restrictive level. Specifies that an automatic failover is initiated when any of the following occurs:<br /><br /> The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service is down.<br /><br /> The lease of the availability group for connecting to the WSFC cluster expires because no ACK is received from the server instance. For more information, see [How It Works: SQL Server AlwaysOn Lease Timeout](http://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-alwayson-lease-timeout.aspx).|1|`OnServerDown`|  
-|Two|On server unresponsive. Specifies that an automatic failover is initiated when any of the following occurs:<br /><br /> The instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not connect to cluster, and the user-specified health check timeout threshold of the availability group is exceeded.<br /><br /> The availability replica is in failed state.|2|`OnServerUnresponsive`|  
-|Three|On critical server error. Specifies that an automatic failover is initiated on critical [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] internal errors, such as orphaned spinlocks, serious write-access violations, or too much dumping. This is the default level.|3|`OnCriticalServerError`|  
-|Four|On moderate server error. Specifies that an automatic failover is initiated on moderate [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] internal errors, such as a persistent out-of-memory condition in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] internal resource pool.|4|`OnModerateServerError`|  
+|One|On server down. This is the least restrictive level. Specifies that an automatic failover is initiated when any of the following occurs:<br /><br /> The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] service is down.<br /><br /> The lease of the availability group for connecting to the WSFC cluster expires because no ACK is received from the server instance. For more information, see [How It Works: SQL Server AlwaysOn Lease Timeout](http://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-alwayson-lease-timeout.aspx).|1|`OnServerDown`|  
+|Two|On server unresponsive. Specifies that an automatic failover is initiated when any of the following occurs:<br /><br /> The instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not connect to cluster, and the user-specified health check timeout threshold of the availability group is exceeded.<br /><br /> The availability replica is in failed state.|2|`OnServerUnresponsive`|  
+|Three|On critical server error. Specifies that an automatic failover is initiated on critical [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] internal errors, such as orphaned spinlocks, serious write-access violations, or too much dumping. This is the default level.|3|`OnCriticalServerError`|  
+|Four|On moderate server error. Specifies that an automatic failover is initiated on moderate [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] internal errors, such as a persistent out-of-memory condition in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] internal resource pool.|4|`OnModerateServerError`|  
 |Five|On any qualified failure conditions. This is the most restrictive level. Specifies that an automatic failover is initiated on any qualified failure conditions, including:<br /><br /> Exhaustion of SQL Engine worker-threads.<br /><br /> Detection of an unsolvable deadlock.|5|`OnAnyQualifiedFailureConditions`|  
   
 > [!NOTE]  
->  Lack of response by an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to client requests is irrelevant to availability groups.  
+>  Lack of response by an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to client requests is irrelevant to availability groups.  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
  **To configure automatic failover**  
@@ -74,6 +74,6 @@ manager: "jhubbard"
  [Failover and Failover Modes &#40;AlwaysOn Availability Groups&#41;](../../2014/database-engine/failover-and-failover-modes-alwayson-availability-groups.md)   
  [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../2014/database-engine/windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [Failover Policy for Failover Cluster Instances](../../2014/database-engine/failover-policy-for-failover-cluster-instances.md)   
- [sp_server_diagnostics &#40;Transact-SQL&#41;](../Topic/sp_server_diagnostics%20\(Transact-SQL\).md)  
+ [sp_server_diagnostics &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md)  
   
   

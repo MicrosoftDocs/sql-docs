@@ -12,22 +12,22 @@ ms.topic: "article"
 ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 caps.latest.revision: 8
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # Add Report Server Content Types to a Library (Reporting Services in SharePoint Integrated Mode)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides predefined SharePoint content types that are used to manage shared data source (.rsds) files, report models (.smdl), and Report Builder report definition (.rdl) files. Adding a **Report Builder Report**, **Report Model**, and **Report Data Source** content type to a library enables the **New** command so that you can create new documents of that type.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] provides predefined SharePoint content types that are used to manage shared data source (.rsds) files, report models (.smdl), and Report Builder report definition (.rdl) files. Adding a **Report Builder Report**, **Report Model**, and **Report Data Source** content type to a library enables the **New** command so that you can create new documents of that type.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode  
+ **[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint mode  
   
  To add content types to a library, you must be a site administrator or have Full Control level of permission.  
   
- The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] content types and content type management will automatically be enabled in all document libraries for existing site collections created from the following **Business Intelligence Center** site template.  
+ The [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] content types and content type management will automatically be enabled in all document libraries for existing site collections created from the following **Business Intelligence Center** site template.  
   
- Sites created after the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] integration will not have the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] content types enabled.  
+ Sites created after the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] integration will not have the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] content types enabled.  
   
 > [!TIP]  
->  If you have **not** previously configured content types for a library, first enable management of content types, then enable the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] content types. See the procedures on enabling content type management in a single document library.  
+>  If you have **not** previously configured content types for a library, first enable management of content types, then enable the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] content types. See the procedures on enabling content type management in a single document library.  
   
  **Short video:** [(SSRS) Enabling Content Types in SharePoint2010.wmv](http://www.youtube.com/watch?v=yqhm3DrtT1w) (http://www.youtube.com/watch?v=yqhm3DrtT1w).  
   
@@ -47,7 +47,7 @@ manager: "mblythe"
   
 ##  <a name="bkmk_enable_all"></a> Enable content types in all document libraries in an existing BI center  
   
-1.  To enable the content types and content management in all document libraries in an existing **Business Intelligence Center** site, you can toggle the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] integration feature.  
+1.  To enable the content types and content management in all document libraries in an existing **Business Intelligence Center** site, you can toggle the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] integration feature.  
   
 2.  Go to **Site settings**.  
   
@@ -104,13 +104,13 @@ manager: "mblythe"
 8.  When you finish adding content types, click **OK**.  
   
 9. > [!NOTE]  
-    >  If the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] content type group **SQL Server Reporting Services Content Types** is not visible on the **Add Content Types** page, one of the following conditions is true:  
+    >  If the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] content type group **SQL Server Reporting Services Content Types** is not visible on the **Add Content Types** page, one of the following conditions is true:  
   
-    -   The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] add-in for SharePoint products has not been installed. For more information, see [Install or Uninstall the Reporting Services Add-in for SharePoint &#40;SharePoint 2010 and SharePoint 2013&#41;](../../2014/sql-server/install/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md). The topic includes information on installing the add-in and stepping through a files only installation of the add-in to work around issues.  
+    -   The [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] add-in for SharePoint products has not been installed. For more information, see [Install or Uninstall the Reporting Services Add-in for SharePoint &#40;SharePoint 2010 and SharePoint 2013&#41;](../../2014/sql-server/install/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md). The topic includes information on installing the add-in and stepping through a files only installation of the add-in to work around issues.  
   
     -   The add-in is installed but the site collection feature **Report Server Integration Feature** is not active. Verify the site collection feature in **Site Settings**.  
   
-    -   All of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] content types have already been added to the library. If all the content types are part of a library, then the group is removed from the **Add Content Types** page. If you delete one or more of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] content types, then the group **SQL Server Reporting Services Content Types** will be visible on the **Add Content Types** page.  
+    -   All of the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] content types have already been added to the library. If all the content types are part of a library, then the group is removed from the **Add Content Types** page. If you delete one or more of the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] content types, then the group **SQL Server Reporting Services Content Types** will be visible on the **Add Content Types** page.  
   
 ##  <a name="bkmk_enable_content_management_2010"></a> To enable content type management for a single document library (SharePoint 2010)  
   

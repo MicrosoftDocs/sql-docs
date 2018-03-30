@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: e8982e05-4984-4406-9760-285e8c028ddf
 caps.latest.revision: 20
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Ole Automation Procedures Server Configuration Option
-  Use the `Ole Automation Procedures` option to specify whether OLE Automation objects can be instantiated within [!INCLUDE[tsql](../../includes/tsql-md.md)] batches. This option can also be configured using the Policy-Based Management or the **sp_configure** stored procedure. For more information, see [Surface Area Configuration](../../2014/database-engine/surface-area-configuration.md).  
+  Use the `Ole Automation Procedures` option to specify whether OLE Automation objects can be instantiated within [!INCLUDE[tsql](../includes/tsql-md.md)] batches. This option can also be configured using the Policy-Based Management or the **sp_configure** stored procedure. For more information, see [Surface Area Configuration](../../2014/database-engine/surface-area-configuration.md).  
   
  The `Ole Automation Procedures` option can be set to the following values.  
   
  0  
- OLE Automation Procedures are disabled. Default for new instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ OLE Automation Procedures are disabled. Default for new instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  1  
  OLE Automation Procedures are enabled.  
@@ -54,8 +54,8 @@ GO
 ```  
   
 ## See Also  
- [sp_configure &#40;Transact-SQL&#41;](../Topic/sp_configure%20\(Transact-SQL\).md)   
- [RECONFIGURE &#40;Transact-SQL&#41;](../Topic/RECONFIGURE%20\(Transact-SQL\).md)   
+ [sp_configure &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
+ [RECONFIGURE &#40;Transact-SQL&#41;](~/t-sql/language-elements/reconfigure-transact-sql.md)   
  [Surface Area Configuration](../../2014/database-engine/surface-area-configuration.md)   
  [Server Configuration Options &#40;SQL Server&#41;](../../2014/database-engine/server-configuration-options-sql-server.md)  
   

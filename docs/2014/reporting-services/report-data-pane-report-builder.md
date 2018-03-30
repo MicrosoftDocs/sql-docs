@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 1492aa39-aeb1-4509-ab97-b9edd0901b7e
 caps.latest.revision: 11
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Report Data Pane (Report Builder)
@@ -36,7 +36,7 @@ manager: "mblythe"
  Represents an embedded data source or a reference to a shared data source. A data source represents a source of data for the report. A data source is the parent node for the collection of datasets that use it. For more information, see [Add Data to a Report &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-data-to-a-report-report-builder-and-ssrs.md) and [Data Connections, Data Sources, and Connection Strings in Report Builder](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md).  
   
  **Datasets**  
- Represents the data that is retrieved from a data source by running one command, for example, a [!INCLUDE[tsql](../../includes/tsql-md.md)] query that retrieves data from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. A dataset is the parent node for the collection of fields that is specified by the query, and also includes calculated fields. Report Builder supports query designers that help you specify a query. For more information, see [Add Data to a Report &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-data-to-a-report-report-builder-and-ssrs.md).  
+ Represents the data that is retrieved from a data source by running one command, for example, a [!INCLUDE[tsql](../includes/tsql-md.md)] query that retrieves data from a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database. A dataset is the parent node for the collection of fields that is specified by the query, and also includes calculated fields. Report Builder supports query designers that help you specify a query. For more information, see [Add Data to a Report &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-data-to-a-report-report-builder-and-ssrs.md).  
   
 ## See Also  
  [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/dataset-fields-collection-report-builder-and-ssrs.md)   

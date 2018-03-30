@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 caps.latest.revision: 12
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "jhubbard"
 ---
 # Back Up and Restore Reporting Services Encryption Keys
   An important part of report server configuration is creating a backup copy of the symmetric key used for encrypting sensitive information. A backup copy of the key is required for many routine operations, and enables you to reuse an existing report server database in a new installation.  
   
- **[!INCLUDE[applies](../../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Native Mode | [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint mode  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native Mode | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode  
   
  It is necessary to restore the backup copy of the encryption key when any of the following events occur:  
   
@@ -32,7 +32,7 @@ manager: "jhubbard"
     > [!NOTE]  
     >  Resetting the password is not the same as changing the password. A password reset requires permission to overwrite account information on the domain controller. Password resets are performed by a system administrator when you forget or do not know a particular password. Only password resets require symmetric key restoration. Periodically changing an account password does not require you to reset the symmetric key.  
   
--   Renaming the computer or instance that hosts the report server (a report server instance is based on a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance name).  
+-   Renaming the computer or instance that hosts the report server (a report server instance is based on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name).  
   
 -   Migrating a report server installation or configuring a report server to use a different report server database.  
   
@@ -49,7 +49,7 @@ manager: "jhubbard"
  **SharePoint mode:** SharePoint Central Administration pages or PowerShell.  
   
 ####  <a name="bkmk_backup_sharepoint"></a> Backup SharePoint Mode Report Servers  
- For SharePoint mode report servers you can either use PowerShell commands or use the management pages for the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] service application. For more information, see the “Key Management” section of [Manage a Reporting Services SharePoint Service Application](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)  
+ For SharePoint mode report servers you can either use PowerShell commands or use the management pages for the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application. For more information, see the “Key Management” section of [Manage a Reporting Services SharePoint Service Application](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)  
   
 ####  <a name="bkmk_backup_configuration_manager"></a> Back up encryption keys -Reporting Services Configuration Manager (Native Mode)  
   
@@ -59,9 +59,9 @@ manager: "jhubbard"
   
 3.  Type a strong password.  
   
-4.  Specify a file to contain the stored key. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] appends a .snk file extension to the file. Consider storing the file on a disk separate from the report server.  
+4.  Specify a file to contain the stored key. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] appends a .snk file extension to the file. Consider storing the file on a disk separate from the report server.  
   
-5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ####  <a name="bkmk_backup_rskeymgmt"></a> Back up encryption keys –rskeymgmt (Native Mode)  
   
@@ -94,7 +94,7 @@ manager: "jhubbard"
   
 4.  Type the password that unlocks the file.  
   
-5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ####  <a name="bkmk_restore_rskeymgmt"></a> Restore encryption keys – rskeymgmt (Native Mode)  
   

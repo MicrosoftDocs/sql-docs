@@ -19,21 +19,21 @@ helpviewer_keywords:
 ms.assetid: 54381870-ce67-482b-aa83-6a838cdbf9b9
 caps.latest.revision: 28
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Introducing Exception Handling in Reporting Services
-  If your [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] application sends a request to the Report Server Web service that the service is unable to process, the service returns a SOAP exception to the client. Handling exceptions thrown by the Report Server Web service is an important part of the applications that you develop because you can return useful information to users when errors occur.  
+  If your [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] application sends a request to the Report Server Web service that the service is unable to process, the service returns a SOAP exception to the client. Handling exceptions thrown by the Report Server Web service is an important part of the applications that you develop because you can return useful information to users when errors occur.  
   
- This section contains specific information about handling exceptions, preventing user input that is not valid, and returning meaningful error information to users. For general information about exception handling, see "Handling and Throwing Exceptions" in the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK documentation.  
+ This section contains specific information about handling exceptions, preventing user input that is not valid, and returning meaningful error information to users. For general information about exception handling, see "Handling and Throwing Exceptions" in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK documentation.  
   
 ## In This Section  
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Handling Exceptions in Reporting Services](../../../2014/reporting-services/dev-guide/handling-exceptions-in-reporting-services.md)|Provides an overview of exceptions in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] and the role of SOAP in returning errors from a Web service.|  
-|[Best Practices for Reporting Services Exception Handling](../../../2014/reporting-services/dev-guide/best-practices-for-reporting-services-exception-handling.md)|Provides recommendations on how to handle exceptions in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
-|[Reporting Services SoapException Class](../../../2014/reporting-services/dev-guide/reporting-services-soapexception-class.md)|Describes the **SoapException** class in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
+|[Handling Exceptions in Reporting Services](../../../2014/reporting-services/dev-guide/handling-exceptions-in-reporting-services.md)|Provides an overview of exceptions in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and the role of SOAP in returning errors from a Web service.|  
+|[Best Practices for Reporting Services Exception Handling](../../../2014/reporting-services/dev-guide/best-practices-for-reporting-services-exception-handling.md)|Provides recommendations on how to handle exceptions in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
+|[Reporting Services SoapException Class](../../../2014/reporting-services/dev-guide/reporting-services-soapexception-class.md)|Describes the **SoapException** class in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
   
 ## See Also  
  [Building Applications Using the Web Service and the .NET Framework](../../../2014/reporting-services/dev-guide/building-applications-using-the-web-service-and-the-net-framework.md)  

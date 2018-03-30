@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 1d3b2573-e29d-480d-9dde-d26379c86618
 caps.latest.revision: 9
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Add and Verify a Data Connection or Data Source (Report Builder and SSRS)
@@ -25,7 +25,7 @@ manager: "mblythe"
  For more information, see [Data Connections, Data Sources, and Connection Strings in Report Builder](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md) and [Specify Credentials in Report Builder](../../2014/reporting-services/specify-credentials-in-report-builder.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ### To create a reference to a shared data source  
   
@@ -40,7 +40,7 @@ manager: "mblythe"
   
 4.  Select the shared data source and then click **Open**.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
  The data source appears in the Report Data pane.  
   
@@ -58,7 +58,7 @@ manager: "mblythe"
   
     -   Type the connection string directly in the **Connection string** text box. For a list of example connection strings, see [Data Connections, Data Sources, and Connection Strings in Report Builder](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md).  
   
-    -   Click the expression (**fx)** button to create an expression that evaluates to a connection string. In the **Expression** dialog box, type the expression in the Expression pane. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+    -   Click the expression (**fx)** button to create an expression that evaluates to a connection string. In the **Expression** dialog box, type the expression in the Expression pane. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
     -   Click **Build** to open the **Connection Properties** dialog box for the data source type that you chose in step 2.  
   
@@ -68,7 +68,7 @@ manager: "mblythe"
   
      Specify the credentials to use for this data source. The owner of the data source chooses the type of credentials that are supported. In some cases, the owner of the data source maintains a shared data source on a report server and configures the data source with credentials that you can use. Contact the data source owner for this information. For more information, see [Specify Credentials in Report Builder](../../2014/reporting-services/specify-credentials-in-report-builder.md).  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
  The data source appears in the Report Data pane.  
   
@@ -78,7 +78,7 @@ manager: "mblythe"
   
 2.  Click **Test Connection**.  
   
-3.  If the connection is successful, the following message appears: "Connection created successfully". [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  If the connection is successful, the following message appears: "Connection created successfully". [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 4.  If the connection is not successful, the following message appears: "Unable to connect to the data source."  
   
@@ -86,7 +86,7 @@ manager: "mblythe"
   
      For more information, see [Specify Credentials in Report Builder](../../2014/reporting-services/specify-credentials-in-report-builder.md).  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## See Also  
  [Add Data to a Report &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-data-to-a-report-report-builder-and-ssrs.md)   

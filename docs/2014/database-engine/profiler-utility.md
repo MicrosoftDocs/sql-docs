@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Profiler Utility
-  The **profiler** utility launches the [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] tool. The optional arguments listed later in this topic allow you to control how the application starts.  
+  The **profiler** utility launches the [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] tool. The optional arguments listed later in this topic allow you to control how the application starts.  
   
 > [!NOTE]  
 >  The **profiler** utility is not intended for scripting traces. For more information, see [SQL Server Profiler](../../2014/database-engine/sql-server-profiler.md).  
@@ -55,22 +55,22 @@ manager: "jhubbard"
  Displays the syntax summary of **profiler** arguments.  
   
  **/U** *login_id*  
- Is the user login ID for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. Login IDs are case sensitive.  
+ Is the user login ID for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication. Login IDs are case sensitive.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)].  
+>  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)].  
   
  **/P** *password*  
- Specifies a user-specified password for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.  
+ Specifies a user-specified password for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication.  
   
  **/E**  
  Specifies connecting with Windows Authentication with the current user's credentials.  
   
  **/S**  *sql_server_name*  
- Specifies an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Profiler will automatically connect to the specified server using the authentication information specified in the **/U** and **/P** switches or the **/E** switch. To connect to a named instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use **/S** *sql_server_name*\\*instance_name*.  
+ Specifies an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Profiler will automatically connect to the specified server using the authentication information specified in the **/U** and **/P** switches or the **/E** switch. To connect to a named instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], use **/S** *sql_server_name*\\*instance_name*.  
   
  **/A**  *analysis_services_server_name*  
- Specifies an instance of Analysis Services. Profiler will automatically connect to the specified server using the authentication information specified in the **/U** and **/P** switches or the **/E** switch. To connect to a named instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] use **/A** *analysis_services_server_name\instance_name*.  
+ Specifies an instance of Analysis Services. Profiler will automatically connect to the specified server using the authentication information specified in the **/U** and **/P** switches or the **/E** switch. To connect to a named instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] use **/A** *analysis_services_server_name\instance_name*.  
   
  **/D** *database*  
  Specifies the name of the database to be used with the connection. This option will select the default database for the specified user if no database is specified.  
@@ -107,7 +107,7 @@ manager: "jhubbard"
 |ss|Two-digit second|  
   
 > [!NOTE]  
->  The "MM-DD-YY hh:mm:ss" format can only be used if the **Use regional settings to display date and time values** option is enabled in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. If this option is not enabled, you must use the "YYYY-MM-DD hh:mm:ss" date and time format.  
+>  The "MM-DD-YY hh:mm:ss" format can only be used if the **Use regional settings to display date and time values** option is enabled in [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]. If this option is not enabled, you must use the "YYYY-MM-DD hh:mm:ss" date and time format.  
   
  **/R**  
  Enables trace file rollover.  

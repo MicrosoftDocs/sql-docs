@@ -18,7 +18,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Change the System Administrator Account (Master Data Services)
-  You can change the user account that is designated as the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] system administrator.  
+  You can change the user account that is designated as the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] system administrator.  
   
 > [!WARNING]  
 >  When you complete this procedure, the former system administrator user account is deleted.  
@@ -26,13 +26,13 @@ manager: "jhubbard"
 ## Prerequisites  
  To perform this procedure:  
   
--   You must add the new administrator's user name to the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Users list. For more information, see [Add a User &#40;Master Data Services&#41;](../../2014/master-data-services/add-a-user-master-data-services.md).  
+-   You must add the new administrator's user name to the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Users list. For more information, see [Add a User &#40;Master Data Services&#41;](../../2014/master-data-services/add-a-user-master-data-services.md).  
   
--   You must have permission to view mdm.tblUser and to execute the mdm.udpSecurityMemberProcessRebuildModel stored procedure in the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database. For more information, see [Database Object Security &#40;Master Data Services&#41;](../../2014/master-data-services/database-object-security-master-data-services.md).  
+-   You must have permission to view mdm.tblUser and to execute the mdm.udpSecurityMemberProcessRebuildModel stored procedure in the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database. For more information, see [Database Object Security &#40;Master Data Services&#41;](../../2014/master-data-services/database-object-security-master-data-services.md).  
   
 ### To change the administrator account  
   
-1.  Open [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance for your [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database.  
+1.  Open [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] and connect to the [!INCLUDE[ssDE](../includes/ssde-md.md)] instance for your [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.  
   
 2.  In mdm.tblUser, find the user that will be the new administrator and copy the value in the `SID` column.  
   

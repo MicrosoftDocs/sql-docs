@@ -20,7 +20,7 @@ ms.author: "jroth"
 manager: "jhubbard"
 ---
 # View Availability Group Listener Properties (SQL Server)
-  This topic describes how to view the properties of an AlwaysOn *availability group listener* by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  This topic describes how to view the properties of an AlwaysOn *availability group listener* by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)] in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
 -   **To view listener properties, using:**  
   
@@ -67,23 +67,23 @@ manager: "jhubbard"
   
  To monitor the availability group listeners, use the following views:  
   
- [sys.availability_group_listener_ip_addresses](../Topic/sys.availability_group_listener_ip_addresses%20\(Transact-SQL\).md)  
+ [sys.availability_group_listener_ip_addresses](~/relational-databases/system-catalog-views/sys-availability-group-listener-ip-addresses-transact-sql.md)  
  Returns a row for every conformant virtual IP address that is currently online for an availability group listener.  
   
  **Column names:** listener_id, ip_address, ip_subnet_mask, is_dhcp, network_subnet_ip, network_subnet_prefix_length, network_subnet_ipv4_mask, state, state_desc  
   
- [sys.availability_group_listeners](../Topic/sys.availability_group_listeners%20\(Transact-SQL\).md)  
+ [sys.availability_group_listeners](~/relational-databases/system-catalog-views/sys-availability-group-listeners-transact-sql.md)  
  For a given availability group, returns either zero rows indicating that no network name is associated with the availability group, or returns a row for each availability-group listener configuration in the WSFC cluster.  
   
  **Column names:** group_id, listener_id, dns_name, port, is_conformant, ip_configuration_string_from_cluster  
   
- [sys.dm_tcp_listener_states](../Topic/sys.dm_tcp_listener_states%20\(Transact-SQL\).md)  
+ [sys.dm_tcp_listener_states](~/relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md)  
  Returns a row containing dynamic-state information for each TCP listener.  
   
  **Column names:** listener_id, ip_address, is_ipv4, port, type, type_desc, state, state_desc, start_time  
   
 > [!NOTE]  
->  For more information about using [!INCLUDE[tsql](../../includes/tsql-md.md)] to monitor your [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] environment, see [Monitor Availability Groups &#40;Transact-SQL&#41;](../../2014/database-engine/monitor-availability-groups-transact-sql.md).  
+>  For more information about using [!INCLUDE[tsql](../includes/tsql-md.md)] to monitor your [!INCLUDE[ssHADR](../includes/sshadr-md.md)] environment, see [Monitor Availability Groups &#40;Transact-SQL&#41;](../../2014/database-engine/monitor-availability-groups-transact-sql.md).  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   

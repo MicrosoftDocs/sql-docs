@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Connect to Server (Connection Properties Page) Analysis Services
-  Use this tab to view or specify options when connecting to [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] or registering [!INCLUDE[ssAS](../../includes/ssas-md.md)] in **Registered Servers**. **Connect** and **Options** only appear in this dialog box when connecting. **Test** and **Save** only appear in this dialog box when registering [!INCLUDE[ssAS](../../includes/ssas-md.md)].  
+  Use this tab to view or specify options when connecting to [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] or registering [!INCLUDE[ssAS](../includes/ssas-md.md)] in **Registered Servers**. **Connect** and **Options** only appear in this dialog box when connecting. **Test** and **Save** only appear in this dialog box when registering [!INCLUDE[ssAS](../includes/ssas-md.md)].  
   
 ## Options  
  **Connect to database**  
@@ -43,7 +43,7 @@ manager: "jhubbard"
  Click to change the dialog and hide the additional server connection options, such as remembering the password.  
   
  **Test**  
- When registering [!INCLUDE[ssAS](../../includes/ssas-md.md)] in **Registered Servers**, click to test the connection.  
+ When registering [!INCLUDE[ssAS](../includes/ssas-md.md)] in **Registered Servers**, click to test the connection.  
   
  **Save**  
  Saves the settings in **Registered Servers**.  

@@ -24,15 +24,15 @@ ms.author: "mblythe"
 manager: "mblythe"
 ---
 # Objects (XMLA)
-  The XML for Analysis (XMLA) protocol uses two methods, `Discover` and `Execute`, to offer a standard way for applications to access information on an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Because these methods are invoked by using the Simple Object Access Protocol (SOAP) protocol, they accept input and deliver output in XML.  
+  The XML for Analysis (XMLA) protocol uses two methods, `Discover` and `Execute`, to offer a standard way for applications to access information on an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Because these methods are invoked by using the Simple Object Access Protocol (SOAP) protocol, they accept input and deliver output in XML.  
   
 ## In This Section  
- The following topics describe the XMLA objects implemented by [!INCLUDE[ssAS](../../../includes/ssas-md.md)].  
+ The following topics describe the XMLA objects implemented by [!INCLUDE[ssAS](../../includes/ssas-md.md)].  
   
 |Method|Description|  
 |------------|-----------------|  
-|[DiscoverResponse Element &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/discoverresponse-element-xmla.md)|Contains the information returned by an instance of [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in response to a [Discover](../../../2014/analysis-services/dev-guide/discover-method-xmla.md) method call.|  
-|[ExecuteResponse Element &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/executeresponse-element-xmla.md)|Contains the information returned by an instance of [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in response to an [Execute](../../../2014/analysis-services/dev-guide/execute-method-xmla.md) method call.|  
+|[DiscoverResponse Element &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/discoverresponse-element-xmla.md)|Contains the information returned by an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in response to a [Discover](../../../2014/analysis-services/dev-guide/discover-method-xmla.md) method call.|  
+|[ExecuteResponse Element &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/executeresponse-element-xmla.md)|Contains the information returned by an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in response to an [Execute](../../../2014/analysis-services/dev-guide/execute-method-xmla.md) method call.|  
   
 ## See Also  
  [XML Elements &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/xml-elements-xmla.md)   

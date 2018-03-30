@@ -56,7 +56,7 @@ manager: "mblythe"
 |Child elements|None|  
   
 ## Remarks  
- When `IgnoreUnrelatedDimensions` is `true`, unrelated dimensions are forced to their top level; when the value is `false`, dimensions are not forced to their top level. This property is similar to the Multidimensional Expressions (MDX) [ValidMeasure](../Topic/ValidMeasure%20\(MDX\).md) function.  
+ When `IgnoreUnrelatedDimensions` is `true`, unrelated dimensions are forced to their top level; when the value is `false`, dimensions are not forced to their top level. This property is similar to the Multidimensional Expressions (MDX) [ValidMeasure](~/mdx/validmeasure-mdx.md) function.  
   
  The element that corresponds to the parent of `IgnoreUnrelatedDimensions` in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.MeasureGroup>.  
   

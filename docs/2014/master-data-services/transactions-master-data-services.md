@@ -19,7 +19,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Transactions (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], a transaction is recorded each time action is taken on a member. Transactions can be viewed by all users and reversed by administrators. Transactions show the date, time, and user who took the action, along with other details. Users can add an annotation to a transaction, to indicate why a transaction took place.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], a transaction is recorded each time action is taken on a member. Transactions can be viewed by all users and reversed by administrators. Transactions show the date, time, and user who took the action, along with other details. Users can add an annotation to a transaction, to indicate why a transaction took place.  
   
 ## When Transaction Are Recorded  
  Transactions are recorded when members:  
@@ -41,9 +41,9 @@ manager: "jhubbard"
 >  Administrators can view all transactions for all users as long as they don't have the read-only permission level applied in the **Version Management** functional area . For example, if the read-only permission and update permission level is set for the administrator, the administrator will not be able to see other user transactions because the read-only permission will take precedence over the update permission.
 
 ## System Settings  
- There is a setting in [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] that affects whether or not transactions are recorded when records are staged. This setting affects SQL Server 2008 R2 only. You can adjust this setting in [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] or directly in the System Settings table in the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database. For more information, see [System Settings &#40;Master Data Services&#41;](../../2014/master-data-services/system-settings-master-data-services.md).  
+ There is a setting in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] that affects whether or not transactions are recorded when records are staged. This setting affects SQL Server 2008 R2 only. You can adjust this setting in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] or directly in the System Settings table in the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database. For more information, see [System Settings &#40;Master Data Services&#41;](../../2014/master-data-services/system-settings-master-data-services.md).  
   
- When importing data in this version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can specify whether or not to log transactions when initiating the stored procedure. For more information, see [Staging Stored Procedure &#40;Master Data Services&#41;](../../2014/master-data-services/staging-stored-procedure-master-data-services.md).  
+ When importing data in this version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], you can specify whether or not to log transactions when initiating the stored procedure. For more information, see [Staging Stored Procedure &#40;Master Data Services&#41;](../../2014/master-data-services/staging-stored-procedure-master-data-services.md).  
   
 ## Concurrency  
  If a particular entity value is shown simultaneously in more than one Explorer session, concurrent edits to the same value are possible. Concurrent edits will not be detected automatically by MDS. This can occur when multiple users use the MDS Explorer in the Web browser from multiple sessions, for example from multiple computers, multiple browser tabs or windows, or multiple user accounts.  

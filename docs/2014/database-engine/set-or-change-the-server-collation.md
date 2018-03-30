@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 caps.latest.revision: 34
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Set or Change the Server Collation
-  The server collation acts as the default collation for all system databases that are installed with the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and also any newly created user databases. The server collation is specified during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation. For more information, see [Collation and Unicode Support](../../2014/database-engine/collation-and-unicode-support.md).  
+  The server collation acts as the default collation for all system databases that are installed with the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], and also any newly created user databases. The server collation is specified during [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] installation. For more information, see [Collation and Unicode Support](../../2014/database-engine/collation-and-unicode-support.md).  
   
 ## Changing the Server Collation  
- Changing the default collation for an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can be a complex operation and involves the following steps:  
+ Changing the default collation for an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] can be a complex operation and involves the following steps:  
   
 -   Make sure you have all the information or scripts needed to re-create your user databases and all the objects in them.  
   
@@ -45,7 +45,7 @@ manager: "jhubbard"
 -   Import all your data.  
   
 > [!NOTE]  
->  Instead of changing the default collation of an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can specify a default collation for each new database you create.  
+>  Instead of changing the default collation of an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], you can specify a default collation for each new database you create.  
   
 ## See Also  
  [Collation and Unicode Support](../../2014/database-engine/collation-and-unicode-support.md)   

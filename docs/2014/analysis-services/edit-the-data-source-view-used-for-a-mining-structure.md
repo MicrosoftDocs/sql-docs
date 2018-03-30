@@ -26,7 +26,7 @@ manager: "mblythe"
   
 -   Right-click in the **Data Source View** pane and select **Edit Data Source View**.  
   
-     Data Source View Designer opens in a new tab in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+     Data Source View Designer opens in a new tab in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 ## See Also  
  [Mining Structure Tasks and How-tos](../../2014/analysis-services/mining-structure-tasks-and-how-tos.md)  

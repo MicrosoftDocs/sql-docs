@@ -23,7 +23,7 @@ manager: "jhubbard"
 # Force a Target Server to Poll the Master Server
   This topic describes how to force a target server to poll the master server. The target server must be a registered server on the master server.  
   
- A job is a specified series of actions that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent performs. A multiserver job is a job that a master server runs on one or more target servers. Each target server can run one instance of the same job at the same time. Each target server periodically polls the master server, downloads a copy of any new jobs assigned to the target server, and then disconnects. The target server runs the job locally and then reconnects to the master server to upload the job outcome status.  
+ A job is a specified series of actions that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent performs. A multiserver job is a job that a master server runs on one or more target servers. Each target server can run one instance of the same job at the same time. Each target server periodically polls the master server, downloads a copy of any new jobs assigned to the target server, and then disconnects. The target server runs the job locally and then reconnects to the master server to upload the job outcome status.  
   
 > [!NOTE]  
 >  If the master server is inaccessible when the target server tries to upload job status, the job status is spooled until the master server can be accessed.  

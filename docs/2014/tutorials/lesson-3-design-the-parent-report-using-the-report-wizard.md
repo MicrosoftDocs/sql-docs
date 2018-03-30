@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 2f69dcd3-cd6d-45a9-a62a-ba6f5f3179d8
 caps.latest.revision: 6
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Lesson 3: Design the Parent Report using the Report Wizard

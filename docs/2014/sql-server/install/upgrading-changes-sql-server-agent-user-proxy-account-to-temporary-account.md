@@ -21,13 +21,13 @@ manager: "jhubbard"
   Database maintenance plans that have log shipping enabled will not be enabled after upgrade.  
   
 ## Component  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
   
 ## Description  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provides a new set of log shipping functions that are not directly compatible with database maintenance plans.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a new set of log shipping functions that are not directly compatible with database maintenance plans.  
   
 ## Corrective Action  
- [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] users that have database maintenance plans that contain log shipping functions should configure log shipping by using the new functions. For more information, search on "log shipping" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online.  
+ [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] users that have database maintenance plans that contain log shipping functions should configure log shipping by using the new functions. For more information, search on "log shipping" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
 ## See Also  
  [SQL Server Agent log shipping job category causes upgrade to fail](../../../2014/sql-server/install/sql-server-agent-log-shipping-job-category-causes-upgrade-to-fail.md)   

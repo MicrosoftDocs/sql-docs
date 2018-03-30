@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 4513a18d-dd6e-407a-b009-49dc9432ec7e
 caps.latest.revision: 46
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Secure the Publisher
@@ -38,7 +38,7 @@ manager: "jhubbard"
  Besides appropriately managing logins and passwords, you should understand the role of the publication access list (PAL). The PAL is used to enable logins to access to publication data while restricting ad hoc access to the database at the Publisher.  
   
 ## Publication Access List  
- The PAL is the primary mechanism for securing publications at the Publisher. The PAL functions similarly to a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows access control list. When you create a publication, replication creates a PAL for the publication. The PAL can be configured to contain a list of logins and groups that are granted access to the publication. When an agent connects to the Publisher or Distributor and requests access to a publication, the authentication information in the PAL is compared to the Publisher login that the agent provides. This process provides additional security for the Publisher by preventing the Publisher and Distributor login from being used by a client tool to perform modifications on the Publisher directly.  
+ The PAL is the primary mechanism for securing publications at the Publisher. The PAL functions similarly to a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows access control list. When you create a publication, replication creates a PAL for the publication. The PAL can be configured to contain a list of logins and groups that are granted access to the publication. When an agent connects to the Publisher or Distributor and requests access to a publication, the authentication information in the PAL is compared to the Publisher login that the agent provides. This process provides additional security for the Publisher by preventing the Publisher and Distributor login from being used by a client tool to perform modifications on the Publisher directly.  
   
 > [!NOTE]  
 >  Replication creates a role on the Publisher for each publication to enforce PAL membership. The role has a name in the form **Msmerge_***\<PublicationID>* for merge replication and **MSReplPAL_***\<PublicationDatabaseID>***_***\<PublicationID>* for transactional and snapshot replication.  
@@ -47,13 +47,13 @@ manager: "jhubbard"
   
  When you are using the PAL, consider the following guidelines:  
   
--   You must associate the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login with a database user in the publication database before adding the login to the PAL.  
+-   You must associate the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login with a database user in the publication database before adding the login to the PAL.  
   
 -   Follow the principle of least privilege by allowing logins in the PAL only the permissions the logins must have to perform replication tasks. Do not add the logins to any fixed database roles or server roles that are not required for replication. For more information about the permissions that are required, see [Replication Agent Security Model](../../../2014/relational-databases/replication/replication-agent-security-model.md) and [Replication Security Best Practices](../../../2014/relational-databases/replication/replication-security-best-practices.md).  
   
 -   If a remote Distributor is used, accounts in the PAL must be available at both the Publisher and the Distributor. The account must be either a domain account or a local account that is defined at both servers. The passwords associated with both logins must be the same.  
   
--   If the PAL contains Windows accounts and the domain uses Active Directory, the account under which [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] runs must have permissions to read from Active Directory. If you experience issues with Windows accounts, make sure that the account under which [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] runs has sufficient permissions. For more information, see the Windows documentation.  
+-   If the PAL contains Windows accounts and the domain uses Active Directory, the account under which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] runs must have permissions to read from Active Directory. If you experience issues with Windows accounts, make sure that the account under which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] runs has sufficient permissions. For more information, see the Windows documentation.  
   
  To manage the PAL, see [Manage Logins in the Publication Access List](../../../2014/relational-databases/replication/manage-logins-in-the-publication-access-list.md).  
   

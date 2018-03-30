@@ -16,15 +16,15 @@ ms.author: "owend"
 manager: "jhubbard"
 ---
 # Creating an Analysis Services Project
-  In the following task, you use [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to create a new [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project named `Analysis Services Tutorial`, based on the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Project template. A *project* is a collection of related objects. Projects exist within a solution, which includes one or more projects. For more information, see [Create an Analysis Services Project &#40;SSDT&#41;](../../2014/analysis-services/create-an-analysis-services-project-ssdt.md).  
+  In the following task, you use [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to create a new [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project named `Analysis Services Tutorial`, based on the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Project template. A *project* is a collection of related objects. Projects exist within a solution, which includes one or more projects. For more information, see [Create an Analysis Services Project &#40;SSDT&#41;](../../2014/analysis-services/create-an-analysis-services-project-ssdt.md).  
   
 ### To create a new Analysis Services project  
   
 1.  Click **Start**, point to **All Programs**, point to **Microsoft SQL Server 2012**, and then click **SQL Server Data Tools**.  
   
-     The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] development environment opens.  
+     The [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] development environment opens.  
   
-2.  On the Start page of [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], click **New Project**.  
+2.  On the Start page of [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], click **New Project**.  
   
 3.  In the **New Project** dialog box, in the **Installed Templates** pane, expand **Business Intelligence**, and then select **Analysis Services**. Choose the **Analysis Services Multidimensional and Data Mining Project** template.  
   

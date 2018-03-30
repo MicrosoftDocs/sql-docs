@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Example: Online Restore of a Read-Only File (Full Recovery Model)
-  This topic is relevant for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases under the full recovery model that contain multiple files or filegroups.  
+  This topic is relevant for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] databases under the full recovery model that contain multiple files or filegroups.  
   
  In this example, a database named `adb`, which uses the full recovery model, contains three filegroups. Filegroup `A` is read/write, and filegroup `B` and filegroup `C` are read-only. Initially, all of the filegroups are online.  
   
@@ -58,6 +58,6 @@ WITH RECOVERY
  [Online Restore &#40;SQL Server&#41;](../../2014/database-engine/online-restore-sql-server.md)   
  [Restore and Recovery Overview &#40;SQL Server&#41;](../../2014/database-engine/restore-and-recovery-overview-sql-server.md)   
  [File Restores &#40;Full Recovery Model&#41;](../../2014/database-engine/file-restores-full-recovery-model.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)  
   
   

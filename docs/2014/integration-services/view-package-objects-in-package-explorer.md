@@ -18,13 +18,13 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # View Package Objects in Package Explorer
-  This procedure describes how to view the objects within a [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package by using the Package Explorer.  
+  This procedure describes how to view the objects within a [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package by using the Package Explorer.  
   
 ## Viewing and Modifying Package Content  
   
 #### To view the package structure and content  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project that contains the package you want to view in **Package Explorer**.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project that contains the package you want to view in **Package Explorer**.  
   
 2.  Click the **Package Explorer** tab.  
   

@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Utility Explorer F1 Help
-  The following topics document [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility functionality and associated operations.  
+  The following topics document [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility functionality and associated operations.  
   
 ## In This Section  
  [Utility Dashboard &#40;SQL Server Utility&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)  

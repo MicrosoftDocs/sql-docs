@@ -26,7 +26,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # AMO Other Classes and Methods
-  This section contains common classes that are not specific to OLAP or data mining, and that are helpful when administering or managing objects in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. These classes cover features such as stored procedures, tracing, exceptions, and backup and restore.  
+  This section contains common classes that are not specific to OLAP or data mining, and that are helpful when administering or managing objects in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. These classes cover features such as stored procedures, tracing, exceptions, and backup and restore.  
   
  This topic contains the following sections:  
   
@@ -52,10 +52,10 @@ manager: "mblythe"
  For more information about methods and properties available, see <xref:Microsoft.AnalysisServices.Assembly> in <xref:Microsoft.AnalysisServices> .  
   
 > [!IMPORTANT]  
->  COM assemblies might pose a security risk. Due to this risk and other considerations, COM assemblies were deprecated in [!INCLUDE[ssASversion10](../../../includes/ssasversion10-md.md)]. COM assemblies might not be supported in future releases.  
+>  COM assemblies might pose a security risk. Due to this risk and other considerations, COM assemblies were deprecated in [!INCLUDE[ssASversion10](../../includes/ssasversion10-md.md)]. COM assemblies might not be supported in future releases.  
   
 ##  <a name="Backup"></a> Backup and Restore Methods  
- Backup and Restore are methods that can be used to create copies of an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] database and recover the database by using the copy. The Backup method belongs to the <xref:Microsoft.AnalysisServices.Database> object, and the Restore method belongs to the <xref:Microsoft.AnalysisServices.Server> object.  
+ Backup and Restore are methods that can be used to create copies of an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database and recover the database by using the copy. The Backup method belongs to the <xref:Microsoft.AnalysisServices.Database> object, and the Restore method belongs to the <xref:Microsoft.AnalysisServices.Server> object.  
   
  Only server and database administrators are permitted to perform a backup of a database. Only server administrators can restore a database onto a different server than it was backed up from. Database administrators can restore a database by overwriting the existing database only if they own the database that is to be overwritten. After a restore, the database administrator may lose access to the restored database if the database is restored with its original security definitions.  
   
@@ -108,13 +108,13 @@ manager: "mblythe"
 -   `Password`, if non-blank, specifies that the server will encrypt the backup file.  
   
 ##  <a name="Traces"></a> Trace Objects  
- Trace is a framework used for monitoring, replaying, and managing an instance of [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. A client application, like [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)], subscribes to a trace and the server sends back trace events as specified in the trace definition.  
+ Trace is a framework used for monitoring, replaying, and managing an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. A client application, like [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], subscribes to a trace and the server sends back trace events as specified in the trace definition.  
   
  Each event is described by an event class. The event class describes the type of event generated. Within an event class, event subclasses describe a finer level of categorization. Each event is described by a number of columns. The columns that describe a trace event are consistent for all events and conform to the SQL trace structure. Information recorded in each column may differ depending on the event class; that is, a predefined set of columns is defined for each trace, but the meaning of the column may differ depending on the event class. For example, the TextData column is used to record the original ASSL for all statement events.  
   
  A trace definition can include one or more event classes to be traced concurrently. For each event class, one or more data columns can be added to the trace definition, but not all trace columns must be used. The database administrator can decide which of the available columns to include in a trace. Further, event classes can be selectively traced based on filter criteria on any column in the trace.  
   
- Traces can be started and deleted. Multiple traces can be run at any one time. Trace events can be captured live or directed to a file for later analysis or replay. [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] is the tool used to analyze and replay [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] trace events. Multiple connections are allowed to receive events from the same trace.  
+ Traces can be started and deleted. Multiple traces can be run at any one time. Trace events can be captured live or directed to a file for later analysis or replay. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] is the tool used to analyze and replay [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] trace events. Multiple connections are allowed to receive events from the same trace.  
   
  Traces can be divided in two groups: server traces and session traces. Server traces will inform of all events in the server; session traces will inform only events in the current session.  
   
@@ -130,7 +130,7 @@ manager: "mblythe"
   
 5.  Stop the trace.  
   
-6.  Review the trace file with [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)].  
+6.  Review the trace file with [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
  Traces, from the session object, are obtained in the following manner:  
   

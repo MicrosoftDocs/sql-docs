@@ -25,13 +25,13 @@ manager: "jhubbard"
 ---
 # Examples of Bulk Import and Export of XML Documents (SQL Server)
     
-##  <a name="top"></a> You can bulk import XML documents into a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database or bulk export them from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. This topic provides examples of both.  
+##  <a name="top"></a> You can bulk import XML documents into a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database or bulk export them from a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database. This topic provides examples of both.  
   
- To bulk import data from a data file into a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table or non-partitioned view, you can use the following:  
+ To bulk import data from a data file into a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] table or non-partitioned view, you can use the following:  
   
 -   **bcp** utility  
   
-     You can also use the **bcp** utility to export data from anywhere in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database that a SELECT statement works, including partitioned views.  
+     You can also use the **bcp** utility to export data from anywhere in a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database that a SELECT statement works, including partitioned views.  
   
 -   BULK INSERT  
   
@@ -53,7 +53,7 @@ manager: "jhubbard"
 -   E. [Bulk exporting XML data](#bulk_export_xml_data)  
   
 ###  <a name="binary_byte_stream"></a> A. Bulk importing XML data as a binary byte stream  
- When you bulk import XML data from a file that contains an encoding declaration that you want to apply, specify the SINGLE_BLOB option in the OPENROWSET(BULK…) clause. The SINGLE_BLOB option makes sure that the XML parser in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] imports the data according to the encoding scheme specified in the XML declaration.  
+ When you bulk import XML data from a file that contains an encoding declaration that you want to apply, specify the SINGLE_BLOB option in the OPENROWSET(BULK…) clause. The SINGLE_BLOB option makes sure that the XML parser in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] imports the data according to the encoding scheme specified in the XML declaration.  
   
 #### Sample Table  
  To test example A, you must create sample table `T`.  
@@ -251,16 +251,16 @@ bcp bulktest..xTable out a-wn.out -N -T -S<server_name>\<instance_name>
 ```  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not save the XML encoding when XML data is persisted in the database. Therefore, the original encoding of XML fields is not available when XML data is exported. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses UTF-16 encoding when exporting XML data.  
+>  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not save the XML encoding when XML data is persisted in the database. Therefore, the original encoding of XML fields is not available when XML data is exported. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses UTF-16 encoding when exporting XML data.  
   
  [&#91;Top&#93;](#top)  
   
 ## See Also  
- [INSERT &#40;Transact-SQL&#41;](../Topic/INSERT%20\(Transact-SQL\).md)   
- [SELECT Clause &#40;Transact-SQL&#41;](../Topic/SELECT%20Clause%20\(Transact-SQL\).md)   
+ [INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/insert-transact-sql.md)   
+ [SELECT Clause &#40;Transact-SQL&#41;](~/t-sql/queries/select-clause-transact-sql.md)   
  [bcp Utility](../../2014/database-engine/bcp-utility.md)   
  [Bulk Import and Export of Data &#40;SQL Server&#41;](../../2014/database-engine/bulk-import-and-export-of-data-sql-server.md)   
- [BULK INSERT &#40;Transact-SQL&#41;](../Topic/BULK%20INSERT%20\(Transact-SQL\).md)   
- [OPENROWSET &#40;Transact-SQL&#41;](../Topic/OPENROWSET%20\(Transact-SQL\).md)  
+ [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md)   
+ [OPENROWSET &#40;Transact-SQL&#41;](~/t-sql/functions/openrowset-transact-sql.md)  
   
   

@@ -15,7 +15,7 @@ f1_keywords:
 ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
 caps.latest.revision: 9
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Sparklines and Data Bars (Report Builder and SSRS)
@@ -26,10 +26,10 @@ manager: "mblythe"
  To quickly get started with sparklines, see [Tutorial: Add a Sparkline to Your Report &#40;Report Builder&#41;](../../2014/tutorials/tutorial-add-a-sparkline-to-your-report-report-builder.md) and the videos [How to: Create a Sparkline in a Table](http://go.microsoft.com/fwlink/?LinkId=197092) and [Sparklines, Bar Charts, and Indicators in Report Builder](http://technet.microsoft.com/bi/video/ff877165) .  
   
 > [!NOTE]  
->  You can publish sparklines and data bars with their parent table, matrix, or list, separately from a report as a report part. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
+>  You can publish sparklines and data bars with their parent table, matrix, or list, separately from a report as a report part. [!INCLUDE[ssRBrptparts](../includes/ssrbrptparts-md.md)]  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ##  <a name="KindsofSparklines"></a> Types of Sparklines  
  You can create almost as many types of sparklines as there are regular charts. In general, you cannot make 3D sparklines. You can make sparkline versions of these full charts:  

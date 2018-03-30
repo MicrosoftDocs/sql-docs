@@ -21,7 +21,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # sql:relationship and the Key Ordering Rule (SQLXML 4.0)
-  Because XML Bulk Load generates records as their nodes enter into scope and sends those records to Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] as their nodes exit scope, the data for the record must be present within the scope of the node.  
+  Because XML Bulk Load generates records as their nodes enter into scope and sends those records to Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as their nodes exit scope, the data for the record must be present within the scope of the node.  
   
  Consider the following XSD schema, in which the one-to-many relationship between **\<Customer>** and **\<Order>** elements (one customer can place many orders) is specified by using the `<sql:relationship>` element:  
   
@@ -57,7 +57,7 @@ manager: "jhubbard"
 </xsd:schema>  
 ```  
   
- As the **\<Customer>** element node enters into scope, XML Bulk Load generates a customer record. This record stays until XML Bulk Load reads **\</Customer>**. In processing the **\<Order>** element node, XML Bulk Load uses `<sql:relationship>` to obtain the value of the CustomerID foreign key column of the CustOrder table from the **\<Customer>** parent element, because the **\<Order>** element does not specify the **CustomerID** attribute. This means that in defining the **\<Customer>** element, you must specify the **CustomerID** attribute in the schema before you specify `<sql:relationship>`. Otherwise, when an **\<Order>** element enters into scope, XML Bulk Load generates a record for the CustOrder table, and when the XML Bulk Load reaches the **\</Order>** end tag, it sends the record to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] without the CustomerID foreign key column value.  
+ As the **\<Customer>** element node enters into scope, XML Bulk Load generates a customer record. This record stays until XML Bulk Load reads **\</Customer>**. In processing the **\<Order>** element node, XML Bulk Load uses `<sql:relationship>` to obtain the value of the CustomerID foreign key column of the CustOrder table from the **\<Customer>** parent element, because the **\<Order>** element does not specify the **CustomerID** attribute. This means that in defining the **\<Customer>** element, you must specify the **CustomerID** attribute in the schema before you specify `<sql:relationship>`. Otherwise, when an **\<Order>** element enters into scope, XML Bulk Load generates a record for the CustOrder table, and when the XML Bulk Load reaches the **\</Order>** end tag, it sends the record to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] without the CustomerID foreign key column value.  
   
  Save the schema that is provided in this example as SampleSchema.xml.  
   
@@ -102,7 +102,7 @@ manager: "jhubbard"
     </ROOT>  
     ```  
   
-3.  To execute XML Bulk Load, save and execute the following [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic Scripting Edition (VBScript) example as MySample.vbs:  
+3.  To execute XML Bulk Load, save and execute the following [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic Scripting Edition (VBScript) example as MySample.vbs:  
   
     ```  
     set objBL = CreateObject("SQLXMLBulkLoad.SQLXMLBulkload.4.0")  

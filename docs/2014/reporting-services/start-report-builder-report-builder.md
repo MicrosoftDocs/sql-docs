@@ -17,20 +17,20 @@ helpviewer_keywords:
 ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
 caps.latest.revision: 50
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Start Report Builder (Report Builder)
-  [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] includes stand-alone and [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] versions of Report Builder. The [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] version can be used with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installed in native or SharePoint integrated mode.  
+  [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] includes stand-alone and [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] versions of Report Builder. The [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] version can be used with [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] installed in native or SharePoint integrated mode.  
   
 > [!NOTE]  
->  Report Builder cannot be installed on Itanium 64-based computers. This applies to the [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] and stand-alone versions of Report Builder.  
+>  Report Builder cannot be installed on Itanium 64-based computers. This applies to the [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] and stand-alone versions of Report Builder.  
   
- If the [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] version of Report Builder that opens is an earlier version of Report Builder, contact your administrator who can update Report Manager and the SharePoint site to use the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version of Report Builder  
+ If the [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] version of Report Builder that opens is an earlier version of Report Builder, contact your administrator who can update Report Manager and the SharePoint site to use the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] version of Report Builder  
   
- You can also use the [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] version of Report Builder to create reports on a [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] workbook that has been published to SharePoint. For more information about using Report Builder with [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], see [Create a Reporting Services Report with PowerPivot Data](http://go.microsoft.com/fwlink/?LinkId=185238) on technet.microsoft.com.  
+ You can also use the [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] version of Report Builder to create reports on a [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] workbook that has been published to SharePoint. For more information about using Report Builder with [!INCLUDE[ssGemini](../includes/ssgemini-md.md)], see [Create a Reporting Services Report with PowerPivot Data](http://go.microsoft.com/fwlink/?LinkId=185238) on technet.microsoft.com.  
   
- To start Report Builder stand-alone from the **Start** menu on your local computer, you or an administrator must install Report Builder directly on your computer before the tool is available for you to use. The stand-alone version is not installed when you install [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]; you must download and install it separately. To download Report Builder, see [Microsoft® SQL Server® 2012 Report Builder](http://go.microsoft.com/fwlink/?LinkId=401502).  
+ To start Report Builder stand-alone from the **Start** menu on your local computer, you or an administrator must install Report Builder directly on your computer before the tool is available for you to use. The stand-alone version is not installed when you install [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]; you must download and install it separately. To download Report Builder, see [Microsoft® SQL Server® 2012 Report Builder](http://go.microsoft.com/fwlink/?LinkId=401502).  
   
 ### To start Report Builder ClickOnce from Report Manager  
   
@@ -62,11 +62,11 @@ manager: "mblythe"
   
      Report Builder opens and you can create a report or open a report on the report server.  
   
-     **Note** If the **New Document** menu does not list the **Report Builder Report**, **Report Builder Model**, and **Report Data Source** options, their content types need to be added to the SharePoint library. For more information, see [Add Report Server Content Types to a Library &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?LinkId=154888) on msdn.microsoft.com.  
+     **Note** If the **New Document** menu does not list the **Report Builder Report**, **Report Builder Model**, and **Report Data Source** options, their content types need to be added to the SharePoint library. For more information, see [Add Report Server Content Types to a Library &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md) in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?LinkId=154888) on msdn.microsoft.com.  
   
 ### To start Report Builder stand-alone from the Start menu  
   
-1.  On the Start menu, click **All Programs**, and then click [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] **Report Builder**.  
+1.  On the Start menu, click **All Programs**, and then click [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **Report Builder**.  
   
 2.  Click **Report Builder** .  
   

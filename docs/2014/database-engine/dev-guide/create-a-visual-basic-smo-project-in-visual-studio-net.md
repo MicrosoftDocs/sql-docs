@@ -23,19 +23,19 @@ manager: "jhubbard"
 # Create a Visual Basic SMO Project in Visual Studio .NET
   This section describes how to build a simple SMO console application.  
   
- This example imports namespaces, which enables the program to reference SMO types. The import of the `Agent` namespace is optional. Use it when you are writing a program that uses [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent. The `Common` namespace is required to establish a secure connection to the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. The `SqlClient` namespace is used to process SQL exception errors.  
+ This example imports namespaces, which enables the program to reference SMO types. The import of the `Agent` namespace is optional. Use it when you are writing a program that uses [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. The `Common` namespace is required to establish a secure connection to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The `SqlClient` namespace is used to process SQL exception errors.  
   
 ### Creating a Visual Basic SMO project in Visual Studio.NET  
   
-1.  Start [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)] (or [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)]).  
+1.  Start [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] (or [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)]).  
   
 2.  On the **File** menu, click **NewProject.** The **New Project** dialog box appears.  
   
-3.  In **Project Types** dialog box, select **Visual Basic**, and then select **Windows**. In the [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Installed Templates pane, select **Console Application.**  
+3.  In **Project Types** dialog box, select **Visual Basic**, and then select **Windows**. In the [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Installed Templates pane, select **Console Application.**  
   
 4.  (Optional) In the **Name** field, type the name of the new application.  
   
-5.  Click **OK** to load the [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] console application template.  
+5.  Click **OK** to load the [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] console application template.  
   
 6.  On the **Project** menu, select **Add Reference**. The **Add Reference** dialog box appears.  
   
@@ -52,7 +52,7 @@ manager: "jhubbard"
     > [!NOTE]  
     >  Use the `Ctrl` key to select more than one file.  
   
-8.  Add any additional SMO assemblies that are required. For example, if you are specifically programming [!INCLUDE[ssSB](../../../includes/sssb-md.md)], add the following assemblies:  
+8.  Add any additional SMO assemblies that are required. For example, if you are specifically programming [!INCLUDE[ssSB](../../includes/sssb-md.md)], add the following assemblies:  
   
      Microsoft.SqlServer.ServiceBrokerEmum.dll  
   

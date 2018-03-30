@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Get the Fields for All Events
-  Accomplishing this task involves using Query Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  Accomplishing this task involves using Query Editor in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
  After the statements in this procedure finish, the **Results** tab of Query Editor displays the following columns:  
   
@@ -36,7 +36,7 @@ manager: "jhubbard"
  You can use the preceding information when configuring event sessions that use the bucketing target. For more information, see [SQL Server Extended Events Targets](../../2014/database-engine/sql-server-extended-events-targets.md).  
   
 ## Before you Begin  
- Before you create a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events session, it is useful to get information about the fields associated with events.  
+ Before you create a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Extended Events session, it is useful to get information about the fields associated with events.  
   
 ## To get the fields for all events using Query Editor  
   
@@ -54,7 +54,7 @@ manager: "jhubbard"
     ```  
   
 ## See Also  
- [sys.dm_xe_objects &#40;Transact-SQL&#41;](../Topic/sys.dm_xe_objects%20\(Transact-SQL\).md)   
- [sys.dm_xe_packages &#40;Transact-SQL&#41;](../Topic/sys.dm_xe_packages%20\(Transact-SQL\).md)  
+ [sys.dm_xe_objects &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md)   
+ [sys.dm_xe_packages &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-xe-packages-transact-sql.md)  
   
   

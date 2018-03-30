@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Relational Query Designer (SSAS)
-  The relational query designer helps you create a query that specifies the data to retrieve from [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] relational databases and [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../../includes/ssdwfull-md.md)]. Use the graphical query designer to explore the metadata, interactively build the query, and view the results of your query.  Use the text-based query designer to view the query that was built by the graphical query designer or to modify a query. You can also import an existing query from a file or report.  
+  The relational query designer helps you create a query that specifies the data to retrieve from [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] relational databases and [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]. Use the graphical query designer to explore the metadata, interactively build the query, and view the results of your query.  Use the text-based query designer to view the query that was built by the graphical query designer or to modify a query. You can also import an existing query from a file or report.  
   
  If you prefer, you can write the query in the SQL language by using the text-based editor. To switch to the text-based query designer, in the toolbar, click **Edit As Text**. After you edit a query in the text-based query designer, you can no longer use the graphical query designer.  
   
@@ -36,7 +36,7 @@ manager: "mblythe"
  The graphical query designer is divided into three areas. Depending on whether the query uses tables/views or stored procedures/table-valued functions the layout of the query designer changes.  
   
 > [!NOTE]  
->  [!INCLUDE[ssDWfull](../../includes/ssdwfull-md.md)] does not support stored procedures or table-valued functions.  
+>  [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] does not support stored procedures or table-valued functions.  
   
  The following figure shows the graphical query designer when it is used with tables or views.  
   
@@ -78,9 +78,9 @@ manager: "mblythe"
   
  Aggregates provide summaries of data and the data is grouped to support the aggregate that deliver the summary data. When you use an aggregate in the query, the other fields returned by the query are automatically grouped and the query includes the SQL GROUP BY clause. You can summarize data without adding an aggregate by using only the **Grouped by** option in the **Group and Aggregate** list. Many of the aggregates include a version that uses the DISTINCT keyword. Including DISTINCT eliminates duplicate values.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses [!INCLUDE[tsql](../../includes/tsql-md.md)] and [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../../includes/ssdwfull-md.md)] uses [!INCLUDE[DWsql](../../includes/dwsql-md.md)]. Both dialects of the SQL language support the clause, keyword, and aggregates that the query designer provides.  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses [!INCLUDE[tsql](../includes/tsql-md.md)] and [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] uses [!INCLUDE[DWsql](../includes/dwsql-md.md)]. Both dialects of the SQL language support the clause, keyword, and aggregates that the query designer provides.  
   
- For more information about [!INCLUDE[tsql](../../includes/tsql-md.md)], see [Transact-SQL Reference &#40;Database Engine&#41;](../Topic/Transact-SQL%20Reference%20\(Database%20Engine\).md)in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?LinkId=141687) on msdn.microsoft.com.  
+ For more information about [!INCLUDE[tsql](../includes/tsql-md.md)], see [Transact-SQL Reference &#40;Database Engine&#41;](~/t-sql/language-reference.md)in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?LinkId=141687) on msdn.microsoft.com.  
   
  The following table list the aggregates and provides brief descriptions of them.  
   
@@ -120,7 +120,7 @@ manager: "mblythe"
 -   **Auto Detect** Toggles the auto-detect feature that automatically creates relationships between tables. If auto detect is turned on, the query designer creates relationships from foreign keys in tables; otherwise, you must create the relationships manually. When you select tables in the **Database view** pane, auto detect automatically attempts to create relationships. If you turn on auto detect after you have manually created joins, those joins will be discarded.  
   
     > [!IMPORTANT]  
-    >  When using with [!INCLUDE[ssDWfull](../../includes/ssdwfull-md.md)] the metadata needed to create joins is not provided and relationships cannot be detected automatically. If your query retrieves data from [!INCLUDE[ssDWfull](../../includes/ssdwfull-md.md)], all table joins must be created manually.  
+    >  When using with [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] the metadata needed to create joins is not provided and relationships cannot be detected automatically. If your query retrieves data from [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)], all table joins must be created manually.  
   
 -   **Add Relationship** Adds a relationship to the **Relationship** list.  
   
@@ -144,7 +144,7 @@ manager: "mblythe"
   
 -   **Left Table** Displays the name of the first table that is part of a join relationship.  
   
--   **Join Type** Displays the type of SQL JOIN statement that is used in the automatically generated query. By default, if a foreign key constraint is detected, INNER JOIN is used. Other joins types can be LEFT JOIN or RIGHT JOIN. If none of these join types apply, the **Join Type** column displays **Unrelated**. No CROSS JOIN joins are created for unrelated tables; instead, you must manually create relationships by joining columns in the left and right tables. For more information about types of JOINs, see "JOIN Fundamentals" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?LinkId=141687) on msdn.microsoft.com..  
+-   **Join Type** Displays the type of SQL JOIN statement that is used in the automatically generated query. By default, if a foreign key constraint is detected, INNER JOIN is used. Other joins types can be LEFT JOIN or RIGHT JOIN. If none of these join types apply, the **Join Type** column displays **Unrelated**. No CROSS JOIN joins are created for unrelated tables; instead, you must manually create relationships by joining columns in the left and right tables. For more information about types of JOINs, see "JOIN Fundamentals" in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?LinkId=141687) on msdn.microsoft.com..  
   
 -   **Right Table** Displays the name of the second table in the join relationship.  
   
@@ -204,7 +204,7 @@ manager: "mblythe"
 |**Command Type**|Select **Text**, **StoredProcedure**, or **TableDirect**. If a stored procedure has parameters, the **Define Query Parameters** dialog box appears when you click **Run** on the toolbar, and you can fill in values as needed.<br /><br /> Note that if a stored procedure returns more than one result set, only the first result set is used to populate the dataset. Note also that <br />                      **TableDirect** is available only for the data source type OLE DB.|  
   
 #### Command Type Text  
- When you create a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dataset, the relational query designer opens by default. To switch to the text-based query designer, click the **Edit As Text** toggle button on the toolbar. The text-based query designer presents two panes: the Query pane and the Result pane. The following figure labels each pane.  
+ When you create a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dataset, the relational query designer opens by default. To switch to the text-based query designer, click the **Edit As Text** toggle button on the toolbar. The text-based query designer presents two panes: the Query pane and the Result pane. The following figure labels each pane.  
   
  ![Generic query designer, for relational data query](../../2014/analysis-services/media/rsqd-dsaw-sql-generic.gif "Generic query designer, for relational data query")  
   

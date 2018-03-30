@@ -20,7 +20,7 @@ manager: "jhubbard"
   
 ### To create the Finance database  
   
-1.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], open a query window and execute the following statement:  
+1.  In [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], open a query window and execute the following statement:  
   
     ```  
     CREATE DATABASE Finance ;  
@@ -66,7 +66,7 @@ manager: "jhubbard"
   
 10. In the **Server restriction** list, select **None**.  
   
-11. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ### To create the Finance policy category  
   
@@ -74,7 +74,7 @@ manager: "jhubbard"
   
 2.  In the **Manage Policy Categories** dialog box, under **Name**, type `Finance` in the blank box, and then clear **Mandate Database Subscriptions**. **Mandate Database Subscriptions** will force every database in the instance to subscribe to the policies that belong to this policy category. For this lesson, only the Finance database should subscribe to the Finance Name policy.  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## Next Task in Lesson  
  [Subscribe to and Check the Finance Name Policy](../../2014/tutorials/subscribe-to-and-check-the-finance-name-policy.md)  

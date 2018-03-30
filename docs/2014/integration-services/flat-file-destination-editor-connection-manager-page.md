@@ -31,7 +31,7 @@ manager: "jhubbard"
  **New**  
  Create a new connection by using the **Flat File Format** and **Flat File Connection Manager Editor** dialog boxes.  
   
- In addition to the standard flat file formats of delimited, fixed width, and ragged right, the **Flat File Format** dialog box has a fourth option, **Fixed width with row delimiters**. This option represents a special case of the ragged-right format in which [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] adds a dummy column as the final column of data. This dummy column ensures that the final column has a fixed width.  
+ In addition to the standard flat file formats of delimited, fixed width, and ragged right, the **Flat File Format** dialog box has a fourth option, **Fixed width with row delimiters**. This option represents a special case of the ragged-right format in which [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] adds a dummy column as the final column of data. This dummy column ensures that the final column has a fixed width.  
   
  The **Fixed width with row delimiters** option is not available in the **Flat File Connection Manager Editor**. If necessary, you can emulate this option in the editor. To emulate this option, on the **General** page of the **Flat File Connection Manager Editor**, for **Format**, select **Ragged right**. Then on the **Advanced** page of the editor, add a new dummy column as the final column of data.  
   

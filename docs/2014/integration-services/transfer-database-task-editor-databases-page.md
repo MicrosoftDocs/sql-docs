@@ -20,7 +20,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Transfer Database Task Editor (Databases Page)
-  Use the **Databases** page of the **Transfer Database Task Editor** dialog box to specify properties for the source and destination databases involved in the Transfer Database task. The Transfer Database task copies or moves a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database between two instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This task can also be used to copy a database within the same server. For more information about this task, see [Transfer Database Task](../../2014/integration-services/transfer-database-task.md).  
+  Use the **Databases** page of the **Transfer Database Task Editor** dialog box to specify properties for the source and destination databases involved in the Transfer Database task. The Transfer Database task copies or moves a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database between two instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. This task can also be used to copy a database within the same server. For more information about this task, see [Transfer Database Task](../../2014/integration-services/transfer-database-task.md).  
   
 ## Options  
  **SourceConnection**  
@@ -30,7 +30,7 @@ manager: "jhubbard"
  Select a SMO connection manager in the list, or click **\<New connection...>** to create a new connection to the destination server.  
   
  **DestinationDatabaseName**  
- Specify the name of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database on the destination server.  
+ Specify the name of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database on the destination server.  
   
  To automatically populate this field with the source database name, specify the **SourceConnection** and **SourceDatabaseName** first.  
   

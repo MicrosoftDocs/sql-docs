@@ -18,7 +18,7 @@ manager: "jhubbard"
 # Filtering a Nested Table in a Mining Model (Intermediate Data Mining Tutorial)
   After you have created and explored the model, you decide that you want to focus on a subset of the customer data. For example, you might want to analyze only the baskets that contain a specific item, or to analyze the demographics of customers who have not purchased anything in a certain period.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] provides the ability to filter the data that is used in a mining model. This feature is useful because you do not need to set up a new data source view to use different data. In the Basic Data Mining Tutorial, you learned how to filter data from a flat table by applying conditions to the case table. In this task, you create a filter that applies to a nested table.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] provides the ability to filter the data that is used in a mining model. This feature is useful because you do not need to set up a new data source view to use different data. In the Basic Data Mining Tutorial, you learned how to filter data from a flat table by applying conditions to the case table. In this task, you create a filter that applies to a nested table.  
   
 ## Filters on Nested vs. Case Tables  
  If your data source view contains a case table and a nested table, like the data source view used in the Association model, you can filter on values from the case table, the presence or absence of a value in the nested table, or some combination of both.  
@@ -27,7 +27,7 @@ manager: "jhubbard"
   
 #### To create and modify a copy of the Association model  
   
-1.  In the **Mining Models** tab of [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], right-click the `Association` model, and select **New Mining Model**.  
+1.  In the **Mining Models** tab of [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], right-click the `Association` model, and select **New Mining Model**.  
   
 2.  For **Model Name**, type `Association Filtered`. For **Algorithm Name**, select **Microsoft Association Rules**. Click **OK**.  
   
@@ -71,7 +71,7 @@ manager: "jhubbard"
   
      `[IncomeGroup] = 'High' OR [IncomeGroup] = 'Moderate' AND EXISTS SELECT * FROM [vAssocSeqLineItems] WHERE [Model] <> NULL).`  
   
-13. [!INCLUDE[clickOK](../../includes/clickok-md.md)] ``  
+13. [!INCLUDE[clickOK](../includes/clickok-md.md)] ``  
   
 #### To enable drillthrough and to process the filtered model  
   
@@ -81,7 +81,7 @@ manager: "jhubbard"
   
 3.  Right-click the `Association Filtered` mining model, and select **Process Model**.  
   
-4.  Click **Yes** in the error message to deploy the new model to the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database.  
+4.  Click **Yes** in the error message to deploy the new model to the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database.  
   
 5.  In the **Process Mining Structure** dialog box, click **Run**.  
   
@@ -97,7 +97,7 @@ manager: "jhubbard"
  EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] = 'Water Bottle' )   
 ```  
   
- This statement means that you are restricting the customers from the case table to only those who have purchased a water bottle. However, because the number of nested table attributes is potentially unlimited, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] does not supply a list of possible values from which to select. Instead, you must type the exact value.  
+ This statement means that you are restricting the customers from the case table to only those who have purchased a water bottle. However, because the number of nested table attributes is potentially unlimited, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] does not supply a list of possible values from which to select. Instead, you must type the exact value.  
   
  You can click **Edit Query** to manually change the filter expression. However, if you change any part of a filter expression manually, the grid will be disabled and thereafter you must work with the filter expression in text edit mode only. To restore grid editing mode, you must clear the filter expression and start over.  
   

@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Deprecated DBCC commands have now been removed
-  The following table lists the DBCC commands that were announced as deprecated in [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)]. These commands were removed from [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and later versions. You should update applications and scripts to remove references to these deprecated commands.  
+  The following table lists the DBCC commands that were announced as deprecated in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. These commands were removed from [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions. You should update applications and scripts to remove references to these deprecated commands.  
   
 ||  
 |-|  
@@ -29,6 +29,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Database Engine Upgrade Issues](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;new&#93;](../Topic/SQL%20Server%202014%20Upgrade%20Advisor%20[new].md)  
+ [SQL Server 2014 Upgrade Advisor &#91;new&#93;](~/2014/sql-server/install/sql-server-2014-upgrade-advisor.md)  
   
   

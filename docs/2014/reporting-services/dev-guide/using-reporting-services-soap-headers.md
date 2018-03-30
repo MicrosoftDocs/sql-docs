@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 306d2c06-a25a-40f8-8a35-13dd32e8841e
 caps.latest.revision: 38
 author: "douglaslM"
-ms.author: "carlasab"
+ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Using Reporting Services SOAP Headers
@@ -34,7 +34,7 @@ manager: "jhubbard"
 |Topic|Description|  
 |-----------|-----------------|  
 |[Batching Methods](../../../2014/reporting-services/dev-guide/batching-methods.md)|Describes how to batch multiple operations into a single transaction using <xref:ReportService2005.BatchHeader>.|  
-|[Identifying Execution State](../../../2014/reporting-services/dev-guide/identifying-execution-state.md)|Describes how to manage session state in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] using **SessionHeader**.|  
+|[Identifying Execution State](../../../2014/reporting-services/dev-guide/identifying-execution-state.md)|Describes how to manage session state in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] using **SessionHeader**.|  
 |[Setting the Item Namespace for the GetProperties Method](../../../2014/reporting-services/dev-guide/setting-the-item-namespace-for-the-getproperties-method.md)|Describes how to retrieve properties based on either the path or the ID of an item by using the <xref:ReportService2010.ReportingService2010.GetProperties%2A> method and the <xref:ReportService2010.ItemNamespaceHeader> SOAP header.|  
   
 ## See Also  

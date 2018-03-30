@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 66c99d28-ab41-45f0-bf02-ed560293595d
 caps.latest.revision: 29
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "mblythe"
 ---
 # General Properties Page, Reports (Report Manager)
@@ -54,11 +54,11 @@ manager: "mblythe"
  Click to open the New Linked Report page. For more information about this page and linked reports, see [New Linked Report Page &#40;Report Manager&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md).  
   
  **Save**  
- Click to extract a read-only copy of the report definition. Depending on the file associations defined on your computer, the file will open in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] or a different application. In most cases, the report opens as an XML file.  
+ Click to extract a read-only copy of the report definition. Depending on the file associations defined on your computer, the file will open in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] or a different application. In most cases, the report opens as an XML file.  
   
  The copy that you open is identical to the original report definition that was initially published to the report server. Any properties that were set on the report after it was published (such as parameters and data source properties) are not reflected in the file that you open.  
   
- You can modify the report definition and save it as a new file in a shared folder, and upload the report definition to the report server as a new item. Modifications that you make to the report definition while it is open in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] (or another application) are not saved directly to the report server. You must upload the file to publish the modified report to the report server.  
+ You can modify the report definition and save it as a new file in a shared folder, and upload the report definition to the report server as a new item. Modifications that you make to the report definition while it is open in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] (or another application) are not saved directly to the report server. You must upload the file to publish the modified report to the report server.  
   
  **Replace**  
  Click to replace the report definition that is used in the current report with a different one from an .rdl file located on the file system. If you update a report definition, you must reset the data source settings after the update is complete.  

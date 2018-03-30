@@ -29,7 +29,7 @@ ms.author: "mblythe"
 manager: "mblythe"
 ---
 # Session Element (XMLA)
-  Uses the SOAP header in a SOAP request message to identify an existing, explicit session on an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+  Uses the SOAP header in a SOAP request message to identify an existing, explicit session on an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
  **Namespace** urn:schemas-microsoft-com:xml-analysis  
   
@@ -70,18 +70,18 @@ manager: "mblythe"
   
 |Attribute|Description|  
 |---------------|-----------------|  
-|SessionId|Required `String` attribute that identifies the session to be used. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] uses a globally unique identifier (GUID) to identify a session.|  
+|SessionId|Required `String` attribute that identifies the session to be used. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] uses a globally unique identifier (GUID) to identify a session.|  
   
 ## Remarks  
- The `Session` header element identifies an existing, explicitly started session on the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance. The `Session` element is part of the SOAP header in the following types of messages:  
+ The `Session` header element identifies an existing, explicitly started session on the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance. The `Session` element is part of the SOAP header in the following types of messages:  
   
 -   A SOAP response that contains a [BeginSession](../../../2014/analysis-services/dev-guide/beginsession-element-xmla.md) SOAP header element.  
   
 -   A SOAP request to identify the session on which to run the [Discover](../../../2014/analysis-services/dev-guide/discover-method-xmla.md) or [Execute](../../../2014/analysis-services/dev-guide/execute-method-xmla.md) method.  
   
- A session identifier does not guarantee that a session remains valid. The session specified in the `Session` element can expire. For example, a session can expire if the session times out or the connection associated with the session is disconnected. If the session expires and is no longer valid, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ends the session and rolls back any transaction currently in process. Any SOAP message sent with a session identifier that is no longer valid fails with a SOAP fault indicating that the specified session cannot be found.  
+ A session identifier does not guarantee that a session remains valid. The session specified in the `Session` element can expire. For example, a session can expire if the session times out or the connection associated with the session is disconnected. If the session expires and is no longer valid, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ends the session and rolls back any transaction currently in process. Any SOAP message sent with a session identifier that is no longer valid fails with a SOAP fault indicating that the specified session cannot be found.  
   
- If a `Session` element is not sent as part of a SOAP request, the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance implicitly begins a session for the duration of the `Discover` or `Execute` method call, and then ends that session once the method call has completed.  
+ If a `Session` element is not sent as part of a SOAP request, the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance implicitly begins a session for the duration of the `Discover` or `Execute` method call, and then ends that session once the method call has completed.  
   
 ## See Also  
  [EndSession Element &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/endsession-element-xmla.md)   

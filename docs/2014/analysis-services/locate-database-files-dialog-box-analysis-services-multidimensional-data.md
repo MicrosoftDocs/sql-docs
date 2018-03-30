@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Locate Database Files Dialog Box (Analysis Services - Multidimensional Data)
-  The **Locate Database Files** dialog box displays a list of available files in log and data folders defined for an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance. You can either select a listed file, or you can specify a different folder and file if needed. The **Locate Database Files** dialog box is displayed by:  
+  The **Locate Database Files** dialog box displays a list of available files in log and data folders defined for an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance. You can either select a listed file, or you can specify a different folder and file if needed. The **Locate Database Files** dialog box is displayed by:  
   
 -   Clicking **Browse** on the **General** page of the **Restore Database** dialog box.  
   

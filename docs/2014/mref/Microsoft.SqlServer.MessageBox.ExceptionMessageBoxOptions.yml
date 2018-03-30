@@ -1,0 +1,11 @@
+### YamlMime:XRefMap
+sorted: true
+hrefUpdated: true
+references:
+- uid: Microsoft.SqlServer.MessageBox.ExceptionMessageBoxOptions
+  commentId: T:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxOptions
+  href: https://msdn.microsoft.com/library/microsoft.sqlserver.messagebox.exceptionmessageboxoptions(v=sql.120).aspx
+  name: ExceptionMessageBoxOptions
+  name.vb: ExceptionMessageBoxOptions
+  fullName: MessageBox.ExceptionMessageBoxOptions
+  fullName.vb: MessageBox.ExceptionMessageBoxOptions

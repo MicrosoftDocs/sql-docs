@@ -15,11 +15,11 @@ helpviewer_keywords:
 ms.assetid: 5eed0488-81d2-40e8-8fdf-b0a640a591d0
 caps.latest.revision: 16
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Rename Views
-  You can rename a view in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  You can rename a view in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
 > [!WARNING]  
 >  If you rename a view, code and applications that depend on the view may fail. These include other views, queries, stored procedures, user-defined functions, and client applications. Note that these failures will cascade.  
@@ -65,7 +65,7 @@ manager: "jhubbard"
   
  While you can use **sp_rename** to change the name of the view, we recommend that you delete the existing view and then re-create it with the new name.  
   
- For more information, see [CREATE VIEW &#40;Transact-SQL&#41;](../Topic/CREATE%20VIEW%20\(Transact-SQL\).md) and [DROP VIEW &#40;Transact-SQL&#41;](../Topic/DROP%20VIEW%20\(Transact-SQL\).md).  
+ For more information, see [CREATE VIEW &#40;Transact-SQL&#41;](~/t-sql/statements/create-view-transact-sql.md) and [DROP VIEW &#40;Transact-SQL&#41;](~/t-sql/statements/drop-view-transact-sql.md).  
   
 ##  <a name="FollowUp"></a> Follow Up: After Renaming a View  
  Ensure that all objects, scripts, and applications that reference the view’s old name now use the new name.  

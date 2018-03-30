@@ -12,44 +12,44 @@ ms.topic: "article"
 ms.assetid: 2c62daf9-1f2d-4508-a497-af62360ee859
 caps.latest.revision: 34
 author: "markingmyname"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "jhubbard"
 ---
 # Install the Analysis Services OLE DB Provider on SharePoint Servers
-  The Microsoft OLE DB Provider for Analysis Services (MSOLAP) is an interface that client applications use to interact with [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] data. In a SharePoint environment that includes [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)], the provider handles connection requests for [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] data.  
+  The Microsoft OLE DB Provider for Analysis Services (MSOLAP) is an interface that client applications use to interact with [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data. In a SharePoint environment that includes [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], the provider handles connection requests for [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data.  
   
- The data provider is included in the [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] installation package (spPowerPivot.msi), but might require manual installation. There are two reasons why you might need to manually install a client library or data provider on a SharePoint server.  
+ The data provider is included in the [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installation package (spPowerPivot.msi), but might require manual installation. There are two reasons why you might need to manually install a client library or data provider on a SharePoint server.  
   
--   **Enable backwards compatibility**. [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] workbooks specify the [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] version of the Analysis Services OLE DB provider in their connection string. As such, this provider version must be present on the computer in order for the request to succeed.  
+-   **Enable backwards compatibility**. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] workbooks specify the [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] version of the Analysis Services OLE DB provider in their connection string. As such, this provider version must be present on the computer in order for the request to succeed.  
   
--   **Enable data access on a dedicated Excel Services instance**. If your SharePoint farm includes Excel Services on a server that does not also have [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)], install the [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] version of the provider and other client connectivity components by using the [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] installation package.  
+-   **Enable data access on a dedicated Excel Services instance**. If your SharePoint farm includes Excel Services on a server that does not also have [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], install the [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] version of the provider and other client connectivity components by using the [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installation package.  
   
     > [!NOTE]  
-    >  These scenarios are not mutually exclusive. Hosting multiple workbook versions on a farm that includes application servers running Excel Services without a [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] instance will require that you install both older and newer versions of the data provider on each Excel Services computer.  
+    >  These scenarios are not mutually exclusive. Hosting multiple workbook versions on a farm that includes application servers running Excel Services without a [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] instance will require that you install both older and newer versions of the data provider on each Excel Services computer.  
   
   
 ##  <a name="bkmk_vers"></a> Versions of the OLE DB Provider Supporting PowerPivot Data Access  
  A SharePoint farm might include multiple versions of the Analysis Services OLE DB provider, including older versions that do not support PowerPivot data access.  
   
- By default, SharePoint 2010 installs the [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] version of the provider. Although it is identified as MSOLAP.4 (the same version number used for [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]), this version does not work for PowerPivot data access. In order for connections to succeed, you must have the [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] or [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] version of the provider.  
+ By default, SharePoint 2010 installs the [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] version of the provider. Although it is identified as MSOLAP.4 (the same version number used for [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), this version does not work for PowerPivot data access. In order for connections to succeed, you must have the [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] or [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version of the provider.  
   
- A post [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] version of the OLE DB provider includes transports and connection support for [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] data structures. [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] workbooks use newer versions of this provider to request query processing from [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] servers in the farm. To get an updated version, you can download and install it through a SQL Server Feature Pack page.  
+ A post [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] version of the OLE DB provider includes transports and connection support for [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data structures. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks use newer versions of this provider to request query processing from [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] servers in the farm. To get an updated version, you can download and install it through a SQL Server Feature Pack page.  
   
  The following table describes the valid versions:  
   
 |Product version|File version|Valid for:|  
 |---------------------|------------------|----------------|  
-|[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]|MSOLAP100.dll in the file system<br /><br /> MSOLAP.4 in an Excel connection string<br /><br /> 10.50.1600 or later in file version details|Use for data models created using the [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] version of PowerPivot for Excel.|  
-|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]|MSOLAP110.dll in the file system<br /><br /> MSOLAP.5 in an Excel connection string<br /><br /> 11.0.0000 or later in file version details|Use for data models created using the [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] or [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] version of [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel.|  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]|MSOLAP120.dll in the file system<br /><br /> 12.0.20000 or later in file version details|Use for data models other than [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] models.|  
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|MSOLAP100.dll in the file system<br /><br /> MSOLAP.4 in an Excel connection string<br /><br /> 10.50.1600 or later in file version details|Use for data models created using the [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] version of PowerPivot for Excel.|  
+|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|MSOLAP110.dll in the file system<br /><br /> MSOLAP.5 in an Excel connection string<br /><br /> 11.0.0000 or later in file version details|Use for data models created using the [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] or [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel.|  
+|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|MSOLAP120.dll in the file system<br /><br /> 12.0.20000 or later in file version details|Use for data models other than [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] models.|  
   
   
 ##  <a name="bkmk_why"></a> Why you need to install the OLE DB Provider  
  There are two scenarios that call for manually installing the OLE DB provider on servers in the farm.  
   
- **The most common scenario** is when you have older and newer versions of [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] workbooks that are saved in document libraries in the farm. If analysts in your organization are using the [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] version of [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel, and they save those workbooks to a [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)][!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] installation, the older workbook will not work. Its connection string will reference an older version of the provider, which won’t be on the server unless you install it. Installing both versions will enable data access for PowerPivot workbooks created in older and newer versions of [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Setup does not install the [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] version of the provider, so you must install it manually if you are using workbooks from a previous version.  
+ **The most common scenario** is when you have older and newer versions of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks that are saved in document libraries in the farm. If analysts in your organization are using the [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] version of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel, and they save those workbooks to a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installation, the older workbook will not work. Its connection string will reference an older version of the provider, which won’t be on the server unless you install it. Installing both versions will enable data access for PowerPivot workbooks created in older and newer versions of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Setup does not install the [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] version of the provider, so you must install it manually if you are using workbooks from a previous version.  
   
- **The second scenario** is when you have a server in a SharePoint farm that runs Excel Services, but not [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)]. In this case, the application server that runs Excel Services must be manually updated to use a newer version of the provider. This is necessary for connecting to a PowerPivot for SharePoint instance. If Excel Services is using an older version of the provider, the connection request will fail. Note that the provider must be installed by using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] setup or the [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] installation package (spPowerPivot.msi) in order to ensure that all components required support [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] are installed.  
+ **The second scenario** is when you have a server in a SharePoint farm that runs Excel Services, but not [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. In this case, the application server that runs Excel Services must be manually updated to use a newer version of the provider. This is necessary for connecting to a PowerPivot for SharePoint instance. If Excel Services is using an older version of the provider, the connection request will fail. Note that the provider must be installed by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup or the [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installation package (spPowerPivot.msi) in order to ensure that all components required support [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] are installed.  
   
   
 ##  <a name="bkmk_sql11"></a> Install the SQL Server 2012 OLE DB Provider on an Excel Services server by using SQL Server Setup  
@@ -105,9 +105,9 @@ manager: "jhubbard"
   
   
 ##  <a name="bkmk_install2012_from_sppowerpivot_msi"></a> Use the PowerPivot for SharePoint Installation package (spPowerPivot.msi) to install the SQL Server 2012 OLE DB Provider  
- Install the [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] OLE DB Provider on and Excel Services Server by using the [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] installation package **(spPowerPivot.msi)**.  
+ Install the [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] OLE DB Provider on and Excel Services Server by using the [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installation package **(spPowerPivot.msi)**.  
   
-#### Download the MSOLAP.5 provider from the [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] Feature Pack.  
+#### Download the MSOLAP.5 provider from the [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] Feature Pack.  
   
 1.  Browse to [Microsoft® SQL Server® 2012 SP1 Feature Pack](http://www.microsoft.com/download/details.aspx?id=35580)  
   
@@ -121,7 +121,7 @@ manager: "jhubbard"
   
   
 ##  <a name="bkmk_kj"></a> Install the SQL Server 2008 R2 OLE DB Provider to host earlier version workbooks  
- Use the following instructions to install the [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] version of the MSOLAP.4 provider, and register the Microsoft.AnalysisServices.ChannelTransport.dll file. The ChannelTransport is a subcomponent of the Analysis Services OLE DB provider. The [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] version of the provider reads the registry when using ChannelTransport to make a connection. Registering this file is a post-installation step required only for connections handled by the [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] provider on a [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] server.  
+ Use the following instructions to install the [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] version of the MSOLAP.4 provider, and register the Microsoft.AnalysisServices.ChannelTransport.dll file. The ChannelTransport is a subcomponent of the Analysis Services OLE DB provider. The [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] version of the provider reads the registry when using ChannelTransport to make a connection. Registering this file is a post-installation step required only for connections handled by the [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] provider on a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] server.  
   
 #### Step 1: Download and install the client library  
   
@@ -129,9 +129,9 @@ manager: "jhubbard"
   
 2.  Download the x64 Package of the `SQLServer2008_ASOLEDB10.msi` installation program. Although the file name contains SQLServer2008, it is the correct file for the SQL Server 2008 R2 version of the provider.  
   
-3.  On the computer that has an installation of [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)], run the .msi to install the library.  
+3.  On the computer that has an installation of [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], run the .msi to install the library.  
   
-4.  If you have other servers in the farm that run just Excel Services, without [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] on the same server, repeat the previous steps to install the 2008 R2 version of the provider on the Excel Services computer.  
+4.  If you have other servers in the farm that run just Excel Services, without [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] on the same server, repeat the previous steps to install the 2008 R2 version of the provider on the Excel Services computer.  
   
 #### Step 2: Register the Microsoft.AnalysisServices.ChannelTransport.dll file  
   
@@ -147,7 +147,7 @@ manager: "jhubbard"
   
 #### Verify installation  
   
-1.  You should now be able to slice or filter [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] workbooks. If an error occurs, verify that you used the 64-bit version of regasm.exe to register the file.  
+1.  You should now be able to slice or filter [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] workbooks. If an error occurs, verify that you used the 64-bit version of regasm.exe to register the file.  
   
 2.  Additionally, you can check the file version.  
   

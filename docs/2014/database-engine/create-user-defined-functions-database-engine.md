@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Create User-defined Functions (Database Engine)
-  This topic describes how to create a user-defined function in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  This topic describes how to create a user-defined function in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] by using [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -80,7 +80,7 @@ manager: "jhubbard"
  Requires CREATE FUNCTION permission in the database and ALTER permission on the schema in which the function is being created. If the function specifies a user-defined type, requires EXECUTE permission on the type.  
   
 ##  <a name="Scalar"></a> Scalar Functions  
- The following example creates a multistatement scalar function in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. The function takes one input value, a `ProductID`, and returns a single data value, the aggregated quantity of the specified product in inventory.  
+ The following example creates a multistatement scalar function in the [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] database. The function takes one input value, a `ProductID`, and returns a single data value, the aggregated quantity of the specified product in inventory.  
   
 ```  
 IF OBJECT_ID (N'dbo.ufnGetInventoryStock', N'FN') IS NOT NULL  
@@ -114,7 +114,7 @@ WHERE ProductModelID BETWEEN 75 and 80;
 ```  
   
 ##  <a name="TVF"></a> Table-Valued Functions  
- The following example creates an inline table-valued function in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. The function takes one input parameter, a customer (store) ID, and returns the columns `ProductID`, `Name`, and the aggregate of year-to-date sales as `YTD Total` for each product sold to the store.  
+ The following example creates an inline table-valued function in the [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] database. The function takes one input parameter, a customer (store) ID, and returns the columns `ProductID`, `Name`, and the aggregate of year-to-date sales as `YTD Total` for each product sold to the store.  
   
 ```  
 IF OBJECT_ID (N'Sales.ufn_SalesByStore', N'IF') IS NOT NULL  
@@ -143,7 +143,7 @@ SELECT * FROM Sales.ufn_SalesByStore (602);
   
 ```  
   
- The following example creates a table-valued function in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. The function takes a single input parameter, an `EmployeeID` and returns a list of all the employees who report to the specified employee directly or indirectly. The function is then invoked specifying employee ID 109.  
+ The following example creates a table-valued function in the [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] database. The function takes a single input parameter, an `EmployeeID` and returns a list of all the employees who report to the specified employee directly or indirectly. The function is then invoked specifying employee ID 109.  
   
 ```  
 IF OBJECT_ID (N'dbo.ufn_FindReports', N'TF') IS NOT NULL  
@@ -192,6 +192,6 @@ FROM dbo.ufn_FindReports(1);
   
 ## See Also  
  [User-Defined Functions](../../2014/database-engine/user-defined-functions.md)   
- [CREATE FUNCTION &#40;Transact-SQL&#41;](../Topic/CREATE%20FUNCTION%20\(Transact-SQL\).md)  
+ [CREATE FUNCTION &#40;Transact-SQL&#41;](~/t-sql/statements/create-function-transact-sql.md)  
   
   

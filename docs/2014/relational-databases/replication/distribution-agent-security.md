@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
 caps.latest.revision: 24
 author: "craigg-msft"
-ms.author: "rickbyh"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Distribution Agent Security
-  The **Distribution Agent Security** dialog box allows you to specify the Windows account under which the Distribution Agent runs. The Distribution Agent runs at the Distributor for push subscriptions and at the Subscriber for pull subscriptions. The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows account is also referred to as the *process account*, because the agent process runs under this account. Additional options available in the dialog box depend on how you access it:  
+  The **Distribution Agent Security** dialog box allows you to specify the Windows account under which the Distribution Agent runs. The Distribution Agent runs at the Distributor for push subscriptions and at the Subscriber for pull subscriptions. The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows account is also referred to as the *process account*, because the agent process runs under this account. Additional options available in the dialog box depend on how you access it:  
   
--   If the dialog box is accessed from the New Subscription Wizard, it also allows you to specify the context under which the Distribution Agent makes connections to the Subscriber (for push subscriptions) or the Distributor (for pull subscriptions). The connection can be made by impersonating the Windows account or under the context of a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] account you specify.  
+-   If the dialog box is accessed from the New Subscription Wizard, it also allows you to specify the context under which the Distribution Agent makes connections to the Subscriber (for push subscriptions) or the Distributor (for pull subscriptions). The connection can be made by impersonating the Windows account or under the context of a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account you specify.  
   
 -   If the dialog box is accessed from the **Subscription Properties** dialog box, specify the context under which the Distribution Agent makes connections by clicking the properties button (**...**) in the **Subscriber Connection** or **Distributor Connection** row of that dialog box. For more information about accessing the **Subscription Properties** dialog box, see [View and Modify Push Subscription Properties](../../../2014/relational-databases/replication/view-and-modify-push-subscription-properties.md) and how to: [View and Modify Pull Subscription Properties](../../../2014/relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
   
@@ -40,13 +40,13 @@ manager: "jhubbard"
   
     -   Have read permissions on the snapshot share.  
   
-    -   Have read permissions on the install directory of the OLE DB provider for the Subscriber if the subscription is for a non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscriber.  
+    -   Have read permissions on the install directory of the OLE DB provider for the Subscriber if the subscription is for a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscriber.  
   
 -   For pull subscriptions, the account must at minimum be a member of the **db_owner** fixed database role in the subscription database.  
   
  Additional permissions are required if the process account is impersonated when connections are made. See the **Connect to the Distributor** and **Connect to the Subscriber** sections below.  
   
- **Process Account** cannot be specified for pull subscriptions to [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)], because the Distribution Agent does not run on instances of [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)].  
+ **Process Account** cannot be specified for pull subscriptions to [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], because the Distribution Agent does not run on instances of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
   
  **Password** and **Confirm Password**  
  Enter the password for the Windows account.  
@@ -54,12 +54,12 @@ manager: "jhubbard"
  **Connect to the Distributor**  
  For push subscriptions, connections to the Distributor are always made by impersonating the account specified in the **Process account** text box.  
   
- For pull subscriptions, select whether the Distribution Agent should make connections to the Distributor by impersonating the account specified in the **Process account** text box or by using a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] account. If you select to use a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] account, enter a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login and password.  
+ For pull subscriptions, select whether the Distribution Agent should make connections to the Distributor by impersonating the account specified in the **Process account** text box or by using a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account. If you select to use a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account, enter a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login and password.  
   
 > [!NOTE]  
->  It is recommended that you select to impersonate the Windows account rather than using a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] account.  
+>  It is recommended that you select to impersonate the Windows account rather than using a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account.  
   
- The Windows account or [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] account used for the connection must:  
+ The Windows account or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account used for the connection must:  
   
 -   Be a member of the PAL.  
   
@@ -68,19 +68,19 @@ manager: "jhubbard"
  **Connect to the Subscriber**  
  For pull subscriptions, connections to the Subscriber are always made by impersonating the account specified in the **Process account** text box.  
   
- For push subscriptions, the options are different for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers and non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers:  
+ For push subscriptions, the options are different for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers and non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers:  
   
--   For [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers: select whether the Distribution Agent should make connections to the Subscriber by impersonating the account specified in the **Process account** text box or by using a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] account. If you select to use a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] account, enter a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login and password.  
+-   For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers: select whether the Distribution Agent should make connections to the Subscriber by impersonating the account specified in the **Process account** text box or by using a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account. If you select to use a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account, enter a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login and password.  
   
     > [!NOTE]  
-    >  It is recommended that you select to impersonate the Windows account rather than using a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] account.  
+    >  It is recommended that you select to impersonate the Windows account rather than using a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account.  
   
-     The Windows account or [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] account used for the connection to the Subscriber must at minimum be a member of the **db_owner** fixed database role in the subscription database.  
+     The Windows account or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account used for the connection to the Subscriber must at minimum be a member of the **db_owner** fixed database role in the subscription database.  
   
--   For non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers, specify the database login at the Subscriber that should be used when the Distribution Agent connects to the Subscriber. The login should have sufficient permissions to create objects in the subscription database. For more information about configuring non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers, see [Create a Subscription for a Non-SQL Server Subscriber](../../../2014/relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
+-   For non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers, specify the database login at the Subscriber that should be used when the Distribution Agent connects to the Subscriber. The login should have sufficient permissions to create objects in the subscription database. For more information about configuring non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers, see [Create a Subscription for a Non-SQL Server Subscriber](../../../2014/relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
   
  **Additional connection options**  
- Non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers only. Specify any connection options for the Subscriber in the form of a connection string (Oracle does not require additional options). Each option should be separated by a semi-colon. The following is an example of an IBM DB2 connection string (line breaks are for readability):  
+ Non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers only. Specify any connection options for the Subscriber in the form of a connection string (Oracle does not require additional options). Each option should be separated by a semi-colon. The following is an example of an IBM DB2 connection string (line breaks are for readability):  
   
 ```  
 Provider=DB2OLEDB;Initial Catalog=MY_SUBSCRIBER_DB;Network Transport Library=TCP;Host CCSID=1252;  

@@ -18,15 +18,15 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Data Mining Tutorials (Analysis Services)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] makes it easy to create sophisticated data mining solutions. The tools in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] help you design, create, and manage data mining models that use either relational or cube data. You can manage client access to data mining models and create prediction queries from multiple clients.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] makes it easy to create sophisticated data mining solutions. The tools in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] help you design, create, and manage data mining models that use either relational or cube data. You can manage client access to data mining models and create prediction queries from multiple clients.  
   
- The step-by-step tutorials in the following list will help you learn how to get the most out of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], so that you can perform advanced analysis to solve business problems that are beyond the reach of traditional business intelligence methods.  
+ The step-by-step tutorials in the following list will help you learn how to get the most out of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], so that you can perform advanced analysis to solve business problems that are beyond the reach of traditional business intelligence methods.  
   
 ## In This Section  
   
 -   [Basic Data Mining Tutorial](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
-     This tutorial walks you through a targeted mailing scenario. It demonstrates how to use the data mining algorithms, mining model viewers, and data mining tools that are included in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. You will build three data mining models to answer practical business questions while learning data mining concepts and tools.  
+     This tutorial walks you through a targeted mailing scenario. It demonstrates how to use the data mining algorithms, mining model viewers, and data mining tools that are included in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. You will build three data mining models to answer practical business questions while learning data mining concepts and tools.  
   
 -   [Intermediate Data Mining Tutorial &#40;Analysis Services - Data Mining&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)  
   
@@ -42,12 +42,12 @@ manager: "jhubbard"
   
      The lessons are independent and can be done in any order, but you should have a basic knowledge of how to build data sources.  
   
-     Advanced concepts covered in these lessons include the use of nested tables, cross-prediction, custom data source views and named queries, and filtering in data mining queries. You will also gain proficiency in using the prediction query tools that are included in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+     Advanced concepts covered in these lessons include the use of nested tables, cross-prediction, custom data source views and named queries, and filtering in data mining queries. You will also gain proficiency in using the prediction query tools that are included in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
 ## Reference  
  [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-algorithms-analysis-services-data-mining.md)  
   
- [Data Mining Extensions &#40;DMX&#41; Reference](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Reference.md)  
+ [Data Mining Extensions &#40;DMX&#41; Reference](~/dmx/data-mining-extensions-dmx-reference.md)  
   
 ## Related Sections  
  [Data Mining Tools](../../2014/analysis-services/data-mining-tools.md)  

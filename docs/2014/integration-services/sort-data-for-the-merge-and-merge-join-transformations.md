@@ -19,7 +19,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Sort Data for the Merge and Merge Join Transformations
-  In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], the Merge and Merge Join transformations require sorted data for their inputs. The input data must be sorted physically, and sort options must be set on the outputs and the output columns in the source or in the upstream transformation. If the sort options indicate that the data is sorted, but the data is not actually sorted, the results of the merge or merge join operation are unpredictable.  
+  In [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], the Merge and Merge Join transformations require sorted data for their inputs. The input data must be sorted physically, and sort options must be set on the outputs and the output columns in the source or in the upstream transformation. If the sort options indicate that the data is sorted, but the data is not actually sorted, the results of the merge or merge join operation are unpredictable.  
   
 ## Sorting the Data  
  You can sort this data by using one of the following methods:  
@@ -41,7 +41,7 @@ manager: "jhubbard"
 -   Use the Transact-SQL CAST operator to first cast `varchar` values to `nvarchar` values, and then use the Transact-SQL ORDER BY clause to sort the data.  
   
     > [!IMPORTANT]  
-    >  You cannot use the ORDER BY clause alone because the ORDER BY clause uses a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] collation to sort string values. The use of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] collation might result in a different sort order than Windows collation, which can cause the Merge or Merge Join transformation to produce unexpected results.  
+    >  You cannot use the ORDER BY clause alone because the ORDER BY clause uses a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] collation to sort string values. The use of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] collation might result in a different sort order than Windows collation, which can cause the Merge or Merge Join transformation to produce unexpected results.  
   
 ## Setting Sort Options on the Data  
  There are two important sort properties that must be set for the source or upstream transformation that supplies data to the Merge and Merge Join transformations:  
@@ -59,7 +59,7 @@ manager: "jhubbard"
   
 #### To manually set sort attributes on a source or transformation component  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project that contains the package you want.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project that contains the package you want.  
   
 2.  In Solution Explorer, double-click the package to open it.  
   

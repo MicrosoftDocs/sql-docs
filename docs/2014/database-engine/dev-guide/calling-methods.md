@@ -22,14 +22,14 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Calling Methods
-  Methods perform specific tasks related to the object, such as issuing a `Checkpoint` on a database or requesting an enumerated list of logons for the instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Methods perform specific tasks related to the object, such as issuing a `Checkpoint` on a database or requesting an enumerated list of logons for the instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Methods perform an operation on an object. Methods can take parameters and often have a return value. The return value can be a simple data type, a complex object, or a structure that contains many members.  
   
  Use exception handling to detect whether the method has been successful. For more information, see [Handling SMO Exceptions](../../../2014/database-engine/dev-guide/handling-smo-exceptions.md).  
   
 ## Examples  
- [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  
+ [!INCLUDE[ssChooseProgEnv](../../includes/sschooseprogenv-md.md)]  
   
 ## Using a Simple SMO Method in Visual Basic  
  In this example, the <xref:Microsoft.SqlServer.Management.Smo.Database.Create%2A> method takes no parameters and has no return value.  
@@ -80,7 +80,7 @@ tb.RebuildIndexes(70);
 ## Using an Enumeration Method that Returns a DataTable Object in Visual Basic  
  This section describes how to call an enumeration method and how to handle the data in the returned <xref:System.Data.DataTable> object.  
   
- The <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> method returns a <xref:System.Data.DataTable> object, which requires further navigation to access all available collation information about the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ The <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> method returns a <xref:System.Data.DataTable> object, which requires further navigation to access all available collation information about the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```  
 'Connect to the local, default instance of SQL Server.  
@@ -104,7 +104,7 @@ Next
 ## Using an Enumeration Method that Returns a DataTable Object in Visual C#  
  This section describes how to call an enumeration method and how to handle the data in the returned <xref:System.Data.DataTable> object.  
   
- The <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> method returns a system <xref:System.Data.DataTable> object. The <xref:System.Data.DataTable> object requires further navigation to access all available collation information about the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ The <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> method returns a system <xref:System.Data.DataTable> object. The <xref:System.Data.DataTable> object requires further navigation to access all available collation information about the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```  
 //Connect to the local, default instance of SQL Server.   
@@ -155,12 +155,12 @@ Console.WriteLine(d.Name);
 ```  
   
 ## Copying an SMO Object in Visual Basic  
- This code example uses the <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> method to create a copy of the <xref:Microsoft.SqlServer.Management.Smo.Server> object. The <xref:Microsoft.SqlServer.Management.Smo.Server> object represents a connection to an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ This code example uses the <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> method to create a copy of the <xref:Microsoft.SqlServer.Management.Smo.Server> object. The <xref:Microsoft.SqlServer.Management.Smo.Server> object represents a connection to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VCMethods6](SMO How to#SMO_VCMethods6)]  -->  
   
 ## Copying an SMO Object in Visual C#  
- This code example uses the <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> method to create a copy of the <xref:Microsoft.SqlServer.Management.Smo.Server> object. The <xref:Microsoft.SqlServer.Management.Smo.Server> object represents a connection to an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ This code example uses the <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> method to create a copy of the <xref:Microsoft.SqlServer.Management.Smo.Server> object. The <xref:Microsoft.SqlServer.Management.Smo.Server> object represents a connection to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```  
 {   
@@ -178,12 +178,12 @@ Console.WriteLine(srv2.ConnectionContext.ConnectTimeout.ToString);
 ```  
   
 ## Monitoring Server Processes in Visual Basic  
- You can obtain the current status type information about the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] through enumeration methods. The code example uses the <xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A> method to discover information about the current processes. It also demonstrates how to work with the columns and rows in the returned <xref:System.Data.DataTable> object.  
+ You can obtain the current status type information about the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] through enumeration methods. The code example uses the <xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A> method to discover information about the current processes. It also demonstrates how to work with the columns and rows in the returned <xref:System.Data.DataTable> object.  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBMethods5](SMO How to#SMO_VBMethods5)]  -->  
   
 ## Monitoring Server Processes in Visual C#  
- You can obtain the current status type information about the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] through enumeration methods. The code example uses the <xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A> method to discover information about the current processes. It also demonstrates how to work with the columns and rows in the returned <xref:System.Data.DataTable> object.  
+ You can obtain the current status type information about the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] through enumeration methods. The code example uses the <xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A> method to discover information about the current processes. It also demonstrates how to work with the columns and rows in the returned <xref:System.Data.DataTable> object.  
   
 ```  
 //Connect to the local, default instance of SQL Server.   

@@ -19,18 +19,18 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Change Data Capture (SSIS)
-  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], change data capture offers an effective solution to the challenge of efficiently performing incremental loads from source tables to data marts and data warehouses.  
+  In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], change data capture offers an effective solution to the challenge of efficiently performing incremental loads from source tables to data marts and data warehouses.  
   
 ## What is Change Data Capture?  
- Source tables change over time. A data mart or data warehouse that is based on those tables needs to reflect these changes. However, a process that periodically copies a snapshot of the entire source consumes too much time and resources. Alternate approaches that include timestamp columns, triggers, or complex queries often hurt performance and increase complexity. What is needed is a reliable stream of change data that is structured so that it can easily be applied by consumers to target representations of the data. Change data capture in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides this solution.  
+ Source tables change over time. A data mart or data warehouse that is based on those tables needs to reflect these changes. However, a process that periodically copies a snapshot of the entire source consumes too much time and resources. Alternate approaches that include timestamp columns, triggers, or complex queries often hurt performance and increase complexity. What is needed is a reliable stream of change data that is structured so that it can easily be applied by consumers to target representations of the data. Change data capture in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provides this solution.  
   
- The change data capture feature of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] captures insert, update, and delete activity applied to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables, and makes the details of the changes available in an easily-consumed, relational format. The change tables used by change data capture contain columns that mirror the column structure of the tracked source tables, along with the metadata needed to understand the changes that have occurred on a row by row basis.  
+ The change data capture feature of the [!INCLUDE[ssDE](../includes/ssde-md.md)] captures insert, update, and delete activity applied to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tables, and makes the details of the changes available in an easily-consumed, relational format. The change tables used by change data capture contain columns that mirror the column structure of the tracked source tables, along with the metadata needed to understand the changes that have occurred on a row by row basis.  
   
 > [!NOTE]  
->  Change data capture is not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+>  Change data capture is not available in every edition of [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ## How Change Data Capture Works in Integration Services  
- An [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package can easily harvest the change data in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases to perform efficient incremental loads to a data warehouse. However, before you can use [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] to load change data, an administrator must enable change data capture on the database and the tables from which you want to capture changes. For more information on how to configure change data capture on a database, see [Enable and Disable Change Data Capture &#40;SQL Server&#41;](../../2014/database-engine/enable-and-disable-change-data-capture-sql-server.md).  
+ An [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package can easily harvest the change data in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] databases to perform efficient incremental loads to a data warehouse. However, before you can use [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] to load change data, an administrator must enable change data capture on the database and the tables from which you want to capture changes. For more information on how to configure change data capture on a database, see [Enable and Disable Change Data Capture &#40;SQL Server&#41;](../../2014/database-engine/enable-and-disable-change-data-capture-sql-server.md).  
   
  Once an administrator has enabled change data capture on the database, you can create a package that performs an incremental load of the change data. The following diagram shows the steps for creating such a package that performs an incremental load from a single table:  
   
@@ -43,7 +43,7 @@ manager: "jhubbard"
   
 -   Calculate the starting and ending `datetime` values for the interval of changes to the source data that you want to retrieve.  
   
-     To calculate these values, use an Execute SQL task or [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] expressions with `datetime` functions. You then store these endpoints in package variables for use later in the package.  
+     To calculate these values, use an Execute SQL task or [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] expressions with `datetime` functions. You then store these endpoints in package variables for use later in the package.  
   
      **For more information:**  [Specify an Interval of Change Data](../../2014/integration-services/specify-an-interval-of-change-data.md)  
   
@@ -62,7 +62,7 @@ manager: "jhubbard"
  **Step 2: Setting Up the Query for Change Data**  
  Create the table-valued function that will query for the data.  
   
- Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to develop and save the query.  
+ Use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to develop and save the query.  
   
  **For more information:**  [Retrieve and Understand the Change Data](../../2014/integration-services/retrieve-and-understand-the-change-data.md)  
   
@@ -91,7 +91,7 @@ manager: "jhubbard"
  The process outlined in the previous diagram and steps involves an incremental load from a single table. When having to perform an incremental load from multiple tables, the overall process is the same. However, the design of the package needs to be changed to accommodate the processing of multiple tables. For more information on how to create a package that performs an incremental load from multiples tables, see [Perform an Incremental Load of Multiple Tables](../../2014/integration-services/perform-an-incremental-load-of-multiple-tables.md).  
   
 ## Samples of Change Data Capture Packages  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides two samples that demonstrate how to use change data capture in packages. For more information, see the following topics:  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides two samples that demonstrate how to use change data capture in packages. For more information, see the following topics:  
   
 -   [Readme_Change Data Capture for Specified Interval Package Sample](http://go.microsoft.com/fwlink/?LinkId=133507)  
   

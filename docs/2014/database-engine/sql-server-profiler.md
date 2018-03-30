@@ -31,12 +31,12 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQL Server Profiler
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] is a rich interface to create and manage traces and analyze and replay trace results. The events are saved in a trace file that can later be analyzed or used to replay a specific series of steps when trying to diagnose a problem.  
+  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] is a rich interface to create and manage traces and analyze and replay trace results. The events are saved in a trace file that can later be analyzed or used to replay a specific series of steps when trying to diagnose a problem.  
   
 > [!IMPORTANT]  
->  We are announcing the deprecation of [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] for [!INCLUDE[ssDE](../../includes/ssde-md.md)] Trace Capture and Trace Replay. These features will be supported in the next version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], but will be removed in a later version. The specific version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has not been determined. The *Microsoft.SqlServer.Management.Trace* namespace that contains the Microsoft SQL Server Trace and Replay objects will also be deprecated. Note that [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] for the Analysis Services workloads is not being deprecated, and will continue to be supported.  
+>  We are announcing the deprecation of [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] for [!INCLUDE[ssDE](../includes/ssde-md.md)] Trace Capture and Trace Replay. These features will be supported in the next version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], but will be removed in a later version. The specific version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has not been determined. The *Microsoft.SqlServer.Management.Trace* namespace that contains the Microsoft SQL Server Trace and Replay objects will also be deprecated. Note that [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] for the Analysis Services workloads is not being deprecated, and will continue to be supported.  
 >   
->  The following table shows the features we recommend using in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] to capture and replay your trace data:  
+>  The following table shows the features we recommend using in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] to capture and replay your trace data:  
   
 ||||  
 |-|-|-|  
@@ -45,28 +45,28 @@ manager: "jhubbard"
 |**Trace Replay**|Distributed Replay|SQL Server Profiler|  
   
 ## Benefits of SQL Server Profiler  
- Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] is a graphical user interface to SQL Trace for monitoring an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] or Analysis Services. You can capture and save data about each event to a file or table to analyze later. For example, you can monitor a production environment to see which stored procedures are affecting performance by executing too slowly. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] is used for activities such as:  
+ Microsoft [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] is a graphical user interface to SQL Trace for monitoring an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)] or Analysis Services. You can capture and save data about each event to a file or table to analyze later. For example, you can monitor a production environment to see which stored procedures are affecting performance by executing too slowly. [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] is used for activities such as:  
   
 -   Stepping through problem queries to find the cause of the problem.  
   
 -   Finding and diagnosing slow-running queries.  
   
--   Capturing the series of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that lead to a problem. The saved trace can then be used to replicate the problem on a test server where the problem can be diagnosed.  
+-   Capturing the series of [!INCLUDE[tsql](../includes/tsql-md.md)] statements that lead to a problem. The saved trace can then be used to replicate the problem on a test server where the problem can be diagnosed.  
   
--   Monitoring the performance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to tune workloads. For information about tuning the physical database design for database workloads, see [Database Engine Tuning Advisor](../../2014/database-engine/database-engine-tuning-advisor.md).  
+-   Monitoring the performance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to tune workloads. For information about tuning the physical database design for database workloads, see [Database Engine Tuning Advisor](../../2014/database-engine/database-engine-tuning-advisor.md).  
   
 -   Correlating performance counters to diagnose problems.  
   
- [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] also supports auditing the actions performed on instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Audits record security-related actions for later review by a security administrator.  
+ [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] also supports auditing the actions performed on instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Audits record security-related actions for later review by a security administrator.  
   
 ## SQL Server Profiler Concepts  
- To use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], you need to understand the terms that describe the way the tool functions.  
+ To use [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)], you need to understand the terms that describe the way the tool functions.  
   
 > [!NOTE]  
->  When working with [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], it is helpful to understand SQL Trace. For more information, see [SQL Trace](../../2014/database-engine/sql-trace.md).  
+>  When working with [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)], it is helpful to understand SQL Trace. For more information, see [SQL Trace](../../2014/database-engine/sql-trace.md).  
   
  **Event**  
- An event is an action generated within an instance of [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Examples of these are:  
+ An event is an action generated within an instance of [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. Examples of these are:  
   
 -   Login connections, failures, and disconnections.  
   
@@ -80,7 +80,7 @@ manager: "jhubbard"
   
 -   The start or end of an SQL batch.  
   
--   An error written to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log.  
+-   An error written to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] error log.  
   
 -   A lock acquired or released on a database object.  
   
@@ -104,18 +104,18 @@ manager: "jhubbard"
 -   **Lock:Released**  
   
  **EventCategory**  
- An event category defines the way events are grouped within [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. For example, all lock events classes are grouped within the **Locks** event category. However, event categories only exist within [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. This term does not reflect the way Engine events are grouped.  
+ An event category defines the way events are grouped within [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]. For example, all lock events classes are grouped within the **Locks** event category. However, event categories only exist within [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]. This term does not reflect the way Engine events are grouped.  
   
  **DataColumn**  
  A data column is an attribute of an event classes captured in the trace. Because the event class determines the type of data that can be collected, not all data columns are applicable to all event classes. For example, in a trace that captures the **Lock:Acquired** event class, the **BinaryData** data column contains the value of the locked page ID or row, but the **Integer Data** data column does not contain any value because it is not applicable to the event class being captured.  
   
  **Template**  
- A template defines the default configuration for a trace. Specifically, it includes the event classes you want to monitor with [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. For example, you can create a template that specifies the events, data columns, and filters to use. A template is not executed, but rather is saved as a file with a .tdf extension. Once saved, the template controls the trace data that is captured when a trace based on the template is launched.  
+ A template defines the default configuration for a trace. Specifically, it includes the event classes you want to monitor with [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]. For example, you can create a template that specifies the events, data columns, and filters to use. A template is not executed, but rather is saved as a file with a .tdf extension. Once saved, the template controls the trace data that is captured when a trace based on the template is launched.  
   
  **Trace**  
  A trace captures data based on selected event classes, data columns, and filters. For example, you can create a trace to monitor exception errors. To do this, you select the **Exception** event class and the **Error**, **State**, and **Severity** data columns. Data from these three columns needs to be collected in order for the trace results to provide meaningful data. You can then run a trace, configured in such a manner, and collect data on any **Exception** events that occur in the server. Trace data can be saved, or used immediately for analysis. Traces can be replayed at a later date, although certain events, such as **Exception** events, are never replayed. You can also save the trace as a template to build similar traces in the future.  
   
- SQL Server provides two ways to trace an instance of SQL Server: you can trace with [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], or you can trace using system stored procedures.  
+ SQL Server provides two ways to trace an instance of SQL Server: you can trace with [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)], or you can trace using system stored procedures.  
   
  **Filter**  
  When you create a trace or template, you can define criteria to filter the data collected by the event. To keep traces from becoming too large, you can filter them so that only a subset of the event data is collected. For example, you can limit the Microsoft Windows user names in the trace to specific users, thereby reducing the output data.  
@@ -179,7 +179,7 @@ manager: "jhubbard"
 |Describes how to filter traces with SQL Server Profiler.|[Filter Traces with SQL Server Profiler](../../2014/database-engine/filter-traces-with-sql-server-profiler.md)|  
 |Describes how to use the replay features of SQL Server Profiler.|[Replay Traces](../../2014/database-engine/replay-traces.md)|  
 |Lists the context-sensitive help topics for SQL Server Profiler.|[SQL Server Profiler F1 Help](../../2014/database-engine/sql-server-profiler-f1-help.md)|  
-|Lists the system stored procedures that are used by [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to monitor performance and activity.|[SQL Server Profiler Stored Procedures &#40;Transact-SQL&#41;](../Topic/SQL%20Server%20Profiler%20Stored%20Procedures%20\(Transact-SQL\).md)|  
+|Lists the system stored procedures that are used by [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] to monitor performance and activity.|[SQL Server Profiler Stored Procedures &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)|  
   
 ## See Also  
  [Locks Event Category](../../2014/database-engine/locks-event-category.md)   

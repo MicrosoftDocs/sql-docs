@@ -56,11 +56,11 @@ manager: "mblythe"
 |Child elements|None|  
   
 ## Remarks  
- Every major object in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] has an `ID` element as a property. The value of an `ID` element has the following restrictions:  
+ Every major object in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] has an `ID` element as a property. The value of an `ID` element has the following restrictions:  
   
--   The value cannot contain leading or trailing spaces. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] will implicitly remove leading or trailing spaces from the value of an `ID` element.  
+-   The value cannot contain leading or trailing spaces. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] will implicitly remove leading or trailing spaces from the value of an `ID` element.  
   
--   The value cannot contain control characters. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] will implicitly remove control characters from the value of an `ID` element.  
+-   The value cannot contain control characters. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] will implicitly remove control characters from the value of an `ID` element.  
   
 -   The following reserved values cannot be used:  
   
@@ -82,7 +82,7 @@ manager: "mblythe"
   
 |Parent element|Characters|  
 |--------------------|----------------|  
-|[Server](../../../2014/analysis-services/dev-guide/server-element-assl.md)|The value must follow the rules for [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows computer names. (IP addresses are not valid.)|  
+|[Server](../../../2014/analysis-services/dev-guide/server-element-assl.md)|The value must follow the rules for [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows computer names. (IP addresses are not valid.)|  
 |[DataSource](../../../2014/analysis-services/dev-guide/datasource-element-assl.md)|:/\\*&#124;?"()[]{}<>|  
 |[Level](../../../2014/analysis-services/dev-guide/level-element-assl.md), [Attribute Element](../../../2014/analysis-services/dev-guide/attribute-element-assl.md)|.,;'`:/\\*&#124;?"&%$!+=[]{}<>|  
 |All other parent elements|.,;'`:/\\*&#124;?"&%$!+=()[]{}<>|  

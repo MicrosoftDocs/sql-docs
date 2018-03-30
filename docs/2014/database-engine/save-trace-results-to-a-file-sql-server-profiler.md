@@ -19,11 +19,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Save Trace Results to a File (SQL Server Profiler)
-  This topic describes how to save trace results to a file by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+  This topic describes how to save trace results to a file by using [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)].  
   
 ### To save trace results to a file  
   
-1.  On the **File** menu, click **New Trace**, and then connect to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+1.  On the **File** menu, click **New Trace**, and then connect to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
      The **Trace Properties**dialog box appears.  
   
@@ -45,7 +45,7 @@ manager: "jhubbard"
   
 6.  Optionally, specify the following options:  
   
-    -   Select the **Enable file rollover** check box to have [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] create new files for trace data once the maximum file size is reached. This option is selected by default.  
+    -   Select the **Enable file rollover** check box to have [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] create new files for trace data once the maximum file size is reached. This option is selected by default.  
   
     -   Select the **Server processes trace data** check box to ensure that the server records each trace event.  
   

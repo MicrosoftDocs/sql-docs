@@ -24,21 +24,21 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Using Large Value Types
-  Before [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], working with large value data types required special handling. Large value data types are those that exceed the maximum row size of 8 KB. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduced a **max** specifier for **varchar**, **nvarchar** and **varbinary** data types to allow storage of values as large as 2^31 -1 bytes. Table columns and [!INCLUDE[tsql](../../../includes/tsql-md.md)] variables may specify **varchar(max)**, **nvarchar(max)** or **varbinary(max)** data types.  
+  Before [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], working with large value data types required special handling. Large value data types are those that exceed the maximum row size of 8 KB. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introduced a **max** specifier for **varchar**, **nvarchar** and **varbinary** data types to allow storage of values as large as 2^31 -1 bytes. Table columns and [!INCLUDE[tsql](../../includes/tsql-md.md)] variables may specify **varchar(max)**, **nvarchar(max)** or **varbinary(max)** data types.  
   
 > [!NOTE]  
 >  Large value data types can have a maximum size between 1 and 8 KB, or they can be specified as unlimited.  
   
- Previously, only [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data types such as **text**, **ntext** and **image** could attain such lengths. The **max** specifier for **varchar**, **nvarchar** and **varbinary** made these data types redundant. However, because long data types are still available, most of the interfaces to the OLE DB and ODBC data access components will remain the same. For backward compatibility with prior releases, the DBCOLUMNFLAGS_ISLONG flag in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider, and the SQL_LONGVARCHAR in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver remain in use. Providers and drivers written against [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and later continue to use these terms for the new types when set to unlimited maximum length.  
+ Previously, only [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types such as **text**, **ntext** and **image** could attain such lengths. The **max** specifier for **varchar**, **nvarchar** and **varbinary** made these data types redundant. However, because long data types are still available, most of the interfaces to the OLE DB and ODBC data access components will remain the same. For backward compatibility with prior releases, the DBCOLUMNFLAGS_ISLONG flag in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider, and the SQL_LONGVARCHAR in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver remain in use. Providers and drivers written against [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later continue to use these terms for the new types when set to unlimited maximum length.  
   
 > [!NOTE]  
->  You can also specify **varchar(max)**, **nvarchar(max)**, and **varbinary(max)** data types as input and output parameter types of stored procedures, function return types, or in [CAST and CONVERT](../Topic/CAST%20and%20CONVERT%20\(Transact-SQL\).md) functions.  
+>  You can also specify **varchar(max)**, **nvarchar(max)**, and **varbinary(max)** data types as input and output parameter types of stored procedures, function return types, or in [CAST and CONVERT](~/t-sql/functions/cast-and-convert-transact-sql.md) functions.  
   
 > [!NOTE]  
 >  If replicating data you may need to configure the [max text repl size server configuration option](../../../2014/database-engine/configure-the-max-text-repl-size-server-configuration-option.md) to -1.  
   
 ## SQL Server Native Client OLE DB Provider  
- The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider exposes the **varchar(max)**, **varbinary(max)**, and **nvarchar(max)** types as DBTYPE_STR, DBTYPE_BYTES, and DBTYPE_WSTR, respectively.  
+ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider exposes the **varchar(max)**, **varbinary(max)**, and **nvarchar(max)** types as DBTYPE_STR, DBTYPE_BYTES, and DBTYPE_WSTR, respectively.  
   
  The data types **varchar(max)**, **varbinary(max)**, and **nvarchar(max)** in columns with the **max** size set to unlimited are represented as an ISLONG through the core OLE DB schema rowsets and interfaces returning column data types.  
   
@@ -46,9 +46,9 @@ manager: "jhubbard"
   
  Streamed output parameter values are returned after any result rows. If the application attempts to move on to the next result set by calling **IMultipleResults::GetResult** without consuming all the returned output parameter values, DB_E_OBJECTOPEN will be returned.  
   
- In order to support streaming, the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider requires variable length parameters to be accessed in sequential order. This means that DBPROP_ACCESSORDER must be set to either DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS or DBPROPVAL_AO_SEQUENTIAL whenever **varchar(max)**, **nvarchchar(max)**, or **varbinary(max)** columns or output parameters are bound to DBTYPE_IUNKNOWN. Calls to **IRowset::GetData** will fail with DBSTATUS_E_UNAVAILABLE if this access order restriction is not adhered to. This restriction does not apply when there are no output bindings using DBTYPE_IUNKNOWN.  
+ In order to support streaming, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider requires variable length parameters to be accessed in sequential order. This means that DBPROP_ACCESSORDER must be set to either DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS or DBPROPVAL_AO_SEQUENTIAL whenever **varchar(max)**, **nvarchchar(max)**, or **varbinary(max)** columns or output parameters are bound to DBTYPE_IUNKNOWN. Calls to **IRowset::GetData** will fail with DBSTATUS_E_UNAVAILABLE if this access order restriction is not adhered to. This restriction does not apply when there are no output bindings using DBTYPE_IUNKNOWN.  
   
- The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider also supports binding output parameters as DBTYPE_IUNKNOWN for large value data types to facilitate scenarios where a stored procedure returns large value types as return values that are exposed as DBTYPE_IUNKNOWN to the client.  
+ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider also supports binding output parameters as DBTYPE_IUNKNOWN for large value data types to facilitate scenarios where a stored procedure returns large value types as return values that are exposed as DBTYPE_IUNKNOWN to the client.  
   
  To work with these types, an application has the following options:  
   
@@ -58,7 +58,7 @@ manager: "jhubbard"
   
 -   Bind as DBTYPE_IUNKNOWN and use streaming.  
   
- When reporting the maximum size of a column, the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider will report:  
+ When reporting the maximum size of a column, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider will report:  
   
 -   The defined maximum size, which for example, is 2000 for a **varchar(**2000**)** column, or  
   
@@ -686,10 +686,10 @@ _ExitProcessResultSet:
 }  
 ```  
   
- For more information about how the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider exposes large value data types, see [BLOBs and OLE Objects](../../../2014/database-engine/dev-guide/blobs-and-ole-objects.md).  
+ For more information about how the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider exposes large value data types, see [BLOBs and OLE Objects](../../../2014/database-engine/dev-guide/blobs-and-ole-objects.md).  
   
 ## SQL Server Native Client ODBC Driver  
- The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver exposes the **varchar(max)**, **varbinary(max)** and **nvarchar(max)** types as SQL_VARCHAR, SQL_VARBINARY, and SQL_WVARCHAR in ODBC API functions that accept or return ODBC SQL data types.  
+ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver exposes the **varchar(max)**, **varbinary(max)** and **nvarchar(max)** types as SQL_VARCHAR, SQL_VARBINARY, and SQL_WVARCHAR in ODBC API functions that accept or return ODBC SQL data types.  
   
  When reporting the maximum size of a column, the driver will report either:  
   

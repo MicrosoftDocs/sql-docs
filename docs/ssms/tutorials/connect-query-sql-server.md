@@ -13,7 +13,16 @@ manager: craigg
 ---
 
 # Tutorial: Connect to and query a SQL Server instance by using SQL Server Management Studio
-This tutorial teaches you how to use SQL Server Management Studio (SSMS) to connect to your SQL Server instance and run some basic Transact-SQL (T-SQL) commands. First, you'll create a new database. Next, you'll populate that database with data. And finally, you'll learn how to query that data.
+This tutorial teaches you how to use SQL Server Management Studio (SSMS) to connect to your SQL Server instance and run some basic Transact-SQL (T-SQL) commands. This article demonstrates how to do the following:
+
+> [!div class="checklist"]	
+> * Connect to a SQL Server	
+> * Create a database (*TutorialDB*)	
+> * Create a table (*Customers*) in your new database	
+> * Insert rows into your new table	
+> * Query the new table and view the results	
+> * Use the query window table to verify your connection properties	
+> * Change the server that your query window is connected to
 
 ## Prerequisites
 To complete this tutorial, you need SQL Server Management Studio and access to a SQL Server instance. 

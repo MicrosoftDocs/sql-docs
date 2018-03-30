@@ -1,7 +1,7 @@
 ---
 title: "Copy-Only Backups (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/10/2016"
+ms.date: "03/30/2016"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
@@ -27,7 +27,7 @@ ms.workload: "On Demand"
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   A *copy-only backup* is a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup that is independent of the sequence of conventional [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups. Usually, taking a backup changes the database and affects how later backups are restored. However, occasionally, it is useful to take a backup for a special purpose without affecting the overall backup and restore procedures for the database. Copy-only backups serve this purpose.  
 
-[!INCLUDE[sql-db-mi-limitation](../../includes/sql-db-mi-limitation.md)
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
   
  The types of copy-only backups are as follows:  
   

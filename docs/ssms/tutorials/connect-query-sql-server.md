@@ -13,10 +13,10 @@ manager: craigg
 ---
 
 # Tutorial: Connect to and query a SQL Server instance by using SQL Server Management Studio
-This tutorial teaches you how to use SQL Server Management Studio (SSMS) to connect to your SQL Server instance and run some basic Transact-SQL (T-SQL) commands. This article demonstrates how to do the following:
+This tutorial teaches you how to use SQL Server Management Studio (SSMS) to connect to your SQL Server instance and run some basic Transact-SQL (T-SQL) commands. The article demonstrates how to do the following:
 
 > [!div class="checklist"]	
-> * Connect to a SQL Server	
+> * Connect to a SQL Server instance	
 > * Create a database (*TutorialDB*)	
 > * Create a table (*Customers*) in your new database	
 > * Insert rows into your new table	
@@ -57,7 +57,7 @@ If you don't have access to a SQL Server instance, select your platform from the
 
    ![Successful connection](media/connect-query-sql-server/successfulconnection.png)
 
-## Create a *TutorialDB* database
+## Create a database
 Create a database named *TutorialDB* by doing the following: 
 
 1. Right-click your server instance in **Object Explorer**, and then select **New Query**:
@@ -80,11 +80,11 @@ Create a database named *TutorialDB* by doing the following:
 
    ![Execute Query](media/connect-query-sql-server/execute.png)
   
-    After the query is complete, the new **TutorialDB** appears in the list of databases in **Object Explorer**. If it isn't displayed, right-click the **Databases** node, and then select **Refresh**.  
+    After the query is complete, the new *TutorialDB* database appears in the list of databases in **Object Explorer**. If it isn't displayed, right-click the **Databases** node, and then select **Refresh**.  
 
 
-## Create a *Customers* table in the new database
-In this section, you create a table in the newly created **TutorialDB** database. Because the query editor is still in the context of the *master* database, switch the connection context to the *TutorialDB* database by doing the following: 
+## Create a table in the new database
+In this section, you create a table in the newly created *TutorialDB* database. Because the query editor is still in the context of the *master* database, switch the connection context to the *TutorialDB* database by doing the following: 
 
 1. In the database drop-down list, select the database that you want, as shown here: 
 
@@ -110,10 +110,10 @@ In this section, you create a table in the newly created **TutorialDB** database
    GO
    ```
 
-After the query is complete, the new **Customers** table is displayed in the list of tables in **Object Explorer**. If the table is not visible, right-click the **TutorialDB > Tables** node in **Object Explorer**, and then select **Refresh**.
+After the query is complete, the new *Customers* table is displayed in the list of tables in **Object Explorer**. If the table is not displayed, right-click the **TutorialDB** > **Tables** node in **Object Explorer**, and then select **Refresh**.
 
 ## Insert rows into the new table
-Insert some rows into the **Customers** table that you created previously. To do so, paste the following T-SQL code snippet into the query window, and then select **Execute**: 
+Insert some rows into the *Customers* table that you created previously. To do so, paste the following T-SQL code snippet into the query window, and then select **Execute**: 
 
 
    ```sql
@@ -129,7 +129,7 @@ Insert some rows into the **Customers** table that you created previously. To do
    ```
 
 ## Query the table and view the results
-The results of a query are visible below the query text window. To query the **Customers** table and view the rows that were previously inserted, do the following:  
+The results of a query are visible below the query text window. To query the *Customers* table and view the rows that were previously inserted, do the following:  
 
 1. Paste the following T-SQL code snippet into the query window, and then select **Execute**: 
 

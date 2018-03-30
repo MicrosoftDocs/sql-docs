@@ -49,7 +49,7 @@ If you don't have access to a SQL Server instance, select your platform from the
 
     ![![Connection options](media/connect-query-sql-server/connection.png)](media/connect-query-sql-server/connection2.png)
 
-    You can also modify additional connection options (such as the database you're connecting to, the connection timeout value, and the network protocol) by selecting the **Options** button. This article uses the default values for all the options. 
+    You can also modify additional connection options (such as the database you're connecting to, the connection timeout value, and the network protocol) by selecting **Options**. This article uses the default values for all the options. 
 
 3. After you've completed all the fields, select **Connect**. 
 
@@ -90,8 +90,8 @@ In this section, you create a table in the newly created *TutorialDB* database. 
 
    ![Change database](media/connect-query-sql-server/changedb.png)
 
-2. Paste the following T-SQL code snippet into the query window, select it, and then select **Execute** (or select F5 on your keyboard): 
-    - You can either replace the existing text in the query window or append it to the end. To execute everything in the query window, select **Execute**. To execute a portion of the text, highlight that portion, and then select **Execute**.  
+2. Paste the following T-SQL code snippet into the query window, select it, and then select **Execute** (or select F5 on your keyboard).  
+   You can either replace the existing text in the query window or append it to the end. To execute everything in the query window, select **Execute**. To execute a portion of the text, highlight that portion, and then select **Execute**.  
   
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'

@@ -1,5 +1,5 @@
 ---
-title: "Workspace database | Microsoft Docs"
+title: "Workspace database in SQL Server Data Tools| Microsoft Docs"
 ms.custom: ""
 ms.date: "03/30/2018"
 ms.prod: analysis-services

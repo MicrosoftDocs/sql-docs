@@ -13,7 +13,7 @@
 ### [Import from Analysis Services](import-from-analysis-services-ssas-tabular.md)  
 ### [Import from Power Pivot](import-from-power-pivot-ssas-tabular.md)  
 
-## [Properties](properties-ssas-tabular.md)  
+## Properties
 ### [Power View - Reporting Properties](power-view-reporting-properties-ssas-tabular.md)  
 ### [Power View - Configure Default Field Set](power-view-configure-default-field-set-for-reports.md)  
 ### [Power View - Configure Table Behavior Properties](power-view-configure-table-behavior-properties-for-reports.md)  

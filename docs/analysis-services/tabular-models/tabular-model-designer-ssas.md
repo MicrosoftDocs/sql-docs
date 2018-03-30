@@ -1,5 +1,5 @@
 ---
-title: "Tabular model designer | Microsoft Docs"
+title: "Tabular model designer in SQL Server Data Tools| Microsoft Docs"
 ms.date: "03/30/2018"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
@@ -138,6 +138,5 @@ The tabular model designer is part of [!INCLUDE[ssBIDevStudioFull](../../include
   
 ## See also  
  [Tabular Model Projects](../../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)   
- [Properties](../../analysis-services/tabular-models/properties-ssas-tabular.md)  
   
   

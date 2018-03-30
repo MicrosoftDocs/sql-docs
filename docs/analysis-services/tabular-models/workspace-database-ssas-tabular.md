@@ -1,7 +1,7 @@
 ---
-title: "Workspace Database | Microsoft Docs"
+title: "Workspace database | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/21/2018"
+ms.date: "03/30/2018"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""

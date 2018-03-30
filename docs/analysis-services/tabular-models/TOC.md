@@ -1,12 +1,12 @@
 # [Overview](tabular-models-ssas.md)  
-
-# [Create Tabular Models](tabular-model-solutions-ssas-tabular.md)  
+## [Compatibility level](compatibility-level-for-tabular-models-in-analysis-services.md)  
 ## [Data sources supported in tabular 1400 models](data-sources-supported-ssas-tabular-1400.md)  
 ## [Data sources supported in tabular 1200 models](data-sources-supported-ssas-tabular.md)  
 ## [Data types supported](data-types-supported-ssas-tabular.md)  
-## [Tabular Model Designer](tabular-model-designer-ssas.md)  
-## [Workspace Database](workspace-database-ssas-tabular.md)  
-## [Compatibility Level](compatibility-level-for-tabular-models-in-analysis-services.md)  
+
+# Create Tabular Models
+## [Tabular model designer](tabular-model-designer-ssas.md)  
+## [Workspace database](workspace-database-ssas-tabular.md)  
 
 ## [Tabular Model Projects](tabular-model-projects-ssas-tabular.md)  
 ### [Create a New Tabular Model Project](create-a-new-tabular-model-project-analysis-services.md)  

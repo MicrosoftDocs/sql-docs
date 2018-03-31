@@ -182,7 +182,7 @@ manager: "jhubbard"
 ## Example  
  This example demonstrates the caching of property changes. Changes made to the attributes of a transactional publication are cached until they are explicitly sent to the server.  
   
- [!code-csharp[HowTo#rmo_ChangeTranPub_cached](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_ChangeTranPub_cached)]  
+ [!code-csharp[HowTo#rmo_ChangeTranPub_cached](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_ChangeTranPub_cached)]  
   
 ## See Also  
  [Replication System Stored Procedures Concepts](../../../../2014/relational-databases/replication/dev-guide/replication-system-stored-procedures-concepts.md)   

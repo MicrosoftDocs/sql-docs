@@ -35,6 +35,7 @@ caps.latest.revision: 140
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
+ms.reviewer: mathoma
 ms.workload: "Active"
 ---
 # CREATE TRIGGER (Transact-SQL)
@@ -273,7 +274,7 @@ SELECT * FROM deleted;
 > [!NOTE]  
 >  By default, the ability of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to run CLR code is off. You can create, modify, and drop database objects that reference managed code modules, but these references will not execute in an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unless the [clr enabled Option](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) is enabled by using [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
-## Remarks DML Triggers  
+## Remarks for DML Triggers  
  DML triggers are frequently used for enforcing business rules and data integrity. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides declarative referential integrity (DRI) through the ALTER TABLE and CREATE TABLE statements. However, DRI does not provide cross-database referential integrity. Referential integrity refers to the rules about the relationships between the primary and foreign keys of tables. To enforce referential integrity, use the PRIMARY KEY and FOREIGN KEY constraints in ALTER TABLE and CREATE TABLE. If constraints exist on the trigger table, they are checked after the INSTEAD OF trigger execution and before the AFTER trigger execution. If the constraints are violated, the INSTEAD OF trigger actions are rolled back and the AFTER trigger is not fired.  
   
  The first and last AFTER triggers to be executed on a table can be specified by using sp_settriggerorder. Only one first and one last AFTER trigger for each INSERT, UPDATE, and DELETE operation can be specified on a table. If there are other AFTER triggers on the same table, they are randomly executed.  
@@ -326,9 +327,24 @@ SELECT * FROM deleted;
 |ALTER TABLE when used to do the following:<br /><br /> Add, modify, or drop columns.<br /><br /> Switch partitions.<br /><br /> Add or drop PRIMARY KEY or UNIQUE constraints.|||  
   
 > [!NOTE]  
->  Because [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not support user-defined triggers on system tables, we recommend that you do not create user-defined triggers on system tables.  
+>  Because [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not support user-defined triggers on system tables, we recommend that you do not create user-defined triggers on system tables. 
+
+### Optimizing DML Triggers
+ Triggers work in transactions (implied, or otherwise) and while they are open, they lock resources. The lock will remain in place until the transaction is confirmed (with COMMIT) or rejected (with a ROLLBACK). The longer a trigger runs, the higher the probability that another process will be blocked. Therefore, triggers should be written in a way to decrease their duration whenever possible. There are two main ways to achieve this. The first is to release the trigger if the row count for a DML statement is 0. The second way is to release the trigger if the update or insert of a column does not change the value within that column. 
+
+To release the trigger for a comamnd that that does not change any rows,  employ the system variable [@@ROWCOUNT](https://docs.microsoft.com/en-us/sql/t-sql/functions/rowcount-transact-sql). If the number of rows is greater than 2 billion, use the function [ROWCOUNT_BIG](https://docs.microsoft.com/it-it/sql/t-sql/functions/rowcount-big-transact-sql). 
+
+The following T-SQL code snippet will achieve this, and should be present at the beginning of each trigger:
+
+    ```sql
+    IF (@@ROWCOUNT = 0)
+    RETURN;
+    ```
+
+To release a trigger for an update to a column where the value stays, employ the [UPDATE ()](https://docs.microsoft.com/en-us/sql/t-sql/functions/update-trigger-functions-transact-sql) function. The UPDATE () function returns a Boolean value that indicates whether an INSERT or UPDATE attempt was made on a specified column or table. Using this function in a trigger will release the trigger if the the update for the value in the column specified does not change the value. 
   
-## Remarks DDL Triggers  
+  
+## Remarks for DDL Triggers  
  DDL triggers, like standard triggers, execute stored procedures in response to an event. But unlike standard triggers, they do not execute in response to UPDATE, INSERT, or DELETE statements on a table or view. Instead, they primarily execute in response to data definition language (DDL) statements. These include CREATE, ALTER, DROP, GRANT, DENY, REVOKE, and UPDATE STATISTICS statements. Certain system stored procedures that perform DDL-like operations can also fire DDL triggers.  
   
 > [!IMPORTANT]  
@@ -441,6 +457,8 @@ GO
 CREATE TRIGGER Purchasing.LowCredit ON Purchasing.PurchaseOrderHeader  
 AFTER INSERT  
 AS  
+IF (@@ROWCOUNT = 0)
+RETURN;
 IF EXISTS (SELECT *  
            FROM Purchasing.PurchaseOrderHeader AS p   
            JOIN inserted AS i   
@@ -486,6 +504,8 @@ CREATE TRIGGER safety
 ON DATABASE   
 FOR DROP_SYNONYM  
 AS   
+IF (@@ROWCOUNT = 0)
+RETURN;
    RAISERROR ('You must disable Trigger "safety" to drop synonyms!',10, 1)  
    ROLLBACK  
 GO  
@@ -549,7 +569,34 @@ JOIN sys.triggers AS T ON T.object_id = TE.object_id
 WHERE T.parent_class = 0 AND T.name = 'safety';  
 GO  
 ```  
-  
+
+### H. Rease a trigger if no value is changing in a specific column
+  The following example uses the UPDATE() function to release a trigger when no value changes on the Sales.SalesOrderDetail table. This trigger will only fire if the newly updated value is different than the current value. 
+
+```SQl
+CREATE TRIGGER Sales.TR_SalesOrderDetail_Upd ON
+Sales.SalesOrderDetail
+AFTER UPDATE AS
+    BEGIN
+        IF (@@ROWCOUNT = 0)
+            RETURN;
+        SET NOCOUNT ON;
+        IF UPDATE(UnitPrice)
+            AND EXISTS (SELECT i.SalesOrderID, i.SalesOrderDetailID
+                FROM inserted AS i
+                    JOIN deleted AS d ON
+                        (d.SalesOrderID=i.SalesOrderID)
+                            AND (d.SalesOrderDetailID=i.SalesOrderDetailID)
+                                WHERE (d.UnitPrice &lt;&gt; i.UnitPrice))
+                                    BEGIN
+                                        -- <azione>
+                                    END;
+    END;
+
+GO
+```
+    
+
 ## See Also  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   

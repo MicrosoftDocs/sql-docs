@@ -1661,6 +1661,16 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/analysis-services/tabular-models/properties-ssas-tabular.md",
+            "redirect_url": "/sql/analysis-services/analysis-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md",
+            "redirect_url": "/sql/analysis-services/tabular-models/tabular-models-ssas",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/analysis-services/tabular-models/edit-an-existing-data-source-connection-ssas-tabular.md",
             "redirect_url": "/sql/analysis-services/analysis-services",
             "redirect_document_id": false

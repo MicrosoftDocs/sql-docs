@@ -186,7 +186,7 @@ ON Purchasing.PurchaseOrderDetail
   
  Sort order can be specified only for key columns. The [sys.index_columns](~/relational-databases/system-catalog-views/sys-indexes-transact-sql.md) catalog view and the INDEXKEY_PROPERTY function report whether an index column is stored in ascending or descending order.  
   
- ![Arrow icon used with Back to Top link](../2014/data-quality-services/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Guide](#Top)  
+ ![Arrow icon used with Back to Top link](../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Guide](#Top)  
   
 ##  <a name="Clustered"></a> Clustered Index Design Guidelines  
  Clustered indexes sort and store the data rows in the table based on their key values. There can only be one clustered index per table, because the data rows themselves can only be sorted in one order. With few exceptions, every table should have a clustered index defined on the column, or columns, that offer the following:  
@@ -257,7 +257,7 @@ ON Purchasing.PurchaseOrderDetail
   
      Wide keys are a composite of several columns or several large-size columns. The key values from the clustered index are used by all nonclustered indexes as lookup keys. Any nonclustered indexes defined on the same table will be significantly larger because the nonclustered index entries contain the clustering key and also the key columns defined for that nonclustered index.  
   
- ![Arrow icon used with Back to Top link](../2014/data-quality-services/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Guide](#Top)  
+ ![Arrow icon used with Back to Top link](../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Guide](#Top)  
   
 ##  <a name="Nonclustered"></a> Nonclustered Index Design Guidelines  
  A nonclustered index contains the index key values and row locators that point to the storage location of the table data. You can create multiple nonclustered indexes on a table or indexed view. Generally, nonclustered indexes should be designed to improve the performance of frequently used queries that are not covered by the clustered index.  
@@ -426,7 +426,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  You will have to determine whether the gains in query performance outweigh the affect to performance during data modification and in additional disk space requirements.  
   
- ![Arrow icon used with Back to Top link](../2014/data-quality-services/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Guide](#Top)  
+ ![Arrow icon used with Back to Top link](../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Guide](#Top)  
   
 ##  <a name="Unique"></a> Unique Index Design Guidelines  
  A unique index guarantees that the index key contains no duplicate values and therefore every row in the table is in some way unique. Specifying a unique index makes sense only when uniqueness is a characteristic of the data itself. For example, if you want to make sure that the values in the `NationalIDNumber` column in the `HumanResources.Employee` table are unique, when the primary key is `EmployeeID`, create a UNIQUE constraint on the `NationalIDNumber` column. If the user tries to enter the same value in that column for more than one employee, an error message is displayed and the duplicate value is not entered.  
@@ -451,7 +451,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
 -   A unique nonclustered index can contain included nonkey columns. For more information, see [Index with Included Columns](#Included_Columns).  
   
- ![Arrow icon used with Back to Top link](../2014/data-quality-services/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Guide](#Top)  
+ ![Arrow icon used with Back to Top link](../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Guide](#Top)  
   
 ##  <a name="Filtered"></a> Filtered Index Design Guidelines  
  A filtered index is an optimized nonclustered index, especially suited to cover queries that select from a well-defined subset of data. It uses a filter predicate to index a portion of rows in the table. A well-designed filtered index can improve query performance, reduce index maintenance costs, and reduce index storage costs compared with full-table indexes.  
@@ -595,7 +595,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
   
  Moving the data conversion from the left side to the right side of a comparison operator might change the meaning of the conversion. In the above example, when the CONVERT operator was added to the right side, the comparison changed from an integer comparison to a `varbinary` comparison.  
   
- ![Arrow icon used with Back to Top link](../2014/data-quality-services/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Guide](#Top)  
+ ![Arrow icon used with Back to Top link](../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Guide](#Top)  
   
 ##  <a name="Additional_Reading"></a> Additional Reading  
  [Improving Performance with SQL Server 2008 Indexed Views](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  

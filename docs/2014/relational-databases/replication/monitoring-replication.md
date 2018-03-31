@@ -26,15 +26,15 @@ manager: "jhubbard"
 # Monitoring (Replication)
   Monitoring a replication topology is an important aspect of deploying replication. Because replication activity is distributed, it is essential to track activity and status across all computers involved in replication. The following tools can be used to monitor replication:  
   
--   [!INCLUDE[msCoName](../includes/msCoName-md.md)] [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Replication Monitor  
+-   [!INCLUDE[msCoName](../../includes/msCoName-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] Replication Monitor  
   
      Replication Monitor is the most important tool for monitoring replication, presenting a Publisher-focused view of all replication activity. For more information, see [Monitor Replication](monitor-replication.md).  
   
--   [!INCLUDE[msCoName](../includes/msCoName-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssManStudioFull-md.md)]  
+-   [!INCLUDE[msCoName](../../includes/msCoName-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssManStudioFull-md.md)]  
   
-     [!INCLUDE[ssManStudio](../includes/ssManStudio-md.md)] provides access to Replication Monitor. It also allows you to view the current status and last message logged by the following agents and allows you start and stop each agent: Log Reader Agent, Snapshot Agent, Merge Agent, and Distribution Agent. For more information, see [Monitor Replication Agents](monitor-replication-agents.md).  
+     [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] provides access to Replication Monitor. It also allows you to view the current status and last message logged by the following agents and allows you start and stop each agent: Log Reader Agent, Snapshot Agent, Merge Agent, and Distribution Agent. For more information, see [Monitor Replication Agents](monitor-replication-agents.md).  
   
--   [!INCLUDE[tsql](../includes/tsql-md.md)] and Replication Management Objects (RMO)  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] and Replication Management Objects (RMO)  
   
      Both interfaces allow you to monitor all types of replication from the Distributor. Merge replication also provides the ability to monitor replication from the Subscriber.  
   

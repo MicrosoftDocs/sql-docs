@@ -176,7 +176,7 @@ SELECT * FROM TestBatch;  -- Returns rows 1 and 2.
 GO  
 ```  
   
- ![Arrow icon used with Back to Top link](../2014/data-quality-services/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Guide](#Top)  
+ ![Arrow icon used with Back to Top link](../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Guide](#Top)  
   
 ##  <a name="Lock_Basics"></a> Locking and Row Versioning Basics  
  The [!INCLUDE[ssDEnoversion](includes/ssdenoversion-md.md)] uses the following mechanisms to ensure the integrity of transactions and maintain the consistency of databases when multiple users are accessing data at the same time:  
@@ -338,7 +338,7 @@ GO
   
  For snapshot transactions, applications call `SQLSetConnectAttr` with Attribute set to SQL_COPT_SS_TXN_ISOLATION and ValuePtr set to SQL_TXN_SS_SNAPSHOT. A snapshot transaction can be retrieved using either SQL_COPT_SS_TXN_ISOLATION or SQL_ATTR_TXN_ISOLATION.  
   
- ![Arrow icon used with Back to Top link](../2014/data-quality-services/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Guide](#Top)  
+ ![Arrow icon used with Back to Top link](../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Guide](#Top)  
   
 ##  <a name="Lock_Engine"></a> Locking in the Database Engine  
  Locking is a mechanism used by the [!INCLUDE[ssDEnoversion](includes/ssdenoversion-md.md)] to synchronize access by multiple users to the same piece of data at the same time.  
@@ -999,7 +999,7 @@ BEGIN TRANSACTION
         WITH (TABLOCKX, HOLDLOCK);  
 ```  
   
- ![Arrow icon used with Back to Top link](../2014/data-quality-services/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Guide](#Top)  
+ ![Arrow icon used with Back to Top link](../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Guide](#Top)  
   
 ##  <a name="Row_versioning"></a> Row Versioning-based Isolation Levels in the Database Engine  
  Starting with SQL Server 2005, the Database Engine offers an implementation of an existing transaction isolation level, read committed, that provides a statement level snapshot using row versioning. SQL Server Database Engine also offers a transaction isolation level, snapshot, that provides a transaction level snapshot also using row versioning.  
@@ -1557,7 +1557,7 @@ ALTER DATABASE AdventureWorks2012
     > [!NOTE]  
     >  BULK INSERT operations may cause changes to target table metadata (for example, when disabling constraint checks). When this happens, concurrent snapshot isolation transactions accessing bulk inserted tables fail.  
   
- ![Arrow icon used with Back to Top link](../2014/data-quality-services/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Guide](#Top)  
+ ![Arrow icon used with Back to Top link](../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Guide](#Top)  
   
 ## Customizing Locking and Row Versioning  
   
@@ -1705,7 +1705,7 @@ GO
 |Row level|Page-level and table-level locks|  
 |Page level and row level|Table-level locks|  
   
- ![Arrow icon used with Back to Top link](../2014/data-quality-services/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Guide](#Top)  
+ ![Arrow icon used with Back to Top link](../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Guide](#Top)  
   
 ##  <a name="Advanced"></a> Advanced Transaction Information  
   
@@ -1857,7 +1857,7 @@ GO
 #### Stopping a Transaction  
  You may have to use the KILL statement. Use this statement very carefully, however, especially when critical processes are running. For more information, see [KILL &#40;Transact-SQL&#41;](~/t-sql/language-elements/kill-transact-sql.md).  
   
- ![Arrow icon used with Back to Top link](../2014/data-quality-services/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Guide](#Top)  
+ ![Arrow icon used with Back to Top link](../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Guide](#Top)  
   
 ## See Also  
  [SQL Server 2005 Row Versioning-Based Transaction Isolation](http://msdn.microsoft.com/library/ms345124(v=sql.90).aspx)   

@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "mapping users"
   - "users [SQL Server], creating"
   - "database user additions [SQL Server]"
-  - "database users, mapping\"
+  - "database users, mapping"
   - "CREATE USER [Management Studio]"
   - "users [SQL Server], adding"
   - "mapping database users"

@@ -38,8 +38,8 @@ ms.workload: "On Demand"
   
 
     
-## Related Content  
- [Tabular Model Solutions](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
+## See also  
+ [Tabular Model Solutions](../../analysis-services/tabular-models/tabular-models-ssas.md)  
   
  [Tabular Model Data Access](../../analysis-services/tabular-models/tabular-model-data-access.md)  
 

@@ -54,9 +54,9 @@ Use the **Always Encrypted Wizard** to help protect sensitive data  stored in a 
  
  - Choose where the column master key will be stored.  
  
- - - **Storing a master key in Windows cert** For more information, see [Using Certificate Stores](https://msdn.microsoft.com/library/windows/desktop/aa388160.aspx)  
+   - **Storing a master key in Windows cert** For more information, see [Using Certificate Stores](https://msdn.microsoft.com/library/windows/desktop/aa388160.aspx)  
  
- - - **Storing a master key in AKV** For more information, see [Get Started with Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/).  
+   - **Storing a master key in AKV** For more information, see [Get Started with Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/).  
  
  - To generate a column master key in the Azure Key Vault, the user must have the **WrapKey**, **UnwrapKey**, **Verify**, and **Sign** permissions to the key vault. Users might also need the **Get**, **List**, **Create**, **Delete**, **Update**, **Import**, **Backup**, and **Restore** permissions. For more information, see [What is Azure Key Vault?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/) and   [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx).  
  

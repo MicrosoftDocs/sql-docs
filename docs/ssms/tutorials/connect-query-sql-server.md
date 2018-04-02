@@ -17,8 +17,8 @@ This tutorial teaches you how to use SQL Server Management Studio (SSMS) to conn
 
 > [!div class="checklist"]	
 > * Connect to a SQL Server instance	
-> * Create a database (*TutorialDB*)	
-> * Create a table (*Customers*) in your new database	
+> * Create a database ("TutorialDB")	
+> * Create a table ("Customers") in your new database	
 > * Insert rows into your new table	
 > * Query the new table and view the results	
 > * Use the query window table to verify your connection properties	
@@ -29,7 +29,7 @@ To complete this tutorial, you need SQL Server Management Studio and access to a
 
 - Install [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
 
-If you don't have access to a SQL Server instance, select your platform from the following links (if you choose SQL Authentication, use your SQL login and password):
+If you don't have access to a SQL Server instance, select your platform from the following links. If you choose SQL Authentication, use your SQL Server login credentials.
 - **Windows**: [Download SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
 - **macOS**: [Download SQL Server 2017 on Docker](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker).
 
@@ -39,30 +39,34 @@ If you don't have access to a SQL Server instance, select your platform from the
 1. Start SQL Server Management Studio.  
     The first time you run SSMS, the **Connect to Server** window opens. If it doesn't open, you can open it manually by selecting **Object Explorer** > **Connect** > **Database Engine**.
 
-    ![Connect in Object Explorer](media/connect-query-sql-server/connectobjexp.png)
+    ![The Connect link in Object Explorer](media/connect-query-sql-server/connectobjexp.png)
 
 2. In the **Connect to Server** window, do the following: 
 
     - For **Server type**, select **Database Engine** (usually the default option).
     - For **Server Name**, enter the name of your SQL Server instance. (This article uses the instance name SQL2016ST on the hostname NODE5 [NODE5\SQL2016ST].) If you're unsure how to determine your SQL Server instance name, see [Additional tips and tricks for using SSMS](ssms-tricks.md#determine-sql-server-name).  
-    - For **Authentication**, select **Windows Authentication**. (This article uses Windows Authentication, but SQL Login is also supported. If you select **SQL Login**, you will be prompted for a username and password.) For more information about authentication types, see [Connect to server (database engine)](https://docs.microsoft.com/en-us/sql/ssms/f1-help/connect-to-server-database-engine).
 
-    ![![Connection options](media/connect-query-sql-server/connection.png)](media/connect-query-sql-server/connection2.png)
 
-    You can also modify additional connection options (such as the database you're connecting to, the connection timeout value, and the network protocol) by selecting **Options**. This article uses the default values for all the options. 
+      ![Connection using this article's example instance name NODE5\SQL2016ST](media/connect-query-sql-server/connection.png)
+
+      ![Connection using the name of your SQL Server instance](media/connect-query-sql-server/connection2.png)
+
+    - For **Authentication**, select **Windows Authentication**. This article uses Windows Authentication, but SQL Server login is also supported. If you select **SQL Login**, you will be prompted for a username and password. For more information about authentication types, see [Connect to server (database engine)](https://docs.microsoft.com/en-us/sql/ssms/f1-help/connect-to-server-database-engine).
+
+    You can also modify additional connection options by selecting **Options**. Examples of connection options are the database you're connecting to, the connection timeout value, and the network protocol. This article uses the default values for all the options. 
 
 3. After you've completed all the fields, select **Connect**. 
 
-4. Verify that the connection to your SQL Server instance is successful by exploring the objects in **Object Explorer**, as shown here: 
+4. Verify that the connection to your SQL Server instance is successful by exploring the objects in Object Explorer, as shown here: 
 
    ![Successful connection](media/connect-query-sql-server/successfulconnection.png)
 
 ## Create a database
-Create a database named *TutorialDB* by doing the following: 
+Create a database named TutorialDB by doing the following: 
 
-1. Right-click your server instance in **Object Explorer**, and then select **New Query**:
+1. Right-click your server instance in Object Explorer, and then select **New Query**:
 
-   ![New Query](media/connect-query-sql-server/newquery.png)
+   ![The New Query link](media/connect-query-sql-server/newquery.png)
    
 2. Into the query window, paste the following T-SQL code snippet: 
    ```sql
@@ -78,13 +82,13 @@ Create a database named *TutorialDB* by doing the following:
    ```
 2. To execute the query, select **Execute** (or select F5 on your keyboard). 
 
-   ![Execute Query](media/connect-query-sql-server/execute.png)
+   ![The Execute command](media/connect-query-sql-server/execute.png)
   
-    After the query is complete, the new *TutorialDB* database appears in the list of databases in **Object Explorer**. If it isn't displayed, right-click the **Databases** node, and then select **Refresh**.  
+    After the query is complete, the new TutorialDB database appears in the list of databases in Object Explorer. If it isn't displayed, right-click the **Databases** node, and then select **Refresh**.  
 
 
 ## Create a table in the new database
-In this section, you create a table in the newly created *TutorialDB* database. Because the query editor is still in the context of the *master* database, switch the connection context to the *TutorialDB* database by doing the following: 
+In this section, you create a table in the newly created TutorialDB database. Because the query editor is still in the context of the *master* database, switch the connection context to the *TutorialDB* database by doing the following: 
 
 1. In the database drop-down list, select the database that you want, as shown here: 
 
@@ -110,10 +114,10 @@ In this section, you create a table in the newly created *TutorialDB* database. 
    GO
    ```
 
-After the query is complete, the new *Customers* table is displayed in the list of tables in **Object Explorer**. If the table is not displayed, right-click the **TutorialDB** > **Tables** node in **Object Explorer**, and then select **Refresh**.
+After the query is complete, the new Customers table is displayed in the list of tables in Object Explorer. If the table is not displayed, right-click the **TutorialDB** > **Tables** node in Object Explorer, and then select **Refresh**.
 
 ## Insert rows into the new table
-Insert some rows into the *Customers* table that you created previously. To do so, paste the following T-SQL code snippet into the query window, and then select **Execute**: 
+Insert some rows into the Customers table that you created previously. To do so, paste the following T-SQL code snippet into the query window, and then select **Execute**: 
 
 
    ```sql
@@ -129,7 +133,7 @@ Insert some rows into the *Customers* table that you created previously. To do s
    ```
 
 ## Query the table and view the results
-The results of a query are visible below the query text window. To query the *Customers* table and view the rows that were previously inserted, do the following:  
+The results of a query are visible below the query text window. To query the Customers table and view the rows that were previously inserted, do the following:  
 
 1. Paste the following T-SQL code snippet into the query window, and then select **Execute**: 
 
@@ -140,15 +144,15 @@ The results of a query are visible below the query text window. To query the *Cu
 
     The results of the query are displayed under the area where text was entered: 
 
-   ![Query Results](media/connect-query-sql-server/queryresults.png)
+   ![The Results list](media/connect-query-sql-server/queryresults.png)
 
 2. Modify the way results are presented by selecting one of the following options:
 
-     ![Results options](media/connect-query-sql-server/results.png)
+     ![Three options for displaying query results](media/connect-query-sql-server/results.png)
 
     - The middle button displays the results in **Grid View**, which is the default option. 
     - The first button displays the results in **Text View**, as shown in the image in the next section.
-    - The third button lets you save the results to a file whose extension is \**.rpt* by default.
+    - The third button lets you save the results to a file whose extension is .rpt by default.
 
 ## Verify your connection properties by using the query window table
 You can find information about the connection properties under the results of your query. After you run the previously mentioned query in the preceding step, review the connection properties at the bottom of the query window.
@@ -156,7 +160,7 @@ You can find information about the connection properties under the results of yo
 - You can determine which server and database you're connected to, and the username that you're logged in with.
 - You can also view the query duration and the number of rows that are returned by the previously executed query.
 
-    ![Connection Properties](media/connect-query-sql-server/connectionproperties.png)
+    ![Connection properties](media/connect-query-sql-server/connectionproperties.png)
     
     In the image, note that the results are displayed in **Text View**. 
 
@@ -167,10 +171,10 @@ You can change the server that your current query window is connected to by doin
     The **Connect to Server** window opens again.
 2. Change the server that your query is connected to. 
  
-   ![Change Connection](media/connect-query-sql-server/changeconnection.png)
+   ![The Change Connection command](media/connect-query-sql-server/changeconnection.png)
 
     > [!NOTE]
-    > This action changes only the server that the query window is connected to, not the server that **Object Explorer** is connected to. 
+    > This action changes only the server that the query window is connected to, not the server that Object Explorer is connected to. 
 
 
 

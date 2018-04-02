@@ -62,9 +62,6 @@ The capabilities described in this article require the following versions of SQL
 -   For Visual Studio 2017, version 15.3 (preview) or later.
 -   For Visual Studio 2015,  version 17.2 or later.
 
-> [!NOTE]
-> When you deploy packages to Azure, the Package Deployment Wizard always upgrades the packages to the latest package format.
-
 For more info about prerequisites in Azure, see [Deploy SSIS packages to Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal).
 
 ## Provision SSIS on Azure

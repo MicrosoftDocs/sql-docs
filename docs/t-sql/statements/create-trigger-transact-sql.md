@@ -339,7 +339,7 @@ The following T-SQL code snippet will achieve this, and should be present at the
 ```sql
     IF (@@ROWCOUNT_BIG = 0)
     RETURN;
-  ```
+```
   
   
 ## Remarks for DDL Triggers  

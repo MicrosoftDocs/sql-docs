@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Replicating Data Between Continuously Connected Servers | Microsoft Docs"
+title: "Tutorial: Configuring Transactional Replication | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-non-specified"

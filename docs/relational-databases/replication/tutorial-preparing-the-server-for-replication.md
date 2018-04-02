@@ -202,7 +202,7 @@ Configuring a Publisher with a remote Distributor is outside the scope of this t
   
 4.  Click **OK** to create the login.  
   
-5.  Repeat steps 1-4 to create a login for both the local repl_distribution and repl_logreader accounts. These logins must also be mapped to users that are members of the **db_owner** fixed database role in the **distribution** and **AdventureWorks** databases.  
+5.  Repeat steps 1-4 to create a login for the other local accounts (repl_distribution, repl_logreader, and repl_merge) the local repl_distribution and repl_logreader. These logins must also be mapped to users that are members of the **db_owner** fixed database role in the **distribution** and **AdventureWorks** databases.  
   
 6. Repeat steps 1-4 to create a login for the local repl_merge account. This login must have user mappings in the **distribution** and **AdventureWorks** databases.  
   
@@ -211,7 +211,7 @@ Configuring a Publisher with a remote Distributor is outside the scope of this t
 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)  
 
 ## Next steps
-The next article teaches you how to configure Transactional Replication
+The next article teaches you how to configure Transactional Replication. 
 
 Advance to the next article to learn more
 > [!div class="nextstepaction"]

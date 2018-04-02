@@ -38,8 +38,10 @@ In the replication tutorials, "Publisher" refers to the server that contains tha
 [Preparing the Server for Replication](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md)  
 Learn how to prepare servers so that replication can be run with least privileges. You must complete this tutorial before the other replication tutorials.  
   
-[Replicating Data Between Continuously Connected Servers](../../relational-databases/replication/tutorial-replicating-data-between-continuously-connected-servers.md)  
-Learn how to use transactional replication to replicate data between fully connected servers.  
+[Configuring Transactional Replication](../../relational-databases/replication/tutorial-replicating-data-between-continuously-connected-servers.md)  
+Learn how to use transactional replication to replicate data between fully connected servers. 
+
+[Configuring Merge Replication] 
   
 [Replicating Data with Mobile Clients](../../relational-databases/replication/tutorial-replicating-data-with-mobile-clients.md)  
 Learn how to use merge replication to exchange data between a server and one or more clients that are only occasionally connected.  

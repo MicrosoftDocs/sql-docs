@@ -117,13 +117,15 @@ fn_get_audit_file ( file_pattern,
 |user_defined_event_id|**smallint**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> User defined event id passed as an argument to **sp_audit_write**. **NULL** for system events (default) and non-zero for user-defined event. For more information, see [sp_audit_write &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md).|  
 |user_defined_information|**nvarchar(4000)**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Used to record any extra information the user wants to record in |audit log by using the **sp_audit_write** stored procedure.|  
 |audit_schema_version |**int** | |  
-|sequence_group_id |**varbinary** | SQL Server only (starting with 2016) |  
-|transaction_id |**bigint** | SQL Server only (starting with 2016) |  
-|client_ip |**nvarchar(128)** | Azure SQL DB + SQL Server (starting with 2017) |  
-|application_name |**nvarchar(128)** | Azure SQL DB + SQL Server (starting with 2017) |  
-|duration_milliseconds |**bigint** | Azure SQL DB only |  
-|response_rows |**bigint** | Azure SQL DB only |  
-|affected_rows |**bigint** | Azure SQL DB only |  
+|sequence_group_id |**varbinary** | **Applies to**: SQL Server only (starting with 2016) |  
+|transaction_id |**bigint** | **Applies to**: SQL Server only (starting with 2016) |  
+|client_ip |**nvarchar(128)** | **Applies to**: Azure SQL DB + SQL Server (starting with 2017) |  
+|application_name |**nvarchar(128)** | **Applies to**: Azure SQL DB + SQL Server (starting with 2017) |  
+|duration_milliseconds |**bigint** | **Applies to**: Azure SQL DB only |  
+|response_rows |**bigint** | **Applies to**: Azure SQL DB only |  
+|affected_rows |**bigint** | **Applies to**: Azure SQL DB only |  
+|connection_id |GUID | **Applies to**: Azure SQL DB only |
+|data_sensitivity_information |nvarchar(4000) | **Applies to**: Azure SQL DB only |
   
 ## Remarks  
  If the *file_pattern* argument passed to **fn_get_audit_file** references a path or file that does not exist, or if the file is not an audit file, the **MSG_INVALID_AUDIT_FILE** error message is returned.  

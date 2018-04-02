@@ -48,6 +48,8 @@ If **false** is returned by **sqlsrv_get_config**, you must call [sqlsrv_errors]
   
 ## See Also  
 [SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)  
+
 [sqlsrv_configure](../../connect/php/sqlsrv-configure.md)  
+
 [sqlsrv_errors](../../connect/php/sqlsrv-errors.md)  
   

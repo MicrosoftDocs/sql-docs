@@ -25,9 +25,9 @@ ms.workload: "Inactive"
  Machine learning features are available in SQL Server 2016 and SQL Server 2017. This article lists the editions providing the feature, describes limitations that apply in specific editions, and lists capabilities available only in certain editions.
 
 
-## SQL Server 2017 Machine Learning features
+## SQL Server 2017 features
 
-Enterprise and Developer editions have the same feature coverage so that you can build solutions for an Enterprise installation without incurring the same cost. Although the editions are functionally equivlanet, use of the Developer Edition is not supported for production environments.
+Enterprise and Developer editions have the same feature coverage so that you can build solutions for an Enterprise installation without incurring the same cost. Although the editions are functionally equivalent, use of the Developer Edition is not supported for production environments.
 
 The difference between basic and advanced integration is scale. Advanced integration can use all available cores for parallel processing of data sets at any size your computer can accommodate. Basic integration is limited to 2 cores and to data sets fitting in memory. 
 

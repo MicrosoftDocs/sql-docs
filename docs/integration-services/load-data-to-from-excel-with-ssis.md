@@ -91,6 +91,8 @@ If you're importing data from Excel, the next step is to indicate whether the fi
 -   If the data contains column names, but you disable this option, the wizard imports the column names as the first row of data.
 -   If the data does not contain column names, but you enable this option, the wizard uses the first row of source data as the column names. In this case, the first row of source data is no longer included in the data itself.
 
+If you're exporting data from Excel, and you enable this option, the first row of exported data includes the column names.
+
 ## Worksheets and ranges
 
 There are three types of Excel objects that you can use as the source or destination for your data: a worksheet, a named range, or an unnamed range of cells that you specify with its address.

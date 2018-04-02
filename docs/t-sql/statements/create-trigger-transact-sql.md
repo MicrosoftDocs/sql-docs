@@ -330,18 +330,16 @@ SELECT * FROM deleted;
 >  Because [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not support user-defined triggers on system tables, we recommend that you do not create user-defined triggers on system tables. 
 
 ### Optimizing DML Triggers
- Triggers work in transactions (implied, or otherwise) and while they are open, they lock resources. The lock will remain in place until the transaction is confirmed (with COMMIT) or rejected (with a ROLLBACK). The longer a trigger runs, the higher the probability that another process will be blocked. Therefore, triggers should be written in a way to decrease their duration whenever possible. There are two main ways to achieve this. The first is to release the trigger if the row count for a DML statement is 0. The second way is to release the trigger if the update or insert of a column does not change the value within that column. 
+ Triggers work in transactions (implied, or otherwise) and while they are open, they lock resources. The lock will remain in place until the transaction is confirmed (with COMMIT) or rejected (with a ROLLBACK). The longer a trigger runs, the higher the probability that another process will be blocked. Therefore, triggers should be written in a way to decrease their duration whenever possible. One way to achieve this is to release a trigger when a DML statement changes 0 rows. 
 
 To release the trigger for a command that that does not change any rows,  employ the system variable [@@ROWCOUNT](https://docs.microsoft.com/en-us/sql/t-sql/functions/rowcount-transact-sql). If the number of rows is greater than 2 billion, use the function [ROWCOUNT_BIG](https://docs.microsoft.com/it-it/sql/t-sql/functions/rowcount-big-transact-sql). 
 
-The following T-SQL code snippet will achieve this, and should be present at the beginning of each trigger:
+The following T-SQL code snippet will achieve this, and should be present at the beginning of each DML trigger:
 
     ```sql
     IF (@@ROWCOUNT = 0)
     RETURN;
     ```
-
-To release a trigger for an update to a column where the value stays, employ the [UPDATE ()](https://docs.microsoft.com/en-us/sql/t-sql/functions/update-trigger-functions-transact-sql) function. The UPDATE () function returns a Boolean value that indicates whether an INSERT or UPDATE attempt was made on a specified column or table. Using this function in a trigger will release the trigger if the update for the value in the column specified does not change the value. 
   
   
 ## Remarks for DDL Triggers  
@@ -570,31 +568,6 @@ WHERE T.parent_class = 0 AND T.name = 'safety';
 GO  
 ```  
 
-### H. Release a trigger if no value is changing in a specific column
-  The following example uses the UPDATE() function to release a trigger when no value changes on the Sales.SalesOrderDetail table. This trigger will only fire if the newly updated value is different than the current value. 
-
-```SQl
-CREATE TRIGGER Sales.TR_SalesOrderDetail_Upd ON
-Sales.SalesOrderDetail
-AFTER UPDATE AS
-    BEGIN
-        IF (@@ROWCOUNT = 0)
-            RETURN;
-        SET NOCOUNT ON;
-        IF UPDATE(UnitPrice)
-            AND EXISTS (SELECT i.SalesOrderID, i.SalesOrderDetailID
-                FROM inserted AS i
-                    JOIN deleted AS d ON
-                        (d.SalesOrderID=i.SalesOrderID)
-                            AND (d.SalesOrderDetailID=i.SalesOrderDetailID)
-                                WHERE (d.UnitPrice &lt;&gt; i.UnitPrice))
-                                    BEGIN
-                                        -- <action>
-                                    END;
-    END;
-
-GO
-```
     
 
 ## See Also  

@@ -40,12 +40,11 @@ In this tutorial, you will learn how to:
 > * Configure Distribution
 
 ## Prerequisites
-This tutorial is intended for users familiar with fundamental database operations, but who have limited exposure to replication. To complete this Tutorial, you need SQL Server Management Studio, access to a SQL Server, and the AdventureWorks2012 database. 
+This Tutorial is intended for users familiar with fundamental database operations, but who have limited exposure to replication. To complete this Tutorial, you need SQL Server Management Studio, access to a SQL Server, and the AdventureWorks2012 database. 
 
 - Install [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
 - Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
 - Download an [AdventureWorks Sample Databases](https://github.com/Microsoft/sql-server-samples/releases). Instructions for restoring databases in SSMS can be found here: [Restoring a Database](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
-
 
 
 **Estimated time to complete this tutorial: 30 minutes**
@@ -102,7 +101,7 @@ In this section, you will create Windows accounts to run replication agents. You
 ## Prepare the Snapshot Folder
 In this section, you will learn to configure the snapshot folder that is used to create and store the publication snapshot. 
 
-### To create a share for the snapshot folder and assign permissions  
+### Create a share for the snapshot folder and assign permissions  
   
 1.  In Windows Explorer, navigate to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data folder. The default location is C:\Program Files\Microsoft SQL Server\MSSQL.X\MSSQL\Data.  
   
@@ -159,14 +158,13 @@ Configuring a Publisher with a remote Distributor is outside the scope of this t
   
     The Distribution Configuration Wizard launches.  
   
-3.  On the **Distributor** page, select 'ServerName' will act as its own Distributor; SQL Server will create a distribution database and log**, and then click **Next**.  
+3.  On the **Distributor** page, select **'ServerName' will act as its own Distributor; SQL Server will create a distribution database and log**, and then click **Next**.  
 
     ![Server Acts as Own Distributor](media/preparing-server-for-replication/serverdistributor.png)
   
 4.  If the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is not running, on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Agent Start** page, select **Yes**, configure the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service to start automatically. Click **Next**.  
 
-    ![Start SQL Agent](media/preparing-server-for-replication/startagent.png)
-  
+     
 5.  Enter **\\\\**\<*Machine_Name>***\repldata** in the **Snapshot folder** text box, where \<*Machine_Name>* is the name of the Publisher, and then click **Next**. This path should match what you see under **Network Path** of your repldata properties folder. 
 
     ![Repl Data Snapshot Folder](media/preparing-server-for-replication/repldatasnapshot.png)
@@ -177,15 +175,14 @@ Configuring a Publisher with a remote Distributor is outside the scope of this t
   
 7.  Click **Finish** to enable distribution. 
 
-You might see this error when configuring the Distributor. It's an indication that the account used to start the SQL Server Agent account is not an administrator on the system. You'll either need to grant those permissions to the existing account, modify which account the SQL Server Agent is using, or just start the SQL Agent manually. 
+    You might see this error when configuring the Distributor. It's an indication that the account used to start the SQL Server Agent account is not an administrator on the system. You'll either need to grant those permissions to the existing account, modify which account the SQL Server Agent is using, or just start the SQL Agent manually. 
 
-    ![Starting Agent Error](media/preparing-server-for-replication/startingagent.png)
+     ![Starting Agent Error](media/preparing-server-for-replication/startingagenterror.png)
 
-If your SQL Server Management Studio is running with administrative rights, you can start the SQL Agent manually from within SSMS: 
+    If your SQL Server Management Studio is running with administrative rights, you can start the SQL Agent manually from within SSMS:  
+        ![Start Agent from SSMS](media/preparing-server-for-replication/ssmsstartagent.png)
 
-    ![Starting Agent from SSMS](media/preparing-server-for-replication/startagentfromssms.png)
-
-   - You may need to refresh the SQL Server Agent within your **Object Explorer** to see that it's online.  
+    
   
 ### Setting database permissions at the Publisher  
   
@@ -200,18 +197,25 @@ If your SQL Server Management Studio is running with administrative rights, you 
 3.  On the **User Mapping** page, in the **Users mapped to this login** list select both the **distribution** and [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] databases.  
   
     In the **Database role membership** list select the **db_owner** role for the login for both databases.  
+
+    ![Repl Snapshot DB Owner](media/preparing-server-for-replication/dbowner.png)
   
 4.  Click **OK** to create the login.  
   
-5.  Repeat steps 1-4 to create a login for the local repl_logreader account. This login must also be mapped to users that are members of the **db_owner** fixed database role in the **distribution** and **AdventureWorks** databases.  
+5.  Repeat steps 1-4 to create a login for both the local repl_distribution and repl_logreader accounts. These logins must also be mapped to users that are members of the **db_owner** fixed database role in the **distribution** and **AdventureWorks** databases.  
   
-6.  Repeat steps 1-4 to create a login for the local repl_distribution account. This login must be mapped to a user that is a member of the **db_owner** fixed database role in the **distribution** database.  
-  
-7.  Repeat steps 1-4 to create a login for the local repl_merge account. This login must have user mappings in the **distribution** and **AdventureWorks** databases.  
+6. Repeat steps 1-4 to create a login for the local repl_merge account. This login must have user mappings in the **distribution** and **AdventureWorks** databases.  
   
 **See Also**:  
 [Configure Distribution](../../relational-databases/replication/configure-distribution.md)  
 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)  
+
+## Next steps
+The next article teaches you how to configure Transactional Replication
+
+Advance to the next article to learn more
+> [!div class="nextstepaction"]
+> [Next steps button](scripting-ssms.md)
 
   
   

@@ -24,7 +24,7 @@ ms.workload: "Inactive"
 # FILESTREAM Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-Beginning with [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] and OLE DB Driver for SQL Server, OLE DB supports the enhanced FILESTREAM feature. For more information about this feature, see [FILESTREAM Support](../../oledb/features/filestream-support.md). For samples, see [Filestream and OLE DB](../../oledb/ole-db-how-to/filestream/filestream-and-ole-db.md).  
+Beginning with [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] and OLE DB Driver for SQL Server, OLE DB supports the enhanced FILESTREAM feature. For samples, see [Filestream and OLE DB](../../oledb/ole-db-how-to/filestream/filestream-and-ole-db.md).  
 
 FILESTREAM provides a way to store and access large binary values, either through [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] or by direct access to the Windows file system. A large binary value is a value larger than 2 gigabytes (GB). For more information about enhanced FILESTREAM support, see [FILESTREAM &#40;SQL Server&#41;](../../../relational-databases/blob/filestream-sql-server.md).  
   
@@ -32,11 +32,7 @@ When a database connection is opened, **@@TEXTSIZE** will be set to -1 ("unlimit
   
 It is also possible to access and update FILESTREAM columns using Windows file system APIs.  
   
-For more information, see the following topics:  
-  
--   [FILESTREAM Support &#40;OLE DB&#41;](../../oledb/oledb/features/filestream-support.md)    
-  
--   [Access FILESTREAM Data with OpenSqlFilestream](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
+For more information, see [Access FILESTREAM Data with OpenSqlFilestream](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   
 ## Querying for FILESTREAM Columns  
 Schema rowsets in OLE DB will not report whether a column is a FILESTREAM column. ITableDefinition in OLE DB cannot be used to create a FILESTREAM column.    

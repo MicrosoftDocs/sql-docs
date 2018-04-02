@@ -28,7 +28,7 @@ ms.assetid: 8b9e23d6-da62-437a-8c05-8ad2628b9441
 caps.latest.revision: 16
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Assessing Access Database Objects for Conversion (AccessToSQL)

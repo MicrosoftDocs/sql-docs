@@ -8,10 +8,8 @@ ms.service: ""
 ms.component: "extended-events"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
+ms.technology: "database-engine"
+ ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
   - "queries [SQL Server], extended events"

@@ -28,7 +28,7 @@ ms.assetid: ea8950b7-fabc-4aa4-89f8-9573a2617d70
 caps.latest.revision: 22
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Executing the SSMA Console (SybaseToSQL)

@@ -19,7 +19,7 @@ ms.assetid: f325a606-97ac-48bc-b344-b55f5e086a48
 caps.latest.revision: 5
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Setting Project Options (DB2ToSQL)

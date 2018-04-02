@@ -19,7 +19,7 @@ ms.assetid: bc14a072-8949-4ee0-a4b4-ada55fe8df5c
 caps.latest.revision: 3
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Connect to SQL Server (DB2ToSQL)

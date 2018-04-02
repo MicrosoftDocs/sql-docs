@@ -34,7 +34,7 @@ It is also possible to access and update FILESTREAM columns using Windows file s
   
 For more information, see the following topics:  
   
--   [FILESTREAM Support &#40;OLE DB&#41;](../../oledb/ole-db/filestream-support-ole-db.md)    
+-   [FILESTREAM Support &#40;OLE DB&#41;](../../oledb/oledb/features/filestream-support.md)    
   
 -   [Access FILESTREAM Data with OpenSqlFilestream](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   

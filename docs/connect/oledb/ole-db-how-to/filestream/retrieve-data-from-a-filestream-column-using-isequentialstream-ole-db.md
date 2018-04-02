@@ -23,7 +23,7 @@ ms.workload: "Inactive"
 
   This sample shows uses an ISequentialStream interface in an ICommandText interface to retrieve a single record from a Filestream column.  
   
- For more information on the filestream feature, see [FILESTREAM Support &#40;OLE DB&#41;](../../../oledb/ole-db/filestream-support-ole-db.md).  
+ For more information on the filestream feature, see [FILESTREAM Support &#40;OLE DB&#41;](../../../oledb/oledb/features/filestream-support.md).  
   
 ## Example  
  Make sure your INCLUDE environment variable includes the directory that contains msoledbsql.h.  

@@ -336,10 +336,10 @@ To release the trigger for a command that that does not change any rows, employ 
 
 The following T-SQL code snippet will achieve this, and should be present at the beginning of each DML trigger:
 
-    ```sql
+```sql
     IF (@@ROWCOUNT_BIG = 0)
     RETURN;
-    ```
+  ```
   
   
 ## Remarks for DDL Triggers  
@@ -419,7 +419,7 @@ The following T-SQL code snippet will achieve this, and should be present at the
 ### A. Using a DML trigger with a reminder message  
  The following DML trigger prints a message to the client when anyone tries to add or change data in the `Customer` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```  
+```sql  
 CREATE TRIGGER reminder1  
 ON Sales.Customer  
 AFTER INSERT, UPDATE   
@@ -430,7 +430,7 @@ GO
 ### B. Using a DML trigger with a reminder e-mail message  
  The following example sends an e-mail message to a specified person (`MaryM`) when the `Customer` table changes.  
   
-```  
+```sql  
 CREATE TRIGGER reminder2  
 ON Sales.Customer  
 AFTER INSERT, UPDATE, DELETE   
@@ -448,7 +448,7 @@ GO
   
  The following example creates a DML trigger in the AdventureWorks2012 database. This trigger checks to make sure the credit rating for the vendor is good (not 5) when an attempt is made to insert a new purchase order into the `PurchaseOrderHeader` table. To obtain the credit rating of the vendor, the `Vendor` table must be referenced. If the credit rating is too low, a message is displayed and the insertion does not execute.  
   
-```  
+```sql  
 -- This trigger prevents a row from being inserted in the Purchasing.PurchaseOrderHeader 
 -- table when the credit rating of the specified vendor is set to 5 (below average).  
   
@@ -497,7 +497,7 @@ GO
 ### D. Using a database-scoped DDL trigger  
  The following example uses a DDL trigger to prevent any synonym in a database from being dropped.  
   
-```  
+```sql  
 CREATE TRIGGER safety   
 ON DATABASE   
 FOR DROP_SYNONYM  
@@ -517,7 +517,7 @@ GO
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```  
+```sql  
 CREATE TRIGGER ddl_trig_database   
 ON ALL SERVER   
 FOR CREATE_DATABASE   
@@ -535,7 +535,7 @@ GO
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```  
+```sql  
 USE master;  
 GO  
 CREATE LOGIN login_test WITH PASSWORD = '3KHJ6dhx(0xVYsdf' MUST_CHANGE,  
@@ -560,7 +560,7 @@ END;
 ### G. Viewing the events that cause a trigger to fire  
  The following example queries the `sys.triggers` and `sys.trigger_events` catalog views to determine which [!INCLUDE[tsql](../../includes/tsql-md.md)] language events cause trigger `safety` to fire. `safety` is created in the previous example.  
   
-```  
+```sql  
 SELECT TE.*  
 FROM sys.trigger_events AS TE  
 JOIN sys.triggers AS T ON T.object_id = TE.object_id  

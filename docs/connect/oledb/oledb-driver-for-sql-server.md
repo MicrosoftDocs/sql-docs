@@ -32,7 +32,7 @@ The [Microsoft OLE DB Provider for SQL Server](../../ado/guide/appendixes/micros
 
 
 ### 2. SQL Server Native Client (SNAC)
-Starting in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], the [SQL Server Native Client (SNAC)](../../relational-databases/native-client/sql-server-native-client.md) includes an OLE DB provider interface (SQLNCLI) and is the OLE DB provider that shipped with [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] through [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].
+Starting in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], the [SQL Server Native Client (SNAC)](../../relational-databases/native-client/sql-server-native-client.md) includes an OLE DB provider interface (SQLNCLI) and is the OLE DB provider that shipped with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] through [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].
 
 It was [announced as deprecated in 2011](https://blogs.msdn.microsoft.com/sqlnativeclient/2011/08/29/microsoft-is-aligning-with-odbc-for-native-relational-data-access/) and it is not recommended to use this driver for new development. For more information about the SNAC lifecycle and available downloads, refer to [SNAC lifecycle explained](https://blogs.msdn.microsoft.com/sqlreleaseservices/snac-lifecycle-explained/).
 

@@ -50,13 +50,13 @@ Use the **Always Encrypted Wizard** to help protect sensitive data  stored in a 
  
  - If you chose an auto-generated column encryption key in the Column Selection page, you must configure a column master key that the generated column encryption key will be encrypted with. If you already have a column master key defined in your database, you can select it. (To use an existing column master key, the user must have permission to access the key.) Or, you can generate a column master key in a selected key store (Windows Certificate Store or Azure Key Vault) and define the key in the database.  
  
- - **Key Storage**  
+ ### **Key Storage**  
  
  - Choose where the column master key will be stored.  
  
- --  **Storing a master key in Windows cert** For more information, see [Using Certificate Stores](https://msdn.microsoft.com/library/windows/desktop/aa388160.aspx)  
+ - - **Storing a master key in Windows cert** For more information, see [Using Certificate Stores](https://msdn.microsoft.com/library/windows/desktop/aa388160.aspx)  
  
- --  **Storing a master key in AKV** For more information, see [Get Started with Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/).  
+ - - **Storing a master key in AKV** For more information, see [Get Started with Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/).  
  
  - To generate a column master key in the Azure Key Vault, the user must have the **WrapKey**, **UnwrapKey**, **Verify**, and **Sign** permissions to the key vault. Users might also need the **Get**, **List**, **Create**, **Delete**, **Update**, **Import**, **Backup**, and **Restore** permissions. For more information, see [What is Azure Key Vault?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/) and   [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx).  
  
@@ -64,13 +64,13 @@ Use the **Always Encrypted Wizard** to help protect sensitive data  stored in a 
  
  ## Always Encrypted Terms  
  
- --   **Deterministic encryption** uses a method which always generates the same encrypted value for any given plain text value. Using deterministic encryption allows grouping, filtering by equality, and joining tables based on encrypted values, but can also allow unauthorized users to guess information about encrypted values by examining patterns in the encrypted column. This weakness is increased when there is a small set of possible encrypted values, such as True/False, or North/South/East/West region. Deterministic encryption must use a column collation with a binary2 sort order for character columns.  
- -  
- --   **Randomized encryption** uses a method that encrypts data in a less predictable manner. Randomized encryption is more secure, but prevents equality searches, grouping, indexing, and joining on encrypted columns.  
+ - **Deterministic encryption** uses a method which always generates the same encrypted value for any given plain text value. Using deterministic encryption allows grouping, filtering by equality, and joining tables based on encrypted values, but can also allow unauthorized users to guess information about encrypted values by examining patterns in the encrypted column. This weakness is increased when there is a small set of possible encrypted values, such as True/False, or North/South/East/West region. Deterministic encryption must use a column collation with a binary2 sort order for character columns.  
+ 
+ - **Randomized encryption** uses a method that encrypts data in a less predictable manner. Randomized encryption is more secure, but prevents equality searches, grouping, indexing, and joining on encrypted columns.  
 
- --   **Column master keys** are protecting keys used to encrypt column encryption keys. Column master keys must be stored in a trusted key store. Information about column master keys, including their location, is stored in the database in system catalog views.  
+ - **Column master keys** are protecting keys used to encrypt column encryption keys. Column master keys must be stored in a trusted key store. Information about column master keys, including their location, is stored in the database in system catalog views.  
 
- --   **Column encryption keys** are used to encrypt sensitive data stored in database columns. All values in a column can be encrypted using a single column encryption key. Encrypted values of column encryption keys are stored in the database in system catalog views. You should store column encryption keys in a secure/trusted location for backup.  
+ - **Column encryption keys** are used to encrypt sensitive data stored in database columns. All values in a column can be encrypted using a single column encryption key. Encrypted values of column encryption keys are stored in the database in system catalog views. You should store column encryption keys in a secure/trusted location for backup.  
 
  ## See Also  
  - [Always Encrypted &#40;Database Engine&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   

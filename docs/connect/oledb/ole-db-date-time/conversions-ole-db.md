@@ -42,7 +42,7 @@ ms.workload: "Inactive"
      *yyyy*-*mm*-*dd*  
   
 > [!NOTE]  
->  Earlier versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client and SQLOLEDB implemented OLE conversions, in case standard conversions failed. As a result, some conversions performed by OLE DB Driver for SQL Server differ from the OLE DB specification.  
+>  Earlier versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client and SQLOLEDB implemented OLE conversions, in case standard conversions failed. The OLE DB Driver for SQL Server follows the same behavior as [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. As a result, some conversions performed by OLE DB Driver for SQL Server differ from the OLE DB specification.  
   
  Conversions from strings allow flexibility in white space and field width. For more information, see the "Data Formats: Strings and Literals" section in [Data Type Support for OLE DB Date and Time Improvements](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md).  
   

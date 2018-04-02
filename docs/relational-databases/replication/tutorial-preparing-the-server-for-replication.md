@@ -31,7 +31,7 @@ It is important to plan for security before you configure your replication topol
 > To replicate data securely between servers, you should implement all of the recommendations in [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md).  
   
 ## What You Will Learn  
-This tutorial teachs you to prepare a server so that replication can run securely with least privileges.  
+This tutorial teaches you to prepare a server so that replication can run securely with least privileges.  
 
 In this tutorial, you will learn how to:
 > [!div class="checklist"]
@@ -50,7 +50,6 @@ This Tutorial is intended for users familiar with fundamental database operation
 **Estimated time to complete this tutorial: 30 minutes**
   
 ## Create Windows Acounts for Replication
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 In this section, you will create Windows accounts to run replication agents. You will create a separate Windows account on the local server for the following agents:  
   
 |Agent|Location|Account name|  
@@ -71,11 +70,11 @@ In this section, you will create Windows accounts to run replication agents. You
   
 3.  Right-click **Users** and then click **New User**.  
      
-4.  Enter **repl_snapshot** in the **User name** box, provide the password and other relevant information, and then click **Create** to create the repl_snapshot account.  
+4.  Enter **repl_snapshot** in the **User name** box, provide the password and other relevant information, and then click **Create** to create the repl_snapshot account: 
 
        ![New user](media/preparing-server-for-replication/newuser.png)
   
-5.  Repeat the previous step to create the repl_logreader, repl_distribution, and repl_merge accounts.  
+5.  Repeat the previous step to create the repl_logreader, repl_distribution, and repl_merge accounts:  
  
     ![Replication Users](media/preparing-server-for-replication/replusers.png)
   
@@ -180,9 +179,8 @@ Configuring a Publisher with a remote Distributor is outside the scope of this t
      ![Starting Agent Error](media/preparing-server-for-replication/startingagenterror.png)
 
     If your SQL Server Management Studio is running with administrative rights, you can start the SQL Agent manually from within SSMS:  
-        ![Start Agent from SSMS](media/preparing-server-for-replication/ssmsstartagent.png)
-
-    
+        ![Start Agent from SSMS](media/preparing-server-for-replication/ssmsstartagent.png) 
+        - If the SQL Agent doesn't visibly start, right-click the **SQL Server Agent** in SSMS and **Refresh**.     
   
 ### Setting database permissions at the Publisher  
   
@@ -202,9 +200,10 @@ Configuring a Publisher with a remote Distributor is outside the scope of this t
   
 4.  Click **OK** to create the login.  
   
-5.  Repeat steps 1-4 to create a login for the other local accounts (repl_distribution, repl_logreader, and repl_merge) the local repl_distribution and repl_logreader. These logins must also be mapped to users that are members of the **db_owner** fixed database role in the **distribution** and **AdventureWorks** databases.  
+5.  Repeat steps 1-4 to create a login for the other local accounts (repl_distribution, repl_logreader, and repl_merge). These logins must also be mapped to users that are members of the **db_owner** fixed database role in the **distribution** and **AdventureWorks** databases.  
+
+    ![Repl Users in SSMS](media/preparing-server-for-replication/usersinssms.png)
   
-6. Repeat steps 1-4 to create a login for the local repl_merge account. This login must have user mappings in the **distribution** and **AdventureWorks** databases.  
   
 **See Also**:  
 [Configure Distribution](../../relational-databases/replication/configure-distribution.md)  

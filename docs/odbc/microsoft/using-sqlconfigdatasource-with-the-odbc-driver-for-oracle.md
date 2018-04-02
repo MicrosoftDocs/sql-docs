@@ -18,7 +18,7 @@ ms.assetid: e535d1ef-aff9-4ae7-a3ed-ef4ca2584289
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Using SQLConfigDatasource with the ODBC Driver for Oracle

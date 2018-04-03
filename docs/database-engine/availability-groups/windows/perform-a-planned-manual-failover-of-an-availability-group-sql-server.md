@@ -37,7 +37,7 @@ A planned manual failover is supported only when the primary replica and the tar
 ##  <a name="BeforeYouBegin"></a> Before you begin 
 
 >[!IMPORTANT]
->There are specific procedures to fail over a read-scale availability group with no cluster manager. When an availability group has CLUSTER_TYPE = NONE, follow the procedures under [Fail over the primary replica on a read-scale availability group](#Fail-over-the-primary-replica-on-a-read-scale-availability-group).
+>There are specific procedures to fail over a read-scale availability group with no cluster manager. When an availability group has CLUSTER_TYPE = NONE, follow the procedures under [Fail over the primary replica on a read-scale availability group](#fail-over-the-primary-replica-on-a-read-scale-availability-group).
 
 ###  <a name="Restrictions"></a> Limitations and restrictions 
   

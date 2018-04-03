@@ -23,7 +23,7 @@ ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "On Demand"
 ---
-# Tutorial: Preparing the Server for Replication
+# Tutorial: Prepare SQL Server Publisher and Distributor for Replication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 It is important to plan for security before you configure your replication topology. This tutorial shows you how to better secure a replication topology as well as how to configure distribution, which is the first step in replicating data. You must complete this tutorial before any of the others.  
   
@@ -110,20 +110,40 @@ In this section, you will learn to configure the snapshot folder that is used to
   
 4.  On the **Sharing** tab in the **repldata Properties** dialog box, click **Advanced Sharing**.  
   
-5.  In the **Advanced Sharing** dialog box, click **Share this Folder**, and then click **Ok**.  
+5.  In the **Advanced Sharing** dialog box, click **Share this Folder**, and then select **Permissions**.  
 
-    ![Sharing Repl Data](media/preparing-server-for-replication/repldata.png)
-  
-6.  On the **Security** tab, click **Edit**.  
-  
-7.  In the **Permissions** dialog box, click **Add.** In the **Select User, Computers, Service Account, or Groups** text box, type the name of the Snapshot Agent account created in Lesson 1, as \<*Machine_Name>***\repl_snapshot**, where \<*Machine_Name>* is the name of the Publisher. Click **Check Names**, and then click **OK**.  
+       ![Sharing Repl Data](media/preparing-server-for-replication/repldata.png)
 
-    ![Repl Data Sharing Permissions](media/preparing-server-for-replication/sharingrepldata.png)
+6.  In the **Permssions for repldata** dialog box, click **Add**.  In the **Select User, Computers, Service Account, or Groups** text box, type the name of the Snapshot Agent account created in previously, as \<*Machine_Name>***\repl_snapshot**, where \<*Machine_Name>* is the name of the Publisher. Click **Check Names**, and then click **OK**.  
+
+    ![Add Sharing Permissions](media/preparing-server-for-replication/addshareperms.png)
+
+7. Repeat step 7 to add the other two accounts that were created previously: \<*Machine_Name>***\repl_merge** and \<*Machine_Name>***\repl_distribution**
+
+8. Once these three accounts have been added, assign the following permissions: 
+
+    -   repl_snapshot - Full Control   
+    -   repl_distribution - Read  
+    -   repl_merge - Read  
+    
+     ![Shared Permissions](media/preparing-server-for-replication/sharedpermissions.png)
+
+
+9. Once your share permissions are configured correctly, select **Ok** to close the **Permissions for repldata** dialog box. Select **Ok** to close the **Advanced Sharing** dialog box. 
+
+10.  On the **repldata Properties**, select the **Security** tab and select **Edit**.  
+
+       ![Edit Security](media/preparing-server-for-replication/editsecurity.png)   
+
+11. In the **Permissions for repldata** dialog box, select **Add..**. In the **Select User, Computers, Service Account, or Groups** text box, type the name of the Snapshot Agent account created previously, as \<*Machine_Name>***\repl_snapshot**, where \<*Machine_Name>* is the name of the Publisher. Click **Check Names**, and then click **OK**.  
+
+    ![Add Security Permissions](media/preparing-server-for-replication/addsecuritypermissions.png)
+
   
-8.  Repeat the previous step to add permissions for the Distribution Agent, as \<*Machine_Name>***\repl_distribution**, and for the Merge Agent as \<*Machine_Name>***\repl_merge**.  
+12.  Repeat the previous step to add permissions for the Distribution Agent, as \<*Machine_Name>***\repl_distribution**, and for the Merge Agent as \<*Machine_Name>***\repl_merge**.  
     
   
-9. Verify the following permissions are allowed:  
+13. Verify the following permissions are allowed:  
   
     -   repl_snapshot - Full Control   
     -   repl_distribution - Read  
@@ -132,15 +152,14 @@ In this section, you will learn to configure the snapshot folder that is used to
       ![Repl Data User Permissions](media/preparing-server-for-replication/replpermissions.png) 
 
  
-10. Click **OK** to close the **repldata Properties** dialog box and create the repldata share. 
+14. Click **OK** to close the **repldata Properties** dialog box and create the repldata share. 
  
 **See Also**:  
 [Secure the Snapshot Folder](../../relational-databases/replication/security/secure-the-snapshot-folder.md)  
   
 
 ## Configuring Distribution
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-In this section, you will configure distribution at the Publisher and set the required permissions on the publication and distribution databases. If you have already configured the Distributor, you must first disable publishing and distribution before you begin this lesson. Do not do this if you must retain an existing replication topology.  
+In this section, you will configure distribution at the Publisher and set the required permissions on the publication and distribution databases. If you have already configured the Distributor, you must first disable publishing and distribution before you begin this section. Do not do this if you must retain an existing replication topology, especially in Production.   
   
 Configuring a Publisher with a remote Distributor is outside the scope of this tutorial.  
 
@@ -214,7 +233,7 @@ The next article teaches you how to configure Transactional Replication.
 
 Advance to the next article to learn more
 > [!div class="nextstepaction"]
-> [Next steps button](scripting-ssms.md)
+> [Next steps button](tutorial-replicating-data-between-continuously-connected-servers.md)
 
   
   

@@ -285,8 +285,8 @@
 ### [MSSQL_REPL-2147201007](mssql-repl-2147201007.md)  
 ### [MSSQL_REPL-2147201021](mssql-repl-2147201021.md)  
 # [Replication Language Reference](replication-language-reference.md)  
-# [Replication Tutorials](replication-tutorials.md)  
-# [Preparing the Server for Replication](tutorial-preparing-the-server-for-replication.md)  
-# [Replicating Data Between Fully Connected Servers](tutorial-replicating-data-between-continuously-connected-servers.md)  
-# [Replicating Data with Mobile Clients](tutorial-replicating-data-with-mobile-clients.md)  
+## [Replication Tutorials](replication-tutorials.md)  
+## [Prepare Server Publ and Dist for Repl](tutorial-preparing-the-server-for-replication.md)  
+## [Configure Pub and Sub for Trans Repl](tutorial-replicating-data-between-continuously-connected-servers.md)  
+## [Configure Pub and Sub for Merge Repl](tutorial-replicating-data-with-mobile-clients.md)  
 

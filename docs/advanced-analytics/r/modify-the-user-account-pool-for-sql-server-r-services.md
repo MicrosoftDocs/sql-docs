@@ -10,11 +10,9 @@ ms.technology:
   
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 58b79170-5731-46b5-af8c-21164d28f3b0
-caps.latest.revision: 19
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+ms.author: "heidist"
+author: "HeidiSteen"
+manager: "cgronlun"
 ms.workload: "Inactive"
 ---
 # Modify the user account pool for SQL Server machine learning

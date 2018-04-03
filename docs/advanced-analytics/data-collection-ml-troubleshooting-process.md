@@ -16,7 +16,7 @@ dev_langs:
   - "R"
 caps.latest.revision: 1
 author: "jeannt"
- ms.author: "heidist"
+ms.author: "heidist"
 manager: "cgronlund"
 ms.workload: "Inactive"
 ---

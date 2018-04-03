@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Index Design Guide | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/1/2017"
+ms.date: "04/03/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
@@ -644,7 +644,7 @@ A columnstore index physically stores most of the data in columnstore format. In
 
 A columnstore index also physically stores some rows in a rowstore format called a deltastore. The deltastore,also called delta rowgroups, is a holding place for rows that are too few in number to qualify for compression into the columnstore. Each delta rowgroup is implemented as a clustered B-tree index. 
 
-- A **deltastore** is a a holding place for rows that are too few in number to be compressed into the columnstore. The deltastore is a rowstore. 
+- The **deltastore** is a holding place for rows that are too few in number to be compressed into the columnstore. The deltastore stores the rows in rowstore format. 
   
 #### Operations are performed on rowgroups and column segments
 

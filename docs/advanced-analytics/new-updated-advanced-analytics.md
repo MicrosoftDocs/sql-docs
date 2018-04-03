@@ -2,9 +2,9 @@
 title: Updated - Advanced Analytics for SQL Server docs | Microsoft Docs
 description: Display snippets of updated content for recently changed in documentation, for Advanced Analytics for Microsoft SQL Server.
 
-manager: craigg
-author: MightyPen
-ms.author: genemi
+author: "HeidiSteen"
+ms.author: "heidist"
+manager: "cgronlun"
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql

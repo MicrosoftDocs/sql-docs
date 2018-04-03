@@ -148,7 +148,7 @@ Enables or disables a compiled plan stub to be stored in cache when a batch is c
 
 XTP_PROCEDURE_EXECUTION_STATISTICS  **=** { ON | **OFF** }  
 
-**Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
+**Applies to**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 
 
 Enables or disables collection of execution statistics at the module-level for natively compiled T-SQL modules in the current database. The default is OFF. The execution statistics are reflected in [sys.dm_exec_procedure_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md).
 
@@ -156,7 +156,7 @@ Module-level execution statistics for natively compiled T-SQL modules are collec
 
 XTP_QUERY_EXECUTION_STATISTICS  **=** { ON | **OFF** }  
 
-**Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
+**Applies to**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]
 
 Enables or disables collection of execution statistics at the statement-level for natively compiled T-SQL modules in the current database. The default is OFF. The execution statistics are reflected in [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) and in [Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).
 

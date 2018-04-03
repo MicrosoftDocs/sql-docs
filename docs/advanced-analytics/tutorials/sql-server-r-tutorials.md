@@ -16,10 +16,9 @@ applies_to:
   - "SQL Server 2016"
 dev_langs: 
   - "R"
-caps.latest.revision: 1
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+ms.author: "heidist"
+author: "HeidiSteen"
+manager: "cgronlun"
 ms.workload: "On Demand"
 ---
 # SQL Server R tutorials

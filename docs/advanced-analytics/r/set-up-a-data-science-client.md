@@ -11,10 +11,8 @@ ms.technology:
   
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 
-caps.latest.revision: 14
-author: "HeidiSteen"
 ms.author: "heidist"
+author: "HeidiSteen"
 manager: "cgronlun"
 ---
 # Set up a data-science client for R development on SQL Server

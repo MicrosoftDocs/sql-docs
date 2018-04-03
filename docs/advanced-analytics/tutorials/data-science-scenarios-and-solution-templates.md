@@ -13,11 +13,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "tutorial"
 applies_to: 
   - "SQL Server 2016"
-ms.assetid: 49e54fa9-9b28-44ba-b256-06dad4e8dece
-caps.latest.revision: 17
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+ms.author: "heidist"
+author: "HeidiSteen"
+manager: "cgronlun"
 ms.workload: "Inactive"
 ---
 # Data science scenarios and solution templates

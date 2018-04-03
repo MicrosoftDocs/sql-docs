@@ -12,11 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "R"
-ms.assetid:  
-caps.latest.revision: 1
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+ms.author: "heidist"
+author: "HeidiSteen"
+manager: "cgronlun"
 ---
 # How to use RevoScaleR functions to find or install R packages on SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -91,7 +91,7 @@ FROM <backup_device>
 |LogicalName|**nvarchar(128)**|Logical name of the file.|  
 |PhysicalName|**nvarchar(260)**|Physical or operating-system name of the file.|  
 |Type|**char(1)**|The type of file, one of:<br /><br /> **L** = Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log file<br /><br /> **D** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data file<br /><br /> **F** = Full Text Catalog<br /><br /> **S** = FileStream, FileTable, or [!INCLUDE[hek_2](../../includes/hek-2-md.md)] container|  
-|FileGroupName|**nvarchar(128)**|Name of the filegroup that contains the file.|  
+|FileGroupName|**nvarchar(128)** NULL|Name of the filegroup that contains the file.|  
 |Size|**numeric(20,0)**|Current size in bytes.|  
 |MaxSize|**numeric(20,0)**|Maximum allowed size in bytes.|  
 |FileID|**bigint**|File identifier, unique within the database.|  
@@ -103,13 +103,13 @@ FROM <backup_device>
 |BackupSizeInBytes|**bigint**|Size of the backup for this file in bytes.|  
 |SourceBlockSize|**int**|Block size of the physical device containing the file in bytes (not the backup device).|  
 |FileGroupID|**int**|ID of the filegroup.|  
-|LogGroupGUID|**uniqueidentifier NULL**|NULL.|  
+|LogGroupGUID|**uniqueidentifier** NULL|NULL.|  
 |DifferentialBaseLSN|**numeric(25,0)** NULL|For differential backups, changes with log sequence numbers greater than or equal to **DifferentialBaseLSN** are included in the differential.<br /><br /> For other backup types, the value is NULL.|  
-|DifferentialBaseGUID|**uniqueidentifier**|For differential backups, the unique identifier of the differential base.<br /><br /> For other backup types, the value is NULL.|  
+|DifferentialBaseGUID|**uniqueidentifier** NULL|For differential backups, the unique identifier of the differential base.<br /><br /> For other backup types, the value is NULL.|  
 |IsReadOnly|**bit**|**1** = The file is read-only.|  
 |IsPresent|**bit**|**1** = The file is present in the backup.|  
-|TDEThumbprint|**varbinary(32)**|Shows the thumbprint of the Database Encryption Key. The encryptor thumbprint is a SHA-1 hash of the certificate with which the key is encrypted. For information about database encryption, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).|  
-|SnapshotURL|**nvarchar(360)**|The URL for the Azure snapshot of the database file contained in the FILE_SNAPSHOT backup. Returns NULL if no FILE_SNAPSHOT backup.|  
+|TDEThumbprint|**varbinary(32)** NULL|Shows the thumbprint of the Database Encryption Key. The encryptor thumbprint is a SHA-1 hash of the certificate with which the key is encrypted. For information about database encryption, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).|  
+|SnapshotURL|**nvarchar(360)** NULL|The URL for the Azure snapshot of the database file contained in the FILE_SNAPSHOT backup. Returns NULL if no FILE_SNAPSHOT backup.|  
   
 ## Security  
  A backup operation may optionally specify passwords for a media set, a backup set, or both. When a password has been defined on a media set or backup set, you must specify the correct password or passwords in the RESTORE statement. These passwords prevent unauthorized restore operations and unauthorized appends of backup sets to media using [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tools. However, a password does not prevent overwrite of media using the BACKUP statement's FORMAT option.  

@@ -12,9 +12,9 @@ ms.technology:
   
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-author: "jeannt"
+author: "HeidiSteen"
 ms.author: "heidist"
-manager: "cgronlund"
+manager: "cgronlun"
 ms.workload: "Inactive"
 ---
 

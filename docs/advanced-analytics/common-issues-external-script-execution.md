@@ -14,9 +14,9 @@ ms.technology:
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 caps.latest.revision: 1
-author: "jeannt"
 ms.author: "heidist"
-manager: "cgronlund"
+author: "HeidiSteen"
+manager: "cgronlun"
 ms.workload: "Inactive"
 ---
 # Common issues with external script execution in SQL Server

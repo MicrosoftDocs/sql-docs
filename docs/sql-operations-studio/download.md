@@ -58,9 +58,18 @@ This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a s
 1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for Linux](https://go.microsoft.com/fwlink/?linkid=870840).
 1. To extract the file and launch [!INCLUDE[name-sos](../includes/name-sos-short.md)], open a new Terminal window and type the following commands:
 
+   **Debian Installation:**
    ```bash
    cd ~
    sudo dpkg -i ./Downloads/sqlops-linux-<version string>.deb
+
+   sqlops
+   ```
+
+   **rpm Installation:**
+   ```bash
+   cd ~
+   yum install ./Downloads/sqlops-linux-<version string>.rpm
 
    sqlops
    ```

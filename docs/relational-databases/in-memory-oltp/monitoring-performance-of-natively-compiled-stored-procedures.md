@@ -21,10 +21,10 @@ ms.workload: "Inactive"
 ---
 # Monitoring Performance of Natively Compiled Stored Procedures
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  This topic discusses how you can monitor the performance of natively compiled stored procedures and other T-SQL modules.  
+  This article discusses how you can monitor the performance of natively compiled stored procedures and other natively compiled T-SQL modules.  
   
 ## Using Extended Events  
- Use the **sp_statement_completed** extended event to trace execution of a query. Create an extended event session with this event, optionally with a filter on object_id for a particular natively compiled stored procedure, The extended event is raised after the execution of each query. The CPU time and duration reported by the extended event indicate how much CPU the query used and the execution time. A natively compiled stored procedure that uses a lot of CPU time may have performance problems.  
+ Use the **sp_statement_completed** extended event to trace execution of a query. Create an extended event session with this event, optionally with a filter on object_id for a particular natively compiled stored procedure. The extended event is raised after the execution of each query. The CPU time and duration reported by the extended event indicate how much CPU the query used and the execution time. A natively compiled stored procedure that uses a lot of CPU time may have performance problems.  
   
  **line_number**, along with the **object_id** in the extended event can be used to investigate the query. The following query can be used to retrieve the procedure definition. The line number can be used to identify the query within the definition:  
   
@@ -37,28 +37,28 @@ select [definition] from sys.sql_modules where object_id=object_id
 ## Using Data Management Views and Query Store
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)] support collecting execution statistics for natively compiled stored procedures, both on the procedure level and the query level. Collecting execution statistics is not enabled by default due to performance impact.  
 
-Execution statististics are reflected in the system views [sys.dm_exec_procedure_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) and [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md), as well as in [Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).
+Execution statistics are reflected in the system views [sys.dm_exec_procedure_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) and [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md), as well as in [Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).
 
 ### Enabling Procedure-Level Execution Statistics Collection
 
-**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: Enable or disable statistics collection on natively compiled stored procedures at the procedure-level using [sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md).  The following statement enables collection of procedure-level execution statistics for all natively-compiled T-SQL modules on the current instance:
+**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: Enable or disable statistics collection on natively compiled stored procedures at the procedure-level using [sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md).  The following statement enables collection of procedure-level execution statistics for all natively compiled T-SQL modules on the current instance:
 ```sql
 EXEC sys.sp_xtp_control_proc_exec_stats 1
 ```
 
-**[!INCLUDE[ssSDS](../../includes/sssds-md.md)]**: Enable or disable statistics collection on natively compiled stored procedures at the procedure level using the [database-scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) option `XTP_PROCEDURE_EXECUTION_STATISTICS`. The following statement enables collection of procedure-level execution statistics for all natively-compiled T-SQL modules in the current database:
+**[!INCLUDE[ssSDS](../../includes/sssds-md.md)]**: Enable or disable statistics collection on natively compiled stored procedures at the procedure level using the [database-scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) option `XTP_PROCEDURE_EXECUTION_STATISTICS`. The following statement enables collection of procedure-level execution statistics for all natively compiled T-SQL modules in the current database:
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET XTP_PROCEDURE_EXECUTION_STATISTICS = ON
 ```
 
 ### Enabling Query-Level Execution Statistics Collection
 
-**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: Enable or disable statistics collection on natively compiled stored procedures at the query-level using [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).  The following statement enables collection of query-level execution statistics for all natively-compiled T-SQL modules on the current instance:
+**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: Enable or disable statistics collection on natively compiled stored procedures at the query-level using [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).  The following statement enables collection of query-level execution statistics for all natively compiled T-SQL modules on the current instance:
 ```sql
 EXEC sys.sp_xtp_control_query_exec_stats 1
 ```
 
-**[!INCLUDE[ssSDS](../../includes/sssds-md.md)]**: Enable or disable statistics collection on natively compiled stored procedures at the statement level using the [database-scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) option `XTP_QUERY_EXECUTION_STATISTICS`. The following statement enables collection of query-level execution statistics for all natively-compiled T-SQL modules in the current database:
+**[!INCLUDE[ssSDS](../../includes/sssds-md.md)]**: Enable or disable statistics collection on natively compiled stored procedures at the statement level using the [database-scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) option `XTP_QUERY_EXECUTION_STATISTICS`. The following statement enables collection of query-level execution statistics for all natively compiled T-SQL modules in the current database:
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET XTP_QUERY_EXECUTION_STATISTICS = ON
 ```

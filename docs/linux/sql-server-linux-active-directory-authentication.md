@@ -132,6 +132,8 @@ Use the following steps to join a [!INCLUDE[ssNoVersion](../includes/ssnoversion
    > If you see an error, "Necessary packages are not installed," then you should install those packages using your Linux distribution's package manager before running the `realm join` command again.
    >
    > If you receive an error, "Insufficient permissions to join the domain," then you need to check with a domain administrator that you have sufficient permissions to join Linux machines to your domain.
+   >
+   > If you receive an error, "KDC reply did not match expectations," then you may not have specified the correct realm name for the user. Realm names are case-sensitive, usually uppercase, and can be identified with the command `realm discover contoso.com`.
    
    > SQL Server uses SSSD and NSS for mapping user accounts and groups to security identifiers (SID's). SSSD must be configured and running in order for SQL Server to create AD logins successfully. Realmd usually does this automatically as part of joining the domain, but in some cases you must do this separately.
    >

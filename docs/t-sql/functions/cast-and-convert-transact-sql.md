@@ -427,7 +427,7 @@ WHERE EnglishProductName LIKE 'Long-Sleeve Logo Jersey, M';
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
 ```  
-Name        UnitPrice
+Name        ListPrice
 ----------  ---------
 Long-Sleev  31.2437
 Long-Sleev  32.4935
@@ -451,7 +451,7 @@ GO
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
 ```  
-FirstName        LastName            SalesYTD         SalesPersonID
+FirstName        LastName            SalesYTD         BusinessEntityID
 ---------------- ------------------- ---------------- -------------
 Tsvi             Reiter              2811012.7151      279
 Syed             Abbas               219088.8836       288

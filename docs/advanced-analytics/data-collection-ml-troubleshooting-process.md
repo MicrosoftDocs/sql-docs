@@ -48,7 +48,7 @@ If you need help to determine which edition and version you have, see this artic
 
 Depending on the edition of SQL Server you're using, some machine learning functionality might be unavailable, or limited.
 
-See the following topics for a list of machine learning features in Enterprise, Developer, Standard, and Express editions.
+See the following articles for a list of machine learning features in Enterprise, Developer, Standard, and Express editions.
 
 * [Editions and supported features of SQL Server](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2016)
 * [Differences in R features between editions of SQL Server](https://docs.microsoft.com/sql/advanced-analytics/r/differences-in-r-features-between-editions-of-sql-server)

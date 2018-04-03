@@ -422,7 +422,7 @@ This example shows how to create a two-replica AG that uses a configuration-only
     ALTER AVAILABILITY GROUP [<AGName>] JOIN WITH (CLUSTER_TYPE = EXTERNAL);
     
     GO
-    ```
+   ```
 
 #### Example Two – Three replicas with read-only routing (External cluster type)
 

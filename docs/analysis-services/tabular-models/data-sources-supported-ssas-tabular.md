@@ -1,7 +1,7 @@
 ---
-title: "Data sources supported in SQL Server Analysis Services tabular models | Microsoft Docs"
+title: "Data sources supported in SQL Server Analysis Services tabular 1200 models | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/22/2018"
+ms.date: "03/28/2018"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
@@ -21,11 +21,14 @@ ms.author: "owend"
 manager: "kfile"
 ms.workload: "On Demand"
 ---
-# Data sources supported in tabular models
+# Data sources supported in SQL Server Analysis Services tabular 1200 models
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-For Azure Analysis Services, see [Data sources supported in Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource).
+  
+This article describes the types of data sources that can be used with SQL Server Analysis Services tabular models at the 1200 and lower compatibility level. 
 
-  This article describes the types of data sources that can be used with tabular models.  
+For models at the 1400 compatibility levels, see [Data sources supported in SQL Server Analysis Services tabular 1400  models](data-sources-supported-ssas-tabular-1400.md).
+
+For Azure Analysis Services, see [Data sources supported in Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource).
   
 ##  <a name="bkmk_supported_ds"></a> Supported data sources for in-memory tabular models  
 When you install [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], setup does not install the providers that are listed for each data source. Some providers might be installed with other applications on your computer. In other cases, you may need to download and install the provider.  
@@ -71,3 +74,9 @@ Importing multiple tables, and then deleting the ones you don't need, can also s
 Columns that contain similar data in different data sources are the basis of creating relationships within the model designer. When using heterogeneous data sources, choose tables that have columns that can be mapped to tables in other data sources that contain identical or similar data.  
   
 OLE DB providers can sometimes offer faster performance for large-scale data. When choosing between different providers for the same data source, you should try the OLE DB provider first.  
+
+## See also
+
+[Data sources supported in SQL Server Analysis Services tabular 1400  models](data-sources-supported-ssas-tabular-1400.md)
+
+[Data sources supported in Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource)   

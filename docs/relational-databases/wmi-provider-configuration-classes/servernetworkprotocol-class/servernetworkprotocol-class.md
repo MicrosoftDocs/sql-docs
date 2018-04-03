@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "ServerNetworkProtocol class"
 ms.assetid: 0f9f7f7d-f8ab-426e-a85d-4eda3a241eb5
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

@@ -16,7 +16,7 @@ ms.assetid: 17cabd9d-cb2f-436c-ad9c-ce02225808b7
 caps.latest.revision: 3
 author: "BarbKess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 robots: noindex,nofollow
 ms.workload: "On Demand"
 ---

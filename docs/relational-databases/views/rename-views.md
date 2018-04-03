@@ -18,8 +18,8 @@ helpviewer_keywords:
 ms.assetid: 5eed0488-81d2-40e8-8fdf-b0a640a591d0
 caps.latest.revision: 17
 author: "stevestein"
-author: "sstein"
-manager: "craigg"
+ms.author: "sstein"
+ms.manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Rename Views

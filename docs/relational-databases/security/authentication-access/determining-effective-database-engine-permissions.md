@@ -25,13 +25,13 @@ ms.workload: "Inactive"
 # Determining Effective Database Engine Permissions
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-This topic describes how to determine who has permissions to various objects in the SQL Server Database Engine. SQL Server implements two permission systems for the Database Engine. An older system of fixed roles has preconfigured permissions. Beginning with SQL Server 2005 a more flexible and precise system is available. (The information in this topic applies to SQL Server, beginning with 2005. Some types of permissions are not available in some versions of SQL Server.)
+This article describes how to determine who has permissions to various objects in the SQL Server Database Engine. SQL Server implements two permission systems for the Database Engine. An older system of fixed roles has preconfigured permissions. Beginning with SQL Server 2005 a more flexible and precise system is available. (The information in this article applies to SQL Server, beginning with 2005. Some types of permissions are not available in some versions of SQL Server.)
 
 >  [!IMPORTANT] 
 >  * The effective permissions are the aggregate of both permission systems. 
 >  * A denial of permissions overrides a grant of permissions. 
 >  * If a user is a member of the sysadmin fixed server role, permissions are not checked further, so denials will not be enforced. 
->  * The old system and new system have similarities. For example, membership in the `sysadmin` fixed server role is similar to having `CONTROL SERVER` permission. But the systems are not identical. For example, if a login only has the `CONTROL SERVER` permission, and a stored procedures checks for membership in the `sysadmin` fixed server role, then the permission check will fail. The reverse is also true. 
+>  * The old system and new system have similarities. For example, membership in the `sysadmin` fixed server role is similar to having `CONTROL SERVER` permission. But the systems are not identical. For example, if a login only has the `CONTROL SERVER` permission, and a stored procedures check for membership in the `sysadmin` fixed server role, then the permission check will fail. The reverse is also true. 
 
 
 ## Summary   
@@ -40,19 +40,19 @@ This topic describes how to determine who has permissions to various objects in 
 * Database-level permission can come from membership in the fixed database roles or user-defined database roles in each database. Everyone belongs to the `public` fixed database role and receives any permission assigned there.   
 * Database-level permissions can come from permission grants to users or user-defined database roles in each database.   
 * Permissions can be received from the `guest` login or `guest` database user if enabled. The `guest` login and users are disabled by default.   
-* Windows users can be members of Windows groups which can have logins. SQL Server learns of Windows group membership when a Windows user connects and presents a Windows token with the security identifier of a Windows group. Because SQL Server does not manage or receive automatic updates about Windows group memberships, SQL Server cannot reliably report the permissions of Windows users that are received from Windows group membership.   
+* Windows users can be members of Windows groups that can have logins. SQL Server learns of Windows group membership when a Windows user connects and presents a Windows token with the security identifier of a Windows group. Because SQL Server does not manage or receive automatic updates about Windows group memberships, SQL Server cannot reliably report the permissions of Windows users that are received from Windows group membership.   
 * Permissions can be acquired by switching to an application role and providing the password.   
 * Permissions can be acquired by executing a stored procedure that includes the `EXECUTE AS` clause.   
 * Permissions can be acquired by logins or users with the `IMPERSONATE` permission.   
 * Members of the local computer administrator group can always elevate their privileges to `sysadmin`. (Does not apply to SQL Database.)  
 * Members of the `securityadmin` fixed server role can elevate many of their privileges and in some cases can elevate the privileges to `sysadmin`. (Does not apply to SQL Database.)   
-* SQL Server adminstrators can see information about all logins and users. Less priviledged users usually see information about only their own identities.
+* SQL Server administrators can see information about all logins and users. Less privileged users usually see information about only their own identities.
 
 ## Older Fixed Role Permission System
 
-Fixed Server Roles and Fixed Database Roles have preconfigured permissions that cannot be changed. To determine who is a member of a fixed server role, execute the following query.    
+Fixed Server Roles and Fixed Database Roles have preconfigured permissions that cannot be changed. To determine who is a member of a fixed server role, execute the following query:    
 >  [!NOTE] 
->  Does not apply to SQL Database or SQL Data Warehouse where server level permission are not available. The `is_fixed_role` column of `sys.server_principals` was added in SQL Server 2012. It is not needed for older versions of SQL Server.  
+>  Does not apply to SQL Database or SQL Data Warehouse where server level permission is not available. The `is_fixed_role` column of `sys.server_principals` was added in SQL Server 2012. It is not needed for older versions of SQL Server.  
 ```sql
 SELECT SP1.name AS ServerRoleName, 
  isnull (SP2.name, 'No members') AS LoginName   
@@ -84,11 +84,11 @@ To understand the permissions that are granted to each role, see the role descri
 
 ## Newer Granular Permission System
 
-This system is extremely flexible, which means it can be complicated if the people setting it up want to be very precise. That's not necessarily bad; I hope my financial institution is precise. To simplify matters it helps to create roles, assign permissions to roles, and then add groups of people to the roles. And it's easier if the database development team separates activity by schema and then grants role permissions to a whole schema instead of to individual tables or procedures. But the real world is complex and we have to assume that business needs create unexpected security requirements.   
+This system is flexible, which means it can be complicated if the people setting it up want to be precise. To simplify matters it helps to create roles, assign permissions to roles, and then add groups of people to the roles. And it's easier if the database development team separates activity by schema and then grants role permissions to a whole schema instead of to individual tables or procedures. Real world scenarios are complex and business needs can create unexpected security requirements.   
 
-The following graphic shows the permissions and their relationships to each other. Some of the higher level permissions (such as `CONTROL SERVER`) are listed many times. In this topic, the poster is far to small to read. Click the image to download the **Database Engine Permissions Poster** in pdf format.  
+The following graphic shows the permissions and their relationships to each other. Some of the higher level permissions (such as `CONTROL SERVER`) are listed many times. In this article, the poster is far too small to read. Click the image to download the **Database Engine Permissions Poster** in pdf format.  
   
- [![Database Engine Permissions](../../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
+ [![Database Engine Permissions](../../../relational-databases/security/media/database-engine-permissions.PNG)](https://aka.ms/sql-permissions-poster)
 
 ### Security Classes
 
@@ -100,7 +100,7 @@ Permissions are granted to principals. Principals can be server roles, logins, d
 
 When a Windows user connects using a login based on a Windows group, some activities may require SQL Server to create a login or user to represent the individual Windows user. For example, a Windows group (Engineers) contains users (Mary, Todd, Pat) and the Engineers group has a database user account. If Mary has permission and creates a table, a user (Mary) might be created to be the owner of the table. Or if Todd is denied a permission that the rest of the Engineers group has, then the user Todd must be created to track the permission denial.
 
-Remember that a Windows user might be a member of more than one Windows group (e.g. both Engineers, and Managers). Permissions granted or denied to the Engineers login, to the Managers login, granted or denied to the user individually, and granted or denied to roles that the user is a member of, will all be aggregated and evaluated to for the effective permissions. The `HAS_PERMS_BY_NAME` function can reveal whether a user or login has a particular permission. However, there is no obvious way of determining the source of the grant or denial of permission. You must study the list of permissions and perhaps experiment using trial and error.
+Remember that a Windows user might be a member of more than one Windows group (e.g. both Engineers, and Managers). Permissions granted or denied to the Engineers login, to the Managers login, granted or denied to the user individually, and granted or denied to roles that the user is a member of, will all be aggregated and evaluated to for the effective permissions. The `HAS_PERMS_BY_NAME` function can reveal whether a user or login has a particular permission. However, there is no obvious way of determining the source of the grant or denial of permission. Study the list of permissions and perhaps experiment using trial and error.
 
 ## Useful Queries
 

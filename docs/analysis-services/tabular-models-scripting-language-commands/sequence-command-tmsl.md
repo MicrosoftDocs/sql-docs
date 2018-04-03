@@ -1,7 +1,7 @@
 ---
 title: "Sequence command (TMSL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/30/2017"
+ms.date: "03/12/2018"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
@@ -87,7 +87,7 @@ ms.workload: "Inactive"
         {   
           "refresh": {   
             "type": "calculate",   
-            "object": {   
+            "objects": {   
              "database": "salesdatabase"   
             }   
           }   

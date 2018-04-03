@@ -110,34 +110,34 @@ In the first case, if you require high availability of a database and logical se
 To maintain high availability of TDE Protectors for encrypted databases, it is required to configure redundant Azure Key Vaults based on the existing or desired SQL Database failover groups or active geo-replication instances.  Each geo-replicated server requires a separate key vault, that must be co-located with the server in the same Azure region. Should a primary database become inaccessible due to an outage in one region and a failover is triggered, the secondary database is able to take over using the secondary key vault. 
  
 For Geo-Replicated Azure SQL databases, the following Azure Key Vault configuration is required:
-✓ One primary database with a key vault in region and one secondary database with a key vault in region. 
-✓ At least one secondary is required, up to four secondaries are supported. 
-✓ Secondaries of secondaries (chaining) is not supported.
+- One primary database with a key vault in region and one secondary database with a key vault in region. 
+- At least one secondary is required, up to four secondaries are supported. 
+- Secondaries of secondaries (chaining) are not supported.
 
 The following section will go over the setup and configuration steps in more detail. 
 
 ### Azure Key Vault Configuration Steps
 
-1. Install [PowerShell](https://docs.microsoft.com/en-us/powershell/azure/install-azurerm-ps?view=azurermps-5.6.0) 
-2. Create two Azure Key Vaults in two different regions using [PowerShell to enable the “soft-delete” property](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-powershell) on the key vaults (this option is not available from the AKV Portal yet – but required by SQL) 
-3. Create a new key in one key vault:  
-   a. RSA/RSA-HSA 2048 key 
-   b. No expiration dates 
-   c. Key is enabled and has permissions to perform get, wrap key, and unwrap key operations 
-4. Backup the primary key and restore the key to the second key vault.  See [BackupAzureKeyVaultKey](https://docs.microsoft.com/en-us/powershell/module/azurerm.keyvault/backup-azurekeyvaultkey?view=azurermps-5.1.1) and [Restore-AzureKeyVaultKey](https://docs.microsoft.com/en-us/powershell/module/azurerm.keyvault/restore-azurekeyvaultkey?view=azurermps-5.5.0). 
+- Install [PowerShell](https://docs.microsoft.com/en-us/powershell/azure/install-azurerm-ps?view=azurermps-5.6.0) 
+- Create two Azure Key Vaults in two different regions using [PowerShell to enable the “soft-delete” property](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-powershell) on the key vaults (this option is not available from the AKV Portal yet – but required by SQL) 
+- Create a new key in the first key vault:  
+  - RSA/RSA-HSA 2048 key 
+  - No expiration dates 
+  - Key is enabled and has permissions to perform get, wrap key, and unwrap key operations 
+- Back up the primary key and restore the key to the second key vault.  See [BackupAzureKeyVaultKey](https://docs.microsoft.com/en-us/powershell/module/azurerm.keyvault/backup-azurekeyvaultkey?view=azurermps-5.1.1) and [Restore-AzureKeyVaultKey](https://docs.microsoft.com/en-us/powershell/module/azurerm.keyvault/restore-azurekeyvaultkey?view=azurermps-5.5.0). 
 
 ### Azure SQL Database Configuration Steps
 
-The following configuration steps will differ whether starting with a new SQL deployment or if working with an already existing SQL Geo-DR deployment.  We will go over the configuration steps for a new deployment first, and then talk about how to assign TDE Protectors stored in Azure Key Vault to an existing deployment that already has a Geo-DR link established. 
+The following configuration steps differ whether starting with a new SQL deployment or if working with an already existing SQL Geo-DR deployment.  We outline the configuration steps for a new deployment first, and then explain how to assign TDE Protectors stored in Azure Key Vault to an existing deployment that already has a Geo-DR link established. 
 
 Steps for a new deployment:
-1. Create the two logical SQL servers in the same two regions as the previously created key vaults. 
-2. Select the logical server TDE pane, and for each logical SQL server:  
-   a. Select the AKV in the same region 
-   b. Select the key to use as TDE Protector – each server will use the local copy of the TDE Protector. 
-   c. Doing this in the Portal will create an [AppID](https://docs.microsoft.com/en-us/azure/active-directory/managed-service-identity/overview) for the logical SQL server, which is used to assign the logical SQL Server permissions to access the key vault – do not delete this identity.  Access can be revoked by removing the permissions in Azure Key Vault instead. for the logical SQL server, which is used to assign the logical SQL Server permissions to access the key vault – do not delete this identity.  Access can be revoked by removing the permissions in Azure Key Vault instead. 
-3. Create the primary database. 
-4. Follow the [active geo-replication guidance](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-geo-replication-overview) to complete the scenario, this step will create the secondary database.
+- Create the two logical SQL servers in the same two regions as the previously created key vaults. 
+- Select the logical server TDE pane, and for each logical SQL server:  
+   - Select the AKV in the same region 
+   - Select the key to use as TDE Protector – each server will use the local copy of the TDE Protector. 
+   - Doing this in the Portal will create an [AppID](https://docs.microsoft.com/en-us/azure/active-directory/managed-service-identity/overview) for the logical SQL server, which is used to assign the logical SQL Server permissions to access the key vault – do not delete this identity.  Access can be revoked by removing the permissions in Azure Key Vault instead. for the logical SQL server, which is used to assign the logical SQL Server permissions to access the key vault – do not delete this identity.  Access can be revoked by removing the permissions in Azure Key Vault instead. 
+- Create the primary database. 
+- Follow the [active geo-replication guidance](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-geo-replication-overview) to complete the scenario, this step will create the secondary database.
 
 ![Failover groups and geo-dr](./media/transparent-data-encryption-byok-azure-sql/Geo_DR_Config.PNG)
 
@@ -147,12 +147,12 @@ Steps for a new deployment:
 
 Steps for an existing SQL DB with Geo-DR deployment:
 
-Because the logical SQL servers already exist, and primary and secondary databases are already assigned, the steps to configure Azure Key Vault are the following: 
-1. Start with the logical SQL Server that hosts the secondary database: 
-   a. Assign the key vault located in the same region 
-   b. Assign the TDE Protector 
-2. Now go to the logical SQL Server that hosts the primary database: 
-   a. Select the same TDE Protector as used for the secondary DB
+Because the logical SQL servers already exist, and primary and secondary databases are already assigned, the steps to configure Azure Key Vault must be performed in the following order: 
+- Start with the logical SQL Server that hosts the secondary database: 
+   - Assign the key vault located in the same region 
+   - Assign the TDE Protector 
+- Now go to the logical SQL Server that hosts the primary database: 
+   - Select the same TDE Protector as used for the secondary DB
    
 ![Failover groups and geo-dr](./media/transparent-data-encryption-byok-azure-sql/geo_DR_ex_config.PNG)
 
@@ -160,7 +160,7 @@ Because the logical SQL servers already exist, and primary and secondary databas
 >When assigning the key vault to the server, it is important to start with the secondary server.  In the second step assign the key vault to the primary server and update the TDE Protector, the Geo-DR link will continue to work because at this point the TDE Protector used by the replicated database is available to both servers.
 >
 
-Before enabling TDE with customer managed keys in Azure Key Vault for a SQL Database Geo-DR scenario, it is important to create and maintain two Azure Key Vaults with identical contents in the same regions that will be used for SQL Database georeplication.  “Identical contents” specifically means that both key vaults must contain copies of the same TDE Protector(s) so that both servers have access to the TDE Protectors use by all databases.  Going forward, it is required to keep both key vaults in sync, which means they must contain the same copies of TDE Protectors after key rotation, maintain old versions of keys used for log files or backups, TDE Protectors must maintain the same key properties and the key vaults must maintain the same access permissions for SQL.  
+Before enabling TDE with customer managed keys in Azure Key Vault for a SQL Database Geo-DR scenario, it is important to create and maintain two Azure Key Vaults with identical contents in the same regions that will be used for SQL Database geo-replication.  “Identical contents” specifically means that both key vaults must contain copies of the same TDE Protector(s) so that both servers have access to the TDE Protectors use by all databases.  Going forward, it is required to keep both key vaults in sync, which means they must contain the same copies of TDE Protectors after key rotation, maintain old versions of keys used for log files or backups, TDE Protectors must maintain the same key properties and the key vaults must maintain the same access permissions for SQL.  
  
 Follow the steps in [Active geo-replication overview](https://docs.microsoft.com/azure/sql-database/sql-database-geo-replication-overview) to test and trigger a failover, which should be done on a regular basis to confirm the access permissions for SQL to both key vaults have been maintained. 
 

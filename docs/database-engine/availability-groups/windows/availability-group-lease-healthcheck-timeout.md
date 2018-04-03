@@ -12,8 +12,6 @@ ms.technology:
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-f1_keywords: ""
-helpviewer_keywords: ""
 ms.assetid:
 caps.latest.revision: 7
 author: "MikeRayMSFT"

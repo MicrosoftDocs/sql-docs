@@ -14,7 +14,7 @@ ms.topic: "article"
 ms.assetid: 8fc84754-7fbf-4c1b-9150-7d88680b3e68
 caps.latest.revision: 9
 author: "jeannt"
-ms.author: "jeannt"
+ms.author: "heidist"
 manager: "cgronlund"
 ms.workload: "Inactive"
 ---

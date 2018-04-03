@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "08/08/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
-ms.service: ""
 ms.component: "node-js"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -16,14 +15,14 @@ ms.assetid: c4cdbfa6-9b73-4b72-a1a6-e1b45d8a773d
 caps.latest.revision: 17
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Node.js Driver for SQL Server
 
 ![Download-DownArrow-Circled](../../ssdt/media/download.png)[To download Node.js SQL driver](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-The tedious module is a javascript implementation of the TDS protocol, which is supported by all modern version of SQL Server. The driver is an open source project, available on Github.  
+The tedious module is a javascript implementation of the TDS protocol, which is supported by all modern versions of SQL Server. The driver is an open-source project, available on Github.  
   
 You can  connect to a SQL Database using Node.js on Windows, Linux, or Mac.  
   

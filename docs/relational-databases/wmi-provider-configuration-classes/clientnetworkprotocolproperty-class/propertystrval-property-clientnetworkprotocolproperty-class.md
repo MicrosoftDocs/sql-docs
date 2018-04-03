@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "PropertyStrVal property"
 ms.assetid: eeb15b13-4fee-47ac-81c3-cba19d450bd9
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

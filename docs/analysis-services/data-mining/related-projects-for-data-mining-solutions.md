@@ -206,6 +206,6 @@ ms.workload: "Inactive"
   
 ## See Also  
  [Multidimensional Model Solutions ](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [Tabular Model Solutions](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
+ [Tabular Model Solutions](../../analysis-services/tabular-models/tabular-models-ssas.md)  
   
   

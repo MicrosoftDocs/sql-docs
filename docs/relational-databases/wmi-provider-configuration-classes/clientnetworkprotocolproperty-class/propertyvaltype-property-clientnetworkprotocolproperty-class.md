@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "PropertyValType property"
 ms.assetid: 624b9bdd-ed93-4140-bd4e-00d714a2558c
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

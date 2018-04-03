@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "functional area permissions [Master Data Services], assigning"
 ms.assetid: af6fe2f3-37d0-4413-ab27-b3a0fb95eb50
 caps.latest.revision: 6
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

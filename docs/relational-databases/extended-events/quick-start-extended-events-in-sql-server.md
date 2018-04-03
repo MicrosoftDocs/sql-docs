@@ -651,7 +651,7 @@ Here are links to documentation related to these SELECTs, and to permissions:
 - [sys.server_principals (Transact-SQL)](http://msdn.microsoft.com/library/ms188786.aspx)
 - For Azure SQL Database especially, [sys.database_principals (Transact-SQL)](http://msdn.microsoft.com/library/ms187328.aspx)
 - Blog: [Effective Database Engine Permissions](http://social.technet.microsoft.com/wiki/contents/articles/15180.effective-database-engine-permissions.aspx)
-- Zoomable [poster](http://go.microsoft.com/fwlink/?LinkId=229142), as a PDF, that displays the hierarchy of all SQL Server permissions.
+- Zoomable [poster](https://aka.ms/sql-permissions-poster), as a PDF, that displays the hierarchy of all SQL Server permissions.
 
 
 

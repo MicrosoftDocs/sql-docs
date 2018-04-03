@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "ProtocolDisplayName property"
 ms.assetid: b90755fd-7cac-4bdb-8e45-e95119a7665c
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

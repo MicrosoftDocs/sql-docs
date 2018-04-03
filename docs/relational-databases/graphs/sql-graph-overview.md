@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 
 caps.latest.revision: 1
 author: "shkale-msft"
-ms.author: "shkale;barbkess"
+ms.author: "shkale"
 manager: "craigg"
 ms.workload: "Active"
 ---

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "MSSQL_ENG021330 error"
 ms.assetid: e2bb2e21-62a7-4689-b68b-bdfba3fdd985
 caps.latest.revision: 16
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

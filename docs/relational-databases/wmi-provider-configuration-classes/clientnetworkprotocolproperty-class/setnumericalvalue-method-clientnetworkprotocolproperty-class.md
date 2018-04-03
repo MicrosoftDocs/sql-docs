@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "SetNumericalValue method"
 ms.assetid: d4d6df52-9e68-4003-9e28-ece6716ba7f1
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

@@ -46,7 +46,7 @@ Execution statistics are reflected in the system views [sys.dm_exec_procedure_st
 EXEC sys.sp_xtp_control_proc_exec_stats 1
 ```
 
-**[!INCLUDE[ssSDS](../../includes/sssds-md.md)]**: Enable or disable statistics collection on natively compiled stored procedures at the procedure level using the [database-scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) option `XTP_PROCEDURE_EXECUTION_STATISTICS`. The following statement enables collection of procedure-level execution statistics for all natively compiled T-SQL modules in the current database:
+**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]**: Enable or disable statistics collection on natively compiled stored procedures at the procedure level using the [database-scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) option `XTP_PROCEDURE_EXECUTION_STATISTICS`. The following statement enables collection of procedure-level execution statistics for all natively compiled T-SQL modules in the current database:
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET XTP_PROCEDURE_EXECUTION_STATISTICS = ON
 ```
@@ -58,7 +58,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET XTP_PROCEDURE_EXECUTION_STATISTICS = ON
 EXEC sys.sp_xtp_control_query_exec_stats 1
 ```
 
-**[!INCLUDE[ssSDS](../../includes/sssds-md.md)]**: Enable or disable statistics collection on natively compiled stored procedures at the statement level using the [database-scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) option `XTP_QUERY_EXECUTION_STATISTICS`. The following statement enables collection of query-level execution statistics for all natively compiled T-SQL modules in the current database:
+**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]**: Enable or disable statistics collection on natively compiled stored procedures at the statement level using the [database-scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) option `XTP_QUERY_EXECUTION_STATISTICS`. The following statement enables collection of query-level execution statistics for all natively compiled T-SQL modules in the current database:
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET XTP_QUERY_EXECUTION_STATISTICS = ON
 ```

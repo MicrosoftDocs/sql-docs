@@ -31,7 +31,7 @@ manager: "craigg"
 ms.workload: "On Demand"
 ---
 # RESTORE Statements - FILELISTONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md )]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
 
 
   Returns a result set containing a list of the database and log files contained in the backup set in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

@@ -49,7 +49,7 @@ manager: "craigg"
 ms.workload: "Active"
 ---
 # RESTORE Statements (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Restores backups taken using the BACKUP command. This command enables you to perform the following restore scenarios:  
   
@@ -357,6 +357,8 @@ These limitations apply:
 - Backups containing databases that have active In-memory objects cannot currently be restored.
 - Backups containing databases where at some point In-Memory objects existed cannot currently be restored.
 - Backups containing databases in read-only mode cannot currently be restored. This limitation will be removed soon.
+
+For more information, see [Managed Instance](/azure/sql-database/sql-database-managed-instance)
 
 ## Interoperability  
   

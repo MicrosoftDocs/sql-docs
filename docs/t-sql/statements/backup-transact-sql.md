@@ -55,7 +55,7 @@ manager: "craigg"
 ms.workload: "Active"
 ---
 # BACKUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md )]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
 
   Backs up a complete [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database to create a database backup, or one or more files or filegroups of the database to create a file backup (BACKUP DATABASE). Also, under the full recovery model or bulk-logged recovery model, backs up the transaction log of the database to create a log backup (BACKUP LOG). 
 
@@ -781,8 +781,7 @@ When a restore is performed, if the backup set was not already recorded in the *
 -   F. [Creating and backing up to a multifamily mirrored media set](#create_multifamily_mirrored_media_set)  
 -   G  [Backing up to an existing mirrored media set](#existing_mirrored_media_set)  
 -   H. [Creating a compressed backup in a new media set](#creating_compressed_backup_new_media_set)  
--   I. [Backing up to the Microsoft Azure Blob storage service](#
--   )  
+-   I. [Backing up to the Microsoft Azure Blob storage service](#url)  
   
 > [!NOTE]  
 > The backup how-to topics contain additional examples. For more information, see [Backup Overview &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md).  

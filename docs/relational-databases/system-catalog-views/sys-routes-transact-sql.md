@@ -29,7 +29,7 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.routes (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   This catalog views contains one row per route. Service Broker uses routes to locate the network address for a service.   
 

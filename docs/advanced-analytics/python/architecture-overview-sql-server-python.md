@@ -12,7 +12,7 @@ ms.technology:
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 author: "jeannt"
-ms.author: "jeannt"
+ ms.author: "heidist"
 manager: "cgronlund"
 ms.workload: "Inactive"
 ---

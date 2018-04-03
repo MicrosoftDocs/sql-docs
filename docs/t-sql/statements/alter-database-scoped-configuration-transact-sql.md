@@ -33,7 +33,7 @@ ms.workload: "On Demand"
 # ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  This statement enables several database configuration settings at the **individual database** level. This statement is available in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] and in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Those settings are:  
+  This statement enables several database configuration settings at the **individual database** level. This statement is available in [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] and in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Those settings are:  
   
 - Clear procedure cache.  
 - Set the MAXDOP parameter to an arbitrary value (1,2, ...) for the primary database based on what works best for that particular database and set a different value (e.g. 0) for all secondary database used (such as for reporting queries).  
@@ -41,7 +41,8 @@ ms.workload: "On Demand"
 - Enable or disable parameter sniffing at the database level.
 - Enable or disable query optimization hotfixes at the database level.
 - Enable or disable the identity cache at the database level.
-- Enable or disable a compiled plan stub to be stored in cache when a batch is compiled for the first time.    
+- Enable or disable a compiled plan stub to be stored in cache when a batch is compiled for the first time.  
+- Enable or disable collection of execution statistics for natively compiled T-SQL modules.
   
  ![link icon](../../database-engine/configure-windows/media/topic-link.gif "link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -133,7 +134,7 @@ Clears the procedure (plan) cache for the database. This can be executed both on
 
 IDENTITY_CACHE **=** { **ON** | OFF }  
 
-**Applies to**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
+**Applies to**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 Enables or disables identity cache at the database level. The default is **ON**. Identity caching is used to improve INSERT performance on tables with identity columns. To avoid gaps in the values of an identity column in cases where the server restarts unexpectedly or fails over to a secondary server, disable the IDENTITY_CACHE option. This option is similar to the existing [Trace Flag 272](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), except that it can be set at the database level rather than only at the server level.   
 
@@ -142,7 +143,7 @@ Enables or disables identity cache at the database level. The default is **ON**.
 
 OPTIMIZE_FOR_AD_HOC_WORKLOADS **=** { ON | **OFF** }  
 
-**Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
+**Applies to**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] 
 
 Enables or disables a compiled plan stub to be stored in cache when a batch is compiled for the first time. The default is OFF. Once the database scoped configuration OPTIMIZE_FOR_AD_HOC_WORKLOADS is enabled for a database, a compiled plan stub will be stored in cache when a batch is compiled for the first time. Plan stubs have a smaller memory footprint compared to the size of the full compiled plan.  If a batch is compiled or executed again, the compiled plan stub will be removed and replaced with a full compiled plan.
 

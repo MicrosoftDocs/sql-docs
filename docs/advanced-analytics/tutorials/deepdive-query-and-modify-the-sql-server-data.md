@@ -16,7 +16,6 @@ applies_to:
   - "SQL Server 2017"
 dev_langs: 
   - "R"
-7
 ms.author: "heidist"
 author: "HeidiSteen"
 manager: "cgronlun"

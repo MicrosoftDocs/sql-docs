@@ -15,11 +15,9 @@ applies_to:
   - "SQL Server 2016"
 dev_langs: 
   - "R"
-ms.assetid: 65fd41d4-c94e-4929-a24a-20e792a86579
-caps.latest.revision: 30
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+ms.author: "heidist"
+author: "HeidiSteen"
+manager: "cgronlun"
 ms.workload: "On Demand"
 ---
 # Prepare the data using PowerShell (walkthrough)

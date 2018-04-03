@@ -10,10 +10,9 @@ ms.component:
 ms.technology: 
 ms.tgt_pltfrm: ""
 ms.topic: "tutorial"
-caps.latest.revision: 4
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+ms.author: "heidist"
+author: "HeidiSteen"
+manager: "cgronlun"
 ---
 # Use Python with revoscalepy to create a model
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

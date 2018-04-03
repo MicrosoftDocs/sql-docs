@@ -15,11 +15,9 @@ applies_to:
   - "SQL Server 2017"
 dev_langs: 
   - "R"
-ms.assetid: 10def0b3-9b09-4df9-b8aa-69516f7d7659
-caps.latest.revision: 14
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+ms.author: "heidist"
+author: "HeidiSteen"
+manager: "cgronlun"
 ms.workload: "Inactive"
 ---
 #  Visualize SQL Server data using R (SQL and R deep dive)

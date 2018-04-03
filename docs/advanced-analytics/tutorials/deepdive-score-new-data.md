@@ -16,11 +16,9 @@ applies_to:
   - "SQL Server 2017"
 dev_langs: 
   - "R"
-ms.assetid: 87056467-f67f-4d72-a83c-ac052736d85d
-caps.latest.revision: 17
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+ms.author: "heidist"
+author: "HeidiSteen"
+manager: "cgronlun"
 ms.workload: "Inactive"
 ---
 # Score new data (SQL and R deep dive)

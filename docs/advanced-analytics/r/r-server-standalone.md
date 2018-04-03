@@ -14,10 +14,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "R"
-ms.assetid: 
-caps.latest.revision: 22
-author: "HeidiSteen"
 ms.author: "heidist"
+author: "HeidiSteen"
 manager: "cgronlun"
 ---
 # SQL Server Machine Learning Server (Standalone) and R Server (Standalone)

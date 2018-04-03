@@ -1,4 +1,4 @@
-### Bug fixes in the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]
+### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.1 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
 
 - Fixed 1-second delay upon SQLFreeHandle with Encrypt and MARS
 - Fixed the type of cekMDversion, it is now an 8-byte integer, not an array of 8 bytes.

@@ -66,10 +66,10 @@ FINDSTRING("New York, NY, NY", "NY", 1)
 FINDSTRING("New York, NY, NY", "NY", 3)   
 ```  
   
- This example uses the **Name** column. It returns the location of the value n in the **Name** column. The return result varies depending on the value in **Name**. If **Name** contains Anderson, the function returns 8.  
+ This example uses the **Name** column. It returns the location of the second "n" in the **Name** column. The return result varies depending on the value in **Name**. If **Name** contains Anderson, the function returns 8.  
   
 ```  
-FINDSTRING(Name,"n", 2)   
+FINDSTRING(Name, "n", 2)   
 ```  
   
  This example uses the **Name** and **Size** columns. It returns the location of the leftmost character of the **Size** value in the **Name** column. The return result varies depending on column values. If **Name** contains Mountain,500Red,42 and **Size** contains 42, the return result is 17.  

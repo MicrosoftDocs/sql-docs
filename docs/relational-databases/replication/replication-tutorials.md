@@ -39,7 +39,7 @@ In the replication tutorials, "Publisher" refers to the server that contains tha
 Learn how to prepare servers so that replication can be run with least privileges. You must complete this tutorial before the other replication tutorials.  
   
 [Tutorial: Configure Publisher and Subscriber for Transactional Replication](../../relational-databases/replication/tutorial-replicating-data-between-continuously-connected-servers.md)  
-Learn how to configure Transactional Replication to replicate data between fully connected servers. 
+Learn how to configure Transactional Replication to replicate data between fully connected servers. This section also covers some basic Transactional error troubleshooting methodology. 
 
   
 [Tutorial: Configure Publisher and Subscriber for Merge Replication](../../relational-databases/replication/tutorial-replicating-data-with-mobile-clients.md)  

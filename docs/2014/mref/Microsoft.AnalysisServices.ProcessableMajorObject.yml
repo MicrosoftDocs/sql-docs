@@ -1,0 +1,11 @@
+### YamlMime:XRefMap
+sorted: true
+hrefUpdated: true
+references:
+- uid: Microsoft.AnalysisServices.ProcessableMajorObject.State*
+  commentId: P:Microsoft.AnalysisServices.ProcessableMajorObject.State
+  href: https://msdn.microsoft.com/library/microsoft.analysisservices.processablemajorobject.state(v=sql.120).aspx
+  name: State*
+  name.vb: State*
+  fullName: ProcessableMajorObject.State*
+  fullName.vb: ProcessableMajorObject.State*

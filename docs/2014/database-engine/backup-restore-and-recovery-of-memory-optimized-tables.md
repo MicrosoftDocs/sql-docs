@@ -1,0 +1,30 @@
+---
+title: "Backup, Restore, and Recovery of Memory-Optimized Tables | Microsoft Docs"
+ms.custom: ""
+ms.date: "06/13/2017"
+ms.prod: "sql-server-2014"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "database-engine-imoltp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+ms.assetid: 3f083347-0fbb-4b19-a6fb-1818d545e281
+caps.latest.revision: 4
+author: "stevestein"
+ms.author: "sstein"
+manager: "jhubbard"
+---
+# Backup, Restore, and Recovery of Memory-Optimized Tables
+  Topics in this section:  
+  
+-   [Backing Up a Database with Memory-Optimized Tables](../../2014/database-engine/backing-up-a-database-with-memory-optimized-tables.md)  
+  
+-   [Piecemeal Restore of Databases With Memory-Optimized Tables](../../2014/database-engine/piecemeal-restore-of-databases-with-memory-optimized-tables.md)  
+  
+-   [Restore and Recovery of Memory-Optimized Tables](../../2014/database-engine/restore-and-recovery-of-memory-optimized-tables.md)  
+  
+## See Also  
+ [In-Memory OLTP &#40;In-Memory Optimization&#41;](../../2014/database-engine/in-memory-oltp-in-memory-optimization.md)  
+  
+  

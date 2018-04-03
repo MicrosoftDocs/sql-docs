@@ -1,0 +1,18 @@
+### YamlMime:XRefMap
+sorted: true
+hrefUpdated: true
+references:
+- uid: ReportService2005.ReportingService2005
+  commentId: T:ReportService2005.ReportingService2005
+  href: https://msdn.microsoft.com/library/reportservice2005.reportingservice2005(v=sql.120).aspx
+  name: ReportingService2005
+  name.vb: ReportingService2005
+  fullName: ReportService2005.ReportingService2005
+  fullName.vb: ReportService2005.ReportingService2005
+- uid: ReportService2005.ReportingService2005.ListSecureMethods*
+  commentId: M:ReportService2005.ReportingService2005.ListSecureMethods
+  href: https://msdn.microsoft.com/library/reportservice2005.reportingservice2005.listsecuremethods(v=sql.120).aspx
+  name: ListSecureMethods
+  name.vb: ListSecureMethods
+  fullName: ReportService2005.ReportingService2005.ListSecureMethods*
+  fullName.vb: ReportService2005.ReportingService2005.ListSecureMethods*

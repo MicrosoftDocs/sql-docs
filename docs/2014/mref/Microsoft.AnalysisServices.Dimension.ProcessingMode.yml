@@ -1,0 +1,11 @@
+### YamlMime:XRefMap
+sorted: true
+hrefUpdated: true
+references:
+- uid: Microsoft.AnalysisServices.Dimension.ProcessingMode*
+  commentId: P:Microsoft.AnalysisServices.Dimension.ProcessingMode*
+  href: https://msdn.microsoft.com/library/microsoft.analysisservices.dimension.processingmode(v=sql.120).aspx
+  name: ProcessingMode*
+  name.vb: ProcessingMode*
+  fullName: Microsoft.AnalysisServices.Dimension.ProcessingMode*
+  fullName.vb: Microsoft.AnalysisServices.Dimension.ProcessingMode*

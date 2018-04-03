@@ -1,0 +1,51 @@
+---
+title: "DatabaseLogonTimeout Property (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
+ms.custom: ""
+ms.date: "06/13/2017"
+ms.prod: "sql-server-2014"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "reporting-services-native"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+api_name: 
+  - "DatabaseLogonTimeout Property"
+api_location: 
+  - "reportingservices.mof"
+topic_type: 
+  - "apiref"
+helpviewer_keywords: 
+  - "DatabaseLogonTimeout property"
+ms.assetid: 4a65162c-33de-485e-8fd3-2bd6bff8bf8d
+caps.latest.revision: 37
+author: "douglaslM"
+ms.author: "douglasl"
+manager: "mblythe"
+---
+# DatabaseLogonTimeout Property (WMI MSReportServer_ConfigurationSetting)
+  Specifies the number of seconds to wait before an attempt to log on to the report server database fails. A value of **0** indicates an infinite wait time. Read only.  
+  
+## Syntax  
+  
+```vb  
+Public Dim DatabaseLogonTimeout As Int32  
+```  
+  
+```csharp  
+public Int32 DatabaseLogonTimeout;  
+```  
+  
+## Property Values  
+ A 32-bit signed integer object that represents the number of seconds.  
+  
+## Example Code  
+ [MSReportServer_ConfigurationSetting Class](../../2014/reporting-services/msreportserver-configurationsetting-class.md)  
+  
+## Requirements  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../includes/ssrswminmspca-md.md)]  
+  
+## See Also  
+ [MSReportServer_ConfigurationSetting Members](../../2014/reporting-services/msreportserver-configurationsetting-members.md)  
+  
+  

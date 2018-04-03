@@ -1,0 +1,11 @@
+### YamlMime:XRefMap
+sorted: true
+hrefUpdated: true
+references:
+- uid: Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDefaultButton
+  commentId: T:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDefaultButton
+  href: https://msdn.microsoft.com/library/microsoft.sqlserver.messagebox.exceptionmessageboxdefaultbutton(v=sql.120).aspx
+  name: ExceptionMessageBoxDefaultButton
+  name.vb: ExceptionMessageBoxDefaultButton
+  fullName: MessageBox.ExceptionMessageBoxDefaultButton
+  fullName.vb: MessageBox.ExceptionMessageBoxDefaultButton

@@ -13,7 +13,7 @@ ms.topic: "article"
 ms.assetid: 21456462-e58a-44c3-9d3a-68b4263575d7
 caps.latest.revision: 1
 author: "jeannt"
-ms.author: "jeannt"
+ms.author: "heidist"
 manager: "cgronlund"
 ms.workload: "On Demand"
 ---

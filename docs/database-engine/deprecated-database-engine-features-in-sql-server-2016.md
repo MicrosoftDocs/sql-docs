@@ -53,7 +53,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Remote servers|SET REMOTE_PROC_TRANSACTIONS|Replace remote servers by using linked servers.|SET REMOTE_PROC_TRANSACTIONS|110|  
 |Set options|**SET ROWCOUNT** for **INSERT**, **UPDATE**, and **DELETE** statements|TOP keyword|SET ROWCOUNT|109|  
 |Table hints|HOLDLOCK table hint without parenthesis.|Use HOLDLOCK with parenthesis.|HOLDLOCK table hint without parenthesis|167|  
-|Tools|sqlmaint Utility|Use the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] maintenance plan feature|None|None|  
   
 ## Features Not Supported in a Future Version of SQL Server  
  The following [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] features are supported in the next version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], but will be removed in a later version. The specific version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has not been determined.  

@@ -11,15 +11,15 @@ ms.technology:
   
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+ms.author: "heidist"
+author: "HeidiSteen"
+manager: "cgronlun"
 ms.workload: "Inactive"
 ---
 # Python interoperability with SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This topic describes the Python components that are installed if you enable the feature **Machine Learning Services (In-Database)** and select Python as the language.
+This article describes the Python components that are installed if you enable the feature **Machine Learning Services (In-Database)** and select Python as the language.
 
 ## Python components
 

@@ -15,10 +15,9 @@ applies_to:
   - "SQL Server 2017"
 dev_langs: 
   - "Python"
-caps.latest.revision: 1
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+ms.author: "heidist"
+author: "HeidiSteen"
+manager: "cgronlun"
 ---
 # SQL Server Python tutorials
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -47,9 +46,6 @@ For information about requirements and setup, see [Prerequisites](#bkmk_Prerequi
 
     This end-to-end walkthrough demonstrates the process of building a complete Python solution using T-SQL stored procedures. All Python code is included.
 
-+ [Deploy and consume a Python model](..\python\publish-consume-python-code.md)
-
-  Learn how to deploy a Python model as a web service, using the latest version of Microsoft Machine Learning Server.
 
 ## Python samples
 

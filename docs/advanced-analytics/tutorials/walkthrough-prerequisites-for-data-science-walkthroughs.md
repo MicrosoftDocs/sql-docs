@@ -14,11 +14,9 @@ applies_to:
   - "SQL Server 2016"
 dev_langs: 
   - "R"
-ms.assetid: 0b0582b8-8843-4787-94a8-2e28bdc04fb2
-caps.latest.revision: 13
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+ms.author: "heidist"
+author: "HeidiSteen"
+manager: "cgronlun"
 ms.workload: "Inactive"
 ---
 # Prerequisites for the data science walkthrough for SQL Server and R
@@ -35,7 +33,7 @@ You must have access to an instance of SQL Server with support for R installed. 
 + Machine Learning Services (In-Database) for SQL Server 2017
 + SQL Server 2016 R Services
 
-For more information, see [Set up SQL Server R Services (In-Database](../r/set-up-sql-server-r-services-in-database.md).
+For more information, see [Install SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) or [Install SQL Server 2016 R Services](../install/sql-r-services-windows-install.md).
 
 > [!IMPORTANT]
 > SQL Server versions earlier than 2016 do not support integration with R. However, you can use older SQL databases as an ODBC data source.

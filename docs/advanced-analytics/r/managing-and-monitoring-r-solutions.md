@@ -12,11 +12,9 @@ ms.technology:
   
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: d455f22a-190f-4a28-9088-98a843cd5db2
-caps.latest.revision: 15
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+ms.author: "heidist"
+author: "HeidiSteen"
+manager: "cgronlun"
 ms.workload: "Inactive"
 ---
 # Managing and monitoring machine learning solutions
@@ -59,7 +57,5 @@ Database administrators must integrate competing projects and priorities into a 
 For more information, see these resources:
 
 + [Resource governance for R Services](../r/resource-governance-for-r-services.md)
-
-+ [Monitoring R Services](../r/monitoring-r-services.md)
 
 + [Configure and manage Advanced Analytics Extensions](../r/configure-and-manage-advanced-analytics-extensions.md)

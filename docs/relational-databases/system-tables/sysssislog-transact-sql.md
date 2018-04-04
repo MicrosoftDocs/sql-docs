@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sysssislog system table"
 ms.assetid: 7fa288a1-81e3-42a0-82f6-8a59019693d0
 caps.latest.revision: 40
-author: "spelluru"
-ms.author: "spelluru"
+author: "douglasl"
+ms.author: "douglasl"
 manager: "craigg"
 ms.workload: "On Demand"
 ---

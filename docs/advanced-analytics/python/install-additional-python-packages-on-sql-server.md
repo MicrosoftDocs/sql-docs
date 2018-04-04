@@ -10,11 +10,9 @@ ms.technology:
   - "r-services"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 21456462-e58a-44c3-9d3a-68b4263575d7
-caps.latest.revision: 1
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+ms.author: "heidist"
+author: "HeidiSteen"
+manager: "cgronlun"
 ms.workload: "On Demand"
 ---
 # Install new Python packages on SQL Server
@@ -28,7 +26,7 @@ For help figuring out where packages are installed, or which packages are instal
 
 ## Prerequisites
 
-+ You must have installed Machine Learning Services (In-Database) with the Python language option. For instructions, see [Set up Python Machine Learning Services](setup-python-machine-learning-services.md).
++ You must have installed Machine Learning Services (In-Database) with the Python language option. For instructions, see [Install SQL Server 2017 Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md).
 
 + For each server instance, you must install a separate copy of the package. Packages cannot be shared across instances.
 

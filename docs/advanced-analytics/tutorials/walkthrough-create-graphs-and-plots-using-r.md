@@ -14,11 +14,9 @@ applies_to:
   - "SQL Server 2016"
 dev_langs: 
   - "R"
-ms.assetid: 5f70f0a6-fd4a-410f-9f44-1605503f77ec
-caps.latest.revision: 16
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+ms.author: "heidist"
+author: "HeidiSteen"
+manager: "cgronlun"
 ms.workload: "On Demand"
 ---
 # Create graphs and plots using SQL and R (walkthrough)

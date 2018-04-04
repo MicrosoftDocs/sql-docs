@@ -16,11 +16,9 @@ applies_to:
 dev_langs: 
   - "Python"
   - "TSQL"
-ms.assetid: 
-caps.latest.revision: 2
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+ms.author: "heidist"
+author: "HeidiSteen"
+manager: "cgronlun"
 ---
 # In-Database Python analytics for SQL developers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -76,7 +74,7 @@ All tasks can be done using [!INCLUDE[tsql](../../includes/tsql-md.md)] stored p
 
 ### Prerequisites
 
-+ Install an instance of SQL Server 2017 with Machine Learning Services and Python enabled. For more information, see [Set up SQL Server Machine Learning Services with Python](../python/setup-python-machine-learning-services.md).
++ Install an instance of SQL Server 2017 with Machine Learning Services and Python enabled. For more information, see [Install SQL Server 2017 Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md).
 + The login that you use for this walkthrough must have permissions to create databases and other objects, to upload data, select data, and run stored procedures.
 
 ### Experience level

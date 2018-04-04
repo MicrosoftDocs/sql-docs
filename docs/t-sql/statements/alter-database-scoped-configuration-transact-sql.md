@@ -1,7 +1,7 @@
 ---
 title: "ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/04/2018"
+ms.date: "04/03/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
@@ -33,7 +33,7 @@ ms.workload: "On Demand"
 # ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  This statement enables several database configuration settings at the **individual database** level. This statement is available in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] and in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Those settings are:  
+  This statement enables several database configuration settings at the **individual database** level. This statement is available in [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] and in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Those settings are:  
   
 - Clear procedure cache.  
 - Set the MAXDOP parameter to an arbitrary value (1,2, ...) for the primary database based on what works best for that particular database and set a different value (e.g. 0) for all secondary database used (such as for reporting queries).  
@@ -41,7 +41,8 @@ ms.workload: "On Demand"
 - Enable or disable parameter sniffing at the database level.
 - Enable or disable query optimization hotfixes at the database level.
 - Enable or disable the identity cache at the database level.
-- Enable or disable a compiled plan stub to be stored in cache when a batch is compiled for the first time.    
+- Enable or disable a compiled plan stub to be stored in cache when a batch is compiled for the first time.  
+- Enable or disable collection of execution statistics for natively compiled T-SQL modules.
   
  ![link icon](../../database-engine/configure-windows/media/topic-link.gif "link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,6 +65,8 @@ ALTER DATABASE SCOPED CONFIGURATION
     | QUERY_OPTIMIZER_HOTFIXES = { ON | OFF | PRIMARY}
     | IDENTITY_CACHE = { ON | OFF }
     | OPTIMIZE_FOR_AD_HOC_WORKLOADS = { ON | OFF }
+    | XTP_PROCEDURE_EXECUTION_STATISTICS = { ON | OFF } 
+    | XTP_QUERY_EXECUTION_STATISTICS = { ON | OFF }     
 }  
 ```  
   
@@ -131,7 +134,7 @@ Clears the procedure (plan) cache for the database. This can be executed both on
 
 IDENTITY_CACHE **=** { **ON** | OFF }  
 
-**Applies to**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
+**Applies to**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 Enables or disables identity cache at the database level. The default is **ON**. Identity caching is used to improve INSERT performance on tables with identity columns. To avoid gaps in the values of an identity column in cases where the server restarts unexpectedly or fails over to a secondary server, disable the IDENTITY_CACHE option. This option is similar to the existing [Trace Flag 272](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), except that it can be set at the database level rather than only at the server level.   
 
@@ -140,9 +143,27 @@ Enables or disables identity cache at the database level. The default is **ON**.
 
 OPTIMIZE_FOR_AD_HOC_WORKLOADS **=** { ON | **OFF** }  
 
-**Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
+**Applies to**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] 
 
 Enables or disables a compiled plan stub to be stored in cache when a batch is compiled for the first time. The default is OFF. Once the database scoped configuration OPTIMIZE_FOR_AD_HOC_WORKLOADS is enabled for a database, a compiled plan stub will be stored in cache when a batch is compiled for the first time. Plan stubs have a smaller memory footprint compared to the size of the full compiled plan.  If a batch is compiled or executed again, the compiled plan stub will be removed and replaced with a full compiled plan.
+
+XTP_PROCEDURE_EXECUTION_STATISTICS  **=** { ON | **OFF** }  
+
+**Applies to**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 
+
+Enables or disables collection of execution statistics at the module-level for natively compiled T-SQL modules in the current database. The default is OFF. The execution statistics are reflected in [sys.dm_exec_procedure_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md).
+
+Module-level execution statistics for natively compiled T-SQL modules are collected if either this option is ON, or if statistics collection is enabled through [sp_xtp_control_proc_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md).
+
+XTP_QUERY_EXECUTION_STATISTICS  **=** { ON | **OFF** }  
+
+**Applies to**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]
+
+Enables or disables collection of execution statistics at the statement-level for natively compiled T-SQL modules in the current database. The default is OFF. The execution statistics are reflected in [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) and in [Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).
+
+Statement-level execution statistics for natively compiled T-SQL modules are collected if either this option is ON, or if statistics collection is enabled through [sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).
+
+For more details about performance monitoring of natively-compiled T-SQL modules see [Monitoring Performance of Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md).
 
 ##  <a name="Permissions"></a> Permissions  
  Requires ALTER ANY DATABASE SCOPE CONFIGURATION   

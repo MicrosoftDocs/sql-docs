@@ -12,9 +12,9 @@ ms.technology:
   
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+author: "HeidiSteen"
+ms.author: "heidist"
+manager: "cgronlun"
 ms.workload: "Inactive"
 ---
 
@@ -52,10 +52,6 @@ This deployment feature of R Server provides these benefits:
 + Faster scoring
   
   You can use realtime scoring with a supported R model object to improve the speed of scoring operations.
-
-+ Publish Python code as a web service
-
-  For examples, see [Publish and consume Python code](./python/publish-consume-python-code.md).
 
 + Asynchronous batch consumption
 

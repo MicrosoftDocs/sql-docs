@@ -1,7 +1,7 @@
 ---
-title: "Upgrade machine learning components in a SQL Server instance | Microsoft Docs"
+title: "Bind machine learning components on SQL Server to Microsoft Machine Learning Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/31/2017"
+ms.date: "03/15/2018"
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -13,14 +13,12 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to: 
   - "SQL Server (starting with 2016 CTP3)"
-ms.assetid: 4da80998-f929-4fad-a86f-87d09c1a79ef
-caps.latest.revision: 15
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+ms.author: "heidist"
+author: "HeidiSteen"
+manager: "cgronlun"
 ms.workload: "On Demand"
 ---
-# Upgrade machine learning components in a SQL Server instance
+# Bind machine learning components on SQL Server to Microsoft Machine Learning Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article explains the process of _binding_, which you can use to upgrade the machine learning components used in SQL Server. The process of binding locks the server into an update cadence based on releases of Machine Learning Server, rather than using the SQL Server release and update schedule.

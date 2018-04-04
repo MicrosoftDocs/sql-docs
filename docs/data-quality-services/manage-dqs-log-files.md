@@ -20,7 +20,7 @@ ms.assetid: 4fccfd24-aede-4882-be69-ec1e82682e16
 caps.latest.revision: 15
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Manage DQS Log Files

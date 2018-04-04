@@ -11,9 +11,9 @@ ms.technology:
   
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+ms.author: "heidist"
+author: "HeidiSteen"
+manager: "cgronlun"
 ms.workload: "Inactive"
 ---
 # Python
@@ -31,7 +31,6 @@ This section contains links to API reference specific to Machine Learning Servic
 **Samples**
 
 + [Run Python from T-SQL](../tutorials/run-python-using-t-sql.md)
-+ [Publish and Consume Python Models](publish-consume-python-code.md)
 + [Use revoscalepy to Create a Model](../tutorials/use-python-revoscalepy-to-create-model.md)
 
 

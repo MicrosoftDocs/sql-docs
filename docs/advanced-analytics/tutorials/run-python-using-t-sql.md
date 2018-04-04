@@ -14,10 +14,9 @@ applies_to:
   - "SQL Server 2017"
 dev_langs: 
   - "Python"
-caps.latest.revision: 2
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+ms.author: "heidist"
+author: "HeidiSteen"
+manager: "cgronlun"
 ---
 # Run Python using T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,7 +25,7 @@ This tutorial explains how you can run Python code in SQL Server 2017. It walks 
 
 ## Prerequisites
 
-To complete this tutorial, you must first install SQL Server 2017 and enable Machine Learning Services on the instance, as described in [this article](../python/setup-python-machine-learning-services.md). 
+To complete this tutorial, you must first install SQL Server 2017 and enable Machine Learning Services on the instance, as described in [Install SQL Server 2017 Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md). 
 
 You should also install [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms). Alternatively, you can use another database management or query tool, as long as it can connect to a server and database, and run a T-SQL query or stored procedure.
 
@@ -383,7 +382,7 @@ This exercise was intended to give you an idea of how to work with different Pyt
 
 + Can't find the stored procedure, `sp_execute_external_script`? It means you probably haven't finished configuring the instance to support external script execution. After running SQL Server 2017 setup and selecting Python as the machine learning language, you must also explicitly enable the feature using `sp_configure`, and then restart the instance. 
 
-    For details, see [Setup Machine Learning Services with Python](../python/setup-python-machine-learning-services.md).
+    For details, see [Install SQL Server 2017 Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md).
 
 ## Next steps
 

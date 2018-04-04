@@ -53,8 +53,8 @@ ms.workload: "On Demand"
  This view requires VIEW DATABASE STATE permission.  
   
 ## Remarks  
- The data returned by **sys.dm_db_resource_stats** is expressed as a percentage of the maximum allowed DTU limits for the service tier/performance level that you are running for Basic, Standard, and Premium databases. For Web and Business tiers, these numbers indicate the percentages in terms of the Standard S2 performance tier. For example, when executing against a Web or Business database, if avg_cpu_percent returns 70%, that indicates 70% of the S2 tier limit. In addition, for Web and Business tiers, the percentages may reflect a number in excess of 100%, which is also based on the S2 tier limit.  
-  
+ The data returned by **sys.dm_db_resource_stats** is expressed as a percentage of the maximum allowed DTU limits for the service tier/performance level that you are running for Basic, Standard, and Premium databases.
+ 
  If the database was failed over to another server within the last 60 minutes, the view will only return data for the time it has been the primary database since that failover.  
   
  For a less granular view of this data, use **sys.resource_stats** catalog view in the **master** database. This view captures data every 5 minutes and maintains historical data for 14 days.  For more information, see [sys.resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md).  
@@ -63,10 +63,7 @@ ms.workload: "On Demand"
   
 ## Example  
   
-> [!NOTE]  
->  For Web and Business tiers, these numbers indicate the percentages in terms of the Standard S2 performance tier. For example, when executing against a Web or Business database, if avg_cpu_percent returns 70%, that indicates 70% of the S2 tier limit. In addition, for Web and Business tiers, the percentages may reflect a number in excess of 100%, which is also based on the S2 tier limit.  
-  
- The following example returns resource utilization data ordered by the most recent time for the currently connected database.  
+The following example returns resource utilization data ordered by the most recent time for the currently connected database.  
   
 ```  
 SELECT * FROM sys.dm_db_resource_stats ORDER BY end_time DESC;  

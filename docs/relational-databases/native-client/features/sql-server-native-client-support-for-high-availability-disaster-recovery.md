@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Native Client Support for High Availability, Disaster Recovery | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: "04/04/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
@@ -69,16 +69,35 @@ ms.workload: "On Demand"
  If you upgrade a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client application that currently uses database mirroring to a multi-subnet scenario, you should remove the **Failover_Partner** connection property and replace it with **MultiSubnetFailover** set to **Yes** and replace the server name in the connection string with an availability group listener. If a connection string uses **Failover_Partner** and **MultiSubnetFailover=Yes**, the driver will generate an error. However, if a connection string uses **Failover_Partner** and **MultiSubnetFailover=No** (or **ApplicationIntent=ReadWrite**), the application will use database mirroring.  
   
  The driver will return an error if database mirroring is used on the primary database in the availability group, and if **MultiSubnetFailover=Yes** is used in the connection string that connects to a primary database instead of to an availability group listener.  
-  
-## Specifying Application Intent  
- When **ApplicationIntent=ReadOnly**, the client requests a read workload when connecting to an Always On enabled database. The server will enforce the intent at connection time and during a USE database statement but only to an Always On enabled database.  
-  
- The **ApplicationIntent** keyword does not work with legacy, read-only databases.  
-  
- A database can allow or disallow read workloads on the targeted Always On database. (This is done with the **ALLOW_CONNECTIONS** clause of the **PRIMARY_ROLE** and **SECONDARY_ROLE**[!INCLUDE[tsql](../../../includes/tsql-md.md)] statements.)  
-  
- The **ApplicationIntent** keyword is used to enable read-only routing.  
-  
+
+
+## Specifying Application Intent
+
+The keyword **ApplicationIntent** can be specified in your connection string. The assignable values are **ReadWrite** or **ReadOnly**. The default is **ReadWrite**.
+
+When **ApplicationIntent=ReadOnly**, the client requests a read workload when connecting. The server enforces the intent at connection time, and during a **USE** database statement.
+
+The **ApplicationIntent** keyword does not work with legacy read-only databases.  
+
+
+#### Targets of ReadOnly
+
+When a connection chooses **ReadOnly**, the connection is assigned to any of the following special configurations that might exist for the database:
+
+- [Always On](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
+    - A database can allow or disallow read workloads on the targeted Always On database. This is done with the **ALLOW_CONNECTIONS** clause of the **PRIMARY_ROLE** and **SECONDARY_ROLE**[!INCLUDE[tsql](../../../includes/tsql-md.md)] statements.
+
+- [Geo-Replication](https://docs.microsoft.com/azure/sql-database/sql-database-geo-replication-overview)
+
+- [Read Scale-Out](https://docs.microsoft.com/azure/sql-database/sql-database-read-scale-out)
+
+If none of those special targets are available, the regular database is read from.
+
+&nbsp;
+
+The **ApplicationIntent** keyword enables *read-only routing*.  
+
+
 ## Read-Only Routing  
  Read-only routing is a feature that can ensure the availability of a read only replica of a database. To enable read-only routing:  
   

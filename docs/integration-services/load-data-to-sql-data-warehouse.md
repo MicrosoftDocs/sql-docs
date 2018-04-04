@@ -187,8 +187,8 @@ Congratulations! You’ve successfully used SQL Server Integration Services to l
 [Download SQL Server Data Tools (SSDT)]: ../ssdt/download-sql-server-data-tools-ssdt.md
 [CREATE TABLE (Azure SQL Data Warehouse, Parallel Data Warehouse)]: ../t-sql/statements/create-table-azure-sql-data-warehouse.md
 [Data Flow]: ./data-flow/data-flow.md
-[Troubleshooting Tools for Package Development]: ./troubleshooting/troubleshooting-tools-for-package-development
-[Deployment of Projects and Packages]: ./packages/deploy-integration-services-ssis-projects-and-packages
+[Troubleshooting Tools for Package Development]: ./troubleshooting/troubleshooting-tools-for-package-development.md
+[Deployment of Projects and Packages]: ./packages/deploy-integration-services-ssis-projects-and-packages.md
 
 <!--Other Web references-->
 [Microsoft SQL Server 2016 Integration Services Feature Pack for Azure]: http://go.microsoft.com/fwlink/?LinkID=626967

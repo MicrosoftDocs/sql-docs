@@ -16,10 +16,9 @@ applies_to:
 dev_langs: 
   - "R"
 ms.assetid: 69b374c1-2042-4861-8f8b-204a6297c0db
-caps.latest.revision: 21
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+ms.author: "heidist"
+author: "HeidiSteen"
+manager: "cgronlun"
 ms.workload: "Inactive"
 ---
 # Build an R model and save to SQL Server

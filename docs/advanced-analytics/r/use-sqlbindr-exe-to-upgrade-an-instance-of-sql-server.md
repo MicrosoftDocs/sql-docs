@@ -13,10 +13,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to: 
   - "SQL Server (starting with 2016 CTP3)"
-ms.assetid: 
-caps.latest.revision: 15
-author: "HeidiSteen"
 ms.author: "heidist"
+author: "HeidiSteen"
 manager: "cgronlun"
 ms.workload: "On Demand"
 ---

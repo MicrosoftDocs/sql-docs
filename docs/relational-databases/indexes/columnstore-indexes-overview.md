@@ -1,7 +1,7 @@
 ---
 title: "Columnstore indexes - Overview | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/07/2016"
+ms.date: "04/03/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
@@ -70,7 +70,7 @@ ms.workload: "Active"
  To reduce fragmentation of the column segments and improve performance, the columnstore index might store some data temporarily into a clustered index, which is called a deltastore, and a btree list of IDs for deleted rows. The deltastore operations are handled behind the scenes. To return the correct query results, the clustered columnstore index combines query results from both the columnstore and the deltastore.  
   
  delta rowgroup  
- Used with clustered column store indexes only, a *delta rowgroup* is a clustered index that improves columnstore compression and performance by storing rows until the number of rows reaches a threshold and are then moved into the columnstore.  
+ Used with column store indexes only, a *delta rowgroup* is a clustered index that improves columnstore compression and performance by storing rows until the number of rows reaches a threshold and are then moved into the columnstore.  
 
  When a delta rowgroup reaches the maximum number of rows, it becomes closed. A tuple-mover process checks for closed row groups. When it finds the closed rowgroup, it compresses it and stores it into the columnstore.  
   

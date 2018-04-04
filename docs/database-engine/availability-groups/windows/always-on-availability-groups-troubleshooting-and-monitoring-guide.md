@@ -1,7 +1,7 @@
 ---
 title: "Always On Availability Groups troubleshooting and monitoring guide (SQL Server) | Microsoft Docs"
 ms.custom: "ag-guide"
-ms.date: "2016-10-05"
+ms.date: "05/10/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

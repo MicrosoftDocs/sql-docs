@@ -24,7 +24,7 @@ manager: "jhubbard"
   
  Creating a report server database and configuring the connection is a multi-step process. To guide you through the steps, this page provides Wizards for each type of task. Permissions and logins are created or updated for you. You can monitor the status of each step in the Progress page. If an error occurs, you can click the error for information on how to resolve it.  
   
- A report server database must support a specific server mode. The default mode is native mode, but you can also create a report server database for SharePoint integrated mode if you are running a report server in a larger deployment of a SharePoint product or technology. For more information, see [Create a Native Mode Report Server Database  &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/create-a-native-mode-report-server-database-ssrs-configuration-manager.md).  
+ A report server database must support a specific server mode. The default mode is native mode, but you can also create a report server database for SharePoint integrated mode if you are running a report server in a larger deployment of a SharePoint product or technology. For more information, see [Create a Native Mode Report Server Database  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
   
  To open this page, start the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager and click **Database** in the navigation pane. For more information, see [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
@@ -54,7 +54,7 @@ manager: "jhubbard"
  Start a wizard that guides you through all of the steps required for selecting a different account or updating the password on the account that is used to connect to the report server database.  
   
 ## See Also  
- [Create a Native Mode Report Server Database  &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/create-a-native-mode-report-server-database-ssrs-configuration-manager.md)   
+ [Create a Native Mode Report Server Database  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
  [Reporting Services Configuration Manager F1 Help Topics &#40;SSRS Native Mode&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [Report Server Database &#40;SSRS Native Mode&#41;](../../../2014/reporting-services/report-server-database-ssrs-native-mode.md)   
  [Configure a Report Server Database Connection  &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  

@@ -29,7 +29,7 @@ manager: "jhubbard"
 |Note: If you are upgrading a computer from a previous CTP release [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and you had made custom changes to the configuration files, you will need to make the same changes to the configuration files, following the upgrade to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. The affected files are **web.config** and **client.config**.||  
   
 ## Installation Scenarios  
- The following table describes the possible scenarios when you are installing [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] into and existing SharePoint Farm. Local mode allows reports to be rendered locally from the SharePoint document library, without integration with a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server. The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] add-in for SharePoint products is required but a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server is not. For more information on local mode, see [Local Mode vs. Connected Mode Reports in the Report Viewer &#40;Reporting Services in SharePoint Mode&#41;](../../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md) and [Where to find the Reporting Services add-in for SharePoint Products](../../../2014/sql-server/install/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
+ The following table describes the possible scenarios when you are installing [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] into and existing SharePoint Farm. Local mode allows reports to be rendered locally from the SharePoint document library, without integration with a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server. The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] add-in for SharePoint products is required but a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server is not. For more information on local mode, see [Local Mode vs. Connected Mode Reports in the Report Viewer &#40;Reporting Services in SharePoint Mode&#41;](../../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md) and [Where to find the Reporting Services add-in for SharePoint Products](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
 |Starting Configuration|Workflow|Ending Configuration|Comments|  
 |----------------------------|--------------|--------------------------|--------------|  
@@ -43,13 +43,13 @@ manager: "jhubbard"
 |Step|Link|  
 |----------|----------|  
 |**Installation and initial configuration**||  
-|Install the SharePoint add-in on all Web front-end (WFE) computers.|[Add an Additional Reporting Services Web Front-end to a Farm](../../../2014/sql-server/install/add-an-additional-reporting-services-web-front-end-to-a-farm.md)|  
+|Install the SharePoint add-in on all Web front-end (WFE) computers.|[Add an Additional Reporting Services Web Front-end to a Farm](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)|  
 |Install SQL Server [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Reporting Services and the Database engine.|[Install Reporting Services SharePoint Mode for SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)|  
 |Create at least one SSRS service application and configure service app association.|See the ‘Service Application’ section in [Install Reporting Services SharePoint Mode for SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)|  
 |**Additional Configuration**||  
 |Add SSRS content types to your document library.|[Add Report Server Content Types to a Library &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)|  
-|Provision SQL Server Agent|[Provision Subscriptions and Alerts for SSRS Service Applications](../../../2014/sql-server/install/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)|  
-|Configure e-mail settings for your Service application|[Configure E-mail for a Reporting Services Service Application &#40;SharePoint 2010 and SharePoint 2013&#41;](../../../2014/sql-server/install/configure-e-mail-for-a-reporting-services-service-application.md)|  
+|Provision SQL Server Agent|[Provision Subscriptions and Alerts for SSRS Service Applications](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)|  
+|Configure e-mail settings for your Service application|[Configure E-mail for a Reporting Services Service Application &#40;SharePoint 2010 and SharePoint 2013&#41;](../../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|  
 |Configure Claims to Windows Token Service (c2WTS)|[Claims to Windows Token Service &#40;C2WTS&#41; and Reporting Services](../../../2014/sql-server/install/claims-to-windows-token-service-c2wts-and-reporting-services.md)|  
   
 ## Migration Checklist  
@@ -69,8 +69,8 @@ manager: "jhubbard"
 ## Next Steps  
   
 ## See Also  
- [Reporting Services SharePoint Mode Installation &#40;SharePoint 2010 and SharePoint 2013&#41;](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode.md)   
+ [Reporting Services SharePoint Mode Installation &#40;SharePoint 2010 and SharePoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)   
  [Guidance for Using SQL Server BI Features in a SharePoint 2010 Farm](../../../2014/sql-server/install/guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md)   
- [Supported Combinations of SharePoint and Reporting Services Server and Add-in &#40;SQL Server 2014&#41;](../../../2014/sql-server/install/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
+ [Supported Combinations of SharePoint and Reporting Services Server and Add-in &#40;SQL Server 2014&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
   
   

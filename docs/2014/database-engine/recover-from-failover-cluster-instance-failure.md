@@ -38,11 +38,11 @@ manager: "jhubbard"
   
 4.  Install new hardware to replace the failed hardware in Node 1.  
   
-5.  Using the Failover Cluster Manager snap-in, add Node 1 to the existing cluster. For more information, see [Before Installing Failover Clustering](../../2014/sql-server/install/before-installing-failover-clustering.md).  
+5.  Using the Failover Cluster Manager snap-in, add Node 1 to the existing cluster. For more information, see [Before Installing Failover Clustering](../sql-server/failover-clusters/install/before-installing-failover-clustering.md).  
   
 6.  Ensure that the administrator accounts are the same on all cluster nodes.  
   
-7.  Run [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Setup to add Node 1 to the FCI. For more information, see [Add or Remove Nodes in a SQL Server Failover Cluster &#40;Setup&#41;](../../2014/sql-server/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
+7.  Run [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Setup to add Node 1 to the FCI. For more information, see [Add or Remove Nodes in a SQL Server Failover Cluster &#40;Setup&#41;](../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
 ##  <a name="Scenario2"></a> Recover from a reparable failure  
  Us the following steps to recover from a reparable failure. In this case, failure is caused by Node 1 being down or offline but not irretrievably broken. This could be caused by an operating system failure, hardware failure, or failure in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance itself.  

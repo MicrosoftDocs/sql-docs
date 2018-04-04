@@ -61,6 +61,6 @@ robots: noindex,nofollow
  For more information about the contents of the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web.config file, see [Web Configuration Reference &#40;Master Data Services&#41;](../../2014/master-data-services/web-configuration-reference-master-data-services.md).  
   
 ## See Also  
- [Install Master Data Services](../../2014/sql-server/install/install-master-data-services.md)  
+ [Install Master Data Services](install-windows/install-master-data-services.md)  
   
   

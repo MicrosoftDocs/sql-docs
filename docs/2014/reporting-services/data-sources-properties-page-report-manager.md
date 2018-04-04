@@ -86,7 +86,7 @@ manager: "mblythe"
  **Credentials are not required**  
  Specify that credentials are not required to access the data source. Note that if a data source requires a user logon, choosing this option will have no effect. You should only choose this option if the data source connection does not require user credentials.  
   
- To use this option, you must have previously configured the unattended execution account for your report server deployment. The unattended execution account is used to connect to external data sources when other sources of credentials are not available. If you specify this option and the account is not configured, the connection to the report data source will fail and report processing will not occur.  For more information about this account, see [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+ To use this option, you must have previously configured the unattended execution account for your report server deployment. The unattended execution account is used to connect to external data sources when other sources of credentials are not available. If you specify this option and the account is not configured, the connection to the report data source will fail and report processing will not occur.  For more information about this account, see [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
  **Apply**  
  Click to save your changes.  

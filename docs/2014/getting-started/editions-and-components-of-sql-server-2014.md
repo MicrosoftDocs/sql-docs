@@ -74,7 +74,7 @@ manager: "jhubbard"
 ## Using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] with Client/Server Applications  
  You can install just the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] client components on a computer that is running client/server applications that connect directly to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. A client components installation is also a good option if you administer an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on a database server, or if you plan to develop [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] applications.  
   
- The client tools option installs the following [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] features: backward compatibility components, [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], connectivity components, management tools, software development kit, and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online components. For more information, see [Install SQL Server 2014 from the Installation Wizard &#40;Setup&#41;](../../2014/sql-server/install/install-sql-server-2014-from-the-installation-wizard-setup.md).  
+ The client tools option installs the following [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] features: backward compatibility components, [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], connectivity components, management tools, software development kit, and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online components. For more information, see [Install SQL Server 2014 from the Installation Wizard &#40;Setup&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).  
   
 ## Deciding Among [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Components  
  Use the Feature Selection page of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Installation Wizard to select the components to include in an installation of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. By default, none of the features in the tree are selected.  
@@ -105,6 +105,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Planning a SQL Server Installation](../../2014/sql-server/install/planning-a-sql-server-installation.md)   
- [Install SQL Server 2014 from the Installation Wizard &#40;Setup&#41;](../../2014/sql-server/install/install-sql-server-2014-from-the-installation-wizard-setup.md)  
+ [Install SQL Server 2014 from the Installation Wizard &#40;Setup&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)  
   
   

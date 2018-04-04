@@ -30,7 +30,7 @@ manager: "jhubbard"
   
  As a best practice before upgrading to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], we recommend that you back up your data and system settings, and take strategic steps as outlined in the operational guidelines defined for your organization. Use the following steps to complete the upgrade:  
   
-1.  Review [Hardware and Software Requirements for Installing SQL Server 2014](../../../2014/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2014.md).  
+1.  Review [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md).  
   
 2.  Back up data and system settings.  
   

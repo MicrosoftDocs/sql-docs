@@ -71,11 +71,11 @@ manager: "mblythe"
   
 -   [Configure a Report Server for E-Mail Delivery &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
   
--   [E-mail Settings - Configuration Manager &#40;SSRS Native Mode&#41;](../../2014/sql-server/install/e-mail-settings-configuration-manager-ssrs-native-mode.md)  
+-   [E-mail Settings - Configuration Manager &#40;SSRS Native Mode&#41;](install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)  
   
  For information on how to configure a SharePoint mode report server, see the following:  
   
--   [Configure E-mail for a Reporting Services Service Application &#40;SharePoint 2010 and SharePoint 2013&#41;](../../2014/sql-server/install/configure-e-mail-for-a-reporting-services-service-application.md)  
+-   [Configure E-mail for a Reporting Services Service Application &#40;SharePoint 2010 and SharePoint 2013&#41;](install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
   
 ## See Also  
  [Tasks and Permissions](../../2014/reporting-services/tasks-and-permissions.md)   

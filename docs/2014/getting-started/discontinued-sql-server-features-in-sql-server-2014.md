@@ -76,8 +76,8 @@ manager: "jhubbard"
   
  <sup>1</sup>These parameters are valid only for installation.  
   
- <sup>2</sup>Starting [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], specify /Action=EditionUpgrade, to upgrade an existing edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to a different edition any time without using the original installation media. For more information about the supported version and edition upgrades, see [Supported Version and Edition Upgrades](../../2014/sql-server/install/supported-version-and-edition-upgrades.md).  
+ <sup>2</sup>Starting [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], specify /Action=EditionUpgrade, to upgrade an existing edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to a different edition any time without using the original installation media. For more information about the supported version and edition upgrades, see [Supported Version and Edition Upgrades](../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
- For more information, see [Install SQL Server 2014 from the Command Prompt](../../2014/sql-server/install/install-sql-server-2014-from-the-command-prompt.md).  
+ For more information, see [Install SQL Server 2014 from the Command Prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
   

@@ -31,6 +31,6 @@ manager: "jhubbard"
 |Registry|The uninstall process removes all [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] registry keys from the Windows registry.|  
   
 ## See Also  
- [Install Master Data Services](../../../2014/sql-server/install/install-master-data-services.md)  
+ [Install Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
   
   

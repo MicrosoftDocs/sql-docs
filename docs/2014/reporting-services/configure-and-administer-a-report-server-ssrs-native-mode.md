@@ -35,10 +35,10 @@ manager: "mblythe"
 -   Optionally, modify configuration files to change application settings. For more information about each file and guidelines for modifying them, see [Reporting Services Configuration Files](../../2014/reporting-services/reporting-services-configuration-files.md).  
   
 ## In This Section  
- [Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-report-server-urls-ssrs-configuration-manager.md)  
+ [Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
  Describes how to define the URLs used to access the report server and Report Manager.  
   
- [Configure the Report Server Service Account &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
+ [Configure the Report Server Service Account &#40;SSRS Configuration Manager&#41;](install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
  Provides recommendations and steps on how to modify service account and password.  
   
  [Create a Report Server Database  &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
@@ -50,7 +50,7 @@ manager: "mblythe"
  [Configure a Report Server for E-Mail Delivery &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
  Describes how to configure a report server to support e-mail report distribution.  
   
- [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-the-unattended-execution-account-ssrs-configuration-manager.md)  
+ [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)  
  Describes how to configure a user account to process reports in unattended mode.  
   
 ## See Also  

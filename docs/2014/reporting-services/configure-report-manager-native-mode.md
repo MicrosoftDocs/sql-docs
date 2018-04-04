@@ -52,7 +52,7 @@ manager: "mblythe"
   
 -   You must have a minimally configured report server. For more information about minimally configuring a report server, see [Configure a Report Server &#40;Reporting Services Native Mode&#41;](../../2014/reporting-services/configure-a-report-server-reporting-services-native-mode.md).  
   
--   Your report server must run in native mode. You cannot use Report Manager with a report server that is configured for SharePoint integrated mode. In SQL Server 2012 you cannot switch a report server from one mode to the other. If you want to change the type of report server that your environment uses, you must install the desired mode of report server and then copy or move the report items to the new report server. This process is typically referred to as a ‘migration’. The steps needed to migrate depend on the mode you are migrating to and the version you are migrating from. For more information, see [Upgrade and Migrate Reporting Services](../../2014/sql-server/install/upgrade-and-migrate-reporting-services.md).  
+-   Your report server must run in native mode. You cannot use Report Manager with a report server that is configured for SharePoint integrated mode. In SQL Server 2012 you cannot switch a report server from one mode to the other. If you want to change the type of report server that your environment uses, you must install the desired mode of report server and then copy or move the report items to the new report server. This process is typically referred to as a ‘migration’. The steps needed to migrate depend on the mode you are migrating to and the version you are migrating from. For more information, see [Upgrade and Migrate Reporting Services](install-windows/upgrade-and-migrate-reporting-services.md).  
   
 -   You must also have Internet Explorer 7.0 or later with scripting enabled. For more information, see [Planning for Reporting Services and Power View Browser Support &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   
@@ -171,8 +171,8 @@ manager: "mblythe"
 ## See Also  
  [Report Manager  &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Planning for Reporting Services and Power View Browser Support &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)   
- [Configure a URL  &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-a-url-ssrs-configuration-manager.md)   
- [Verify a Reporting Services Installation](../../2014/sql-server/install/verify-a-reporting-services-installation.md)   
+ [Configure a URL  &#40;SSRS Configuration Manager&#41;](install-windows/configure-a-url-ssrs-configuration-manager.md)   
+ [Verify a Reporting Services Installation](install-windows/verify-a-reporting-services-installation.md)   
  [Customize Style Sheets for HTML Viewer and Report Manager](../../2014/reporting-services/customize-style-sheets-for-html-viewer-and-report-manager.md)   
  [Turn Reporting Services Features On or Off](../../2014/reporting-services/turn-reporting-services-features-on-or-off.md)   
  [Manage a Reporting Services Native Mode Report Server](../../2014/reporting-services/manage-a-reporting-services-native-mode-report-server.md)   

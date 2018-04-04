@@ -56,7 +56,7 @@ manager: "mblythe"
   
 -   Configure unattended report processing and e-mail report delivery.  
   
- **Installation:** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Configuration Manager is installed when you install [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Native mode. For more information, see [Install Reporting Services Native Mode Report Server](../../2014/sql-server/install/install-reporting-services-native-mode-report-server.md)  
+ **Installation:** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Configuration Manager is installed when you install [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Native mode. For more information, see [Install Reporting Services Native Mode Report Server](install-windows/install-reporting-services-native-mode-report-server.md)  
   
 #### To start the Reporting Services Configuration Manager  
   
@@ -87,7 +87,7 @@ manager: "mblythe"
 ##  <a name="bkmk_report_manager"></a> Report Manager (Native Mode)  
  Use [Report Manager  &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md) to set permissions, manage subscriptions and schedules, and work with reports. You can also use Report Manager to view reports.  
   
- **Installation:** Report Manager Is installed when you install [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Native mode: [Install Reporting Services Native Mode Report Server](../../2014/sql-server/install/install-reporting-services-native-mode-report-server.md)  
+ **Installation:** Report Manager Is installed when you install [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Native mode: [Install Reporting Services Native Mode Report Server](install-windows/install-reporting-services-native-mode-report-server.md)  
   
  Before you can open Report Manager, you must have sufficient permissions (initially, only members of the local Administrators group have permissions that provide access to Report Manager features). Report Manager provides different pages and options depending on the role assignments of the current user. Users who have no permissions will get an empty page. Users with permissions to view reports will get links that they can click to open the reports. To learn more about permissions, see [Roles and Permissions &#40;Reporting Services&#41;](../../2014/reporting-services/roles-and-permissions-reporting-services.md).  
   
@@ -95,7 +95,7 @@ manager: "mblythe"
   
 1.  Open your browser. For information on supported browsers and browser versions, see [Planning for Reporting Services and Power View Browser Support &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   
-2.  In the address bar of the Web browser, type the Report Manager URL. By default, the URL is **http://\<serverName>/reports**. You can use the Reporting Services Configuration tool to confirm the server name and URL. For more information about URLs used in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], see [Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-report-server-urls-ssrs-configuration-manager.md).  
+2.  In the address bar of the Web browser, type the Report Manager URL. By default, the URL is **http://\<serverName>/reports**. You can use the Reporting Services Configuration tool to confirm the server name and URL. For more information about URLs used in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], see [Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  
   
 3.  Report Manager opens in the browser window. The startup page is the Home folder. Depending on permissions, you might see additional folders, hyperlinks to reports, and resource files within the startup page. You might also see additional buttons and commands on the toolbar.  
   
@@ -198,7 +198,7 @@ manager: "mblythe"
   
 ## See Also  
  [Install, Uninstall, and Report Builder Support](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)   
- [Reporting Services SharePoint Mode Installation &#40;SharePoint 2010 and SharePoint 2013&#41;](../../2014/sql-server/install/install-reporting-services-sharepoint-mode.md)   
+ [Reporting Services SharePoint Mode Installation &#40;SharePoint 2010 and SharePoint 2013&#41;](install-windows/install-reporting-services-sharepoint-mode.md)   
  [Reporting Services Report Server](../../2014/reporting-services/reporting-services-report-server.md)   
  [Query Design Tools in Report Designer SQL Server Data Tools &#40;SSRS&#41;](../../2014/reporting-services/query-design-tools-in-report-designer-sql-server-data-tools-ssrs.md)   
  [Reporting Services Tutorials &#40;SSRS&#41;](../../2014/tutorials/reporting-services-tutorials-ssrs.md)  

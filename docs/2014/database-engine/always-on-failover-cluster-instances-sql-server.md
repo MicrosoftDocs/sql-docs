@@ -149,8 +149,8 @@ manager: "jhubbard"
   
 |**Topic descriptions**|**Topic**|  
 |----------------------------|---------------|  
-|Describes how to install a new [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] FCI.|[Create a New SQL Server Failover Cluster (;Setup);](../../2014/sql-server/install/create-a-new-sql-server-failover-cluster-setup.md)|  
-|Describes how to upgrade to a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] failover cluster.|[Upgrade a SQL Server Failover Cluster](../../2014/sql-server/install/upgrade-a-sql-server-failover-cluster.md)|  
+|Describes how to install a new [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] FCI.|[Create a New SQL Server Failover Cluster (;Setup);](../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
+|Describes how to upgrade to a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] failover cluster.|[Upgrade a SQL Server Failover Cluster](../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)|  
 |Describes Windows Failover Clustering Concepts and provides links to tasks related to Windows Failover Clustering|[!INCLUDE[nextref_longhorn](../includes/nextref-longhorn-md.md)]: [Overview of Failover Clusters](http://go.microsoft.com/fwlink/?LinkId=177878)<br /><br /> [!INCLUDE[nextref_longhorn](../includes/nextref-longhorn-md.md)] R2: [Overview of Failover Clusters](http://go.microsoft.com/fwlink/?LinkId=177879)|  
 |Describes the distinctions in concepts between nodes in an FCI and replicas within an availability group and considerations for using an FCI to host a replica for an availability group.|[Failover Clustering and Always On Availability Groups (SQL Server)](../../2014/database-engine/failover-clustering-and-alwayson-availability-groups-sql-server.md)|  
   

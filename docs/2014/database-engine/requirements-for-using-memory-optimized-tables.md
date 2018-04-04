@@ -18,7 +18,7 @@ ms.author: "sstein"
 manager: "jhubbard"
 ---
 # Requirements for Using Memory-Optimized Tables
-  In addition to the [Hardware and Software Requirements for Installing SQL Server 2014](../../2014/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2014.md), the following are requirements to use In-Memory OLTP:  
+  In addition to the [Hardware and Software Requirements for Installing SQL Server 2014](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md), the following are requirements to use In-Memory OLTP:  
   
 -   64-bit Enterprise, Developer, or Evaluation edition of [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   

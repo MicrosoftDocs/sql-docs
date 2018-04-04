@@ -157,7 +157,7 @@ manager: "mblythe"
   
  `rshost!rshost!10a8!01/07/2010-19:29:38:: i INFO: SPN Whitelist Added <ComputerNamePhysicalDnsHostname> - <theservername>.`  
   
- For more information, see [Register a Service Principal Name &#40;SPN&#41; for a Report Server](../../2014/reporting-services/register-a-service-principal-name-spn-for-a-report-server.md) and [About URL Reservations and Registration  &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/about-url-reservations-and-registration-ssrs-configuration-manager.md).  
+ For more information, see [Register a Service Principal Name &#40;SPN&#41; for a Report Server](../../2014/reporting-services/register-a-service-principal-name-spn-for-a-report-server.md) and [About URL Reservations and Registration  &#40;SSRS Configuration Manager&#41;](install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md).  
   
 ## See Also  
  [Connect to the Database Engine Using Extended Protection](../../2014/database-engine/connect-to-the-database-engine-using-extended-protection.md)   

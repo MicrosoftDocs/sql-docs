@@ -41,9 +41,9 @@ manager: "jhubbard"
   
  [Checklists for Installing BI Features with SharePoint](../../../2014/sql-server/install/checklists-for-installing-bi-features-with-sharepoint.md)  
   
- [Reporting Services SharePoint Mode Installation &#40;SharePoint 2010 and SharePoint 2013&#41;](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode.md)  
+ [Reporting Services SharePoint Mode Installation &#40;SharePoint 2010 and SharePoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)  
   
- [PowerPivot for SharePoint 2013 Installation](../../../2014/sql-server/install/powerpivot-for-sharepoint-2013-installation.md)  
+ [PowerPivot for SharePoint 2013 Installation](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
  [PowerPivot for SharePoint 2010 Installation](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   
@@ -58,8 +58,8 @@ manager: "jhubbard"
 |-|-----------|--------------|--------------------------|  
 |1|SharePoint Only|Native Excel Services Features|Excel Services and other services included with SharePoint Server 2013.|  
 |**2**|SharePoint with Analysis Services in SharePoint Mode|Interactive PowerPivot workbooks in the browser|Install [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in SharePoint mode.<br /><br /> Register Analysis Services Server in Excel Services.|  
-|**3**|SharePoint with Reporting Services in SharePoint Mode|Power View|Install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in SharePoint mode.<br /><br /> Install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] add-in **(rsSharePoint.msi)** for SharePoint. For more information, see [Install or Uninstall the Reporting Services Add-in for SharePoint &#40;SharePoint 2010 and SharePoint 2013&#41;](../../../2014/sql-server/install/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)|  
-|**4**|All PowerPivot Features|Access to workbooks as a data source from outside the farm.<br /><br /> Schedule Data refresh.<br /><br /> PowerPivot Gallery.<br /><br /> Management Dashboard.<br /><br /> BISM link file content type.|Deploy PowerPivot for SharePoint 2013 add-in **(spPowerPivot.msi)**. For more information, see the following:<br /><br /> [Install or Uninstall the PowerPivot for SharePoint Add-in &#40;SharePoint 2013&#41;](../../../2014/sql-server/install/install-or-uninstall-the-powerpivot-for-sharepoint-add-in-sharepoint-2013.md)<br /><br /> For information see on how to download **spPowerPivot.msi**, see [Download SQL Server 2014 PowerPivot for SharePoint](http://go.microsoft.com/fwlink/?LinkID=296473).|  
+|**3**|SharePoint with Reporting Services in SharePoint Mode|Power View|Install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in SharePoint mode.<br /><br /> Install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] add-in **(rsSharePoint.msi)** for SharePoint. For more information, see [Install or Uninstall the Reporting Services Add-in for SharePoint &#40;SharePoint 2010 and SharePoint 2013&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)|  
+|**4**|All PowerPivot Features|Access to workbooks as a data source from outside the farm.<br /><br /> Schedule Data refresh.<br /><br /> PowerPivot Gallery.<br /><br /> Management Dashboard.<br /><br /> BISM link file content type.|Deploy PowerPivot for SharePoint 2013 add-in **(spPowerPivot.msi)**. For more information, see the following:<br /><br /> [Install or Uninstall the PowerPivot for SharePoint Add-in &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)<br /><br /> For information see on how to download **spPowerPivot.msi**, see [Download SQL Server 2014 PowerPivot for SharePoint](http://go.microsoft.com/fwlink/?LinkID=296473).|  
   
  For additional information on enabling [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] features, see [The SQL Server BI Light-Up Story for SharePoint 2013](http://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx) (http://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx).  
   
@@ -92,9 +92,9 @@ manager: "jhubbard"
   
      ![two powerpivot configuratoin tools](../../../2014/analysis-services/media/as-powerpivot-configtools-bothicons.gif "two powerpivot configuratoin tools")  
   
-5.  Configure Excel Services in SharePoint Server 2013 to use the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance. For more information, see the section “Configure Basic Analysis Services SharePoint Integration” in [PowerPivot for SharePoint 2013 Installation](../../../2014/sql-server/install/powerpivot-for-sharepoint-2013-installation.md).and [Manage Excel Services data model settings (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780.aspx) (http://technet.microsoft.com/library/jj219780.aspx).  
+5.  Configure Excel Services in SharePoint Server 2013 to use the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance. For more information, see the section “Configure Basic Analysis Services SharePoint Integration” in [PowerPivot for SharePoint 2013 Installation](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).and [Manage Excel Services data model settings (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780.aspx) (http://technet.microsoft.com/library/jj219780.aspx).  
   
-6.  For more information, see [PowerPivot for SharePoint 2013 Installation](../../../2014/sql-server/install/powerpivot-for-sharepoint-2013-installation.md).  
+6.  For more information, see [PowerPivot for SharePoint 2013 Installation](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
  **[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010**  
   
@@ -126,13 +126,13 @@ manager: "jhubbard"
   
         -   The version of the SharePoint product.  
   
-         [Supported Combinations of SharePoint and Reporting Services Server and Add-in &#40;SQL Server 2014&#41;](../../../2014/sql-server/install/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
+         [Supported Combinations of SharePoint and Reporting Services Server and Add-in &#40;SQL Server 2014&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
   
     -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] on SharePoint 2010 requires the SharePoint 2010 Service Pack 2 (SP2).  
   
-    1.  Install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in SharePoint mode. [Reporting Services SharePoint Mode Installation &#40;SharePoint 2010 and SharePoint 2013&#41;](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode.md) and [Install Reporting Services SharePoint Mode for SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md).  
+    1.  Install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in SharePoint mode. [Reporting Services SharePoint Mode Installation &#40;SharePoint 2010 and SharePoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md) and [Install Reporting Services SharePoint Mode for SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md).  
   
-    2.  Install the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] add-in for SharePoint products (rsSharePoint.msi). See [Install or Uninstall the Reporting Services Add-in for SharePoint &#40;SharePoint 2010 and SharePoint 2013&#41;](../../../2014/sql-server/install/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md). For the current version of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] add-in for SharePoint, see [Where to find the Reporting Services add-in for SharePoint Products](../../../2014/sql-server/install/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
+    2.  Install the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] add-in for SharePoint products (rsSharePoint.msi). See [Install or Uninstall the Reporting Services Add-in for SharePoint &#40;SharePoint 2010 and SharePoint 2013&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md). For the current version of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] add-in for SharePoint, see [Where to find the Reporting Services add-in for SharePoint Products](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
     3.  Configure the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint service and at least one [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application. For more information, see the section “Create a Reporting Services Service Application” in [Install Reporting Services SharePoint Mode for SharePoint 2013](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md).  
   
@@ -156,7 +156,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  For more information on PowerPivot and SharePoint database-attach upgrade, see the following:  
   
--   [Migrate PowerPivot to SharePoint 2013](../../../2014/sql-server/install/migrate-powerpivot-to-sharepoint-2013.md)  
+-   [Migrate PowerPivot to SharePoint 2013](../../analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md)  
   
 -   [Overview of the upgrade process to SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256688).  
   
@@ -165,8 +165,8 @@ manager: "jhubbard"
 -   [Upgrade databases from SharePoint 2010 to SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256690).  
   
 ## See Also  
- [Where to find the Reporting Services add-in for SharePoint Products](../../../2014/sql-server/install/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)   
- [Supported Combinations of SharePoint and Reporting Services Server and Add-in &#40;SQL Server 2014&#41;](../../../2014/sql-server/install/supported-combinations-of-sharepoint-and-reporting-services-server.md)   
- [Install or Uninstall the Reporting Services Add-in for SharePoint &#40;SharePoint 2010 and SharePoint 2013&#41;](../../../2014/sql-server/install/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
+ [Where to find the Reporting Services add-in for SharePoint Products](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)   
+ [Supported Combinations of SharePoint and Reporting Services Server and Add-in &#40;SQL Server 2014&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)   
+ [Install or Uninstall the Reporting Services Add-in for SharePoint &#40;SharePoint 2010 and SharePoint 2013&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   
   

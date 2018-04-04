@@ -21,7 +21,7 @@ ms.author: "maghan"
 manager: "mblythe"
 ---
 # Discontinued Functionality to SQL Server Reporting Services in SQL Server 2014
-  This topic describes [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features that are no longer available in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. It does not include announcements about discontinued support for specific versions of the operating system or [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Information Services (IIS). For more information about system prerequisites, see [Hardware and Software Requirements for Installing SQL Server 2014](../../2014/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2014.md).  
+  This topic describes [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features that are no longer available in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. It does not include announcements about discontinued support for specific versions of the operating system or [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Information Services (IIS). For more information about system prerequisites, see [Hardware and Software Requirements for Installing SQL Server 2014](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
  In this topic:  
   

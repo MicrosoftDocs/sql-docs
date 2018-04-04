@@ -73,7 +73,7 @@ manager: "mblythe"
   
  If the data source uses Windows Authentication, select **Use as Windows credentials** when specifying the connection.  
   
- If you are using a data source that does not authenticate user connections (for example, if the data source is an XML file), select Credentials are not required. This option requires that you previously configured the unattended execution account. For more information, see [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+ If you are using a data source that does not authenticate user connections (for example, if the data source is an XML file), select Credentials are not required. This option requires that you previously configured the unattended execution account. For more information, see [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 ## Specify a Query (Page 3)  
  Use this page to enter the query that retrieves subscriber data. For best result, run the query in SQL Server Management Studio first, before using it in the data-driven subscription. You can then examine the results to verify that it contains the information you require. Important points to recognize about the query results are:  

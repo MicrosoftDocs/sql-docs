@@ -16,7 +16,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Overview of SQL Server Servicing Installation
-  You can apply an update to any installed [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] component with a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] servicing update. If the version level of an existing [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] component is later than the update version level, the Setup program will exclude it from the update. For more information on applying a servicing update, see [Install SQL Server 2014 Servicing Updates](../../../2014/sql-server/install/install-sql-server-2014-servicing-updates.md).  
+  You can apply an update to any installed [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] component with a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] servicing update. If the version level of an existing [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] component is later than the update version level, the Setup program will exclude it from the update. For more information on applying a servicing update, see [Install SQL Server 2014 Servicing Updates](../../database-engine/install-windows/install-sql-server-servicing-updates.md).  
   
  The following considerations apply when you install [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] updates:  
   
@@ -95,7 +95,7 @@ manager: "jhubbard"
   
 -   LLL indicates the character abbreviation for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] language, for example: LLL for English is ENU.  
   
- To apply updates to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] components that are part of a failover cluster, see the section for failover cluster installation. For more information about how to run an update installation in unattended mode, see [Install SQL Server 2014 from the Command Prompt](../../../2014/sql-server/install/install-sql-server-2014-from-the-command-prompt.md).  
+ To apply updates to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] components that are part of a failover cluster, see the section for failover cluster installation. For more information about how to run an update installation in unattended mode, see [Install SQL Server 2014 from the Command Prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
 ####  <a name="Slipstream"></a> Product Updates in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Installation  
  Product Update is a feature in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Setup. It integrates the latest product updates with the main product installation so that the main product and its applicable updates are installed at the same time. Product Update can search [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update, Windows Server Update Services (WSUS), a local folder, or a network share for applicable updates.  After Setup finds the latest versions of the applicable updates, it downloads and integrates them with the current [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup process. Product Update can pull in a cumulative update, service pack, or service pack plus cumulative update. Product Update functionality is an extension of the Slipstream functionally that was available in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] PCU1.  
@@ -111,7 +111,7 @@ manager: "jhubbard"
   
      You can apply updates to a prepared instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] through [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update. The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update package will detect that the instance is in the prepared state and apply the patch to the prepare instance without completing the configuration.  
   
- If you are updating a prepared image of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you will need to specify the InstanceID parameter. For more information and sample syntax, see [Installing Updates from the Command Prompt](../../../2014/sql-server/install/installing-updates-from-the-command-prompt.md).  
+ If you are updating a prepared image of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you will need to specify the InstanceID parameter. For more information and sample syntax, see [Installing Updates from the Command Prompt](../../database-engine/install-windows/installing-updates-from-the-command-prompt.md).  
   
 ## Updating a Completed Image of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Updating a completed and configured instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] follows the same processes as any other installed instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -140,9 +140,9 @@ manager: "jhubbard"
 -   For an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] with Cumulative Update 1, SP1, and Cumulative Update 2 installed, uninstall Cumulative Update 2 first and then uninstall SP1.  
   
 ## See Also  
- [Install SQL Server 2014 from the Command Prompt](../../../2014/sql-server/install/install-sql-server-2014-from-the-command-prompt.md)   
- [Install SQL Server 2014 Servicing Updates](../../../2014/sql-server/install/install-sql-server-2014-servicing-updates.md)   
- [Validate a SQL Server Installation](../../../2014/sql-server/install/validate-a-sql-server-installation.md)   
- [View and Read SQL Server Setup Log Files](../../../2014/sql-server/install/view-and-read-sql-server-setup-log-files.md)  
+ [Install SQL Server 2014 from the Command Prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
+ [Install SQL Server 2014 Servicing Updates](../../database-engine/install-windows/install-sql-server-servicing-updates.md)   
+ [Validate a SQL Server Installation](../../database-engine/install-windows/validate-a-sql-server-installation.md)   
+ [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   

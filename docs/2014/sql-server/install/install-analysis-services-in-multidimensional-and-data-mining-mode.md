@@ -50,15 +50,15 @@ manager: "jhubbard"
   
 |Links|Tasks|  
 |-----------|-----------|  
-|[Hardware and Software Requirements for Installing SQL Server 2014](../../../2014/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2014.md) and [Configure Windows Service Accounts and Permissions](../../../2014/database-engine/configure-windows-service-accounts-and-permissions.md).|Before you run Setup, check prerequisites for installing [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and determine which account you will use to provision the server.|  
-|[Install SQL Server 2014 from the Installation Wizard &#40;Setup&#41;](../../../2014/sql-server/install/install-sql-server-2014-from-the-installation-wizard-setup.md).|Run SQL Server Setup to install the software.|  
+|[Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md) and [Configure Windows Service Accounts and Permissions](../../../2014/database-engine/configure-windows-service-accounts-and-permissions.md).|Before you run Setup, check prerequisites for installing [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and determine which account you will use to provision the server.|  
+|[Install SQL Server 2014 from the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).|Run SQL Server Setup to install the software.|  
 |[Configure the Windows Firewall to Allow Analysis Services Access](../../../2014/analysis-services/configure-the-windows-firewall-to-allow-analysis-services-access.md)|After Setup is finished, you must configure firewall settings to allow remote connections to the server.|  
 |[Authorizing access to objects and operations &#40;Analysis Services&#41;](../../../2014/analysis-services/authorizing-access-to-objects-and-operations-analysis-services.md)|Users who access Analysis Services databases must have Read permission on at least one database on the server.|  
   
 ## Related Content  
  Additional setup content can be found in the following topics:  
   
- [Install Analysis Services in Tabular Mode](../../../2014/sql-server/install/install-analysis-services-in-tabular-mode.md)  
+ [Install Analysis Services in Tabular Mode](../../analysis-services/instances/install-windows/install-analysis-services.md)  
   
  [PowerPivot for SharePoint 2010 Installation](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   
@@ -71,6 +71,6 @@ manager: "jhubbard"
 ## See Also  
  [Features Supported by the Editions of SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473)   
  [Languages and Collations &#40;Analysis Services&#41;](../../../2014/analysis-services/languages-and-collations-analysis-services.md)   
- [Upgrade Analysis Services](../../../2014/sql-server/install/upgrade-analysis-services.md)  
+ [Upgrade Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)  
   
   

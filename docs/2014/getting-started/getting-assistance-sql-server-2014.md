@@ -38,6 +38,6 @@ manager: "jhubbard"
   
 ## See Also  
  [What's New in SQL Server 2014](../../2014/getting-started/what-s-new-in-sql-server-2014.md)   
- [Installation for SQL Server 2014](../../2014/sql-server/install/installation-for-sql-server-2014.md)  
+ [Installation for SQL Server 2014](../database-engine/install-windows/installation-for-sql-server.md)  
   
   

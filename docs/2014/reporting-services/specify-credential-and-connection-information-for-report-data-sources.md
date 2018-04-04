@@ -122,7 +122,7 @@ manager: "mblythe"
   
 -   The report is a subreport that uses the credentials of the parent report.  
   
- Under these conditions, the report server connects to a remote data source using the unattended execution account that you must define in advance. Because the report server does not connect to a remote server using its service credentials, you must specify an account that the report server can use to make the connection. For more information about creating this account, see [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+ Under these conditions, the report server connects to a remote data source using the unattended execution account that you must define in advance. Because the report server does not connect to a remote server using its service credentials, you must specify an account that the report server can use to make the connection. For more information about creating this account, see [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 ##  <a name="DataSourceConfigurationConnections"></a> Data Source Configuration and Network Connections  
  The following table shows how connections are made for specific combinations of credential types and data processing extensions. If you are using a custom data processing extension, see [Specify Connections for Custom Data Processing Extensions](../../2014/reporting-services/specify-connections-for-custom-data-processing-extensions.md).  

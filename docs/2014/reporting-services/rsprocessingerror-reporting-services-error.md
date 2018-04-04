@@ -84,7 +84,7 @@ manager: "mblythe"
 ### Main Report with Subreport Could Not Be Processed  
  A report with subreports must be processed by the same version of the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report processor. When upgrading reports to the current version of the report definition schema, the main report and the subreports may or may not be updated at the same time. If the version is not compatible between a report and its subreports, the following message is displayed: "Subreport could not be processed."  
   
- You must change either the main report or the subreports so that all the reports can be processed by the same version of the report processor. For information about why a report fails to upgrade, see [Upgrade Reports](../../2014/sql-server/install/upgrade-reports.md).  
+ You must change either the main report or the subreports so that all the reports can be processed by the same version of the report processor. For information about why a report fails to upgrade, see [Upgrade Reports](install-windows/upgrade-reports.md).  
   
 ### Verify Function Calls are Visual Basic and Not SQL  
  You can use SQL functions in query text on a relational database. You cannot use [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] functions in query text.  

@@ -77,7 +77,7 @@ manager: "mblythe"
   
 10. Click **Run** to process all of the actions in the task list. The **Run** button is enabled after you validate the actions. If **Run** is not enabled, click **Validate** first.  
   
-11. [Verify a PowerPivot for SharePoint Installation](../../2014/sql-server/install/verify-a-powerpivot-for-sharepoint-installation.md).  
+11. [Verify a PowerPivot for SharePoint Installation](instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md).  
   
 ##  <a name="bkmk_input"></a> Input values used to configure the server  
  The PowerPivot Configuration Tool uses a combination of input values that you type in and default values that it detects or uses automatically.  

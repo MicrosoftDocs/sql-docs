@@ -23,7 +23,7 @@ ms.author: "maghan"
 manager: "mblythe"
 ---
 # Configure a Native Mode Report Server for Local Administration (SSRS)
-  Deploying a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report server on one of the following operating systems requires more configuration steps if you want to administer the report server instance locally. This topic explains how to configure the report server for local administration. If you have not yet installed or configured the report server, see [Install SQL Server 2014 from the Installation Wizard &#40;Setup&#41;](../../2014/sql-server/install/install-sql-server-2014-from-the-installation-wizard-setup.md) and [Manage a Reporting Services Native Mode Report Server](../../2014/reporting-services/manage-a-reporting-services-native-mode-report-server.md).  
+  Deploying a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report server on one of the following operating systems requires more configuration steps if you want to administer the report server instance locally. This topic explains how to configure the report server for local administration. If you have not yet installed or configured the report server, see [Install SQL Server 2014 from the Installation Wizard &#40;Setup&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) and [Manage a Reporting Services Native Mode Report Server](../../2014/reporting-services/manage-a-reporting-services-native-mode-report-server.md).  
   
 ||  
 |-|  

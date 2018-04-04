@@ -28,7 +28,7 @@ manager: "jhubbard"
 >  To uninstall an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you must be a local administrator with permission to log on as a service.  
   
 > [!NOTE]  
->  To uninstall a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster, use the Remove Node functionality provided by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup to remove each node individually. For more information, see [Add or Remove Nodes in a SQL Server Failover Cluster &#40;Setup&#41;](../../../2014/sql-server/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)  
+>  To uninstall a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster, use the Remove Node functionality provided by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup to remove each node individually. For more information, see [Add or Remove Nodes in a SQL Server Failover Cluster &#40;Setup&#41;](../failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)  
   
  Consider the following important information before you uninstall [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
@@ -98,11 +98,11 @@ manager: "jhubbard"
   
     -   [How to identify SQL Server 2008 setup issues in the setup log files](http://support.microsoft.com/kb/955396/en-us)  
   
-    -   [View and Read SQL Server Setup Log Files](../../../2014/sql-server/install/view-and-read-sql-server-setup-log-files.md)  
+    -   [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
 2.  If you are unable to fix the cause of the uninstallation failure, you can contact [!INCLUDE[msCoName](../../includes/msconame-md.md)] Support. In some cases, such as unintentional deletion of important files, reinstalling the operating system may be required before reinstalling [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the computer.  
   
 ## See Also  
- [View and Read SQL Server Setup Log Files](../../../2014/sql-server/install/view-and-read-sql-server-setup-log-files.md)  
+ [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   

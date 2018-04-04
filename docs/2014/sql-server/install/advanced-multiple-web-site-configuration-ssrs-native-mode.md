@@ -74,7 +74,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [Configure a URL  &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-url-ssrs-configuration-manager.md)   
- [Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-report-server-urls-ssrs-configuration-manager.md)  
+ [Configure a URL  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
+ [Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   
   

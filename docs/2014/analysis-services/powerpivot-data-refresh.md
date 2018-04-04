@@ -36,6 +36,6 @@ manager: "mblythe"
 >  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] and SharePoint Server 2013 Excel Services use a different architecture for data refresh of PowerPivot data models. The SharePoint 2013 supported architecture utilizes Excel Services as the primary component to load PowerPivot data models. The previous data refresh architecture used relied on a server running PowerPivot System Service and [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in SharePoint mode to load data models. For more information, see the following:  
 >   
 >  -   [PowerPivot Data Refresh with SharePoint 2013](../../2014/analysis-services/powerpivot-data-refresh-with-sharepoint-2013.md)  
-> -   [Upgrade Workbooks and Scheduled Data Refresh &#40;SharePoint 2013&#41;](../../2014/sql-server/install/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
+> -   [Upgrade Workbooks and Scheduled Data Refresh &#40;SharePoint 2013&#41;](instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
   
   

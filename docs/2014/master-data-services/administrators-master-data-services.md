@@ -54,7 +54,7 @@ manager: "jhubbard"
 ## See Also  
  [Create a Model Administrator &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-administrator-master-data-services.md)   
  [Change the System Administrator Account &#40;Master Data Services&#41;](../../2014/master-data-services/change-the-system-administrator-account-master-data-services.md)   
- [Create a Master Data Services Database](../../2014/sql-server/install/create-a-master-data-services-database.md)   
+ [Create a Master Data Services Database](install-windows/create-a-master-data-services-database.md)   
  [Notifications &#40;Master Data Services&#41;](../../2014/master-data-services/notifications-master-data-services.md)  
   
   

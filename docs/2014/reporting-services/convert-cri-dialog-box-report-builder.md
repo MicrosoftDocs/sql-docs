@@ -28,7 +28,7 @@ manager: "mblythe"
   
  Some CRIs can be converted to report items in the new report definition format. When you open the report, you are prompted whether to upgrade. Use the following information to decide whether to convert the CRIs in this report:  
   
--   **Yes** Choose **Yes** to convert all the CRIs in the report, where possible. Unsupported features in the CRIs cannot be upgraded and are removed from the report definition file. For the list of unsupported features, see [Upgrade Reports](../../2014/sql-server/install/upgrade-reports.md). When you view the report, you might see differences in the way the CRI displays in the report.  
+-   **Yes** Choose **Yes** to convert all the CRIs in the report, where possible. Unsupported features in the CRIs cannot be upgraded and are removed from the report definition file. For the list of unsupported features, see [Upgrade Reports](install-windows/upgrade-reports.md). When you view the report, you might see differences in the way the CRI displays in the report.  
   
 -   **No** Choose **No** when you do not want to convert the CRIs in the report. These CRIs cannot be displayed by the report processor in their current version. If your system administrator is planning to install a new version of the CRI from the third-party software vendor that is compatible with the new report definition format, you should choose **No**. Until new versions are available, the CRIs display in the report as an empty text box with a red X.  
   
@@ -36,7 +36,7 @@ manager: "mblythe"
   
  If you do not save the report, the original report remains unchanged. However, you cannot edit this report in a [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] later version of [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] or a report authoring environment that uses this report definition format. You can continue to run the original version of the report by uploading it to a [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] or later [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report server by using Report Manager. For more information, see [Upload a File or Report &#40;Report Manager&#41;](../../2014/reporting-services/upload-a-file-or-report-report-manager.md).  
   
- For reports that you upload instead of publish to a report server, the report processor determines whether the report can be upgraded on first use. Reports that cannot be upgraded are processed in backward-compatibility mode, and continue to display as they did in the earlier version of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. For more information, see [Upgrade Reports](../../2014/sql-server/install/upgrade-reports.md).  
+ For reports that you upload instead of publish to a report server, the report processor determines whether the report can be upgraded on first use. Reports that cannot be upgraded are processed in backward-compatibility mode, and continue to display as they did in the earlier version of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. For more information, see [Upgrade Reports](install-windows/upgrade-reports.md).  
   
  To identify the current report definition format for a report, for a report server, or for your report authoring environment, see [Find the Report Definition Schema Version &#40;SSRS&#41;](../../2014/reporting-services/find-the-report-definition-schema-version-ssrs.md).  
   

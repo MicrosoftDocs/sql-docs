@@ -21,7 +21,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Development of an Integration Services Project
-  You add [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages to projects. To create and work with [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] projects, you must install the [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] environment. For more information, see [Install Integration Services](../../2014/sql-server/install/install-integration-services.md).  
+  You add [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages to projects. To create and work with [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] projects, you must install the [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] environment. For more information, see [Install Integration Services](install-windows/install-integration-services.md).  
   
  When you create a new [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], the **New Project** dialog box includes an **Integration Services Project** template. This project template creates a new project that contains a single package.  
   

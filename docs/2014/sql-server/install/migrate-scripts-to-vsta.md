@@ -25,7 +25,7 @@ manager: "jhubbard"
   
  If the scripts in either the Script tasks or Script components reference interfaces, you might have to modify those references before you upgrade the package. Otherwise, the package will not be upgraded or the scripts will not be validated, depending on the upgrade method that you use. To modify these references, replace references to IDTS*xxx*90 interfaces with references to the corresponding IDTS*xxx*100 interfaces.  
   
- For more information about how to migrate scripts and upgrade packages, see [Upgrade Integration Services Packages](../../../2014/sql-server/install/upgrade-integration-services-packages.md).  
+ For more information about how to migrate scripts and upgrade packages, see [Upgrade Integration Services Packages](../../integration-services/install-windows/upgrade-integration-services-packages.md).  
   
 ## Understanding Migration Failures  
  When you migrate the scripts, the migration can fail because of one of the following reasons:  

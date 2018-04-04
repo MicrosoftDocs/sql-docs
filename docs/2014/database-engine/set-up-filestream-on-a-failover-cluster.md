@@ -38,8 +38,8 @@ manager: "jhubbard"
   
 ## See Also  
  [Server Configuration Options &#40;SQL Server&#41;](../../2014/database-engine/server-configuration-options-sql-server.md)   
- [Create a New SQL Server Failover Cluster &#40;Setup&#41;](../../2014/sql-server/install/create-a-new-sql-server-failover-cluster-setup.md)   
- [Remove a SQL Server Failover Cluster Instance &#40;Setup&#41;](../../2014/sql-server/install/remove-a-sql-server-failover-cluster-instance-setup.md)   
- [Add or Remove Nodes in a SQL Server Failover Cluster &#40;Setup&#41;](../../2014/sql-server/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)  
+ [Create a New SQL Server Failover Cluster &#40;Setup&#41;](../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)   
+ [Remove a SQL Server Failover Cluster Instance &#40;Setup&#41;](../sql-server/failover-clusters/install/remove-a-sql-server-failover-cluster-instance-setup.md)   
+ [Add or Remove Nodes in a SQL Server Failover Cluster &#40;Setup&#41;](../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)  
   
   

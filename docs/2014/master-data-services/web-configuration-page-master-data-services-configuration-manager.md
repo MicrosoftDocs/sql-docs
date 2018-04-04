@@ -40,12 +40,12 @@ manager: "jhubbard"
   
 |Control Name|Description|  
 |------------------|-----------------|  
-|**Enable integration with Data Quality Services**|Select this option to enable the Data Quality functionality available in the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]. For more information, see [Enable Data Quality Services Integration with Master Data Services](../../2014/sql-server/install/enable-data-quality-services-integration-with-master-data-services.md).|  
+|**Enable integration with Data Quality Services**|Select this option to enable the Data Quality functionality available in the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]. For more information, see [Enable Data Quality Services Integration with Master Data Services](install-windows/enable-data-quality-services-integration-with-master-data-services.md).|  
   
 ## See Also  
  [Set up the Database and Website for Master Data Services](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
- [Web Application Requirements &#40;Master Data Services&#41;](../../2014/sql-server/install/web-application-requirements-master-data-services.md)   
- [Create a Master Data Manager Web Application &#40;Master Data Services&#41;](../../2014/sql-server/install/create-a-master-data-manager-web-application-master-data-services.md)   
+ [Web Application Requirements &#40;Master Data Services&#41;](install-windows/web-application-requirements-master-data-services.md)   
+ [Create a Master Data Manager Web Application &#40;Master Data Services&#41;](install-windows/create-a-master-data-manager-web-application-master-data-services.md)   
  [MDS 2014 and “Service Unavailable” Error](http://blogs.msdn.com/b/womeninanalytics/archive/2015/08/19/mds-2014-and-service-unavailable-error.aspx)  
   
   

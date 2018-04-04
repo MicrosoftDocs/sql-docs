@@ -37,7 +37,7 @@ manager: "jhubbard"
  [What's New in SQL Server Installation](../../../2014/sql-server/install/what-s-new-in-sql-server-installation.md)  
  This topic describes the details about the new or improved features of installation in this version of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- [Hardware and Software Requirements for Installing SQL Server 2014](../../../2014/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2014.md)  
+ [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)  
  This topic lists the minimum hardware and software requirements to install and run an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  [Security Considerations for a SQL Server Installation](../../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)  
@@ -56,26 +56,26 @@ manager: "jhubbard"
  This topic describes about the localized versions of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ## Related Sections  
- [Install SQL Server 2014](../../../2014/sql-server/install/install-sql-server-2014.md)  
+ [Install SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)  
  This section provides an overview of different installation options we have for installing [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- [Install SQL Server 2014 BI Features](../../../2014/sql-server/install/install-sql-server-2014-bi-features.md)  
+ [Install SQL Server 2014 BI Features](install-sql-server-business-intelligence-features.md)  
  This section of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup documentation explains how to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features that are part of the Microsoft BI platform.  
   
- [Upgrade to SQL Server 2014](../../../2014/sql-server/install/upgrade-to-sql-server-2014.md)  
+ [Upgrade to SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)  
  The section provides an overview of upgrading instances of previous [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- [Uninstall SQL Server 2014](../../../2014/sql-server/install/uninstall-sql-server-2014.md)  
+ [Uninstall SQL Server 2014](uninstall-sql-server.md)  
  Refer this section to uninstall an existing instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] completely, and prepare the system so that you can reinstall [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [SQL Server Failover Cluster Installation](../../../2014/sql-server/install/sql-server-failover-cluster-installation.md)  
+ [SQL Server Failover Cluster Installation](../failover-clusters/install/sql-server-failover-cluster-installation.md)  
  This section of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup documentation explains how to install, and configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster.  
   
 ## See Also  
  [Quick-Start Installation of SQL Server 2014](../../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)   
- [Install SQL Server 2014 from the Command Prompt](../../../2014/sql-server/install/install-sql-server-2014-from-the-command-prompt.md)   
+ [Install SQL Server 2014 from the Command Prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
  [High Availability Solutions &#40;SQL Server&#41;](../../../2014/database-engine/high-availability-solutions-sql-server.md)   
- [Before Installing Failover Clustering](../../../2014/sql-server/install/before-installing-failover-clustering.md)   
- [Upgrade to SQL Server 2014 Using the Installation Wizard &#40;Setup&#41;](../../../2014/sql-server/install/upgrade-to-sql-server-2014-using-the-installation-wizard-setup.md)  
+ [Before Installing Failover Clustering](../failover-clusters/install/before-installing-failover-clustering.md)   
+ [Upgrade to SQL Server 2014 Using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
   
   

@@ -66,6 +66,6 @@ manager: "jhubbard"
 ## See Also  
  [sys.key_encryptions &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-key-encryptions-transact-sql.md)   
  [SQL Server and Database Encryption Keys &#40;Database Engine&#41;](../../2014/database-engine/sql-server-and-database-encryption-keys-database-engine.md)   
- [Back Up and Restore Reporting Services Encryption Keys](../../2014/sql-server/install/back-up-and-restore-reporting-services-encryption-keys.md)  
+ [Back Up and Restore Reporting Services Encryption Keys](../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
   
   

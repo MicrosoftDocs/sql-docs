@@ -144,7 +144,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
      From Setup, you can select the **PowerPivot** instance, and then select **Analysis Services** and **Analysis Services SharePoint Integration** to remove just that feature, leaving everything else in place.  
   
 ##  <a name="bkmk_addin"></a> Step 4: Uninstall the PowerPivot for SharePoint add-in  
- If your [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] deployment has two or more servers and you installed the [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] Add-in, then uninstall the [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] add-in from each server where it was installed to completely uninstall all [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] files. For more information, see [Install or Uninstall the PowerPivot for SharePoint Add-in &#40;SharePoint 2013&#41;](../../../2014/sql-server/install/install-or-uninstall-the-powerpivot-for-sharepoint-add-in-sharepoint-2013.md).  
+ If your [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] deployment has two or more servers and you installed the [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] Add-in, then uninstall the [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] add-in from each server where it was installed to completely uninstall all [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] files. For more information, see [Install or Uninstall the PowerPivot for SharePoint Add-in &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
 ##  <a name="verify"></a> Step 5: Verify Uninstall  
   
@@ -186,7 +186,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
      Do not uninstall the Analysis Services OLE DB provider. SharePoint installs the OLE DB provider as a prerequisite for Excel workbooks that connect to Analysis Services databases. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installs a newer version, but this version is backwards compatible so you should leave it on the system to avoid data connection problems later.  
   
 ## See Also  
- [Install or Uninstall the PowerPivot for SharePoint Add-in &#40;SharePoint 2013&#41;](../../../2014/sql-server/install/install-or-uninstall-the-powerpivot-for-sharepoint-add-in-sharepoint-2013.md)   
+ [Install or Uninstall the PowerPivot for SharePoint Add-in &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
  [PowerPivot Configuration Tools](../../../2014/analysis-services/powerpivot-configuration-tools.md)  
   
   

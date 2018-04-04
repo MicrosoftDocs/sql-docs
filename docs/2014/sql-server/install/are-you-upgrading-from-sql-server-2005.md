@@ -61,11 +61,11 @@ manager: "jhubbard"
   
     -   [Planning an efficient upgrade from SQL Server 2005: Step 3 of 3](http://blogs.technet.com/b/dataplatforminsider/archive/2015/12/17/planning-an-efficient-upgrade-from-sql-server-2005-step-3-of-3.aspx)  
   
--   Review the requirements and considerations under [Planning a SQL Server Installation](../../../2014/sql-server/install/planning-a-sql-server-installation.md), including the [Hardware and Software Requirements for Installing SQL Server 2014](../../../2014/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2014.md).  
+-   Review the requirements and considerations under [Planning a SQL Server Installation](../../../2014/sql-server/install/planning-a-sql-server-installation.md), including the [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md).  
   
 -   Read about how to upgrade.  
   
-    -   Review the available upgrade methods and learn how to plan and test in the topic [Upgrade Database Engine](../../../2014/sql-server/install/upgrade-database-engine.md).  
+    -   Review the available upgrade methods and learn how to plan and test in the topic [Upgrade Database Engine](../../database-engine/install-windows/upgrade-database-engine.md).  
   
         > [!IMPORTANT]  
         >  You can't upgrade a SQL Server 2005 server to a SQL Server 2014 server in place. You have to install SQL Server 2014, then migrate your SQL Server 2005 databases to the new installation.  

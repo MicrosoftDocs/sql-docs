@@ -36,7 +36,7 @@ manager: "jhubbard"
   
 1.  Start the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration manager and connect to the report server.  
   
-2.  On the Service Account page, select the option that describes the type of account you want to use. For recommendations about which account type to specify, see [Configure the Report Server Service Account &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
+2.  On the Service Account page, select the option that describes the type of account you want to use. For recommendations about which account type to specify, see [Configure the Report Server Service Account &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
   
 3.  If you selected a Windows user account, specify the new account and password. The account cannot be more than 20 characters.  
   
@@ -55,7 +55,7 @@ manager: "jhubbard"
 ## Troubleshooting Service Identity Update Errors  
  Changing the service identity initiates a series of events that include restarting the service, updating the password-protected encryption key, updating URL reservations, and updating the report server database connection information if you are using the service account to connect to the report server database. You can monitor the status of these events by viewing the notifications in the Results panel at the bottom of the page. If errors occur during this process, you can try to resolve them using the following techniques:  
   
--   If the symmetric key cannot be restored, you can try to restore it manually by using **Restore** in the Encryption Keys page. If that does not work, consider deleting the encrypted content. You will have to re-create data source connection information and subscriptions, but the rest of your content will still be available. For more information, see [Back Up and Restore Reporting Services Encryption Keys](../../../2014/sql-server/install/back-up-and-restore-reporting-services-encryption-keys.md).  
+-   If the symmetric key cannot be restored, you can try to restore it manually by using **Restore** in the Encryption Keys page. If that does not work, consider deleting the encrypted content. You will have to re-create data source connection information and subscriptions, but the rest of your content will still be available. For more information, see [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).  
   
 -   If the service will not start, restart it manually by using the Services console application in Administrator Tools.  
   
@@ -63,9 +63,9 @@ manager: "jhubbard"
   
 ## See Also  
  [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [Configure the Report Server Service Account &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [Configure the Report Server Service Account &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Configure a Report Server Database Connection  &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Service Account &#40;SSRS Native Mode&#41;](../../../2014/sql-server/install/service-account-ssrs-native-mode.md)   
- [Configure and Manage Encryption Keys &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-and-manage-encryption-keys-ssrs-configuration-manager.md)  
+ [Configure and Manage Encryption Keys &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

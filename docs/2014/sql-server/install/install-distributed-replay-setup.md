@@ -35,7 +35,7 @@ manager: "jhubbard"
   
  **Prerequisites:**  
   
--   Make sure that the computers that you want to use meet the requirements that are described in the topic [Distributed Replay Requirements](../../../2014/sql-server/install/distributed-replay-requirements.md).  
+-   Make sure that the computers that you want to use meet the requirements that are described in the topic [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md).  
   
 -   Before you begin this procedure, you create the domain user accounts that the controller and client services will run under. We recommend that these accounts are not members of the Windows Administrators group. For more information, see the User and Service Accounts section in the [Distributed Replay Security](../../../2014/database-engine/distributed-replay-security.md) topic.  
   
@@ -117,11 +117,11 @@ manager: "jhubbard"
 14. On the **Ready to Install the Program** page, click **Install**.  
   
     > [!IMPORTANT]  
-    >  After you install Distributed Replay you must create firewall rules on the controller and client computers, and grant each client computer permissions on the target server. For more information, see [Complete the Post-Installation Steps](../../../2014/sql-server/install/complete-the-post-installation-steps.md).  
+    >  After you install Distributed Replay you must create firewall rules on the controller and client computers, and grant each client computer permissions on the target server. For more information, see [Complete the Post-Installation Steps](../../tools/distributed-replay/complete-the-post-installation-steps.md).  
   
  These additional topics document other ways to install Distributed Replay:  
   
--   [Install Distributed Replay from the Command Prompt](../../../2014/sql-server/install/install-distributed-replay-from-the-command-prompt.md)  
+-   [Install Distributed Replay from the Command Prompt](../../tools/distributed-replay/install-distributed-replay-overview.md)  
   
 -   [Install Distributed Replay Using a Configuration File](../../../2014/sql-server/install/install-distributed-replay-using-a-configuration-file.md)  
   
@@ -131,7 +131,7 @@ manager: "jhubbard"
 ## See Also  
  [Features Supported by the Editions of SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [SQL Server Distributed Replay](../../../2014/database-engine/sql-server-distributed-replay.md)   
- [Distributed Replay Requirements](../../../2014/sql-server/install/distributed-replay-requirements.md)   
+ [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
  [Administration Tool Command-line Options &#40;Distributed Replay Utility&#41;](../../../2014/database-engine/administration-tool-command-line-options-distributed-replay-utility.md)   
  [Configure Distributed Replay](../../../2014/database-engine/configure-distributed-replay.md)  
   

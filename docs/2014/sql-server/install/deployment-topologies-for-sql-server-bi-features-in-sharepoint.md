@@ -171,8 +171,8 @@ manager: "jhubbard"
  ![5-server toplogy](../../../2014/sql-server/install/media/sql11bisetup-5server.gif "5-server toplogy")  
   
 ## See Also  
- [Reporting Services SharePoint Mode Installation &#40;SharePoint 2010 and SharePoint 2013&#41;](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode.md)   
- [PowerPivot for SharePoint 2013 Installation](../../../2014/sql-server/install/powerpivot-for-sharepoint-2013-installation.md)   
+ [Reporting Services SharePoint Mode Installation &#40;SharePoint 2010 and SharePoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)   
+ [PowerPivot for SharePoint 2013 Installation](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)   
  [PowerPivot for SharePoint 2010 Installation](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   
   

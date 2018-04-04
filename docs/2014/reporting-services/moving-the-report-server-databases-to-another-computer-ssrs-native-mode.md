@@ -218,10 +218,10 @@ GO
  [Create the RSExecRole](../../2014/reporting-services/create-the-rsexecrole.md)   
  [Start and Stop the Report Server Service](../../2014/reporting-services/start-and-stop-the-report-server-service.md)   
  [Configure a Report Server Database Connection  &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
+ [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
  [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [rsconfig Utility &#40;SSRS&#41;](../../2014/reporting-services/rsconfig-utility-ssrs.md)   
- [Configure and Manage Encryption Keys &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-and-manage-encryption-keys-ssrs-configuration-manager.md)   
+ [Configure and Manage Encryption Keys &#40;SSRS Configuration Manager&#41;](install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
  [Report Server Database &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-server-database-ssrs-native-mode.md)  
   
   

@@ -56,6 +56,6 @@ manager: "jhubbard"
 -   Send the report as an e-mail message.  
   
 ## See Also  
- [Upgrade Integration Services Packages](../../2014/sql-server/install/upgrade-integration-services-packages.md)  
+ [Upgrade Integration Services Packages](install-windows/upgrade-integration-services-packages.md)  
   
   

@@ -52,7 +52,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Reporting Services Configuration Manager F1 Help Topics &#40;SSRS Native Mode&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
- [Store Encrypted Report Server Data &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/store-encrypted-report-server-data-ssrs-configuration-manager.md)   
- [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-the-unattended-execution-account-ssrs-configuration-manager.md)  
+ [Store Encrypted Report Server Data &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)  
   
   

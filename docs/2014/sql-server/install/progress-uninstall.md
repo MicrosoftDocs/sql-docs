@@ -19,6 +19,6 @@ manager: "jhubbard"
   Use the Progress (Uninstall) page to monitor the Setup progess.  
   
 ## See Also  
- [View and Read SQL Server Setup Log Files](../../../2014/sql-server/install/view-and-read-sql-server-setup-log-files.md)  
+ [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   

@@ -128,7 +128,7 @@ rskeymgmt -a -f a:\backupkey\keys -p <password>
 ```  
   
 #### Deleting Encryption Keys and Encrypted Content  
- This example shows how to delete all encryption keys stored in a report server. If your installation is a report server scale-out deployment, the encryption keys for all report server instances that are included in the deployment will be deleted. Deleting an encryption key also deletes any existing encrypted values in the report server database. For more information about encrypted content, see [Store Encrypted Report Server Data &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/store-encrypted-report-server-data-ssrs-configuration-manager.md).  
+ This example shows how to delete all encryption keys stored in a report server. If your installation is a report server scale-out deployment, the encryption keys for all report server instances that are included in the deployment will be deleted. Deleting an encryption key also deletes any existing encrypted values in the report server database. For more information about encrypted content, see [Store Encrypted Report Server Data &#40;SSRS Configuration Manager&#41;](install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md).  
   
 ```  
 rskeymgmt -d  
@@ -170,12 +170,12 @@ rskeymgmt -r <installationID>
   
  The **rskeymgmt** utility is used to manage the key set that is defined during Setup or during initialization. It connects to the local Report Server Windows service through a Remote Procedure Call (RPC) endpoint. The Report Server Windows service must be running in order for this utility to work.  
   
- For more information about the encryption keys, see [Configure and Manage Encryption Keys &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-and-manage-encryption-keys-ssrs-configuration-manager.md) and [Initialize a Report Server &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/initialize-a-report-server-ssrs-configuration-manager.md).  
+ For more information about the encryption keys, see [Configure and Manage Encryption Keys &#40;SSRS Configuration Manager&#41;](install-windows/ssrs-encryption-keys-manage-encryption-keys.md) and [Initialize a Report Server &#40;SSRS Configuration Manager&#41;](install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
   
 ## See Also  
- [Configure a Native Mode Report Server Scale-Out Deployment &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-a-native-mode-report-server-scale-out-deployment.md)   
+ [Configure a Native Mode Report Server Scale-Out Deployment &#40;SSRS Configuration Manager&#41;](install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
  [Reporting Services Report Server &#40;Native Mode&#41;](../../2014/reporting-services/reporting-services-report-server-native-mode.md)   
  [Report Server Command Prompt Utilities &#40;SSRS&#41;](../../2014/reporting-services/report-server-command-prompt-utilities-ssrs.md)   
- [Configure and Manage Encryption Keys &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-and-manage-encryption-keys-ssrs-configuration-manager.md)  
+ [Configure and Manage Encryption Keys &#40;SSRS Configuration Manager&#41;](install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

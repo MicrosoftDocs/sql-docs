@@ -193,6 +193,6 @@ manager: "jhubbard"
  [MSSQL_ENG021797](../../../2014/relational-databases/replication/mssql-eng021797.md)   
  [MSSQL_ENG021798](../../../2014/relational-databases/replication/mssql-eng021798.md)   
  [Replication System Stored Procedures Concepts](../../../2014/relational-databases/replication/dev-guide/replication-system-stored-procedures-concepts.md)   
- [Upgrade Replicated Databases](../../../2014/sql-server/install/upgrade-replicated-databases.md)  
+ [Upgrade Replicated Databases](../../database-engine/install-windows/upgrade-replicated-databases.md)  
   
   

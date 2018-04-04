@@ -272,7 +272,7 @@ manager: "jhubbard"
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Distributed Replay Controller|DRU_CTLR, CTLRSVCACCOUNT,CTLRSVCPASSWORD, CTLRSTARTUPTYPE, CTLRUSERS|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Distributed Replay Client|DRU_CLT, CLTSVCACCOUNT, CLTSVCPASSWORD, CLTSTARTUPTYPE, CLTCTLRNAME, CLTWORKINGDIR, CLTRESULTDIR|  
   
- <sup>1</sup>For more information and sample syntax for unattended installations, see [Install SQL Server 2014 from the Command Prompt](../../2014/sql-server/install/install-sql-server-2014-from-the-command-prompt.md).  
+ <sup>1</sup>For more information and sample syntax for unattended installations, see [Install SQL Server 2014 from the Command Prompt](install-windows/install-sql-server-from-the-command-prompt.md).  
   
  <sup>2</sup>The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent service is disabled on instances of [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] and [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services.  
   
@@ -557,7 +557,7 @@ manager: "jhubbard"
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Setup provisions the **NT SERVICE\Winmgmt** account as a [!INCLUDE[ssDE](../includes/ssde-md.md)] login and adds it to the **sysadmin** fixed server role.  
   
 #### SSRS Provisioning  
- The account specified during setup is provisioned as a member of the **RSExecRole** database role. For more information, see [Configure the Report Server Service Account &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
+ The account specified during setup is provisioned as a member of the **RSExecRole** database role. For more information, see [Configure the Report Server Service Account &#40;SSRS Configuration Manager&#41;](../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
   
 ###  <a name="SSAS"></a> SSAS Provisioning  
  [!INCLUDE[ssAS](../includes/ssas-md.md)] service account requirements vary depending on how you deploy the server. If you are installing [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Setup requires that you configure the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] service to run under a domain account. Domain accounts are required to support the managed account facility that is built into SharePoint. For this reason, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Setup does not provide a default service account, such as a virtual account, for a [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] installation. For more information about provisioning PowerPivot for SharePoint, see [Configure PowerPivot Service Accounts](../../2014/analysis-services/configure-powerpivot-service-accounts.md).  
@@ -569,7 +569,7 @@ manager: "jhubbard"
  All [!INCLUDE[ssAS](../includes/ssas-md.md)] installations require that you specify a system administrator of the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance. Administrator privileges are provisioned in the Analysis Services **Server** role.  
   
 ###  <a name="SSRS"></a> SSRS Provisioning  
- The account specified during setup is provisioned in the [!INCLUDE[ssDE](../includes/ssde-md.md)] as a member of the **RSExecRole** database role. For more information, see [Configure the Report Server Service Account &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
+ The account specified during setup is provisioned in the [!INCLUDE[ssDE](../includes/ssde-md.md)] as a member of the **RSExecRole** database role. For more information, see [Configure the Report Server Service Account &#40;SSRS Configuration Manager&#41;](../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
   
 ##  <a name="Upgrade"></a> Upgrading From Previous Versions  
  This section describes the changes made during upgrade from a previous version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -674,6 +674,6 @@ manager: "jhubbard"
   
  [File Locations for Default and Named Instances of SQL Server](../../2014/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)  
   
- [Install Master Data Services](../../2014/sql-server/install/install-master-data-services.md)  
+ [Install Master Data Services](../master-data-services/install-windows/install-master-data-services.md)  
   
   

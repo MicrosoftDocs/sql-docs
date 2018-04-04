@@ -42,7 +42,7 @@ manager: "mblythe"
   
      The **Credentials are not required** option can also be used under some circumstances.  
   
-     From some data source types, the unattended execution account must be configured on the report server. For more information, see the topic for the corresponding data source type in [Add Data from External Data Sources &#40;SSRS&#41;](../../2014/reporting-services/add-data-from-external-data-sources-ssrs.md) and [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+     From some data source types, the unattended execution account must be configured on the report server. For more information, see the topic for the corresponding data source type in [Add Data from External Data Sources &#40;SSRS&#41;](../../2014/reporting-services/add-data-from-external-data-sources-ssrs.md) and [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 7.  Type a user name and password.  
   
@@ -68,7 +68,7 @@ manager: "mblythe"
   
      The **Credentials are not required** option can also be used under some circumstances. This option works only if the data source does not accept credentials or if you are passing credentials some other way.  
   
-     From some data source types, the unattended execution account must be configured on the report server. For more information, see the topic for the corresponding data source type in [Add Data from External Data Sources &#40;SSRS&#41;](../../2014/reporting-services/add-data-from-external-data-sources-ssrs.md) and [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+     From some data source types, the unattended execution account must be configured on the report server. For more information, see the topic for the corresponding data source type in [Add Data from External Data Sources &#40;SSRS&#41;](../../2014/reporting-services/add-data-from-external-data-sources-ssrs.md) and [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 5.  Type a user name and password.  
   

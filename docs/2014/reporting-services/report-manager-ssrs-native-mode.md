@@ -111,7 +111,7 @@ manager: "mblythe"
 |![Property Page icon](../../2014/reporting-services/media/hlp-16prop.gif "Property Page icon")|Property page|Click the property icon to access additional pages to set properties and security.|  
   
 ## See Also  
- [Configure a URL  &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-a-url-ssrs-configuration-manager.md)   
+ [Configure a URL  &#40;SSRS Configuration Manager&#41;](install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [Planning for Reporting Services and Power View Browser Support &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)   
  [Report Builder &#40;SSRS&#41;](../../2014/reporting-services/report-builder-ssrs.md)   
  [Reporting Services Tools](../../2014/reporting-services/reporting-services-tools.md)   

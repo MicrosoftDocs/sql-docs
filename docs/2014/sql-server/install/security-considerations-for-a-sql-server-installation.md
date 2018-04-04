@@ -151,7 +151,7 @@ manager: "jhubbard"
 >  During setup of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] a login is added for the BUILTIN\Users group. This allows all authenticated users of the computer to access the instance of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] as a member of the public role. The BUILTIN\Users login can be safely removed to restrict [!INCLUDE[ssDE](../../includes/ssde-md.md)] access to computer users who have individual logins or are members of other Windows groups with logins.  
   
 ## See Also  
- [Hardware and Software Requirements for Installing SQL Server 2014](../../../2014/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2014.md)   
+ [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)   
  [Network Protocols and Network Libraries](../../../2014/sql-server/install/network-protocols-and-network-libraries.md)   
  [Register a Service Principal Name for Kerberos Connections](../../../2014/database-engine/register-a-service-principal-name-for-kerberos-connections.md)  
   

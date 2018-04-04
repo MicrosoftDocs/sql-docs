@@ -48,6 +48,6 @@ manager: "jhubbard"
 5.  Click **Apply**.  
   
 ## See Also  
- [Configure the Report Server Service Account &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
+ [Configure the Report Server Service Account &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
   
   

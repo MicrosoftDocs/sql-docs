@@ -128,6 +128,6 @@ manager: "jhubbard"
   
 ## See Also  
  [SQL Server Distributed Replay](../../2014/database-engine/sql-server-distributed-replay.md)   
- [Install Distributed Replay](../../2014/sql-server/install/install-distributed-replay.md)  
+ [Install Distributed Replay](../tools/distributed-replay/install-distributed-replay-overview.md)  
   
   

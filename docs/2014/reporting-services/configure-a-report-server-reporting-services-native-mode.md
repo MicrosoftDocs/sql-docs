@@ -39,9 +39,9 @@ manager: "mblythe"
   
 1.  Start the Reporting Services Configuration Manager and connect to the report server instance. For instructions, see [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
-2.  Click **Web Service URL** to open the page for configuring a URL for the report server. For instructions on how to define the URL, see [Configure a URL  &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-a-url-ssrs-configuration-manager.md).  
+2.  Click **Web Service URL** to open the page for configuring a URL for the report server. For instructions on how to define the URL, see [Configure a URL  &#40;SSRS Configuration Manager&#41;](install-windows/configure-a-url-ssrs-configuration-manager.md).  
   
-3.  Click **Database** to create the report server database. For instructions, see [Create a Native Mode Report Server Database  &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/create-a-native-mode-report-server-database-ssrs-configuration-manager.md).  
+3.  Click **Database** to create the report server database. For instructions, see [Create a Native Mode Report Server Database  &#40;SSRS Configuration Manager&#41;](install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
   
 4.  Go back to the **Web Service URL** page and click the URL to verify it works.  
   
@@ -54,7 +54,7 @@ manager: "mblythe"
   
  If you are using Windows Vista or Windows Server 2008, additional steps are required before you can open Report Manager locally. For more information, see [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../../2014/reporting-services/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
- Verify your installation by creating folders, uploading items, and running reports. Follow the instructions in [Verify a Reporting Services Installation](../../2014/sql-server/install/verify-a-reporting-services-installation.md) to verify your installation.  
+ Verify your installation by creating folders, uploading items, and running reports. Follow the instructions in [Verify a Reporting Services Installation](install-windows/verify-a-reporting-services-installation.md) to verify your installation.  
   
 ## See Also  
  [Manage a Reporting Services Native Mode Report Server](../../2014/reporting-services/manage-a-reporting-services-native-mode-report-server.md)   

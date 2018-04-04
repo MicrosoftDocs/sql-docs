@@ -180,7 +180,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
  Specifies the e-mail address to use in the From: field of a generated e-mail. You must specify a user account that has permission to send mail from the SMTP server.  
   
 ##  <a name="bkmk_provisionsubscriptions"></a> Provision Subscriptions and Alerts  
- Use this page to verify if SQL Server Agent is running and to provision access for reporting services to use SQL Server Agent. SQL Server Agent is required for [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] subscriptions, schedules, and data alerts. [Provision Subscriptions and Alerts for SSRS Service Applications](../../2014/sql-server/install/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)  
+ Use this page to verify if SQL Server Agent is running and to provision access for reporting services to use SQL Server Agent. SQL Server Agent is required for [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] subscriptions, schedules, and data alerts. [Provision Subscriptions and Alerts for SSRS Service Applications](install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)  
   
 ## Proxy association  
  When you created the Reporting Services service application you selected the web application to associate and provision permissions for access by the Reporting Services service application. If you chose to not associate or you want to change the association, you can use the following steps.  

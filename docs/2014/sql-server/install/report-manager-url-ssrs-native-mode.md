@@ -40,8 +40,8 @@ manager: "jhubbard"
  Add an additional URL for the current Report Manager instance.  
   
 ## See Also  
- [Configure a URL  &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-url-ssrs-configuration-manager.md)   
- [URLs in Configuration Files  &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/urls-in-configuration-files-ssrs-configuration-manager.md)   
- [Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-report-server-urls-ssrs-configuration-manager.md)  
+ [Configure a URL  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
+ [URLs in Configuration Files  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)   
+ [Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   
   

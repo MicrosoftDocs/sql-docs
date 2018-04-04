@@ -1,7 +1,7 @@
 ---
 title: "DSN and Connection String Keywords and Attributes Used in the ODBC Driver for SQL Server| Microsoft Docs"
 ms.custom: ""
-ms.date: "01/24/2018"
+ms.date: "03/21/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""
@@ -163,6 +163,7 @@ Sets the authentication mode to use when connecting to SQL Server. See [Using Az
 |SqlPassword|SQL_AU_PASSWORD|SQL Server authentication with username and password.|
 |ActiveDirectoryIntegrated|SQL_AU_AD_INTEGRATED|Azure Active Directory Integrated authentication.|
 |ActiveDirectoryPassword|SQL_AU_AD_PASSWORD|Azure Active Directory Password authentication.|
+|ActiveDirectoryInteractive|SQL_AU_AD_INTERACTIVE|Azure Active Directory Interactive authentication.|
 | |SQL_AU_RESET|Unset. Overrides any DSN or connection string setting.|
 
 ### ColumnEncryption - SQL_COPT_SS_COLUMN_ENCRYPTION

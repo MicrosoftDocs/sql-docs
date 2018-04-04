@@ -9,10 +9,8 @@ ms.component: r
 ms.technology: 
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 21456462-e58a-44c3-9d3a-68b4263575d7
-caps.latest.revision: 1
-author: "HeidiSteen"
 ms.author: "heidist"
+author: "HeidiSteen"
 manager: "cgronlun"
 ms.workload: "Inactive"
 ---

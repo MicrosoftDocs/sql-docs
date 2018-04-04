@@ -27,7 +27,7 @@ ms.workload: "On Demand"
 ---
 # Tutorial: Configure Publisher and Subscriber for Transactional Replication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Transacational Replication is a good solution to the problem of moving data between continuously connected servers. Using  the Replication Wizard, you can easily configure and administer a replication topology. This tutorial shows you how to configure a Transactional Replication topology for continuously connected servers. For more information about how Transactional Replication works, please see [Transactional Replication Overview](https://docs.microsoft.com/en-us/sql/relational-databases/replication/transactional/transactional-replication). 
+Transactional Replication is a good solution to the problem of moving data between continuously connected servers. Using  the Replication Wizard, you can easily configure and administer a replication topology. This tutorial shows you how to configure a Transactional Replication topology for continuously connected servers. For more information about how Transactional Replication works, please see [Transactional Replication Overview](https://docs.microsoft.com/en-us/sql/relational-databases/replication/transactional/transactional-replication). 
   
 ## What You Will Learn  
 This tutorial will show you how to publish data from one database to another using transactional replication. 
@@ -67,7 +67,7 @@ To use this Tutorial, your system must have SQL Server Management Studio (SSMS) 
 **Estimated time to complete this tutorial: 60 minutes.**  
   
 ## Configure the Publisher for Transactional Replication
-In this secton, you will create a transactional publication using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to publish a filtered subset of the **Product** table in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database. You will also add the SQL Server login used by the Distribution Agent to the publication access list (PAL). Before starting this tutorial, you should have completed the previous tutorial, [Preparing the Server for Replication](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md).
+In this section, you will create a transactional publication using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to publish a filtered subset of the **Product** table in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database. You will also add the SQL Server login used by the Distribution Agent to the publication access list (PAL). Before starting this tutorial, you should have completed the previous tutorial, [Preparing the Server for Replication](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md).
 
 
 ### Create a publication and define articles
@@ -182,7 +182,7 @@ In this section, you will add a subscriber to the Publication that was previousl
 
     ![Run Agents at Dist](media/tutorial-replicating-data-between-continuously-connected-servers/runagentsatdist.png)
   
-5.  On the Subscribers page, if the name of the Subscriber instance is not displayed, select **Add Subscriber** and then select **Add SQL Server Subscriber** from the drop down. This will launch the **Connect to Server** dialog box. Enter the Subscriber instance name and then select **Connect**.  
+5.  On the Subscribers page, if the name of the Subscriber instance is not displayed, select **Add Subscriber** and then select **Add SQL Server Subscriber** from the drop-down. This will launch the **Connect to Server** dialog box. Enter the Subscriber instance name and then select **Connect**.  
 
     ![Add Subscriber Server](media/tutorial-replicating-data-between-continuously-connected-servers/addsub.png)
   
@@ -202,7 +202,7 @@ In this section, you will add a subscriber to the Publication that was previousl
   
 1.  Connect to the Subscriber in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expand **Security**, right-click **Logins**, and then select **New Login**.     
   
-    - On the **General** page, under **Login Name** select **Search** and add the login for <machinename>\repl_distributor.
+    - On the **General** page, under **Login Name** select **Search** and add the login for <*Subscriber_Machine_Name>\***repl_distributor**.
     - On the **User Mappings** page, grant the login **db_owner** for the **ProductReplica** database. 
 
     ![Login on Subscriber](media/tutorial-replicating-data-between-continuously-connected-servers/loginforsub.png)
@@ -252,7 +252,7 @@ The **Snapshot Agent** is the agent that generates the snapshot, and writes it t
 
 1. To view the status of your snapshot agent, expand the **Local Publication** node under replication, right select your publication **AdvWorksProductTrans** > **View Snapshot Agent Status**. 
 2. If an error is reported in the **Snapshot Agent Status**, more details can be found in the **Snapshot Agent** job history. To access this, expand **SQL Server Agent** in **Object Explorer** and open the **Job Activity Monitor**. 
-3. Sort by **Category** and identfy the **Snapshot Agent** by the category 'REPL-Snapshot'. 
+3. Sort by **Category** and identify the **Snapshot Agent** by the category 'REPL-Snapshot'. 
 
 
     
@@ -273,7 +273,7 @@ The **Log Reader Agent** connects to  your publisher database and scans the tran
     Replication Monitor launches. 
     ![Replication Monitor](media/tutorial-replicating-data-between-continuously-connected-servers/replmonitor.png) 
    
-2. The Red X is an indication that the publication is not synchronizing. Expand **My Publishers** on the left hand side, and then expand the relevant publisher server.  
+2. The Red X is an indication that the publication is not synchronizing. Expand **My Publishers** on the left-hand side, and then expand the relevant publisher server.  
   
 3.  Select the **AdvWorksProductTrans** publication on the left and then look for the Red X on one of the tabs to identify where the issue is. In this case, the Red X is on the **Agents Tab**, indicating that one of the Agents is running into an error. 
 
@@ -293,14 +293,15 @@ The **Log Reader Agent** connects to  your publisher database and scans the tran
        Status: 0, code: 15517, text: 'Cannot execute as the database principal because the principal "dbo" does not exist, this type of principal cannot be impersonated, or you do not have permission.'.
        Status: 0, code: 22037, text: 'The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.'.        
 
-6. The aforementioned error is typically caused because the owner of the publisher database is not set correctly. To verify this, expand **Databases** in **Object Explorer** > right-click **AdventureWorks2012** > **Properties**. Verify the databsae owner on the **General** tab. 
+6. The aforementioned error is typically caused because the owner of the publisher database is not set correctly. This typically happens when a database has been restored. To verify this, expand **Databases** in **Object Explorer** > right-click **AdventureWorks2012** > **Properties**. Verify that an owner exists under the **Files** tab. If this field is blank, then this is the likely cause of your issue. 
 
     ![DB Properties](media/tutorial-replicating-data-between-continuously-connected-servers/dbproperties.png)
 
 7. If the owner is not set to 'sa', open a **New Query Window** within the context of the **AdventureWorks2012** database. Run the following T-SQL code snippet:
 
 ```sql
-    EXEC sp_changedbowner 'sa'
+-- set the owner of the database to 'sa' or a specific user account, without the brackets. 
+    EXEC sp_changedbowner '<useraccount>'
 ```
 
 8. You'll need to restart the **Log Reader Agent**. To do this, expand the **SQL Server Agent** node in **Object Explorer** and open the **Job Activity Monitor**. Sort by **Category** and identify the **Log Reader Agent** by the **'REPL-LogReader'** category. Right-click the **Log Reader Agent** job and **Start Job at Step**. 
@@ -308,12 +309,12 @@ The **Log Reader Agent** connects to  your publisher database and scans the tran
     ![Restart Log Reader Agent](media/tutorial-replicating-data-between-continuously-connected-servers/startjobatstep.png)
 
 9. Validate that your publication is now synchronizing by opening the **Replication Monitor** again. If it's not already open, it can be found by right-clicking **Replication** in **Object Explorer**. 
-10. Select the **AdvWorksProductTrans** publication, select the **Agents** tab, and double-select the **Log Reader Agent** to open the agent history. You should now see that the **Log Reader Agent** is running and either replicating commands, or that it has "No Replicated Transacations".
+10. Select the **AdvWorksProductTrans** publication, select the **Agents** tab, and double-select the **Log Reader Agent** to open the agent history. You should now see that the **Log Reader Agent** is running and either replicating commands, or that it has "No Replicated Transactions".
 
     ![Log Reader Running](media/tutorial-replicating-data-between-continuously-connected-servers/logreaderrunning.png)
 
 ### Troubleshoot errors with Distribution Agent
-The **Distribution Agent** takes data it finds in the **Distrbution** database and then applies it to the Subscriber. 
+The **Distribution Agent** takes data it finds in the **Distribution** database and then applies it to the Subscriber. 
 
 1. Connect to the Publisher in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expand the server node, right-click the **Replication** folder, and then select **Launch Replication Monitor**.  
 2. In **Replication Monitor**, select the **AdvWorksProductTrans** publication, and select the **All Subscriptions** tab. Right-click the Subscription and **View Details**.
@@ -340,7 +341,7 @@ The **Distribution Agent** takes data it finds in the **Distrbution** database a
         Message:
         Unable to start execution of step 2 (reason: Error authenticating proxy NODE1\repl_distribution, system error: The user name or password is incorrect.)
 
-6. This error is an indication that the password used by the **Distribution Agent** is incorrect. To resolve this, expand the **Replication** node in **Object Explorer**, right-click the subscription > **Properties**. Select the elipses (...) next to **Agent Process Account** and modify the password:
+6. This error is an indication that the password used by the **Distribution Agent** is incorrect. To resolve this, expand the **Replication** node in **Object Explorer**, right-click the subscription > **Properties**. Select the ellipses (...) next to **Agent Process Account** and modify the password:
 
     ![Modify PW for Dist Agent](media/tutorial-replicating-data-between-continuously-connected-servers/distagentpwchange.png)
 
@@ -353,7 +354,7 @@ The **Distribution Agent** takes data it finds in the **Distrbution** database a
         Number:  18456
         Message: Login failed for user 'NODE2\repl_distribution'.
 
-8. This error indicates that the the **Distribution Agent** could not connect to the subscriber, as the login failed for user **NODE2\repl_distribution**. To investigate further, open the current **SQL Error Log** for the subscriber under the **Management** node in **Object Explorer**: 
+8. This error indicates that the **Distribution Agent** could not connect to the subscriber, as the login failed for user **NODE2\repl_distribution**. To investigate further, open the current **SQL Error Log** for the subscriber under the **Management** node in **Object Explorer**: 
 
     ![Login Failed for Subscriber](media/tutorial-replicating-data-between-continuously-connected-servers/loginfailed.png)
     If you're seeing this error, it means that the login is missing on the subscriber. To resolve this, please see [Setting database permissions at the Subscriber](#setting-database-permissions-at-the-subscriber)
@@ -363,7 +364,7 @@ The **Distribution Agent** takes data it finds in the **Distrbution** database a
      ![Dist Agent Success](media/tutorial-replicating-data-between-continuously-connected-servers/distagentsuccess.png)   
 
   ## Next steps
-The next article will teach you how to configure Merge replication.  
+You have successfully configured both your Publisher and your Subscriber for your Transactional Replication.  You can now insert, update, or delete data in the **Product**  table at the Publisher. Then you can query the **Product** table at the Subscriber to view the replicated changes. The next article will teach you how to configure Merge replication.  
 
 Advance to the next article to learn more
 > [!div class="nextstepaction"]

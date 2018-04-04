@@ -65,7 +65,7 @@ To complete this Tutorial, your system must have SQL Server Management Studio (S
 
 **Estimated time to complete this tutorial:  30 minutes**
   
-## Create Windows Acounts for Replication
+## Create Windows Accounts for Replication
 In this section, you will create Windows accounts to run replication agents. You will create a separate Windows account on the local server for the following agents:  
   
 |Agent|Location|Account name|  
@@ -130,7 +130,7 @@ In this section, you will learn to configure the snapshot folder that is used to
 
        ![Sharing Repl Data](media/tutorial-preparing-the-server-for-replication/repldata.png)
 
-6.  In the **Permssions for repldata** dialog box, click **Add**.  In the **Select User, Computers, Service Account, or Groups** text box, type the name of the Snapshot Agent account created in previously, as \<*Machine_Name>***\repl_snapshot**, where \<*Machine_Name>* is the name of the Publisher. Click **Check Names**, and then click **OK**.  
+6.  In the **Permissions for repldata** dialog box, click **Add**.  In the **Select User, Computers, Service Account, or Groups** text box, type the name of the Snapshot Agent account created in previously, as \<*Machine_Name>***\repl_snapshot**, where \<*Machine_Name>* is the name of the Publisher. Click **Check Names**, and then click **OK**.  
 
     ![Add Sharing Permissions](media/tutorial-preparing-the-server-for-replication/addshareperms.png)
 
@@ -215,7 +215,7 @@ Configuring a Publisher with a remote Distributor is outside the scope of this t
 
     If your SQL Server Management Studio is running with administrative rights, you can start the SQL Agent manually from within SSMS:  
         ![Start Agent from SSMS](media/tutorial-preparing-the-server-for-replication/ssmsstartagent.png) 
-        - If the SQL Agent doesn't visibly start, right-click the **SQL Server Agent** in SSMS and **Refresh**.     
+        - If the SQL Agent doesn't visibly start, right-click the SQL Server Agent in SSMS, and **Refresh**.     
   
 ### Setting database permissions at the Publisher  
   
@@ -229,7 +229,7 @@ Configuring a Publisher with a remote Distributor is outside the scope of this t
   
 3.  On the **User Mapping** page, in the **Users mapped to this login** list select both the **distribution** and [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] databases.  
   
-    In the **Database role membership** list select the **db_owner** role for the login for both databases.  
+    In the Database role membership list, select the **db_owner** role for the login for both databases.  
 
     ![Repl Snapshot DB Owner](media/tutorial-preparing-the-server-for-replication/dbowner.png)
   
@@ -245,7 +245,7 @@ Configuring a Publisher with a remote Distributor is outside the scope of this t
 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)  
 
 ## Next steps
-The next article teaches you how to configure Transactional Replication. 
+You have now successfully prepared your server for replication. The next article teaches you how to configure Transactional Replication. 
 
 Advance to the next article to learn more
 > [!div class="nextstepaction"]

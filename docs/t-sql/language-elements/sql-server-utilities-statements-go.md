@@ -93,7 +93,7 @@ GO;
 ```  
   
 ## Examples  
- The following example creates two batches. The first batch contains only a `USE``AdventureWorks2012` statement to set the database context. The remaining statements use a local variable. Therefore, all local variable declarations must be grouped in a single batch. This is done by not having a `GO` command until after the last statement that references the variable.  
+ The following example creates two batches. The first batch contains only a `USE AdventureWorks2012` statement to set the database context. The remaining statements use a local variable. Therefore, all local variable declarations must be grouped in a single batch. This is done by not having a `GO` command until after the last statement that references the variable.  
   
 ```  
 USE AdventureWorks2012;  

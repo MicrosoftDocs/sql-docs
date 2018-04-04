@@ -9,7 +9,9 @@ ms.component: "native-client|applications"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 

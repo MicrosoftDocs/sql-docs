@@ -12,17 +12,15 @@ ms.technology:
   
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: bf6de7e2-f394-4b8a-a4b7-0b8dadf25426
-caps.latest.revision: 20
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+ms.author: "heidist"
+author: "HeidiSteen"
+manager: "cgronlun"
 ms.workload: "Inactive"
 ---
 # Data Exploration and Predictive Modeling with R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This topic describes improvements to the data science process that are possible through integration with SQL Server.
+This article describes improvements to the data science process that are possible through integration with SQL Server.
 
 Applies to: SQL Server 2016 R Services, SQL Server 2017 Machine Learnign Services
 

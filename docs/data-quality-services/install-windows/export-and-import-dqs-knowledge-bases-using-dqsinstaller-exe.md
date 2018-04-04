@@ -16,7 +16,7 @@ ms.assetid: 8234c63b-a018-4e55-8184-9a6bdf03274d
 caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Export and Import DQS Knowledge Bases Using DQSInstaller.exe

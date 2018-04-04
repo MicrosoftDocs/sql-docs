@@ -18,7 +18,7 @@ ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
 caps.latest.revision: 27
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Create Term-Based Relations

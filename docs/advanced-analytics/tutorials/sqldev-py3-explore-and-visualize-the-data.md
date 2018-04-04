@@ -16,11 +16,9 @@ applies_to:
 dev_langs: 
   - "Python"
   - "TSQL"
-ms.assetid: 
-caps.latest.revision: 2
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+ms.author: "heidist"
+author: "HeidiSteen"
+manager: "cgronlun"
 ---
 # Step 3: Explore and visualize the data
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

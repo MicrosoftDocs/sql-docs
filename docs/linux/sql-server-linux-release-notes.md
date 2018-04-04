@@ -4,7 +4,7 @@ description: This article contains the release notes and supported features for 
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 03/21/2018
+ms.date: 04/04/2018
 ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
@@ -65,6 +65,24 @@ If you are updating existing SQL Server packages, run the appropriate update com
 ## <a id="CU5"></a> CU5 (March 2018)
 
 This is the Cumulative Update 5 (CU5) release of SQL Server 2017. The SQL Server engine version for this release is 14.0.3023.8. For information about the fixes and improvements in this release, see [https://support.microsoft.com/help/4092643](https://support.microsoft.com/help/4092643).
+
+### Known upgrade issue
+
+When you upgrade from a previous release to CU5, SQL Server might fail to start with the following error:
+
+```
+Error: 4860, Severity: 16, State: 1.
+Cannot bulk load. The file "C:\Install\SqlTraceCollect.dtsx" does not exist or you don't have file access rights.
+Error: 912, Severity: 21, State: 2.
+Script level upgrade for database 'master' failed because upgrade step 'msdb110_upgrade.sql' encountered error 200, state
+```
+
+To resolve this error, enable SQL Server Agent and restart SQL Server with the following commands:
+
+```bash
+sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true
+sudo systemctl start mssql-server
+```
 
 ### Package details
 

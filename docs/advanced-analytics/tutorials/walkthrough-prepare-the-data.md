@@ -64,7 +64,7 @@ All the code needed has been provided in a GitHub repository. You can use a Powe
   
     ![After completion of PowerShell script](media/rsql-e2e-psscriptresults.PNG "After completion of PowerShell script")
   
-5.  In the PowerShell console, you can run the command `ls` to view a list of the files that were downloaded to *DestDir*.  For a description of the files, see [What's Included](#What-the-Download-Includes).
+5.  In the PowerShell console, you can run the command `ls` to view a list of the files that were downloaded to *DestDir*.  For a description of the files, see [What's Included](#whats-included-in-the-sample).
 
 ## 2. Install required R packages
 

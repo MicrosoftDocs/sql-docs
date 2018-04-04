@@ -1,3 +1,30 @@
+---
+title: "List of bugs fixed | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/13/2018"
+ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "odbc"
+ms.reviewer: ""
+ms.suite: "sql"
+ms.technology: 
+  - "drivers"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "driver"
+ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
+caps.latest.revision: 69
+author: "v-makouz"
+ms.author: "genemi"
+manager: "kenvh"
+ms.workload: "Active"
+---
+# List of bugs fixed
+
+This page contains a listing of bugs fixed in each release, starting with [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.1 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
 
 - Fixed 1-second delay when calling SQLFreeHandle with MARS enabled and connection attribute "Encrypt=yes"

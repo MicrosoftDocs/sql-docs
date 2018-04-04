@@ -1,7 +1,7 @@
 ---
 title: "List of bugs fixed | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/13/2018"
+ms.date: "04/04/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""
@@ -52,4 +52,4 @@ This page contains a listing of bugs fixed in each release, starting with [!INCL
 - Fixed a bug where Hebrew data (varchar) is truncated when returned as wide chars on Linux
 - Fixed an issue with querying Shift-JIS encoded char/varchar from UTF-8 application
 - Fixed the bug where calling SQLGetInfo with SQL_DRIVER_NAME parameter returned Linux-style filename on MacOS
-- Fixed an issue where loading Windows-1252 character data, using input files larger then 32k bytes into VARCHAR columns using the BCP utility would result in failures
+- Fixed an issue where loading Windows-1252 character data, using input files larger than 32k bytes into VARCHAR columns using the BCP utility would result in failures

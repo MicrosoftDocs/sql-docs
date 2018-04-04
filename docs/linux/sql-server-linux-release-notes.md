@@ -4,7 +4,7 @@ description: This article contains the release notes and supported features for 
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 03/22/2018
+ms.date: 04/04/2018
 ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"

@@ -155,8 +155,7 @@ For instructions on setting up the Web site, see [Master Data Services Installat
 3. Click the entity to which the rule applies, as listed in the tables above, and then click **Business Rules**.  
 4. Click the name of the business rule that you want to view. The UI expands to show the **If**, **Then** and **Else** statements.  
   
-## Did this Article Help You? We’re Listening   
-What information are you looking for, and did you find it? We’re listening to your feedback to improve the content. Please submit your comments to [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com).   
+ 
   
   
   

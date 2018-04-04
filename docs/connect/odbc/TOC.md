@@ -7,3 +7,5 @@
 # [Download ODBC Driver for SQL Server](download-odbc-driver-for-sql-server.md)
 
 # [DSN Connection String Keywords and Attributes](dsn-connection-string-attribute.md)
+
+# [Bug Fixes](bug-fixes.md)

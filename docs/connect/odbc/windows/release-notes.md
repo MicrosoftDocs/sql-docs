@@ -1,7 +1,7 @@
 ---
 title: "Release Notes (ODBC Driver for SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/14/2018"
+ms.date: "04/04/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""

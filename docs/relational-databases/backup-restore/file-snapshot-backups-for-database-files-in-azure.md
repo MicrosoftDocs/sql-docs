@@ -177,9 +177,6 @@ sys.sp_delete_backup_file_snapshot N'adventureworks2016', N'https://<mystorageac
 GO  
 ```  
   
-## Did this Article Help You? We’re Listening  
- What information are you looking for, and did you find it? We’re listening to your feedback to improve the content. Please submit your comments to [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20File-Snapshot%20Backups%20for%20Database%20Files%20in%20Azure%20page)  
-  
 ## See Also  
  [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   

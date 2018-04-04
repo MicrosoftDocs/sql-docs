@@ -1,7 +1,7 @@
 ---
 title: "Release Notes - Microsoft ODBC Driver for SQL Server on Linux and macOS | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "04/04/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""

@@ -29,7 +29,9 @@ ms.workload: "On Demand"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Replication is a powerf solution for moving data, or subsets of data between servers. You can replicate data between servers that are fully connected using Transactional Replication. You can also replicate data between servers and clients that are intermittently connected using Merge Replication. Below, you will find tutorials that help prepare your server for replication, and then teach you to configure both Transactional and Merge replication. 
   
-In the replication tutorials, "Publisher" refers to the server that contains that source data being replicated and "Subscriber" refers to the destination server. The Publisher and Subscriber may share the same instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], but it is not a requirement. For more information, see [Replication Publishing Model Overview](../../relational-databases/replication/publish/replication-publishing-model-overview.md).  
+In the Replication Tutorials, "Publisher" refers to the server that contains that source data being replicated and "Subscriber" refers to the destination server. The Publisher and Subscriber may share the same instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], but it is not a requirement. For more information, see [Replication Publishing Model Overview](../../relational-databases/replication/publish/replication-publishing-model-overview.md).  
+
+These tutorials uses NODE1\SQL2016 as the Publisher and Distributor, and NODE2\SQL2016 as the Subscriber. 
   
 > [!NOTE]  
 > Most of the tasks shown in these tutorials can be performed programmatically. For more information, see [Replication Developer Documentation](../../relational-databases/replication/concepts/replication-developer-documentation.md).  

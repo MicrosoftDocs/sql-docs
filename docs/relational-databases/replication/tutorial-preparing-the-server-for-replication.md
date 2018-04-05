@@ -56,12 +56,11 @@ To complete this Tutorial, your system must have SQL Server Management Studio (S
   
 - Install [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
 - Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
-- Download an [AdventureWorks Sample Databases](https://github.com/Microsoft/sql-server-samples/releases). 
-    - Instructions for restoring databases in SSMS can be found here: [Restoring a Database](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+- Download an [AdventureWorks Sample Databases](https://github.com/Microsoft/sql-server-samples/releases). For instructions on restoring a database in SSMS, please see [Restoring a Database](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
     
 >[!NOTE]
-> - Replication is not supported on SQL Servers that are more than two versions apart. For more information, please see [Supported SQL Versions in Repl Topology](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/)
- > - In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], you must connect to the Publisher and Subscriber using a login that is a member of the **sysadmin** fixed server role  
+> - Replication is not supported on SQL Servers that are more than two versions apart. For more information, please see [Supported SQL Versions in Repl Topology](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/).
+> - In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], you must connect to the Publisher and Subscriber using a login that is a member of the **sysadmin** fixed server role. For more information on the sysadmin role, please see [Server Level Roles](https://docs.microsoft.com/en-us/sql/relational-databases/security/authentication-access/server-level-roles).  
 
 
 **Estimated time to complete this tutorial:  30 minutes**
@@ -85,9 +84,9 @@ In this section, you will create Windows accounts to run replication agents. You
   
 2.  In **System Tools**, expand **Local Users and Groups**.  
   
-3.  Right-click **Users** and then click **New User**.  
+3.  Right-click **Users** and then select **New User**.  
      
-4.  Enter **repl_snapshot** in the **User name** box, provide the password and other relevant information, and then click **Create** to create the repl_snapshot account: 
+4.  Enter **repl_snapshot** in the **User name** box, provide the password and other relevant information, and then select **Create** to create the repl_snapshot account: 
 
        ![New user](media/tutorial-preparing-the-server-for-replication/newuser.png)
   
@@ -95,7 +94,7 @@ In this section, you will create Windows accounts to run replication agents. You
  
     ![Replication Users](media/tutorial-preparing-the-server-for-replication/replusers.png)
   
-6.  Click **Close**.  
+6.  Select **Close**.  
   
 ### To create local Windows accounts for replication agents at the Subscriber  
   
@@ -103,13 +102,13 @@ In this section, you will create Windows accounts to run replication agents. You
   
 2.  In **System Tools**, expand **Local Users and Groups**.  
   
-3.  Right-click **Users** and then click **New User**.  
+3.  Right-click **Users** and then select **New User**.  
   
-4.  Enter **repl_distribution** in the **User name** box, provide the password and other relevant information, and then click **Create** to create the repl_distribution account.  
+4.  Enter **repl_distribution** in the **User name** box, provide the password and other relevant information, and then select **Create** to create the repl_distribution account.  
   
 5.  Repeat the previous step to create the repl_merge account.  
   
-6.  Click **Close**.  
+6.  Select **Close**.  
 
 **See Also**:
 [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)  
@@ -123,42 +122,41 @@ In this section, you will learn to configure the snapshot folder that is used to
   
 2.  Create a new folder named **repldata**.  
   
-3.  Right-click this folder and click **Properties**.  
+3.  Right-click this folder and select **Properties**.  
   
-4.  On the **Sharing** tab in the **repldata Properties** dialog box, click **Advanced Sharing**.  
+    a. On the **Sharing** tab in the **repldata Properties** dialog box, select **Advanced Sharing**.  
   
-5.  In the **Advanced Sharing** dialog box, click **Share this Folder**, and then select **Permissions**.  
+    a. In the **Advanced Sharing** dialog box, select **Share this Folder**, and then select **Permissions**:  
 
        ![Sharing Repl Data](media/tutorial-preparing-the-server-for-replication/repldata.png)
 
-6.  In the **Permissions for repldata** dialog box, click **Add**.  In the **Select User, Computers, Service Account, or Groups** text box, type the name of the Snapshot Agent account created in previously, as \<*Machine_Name>***\repl_snapshot**, where \<*Machine_Name>* is the name of the Publisher. Click **Check Names**, and then click **OK**.  
+6.  In the **Permissions for repldata** dialog box, select **Add**. In the **Select User, Computers, Service Account, or Groups** text box, type the name of the Snapshot Agent account created in previously, as \<*Publisher_Machine_Name>***\repl_snapshot**. Select **Check Names**, and then select **OK**:  
 
     ![Add Sharing Permissions](media/tutorial-preparing-the-server-for-replication/addshareperms.png)
 
-7. Repeat step 7 to add the other two accounts that were created previously: \<*Machine_Name>***\repl_merge** and \<*Machine_Name>***\repl_distribution**
+7. Repeat step 6 to add the other two accounts that were created previously: \<*Publisher_Machine_Name>***\repl_merge** and \<*Publisher_Machine_Name>***\repl_distribution**
 
 8. Once these three accounts have been added, assign the following permissions: 
-
-    -   repl_snapshot - Full Control   
-    -   repl_distribution - Read  
-    -   repl_merge - Read  
+     
+    - repl_distribution - Read  
+    - repl_merge - Read  
+    - repl_snapshot - Full Control
     
 
-     ![Shared Permissions](media/tutorial-preparing-the-server-for-replication/sharedpermissions.png)
-
+   ![Shared Permissions](media/tutorial-preparing-the-server-for-replication/sharedpermissions.png)
 
 9. Once your share permissions are configured correctly, select **OK** to close the **Permissions for repldata** dialog box. Select **OK** to close the **Advanced Sharing** dialog box. 
 
-10.  On the **repldata Properties**, select the **Security** tab and select **Edit**.  
+10.  On the **repldata Properties**, select the **Security** tab and select **Edit**:  
 
        ![Edit Security](media/tutorial-preparing-the-server-for-replication/editsecurity.png)   
 
-11. In the **Permissions for repldata** dialog box, select **Add..**. In the **Select User, Computers, Service Account, or Groups** text box, type the name of the Snapshot Agent account created previously, as \<*Machine_Name>***\repl_snapshot**, where \<*Machine_Name>* is the name of the Publisher. Click **Check Names**, and then click **OK**.  
+11. In the **Permissions for repldata** dialog box, select **Add..**. In the **Select User, Computers, Service Account, or Groups** text box, type the name of the Snapshot Agent account created previously, as \<*Publisher_Machine_Name>***\repl_snapshot**. Select **Check Names**, and then select **OK**:  
 
     ![Add Security Permissions](media/tutorial-preparing-the-server-for-replication/addsecuritypermissions.png)
 
   
-12.  Repeat the previous step to add permissions for the Distribution Agent, as \<*Machine_Name>***\repl_distribution**, and for the Merge Agent as \<*Machine_Name>***\repl_merge**.  
+12.  Repeat the previous step to add permissions for the Distribution Agent, as \<*Publisher_Machine_Name>***\repl_distribution**, and for the Merge Agent as \<*Publisher_Machine_Name>***\repl_merge**.  
     
   
 13. Verify the following permissions are allowed:  
@@ -169,76 +167,80 @@ In this section, you will learn to configure the snapshot folder that is used to
  
 
     ![Repl Data User Permissions](media/tutorial-preparing-the-server-for-replication/replpermissions.png) 
+1. Select the **Sharing** tab again and note down the **Network Path** for the share. You will need this path later when you're configuring your **Snapshot Folder**:  
 
- 
-14. Click **OK** to close the **repldata Properties** dialog box and create the repldata share. 
+    ![Network Path](media/tutorial-replicating-data-between-continuously-connected-servers/networkpath.png)
+
+1. Select **OK** to close the **repldata Properties** dialog box. 
  
 **See Also**:  
 [Secure the Snapshot Folder](../../relational-databases/replication/security/secure-the-snapshot-folder.md)  
   
 
-## Configuring Distribution
+## Configure Distribution
 In this section, you will configure distribution at the Publisher and set the required permissions on the publication and distribution databases. If you have already configured the Distributor, you must first disable publishing and distribution before you begin this section. Do not do this if you must retain an existing replication topology, especially in Production.   
   
 Configuring a Publisher with a remote Distributor is outside the scope of this tutorial.  
 
-### Configuring distribution at the Publisher  
+### Configure distribution at the Publisher  
   
 1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], and then expand the server node.  
   
-2.  Right-click the **Replication** folder and click **Configure Distribution**.  
+2.  Right-click the **Replication** folder and select **Configure Distribution**:  
 
     ![Configure Distribution](media/tutorial-preparing-the-server-for-replication/configuredistribution.png)
   
     > [!NOTE]  
-    > If you have connected to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using **localhost** rather than the actual server name you will be prompted with a warning that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is unable to connect to server **'localhost'**. Click **OK** on the warning dialog. In the **Connect to Server** dialog change the **Server name** from **localhost** to the name of your server. Click **Connect**.  
+    > If you have connected to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using **localhost** rather than the actual server name you will be prompted with a warning that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is unable to connect to server **'localhost'**. Select **OK** on the warning dialog. In the **Connect to Server** dialog change the **Server name** from **localhost** to the name of your server. Select **Connect**.  
   
     The Distribution Configuration Wizard launches.  
   
-3.  On the **Distributor** page, select **'ServerName' will act as its own Distributor; SQL Server will create a distribution database and log**, and then click **Next**.  
+3.  On the **Distributor** page, select **'ServerName' will act as its own Distributor; SQL Server will create a distribution database and log**, and then select **Next**:  
 
     ![Server Acts as Own Distributor](media/tutorial-preparing-the-server-for-replication/serverdistributor.png)
   
-4.  If the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is not running, on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Agent Start** page, select **Yes**, configure the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service to start automatically. Click **Next**.  
+4.  If the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is not running, on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Agent Start** page, select **Yes**, configure the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service to start automatically. Select **Next**.  
 
      
-5.  Enter **\\\\**\<*Publisher_Machine_Name>***\repldata** in the **Snapshot folder** text box, and then click **Next**. This path should match what you see under **Network Path** of your repldata properties folder. 
+5.  Enter **\\**\<*Publisher_Machine_Name>***\repldata** in the **Snapshot folder** text box, and then select **Next**. This path should match what you saw previously under **Network Path** of your repldata properties folder after configuring your share properties: 
 
     ![Repl Data Snapshot Folder](media/tutorial-preparing-the-server-for-replication/repldatasnapshot.png)
   
-6.  Accept the default values on the remaining pages of the wizard.  
+6.  Accept the default values on the remaining pages of the wizard:  
     
     ![Distribution Wizard Defaults](media/tutorial-preparing-the-server-for-replication/distributionwizarddefaults.png)
   
-7.  Click **Finish** to enable distribution. 
+7.  Select **Finish** to enable distribution. 
 
-    You might see this error when configuring the Distributor. It's an indication that the account used to start the SQL Server Agent account is not an administrator on the system. You'll either need to grant those permissions to the existing account, modify which account the SQL Server Agent is using, or just start the SQL Agent manually. 
+    You might see this error when configuring the Distributor. It's an indication that the account used to start the SQL Server Agent account is not an administrator on the system. You'll either need to grant those permissions to the existing account, modify which account the SQL Server Agent is using, or just start the SQL Agent manually: 
 
      ![Starting Agent Error](media/tutorial-preparing-the-server-for-replication/startingagenterror.png)
 
     If your SQL Server Management Studio is running with administrative rights, you can start the SQL Agent manually from within SSMS:  
         ![Start Agent from SSMS](media/tutorial-preparing-the-server-for-replication/ssmsstartagent.png) 
-        - If the SQL Agent doesn't visibly start, right-click the SQL Server Agent in SSMS, and **Refresh**.  If it's still not started,  you'll need to start it manually from the **SQL Server Configuration Manager**.    
+
+    >[!NOTE]
+    > If the SQL Agent doesn't visibly start, right-click the SQL Server Agent in SSMS, and **Refresh**.  If it's still in the stopped state,  you'll need to start it manually from the **SQL Server Configuration Manager**.    
   
 ### Setting database permissions at the Publisher  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expand **Security**, right-click **Logins**, and then select **New Login**.  
+1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expand **Security**, right-click **Logins**, and then select **New Login**:  
 
     ![New Login](media/tutorial-preparing-the-server-for-replication/newlogin.png)
   
-2.  On the **General** page, click **Search**, enter \<*Publisher_Machine_Name>***\repl_snapshot** in the **Enter the object name to select** box, click **Check Names**, and then click **OK**.  
+2.  On the **General** page, select **Search**, enter \<*Publisher_Machine_Name>***\repl_snapshot** in the **Enter the object name to select** box, select **Check Names**, and then select **OK**:  
 
     ![Add Repl Snapshot Login](media/tutorial-preparing-the-server-for-replication/addsnapshotlogin.png)
   
 3.  On the **User Mapping** page, in the **Users mapped to this login** list select both the **distribution** and [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] databases.  
   
-    In the Database role membership list, select the **db_owner** role for the login for both databases.  
+    In the Database role membership list, select the **db_owner** role for the login for both databases:  
 
     ![Repl Snapshot DB Owner](media/tutorial-preparing-the-server-for-replication/dbowner.png)
   
-4.  Click **OK** to create the login.  
+4.  Select **OK** to create the login.  
   
-5.  Repeat steps 1-4 to create a login for the other local accounts (repl_distribution, repl_logreader, and repl_merge). These logins must also be mapped to users that are members of the **db_owner** fixed database role in the **distribution** and **AdventureWorks** databases.  
+5.  Repeat steps 1-4 to create a login for the other local accounts (repl_distribution, repl_logreader, and repl_merge). These logins must also be mapped to users that are members of the **db_owner** fixed database role in the **distribution** and **AdventureWorks** databases:  
 
     ![Repl Users in SSMS](media/tutorial-preparing-the-server-for-replication/usersinssms.png)
   

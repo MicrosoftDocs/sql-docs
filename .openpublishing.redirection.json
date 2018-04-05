@@ -3542,7 +3542,7 @@
 	  "redirect_url": "/sql/samples/sql-samples-where-are",
 	  "redirect_document_id": false
       },
-	  	  {
+	  {
 	  "source_path": "docs/sample/world-wide-importers/database-catalog-oltp.md",
 	  "redirect_url": "/sql/samples/wide-world-importers-oltp-database-catalog",
 	  "redirect_document_id": false
@@ -3612,6 +3612,5 @@
 	  "redirect_url": "/sql/samples/wide-world-importers-what-is",
 	  "redirect_document_id": false
       }
-
     ]
 }
